@@ -1,9 +1,10 @@
 {
   "name": "ohjelmoinnin-mooc",
   "dependencies": {
+    "babel-plugin-styled-components": "^1.5.1",
     "gatsby": "next",
     "gatsby-plugin-react-helmet": "next",
-    "gatsby-plugin-styled-components": "^2.0.11",
+    "gatsby-plugin-styled-components": "^3.0.0-beta.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
