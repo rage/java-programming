@@ -1,1 +1,4 @@
-{ "type": "static" }
+{
+  "type": "static",
+  "alias": "ohjelmointi-19.mooc.fi"
+}
