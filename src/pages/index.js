@@ -3,6 +3,7 @@ import React, { Fragment } from 'react'
 import Layout from '../components/layout'
 import Banner from '../components/Banner'
 import Logo from '../components/Logo';
+import ScheduleTimeline from '../components/ScheduleTimeline';
 
 const IndexPage = () => (
   <Fragment>
@@ -52,6 +53,8 @@ const IndexPage = () => (
         Kurssin sisältö tarkentuu kurssin edetessä. Tietoa kurssin aikatauluista
         sekä sisällöstä lisätään tälle sivulle kurssin alettua.
       </p>
+
+      <ScheduleTimeline />
 
       <table>
         <thead>
