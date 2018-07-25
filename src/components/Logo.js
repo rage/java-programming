@@ -22,6 +22,7 @@ const StyledLink = styled.a`
   display: flex;
   align-items: center;
   padding: 1rem;
+  height: 64px;
 `
 
 export default () => (
