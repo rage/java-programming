@@ -1,18 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
+import Bruce from '../images/banner.svg'
 
 const Banner = styled.div`
-  height: 20rem;
+  height: 30rem;
   display: flex;
   justify-content: center;
   align-items: center;
-
   margin-bottom: 2rem;
-
+  background: url(${Bruce});
   h1 {
     font-size: 3rem;
-    background-color: white;
+    color: #c0392b;
     padding: 0.25rem;
+    background: white;
+    padding: .5rem;
   }
 `
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../images/logo.png'
 import styled from 'styled-components'
+import "typeface-open-sans-condensed"
 
 const LogoImg = styled.img`
   width: 50px;
