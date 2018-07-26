@@ -23,6 +23,7 @@ const StyledLink = styled.a`
   align-items: center;
   padding: 1rem;
   height: 64px;
+  background-color: white;
 `
 
 export default () => (
