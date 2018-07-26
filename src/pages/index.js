@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 import Banner from '../components/Banner'
 import Logo from '../components/Logo';
 import ScheduleTimeline from '../components/ScheduleTimeline';
+import MailinglistForm from '../components/MailinglistForm';
 
 const IndexPage = () => (
   <Fragment>
@@ -149,7 +150,7 @@ const IndexPage = () => (
         </b>
       </p>
 
-      <p>Haluan tietoa kun kurssi alkaa</p>
+      <MailinglistForm />
     </Layout>
   </Fragment>
 )
