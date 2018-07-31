@@ -2,7 +2,6 @@ import React, { Fragment } from 'react'
 
 import Layout from '../components/layout'
 import Banner from '../components/Banner'
-import Logo from '../components/Logo'
 import ScheduleTimeline from '../components/ScheduleTimeline'
 import MailinglistForm from '../components/MailinglistForm'
 import Sidebar from '../components/Sidebar'

@@ -62,7 +62,6 @@ export default class TreeViewItem extends React.Component {
 
   componentDidMount() {
     if (this.props.item.children) {
-      console.log(this.childrenListRef.current)
       trackElementHeight(this.childrenListRef.current)
     }
   }

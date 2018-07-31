@@ -37,7 +37,7 @@ export default () => (
       target="_blank"
       noValidate
     >
-      <label for="EMAIL">Sähköpostiosoite</label>
+      <label htmlFor="EMAIL">Sähköpostiosoite</label>
       <FieldContainer>
         <input placeholder="arto@example.com" name="EMAIL" />
         <button>Lähetä</button>
