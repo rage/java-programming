@@ -1,11 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { Motion, spring } from 'react-motion'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
+import { trackElementHeight } from '../../util/trackHeight'
 
 const ChildrenList = styled.ul`
-  max-height: var(--max-height);
+  height: calc(var(--open-ratio) * var(--calculated-height) * 1px);
   overflow: hidden;
 `
 
@@ -28,7 +31,7 @@ const ItemTitleWrapper = styled.div`
   &.active-section {
     background-color: #ffdfdf;
     border-top-left-radius: 5px;
-border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     a {
       color: black;
     }
@@ -38,6 +41,8 @@ border-bottom-left-radius: 5px;
 const StyledIcon = styled(FontAwesomeIcon)`
   vertical-align: middle;
   margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  transform: rotate(calc(var(--open-ratio) * 90deg));
 `
 
 export default class TreeViewItem extends React.Component {
@@ -46,6 +51,7 @@ export default class TreeViewItem extends React.Component {
     this.state = {
       childrenVisible: props.item.childrenVisibleByDefault || false,
     }
+    this.childrenListRef = React.createRef()
   }
 
   onClick = () => {
@@ -53,32 +59,52 @@ export default class TreeViewItem extends React.Component {
       childrenVisible: !prev.childrenVisible,
     }))
   }
+
+  componentDidMount() {
+    if (this.props.item.children) {
+      console.log(this.childrenListRef.current)
+      trackElementHeight(this.childrenListRef.current)
+    }
+  }
   render() {
     return (
       <React.Fragment>
-        <ItemTitleWrapper
-          className={`nav-item-${this.props.item.name
-            .toLowerCase()
-            .replace(/ /g, '-')}`}
+        <Motion
+          style={{ openRatio: spring(this.state.childrenVisible ? 1 : 0) }}
         >
-          {this.props.item.children && (
-            <StyledIcon icon={faCaretRight} size="1x" />
+          {({ openRatio }) => (
+            <React.Fragment>
+              <ItemTitleWrapper
+                className={`nav-item-${this.props.item.name
+                  .toLowerCase()
+                  .replace(/ /g, '-')}`}
+              >
+                {this.props.item.children && (
+                  <StyledIcon
+                    style={{ '--open-ratio': `${openRatio}` }}
+                    icon={faCaretRight}
+                    size="1x"
+                  />
+                )}
+                <a href={this.props.item.href}>
+                  <ListItem onClick={this.onClick}>
+                    {this.props.item.name}
+                  </ListItem>
+                </a>
+              </ItemTitleWrapper>
+              {this.props.item.children && (
+                <ChildrenList
+                  innerRef={this.childrenListRef}
+                  style={{ '--open-ratio': `${openRatio}` }}
+                >
+                  {this.props.item.children.map(i => (
+                    <TreeViewItem key={i.name} item={i} />
+                  ))}
+                </ChildrenList>
+              )}
+            </React.Fragment>
           )}
-          <a href={this.props.item.href}>
-            <ListItem onClick={this.onClick}>{this.props.item.name}</ListItem>
-          </a>
-        </ItemTitleWrapper>
-        {this.props.item.children && (
-          <ChildrenList
-            style={{
-              '--max-height': this.state.childrenVisible ? '9999px' : '0',
-            }}
-          >
-            {this.props.item.children.map(i => (
-              <TreeViewItem key={i.name} item={i} />
-            ))}
-          </ChildrenList>
-        )}
+        </Motion>
       </React.Fragment>
     )
   }
