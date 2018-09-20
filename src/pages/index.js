@@ -17,11 +17,11 @@ const IndexPage = () => (
         <section id="yleistä">
           <h1>Tietoa kurssista</h1>
           <p>
-            Ohjelmoinnin MOOC on kaikille avoin ja ilmainen ohjelmoinnin perusteet
-            opettava verkkokurssi. Kurssilla perehdytään nykyaikaisen ohjelmoinnin
-            perusideoihin sekä ohjelmoinnissa käytettävien työvälineiden lisäksi
-            algoritmien laatimiseen. Kurssille osallistuminen ei vaadi
-            ennakkotietoja ohjelmoinnista.
+            Ohjelmoinnin MOOC on kaikille avoin ja ilmainen ohjelmoinnin
+            perusteet opettava verkkokurssi. Kurssilla perehdytään nykyaikaisen
+            ohjelmoinnin perusideoihin sekä ohjelmoinnissa käytettävien
+            työvälineiden lisäksi algoritmien laatimiseen. Kurssille
+            osallistuminen ei vaadi ennakkotietoja ohjelmoinnista.
           </p>
           <p>
             Ohjelmoinnin MOOC vastaa sisällöltään Helsingin yliopiston
@@ -46,9 +46,11 @@ const IndexPage = () => (
           <h2>Kurssin kaksi versiota</h2>
 
           <p>
-            Kurssista julkaistaan aluksi yksi aikataulutettu versio. Niille,
-            jotka ei pysy aikataulussa mukana, tullaan tarjoamaan mahdollisuus
-            siirtyä aikatauluttomaan versioon.
+            Kurssista julkaistaan aluksi aikataulutettu versio jossa on
+            viikoittaiset deadlinet. Myöhemmin kurssista aukeaa myös aikataulun
+            versio jossa tehtäviä voi tehdä täysin omaan tahtiin. Voit siirtyä
+            aikataululliselta kurssilta aikatauluttomaan, mikäli niin haluat.
+            Kurssin vaihtaminen toiseen suuntaan ei ole mahdollista.
           </p>
         </section>
 
@@ -56,11 +58,10 @@ const IndexPage = () => (
           <h2>Sisältö ja aikataulu</h2>
 
           <p>
-            Kurssi koostuu neljästätoista tehtäväsarjasta. Kunkin tehtäväsarjan
-            tekemiseen kannattaa varata aikaa noin 5-20 tuntia. Varaamme
-            oikeuden aikataulun ja aiheiden muutoksiin, kuitenkin niin, että
-            jokaista tehtäväsarjaa on mahdollista suorittaa vähintään kahden
-            viikon ajan.
+            Kurssi koostuu 14 tehtäväsarjasta. Kunkin tehtäväsarjan tekemiseen
+            kannattaa varata aikaa noin 5-20 tuntia. Varaamme oikeuden
+            aikataulun ja aiheiden muutoksiin, kuitenkin niin, että jokaista
+            tehtäväsarjaa on mahdollista suorittaa vähintään kahden viikon ajan.
           </p>
 
           <p>
@@ -167,39 +168,27 @@ const IndexPage = () => (
           <h2>Kurssin arvostelu</h2>
 
           <p>
-            Ohjelmoinnin MOOC koostuu kahdesta yliopistotason ohjelmointikurssista,
-            jotka kummatkin arvostellaan erikseen. Kummankin kurssin jälkeen
-            järjestetään verkkotentti. Verkkotenttiin saa osallistua kun tekee
-            vähintään 75 % kunkin osan tehtävistä. Kurssin arvosana määräytyy seuraavasti:
+            Ohjelmoinnin MOOC koostuu kahdesta yliopistotason
+            ohjelmointikurssista, jotka kummatkin arvostellaan erikseen.
+            Kummankin kurssin jälkeen järjestetään ilmainen verkkotentti.
+            Verkkotenttiin saa osallistua kun on saanut vähintään 75% kunkin
+            osan pisteistä. Kurssin arvosana määräytyy seuraavasti:
           </p>
 
           <ul>
-            <li>
-              yli 90% tenttipisteistä: arvosana 5/5.
-            </li>
-            <li>
-              80-90% tenttipisteistä: arvosana 4/5.
-            </li>
-            <li>
-              70-80% tenttipisteistä: arvosana 3/5.
-            </li>
-            <li>
-              60-70% tenttipisteistä: arvosana 2/5.
-            </li>
-            <li>
-              50-60% tenttipisteistä: arvosana 1/5.
-            </li>
-            <li>
-              alle 50% tenttipisteistä: hylätty suoritus
-            </li>
+            <li>yli 90% tenttipisteistä: arvosana 5/5.</li>
+            <li>80-90% tenttipisteistä: arvosana 4/5.</li>
+            <li>70-80% tenttipisteistä: arvosana 3/5.</li>
+            <li>60-70% tenttipisteistä: arvosana 2/5.</li>
+            <li>50-60% tenttipisteistä: arvosana 1/5.</li>
+            <li>alle 50% tenttipisteistä: hylätty suoritus</li>
           </ul>
 
           <p>
-            Arvosana kirjataan Helsingin yliopiston opintorekisteriin. Verkkotenteistä
-            järjestetään useita uusintoja.
+            Arvosana kirjataan Helsingin yliopiston opintorekisteriin.
+            Verkkotenteistä järjestetään useita uusintoja.
           </p>
         </section>
-
       </Layout>
     </ContentArea>
   </Fragment>

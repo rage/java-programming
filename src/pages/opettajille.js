@@ -31,8 +31,8 @@ const IndexPage = () => (
           <p>
             Avoimen yliopiston kurssisuoritus luetaan automaattisesti osaksi
             Helsingin yliopiston opintoja. Useat toisen asteen oppilaitokset
-            kuten lukiot tarjoavat Ohjelmoinnin MOOCin suorittamisesta useita
-            kursseja.
+            kuten lukiot tarjoavat Ohjelmoinnin MOOCin suorittamisesta
+            suoritusmerkintöjä.
           </p>
         </section>
       </Layout>
