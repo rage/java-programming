@@ -12,6 +12,7 @@ import { Location } from '@reach/router'
 const ChildrenList = styled.ul`
   height: calc(var(--open-ratio) * var(--calculated-height) * 1px);
   overflow: hidden;
+  margin-left: 0;
 `
 
 const ListItem = styled.li`
@@ -22,6 +23,7 @@ const ListItem = styled.li`
 `
 
 const NavigationLink = styled(GatsbyLink)`
+  padding-left: 0.5rem;
   ${props => props.active == "t" && `
     background-color: #ffccc6;
     width: 100%;
@@ -101,7 +103,7 @@ export default class TreeViewItem extends React.Component {
                     <NavigationLink
                       to={this.props.item.href}
                       active={
-                        this.props.item.href == location.pathname ? 't' : 'f'
+                        (this.props.item.href == location.pathname || this.props.item.href == location.pathname.slice(0, -1)) ? 't' : 'f'
                       }
                     >
                       <ListItem onClick={this.onClick}>

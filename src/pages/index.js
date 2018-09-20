@@ -200,22 +200,6 @@ const IndexPage = () => (
           </p>
         </section>
 
-        <section id="kurssi-vaylana">
-          <h2>Ohjelmoinnin MOOC väylänä yliopistoon</h2>
-
-          <p>
-            Ohjelmoinnin MOOC toimii väylänä yliopistoon. Suorittamalla Ohjelmoinnin
-            MOOCin jokaisen osan tehtävistä yli 90 % annetussa aikataulussa, saat
-            kutsun Helsingin yliopistolla järjestettävään näyttökokeeseen. Näyttökokeessa
-            tehdään kurssin laajempia tehtäviä vastaava ohjelmointitehtävä sekä vastataan
-            muutamaan esseetyyppiseen kysymykseen.
-          </p>
-
-          <p>
-            Ohjelmoinnin MOOC on osa yhteishakua. Lisäämme tänne yhteishaun lähestyessä
-            ohjeita yhteishakulomakkeen täyttämiseen.
-          </p>
-        </section>
       </Layout>
     </ContentArea>
   </Fragment>
