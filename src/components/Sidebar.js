@@ -20,7 +20,6 @@ const SidebarContainer = styled.div`
   left: 0;
   background-color: white;
   z-index: 100;
-  //border-right: 5px solid #fb8b8b;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 
 `
@@ -55,56 +54,9 @@ export default class Sidebar extends React.Component {
       <SidebarContainer>
         <TopContainer>
           <Logo />
-          <StyledIcon icon={faArrowAltCircleLeft} size="2x" />
+          {/* <StyledIcon icon={faArrowAltCircleLeft} size="2x" /> */}
         </TopContainer>
         <TreeView data={content2} />
-        {/* <ul>
-          <li>Johdanto</li>
-          <ul>
-            <li>Alkusanat</li>
-            <li>Kurssin kaksi versiota</li>
-            <li>Sisältö ja aikataulu</li>
-            <li>Muistuta minua kun kurssi alkaa</li>
-          </ul>
-          <li>Osa 1 -- Ensiaskeleet</li>
-          <ul>
-            <li>Ohjelma ja lähdekoodi</li>
-            <ul>
-              <li>Ohjelmarunko</li>
-              <li>Ohjelman osia</li>
-              <ul>
-                <li>Kommentit</li>
-                <li>Tulostaminen</li>
-                <li>Komennon parametrit</li>
-                <li>Puolipiste</li>
-                <li>Lohko</li>
-              </ul>
-              <li>Ohjelmointityylistä</li>
-            </ul>
-            <li>Ohjelma ja tieto</li>
-            <ul>
-              <li>Tiedon tyyppi</li>
-              <li>Muuttujan esittely</li>
-              <li>Muuttujaan asetetun arvon muuttaminen</li>
-              <li>Muuttujan tyyppi pysyy</li>
-              <li>Muuttujan nimentä</li>
-              <ul>
-                <li>Sallittuja muuttujien nimiä</li>
-                <li>Virheellisiä muuttujien nimiä</li>
-              </ul>
-            </ul>
-            <li>Tietokone on laskin</li>
-            <ul>
-              <li>Laskentaaa</li>
-              <li>Laskukärjestys ja sulut</li>
-              <li>Laskentaa ja tulostamista</li>
-              <li>Jakolasku</li>
-              <li>Muuttujan arvoon liittyviä väärinkäsityksiä</li>
-            </ul>
-            <li>Käyttäjän syötteen lukeminen</li>
-          </ul>
-          <li>Osa 2 -- Metodit</li>
-        </ul> */}
       </SidebarContainer>
     )
   }

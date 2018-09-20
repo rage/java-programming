@@ -6,6 +6,7 @@ import ScheduleTimeline from '../components/ScheduleTimeline'
 import MailinglistForm from '../components/MailinglistForm'
 import Sidebar from '../components/Sidebar'
 import ContentArea from '../components/ContentArea'
+import GatsbyLink from 'gatsby-link'
 
 const IndexPage = () => (
   <Fragment>
@@ -20,22 +21,22 @@ const IndexPage = () => (
             algoritmien laatimiseen ja nykyaikaisen ohjelmoinnin perusideoihin.
             Opiskelijalta ei edellytetä ennakkotietoja ohjelmoinnista.
           </p>
-          <ul>
-            <li>
-              Ohjelmoinnin MOOC vastaa sisällöltään Helsingin yliopiston
-              tietojenkäsittelytieteen laitoksen kursseja Ohjelmoinnin perusteet
-              ja Ohjelmoinnin jatkokurssi. Kurssit vastaavat yhteensä kymmentä
-              opintopistettä (5+5).
-            </li>
-            <li>
-              Ohjelmoinnin MOOC tarjoaa mahdollisuuden opinto-oikeuteen
-              tietojenkäsittelytieteen opintoihin Helsingin yliopistolla. Mikäli
-              haet kurssin kautta opinto-oikeutta, lue kaikki opinto-oikeuden
-              hakemiseen liittyvät tiedot huolellisesti. Esimerkiksi tehtävien
-              aikarajoista EI voida joustaa lainkaan. Ehdot opinto-oikeuden
-              saamiseksi päivittyvät lähempänä yhteishakua.
-            </li>
-          </ul>
+          <p>
+            Ohjelmoinnin MOOC vastaa sisällöltään Helsingin yliopiston
+            tietojenkäsittelytieteen laitoksen kursseja Ohjelmoinnin perusteet
+            ja Ohjelmoinnin jatkokurssi. Kurssit vastaavat yhteensä kymmentä
+            opintopistettä (5+5).
+          </p>
+          <p>
+            Ohjelmoinnin MOOC tarjoaa mahdollisuuden opinto-oikeuteen
+            tietojenkäsittelytieteen opintoihin Helsingin yliopistolla. Mikäli
+            haet kurssin kautta opinto-oikeutta, lue kaikki opinto-oikeuden
+            hakemiseen liittyvät tiedot huolellisesti. Esimerkiksi tehtävien
+            aikarajoista EI voida joustaa lainkaan. Ehdot opinto-oikeuden
+            saamiseksi päivittyvät lähempänä yhteishakua. Lisätietoa
+            opinto-oikeudesta saat{' '}
+            <GatsbyLink to="/opinto-oikeus">täältä</GatsbyLink>.
+          </p>
           <MailinglistForm />
         </section>
         <section id="kurssin-kaksi-versiota">
