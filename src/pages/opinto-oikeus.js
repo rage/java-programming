@@ -48,11 +48,11 @@ const IndexPage = () => (
             prioriteetille.
           </p>
           <p>
-            Yhteishaun hakuaika on <b>TODO: YHTEISHAUN HAKUAIKA TÄHÄN</b>
+            Yhteishaun hakuaika on 20.3.-3.4.2019. Hakuaika päättyy klo 15.00.
           </p>
           <p>
-            Hakulomake sekä lisää tietoa päähausta ja opinnoista löytyy
-            osoitteesta <b>TODO: Linkki tähän</b>.
+            Löydät lisätietoja sähköisestä hausta korkeakouluihin Opintopolku.fi 
+            -portaalista 29.10.2018 alkaen. 
           </p>
         </section>
       </Layout>
