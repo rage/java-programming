@@ -33,52 +33,20 @@ const TopContainer = styled.div`
   align-items: center;
 `
 
-const content = [
+
+const content2 = [
   {
-    name: 'Johdanto',
-    childrenVisibleByDefault: true,
-    children: [
-      {
-        name: 'Kurssista',
-        childrenVisibleByDefault: true,
-        children: [
-          { name: 'Yleistä', href: '#yleistä' },
-          { name: 'Kurssin kaksi versiota', href: '#kurssin-kaksi-versiota' },
-          { name: 'Sisältö ja aikataulu', href: '#sisältö-ja-aikataulu' },
-          { name: 'Kokeet ja arvostelu' },
-        ],
-      },
-      {
-        name: 'Opinto-oikeus',
-        children: [
-          { name: 'Tietoa' },
-          { name: 'Näyttökoe' },
-          { name: 'Hyödyllistä tietoa' },
-        ],
-      },
-      {
-        name: 'Opettajille ja opinto-ohjaajille',
-        children: [
-          { name: 'Opetuksessa käyttö' },
-          { name: 'Oma versio kurssista' },
-        ],
-      },
-    ],
+    name: 'Tietoa kurssista',
+    href: '/'
   },
   {
-    name: 'Osa 1 -- Ensiaskeleet',
-    children: [
-      {
-        name: 'Ohjelma ja lähdekoodi',
-        children: [
-          { name: 'Ohjelmarunko' },
-          {
-            name: 'Ohjelman osia',
-          },
-        ],
-      },
-    ],
+    name: 'Mahdollisuus opinto-oikeuteen',
+    href: '/opinto-oikeus'
   },
+  {
+    name: 'Opettajille ja opinto-ohjaajille',
+    href: '/opettajille'
+  }
 ]
 
 export default class Sidebar extends React.Component {
@@ -89,7 +57,7 @@ export default class Sidebar extends React.Component {
           <Logo />
           <StyledIcon icon={faArrowAltCircleLeft} size="2x" />
         </TopContainer>
-        <TreeView data={content} />
+        <TreeView data={content2} />
         {/* <ul>
           <li>Johdanto</li>
           <ul>

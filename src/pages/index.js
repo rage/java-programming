@@ -14,6 +14,7 @@ const IndexPage = () => (
       <Banner />
       <Layout>
         <section id="yleistä">
+          <h1>Tietoa kurssista</h1>
           <p>
             Ohjelmoinnin MOOC on ilmainen verkkokurssi, jossa perehdytään
             algoritmien laatimiseen ja nykyaikaisen ohjelmoinnin perusideoihin.
@@ -63,8 +64,6 @@ const IndexPage = () => (
             aikatauluista sekä sisällöstä lisätään tälle sivulle kurssin
             alettua.
           </p>
-
-          <ScheduleTimeline />
 
           <table>
             <thead>

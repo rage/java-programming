@@ -6,6 +6,8 @@ import { Motion, spring } from 'react-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
 import { trackElementHeight } from '../../util/trackHeight'
+import GatsbyLink from 'gatsby-link'
+import { Location } from '@reach/router'
 
 const ChildrenList = styled.ul`
   height: calc(var(--open-ratio) * var(--calculated-height) * 1px);
@@ -17,6 +19,13 @@ const ListItem = styled.li`
   list-style-type: none;
   margin-bottom: 0;
   padding: 0.5rem;
+`
+
+const NavigationLink = styled(GatsbyLink)`
+  ${props => props.active == "t" && `
+    background-color: #ffccc6;
+    width: 100%;
+  `}
 `
 
 const ItemTitleWrapper = styled.div`
@@ -68,42 +77,53 @@ export default class TreeViewItem extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Motion
-          style={{ openRatio: spring(this.state.childrenVisible ? 1 : 0) }}
-        >
-          {({ openRatio }) => (
-            <React.Fragment>
-              <ItemTitleWrapper
-                className={`nav-item-${this.props.item.name
-                  .toLowerCase()
-                  .replace(/ /g, '-')}`}
-              >
-                {this.props.item.children && (
-                  <StyledIcon
-                    style={{ '--open-ratio': `${openRatio}` }}
-                    icon={faCaretRight}
-                    size="1x"
-                  />
-                )}
-                <a href={this.props.item.href}>
-                  <ListItem onClick={this.onClick}>
-                    {this.props.item.name}
-                  </ListItem>
-                </a>
-              </ItemTitleWrapper>
-              {this.props.item.children && (
-                <ChildrenList
-                  innerRef={this.childrenListRef}
-                  style={{ '--open-ratio': `${openRatio}` }}
-                >
-                  {this.props.item.children.map(i => (
-                    <TreeViewItem key={i.name} item={i} />
-                  ))}
-                </ChildrenList>
+        <Location>
+          {({ navigate, location }) => (
+            <Motion
+              style={{
+                openRatio: spring(this.state.childrenVisible ? 1 : 0),
+              }}
+            >
+              {({ openRatio }) => (
+                <React.Fragment>
+                  <ItemTitleWrapper
+                    className={`nav-item-${this.props.item.name
+                      .toLowerCase()
+                      .replace(/ /g, '-')}`}
+                  >
+                    {this.props.item.children && (
+                      <StyledIcon
+                        style={{ '--open-ratio': `${openRatio}` }}
+                        icon={faCaretRight}
+                        size="1x"
+                      />
+                    )}
+                    <NavigationLink
+                      to={this.props.item.href}
+                      active={
+                        this.props.item.href == location.pathname ? 't' : 'f'
+                      }
+                    >
+                      <ListItem onClick={this.onClick}>
+                        {this.props.item.name}
+                      </ListItem>
+                    </NavigationLink>
+                  </ItemTitleWrapper>
+                  {this.props.item.children && (
+                    <ChildrenList
+                      innerRef={this.childrenListRef}
+                      style={{ '--open-ratio': `${openRatio}` }}
+                    >
+                      {this.props.item.children.map(i => (
+                        <TreeViewItem key={i.name} item={i} />
+                      ))}
+                    </ChildrenList>
+                  )}
+                </React.Fragment>
               )}
-            </React.Fragment>
+            </Motion>
           )}
-        </Motion>
+        </Location>
       </React.Fragment>
     )
   }
