@@ -3,7 +3,9 @@ import styled from 'styled-components'
 import { SIDEBAR_WIDTH } from './Sidebar'
 
 const ContentAreaContainer = styled.div`
-  margin-left: ${SIDEBAR_WIDTH};
+  @media only screen and (min-width: 500px) {
+    margin-left: ${SIDEBAR_WIDTH};
+  }
 `
 
 export default class ContentArea extends React.Component {
