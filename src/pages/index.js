@@ -17,9 +17,11 @@ const IndexPage = () => (
         <section id="yleistä">
           <h1>Tietoa kurssista</h1>
           <p>
-            Ohjelmoinnin MOOC on ilmainen verkkokurssi, jossa perehdytään
-            algoritmien laatimiseen ja nykyaikaisen ohjelmoinnin perusideoihin.
-            Opiskelijalta ei edellytetä ennakkotietoja ohjelmoinnista.
+            Ohjelmoinnin MOOC on kaikille avoin ja ilmainen ohjelmoinnin perusteet
+            opettava verkkokurssi. Kurssilla perehdytään nykyaikaisen ohjelmoinnin
+            perusideoihin sekä ohjelmoinnissa käytettävien työvälineiden lisäksi
+            algoritmien laatimiseen. Kurssille osallistuminen ei vaadi
+            ennakkotietoja ohjelmoinnista.
           </p>
           <p>
             Ohjelmoinnin MOOC vastaa sisällöltään Helsingin yliopiston
@@ -39,6 +41,7 @@ const IndexPage = () => (
           </p>
           <MailinglistForm />
         </section>
+
         <section id="kurssin-kaksi-versiota">
           <h2>Kurssin kaksi versiota</h2>
 
@@ -63,7 +66,7 @@ const IndexPage = () => (
           <p>
             Kurssin sisältö tarkentuu kurssin edetessä. Tietoa kurssin
             aikatauluista sekä sisällöstä lisätään tälle sivulle kurssin
-            alettua.
+            aloituksen lähestyessä.
           </p>
 
           <table>
@@ -157,6 +160,60 @@ const IndexPage = () => (
               koneesi kello voi olla jäljessä tai edellä, joten älä jätä
               tehtävien tekemistä ja palauttamista viime hetkeen.
             </b>
+          </p>
+        </section>
+
+        <section id="kurssin-arvostelu">
+          <h2>Kurssin arvostelu</h2>
+
+          <p>
+            Ohjelmoinnin MOOC koostuu kahdesta yliopistotason ohjelmointikurssista,
+            jotka kummatkin arvostellaan erikseen. Kummankin kurssin jälkeen
+            järjestetään verkkotentti. Verkkotenttiin saa osallistua kun tekee
+            vähintään 75 % kunkin osan tehtävistä. Kurssin arvosana määräytyy seuraavasti:
+          </p>
+
+          <ul>
+            <li>
+              yli 90% tenttipisteistä: arvosana 5/5.
+            </li>
+            <li>
+              80-90% tenttipisteistä: arvosana 4/5.
+            </li>
+            <li>
+              70-80% tenttipisteistä: arvosana 3/5.
+            </li>
+            <li>
+              60-70% tenttipisteistä: arvosana 2/5.
+            </li>
+            <li>
+              50-60% tenttipisteistä: arvosana 1/5.
+            </li>
+            <li>
+              alle 50% tenttipisteistä: hylätty suoritus
+            </li>
+          </ul>
+
+          <p>
+            Arvosana kirjataan Helsingin yliopiston opintorekisteriin. Verkkotenteistä
+            järjestetään useita uusintoja.
+          </p>
+        </section>
+
+        <section id="kurssi-vaylana">
+          <h2>Ohjelmoinnin MOOC väylänä yliopistoon</h2>
+
+          <p>
+            Ohjelmoinnin MOOC toimii väylänä yliopistoon. Suorittamalla Ohjelmoinnin
+            MOOCin jokaisen osan tehtävistä yli 90 % annetussa aikataulussa, saat
+            kutsun Helsingin yliopistolla järjestettävään näyttökokeeseen. Näyttökokeessa
+            tehdään kurssin laajempia tehtäviä vastaava ohjelmointitehtävä sekä vastataan
+            muutamaan esseetyyppiseen kysymykseen.
+          </p>
+
+          <p>
+            Ohjelmoinnin MOOC on osa yhteishakua. Lisäämme tänne yhteishaun lähestyessä
+            ohjeita yhteishakulomakkeen täyttämiseen.
           </p>
         </section>
       </Layout>
