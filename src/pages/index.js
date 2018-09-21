@@ -46,10 +46,10 @@ const IndexPage = () => (
           <h2>Kurssin kaksi versiota</h2>
 
           <p>
-            Kurssista julkaistaan aluksi aikataulutettu versio jossa on
+            Kurssista julkaistaan aluksi aikataulutettu versio, jossa on
             viikoittaiset deadlinet. Myöhemmin kurssista aukeaa myös aikataulun
-            versio jossa tehtäviä voi tehdä täysin omaan tahtiin. Voit siirtyä
-            aikataululliselta kurssilta aikatauluttomaan, mikäli niin haluat.
+            versio, jossa tehtäviä voi tehdä täysin omaan tahtiin. Voit siirtyä
+            aikataululliselta kurssilta aikatauluttomaan mikäli niin haluat.
             Kurssin vaihtaminen toiseen suuntaan ei ole mahdollista.
           </p>
         </section>

@@ -18,8 +18,7 @@ const IndexPage = () => (
           <p>
             Kurssin tai sen osan saa ottaa vapaasti osaksi peruskoulun, lukion,
             ammattikoulun, ammattikorkeakoulun tai yliopiston opintotarjontaa.
-            Sano opiskelijoillesi, että osallistuvat kurssille ja järjestä
-            halutessasi yhteisiä aikoja tehtävien tekemiseen.
+            Kerro opiskelijoillesi mahdollisuudesta osallistua kurssille.
           </p>
           <p>
             Jos haluat, että kurssillasi on koe ja opiskelijasi saavat kurssista
