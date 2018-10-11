@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 const StyledUl = styled.ul`
   margin-left: 0;
+  margin-top: 0.5rem;
 `
 
 export default class TreeView extends React.Component {

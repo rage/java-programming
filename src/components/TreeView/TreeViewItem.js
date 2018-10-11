@@ -19,13 +19,14 @@ const ListItem = styled.li`
   cursor: pointer;
   list-style-type: none;
   margin-bottom: 0;
-  padding: 0.5rem;
+  padding: 0.75rem;
 `
 
 const NavigationLink = styled(GatsbyLink)`
-  padding-left: 0.5rem;
+  border-left: 0.5rem solid white;
   ${props => props.active == "t" && `
-    background-color: #ffccc6;
+    border-color: #f75b4b;
+    background-color: #ffeeed;
     width: 100%;
   `}
 `
