@@ -20,15 +20,17 @@ const ListItem = styled.li`
   list-style-type: none;
   margin-bottom: 0;
   padding: 0.75rem;
+
 `
 
 const NavigationLink = styled(GatsbyLink)`
   border-left: 0.5rem solid white;
+  width: 100%;
   ${props => props.active == "t" && `
     border-color: #f75b4b;
     background-color: #ffeeed;
-    width: 100%;
   `}
+
 `
 
 const ItemTitleWrapper = styled.div`

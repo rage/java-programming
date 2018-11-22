@@ -165,32 +165,6 @@ const IndexPage = () => (
             </b>
           </p>
         </section>
-
-        <section id="kurssin-arvostelu">
-          <h2>Kurssin arvostelu</h2>
-
-          <p>
-            Ohjelmoinnin MOOC koostuu kahdesta yliopistotason
-            ohjelmointikurssista, jotka kummatkin arvostellaan erikseen.
-            Kummankin kurssin jälkeen järjestetään ilmainen verkkotentti.
-            Verkkotenttiin saa osallistua kun on saanut vähintään 75% kunkin
-            osan pisteistä. Kurssin arvosana määräytyy seuraavasti:
-          </p>
-
-          <ul>
-            <li>yli 90% tenttipisteistä: arvosana 5/5.</li>
-            <li>80-90% tenttipisteistä: arvosana 4/5.</li>
-            <li>70-80% tenttipisteistä: arvosana 3/5.</li>
-            <li>60-70% tenttipisteistä: arvosana 2/5.</li>
-            <li>50-60% tenttipisteistä: arvosana 1/5.</li>
-            <li>alle 50% tenttipisteistä: hylätty suoritus</li>
-          </ul>
-
-          <p>
-            Arvosana kirjataan Helsingin yliopiston opintorekisteriin.
-            Verkkotenteistä järjestetään useita uusintoja.
-          </p>
-        </section>
       </Layout>
     </ContentArea>
   </Fragment>
