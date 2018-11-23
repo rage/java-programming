@@ -165,6 +165,16 @@ const IndexPage = () => (
             </b>
           </p>
         </section>
+
+        <section id="ilmoittautuminen">
+          <h2>Ilmoittautuminen</h2>
+
+          <p>
+            Kurssille ei tarvitse eikä voi ilmoittautua. Ilmoittautuneiksi
+            katsotaan ne osallistujat, jotka tekevät kurssin
+            ohjelmointitehtäviä.
+          </p>
+        </section>
       </Layout>
     </ContentArea>
   </Fragment>
