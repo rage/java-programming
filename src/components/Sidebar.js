@@ -49,7 +49,6 @@ class Sidebar extends React.Component {
     const edges =
       this.props.data?.allMarkdownRemark?.edges.map(o => o.node?.frontmatter) || []
     const content = content2.concat(edges)
-    console.log(JSON.stringify(edges))
     return (
       <SidebarContainer>
         <TopContainer>

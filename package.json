@@ -17,6 +17,7 @@
     "react-helmet": "^5.2.0",
     "react-motion": "^0.5.2",
     "react-scrollspy": "^3.3.5",
+    "rehype-react": "^3.1.0",
     "styled-components": "^4.1.1",
     "typeface-open-sans-condensed": "0.0.54"
   },
@@ -33,6 +34,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-optional-chaining": "^7.0.0",
     "babel-preset-gatsby": "^0.1.4",
+    "import-all.macro": "^2.0.3",
     "prettier": "^1.15.2"
   }
 }

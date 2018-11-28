@@ -1,8 +1,7 @@
 ---
 path: "/osa-2/1-ratkaisumalleja"
-title: "Osa 2"
+title: "Ratkaisumalleja"
 ---
-
 
 <% partial 'partials/hint', locals: { name: 'Ensimmäisen osan tavoitteet' } do %>
 
