@@ -1,7 +1,7 @@
 // Used for animations
-import { injectGlobal } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
-injectGlobal`
+createGlobalStyle`
   .render-element-off-screen-for-measurement {
     position: absolute !important;
     top: -100000px !important;

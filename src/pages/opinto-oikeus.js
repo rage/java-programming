@@ -2,8 +2,6 @@ import React, { Fragment } from 'react'
 
 import Layout from '../components/layout'
 import Banner from '../components/Banner'
-import ScheduleTimeline from '../components/ScheduleTimeline'
-import MailinglistForm from '../components/MailinglistForm'
 import Sidebar from '../components/Sidebar'
 import ContentArea from '../components/ContentArea'
 
@@ -51,8 +49,8 @@ const IndexPage = () => (
             Yhteishaun hakuaika on 20.3.-3.4.2019. Hakuaika päättyy klo 15.00.
           </p>
           <p>
-            Löydät lisätietoja sähköisestä hausta korkeakouluihin Opintopolku.fi 
-            -portaalista 29.10.2018 alkaen. 
+            Löydät lisätietoja sähköisestä hausta korkeakouluihin Opintopolku.fi
+            -portaalista 29.10.2018 alkaen.
           </p>
         </section>
       </Layout>

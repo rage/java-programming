@@ -2,13 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Logo from './Logo'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons'
 import TreeView from './TreeView'
-
-const StyledIcon = styled(FontAwesomeIcon)`
-  //color: rgba(0, 0, 0, 0.54);
-`
 
 export const SIDEBAR_WIDTH = '20rem'
 
@@ -54,7 +48,6 @@ export default class Sidebar extends React.Component {
       <SidebarContainer>
         <TopContainer>
           <Logo />
-          {/* <StyledIcon icon={faArrowAltCircleLeft} size="2x" /> */}
         </TopContainer>
         <TreeView data={content2} />
       </SidebarContainer>

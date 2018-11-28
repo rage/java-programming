@@ -26,7 +26,7 @@ const ListItem = styled.li`
 const NavigationLink = styled(GatsbyLink)`
   border-left: 0.5rem solid white;
   width: 100%;
-  ${props => props.active == "t" && `
+  ${props => props.active === "t" && `
     border-color: #f75b4b;
     background-color: #ffeeed;
   `}
@@ -106,7 +106,7 @@ export default class TreeViewItem extends React.Component {
                     <NavigationLink
                       to={this.props.item.href}
                       active={
-                        (this.props.item.href == location.pathname || this.props.item.href == location.pathname.slice(0, -1)) ? 't' : 'f'
+                        (this.props.item.href === location.pathname || this.props.item.href === location.pathname.slice(0, -1)) ? 't' : 'f'
                       }
                     >
                       <ListItem onClick={this.onClick}>

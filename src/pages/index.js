@@ -2,7 +2,6 @@ import React, { Fragment } from 'react'
 
 import Layout from '../components/layout'
 import Banner from '../components/Banner'
-import ScheduleTimeline from '../components/ScheduleTimeline'
 import MailinglistForm from '../components/MailinglistForm'
 import Sidebar from '../components/Sidebar'
 import ContentArea from '../components/ContentArea'
