@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import Logo from './Logo'
+import { graphql, StaticQuery } from 'gatsby'
 
+import Logo from './Logo'
 import TreeView from './TreeView'
 
 export const SIDEBAR_WIDTH = '20rem'
@@ -15,7 +16,8 @@ const SidebarContainer = styled.div`
     left: 0;
     background-color: white;
     z-index: 100;
-    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
   }
 `
 
@@ -27,30 +29,60 @@ const TopContainer = styled.div`
   align-items: center;
 `
 
-const content2 = [
+var content2 = [
   {
-    name: 'Tietoa kurssista',
-    href: '/',
+    title: 'Tietoa kurssista',
+    path: '/',
   },
   {
-    name: 'Mahdollisuus opinto-oikeuteen',
-    href: '/opinto-oikeus',
+    title: 'Mahdollisuus opinto-oikeuteen',
+    path: '/opinto-oikeus',
   },
   {
-    name: 'Opettajille ja opinto-ohjaajille',
-    href: '/opettajille',
+    title: 'Opettajille ja opinto-ohjaajille',
+    path: '/opettajille',
   },
 ]
 
-export default class Sidebar extends React.Component {
+class Sidebar extends React.Component {
   render() {
+    const edges =
+      this.props.data?.allMarkdownRemark?.edges.map(o => o.node?.frontmatter) || []
+    const content = content2.concat(edges)
+    console.log(JSON.stringify(edges))
     return (
       <SidebarContainer>
         <TopContainer>
           <Logo />
         </TopContainer>
-        <TreeView data={content2} />
+        <TreeView data={content} />
       </SidebarContainer>
     )
   }
 }
+
+const query = graphql`
+  query {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/index.md/" } }
+      sort: { fields: [frontmatter___path] }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            path
+          }
+        }
+      }
+    }
+  }
+`
+
+export default props => (
+  <StaticQuery
+    query={query}
+    render={data => <Sidebar data={data} {...props} />}
+  />
+)

@@ -92,7 +92,7 @@ export default class TreeViewItem extends React.Component {
               {({ openRatio }) => (
                 <React.Fragment>
                   <ItemTitleWrapper
-                    className={`nav-item-${this.props.item.name
+                    className={`nav-item-${this.props.item.title
                       .toLowerCase()
                       .replace(/ /g, '-')}`}
                   >
@@ -104,13 +104,13 @@ export default class TreeViewItem extends React.Component {
                       />
                     )}
                     <NavigationLink
-                      to={this.props.item.href}
+                      to={this.props.item.path}
                       active={
-                        (this.props.item.href === location.pathname || this.props.item.href === location.pathname.slice(0, -1)) ? 't' : 'f'
+                        (this.props.item.path === location.pathname || this.props.item.path === location.pathname.slice(0, -1)) ? 't' : 'f'
                       }
                     >
                       <ListItem onClick={this.onClick}>
-                        {this.props.item.name}
+                        {this.props.item.title}
                       </ListItem>
                     </NavigationLink>
                   </ItemTitleWrapper>
@@ -120,7 +120,7 @@ export default class TreeViewItem extends React.Component {
                       style={{ '--open-ratio': `${openRatio}` }}
                     >
                       {this.props.item.children.map(i => (
-                        <TreeViewItem key={i.name} item={i} />
+                        <TreeViewItem key={i.title} item={i} />
                       ))}
                     </ChildrenList>
                   )}

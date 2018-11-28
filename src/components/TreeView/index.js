@@ -12,7 +12,7 @@ export default class TreeView extends React.Component {
     return (
       <StyledUl>
         {this.props.data.map(top => (
-          <TreeViewItem key={top.name} item={top} spy />
+          <TreeViewItem key={top.title} item={top} spy />
         ))}
       </StyledUl>
     )
