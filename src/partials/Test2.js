@@ -1,3 +1,6 @@
 import React from 'react'
 
-export default () => <div>This is test 2.</div>
+export default props => {
+  console.log('props', props)
+  return <div>{props.children}</div>
+}

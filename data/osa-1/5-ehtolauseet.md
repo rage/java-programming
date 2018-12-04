@@ -3,6 +3,11 @@ path: "/osa-1/5-ehtolauseet"
 title: "Ehtolauseet ja vaihtoehtoinen toiminta"
 ---
 
+
+<programming-exercise name="Positiivinen luku" model_solution="50233">
+Tee ohjelma, joka kysyy käyttäjältä kokonaisluvun ja kertoo, onko se positiivinen (eli suurempi kuin nolla) vai ei.
+</programming-exercise>
+
 <% partial 'partials/learning_objectives', locals: { name: 'Oppimistavoitteet' } do %>
 
   <ul>
@@ -31,19 +36,18 @@ title: "Ehtolauseet ja vaihtoehtoinen toiminta"
   Jotta ohjelman suoritus voisi <em>haarautua</em> esimerkiksi käyttäjän antaman syötteen perusteella, tarvitsemme käyttöömme <strong>ehtolauseen</strong>. Yksinkertaisin ehtolause on seuraavanlainen.
 </p>
 
-
-<% partial 'partials/code_highlight' do %>
-  System.out.println("Hei maailma!");
-
-  if (true) {
-      System.out.println("Et voi välttää tätä koodia!");
-  }
-<% end %>
+```javascript
+System.out.println("Hei maailma!");
+if (true) {
+    System.out.println("Et voi välttää tätä koodia!");
+}
+```
 
 <% partial 'partials/sample_output' do %>
   Hei maailma!
   Et voi välttää tätä koodia!
 <% end %>
+
 
 <p>
   Ehtolause alkaa avainsanalla <code>if</code>, jota seuraa sulut. Sulkujen sisälle asetetaan lauseke, joka evaluoidaan kun ehtolause saavutetaan. Evaluoinnin tulos on totuusarvo, yllä evaluointia ei tehty, vaan ehtolauseessa käytettiin suoraan totuusarvoa.
@@ -261,6 +265,10 @@ if (luku &gt; 5) {
 <p>
   Huom! Jos et sisennä em. tavalla, tyylitarkastaja valittaa "Line xx: '}' should be on the same line."
 </p>
+
+<programming-exercise name="Positiivinen luku", model_solution="50233">
+Tee ohjelma, joka kysyy käyttäjältä kokonaisluvun ja kertoo, onko se positiivinen (eli suurempi kuin nolla) vai ei.
+</programming-exercise>
 
 <% partial 'partials/exercise', locals: { name: 'Positiivinen luku', model_solution: '50233' } do %>
 

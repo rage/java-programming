@@ -6,7 +6,7 @@ import rehypeReact from 'rehype-react'
 import Layout from '../components/layout'
 import Sidebar from '../components/Sidebar'
 import ContentArea from '../components/ContentArea'
-import Partials from '../partials'
+import getNamedPartials from '../partials'
 import PagesContext from '../contexes/PagesContext'
 
 const ContentWrapper = styled.div`
@@ -18,10 +18,13 @@ export default function CourseContentTemplate({
 }) {
   const { frontmatter, htmlAst } = data.page
   const allPages = data.allPages.edges.map(o => o.node?.frontmatter)
+  const partials = getNamedPartials()
   const renderAst = new rehypeReact({
     createElement: React.createElement,
-    components: Partials,
+    components: partials,
   }).Compiler
+  console.log(data.page.html)
+  console.log(Object.keys(partials))
   return (
     <PagesContext.Provider value={{
       all: allPages,
@@ -46,6 +49,7 @@ export const pageQuery = graphql`
   query($path: String!) {
     page: markdownRemark(frontmatter: { path: { eq: $path } }) {
       htmlAst
+      html
       frontmatter {
         path
         title
