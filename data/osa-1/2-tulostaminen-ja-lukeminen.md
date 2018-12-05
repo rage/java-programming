@@ -1,20 +1,20 @@
 ---
-path: "/osa-1/2-tulostaminen-ja-lukeminen"
-title: "Tulostaminen ja lukeminen"
+path: '/osa-1/2-tulostaminen-ja-lukeminen'
+title: 'Tulostaminen ja lukeminen'
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
-* Osaat kirjoittaa ohjelman, joka tulostaa tekstiä.
-* Tutustut pinnallisesti käsitteeseen muuttuja
-* Osaat luoda merkkijonomuuttujan (String) ja käyttää merkkijonomuuttujaa osana tekstiä tulostavaa ohjelmaa.
-* Osaat luoda uuden merkkijonomuuttujan useampia merkkijonoja yhdistelemällä.
-* Osaat kirjoittaa ohjelman, joka pyytää käyttäjältä tekstimuotoista syötettä.
-* Osaat käyttää kurssilla käytetyn ohjelmointiympäristön TMC:n perustoiminnallisuuksia, eli osaat..
-    * ladata tehtävät TMC:n avulla
-    * suorittaa tehtävän TMC:n avulla
-    * testata tehtävää TMC:n avulla
-    * palauttaa tehtävän arvostelua varten TMC:n avulla
+- Osaat kirjoittaa ohjelman, joka tulostaa tekstiä.
+- Tutustut pinnallisesti käsitteeseen muuttuja
+- Osaat luoda merkkijonomuuttujan (String) ja käyttää merkkijonomuuttujaa osana tekstiä tulostavaa ohjelmaa.
+- Osaat luoda uuden merkkijonomuuttujan useampia merkkijonoja yhdistelemällä.
+- Osaat kirjoittaa ohjelman, joka pyytää käyttäjältä tekstimuotoista syötettä.
+- Osaat käyttää kurssilla käytetyn ohjelmointiympäristön TMC:n perustoiminnallisuuksia, eli osaat..
+  - ladata tehtävät TMC:n avulla
+  - suorittaa tehtävän TMC:n avulla
+  - testata tehtävää TMC:n avulla
+  - palauttaa tehtävän arvostelua varten TMC:n avulla
 
 </text-box>
 
@@ -167,7 +167,11 @@ Komennon `System.out.println("...")` kirjoittaminen voi olla melko työlästä. 
 
 Alla oleva animaatio kuvaa sout-komennon käyttöä. Kun käyttäjä on kirjoittanut sout, hän painaa tabulaattoria. Taikatemppu!
 
-![](../img/sout.gif) <% end %>                                 <% partial 'partials/exercise', locals: { name: 'Olipa kerran', model\_solution: '50208' } do %>
+![](../img/sout.gif)
+
+</text-box>
+
+<programming-exercise name='Olipa kerran'>
 
 Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
 
@@ -183,7 +187,7 @@ Muokkaa ohjelmaa siten, että ohjelman suoritus tulostaa seuraavanlaisen tekstin
 
 <sample-output>
 
- Olipa kerran... on ranskalainen opetusanimaatiosarjojen kokoelma. Kokoelmaan kuuluu seitsemän erillistä sarjaa, jotka käsittelevät eri tiedonaloja. Useimmat sarjoista liittyvät historiaan; Olipa kerran ihminen keskittyy ihmiskunnan historiaan ja kehitykseen, kun muut kertovat erityisistä historian alueista, kuten löytöretkeilijöistä tai keksijöistä.
+Olipa kerran... on ranskalainen opetusanimaatiosarjojen kokoelma. Kokoelmaan kuuluu seitsemän erillistä sarjaa, jotka käsittelevät eri tiedonaloja. Useimmat sarjoista liittyvät historiaan; Olipa kerran ihminen keskittyy ihmiskunnan historiaan ja kehitykseen, kun muut kertovat erityisistä historian alueista, kuten löytöretkeilijöistä tai keksijöistä.
 
 </sample-output>
 
@@ -247,10 +251,10 @@ Olemme käyttäneet lausetta `System.out.println("tulostettava");` merkkijonon t
 
 Tulostamiseen on kaksi lausetta:
 
-* `System.out.println("sana");` tulostaa tekstin "sana" ja loppurivinvaihdon
-* `System.out.print("sana");` tulostaa tekstin "sana" ilman loppurivinvaihtoa
+- `System.out.println("sana");` tulostaa tekstin "sana" ja loppurivinvaihdon
+- `System.out.print("sana");` tulostaa tekstin "sana" ilman loppurivinvaihtoa
 
-Tulostettavan tekstin osana voi olla erikoismerkkejä, joista tärkein on rivinvaihto. Rivinvaihto ilmaistaan kenoviivalla ja n-merkillä seuraavasti: `\n`. Erikoismerkkejä on [muitakin](http://en.wikipedia.org/wiki/Escape_character "Escape character - Wikipedia, the free encyclopedia").
+Tulostettavan tekstin osana voi olla erikoismerkkejä, joista tärkein on rivinvaihto. Rivinvaihto ilmaistaan kenoviivalla ja n-merkillä seuraavasti: `\n`. Erikoismerkkejä on [muitakin](http://en.wikipedia.org/wiki/Escape_character 'Escape character - Wikipedia, the free encyclopedia').
 
 ```java
 System.out.println("Ensimmäinen\\nToinen\\nKolmas");
@@ -316,12 +320,13 @@ public class Ohjelma {
     }
 }
 ```
+
 ### Kommentit
 
 Lähdekoodia voi kommentoida selkeyttääkseen sitä tai lisätäkseen muistiinpanoja kahdella eri tavalla.
 
-* Yhden rivin kommentit aloitetaan kahdella vinoviivalla, `//`. Kaikki kahta vinoviivaa seuraava samalla rivillä oleva teksti tulkitaan kommentiksi.
-* Useamman rivin kommentit aloitetaan yhdellä vinoviivalla ja tähdellä `/*` ja lopetetaan tähdellä ja vinoviivalla `*/`. Kaikki useamman rivin kommentin aloittavan ja lopettavan alueen välillä tulkitaan kommentiksi.
+- Yhden rivin kommentit aloitetaan kahdella vinoviivalla, `//`. Kaikki kahta vinoviivaa seuraava samalla rivillä oleva teksti tulkitaan kommentiksi.
+- Useamman rivin kommentit aloitetaan yhdellä vinoviivalla ja tähdellä `/*` ja lopetetaan tähdellä ja vinoviivalla `*/`. Kaikki useamman rivin kommentin aloittavan ja lopettavan alueen välillä tulkitaan kommentiksi.
 
 Alla on esimerkki ohjelmasta, jossa kumpikin kommenttityyppi on käytössä.
 
@@ -382,7 +387,6 @@ Merkkijonoliteraalin voi asettaa myös merkkijonomuotoisen muuttujan arvoksi. Mu
 
 Merkkijonomuotoinen muuttuja nimeltä `viesti`, jonka arvona on merkkijono "Hei maailma!", luodaan seuraavasti.
 
-
 ```java
   String viesti = "Hei maailma!";
 ```
@@ -402,12 +406,10 @@ Hei maailma!
 
 Mikäli ohjelmassa olisi hipsut merkkijonomuuttujan `viesti` nimen ympärillä, tulostaisi ohjelma tekstin "viesti" muuttujan `viesti` arvon eli tekstin "Hei maailma!" sijaan.
 
-
 ```java
   String viesti = "Hei maailma!";
   System.out.println("viesti");
 ```
-
 
 <sample-output>
 
@@ -417,9 +419,7 @@ viesti
 
 <programming-exercise name='Passi ja hammasharja'>
 
-
 Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
-
 
 ```java
     public class PassiJaHammasharja {
@@ -473,7 +473,6 @@ Edellistä esimerkkiä noudattaen myös merkkijonomuuttujan arvon ja merkkijonol
       }
   }
 ```
-
 
 <sample-output>
 Hei maailma!
@@ -627,11 +626,11 @@ Alla sama esimerkki, mutta siten, että käyttäjän syöttämä merkkijono tulo
 
  <sample-output>
 
- Syötä viesti:
+Syötä viesti:
 
- selkeä
+selkeä
 
- Viestisi oli selkeä
+Viestisi oli selkeä
 
  </sample-output>
 
