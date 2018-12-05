@@ -21,13 +21,15 @@
 // export default getNamedPartials
 
 import Test from './Test'
-import PagesInThisSection from "./PagesInThisSection"
-import ProgrammingExercise from "./ProgrammingExercise"
+import PagesInThisSection from './PagesInThisSection'
+import ProgrammingExercise from './ProgrammingExercise'
+import TextBox from './TextBox'
 
 const mapping = {
-  "test": Test,
-  "pages-in-this-section": PagesInThisSection,
-  "programming-exercise": ProgrammingExercise
+  test: Test,
+  'pages-in-this-section': PagesInThisSection,
+  'programming-exercise': ProgrammingExercise,
+  'text-box': TextBox,
 }
 
 export default () => {
