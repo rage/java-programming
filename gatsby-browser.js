@@ -5,4 +5,4 @@
  */
 
  // You can delete this file if you're not using it
-require("prismjs/themes/prism-solarizedlight.css")
+require("prismjs/themes/prism-tomorrow.css")
