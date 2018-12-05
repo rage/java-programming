@@ -146,7 +146,7 @@ Komennon `System.out.println("...")` kirjoittaminen voi olla melko työlästä. 
 
 Alla oleva animaatio kuvaa sout-komennon käyttöä. Kun käyttäjä on kirjoittanut sout, hän painaa tabulaattoria. Taikatemppu!
 
-![](/img/sout.gif) <% end %>                                 <% partial 'partials/exercise', locals: { name: 'Olipa kerran', model\_solution: '50208' } do %>
+![](../img/sout.gif) <% end %>                                 <% partial 'partials/exercise', locals: { name: 'Olipa kerran', model\_solution: '50208' } do %>
 
 Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
 
@@ -245,11 +245,11 @@ Esimerkiksi ohjelman käynnistämiskohdan määrittelevä merkkijono `public sta
 
 Alla olevassa kuvassa on näytettynä Ohjelma-nimisen luokan rajaama lohko. Lohko alkaa merkkijonon `public class Ohjelma` jälkeen alkavasta aaltosulusta ja päättyy viimeiseen aaltosulkuun.
 
-![](/img/lohkoesimerkki-1.png)
+![Esimerkki lohkoista](../img/lohkoesimerkki-1.png)
 
 Yllä olevan esimerkin lohko sisältää toisen lohkon. Tämä lohko alkaa merkkijonosta `public static void main(String[] args)` ja sisältää ohjelman käynnistymisessä suoritettavan lähdekoodin.
 
-![](/img/lohkoesimerkki-2.png)
+![](../img/lohkoesimerkki-2.png)
 
 Laajemmin lohkojen merkitystä voi ajatella suoritettavan ohjelman rakenteen kuvaajina. Merkkijonosta `public class _Ohjelma_` alkava lohko sisältää koko ohjelman rakenteen, kun taas merkkijonosta `public static void main(String[] args)` alkava lohko sisältää ohjelman käynnistyksen jälkeen suoritettavan lähdekoodin.
 

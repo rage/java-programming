@@ -172,7 +172,7 @@ Vertailuoperaattoreita voi käyttää myös ehtojen ulkopuolella. Tällöin vert
 
 Yllä olevassa esimerkissä totuusarvomuuttuja `onkoSuurempi` sisältää nyt totuusarvon _false_. Yllä olevaa esimerkkiä voi myös jatkaa ja ottaa siihen mukaan ehtolauseen.
 
-<% partial 'partials/code\_highlight' do %> int eka = 1; int toka = 3; boolean onkoPienempi = eka < toka; if (onkoPienempi) { System.out.println("1 on pienempi kuin 3!"); } <% end %> ![](/img/drawings/boolean-muuttuja.png)
+<% partial 'partials/code\_highlight' do %> int eka = 1; int toka = 3; boolean onkoPienempi = eka < toka; if (onkoPienempi) { System.out.println("1 on pienempi kuin 3!"); } <% end %> ![](../img/drawings/boolean-muuttuja.png)
 
 Yllä olevassa kuvassa ohjelmakoodia on suoritettu niin pitkään, että ohjelman muuttujat on luotu ja niihin on asetettu arvot. Muuttujassa `onkoPienempi` on arvona `true`. Seuraavana suoritetaan vertailu `if (onkoPienempi)` \-- muuttujaan `onkoPienempi` liittyvä arvo löytyy sen lokerosta, ja lopulta ohjelma tulostaa:
 
