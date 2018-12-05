@@ -2,537 +2,294 @@
 path: "/osa-1/2-tulostaminen-ja-lukeminen"
 title: "Tulostaminen ja lukeminen"
 ---
+<% partial 'partials/learning\_objectives', locals: { name: 'Oppimistavoitteet' } do %>
 
-<% partial 'partials/learning_objectives', locals: { name: 'Oppimistavoitteet' } do %>
-
-  <ul>
-    <li>
-      Osaat kirjoittaa ohjelman, joka tulostaa tekstiä.
-    </li>
-    <li>
-      Tutustut pinnallisesti käsitteeseen muuttuja
-    </li>
-    <li>
-      Osaat luoda merkkijonomuuttujan (String) ja käyttää merkkijonomuuttujaa osana tekstiä tulostavaa ohjelmaa.
-    </li>
-    <li>
-      Osaat luoda uuden merkkijonomuuttujan useampia merkkijonoja yhdistelemällä.
-    </li>
-    <li>
-      Osaat kirjoittaa ohjelman, joka pyytää käyttäjältä tekstimuotoista syötettä.
-    </li>
-    <li>
-      Osaat käyttää kurssilla käytetyn ohjelmointiympäristön TMC:n perustoiminnallisuuksia, eli osaat..
-      <ul>
-	      <li>ladata tehtävät TMC:n avulla</li>
-	      <li>suorittaa tehtävän TMC:n avulla</li>
-	      <li>testata tehtävää TMC:n avulla</li>
-	      <li>palauttaa tehtävän arvostelua varten TMC:n avulla</li>
-      </ul>
-    </li>
-
-  </ul>
+* Osaat kirjoittaa ohjelman, joka tulostaa tekstiä.
+* Tutustut pinnallisesti käsitteeseen muuttuja
+* Osaat luoda merkkijonomuuttujan (String) ja käyttää merkkijonomuuttujaa osana tekstiä tulostavaa ohjelmaa.
+* Osaat luoda uuden merkkijonomuuttujan useampia merkkijonoja yhdistelemällä.
+* Osaat kirjoittaa ohjelman, joka pyytää käyttäjältä tekstimuotoista syötettä.
+* Osaat käyttää kurssilla käytetyn ohjelmointiympäristön TMC:n perustoiminnallisuuksia, eli osaat..
+    * ladata tehtävät TMC:n avulla
+    * suorittaa tehtävän TMC:n avulla
+    * testata tehtävää TMC:n avulla
+    * palauttaa tehtävän arvostelua varten TMC:n avulla
 
 <% end %>
 
 # Ohjelmarunko
 
-<p>
-  Java-ohjelmat vaativat toimiakseen ohjelmarungon. Ohjelmarunko on seuraavanlainen.
-</p>
+Java-ohjelmat vaativat toimiakseen ohjelmarungon. Ohjelmarunko on seuraavanlainen.
 
-<% partial 'partials/code_highlight' do %>
-  public class Esimerkki {
-      public static void main(String[] args) {
+```java
+public class Esimerkki {
+    public static void main(String\[\] args) {
+        // Tänne kirjoitetaan ohjelman käyttämät lauseet
+        System.out.println("Tulostettava teksti");
+    }
+}
+```
 
-          // Tänne kirjoitetaan ohjelman käyttämät lauseet
-          System.out.println("Tulostettava teksti");
-      }
-  }
-<% end %>
+Ohjelmarunkomme sisältää Java-ohjelmointikielelle oleellisia osia. Ohjelman suoritus alkaa riviä `public static void main(String[] args) {` seuraavalta riviltä ja päättyy sulkevaan aaltosulkuun `}`. Lauseet suoritetaan yksi kerrallaan. Tällä hetkellä ainoa suoritettava lause on `System.out.println("Tulostettava teksti");`, mikä tulostaa tekstin "Tulostettava teksti".
 
-<p>
-  Ohjelmarunkomme sisältää Java-ohjelmointikielelle oleellisia osia. Ohjelman suoritus alkaa riviä <code>public static void main(String[] args) {</code> seuraavalta riviltä ja päättyy sulkevaan aaltosulkuun <code>}</code>. Lauseet suoritetaan yksi kerrallaan. Tällä hetkellä ainoa suoritettava lause on <code>System.out.println("Tulostettava teksti");</code>, mikä tulostaa tekstin "Tulostettava teksti".
-</p>
+Tulemme myöhemmin tutustumaan tarkemmin sanojen `public class` ja `public static void` merkitykseen.
 
-<p>
-  Tulemme myöhemmin tutustumaan tarkemmin sanojen <code>public class</code> ja <code>public static void</code> merkitykseen.
-</p>
+Jatkossa materiaalin esimerkeissä ei aina erikseen näytetä ohjelmarunkoa, mutta voit olettaa, että se tarvitaan.
 
-<p>
-  Jatkossa materiaalin esimerkeissä ei aina erikseen näytetä ohjelmarunkoa, mutta voit olettaa, että se tarvitaan.
-</p>
+Materiaalin esimerkeissä ei käytetä aina ohjelmarunkoa, mutta voit olettaa, että se tarvitaan aina. Esimerkit voivat siis olla esimerkiksi yhden rivin mittaisia kuten alla oleva tulostusesimerkki.
 
-<p>
-  Materiaalin esimerkeissä ei käytetä aina ohjelmarunkoa, mutta voit olettaa, että se tarvitaan aina. Esimerkit voivat siis olla esimerkiksi yhden rivin mittaisia kuten alla oleva tulostusesimerkki.
-</p>
+```java
+System.out.println("Hei maailma!");
+```
 
-<% partial 'partials/code_highlight' do %>
-  System.out.println("Hei maailma!");
-<% end %>
+Todellisuudessa yllä oleva esimerkki näyttää Java-kielisellä ohjelmalla kuitenkin seuraavalta.
 
-<p>
-  Todellisuudessa yllä oleva esimerkki näyttää Java-kielisellä ohjelmalla kuitenkin seuraavalta.
-</p>
-
-<% partial 'partials/code_highlight' do %>
-  public class Esimerkki {
-      public static void main(String[] args) {
-
-          // Tänne kirjoitetaan ohjelman käyttämät lauseet
-          System.out.println("Hei maailma!");
-      }
-  }
-<% end %>
-
-
-<% partial 'partials/material_sub_heading' do %>
-  Tulostuskomento
-<% end %>
-
-<p>
-  Ensimmäinen komento, jonka opimme on tulostuskomento. Komento <code>System.out.println("Hei maailma");</code> tulostaa tekstin "Hei maailma". Tulostettavaa tekstiä voi vaihtaa mielivaltaisesti, kunhan komento <code>System.out.println("mielivaltainen teksti");</code> -- eli <code>System</code> piste <code>out</code> piste <code>println</code> sulut auki <code>(</code> "teksti" sulut kiinni <code>)</code> ja puolipiste <code>;</code> pysyy muuttumattomana.
-</p>
-
-<p>
-  Kuten johdannossa todettiin, <em>Lause System.out.println on Java-ohjelmointikielen valmiiksi tarjoama komento, jota käytetään merkkijonon tulostamiseen. Komento käytännössä käskee tietokonetta tulostamaan sille sulkeiden sisällä hipsuissa annetun merkkijonon. Komennon pääte ln on lyhenne sanasta line, eli komentoa käyttämällä merkkijonon jälkeen tulostetaan myös rivinvaihto. Lauseen loppuun kirjoitetaan puolipiste ;.</em>
-</p>
-
-<% partial 'partials/code_highlight' do %>
-public class Ohjelma {
-
-    public static void main(String[] args) {
+```java
+public class Esimerkki {
+    public static void main(String\[\] args) {
+        // Tänne kirjoitetaan ohjelman käyttämät lauseet
         System.out.println("Hei maailma!");
     }
 }
-<% end %>
+```
 
-<p>
-  Alla oleva tekstialue on materiaalissa käytettävä esimerkki ohjelman tuottamaan tulostukseen. Yllä oleva ohjelma tuottaisi siis tulostuksen "Hei maailma!". Voit kokeilla kaikkia materiaalin esimerkkejä ohjelmointiympäristössä olevassa "Hiekkalaatikko"-nimisessä tehtäväpohjassa.
-</p>
+<% partial 'partials/material\_sub\_heading' do %> Tulostuskomento<% end %>
 
-<% partial 'partials/sample_output' do %>
-  Hei maailma!
-<% end %>
+Ensimmäinen komento, jonka opimme on tulostuskomento. Komento `System.out.println("Hei maailma");` tulostaa tekstin "Hei maailma". Tulostettavaa tekstiä voi vaihtaa mielivaltaisesti, kunhan komento `System.out.println("mielivaltainen teksti");` -- eli `System` piste `out` piste `println` sulut auki `(` "teksti" sulut kiinni `)` ja puolipiste `;` pysyy muuttumattomana.
 
-<% partial 'partials/hint', locals: { name: 'Ohjelmoinnin aloittaminen' } do %>
+Kuten johdannossa todettiin, _Lause System.out.println on Java-ohjelmointikielen valmiiksi tarjoama komento, jota käytetään merkkijonon tulostamiseen. Komento käytännössä käskee tietokonetta tulostamaan sille sulkeiden sisällä hipsuissa annetun merkkijonon. Komennon pääte ln on lyhenne sanasta line, eli komentoa käyttämällä merkkijonon jälkeen tulostetaan myös rivinvaihto. Lauseen loppuun kirjoitetaan puolipiste ;._
 
-  <p>
-    Ohjelmoinnin aloittamiseen tarvitset seuraavat asiat.
-  </p>
+```java
+public class Ohjelma {
+    public static void main(String\[\] args) {
+        System.out.println("Hei maailma!");
+    }
+}
+```
 
-  <ol>
-    <li>
-      Käyttäjätunnuksen kurssilla käytettyyn TMC-järjestelmään.
-    </li>
-    <li>
-      Javan (Java JDK).
-    </li>
-    <li>
-      NetBeans with TMC-ohjelmointiympäristön.
-    </li>
-  </ol>
+Alla oleva tekstialue on materiaalissa käytettävä esimerkki ohjelman tuottamaan tulostukseen. Yllä oleva ohjelma tuottaisi siis tulostuksen "Hei maailma!". Voit kokeilla kaikkia materiaalin esimerkkejä ohjelmointiympäristössä olevassa "Hiekkalaatikko"-nimisessä tehtäväpohjassa.
 
-  <p>
-    Ohjeistus oleellisten työvälineiden asentamiseen sekä kurssilla tarvittavan käyttäjätunnuksen luomiseen löytyy osoitteesta <a href="https://materiaalit.github.io/tmc-asennus/netbeans/" target="_blank">https://materiaalit.github.io/tmc-asennus/netbeans/</a>.
-  </p>
+<% partial 'partials/sample\_output' do %> Hei maailma! <% end %>                                 <% partial 'partials/hint', locals: { name: 'Ohjelmoinnin aloittaminen' } do %>
 
-  <div class="text-center text-xs-center">
-    <p>
-      <a class="btn btn-success btn-xs" href="https://materiaalit.github.io/tmc-asennus/netbeans/" target="_blank">
-	Ohjeisiin!
-      </a>
-    </p>
-  </div>
+Ohjelmoinnin aloittamiseen tarvitset seuraavat asiat.
+
+1.  Käyttäjätunnuksen kurssilla käytettyyn TMC-järjestelmään.
+2.  Javan (Java JDK).
+3.  NetBeans with TMC-ohjelmointiympäristön.
+
+Ohjeistus oleellisten työvälineiden asentamiseen sekä kurssilla tarvittavan käyttäjätunnuksen luomiseen löytyy osoitteesta [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/).
+
+[Ohjeisiin!](https://materiaalit.github.io/tmc-asennus/netbeans/)
 
 <% end %>
 
-<p>
-  Alla on kurssin ensimmäiset ohjelmointitehtävät. Ensimmäinen tehtävä -- "Hiekkalaatikko" -- on oikeastaan ympäristö, missä voit tehdä omia kokeilujasi.  Toisessa tehtävässä -- "Ada Lovelace" teet jo määrättyjä asioita.
-</p>
+Alla on kurssin ensimmäiset ohjelmointitehtävät. Ensimmäinen tehtävä -- "Hiekkalaatikko" -- on oikeastaan ympäristö, missä voit tehdä omia kokeilujasi. Toisessa tehtävässä -- "Ada Lovelace" teet jo määrättyjä asioita.
 
-<p>
-   Ohjelmointitehtävien tehtävänannot löytyvät kurssimateriaalista (eli materiaalista mitä juuri luet). Tehtävänannon saa auki klikkaamalla tehtävänannon otsikkoa (alla "Ada Lovelace"). Tehtäväpohjat löytyvät TMC:stä (asennusohjeet yllä kohdassa "Ohjelmoinnin aloittaminen").
-</p>
+Ohjelmointitehtävien tehtävänannot löytyvät kurssimateriaalista (eli materiaalista mitä juuri luet). Tehtävänannon saa auki klikkaamalla tehtävänannon otsikkoa (alla "Ada Lovelace"). Tehtäväpohjat löytyvät TMC:stä (asennusohjeet yllä kohdassa "Ohjelmoinnin aloittaminen").
 
-<p>
-  Voit katsoa ohjeet aloittamiseen myös seuraavalta videolta.
-</p>
+Voit katsoa ohjeet aloittamiseen myös seuraavalta videolta.
 
-<p>
-  <%= partial 'partials/youtube_2', locals: { id: 'lxehAkYVEGo' } %>
-</p>
-
+<%= partial 'partials/youtube\_2', locals: { id: 'lxehAkYVEGo' } %>
 
 <% partial 'partials/exercise', locals: { name: 'Hiekkalaatikko' } do %>
 
-  <p>
-    Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
-  </p>
+Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
 
-  <% partial 'partials/code_highlight' do %>
-    public class Hiekkalaatikko {
-
-        public static void main(String[] args) {
-            // Kirjoita ohjelmasi tähän alle
-
-        }
+```java
+public class Hiekkalaatikko {
+    public static void main(String\[\] args) {
+        // Kirjoita ohjelmasi tähän alle
     }
-  <% end %>
+}
+```
 
-  <p>
-    Voit tehdä tehtäväpohjaan omia kokeilujasi. Pisteet tehtävästä saa kun palauttaa toimivan ohjelman -- ohjelma voi olla käytännössä minkälainen tahansa, jopa tyhjä ohjelma kelpaa.
-  </p>
+Voit tehdä tehtäväpohjaan omia kokeilujasi. Pisteet tehtävästä saa kun palauttaa toimivan ohjelman -- ohjelma voi olla käytännössä minkälainen tahansa, jopa tyhjä ohjelma kelpaa.
+
+<% end %>                                 <% partial 'partials/exercise', locals: { name: 'Ada Lovelace', model\_solution: '50207' } do %>
+
+Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
+
+```java
+public class Nimi {
+    public static void main(String\[\] args) {
+        // Kirjoita ohjelmasi tähän alle
+    }
+}
+```
+
+Rivi "// Kirjoita ohjelmasi tähän alle" on _kommenttirivi_, jota tietokone ei ota huomioon ohjelmaa suoritettaessa. Lisää kommenttirivin alle lause, joka tulostaa merkkijonon "Ada Lovelace" ja suorita ohjelma. Ohjelman tulostuksen tulee olla seuraavanlainen:
+
+<% partial 'partials/sample\_output' do %> Ada Lovelace <% end %>
+
+Kun olet tehnyt tehtävän ja huomaat, että ohjelma tulostaa halutun merkkijonon, palauta tehtävä TMC:lle. Tutustu tämän jälkeen halutessasi lisää [Ada Lovelaceen](https://en.wikipedia.org/wiki/Ada_Lovelace), joka oli yksi ensimmäisistä ohjelmoijista.
 
 <% end %>
 
+Tehtävänannoissa olevat toiveet tulostusmuodosta ovat tarkkoja. Jos tehtävänannossa toivotaan esimerkiksi että ohjelma tulostaa sulun toisen rivin ensimmäiseksi merkiksi, ei sulkua saa jättää tulostamatta.
 
-<% partial 'partials/exercise', locals: { name: 'Ada Lovelace', model_solution: '50207' } do %>
+Ohjelmia rakennetaan komento komennolta, missä jokainen komento tulee uudelle rivilleen. Alla olevassa esimerkissä komento `System.out.println` esiintyy kahdesti, joka tarkoittaa sitä että ohjelmassa suoritetaan kaksi tulostuskomentoa.
 
-  <p>
-    Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
-  </p>
-
-  <% partial 'partials/code_highlight' do %>
-    public class Nimi {
-
-        public static void main(String[] args) {
-            // Kirjoita ohjelmasi tähän alle
-
-        }
-    }
-  <% end %>
-
-  <p>
-    Rivi "// Kirjoita ohjelmasi tähän alle" on <em>kommenttirivi</em>, jota tietokone ei ota huomioon ohjelmaa suoritettaessa. Lisää kommenttirivin alle lause, joka tulostaa merkkijonon "Ada Lovelace" ja suorita ohjelma. Ohjelman tulostuksen tulee olla seuraavanlainen:
-  </p>
-
-  <% partial 'partials/sample_output' do %>
-    Ada Lovelace
-  <% end %>
-
-  <p>
-    Kun olet tehnyt tehtävän ja huomaat, että ohjelma tulostaa halutun merkkijonon, palauta tehtävä TMC:lle. Tutustu tämän jälkeen halutessasi lisää <a href="https://en.wikipedia.org/wiki/Ada_Lovelace" target="_blank" rel="noopener">Ada Lovelaceen</a>, joka oli yksi ensimmäisistä ohjelmoijista.
-  </p>
-
-<% end %>
-
-<p>
-  Tehtävänannoissa olevat toiveet tulostusmuodosta ovat tarkkoja. Jos tehtävänannossa toivotaan esimerkiksi että ohjelma tulostaa sulun toisen rivin ensimmäiseksi merkiksi, ei sulkua saa jättää tulostamatta.
-</p>
-
-<p>
-  Ohjelmia rakennetaan komento komennolta, missä jokainen komento tulee uudelle rivilleen. Alla olevassa esimerkissä komento <code>System.out.println</code> esiintyy kahdesti, joka tarkoittaa sitä että ohjelmassa suoritetaan kaksi tulostuskomentoa.
-</p>
-
-
-
-<% partial 'partials/code_highlight' do %>
+```java
 public class Ohjelma {
-
-    public static void main(String[] args) {
+    public static void main(String\[\] args) {
         System.out.println("Hei maailma!");
         System.out.println("... ja maailmankaikkeus!");
     }
 }
-<% end %>
+```
 
-<p>
-  Yllä olevan ohjelman tulostus on seuraava.
-</p>
+Yllä olevan ohjelman tulostus on seuraava.
 
-<% partial 'partials/sample_output' do %>
-Hei maailma!
-... ja maailmankaikkeus!
-<% end %>
+<% partial 'partials/sample\_output' do %> Hei maailma! ... ja maailmankaikkeus! <% end %>                                 <% partial 'partials/hint', locals: { name: 'Lyhenne "sout"' } do %>
 
-<% partial 'partials/hint', locals: { name: 'Lyhenne "sout"' } do %>
+Komennon `System.out.println("...")` kirjoittaminen voi olla melko työlästä. Kokeile kirjoittaa NetBeans:iin (main:in sisään) tyhjälle riville _sout_ ja paina tabulaattoria (näppäin q:n vasemmalla puolella). Mitä tapahtuu? Tämä pieni apuväline säästänee jatkossa runsaasti aikaasi.
 
-  <p>
-    Komennon <code>System.out.println("...")</code> kirjoittaminen voi olla melko työlästä. Kokeile kirjoittaa NetBeans:iin (main:in sisään) tyhjälle riville <em>sout</em> ja paina tabulaattoria (näppäin q:n vasemmalla puolella). Mitä tapahtuu? Tämä pieni apuväline säästänee jatkossa runsaasti aikaasi.
-  </p>
+Alla oleva animaatio kuvaa sout-komennon käyttöä. Kun käyttäjä on kirjoittanut sout, hän painaa tabulaattoria. Taikatemppu!
 
-  <p>
-    Alla oleva animaatio kuvaa sout-komennon käyttöä. Kun käyttäjä on kirjoittanut sout, hän painaa tabulaattoria. Taikatemppu!
-  </p>
+![](/img/sout.gif) <% end %>                                 <% partial 'partials/exercise', locals: { name: 'Olipa kerran', model\_solution: '50208' } do %>
 
+Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
 
-  <img class="naytto" src="/img/sout.gif"/>
+```java
+public class OlipaKerran {
+    public static void main(String\[\] args) {
 
-<% end %>
-
-
-
-<% partial 'partials/exercise', locals: { name: 'Olipa kerran', model_solution: '50208' } do %>
-
-  <p>
-    Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
-  </p>
-
-  <% partial 'partials/code_highlight' do %>
-    public class OlipaKerran {
-
-        public static void main(String[] args) {
-
-        }
     }
-  <% end %>
+}
+```
 
-  <p>
-    Muokkaa ohjelmaa siten, että ohjelman suoritus tulostaa seuraavanlaisen tekstin. Käytä tekstin tulostamiseen kuutta <code>System.out.println</code> komentoa.
-  </p>
+Muokkaa ohjelmaa siten, että ohjelman suoritus tulostaa seuraavanlaisen tekstin. Käytä tekstin tulostamiseen kuutta `System.out.println` komentoa.
 
-  <% partial 'partials/sample_output' do %>
-    Olipa kerran... on ranskalainen opetusanimaatiosarjojen kokoelma.
-    Kokoelmaan kuuluu seitsemän erillistä sarjaa, jotka käsittelevät
-    eri tiedonaloja. Useimmat sarjoista liittyvät historiaan; Olipa
-    kerran ihminen keskittyy ihmiskunnan historiaan ja kehitykseen,
-    kun muut kertovat erityisistä historian alueista, kuten
-    löytöretkeilijöistä tai keksijöistä.
-  <% end %>
+<% partial 'partials/sample\_output' do %> Olipa kerran... on ranskalainen opetusanimaatiosarjojen kokoelma. Kokoelmaan kuuluu seitsemän erillistä sarjaa, jotka käsittelevät eri tiedonaloja. Useimmat sarjoista liittyvät historiaan; Olipa kerran ihminen keskittyy ihmiskunnan historiaan ja kehitykseen, kun muut kertovat erityisistä historian alueista, kuten löytöretkeilijöistä tai keksijöistä. <% end %> <% end %>
 
-<% end %>
+Tarkalleen ottaen komento `System.out.println("merkkijono");` tulostaa tekstin "merkkijono" sekä rivinvaihdon. Rivinvaihdon voi halutessaan tulostaa myös erikoismerkillä `\n`, joka kirjoitetaan osaksi tulostettavaa merkkijonoa. Esimerkiksi seuraavan tulostuksen saa aikaan ainakin kahdella eri tapaa.
 
-<p>
-  Tarkalleen ottaen komento <code>System.out.println("merkkijono");</code> tulostaa tekstin "merkkijono" sekä rivinvaihdon. Rivinvaihdon voi halutessaan tulostaa myös erikoismerkillä <code>\n</code>, joka kirjoitetaan osaksi tulostettavaa merkkijonoa. Esimerkiksi seuraavan tulostuksen saa aikaan ainakin kahdella eri tapaa.
-</p>
+<% partial 'partials/sample\_output' do %> Hei maailma! ... ja maailmankaikkeus! <% end %>
 
+Toinen vaihtoehto on kahden `System.out.println`\-komennon käyttäminen, yksi kummallekin riville. Toinen on yhden `System.out.println`\-komennon käyttäminen siten, että tulostettava merkkijono sisältää rivinvaihtomerkin `\n`. Tämä näyttäisi ohjelmassa seuraavalta.
 
-<% partial 'partials/sample_output' do %>
-  Hei maailma!
-  ... ja maailmankaikkeus!
-<% end %>
-
-<p>
-  Toinen vaihtoehto on kahden <code>System.out.println</code>-komennon käyttäminen, yksi kummallekin riville. Toinen on yhden <code>System.out.println</code>-komennon käyttäminen siten, että tulostettava merkkijono sisältää rivinvaihtomerkin <code>\n</code>. Tämä näyttäisi ohjelmassa seuraavalta.
-</p>
-
-
-<% partial 'partials/code_highlight' do %>
-  public class Ohjelma {
-
-      public static void main(String[] args) {
-          System.out.println("Hei maailma!\n... ja maailmankaikkeus!");
-      }
-  }
-<% end %>
-
-<% partial 'partials/exercise', locals: { name: 'Olipa kerran maa', model_solution: '50209' } do %>
-
-  <p>
-    Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
-  </p>
-
-  <% partial 'partials/code_highlight' do %>
-    public class OlipaKerranMaa {
-
-        public static void main(String[] args) {
-
-        }
+```java
+public class Ohjelma {
+    public static void main(String\[\] args) {
+        System.out.println("Hei maailma!\\n... ja maailmankaikkeus!");
     }
-  <% end %>
+}
+```
 
-  <p>
-    Muokkaa ohjelmaa siten, että ohjelman suoritus tulostaa seuraavanlaisen tekstin. Käytä tekstin tulostamiseen yhtä <code>System.out.println</code> komentoa.
-  </p>
+ <% partial 'partials/exercise', locals: { name: 'Olipa kerran maa', model\_solution: '50209' } do %>
 
-  <% partial 'partials/sample_output' do %>
-    Olipa kerran maa valmistui vuonna 2008. Sarja käsittelee
-    luontoympäristön suojelemista ja varoittaa maailmanlaajuisesta
-    ilmastonlämpenemisestä, kasvihuoneilmiöstä, saasteista ja
-    niin edelleen.
-  <% end %>
+Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
 
-<% end %>
+```java
+public class OlipaKerranMaa {
+    public static void main(String\[\] args) {
 
-<p>
-  Mikäli merkkijonosta muodostuu hyvin pitkä, voi sen pilkkoa useampaan osaan. Tämä tapahtuu
-  rajaamalla jokainen merkkijonon osa hipsuilla ja yhdistämällä osat <code>+</code>-merkillä. Tällöin tulostettavan merkkijonon voi esittää useammalla rivillä, vaikka tulostuskomentoja olisi vain yksi.
-</p>
+    }
+}
+```
 
+Muokkaa ohjelmaa siten, että ohjelman suoritus tulostaa seuraavanlaisen tekstin. Käytä tekstin tulostamiseen yhtä `System.out.println` komentoa.
 
-<% partial 'partials/code_highlight' do %>
-  public class Ohjelma {
+<% partial 'partials/sample\_output' do %> Olipa kerran maa valmistui vuonna 2008. Sarja käsittelee luontoympäristön suojelemista ja varoittaa maailmanlaajuisesta ilmastonlämpenemisestä, kasvihuoneilmiöstä, saasteista ja niin edelleen. <% end %> <% end %>
 
-      public static void main(String[] args) {
-          System.out.println("Hei maailma!\n"
-          + "... ja maailmankaikkeus!");
-      }
-  }
-<% end %>
+Mikäli merkkijonosta muodostuu hyvin pitkä, voi sen pilkkoa useampaan osaan. Tämä tapahtuu rajaamalla jokainen merkkijonon osa hipsuilla ja yhdistämällä osat `+`\-merkillä. Tällöin tulostettavan merkkijonon voi esittää useammalla rivillä, vaikka tulostuskomentoja olisi vain yksi.
 
+```java
+public class Ohjelma {
+    public static void main(String\[\] args) {
+        System.out.println("Hei maailma!\\n" + "... ja maailmankaikkeus!");
+    }
+}
+```
 
+## Komennon osia ja terminologiaa
 
-<% partial 'partials/material_sub_heading' do %>
-  Komennon osia ja terminologiaa
-<% end %>
+Olemme käyttäneet lausetta `System.out.println("tulostettava");` merkkijonon tulostamiseen. Tulostuslause tulostaa sekä hipsuissa olevan merkkijonon että rivinvaihdon. Jos merkkijonon haluaa tulostaa ilman rivinvaihtoa, käytetään komentoa `System.out.print("tulostettava");`.
 
-<p>
-  Olemme käyttäneet lausetta <code>System.out.println("tulostettava");</code> merkkijonon tulostamiseen. Tulostuslause tulostaa sekä hipsuissa olevan merkkijonon että rivinvaihdon. Jos merkkijonon haluaa tulostaa ilman rivinvaihtoa, käytetään komentoa <code>System.out.print("tulostettava");</code>.
-</p>
+Tulostamiseen on kaksi lausetta:
 
-<p>
-  Tulostamiseen on kaksi lausetta:
-</p>
+* `System.out.println("sana");` tulostaa tekstin "sana" ja loppurivinvaihdon
+* `System.out.print("sana");` tulostaa tekstin "sana" ilman loppurivinvaihtoa
 
-<ul>
-  <li><code>System.out.println("sana");</code> tulostaa tekstin "sana" ja loppurivinvaihdon</li>
-  <li><code>System.out.print("sana");</code> tulostaa tekstin "sana" ilman loppurivinvaihtoa</li>
-</ul>
+Tulostettavan tekstin osana voi olla erikoismerkkejä, joista tärkein on rivinvaihto. Rivinvaihto ilmaistaan kenoviivalla ja n-merkillä seuraavasti: `\n`. Erikoismerkkejä on [muitakin](http://en.wikipedia.org/wiki/Escape_character "Escape character - Wikipedia, the free encyclopedia").
 
-<p>
-  Tulostettavan tekstin osana voi olla erikoismerkkejä, joista tärkein on rivinvaihto. Rivinvaihto ilmaistaan kenoviivalla ja n-merkillä seuraavasti: <code>\n</code>. Erikoismerkkejä on <a href="http://en.wikipedia.org/wiki/Escape_character" title="Escape character - Wikipedia, the free encyclopedia" target="_blank" rel="noopener">muitakin</a>.
-</p>
+```java
+System.out.println("Ensimmäinen\\nToinen\\nKolmas");
+```
 
-<% partial 'partials/code_highlight' do %>
-  System.out.println("Ensimmäinen\nToinen\nKolmas");
-<% end %>
+Yllä oleva lause tulostaa seuraavaa:
 
-<p>
-  Yllä oleva lause tulostaa seuraavaa:
-</p>
+<% partial 'partials/sample\_output' do %> Ensimmäinen Toinen Kolmas <% end %>                                 <% partial 'partials/material\_sub\_sub\_heading' do %> Komennon parametrit <% end %>
 
-<% partial 'partials/sample_output' do %>
-  Ensimmäinen
-  Toinen
-  Kolmas
-<% end %>
+Tulostuslauseen tulostama tieto eli komennon _parametrit_ annetaan tulostuskomennolle lisäämällä ne lauseen perässä olevien sulkujen `()` sisään. Esimerkiksi `System.out.println` -komennon parametriksi annetaan merkkijono _hei_ hipsujen sisällä seuraavasti: `System.out.println("hei")`.
 
+<% partial 'partials/material\_sub\_sub\_heading' do %> Puolipiste erottaa lauseet toisistaan <% end %>
 
-<% partial 'partials/material_sub_sub_heading' do %>
-  Komennon parametrit
-<% end %>
+Puolipisteellä `;` erotetaan lauseet toisistaan. Voisimme oikeastaan kirjoittaa koko ohjelman yhdelle riville -- mikä ei kuitenkaan ole kovin ymmärrettävää.
 
-<p>
-  Tulostuslauseen tulostama tieto eli komennon <em>parametrit</em> annetaan tulostuskomennolle lisäämällä ne lauseen perässä olevien sulkujen <code>()</code> sisään. Esimerkiksi <code>System.out.println</code> -komennon parametriksi annetaan merkkijono <em>hei</em> hipsujen sisällä seuraavasti: <code>System.out.println("hei")</code>.
-</p>
+```java
+System.out.print("Hei ");
+System.out.print("maailma");
+System.out.print("!\\n");
+```
 
+<% partial 'partials/sample\_output' do %> Hei maailma! <% end %>
 
-<% partial 'partials/material_sub_sub_heading' do %>
-  Puolipiste erottaa lauseet toisistaan
-<% end %>
+Vaikka yllä oleva esimerkki toimii, on rivinvaihtojen käyttö tärkeää muita ohjelmoijia ajatellen. Tällöin ohjelman lukija tietää, että kullakin rivillä tehdään vain yksi konkreettinen asia.
 
-<p>
-  Puolipisteellä <code>;</code> erotetaan lauseet toisistaan. Voisimme oikeastaan kirjoittaa koko ohjelman yhdelle riville -- mikä ei kuitenkaan ole kovin ymmärrettävää.
-</p>
+<% partial 'partials/material\_sub\_sub\_heading' do %> Lohko <% end %>
 
-<% partial 'partials/code_highlight' do %>
-  System.out.print("Hei "); System.out.print("maailma"); System.out.print("!\n");
-<% end %>
+Lohkolla tarkoitetaan aaltosulkujen rajaamaa aluetta. Ohjelmissamme näitä on tyypillisesti useita. Ohjelman sisältävä lähdekooditiedosto sisältää merkkijonon `public class _Ohjelma_`, jota seuraa lohkon avaava aaltosulku. Lohko päättyy sulkevaan aaltosulkuun. _Ohjelma_ sisällä voi olla useita lohkoja.
 
-<% partial 'partials/sample_output' do %>
-  Hei maailma!
-<% end %>
+Esimerkiksi ohjelman käynnistämiskohdan määrittelevä merkkijono `public static void main(String[] args)` määrittelee oman lohkon, jonka sisällä oleva lähdekoodi suoritetaan kun ohjelma käynnistetään.
 
-<p>
-  Vaikka yllä oleva esimerkki toimii, on rivinvaihtojen käyttö tärkeää muita ohjelmoijia ajatellen. Tällöin ohjelman lukija tietää, että kullakin rivillä tehdään vain yksi konkreettinen asia.
-</p>
+Alla olevassa kuvassa on näytettynä Ohjelma-nimisen luokan rajaama lohko. Lohko alkaa merkkijonon `public class Ohjelma` jälkeen alkavasta aaltosulusta ja päättyy viimeiseen aaltosulkuun.
 
+![](/img/lohkoesimerkki-1.png)
 
-<% partial 'partials/material_sub_sub_heading' do %>
-  Lohko
-<% end %>
+Yllä olevan esimerkin lohko sisältää toisen lohkon. Tämä lohko alkaa merkkijonosta `public static void main(String[] args)` ja sisältää ohjelman käynnistymisessä suoritettavan lähdekoodin.
 
-<p>
-  Lohkolla tarkoitetaan aaltosulkujen rajaamaa aluetta. Ohjelmissamme näitä on tyypillisesti useita. Ohjelman sisältävä lähdekooditiedosto sisältää merkkijonon <code>public class <em>Ohjelma</em></code>, jota seuraa lohkon avaava aaltosulku. Lohko päättyy sulkevaan aaltosulkuun. <em>Ohjelma</em> sisällä voi olla useita lohkoja.
-</p>
+![](/img/lohkoesimerkki-2.png)
 
-<p>
-  Esimerkiksi ohjelman käynnistämiskohdan määrittelevä merkkijono <code>public static void main(String[] args)</code> määrittelee oman lohkon, jonka sisällä oleva lähdekoodi suoritetaan kun ohjelma käynnistetään.
-</p>
+Laajemmin lohkojen merkitystä voi ajatella suoritettavan ohjelman rakenteen kuvaajina. Merkkijonosta `public class _Ohjelma_` alkava lohko sisältää koko ohjelman rakenteen, kun taas merkkijonosta `public static void main(String[] args)` alkava lohko sisältää ohjelman käynnistyksen jälkeen suoritettavan lähdekoodin.
 
-<p>
-  Alla olevassa kuvassa on näytettynä Ohjelma-nimisen luokan rajaama lohko. Lohko alkaa merkkijonon <code>public class Ohjelma</code> jälkeen alkavasta aaltosulusta ja päättyy viimeiseen aaltosulkuun.
-</p>
+Lohko rajataan aina aaltosuluilla, ja aaltosuluille tulee löytyä aina pari. Tietokone ei esimerkiksi ymmärtäisi seuraavanlaista ohjelmaa, sillä siitä puuttuu yksi aaltosulku.
 
-<img class="naytto" src="/img/lohkoesimerkki-1.png"/>
+```java
+public class Ohjelma {
+    public static void main(String\[\] args) {
+        // Tänne voit kirjoittaa ohjelmakoodia. Ohjelmasi voit ajaa
+        // valitsemalla menusta Run->Run File tai painamalla Shift+F6
+    }
+}
+```
+<% partial 'partials/material\_sub\_sub\_heading' do %> Kommentit <% end %>
 
-<p>&nbsp;</p>
+Lähdekoodia voi kommentoida selkeyttääkseen sitä tai lisätäkseen muistiinpanoja kahdella eri tavalla.
 
-<p>
-  Yllä olevan esimerkin lohko sisältää toisen lohkon. Tämä lohko alkaa merkkijonosta <code>public static void main(String[] args)</code> ja sisältää ohjelman käynnistymisessä suoritettavan lähdekoodin.
-</p>
+* Yhden rivin kommentit aloitetaan kahdella vinoviivalla, `//`. Kaikki kahta vinoviivaa seuraava samalla rivillä oleva teksti tulkitaan kommentiksi.
+* Useamman rivin kommentit aloitetaan yhdellä vinoviivalla ja tähdellä `/*` ja lopetetaan tähdellä ja vinoviivalla `*/`. Kaikki useamman rivin kommentin aloittavan ja lopettavan alueen välillä tulkitaan kommentiksi.
 
-<img class="naytto" src="/img/lohkoesimerkki-2.png"/>
+Alla on esimerkki ohjelmasta, jossa kumpikin kommenttityyppi on käytössä.
 
-<p>&nbsp;</p>
-
-<p>
-  Laajemmin lohkojen merkitystä voi ajatella suoritettavan ohjelman rakenteen kuvaajina. Merkkijonosta <code>public class <em>Ohjelma</em></code> alkava lohko sisältää koko ohjelman rakenteen, kun taas merkkijonosta <code>public static void main(String[] args)</code> alkava lohko sisältää ohjelman käynnistyksen jälkeen suoritettavan lähdekoodin.
-</p>
-
-<p>
-  Lohko rajataan aina aaltosuluilla, ja aaltosuluille tulee löytyä aina pari. Tietokone ei esimerkiksi ymmärtäisi seuraavanlaista ohjelmaa, sillä siitä puuttuu yksi aaltosulku.
-</p>
-
-<% partial 'partials/code_highlight' do %>
-  public class Ohjelma {
-
-      public static void main(String[] args) {
-
-          // Tänne voit kirjoittaa ohjelmakoodia. Ohjelmasi voit ajaa
-          // valitsemalla menusta Run->Run File tai painamalla Shift+F6
-
-
-  }
-<% end %>
-
-
-
-<% partial 'partials/material_sub_sub_heading' do %>
-  Kommentit
-<% end %>
-
-
-<p>
-  Lähdekoodia voi kommentoida selkeyttääkseen sitä tai lisätäkseen muistiinpanoja kahdella eri tavalla.
-</p>
-
-<ul>
-  <li>Yhden rivin kommentit aloitetaan kahdella vinoviivalla, <code>//</code>. Kaikki kahta vinoviivaa seuraava samalla rivillä oleva teksti tulkitaan kommentiksi.</li>
-  <li>Useamman rivin kommentit aloitetaan yhdellä vinoviivalla ja tähdellä <code>/*</code> ja lopetetaan tähdellä ja vinoviivalla <code>*/</code>. Kaikki useamman rivin kommentin aloittavan ja lopettavan alueen välillä tulkitaan kommentiksi.</li>
-</ul>
-
-<p>
-  Alla on esimerkki ohjelmasta, jossa kumpikin kommenttityyppi on käytössä.
-</p>
-
-
-<% partial 'partials/code_highlight' do %>
+```java
 public class Kommentteja {
-    public static void main(String[] args) {
-
+    public static void main(String\[\] args) {
         // Tulostetaan
         System.out.println("Tulostettava teksti");
         System.out.println("Lisää tulostettavaa!");
-
-        /*
-        Seuraavaksi:
-         - lisää tulostamisesta
-         - lisää harjoittelua
-         - muuttujat
-         - ...
-        */
-
-        // System.out.println("Muuta tulostettavaa");
+        /\* Seuraavaksi: - lisää tulostamisesta - lisää harjoittelua - muuttujat - ... \*/ System.out.println("Muuta tulostettavaa");
     }
 }
-<% end %>
+```
 
-<p>
-  Esimerkin alin rivi esittelee erityisen kätevän käyttökohteen kommenteille. Kirjoitettua lähdekoodia ei tarvitse poistaa jos haluaa tilapäisesti kokeilla jotain.
-</p>
+Esimerkin alin rivi esittelee erityisen kätevän käyttökohteen kommenteille. Kirjoitettua lähdekoodia ei tarvitse poistaa jos haluaa tilapäisesti kokeilla jotain.
 
+<% partial 'partials/material\_sub\_sub\_heading' do %> Ohjelmointityylistä <% end %>
 
-<% partial 'partials/material_sub_sub_heading' do %>
-  Ohjelmointityylistä
-<% end %>
+Vaikka tietokone ja käyttämämme ohjelmointikieli ei aseta rajoituksia kirjoitettavan ohjelmakoodin ulkoasulle, olemme huomanneet että ohjelmoijan -- tai opiskelevan ohjelmoijan -- kirjoittaman koodin ulkoasulla on merkitystä myös oppimisen kannalta. Luettavuus ja sisennyksen säännönmukaisuus ovat asioita, jotka vaikuttavat lähdekoodin ymmärrettävyyteen, ja sitä kautta myös oppimistuloksiin. Seuraava koodi on säännönmukaisesti sisennettyä.
 
-<p>
-  Vaikka tietokone ja käyttämämme ohjelmointikieli ei aseta rajoituksia kirjoitettavan ohjelmakoodin ulkoasulle, olemme huomanneet että ohjelmoijan -- tai opiskelevan ohjelmoijan -- kirjoittaman koodin ulkoasulla on merkitystä myös oppimisen kannalta. Luettavuus ja sisennyksen säännönmukaisuus ovat asioita, jotka vaikuttavat lähdekoodin ymmärrettävyyteen, ja sitä kautta myös oppimistuloksiin. Seuraava koodi on säännönmukaisesti sisennettyä.
-</p>
-
-<% partial 'partials/code_highlight' do %>
+```java
 public class Esimerkki {
     public static void main(String[] args) {
         System.out.println("Heippa vaan! Tämä koodi on siististi sisennetty.");
@@ -541,94 +298,71 @@ public class Esimerkki {
         System.out.println("public static ... sisällä -- kahdeksan merkin sisennys -- tai enemmän.");
     }
 }
-<% end %>
+```
 
+Tämä koodi taas ei ole kovin ymmärrettävää.
 
-<p>
-  Tämä koodi taas ei ole kovin ymmärrettävää.
-</p>
-
-<% partial 'partials/code_highlight' do %>
+```java
          public class Esimerkki {
 public static void main(String[] args) {
       System.out.println("Heippa vaan! Tämä koodi on siististi sisennetty.");
  System.out.println("public class -- ei sisennystä.");
                    System.out.println("public static -- neljän merkin sisennys.");
            System.out.println("public static ... sisällä -- kahdeksan merkin sisennys -- tai enemmän.");}}
-<% end %>
+```
 
-<p>
-  Tyylivirheet näytetään ohjelmointiympäristössä keltaisella, ja normaalit testi-ilmoitukset punaisella. Kurssilla tutuksi tuleva tehtävän edistymispalkki muuttuu myöskin keltaiseksi, jos koodissa havaitaan tyylivirheitä. Vaikkakin näppäinyhdistelmä alt + shift + f (macOS control + shift + f) auttaa useimpien tyylivirheiden korjaamiseen, on koodia syytä kirjoittaa oikein alusta alkaen.
-</p>
+Tyylivirheet näytetään ohjelmointiympäristössä keltaisella, ja normaalit testi-ilmoitukset punaisella. Kurssilla tutuksi tuleva tehtävän edistymispalkki muuttuu myöskin keltaiseksi, jos koodissa havaitaan tyylivirheitä. Vaikkakin näppäinyhdistelmä alt + shift + f (macOS control + shift + f) auttaa useimpien tyylivirheiden korjaamiseen, on koodia syytä kirjoittaa oikein alusta alkaen.
 
 <% partial 'partials/hint', locals: { name: 'Lähdekoodi tulee sisentää oikein' } do %>
 
-  <p>
-    Javassa koodia sisennetään neljän välilyönnin tai yhden tabulaattorin verran jokaisen lohkon kohdalla. Käytä sisentämiseen joko välilyöntejä tai tabulaattoreita. Joissakin tapauksissa sisennys saattaa hajota mikäli käytät molempia. NetBeans auttaa tässä kun painat kirjainyhdistelmää "alt + shift + f" (macOS "control + shift + f").
-  </p>
+Javassa koodia sisennetään neljän välilyönnin tai yhden tabulaattorin verran jokaisen lohkon kohdalla. Käytä sisentämiseen joko välilyöntejä tai tabulaattoreita. Joissakin tapauksissa sisennys saattaa hajota mikäli käytät molempia. NetBeans auttaa tässä kun painat kirjainyhdistelmää "alt + shift + f" (macOS "control + shift + f").
 
-  <p>
-    Jatkossa ohjelmakoodi tulee sisentää oikein myös tehtävissä. Jos sisennys on väärin, ei ohjelmointiympäristö hyväksy tehtävää.
-  </p>
+Jatkossa ohjelmakoodi tulee sisentää oikein myös tehtävissä. Jos sisennys on väärin, ei ohjelmointiympäristö hyväksy tehtävää.
 
 <% end %>
 
+## Merkkijonon tulostaminen
+
+Tulostuskomentoa harjoiteltaessa olemme antaneet tulostettavan merkkijonon hipsuissa tulostuskomennolle. Ohjelmointikielen kyseinen hipsuissa oleva merkkijono on ns. merkkijonoliteraali, eli määrätyn muotoinen merkkijonomuotoinen arvo.
+
+Merkkijonoliteraalin voi asettaa myös merkkijonomuotoisen muuttujan arvoksi. Muuttujat ovat käytännössä nimettyjä lokeroita, jotka sisältävät tietyn tyyppistä tietoa, ja joilla on nimi. Merkkijonomuuttuja esitellään ohjelmassa kertomalla muuttujan tyyppi (`String`), muuttujan nimi (esimerkiksi `mjono`). Muuttujan esittelyn yhteydessä muuttujaan asetetaan tyypillisesti myös arvo. Arvon asettaminen tapahtuu muuttujan esittelyä seuraavalla yhtäsuuruusmerkillä, jonka jälkeen tulee arvo sekä puolipiste.
+
+Merkkijonomuotoinen muuttuja nimeltä `viesti`, jonka arvona on merkkijono "Hei maailma!", luodaan seuraavasti.
 
 
-<% partial 'partials/material_sub_heading' do %>
-  Merkkijonon tulostaminen
-<% end %>
-
-<p>
-  Tulostuskomentoa harjoiteltaessa olemme antaneet tulostettavan merkkijonon hipsuissa tulostuskomennolle. Ohjelmointikielen kyseinen hipsuissa oleva merkkijono on ns. merkkijonoliteraali, eli määrätyn muotoinen merkkijonomuotoinen arvo.
-</p>
-
-<p>
-  Merkkijonoliteraalin voi asettaa myös merkkijonomuotoisen muuttujan arvoksi. Muuttujat ovat käytännössä nimettyjä lokeroita, jotka sisältävät tietyn tyyppistä tietoa, ja joilla on nimi. Merkkijonomuuttuja esitellään ohjelmassa kertomalla muuttujan tyyppi (<code>String</code>), muuttujan nimi (esimerkiksi <code>mjono</code>). Muuttujan esittelyn yhteydessä muuttujaan asetetaan tyypillisesti myös arvo. Arvon asettaminen tapahtuu muuttujan esittelyä seuraavalla yhtäsuuruusmerkillä, jonka jälkeen tulee arvo sekä puolipiste.
-</p>
-
-<p>
-  Merkkijonomuotoinen muuttuja nimeltä <code>viesti</code>, jonka arvona on merkkijono "Hei maailma!", luodaan seuraavasti.
-</p>
-
-
-<% partial 'partials/code_highlight' do %>
+```java
   String viesti = "Hei maailma!";
-<% end %>
+```
 
-<p>
-  Muuttujan luominen luo ohjelman käyttöön paikan, jonka sisältöön voi myöhemmin viitata. Viittaaminen tapahtuu muuttujan nimen avulla. Esimerkiksi merkkijonomuuttujan luominen ja tulostaminen tapahtuu seuraavalla tavalla.
-</p>
+Muuttujan luominen luo ohjelman käyttöön paikan, jonka sisältöön voi myöhemmin viitata. Viittaaminen tapahtuu muuttujan nimen avulla. Esimerkiksi merkkijonomuuttujan luominen ja tulostaminen tapahtuu seuraavalla tavalla.
 
-<% partial 'partials/code_highlight' do %>
+
+
+<% partial 'partials/sample\_output' do %> Hei maailma! <% end %>
+```java
   String viesti = "Hei maailma!";
   System.out.println(viesti);
-<% end %>
+```
 
-<% partial 'partials/sample_output' do %>
-  Hei maailma!
-<% end %>
+Mikäli ohjelmassa olisi hipsut merkkijonomuuttujan `viesti` nimen ympärillä, tulostaisi ohjelma tekstin "viesti" muuttujan `viesti` arvon eli tekstin "Hei maailma!" sijaan.
 
-<p>
-  Mikäli ohjelmassa olisi hipsut merkkijonomuuttujan <code>viesti</code> nimen ympärillä, tulostaisi ohjelma tekstin "viesti" muuttujan <code>viesti</code> arvon eli tekstin "Hei maailma!" sijaan.
-</p>
 
-<% partial 'partials/code_highlight' do %>
+```java
   String viesti = "Hei maailma!";
   System.out.println("viesti");
-<% end %>
+```
 
-<% partial 'partials/sample_output' do %>
-  viesti
-<% end %>
 
-<% partial 'partials/exercise', locals: { name: 'Passi ja hammasharja', model_solution: '50210' } do %>
+<% partial 'partials/sample\_output' do %> viesti <% end %>
 
-  <p>
-    Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
-  </p>
 
-  <% partial 'partials/code_highlight' do %>
+<% partial 'partials/exercise', locals: { name: 'Passi ja hammasharja', model\_solution: '50210' } do %>
+
+
+Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
+
+
+```java
     public class PassiJaHammasharja {
 
         public static void main(String[] args) {
@@ -637,44 +371,30 @@ public static void main(String[] args) {
           System.out.println(viesti);
         }
     }
-  <% end %>
+```
 
-  <p>
-    Ohjelman suorittaminen tulostaa seuraavan tekstin.
-  </p>
+Ohjelman suorittaminen tulostaa seuraavan tekstin.
 
-  <% partial 'partials/sample_output' do %>
-    Passi ja hammaslanka
-  <% end %>
+<% partial 'partials/sample\_output' do %> Passi ja hammaslanka <% end %>
 
-  <p>
-    Muokkaa ohjelmaa siten, että ohjelman suoritus tulostaa seuraavanlaisen tekstin. Huom! Älä muokkaa riviä <code>System.out.println(viesti);</code>.
-  </p>
+Muokkaa ohjelmaa siten, että ohjelman suoritus tulostaa seuraavanlaisen tekstin. Huom! Älä muokkaa riviä `System.out.println(viesti);`.
 
-  <% partial 'partials/sample_output' do %>
-    Passi ja hammasharja
-  <% end %>
+<% partial 'partials/sample\_output' do %> Passi ja hammasharja <% end %> <% end %>
 
-<% end %>
+Tulostettavan merkkijonon voi koostaa useammista merkkijonoista `+`\-merkin avulla. Esimerkiksi alla oleva ohjelma tulostaa viestin "Hei maailma!" yhdelle riville.
 
-<p>
-  Tulostettavan merkkijonon voi koostaa useammista merkkijonoista <code>+</code>-merkin avulla. Esimerkiksi alla oleva ohjelma tulostaa viestin "Hei maailma!" yhdelle riville.
-</p>
-
-<% partial 'partials/code_highlight' do %>
+```java
   public class Ohjelma {
 
       public static void main(String[] args) {
           System.out.println("Hei " + "maailma!");
       }
   }
-<% end %>
+```
 
-<p>
-  Edellistä esimerkkiä noudattaen myös merkkijonomuuttujan arvon ja merkkijonoliteraalin arvo voidaan yhdistää.
-</p>
+Edellistä esimerkkiä noudattaen myös merkkijonomuuttujan arvon ja merkkijonoliteraalin arvo voidaan yhdistää.
 
-<% partial 'partials/code_highlight' do %>
+```java
   public class Ohjelma {
 
       public static void main(String[] args) {
@@ -683,21 +403,14 @@ public static void main(String[] args) {
           System.out.println(viesti + "\n... ja maailmankaikkeus!");
       }
   }
-<% end %>
+```
 
 
-<% partial 'partials/sample_output' do %>
-  Hei maailma!
-  ... ja maailmankaikkeus!
-<% end %>
+<% partial 'partials/sample\_output' do %> Hei maailma! ... ja maailmankaikkeus! <% end %>
 
+Sama onnistuu myös useammalla osalla.
 
-<p>
-  Sama onnistuu myös useammalla osalla.
-</p>
-
-
-<% partial 'partials/code_highlight' do %>
+```java
   public class Ohjelma {
 
       public static void main(String[] args) {
@@ -707,40 +420,31 @@ public static void main(String[] args) {
           System.out.println(alku + "Bond" + loppu);
       }
   }
-<% end %>
+```
 
-<% partial 'partials/sample_output' do %>
-  My name is Bond, James Bond
-<% end %>
 
-<p>
-  Vastaavasti merkkijonomuuttujan arvon voi luoda useammasta merkkijonoliteraalista.
-</p>
 
-<% partial 'partials/code_highlight' do %>
-  public class Ohjelma {
+                                <% partial 'partials/sample\_output' do %> My name is Bond, James Bond <% end %>
 
-      public static void main(String[] args) {
-          String luvut = "yksi" + "\n" + "kaksi" + "\n" + "kolme";
+Vastaavasti merkkijonomuuttujan arvon voi luoda useammasta merkkijonoliteraalista.
 
-          System.out.println(luvut)
-      }
-  }
-<% end %>
+```java
+public class Ohjelma {
 
-<% partial 'partials/sample_output' do %>
-  yksi
-  kaksi
-  kolme
-<% end %>
+    public static void main(String[] args) {
+        String luvut = "yksi" + "\n" + "kaksi" + "\n" + "kolme";
 
-<% partial 'partials/exercise', locals: { name: 'Hei Ada Lovelace!', model_solution: '50211' } do %>
+        System.out.println(luvut)
+    }
+}
+```
 
-  <p>
-    Tehtäväpohjassa on seuraavanlainen ohjelma.
-  </p>
 
-  <% partial 'partials/code_highlight' do %>
+ <% partial 'partials/sample\_output' do %> yksi kaksi kolme <% end %>                                 <% partial 'partials/exercise', locals: { name: 'Hei Ada Lovelace!', model\_solution: '50211' } do %>
+
+Tehtäväpohjassa on seuraavanlainen ohjelma.
+
+```java
     public class HeiAdaLovelace {
 
         public static void main(String[] args) {
@@ -748,33 +452,21 @@ public static void main(String[] args) {
 
         }
     }
-  <% end %>
+```
 
-  <p>
-    Muokkaa ohjelmaa siten, että ohjelmassa tulostetaan muuttujan <code>nimi</code> sisältö, ja että ohjelman tulostus on kokonaisuudessaan muotoa:
-  </p>
+Muokkaa ohjelmaa siten, että ohjelmassa tulostetaan muuttujan `nimi` sisältö, ja että ohjelman tulostus on kokonaisuudessaan muotoa:
 
-  <% partial 'partials/sample_output' do %>
-    Hei Ada Lovelace!
-  <% end %>
+<% partial 'partials/sample\_output' do %> Hei Ada Lovelace! <% end %>
 
-  <p>
-    Huom! Kun käytät <code>System.out.println</code>-komentoa, älä kirjoita komentoon merkkijonoa "Ada Lovelace", vaan hyödynnä tulostuksessa olemassaolevaa muuttujaa <code>nimi</code>.
-  </p>
+Huom! Kun käytät `System.out.println`\-komentoa, älä kirjoita komentoon merkkijonoa "Ada Lovelace", vaan hyödynnä tulostuksessa olemassaolevaa muuttujaa `nimi`.
 
 <% end %>
 
+## Merkkijonon lukeminen käyttäjältä
 
+Tutustutaan syötteen lukemiseen käyttäjältä. Syötteen lukemiseen käytetään Javan valmista `Scanner`\-apuvälinettä. Apuväline tuodaan käyttöön lisäämällä komento `import java.util.Scanner;` ennen pääohjelmarungon aloitusta (`public class` ...), ja se luodaan komennolla `Scanner lukija = new Scanner(System.in);`. Tarkemmin ottaen tässä luodaan _lukija_\-niminen muuttuja, jota voidaan jatkossa käyttää käyttäjän kirjoittaman tekstin lukemiseen.
 
-<% partial 'partials/material_sub_heading' do %>
-  Merkkijonon lukeminen käyttäjältä
-<% end %>
-
-<p>
-  Tutustutaan syötteen lukemiseen käyttäjältä. Syötteen lukemiseen käytetään Javan valmista <code>Scanner</code>-apuvälinettä. Apuväline tuodaan käyttöön lisäämällä komento <code>import java.util.Scanner;</code> ennen pääohjelmarungon aloitusta (<code>public class</code> ...), ja se luodaan komennolla <code>Scanner lukija = new Scanner(System.in);</code>. Tarkemmin ottaen tässä luodaan <em>lukija</em>-niminen muuttuja, jota voidaan jatkossa käyttää käyttäjän kirjoittaman tekstin lukemiseen.
-</p>
-
-<% partial 'partials/code_highlight' do %>
+```java
   import java.util.Scanner;
 
   public class Ohjelma {
@@ -785,17 +477,13 @@ public static void main(String[] args) {
           // ohjelmakoodi
       }
   }
-<% end %>
+```
 
-<p>
-  Älä hätäile vaikka pääohjelmarunko saattaa näyttää vaikeaselkoiselta! Jatkamme yhä ohjelmointia kommentilla <em>ohjelmakoodi</em> merkittyyn kohtaan.
-</p>
+Älä hätäile vaikka pääohjelmarunko saattaa näyttää vaikeaselkoiselta! Jatkamme yhä ohjelmointia kommentilla _ohjelmakoodi_ merkittyyn kohtaan.
 
-<p>
-  Merkkijonon lukeminen käyttäjältä onnistuu <code>lukija</code>-muuttujaan liittyvällä komennolla <code>nextLine()</code>. Mikäli käyttäjän syöttämä teksti halutaan tallentaa, tulee sitä varten esitellä merkkijonomuuttuja. Alla on esitelty ohjelma, joka kysyy käyttäjältä syötettä, lukee käyttäjän syöttämän merkkijonon, ja lopulta tulostaa käyttäjän syöttämän merkkijonon.
-</p>
+Merkkijonon lukeminen käyttäjältä onnistuu `lukija`\-muuttujaan liittyvällä komennolla `nextLine()`. Mikäli käyttäjän syöttämä teksti halutaan tallentaa, tulee sitä varten esitellä merkkijonomuuttuja. Alla on esitelty ohjelma, joka kysyy käyttäjältä syötettä, lukee käyttäjän syöttämän merkkijonon, ja lopulta tulostaa käyttäjän syöttämän merkkijonon.
 
-<% partial 'partials/code_highlight' do %>
+```java
   // Tuodaan lukemiseen käytettävä Scanner-apuväline käyttöön
   import java.util.Scanner;
 
@@ -815,24 +503,15 @@ public static void main(String[] args) {
           System.out.println(viesti);
       }
   }
-<% end %>
+```
 
-<p>
-  Jatkossa tulostusesimerkkeihin merkitään käyttäjän syöttämä syöte <font color="red">punaisella värillä</font>. Mikäli käyttäjä syöttäisi ohjelmaan tekstin "Hei maailma", olisi ohjelman suoritus seuraavanlainen.
-</p>
+Jatkossa tulostusesimerkkeihin merkitään käyttäjän syöttämä syöte punaisella värillä. Mikäli käyttäjä syöttäisi ohjelmaan tekstin "Hei maailma", olisi ohjelman suoritus seuraavanlainen.
 
-<% partial 'partials/sample_output' do %>
-  Syötä viesti:
-  <font color="red">Hei maailma</font>
-  Hei maailma
-<% end %>
+<% partial 'partials/sample\_output' do %> Syötä viesti: Hei maailma Hei maailma <% end %>
 
-<p>
-  Alla sama esimerkki, mutta siten, että käyttäjän syöttämä merkkijono tulostetaan tekstin "Viestisi oli " jälkeen.
-</p>
+Alla sama esimerkki, mutta siten, että käyttäjän syöttämä merkkijono tulostetaan tekstin "Viestisi oli " jälkeen.
 
-
-<% partial 'partials/code_highlight' do %>
+```java
   import java.util.Scanner;
 
   public class Ohjelma {
@@ -847,32 +526,19 @@ public static void main(String[] args) {
           System.out.println("Viestisi oli " + viesti);
       }
   }
-<% end %>
+```
 
+ <% partial 'partials/sample\_output' do %> Syötä viesti: selkeä Viestisi oli selkeä <% end %>
 
-<% partial 'partials/sample_output' do %>
-  Syötä viesti:
-  <font color="red">selkeä</font>
-  Viestisi oli selkeä
-<% end %>
+<%= partial 'partials/youtube\_2', locals: { id: '7lswbb\_R7uM' } %>
 
+<% partial 'partials/exercise', locals: { name: 'Viesti', model\_solution: '50212' } do %>
 
-<p>
-  <%= partial 'partials/youtube_2', locals: { id: '7lswbb_R7uM' } %>
-</p>
+Kirjoita ohjelma, joka pyytää käyttäjää kirjoittamaan merkkijonon. Kun käyttäjä on syöttänyt merkkijonon (eli kirjoittanut tekstin sekä painanut enter-näppäintä), ohjelma tulostaa käyttäjän syöttämän merkkijonon.
 
+Tehtäväpohjan mukana tulee runko, joka sisältää Scanner-apuvälineen luomisen.
 
-<% partial 'partials/exercise', locals: { name: 'Viesti', model_solution: '50212' } do %>
-
-  <p>
-    Kirjoita ohjelma, joka pyytää käyttäjää kirjoittamaan merkkijonon. Kun käyttäjä on syöttänyt merkkijonon (eli kirjoittanut tekstin sekä painanut enter-näppäintä), ohjelma tulostaa käyttäjän syöttämän merkkijonon.
-  </p>
-
-  <p>
-    Tehtäväpohjan mukana tulee runko, joka sisältää Scanner-apuvälineen luomisen.
-  </p>
-
-  <% partial 'partials/code_highlight' do %>
+```java
     import java.util.Scanner;
 
     public class Viesti {
@@ -884,43 +550,21 @@ public static void main(String[] args) {
             // toteuta ohjelma tänne
         }
     }
-  <% end %>
+```
 
-  <p>
-    Tulostusesimerkki kun käyttäjä syöttää merkkijonon "Heippa".
-  </p>
+Tulostusesimerkki kun käyttäjä syöttää merkkijonon "Heippa".
 
-  <% partial 'partials/sample_output' do %>
-    Kirjoita merkkijono!
-    <font color="red">Heippa</font>
-    Heippa
-  <% end %>
+<% partial 'partials/sample\_output' do %> Kirjoita merkkijono! Heippa Heippa <% end %>
 
-  <p>
-    Tulostusesimerkki kun käyttäjä syöttää merkkijonon "Olipa kerran...".
-  </p>
+Tulostusesimerkki kun käyttäjä syöttää merkkijonon "Olipa kerran...".
 
-  <% partial 'partials/sample_output' do %>
-    Kirjoita merkkijono!
-    <font color="red">Olipa kerran...</font>
-    Olipa kerran...
-  <% end %>
+<% partial 'partials/sample\_output' do %> Kirjoita merkkijono! Olipa kerran... Olipa kerran... <% end %> <% end %>                                 <% partial 'partials/exercise', locals: { name: 'Viesti kolmesti', model\_solution: '50213' } do %>
 
-<% end %>
+Kirjoita ohjelma, joka pyytää käyttäjää kirjoittamaan merkkijonon. Kun käyttäjä on syöttänyt merkkijonon (eli kirjoittanut tekstin sekä painanut enter-näppäintä), ohjelma tulostaa käyttäjän syöttämän kolme kertaa (voit käyttää System.out.println-komentoa useampaan kertaan).
 
+Tehtäväpohjan mukana tulee runko, joka sisältää Scanner-apuvälineen luomisen.
 
-
-<% partial 'partials/exercise', locals: { name: 'Viesti kolmesti', model_solution: '50213' } do %>
-
-  <p>
-    Kirjoita ohjelma, joka pyytää käyttäjää kirjoittamaan merkkijonon. Kun käyttäjä on syöttänyt merkkijonon (eli kirjoittanut tekstin sekä painanut enter-näppäintä), ohjelma tulostaa käyttäjän syöttämän kolme kertaa (voit käyttää System.out.println-komentoa useampaan kertaan).
-  </p>
-
-  <p>
-    Tehtäväpohjan mukana tulee runko, joka sisältää Scanner-apuvälineen luomisen.
-  </p>
-
-  <% partial 'partials/code_highlight' do %>
+```java
     import java.util.Scanner;
 
     public class ViestiKolmesti {
@@ -932,45 +576,21 @@ public static void main(String[] args) {
             // toteuta ohjelma tänne
         }
     }
-  <% end %>
+```
 
-  <p>
-    Tulostusesimerkki kun käyttäjä syöttää merkkijonon "Heippa".
-  </p>
+Tulostusesimerkki kun käyttäjä syöttää merkkijonon "Heippa".
 
-  <% partial 'partials/sample_output' do %>
-    Kirjoita merkkijono!
-    <font color="red">Heippa</font>
-    Heippa
-    Heippa
-    Heippa
-  <% end %>
+<% partial 'partials/sample\_output' do %> Kirjoita merkkijono! Heippa Heippa Heippa Heippa <% end %>
 
-  <p>
-    Tulostusesimerkki kun käyttäjä syöttää merkkijonon "Olipa kerran...".
-  </p>
+Tulostusesimerkki kun käyttäjä syöttää merkkijonon "Olipa kerran...".
 
-  <% partial 'partials/sample_output' do %>
-    Kirjoita merkkijono!
-    <font color="red">Olipa kerran...</font>
-    Olipa kerran...
-    Olipa kerran...
-    Olipa kerran...
-  <% end %>
+<% partial 'partials/sample\_output' do %> Kirjoita merkkijono! Olipa kerran... Olipa kerran... Olipa kerran... Olipa kerran... <% end %> <% end %>                                 <% partial 'partials/exercise', locals: { name: 'Nimi', model\_solution: '50214' } do %>
 
-<% end %>
+Kirjoita ohjelma, joka kysyy käyttäjältä nimeä käyttäen tekstiä "Mikä on nimesi?". Kun käyttäjä syöttää nimen, ohjelma tulostaa käyttäjälle merkkijonon "Hei ", jota seuraa käyttäjän nimi.
 
-<% partial 'partials/exercise', locals: { name: 'Nimi', model_solution: '50214' } do %>
+Tehtäväpohjan mukana tulee runko, joka sisältää Scanner-apuvälineen luomisen.
 
-  <p>
-    Kirjoita ohjelma, joka kysyy käyttäjältä nimeä käyttäen tekstiä "Mikä on nimesi?". Kun käyttäjä syöttää nimen, ohjelma tulostaa käyttäjälle merkkijonon "Hei ", jota seuraa käyttäjän nimi.
-  </p>
-
-  <p>
-    Tehtäväpohjan mukana tulee runko, joka sisältää Scanner-apuvälineen luomisen.
-  </p>
-
-  <% partial 'partials/code_highlight' do %>
+```java
     import java.util.Scanner;
 
     public class Nimi {
@@ -981,207 +601,110 @@ public static void main(String[] args) {
             // toteuta ohjelma tänne
         }
     }
-  <% end %>
+```
 
-  <p>
-    Tulostusesimerkki kun käyttäjä syöttää nimeksi Ada.
-  </p>
+Tulostusesimerkki kun käyttäjä syöttää nimeksi Ada.
 
-  <% partial 'partials/sample_output' do %>
-    Mikä on nimesi?
-    <font color="red">Ada</font>
-    Hei Ada
-  <% end %>
+<% partial 'partials/sample\_output' do %> Mikä on nimesi? Ada Hei Ada <% end %>
 
-  <p>
-    Tulostusesimerkki kun käyttäjä syöttää nimeksi Lilja.
-  </p>
+Tulostusesimerkki kun käyttäjä syöttää nimeksi Lilja.
 
-  <% partial 'partials/sample_output' do %>
-    Mikä on nimesi?
-    <font color="red">Lilja</font>
-    Hei Lilja
-  <% end %>
+<% partial 'partials/sample\_output' do %> Mikä on nimesi? Lilja Hei Lilja <% end %> <% end %>
 
-<% end %>
+Ohjelma voi kysyä käyttäjältä myös montaa merkkijonoa. Tämä toimii kysymällä jokaista haluttua merkkijonoa erikseen `nextLine()`\-komennolla.
 
-<p>
-  Ohjelma voi kysyä käyttäjältä myös montaa merkkijonoa. Tämä toimii kysymällä jokaista haluttua merkkijonoa erikseen <code>nextLine()</code>-komennolla.
-</p>
+```java
+import java.util.Scanner;
 
-<% partial 'partials/code_highlight' do %>
-  import java.util.Scanner;
+public class Ohjelma {
 
-  public class Ohjelma {
+    public static void main(String[] args) {
+        Scanner lukija = new Scanner(System.in);
 
-      public static void main(String[] args) {
-          Scanner lukija = new Scanner(System.in);
+        System.out.println("Syötä kolme riviä, tulostan ne sen jälkeen: ");
 
-          System.out.println("Syötä kolme riviä, tulostan ne sen jälkeen: ");
+        String eka = lukija.nextLine();
+        String toka = lukija.nextLine();
+        String kolmas = lukija.nextLine();
 
-          String eka = lukija.nextLine();
-          String toka = lukija.nextLine();
-          String kolmas = lukija.nextLine();
-
-          System.out.println(eka);
-          System.out.println(toka);
-          System.out.println(kolmas);
-      }
-  }
-<% end %>
-
-
-<p>
-  Yllä olevan ohjelman toimintaa kuvaava esimerkki:
-</p>
-
-<% partial 'partials/sample_output' do %>
-  Syötä kolme riviä, tulostan ne sen jälkeen:
-  <font color="red">yksi</font>
-  <font color="red">kaksi</font>
-  <font color="red">kolme</font>
-  yksi
-  kaksi
-  kolme
-<% end %>
-
-<p>
-  Muuttujat voisi halutessaan tulostaa myös käänteisessä järjestyksessä tai vaikkapa yhteen pötköön.
-</p>
-
-<% partial 'partials/code_highlight' do %>
-  import java.util.Scanner;
-
-  public class Ohjelma {
-
-      public static void main(String[] args) {
-          Scanner lukija = new Scanner(System.in);
-
-          System.out.println("Syötä kolme riviä, tulostan ne käänteisessä järjestyksessä: ");
-
-          String eka = lukija.nextLine();
-          String toka = lukija.nextLine();
-          String kolmas = lukija.nextLine();
-
-          System.out.println(kolmas);
-          System.out.println(toka);
-          System.out.println(eka);
-
-          System.out.println(eka + toka + kolmas);
-      }
-  }
-<% end %>
-
-
-<% partial 'partials/sample_output' do %>
-  Syötä kolme riviä, tulostan ne sen jälkeen:
-  <font color="red">yksi</font>
-  <font color="red">kaksi</font>
-  <font color="red">kolme</font>
-  kolme
-  kaksi
-  yksi
-  yksikaksikolme
-<% end %>
-
-<% partial 'partials/exercise', locals: { name: 'Keskustelu', model_solution: '50215' } do %>
-
-  <p>
-    Kirjoita ohjelma, joka toimii seuraavalla tavalla.
-  </p>
-
-  <% partial 'partials/sample_output' do %>
-    Hyvää päivää! Mitä kuuluu?
-    <font color="red">Kiitos hyvää!</font>
-    No mutta sepäs kiinnostavaa, kerro lisää!
-    <font color="red">Noh, eipä tässä muuta.</font>
-    Kiitos kertomastasi!
-  <% end %>
-
-
-  <% partial 'partials/sample_output' do %>
-    Hyvää päivää! Mitä kuuluu?
-    <font color="red">Mitäs tässä, ritari ässä!</font>
-    No mutta sepäs kiinnostavaa, kerro lisää!
-    <font color="red">tulin juuri kaupasta.</font>
-    Kiitos kertomastasi!
-  <% end %>
-
-  <p>
-    Tehtäväpohjan mukana tulee runko, joka sisältää Scanner-apuvälineen luomisen.
-  </p>
-
-  <% partial 'partials/code_highlight' do %>
-    import java.util.Scanner;
-
-    public class Keskustelu {
-
-        public static void main(String[] args) {
-            Scanner lukija = new Scanner(System.in);
-
-            // toteuta ohjelma tänne
-        }
+        System.out.println(eka);
+        System.out.println(toka);
+        System.out.println(kolmas);
     }
-  <% end %>
+}
+```
 
-<% end %>
+Yllä olevan ohjelman toimintaa kuvaava esimerkki:
 
+<% partial 'partials/sample\_output' do %> Syötä kolme riviä, tulostan ne sen jälkeen: yksi kaksi kolme yksi kaksi kolme <% end %>
 
-<% partial 'partials/exercise', locals: { name: 'Tarina', model_solution: '50216' } do %>
+Muuttujat voisi halutessaan tulostaa myös käänteisessä järjestyksessä tai vaikkapa yhteen pötköön.
 
-  <p>
-    Kirjoita ohjelma, joka toimii seuraavalla tavalla.
-  </p>
+```java
+import java.util.Scanner;
 
-  <% partial 'partials/sample_output' do %>
-    Kerron kohta tarinan, mutta tarvitsen siihen hieman tietoja.
-    Minkä niminen tarinassa esiintyvä hahmo on?
-    <font color="red">Nauriskala</font>
-    Mikä hahmon ammatti on?
-    <font color="red">kalastaja</font>
-    Tässä tarina:
-    Olipa kerran Nauriskala, joka oli ammatiltaan kalastaja.
-    Matkatessaan töihin, Nauriskala mietti arkeaan. Kun työnä
-    on kalastaja, tekemistä riittää välillä hyvin paljon ja
-    välillä ei lainkaan. Ehkäpä Nauriskala ei olekaan koko
-    elämäänsä kalastaja.
-  <% end %>
+public class Ohjelma {
 
-  <p>
-    Tehtäväpohjan mukana tulee runko, joka sisältää Scanner-apuvälineen luomisen.
-  </p>
+    public static void main(String[] args) {
+        Scanner lukija = new Scanner(System.in);
 
-  <% partial 'partials/code_highlight' do %>
-    import java.util.Scanner;
+        System.out.println("Syötä kolme riviä, tulostan ne käänteisessä järjestyksessä: ");
 
-    public class Tarina {
+        String eka = lukija.nextLine();
+        String toka = lukija.nextLine();
+        String kolmas = lukija.nextLine();
 
-        public static void main(String[] args) {
-            Scanner lukija = new Scanner(System.in);
+        System.out.println(kolmas);
+        System.out.println(toka);
+        System.out.println(eka);
 
-            // toteuta ohjelma tänne
-        }
+        System.out.println(eka + toka + kolmas);
     }
-  <% end %>
+}
+```
 
-  <p>
-    Alla vielä toinen esimerkki.
-  </p>
+<% partial 'partials/sample\_output' do %> Syötä kolme riviä, tulostan ne sen jälkeen: yksi kaksi kolme kolme kaksi yksi yksikaksikolme <% end %>                                 <% partial 'partials/exercise', locals: { name: 'Keskustelu', model\_solution: '50215' } do %>
 
+Kirjoita ohjelma, joka toimii seuraavalla tavalla.
 
-  <% partial 'partials/sample_output' do %>
-    Kerron kohta tarinan, mutta tarvitsen siihen hieman tietoja.
-    Minkä niminen tarinassa esiintyvä hahmo on?
-    <font color="red">Ada</font>
-    Mikä hahmon ammatti on?
-    <font color="red">datatieteilijä</font>
-    Tässä tarina:
-    Olipa kerran Ada, joka oli ammatiltaan datatieteilijä.
-    Matkatessaan töihin, Ada mietti arkeaan. Kun työnä
-    on datatieteilijä, tekemistä riittää välillä hyvin paljon ja
-    välillä ei lainkaan. Ehkäpä Ada ei olekaan koko
-    elämäänsä datatieteilijä.
-  <% end %>
+<% partial 'partials/sample\_output' do %> Hyvää päivää! Mitä kuuluu? Kiitos hyvää! No mutta sepäs kiinnostavaa, kerro lisää! Noh, eipä tässä muuta. Kiitos kertomastasi! <% end %>                                 <% partial 'partials/sample\_output' do %> Hyvää päivää! Mitä kuuluu? Mitäs tässä, ritari ässä! No mutta sepäs kiinnostavaa, kerro lisää! tulin juuri kaupasta. Kiitos kertomastasi! <% end %>
 
+Tehtäväpohjan mukana tulee runko, joka sisältää Scanner-apuvälineen luomisen.
 
-<% end %>
+```java
+import java.util.Scanner;
+
+public class Keskustelu {
+
+    public static void main(String[] args) {
+        Scanner lukija = new Scanner(System.in);
+
+        // toteuta ohjelma tänne
+    }
+}
+```
+
+ <% partial 'partials/exercise', locals: { name: 'Tarina', model\_solution: '50216' } do %>
+
+Kirjoita ohjelma, joka toimii seuraavalla tavalla.
+
+<% partial 'partials/sample\_output' do %> Kerron kohta tarinan, mutta tarvitsen siihen hieman tietoja. Minkä niminen tarinassa esiintyvä hahmo on? Nauriskala Mikä hahmon ammatti on? kalastaja Tässä tarina: Olipa kerran Nauriskala, joka oli ammatiltaan kalastaja. Matkatessaan töihin, Nauriskala mietti arkeaan. Kun työnä on kalastaja, tekemistä riittää välillä hyvin paljon ja välillä ei lainkaan. Ehkäpä Nauriskala ei olekaan koko elämäänsä kalastaja. <% end %>
+
+Tehtäväpohjan mukana tulee runko, joka sisältää Scanner-apuvälineen luomisen.
+
+```java
+import java.util.Scanner;
+
+public class Tarina {
+
+    public static void main(String[] args) {
+        Scanner lukija = new Scanner(System.in);
+
+        // toteuta ohjelma tänne
+    }
+}
+```
+
+Alla vielä toinen esimerkki.
+
+<% partial 'partials/sample\_output' do %> Kerron kohta tarinan, mutta tarvitsen siihen hieman tietoja. Minkä niminen tarinassa esiintyvä hahmo on? Ada Mikä hahmon ammatti on? datatieteilijä Tässä tarina: Olipa kerran Ada, joka oli ammatiltaan datatieteilijä. Matkatessaan töihin, Ada mietti arkeaan. Kun työnä on datatieteilijä, tekemistä riittää välillä hyvin paljon ja välillä ei lainkaan. Ehkäpä Ada ei olekaan koko elämäänsä datatieteilijä. <% end %> <% end %>
