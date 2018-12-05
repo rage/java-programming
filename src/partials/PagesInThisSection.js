@@ -15,7 +15,12 @@ export default () => (
 
       const sectionPages = value.all.filter(o =>
         o.path.startsWith(`${sectionPath}/`)
-      )
+      ).sort((a, b) => {
+        a = a.path.toLowerCase();
+        b = b.path.toLowerCase();
+
+        return a > b ? 1 : b > a ? -1 : 0;
+      })
 
       return (
         <div>
