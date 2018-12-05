@@ -1,19 +1,27 @@
 ---
-path: "/osa-1/1-johdanto"
-title: "Johdanto"
+path: '/osa-1/1-johdanto'
+title: 'Johdanto'
 ---
 
-<% partial 'partials/hint', locals: { name: 'Ensimmäisen osan tavoitteet' } do %>
+<text-box variant='hint' name='Ensimmäisen osan tavoitteet'>
 
 Osaat kirjoittaa ohjelmia, jotka lukevat käyttäjältä syötettä ja tekevät laskentaa syötteen perusteella. Tunnet käsitteet muuttuja, ehtolause ja toistolause, ja osaat käyttää näitä ohjelmissasi.
 
-<% end %>                                 <% partial 'partials/learning\_objectives', locals: { name: 'Oppimistavoitteet' } do %>
+</text-box>
 
-* Tiedät muutamia esimerkkejä siitä, miten ohjelmistot vaikuttavat yhteiskuntamme toimintaan.
-* Tunnet käsitteet ohjelma, ohjelmointikieli ja lähdekoodi, ja tiedät, että lähdekoodi koostuu lauseista ja lausekkeista.
-* Tiedät pääpiirteittäin ohjelmien suorittamiseen liittyvät askeleet.
+<text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
-<% end %> <%= partial 'partials/quiz', locals: { id: '5b8ce0619706ea16c1d17184' } %>
+- Tiedät muutamia esimerkkejä siitä, miten ohjelmistot vaikuttavat yhteiskuntamme toimintaan.
+- Tunnet käsitteet ohjelma, ohjelmointikieli ja lähdekoodi, ja tiedät, että lähdekoodi koostuu lauseista ja lausekkeista.
+- Tiedät pääpiirteittäin ohjelmien suorittamiseen liittyvät askeleet.
+
+</text-box>
+
+<quiznator name='Quiznator'>
+
+id '5b8ce0619706ea16c1d17184'
+
+</quiznator>
 
 Ohjelmoinnin opiskelua harkitseva tietää harvoin kuinka riippuvainen yhteiskuntamme on ohjelmoijien tuottamista ohjelmistoista. Ilman ohjelmistoja yhteydenpito, kaupankäynti, matkustaminen ja niin edelleen olisi monimutkaisempaa. Puhelimet eivät toimisi tai niitä olisi vain muutamia, verkkopankkeja saatikka pankki- tai luottokortteja ei olisi, matkojen varaaminen ja henkilöasiakirjojen käyttäminen ei onnistuisi verkon yli, ja terveydenhuoltopalveluissa sähköisistä palveluista kuten e-reseptistä tai potilastietojen nopeasta siirtämisestä osastojen ja sairaaloiden välillä voisi vain unelmoida. Wikipediaa tai hakukoneita ei myöskään olisi ja tiedon hakeminen tapahtuisi sana- ja tietokirjoista.
 
@@ -23,7 +31,7 @@ Tämä on johtanut tilanteeseen, missä työnkuvia katoaa ja työnkuvia syntyy. 
 
 Vaikka digitalisaatio voi tehostaa toimintaa muunmuassa vapauttamalla työntekijän helposti automatisoitavista tehtävistä, on digitalisaatiossa myös haasteita. Sähköisten järjestelmien käytön oppiminen ei ole aina helppoa ja työnkuvien muutoksen vaatima jatkuva uudelleenkouluttautuminen on uudenlainen koulutukseen liittyvä haaste. Innokkuus sähköisten palveluiden käyttöönotossa vähentää myös perinteisiä palveluita -- kukapa ei esimerkiksi olisi kuullut pankkipalveluiden digitalisoitumisen ja kassapalveluiden vähentymisen sivuvaikutuksena tuomista pitkistä pankkijonoista. Sähköiset palvelut ovat ihmisten tekemiä ja harvoin virheettömiä. Harva ei ole kuullut huonosti toimivista ohjelmistoista.
 
-Tietojenkäsittelytieteilijät ja laajemmin ohjelmistotekniikan ammattilaiset ovat digitaalisten palveluiden arkkitehtejä. Vastuullamme on näiden järjestelmien toteutus siten, että ne toimivat mahdollisimman hyvin järjestelmien kohdeyleisölle -- myös niille, jotka eivät ole tottuneet käyttämään vastaavia järjestelmiä. Järjestelmien loppukäyttäjät harvoin tietävät kuka tai ketkä ovat toteuttaneet kyseiset järjestelmät -- harva on kuullut esimerkiksi [Margaret Hamilton](https://en.wikipedia.org/wiki/Margaret_Hamilton_(scientist))ista, joka kirjoitti avaruuteen pääsemisessä ja kuulennossa auttaneen ohjelman.
+Tietojenkäsittelytieteilijät ja laajemmin ohjelmistotekniikan ammattilaiset ovat digitaalisten palveluiden arkkitehtejä. Vastuullamme on näiden järjestelmien toteutus siten, että ne toimivat mahdollisimman hyvin järjestelmien kohdeyleisölle -- myös niille, jotka eivät ole tottuneet käyttämään vastaavia järjestelmiä. Järjestelmien loppukäyttäjät harvoin tietävät kuka tai ketkä ovat toteuttaneet kyseiset järjestelmät -- harva on kuullut esimerkiksi [Margaret Hamilton](<https://en.wikipedia.org/wiki/Margaret_Hamilton_(scientist)>)ista, joka kirjoitti avaruuteen pääsemisessä ja kuulennossa auttaneen ohjelman.
 
 Ohjelmointia voidaan ajatella nykyajan käsityöläistaitona, ja ohjelmistoalan työläisiä on maailmassa kymmeniä miljoonia. Tälle modernille käsityöläistaidolle on myös kysyntää -- esimerkiksi Tivi uutisoi vuonna 2016 aiheesta otsikolla "[It-osaaja pääsee töihin vaikka heti](http://www.tivi.fi/Kaikki_uutiset/it-osaaja-paasee-toihin-vaikka-heti-6555159)". Ohjelmistojen ja digitaalisten järjestelmien ymmärryksen tarve näkyy myös nykyään kaikkialla -- ohjelmoinnin alkeita opetetaan jo peruskoulussa, ja samalla esimerkiksi moderni tiede hyödyntää enemmän ja enemmän tiedon analysoinnissa käytettäviä ohjelmistoja sekä ohjelmistoalan innovaatioita. Esimerkiksi meteorologit, fyysikot ja kemistit käyttävät ohjelmistoja ja ohjelmoivat työssään. Myös kasvatustiede ja opetusala hyödyntää digitalisaation tuomia mahdollisuuksia yhä enemmän.
 
@@ -33,7 +41,7 @@ Kurssi on tarkoitettu ohjelmoinnin alkeiskurssiksi kohdeyleisöä sen laajemmin 
 
 ## Ohjelmoija kirjoittaa lähdekoodia
 
-Ohjelmointi on ohjelmistojen suunnittelua ja toteutusta. Toteutettava toiminnallisuus määräytyy ohjelmiston tilaajien ja käyttäjien toiveiden ja vaatimusten perusteella. Ohjelmia toteutetaan (eli kirjoitetaan tai "koodataan") tyypillisesti ihmisten kirjoitettavaksi ja luettavaksi tarkoitetulla ohjelmointikielellä. Ohjelmointikieliä on satoja ja tällä kurssilla keskitytään näistä kielistä yhteen. Kurssin kielenä on [Java](https://en.wikipedia.org/wiki/Java_(programming_language)), joka on yksi maailman eniten käytetyistä ohjelmointikielistä. Javaa tuntevan on myös helppo oppia uusia ohjelmointikieliä.
+Ohjelmointi on ohjelmistojen suunnittelua ja toteutusta. Toteutettava toiminnallisuus määräytyy ohjelmiston tilaajien ja käyttäjien toiveiden ja vaatimusten perusteella. Ohjelmia toteutetaan (eli kirjoitetaan tai "koodataan") tyypillisesti ihmisten kirjoitettavaksi ja luettavaksi tarkoitetulla ohjelmointikielellä. Ohjelmointikieliä on satoja ja tällä kurssilla keskitytään näistä kielistä yhteen. Kurssin kielenä on [Java](<https://en.wikipedia.org/wiki/Java_(programming_language)>), joka on yksi maailman eniten käytetyistä ohjelmointikielistä. Javaa tuntevan on myös helppo oppia uusia ohjelmointikieliä.
 
 Ohjelmointikielet kuten Java tarjoavat suuren määrän valmiita komentoja, joita ohjelmoija käyttää ohjelmistoja luodessa. Tämä helpottaa ohjelmointia, sillä aivan kaikkea ei tarvitse toteuttaa alusta lähtien. Esimerkiksi graafisia käyttöliittymiä toteutettaessa ohjelmointikielillä on tyypillisesti valmiita toiminnallisuuksia erilaisten valikoiden ja näkymien luomiseen. Iso osa ohjelmoinnista onkin ohjelmointikielen valmiiksi tarjoamien komentojen soveltamista ongelmien ratkaisuissa.
 
@@ -57,14 +65,6 @@ public class Esimerkki {
 ```
 
 Yhdenkin merkin puuttuminen voi johtaa ohjelmoidessa virhetilanteeseen. Ohjelmoija saattaa vahingossa esimerkiksi syöttää pilkun pisteen sijaan, kirjoittaa vaikkapa `printin` sanan `println` sijaan, jättää tulostettavasta merkkijonosta hipsut pois, tai unohtaa komentoa seuraavan puolipisteen. Jokainen edelläolevista esimerkeistä johtaa virhetilanteeseen, missä ohjelman suoritus ei onnistu.
-
-Ohjelmien kirjoittaminen on siis hyvin tarkkaa. Alla on annettuna esimerkkiohjelma ja osittain valmis ohjelma. Täydennä osittain valmista ohjelmaa siten, että se vastaa esimerkkiohjelmaa merkki merkiltä.
-
-public class Esimerkki { public static void main(String\[\] args) { // Tänne kirjoitetaan ohjelman käyttämät lauseet System.out.println("Tulostettava teksti"); } }
-
-public class Esimerkki { public static void main(String\[\] args) { // Tänne kirjoitetaan ohjelman käyttämät lauseet // MARK } }
-
-Mikäli yllä oleva ohjelma olisi toteutettu ohjelmointiympäristössä, voisi ohjelman suorittaa. Tällöin tietokone tulostaisi merkkijonon "Tulostettava teksti".
 
 ## Tietokone suorittaa ohjelman
 

@@ -26,6 +26,7 @@ import ProgrammingExercise from './ProgrammingExercise'
 import TextBox from './TextBox'
 import SampleOutput from './SampleOutput'
 import Youtube from './Youtube'
+import Quiznator from './Quiznator'
 
 const mapping = {
   test: Test,
@@ -34,6 +35,7 @@ const mapping = {
   'text-box': TextBox,
   'sample-output': SampleOutput,
   'youtube': Youtube,
+  'quiznator': Quiznator,
 }
 
 export default () => {

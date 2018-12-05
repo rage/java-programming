@@ -34,13 +34,13 @@ const Body = styled.div`
 `
 
 const variantToColor = {
-  hint: '#528afc',
-  learningObjectives: '#57b181',
+  info: '#528afc',
+  learningGoals: '#57b181',
 }
 
 const variantToIcon = {
-  hint: faInfoCircle,
-  learningObjectives: faUserGraduate,
+  info: faInfoCircle,
+  learningGoals: faUserGraduate,
 }
 
 export default props => {

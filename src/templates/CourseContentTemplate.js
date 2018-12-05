@@ -9,6 +9,7 @@ import ContentArea from '../components/ContentArea'
 import getNamedPartials from '../partials'
 import PagesContext from '../contexes/PagesContext'
 import TopBar from '../components/TopBar';
+import './remark.css'
 
 const ContentWrapper = styled.div`
   margin-top: 1rem;

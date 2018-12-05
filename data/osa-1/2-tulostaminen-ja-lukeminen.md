@@ -2,7 +2,8 @@
 path: "/osa-1/2-tulostaminen-ja-lukeminen"
 title: "Tulostaminen ja lukeminen"
 ---
-<% partial 'partials/learning\_objectives', locals: { name: 'Oppimistavoitteet' } do %>
+
+<text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
 * Osaat kirjoittaa ohjelman, joka tulostaa tekstiä.
 * Tutustut pinnallisesti käsitteeseen muuttuja
@@ -15,7 +16,7 @@ title: "Tulostaminen ja lukeminen"
     * testata tehtävää TMC:n avulla
     * palauttaa tehtävän arvostelua varten TMC:n avulla
 
-<% end %>
+</text-box>
 
 # Ohjelmarunko
 
@@ -53,7 +54,7 @@ public class Esimerkki {
 }
 ```
 
-<% partial 'partials/material\_sub\_heading' do %> Tulostuskomento<% end %>
+## Tulostuskomento
 
 Ensimmäinen komento, jonka opimme on tulostuskomento. Komento `System.out.println("Hei maailma");` tulostaa tekstin "Hei maailma". Tulostettavaa tekstiä voi vaihtaa mielivaltaisesti, kunhan komento `System.out.println("mielivaltainen teksti");` -- eli `System` piste `out` piste `println` sulut auki `(` "teksti" sulut kiinni `)` ja puolipiste `;` pysyy muuttumattomana.
 
@@ -69,7 +70,13 @@ public class Ohjelma {
 
 Alla oleva tekstialue on materiaalissa käytettävä esimerkki ohjelman tuottamaan tulostukseen. Yllä oleva ohjelma tuottaisi siis tulostuksen "Hei maailma!". Voit kokeilla kaikkia materiaalin esimerkkejä ohjelmointiympäristössä olevassa "Hiekkalaatikko"-nimisessä tehtäväpohjassa.
 
-<% partial 'partials/sample\_output' do %> Hei maailma! <% end %>                                 <% partial 'partials/hint', locals: { name: 'Ohjelmoinnin aloittaminen' } do %>
+<sample-output>
+
+Hei maailma!
+
+</sample-output>
+
+<text-box variant='hint' name='Ohjelmoinnin aloittaminen'>
 
 Ohjelmoinnin aloittamiseen tarvitset seuraavat asiat.
 
@@ -81,7 +88,7 @@ Ohjeistus oleellisten työvälineiden asentamiseen sekä kurssilla tarvittavan k
 
 [Ohjeisiin!](https://materiaalit.github.io/tmc-asennus/netbeans/)
 
-<% end %>
+</text-box>
 
 Alla on kurssin ensimmäiset ohjelmointitehtävät. Ensimmäinen tehtävä -- "Hiekkalaatikko" -- on oikeastaan ympäristö, missä voit tehdä omia kokeilujasi. Toisessa tehtävässä -- "Ada Lovelace" teet jo määrättyjä asioita.
 
@@ -91,7 +98,7 @@ Voit katsoa ohjeet aloittamiseen myös seuraavalta videolta.
 
 <youtube id="lxehAkYVEGo"></youtube>
 
-<% partial 'partials/exercise', locals: { name: 'Hiekkalaatikko' } do %>
+<programming-exercise name='Hiekkalaatikko'>
 
 Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
 
@@ -105,7 +112,9 @@ public class Hiekkalaatikko {
 
 Voit tehdä tehtäväpohjaan omia kokeilujasi. Pisteet tehtävästä saa kun palauttaa toimivan ohjelman -- ohjelma voi olla käytännössä minkälainen tahansa, jopa tyhjä ohjelma kelpaa.
 
-<% end %>                                 <% partial 'partials/exercise', locals: { name: 'Ada Lovelace', model\_solution: '50207' } do %>
+</programming-exercise>
+
+<programming-exercise name='Ada Lovelace'>
 
 Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
 
@@ -119,11 +128,15 @@ public class Nimi {
 
 Rivi "// Kirjoita ohjelmasi tähän alle" on _kommenttirivi_, jota tietokone ei ota huomioon ohjelmaa suoritettaessa. Lisää kommenttirivin alle lause, joka tulostaa merkkijonon "Ada Lovelace" ja suorita ohjelma. Ohjelman tulostuksen tulee olla seuraavanlainen:
 
-<% partial 'partials/sample\_output' do %> Ada Lovelace <% end %>
+<sample-output>
+
+Ada Lovelace
+
+</sample-output>
 
 Kun olet tehnyt tehtävän ja huomaat, että ohjelma tulostaa halutun merkkijonon, palauta tehtävä TMC:lle. Tutustu tämän jälkeen halutessasi lisää [Ada Lovelaceen](https://en.wikipedia.org/wiki/Ada_Lovelace), joka oli yksi ensimmäisistä ohjelmoijista.
 
-<% end %>
+</programming-exercise>
 
 Tehtävänannoissa olevat toiveet tulostusmuodosta ovat tarkkoja. Jos tehtävänannossa toivotaan esimerkiksi että ohjelma tulostaa sulun toisen rivin ensimmäiseksi merkiksi, ei sulkua saa jättää tulostamatta.
 
@@ -140,7 +153,15 @@ public class Ohjelma {
 
 Yllä olevan ohjelman tulostus on seuraava.
 
-<% partial 'partials/sample\_output' do %> Hei maailma! ... ja maailmankaikkeus! <% end %>                                 <% partial 'partials/hint', locals: { name: 'Lyhenne "sout"' } do %>
+<sample-output>
+
+Hei maailma!
+
+... ja maailmankaikkeus!
+
+</sample-output>
+
+<text-box variant='hint' name='Lyhenne "sout"'>
 
 Komennon `System.out.println("...")` kirjoittaminen voi olla melko työlästä. Kokeile kirjoittaa NetBeans:iin (main:in sisään) tyhjälle riville _sout_ ja paina tabulaattoria (näppäin q:n vasemmalla puolella). Mitä tapahtuu? Tämä pieni apuväline säästänee jatkossa runsaasti aikaasi.
 
@@ -160,11 +181,23 @@ public class OlipaKerran {
 
 Muokkaa ohjelmaa siten, että ohjelman suoritus tulostaa seuraavanlaisen tekstin. Käytä tekstin tulostamiseen kuutta `System.out.println` komentoa.
 
-<% partial 'partials/sample\_output' do %> Olipa kerran... on ranskalainen opetusanimaatiosarjojen kokoelma. Kokoelmaan kuuluu seitsemän erillistä sarjaa, jotka käsittelevät eri tiedonaloja. Useimmat sarjoista liittyvät historiaan; Olipa kerran ihminen keskittyy ihmiskunnan historiaan ja kehitykseen, kun muut kertovat erityisistä historian alueista, kuten löytöretkeilijöistä tai keksijöistä. <% end %> <% end %>
+<sample-output>
+
+ Olipa kerran... on ranskalainen opetusanimaatiosarjojen kokoelma. Kokoelmaan kuuluu seitsemän erillistä sarjaa, jotka käsittelevät eri tiedonaloja. Useimmat sarjoista liittyvät historiaan; Olipa kerran ihminen keskittyy ihmiskunnan historiaan ja kehitykseen, kun muut kertovat erityisistä historian alueista, kuten löytöretkeilijöistä tai keksijöistä.
+
+</sample-output>
+
+</programming-exercise>
 
 Tarkalleen ottaen komento `System.out.println("merkkijono");` tulostaa tekstin "merkkijono" sekä rivinvaihdon. Rivinvaihdon voi halutessaan tulostaa myös erikoismerkillä `\n`, joka kirjoitetaan osaksi tulostettavaa merkkijonoa. Esimerkiksi seuraavan tulostuksen saa aikaan ainakin kahdella eri tapaa.
 
-<% partial 'partials/sample\_output' do %> Hei maailma! ... ja maailmankaikkeus! <% end %>
+<sample-output>
+
+Hei maailma!
+
+... ja maailmankaikkeus!
+
+</sample-output>
 
 Toinen vaihtoehto on kahden `System.out.println`\-komennon käyttäminen, yksi kummallekin riville. Toinen on yhden `System.out.println`\-komennon käyttäminen siten, että tulostettava merkkijono sisältää rivinvaihtomerkin `\n`. Tämä näyttäisi ohjelmassa seuraavalta.
 
@@ -176,7 +209,7 @@ public class Ohjelma {
 }
 ```
 
- <% partial 'partials/exercise', locals: { name: 'Olipa kerran maa', model\_solution: '50209' } do %>
+ <programming-exercise name='Olipa kerran maa'>
 
 Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
 
@@ -190,7 +223,13 @@ public class OlipaKerranMaa {
 
 Muokkaa ohjelmaa siten, että ohjelman suoritus tulostaa seuraavanlaisen tekstin. Käytä tekstin tulostamiseen yhtä `System.out.println` komentoa.
 
-<% partial 'partials/sample\_output' do %> Olipa kerran maa valmistui vuonna 2008. Sarja käsittelee luontoympäristön suojelemista ja varoittaa maailmanlaajuisesta ilmastonlämpenemisestä, kasvihuoneilmiöstä, saasteista ja niin edelleen. <% end %> <% end %>
+<sample-output>
+
+Olipa kerran maa valmistui vuonna 2008. Sarja käsittelee luontoympäristön suojelemista ja varoittaa maailmanlaajuisesta ilmastonlämpenemisestä, kasvihuoneilmiöstä, saasteista ja niin edelleen.
+
+</sample-output>
+
+</programming-exercise>
 
 Mikäli merkkijonosta muodostuu hyvin pitkä, voi sen pilkkoa useampaan osaan. Tämä tapahtuu rajaamalla jokainen merkkijonon osa hipsuilla ja yhdistämällä osat `+`\-merkillä. Tällöin tulostettavan merkkijonon voi esittää useammalla rivillä, vaikka tulostuskomentoja olisi vain yksi.
 
@@ -219,11 +258,21 @@ System.out.println("Ensimmäinen\\nToinen\\nKolmas");
 
 Yllä oleva lause tulostaa seuraavaa:
 
-<% partial 'partials/sample\_output' do %> Ensimmäinen Toinen Kolmas <% end %>                                 <% partial 'partials/material\_sub\_sub\_heading' do %> Komennon parametrit <% end %>
+<sample-output>
+
+Ensimmäinen
+
+Toinen
+
+Kolmas
+
+</sample-output>
+
+### Komennon parametrit
 
 Tulostuslauseen tulostama tieto eli komennon _parametrit_ annetaan tulostuskomennolle lisäämällä ne lauseen perässä olevien sulkujen `()` sisään. Esimerkiksi `System.out.println` -komennon parametriksi annetaan merkkijono _hei_ hipsujen sisällä seuraavasti: `System.out.println("hei")`.
 
-<% partial 'partials/material\_sub\_sub\_heading' do %> Puolipiste erottaa lauseet toisistaan <% end %>
+### Puolipiste erottaa lauseet toisistaan
 
 Puolipisteellä `;` erotetaan lauseet toisistaan. Voisimme oikeastaan kirjoittaa koko ohjelman yhdelle riville -- mikä ei kuitenkaan ole kovin ymmärrettävää.
 
@@ -233,11 +282,15 @@ System.out.print("maailma");
 System.out.print("!\\n");
 ```
 
-<% partial 'partials/sample\_output' do %> Hei maailma! <% end %>
+<sample-output>
+
+Hei maailma!
+
+</sample-output>
 
 Vaikka yllä oleva esimerkki toimii, on rivinvaihtojen käyttö tärkeää muita ohjelmoijia ajatellen. Tällöin ohjelman lukija tietää, että kullakin rivillä tehdään vain yksi konkreettinen asia.
 
-<% partial 'partials/material\_sub\_sub\_heading' do %> Lohko <% end %>
+### Lohko
 
 Lohkolla tarkoitetaan aaltosulkujen rajaamaa aluetta. Ohjelmissamme näitä on tyypillisesti useita. Ohjelman sisältävä lähdekooditiedosto sisältää merkkijonon `public class _Ohjelma_`, jota seuraa lohkon avaava aaltosulku. Lohko päättyy sulkevaan aaltosulkuun. _Ohjelma_ sisällä voi olla useita lohkoja.
 
@@ -263,7 +316,7 @@ public class Ohjelma {
     }
 }
 ```
-<% partial 'partials/material\_sub\_sub\_heading' do %> Kommentit <% end %>
+### Kommentit
 
 Lähdekoodia voi kommentoida selkeyttääkseen sitä tai lisätäkseen muistiinpanoja kahdella eri tavalla.
 
@@ -285,7 +338,7 @@ public class Kommentteja {
 
 Esimerkin alin rivi esittelee erityisen kätevän käyttökohteen kommenteille. Kirjoitettua lähdekoodia ei tarvitse poistaa jos haluaa tilapäisesti kokeilla jotain.
 
-<% partial 'partials/material\_sub\_sub\_heading' do %> Ohjelmointityylistä <% end %>
+### Ohjelmointityylistä
 
 Vaikka tietokone ja käyttämämme ohjelmointikieli ei aseta rajoituksia kirjoitettavan ohjelmakoodin ulkoasulle, olemme huomanneet että ohjelmoijan -- tai opiskelevan ohjelmoijan -- kirjoittaman koodin ulkoasulla on merkitystä myös oppimisen kannalta. Luettavuus ja sisennyksen säännönmukaisuus ovat asioita, jotka vaikuttavat lähdekoodin ymmärrettävyyteen, ja sitä kautta myös oppimistuloksiin. Seuraava koodi on säännönmukaisesti sisennettyä.
 
@@ -313,13 +366,13 @@ public static void main(String[] args) {
 
 Tyylivirheet näytetään ohjelmointiympäristössä keltaisella, ja normaalit testi-ilmoitukset punaisella. Kurssilla tutuksi tuleva tehtävän edistymispalkki muuttuu myöskin keltaiseksi, jos koodissa havaitaan tyylivirheitä. Vaikkakin näppäinyhdistelmä alt + shift + f (macOS control + shift + f) auttaa useimpien tyylivirheiden korjaamiseen, on koodia syytä kirjoittaa oikein alusta alkaen.
 
-<% partial 'partials/hint', locals: { name: 'Lähdekoodi tulee sisentää oikein' } do %>
+<text-box variant='hint' name='Lähdekoodi tulee sisentää oikein'>
 
 Javassa koodia sisennetään neljän välilyönnin tai yhden tabulaattorin verran jokaisen lohkon kohdalla. Käytä sisentämiseen joko välilyöntejä tai tabulaattoreita. Joissakin tapauksissa sisennys saattaa hajota mikäli käytät molempia. NetBeans auttaa tässä kun painat kirjainyhdistelmää "alt + shift + f" (macOS "control + shift + f").
 
 Jatkossa ohjelmakoodi tulee sisentää oikein myös tehtävissä. Jos sisennys on väärin, ei ohjelmointiympäristö hyväksy tehtävää.
 
-<% end %>
+</text-box>
 
 ## Merkkijonon tulostaminen
 
@@ -336,13 +389,16 @@ Merkkijonomuotoinen muuttuja nimeltä `viesti`, jonka arvona on merkkijono "Hei 
 
 Muuttujan luominen luo ohjelman käyttöön paikan, jonka sisältöön voi myöhemmin viitata. Viittaaminen tapahtuu muuttujan nimen avulla. Esimerkiksi merkkijonomuuttujan luominen ja tulostaminen tapahtuu seuraavalla tavalla.
 
-
-
-<% partial 'partials/sample\_output' do %> Hei maailma! <% end %>
 ```java
   String viesti = "Hei maailma!";
   System.out.println(viesti);
 ```
+
+<sample-output>
+
+Hei maailma!
+
+</sample-output>
 
 Mikäli ohjelmassa olisi hipsut merkkijonomuuttujan `viesti` nimen ympärillä, tulostaisi ohjelma tekstin "viesti" muuttujan `viesti` arvon eli tekstin "Hei maailma!" sijaan.
 
@@ -353,10 +409,13 @@ Mikäli ohjelmassa olisi hipsut merkkijonomuuttujan `viesti` nimen ympärillä, 
 ```
 
 
-<% partial 'partials/sample\_output' do %> viesti <% end %>
+<sample-output>
 
+viesti
 
-<% partial 'partials/exercise', locals: { name: 'Passi ja hammasharja', model\_solution: '50210' } do %>
+</sample-output>
+
+<programming-exercise name='Passi ja hammasharja'>
 
 
 Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
@@ -375,11 +434,21 @@ Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
 
 Ohjelman suorittaminen tulostaa seuraavan tekstin.
 
-<% partial 'partials/sample\_output' do %> Passi ja hammaslanka <% end %>
+<sample-output>
+
+Passi ja hammaslanka
+
+</sample-output>
 
 Muokkaa ohjelmaa siten, että ohjelman suoritus tulostaa seuraavanlaisen tekstin. Huom! Älä muokkaa riviä `System.out.println(viesti);`.
 
-<% partial 'partials/sample\_output' do %> Passi ja hammasharja <% end %> <% end %>
+<sample-output>
+
+Passi ja hammasharja
+
+</sample-output>
+
+</programming-exercise>
 
 Tulostettavan merkkijonon voi koostaa useammista merkkijonoista `+`\-merkin avulla. Esimerkiksi alla oleva ohjelma tulostaa viestin "Hei maailma!" yhdelle riville.
 
@@ -406,7 +475,12 @@ Edellistä esimerkkiä noudattaen myös merkkijonomuuttujan arvon ja merkkijonol
 ```
 
 
-<% partial 'partials/sample\_output' do %> Hei maailma! ... ja maailmankaikkeus! <% end %>
+<sample-output>
+Hei maailma!
+
+... ja maailmankaikkeus!
+
+</sample-output>
 
 Sama onnistuu myös useammalla osalla.
 
@@ -422,9 +496,11 @@ Sama onnistuu myös useammalla osalla.
   }
 ```
 
+<sample-output>
 
+My name is Bond, James Bond
 
-                                <% partial 'partials/sample\_output' do %> My name is Bond, James Bond <% end %>
+</sample-output>
 
 Vastaavasti merkkijonomuuttujan arvon voi luoda useammasta merkkijonoliteraalista.
 
@@ -439,8 +515,17 @@ public class Ohjelma {
 }
 ```
 
+<sample-output>
 
- <% partial 'partials/sample\_output' do %> yksi kaksi kolme <% end %>                                 <% partial 'partials/exercise', locals: { name: 'Hei Ada Lovelace!', model\_solution: '50211' } do %>
+yksi
+
+kaksi
+
+kolme
+
+</sample-output>
+
+<programming-exercise name='Hei Ada Lovelace!'>
 
 Tehtäväpohjassa on seuraavanlainen ohjelma.
 
@@ -456,11 +541,15 @@ Tehtäväpohjassa on seuraavanlainen ohjelma.
 
 Muokkaa ohjelmaa siten, että ohjelmassa tulostetaan muuttujan `nimi` sisältö, ja että ohjelman tulostus on kokonaisuudessaan muotoa:
 
-<% partial 'partials/sample\_output' do %> Hei Ada Lovelace! <% end %>
+<sample-output>
+
+Hei Ada Lovelace!
+
+</sample-output>
 
 Huom! Kun käytät `System.out.println`\-komentoa, älä kirjoita komentoon merkkijonoa "Ada Lovelace", vaan hyödynnä tulostuksessa olemassaolevaa muuttujaa `nimi`.
 
-<% end %>
+</programming-exercise>
 
 ## Merkkijonon lukeminen käyttäjältä
 
@@ -507,7 +596,15 @@ Merkkijonon lukeminen käyttäjältä onnistuu `lukija`\-muuttujaan liittyväll�
 
 Jatkossa tulostusesimerkkeihin merkitään käyttäjän syöttämä syöte punaisella värillä. Mikäli käyttäjä syöttäisi ohjelmaan tekstin "Hei maailma", olisi ohjelman suoritus seuraavanlainen.
 
-<% partial 'partials/sample\_output' do %> Syötä viesti: Hei maailma Hei maailma <% end %>
+<sample-output>
+
+Syötä viesti:
+
+Hei maailma
+
+Hei maailma
+
+</sample-output>
 
 Alla sama esimerkki, mutta siten, että käyttäjän syöttämä merkkijono tulostetaan tekstin "Viestisi oli " jälkeen.
 
@@ -528,11 +625,19 @@ Alla sama esimerkki, mutta siten, että käyttäjän syöttämä merkkijono tulo
   }
 ```
 
- <% partial 'partials/sample\_output' do %> Syötä viesti: selkeä Viestisi oli selkeä <% end %>
+ <sample-output>
 
-<%= partial 'partials/youtube\_2', locals: { id: '7lswbb\_R7uM' } %>
+ Syötä viesti:
 
-<% partial 'partials/exercise', locals: { name: 'Viesti', model\_solution: '50212' } do %>
+ selkeä
+
+ Viestisi oli selkeä
+
+ </sample-output>
+
+<youtube id='7lswbb\_R7uM'></youtube>
+
+<programming-exercise name='Viesti'>
 
 Kirjoita ohjelma, joka pyytää käyttäjää kirjoittamaan merkkijonon. Kun käyttäjä on syöttänyt merkkijonon (eli kirjoittanut tekstin sekä painanut enter-näppäintä), ohjelma tulostaa käyttäjän syöttämän merkkijonon.
 
@@ -554,11 +659,31 @@ Tehtäväpohjan mukana tulee runko, joka sisältää Scanner-apuvälineen luomis
 
 Tulostusesimerkki kun käyttäjä syöttää merkkijonon "Heippa".
 
-<% partial 'partials/sample\_output' do %> Kirjoita merkkijono! Heippa Heippa <% end %>
+<sample-output>
+
+Kirjoita merkkijono!
+
+Heippa
+
+Heippa
+
+</sample-output>
 
 Tulostusesimerkki kun käyttäjä syöttää merkkijonon "Olipa kerran...".
 
-<% partial 'partials/sample\_output' do %> Kirjoita merkkijono! Olipa kerran... Olipa kerran... <% end %> <% end %>                                 <% partial 'partials/exercise', locals: { name: 'Viesti kolmesti', model\_solution: '50213' } do %>
+<sample-output>
+
+Kirjoita merkkijono!
+
+Olipa kerran...
+
+Olipa kerran...
+
+</sample-output>
+
+</programming-exercise>
+
+<programming-exercise name='Viesti kolmesti'>
 
 Kirjoita ohjelma, joka pyytää käyttäjää kirjoittamaan merkkijonon. Kun käyttäjä on syöttänyt merkkijonon (eli kirjoittanut tekstin sekä painanut enter-näppäintä), ohjelma tulostaa käyttäjän syöttämän kolme kertaa (voit käyttää System.out.println-komentoa useampaan kertaan).
 
@@ -580,11 +705,39 @@ Tehtäväpohjan mukana tulee runko, joka sisältää Scanner-apuvälineen luomis
 
 Tulostusesimerkki kun käyttäjä syöttää merkkijonon "Heippa".
 
-<% partial 'partials/sample\_output' do %> Kirjoita merkkijono! Heippa Heippa Heippa Heippa <% end %>
+<sample-output>
+
+Kirjoita merkkijono!
+
+Heippa
+
+Heippa
+
+Heippa
+
+Heippa
+
+</sample-output>
 
 Tulostusesimerkki kun käyttäjä syöttää merkkijonon "Olipa kerran...".
 
-<% partial 'partials/sample\_output' do %> Kirjoita merkkijono! Olipa kerran... Olipa kerran... Olipa kerran... Olipa kerran... <% end %> <% end %>                                 <% partial 'partials/exercise', locals: { name: 'Nimi', model\_solution: '50214' } do %>
+<sample-output>
+
+Kirjoita merkkijono!
+
+Olipa kerran...
+
+Olipa kerran...
+
+Olipa kerran...
+
+Olipa kerran...
+
+</sample-output>
+
+</programming-exercise>
+
+<programming-exercise name='Nimi'>
 
 Kirjoita ohjelma, joka kysyy käyttäjältä nimeä käyttäen tekstiä "Mikä on nimesi?". Kun käyttäjä syöttää nimen, ohjelma tulostaa käyttäjälle merkkijonon "Hei ", jota seuraa käyttäjän nimi.
 
@@ -605,11 +758,29 @@ Tehtäväpohjan mukana tulee runko, joka sisältää Scanner-apuvälineen luomis
 
 Tulostusesimerkki kun käyttäjä syöttää nimeksi Ada.
 
-<% partial 'partials/sample\_output' do %> Mikä on nimesi? Ada Hei Ada <% end %>
+<sample-output>
+
+Mikä on nimesi?
+
+Ada
+
+Hei Ada
+
+</sample-output>
 
 Tulostusesimerkki kun käyttäjä syöttää nimeksi Lilja.
 
-<% partial 'partials/sample\_output' do %> Mikä on nimesi? Lilja Hei Lilja <% end %> <% end %>
+<sample-output>
+
+Mikä on nimesi?
+
+Lilja
+
+Hei Lilja
+
+</sample-output>
+
+</programming-exercise>
 
 Ohjelma voi kysyä käyttäjältä myös montaa merkkijonoa. Tämä toimii kysymällä jokaista haluttua merkkijonoa erikseen `nextLine()`\-komennolla.
 
@@ -636,7 +807,23 @@ public class Ohjelma {
 
 Yllä olevan ohjelman toimintaa kuvaava esimerkki:
 
-<% partial 'partials/sample\_output' do %> Syötä kolme riviä, tulostan ne sen jälkeen: yksi kaksi kolme yksi kaksi kolme <% end %>
+<sample-output>
+
+Syötä kolme riviä, tulostan ne sen jälkeen:
+
+yksi
+
+kaksi
+
+kolme
+
+yksi
+
+kaksi
+
+kolme
+
+</sample-output>
 
 Muuttujat voisi halutessaan tulostaa myös käänteisessä järjestyksessä tai vaikkapa yhteen pötköön.
 
@@ -663,11 +850,57 @@ public class Ohjelma {
 }
 ```
 
-<% partial 'partials/sample\_output' do %> Syötä kolme riviä, tulostan ne sen jälkeen: yksi kaksi kolme kolme kaksi yksi yksikaksikolme <% end %>                                 <% partial 'partials/exercise', locals: { name: 'Keskustelu', model\_solution: '50215' } do %>
+<sample-output>
+
+Syötä kolme riviä, tulostan ne sen jälkeen:
+
+yksi
+
+kaksi
+
+kolme
+
+kolme
+
+kaksi
+
+yksi
+
+yksikaksikolme
+
+</sample-output>
+
+<programming-exercise name='Keskustelu'>
 
 Kirjoita ohjelma, joka toimii seuraavalla tavalla.
 
-<% partial 'partials/sample\_output' do %> Hyvää päivää! Mitä kuuluu? Kiitos hyvää! No mutta sepäs kiinnostavaa, kerro lisää! Noh, eipä tässä muuta. Kiitos kertomastasi! <% end %>                                 <% partial 'partials/sample\_output' do %> Hyvää päivää! Mitä kuuluu? Mitäs tässä, ritari ässä! No mutta sepäs kiinnostavaa, kerro lisää! tulin juuri kaupasta. Kiitos kertomastasi! <% end %>
+<sample-output>
+
+Hyvää päivää! Mitä kuuluu?
+
+Kiitos hyvää!
+
+No mutta sepäs kiinnostavaa, kerro lisää!
+
+Noh, eipä tässä muuta.
+
+Kiitos kertomastasi!
+
+</sample-output>
+
+<sample-output>
+
+Hyvää päivää! Mitä kuuluu?
+
+Mitäs tässä, ritari ässä!
+
+No mutta sepäs kiinnostavaa, kerro lisää!
+
+tulin juuri kaupasta.
+
+Kiitos kertomastasi!
+
+</sample-output>
 
 Tehtäväpohjan mukana tulee runko, joka sisältää Scanner-apuvälineen luomisen.
 
@@ -684,11 +917,37 @@ public class Keskustelu {
 }
 ```
 
- <% partial 'partials/exercise', locals: { name: 'Tarina', model\_solution: '50216' } do %>
+</programming-exercise>
+
+<programming-exercise name='Tarina'>
 
 Kirjoita ohjelma, joka toimii seuraavalla tavalla.
 
-<% partial 'partials/sample\_output' do %> Kerron kohta tarinan, mutta tarvitsen siihen hieman tietoja. Minkä niminen tarinassa esiintyvä hahmo on? Nauriskala Mikä hahmon ammatti on? kalastaja Tässä tarina: Olipa kerran Nauriskala, joka oli ammatiltaan kalastaja. Matkatessaan töihin, Nauriskala mietti arkeaan. Kun työnä on kalastaja, tekemistä riittää välillä hyvin paljon ja välillä ei lainkaan. Ehkäpä Nauriskala ei olekaan koko elämäänsä kalastaja. <% end %>
+<sample-output>
+
+Kerron kohta tarinan, mutta tarvitsen siihen hieman tietoja.
+
+Minkä niminen tarinassa esiintyvä hahmo on?
+
+Nauriskala
+
+Mikä hahmon ammatti on?
+
+kalastaja
+
+Tässä tarina:
+
+Olipa kerran Nauriskala, joka oli ammatiltaan kalastaja.
+
+Matkatessaan töihin, Nauriskala mietti arkeaan. Kun työnä
+
+on kalastaja, tekemistä riittää välillä hyvin paljon ja
+
+välillä ei lainkaan. Ehkäpä Nauriskala ei olekaan koko
+
+elämäänsä kalastaja.
+
+</sample-output>
 
 Tehtäväpohjan mukana tulee runko, joka sisältää Scanner-apuvälineen luomisen.
 
@@ -707,4 +966,28 @@ public class Tarina {
 
 Alla vielä toinen esimerkki.
 
-<% partial 'partials/sample\_output' do %> Kerron kohta tarinan, mutta tarvitsen siihen hieman tietoja. Minkä niminen tarinassa esiintyvä hahmo on? Ada Mikä hahmon ammatti on? datatieteilijä Tässä tarina: Olipa kerran Ada, joka oli ammatiltaan datatieteilijä. Matkatessaan töihin, Ada mietti arkeaan. Kun työnä on datatieteilijä, tekemistä riittää välillä hyvin paljon ja välillä ei lainkaan. Ehkäpä Ada ei olekaan koko elämäänsä datatieteilijä. <% end %> <% end %>
+<sample-output>
+
+Kerron kohta tarinan, mutta tarvitsen siihen hieman tietoja.
+
+Minkä niminen tarinassa esiintyvä hahmo on?
+
+Ada
+
+Mikä hahmon ammatti on?
+
+datatieteilijä
+
+Tässä tarina: Olipa kerran Ada, joka oli ammatiltaan datatieteilijä.
+
+Matkatessaan töihin, Ada mietti arkeaan. Kun työnä
+
+on datatieteilijä, tekemistä riittää välillä hyvin paljon ja
+
+välillä ei lainkaan. Ehkäpä Ada ei olekaan koko
+
+elämäänsä datatieteilijä.
+
+</sample-output>
+
+</programming-exercise>
