@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { SIDEBAR_WIDTH } from './Sidebar'
 
 const ContentAreaContainer = styled.div`
-  @media only screen and (min-width: 500px) {
+  @media only screen and (min-width: 900px) {
     margin-left: ${SIDEBAR_WIDTH};
   }
 `

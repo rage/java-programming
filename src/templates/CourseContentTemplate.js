@@ -8,6 +8,7 @@ import Sidebar from '../components/Sidebar'
 import ContentArea from '../components/ContentArea'
 import getNamedPartials from '../partials'
 import PagesContext from '../contexes/PagesContext'
+import TopBar from '../components/TopBar';
 
 const ContentWrapper = styled.div`
   margin-top: 1rem;
@@ -32,6 +33,7 @@ export default function CourseContentTemplate({
     }}>
       <Fragment>
         <Sidebar />
+        <TopBar />
         <ContentArea>
           <Layout>
             <ContentWrapper>

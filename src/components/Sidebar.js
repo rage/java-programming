@@ -8,7 +8,7 @@ import TreeView from './TreeView'
 export const SIDEBAR_WIDTH = '20rem'
 
 const SidebarContainer = styled.div`
-  @media only screen and (min-width: 500px) {
+  @media only screen and (min-width: 900px) {
     height: 100vh;
     width: ${SIDEBAR_WIDTH};
     position: fixed;
