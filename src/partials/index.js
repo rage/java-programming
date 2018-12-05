@@ -24,12 +24,14 @@ import Test from './Test'
 import PagesInThisSection from './PagesInThisSection'
 import ProgrammingExercise from './ProgrammingExercise'
 import TextBox from './TextBox'
+import SampleOutput from './SampleOutput'
 
 const mapping = {
   test: Test,
   'pages-in-this-section': PagesInThisSection,
   'programming-exercise': ProgrammingExercise,
   'text-box': TextBox,
+  'sample-output': SampleOutput,
 }
 
 export default () => {

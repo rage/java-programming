@@ -29,13 +29,6 @@ const Header = styled.h3`
   border-bottom: 1px solid #f7f7f9;
 `
 
-const HeaderMuted = styled.span`
-  color: #818a91 !important;
-  font-size: 80%;
-  font-weight: 400;
-  margin-right: 0.2rem;
-`
-
 const Body = styled.div`
   padding-bottom: 0.5rem;
 `
