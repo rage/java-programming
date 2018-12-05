@@ -46,6 +46,7 @@ class CreateAccountForm extends React.Component {
   state = {
     email: undefined,
     password: undefined,
+    password_confirmation: undefined,
     submitting: false,
     error: false,
   }
@@ -86,6 +87,17 @@ class CreateAccountForm extends React.Component {
               onChange={o => this.setState({ password: o.target.value })}
             />
           </Row>
+          <Row>
+            <TextField
+              variant="outlined"
+              type={this.state.showPassword ? 'text' : 'password'}
+              label="Salasana uudestaan"
+              fullWidth
+              value={this.state.password}
+              onChange={o => this.setState({ password_confirmation: o.target.value })}
+            />
+          </Row>
+
 
           <Row>
             <Button
