@@ -634,7 +634,7 @@ Viestisi oli selkeä
 
  </sample-output>
 
-<youtube id='7lswbb\_R7uM'></youtube>
+<youtube id='7lswbb_R7uM'></youtube>
 
 <programming-exercise name='Viesti'>
 
