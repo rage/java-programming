@@ -25,6 +25,7 @@ import PagesInThisSection from './PagesInThisSection'
 import ProgrammingExercise from './ProgrammingExercise'
 import TextBox from './TextBox'
 import SampleOutput from './SampleOutput'
+import Youtube from './Youtube'
 
 const mapping = {
   test: Test,
@@ -32,6 +33,7 @@ const mapping = {
   'programming-exercise': ProgrammingExercise,
   'text-box': TextBox,
   'sample-output': SampleOutput,
+  'youtube': Youtube,
 }
 
 export default () => {

@@ -89,7 +89,7 @@ Ohjelmointitehtävien tehtävänannot löytyvät kurssimateriaalista (eli materi
 
 Voit katsoa ohjeet aloittamiseen myös seuraavalta videolta.
 
-<%= partial 'partials/youtube\_2', locals: { id: 'lxehAkYVEGo' } %>
+<youtube id="lxehAkYVEGo"></youtube>
 
 <% partial 'partials/exercise', locals: { name: 'Hiekkalaatikko' } do %>
 

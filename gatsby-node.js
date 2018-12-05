@@ -16,7 +16,7 @@ exports.createPages = ({ actions, graphql }) => {
   return graphql(`
     {
       allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___title] }
+        sort: { order: DESC, fields: [frontmatter___path] }
         limit: 1000
       ) {
         edges {
@@ -33,7 +33,12 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    result.data.allMarkdownRemark.edges.sort((a, b) => {
+      a = a.node.frontmatter.path.toLowerCase();
+      b = b.node.frontmatter.path.toLowerCase();
+
+      return a > b ? -1 : b > a ? 1 : 0;
+    }).forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
         component: blogPostTemplate,
