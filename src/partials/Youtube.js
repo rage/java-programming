@@ -12,6 +12,9 @@ let analytics = undefined
 initAnalytics()
 
 function initAnalytics() {
+  if (typeof window === "undefined") {
+    return
+  }
   analytics = new ReduxActionAnalytics(
     'https://usage.testmycode.io/api/v0/data',
     'youtube-watch-stats',
