@@ -13,10 +13,21 @@ module.exports = {
       },
     },
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `gatsby-remark-copy-linked-files`,
+          {
+            resolve: 'gatsby-remark-smartypants',
+            options: {
+              quotes: false,
+              ellipses: false,
+              backticks: false,
+              dashes: 'inverted'
+            },
+          },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
@@ -58,9 +69,37 @@ module.exports = {
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
               maxWidth: 920,
-              withWebp: true
+              withWebp: true,
             },
           },
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+              rel: 'noopener noreferrer',
+            },
+          },
+          {
+            resolve: 'gatsby-remark-emojis',
+            options: {
+              // Deactivate the plugin globally (default: true)
+              active: true,
+              // Add a custom css class
+              class: 'emoji-icon',
+              // Select the size (available size: 16, 24, 32, 64)
+              size: 64,
+              // Add custom styles
+              styles: {
+                display: 'inline',
+                margin: '0',
+                'margin-top': '1px',
+                position: 'relative',
+                top: '5px',
+                width: '25px',
+              },
+            },
+          },
+          `gatsby-remark-component`,
         ],
       },
     },

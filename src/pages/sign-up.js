@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 
-import Layout from '../components/layout'
+import Layout from '../templates/layout'
 import Sidebar from '../components/Sidebar'
 import ContentArea from '../components/ContentArea'
 import CreateAccountForm from '../components/user/CreateAccountForm'

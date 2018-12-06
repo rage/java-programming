@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import Layout from '../components/layout'
+import Layout from '../templates/layout'
 import Sidebar from '../components/Sidebar'
 import ContentArea from '../components/ContentArea'
 import { authenticate } from '../services/moocfi'
@@ -42,7 +42,6 @@ class SignInPage extends React.Component {
         username: this.state.email,
         password: this.state.password,
       })
-      console.log(`Authenticated, ${JSON.stringify(result)}`)
       navigate('/')
     } catch (error) {
       this.setState({ error: true, submitting: false })

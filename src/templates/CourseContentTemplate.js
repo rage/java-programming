@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import rehypeReact from 'rehype-react'
 
-import Layout from '../components/layout'
+import Layout from '../templates/layout'
 import Sidebar from '../components/Sidebar'
 import ContentArea from '../components/ContentArea'
 import getNamedPartials from '../partials'
@@ -25,8 +25,6 @@ export default function CourseContentTemplate({
     createElement: React.createElement,
     components: partials,
   }).Compiler
-  console.log(data.page.html)
-  console.log(Object.keys(partials))
   return (
     <PagesContext.Provider value={{
       all: allPages,

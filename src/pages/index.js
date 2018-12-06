@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 
-import Layout from '../components/layout'
+import Layout from '../templates/layout'
 import Banner from '../components/Banner'
 import MailinglistForm from '../components/MailinglistForm'
 import Sidebar from '../components/Sidebar'
