@@ -1,11 +1,4 @@
-import React, { Fragment } from 'react'
-import Layout from '../layout'
-import Banner from '../Banner'
-import Sidebar from '../Sidebar'
-import ContentArea from '../ContentArea'
-import { authenticate } from '../../services/moocfi'
-import { navigate } from 'gatsby'
-import { loggedIn } from '../../services/moocfi'
+import React from 'react'
 import {
   TextField,
   Button,
@@ -20,13 +13,6 @@ const Row = styled.div`
 `
 
 const Form = styled.form``
-
-const Label = styled.label``
-
-const Input = styled.input`
-  width: 100%;
-  padding: 0.3rem;
-`
 
 const InfoBox = styled.div`
   margin-bottom: 2rem;

@@ -1,11 +1,8 @@
 import React from 'react'
-import PagesContext from '../contexes/PagesContext'
 import styled from 'styled-components'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfoCircle, faUserGraduate } from '@fortawesome/free-solid-svg-icons'
-
-const accentColor = '#FAAA38'
 
 const Wrapper = styled.div`
   padding 1rem;

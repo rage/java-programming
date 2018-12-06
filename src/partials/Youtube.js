@@ -1,8 +1,5 @@
 import React from 'react'
-import PagesContext from '../contexes/PagesContext'
-
 import styled from 'styled-components'
-
 import ReduxActionAnalytics from 'redux-action-analytics'
 import * as storejs from 'store'
 import YouTube from 'react-youtube'
@@ -36,7 +33,7 @@ function onPlayerStateChange(event) {
   const player = event.target
   const eventCode = event.data
   const action = Object.entries(YouTube.PlayerState).find(o => {
-    return o[1] == eventCode
+    return o[1] === eventCode
   })[0]
   logAction(action, player)
 }

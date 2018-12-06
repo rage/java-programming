@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 import Layout from '../components/layout'
-import Banner from '../components/Banner'
 import Sidebar from '../components/Sidebar'
 import ContentArea from '../components/ContentArea'
 import { authenticate } from '../services/moocfi'
@@ -16,13 +15,6 @@ const Row = styled.div`
 
 const Form = styled.form``
 
-const Label = styled.label``
-
-const Input = styled.input`
-  width: 100%;
-  padding: 0.3rem;
-`
-
 const InfoBox = styled.div`
   margin-bottom: 2rem;
 `
@@ -37,7 +29,7 @@ class SignInPage extends React.Component {
     e.preventDefault()
     if (
       this.state.submitting ||
-      (this.state.email.length == 0 && this.state.password.length == 0)
+      (this.state.email.length === 0 && this.state.password.length === 0)
     ) {
       return
     }
@@ -80,7 +72,11 @@ class SignInPage extends React.Component {
               <Form>
                 <InfoBox>
                   Tämä kurssi käyttää{' '}
-                  <a href="https://mooc.fi" target="_blank" rel="noopener">
+                  <a
+                    href="https://mooc.fi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     mooc.fi
                   </a>{' '}
                   käyttäjätunnuksia. Jos olet aikaisemmin tehnyt mooc.fi
@@ -134,7 +130,7 @@ class SignInPage extends React.Component {
                 <a
                   href="https://tmc.mooc.fi/password_reset_keys/new"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   Unohdin salasanani
                 </a>

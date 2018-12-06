@@ -1,17 +1,6 @@
-import React, { Fragment } from 'react'
-import Layout from '../layout'
-import Banner from '../Banner'
-import Sidebar from '../Sidebar'
-import ContentArea from '../ContentArea'
-import { authenticate } from '../../services/moocfi'
-import { navigate, Link } from 'gatsby'
-import { loggedIn } from '../../services/moocfi'
-import {
-  TextField,
-  Button,
-  FormControlLabel,
-  Checkbox,
-} from '@material-ui/core'
+import React from 'react'
+import { Link } from 'gatsby'
+import { TextField, Button } from '@material-ui/core'
 
 import styled from 'styled-components'
 
@@ -20,13 +9,6 @@ const Row = styled.div`
 `
 
 const Form = styled.form``
-
-const Label = styled.label``
-
-const Input = styled.input`
-  width: 100%;
-  padding: 0.3rem;
-`
 
 const InfoBox = styled.div`
   margin-bottom: 2rem;
@@ -58,7 +40,7 @@ class CreateAccountForm extends React.Component {
         <Form>
           <InfoBox>
             Tämä kurssi käyttää{' '}
-            <a href="https://mooc.fi" target="_blank" rel="noopener">
+            <a href="https://mooc.fi" target="_blank" rel="noopener noreferrer">
               mooc.fi
             </a>{' '}
             käyttäjätunnuksia. Jos olet aikaisemmin tehnyt mooc.fi -kursseja
@@ -94,10 +76,11 @@ class CreateAccountForm extends React.Component {
               label="Salasana uudestaan"
               fullWidth
               value={this.state.password}
-              onChange={o => this.setState({ password_confirmation: o.target.value })}
+              onChange={o =>
+                this.setState({ password_confirmation: o.target.value })
+              }
             />
           </Row>
-
 
           <Row>
             <Button
@@ -113,7 +96,9 @@ class CreateAccountForm extends React.Component {
         </Form>
 
         <Row>
-          <Link to="/log-in">Onko sinulla jo käyttäjätunnus? Kirjaudu sisään</Link>
+          <Link to="/log-in">
+            Onko sinulla jo käyttäjätunnus? Kirjaudu sisään
+          </Link>
         </Row>
         {this.state.error && (
           <InfoBox>

@@ -1,15 +1,7 @@
 import React, { Fragment } from 'react'
-import styled from 'styled-components'
 import Button from './Button'
 import { loggedIn, signOut } from '../services/moocfi'
 import { navigate } from 'gatsby'
-
-const LoginControlsContainer = styled.div`
-  background-color: black;
-  display: block;
-  height: 5rem;
-  width: 100%;
-`
 
 export default class LoginControls extends React.Component {
   doSignOut = e => {

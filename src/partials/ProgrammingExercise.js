@@ -1,5 +1,4 @@
 import React from 'react'
-import PagesContext from '../contexes/PagesContext'
 import styled from 'styled-components'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

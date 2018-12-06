@@ -1,33 +1,7 @@
-import React, { Fragment } from 'react'
-import Layout from '../layout'
-import Banner from '../Banner'
-import Sidebar from '../Sidebar'
-import ContentArea from '../ContentArea'
-import { authenticate } from '../../services/moocfi'
+import React from 'react'
 import { Link } from 'gatsby'
-import { loggedIn } from '../../services/moocfi'
-import {
-  TextField,
-  Button,
-  FormControlLabel,
-  Checkbox,
-} from '@material-ui/core'
 
 import styled from 'styled-components'
-import CourseOptionsEditor from '../user/CourseOptionsEditor'
-
-const Row = styled.div`
-  margin-bottom: 1.5rem;
-`
-
-const Form = styled.form``
-
-const Label = styled.label``
-
-const Input = styled.input`
-  width: 100%;
-  padding: 0.3rem;
-`
 
 const InfoBox = styled.div`
   margin-bottom: 2rem;
