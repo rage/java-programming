@@ -7,6 +7,8 @@ import Sidebar from '../components/Sidebar'
 import ContentArea from '../components/ContentArea'
 import GatsbyLink from 'gatsby-link'
 
+import { Table, TableBody, TableCell, TableHead, TableRow } from '@material-ui/core';
+
 const IndexPage = () => (
   <Fragment>
     <Sidebar />
@@ -71,87 +73,87 @@ const IndexPage = () => (
             aloituksen lähestyessä.
           </p>
 
-          <table>
-            <thead>
-              <tr>
-                <th>Aikataulu</th>
-                <th>Julkaisu</th>
-                <th>Deadline</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Osa 1</td>
-                <td>14.12.2018</td>
-                <td>21.1.2019</td>
-              </tr>
-              <tr>
-                <td>Osa 2</td>
-                <td>28.12.2018</td>
-                <td>28.1.2019</td>
-              </tr>
-              <tr>
-                <td>Osa 3</td>
-                <td>11.1.2019</td>
-                <td>4.2.2019</td>
-              </tr>
-              <tr>
-                <td>Osa 4</td>
-                <td>25.1.2019</td>
-                <td>11.2.2019</td>
-              </tr>
-              <tr>
-                <td>Osa 5</td>
-                <td>1.2.2019</td>
-                <td>18.2.2019</td>
-              </tr>
-              <tr>
-                <td>Osa 6</td>
-                <td>8.2.2019</td>
-                <td>25.2.2019</td>
-              </tr>
-              <tr>
-                <td>Osa 7</td>
-                <td>15.2.2019</td>
-                <td>4.3.2019</td>
-              </tr>
-              <tr>
-                <td>Osa 8</td>
-                <td>1.3.2019</td>
-                <td>18.3.2019</td>
-              </tr>
-              <tr>
-                <td>Osa 9</td>
-                <td>8.3.2019</td>
-                <td>25.3.2019</td>
-              </tr>
-              <tr>
-                <td>Osa 10</td>
-                <td>15.3.2019</td>
-                <td>1.4.2019</td>
-              </tr>
-              <tr>
-                <td>Osa 11</td>
-                <td>22.3.2019</td>
-                <td>8.4.2019</td>
-              </tr>
-              <tr>
-                <td>Osa 12</td>
-                <td>29.3.2019</td>
-                <td>15.4.2019</td>
-              </tr>
-              <tr>
-                <td>Osa 13</td>
-                <td>12.4.2019</td>
-                <td>29.4.2019</td>
-              </tr>
-              <tr>
-                <td>Osa 14</td>
-                <td>19.4.2019</td>
-                <td>6.5.2019</td>
-              </tr>
-            </tbody>
-          </table>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell>Aikataulu</TableCell>
+                <TableCell>Julkaisu</TableCell>
+                <TableCell>Deadline</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              <TableRow>
+                <TableCell>Osa 1</TableCell>
+                <TableCell>14.12.2018</TableCell>
+                <TableCell>21.1.2019</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Osa 2</TableCell>
+                <TableCell>28.12.2018</TableCell>
+                <TableCell>28.1.2019</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Osa 3</TableCell>
+                <TableCell>11.1.2019</TableCell>
+                <TableCell>4.2.2019</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Osa 4</TableCell>
+                <TableCell>25.1.2019</TableCell>
+                <TableCell>11.2.2019</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Osa 5</TableCell>
+                <TableCell>1.2.2019</TableCell>
+                <TableCell>18.2.2019</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Osa 6</TableCell>
+                <TableCell>8.2.2019</TableCell>
+                <TableCell>25.2.2019</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Osa 7</TableCell>
+                <TableCell>15.2.2019</TableCell>
+                <TableCell>4.3.2019</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Osa 8</TableCell>
+                <TableCell>1.3.2019</TableCell>
+                <TableCell>18.3.2019</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Osa 9</TableCell>
+                <TableCell>8.3.2019</TableCell>
+                <TableCell>25.3.2019</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Osa 10</TableCell>
+                <TableCell>15.3.2019</TableCell>
+                <TableCell>1.4.2019</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Osa 11</TableCell>
+                <TableCell>22.3.2019</TableCell>
+                <TableCell>8.4.2019</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Osa 12</TableCell>
+                <TableCell>29.3.2019</TableCell>
+                <TableCell>15.4.2019</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Osa 13</TableCell>
+                <TableCell>12.4.2019</TableCell>
+                <TableCell>29.4.2019</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Osa 14</TableCell>
+                <TableCell>19.4.2019</TableCell>
+                <TableCell>6.5.2019</TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
 
           <p>
             <b>

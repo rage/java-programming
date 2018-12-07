@@ -1,9 +1,58 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PagesContext from '../contexes/PagesContext'
 import { nthIndex } from '../util/strings'
 import { Link } from 'gatsby'
+import styled from 'styled-components'
 
-export default () => (
+import { Divider, Paper } from '@material-ui/core'
+
+const PagesList = styled.ol`
+  padding-left: 0;
+  margin-bottom: 0;
+
+  a {
+    text-decoration: none;
+  }
+`
+
+const Page = styled.li`
+  margin: 0.5rem;
+  padding: 1em;
+  list-style-type: none;
+  color: black;
+  text-decoration: none;
+
+  ${props =>
+    props.currentPage &&
+    `
+    background-color: black;
+    border-radius: 0.25rem;
+    color: white;
+  `}
+
+  :hover {
+    font-weight: bold;
+    //background-color: rgba(0, 0, 0, 0.08);
+    //color: black;
+  }
+`
+
+const Title = styled.div`
+  margin-bottom: 0.35em;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.5em;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 400;
+  line-height: 1.33;
+  letter-spacing: 0em;
+`
+
+const StyledPaper = styled(Paper)`
+  padding: 1em;
+  margin-bottom: 1em;
+`
+
+const PagesInThisSection = ({ style }) => (
   <PagesContext.Consumer>
     {value => {
       const currentPath = value.current.path
@@ -13,25 +62,34 @@ export default () => (
         sectionPath = currentPath.substr(0, sectionSeparator)
       }
 
-      const sectionPages = value.all.filter(o =>
-        o.path.startsWith(`${sectionPath}/`)
-      ).sort((a, b) => {
-        a = a.path.toLowerCase();
-        b = b.path.toLowerCase();
+      const sectionPages = value.all
+        .filter(o => o.path.startsWith(`${sectionPath}/`))
+        .sort((a, b) => {
+          a = a.path.toLowerCase()
+          b = b.path.toLowerCase()
 
-        return a > b ? 1 : b > a ? -1 : 0;
-      })
+          return a > b ? 1 : b > a ? -1 : 0
+        })
 
       return (
-        <div>
-          <b>Tässä osassa:</b>
-          {sectionPages.map((page, i) => (
-            <div key={page.path}>
-              {i + 1}. <Link to={page.path}>{page.title}</Link>
-            </div>
-          ))}
-        </div>
+        <StyledPaper style={style}>
+          <Title>Tässä osassa:</Title>
+          <PagesList>
+            {sectionPages.map((page, i) => (
+              <Fragment>
+                <Link to={page.path}>
+                  <Page key={page.path} currentPage={page.path === currentPath}>
+                    {i + 1}. {page.title}
+                  </Page>
+                </Link>
+                {i !== sectionPages.length - 1 && <Divider variant="middle" />}
+              </Fragment>
+            ))}
+          </PagesList>
+        </StyledPaper>
       )
     }}
   </PagesContext.Consumer>
 )
+
+export default PagesInThisSection

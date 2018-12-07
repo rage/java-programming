@@ -20,17 +20,17 @@ const ListItem = styled.li`
   list-style-type: none;
   margin-bottom: 0;
   padding: 0.75rem;
-
 `
 
 const NavigationLink = styled(GatsbyLink)`
   border-left: 0.5rem solid white;
   width: 100%;
-  ${props => props.active === "t" && `
+  ${props =>
+    props.active === 't' &&
+    `
     border-color: #f75b4b;
     background-color: #ffeeed;
   `}
-
 `
 
 const ItemTitleWrapper = styled.div`
@@ -83,51 +83,55 @@ export default class TreeViewItem extends React.Component {
     return (
       <React.Fragment>
         <Location>
-          {({ navigate, location }) => (
-            <Motion
-              style={{
-                openRatio: spring(this.state.childrenVisible ? 1 : 0),
-              }}
-            >
-              {({ openRatio }) => (
-                <React.Fragment>
-                  <ItemTitleWrapper
-                    className={`nav-item-${this.props.item.title
-                      .toLowerCase()
-                      .replace(/ /g, '-')}`}
-                  >
+          {({ navigate, location }) => {
+            let active = location.pathname.startsWith(this.props.item.path)
+            if (this.props.item.path === '/') {
+              active = location.pathname === this.props.item.path
+            }
+            return (
+              <Motion
+                style={{
+                  openRatio: spring(this.state.childrenVisible ? 1 : 0),
+                }}
+              >
+                {({ openRatio }) => (
+                  <React.Fragment>
+                    <ItemTitleWrapper
+                      className={`nav-item-${this.props.item.title
+                        .toLowerCase()
+                        .replace(/ /g, '-')}`}
+                    >
+                      {this.props.item.children && (
+                        <StyledIcon
+                          style={{ '--open-ratio': `${openRatio}` }}
+                          icon={faCaretRight}
+                          size="1x"
+                        />
+                      )}
+                      <NavigationLink
+                        to={this.props.item.path}
+                        active={active ? 't' : 'f'}
+                      >
+                        <ListItem onClick={this.onClick}>
+                          {this.props.item.title}
+                        </ListItem>
+                      </NavigationLink>
+                    </ItemTitleWrapper>
                     {this.props.item.children && (
-                      <StyledIcon
+                      <ChildrenList
+                        innerRef={this.childrenListRef}
                         style={{ '--open-ratio': `${openRatio}` }}
-                        icon={faCaretRight}
-                        size="1x"
-                      />
+                      >
+                        {this.props.item.children.map(i => (
+                          <TreeViewItem key={i.title} item={i} />
+                        ))}
+                      </ChildrenList>
                     )}
-                    <NavigationLink
-                      to={this.props.item.path}
-                      active={
-                        (this.props.item.path === location.pathname || this.props.item.path === location.pathname.slice(0, -1)) ? 't' : 'f'
-                      }
-                    >
-                      <ListItem onClick={this.onClick}>
-                        {this.props.item.title}
-                      </ListItem>
-                    </NavigationLink>
-                  </ItemTitleWrapper>
-                  {this.props.item.children && (
-                    <ChildrenList
-                      innerRef={this.childrenListRef}
-                      style={{ '--open-ratio': `${openRatio}` }}
-                    >
-                      {this.props.item.children.map(i => (
-                        <TreeViewItem key={i.title} item={i} />
-                      ))}
-                    </ChildrenList>
-                  )}
-                </React.Fragment>
-              )}
-            </Motion>
-          )}
+                  </React.Fragment>
+                )}
+              </Motion>
+            )
+          }}
         </Location>
       </React.Fragment>
     )

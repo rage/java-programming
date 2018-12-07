@@ -3,12 +3,6 @@ path: '/osa-1/1-johdanto'
 title: 'Johdanto'
 ---
 
-<text-box variant='hint' name='Ensimmäisen osan tavoitteet'>
-
-Osaat kirjoittaa ohjelmia, jotka lukevat käyttäjältä syötettä ja tekevät laskentaa syötteen perusteella. Tunnet käsitteet muuttuja, ehtolause ja toistolause, ja osaat käyttää näitä ohjelmissasi.
-
-</text-box>
-
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
 - Tiedät muutamia esimerkkejä siitä, miten ohjelmistot vaikuttavat yhteiskuntamme toimintaan.

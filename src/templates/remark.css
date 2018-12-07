@@ -7,3 +7,8 @@ code.language-text {
   margin-right: 0.4rem;
   padding-left: 0.4rem !important;
 }
+
+:not(pre) > code[class*='language-'] {
+  background-color: rgba(255, 229, 100, 0.2);
+  color: rgb(26, 26, 26);
+}
