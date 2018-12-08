@@ -33,7 +33,7 @@ export function createAccount(data) {
   const body = {
     user: data,
     origin: 'Ohjelmoinnin MOOC 2019',
-    language: 'fi'
+    language: 'fi',
   }
   return new Promise((resolve, reject) => {
     fetch(`${BASE_URL}/users`, {
@@ -93,7 +93,16 @@ export async function userDetails() {
       },
     }
   )
-  return res.data;
+  store.set('tmc.user.details', res.data)
+  return res.data
+}
+
+export async function getCachedUserDetails() {
+  let details = store.get('tmc.user.details')
+  if (!details) {
+    details = await userDetails()
+  }
+  return details
 }
 
 const createHeader = () => ({
@@ -127,9 +136,7 @@ export function updateUserDetails({ extraFields, userField }) {
   )
 }
 
-
 export function updatePassword(currentPassword, password, confirmPassword) {
-
   setPasswordFields(userDetails, currentPassword, password, confirmPassword)
   const id = userDetails['id']
 
