@@ -1,13 +1,16 @@
 import React, { Fragment } from 'react'
 import Button from './Button'
-import { loggedIn, signOut, getCachedUserDetails } from '../services/moocfi'
+import { Button as MaterialButton } from '@material-ui/core'
+import { signOut, getCachedUserDetails } from '../services/moocfi'
 import { navigate } from 'gatsby'
+import LoginStateContext from '../contexes/LoginStateContext'
 
 export default class LoginControls extends React.Component {
+  static contextType = LoginStateContext
+
   doSignOut = e => {
     e.preventDefault()
     signOut()
-    navigate('/')
   }
 
   async componentDidMount() {
@@ -27,10 +30,10 @@ export default class LoginControls extends React.Component {
   }
 
   render() {
-    return loggedIn() ? (
+    return this.context.loggedIn ? (
       <Fragment>
         <Button to="/profile">{this.state.name}</Button>
-        <Button onClick={this.doSignOut}>Kirjaudu ulos</Button>
+        <MaterialButton onClick={this.doSignOut}>Kirjaudu ulos</MaterialButton>
       </Fragment>
     ) : (
       <Fragment>

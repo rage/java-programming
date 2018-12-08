@@ -1,14 +1,15 @@
 import React, { Fragment } from 'react'
 
-import { loggedIn } from '../services/moocfi'
-
 import Layout from '../templates/layout'
 import Sidebar from '../components/Sidebar'
 import ContentArea from '../components/ContentArea'
 import CourseOptionsEditor from '../components/user/CourseOptionsEditor'
 import { navigate } from 'gatsby'
+import LoginStateContext from '../contexes/LoginStateContext';
 
 class MissingInfo extends React.Component {
+  static contextType = LoginStateContext
+
   onStepComplete = () => {
     if (typeof window !== 'undefined') {
       window.history.back()
@@ -18,7 +19,7 @@ class MissingInfo extends React.Component {
   }
 
   render() {
-    if (!loggedIn()) {
+    if (!this.context.loggedIn) {
       navigate('/sign-in')
       return <div>Redirecting...</div>
     }

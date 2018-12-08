@@ -21,7 +21,7 @@ const StyledLink = styled(Link)`
 `
 
 export default ({ children, to, onClick, disabled }) => (
-  <StyledLink onClick={onClick} to={to} disabled={disabled}>
+  <StyledLink onClick={onClick} to={to === undefined ? false : to} disabled={disabled}>
     {children}
   </StyledLink>
 )

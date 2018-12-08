@@ -11,8 +11,9 @@ import getNamedPartials from '../partials'
 import PagesContext from '../contexes/PagesContext'
 import TopBar from '../components/TopBar'
 import CoursePageFooter from '../components/CoursePageFooter'
-import { getCachedUserDetails, loggedIn } from '../services/moocfi'
+import { getCachedUserDetails } from '../services/moocfi'
 import './remark.css'
+import { LoginStateContextProvider } from '../contexes/LoginStateContext'
 
 const ContentWrapper = styled.div`
   margin-top: 1rem;
@@ -21,10 +22,13 @@ const ContentWrapper = styled.div`
 const SectionIndicator = styled.h2``
 
 export default class CourseContentTemplate extends React.Component {
+  static contextType = LoginStateContextProvider
+
   async componentDidMount() {
-    if (!loggedIn()) {
-      return;
+    if (!this.context.loggedIn) {
+      return
     }
+
     let userInfo = await getCachedUserDetails()
     const research = userInfo?.extra_fields?.research
     if (research === undefined) {
@@ -48,20 +52,22 @@ export default class CourseContentTemplate extends React.Component {
           current: frontmatter,
         }}
       >
-        <Fragment>
-          <Sidebar />
-          <TopBar />
-          <ContentArea>
-            <Layout>
-              <ContentWrapper>
-                <SectionIndicator>Osa x.y</SectionIndicator>
-                <h1>{frontmatter.title}</h1>
-                {renderAst(htmlAst)}
-              </ContentWrapper>
-            </Layout>
-            <CoursePageFooter />
-          </ContentArea>
-        </Fragment>
+        <LoginStateContextProvider>
+          <Fragment>
+            <Sidebar />
+            <TopBar />
+            <ContentArea>
+              <Layout>
+                <ContentWrapper>
+                  <SectionIndicator>Osa x.y</SectionIndicator>
+                  <h1>{frontmatter.title}</h1>
+                  {renderAst(htmlAst)}
+                </ContentWrapper>
+              </Layout>
+              <CoursePageFooter />
+            </ContentArea>
+          </Fragment>
+        </LoginStateContextProvider>
       </PagesContext.Provider>
     )
   }

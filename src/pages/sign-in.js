@@ -4,10 +4,10 @@ import Sidebar from '../components/Sidebar'
 import ContentArea from '../components/ContentArea'
 import { authenticate } from '../services/moocfi'
 import { navigate, Link } from 'gatsby'
-import { loggedIn } from '../services/moocfi'
 import { TextField, Button } from '@material-ui/core'
 
 import styled from 'styled-components'
+import LoginStateContext from '../contexes/LoginStateContext'
 
 const Row = styled.div`
   margin-bottom: 1.5rem;
@@ -25,6 +25,8 @@ const FormContainer = styled.div`
 `
 
 class SignInPage extends React.Component {
+  static contextType = LoginStateContext
+
   onClick = async e => {
     e.preventDefault()
     if (
@@ -57,7 +59,7 @@ class SignInPage extends React.Component {
   }
 
   render() {
-    if (loggedIn()) {
+    if (this.context.loggedIn) {
       navigate('/')
       return <div>Redirecting....</div>
     }
