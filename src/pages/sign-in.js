@@ -1,13 +1,14 @@
-import React, { Fragment } from 'react'
-import Layout from '../templates/layout'
-import Sidebar from '../components/Sidebar'
-import ContentArea from '../components/ContentArea'
+import React from 'react'
+import Layout from '../templates/Layout'
 import { authenticate } from '../services/moocfi'
 import { navigate, Link } from 'gatsby'
 import { TextField, Button } from '@material-ui/core'
 
 import styled from 'styled-components'
-import LoginStateContext from '../contexes/LoginStateContext'
+import LoginStateContext, {
+  withLoginStateContext,
+} from '../contexes/LoginStateContext'
+import Container from '../components/Container'
 
 const Row = styled.div`
   margin-bottom: 1.5rem;
@@ -64,84 +65,81 @@ class SignInPage extends React.Component {
       return <div>Redirecting....</div>
     }
     return (
-      <Fragment>
-        <Sidebar />
-        <ContentArea>
-          <Layout>
-            <FormContainer>
-              <h1>Kirjaudu sisään</h1>
-              <Form>
-                <InfoBox>
-                  Tämä kurssi käyttää{' '}
-                  <a
-                    href="https://mooc.fi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    mooc.fi
-                  </a>{' '}
-                  käyttäjätunnuksia. Jos olet aikaisemmin tehnyt mooc.fi
-                  -kursseja voit käyttää olemassaolevia tunnuksiasi.
-                </InfoBox>
-
-                <Row>
-                  <TextField
-                    id="outlined-adornment-password"
-                    variant="outlined"
-                    type="text"
-                    label="Sähköpostiosoite tai käyttäjänimi"
-                    fullWidth
-                    value={this.state.email}
-                    onChange={o => this.setState({ email: o.target.value })}
-                  />
-                </Row>
-                <Row>
-                  <TextField
-                    id="outlined-adornment-password"
-                    variant="outlined"
-                    type={this.state.showPassword ? 'text' : 'password'}
-                    label="Salasana"
-                    fullWidth
-                    value={this.state.password}
-                    onChange={o => this.setState({ password: o.target.value })}
-                  />
-                </Row>
-
-                <Row>
-                  <Button
-                    onClick={this.onClick}
-                    disabled={this.state.submitting}
-                    variant="contained"
-                    color="primary"
-                    fullWidth
-                  >
-                    Kirjaudu sisään
-                  </Button>
-                </Row>
-              </Form>
-              {this.state.error && (
-                <InfoBox>
-                  <b>Invalid credentials</b>
-                </InfoBox>
-              )}
-              <Row>
-                <Link to="/sign-up">Luo uusi tunnus</Link>
-              </Row>
-              <Row>
+      <Layout>
+        <Container>
+          <FormContainer>
+            <h1>Kirjaudu sisään</h1>
+            <Form>
+              <InfoBox>
+                Tämä kurssi käyttää{' '}
                 <a
-                  href="https://tmc.mooc.fi/password_reset_keys/new"
+                  href="https://mooc.fi"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Unohdin salasanani
-                </a>
+                  mooc.fi
+                </a>{' '}
+                käyttäjätunnuksia. Jos olet aikaisemmin tehnyt mooc.fi -kursseja
+                voit käyttää olemassaolevia tunnuksiasi.
+              </InfoBox>
+
+              <Row>
+                <TextField
+                  id="outlined-adornment-password"
+                  variant="outlined"
+                  type="text"
+                  label="Sähköpostiosoite tai käyttäjänimi"
+                  fullWidth
+                  value={this.state.email}
+                  onChange={o => this.setState({ email: o.target.value })}
+                />
               </Row>
-            </FormContainer>
-          </Layout>
-        </ContentArea>
-      </Fragment>
+              <Row>
+                <TextField
+                  id="outlined-adornment-password"
+                  variant="outlined"
+                  type={this.state.showPassword ? 'text' : 'password'}
+                  label="Salasana"
+                  fullWidth
+                  value={this.state.password}
+                  onChange={o => this.setState({ password: o.target.value })}
+                />
+              </Row>
+
+              <Row>
+                <Button
+                  onClick={this.onClick}
+                  disabled={this.state.submitting}
+                  variant="contained"
+                  color="primary"
+                  fullWidth
+                >
+                  Kirjaudu sisään
+                </Button>
+              </Row>
+            </Form>
+            {this.state.error && (
+              <InfoBox>
+                <b>Invalid credentials</b>
+              </InfoBox>
+            )}
+            <Row>
+              <Link to="/sign-up">Luo uusi tunnus</Link>
+            </Row>
+            <Row>
+              <a
+                href="https://tmc.mooc.fi/password_reset_keys/new"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Unohdin salasanani
+              </a>
+            </Row>
+          </FormContainer>
+        </Container>
+      </Layout>
     )
   }
 }
 
-export default SignInPage
+export default withLoginStateContext(SignInPage)

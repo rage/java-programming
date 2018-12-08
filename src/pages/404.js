@@ -1,11 +1,15 @@
 import React from 'react'
-import Layout from '../templates/layout'
+import Layout from '../templates/Layout'
+import Container from '../components/Container'
+import { withLoginStateContext } from '../contexes/LoginStateContext'
 
 const NotFoundPage = () => (
   <Layout>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <Container>
+      <h1>Ei löytynyt</h1>
+      <p>Olet päätynyt osoitteeseen, jota ei ole olemassa.</p>
+    </Container>
   </Layout>
 )
 
-export default NotFoundPage
+export default withLoginStateContext(NotFoundPage)

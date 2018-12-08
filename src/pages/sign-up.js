@@ -1,14 +1,15 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
 import { navigate } from 'gatsby'
 
-import Layout from '../templates/layout'
-import Sidebar from '../components/Sidebar'
-import ContentArea from '../components/ContentArea'
+import Layout from '../templates/Layout'
 import CreateAccountForm from '../components/user/CreateAccountForm'
 import CourseOptionsEditor from '../components/user/CourseOptionsEditor'
 import ConfirmEmail from '../components/user/ConfirmEmail'
-import LoginStateContext from '../contexes/LoginStateContext'
+import LoginStateContext, {
+  withLoginStateContext,
+} from '../contexes/LoginStateContext'
+import Container from '../components/Container'
 
 class SignInPage extends React.Component {
   static contextType = LoginStateContext
@@ -38,14 +39,11 @@ class SignInPage extends React.Component {
     }
 
     return (
-      <Fragment>
-        <Sidebar />
-        <ContentArea>
-          <Layout>{stepComponent}</Layout>
-        </ContentArea>
-      </Fragment>
+      <Layout>
+        <Container>{stepComponent}</Container>
+      </Layout>
     )
   }
 }
 
-export default SignInPage
+export default withLoginStateContext(SignInPage)

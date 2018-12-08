@@ -3,9 +3,11 @@ import Button from './Button'
 import { Button as MaterialButton } from '@material-ui/core'
 import { signOut, getCachedUserDetails } from '../services/moocfi'
 import { navigate } from 'gatsby'
-import LoginStateContext from '../contexes/LoginStateContext'
+import LoginStateContext, {
+  withLoginStateContext,
+} from '../contexes/LoginStateContext'
 
-export default class LoginControls extends React.Component {
+class LoginControls extends React.Component {
   static contextType = LoginStateContext
 
   doSignOut = e => {
@@ -43,3 +45,5 @@ export default class LoginControls extends React.Component {
     )
   }
 }
+
+export default withLoginStateContext(LoginControls)

@@ -4,16 +4,19 @@ import styled from 'styled-components'
 import rehypeReact from 'rehype-react'
 import { navigate } from 'gatsby'
 
-import Layout from '../templates/layout'
-import Sidebar from '../components/Sidebar'
-import ContentArea from '../components/ContentArea'
+import Layout from './Layout'
+
 import getNamedPartials from '../partials'
-import PagesContext from '../contexes/PagesContext'
-import TopBar from '../components/TopBar'
 import CoursePageFooter from '../components/CoursePageFooter'
 import { getCachedUserDetails } from '../services/moocfi'
 import './remark.css'
-import { LoginStateContextProvider } from '../contexes/LoginStateContext'
+import PagesContext from '../contexes/PagesContext'
+import LoginStateContext, {
+  LoginStateContextProvider,
+} from '../contexes/LoginStateContext'
+import Container from '../components/Container'
+
+import { loggedIn } from '../services/moocfi'
 
 const ContentWrapper = styled.div`
   margin-top: 1rem;
@@ -22,10 +25,10 @@ const ContentWrapper = styled.div`
 const SectionIndicator = styled.h2``
 
 export default class CourseContentTemplate extends React.Component {
-  static contextType = LoginStateContextProvider
+  static contextType = LoginStateContext
 
   async componentDidMount() {
-    if (!this.context.loggedIn) {
+    if (!loggedIn()) {
       return
     }
 
@@ -53,20 +56,18 @@ export default class CourseContentTemplate extends React.Component {
         }}
       >
         <LoginStateContextProvider>
-          <Fragment>
-            <Sidebar />
-            <TopBar />
-            <ContentArea>
-              <Layout>
+          <Layout>
+            <Fragment>
+              <Container>
                 <ContentWrapper>
                   <SectionIndicator>Osa x.y</SectionIndicator>
                   <h1>{frontmatter.title}</h1>
                   {renderAst(htmlAst)}
                 </ContentWrapper>
-              </Layout>
+              </Container>
               <CoursePageFooter />
-            </ContentArea>
-          </Fragment>
+            </Fragment>
+          </Layout>
         </LoginStateContextProvider>
       </PagesContext.Provider>
     )

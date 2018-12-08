@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
-import Layout from '../templates/layout'
-import Sidebar from '../components/Sidebar'
-import ContentArea from '../components/ContentArea'
+import Layout from '../templates/Layout'
 import CourseOptionsEditor from '../components/user/CourseOptionsEditor'
 import { navigate } from 'gatsby'
-import LoginStateContext from '../contexes/LoginStateContext';
+import LoginStateContext, {
+  withLoginStateContext,
+} from '../contexes/LoginStateContext'
 
 class MissingInfo extends React.Component {
   static contextType = LoginStateContext
@@ -24,16 +24,11 @@ class MissingInfo extends React.Component {
       return <div>Redirecting...</div>
     }
     return (
-      <Fragment>
-        <Sidebar />
-        <ContentArea>
-          <Layout>
-            <CourseOptionsEditor onComplete={this.onStepComplete} />
-          </Layout>
-        </ContentArea>
-      </Fragment>
+      <Layout>
+        <CourseOptionsEditor onComplete={this.onStepComplete} />
+      </Layout>
     )
   }
 }
 
-export default MissingInfo
+export default withLoginStateContext(MissingInfo)

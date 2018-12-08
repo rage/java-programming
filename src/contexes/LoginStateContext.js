@@ -26,4 +26,12 @@ export class LoginStateContextProvider extends React.Component {
   }
 }
 
+export function withLoginStateContext(Component) {
+  return props => (
+    <LoginStateContextProvider>
+      <Component {...props} />
+    </LoginStateContextProvider>
+  )
+}
+
 export default LoginStateContext
