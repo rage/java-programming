@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react'
 
+import { loggedIn } from "../services/moocfi";
+
 import Layout from '../templates/layout'
 import Sidebar from '../components/Sidebar'
 import ContentArea from '../components/ContentArea'
@@ -9,8 +11,9 @@ import ConfirmEmail from '../components/user/ConfirmEmail'
 
 class SignInPage extends React.Component {
   state = {
-    step: 1,
+    step: loggedIn() ? 3 : 1,
   }
+
 
   onStepComplete = () => {
     this.setState(prevState => ({

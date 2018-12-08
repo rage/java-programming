@@ -4,7 +4,13 @@ import {
   Button,
   FormControlLabel,
   Checkbox,
+  Radio,
+  RadioGroup,
 } from '@material-ui/core'
+
+import Loading from '../Loading'
+
+import { updateUserDetails, userDetails } from '../../services/moocfi'
 
 import styled from 'styled-components'
 
@@ -24,19 +30,86 @@ const FormContainer = styled.div`
 `
 
 class CourseOptionsEditor extends React.Component {
+  async componentDidMount() {
+    const data = await userDetails()
+    console.log('Got saved state: ', JSON.stringify(data))
+    this.setState(
+      {
+        first_name: data.user_field?.first_name,
+        last_name: data.user_field?.last_name,
+        student_number: data.user_field?.organizational_id,
+        applies_for_study_right: data.extra_fields?.applies_for_study_right,
+        digital_education_for_all: data.extra_fields?.digital_education_for_all,
+        marketing: data.extra_fields?.marketing,
+        research: data.extra_fields?.research,
+        loading: false,
+      },
+      () => {
+        this.validate()
+      }
+    )
+  }
+
   onClick = async e => {
     e.preventDefault()
+    const extraFields = {
+      applies_for_study_right: this.state.applies_for_study_right,
+      digital_education_for_all: this.state.digital_education_for_all,
+      marketing: this.state.marketing,
+      research: this.state.research,
+    }
+    const userField = {
+      first_name: this.state.first_name,
+      last_name: this.state.last_name,
+      organizational_id: this.state.student_number,
+    }
+    await updateUserDetails({
+      extraFields,
+      userField,
+    })
     this.props.onComplete()
   }
 
   state = {
-    email: undefined,
-    password: undefined,
     submitting: false,
-    error: false,
+    error: true,
+    errorObj: {},
+    applies_for_study_right: false,
+    digital_education_for_all: false,
+    marketing: false,
+    research: undefined,
+    first_name: undefined,
+    last_name: undefined,
+    student_number: undefined,
+    loading: true,
+  }
+
+  handleInput = e => {
+    const name = e.target.name
+    const value = e.target.value
+    this.setState({ [name]: value }, () => {
+      this.validate()
+    })
+  }
+
+  handleCheckboxInput = e => {
+    const name = e.target.name
+    const value = e.target.checked
+    this.setState({ [name]: value }, () => {
+      this.validate()
+    })
+  }
+
+  validate = () => {
+    this.setState(prev => ({
+      error: prev.research === undefined,
+    }))
   }
 
   render() {
+    if (this.state.loading) {
+      return <Loading />
+    }
     return (
       <FormContainer>
         <h1>Opiskelijan tiedot</h1>
@@ -44,7 +117,8 @@ class CourseOptionsEditor extends React.Component {
           <InfoBox>
             Kerro meille itsestäsi. Nämä tiedot auttavat meitä suoritusten
             merkitsemisessä ja kurssin järjestämisessä. Voit muokata näitä
-            tietoja myöhemmin kurssin asetuksista.
+            tietoja myöhemmin kurssin asetuksista. Tietojen täyttämisen jälkeen
+            paina "Tallenna" sivun alareunasta.
           </InfoBox>
 
           <Row>
@@ -52,9 +126,12 @@ class CourseOptionsEditor extends React.Component {
               variant="outlined"
               type="text"
               label="Etunimi"
+              autoComplete="given-name"
+              name="first_name"
+              InputLabelProps={{ shrink: this.state.first_name }}
               fullWidth
               value={this.state.first_name}
-              onChange={o => this.setState({ first_name: o.target.value })}
+              onChange={this.handleInput}
             />
           </Row>
 
@@ -63,9 +140,12 @@ class CourseOptionsEditor extends React.Component {
               variant="outlined"
               type="text"
               label="Sukunimi"
+              autoComplete="family-name"
+              name="last_name"
+              InputLabelProps={{ shrink: this.state.last_name }}
               fullWidth
               value={this.state.last_name}
-              onChange={o => this.setState({ last_name: o.target.value })}
+              onChange={this.handleInput}
             />
           </Row>
 
@@ -74,9 +154,12 @@ class CourseOptionsEditor extends React.Component {
               variant="outlined"
               type="text"
               label="Helsingin yliopiston opiskelijanumero"
+              name="student_number"
+              InputLabelProps={{ shrink: this.state.student_number }}
               fullWidth
               value={this.state.student_number}
-              onChange={o => this.setState({ student_number: o.target.value })}
+              onChange={this.handleInput}
+              helperText="Jätä tyhjäksi, jos et ole tällä hetkellä Helsingin yliopiston opiskelija."
             />
           </Row>
 
@@ -84,12 +167,27 @@ class CourseOptionsEditor extends React.Component {
             <FormControlLabel
               control={
                 <Checkbox
-                  checked={this.state.applying}
-                  onChange={o => this.setState({ applying: o.target.value })}
-                  value="aion hakea"
+                  checked={this.state.applies_for_study_right}
+                  onChange={this.handleCheckboxInput}
+                  name="applies_for_study_right"
+                  value="1"
                 />
               }
-              label="Aion hakea kurssin kautta opinto-oikeutta Helsingin yliopiston tietojenkäsittelytieteen osastolle"
+              label="Aion hakea kurssin kautta opinto-oikeutta Helsingin yliopiston tietojenkäsittelytieteen osastolle. (Ei koske Digital Education for All -hankkeen tai Avoimen väylän kautta hakevia, vaan vain kurssin sivulla mainitun Ohjelmoinnin MOOCin hakuväylän kautta hakevia (meillä on monta sisääntuloväylää, sori siitä 😎) )"
+            />
+          </Row>
+
+          <Row>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked={this.state.digital_education_for_all}
+                  onChange={this.handleCheckboxInput}
+                  name="digital_education_for_all"
+                  value="1"
+                />
+              }
+              label="Olen tällä hetkellä opiskelija Digital Education for All -hankkeessa (Älä valitse, jos et ole kuullut aikaisemmin)"
             />
           </Row>
 
@@ -98,11 +196,12 @@ class CourseOptionsEditor extends React.Component {
               control={
                 <Checkbox
                   checked={this.state.marketing}
-                  onChange={o => this.setState({ marketing: o.target.value })}
+                  onChange={this.handleCheckboxInput}
+                  name="marketing"
                   value="1"
                 />
               }
-              label="Haluan tietoa uusista kursseista"
+              label="Minulle voi lähettää tietoa uusista kursseista"
             />
           </Row>
 
@@ -131,9 +230,16 @@ class CourseOptionsEditor extends React.Component {
 
           <p>
             Tällaisesta oppimisanalytiikaksi kutsutusta tutkimuksesta
-            kiinnostuneiden kannattaa tutustua esimerkiksi artikkeliin
-            {' '}<a href="https://dl.acm.org/citation.cfm?id=2858798" target="_blank" rel="noopener noreferrer">Educational Data Mining and Learning Analytics in Programming:
-            Literature Review and Case Studies</a>.
+            kiinnostuneiden kannattaa tutustua esimerkiksi artikkeliin{' '}
+            <a
+              href="https://dl.acm.org/citation.cfm?id=2858798"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Educational Data Mining and Learning Analytics in Programming:
+              Literature Review and Case Studies
+            </a>
+            .
           </p>
 
           <p>
@@ -154,22 +260,29 @@ class CourseOptionsEditor extends React.Component {
           </p>
 
           <Row>
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={this.state.research}
-                  onChange={o => this.setState({ research: o.target.value })}
-                  value="1"
-                />
-              }
-              label="Osallistun oppimiseen liittyvään tutkimukseen. Valitsemalla tämän autat sekä nykyisiä että tulevia opiskelijoita."
-            />
+            <RadioGroup
+              aria-label="Tutkimukseen osallistuminen"
+              name="research"
+              value={this.state.research}
+              onChange={this.handleInput}
+            >
+              <FormControlLabel
+                value="1"
+                control={<Radio color="primary" />}
+                label="Osallistun oppimiseen liittyvään tutkimukseen. Valitsemalla tämän autat sekä nykyisiä että tulevia opiskelijoita."
+              />
+              <FormControlLabel
+                value="0"
+                control={<Radio />}
+                label="En osallistu oppimiseen liittyvään tutkimukseen."
+              />
+            </RadioGroup>
           </Row>
 
           <Row>
             <Button
               onClick={this.onClick}
-              disabled={this.state.submitting}
+              disabled={this.state.submitting || this.state.error}
               variant="contained"
               color="primary"
               fullWidth
@@ -180,7 +293,7 @@ class CourseOptionsEditor extends React.Component {
         </Form>
         {this.state.error && (
           <InfoBox>
-            <b>Invalid credentials</b>
+            <b>Täytä vaaditut kentät.</b>
           </InfoBox>
         )}
       </FormContainer>

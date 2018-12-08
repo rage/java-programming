@@ -38,7 +38,7 @@ class SignInPage extends React.Component {
       error: false,
     })
     try {
-      const result = await authenticate({
+      await authenticate({
         username: this.state.email,
         password: this.state.password,
       })

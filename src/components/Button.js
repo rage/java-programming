@@ -12,6 +12,12 @@ const StyledLink = styled(Link)`
   justify-content: center;
   align-items: center;
   text-decoration: none;
+
+  :hover {
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+  }
 `
 
 export default ({ children, to, onClick, disabled }) => (

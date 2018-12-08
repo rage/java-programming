@@ -37,7 +37,8 @@
     "store": "^2.0.12",
     "styled-components": "^4.1.2",
     "tmc-client-js": "0.0.9",
-    "typeface-open-sans-condensed": "0.0.54"
+    "typeface-open-sans-condensed": "0.0.54",
+    "uuid": "^3.3.2"
   },
   "keywords": [
     "gatsby"
