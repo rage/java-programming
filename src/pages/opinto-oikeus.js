@@ -22,17 +22,17 @@ const IndexPage = () => (
           Saat kutsun näyttökokeeseen tekemällä aikataulutetun kurssin jokaisesta osasta vähintään 90% saatavissa olevista pisteistä. Pisteiden laskemisessa otetaan huomioon vain ohjelmointitehtävät. Kyselyt tai muu sisältö eivät vaikuta näihin pisteisiin.
         </p>
         <p>
-          Ohjelmoinnin MOOCin kautta valitaan 50 opiskelijaa. Voit hakea yhteishaussa korkeakoulupaikkaa myös normaalin valintakokeen kautta sekä ylioppilaskirjoitusten tulosten perusteella. Vaikka et Ohjelmoinnin MOOCin kautta opiskelupaikkaa saisi, voi kurssia ajatella ilmaisena valmennuskurssina yhteishaun normaaliin valintakokeeseen.
+          Ohjelmoinnin MOOCin kautta valitaan 50 opiskelijaa. Voit hakea yhteishaussa korkeakoulupaikkaa myös normaalin valintakokeen kautta sekä ylioppilaskirjoitusten tulosten perusteella. Ohjelmoinnin MOOC -kurssi toimii myös ilmaisena valmennuskurssina yhteishaun valintakokeeseen, jos et MOOC-väylän kautta paikkaa saa.
         </p>
         <p>
           Yhteishaussa hakemisen edellytyksenä on korkeakoulukelpoisuus ja hakiessasi kevään 2019 haussa oletuksena on, että voit aloittaa opinnot syksyllä 2019. Mikäli olet valmistumassa vasta keväällä 2020, voit hakea opiskelupaikkaa Ohjelmoinnin MOOCin näyttökokeessa vuotta 2020 varten.
         </p>
         <p>
-          Helsingin yliopiston tietojenkäsittelytieteen kandiohjelmaan on mahdollista hakea yhteisvalinnan ja MOOCin lisäksi Helsingin yliopiston Avoimen yliopiston kautta sekä Digital Education for All -hankkeen kautta. Lisätietoa näistä seuraavista linkeistä:
+          Helsingin yliopiston tietojenkäsittelytieteen kandiohjelmaan on mahdollista hakea yhteisvalinnan ja MOOCin lisäksi Helsingin yliopiston avoimen yliopiston kautta sekä Digital Education for All -hankkeen kautta. Lisätietoa näistä seuraavista linkeistä:
         </p>
 
         <ul>
-            <li><a href="https://www.helsinki.fi/fi/avoin-yliopisto/opiskelu/tule-opiskelemaan/tavoitteena-tutkinto" target="_blank">Helsingin yliopiston Avoimen yliopiston väylä</a></li>
+            <li><a href="https://www.helsinki.fi/fi/avoin-yliopisto/opiskelu/tule-opiskelemaan/tavoitteena-tutkinto" target="_blank">Helsingin yliopiston avoimen yliopiston väylä</a></li>
             <li><a href="https://www.helsinki.fi/fi/projektit/digital-education-for-all/" target="_blank">Digital Education for All -hanke</a></li>
         </ul>
       </section>
