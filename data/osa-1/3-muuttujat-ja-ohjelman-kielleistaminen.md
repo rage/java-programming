@@ -387,40 +387,203 @@ Kokeile toteuttamasi ohjelman toimintaa myös syötteillä, jotka eivät ole luk
 
 Merkkijonon muuntaminen liukuluvuksi tapahtuu komennolla `Double.valueOf`, jolle annetaan parametrina muunnettavan luvun sisältämä merkkijono.
 
-<% partial 'partials/code\_highlight' do %> String lukuMerkkijonona = "42.42"; double luku = Double.valueOf(lukuMerkkijonona); System.out.println(luku); <% end %>                                 <% partial 'partials/sample\_output' do %> 42.42 <% end %>
+```java
+String lukuMerkkijonona = "42.42"; 
+double luku = Double.valueOf(lukuMerkkijonona); 
+System.out.println(luku);
+```
+
+<sample-output>
+
+42.42
+
+</sample-output>
 
 Kuten kokonaislukujen tapauksessa, Scanneria käytettäessä lukeminen ja muuntaminen asetetaan yleensä sisäkkäin. Tämä tapahtuu seuraavasti.
 
-<% partial 'partials/code\_highlight' do %> import java.util.Scanner; public class Ohjelma { public static void main(String\[\] args) { Scanner lukija = new Scanner(System.in); System.out.println("Kirjoita luku "); double luku = Double.valueOf(lukija.nextLine()); System.out.println("Kirjoitit " + luku); } } <% end %>                                 <% partial 'partials/sample\_output' do %> Kirjoita luku 1234.2 Kirjoitit 1234.2 <% end %>
+```java
+import java.util.Scanner; 
+
+public class Ohjelma {
+    public static void main(String[] args) { 
+        Scanner lukija = new Scanner(System.in); 
+        System.out.println("Kirjoita luku "); 
+        double luku = Double.valueOf(lukija.nextLine());
+        System.out.println("Kirjoitit " + luku);
+    }
+}
+```
+
+<sample-output>
+
+Kirjoita luku 
+**1234.2**
+Kirjoitit 1234.2
+
+</sample-output>
 
 Liukulukutyyppiseen muuttujaan voi lukea myös kokonaisluvun. Tällöin luku muunnetaan liukulukutyyppiseksi automaattisesti. Alla oleva esimerkki näyttää edellisen ohjelman toiminnan kun käyttäjä syöttää kokonaisluvun.
 
-<% partial 'partials/sample\_output' do %> Kirjoita luku 18 Kirjoitit 18.0 <% end %>                                 <% partial 'partials/exercise', locals: { name: 'Liukuluku', model\_solution: '50219' } do %>
+<sample-output> 
+
+Kirjoita luku 
+**18** 
+Kirjoitit 18.0 
+
+</sample-output>
+
+<programming-exercise name="Liukuluku">
 
 Kirjoita ohjelma, joka kysyy käyttäjältä liukulukua. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämän luvun.
 
 Alla on annettuna ohjelman esimerkkitulostuksia:
 
-<% partial 'partials/sample\_output' do %> Syötä luku! 3.14 Syötit luvun 3.14 <% end %>                                 <% partial 'partials/sample\_output' do %> Syötä luku! 2.718 Syötit luvun 2.718 <% end %> <% end %>                                 <% partial 'partials/material\_sub\_sub\_heading' do %> Totuusarvon lukeminen <% end %>
+<sample-output> 
+
+Syötä luku! 
+**3.14** 
+Syötit luvun 3.14 
+
+</sample-output>
+
+<sample-output> 
+
+Syötä luku! 
+**2.718** 
+Syötit luvun 2.718
+
+</sample-output>
+
+</programming-exercise>
+
+
+### Totuusarvon lukeminen
 
 Merkkijonon muuntaminen kokonaisluvuksi tapahtui komennolla `Integer.valueOf` ja merkkijonon muuntaminen liukuluvuksi tapahtui komennolla `Double.valueOf`. Komento `valueOf` esiintyy myös merkkijonon muuntamisessa totuusarvoksi -- tämä tehdään komennolla `Boolean.valueOf`.
 
 Totuusarvotyyppiset muuttujat voivat saada arvokseen vain `true` eli totta tai `false` eli epätotta. Kun merkkijonoa muunnetaan totuusarvotyyppiseksi, merkkijonon tulee olla "true" mikäli totuusarvon arvoksi halutaan `true`. Kirjoitusasulla ei ole väliä, eli myös "TRue" muuttuu totuusarvoksi `true`. Muut merkkijonot muuntuvat totuusarvoksi `false`.
 
-<% partial 'partials/code\_highlight' do %> import java.util.Scanner; public class Ohjelma { public static void main(String\[\] args) { Scanner lukija = new Scanner(System.in); System.out.println("Kirjoita totuusarvo "); boolean arvo = Boolean.valueOf(lukija.nextLine()); System.out.println("Kirjoitit " + arvo); } } <% end %>                                 <% partial 'partials/sample\_output' do %> Kirjoita totuusarvo enpäs! Kirjoitit false <% end %>                                 <% partial 'partials/sample\_output' do %> Kirjoita totuusarvo TRUE Kirjoitit true <% end %>                                 <% partial 'partials/sample\_output' do %> Kirjoita totuusarvo true Kirjoitit true <% end %>                                 <% partial 'partials/exercise', locals: { name: 'Totuusarvo', model\_solution: '50220' } do %>
+```java 
+import java.util.Scanner; 
+
+public class Ohjelma { 
+    public static void main(String[] args) {
+        Scanner lukija = new Scanner(System.in); 
+        System.out.println("Kirjoita totuusarvo "); 
+        boolean arvo = Boolean.valueOf(lukija.nextLine());
+        System.out.println("Kirjoitit " + arvo); 
+    }
+}
+```
+
+<sample-output> 
+
+Kirjoita totuusarvo 
+**enpäs!** 
+Kirjoitit false
+
+</sample-output>
+
+<sample-output>
+
+Kirjoita totuusarvo
+**TRUE** 
+Kirjoitit true
+
+</sample-output>
+
+<sample-output>
+
+Kirjoita totuusarvo
+**true** 
+Kirjoitit true
+
+</sample-output>
+
+
+<programming-exercise name="Totuusarvo">
 
 Kirjoita ohjelma, joka kysyy käyttäjältä totuusarvoa. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämän totuusarvon.
 
 Alla on annettuna ohjelman esimerkkitulostuksia:
 
-<% partial 'partials/sample\_output' do %> Syötä jotain! joulupukkia ei ole olemassa Totta vaiko ei? false <% end %>                                 <% partial 'partials/sample\_output' do %> Syötä jotain! TRUE Totta vaiko ei? true <% end %> <% end %>                                 <% partial 'partials/material\_sub\_sub\_heading' do %> Yhteenveto <% end %>
+<sample-output>
+
+Syötä jotain! 
+**joulupukkia ei ole olemassa** 
+Totta vaiko ei? false
+
+</sample-output>
+
+<sample-output>
+
+Syötä jotain!
+**TRUE** 
+Totta vaiko ei? true
+
+</sample-output>
+
+</programming-exercise>
+
+### Yhteenveto
 
 Alla vielä yhteenveto:
 
-<% partial 'partials/code\_highlight' do %> import java.util.Scanner; public class Ohjelma { public static void main(String\[\] args) { Scanner lukija = new Scanner(System.in); String teksti = lukija.nextLine(); int kokonaisluku = Integer.valueOf(lukija.nextLine()); double liukuluku = Double.valueOf(lukija.nextLine()); boolean totuusarvo = Boolean.valueOf(lukija.nextLine()); // jne } } <% end %>                                 <% partial 'partials/exercise', locals: { name: 'Muuttujat yhdessä', model\_solution: '50221' } do %>
+```java 
+import java.util.Scanner; 
+
+public class Ohjelma { 
+    public static void main(String[] args) {
+        Scanner lukija = new Scanner(System.in);
+        String teksti = lukija.nextLine();
+        int kokonaisluku = Integer.valueOf(lukija.nextLine();
+        double liukuluku = Double.valueOf(lukija.nextLine()); 
+        boolean totuusarvo = Boolean.valueOf(lukija.nextLine()); 
+        
+        // jne 
+    } 
+}
+```
+
+<programming-exercise name="Muuttujat yhdessä">
 
 Kirjoita ohjelma, joka kysyy käyttäjältä merkkijonoa, kokonaislukua, liukulukua ja totuusarvoa. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämät arvot.
 
 Alla on annettuna ohjelman esimerkkitulostuksia:
 
-<% partial 'partials/sample\_output' do %> Syötä merkkijono! heippa Syötä kokonaisluku! 11 Syötä liukuluku! 4.2 Syötä totuusarvo! true Syötit merkkijonon heippa Syötit kokonaisluvun 11 Syötit liukuluvun 4.2 Syötit totuusarvon true <% end %>                                 <% partial 'partials/sample\_output' do %> Syötä merkkijono! oho! Syötä kokonaisluku! \-4 Syötä liukuluku! 3200.1 Syötä totuusarvo! false Syötit merkkijonon oho! Syötit kokonaisluvun -4 Syötit liukuluvun 3200.1 Syötit totuusarvon false <% end %> <% end %>
+<sample-output>
+
+Syötä merkkijono!
+**heippa** 
+Syötä kokonaisluku! 
+**11** 
+Syötä liukuluku! 
+**4.2** 
+Syötä totuusarvo! 
+**true** 
+
+Syötit merkkijonon heippa 
+Syötit kokonaisluvun 11 
+Syötit liukuluvun 4.2 
+Syötit totuusarvon true
+
+</sample-output>
+
+<sample-output> 
+
+Syötä merkkijono! 
+**oho!** 
+Syötä kokonaisluku! 
+**-4** 
+Syötä liukuluku! 
+**3200.1** 
+Syötä totuusarvo!
+**false** 
+Syötit merkkijonon oho! 
+Syötit kokonaisluvun -4 
+Syötit liukuluvun 3200.1 
+Syötit totuusarvon false
+
+</sample-output>
+
+</programming-exercise>
