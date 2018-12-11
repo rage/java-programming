@@ -31,9 +31,13 @@ const Page = styled.li`
   `}
 
   :hover {
-    font-weight: bold;
-    //background-color: rgba(0, 0, 0, 0.08);
-    //color: black;
+    background-color: #eeeeee;
+  }
+`
+
+const StyledLink = styled(Link)`
+  :hover {
+    text-decoration: none;
   }
 `
 
@@ -77,11 +81,11 @@ const PagesInThisSection = ({ style }) => (
           <PagesList>
             {sectionPages.map((page, i) => (
               <Fragment>
-                <Link to={page.path}>
+                <StyledLink to={page.path}>
                   <Page key={page.path} currentPage={page.path === currentPath}>
                     {i + 1}. {page.title}
                   </Page>
-                </Link>
+                </StyledLink>
                 {i !== sectionPages.length - 1 && <Divider variant="middle" />}
               </Fragment>
             ))}

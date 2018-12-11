@@ -19,14 +19,31 @@ const SidebarContainer = styled.div`
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
       0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
   }
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
 `
 
-const TopContainer = styled.div`
+const LogoContainer = styled.div`
   display: flex;
   background-color: white;
   justify-content: space-around;
   align-content: center;
   align-items: center;
+`
+
+const TreeViewContainer = styled.div`
+  flex: 1;
+`
+
+const Brand = styled.div`
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  padding-top: 2rem;
+  font-weight: bold;
+  color: #c0392b;
+  font-size: 1.3rem;
 `
 
 var content2 = [
@@ -44,17 +61,36 @@ var content2 = [
   },
 ]
 
+var futurePages = [
+  { title: 'Osa 2', tba: '28.12.2018' },
+  { title: 'Osa 3', tba: '11.1.2019' },
+  { title: 'Osa 4', tba: '25.1.2019' },
+  { title: 'Osa 5', tba: '1.2.2019' },
+  { title: 'Osa 8', tba: '8.2.2019' },
+  { title: 'Osa 9', tba: '8.3.2019' },
+  { title: 'Osa 10', tba: '15.3.2019' },
+  { title: 'Osa 11', tba: '22.3.2019' },
+  { title: 'Osa 12', tba: '29.3.2019' },
+  { title: 'Osa 13', tba: '12.4.2019' },
+  { title: 'Osa 14', tba: '19.4.2019' },
+]
+
 class Sidebar extends React.Component {
   render() {
     const edges =
-      this.props.data?.allMarkdownRemark?.edges.map(o => o.node?.frontmatter) || []
-    const content = content2.concat(edges)
+      this.props.data?.allMarkdownRemark?.edges.map(o => o.node?.frontmatter) ||
+      []
+    let content = content2.concat(edges)
+    content = content.concat(futurePages)
     return (
       <SidebarContainer>
-        <TopContainer>
+        <Brand>Ohjelmoinnin MOOC 2019</Brand>
+        <TreeViewContainer>
+          <TreeView data={content} />
+        </TreeViewContainer>
+        <LogoContainer>
           <Logo />
-        </TopContainer>
-        <TreeView data={content} />
+        </LogoContainer>
       </SidebarContainer>
     )
   }
