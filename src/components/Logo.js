@@ -22,8 +22,14 @@ const StyledLink = styled.a`
   display: flex;
   align-items: center;
   padding: 1rem;
+  padding-right: 1.7rem;
   height: 64px;
   background-color: white;
+
+  :hover {
+    text-decoration: none;
+    color: black;
+  }
 `
 
 export default () => (

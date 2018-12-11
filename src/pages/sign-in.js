@@ -45,6 +45,10 @@ class SignInPage extends React.Component {
         username: this.state.email,
         password: this.state.password,
       })
+      if (typeof window !== 'undefined') {
+        window.history.back()
+        return
+      }
       navigate('/')
     } catch (error) {
       this.setState({ error: true, submitting: false })

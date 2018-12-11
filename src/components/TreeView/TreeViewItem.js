@@ -8,6 +8,11 @@ import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
 import { trackElementHeight } from '../../util/trackHeight'
 import GatsbyLink from 'gatsby-link'
 import { Location } from '@reach/router'
+import Avatar from '@material-ui/core/Avatar'
+import Chip from '@material-ui/core/Chip'
+import FaceIcon from '@material-ui/icons/Face'
+
+import { faCalendarAlt as icon } from '@fortawesome/free-regular-svg-icons'
 
 const ChildrenList = styled.ul`
   height: calc(var(--open-ratio) * var(--calculated-height) * 1px);
@@ -16,21 +21,43 @@ const ChildrenList = styled.ul`
 `
 
 const ListItem = styled.li`
-  cursor: pointer;
   list-style-type: none;
   margin-bottom: 0;
   padding: 0.75rem;
+  display: flex;
+  align-items: center;
+`
+
+const ListItemLabel = styled.div`
+  flex: 1;
+  padding: 0.3rem;
 `
 
 const NavigationLink = styled(GatsbyLink)`
   border-left: 0.5rem solid white;
   width: 100%;
+  background-color: white;
   ${props =>
     props.active === 't' &&
     `
-    border-color: #f75b4b;
+    border-color: #f75b4b !important;
     background-color: #ffeeed;
   `}
+
+  :hover {
+    text-decoration: none;
+    color: black;
+    background-color: #eeeeee;
+    border-color: #eeeeee;
+    //filter: brightness(0.5);
+  }
+`
+
+const DisabledItem = styled.div`
+  opacity: 0.5;
+  width: 100%;
+  cursor: default !important;
+  border-left: 0.5rem solid white;
 `
 
 const ItemTitleWrapper = styled.div`
@@ -59,6 +86,11 @@ const StyledIcon = styled(FontAwesomeIcon)`
   transform: rotate(calc(var(--open-ratio) * 90deg));
 `
 
+const StyledChip = styled(Chip)`
+  span {
+    width: 86px;
+  }
+`
 export default class TreeViewItem extends React.Component {
   constructor(props) {
     super(props)
@@ -108,14 +140,25 @@ export default class TreeViewItem extends React.Component {
                           size="1x"
                         />
                       )}
-                      <NavigationLink
-                        to={this.props.item.path}
+                      <LinkWrapper
+                        to={this.props.item.path || '#'}
                         active={active ? 't' : 'f'}
+                        disabled={this.props.item.tba}
                       >
                         <ListItem onClick={this.onClick}>
-                          {this.props.item.title}
+                          <ListItemLabel>{this.props.item.title}</ListItemLabel>
+                          {this.props.item.tba && (
+                            <StyledChip
+                              avatar={
+                                <Avatar>
+                                  <FontAwesomeIcon icon={icon} />
+                                </Avatar>
+                              }
+                              label={this.props.item.tba}
+                            />
+                          )}
                         </ListItem>
-                      </NavigationLink>
+                      </LinkWrapper>
                     </ItemTitleWrapper>
                     {this.props.item.children && (
                       <ChildrenList
@@ -136,4 +179,11 @@ export default class TreeViewItem extends React.Component {
       </React.Fragment>
     )
   }
+}
+
+function LinkWrapper(props) {
+  if (props.disabled) {
+    return <DisabledItem {...props} />
+  }
+  return <NavigationLink {...props} />
 }

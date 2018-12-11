@@ -7,6 +7,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import './reboot.css'
 import './theme.css'
+import 'focus-visible'
 
 const layoutQuery = graphql`
   query {
