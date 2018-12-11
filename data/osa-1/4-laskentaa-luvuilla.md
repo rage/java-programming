@@ -3,126 +3,425 @@ path: "/osa-1/4-muuttujat"
 title: "Laskentaa luvuilla"
 ---
 
-<% partial 'partials/learning\_objectives', locals: { name: 'Oppimistavoitteet' } do %>
+<text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
 * Osaat tehdä laskutoimintoja muuttujien avulla.
 * Osaat muodostaa tulostuslauseita, jossa on mukana sekä laskuoperaatioita (lausekkeita) että merkkijonoja.
 
-<% end %>
-
-voiko int-arvoon lisätä doublen tai toisinpäin?
+</text-box>
 
 Laskuoperaatiot ovat tuttuja ja suoraviivaisia: yhteenlasku `+`, erotus `-`, kertolasku `*` ja jakolasku `/`. Laskentajärjestys on myös tuttu: laskenta tehdään vasemmalta oikealle sulut huomioon ottaen. Kuitenkin `*` ja `/` lasketaan ennen `+` ja `-` operaatioita, samoin kuin perus- tai kansakoulumatematiikassa on tullut tutuksi.
 
-<% partial 'partials/code\_highlight' do %> int eka = 2; System.out.println(eka); // tulostaa 2 int toka = 4; System.out.println(toka); // tulostaa 4 int summa = eka + toka; // muuttujaan summa asetetaan muuttujien eka ja toka arvojen summa System.out.println(summa); // tulostaa 6 <% end %>                                 <% partial 'partials/material\_sub\_heading' do %> Laskujärjestys ja sulut <% end %>
+```java 
+int eka = 2; 
+System.out.println(eka); // tulostaa 2 
+int toka = 4; 
+System.out.println(toka); // tulostaa 4 
+
+int summa = eka + toka; // muuttujaan summa asetetaan muuttujien eka ja toka arvojen summa 
+System.out.println(summa); // tulostaa 6
+```
+
+## Laskujärjestys ja sulut
 
 Laskujärjestykseen voi vaikuttaa sulkujen avulla. Sulkujen sisällä olevat laskuoperaatiot suoritetaan ennen niiden ulkopuolella olevia laskuoperaatioita.
 
-<% partial 'partials/code\_highlight' do %> int laskuSuluilla = (1 + 1) + 3 \* (2 + 5); System.out.println(laskuSuluilla); // tulostaa 23 int laskuSuluitta = 1 + 1 + 3 \* 2 + 5; System.out.println(laskuSuluitta); // tulostaa 13 <% end %>
+```java 
+int laskuSuluilla = (1 + 1) + 3 * (2 + 5); 
+System.out.println(laskuSuluilla); // tulostaa 23 
+
+int laskuSuluitta = 1 + 1 + 3 * 2 + 5; 
+System.out.println(laskuSuluitta); // tulostaa 13
+```
 
 Yllä olevan esimerkin voi jakaa myös osiin.
 
-<% partial 'partials/code\_highlight' do %> int laskuSuluilla = (1 + 1); System.out.println(laskuSuluilla); // tulostaa 2 laskuSuluilla = laskuSuluilla + 3 \* (2 + 5); System.out.println(laskuSuluilla); // tulostaa 23 int laskuSuluitta = 1 + 1; laskuSuluitta = laskuSuluitta + 3 \* 2; laskuSuluitta = laskuSuluitta + 5; System.out.println(laskuSuluitta); // tulostaa 13 <% end %>                                 <% partial 'partials/exercise', locals: { name: 'Sekunnit vuorokaudessa', model\_solution: '50222' } do %>
+```java 
+int laskuSuluilla = (1 + 1); 
+System.out.println(laskuSuluilla); // tulostaa 2 
+laskuSuluilla = laskuSuluilla + 3 * (2 + 5);
+System.out.println(laskuSuluilla); // tulostaa 23
+
+int laskuSuluitta = 1 + 1; 
+laskuSuluitta = laskuSuluitta + 3 * 2; 
+laskuSuluitta = laskuSuluitta + 5;
+System.out.println(laskuSuluitta); // tulostaa 13 
+```
+
+<programming-exercise name="Sekunnit vuorokaudessa">
 
 Toteuta tehtäväpohjaan ohjelma, joka kysyy käyttäjältä vuorokausien lukumäärää. Tämän jälkeen ohjelma tulostaa sekuntien määrän annetuissa vuorokausissa.
 
 Esimerkkitulostuksia:
 
-<% partial 'partials/sample\_output' do %> Kuinka monen vuorokauden sekunnit tulostetaan? 3 259200 <% end %>                                 <% partial 'partials/sample\_output' do %> Kuinka monen vuorokauden sekunnit tulostetaan? 7 604800 <% end %> <% end %> <%= partial 'partials/quiz', locals: { id: '5a57bcce574f0b000439a32b' } %> <% partial 'partials/hint', locals: { name: 'Lauseke ja lause' } do %>
+<sample-output> 
+
+Kuinka monen vuorokauden sekunnit tulostetaan? 
+**3** 
+259200
+
+</sample-output> 
+
+<sample-output>
+Kuinka monen vuorokauden sekunnit tulostetaan? 
+**7** 
+604800
+
+</sample-output>
+ 
+</programming-exercise>
+
+<quiznator id="5a57bcce574f0b000439a32b"></quiznator>
+ 
+
+<text-box variant='hint' name='Lauseke ja lause'>
 
 Lauseke (expression) on arvojen yhdistelmä, joka muuntuu arvoksi laskuoperaation tai evaluaation yhteydessä. Alla oleva lause sisältää lausekkeen `1 + 1 + 3 * 2 + 5`, joka evaluoidaan ennen arvon asetusta muuttujaan.
 
-<% partial 'partials/code\_highlight' do %> int laskuSuluitta = 1 + 1 + 3 \* 2 + 5; <% end %>
+```java 
+int laskuSuluitta = 1 + 1 + 3 * 2 + 5;
+```
 
-Lausekkeen evaluaatio tapahtuu aina ennen muuttujan arvon asetusta, eli yllä lasku "1 + 1 + 3 \* 2 + 5" suoritetaan ennen tuloksen asetusta muuttujaan.
+Lausekkeen evaluaatio tapahtuu aina ennen muuttujan arvon asetusta, eli yllä lasku "1 + 1 + 3 * 2 + 5" suoritetaan ennen tuloksen asetusta muuttujaan.
 
-<% end %>
+</text-box>
+
 
 Lausekkeen evaluointi tapahtuu ohjelmakoodissa siinä kohtaa, missä lauseke on. Evaluointi onnistuu siis esimerkiksi myös tulostuslauseen yhteydessä, jos lauseketta käytetään tulostuslauseen parametrin arvon laskemisessa.
 
-<% partial 'partials/code\_highlight' do %> int eka = 2; int toka = 4; System.out.println(eka + toka); // tulostaa 6 System.out.println(2 + toka - eka - toka); // tulostaa 0 <% end %>
+```java 
+int eka = 2; 
+int toka = 4; 
+
+System.out.println(eka + toka); // tulostaa 6 
+System.out.println(2 + toka - eka - toka); // tulostaa 0 
+```
 
 Lauseke ei muuta muuttujassa olevaa arvoa, ellei lausekkeen lopputulosta aseteta muuttujan arvoksi tai anneta parametrina esimerkiksi tulostukselle.
 
-<% partial 'partials/code\_highlight' do %> int eka = 2; int toka = 4; // alla oleva lauseke ei edes toimi, sillä lauseketta // ei aseteta minkään muuttujan arvoksi tai anneta parametrina // tulostuslauseelle eka + toka; <% end %> <%= partial 'partials/quiz', locals: { id: '5878a0b579db890004df0d1d' } %> <% partial 'partials/material\_sub\_heading' do %> Laskentaa ja tulostamista <% end %>
+```java 
+int eka = 2; 
+int toka = 4; 
+
+// alla oleva lauseke ei edes toimi, sillä lauseketta 
+// ei aseteta minkään muuttujan arvoksi tai anneta parametrina 
+// tulostuslauseelle 
+eka + toka; 
+```
+
+<quiznator id="5878a0b579db890004df0d1d"></quiznator>
+
+
+## Laskentaa ja tulostamista
 
 Muuttujan arvon voi tulostaa komennolla `System.out.println`. Tulostettavaan hipsuilla merkittyyn merkkijonoon, esim. "Pituus ", voidaan lisätä muuta tulostettavaa operaation `+` avulla.
 
-<% partial 'partials/code\_highlight' do %> int pituus = 42; System.out.println("Pituus " + pituus); <% end %>                                 <% partial 'partials/sample\_output' do %> Pituus 42 <% end %>                                 <% partial 'partials/code\_highlight' do %> System.out.println("tuossa on kokonaisluku --> " + 2); System.out.println(2 + " <-- tuossa on kokonaisluku"); <% end %>                                 <% partial 'partials/sample\_output' do %> tuossa on kokonaisluku --> 2 2 <-- tuossa on kokonaisluku <% end %>
+```java 
+int pituus = 42; 
+System.out.println("Pituus " + pituus); 
+```
+
+<sample-output>
+
+Pituus 42 
+
+</sample-output>
+
+```java 
+System.out.println("tuossa on kokonaisluku --> " + 2);
+System.out.println(2 + " <-- tuossa on kokonaisluku"); 
+```
+
+<sample-output> 
+
+tuossa on kokonaisluku --> 2
+2 <-- tuossa on kokonaisluku
+
+</sample-output>
 
 Jos toinen operaation `+` kohteista on merkkijono, muutetaan myös toinen operaation kohteista merkkijonoksi ohjelman suorituksen yhteydessä. Alla olevassa esimerkissä kokonaisluku `2` on muutettu merkkijonoksi "2", ja siihen on yhdistetty merkkijono.
 
 Aiemmin esitellyt laskusäännöt pätevät täälläkin:
 
-<% partial 'partials/code\_highlight' do %> System.out.println("Neljä: " + (2 + 2)); System.out.println("Mutta! kaksikymmentäkaksi: " + 2 + 2); <% end %>                                 <% partial 'partials/sample\_output' do %> Neljä: 4 Mutta! kaksikymmentäkaksi: 22 <% end %>
+```java 
+System.out.println("Neljä: " + (2 + 2)); 
+System.out.println("Mutta! kaksikymmentäkaksi: " + 2 + 2);
+```
 
-<% partial 'partials/exercise', locals: { name: 'Kahden luvun summa', model\_solution: '50223' } do %>
+<sample-output>
+
+Neljä: 4 
+Mutta! kaksikymmentäkaksi: 22
+
+</sample-output>
+
+
+<programming-exercise name="Kahden luvun summa">
 
 Kirjoita ohjelma, joka kysyy käyttäjältä kahta lukua. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämien lukujen summan.
 
 Muistathan, että luvun lukeminen onnistuu Scanner-apuvälineen avulla seuraavasti:
 
-<% partial 'partials/code\_highlight' do %> Scanner lukija = new Scanner(System.in); System.out.println("Kirjoita luku "); int luku = Integer.valueOf(lukija.nextLine()); System.out.println("Kirjoitit " + luku); <% end %>
+```java 
+Scanner lukija = new Scanner(System.in);
+
+System.out.println("Kirjoita luku ");
+int luku = Integer.valueOf(lukija.nextLine()); 
+System.out.println("Kirjoitit " + luku);
+```
 
 Alla on annettuna ohjelman toivottuja esimerkkitulostuksia:
 
-<% partial 'partials/sample\_output' do %> Syötä ensimmäinen luku! 8 Syötä toinen luku! 3 Lukujen summa on 11 <% end %>                                 <% partial 'partials/sample\_output' do %> Syötä ensimmäinen luku! 3 Syötä toinen luku! \-1 Lukujen summa on 2 <% end %> <% end %>                                 <% partial 'partials/exercise', locals: { name: 'Kolmen luvun summa', model\_solution: '50224' } do %>
+<sample-output> 
+
+Syötä ensimmäinen luku! 
+**8**
+Syötä toinen luku!
+**3**
+Lukujen summa on 11
+
+</sample-output>
+
+<sample-output>
+
+Syötä ensimmäinen luku! 
+**3** 
+Syötä toinen luku!
+**-1** 
+Lukujen summa on 2
+
+</sample-output>
+
+</programming-exercise>
+
+
+<programming-exercise name="Kolmen luvun summa">
 
 Kirjoita ohjelma, joka kysyy käyttäjältä kolmea lukua. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämien lukujen summan.
 
 Alla on annettuna ohjelman esimerkkitulostuksia:
 
-<% partial 'partials/sample\_output' do %> Syötä ensimmäinen luku! 8 Syötä toinen luku! 3 Syötä kolmas luku! 3 Lukujen summa on 14 <% end %>                                 <% partial 'partials/sample\_output' do %> Syötä ensimmäinen luku! 3 Syötä toinen luku! \-1 Syötä kolmas luku! 2 Lukujen summa on 4 <% end %> <% end %>
+<sample-output> 
+
+Syötä ensimmäinen luku!
+**8**
+Syötä toinen luku!
+**3** 
+Syötä kolmas luku!
+**3** 
+Lukujen summa on 14
+
+</sample-output>
+
+
+<sample-output>
+
+Syötä ensimmäinen luku!
+**3** 
+Syötä toinen luku!
+**-1**
+Syötä kolmas luku!
+**2** 
+Lukujen summa on 4 
+
+</sample-output>
+
+</programming-exercise>
 
 Edellistä tietoa soveltamalla voimme luoda lausekkeen, joka sisältää tekstiä ja muuttujan, ja joka evaluoidaan tulostuksen yhteydessä:
 
-<% partial 'partials/code\_highlight' do %> int x = 10; System.out.println("muuttujan x arvo on: " + x); int y = 5; int z = 6; System.out.println("y on " + y + " ja z on " + z); <% end %>
+```java 
+int x = 10; 
+
+System.out.println("muuttujan x arvo on: " + x); 
+
+int y = 5; 
+int z = 6; 
+
+System.out.println("y on " + y + " ja z on " + z);
+```
 
 Tulostus:
 
-<% partial 'partials/sample\_output' do %> muuttujan x arvo on: 10 y on 5 ja z on 6 <% end %>                                 <% partial 'partials/exercise', locals: { name: 'Yhteenlasku', model\_solution: '50225' } do %>
+<sample-output> 
+
+muuttujan x arvo on: 10 
+y on 5 ja z on 6
+
+</sample-output>
+
+
+<programming-exercise name="Yhteenlasku">
 
 Tee ohjelma, jonka avulla voidaan laskea kahden kokonaisluvun summa. Ohjelman alussa kysytään kahta kokonaislukua, jotka sisältävät summattavat luvut. Tämän jälkeen ohjelma tulostaa lukujen summausta kuvaavan kaavan.
 
 Tulostusesimerkkejä:
 
-<% partial 'partials/sample\_output' do %> Syötä ensimmäinen luku! 5 Syötä toinen luku! 4 5 + 4 = 9 <% end %>                                 <% partial 'partials/sample\_output' do %> Syötä ensimmäinen luku! 73457 Syötä toinen luku! 12888 73457 + 12888 = 86345 <% end %> <% end %>                                 <% partial 'partials/exercise', locals: { name: 'Kertolasku', model\_solution: '50226' } do %>
+<sample-output>
+
+Syötä ensimmäinen luku!
+**5**
+Syötä toinen luku!
+**4**
+5 + 4 = 9
+
+</sample-output>
+
+
+<sample-output>
+
+Syötä ensimmäinen luku!
+**73457** 
+Syötä toinen luku!
+**12888** 
+73457 + 12888 = 86345
+
+</sample-output>
+
+</programming-exercise>
+
+
+<programming-exercise name="Kertolasku">
 
 Tee edellistä ohjelmaa vastaava ohjelma, joka laskee kahden kokonaislukumuuttujaan sijoitetun arvon kertolaskun.
 
 Esimerkiksi jos syötetyt luvut ovat 2 ja 8, ohjelman suoritus on seuraava:
 
-<% partial 'partials/sample\_output' do %> Syötä ensimmäinen luku! 2 Syötä toinen luku! 8 2 \* 8 = 16 <% end %>
+<sample-output> 
+
+Syötä ensimmäinen luku!
+**2** 
+Syötä toinen luku!
+**8**
+2 * 8 = 16
+
+</sample-output>
 
 Jos taas syötetyt luvut ovat 277 ja 111, ohjelman suoritus on seuraava:
 
-<% partial 'partials/sample\_output' do %> Syötä ensimmäinen luku! 277 Syötä toinen luku! 111 277 \* 111 = 30747 <% end %> <% end %>
+<sample-output>
 
-Kun olet saanut edellisen tehtävän toteutettua, kokeile mikä on suurin mahdollinen kertolasku minkä saat laskettua. Huomaamasi ilmiön taustalla on se, että kokonaislukumuuttujan arvo voi olla korkeintaan 231\-1 eli 2147483647. Tämä johtuu siitä, että kokonaislukumuuttujat esitetään tietokoneen muistissa rajatulla määrällä muistia, eli bittejä. Tähän tutustutaan tarkemmin muunmuassa kurssilla Tietokoneen toiminta.
+Syötä ensimmäinen luku!
+**277** 
+Syötä toinen luku!
+**111** 
+277 * 111 = 30747
 
-<% partial 'partials/material\_sub\_heading' do %> Jakolasku <% end %>
+</sample-output>
+
+</programming-exercise>
+
+Kun olet saanut edellisen tehtävän toteutettua, kokeile mikä on suurin mahdollinen kertolasku minkä saat laskettua. Huomaamasi ilmiön taustalla on se, että kokonaislukumuuttujan arvo voi olla korkeintaan 2<sup>31</sup>\-1 eli 2147483647. Tämä johtuu siitä, että kokonaislukumuuttujat esitetään tietokoneen muistissa 32 bitin avulla. Tähän tutustutaan tarkemmin muunmuassa kurssilla Tietokoneen toiminta.
+
+
+## Jakolasku
 
 Kokonaislukujen jakolasku on hieman hankalampi operaatio. Jakolausekkeessa käytettyjen muuttujien tyyppi määrää evaluaation tuloksena saatavan arvon tyypin. Jos kaikki jakolausekkeessa olevat muuttujat ovat kokonaislukuja, on tulos myös kokonaisluku.
 
-<% partial 'partials/code\_highlight' do %> int tulos = 3 / 2; System.out.println(tulos); // Huom! tulostaa 1 (kokonaisluku), sillä 3 ja 2 ovat myös kokonaislukuja <% end %>                                 <% partial 'partials/code\_highlight' do %> int eka = 3: int toka = 2; double tulos = eka / toka; System.out.println(tulos); // nytkin tulostus on 1, sillä eka ja toka ovat kokonaislukuja <% end %>
+```java 
+int tulos = 3 / 2; 
+System.out.println(tulos); 
+```
+
+<sample-output>
+
+1
+
+</sample-output>
+
+Edellinen esimerkki tulostaa luvun 1, sillä 3 ja 2 ovat kokonaislukuja ja kahden kokonaisluvun jakolaskun tulos on kokonaisluku.
+
+```java 
+int eka = 3;
+int toka = 2; 
+double tulos = eka / toka;
+System.out.println(tulos);
+```
+
+<sample-output>
+
+1
+
+</sample-output>
+
+Nytkin tulostus on 1, sillä eka ja toka ovat (yhä) kokonaislukuja.
 
 Jos jakolaskun jakaja tai jaettava (tai molemmat!) ovat liukulukuja, tulee tulokseksi myös liukuluku.
 
-<% partial 'partials/code\_highlight' do %> double kunJaettavaOnLiukuluku = 3.0 / 2; System.out.println(kunJaettavaOnLiukuluku); // tulostaa 1.5 double kunJakajaOnLiukuluku = 3 / 2.0; System.out.println(kunJakajaOnLiukuluku); // tulostaa 1.5 <% end %>
+```java 
+double kunJaettavaOnLiukuluku = 3.0 / 2; 
+System.out.println(kunJaettavaOnLiukuluku); // tulostaa 1.5 
+
+double kunJakajaOnLiukuluku = 3 / 2.0; 
+System.out.println(kunJakajaOnLiukuluku); // tulostaa 1.5
+```
+
+
+<sample-output>
+
+1.5
+1.5
+
+</sample-output>
 
 Kokonaisluku voidaan tarvittaessa muuttaa liukuluvuksi lisäämällä sen eteen tyyppimuunnosoperaatio `(double)`:
 
-<% partial 'partials/code\_highlight' do %> int eka = 3; int toka = 2; double tulos1 = (double) eka / toka; System.out.println(tulos1); // tulostaa 1.5 double tulos2 = eka / (double) toka; System.out.println(tulos2); // tulostaa 1.5 double tulos3 = (double) (eka / toka); System.out.println(tulos3); // tulostaa 1.0 <% end %>
+```java 
+int eka = 3;
+int toka = 2;
+
+double tulos1 = (double) eka / toka;
+System.out.println(tulos1); // tulostaa 1.5 
+
+double tulos2 = eka / (double) toka; 
+System.out.println(tulos2); // tulostaa 1.5 
+
+double tulos3 = (double) (eka / toka); 
+System.out.println(tulos3); // tulostaa 1.0
+```
+
+<sample-output>
+
+1.5
+1.5
+1.0
+
+</sample-output>
+
 
 Jälkimmäisessä esimerkissä tulos pyöristyy väärin sillä laskuoperaatio kokonaisluvuilla suoritetaan ennen tyyppimuunnosta.
 
 Jos jakolausekkeen tulos asetetaan kokonaislukutyyppiseen muuttujaan, on tulos automaattisesti kokonaisluku.
 
-<% partial 'partials/code\_highlight' do %> // tulos automaattisesti kokonaisluku: 1 int tulosKokonaislukuKoskaTyyppiKokonaisluku = 3.0 / 2; <% end %>
+```java 
+int kokonaisluku = 3.0 / 2;
+System.out.println(kokonaisluku);
+```
 
-Seuraava esimerkki tulostaa "1.5", sillä jaettavasta tehdään liukuluku kertomalla se liukuluvulla (1.0 \* 3 = 3.0) ennen jakolaskua.
+<sample-output>
 
-<% partial 'partials/code\_highlight' do %> int jaettava = 3; int jakaja = 2; double tulos = 1.0 \* jaettava / jakaja; System.out.println(tulos); <% end %>                                 <% partial 'partials/hint', locals: { name: 'Keskiarvon laskeminen' } do %>
+1
+
+</sample-output>
+
+Seuraava esimerkki tulostaa "1.5", sillä jaettavasta tehdään liukuluku kertomalla se liukuluvulla (1.0 * 3 = 3.0) ennen jakolaskua.
+
+```java 
+int jaettava = 3;
+int jakaja = 2; 
+
+double tulos = 1.0 * jaettava / jakaja; 
+System.out.println(tulos);
+```
+
+<sample-output>
+
+1.5
+
+</sample-output>
+
+
+<text-box variant='hint' name='Keskiarvon laskeminen'>
 
 Seuraavissa tehtävissä pyydetään laskemaan syötettyjen lukujen keskiarvo. Kerrataan peruskoulu- tai kansakoulumatematiikasta tutun keskiarvon käsite pikaisesti.
 
@@ -130,19 +429,94 @@ Keskiarvolla tarkoitetaan lukujen summaa jaettuna niiden lukumäärällä. Esime
 
 Ohjelmoinnissa tähän liittyy muutamia asioita, jotka tulee muistaa. Ensiksi, nollalla jakaminen ei tyypillisesti ole sallittua. Tämä tarkoittaa sitä, että nollan luvun keskiarvon laskeminen ei onnistu. Toiseksi, mikäli ohjelma käsittelee lukujen lukumäärän ja summan kokonaislukumuuttujina, tulee muuttujista jompikumpi (tai kummatkin) muuntaa liukulukumuuttujaksi kertomalla luku arvolla 1.0 ennen jakolaskua.
 
-<% end %>                                 <% partial 'partials/exercise', locals: { name: 'Kahden luvun keskiarvo', model\_solution: '50227' } do %>
+</text-box>
+
+
+<programming-exercise name="Kahden luvun keskiarvo">
 
 Kirjoita ohjelma, joka kysyy käyttäjältä kahta kokonaislukua ja tulostaa lukujen keskiarvon.
 
-<% partial 'partials/sample\_output' do %> Syötä ensimmäinen luku! 8 Syötä toinen luku! 2 Syötettyjen lukujen keskiarvo on 5.0 <% end %> <% end %>                                 <% partial 'partials/exercise', locals: { name: 'Kolmen luvun keskiarvo', model\_solution: '50228' } do %>
+<sample-output> 
+
+Syötä ensimmäinen luku!
+**8**
+Syötä toinen luku!
+**2**
+Syötettyjen lukujen keskiarvo on 5.0
+
+</sample-output>
+
+</programming-exercise>
+
+
+<programming-exercise name="Kolmen luvun keskiarvo">
 
 Kirjoita ohjelma, joka kysyy käyttäjältä kolme kokonaislukua ja tulostaa lukujen keskiarvon.
 
-<% partial 'partials/sample\_output' do %> Syötä ensimmäinen luku! 8 Syötä toinen luku! 2 Syötä kolmas luku! 3 Syötettyjen lukujen keskiarvo on 5.5 <% end %>                                 <% partial 'partials/sample\_output' do %> Syötä ensimmäinen luku! 9 Syötä toinen luku! 5 Syötä kolmas luku! \-1 Syötettyjen lukujen keskiarvo on 5.5 <% end %> <% end %> <%= partial 'partials/quiz', locals: { id: '5878a2b179db890004df0d1e' } %> <% partial 'partials/exercise', locals: { name: 'Nelilaskin', model\_solution: '50229' } do %>
+<sample-output>
+
+Syötä ensimmäinen luku!
+**8**
+Syötä toinen luku!
+**2**
+Syötä kolmas luku!
+**3**
+Syötettyjen lukujen keskiarvo on 5.5 
+
+</sample-output>
+
+<sample-output>
+
+Syötä ensimmäinen luku!
+**9**
+Syötä toinen luku!
+**5**
+Syötä kolmas luku!
+**-1**
+Syötettyjen lukujen keskiarvo on 5.5
+
+</sample-output>
+
+</programming-exercise>
+
+
+<quiznator id="5878a2b179db890004df0d1e"></quiznator>
+
+
+<programming-exercise name="Nelilaskin">
 
 Kirjoita ohjelma, joka lukee käyttäjältä kaksi lukua ja tulostaa lukujen summan, lukujen erotuksen, lukujen kertolaskun, ja lukujen jakolaskun. Alla on kaksi esimerkkiä ohjelman toiminnasta.
 
-<% partial 'partials/sample\_output' do %> Syötä ensimmäinen luku! 8 Syötä toinen luku! 2 8 + 2 = 10 8 - 2 = 6 8 \* 2 = 16 8 / 2 = 4.0 <% end %>                                 <% partial 'partials/sample\_output' do %> Syötä ensimmäinen luku! 9 Syötä toinen luku! 2 9 + 2 = 11 9 - 2 = 7 9 \* 2 = 18 9 / 2 = 4.5 <% end %> <% end %>                                 <% partial 'partials/material\_sub\_heading' do %> Muuttujan arvoon liittyviä väärinkäsityksiä <% end %>
+<sample-output>
+
+Syötä ensimmäinen luku!
+**8**
+Syötä toinen luku!
+**2**
+8 + 2 = 10
+8 - 2 = 6
+8 * 2 = 16
+8 / 2 = 4.0
+
+</sample-output>
+
+<sample-output> 
+
+Syötä ensimmäinen luku!
+**9** 
+Syötä toinen luku! 
+**2**
+9 + 2 = 11
+9 - 2 = 7
+9 * 2 = 18
+9 / 2 = 4.5
+
+</sample-output>
+
+</programming-exercise>
+
+
+## Muuttujan arvoon liittyviä väärinkäsityksiä
 
 Kun tietokone suorittaa ohjelmakoodia, suorittaa se sitä käsky kerrallaan, edeten aina täsmälleen siten, kuin ohjelmakoodissa sanotaan. Kun muuttujaan asetetaan arvo, tapahtuu aina sama asia, eli yhtäsuuruusmerkin oikealla puolella oleva arvo kopioidaan yhtäsuuruusmerkin vasemmalla puolella olevan muuttujan arvoksi, eli muuttujan nimeämään paikkaan.
 
@@ -158,12 +532,56 @@ Kolme yleistä väärinkäsitystä, jotka liittyvät muuttujan arvon asettamisee
 
 Ehkäpä paras tapa tietokoneen ohjelmakoodin suorittamisen ymmärtämiseen on paperin ja kynän käyttäminen. Kun luet ohjelmakoodia, kirjoita paperille uusien muuttujien nimet, sekä kirjoita ylös rivi riviltä, miten ohjelmakoodissa olevien muuttujien arvot muuttuvat. Havainnollistetaan suoritusta seuraavalla ohjelmakoodilla:
 
-<% partial 'partials/code\_highlight' do %> rivi 1: int eka = (1 + 1); rivi 2: int toka = eka + 3 \* (2 + 5); rivi 3: rivi 4: eka = 5; rivi 5: rivi 6: int kolmas = eka + toka; rivi 7: System.out.println(eka); rivi 8: System.out.println(toka); rivi 9: System.out.println(kolmas); <% end %>
+```java 
+rivi 1: int eka = (1 + 1); 
+rivi 2: int toka = eka + 3 \* (2 + 5); 
+rivi 3: 
+rivi 4: eka = 5; 
+rivi 5: 
+rivi 6: int kolmas = eka + toka; 
+rivi 7: System.out.println(eka); 
+rivi 8: System.out.println(toka); 
+rivi 9: System.out.println(kolmas);
+```
 
 Alla on kirjoitettu yllä olevan ohjelmakoodin suoritus auki.
 
-<% partial 'partials/sample\_output' do %> rivi 1: luodaan muuttuja eka rivi 1: kopioidaan muuttujan eka arvoksi laskun 1 + 1 tulos rivi 1: muuttujan eka arvo on 2 rivi 2: luodaan muuttuja toka rivi 2: lasketaan 2 + 5, 2 + 5 -> 7 rivi 2: lasketaan 3 \* 7, 3 \* 7 -> 21 rivi 2: lasketaan eka + 21 rivi 2: kopioidaan muuttujan eka arvo laskuun, muuttujan eka arvo on 2 rivi 2: lasketaan 2 + 21, 2 + 21 -> 23 rivi 2: kopioidaan muuttujan toka arvoksi 23 rivi 2: muuttujan toka arvo on 23 rivi 3: (tyhjä, ei tehdä mitään) rivi 4: kopioidaan muuttujan eka arvoksi 5 rivi 4: muuttujan eka arvo on 5 rivi 5: (tyhjä, ei tehdä mitään) rivi 6: luodaan muuttuja kolmas rivi 6: lasketaan eka + toka rivi 6: kopioidaan muuttujan eka arvo laskuun, muuttujan eka arvo on 5 rivi 6: lasketaan 5 + toka rivi 6: kopioidaan muuttujan toka arvo laskuun, muuttujan toka arvo on 23 rivi 6: lasketaan 5 + 23 -> 28 rivi 6: kopioidaan muuttujan kolmas arvoksi 28 rivi 6: muuttujan kolmas arvo on 28 rivo 7: tulostetaan muuttuja eka rivi 7: kopioidaan muuttujan eka arvo tulostettavaksi, muuttujan eka arvo on 5 rivi 7: tulostetaan arvo 5 rivi 8: tulostetaan muuttuja toka rivi 8: kopioidaan muuttujan toka arvo tulostettavaksi, muuttujan toka arvo on 23 rivi 8: tulostetaan arvo 23 rivi 9: tulostetaan muuttuja kolmas rivi 9: kopioidaan muuttujan kolmas arvo tulostettavaksi, muuttujan kolmas arvo on 28 rivi 9: tulostetaan arvo 28 <% end %>
+<sample-output>
+
+rivi 1: luodaan muuttuja eka 
+rivi 1: kopioidaan muuttujan eka arvoksi laskun 1 + 1 tulos 
+rivi 1: muuttujan eka arvo on 2 
+rivi 2: luodaan muuttuja toka 
+rivi 2: lasketaan 2 + 5, 2 + 5 -> 7 
+rivi 2: lasketaan 3 * 7, 3 * 7 -> 21 
+rivi 2: lasketaan eka + 21 
+rivi 2: kopioidaan muuttujan eka arvo laskuun, muuttujan eka arvo on 2 
+rivi 2: lasketaan 2 + 21, 2 + 21 -> 23 
+rivi 2: kopioidaan muuttujan toka arvoksi 23 
+rivi 2: muuttujan toka arvo on 23 
+rivi 3: (tyhjä, ei tehdä mitään) 
+rivi 4: kopioidaan muuttujan eka arvoksi 5 
+rivi 4: muuttujan eka arvo on 5 
+rivi 5: (tyhjä, ei tehdä mitään) 
+rivi 6: luodaan muuttuja kolmas 
+rivi 6: lasketaan eka + toka 
+rivi 6: kopioidaan muuttujan eka arvo laskuun, muuttujan eka arvo on 5 
+rivi 6: lasketaan 5 + toka 
+rivi 6: kopioidaan muuttujan toka arvo laskuun, muuttujan toka arvo on 23 
+rivi 6: lasketaan 5 + 23 -> 28 
+rivi 6: kopioidaan muuttujan kolmas arvoksi 28 
+rivi 6: muuttujan kolmas arvo on 28 
+rivi 7: tulostetaan muuttuja eka 
+rivi 7: kopioidaan muuttujan eka arvo tulostettavaksi, muuttujan eka arvo on 5 
+rivi 7: tulostetaan arvo 5 
+rivi 8: tulostetaan muuttuja toka 
+rivi 8: kopioidaan muuttujan toka arvo tulostettavaksi, muuttujan toka arvo on 23 
+rivi 8: tulostetaan arvo 23 
+rivi 9: tulostetaan muuttuja kolmas 
+rivi 9: kopioidaan muuttujan kolmas arvo tulostettavaksi, muuttujan kolmas arvo on 28 
+rivi 9: tulostetaan arvo 28 
+</sample-output>
 
 Alla edellinen ohjelma askeleittain visualisoituna. Käytössä oleva askeleittainen visualisointi käsittelee ohjelmakoodia riveittäin -- pohdi askeleiden kohdalla miten ohjelma päätyy sen tulostamaan lopputulokseen.
 
-<%= partial 'partials/quiz', locals: { id: '5878a3ee79db890004df0d1f' } %>
+<quiznator id="5878a3ee79db890004df0d1f"></quiznator>
