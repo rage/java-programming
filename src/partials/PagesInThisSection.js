@@ -28,10 +28,16 @@ const Page = styled.li`
     background-color: black;
     border-radius: 0.25rem;
     color: white;
+
+    :hover {
+      background-color: #333333 !important;
+      color: white !important;
+    }
   `}
 
   :hover {
     background-color: #eeeeee;
+    color: black;
   }
 `
 
