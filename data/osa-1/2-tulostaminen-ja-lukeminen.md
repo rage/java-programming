@@ -19,7 +19,7 @@ Java-ohjelmat vaativat toimiakseen ohjelmarungon. Ohjelmarunko on seuraavanlaine
 
 ```java
 public class Esimerkki {
-    public static void main(String\[\] args) {
+    public static void main(String[] args) {
         // Tänne kirjoitetaan ohjelman käyttämät lauseet
         System.out.println("Tulostettava teksti");
     }
@@ -42,7 +42,7 @@ Todellisuudessa yllä oleva esimerkki näyttää Java-kielisellä ohjelmalla kui
 
 ```java
 public class Esimerkki {
-    public static void main(String\[\] args) {
+    public static void main(String[] args) {
         // Tänne kirjoitetaan ohjelman käyttämät lauseet
         System.out.println("Hei maailma!");
     }
@@ -57,7 +57,7 @@ Kuten johdannossa todettiin, _Lause System.out.println on Java-ohjelmointikielen
 
 ```java
 public class Ohjelma {
-    public static void main(String\[\] args) {
+    public static void main(String[] args) {
         System.out.println("Hei maailma!");
     }
 }
@@ -99,7 +99,7 @@ Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
 
 ```java
 public class Hiekkalaatikko {
-    public static void main(String\[\] args) {
+    public static void main(String[] args) {
         // Kirjoita ohjelmasi tähän alle
     }
 }
@@ -115,7 +115,7 @@ Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
 
 ```java
 public class Nimi {
-    public static void main(String\[\] args) {
+    public static void main(String[] args) {
         // Kirjoita ohjelmasi tähän alle
     }
 }
@@ -139,7 +139,7 @@ Ohjelmia rakennetaan komento komennolta, missä jokainen komento tulee uudelle r
 
 ```java
 public class Ohjelma {
-    public static void main(String\[\] args) {
+    public static void main(String[] args) {
         System.out.println("Hei maailma!");
         System.out.println("... ja maailmankaikkeus!");
     }
@@ -171,7 +171,7 @@ Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
 
 ```java
 public class OlipaKerran {
-    public static void main(String\[\] args) {
+    public static void main(String[] args) {
 
     }
 }
@@ -200,7 +200,7 @@ Toinen vaihtoehto on kahden `System.out.println`\-komennon käyttäminen, yksi k
 
 ```java
 public class Ohjelma {
-    public static void main(String\[\] args) {
+    public static void main(String[] args) {
         System.out.println("Hei maailma!\\n... ja maailmankaikkeus!");
     }
 }
@@ -212,7 +212,7 @@ Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
 
 ```java
 public class OlipaKerranMaa {
-    public static void main(String\[\] args) {
+    public static void main(String[] args) {
 
     }
 }
@@ -232,7 +232,7 @@ Mikäli merkkijonosta muodostuu hyvin pitkä, voi sen pilkkoa useampaan osaan. T
 
 ```java
 public class Ohjelma {
-    public static void main(String\[\] args) {
+    public static void main(String[] args) {
         System.out.println("Hei maailma!\\n" + "... ja maailmankaikkeus!");
     }
 }
@@ -305,7 +305,7 @@ Lohko rajataan aina aaltosuluilla, ja aaltosuluille tulee löytyä aina pari. Ti
 
 ```java
 public class Ohjelma {
-    public static void main(String\[\] args) {
+    public static void main(String[] args) {
         // Tänne voit kirjoittaa ohjelmakoodia. Ohjelmasi voit ajaa
         // valitsemalla menusta Run->Run File tai painamalla Shift+F6
     }
@@ -323,7 +323,7 @@ Alla on esimerkki ohjelmasta, jossa kumpikin kommenttityyppi on käytössä.
 
 ```java
 public class Kommentteja {
-    public static void main(String\[\] args) {
+    public static void main(String[] args) {
         // Tulostetaan
         System.out.println("Tulostettava teksti");
         System.out.println("Lisää tulostettavaa!");
@@ -362,7 +362,7 @@ public static void main(String[] args) {
 
 Tyylivirheet näytetään ohjelmointiympäristössä keltaisella, ja normaalit testi-ilmoitukset punaisella. Kurssilla tutuksi tuleva tehtävän edistymispalkki muuttuu myöskin keltaiseksi, jos koodissa havaitaan tyylivirheitä. Vaikkakin näppäinyhdistelmä alt + shift + f (macOS control + shift + f) auttaa useimpien tyylivirheiden korjaamiseen, on koodia syytä kirjoittaa oikein alusta alkaen.
 
-<text-box variant='hint' name='Lähdekoodi tulee sisentää oikein'>
+
 
 Javassa koodia sisennetään neljän välilyönnin tai yhden tabulaattorin verran jokaisen lohkon kohdalla. Käytä sisentämiseen joko välilyöntejä tai tabulaattoreita. Joissakin tapauksissa sisennys saattaa hajota mikäli käytät molempia. NetBeans auttaa tässä kun painat kirjainyhdistelmää "alt + shift + f" (macOS "control + shift + f").
 
