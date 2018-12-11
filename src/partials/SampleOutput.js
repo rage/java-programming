@@ -15,8 +15,15 @@ const Wrapper = styled.div`
 const Body = styled.div`
   padding-bottom: 0.5rem;
   font-family: monospace;
-  p {
+  white-space: pre-wrap;
+
+  p:last-of-type {
     margin-bottom: 0;
+  }
+
+  em, strong {
+    color: red;
+    font-weight: normal;
   }
 `
 

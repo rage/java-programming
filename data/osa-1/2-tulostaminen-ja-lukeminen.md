@@ -156,7 +156,6 @@ Yllä olevan ohjelman tulostus on seuraava.
 <sample-output>
 
 Hei maailma!
-
 ... ja maailmankaikkeus!
 
 </sample-output>
@@ -198,7 +197,6 @@ Tarkalleen ottaen komento `System.out.println("merkkijono");` tulostaa tekstin "
 <sample-output>
 
 Hei maailma!
-
 ... ja maailmankaikkeus!
 
 </sample-output>
@@ -265,9 +263,7 @@ Yllä oleva lause tulostaa seuraavaa:
 <sample-output>
 
 Ensimmäinen
-
 Toinen
-
 Kolmas
 
 </sample-output>
@@ -476,7 +472,6 @@ Edellistä esimerkkiä noudattaen myös merkkijonomuuttujan arvon ja merkkijonol
 
 <sample-output>
 Hei maailma!
-
 ... ja maailmankaikkeus!
 
 </sample-output>
@@ -517,9 +512,7 @@ public class Ohjelma {
 <sample-output>
 
 yksi
-
 kaksi
-
 kolme
 
 </sample-output>
@@ -598,9 +591,7 @@ Jatkossa tulostusesimerkkeihin merkitään käyttäjän syöttämä syöte punai
 <sample-output>
 
 Syötä viesti:
-
-Hei maailma
-
+**Hei maailma**
 Hei maailma
 
 </sample-output>
@@ -627,9 +618,7 @@ Alla sama esimerkki, mutta siten, että käyttäjän syöttämä merkkijono tulo
  <sample-output>
 
 Syötä viesti:
-
-selkeä
-
+**selkeä**
 Viestisi oli selkeä
 
  </sample-output>
@@ -661,9 +650,7 @@ Tulostusesimerkki kun käyttäjä syöttää merkkijonon "Heippa".
 <sample-output>
 
 Kirjoita merkkijono!
-
-Heippa
-
+**Heippa**
 Heippa
 
 </sample-output>
@@ -673,9 +660,7 @@ Tulostusesimerkki kun käyttäjä syöttää merkkijonon "Olipa kerran...".
 <sample-output>
 
 Kirjoita merkkijono!
-
-Olipa kerran...
-
+**Olipa kerran...**
 Olipa kerran...
 
 </sample-output>
@@ -707,13 +692,9 @@ Tulostusesimerkki kun käyttäjä syöttää merkkijonon "Heippa".
 <sample-output>
 
 Kirjoita merkkijono!
-
+**Heippa**
 Heippa
-
 Heippa
-
-Heippa
-
 Heippa
 
 </sample-output>
@@ -723,13 +704,9 @@ Tulostusesimerkki kun käyttäjä syöttää merkkijonon "Olipa kerran...".
 <sample-output>
 
 Kirjoita merkkijono!
-
+**Olipa kerran...**
 Olipa kerran...
-
 Olipa kerran...
-
-Olipa kerran...
-
 Olipa kerran...
 
 </sample-output>
@@ -760,9 +737,7 @@ Tulostusesimerkki kun käyttäjä syöttää nimeksi Ada.
 <sample-output>
 
 Mikä on nimesi?
-
-Ada
-
+**Ada**
 Hei Ada
 
 </sample-output>
@@ -772,9 +747,7 @@ Tulostusesimerkki kun käyttäjä syöttää nimeksi Lilja.
 <sample-output>
 
 Mikä on nimesi?
-
-Lilja
-
+**Lilja**
 Hei Lilja
 
 </sample-output>
@@ -809,17 +782,11 @@ Yllä olevan ohjelman toimintaa kuvaava esimerkki:
 <sample-output>
 
 Syötä kolme riviä, tulostan ne sen jälkeen:
-
+**yksi**
+**kaksi**
+**kolme**
 yksi
-
 kaksi
-
-kolme
-
-yksi
-
-kaksi
-
 kolme
 
 </sample-output>
@@ -852,19 +819,12 @@ public class Ohjelma {
 <sample-output>
 
 Syötä kolme riviä, tulostan ne sen jälkeen:
-
-yksi
-
-kaksi
-
+**yksi**
+**kaksi**
+**kolme**
 kolme
-
-kolme
-
 kaksi
-
 yksi
-
 yksikaksikolme
 
 </sample-output>
@@ -876,13 +836,9 @@ Kirjoita ohjelma, joka toimii seuraavalla tavalla.
 <sample-output>
 
 Hyvää päivää! Mitä kuuluu?
-
-Kiitos hyvää!
-
+**Kiitos hyvää!**
 No mutta sepäs kiinnostavaa, kerro lisää!
-
-Noh, eipä tässä muuta.
-
+**Noh, eipä tässä muuta.**
 Kiitos kertomastasi!
 
 </sample-output>
@@ -890,13 +846,9 @@ Kiitos kertomastasi!
 <sample-output>
 
 Hyvää päivää! Mitä kuuluu?
-
-Mitäs tässä, ritari ässä!
-
+**Mitäs tässä, ritari ässä!**
 No mutta sepäs kiinnostavaa, kerro lisää!
-
-tulin juuri kaupasta.
-
+**tulin juuri kaupasta.**
 Kiitos kertomastasi!
 
 </sample-output>
@@ -925,25 +877,15 @@ Kirjoita ohjelma, joka toimii seuraavalla tavalla.
 <sample-output>
 
 Kerron kohta tarinan, mutta tarvitsen siihen hieman tietoja.
-
 Minkä niminen tarinassa esiintyvä hahmo on?
-
-Nauriskala
-
+**Nauriskala**
 Mikä hahmon ammatti on?
-
-kalastaja
-
+**kalastaja**
 Tässä tarina:
-
 Olipa kerran Nauriskala, joka oli ammatiltaan kalastaja.
-
 Matkatessaan töihin, Nauriskala mietti arkeaan. Kun työnä
-
 on kalastaja, tekemistä riittää välillä hyvin paljon ja
-
 välillä ei lainkaan. Ehkäpä Nauriskala ei olekaan koko
-
 elämäänsä kalastaja.
 
 </sample-output>
@@ -968,23 +910,14 @@ Alla vielä toinen esimerkki.
 <sample-output>
 
 Kerron kohta tarinan, mutta tarvitsen siihen hieman tietoja.
-
 Minkä niminen tarinassa esiintyvä hahmo on?
-
-Ada
-
+**Ada**
 Mikä hahmon ammatti on?
-
-datatieteilijä
-
+**datatieteilijä**
 Tässä tarina: Olipa kerran Ada, joka oli ammatiltaan datatieteilijä.
-
 Matkatessaan töihin, Ada mietti arkeaan. Kun työnä
-
 on datatieteilijä, tekemistä riittää välillä hyvin paljon ja
-
 välillä ei lainkaan. Ehkäpä Ada ei olekaan koko
-
 elämäänsä datatieteilijä.
 
 </sample-output>

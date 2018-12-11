@@ -47,7 +47,7 @@ Java-ohjelmat vaativat toimiakseen kurssin aikana tutuksi tulevan rungon. Ohjelm
 
 ```java
 public class Esimerkki {
-    public static void main(String\[\] args) {
+    public static void main(String[] args) {
         // Tänne kirjoitetaan ohjelman käyttämät lauseet
         System.out.println("Tulostettava teksti");
     }
