@@ -4,6 +4,7 @@ import Sidebar from '../components/Sidebar'
 import ContentArea from '../components/ContentArea'
 import TopBar from '../components/TopBar'
 import { StaticQuery, graphql } from 'gatsby'
+import * as store from 'store'
 
 import './reboot.css'
 import './theme.css'
@@ -20,6 +21,26 @@ const layoutQuery = graphql`
 `
 
 export default class Layout extends React.Component {
+  componentDidMount() {
+    const user = store.get('tmc.user')
+    if (typeof window !== 'undefined' && user) {
+      if (typeof window.Quiznator === 'undefined') {
+        document.addEventListener('quiznatorLoaded', () => {
+          this.setQuiznatorUser(user)
+        })
+      } else {
+        this.setQuiznatorUser(user)
+      }
+    }
+  }
+
+  setQuiznatorUser = user => {
+    window.Quiznator.setUser({
+      id: user.username,
+      accessToken: user.accessToken,
+    })
+  }
+
   render() {
     const { children } = this.props
 
