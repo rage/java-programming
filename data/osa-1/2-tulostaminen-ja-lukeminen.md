@@ -10,11 +10,6 @@ title: 'Tulostaminen ja lukeminen'
 - Osaat luoda merkkijonomuuttujan (String) ja käyttää merkkijonomuuttujaa osana tekstiä tulostavaa ohjelmaa.
 - Osaat luoda uuden merkkijonomuuttujan useampia merkkijonoja yhdistelemällä.
 - Osaat kirjoittaa ohjelman, joka pyytää käyttäjältä tekstimuotoista syötettä.
-- Osaat käyttää kurssilla käytetyn ohjelmointiympäristön TMC:n perustoiminnallisuuksia, eli osaat..
-  - ladata tehtävät TMC:n avulla
-  - suorittaa tehtävän TMC:n avulla
-  - testata tehtävää TMC:n avulla
-  - palauttaa tehtävän arvostelua varten TMC:n avulla
 
 </text-box>
 
