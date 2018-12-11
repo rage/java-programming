@@ -28,14 +28,22 @@ import SampleOutput from './SampleOutput'
 import Youtube from './Youtube'
 import Quiznator from './Quiznator'
 
+import { Table, TableBody, TableCell, TableHead, TableRow, TableTh } from './Table'
+
 const mapping = {
   test: Test,
   'pages-in-this-section': PagesInThisSection,
   'programming-exercise': ProgrammingExercise,
   'text-box': TextBox,
   'sample-output': SampleOutput,
-  'youtube': Youtube,
-  'quiznator': Quiznator,
+  youtube: Youtube,
+  quiznator: Quiznator,
+  table: Table,
+  tbody: TableBody,
+  thead: TableHead,
+  tr: TableRow,
+  td: TableCell,
+  th: TableTh,
 }
 
 export default () => {
