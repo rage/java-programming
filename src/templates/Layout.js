@@ -5,6 +5,7 @@ import ContentArea from '../components/ContentArea'
 import TopBar from '../components/TopBar'
 import { StaticQuery, graphql } from 'gatsby'
 import * as store from 'store'
+import withMaterialUiRoot from './withMaterialUiRoot'
 
 import './reboot.css'
 import './theme.css'
@@ -20,7 +21,7 @@ const layoutQuery = graphql`
   }
 `
 
-export default class Layout extends React.Component {
+class Layout extends React.Component {
   componentDidMount() {
     const user = store.get('tmc.user')
     if (typeof window !== 'undefined' && user) {
@@ -70,3 +71,5 @@ export default class Layout extends React.Component {
     )
   }
 }
+
+export default withMaterialUiRoot(Layout)
