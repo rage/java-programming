@@ -1,11 +1,18 @@
 import React, { Fragment } from 'react'
 import Button from './Button'
-import { Button as MaterialButton } from '@material-ui/core'
 import { signOut, getCachedUserDetails } from '../services/moocfi'
 import { navigate } from 'gatsby'
 import LoginStateContext, {
   withLoginStateContext,
 } from '../contexes/LoginStateContext'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser as profileIcon } from '@fortawesome/free-solid-svg-icons'
+import styled from 'styled-components'
+
+const StyledIcon = styled(FontAwesomeIcon)`
+  margin-right: 0.5rem;
+`
 
 class LoginControls extends React.Component {
   static contextType = LoginStateContext
@@ -34,8 +41,11 @@ class LoginControls extends React.Component {
   render() {
     return this.context.loggedIn ? (
       <Fragment>
-        <Button to="/profile">{this.state.name}</Button>
-        <MaterialButton onClick={this.doSignOut}>Kirjaudu ulos</MaterialButton>
+        <Button to="/profile">
+          <StyledIcon icon={profileIcon} />
+          {this.state.name}
+        </Button>
+        <Button onClick={this.doSignOut}>Kirjaudu ulos</Button>
       </Fragment>
     ) : (
       <Fragment>
