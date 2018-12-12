@@ -32,7 +32,6 @@ const FormContainer = styled.div`
 class CourseOptionsEditor extends React.Component {
   async componentDidMount() {
     const data = await userDetails()
-    console.log('Got saved state: ', JSON.stringify(data))
     this.setState(
       {
         first_name: data.user_field?.first_name,
@@ -52,6 +51,7 @@ class CourseOptionsEditor extends React.Component {
 
   onClick = async e => {
     e.preventDefault()
+    this.setState({ submitting: true })
     const extraFields = {
       applies_for_study_right: this.state.applies_for_study_right,
       digital_education_for_all: this.state.digital_education_for_all,
@@ -67,6 +67,7 @@ class CourseOptionsEditor extends React.Component {
       extraFields,
       userField,
     })
+    this.setState({ submitting: false })
     this.props.onComplete()
   }
 
@@ -82,6 +83,7 @@ class CourseOptionsEditor extends React.Component {
     last_name: undefined,
     student_number: undefined,
     loading: true,
+    focused: null,
   }
 
   handleInput = e => {
@@ -100,6 +102,15 @@ class CourseOptionsEditor extends React.Component {
     })
   }
 
+  handleFocus = e => {
+    const name = e.target.name
+    this.setState({ focused: name })
+  }
+
+  handleUnFocus = () => {
+    this.setState({ focused: null })
+  }
+
   validate = () => {
     this.setState(prev => ({
       error: prev.research === undefined,
@@ -107,9 +118,6 @@ class CourseOptionsEditor extends React.Component {
   }
 
   render() {
-    if (this.state.loading) {
-      return <Loading />
-    }
     return (
       <FormContainer>
         <h1>Opiskelijan tiedot</h1>
@@ -120,90 +128,110 @@ class CourseOptionsEditor extends React.Component {
             tietoja myöhemmin kurssin asetuksista. Tietojen täyttämisen jälkeen
             paina "Tallenna" sivun alareunasta.
           </InfoBox>
-
-          <Row>
-            <TextField
-              variant="outlined"
-              type="text"
-              label="Etunimi"
-              autoComplete="given-name"
-              name="first_name"
-              InputLabelProps={{ shrink: this.state.first_name }}
-              fullWidth
-              value={this.state.first_name}
-              onChange={this.handleInput}
-            />
-          </Row>
-
-          <Row>
-            <TextField
-              variant="outlined"
-              type="text"
-              label="Sukunimi"
-              autoComplete="family-name"
-              name="last_name"
-              InputLabelProps={{ shrink: this.state.last_name }}
-              fullWidth
-              value={this.state.last_name}
-              onChange={this.handleInput}
-            />
-          </Row>
-
-          <Row>
-            <TextField
-              variant="outlined"
-              type="text"
-              label="Helsingin yliopiston opiskelijanumero"
-              name="student_number"
-              InputLabelProps={{ shrink: this.state.student_number }}
-              fullWidth
-              value={this.state.student_number}
-              onChange={this.handleInput}
-              helperText="Jätä tyhjäksi, jos et ole tällä hetkellä Helsingin yliopiston opiskelija."
-            />
-          </Row>
-
-          <Row>
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={this.state.applies_for_study_right}
-                  onChange={this.handleCheckboxInput}
-                  name="applies_for_study_right"
-                  value="1"
+          <Loading loading={this.state.loading} heightHint="490px">
+            <div>
+              <Row>
+                <TextField
+                  variant="outlined"
+                  type="text"
+                  label="Etunimi"
+                  autoComplete="given-name"
+                  name="first_name"
+                  InputLabelProps={{
+                    shrink:
+                      this.state.first_name ||
+                      this.state.focused == 'first_name',
+                  }}
+                  fullWidth
+                  value={this.state.first_name}
+                  onChange={this.handleInput}
+                  onFocus={this.handleFocus}
+                  onBlur={this.handleUnFocus}
                 />
-              }
-              label="Aion hakea kurssin kautta opinto-oikeutta Helsingin yliopiston tietojenkäsittelytieteen osastolle. (Ei koske Digital Education for All -hankkeen tai Avoimen väylän kautta hakevia, vaan vain kurssin sivulla mainitun Ohjelmoinnin MOOCin hakuväylän kautta hakevia (meillä on monta sisääntuloväylää, sori siitä 😎) )"
-            />
-          </Row>
+              </Row>
 
-          <Row>
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={this.state.digital_education_for_all}
-                  onChange={this.handleCheckboxInput}
-                  name="digital_education_for_all"
-                  value="1"
+              <Row>
+                <TextField
+                  variant="outlined"
+                  type="text"
+                  label="Sukunimi"
+                  autoComplete="family-name"
+                  name="last_name"
+                  InputLabelProps={{
+                    shrink:
+                      this.state.last_name || this.state.focused == 'last_name',
+                  }}
+                  fullWidth
+                  value={this.state.last_name}
+                  onChange={this.handleInput}
+                  onFocus={this.handleFocus}
+                  onBlur={this.handleUnFocus}
                 />
-              }
-              label="Olen tällä hetkellä opiskelija Digital Education for All -hankkeessa (Älä valitse, jos et ole kuullut aikaisemmin)"
-            />
-          </Row>
+              </Row>
 
-          <Row>
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={this.state.marketing}
-                  onChange={this.handleCheckboxInput}
-                  name="marketing"
-                  value="1"
+              <Row>
+                <TextField
+                  variant="outlined"
+                  type="text"
+                  label="Helsingin yliopiston opiskelijanumero"
+                  name="student_number"
+                  InputLabelProps={{
+                    shrink:
+                      this.state.student_number ||
+                      this.state.focused == 'student_number',
+                  }}
+                  fullWidth
+                  value={this.state.student_number}
+                  onChange={this.handleInput}
+                  helperText="Jätä tyhjäksi, jos et ole tällä hetkellä Helsingin yliopiston opiskelija."
+                  onFocus={this.handleFocus}
+                  onBlur={this.handleUnFocus}
                 />
-              }
-              label="Minulle voi lähettää tietoa uusista kursseista"
-            />
-          </Row>
+              </Row>
+
+              <Row>
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      checked={this.state.applies_for_study_right}
+                      onChange={this.handleCheckboxInput}
+                      name="applies_for_study_right"
+                      value="1"
+                    />
+                  }
+                  label="Aion hakea kurssin kautta opinto-oikeutta Helsingin yliopiston tietojenkäsittelytieteen osastolle. (Ei koske Digital Education for All -hankkeen tai Avoimen väylän kautta hakevia, vaan vain kurssin sivulla mainitun Ohjelmoinnin MOOCin hakuväylän kautta hakevia (meillä on monta sisääntuloväylää, sori siitä 😎) )"
+                />
+              </Row>
+
+              <Row>
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      checked={this.state.digital_education_for_all}
+                      onChange={this.handleCheckboxInput}
+                      name="digital_education_for_all"
+                      value="1"
+                    />
+                  }
+                  label="Olen tällä hetkellä opiskelija Digital Education for All -hankkeessa (Älä valitse, jos et ole kuullut aikaisemmin)"
+                />
+              </Row>
+
+              <Row>
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      checked={this.state.marketing}
+                      onChange={this.handleCheckboxInput}
+                      name="marketing"
+                      value="1"
+                    />
+                  }
+                  label="Minulle voi lähettää tietoa uusista kursseista"
+                />
+              </Row>
+            </div>
+          </Loading>
 
           <h2>Kurssilla tehtävästä tutkimuksesta</h2>
 
@@ -260,23 +288,25 @@ class CourseOptionsEditor extends React.Component {
           </p>
 
           <Row>
-            <RadioGroup
-              aria-label="Tutkimukseen osallistuminen"
-              name="research"
-              value={this.state.research}
-              onChange={this.handleInput}
-            >
-              <FormControlLabel
-                value="1"
-                control={<Radio color="primary" />}
-                label="Osallistun oppimiseen liittyvään tutkimukseen. Valitsemalla tämän autat sekä nykyisiä että tulevia opiskelijoita."
-              />
-              <FormControlLabel
-                value="0"
-                control={<Radio />}
-                label="En osallistu oppimiseen liittyvään tutkimukseen."
-              />
-            </RadioGroup>
+            <Loading loading={this.state.loading} heightHint="115px">
+              <RadioGroup
+                aria-label="Tutkimukseen osallistuminen"
+                name="research"
+                value={this.state.research}
+                onChange={this.handleInput}
+              >
+                <FormControlLabel
+                  value="1"
+                  control={<Radio color="primary" />}
+                  label="Osallistun oppimiseen liittyvään tutkimukseen. Valitsemalla tämän autat sekä nykyisiä että tulevia opiskelijoita."
+                />
+                <FormControlLabel
+                  value="0"
+                  control={<Radio />}
+                  label="En osallistu oppimiseen liittyvään tutkimukseen."
+                />
+              </RadioGroup>
+            </Loading>
           </Row>
 
           <Row>
