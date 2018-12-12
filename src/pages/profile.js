@@ -40,7 +40,9 @@ class MissingInfo extends React.Component {
 
   render() {
     if (!this.context.loggedIn) {
-      navigate('/sign-in')
+      if (typeof window !== 'undefined') {
+        navigate('/sign-in')
+      }
       return <div>Redirecting...</div>
     }
     return (
