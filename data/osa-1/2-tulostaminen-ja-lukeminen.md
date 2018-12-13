@@ -93,7 +93,7 @@ Voit katsoa ohjeet aloittamiseen myös seuraavalta videolta.
 
 <youtube id="lxehAkYVEGo"></youtube>
 
-<programming-exercise name='Hiekkalaatikko'>
+<programming-exercise name='Hiekkalaatikko' tmcname='osa01-Osa01_01.Hiekkalaatikko'>
 
 Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
 

@@ -6,6 +6,8 @@ import uuidv4 from 'uuid/v4'
 
 const { fetch } = fetchPonyfill()
 const BASE_URL = 'https://tmc.mooc.fi/api/v8'
+const ORGANIZATION = 'mooc'
+const COURSE = '2019-ohjelmointi'
 
 const tmcClient = new TmcClient(
   '59a09eef080463f90f8c2f29fbf63014167d13580e1de3562e57b9e6e4515182',
@@ -24,7 +26,7 @@ export function authenticate(credentials) {
         ) {
           window.Quiznator.setUser({
             id: res.username,
-            accessToken: res.accessToken
+            accessToken: res.accessToken,
           })
         }
         loginStateChanged()
@@ -135,8 +137,8 @@ const setPasswordFields = (
   user['password_repeat'] = confirmPassword
 }
 
-export function updateUserDetails({ extraFields, userField }) {
-  return axios.put(
+export async function updateUserDetails({ extraFields, userField }) {
+  const res = await axios.put(
     `${BASE_URL}/users/current`,
     {
       user: {
@@ -149,6 +151,8 @@ export function updateUserDetails({ extraFields, userField }) {
     },
     { headers: { Authorization: `Bearer ${accessToken()}` } }
   )
+  await userDetails()
+  return res
 }
 
 export function updatePassword(currentPassword, password, confirmPassword) {
@@ -163,6 +167,40 @@ export function updatePassword(currentPassword, password, confirmPassword) {
     .catch(error => {
       return Promise.reject(error.response)
     })
+}
+
+export async function fetchProgrammingExerciseDetails(exerciseName) {
+  const res = await axios.get(
+    `${BASE_URL}/org/${ORGANIZATION}/courses/${COURSE}/exercises/${exerciseName}`,
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${accessToken()}`,
+      },
+    }
+  )
+  return res.data
+}
+
+export async function fetchProgrammingExerciseModelSolution(exerciseId) {
+  const res = await axios.get(
+    `${BASE_URL}/exercises/${exerciseId}/model_solutions`,
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${accessToken()}`,
+      },
+    }
+  )
+  return res.data
+}
+
+export function canDoResearch() {
+  try {
+    return store.get('tmc.user.details')?.extra_fields?.research === '1'
+  } catch (error) {
+    return false
+  }
 }
 
 function loginStateChanged() {
