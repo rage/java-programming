@@ -10,6 +10,8 @@ import {
 } from '../services/moocfi'
 import { Button, Paper, Card, CardContent } from '@material-ui/core'
 import Modal from '@material-ui/core/Modal'
+import LoginStateContext from '../contexes/LoginStateContext'
+import LoginControls from '../components/LoginControls'
 
 const accentColor = '#FAAA38'
 
@@ -44,6 +46,7 @@ const HeaderMuted = styled.span`
 
 const Body = styled.div`
   padding-bottom: 0.5rem;
+  min-height: 300px;
 `
 
 const ModalContent = styled(Paper)`
@@ -52,7 +55,20 @@ const ModalContent = styled(Paper)`
   max-height: 100vh;
 `
 
+const LoginNag = styled.div`
+  margin-bottom: 1rem;
+`
+
+const LoginNagWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+`
+
 export default class ProgrammingExercise extends React.Component {
+  static contextType = LoginStateContext
+
   // {
   //   "id": 55219,
   //   "available_points": [
@@ -130,10 +146,24 @@ export default class ProgrammingExercise extends React.Component {
           {name}
         </Header>
         <Body>
-          <div>{children}</div>
-          {this.state.exerciseDetails === null && (
-            <div>Error loading exercise details</div>
-          )}
+          <div>
+            {this.context.loggedIn ? (
+              <div>
+                {children}
+                {this.state.exerciseDetails === null && (
+                  <div>Error loading exercise details</div>
+                )}
+              </div>
+            ) : (
+              <div>
+                <LoginNag>Kirjaudu sisään nähdäksesi tehtävanannon.</LoginNag>
+                <LoginNagWrapper>
+                  <LoginControls />
+                </LoginNagWrapper>
+              </div>
+            )}
+          </div>
+
           {this.state.exerciseDetails && (
             <p>
               Linkki tehtävään Test My Code palautusympäristössä:{' '}

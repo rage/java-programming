@@ -27,6 +27,7 @@ import TextBox from './TextBox'
 import SampleOutput from './SampleOutput'
 import Youtube from './Youtube'
 import Quiznator from './Quiznator'
+import PleaseLogin from './PleaseLogin'
 
 import { Table, TableBody, TableCell, TableHead, TableRow, TableTh } from './Table'
 
@@ -36,6 +37,7 @@ const mapping = {
   'programming-exercise': ProgrammingExercise,
   'text-box': TextBox,
   'sample-output': SampleOutput,
+  'please-login': PleaseLogin,
   youtube: Youtube,
   quiznator: Quiznator,
   table: Table,
