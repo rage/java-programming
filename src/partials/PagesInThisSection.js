@@ -21,6 +21,7 @@ const Page = styled.li`
   list-style-type: none;
   color: black;
   text-decoration: none;
+  border-radius: 10px;
 
   ${props =>
     props.currentPage &&

@@ -2,6 +2,10 @@
   margin-bottom: 2rem;
 }
 
+.gatsby-highlight pre {
+  border-radius: 10px;
+}
+
 code.language-text {
   padding: 0.2rem !important;
   margin-right: 0.4rem;

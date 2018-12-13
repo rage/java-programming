@@ -15,17 +15,35 @@ import LoginStateContext, {
   LoginStateContextProvider,
 } from '../contexes/LoginStateContext'
 import Container from '../components/Container'
+import Button from '../components/Button'
 
 import { loggedIn } from '../services/moocfi'
 import { capitalizeFirstLetter } from '../util/strings'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowCircleUp as icon } from '@fortawesome/free-solid-svg-icons'
 
-const ContentWrapper = styled.div`
-  margin-top: 1rem;
+const StyledIcon = styled(FontAwesomeIcon)`
+  margin-right: 0.25rem;
+  font-size: 1em;
 `
+
+const ContentWrapper = styled.div``
 
 const SectionIndicator = styled(Link)`
   display: block;
   color: #333 !important;
+`
+
+const UpLink = styled(Link)`
+  color: #332c2cb3 !important;
+  font-weight: bold;
+  margin-bottom: 1rem !important;
+  display: block;
+
+  :hover {
+    text-decoration: none;
+    color: #805050b3 !important;
+  }
 `
 
 export default class CourseContentTemplate extends React.Component {
@@ -54,7 +72,7 @@ export default class CourseContentTemplate extends React.Component {
     }).Compiler
 
     const parentSectionName = capitalizeFirstLetter(
-      `${frontmatter.path.split(/\//g)[1].replace(/-/g, ' ')}:`
+      `${frontmatter.path.split(/\//g)[1].replace(/-/g, ' ')}`
     )
     const parentSectionPath = `/${frontmatter.path.split(/\//g)[1]}`
     return (
@@ -69,9 +87,10 @@ export default class CourseContentTemplate extends React.Component {
             <Fragment>
               <Container>
                 <ContentWrapper>
-                  <SectionIndicator className="h3" to={parentSectionPath}>
+                  <UpLink to={parentSectionPath}>
+                    <StyledIcon icon={icon} />
                     {parentSectionName}
-                  </SectionIndicator>
+                  </UpLink>
                   <h1>{frontmatter.title}</h1>
                   {renderAst(htmlAst)}
                 </ContentWrapper>

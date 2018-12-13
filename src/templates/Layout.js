@@ -10,6 +10,8 @@ import withMaterialUiRoot from './withMaterialUiRoot'
 import './reboot.css'
 import './theme.css'
 import 'focus-visible'
+import 'typeface-open-sans'
+import 'typeface-roboto-slab'
 
 const layoutQuery = graphql`
   query {
