@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import { graphql, StaticQuery } from 'gatsby'
-import MediaQuery from 'react-responsive'
 import { Button } from '@material-ui/core'
 
 import Logo from './Logo'
@@ -67,6 +66,9 @@ const MenuExpanderWrapper = styled.div`
   justify-content: center;
   margin: 1rem;
   margin-bottom: 0;
+  @media only screen and (min-width: 1200px) {
+    display: none;
+  }
 `
 
 var content2 = [
@@ -139,17 +141,15 @@ class Sidebar extends React.Component {
     content = content.concat(futurePages)
     return (
       <MobileWrapperOrFragment mobileMenuOpen={this.state.mobileMenuOpen}>
-        <MediaQuery query="only screen and (max-width: 1200px)">
-          <MenuExpanderWrapper>
-            <Button
-              variant="outlined"
-              color="primary"
-              onClick={this.toggleMobileMenu}
-            >
-              {this.state.mobileMenuOpen ? 'Sulje valikko' : 'Vaihda sivua'}
-            </Button>
-          </MenuExpanderWrapper>
-        </MediaQuery>
+        <MenuExpanderWrapper>
+          <Button
+            variant="outlined"
+            color="primary"
+            onClick={this.toggleMobileMenu}
+          >
+            {this.state.mobileMenuOpen ? 'Sulje valikko' : 'Vaihda sivua'}
+          </Button>
+        </MenuExpanderWrapper>
         <SidebarContainer mobileMenuOpen={this.state.mobileMenuOpen}>
           <Brand>Ohjelmoinnin MOOC 2019</Brand>
           <TreeViewContainer>

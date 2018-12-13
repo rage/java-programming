@@ -34,7 +34,6 @@
     "react-helmet": "^5.2.0",
     "react-jss": "^8.6.1",
     "react-motion": "^0.5.2",
-    "react-responsive": "^6.0.1",
     "react-scrollspy": "^3.3.5",
     "react-youtube": "^7.8.0",
     "redux-action-analytics": "0.0.3",
