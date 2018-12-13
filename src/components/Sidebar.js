@@ -115,7 +115,7 @@ const MobileWrapperOrFragment = props => {
   if (props.mobileMenuOpen) {
     return <MobileWrapper {...props} />
   }
-  return <Fragment {...props} />
+  return <div {...props} />
 }
 
 class Sidebar extends React.Component {
