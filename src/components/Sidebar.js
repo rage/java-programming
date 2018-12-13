@@ -77,6 +77,14 @@ var content2 = [
     path: '/',
   },
   {
+    title: 'Osaamistavoitteet',
+    path: '/osaamistavoitteet',
+  },
+  {
+    title: 'Arvostelu ja kokeet',
+    path: '/arvostelu-ja-kokeet',
+  },
+  {
     title: 'Mahdollisuus opinto-oikeuteen',
     path: '/opinto-oikeus',
   },
