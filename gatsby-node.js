@@ -9,8 +9,12 @@ const path = require('path')
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const blogPostTemplate = path.resolve(
+  const courseMaterialTemplate = path.resolve(
     `src/templates/CourseContentTemplate.js`
+  )
+
+  const coursePartOverviewTemplate = path.resolve(
+    `src/templates/CoursePartOverviewTemplate.js`
   )
 
   return graphql(`
@@ -23,6 +27,7 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             frontmatter {
               path
+              overview
             }
           }
         }
@@ -34,9 +39,13 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      let template = courseMaterialTemplate
+      if (node.frontmatter.overview) {
+        template = coursePartOverviewTemplate
+      }
       createPage({
         path: node.frontmatter.path,
-        component: blogPostTemplate,
+        component: template,
         context: {}, // additional data can be passed via context
       })
     })

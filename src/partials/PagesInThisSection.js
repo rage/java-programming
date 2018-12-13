@@ -59,7 +59,7 @@ const Title = styled.div`
 
 const StyledPaper = styled(Paper)`
   padding: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 `
 
 const PagesInThisSection = ({ style }) => (

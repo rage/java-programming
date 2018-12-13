@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import rehypeReact from 'rehype-react'
-import { navigate, Link } from 'gatsby'
+import { navigate } from 'gatsby'
 
 import Layout from './Layout'
 
@@ -17,18 +17,22 @@ import LoginStateContext, {
 import Container from '../components/Container'
 
 import { loggedIn } from '../services/moocfi'
-import { capitalizeFirstLetter } from '../util/strings'
 
 const ContentWrapper = styled.div`
   margin-top: 1rem;
+
+  p {
+    margin-bottom: 2rem;
+  }
 `
 
-const SectionIndicator = styled(Link)`
-  display: block;
-  color: #333 !important;
+const SectionIndicator = styled.h2``
+
+const Title = styled.h1`
+
 `
 
-export default class CourseContentTemplate extends React.Component {
+export default class CoursePartOverviewTemplate extends React.Component {
   static contextType = LoginStateContext
 
   async componentDidMount() {
@@ -52,11 +56,6 @@ export default class CourseContentTemplate extends React.Component {
       createElement: React.createElement,
       components: partials,
     }).Compiler
-
-    const parentSectionName = capitalizeFirstLetter(
-      `${frontmatter.path.split(/\//g)[1].replace(/-/g, ' ')}:`
-    )
-    const parentSectionPath = `/${frontmatter.path.split(/\//g)[1]}`
     return (
       <PagesContext.Provider
         value={{
@@ -69,14 +68,10 @@ export default class CourseContentTemplate extends React.Component {
             <Fragment>
               <Container>
                 <ContentWrapper>
-                  <SectionIndicator className="h3" to={parentSectionPath}>
-                    {parentSectionName}
-                  </SectionIndicator>
-                  <h1>{frontmatter.title}</h1>
+                  <Title>{frontmatter.title}</Title>
                   {renderAst(htmlAst)}
                 </ContentWrapper>
               </Container>
-              <CoursePageFooter />
             </Fragment>
           </Layout>
         </LoginStateContextProvider>
