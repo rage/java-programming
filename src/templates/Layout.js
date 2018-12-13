@@ -6,12 +6,14 @@ import TopBar from '../components/TopBar'
 import { StaticQuery, graphql } from 'gatsby'
 import * as store from 'store'
 import withMaterialUiRoot from './withMaterialUiRoot'
+import Pheromones from '../util/pheromones'
 
 import './reboot.css'
 import './theme.css'
 import 'focus-visible'
 import 'typeface-open-sans'
 import 'typeface-roboto-slab'
+import { canDoResearch } from '../services/moocfi'
 
 const layoutQuery = graphql`
   query {
@@ -34,7 +36,25 @@ class Layout extends React.Component {
       } else {
         this.setQuiznatorUser(user)
       }
+      if (canDoResearch()) {
+        this.removePheromones = Pheromones.init({
+          apiUrl: 'https://data.pheromones.io/',
+          username: user.username,
+          submitAfter: 20,
+        })
+      }
     }
+  }
+
+  componentWillUnmount() {
+    if (
+      typeof window === 'undefined' ||
+      typeof this.removePheromones === 'undefined'
+    ) {
+      return
+    }
+    this.removePheromones()
+    this.removePheromones = undefined
   }
 
   setQuiznatorUser = user => {

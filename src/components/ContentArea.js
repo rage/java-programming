@@ -11,6 +11,6 @@ const ContentAreaContainer = styled.div`
 
 export default class ContentArea extends React.Component {
   render() {
-    return <ContentAreaContainer>{this.props.children}</ContentAreaContainer>
+    return <ContentAreaContainer className="content-area">{this.props.children}</ContentAreaContainer>
   }
 }
