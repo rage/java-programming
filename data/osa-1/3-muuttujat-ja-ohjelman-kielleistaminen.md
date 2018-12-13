@@ -42,7 +42,7 @@ Totuusarvo: true
 
 </sample-output>
 
-<programming-exercise name="Muuttuvat muuttujat">
+<programming-exercise name="Muuttuvat muuttujat" tmcname='osa01-Osa01_12.MuuttuvatMuuttujat'>
 
 Tehtäväpohja sisältää ohjelman, joka tulostaa seuraavaa.
 
@@ -357,7 +357,7 @@ Kirjoitit 42
 </sample-output>
 
 
-<programming-exercise name="Kokonaisluku">
+<programming-exercise name="Kokonaisluku" tmcname='osa01-Osa01_13.Kokonaisluku'>
 
 Kirjoita ohjelma, joka kysyy käyttäjältä lukua. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämän luvun.
 
@@ -432,7 +432,7 @@ Kirjoitit 18.0
 
 </sample-output>
 
-<programming-exercise name="Liukuluku">
+<programming-exercise name="Liukuluku" tmcname='osa01-Osa01_14.Liukuluku'>
 
 Kirjoita ohjelma, joka kysyy käyttäjältä liukulukua. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämän luvun.
 
@@ -501,7 +501,7 @@ Kirjoitit true
 </sample-output>
 
 
-<programming-exercise name="Totuusarvo">
+<programming-exercise name="Totuusarvo" tmcname='osa01-Osa01_15.Totuusarvo'>
 
 Kirjoita ohjelma, joka kysyy käyttäjältä totuusarvoa. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämän totuusarvon.
 
@@ -545,7 +545,7 @@ public class Ohjelma {
 }
 ```
 
-<programming-exercise name="Muuttujat yhdessä">
+<programming-exercise name="Muuttujat yhdessä"  tmcname='osa01-Osa01_16.MuuttujatYhdessa'>
 
 Kirjoita ohjelma, joka kysyy käyttäjältä merkkijonoa, kokonaislukua, liukulukua ja totuusarvoa. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämät arvot.
 

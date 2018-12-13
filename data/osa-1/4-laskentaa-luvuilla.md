@@ -48,7 +48,7 @@ laskuSuluitta = laskuSuluitta + 5;
 System.out.println(laskuSuluitta); // tulostaa 13 
 ```
 
-<programming-exercise name="Sekunnit vuorokaudessa">
+<programming-exercise name="Sekunnit vuorokaudessa" tmcname='osa01-Osa01_17.SekunnitVuorokaudessa'>
 
 Toteuta tehtäväpohjaan ohjelma, joka kysyy käyttäjältä vuorokausien lukumäärää. Tämän jälkeen ohjelma tulostaa sekuntien määrän annetuissa vuorokausissa.
 
@@ -156,7 +156,7 @@ Mutta! kaksikymmentäkaksi: 22
 </sample-output>
 
 
-<programming-exercise name="Kahden luvun summa">
+<programming-exercise name="Kahden luvun summa" tmcname='osa01-Osa01_18.KahdenLuvunSumma'>
 
 Kirjoita ohjelma, joka kysyy käyttäjältä kahta lukua. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämien lukujen summan.
 
@@ -195,7 +195,7 @@ Lukujen summa on 2
 </programming-exercise>
 
 
-<programming-exercise name="Kolmen luvun summa">
+<programming-exercise name="Kolmen luvun summa" tmcname='osa01-Osa01_19.KolmenLuvunSumma'>
 
 Kirjoita ohjelma, joka kysyy käyttäjältä kolmea lukua. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämien lukujen summan.
 
@@ -251,7 +251,7 @@ y on 5 ja z on 6
 </sample-output>
 
 
-<programming-exercise name="Yhteenlasku">
+<programming-exercise name="Yhteenlasku" tmcname='osa01-Osa01_20.Yhteenlasku'>
 
 Tee ohjelma, jonka avulla voidaan laskea kahden kokonaisluvun summa. Ohjelman alussa kysytään kahta kokonaislukua, jotka sisältävät summattavat luvut. Tämän jälkeen ohjelma tulostaa lukujen summausta kuvaavan kaavan.
 
@@ -281,7 +281,7 @@ Syötä toinen luku!
 </programming-exercise>
 
 
-<programming-exercise name="Kertolasku">
+<programming-exercise name="Kertolasku" tmcname='osa01-Osa01_21.Kertolasku'>
 
 Tee edellistä ohjelmaa vastaava ohjelma, joka laskee kahden kokonaislukumuuttujaan sijoitetun arvon kertolaskun.
 
@@ -432,7 +432,7 @@ Ohjelmoinnissa tähän liittyy muutamia asioita, jotka tulee muistaa. Ensiksi, n
 </text-box>
 
 
-<programming-exercise name="Kahden luvun keskiarvo">
+<programming-exercise name="Kahden luvun keskiarvo" tmcname='osa01-Osa01_22.KahdenLuvunKeskiarvo'>
 
 Kirjoita ohjelma, joka kysyy käyttäjältä kahta kokonaislukua ja tulostaa lukujen keskiarvon.
 
@@ -449,7 +449,7 @@ Syötettyjen lukujen keskiarvo on 5.0
 </programming-exercise>
 
 
-<programming-exercise name="Kolmen luvun keskiarvo">
+<programming-exercise name="Kolmen luvun keskiarvo"  tmcname='osa01-Osa01_23.KolmenLuvunKeskiarvo'>
 
 Kirjoita ohjelma, joka kysyy käyttäjältä kolme kokonaislukua ja tulostaa lukujen keskiarvon.
 
@@ -483,7 +483,7 @@ Syötettyjen lukujen keskiarvo on 5.5
 <quiznator id="5c12b7f263de8e5db0cf8b91"></quiznator>
 
 
-<programming-exercise name="Nelilaskin">
+<programming-exercise name="Nelilaskin" tmcname='osa01-Osa01_24.Nelilaskin'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä kaksi lukua ja tulostaa lukujen summan, lukujen erotuksen, lukujen kertolaskun, ja lukujen jakolaskun. Alla on kaksi esimerkkiä ohjelman toiminnasta.
 

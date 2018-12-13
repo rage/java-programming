@@ -198,7 +198,7 @@ Valmista!
 
 </sample-output>
 
-<programming-exercise name="Poistutaanko">
+<programming-exercise name="Poistutaanko" tmcname='osa01-Osa01_35.Poistutaanko'>
 
 Kirjoita edellä olevaa toistolause-esimerkkiä mukaillen ohjelma, joka kysyy käyttäjältä "Poistutaanko?" kunnes käyttäjä syöttää merkkijonon "kyllä".
 
@@ -260,7 +260,7 @@ Valmista, kiitos!
 
 </sample-output>
 
-<programming-exercise name="Uudestaan">
+<programming-exercise name="Uudestaan" tmcname='osa01-Osa01_36.Uudestaan'>
 
 Kirjoita edellä olevaa esimerkkiä mukaillen ohjelma, joka kysyy käyttäjältä lukuja kunnes käyttäjä syöttää luvun 4.
 
@@ -323,7 +323,7 @@ while (true) {
 }
 ```
 
-<programming-exercise name="Syötteiden rajaus">
+<programming-exercise name="Syötteiden rajaus" tmcname='osa01-Osa01_37.SyotteidenRajaus'>
 
 Kirjoita ohjelma, joka kysyy käyttäjältä lukuja. Mikäli luku on negatiivinen (eli pienempi kuin nolla), käyttäjälle tulostetaan viesti "Epäkelpo luku" ja käyttäjältä kysytään uutta lukua. Jos taas luku on nolla, lukujen lukeminen lopetetaan ja ohjelma poistuu toistolauseesta. Mikäli luku on positiivinen, ohjelma tulostaa luvun toisen potenssin.
 
@@ -535,7 +535,7 @@ Ykkösiä yhteensä: 2
 </sample-output>
 
 
-<programming-exercise name="Lukujen lukumäärä">
+<programming-exercise name="Lukujen lukumäärä" tmcname='osa01-Osa01_38.LukujenLukumaara'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötettyjen lukujen lukumäärän. Syötteen loppumisesta kertovaa nollaa ei tule laskea osaksi lukujen lukumäärää.
 
@@ -555,7 +555,7 @@ Lukuja yhteensä 4
 </programming-exercise>
 
 
-<programming-exercise name="Negatiivisten lukujen lukumäärä">
+<programming-exercise name="Negatiivisten lukujen lukumäärä" tmcname='osa01-Osa01_39.NegatiivistenLukujenLukumaara'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötteessä olleiden negatiivisten lukujen lukumäärän. Syötteen loppumisesta kertovaa nollaa ei tule laskea osaksi lukujen lukumäärää.
 
@@ -575,7 +575,7 @@ Negatiivisia lukuja yhteensä 1
 </programming-exercise>
 
 
-<programming-exercise name="Lukujen summa">
+<programming-exercise name="Lukujen summa" tmcname='osa01-Osa01_40.LukujenSumma'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötettyjen lukujen summan. Syötteen loppumisesta kertovaa nollaa ei tarvitse osaksi lukujen summaa, vaikkei siitä tässä tapauksessa oikeastaan haittaakaan ole.
 
@@ -595,7 +595,7 @@ Lukujen summa 34
 </programming-exercise>
 
 
-<programming-exercise name="Lukujen lukumäärä ja summa">
+<programming-exercise name="Lukujen lukumäärä ja summa" tmcname='osa01-Osa01_41.LukumaaraJaSumma'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötettyjen lukujen lukumäärä ja summan. Syötteen loppumisesta kertovaa nollaa ei tule ottaa huomioon lukumäärässä tai summassa.
 
@@ -618,7 +618,7 @@ Lukujen summa 34
 </programming-exercise>
 
 
-<programming-exercise name="Lukujen keskiarvo">
+<programming-exercise name="Lukujen keskiarvo" tmcname='osa01-Osa01_42.LukujenKeskiarvo'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötettyjen lukujen keskiarvo. Syötteen loppumisesta kertovaa nollaa ei tule ottaa huomioon keskiarvon laskemisessa. Voit olettaa, että käyttäjä syöttää aina vähintään yhden luvun.
 

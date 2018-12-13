@@ -72,7 +72,7 @@ if (luku > 10) {
 </text-box>
 
 
-<programming-exercise name="Ylinopeussakko">
+<programming-exercise name="Ylinopeussakko" tmcname='osa01-Osa01_25.Ylinopeussakko'>
 
 Tee ohjelma, joka kysyy käyttäjältä kokonaisluvun ja tulostaa merkkijonon "Ylinopeussakko!" jos luku on suurempi kuin 120.
 
@@ -121,7 +121,7 @@ Luku oli erisuuri kuin 0
 
 </sample-output>
 
-<programming-exercise name="Orwell">
+<programming-exercise name="Orwell" tmcname='osa01-Osa01_26.Orwell'>
 
 Tee ohjelma, joka kysyy käyttäjältä kokonaisluvun ja tulostaa merkkijonon "Orwell" jos luku on täsmälleen 1984.
 
@@ -140,7 +140,7 @@ Orwell
 
 </programming-exercise>
 
-<programming-exercise name="Wanha">
+<programming-exercise name="Wanha" tmcname='osa01-Osa01_27.Wanha'>
 
 Tee ohjelma, joka kysyy käyttäjältä vuosilukua. Jos käyttäjä syöttää luvun, joka on pienempi kuin 2015, ohjelma tulostaa merkkijonon "Wanha!".
 
@@ -185,7 +185,7 @@ Lukusi on viisi tai alle!
 Jos ehtolauseeseen on määritelty `else`-haara, suoritetaan else-haaran määrittelemä lohko jos ehtolauseen ehto ei ole totta. Komento `else` tulee samalle riville `if`-komennon määrittelemän lohkon lopettavan aaltosulun kanssa.
 
 
-<programming-exercise name="Positiivinen luku">
+<programming-exercise name="Positiivinen luku" tmcname='osa01-Osa01_28.PositiivinenLuku'>
 
 Tee ohjelma, joka kysyy käyttäjältä kokonaisluvun ja kertoo, onko se positiivinen (eli suurempi kuin nolla) vai ei.
 
@@ -206,7 +206,7 @@ Luku ei ole positiivinen.
 </programming-exercise>
 
 
-<programming-exercise name="Täysi-ikäisyys">
+<programming-exercise name="Täysi-ikäisyys" tmcname='osa01-Osa01_29.TaysiIkaisyys'>
 
 Tee ohjelma, joka kysyy käyttäjän ikää ja kertoo, onko tämä täysi-ikäinen (eli 18-vuotias tai vanhempi).
 
@@ -256,7 +256,7 @@ Luetaan yllä oleva esimerkki: 'Jos luku on yksi, tulosta "Luku on yksi", muuten
 Yllä olevan ohjelman askeleittainen visualisointi:
 
 
-<programming-exercise name="Suurempi tai yhtäsuuri">
+<programming-exercise name="Suurempi tai yhtäsuuri" tmcname='osa01-Osa01_30.SuurempiTaiYhtasuuri'>
 
 Tee ohjelma, joka kysyy käyttäjältä kaksi kokonaislukua ja tulostaa niistä suuremman. Jos luvut ovat yhtä suuret, ohjelma huomaa myös tämän.
 
@@ -316,7 +316,7 @@ Luku on suurempi kuin nolla.
 Yllä oleva esimerkki tulostaa merkkijonon "Luku on suurempi kuin nolla." vaikka myös ehto `luku > 2` on totta. Vertailu lopetetaan ensimmäiseen valintakäskyyn, jonka ehto on totta.
 
 
-<programming-exercise name="Arvosanat ja pisteet">
+<programming-exercise name="Arvosanat ja pisteet" tmcname='osa01-Osa01_31.ArvosanatJaPisteet'>
 
 Alla oleva taulukko kuvaa erään kurssin arvosanan muodostumista. Tee ohjelma, joka ilmoittaa kurssiarvosanan annetun taulukon mukaisesti.
 
@@ -470,7 +470,7 @@ if (luku % 400 == 0) {
 </text-box>
 
 
-<programming-exercise name="Pariton vai parillinen">
+<programming-exercise name="Pariton vai parillinen" tmcname='osa01-Osa01_32.ParitonVaiParillinen'>
 
 Tee ohjelma, joka kysyy käyttäjältä luvun ja ilmoittaa, onko syötetty luku parillinen vai pariton.
 
@@ -621,7 +621,7 @@ Merkkijonot olivat samat!
 </sample-output>
 
 
-<programming-exercise name="Tunnussana">
+<programming-exercise name="Tunnussana" tmcname='osa01-Osa01_33.Tunnussana'>
 
 Tee ohjelma, joka kysyy käyttäjältä tunnussanaa. Mikäli tunnussana on "Caput Draconis", ohjelma tulostaa "Tervetuloa!". Muulloin ohjelman tulostus on "Hus siitä!".
 
@@ -644,7 +644,7 @@ Tervetuloa!
 </programming-exercise>
 
 
-<programming-exercise name="Samat sanat">
+<programming-exercise name="Samat sanat" tmcname='osa01-Osa01_34.SamatSanat'>
 
 Tee ohjelma, joka kysyy käyttäjältä kahta merkkijonoa. Mikäli merkkijonot ovat samat, ohjelma tulostaa "Samat sanat", muulloin ohjelma tulostaa "Ei sitten".
 

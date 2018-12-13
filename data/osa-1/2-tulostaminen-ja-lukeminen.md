@@ -109,7 +109,7 @@ Voit tehdä tehtäväpohjaan omia kokeilujasi. Pisteet tehtävästä saa kun pal
 
 </programming-exercise>
 
-<programming-exercise name='Ada Lovelace'>
+<programming-exercise name='Ada Lovelace' tmcname='osa01-Osa01_02.AdaLovelace'>
 
 Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
 
@@ -165,7 +165,7 @@ Alla oleva animaatio kuvaa sout-komennon käyttöä. Kun käyttäjä on kirjoitt
 
 </text-box>
 
-<programming-exercise name='Olipa kerran'>
+<programming-exercise name='Olipa kerran' tmcname='osa01-Osa01_03.OlipaKerran'>
 
 Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
 
@@ -207,7 +207,7 @@ public class Ohjelma {
 }
 ```
 
- <programming-exercise name='Olipa kerran maa'>
+ <programming-exercise name='Olipa kerran maa' tmcname='osa01-Osa01_04.OlipaKerranMaa'>
 
 Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
 
@@ -409,7 +409,7 @@ viesti
 
 </sample-output>
 
-<programming-exercise name='Passi ja hammasharja'>
+<programming-exercise name='Passi ja hammasharja' tmcname='osa01-Osa01_05.PassiJaHammasharja'>
 
 Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
 
@@ -513,7 +513,7 @@ kolme
 
 </sample-output>
 
-<programming-exercise name='Hei Ada Lovelace!'>
+<programming-exercise name='Hei Ada Lovelace!' tmcname='osa01-Osa01_06.HeiAdaLovelace'>
 
 Tehtäväpohjassa on seuraavanlainen ohjelma.
 
@@ -621,7 +621,7 @@ Viestisi oli selkeä
 
 <youtube id='7lswbb_R7uM'></youtube>
 
-<programming-exercise name='Viesti'>
+<programming-exercise name='Viesti' tmcname='osa01-Osa01_07.Viesti'>
 
 Kirjoita ohjelma, joka pyytää käyttäjää kirjoittamaan merkkijonon. Kun käyttäjä on syöttänyt merkkijonon (eli kirjoittanut tekstin sekä painanut enter-näppäintä), ohjelma tulostaa käyttäjän syöttämän merkkijonon.
 
@@ -663,7 +663,7 @@ Olipa kerran...
 
 </programming-exercise>
 
-<programming-exercise name='Viesti kolmesti'>
+<programming-exercise name='Viesti kolmesti' tmcname='osa01-Osa01_08.ViestiKolmesti'>
 
 Kirjoita ohjelma, joka pyytää käyttäjää kirjoittamaan merkkijonon. Kun käyttäjä on syöttänyt merkkijonon (eli kirjoittanut tekstin sekä painanut enter-näppäintä), ohjelma tulostaa käyttäjän syöttämän kolme kertaa (voit käyttää System.out.println-komentoa useampaan kertaan).
 
@@ -709,7 +709,7 @@ Olipa kerran...
 
 </programming-exercise>
 
-<programming-exercise name='Nimi'>
+<programming-exercise name='Nimi' tmcname='osa01-Osa01_09.Nimi'>
 
 Kirjoita ohjelma, joka kysyy käyttäjältä nimeä käyttäen tekstiä "Mikä on nimesi?". Kun käyttäjä syöttää nimen, ohjelma tulostaa käyttäjälle merkkijonon "Hei ", jota seuraa käyttäjän nimi.
 
@@ -825,7 +825,7 @@ yksikaksikolme
 
 </sample-output>
 
-<programming-exercise name='Keskustelu'>
+<programming-exercise name='Keskustelu' tmcname='osa01-Osa01_10.Keskustelu'>
 
 Kirjoita ohjelma, joka toimii seuraavalla tavalla.
 
@@ -866,7 +866,7 @@ public class Keskustelu {
 
 </programming-exercise>
 
-<programming-exercise name='Tarina'>
+<programming-exercise name='Tarina' tmcname='osa01-Osa01_11.Tarina'>
 
 Kirjoita ohjelma, joka toimii seuraavalla tavalla.
 
