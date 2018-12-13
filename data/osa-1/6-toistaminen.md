@@ -646,4 +646,4 @@ Ensimmäinen osa käsitteli ohjelmoinnin ja tietokoneiden toiminnan kannalta ole
 Vastaa vielä alla olevaan kyselyyn.
 
 
-<quiznator id="5b8ce3059706ea16c1d17189"></quiznator>
+<quiznator id="5c12b7f263de8e5db0cf8b93"></quiznator>

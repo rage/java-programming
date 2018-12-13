@@ -71,7 +71,7 @@ Kuinka monen vuorokauden sekunnit tulostetaan?
  
 </programming-exercise>
 
-<quiznator id="5a57bcce574f0b000439a32b"></quiznator>
+<quiznator id="5c12b7f263de8e5db0cf8b8f"></quiznator>
  
 
 <text-box variant='hint' name='Lauseke ja lause'>
@@ -109,7 +109,7 @@ int toka = 4;
 eka + toka; 
 ```
 
-<quiznator id="5878a0b579db890004df0d1d"></quiznator>
+<quiznator id="5c12b7f263de8e5db0cf8b90"></quiznator>
 
 
 ## Laskentaa ja tulostamista
@@ -480,7 +480,7 @@ Syötettyjen lukujen keskiarvo on 5.5
 </programming-exercise>
 
 
-<quiznator id="5878a2b179db890004df0d1e"></quiznator>
+<quiznator id="5c12b7f263de8e5db0cf8b91"></quiznator>
 
 
 <programming-exercise name="Nelilaskin">
@@ -584,4 +584,4 @@ rivi 9: tulostetaan arvo 28
 
 Alla edellinen ohjelma askeleittain visualisoituna. Käytössä oleva askeleittainen visualisointi käsittelee ohjelmakoodia riveittäin -- pohdi askeleiden kohdalla miten ohjelma päätyy sen tulostamaan lopputulokseen.
 
-<quiznator id="5878a3ee79db890004df0d1f"></quiznator>
+<quiznator id="5c12b7f263de8e5db0cf8b92"></quiznator>
