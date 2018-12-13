@@ -1,5 +1,9 @@
-import * as Visibility from 'visibilityjs'
 import $ from 'jquery'
+
+let Visibility = null
+try {
+  Visibility = require('visibilityjs')
+} catch (error) {}
 
 const pheromones = {
   CLASS_PREFIX: 'PS-',
