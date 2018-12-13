@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import LoginControls from './LoginControls';
 
 const TopBarContainer = styled.div`
-  height: 5rem;
+  height: 4rem;
   width: 100%;
   display: flex;
   justify-content: flex-end;
