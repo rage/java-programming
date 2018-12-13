@@ -220,7 +220,7 @@ class CreateAccountForm extends React.Component {
         </Form>
 
         <Row>
-          <Link to="/log-in">
+          <Link to="/sign-in">
             Onko sinulla jo käyttäjätunnus? Kirjaudu sisään
           </Link>
         </Row>
