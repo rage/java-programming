@@ -16,13 +16,12 @@ const CoursePageFooterWrapper = styled.footer`
 
 const CoursePageFooterContent = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   max-width: 960px;
   margin: 0 auto;
 `
 
 const StyledLink = styled(Link)`
-  background-color: white;
   color: black;
   text-decoration: none;
   padding: 1rem;
@@ -51,7 +50,7 @@ const ButtonWrapper = styled.div`
   align-items: center;
 `
 
-export default class CoursePageFooter extends React.Component {
+export default class EndOfSubSection extends React.Component {
   render() {
     return (
       <PagesContext.Consumer>
@@ -89,13 +88,20 @@ export default class CoursePageFooter extends React.Component {
             nextPart = sectionPages[currentPageIndex + 1]
           }
           return (
-            <CoursePageFooterWrapper>
-              <CoursePageFooterContent>
-                <PagesInThisSection
-                  style={{ width: '400px', fontSize: '0.8rem', margin: 0 }}
-                />
-              </CoursePageFooterContent>
-            </CoursePageFooterWrapper>
+            <div>
+              Pääsit aliluvun loppuun!{' '}
+              {nextPart && (
+                <Fragment>
+                  Jatka tästä seuraavaan osaan:{' '}
+                  <ButtonWrapper>
+                    <StyledLink to={nextPart.path}>
+                      <StyledIcon icon={icon} />
+                      {currentPageIndex + 2}. {nextPart.title}
+                    </StyledLink>
+                  </ButtonWrapper>
+                </Fragment>
+              )}
+            </div>
           )
         }}
       </PagesContext.Consumer>

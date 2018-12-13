@@ -21,6 +21,7 @@ import { loggedIn } from '../services/moocfi'
 import { capitalizeFirstLetter } from '../util/strings'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleUp as icon } from '@fortawesome/free-solid-svg-icons'
+import EndOfSubSection from '../components/EndOfSubSection';
 
 const StyledIcon = styled(FontAwesomeIcon)`
   margin-right: 0.25rem;
@@ -93,6 +94,7 @@ export default class CourseContentTemplate extends React.Component {
                   </UpLink>
                   <h1>{frontmatter.title}</h1>
                   {renderAst(htmlAst)}
+                  <EndOfSubSection />
                 </ContentWrapper>
               </Container>
               <CoursePageFooter />
