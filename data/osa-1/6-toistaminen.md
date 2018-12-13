@@ -638,12 +638,3 @@ Lukujen keskiarvo 8.5
 
 </programming-exercise>
 
-
-# Yhteenveto: TODO: siirrä seitsemänteen osaan?
-
-Ensimmäinen osa käsitteli ohjelmoinnin ja tietokoneiden toiminnan kannalta oleellisia ydinasioita. Näitä ovat tulostaminen, muuttujat ja tieto, laskeminen, syötteen käsittely ja lukeminen, vertailu ja päätösten tekeminen sekä toiminnallisuuden toistaminen.
-
-Vastaa vielä alla olevaan kyselyyn.
-
-
-<quiznator id="5c12b7f263de8e5db0cf8b93"></quiznator>

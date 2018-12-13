@@ -123,9 +123,8 @@ class CourseOptionsEditor extends React.Component {
         <h1>Opiskelijan tiedot</h1>
         <Form>
           <InfoBox>
-            Kerro meille itsestäsi. Nämä tiedot auttavat meitä suoritusten
-            merkitsemisessä ja kurssin järjestämisessä. Voit muokata näitä
-            tietoja myöhemmin kurssin asetuksista. Tietojen täyttämisen jälkeen
+            Kerro itsestäsi. Nämä tiedot auttavat suoritusten
+            merkitsemisessä ja kurssin järjestämisessä. Voit muokata tietoja myöhemmin kurssin asetuksista. Tietojen täyttämisen jälkeen
             paina "Tallenna" sivun alareunasta.
           </InfoBox>
           <Loading loading={this.state.loading} heightHint="490px">
@@ -199,7 +198,7 @@ class CourseOptionsEditor extends React.Component {
                       value="1"
                     />
                   }
-                  label="Aion hakea kurssin kautta opinto-oikeutta Helsingin yliopiston tietojenkäsittelytieteen osastolle. (Ei koske Digital Education for All -hankkeen tai Avoimen väylän kautta hakevia, vaan vain kurssin sivulla mainitun Ohjelmoinnin MOOCin hakuväylän kautta hakevia (meillä on monta sisääntuloväylää, sori siitä 😎) )"
+                  label="Aion hakea aikataulutetun Ohjelmoinnin MOOCin kautta opinto-oikeutta Helsingin yliopistoon."
                 />
               </Row>
 
@@ -213,7 +212,7 @@ class CourseOptionsEditor extends React.Component {
                       value="1"
                     />
                   }
-                  label="Olen tällä hetkellä opiskelija Digital Education for All -hankkeessa (Älä valitse, jos et ole kuullut aikaisemmin)"
+                  label="Olen tällä hetkellä opiskelijana Digital Education for All -hankkeessa. Jätä tämä valitsematta mikäli et tiedä kyseisestä hankkeesta."
                 />
               </Row>
 
@@ -236,23 +235,18 @@ class CourseOptionsEditor extends React.Component {
           <h2>Kurssilla tehtävästä tutkimuksesta</h2>
 
           <p>
-            Kurssilla tehdään oppimiseen liittyvää tutkimusta. Tällä
-            tutkimuksella on useampia tavoitteita:
+            Kurssilla tehdään oppimiseen liittyvää tutkimusta. Tällä tutkimuksella on useampia tavoitteita:
           </p>
 
           <ol>
             <li>
-              luoda oppimateriaali, joka ottaa yksilölliset erot huomioon ja
-              reagoi tarvittaessa tarjoten kohdennetumpaa oppisisältöä
+              luoda oppimateriaali, joka ottaa yksilölliset erot huomioon ja reagoi tarvittaessa tarjoten kohdennetumpaa oppisisältöä
             </li>
             <li>
-              kehittää digitaalisissa ympäristöissä tapahtuvaan oppimiseen
-              liittyvää ymmärrystä ja tietoa, sekä
+              kehittää digitaalisissa ympäristöissä tapahtuvaan oppimiseen liittyvää ymmärrystä ja tietoa, sekä
             </li>
             <li>
-              tukea tutkimustiedon kautta muita oppimateriaalien kehittäjiä ja
-              oppimisen tutkijoita. Tämä johtaa luonnollisesti myös parempaan
-              oppimiskokemukseen opiskelijoille.
+              tukea tutkimustiedon kautta muita oppimateriaalien kehittäjiä ja oppimisen tutkijoita. Tämä johtaa luonnollisesti myös parempaan oppimiskokemukseen opiskelijoille.
             </li>
           </ol>
 

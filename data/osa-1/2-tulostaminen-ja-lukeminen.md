@@ -177,11 +177,12 @@ public class OlipaKerran {
 }
 ```
 
-Muokkaa ohjelmaa siten, että ohjelman suoritus tulostaa seuraavanlaisen tekstin. Käytä tekstin tulostamiseen kuutta `System.out.println` komentoa.
+Muokkaa ohjelmaa siten, että ohjelman suoritus tulostaa seuraavanlaisen tekstin. Käytä tekstin tulostamiseen kolmea `System.out.println` komentoa.
 
 <sample-output>
 
-Olipa kerran... on ranskalainen opetusanimaatiosarjojen kokoelma. Kokoelmaan kuuluu seitsemän erillistä sarjaa, jotka käsittelevät eri tiedonaloja. Useimmat sarjoista liittyvät historiaan; Olipa kerran ihminen keskittyy ihmiskunnan historiaan ja kehitykseen, kun muut kertovat erityisistä historian alueista, kuten löytöretkeilijöistä tai keksijöistä.
+Olipa kerran... on ranskalainen opetusanimaatiosarjojen kokoelma. Kokoelmaan kuuluu seitsemän erillistä sarjaa, 
+jotka käsittelevät eri tiedonaloja.
 
 </sample-output>
 
