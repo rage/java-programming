@@ -30,7 +30,15 @@ import Quiznator from './Quiznator'
 import PleaseLogin from './PleaseLogin'
 import FloatImageRight from './FloatImageRight'
 
-import { Table, TableBody, TableCell, TableHead, TableRow, TableTh } from './Table'
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow,
+  TableTh,
+} from './Table'
+import Deadline from './Deadline'
 
 const mapping = {
   test: Test,
@@ -48,6 +56,7 @@ const mapping = {
   tr: TableRow,
   td: TableCell,
   th: TableTh,
+  deadline: Deadline,
 }
 
 export default () => {

@@ -4,6 +4,8 @@ title: 'Osa 1'
 overview: true
 ---
 
+<deadline>21.1.2019</deadline>
+
 Tässä osassa opit kirjoittamaan ohjelmia, jotka lukevat käyttäjältä syötettä ja tekevät laskentaa syötteen perusteella. Opit käsitteet muuttuja, ehtolause ja toistolause, ja opit käyttämään näitä ohjelmissasi.
 
 <please-login></please-login>
