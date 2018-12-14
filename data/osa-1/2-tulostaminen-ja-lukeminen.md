@@ -206,7 +206,7 @@ Toinen vaihtoehto on kahden `System.out.println`\-komennon käyttäminen, yksi k
 ```java
 public class Ohjelma {
     public static void main(String[] args) {
-        System.out.println("Hei maailma!\\n... ja maailmankaikkeus!");
+        System.out.println("Hei maailma!\n... ja maailmankaikkeus!");
     }
 }
 ```
@@ -241,7 +241,7 @@ Mikäli merkkijonosta muodostuu hyvin pitkä, voi sen pilkkoa useampaan osaan. T
 ```java
 public class Ohjelma {
     public static void main(String[] args) {
-        System.out.println("Hei maailma!\\n" + "... ja maailmankaikkeus!");
+        System.out.println("Hei maailma!\n" + "... ja maailmankaikkeus!");
     }
 }
 ```
@@ -282,7 +282,7 @@ Puolipisteellä `;` erotetaan lauseet toisistaan. Voisimme oikeastaan kirjoittaa
 ```java
 System.out.print("Hei ");
 System.out.print("maailma");
-System.out.print("!\\n");
+System.out.print("!\n");
 ```
 
 <sample-output>
