@@ -21,13 +21,19 @@ Tämä on johtanut tilanteeseen, missä työnkuvia katoaa ja työnkuvia syntyy. 
 
 Vaikka digitalisaatio voi tehostaa toimintaa muunmuassa vapauttamalla työntekijän helposti automatisoitavista tehtävistä, on digitalisaatiossa myös haasteita. Sähköisten järjestelmien käytön oppiminen ei ole aina helppoa ja työnkuvien muutoksen vaatima jatkuva uudelleenkouluttautuminen on uudenlainen koulutukseen liittyvä haaste. Innokkuus sähköisten palveluiden käyttöönotossa vähentää myös perinteisiä palveluita -- kukapa ei esimerkiksi olisi kuullut pankkipalveluiden digitalisoitumisen ja kassapalveluiden vähentymisen sivuvaikutuksena tuomista pitkistä pankkijonoista. Sähköiset palvelut ovat ihmisten tekemiä ja harvoin virheettömiä. Harva ei ole kuullut huonosti toimivista ohjelmistoista.
 
+<quiznator id="5c1368623cc3ec11bcd773fa"></quiznator>
+
+
 Tietojenkäsittelytieteilijät ja laajemmin ohjelmistotekniikan ammattilaiset ovat digitaalisten palveluiden arkkitehtejä. Vastuullamme on näiden järjestelmien toteutus siten, että ne toimivat mahdollisimman hyvin järjestelmien kohdeyleisölle -- myös niille, jotka eivät ole tottuneet käyttämään vastaavia järjestelmiä. Järjestelmien loppukäyttäjät harvoin tietävät kuka tai ketkä ovat toteuttaneet kyseiset järjestelmät -- harva on kuullut esimerkiksi [Margaret Hamilton](<https://en.wikipedia.org/wiki/Margaret_Hamilton_(scientist)>)ista, joka kirjoitti ihmisiä kuuhun vieneen ohjelman.
 
-Ohjelmointia voidaan ajatella nykyajan käsityöläistaitona, ja ohjelmistoalan työläisiä on maailmassa kymmeniä miljoonia. Tälle modernille käsityöläistaidolle on myös kysyntää -- esimerkiksi Tivi uutisoi vuonna 2016 aiheesta otsikolla "[It-osaaja pääsee töihin vaikka heti](http://www.tivi.fi/Kaikki_uutiset/it-osaaja-paasee-toihin-vaikka-heti-6555159)". Ohjelmistojen ja digitaalisten järjestelmien ymmärryksen tarve näkyy myös nykyään kaikkialla -- ohjelmoinnin alkeita opetetaan jo peruskoulussa, ja samalla esimerkiksi moderni tiede hyödyntää enemmän ja enemmän tiedon analysoinnissa käytettäviä ohjelmistoja sekä ohjelmistoalan innovaatioita. Esimerkiksi meteorologit, fyysikot ja kemistit käyttävät ohjelmistoja ja ohjelmoivat työssään. Myös kasvatustiede ja opetusala hyödyntää digitalisaation tuomia mahdollisuuksia yhä enemmän.
+Ohjelmointia voidaan ajatella nykyajan käsityöläistaitona, ja ohjelmistoalan työläisiä on maailmassa kymmeniä miljoonia. Tälle modernille käsityöläistaidolle on myös kysyntää -- esimerkiksi Tivi uutisoi vuonna 2016 aiheesta otsikolla "[It-osaaja pääsee töihin vaikka heti](http://www.tivi.fi/Kaikki_uutiset/it-osaaja-paasee-toihin-vaikka-heti-6555159)". Ohjelmistojen ja digitaalisten järjestelmien ymmärryksen tarve näkyy myös nykyään kaikkialla -- ohjelmoinnin alkeita opetetaan jo peruskoulussa, ja samalla esimerkiksi moderni tiede hyödyntää enemmän ja enemmän tiedon analysoinnissa käytettäviä ohjelmistoja sekä ohjelmistoalan innovaatioita. Esimerkiksi meteorologit, fyysikot ja kemistit käyttävät ohjelmistoja ja ohjelmoivat työssään. Myös kasvatustiede ja opetusala hyödyntää digitalisaation tuomia mahdollisuuksia yhä enemmän. Nykyään on oikeastaan vaikeampaa keksiä ammatteja, joihin ohjelmistot ja digitalisaatio ei vaikuta, kuin ammatteja, joihin ohjelmistot ja digitalisaatio vaikuttaa.
 
 Tällä kurssilla otat ensiaskeleet ohjelmointiin. Opit kirjoittamaan ohjelmia ja ymmärtämään niiden toimintaa. Tulet jäsentämään ohjelmissa olevia osakokonaisuuksia pieniksi paloiksi ja esittämään ohjelmissa esiintyviä käsitteitä yhteistoiminnassa toimivina palasina. Käsitteet kuten _muuttuja_, _ehtolause_, _toistolause_, _luokka_ ja _olio_ ovat kurssin lopuksi hyvin tuttuja, ja tiedät myös hieman algoritmiikasta sekä ohjelmistojen testaamisesta. Kurssin jälkeen saatat myös ajatella yhteiskunnan palveluita ohjelmoijan näkökulmasta ja pohdit niiden toimintaa (tai toimimattomuutta) ohjelmistojen tarjoamien mahdollisuuksien ja rajoitteiden näkökulmasta.
 
+Kurssin jälkeen yksinkertainenkin ohjeistus kuten  "_Osta kaksi maitoa. Mikäli kaupassa on appelsiineja, osta neljä._" saa uusia sävyjä. Vaikka ihmiselle viesti on selvä, tietokone saattaisi päätyä ostamaan neljä maitoa.
+
 Kurssi on tarkoitettu ohjelmoinnin alkeiskurssiksi kohdeyleisöä sen laajemmin rajoittamatta. Kurssi on samalla yksi ensiaskelista tietojenkäsittelytieteen opintoihin. Kurssin jälkeen ja kurssin aikaan kannattaa harkita muunmuassa kursseja Tietokantojen perusteet, Ohjelmistotekniikan menetelmät, Tietorakenteet ja algoritmit, sekä Johdatus yliopistomatematiikkaan.
+
 
 ## Ohjelmoija kirjoittaa lähdekoodia
 
@@ -56,6 +62,10 @@ public class Esimerkki {
 
 Yhdenkin merkin puuttuminen voi johtaa ohjelmoidessa virhetilanteeseen. Ohjelmoija saattaa vahingossa esimerkiksi syöttää pilkun pisteen sijaan, kirjoittaa vaikkapa `printin` sanan `println` sijaan, jättää tulostettavasta merkkijonosta hipsut pois, tai unohtaa komentoa seuraavan puolipisteen. Jokainen edelläolevista esimerkeistä johtaa virhetilanteeseen, missä ohjelman suoritus ei onnistu.
 
+
+<quiznator id="5c136a4ea50dbe1223d1981d"></quiznator>
+
+
 ## Tietokone suorittaa ohjelman
 
 Kun ohjelmoija haluaa kokeilla toimiiko hänen kirjoittamansa lähdekoodi, hän suorittaa ohjelman. Ohjelman suorittamiseen tarvittavat askeleet riippuvat käytetystä ohjelmointikielestä, mutta pääpiirteisesti askeleita on kaksi. Ensin lähdekoodi käännetään konekieliseen muotoon, jonka jälkeen ohjelma suoritetaan.
@@ -67,3 +77,5 @@ Ohjelman suorittamiseen liittyvät askeleet ovat ohjelmointikielikohtaisia. Edel
 Nämä askeleet vaikuttavat siihen, miten ja milloin ohjelmien virheet ilmenevät. Mikäli ohjelma käännetään ennen suoritusta, kääntämiseen käytettävä ohjelma voi etsiä tyypillisiä virheitä. Mikäli ohjelma tulkataan ilman käännöstä, virheet nousevat esiin vasta suorituksen aikana tai suorituksen epäonnistuessa. Tämä vaikuttaa myös ohjelmoinnissa käytetyn ohjelmointiympäristön tarjoamiin vinkkeihin -- jotkut ohjelmointiympäristöt kääntävät kirjoitettavaa ohjelmaa jatkuvasti konekielelle, jolloin ohjelmoija saa palautetta ohjelmassa olevista virheistä heti. Toisissa ohjelmointikielissä tätä mahdollisuutta taas ei ole, jolloin ohjelmointiympäristöjen tarjoamat vinkit ovat vähäisemmät.
 
 Mitä tahansa ohjelmia voidaan kirjoittaa tekstieditorissa, joka ei muotoile tekstiä. Tällaisia tekstieditoreita ovat esimerkiksi [Notepad](https://en.wikipedia.org/wiki/Microsoft_Notepad). Ohjelmia kirjoitetaan kuitenkin tyypillisemmin ohjelmointiympäristöissä, jotka ovat ohjelmien kirjoittamisen tukemiseen erikoistuneita ohjelmia. Nämä mahdollistavat muunmuassa käännösvirheiden automaatisen näyttämisen käyttäjälle sekä ohjelman suorittamisen ohjelmointiympäristön sisällä. Tällä kurssilla käytetään ohjelmointiympäristöä nimeltä [NetBeans](https://en.wikipedia.org/wiki/NetBeans), jota varten on kehitetty tehtävien lataamiseen, testaamiseen ja lähettämiseen käytettävä liitännäinen.
+
+Seuraavassa osassa aloitamme ohjelmoinnin ohjelmointiympäristössä.
