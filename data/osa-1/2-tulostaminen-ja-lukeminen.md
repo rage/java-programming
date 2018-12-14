@@ -79,7 +79,7 @@ Ohjelmoinnin aloittamiseen tarvitset seuraavat asiat.
 2.  Javan (Java JDK).
 3.  NetBeans with TMC-ohjelmointiympäristön.
 
-Ohjeistus oleellisten työvälineiden asentamiseen sekä kurssilla tarvittavan käyttäjätunnuksen luomiseen löytyy osoitteesta [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/).
+Ohjeistus oleellisten työvälineiden asentamiseen sekä kurssilla tarvittavan käyttäjätunnuksen luomiseen löytyy osoitteesta [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Valitse organisaatioksi "MOOC" ja kurssiksi "Ohjelmoinnin MOOC 2019".
 
 [Ohjeisiin!](https://materiaalit.github.io/tmc-asennus/netbeans/)
 
@@ -185,7 +185,7 @@ Muokkaa ohjelmaa siten, että ohjelman suoritus tulostaa seuraavanlaisen tekstin
 <sample-output>
 
 Olipa kerran... on ranskalainen opetusanimaatiosarjojen kokoelma.
-Kokoelmaan kuuluu seitsemän erillistä sarjaa, 
+Kokoelmaan kuuluu seitsemän erillistä sarjaa,
 jotka käsittelevät eri tiedonaloja.
 
 </sample-output>
