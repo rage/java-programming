@@ -18,17 +18,23 @@ const IndexPage = () => (
       <section id="yleistä">
         <h1>Arvostelu ja kokeet</h1>
         <p>
-          Ohjelmoinnin MOOC sisältää Helsingin yliopiston kurssit Ohjelmoinnin perusteet (materiaalin osat 1-7) ja Ohjelmoinnin jatkokurssi (materiaalin osat 8-14). Kummastakin osasta saa erillisen arvosanan. Ohjelmoinnin MOOCista on kaksi versiota: aikataulutettu kurssi ja aikatauluttamaton kurssi. Näiden arvostelu poikkeaa hieman toisistaan. 
+          Ohjelmoinnin MOOC sisältää Helsingin yliopiston kurssit Ohjelmoinnin perusteet (materiaalin osat 1-7) ja Ohjelmoinnin jatkokurssi (materiaalin osat 8-14). Kummastakin osasta järjestetään erillinen koe, ja kummastakin osasta saa erillisen arvosanan. Ohjelmoinnin MOOCista on kaksi versiota: aikataulutettu kurssi ja aikatauluttamaton kurssi. Näiden arvostelu poikkeaa hieman toisistaan. 
         </p>
         <h2>Aikataulutettu kurssi</h2>
         <p>
-          Aikataulutetussa kurssissa arvostelu perustuu sekä tehtyihin tehtäviin että kahteen kokeeseen, jotka vastaavat kursseja Ohjelmoinnin perusteet ja Ohjelmoinnin jatkokurssi. 
+          Aikataulutetussa kurssissa arvostelu perustuu sekä tehtyihin tehtäviin (50% kokonaispisteistä) että kokeeseen (50% kokonaispisteistä).
         </p>
         <p>
-          Ohjelmoinnin perusteita vastaava koe suoritetaan osien 1-7 jälkeen. Arvosanasta puolet muodostuu osien 1-7 tehdyistä tehtävistä ja puolet kokeesta. Täydet tehtäväpisteet kustakin osasta saa tekemällä osan tehtävistä vähintään 90%, puolet tekemällä noin 45% jne.
+          Ohjelmoinnin perusteita vastaava koe suoritetaan materiaalin osien 1-7 jälkeen. Arvosanasta puolet muodostuu osien 1-7 tehdyistä tehtävistä ja puolet kokeesta. 
         </p>
         <p>
-          Ohjelmoinnin jatkokurssia vastaava koe suoritetaan osien 8-14 jälkeen. Arvosanasta puolet muodostuu osien 8-14 tehdyistä tehtävistä ja puolet kokeesta. Täydet tehtäväpisteet kustakin osasta saa tekemällä osan tehtävistä vähintään 90%, puolet tekemällä noin 45% jne.
+          Ohjelmoinnin jatkokurssia vastaava koe suoritetaan materiaalin osien 8-14 jälkeen. Arvosanasta puolet muodostuu osien 8-14 tehdyistä tehtävistä ja puolet kokeesta.
+        </p>
+        <p>
+          Täydet tehtäväpisteet kustakin osasta saa tekemällä osan tehtävistä vähintään 90%, puolet tekemällä noin 45% jne.
+        </p>
+        <p> 
+          Kokeeseen saa osallistua kun on tehnyt vähintään 25% jokaisen osan tehtävistä. Aikatauluttamattomassa kurssissa kokeesta tulee saada vähintään puolet kurssin pisteistä kurssin läpäiseksi.
         </p>
         <h2>Aikatauluttamaton kurssi</h2>
         <p>

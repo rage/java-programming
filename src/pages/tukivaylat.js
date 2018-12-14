@@ -10,13 +10,11 @@ const IndexPage = () => (
       <h1>Tukiväylät</h1>
 
       <p>
-        Kurssilla on muutamia tukiväyliä, joista suurin osa perustuu vertaistukeen. Saatamme lisätä kurssin edetessä lisää tukikanavia, tarpeesta riippuen.
+        Kurssilla on vertaistukeen perustuva keskustelukanava, jonka lisäksi tammikuun puolesta välistä lähtien kaikilla kurssilaisilla on mahdollisuus ohjaukseen Helsingin yliopiston kumpulan kampuksella.
       </p>
       <h2>Keskustelukanava</h2>
       <p>
-        Kurssilla on käytössä Telegram-keskusteluhuone. Suosittelemme, että
-        menet tukikanavalle joko Telegrammin selaimessa toimivalla versiolla tai
-        Telegrammin työpöytäohjelmalla.
+        Kurssilla on käytössä Telegram-keskusteluhuone. Suosittelemme, että käytät tukikanavaa joko Telegramin selaimessa toimivalla versiolla tai Telegrammin työpöytäohjelmalla.
       </p>
 
       <p>
@@ -27,13 +25,11 @@ const IndexPage = () => (
       </p>
 
       <p>
-        Huomaathan, että suurin osa kanavan osallistujista ovat
-        kanssaopiskelijoita ja kurssin aiemmin tehneitä opiskelijoita. Kanavan
-        toiminta perustuu vapaaehtoisuuteen.
+        Kanavan osallistujat ovat kanssaopiskelijoita sekä vapaaehtoisia ohjaajia. Kanavan toiminta perustuu vapaaehtoisuuteen. Autathan muita myös vastavuoroisesti.
       </p>
 
       <p>
-        Jos kysyt kanavalta apua ohjelmointitehtävään, valitse ensiksi
+        Jos kysyt kanavalta apua ohjelmointitehtävään, voit liittää kysymykseesi myös ohjelmasi lähdekoodin. Valitse
         Netbeanssista "<code>TMC</code>" -> "
         <code>Send code to TMC Pastebin</code>" ja valitse avautuvasta ikkunasta
         "<code>Send</code>". Tämän jälkeen saat linkin koodiisi, jonka voit
@@ -42,7 +38,9 @@ const IndexPage = () => (
 
       <h2>Pajaohjaus</h2>
 
-      <p>Tammikuusta 2019 lähtien kurssille tulee mahdollisuus pajaohjaukseen Helsingin yliopiston kumpulan kampuksella. Kaikki ovat tervetulleita pajaan! Lisätietoa pajasta tulee tänne myöhemmin.</p>
+      <p>
+        Tammikuusta 2019 lähtien kurssille tulee mahdollisuus pajaohjaukseen Helsingin yliopiston kumpulan kampuksella. Kaikki ovat tervetulleita pajaan! Lisätietoa pajasta tulee tänne myöhemmin.
+      </p>
     </Container>
   </Layout>
 )
