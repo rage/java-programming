@@ -89,9 +89,9 @@ Alla on kurssin ensimmäiset ohjelmointitehtävät. Ensimmäinen tehtävä -- "H
 
 Ohjelmointitehtävien tehtävänannot löytyvät kurssimateriaalista (eli materiaalista mitä juuri luet). Tehtävänannon saa auki klikkaamalla tehtävänannon otsikkoa (alla "Ada Lovelace"). Tehtäväpohjat löytyvät TMC:stä (asennusohjeet yllä kohdassa "Ohjelmoinnin aloittaminen").
 
-Voit katsoa ohjeet aloittamiseen myös seuraavalta videolta.
+<!-- Voit katsoa ohjeet aloittamiseen myös seuraavalta videolta. -->
 
-<youtube id="lxehAkYVEGo"></youtube>
+<!-- <youtube id="lxehAkYVEGo"></youtube> -->
 
 <programming-exercise name='Hiekkalaatikko' tmcname='osa01-Osa01_01.Hiekkalaatikko'>
 
