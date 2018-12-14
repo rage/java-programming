@@ -10,6 +10,7 @@ import Pheromones from '../util/pheromones'
 
 import './reboot.css'
 import './theme.css'
+import './remark.css'
 import 'focus-visible'
 import 'typeface-open-sans'
 import 'typeface-roboto-slab'
