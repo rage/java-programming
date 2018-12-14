@@ -25,10 +25,6 @@ class SignInPage extends React.Component {
   }
 
   render() {
-    if (this.context.loggedIn) {
-      navigate('/')
-      return <div>Redirecting...</div>
-    }
     let stepComponent
     if (this.state.step === 1) {
       stepComponent = <CreateAccountForm onComplete={this.onStepComplete} />

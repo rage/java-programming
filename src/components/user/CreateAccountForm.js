@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import { TextField, Button } from '@material-ui/core'
 import { createAccount, authenticate } from '../../services/moocfi'
 import { capitalizeFirstLetter } from '../../util/strings'
+import { navigate } from 'gatsby'
 
 import styled from 'styled-components'
 
@@ -143,6 +144,10 @@ class CreateAccountForm extends React.Component {
   }
 
   render() {
+    if (this.context.loggedIn) {
+      navigate('/')
+      return <div>Redirecting...</div>
+    }
     return (
       <FormContainer>
         <h1>Luo käyttäjätunnus</h1>

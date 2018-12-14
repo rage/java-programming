@@ -93,6 +93,7 @@ export function signOut() {
     window.Quiznator.removeUser()
   }
   store.remove('tmc.user')
+  store.remove('tmc.user.details')
   loginStateChanged()
 }
 
