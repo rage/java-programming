@@ -3,9 +3,6 @@ path: "/osa-1/6-toistaminen"
 title: "Toiminnallisuuden toistaminen"
 ---
 
-# Toiminnallisuuden toistaminen: toistolauseet
-
-
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
 * Tunnet käsitteen toistolause ja osaat luoda ohjelman, joka sisältää toistolauseen.
@@ -20,38 +17,38 @@ Tietokoneen sisältämä käskyjen suorittamiseen erikoistunut prosessori pystyy
 Motivoidaan toistolauseiden käyttöä hieman. Alla on esimerkki ohjelmasta, missä kysytään käyttäjältä kymmenen lukua ja lasketaan niiden summa.
 
 ```java
-Scanner lukija = new Scanner(System.in); 
-int summa = 0; 
+Scanner lukija = new Scanner(System.in);
+int summa = 0;
 
-System.out.println("Syötä luku"); 
-summa = summa + Integer.valueOf(lukija.nextLine()); 
+System.out.println("Syötä luku");
+summa = summa + Integer.valueOf(lukija.nextLine());
 
-System.out.println("Syötä luku"); 
-summa = summa + Integer.valueOf(lukija.nextLine()); 
+System.out.println("Syötä luku");
+summa = summa + Integer.valueOf(lukija.nextLine());
 
-System.out.println("Syötä luku"); 
-summa = summa + Integer.valueOf(lukija.nextLine()); 
+System.out.println("Syötä luku");
+summa = summa + Integer.valueOf(lukija.nextLine());
 
-System.out.println("Syötä luku"); 
-summa = summa + Integer.valueOf(lukija.nextLine()); 
+System.out.println("Syötä luku");
+summa = summa + Integer.valueOf(lukija.nextLine());
 
-System.out.println("Syötä luku"); 
-summa = summa + Integer.valueOf(lukija.nextLine()); 
+System.out.println("Syötä luku");
+summa = summa + Integer.valueOf(lukija.nextLine());
 
-System.out.println("Syötä luku"); 
-summa = summa + Integer.valueOf(lukija.nextLine()); 
+System.out.println("Syötä luku");
+summa = summa + Integer.valueOf(lukija.nextLine());
 
-System.out.println("Syötä luku"); 
-summa = summa + Integer.valueOf(lukija.nextLine()); 
+System.out.println("Syötä luku");
+summa = summa + Integer.valueOf(lukija.nextLine());
 
-System.out.println("Syötä luku"); 
-summa = summa + Integer.valueOf(lukija.nextLine()); 
+System.out.println("Syötä luku");
+summa = summa + Integer.valueOf(lukija.nextLine());
 
-System.out.println("Syötä luku"); 
-summa = summa + Integer.valueOf(lukija.nextLine()); 
+System.out.println("Syötä luku");
+summa = summa + Integer.valueOf(lukija.nextLine());
 
-System.out.println("Syötä luku"); 
-summa = summa + Integer.valueOf(lukija.nextLine()); 
+System.out.println("Syötä luku");
+summa = summa + Integer.valueOf(lukija.nextLine());
 
 System.out.println("Lukujen summa on " + summa);
 ```
@@ -64,16 +61,16 @@ Saman ongelman voi ratkaista toistolauseella, joka pitää kirjaa sekä summasta
 Scanner lukija = new Scanner(System.in);
 
 int luettujaLukuja = 0;
-int summa = 0; 
+int summa = 0;
 
 while (true) {
     if (luettujaLukuja == 10) {
         break;
-    } 
-    
-    System.out.println("Syötä luku"); 
+    }
+
+    System.out.println("Syötä luku");
     summa = summa + Integer.valueOf(lukija.nextLine()); luettujaLukuja = luettujaLukuja + 1;
-} 
+}
 System.out.println("Lukujen summa on " + summa);
 ```
 
@@ -83,11 +80,11 @@ Tutustutaan seuraavaksi toistolauseisiin.
 
 Toistolause sisältää lausekkeen, jonka perusteella päätellään jatketaanko toistoa, sekä lohkon, joka sisältää toistettavan lähdekoodin. Toistolauseen muoto on seuraava.
 
-```java 
-while (_lauseke_) { 
-    // aaltosuluilla rajatun lohkon sisältö 
-    // lohkossa voi olla käytännössä 
-    // rajaton määrä sisältöä 
+```java
+while (_lauseke_) {
+    // aaltosuluilla rajatun lohkon sisältö
+    // lohkossa voi olla käytännössä
+    // rajaton määrä sisältöä
 }
 ```
 
@@ -119,37 +116,10 @@ while (true) {
     System.out.println(luku);
     if (luku >= 5) {
         break;
-    } 
-    
+    }
+
     luku = luku + 1;
-} 
-
-System.out.println("Valmista!");
-```
-
-<sample-output>
-
-1 
-2 
-3 
-4 
-5 
-Valmista!
-
-</sample-output>
-
-Mikäli luku määritellään toistolauseen sisällä, kuten alla, ei toistolauseen suoritus pääty koskaan koska luku määritellään toistolauseen lohkossa, ja sen arvoksi asetetaan aina yksi.
-
-```java 
-while (true) {
-    int luku = 1;
-    System.out.println(luku);
-    if (luku >= 5) {
-        break;
-    } 
-    
-    luku = luku + 1;
-} 
+}
 
 System.out.println("Valmista!");
 ```
@@ -157,9 +127,36 @@ System.out.println("Valmista!");
 <sample-output>
 
 1
-1 
-1 
-... 
+2
+3
+4
+5
+Valmista!
+
+</sample-output>
+
+Mikäli luku määritellään toistolauseen sisällä, kuten alla, ei toistolauseen suoritus pääty koskaan koska luku määritellään toistolauseen lohkossa, ja sen arvoksi asetetaan aina yksi.
+
+```java
+while (true) {
+    int luku = 1;
+    System.out.println(luku);
+    if (luku >= 5) {
+        break;
+    }
+
+    luku = luku + 1;
+}
+
+System.out.println("Valmista!");
+```
+
+<sample-output>
+
+1
+1
+1
+...
 (ohjelma ei pääty koskaan)
 
 </sample-output>
@@ -167,15 +164,15 @@ System.out.println("Valmista!");
 Toistolauseessa voidaan myös kysyä käyttäjältä syötettä. Kuten edellä, toistolauseessa käytettävät muuttujat kuten Scanner-lukija määritellään ennen toistolausetta. Alla olevassa esimerkissä ohjelma kysyy käyttäjältä mikäli ohjelman suoritusta pitäisi jatkaa. Mikäli käyttäjä syöttää merkkijonon "ei", ohjelman suoritus lopetetaan.
 
 ```java
-Scanner lukija = new Scanner(System.in); 
+Scanner lukija = new Scanner(System.in);
 
 while (true) {
-    System.out.println("Jatketaanko suoritusta? (ei lopettaa)"); 
+    System.out.println("Jatketaanko suoritusta? (ei lopettaa)");
     String syote = lukija.nextLine();
     if (syote.equals("ei")) {
         break;
-    } 
-    
+    }
+
     System.out.println("Ok! Jatketaan!");
 }
 
@@ -184,7 +181,7 @@ System.out.println("Valmista!");
 
 Ohjelma toimii esimerkiksi seuraavasti. Alla käyttäjän syötteet ovat merkitty punaisella.
 
-<sample-output> 
+<sample-output>
 
 Jatketaanko suoritusta? (ei lopettaa)
 **kyllä**
@@ -204,30 +201,30 @@ Kirjoita edellä olevaa toistolause-esimerkkiä mukaillen ohjelma, joka kysyy k�
 
 Huomaa, että alla olevassa esimerkissä on käytetty komentoa `System.out.print` syötteen pyytämisen kehotuksessa komennon `System.out.println` sijaan.
 
-<sample-output> 
+<sample-output>
 
 Poistutaanko?
 **ei**
-Poistutaanko? 
+Poistutaanko?
 **eeei**
-Poistutaanko? 
+Poistutaanko?
 **nej**
-Poistutaanko? 
+Poistutaanko?
 **kyllä**
 
 </sample-output>
 
 <sample-output>
 
-Poistutaanko? 
+Poistutaanko?
 **joo**
-Poistutaanko? 
+Poistutaanko?
 **kyl**
-Poistutaanko? 
+Poistutaanko?
 **kylä**
-Poistutaanko? 
+Poistutaanko?
 **yes**
-Poistutaanko? 
+Poistutaanko?
 **kyllä**
 
 </sample-output>
@@ -242,28 +239,28 @@ Scanner lukija = new Scanner(System.in);
 
 while (true) {
     System.out.println("Syötä numeromuotoinen komento, 0 lopettaa");
-    int komento = Integer.valueOf(lukija.nextLine()); 
+    int komento = Integer.valueOf(lukija.nextLine());
     if (komento == 0) {
         break;
-    } 
-    
+    }
+
     System.out.println("Syötit " + komento);
-} 
+}
 
 System.out.println("Valmista, kiitos!");
 ```
 
 Ohjelman suoritus on esimerkiksi seuraavanlainen.
 
-<sample-output> 
+<sample-output>
 
-Syötä numeromuotoinen komento, 0 lopettaa 
+Syötä numeromuotoinen komento, 0 lopettaa
 **5**
-Syötit 5 
-Syötä numeromuotoinen komento, 0 lopettaa 
+Syötit 5
+Syötä numeromuotoinen komento, 0 lopettaa
 **-2**
-Syötit -2 
-Syötä numeromuotoinen komento, 0 lopettaa 
+Syötit -2
+Syötä numeromuotoinen komento, 0 lopettaa
 **0**
 Valmista, kiitos!
 
@@ -297,18 +294,18 @@ Toistolauseen alkuun palataan silloin kun suoritus päätyy toistolauseen lohkon
 
 Alla olevassa esimerkissä esitellään `continue`-komennon käyttöä. Ohjelma pyytää käyttäjää syöttämään positiivisia lukuja. Mikäli käyttäjä syöttää negativiisen luvun tai nollan, ohjelma tulostaa viestin "Epäkelpo luku! Yritä uudelleen.", jonka jälkeen suoritus palaa toistolauseen alkuun. Edellisessä esimerkissä ohjelma lukee käyttäjältä merkkijonomuotoisia syötteitä. Vastaavanlaisen ohjelman toteutus onnistuu myös muilla muuttujatyypeillä. Alla olevassa esimerkissä käyttäjältä pyydetään lukuja kunnes käyttäjä syöttää luvun nolla.
 
-```java 
-Scanner lukija = new Scanner(System.in); 
+```java
+Scanner lukija = new Scanner(System.in);
 
 while (true) {
     System.out.println("Syötä positiivisia lukuja.");
-    int luku = Integer.valueOf(lukija.nextLine()); 
-    
+    int luku = Integer.valueOf(lukija.nextLine());
+
     if (luku <= 0) {
         System.out.println("Epäkelpo luku! Yritä uudelleen.");
         continue;
     }
-    
+
     System.out.println("Syötit " + luku);
 }
 ```
@@ -318,21 +315,21 @@ Ohjelman suoritus toistuu yllä olevassa esimerkissä ikuisesti, sillä toistola
 Alla olevassa esimerkissä ohjelmaa on muokattu siten, että käyttäjältä pyydetään positiivisia lukuja. Mikäli käyttäjä syöttää negatiivisen luvun, kerrotaan että luku oli epäkelpo ja palataan toistolauseen alkuun. Mikäli käyttäjä syöttää nollan, toistolauseesta poistutaan.
 
 ```java
-Scanner lukija = new Scanner(System.in); 
+Scanner lukija = new Scanner(System.in);
 
 while (true) {
-    System.out.println("Syötä positiivisia lukuja."); 
-    int luku = Integer.valueOf(lukija.nextLine()); 
-    
+    System.out.println("Syötä positiivisia lukuja.");
+    int luku = Integer.valueOf(lukija.nextLine());
+
     if (luku == 0) {
         break;
-    } 
-    
+    }
+
     if (luku < 0) {
         System.out.println("Epäkelpo luku! Yritä uudelleen.");
         continue;
     }
-    
+
     System.out.println("Syötit " + luku);
 }
 ```
@@ -345,16 +342,16 @@ Kirjoita ohjelma, joka kysyy käyttäjältä lukuja. Mikäli luku on negatiivine
 
 Syötä luku
 **5**
-25 
+25
 Syötä luku
-**4** 
-16 
+**4**
+16
 Syötä luku
-**-3** 
-Epäkelpo luku 
+**-3**
+Epäkelpo luku
 Syötä luku
 **1**
-1 
+1
 Syötä luku
 **0**
 
@@ -364,17 +361,17 @@ Syötä luku
 
 Edellisessä tehtävässä toteutettiin ohjelma, joka lukee käyttäjältä lukuja. Mikäli käyttäjä syöttää negatiivisen luvun, ohjelma ilmoittaa että luku oli epäkelpo, ja mikäli käyttäjä syöttää nollan, ohjelmasta poistutaan. Eräs ratkaisu tehtävään on seuraavanlainen.
 
-```java 
+```java
 Scanner lukija = new Scanner(System.in);
 
 while (true) {
     System.out.println("Syötä luku");
     int luku = Integer.valueOf(lukija.nextLine());
-    
+
     if (luku == 0) {
         break;
     }
-    
+
     if (luku < 0) {
         System.out.println("Epäkelpo luku");
         continue;
@@ -385,12 +382,12 @@ while (true) {
 Ohjelman voisi toteuttaa myös muotoilemalla ehtolauseet toisella tavalla. Alla olevassa esimerkissä erillisten ehtolauseiden sijaan ehtolauseet on yhdistetty.
 
 ```java
-Scanner lukija = new Scanner(System.in); 
+Scanner lukija = new Scanner(System.in);
 
 while (true) {
-    System.out.println("Syötä luku"); 
+    System.out.println("Syötä luku");
     int luku = Integer.valueOf(lukija.nextLine());
-    
+
     if (luku == 0) {
         break;
     } else if (luku < 0) {
@@ -404,7 +401,7 @@ Kumpi edellä olevista vaihtoehdoista on selkeämpi?
 
 Tarkastellaan edellisten ohjelmien selkeyttä toisen esimerkin kautta. Alla oleva ohjelma kysyy käyttäjältä lukua. Mikäli luku on negatiivinen, käyttäjälle kerrotaan että luku on epäkelpo ja siirrytään toistolauseen alkuun. Mikäli luku on nolla, toistolauseesta poistutaan. Muissa tilanteissa käyttäjälle tulostetaan syötetyn luvun neliö, eli syötetty luku kerrottuna itsellään.
 
-```java 
+```java
 Scanner lukija = new Scanner(System.in);
 
 while (true) {
@@ -415,24 +412,24 @@ while (true) {
         System.out.println("Epäkelpo luku");
         continue;
     }
-    
+
     if (luku == 0) {
         break;
     }
-    
+
     System.out.println(luku * luku);
 }
 ```
 
 Myös tämän ohjelman voi toteuttaa yhdistämällä ehtolauseet. Tällöin toteutus olisi seuraavanlainen.
 
-```java 
+```java
 Scanner lukija = new Scanner(System.in);
 
 while (true) {
     System.out.println("Syötä luku ");
-    int luku = Integer.valueOf(lukija.nextLine()); 
-    
+    int luku = Integer.valueOf(lukija.nextLine());
+
     if (luku < 0) {
         System.out.println("Epäkelpo luku");
     } else if (luku == 0) {
@@ -445,29 +442,29 @@ while (true) {
 
 Tarkastellaan edellisiä ohjelmia kommentoituna. Jokaista palaa edeltää kommentit, jotka pyrkivät selittämään mitä ohjelmassa tapahtuu. Alla erillisillä ehtolauseilla toteutettu ohjelma.
 
-```java 
-// Tehtävänä syötteen lukeminen käyttäjältä 
-Scanner lukija = new Scanner(System.in); 
+```java
+// Tehtävänä syötteen lukeminen käyttäjältä
+Scanner lukija = new Scanner(System.in);
 
-// Tehtävänä lohkon toistaminen kunnes lohkosta poistutaan 
-while (true) { 
-    // Tehtävänä luvun syöttämisen kehottaminen 
-    System.out.println("Syötä luku "); 
-    // Tehtävänä luvun lukeminen käyttäjältä 
-    int luku = Integer.valueOf(lukija.nextLine()); 
-    
-    // Tehtävänä vartiointi, estetään epäkelpojen lukujen 
-    // jatkokäsittely 
-    if (luku < 0) { 
-        System.out.println("Epäkelpo luku"); 
+// Tehtävänä lohkon toistaminen kunnes lohkosta poistutaan
+while (true) {
+    // Tehtävänä luvun syöttämisen kehottaminen
+    System.out.println("Syötä luku ");
+    // Tehtävänä luvun lukeminen käyttäjältä
+    int luku = Integer.valueOf(lukija.nextLine());
+
+    // Tehtävänä vartiointi, estetään epäkelpojen lukujen
+    // jatkokäsittely
+    if (luku < 0) {
+        System.out.println("Epäkelpo luku");
         continue;
-    } 
-    
+    }
+
     // Tehtävänä toistolauseesta poistumisen tarkastaminen
     if (luku == 0) {
         break;
-    } 
-    
+    }
+
     // Tehtävänä syötetyn luvun neliön tulostaminen
     System.out.println(luku * luku);
 }
@@ -477,20 +474,20 @@ Huomaat, että yllä jokaisella ehtolauseella on ohjelmassa yksi selkeä tehtäv
 
 Kun kommentoimme ohjelman, joka sisältää ehtolauseet yhdistettynä, kommentit ovat seuraavat.
 
-```java 
-// Tehtävänä syötteen lukeminen käyttäjältä 
-Scanner lukija = new Scanner(System.in); 
+```java
+// Tehtävänä syötteen lukeminen käyttäjältä
+Scanner lukija = new Scanner(System.in);
 
-// Tehtävänä lohkon toistaminen kunnes lohkosta poistutaan 
-while (true) { 
-    // Tehtävänä luvun syöttämisen kehottaminen 
-    System.out.println("Syötä luku "); 
-    // Tehtävänä luvun lukeminen käyttäjältä 
-    int luku = Integer.valueOf(lukija.nextLine()); 
-    
-    // if-else if-else -kokonaisuuden tehtävä? 
-    // Tehtävänä luvun käsittely? 
-    if (luku < 0) { 
+// Tehtävänä lohkon toistaminen kunnes lohkosta poistutaan
+while (true) {
+    // Tehtävänä luvun syöttämisen kehottaminen
+    System.out.println("Syötä luku ");
+    // Tehtävänä luvun lukeminen käyttäjältä
+    int luku = Integer.valueOf(lukija.nextLine());
+
+    // if-else if-else -kokonaisuuden tehtävä?
+    // Tehtävänä luvun käsittely?
+    if (luku < 0) {
         System.out.println("Epäkelpo luku");
     } else if (luku == 0) {
         break;
@@ -500,7 +497,7 @@ while (true) {
 }
 ```
 
-Huomaamme, että `if-else if-else`-rakenteelle on vaikea määritellä yksi selkeä tehtävä. Ohjelmia suunniteltaessa ja toteuttaessa kannattaakin pyrkiä tilanteeseen, missä jokaisella ohjelman osalla on yksi selkeä tehtävä. Tämä teema tulee toistumaan kurssilla. 
+Huomaamme, että `if-else if-else`-rakenteelle on vaikea määritellä yksi selkeä tehtävä. Ohjelmia suunniteltaessa ja toteuttaessa kannattaakin pyrkiä tilanteeseen, missä jokaisella ohjelman osalla on yksi selkeä tehtävä. Tämä teema tulee toistumaan kurssilla.
 
 
 ## Laskentaa toistolauseiden avulla
@@ -511,30 +508,30 @@ Jotta ohjelma voi tulostaa toistolauseen jälkeen tietoja toistolauseen suorituk
 
 Alla olevassa esimerkissä ohjelma laskee syötettyjen ykkösten lukumäärän. Syötteitä luetaan kunnes käyttäjä syöttää luvun 0, jonka jälkeen tulostetaan luettujen ykkösten lukumäärä. Ohjelmassa käytetään muuttujaa `ykkosia` ykkösten lukumäärän ylläpitoon.
 
-```java 
-Scanner lukija = new Scanner(System.in); 
+```java
+Scanner lukija = new Scanner(System.in);
 
-// Tehtävänä ykkösten lukumäärän säilöminen 
-int ykkosia = 0; 
+// Tehtävänä ykkösten lukumäärän säilöminen
+int ykkosia = 0;
 
 // Tehtävänä lukujen lukemisen toistaminen
 while (true) {
-    System.out.println("Syötä luku (0 lopettaa): "); 
-    // Tehtävänä yksittäisen luvun lukeminen 
-    int luku = Integer.valueOf(lukija.nextLine()); 
-    
-    // Tehtävänä toistolauseesta poistuminen kun 
-    // käyttäjä syöttää luvun nolla 
+    System.out.println("Syötä luku (0 lopettaa): ");
+    // Tehtävänä yksittäisen luvun lukeminen
+    int luku = Integer.valueOf(lukija.nextLine());
+
+    // Tehtävänä toistolauseesta poistuminen kun
+    // käyttäjä syöttää luvun nolla
     if (luku == 0) {
         break;
-    } 
-    
-    // Tehtävänä ykkösten lukumäärän kasvattaminen 
+    }
+
+    // Tehtävänä ykkösten lukumäärän kasvattaminen
     // yhdellä kun käyttäjä syöttää luvun yksi
     if (luku == 1) {
         ykkosia = ykkosia + 1;
     }
-} 
+}
 
 // Tehtävänä havainnoitujen ykkösten lukumäärän tulostaminen
 System.out.println("Ykkösiä yhteensä: " + ykkosia);
@@ -542,17 +539,17 @@ System.out.println("Ykkösiä yhteensä: " + ykkosia);
 
 Alla on esimerkki ohjelman toiminnasta.
 
-<sample-output> 
+<sample-output>
 
-Syötä luku 
+Syötä luku
 **1**
-Syötä luku 
+Syötä luku
 **2**
-Syötä luku 
+Syötä luku
 **1**
-Syötä luku 
+Syötä luku
 **-1**
-Syötä luku 
+Syötä luku
 **0**
 Ykkösiä yhteensä: 2
 
@@ -567,7 +564,7 @@ Ohjelman tulostusesimerkki:
 
 <sample-output>
 
-Syötä luku 
+Syötä luku
 **5**
 Syötä luku **22**
 Syötä luku **9**
@@ -594,9 +591,9 @@ Syötä luku
 **22**
 Syötä luku
 **9**
-Syötä luku 
+Syötä luku
 **-2**
-Syötä luku 
+Syötä luku
 **0**
 Negatiivisia lukuja yhteensä 1
 
@@ -613,15 +610,15 @@ Ohjelman tulostusesimerkki:
 
 <sample-output>
 
-Syötä luku 
+Syötä luku
 **5**
-Syötä luku 
+Syötä luku
 **22**
-Syötä luku 
+Syötä luku
 **9**
-Syötä luku 
+Syötä luku
 **-2**
-Syötä luku 
+Syötä luku
 **0**
 Lukujen summa 34
 
@@ -640,15 +637,15 @@ Ohjelman tulostusesimerkki:
 
 <sample-output>
 
-Syötä luku 
+Syötä luku
 **5**
-Syötä luku 
+Syötä luku
 **22**
-Syötä luku 
+Syötä luku
 **9**
-Syötä luku 
+Syötä luku
 **-2**
-Syötä luku 
+Syötä luku
 **0**
 Lukuja yhteensä 4
 Lukujen summa 34
@@ -666,15 +663,15 @@ Ohjelman tulostusesimerkki:
 
 <sample-output>
 
-Syötä luku 
+Syötä luku
 **5**
-Syötä luku 
+Syötä luku
 **22**
-Syötä luku 
+Syötä luku
 **9**
-Syötä luku 
+Syötä luku
 **-2**
-Syötä luku 
+Syötä luku
 **0**
 Lukujen keskiarvo 8.5
 
