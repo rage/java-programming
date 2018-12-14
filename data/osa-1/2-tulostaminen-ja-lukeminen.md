@@ -919,7 +919,8 @@ Minkä niminen tarinassa esiintyvä hahmo on?
 **Ada**
 Mikä hahmon ammatti on?
 **datatieteilijä**
-Tässä tarina: Olipa kerran Ada, joka oli ammatiltaan datatieteilijä.
+Tässä tarina:
+Olipa kerran Ada, joka oli ammatiltaan datatieteilijä.
 Matkatessaan töihin, Ada mietti arkeaan. Kun työnä
 on datatieteilijä, tekemistä riittää välillä hyvin paljon ja
 välillä ei lainkaan. Ehkäpä Ada ei olekaan koko
