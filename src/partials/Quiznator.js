@@ -1,4 +1,11 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const QuiznatorWrapper = styled.div`
+  code {
+    color: black !important;
+  }
+`
 
 export default class Quiznator extends React.Component {
   componentDidMount() {
@@ -18,11 +25,13 @@ export default class Quiznator extends React.Component {
       return <div>There should be quiz here but no quiz id is specified.</div>
     }
     return (
-      <div
-        id={`unloaded-quiznator-${id}`}
-        className="quiznator-plugin"
-        data-quiz-id={id}
-      />
+      <QuiznatorWrapper>
+        <div
+          id={`unloaded-quiznator-${id}`}
+          className="quiznator-plugin"
+          data-quiz-id={id}
+        />
+      </QuiznatorWrapper>
     )
   }
 }
