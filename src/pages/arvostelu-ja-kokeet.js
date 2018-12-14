@@ -18,17 +18,17 @@ const IndexPage = () => (
       <section id="yleistä">
         <h1>Arvostelu ja kokeet</h1>
         <p>
-          Ohjelmoinnin MOOC sisältää Helsingin yliopiston kurssit Ohjelmoinnin perusteet (materiaalin osat 1-7) ja Ohjelmoinnin jatkokurssi (materiaalin osat 8-14). Kummastakin osasta järjestetään erillinen koe, ja kummastakin osasta saa erillisen arvosanan. Ohjelmoinnin MOOCista on kaksi versiota: aikataulutettu kurssi ja aikatauluttamaton kurssi. Näiden arvostelu poikkeaa hieman toisistaan. 
+          Ohjelmoinnin MOOC sisältää Helsingin yliopiston kurssit Ohjelmoinnin perusteet (materiaalin osat 1-7) ja Ohjelmoinnin jatkokurssi (materiaalin osat 8-14). Kummastakin osasta järjestetään verkossa tehtävä koe, ja kummastakin osasta saa erillisen arvosanan. Ohjelmoinnin MOOCista on kaksi versiota: aikataulutettu kurssi ja aikatauluttamaton kurssi. Näiden arvostelu poikkeaa hieman toisistaan. 
         </p>
         <h2>Aikataulutettu kurssi</h2>
         <p>
           Aikataulutetussa kurssissa arvostelu perustuu sekä tehtyihin tehtäviin (50% kokonaispisteistä) että kokeeseen (50% kokonaispisteistä).
         </p>
         <p>
-          Ohjelmoinnin perusteita vastaava koe suoritetaan materiaalin osien 1-7 jälkeen. Arvosanasta puolet muodostuu osien 1-7 tehdyistä tehtävistä ja puolet kokeesta. 
+          Ohjelmoinnin perusteita vastaava koe suoritetaan materiaalin osien 1-7 jälkeen. Arvosanasta puolet muodostuu osien 1-7 tehdyistä tehtävistä ja puolet kokeesta. Osien 1-7 kokeita järjestetään 5.3., 14.4., ja 8.5.
         </p>
         <p>
-          Ohjelmoinnin jatkokurssia vastaava koe suoritetaan materiaalin osien 8-14 jälkeen. Arvosanasta puolet muodostuu osien 8-14 tehdyistä tehtävistä ja puolet kokeesta.
+          Ohjelmoinnin jatkokurssia vastaava koe suoritetaan materiaalin osien 8-14 jälkeen. Arvosanasta puolet muodostuu osien 8-14 tehdyistä tehtävistä ja puolet kokeesta. Osien 8-14 kokeita järjestetään 8.5., 8.6., ja 29.6.
         </p>
         <p>
           Täydet tehtäväpisteet kustakin osasta saa tekemällä osan tehtävistä vähintään 90%, puolet tekemällä noin 45% jne.
@@ -41,7 +41,7 @@ const IndexPage = () => (
           Aikatauluttamattomassa kurssiversiossa arvostelu perustuu täysin kokeeseen. Kokeeseen saa osallistua kun on tehnyt jokaisen osan tehtävistä vähintään 90%. 
         </p>
         <p>
-          Kurssin aikatauluttamaton versio julkaistaan aikataulutetun version ensimmäisen määräajan jälkeen (21.1.2019).
+          Kurssin aikatauluttamaton versio julkaistaan aikataulutetun version ensimmäisen määräajan jälkeen (21.1.2019). Aikatauluttamattoman kurssin koeaikataulu julkaistaan myöhemmin.
         </p>
         <h2>Arvosanan muodostuminen</h2>
         <p>
