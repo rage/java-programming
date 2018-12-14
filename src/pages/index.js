@@ -4,6 +4,7 @@ import Layout from '../templates/Layout'
 import Banner from '../components/Banner'
 import MailinglistForm from '../components/MailinglistForm'
 import GatsbyLink from 'gatsby-link'
+import { Link } from 'gatsby'
 import { withLoginStateContext } from '../contexes/LoginStateContext'
 
 import {
@@ -44,7 +45,10 @@ const IndexPage = () => (
           opinto-oikeudesta saat{' '}
           <GatsbyLink to="/opinto-oikeus">täältä</GatsbyLink>.
         </p>
-        <MailinglistForm />
+        <p>
+          <b>Kurssi on käynnissä!</b> Luo tunnus tai kirjaudu sisään, jonka
+          jälkeen valitse <Link to="/osa-1">Osa 1</Link> navigaatiosta.
+        </p>
       </section>
 
       <section id="kurssin-kaksi-versiota">

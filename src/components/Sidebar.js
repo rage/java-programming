@@ -155,7 +155,7 @@ class Sidebar extends React.Component {
             color="primary"
             onClick={this.toggleMobileMenu}
           >
-            {this.state.mobileMenuOpen ? 'Sulje valikko' : 'Vaihda sivua'}
+            {this.state.mobileMenuOpen ? 'Sulje valikko' : 'Avaa valikko'}
           </Button>
         </MenuExpanderWrapper>
         <SidebarContainer mobileMenuOpen={this.state.mobileMenuOpen}>

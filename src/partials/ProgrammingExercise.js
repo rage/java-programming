@@ -94,6 +94,10 @@ export default class ProgrammingExercise extends React.Component {
   }
 
   async componentDidMount() {
+    await this.fetch()
+  }
+
+  fetch = async () => {
     if (!this.props.tmcname) {
       return
     }
@@ -127,6 +131,15 @@ export default class ProgrammingExercise extends React.Component {
 
   onModelSolutionModalClose = () => {
     this.setState({ modelSolutionModalOpen: false })
+  }
+
+  onUpdate = async () => {
+    this.setState({
+      exerciseDetails: undefined,
+      modelSolutionModalOpen: false,
+      modelSolution: undefined,
+    })
+    await this.fetch()
   }
 
   render() {
@@ -164,33 +177,53 @@ export default class ProgrammingExercise extends React.Component {
             )}
           </div>
 
-          {this.state.exerciseDetails && (
+          {this.context.loggedIn && this.state.exerciseDetails && (
             <p>
-              Linkki tehtävään Test My Code palautusympäristössä:{' '}
-              <a
-                href={`https://tmc.mooc.fi/exercises/${
+              <p>
+                Linkki tehtävään Test My Code palautusympäristössä:{' '}
+                <a
+                  href={`https://tmc.mooc.fi/exercises/${
+                    this.state.exerciseDetails.id
+                  }`}
+                  rel="noopener noreferrer"
+                >{`https://tmc.mooc.fi/exercises/${
                   this.state.exerciseDetails.id
-                }`}
-                rel="noopener noreferrer"
-              >{`https://tmc.mooc.fi/exercises/${
-                this.state.exerciseDetails.id
-              }`}</a>
+                }`}</a>
+              </p>
               {tokenThreshHold && (
                 <Fragment>
                   <p>
                     Joka kerta kun olet saanut <i>{tokenThreshHold}</i>:ta
-                    tehtävästä täydet pisteet, saat yhden mallivastaustokenin.
-                    Mallivastaustokenilla voi katsoa tehtävän mallivastauksen
-                    ennen kuin olet saanut sen ratkaistua. Olet käyttänyt{' '}
-                    {totalTokens}/{availableTokens} tokenia.
+                    tehtävää tehtyä, saat kolikon. Kolikoilla voi ostaa
+                    tehtävien vastauksia ja lunastaa itsesi mahdollisesta
+                    jumista.{' '}
+                    {availableTokens > 0 ? (
+                      <span>
+                        {' '}
+                        Käytössäsi on tällä hetkellä {availableTokens} kolikkoa.
+                      </span>
+                    ) : (
+                      <span>Sinulla ei ole vielä yhtään kolikkoa.</span>
+                    )}
                   </p>
-                  <Button
-                    onClick={this.onShowModelSolution}
-                    variant="outlined"
-                    color="secondary"
-                  >
-                    Katso mallivastaus (kuluttaa tokenin)
+                  <p>
+                    Pysyt katsomaan mallivastauksen ilman kolikkoja Test My Code
+                    -palvelusta sen jälkeen kun olet saanut tehtävän oikein.
+                  </p>
+                  {availableTokens > 0 && (
+                    <Button
+                      onClick={this.onShowModelSolution}
+                      variant="outlined"
+                      color="secondary"
+                    >
+                      Katso mallivastaus (kuluttaa tokenin)
+                    </Button>
+                  )}
+
+                  <Button variant="outlined" onClick={this.onUpdate}>
+                    Päivitä
                   </Button>
+
                   <Modal
                     open={this.state.modelSolutionModalOpen}
                     onClose={this.onModelSolutionModalClose}

@@ -23,7 +23,7 @@ export default class PleaseLogin extends React.Component {
       <PleaseLoginWrapper>
         <CardContent>
           <Wrapper>
-            Et ole kirjautunut sisään. Pääset kirjautumaan materiaaliin tästä:
+            Et ole kirjautunut sisään. Kaikki materiaalin osat eivät toimi ilman sisäänkirjautumista. Pääset kirjautumaan materiaaliin tästä:
           </Wrapper>
           <div>
             <LoginControls />

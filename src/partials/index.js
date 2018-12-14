@@ -28,6 +28,7 @@ import SampleOutput from './SampleOutput'
 import Youtube from './Youtube'
 import Quiznator from './Quiznator'
 import PleaseLogin from './PleaseLogin'
+import FloatImageRight from './FloatImageRight'
 
 import { Table, TableBody, TableCell, TableHead, TableRow, TableTh } from './Table'
 
@@ -38,6 +39,7 @@ const mapping = {
   'text-box': TextBox,
   'sample-output': SampleOutput,
   'please-login': PleaseLogin,
+  'float-image-right': FloatImageRight,
   youtube: Youtube,
   quiznator: Quiznator,
   table: Table,
