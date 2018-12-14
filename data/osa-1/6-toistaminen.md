@@ -544,11 +544,16 @@ Alla on esimerkki ohjelman toiminnasta.
 
 <sample-output> 
 
-Syötä luku **1**
-Syötä luku **2**
-Syötä luku **1**
-Syötä luku **-1**
-Syötä luku **0**
+Syötä luku 
+**1**
+Syötä luku 
+**2**
+Syötä luku 
+**1**
+Syötä luku 
+**-1**
+Syötä luku 
+**0**
 Ykkösiä yhteensä: 2
 
 </sample-output>
@@ -562,7 +567,8 @@ Ohjelman tulostusesimerkki:
 
 <sample-output>
 
-Syötä luku **5**
+Syötä luku 
+**5**
 Syötä luku **22**
 Syötä luku **9**
 Syötä luku **-2**

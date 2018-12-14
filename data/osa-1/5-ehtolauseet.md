@@ -78,13 +78,15 @@ Tee ohjelma, joka kysyy käyttäjältä kokonaisluvun ja tulostaa merkkijonon "Y
 
 <sample-output> 
 
-Kerro nopeus: **15**
+Kerro nopeus: 
+**15**
 
 </sample-output>
 
 <sample-output> 
 
-Kerro nopeus: **135**
+Kerro nopeus: 
+**135**
 Ylinopeussakko! 
 
 </sample-output>
@@ -127,18 +129,21 @@ Tee ohjelma, joka kysyy käyttäjältä kokonaisluvun ja tulostaa merkkijonon "O
 
 <sample-output>
 
-Anna luku: **1983**
+Anna luku: 
+**1983**
 
 </sample-output>
 
 <sample-output>
 
-Anna luku: **1984**
+Anna luku: 
+**1984**
 Orwell
 
 </sample-output>
 
 </programming-exercise>
+
 
 <programming-exercise name="Wanha" tmcname='osa01-Osa01_27.Wanha'>
 
@@ -146,13 +151,15 @@ Tee ohjelma, joka kysyy käyttäjältä vuosilukua. Jos käyttäjä syöttää l
 
 <sample-output> 
 
-Anna vuosiluku: **2017**
+Anna vuosiluku: 
+**2017**
 
 </sample-output>
 
 <sample-output>
 
-Anna vuosiluku: **2013**
+Anna vuosiluku: 
+**2013**
 Wanha!
 
 </sample-output>
@@ -191,14 +198,16 @@ Tee ohjelma, joka kysyy käyttäjältä kokonaisluvun ja kertoo, onko se positii
 
 <sample-output>
 
-Anna luku: **5**
+Anna luku: 
+**5**
 Luku on positiivinen.
 
 </sample-output>
 
 <sample-output>
 
-Anna luku: **-2**
+Anna luku: 
+**-2**
 Luku ei ole positiivinen.
 
 </sample-output>
@@ -212,14 +221,16 @@ Tee ohjelma, joka kysyy käyttäjän ikää ja kertoo, onko tämä täysi-ikäin
 
 <sample-output>
 
-Kuinka vanha olet? **12**
+Kuinka vanha olet? 
+**12**
 Et ole täysi-ikäinen!
 
 </sample-output>
 
 <sample-output> 
 
-Kuinka vanha olet? **32**
+Kuinka vanha olet? 
+**32**
 Olet täysi-ikäinen!
 
 </sample-output>
@@ -264,16 +275,20 @@ Esimerkkitulostuksia:
 
 <sample-output>
 
-Anna ensimmäinen luku: **5**
-Anna toinen luku: **3** 
+Anna ensimmäinen luku: 
+**5**
+Anna toinen luku: 
+**3** 
 Suurempi luku: 5
 
 </sample-output>
 
 <sample-output>
 
-Anna ensimmäinen luku: **5**
-Anna toinen luku: **8** 
+Anna ensimmäinen luku: 
+**5**
+Anna toinen luku: 
+**8** 
 Suurempi luku: 8
 
 </sample-output>
@@ -335,28 +350,32 @@ Esimerkkitulostuksia:
 
 <sample-output>
 
-Anna pisteet [0-100]: **37**
+Anna pisteet [0-100]: 
+**37**
 Arvosana: hylätty
 
 </sample-output>
 
 <sample-output>
 
-Anna pisteet [0-100]: **76**
+Anna pisteet [0-100]: 
+**76**
 Arvosana: 3
 
 </sample-output>
 
 <sample-output>
 
-Anna pisteet [0-100]: **95** 
+Anna pisteet [0-100]: 
+**95** 
 Arvosana: 5
 
 </sample-output>
 
 <sample-output>
 
-Anna pisteet [0-100]: **-3** 
+Anna pisteet [0-100]: 
+**-3** 
 Arvosana: mahdotonta! 
 
 </sample-output>
@@ -476,14 +495,16 @@ Tee ohjelma, joka kysyy käyttäjältä luvun ja ilmoittaa, onko syötetty luku 
 
 <sample-output> 
 
-Anna luku: **2**
+Anna luku: 
+**2**
 Luku 2 on parillinen.
 
 </sample-output>
 
 <sample-output>
 
-Anna luku: **7**
+Anna luku: 
+**7**
 Luku 7 on pariton.
 
 </sample-output>
