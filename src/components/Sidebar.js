@@ -88,6 +88,7 @@ var content2 = [
     title: 'Mahdollisuus opinto-oikeuteen',
     path: '/opinto-oikeus',
   },
+  { title: 'Tukiväylät', path: '/tukivaylat' },
   {
     title: 'Opettajille ja opinto-ohjaajille',
     path: '/opettajille',
