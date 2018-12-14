@@ -258,7 +258,7 @@ Tulostamiseen on kaksi lausetta:
 Tulostettavan tekstin osana voi olla erikoismerkkejä, joista tärkein on rivinvaihto. Rivinvaihto ilmaistaan kenoviivalla ja n-merkillä seuraavasti: `\n`. Erikoismerkkejä on [muitakin](http://en.wikipedia.org/wiki/Escape_character 'Escape character - Wikipedia, the free encyclopedia').
 
 ```java
-System.out.println("Ensimmäinen\\nToinen\\nKolmas");
+System.out.println("Ensimmäinen\nToinen\nKolmas");
 ```
 
 Yllä oleva lause tulostaa seuraavaa:
