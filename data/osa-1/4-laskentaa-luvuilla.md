@@ -71,6 +71,7 @@ Kuinka monen vuorokauden sekunnit tulostetaan?
  
 </programming-exercise>
 
+
 <quiznator id="5c12b7f263de8e5db0cf8b8f"></quiznator>
  
 
@@ -228,6 +229,7 @@ Lukujen summa on 4
 
 </programming-exercise>
 
+
 Edellistä tietoa soveltamalla voimme luoda lausekkeen, joka sisältää tekstiä ja muuttujan, ja joka evaluoidaan tulostuksen yhteydessä:
 
 ```java 
@@ -310,6 +312,7 @@ Syötä toinen luku!
 </sample-output>
 
 </programming-exercise>
+
 
 Kun olet saanut edellisen tehtävän toteutettua, kokeile mikä on suurin mahdollinen kertolasku minkä saat laskettua. Huomaamasi ilmiön taustalla on se, että kokonaislukumuuttujan arvo voi olla korkeintaan 2<sup>31</sup>\-1 eli 2147483647. Tämä johtuu siitä, että kokonaislukumuuttujat esitetään tietokoneen muistissa 32 bitin avulla. Tähän tutustutaan tarkemmin muunmuassa kurssilla Tietokoneen toiminta.
 

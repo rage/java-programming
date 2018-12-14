@@ -525,6 +525,7 @@ Totta vaiko ei? true
 
 </programming-exercise>
 
+
 ### Yhteenveto
 
 Alla vielä yhteenveto:
@@ -561,7 +562,6 @@ Syötä liukuluku!
 **4.2** 
 Syötä totuusarvo! 
 **true** 
-
 Syötit merkkijonon heippa 
 Syötit kokonaisluvun 11 
 Syötit liukuluvun 4.2 

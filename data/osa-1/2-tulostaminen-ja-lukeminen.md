@@ -101,6 +101,7 @@ Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
 public class Hiekkalaatikko {
     public static void main(String[] args) {
         // Kirjoita ohjelmasi tähän alle
+
     }
 }
 ```
@@ -117,6 +118,7 @@ Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
 public class Nimi {
     public static void main(String[] args) {
         // Kirjoita ohjelmasi tähän alle
+
     }
 }
 ```
@@ -172,6 +174,7 @@ Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
 ```java
 public class OlipaKerran {
     public static void main(String[] args) {
+        // Toteuta ohjelmasi tänne
 
     }
 }
@@ -181,7 +184,8 @@ Muokkaa ohjelmaa siten, että ohjelman suoritus tulostaa seuraavanlaisen tekstin
 
 <sample-output>
 
-Olipa kerran... on ranskalainen opetusanimaatiosarjojen kokoelma. Kokoelmaan kuuluu seitsemän erillistä sarjaa, 
+Olipa kerran... on ranskalainen opetusanimaatiosarjojen kokoelma.
+Kokoelmaan kuuluu seitsemän erillistä sarjaa, 
 jotka käsittelevät eri tiedonaloja.
 
 </sample-output>
@@ -223,7 +227,10 @@ Muokkaa ohjelmaa siten, että ohjelman suoritus tulostaa seuraavanlaisen tekstin
 
 <sample-output>
 
-Olipa kerran maa valmistui vuonna 2008. Sarja käsittelee luontoympäristön suojelemista ja varoittaa maailmanlaajuisesta ilmastonlämpenemisestä, kasvihuoneilmiöstä, saasteista ja niin edelleen.
+Olipa kerran maa valmistui vuonna 2008. Sarja käsittelee
+luontoympäristön suojelemista ja varoittaa maailmanlaajuisesta
+ilmastonlämpenemisestä, kasvihuoneilmiöstä, saasteista ja
+niin edelleen.
 
 </sample-output>
 
@@ -441,6 +448,7 @@ Passi ja hammasharja
 </sample-output>
 
 </programming-exercise>
+
 
 Tulostettavan merkkijonon voi koostaa useammista merkkijonoista `+`\-merkin avulla. Esimerkiksi alla oleva ohjelma tulostaa viestin "Hei maailma!" yhdelle riville.
 
@@ -749,6 +757,7 @@ Hei Lilja
 </sample-output>
 
 </programming-exercise>
+
 
 Ohjelma voi kysyä käyttäjältä myös montaa merkkijonoa. Tämä toimii kysymällä jokaista haluttua merkkijonoa erikseen `nextLine()`\-komennolla.
 

@@ -206,20 +206,29 @@ Huomaa, että alla olevassa esimerkissä on käytetty komentoa `System.out.print
 
 <sample-output> 
 
-Poistutaanko? **ei**
-Poistutaanko? **eeei**
-Poistutaanko? **nej**
-Poistutaanko? **kyllä**
+Poistutaanko?
+**ei**
+Poistutaanko? 
+**eeei**
+Poistutaanko? 
+**nej**
+Poistutaanko? 
+**kyllä**
 
 </sample-output>
 
 <sample-output>
 
-Poistutaanko? **joo**
-Poistutaanko? **kyl**
-Poistutaanko? **kylä**
-Poistutaanko? **yes**
-Poistutaanko? **kyllä**
+Poistutaanko? 
+**joo**
+Poistutaanko? 
+**kyl**
+Poistutaanko? 
+**kylä**
+Poistutaanko? 
+**yes**
+Poistutaanko? 
+**kyllä**
 
 </sample-output>
 
@@ -266,11 +275,16 @@ Kirjoita edellä olevaa esimerkkiä mukaillen ohjelma, joka kysyy käyttäjält�
 
 <sample-output>
 
-Syötä luku **5**
-Syötä luku **744**
-Syötä luku **22**
-Syötä luku **-1**
-Syötä luku **4**
+Syötä luku
+**5**
+Syötä luku
+**744**
+Syötä luku
+**22**
+Syötä luku
+**-1**
+Syötä luku
+**4**
 
 </sample-output>
 
@@ -329,15 +343,20 @@ Kirjoita ohjelma, joka kysyy käyttäjältä lukuja. Mikäli luku on negatiivine
 
 <sample-output>
 
-Syötä luku **5**
+Syötä luku
+**5**
 25 
-Syötä luku **4** 
+Syötä luku
+**4** 
 16 
-Syötä luku **-3** 
+Syötä luku
+**-3** 
 Epäkelpo luku 
-Syötä luku **1**
+Syötä luku
+**1**
 1 
-Syötä luku **0**
+Syötä luku
+**0**
 
 </sample-output>
 
@@ -349,7 +368,7 @@ Edellisessä tehtävässä toteutettiin ohjelma, joka lukee käyttäjältä luku
 Scanner lukija = new Scanner(System.in);
 
 while (true) {
-    System.out.print("Syötä luku");
+    System.out.println("Syötä luku");
     int luku = Integer.valueOf(lukija.nextLine());
     
     if (luku == 0) {
@@ -369,7 +388,7 @@ Ohjelman voisi toteuttaa myös muotoilemalla ehtolauseet toisella tavalla. Alla 
 Scanner lukija = new Scanner(System.in); 
 
 while (true) {
-    System.out.print("Syötä luku"); 
+    System.out.println("Syötä luku"); 
     int luku = Integer.valueOf(lukija.nextLine());
     
     if (luku == 0) {
@@ -389,7 +408,7 @@ Tarkastellaan edellisten ohjelmien selkeyttä toisen esimerkin kautta. Alla olev
 Scanner lukija = new Scanner(System.in);
 
 while (true) {
-    System.out.print("Syötä luku ");
+    System.out.println("Syötä luku ");
     int luku = Integer.valueOf(lukija.nextLine());
 
     if (luku < 0) {
@@ -411,7 +430,7 @@ Myös tämän ohjelman voi toteuttaa yhdistämällä ehtolauseet. Tällöin tote
 Scanner lukija = new Scanner(System.in);
 
 while (true) {
-    System.out.print("Syötä luku ");
+    System.out.println("Syötä luku ");
     int luku = Integer.valueOf(lukija.nextLine()); 
     
     if (luku < 0) {
@@ -433,7 +452,7 @@ Scanner lukija = new Scanner(System.in);
 // Tehtävänä lohkon toistaminen kunnes lohkosta poistutaan 
 while (true) { 
     // Tehtävänä luvun syöttämisen kehottaminen 
-    System.out.print("Syötä luku "); 
+    System.out.println("Syötä luku "); 
     // Tehtävänä luvun lukeminen käyttäjältä 
     int luku = Integer.valueOf(lukija.nextLine()); 
     
@@ -465,7 +484,7 @@ Scanner lukija = new Scanner(System.in);
 // Tehtävänä lohkon toistaminen kunnes lohkosta poistutaan 
 while (true) { 
     // Tehtävänä luvun syöttämisen kehottaminen 
-    System.out.print("Syötä luku "); 
+    System.out.println("Syötä luku "); 
     // Tehtävänä luvun lukeminen käyttäjältä 
     int luku = Integer.valueOf(lukija.nextLine()); 
     
@@ -500,7 +519,7 @@ int ykkosia = 0;
 
 // Tehtävänä lukujen lukemisen toistaminen
 while (true) {
-    System.out.print("Syötä luku (0 lopettaa): "); 
+    System.out.println("Syötä luku (0 lopettaa): "); 
     // Tehtävänä yksittäisen luvun lukeminen 
     int luku = Integer.valueOf(lukija.nextLine()); 
     
@@ -563,11 +582,16 @@ Ohjelman tulostusesimerkki:
 
 <sample-output>
 
-Syötä luku **5**
-Syötä luku **22**
-Syötä luku **9**
-Syötä luku **-2**
-Syötä luku **0**
+Syötä luku
+**5**
+Syötä luku
+**22**
+Syötä luku
+**9**
+Syötä luku 
+**-2**
+Syötä luku 
+**0**
 Negatiivisia lukuja yhteensä 1
 
 </sample-output>
@@ -583,11 +607,16 @@ Ohjelman tulostusesimerkki:
 
 <sample-output>
 
-Syötä luku **5**
-Syötä luku **22**
-Syötä luku **9**
-Syötä luku **-2**
-Syötä luku **0**
+Syötä luku 
+**5**
+Syötä luku 
+**22**
+Syötä luku 
+**9**
+Syötä luku 
+**-2**
+Syötä luku 
+**0**
 Lukujen summa 34
 
 </sample-output>
@@ -605,11 +634,16 @@ Ohjelman tulostusesimerkki:
 
 <sample-output>
 
-Syötä luku **5**
-Syötä luku **22**
-Syötä luku **9**
-Syötä luku **-2**
-Syötä luku **0**
+Syötä luku 
+**5**
+Syötä luku 
+**22**
+Syötä luku 
+**9**
+Syötä luku 
+**-2**
+Syötä luku 
+**0**
 Lukuja yhteensä 4
 Lukujen summa 34
 
@@ -626,15 +660,19 @@ Ohjelman tulostusesimerkki:
 
 <sample-output>
 
-Syötä luku **5**
-Syötä luku **22**
-Syötä luku **9**
-Syötä luku **-2**
-Syötä luku **0**
+Syötä luku 
+**5**
+Syötä luku 
+**22**
+Syötä luku 
+**9**
+Syötä luku 
+**-2**
+Syötä luku 
+**0**
 Lukujen keskiarvo 8.5
 
 </sample-output>
-
 
 </programming-exercise>
 
