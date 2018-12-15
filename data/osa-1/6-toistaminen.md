@@ -199,8 +199,6 @@ Valmista!
 
 Kirjoita edellä olevaa toistolause-esimerkkiä mukaillen ohjelma, joka kysyy käyttäjältä "Poistutaanko?" kunnes käyttäjä syöttää merkkijonon "kyllä".
 
-Huomaa, että alla olevassa esimerkissä on käytetty komentoa `System.out.print` syötteen pyytämisen kehotuksessa komennon `System.out.println` sijaan.
-
 <sample-output>
 
 Poistutaanko?
