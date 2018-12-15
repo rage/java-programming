@@ -69,7 +69,8 @@ while (true) {
     }
 
     System.out.println("Syötä luku");
-    summa = summa + Integer.valueOf(lukija.nextLine()); luettujaLukuja = luettujaLukuja + 1;
+    summa = summa + Integer.valueOf(lukija.nextLine());
+    luettujaLukuja = luettujaLukuja + 1;
 }
 System.out.println("Lukujen summa on " + summa);
 ```
