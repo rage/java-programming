@@ -38,11 +38,13 @@ class Layout extends React.Component {
         this.setQuiznatorUser(user)
       }
       if (canDoResearch()) {
-        this.removePheromones = Pheromones.init({
-          apiUrl: 'https://data.pheromones.io/',
-          username: user.username,
-          submitAfter: 20,
-        })
+        setTimeout(() => {
+          this.removePheromones = Pheromones.init({
+            apiUrl: 'https://data.pheromones.io/',
+            username: user.username,
+            submitAfter: 20,
+          })
+        }, 1000)
       }
     }
   }
