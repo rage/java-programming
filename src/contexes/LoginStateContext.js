@@ -15,6 +15,11 @@ export class LoginStateContextProvider extends React.Component {
     onLoginStateChanged(loggedIn => {
       this.setState({ loggedIn })
     })
+    setTimeout(() => {
+      this.setState({
+        loggedIn: loggedIn(),
+      })
+    }, 5000)
   }
 
   render() {
