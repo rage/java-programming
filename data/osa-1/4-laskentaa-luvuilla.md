@@ -470,7 +470,6 @@ Syötettyjen lukujen keskiarvo on 4.333333333333333
 </sample-output>
 
 
-
 <sample-output>
 
 Syötä ensimmäinen luku!
