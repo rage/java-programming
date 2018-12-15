@@ -215,7 +215,6 @@ Lukujen summa on 14
 
 </sample-output>
 
-
 <sample-output>
 
 Syötä ensimmäinen luku!
@@ -269,7 +268,6 @@ Syötä toinen luku!
 5 + 4 = 9
 
 </sample-output>
-
 
 <sample-output>
 
@@ -468,7 +466,6 @@ Syötä kolmas luku!
 Syötettyjen lukujen keskiarvo on 4.333333333333333
 
 </sample-output>
-
 
 <sample-output>
 
