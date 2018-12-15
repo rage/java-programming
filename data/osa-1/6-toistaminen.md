@@ -564,10 +564,14 @@ Ohjelman tulostusesimerkki:
 
 Syötä luku
 **5**
-Syötä luku **22**
-Syötä luku **9**
-Syötä luku **-2**
-Syötä luku **0**
+Syötä luku 
+**22**
+Syötä luku 
+**9**
+Syötä luku 
+**-2**
+Syötä luku 
+**0**
 Lukuja yhteensä 4
 
 </sample-output>
@@ -575,7 +579,7 @@ Lukuja yhteensä 4
 </programming-exercise>
 
 
-<programming-exercise name="Negatiivisten lukujen lukumäärä" tmcname='osa01-Osa01_39.NegatiivistenLukujenLukumaara'>
+<programming-exercise name="Negatiivisten lukujen lukumäärä" tmcname='osa01-Osa01_39.NegatiivistenLukujenMaara'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötteessä olleiden negatiivisten lukujen lukumäärän. Syötteen loppumisesta kertovaa nollaa ei tule laskea osaksi lukujen lukumäärää.
 
