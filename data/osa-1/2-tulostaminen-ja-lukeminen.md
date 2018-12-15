@@ -135,6 +135,10 @@ Kun olet tehnyt tehtävän ja huomaat, että ohjelma tulostaa halutun merkkijono
 
 </programming-exercise>
 
+Voit katsoa esimerkin miten Ada Lovelace -tehtävä voidaan ratkaista alla olevalta videolta.
+
+<youtube id="-DzOKI6iH5w"></youtube>
+
 Tehtävänannoissa olevat toiveet tulostusmuodosta ovat tarkkoja. Jos tehtävänannossa toivotaan esimerkiksi että ohjelma tulostaa sulun toisen rivin ensimmäiseksi merkiksi, ei sulkua saa jättää tulostamatta.
 
 Ohjelmia rakennetaan komento komennolta, missä jokainen komento tulee uudelle rivilleen. Alla olevassa esimerkissä komento `System.out.println` esiintyy kahdesti, joka tarkoittaa sitä että ohjelmassa suoritetaan kaksi tulostuskomentoa.
