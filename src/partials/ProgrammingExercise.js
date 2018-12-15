@@ -160,7 +160,7 @@ export default class ProgrammingExercise extends React.Component {
         </Header>
         <Body>
           <div>
-            <div style={{ display: this.context.loggedIn ? 'block' : 'none' }}>
+            <div>
               {children}
               {this.state.exerciseDetails === null && (
                 <div>Error loading exercise details</div>
