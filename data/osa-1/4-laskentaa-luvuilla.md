@@ -582,6 +582,7 @@ rivi 8: tulostetaan arvo 23
 rivi 9: tulostetaan muuttuja kolmas
 rivi 9: kopioidaan muuttujan kolmas arvo tulostettavaksi, muuttujan kolmas arvo on 28
 rivi 9: tulostetaan arvo 28
+
 </sample-output>
 
 Alla edellinen ohjelma askeleittain visualisoituna. Käytössä oleva askeleittainen visualisointi käsittelee ohjelmakoodia riveittäin -- pohdi askeleiden kohdalla miten ohjelma päätyy sen tulostamaan lopputulokseen.
