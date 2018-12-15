@@ -91,9 +91,11 @@ export default class ProgrammingExercise extends React.Component {
     exerciseDetails: undefined,
     modelSolutionModalOpen: false,
     modelSolution: undefined,
+    render: false
   }
 
   async componentDidMount() {
+    this.setState({ render: true })
     await this.fetch()
   }
 
@@ -150,6 +152,10 @@ export default class ProgrammingExercise extends React.Component {
       ?.total_model_solution_tokens
     const availableTokens = this.state?.exerciseDetails?.course
       ?.available_model_solution_tokens
+
+    if (!this.state.render) {
+      return <div>Loading</div>
+    }
 
     return (
       <Wrapper>
