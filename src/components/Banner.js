@@ -34,6 +34,6 @@ const Banner = styled.div`
 export default () => (
   <Banner>
     <h1>Ohjelmoinnin MOOC 2019</h1>
-    <h2>ALKAA 14.12.2018</h2>
+    <h2>KURSSI KÄYNNISSÄ</h2>
   </Banner>
 )
