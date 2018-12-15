@@ -12,13 +12,13 @@ title: "Laskentaa luvuilla"
 
 Laskuoperaatiot ovat tuttuja ja suoraviivaisia: yhteenlasku `+`, erotus `-`, kertolasku `*` ja jakolasku `/`. Laskentajärjestys on myös tuttu: laskenta tehdään vasemmalta oikealle sulut huomioon ottaen. Kuitenkin `*` ja `/` lasketaan ennen `+` ja `-` operaatioita, samoin kuin perus- tai kansakoulumatematiikassa on tullut tutuksi.
 
-```java 
-int eka = 2; 
-System.out.println(eka); // tulostaa 2 
-int toka = 4; 
-System.out.println(toka); // tulostaa 4 
+```java
+int eka = 2;
+System.out.println(eka); // tulostaa 2
+int toka = 4;
+System.out.println(toka); // tulostaa 4
 
-int summa = eka + toka; // muuttujaan summa asetetaan muuttujien eka ja toka arvojen summa 
+int summa = eka + toka; // muuttujaan summa asetetaan muuttujien eka ja toka arvojen summa
 System.out.println(summa); // tulostaa 6
 ```
 
@@ -26,26 +26,26 @@ System.out.println(summa); // tulostaa 6
 
 Laskujärjestykseen voi vaikuttaa sulkujen avulla. Sulkujen sisällä olevat laskuoperaatiot suoritetaan ennen niiden ulkopuolella olevia laskuoperaatioita.
 
-```java 
-int laskuSuluilla = (1 + 1) + 3 * (2 + 5); 
-System.out.println(laskuSuluilla); // tulostaa 23 
+```java
+int laskuSuluilla = (1 + 1) + 3 * (2 + 5);
+System.out.println(laskuSuluilla); // tulostaa 23
 
-int laskuSuluitta = 1 + 1 + 3 * 2 + 5; 
+int laskuSuluitta = 1 + 1 + 3 * 2 + 5;
 System.out.println(laskuSuluitta); // tulostaa 13
 ```
 
 Yllä olevan esimerkin voi jakaa myös osiin.
 
-```java 
-int laskuSuluilla = (1 + 1); 
-System.out.println(laskuSuluilla); // tulostaa 2 
+```java
+int laskuSuluilla = (1 + 1);
+System.out.println(laskuSuluilla); // tulostaa 2
 laskuSuluilla = laskuSuluilla + 3 * (2 + 5);
 System.out.println(laskuSuluilla); // tulostaa 23
 
-int laskuSuluitta = 1 + 1; 
-laskuSuluitta = laskuSuluitta + 3 * 2; 
+int laskuSuluitta = 1 + 1;
+laskuSuluitta = laskuSuluitta + 3 * 2;
 laskuSuluitta = laskuSuluitta + 5;
-System.out.println(laskuSuluitta); // tulostaa 13 
+System.out.println(laskuSuluitta); // tulostaa 13
 ```
 
 <programming-exercise name="Sekunnit vuorokaudessa" tmcname='osa01-Osa01_17.SekunnitVuorokaudessa'>
@@ -54,32 +54,33 @@ Toteuta tehtäväpohjaan ohjelma, joka kysyy käyttäjältä vuorokausien lukum�
 
 Esimerkkitulostuksia:
 
-<sample-output> 
+<sample-output>
 
-Kuinka monen vuorokauden sekunnit tulostetaan? 
-**3** 
+Kuinka monen vuorokauden sekunnit tulostetaan?
+**3**
 259200
 
-</sample-output> 
+</sample-output>
 
 <sample-output>
-Kuinka monen vuorokauden sekunnit tulostetaan? 
-**7** 
+
+Kuinka monen vuorokauden sekunnit tulostetaan?
+**7**
 604800
 
 </sample-output>
- 
+
 </programming-exercise>
 
 
 <quiznator id="5c12b7f263de8e5db0cf8b8f"></quiznator>
- 
+
 
 <text-box variant='hint' name='Lauseke ja lause'>
 
 Lauseke (expression) on arvojen yhdistelmä, joka muuntuu arvoksi laskuoperaation tai evaluaation yhteydessä. Alla oleva lause sisältää lausekkeen `1 + 1 + 3 * 2 + 5`, joka evaluoidaan ennen arvon asetusta muuttujaan.
 
-```java 
+```java
 int laskuSuluitta = 1 + 1 + 3 * 2 + 5;
 ```
 
@@ -90,24 +91,24 @@ Lausekkeen evaluaatio tapahtuu aina ennen muuttujan arvon asetusta, eli yllä la
 
 Lausekkeen evaluointi tapahtuu ohjelmakoodissa siinä kohtaa, missä lauseke on. Evaluointi onnistuu siis esimerkiksi myös tulostuslauseen yhteydessä, jos lauseketta käytetään tulostuslauseen parametrin arvon laskemisessa.
 
-```java 
-int eka = 2; 
-int toka = 4; 
+```java
+int eka = 2;
+int toka = 4;
 
-System.out.println(eka + toka); // tulostaa 6 
-System.out.println(2 + toka - eka - toka); // tulostaa 0 
+System.out.println(eka + toka); // tulostaa 6
+System.out.println(2 + toka - eka - toka); // tulostaa 0
 ```
 
 Lauseke ei muuta muuttujassa olevaa arvoa, ellei lausekkeen lopputulosta aseteta muuttujan arvoksi tai anneta parametrina esimerkiksi tulostukselle.
 
-```java 
-int eka = 2; 
-int toka = 4; 
+```java
+int eka = 2;
+int toka = 4;
 
-// alla oleva lauseke ei edes toimi, sillä lauseketta 
-// ei aseteta minkään muuttujan arvoksi tai anneta parametrina 
-// tulostuslauseelle 
-eka + toka; 
+// alla oleva lauseke ei edes toimi, sillä lauseketta
+// ei aseteta minkään muuttujan arvoksi tai anneta parametrina
+// tulostuslauseelle
+eka + toka;
 ```
 
 <quiznator id="5c12b7f263de8e5db0cf8b90"></quiznator>
@@ -117,23 +118,23 @@ eka + toka;
 
 Muuttujan arvon voi tulostaa komennolla `System.out.println`. Tulostettavaan hipsuilla merkittyyn merkkijonoon, esim. "Pituus ", voidaan lisätä muuta tulostettavaa operaation `+` avulla.
 
-```java 
-int pituus = 42; 
-System.out.println("Pituus " + pituus); 
+```java
+int pituus = 42;
+System.out.println("Pituus " + pituus);
 ```
 
 <sample-output>
 
-Pituus 42 
+Pituus 42
 
 </sample-output>
 
-```java 
+```java
 System.out.println("tuossa on kokonaisluku --> " + 2);
-System.out.println(2 + " <-- tuossa on kokonaisluku"); 
+System.out.println(2 + " <-- tuossa on kokonaisluku");
 ```
 
-<sample-output> 
+<sample-output>
 
 tuossa on kokonaisluku --> 2
 2 <-- tuossa on kokonaisluku
@@ -144,14 +145,14 @@ Jos toinen operaation `+` kohteista on merkkijono, muutetaan myös toinen operaa
 
 Aiemmin esitellyt laskusäännöt pätevät täälläkin:
 
-```java 
-System.out.println("Neljä: " + (2 + 2)); 
+```java
+System.out.println("Neljä: " + (2 + 2));
 System.out.println("Mutta! kaksikymmentäkaksi: " + 2 + 2);
 ```
 
 <sample-output>
 
-Neljä: 4 
+Neljä: 4
 Mutta! kaksikymmentäkaksi: 22
 
 </sample-output>
@@ -163,19 +164,19 @@ Kirjoita ohjelma, joka kysyy käyttäjältä kahta lukua. Tämän jälkeen ohjel
 
 Muistathan, että luvun lukeminen onnistuu Scanner-apuvälineen avulla seuraavasti:
 
-```java 
+```java
 Scanner lukija = new Scanner(System.in);
 
 System.out.println("Kirjoita luku ");
-int luku = Integer.valueOf(lukija.nextLine()); 
+int luku = Integer.valueOf(lukija.nextLine());
 System.out.println("Kirjoitit " + luku);
 ```
 
 Alla on annettuna ohjelman toivottuja esimerkkitulostuksia:
 
-<sample-output> 
+<sample-output>
 
-Syötä ensimmäinen luku! 
+Syötä ensimmäinen luku!
 **8**
 Syötä toinen luku!
 **3**
@@ -185,10 +186,10 @@ Lukujen summa on 11
 
 <sample-output>
 
-Syötä ensimmäinen luku! 
-**3** 
+Syötä ensimmäinen luku!
+**3**
 Syötä toinen luku!
-**-1** 
+**-1**
 Lukujen summa on 2
 
 </sample-output>
@@ -202,14 +203,14 @@ Kirjoita ohjelma, joka kysyy käyttäjältä kolmea lukua. Tämän jälkeen ohje
 
 Alla on annettuna ohjelman esimerkkitulostuksia:
 
-<sample-output> 
+<sample-output>
 
 Syötä ensimmäinen luku!
 **8**
 Syötä toinen luku!
-**3** 
+**3**
 Syötä kolmas luku!
-**3** 
+**3**
 Lukujen summa on 14
 
 </sample-output>
@@ -218,12 +219,12 @@ Lukujen summa on 14
 <sample-output>
 
 Syötä ensimmäinen luku!
-**3** 
+**3**
 Syötä toinen luku!
 **-1**
 Syötä kolmas luku!
-**2** 
-Lukujen summa on 4 
+**2**
+Lukujen summa on 4
 
 </sample-output>
 
@@ -232,22 +233,22 @@ Lukujen summa on 4
 
 Edellistä tietoa soveltamalla voimme luoda lausekkeen, joka sisältää tekstiä ja muuttujan, ja joka evaluoidaan tulostuksen yhteydessä:
 
-```java 
-int x = 10; 
+```java
+int x = 10;
 
-System.out.println("muuttujan x arvo on: " + x); 
+System.out.println("muuttujan x arvo on: " + x);
 
-int y = 5; 
-int z = 6; 
+int y = 5;
+int z = 6;
 
 System.out.println("y on " + y + " ja z on " + z);
 ```
 
 Tulostus:
 
-<sample-output> 
+<sample-output>
 
-muuttujan x arvo on: 10 
+muuttujan x arvo on: 10
 y on 5 ja z on 6
 
 </sample-output>
@@ -273,9 +274,9 @@ Syötä toinen luku!
 <sample-output>
 
 Syötä ensimmäinen luku!
-**73457** 
+**73457**
 Syötä toinen luku!
-**12888** 
+**12888**
 73457 + 12888 = 86345
 
 </sample-output>
@@ -289,10 +290,10 @@ Tee edellistä ohjelmaa vastaava ohjelma, joka laskee kahden kokonaislukumuuttuj
 
 Esimerkiksi jos syötetyt luvut ovat 2 ja 8, ohjelman suoritus on seuraava:
 
-<sample-output> 
+<sample-output>
 
 Syötä ensimmäinen luku!
-**2** 
+**2**
 Syötä toinen luku!
 **8**
 2 * 8 = 16
@@ -304,9 +305,9 @@ Jos taas syötetyt luvut ovat 277 ja 111, ohjelman suoritus on seuraava:
 <sample-output>
 
 Syötä ensimmäinen luku!
-**277** 
+**277**
 Syötä toinen luku!
-**111** 
+**111**
 277 * 111 = 30747
 
 </sample-output>
@@ -321,9 +322,9 @@ Kun olet saanut edellisen tehtävän toteutettua, kokeile mikä on suurin mahdol
 
 Kokonaislukujen jakolasku on hieman hankalampi operaatio. Jakolausekkeessa käytettyjen muuttujien tyyppi määrää evaluaation tuloksena saatavan arvon tyypin. Jos kaikki jakolausekkeessa olevat muuttujat ovat kokonaislukuja, on tulos myös kokonaisluku.
 
-```java 
-int tulos = 3 / 2; 
-System.out.println(tulos); 
+```java
+int tulos = 3 / 2;
+System.out.println(tulos);
 ```
 
 <sample-output>
@@ -334,9 +335,9 @@ System.out.println(tulos);
 
 Edellinen esimerkki tulostaa luvun 1, sillä 3 ja 2 ovat kokonaislukuja ja kahden kokonaisluvun jakolaskun tulos on kokonaisluku.
 
-```java 
+```java
 int eka = 3;
-int toka = 2; 
+int toka = 2;
 double tulos = eka / toka;
 System.out.println(tulos);
 ```
@@ -351,11 +352,11 @@ Nytkin tulostus on 1, sillä eka ja toka ovat (yhä) kokonaislukuja.
 
 Jos jakolaskun jakaja tai jaettava (tai molemmat!) ovat liukulukuja, tulee tulokseksi myös liukuluku.
 
-```java 
-double kunJaettavaOnLiukuluku = 3.0 / 2; 
-System.out.println(kunJaettavaOnLiukuluku); // tulostaa 1.5 
+```java
+double kunJaettavaOnLiukuluku = 3.0 / 2;
+System.out.println(kunJaettavaOnLiukuluku); // tulostaa 1.5
 
-double kunJakajaOnLiukuluku = 3 / 2.0; 
+double kunJakajaOnLiukuluku = 3 / 2.0;
 System.out.println(kunJakajaOnLiukuluku); // tulostaa 1.5
 ```
 
@@ -369,17 +370,17 @@ System.out.println(kunJakajaOnLiukuluku); // tulostaa 1.5
 
 Kokonaisluku voidaan tarvittaessa muuttaa liukuluvuksi lisäämällä sen eteen tyyppimuunnosoperaatio `(double)`:
 
-```java 
+```java
 int eka = 3;
 int toka = 2;
 
 double tulos1 = (double) eka / toka;
-System.out.println(tulos1); // tulostaa 1.5 
+System.out.println(tulos1); // tulostaa 1.5
 
-double tulos2 = eka / (double) toka; 
-System.out.println(tulos2); // tulostaa 1.5 
+double tulos2 = eka / (double) toka;
+System.out.println(tulos2); // tulostaa 1.5
 
-double tulos3 = (double) (eka / toka); 
+double tulos3 = (double) (eka / toka);
 System.out.println(tulos3); // tulostaa 1.0
 ```
 
@@ -396,7 +397,7 @@ Jälkimmäisessä esimerkissä tulos pyöristyy väärin sillä laskuoperaatio k
 
 Jos jakolausekkeen tulos asetetaan kokonaislukutyyppiseen muuttujaan, on tulos automaattisesti kokonaisluku.
 
-```java 
+```java
 int kokonaisluku = 3.0 / 2;
 System.out.println(kokonaisluku);
 ```
@@ -409,11 +410,11 @@ System.out.println(kokonaisluku);
 
 Seuraava esimerkki tulostaa "1.5", sillä jaettavasta tehdään liukuluku kertomalla se liukuluvulla (1.0 * 3 = 3.0) ennen jakolaskua.
 
-```java 
+```java
 int jaettava = 3;
-int jakaja = 2; 
+int jakaja = 2;
 
-double tulos = 1.0 * jaettava / jakaja; 
+double tulos = 1.0 * jaettava / jakaja;
 System.out.println(tulos);
 ```
 
@@ -439,7 +440,7 @@ Ohjelmoinnissa tähän liittyy muutamia asioita, jotka tulee muistaa. Ensiksi, n
 
 Kirjoita ohjelma, joka kysyy käyttäjältä kahta kokonaislukua ja tulostaa lukujen keskiarvon.
 
-<sample-output> 
+<sample-output>
 
 Syötä ensimmäinen luku!
 **8**
@@ -464,7 +465,7 @@ Syötä toinen luku!
 **2**
 Syötä kolmas luku!
 **3**
-Syötettyjen lukujen keskiarvo on 5.5 
+Syötettyjen lukujen keskiarvo on 5.5
 
 </sample-output>
 
@@ -503,11 +504,11 @@ Syötä toinen luku!
 
 </sample-output>
 
-<sample-output> 
+<sample-output>
 
 Syötä ensimmäinen luku!
-**9** 
-Syötä toinen luku! 
+**9**
+Syötä toinen luku!
 **2**
 9 + 2 = 11
 9 - 2 = 7
@@ -535,15 +536,15 @@ Kolme yleistä väärinkäsitystä, jotka liittyvät muuttujan arvon asettamisee
 
 Ehkäpä paras tapa tietokoneen ohjelmakoodin suorittamisen ymmärtämiseen on paperin ja kynän käyttäminen. Kun luet ohjelmakoodia, kirjoita paperille uusien muuttujien nimet, sekä kirjoita ylös rivi riviltä, miten ohjelmakoodissa olevien muuttujien arvot muuttuvat. Havainnollistetaan suoritusta seuraavalla ohjelmakoodilla:
 
-```java 
-rivi 1: int eka = (1 + 1); 
-rivi 2: int toka = eka + 3 \* (2 + 5); 
-rivi 3: 
-rivi 4: eka = 5; 
-rivi 5: 
-rivi 6: int kolmas = eka + toka; 
-rivi 7: System.out.println(eka); 
-rivi 8: System.out.println(toka); 
+```java
+rivi 1: int eka = (1 + 1);
+rivi 2: int toka = eka + 3 \* (2 + 5);
+rivi 3:
+rivi 4: eka = 5;
+rivi 5:
+rivi 6: int kolmas = eka + toka;
+rivi 7: System.out.println(eka);
+rivi 8: System.out.println(toka);
 rivi 9: System.out.println(kolmas);
 ```
 
@@ -551,38 +552,38 @@ Alla on kirjoitettu yllä olevan ohjelmakoodin suoritus auki.
 
 <sample-output>
 
-rivi 1: luodaan muuttuja eka 
-rivi 1: kopioidaan muuttujan eka arvoksi laskun 1 + 1 tulos 
-rivi 1: muuttujan eka arvo on 2 
-rivi 2: luodaan muuttuja toka 
-rivi 2: lasketaan 2 + 5, 2 + 5 -> 7 
-rivi 2: lasketaan 3 * 7, 3 * 7 -> 21 
-rivi 2: lasketaan eka + 21 
-rivi 2: kopioidaan muuttujan eka arvo laskuun, muuttujan eka arvo on 2 
-rivi 2: lasketaan 2 + 21, 2 + 21 -> 23 
-rivi 2: kopioidaan muuttujan toka arvoksi 23 
-rivi 2: muuttujan toka arvo on 23 
-rivi 3: (tyhjä, ei tehdä mitään) 
-rivi 4: kopioidaan muuttujan eka arvoksi 5 
-rivi 4: muuttujan eka arvo on 5 
-rivi 5: (tyhjä, ei tehdä mitään) 
-rivi 6: luodaan muuttuja kolmas 
-rivi 6: lasketaan eka + toka 
-rivi 6: kopioidaan muuttujan eka arvo laskuun, muuttujan eka arvo on 5 
-rivi 6: lasketaan 5 + toka 
-rivi 6: kopioidaan muuttujan toka arvo laskuun, muuttujan toka arvo on 23 
-rivi 6: lasketaan 5 + 23 -> 28 
-rivi 6: kopioidaan muuttujan kolmas arvoksi 28 
-rivi 6: muuttujan kolmas arvo on 28 
-rivi 7: tulostetaan muuttuja eka 
-rivi 7: kopioidaan muuttujan eka arvo tulostettavaksi, muuttujan eka arvo on 5 
-rivi 7: tulostetaan arvo 5 
-rivi 8: tulostetaan muuttuja toka 
-rivi 8: kopioidaan muuttujan toka arvo tulostettavaksi, muuttujan toka arvo on 23 
-rivi 8: tulostetaan arvo 23 
-rivi 9: tulostetaan muuttuja kolmas 
-rivi 9: kopioidaan muuttujan kolmas arvo tulostettavaksi, muuttujan kolmas arvo on 28 
-rivi 9: tulostetaan arvo 28 
+rivi 1: luodaan muuttuja eka
+rivi 1: kopioidaan muuttujan eka arvoksi laskun 1 + 1 tulos
+rivi 1: muuttujan eka arvo on 2
+rivi 2: luodaan muuttuja toka
+rivi 2: lasketaan 2 + 5, 2 + 5 -> 7
+rivi 2: lasketaan 3 * 7, 3 * 7 -> 21
+rivi 2: lasketaan eka + 21
+rivi 2: kopioidaan muuttujan eka arvo laskuun, muuttujan eka arvo on 2
+rivi 2: lasketaan 2 + 21, 2 + 21 -> 23
+rivi 2: kopioidaan muuttujan toka arvoksi 23
+rivi 2: muuttujan toka arvo on 23
+rivi 3: (tyhjä, ei tehdä mitään)
+rivi 4: kopioidaan muuttujan eka arvoksi 5
+rivi 4: muuttujan eka arvo on 5
+rivi 5: (tyhjä, ei tehdä mitään)
+rivi 6: luodaan muuttuja kolmas
+rivi 6: lasketaan eka + toka
+rivi 6: kopioidaan muuttujan eka arvo laskuun, muuttujan eka arvo on 5
+rivi 6: lasketaan 5 + toka
+rivi 6: kopioidaan muuttujan toka arvo laskuun, muuttujan toka arvo on 23
+rivi 6: lasketaan 5 + 23 -> 28
+rivi 6: kopioidaan muuttujan kolmas arvoksi 28
+rivi 6: muuttujan kolmas arvo on 28
+rivi 7: tulostetaan muuttuja eka
+rivi 7: kopioidaan muuttujan eka arvo tulostettavaksi, muuttujan eka arvo on 5
+rivi 7: tulostetaan arvo 5
+rivi 8: tulostetaan muuttuja toka
+rivi 8: kopioidaan muuttujan toka arvo tulostettavaksi, muuttujan toka arvo on 23
+rivi 8: tulostetaan arvo 23
+rivi 9: tulostetaan muuttuja kolmas
+rivi 9: kopioidaan muuttujan kolmas arvo tulostettavaksi, muuttujan kolmas arvo on 28
+rivi 9: tulostetaan arvo 28
 </sample-output>
 
 Alla edellinen ohjelma askeleittain visualisoituna. Käytössä oleva askeleittainen visualisointi käsittelee ohjelmakoodia riveittäin -- pohdi askeleiden kohdalla miten ohjelma päätyy sen tulostamaan lopputulokseen.
