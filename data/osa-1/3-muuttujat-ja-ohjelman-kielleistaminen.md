@@ -23,7 +23,7 @@ Muuttujan arvo voidaan yhdistää merkkijonoon +-merkillä seuraavan esimerkin m
 String teksti = "sisältää tekstiä";
 int kokonaisluku = 123;
 double liukuluku = 3.141592653;
-double totuusarvo = true;
+boolean totuusarvo = true;
 
 System.out.println("Tekstimuuttuja: " + teksti);
 System.out.println("Kokonaislukumuuttuja: " + kokonaisluku);
