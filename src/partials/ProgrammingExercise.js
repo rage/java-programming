@@ -160,21 +160,18 @@ export default class ProgrammingExercise extends React.Component {
         </Header>
         <Body>
           <div>
-            {this.context.loggedIn ? (
-              <div>
-                {children}
-                {this.state.exerciseDetails === null && (
-                  <div>Error loading exercise details</div>
-                )}
-              </div>
-            ) : (
-              <div>
-                <LoginNag>Kirjaudu sisään nähdäksesi tehtävanannon.</LoginNag>
-                <LoginNagWrapper>
-                  <LoginControls />
-                </LoginNagWrapper>
-              </div>
-            )}
+            <div style={{ display: this.context.loggedIn ? 'block' : 'none' }}>
+              {children}
+              {this.state.exerciseDetails === null && (
+                <div>Error loading exercise details</div>
+              )}
+            </div>
+            <div style={{ display: this.context.loggedIn ? 'none' : 'block' }}>
+              <LoginNag>Kirjaudu sisään nähdäksesi tehtävanannon.</LoginNag>
+              <LoginNagWrapper>
+                <LoginControls />
+              </LoginNagWrapper>
+            </div>
           </div>
 
           {this.context.loggedIn && this.state.exerciseDetails && (
