@@ -14,7 +14,12 @@ import './remark.css'
 import 'focus-visible'
 import 'typeface-open-sans'
 import 'typeface-roboto-slab'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+
+import { config as fontAwesomeConfig } from '@fortawesome/fontawesome-svg-core'
 import { canDoResearch } from '../services/moocfi'
+
+fontAwesomeConfig.autoAddCss = false;
 
 const layoutQuery = graphql`
   query {
