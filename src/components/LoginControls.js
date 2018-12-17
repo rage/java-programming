@@ -24,6 +24,9 @@ class LoginControls extends React.Component {
   }
 
   async componentDidMount() {
+    if (!this.context.loggedIn) {
+      return
+    }
     const details = await getCachedUserDetails()
     let name = `${details?.user_field?.first_name || ''} ${details?.user_field
       ?.last_name || ''}`.trim()

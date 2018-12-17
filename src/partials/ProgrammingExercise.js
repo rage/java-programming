@@ -97,6 +97,9 @@ class ProgrammingExercise extends React.Component {
 
   async componentDidMount() {
     this.setState({ render: true })
+    if (!this.context.loggedIn) {
+      return;
+    }
     await this.fetch()
   }
 

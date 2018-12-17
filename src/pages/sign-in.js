@@ -46,7 +46,7 @@ class SignInPage extends React.Component {
         password: this.state.password,
       })
       if (typeof window !== 'undefined') {
-        console.log("Navigating back")
+        console.log('Navigating back')
         window.history.back()
         return
       }
@@ -58,8 +58,8 @@ class SignInPage extends React.Component {
   }
 
   state = {
-    email: undefined,
-    password: undefined,
+    email: '',
+    password: '',
     submitting: false,
     error: false,
   }
