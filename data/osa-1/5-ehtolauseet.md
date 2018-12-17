@@ -17,16 +17,16 @@ Ohjelmamme ovat tähän mennessä olleet lineaarisia eli ohjelmien suoritus on t
 
 Jotta ohjelman suoritus voisi _haarautua_ esimerkiksi käyttäjän antaman syötteen perusteella, tarvitsemme käyttöömme **ehtolauseen**. Yksinkertaisin ehtolause on seuraavanlainen.
 
-```java 
-System.out.println("Hei maailma!"); 
-if (true) { 
-    System.out.println("Et voi välttää tätä koodia!"); 
+```java
+System.out.println("Hei maailma!");
+if (true) {
+    System.out.println("Et voi välttää tätä koodia!");
 }
 ```
 
 <sample-output>
 
-Hei maailma! 
+Hei maailma!
 Et voi välttää tätä koodia!
 
 </sample-output>
@@ -55,8 +55,8 @@ Lohkojen sisällä oleva koodi sisennetään. Esimerkiksi ehtolauseeseen liittyv
 
 Alla oleva esimerkki on sisennetty väärin.
 
-```java 
-if (luku > 10) { 
+```java
+if (luku > 10) {
 luku = 9;
 }
 ```
@@ -76,18 +76,18 @@ if (luku > 10) {
 
 Tee ohjelma, joka kysyy käyttäjältä kokonaisluvun ja tulostaa merkkijonon "Ylinopeussakko!" jos luku on suurempi kuin 120.
 
-<sample-output> 
+<sample-output>
 
-Kerro nopeus: 
+Kerro nopeus:
 **15**
 
 </sample-output>
 
-<sample-output> 
+<sample-output>
 
-Kerro nopeus: 
+Kerro nopeus:
 **135**
-Ylinopeussakko! 
+Ylinopeussakko!
 
 </sample-output>
 
@@ -106,11 +106,11 @@ Vertailuoperaattoreita ovat seuraavat:
 * `!=` erisuuri kuin
 
 ```java
-int luku = 55; 
+int luku = 55;
 
 if (luku != 0) {
     System.out.println("Luku oli erisuuri kuin 0");
-} 
+}
 
 if (luku >= 1000) {
     System.out.println("Luku oli vähintään 1000");
@@ -129,14 +129,14 @@ Tee ohjelma, joka kysyy käyttäjältä kokonaisluvun ja tulostaa merkkijonon "O
 
 <sample-output>
 
-Anna luku: 
+Anna luku:
 **1983**
 
 </sample-output>
 
 <sample-output>
 
-Anna luku: 
+Anna luku:
 **1984**
 Orwell
 
@@ -149,16 +149,16 @@ Orwell
 
 Tee ohjelma, joka kysyy käyttäjältä vuosilukua. Jos käyttäjä syöttää luvun, joka on pienempi kuin 2015, ohjelma tulostaa merkkijonon "Wanha!".
 
-<sample-output> 
+<sample-output>
 
-Anna vuosiluku: 
+Anna vuosiluku:
 **2017**
 
 </sample-output>
 
 <sample-output>
 
-Anna vuosiluku: 
+Anna vuosiluku:
 **2013**
 Wanha!
 
@@ -174,12 +174,12 @@ Jos ehtolauseen sulkujen sisällä oleva lauseke evaluoituu epätodeksi, ohjelma
 Tämä onnistuu `if`-komennon yhteydessä käytettävän `else`-komennon avulla.
 
 ```java
-int luku = 4; 
+int luku = 4;
 
 if (luku > 5) {
     System.out.println("Lukusi on suurempi kuin viisi!");
 } else {
-    System.out.println("Lukusi on viisi tai alle!"); 
+    System.out.println("Lukusi on viisi tai alle!");
 }
 ```
 
@@ -198,7 +198,7 @@ Tee ohjelma, joka kysyy käyttäjältä kokonaisluvun ja kertoo, onko se positii
 
 <sample-output>
 
-Anna luku: 
+Anna luku:
 **5**
 Luku on positiivinen.
 
@@ -206,7 +206,7 @@ Luku on positiivinen.
 
 <sample-output>
 
-Anna luku: 
+Anna luku:
 **-2**
 Luku ei ole positiivinen.
 
@@ -221,15 +221,15 @@ Tee ohjelma, joka kysyy käyttäjän ikää ja kertoo, onko tämä täysi-ikäin
 
 <sample-output>
 
-Kuinka vanha olet? 
+Kuinka vanha olet?
 **12**
 Et ole täysi-ikäinen!
 
 </sample-output>
 
-<sample-output> 
+<sample-output>
 
-Kuinka vanha olet? 
+Kuinka vanha olet?
 **32**
 Olet täysi-ikäinen!
 
@@ -243,7 +243,7 @@ Olet täysi-ikäinen!
 Jos vaihtoehtoja on useampia käytetään `else if`-komentoa. Komento `else if` on kuin `else`, mutta lisäehdolla. `else if` tulee `if`-ehdon jälkeen, ja niitä voi olla useita.
 
 ```java
-int luku = 3; 
+int luku = 3;
 
 if (luku == 1) {
     System.out.println("Luku on yksi");
@@ -256,7 +256,7 @@ if (luku == 1) {
 }
 ```
 
-<sample-output> 
+<sample-output>
 
 Kolme lienee lukuna!
 
@@ -265,6 +265,8 @@ Kolme lienee lukuna!
 Luetaan yllä oleva esimerkki: 'Jos luku on yksi, tulosta "Luku on yksi", muuten jos luku on kaksi, tulosta "Lukuna on kaksi", muuten jos lukuna on kolme, tulosta "Kolme lienee lukuna!". Muulloin, tulosta "Jotain muuta!"'.
 
 Yllä olevan ohjelman askeleittainen visualisointi:
+
+<code-states-visualizer input='{"code":"public class Esimerkki {\n  public static void main(String[] args) {\n    int luku = 3;\n    \n    if (luku == 1) {\n      System.out.println(\"Luku on yksi\");\n    } else if (luku == 2) {\n      System.out.println(\"Lukuna on kaksi\");\n    } else if (luku == 3) {\n      System.out.println(\"Kolme lienee lukuna!\");\n    } else {\n      System.out.println(\"Jotain muuta!\");\n    }\n  }\n}","stdin":"","trace":[{"stdout":"","event":"call","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"1","frame_id":1}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"2","frame_id":2}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{"luku":3},"ordered_varnames":["luku"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"4","frame_id":4}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":7,"stack_to_render":[{"func_name":"main:7","encoded_locals":{"luku":3},"ordered_varnames":["luku"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"8","frame_id":8}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":9,"stack_to_render":[{"func_name":"main:9","encoded_locals":{"luku":3},"ordered_varnames":["luku"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"12","frame_id":12}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":10,"stack_to_render":[{"func_name":"main:10","encoded_locals":{"luku":3},"ordered_varnames":["luku"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"16","frame_id":16}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"Kolme lienee lukuna!\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"luku":3},"ordered_varnames":["luku"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"20","frame_id":20}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"Kolme lienee lukuna!\n","event":"return","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"luku":3,"__return__":["VOID"]},"ordered_varnames":["luku","__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"21","frame_id":21}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}}],"userlog":"Debugger VM maxMemory: 455M\n"}'></code-states-visualizer>
 
 
 <programming-exercise name="Suurempi tai yhtäsuuri" tmcname='osa01-Osa01_30.SuurempiTaiYhtasuuri'>
@@ -275,20 +277,20 @@ Esimerkkitulostuksia:
 
 <sample-output>
 
-Anna ensimmäinen luku: 
+Anna ensimmäinen luku:
 **5**
-Anna toinen luku: 
-**3** 
+Anna toinen luku:
+**3**
 Suurempi luku: 5
 
 </sample-output>
 
 <sample-output>
 
-Anna ensimmäinen luku: 
+Anna ensimmäinen luku:
 **5**
-Anna toinen luku: 
-**8** 
+Anna toinen luku:
+**8**
 Suurempi luku: 8
 
 </sample-output>
@@ -309,7 +311,7 @@ Luvut ovat yhtä suuret!
 Vertailut suoritetaan järjestyksessä ylhäältä alaspäin. Kun suorituksessa päästään ehtolauseeseen, jonka ehto on totta, suoritetaan lohko ja lopetetaan vertailu.
 
 ```java
-int luku = 5; 
+int luku = 5;
 
 if (luku == 0) {
     System.out.println("Luku on nolla.");
@@ -350,7 +352,7 @@ Esimerkkitulostuksia:
 
 <sample-output>
 
-Anna pisteet [0-100]: 
+Anna pisteet [0-100]:
 **37**
 Arvosana: hylätty
 
@@ -358,7 +360,7 @@ Arvosana: hylätty
 
 <sample-output>
 
-Anna pisteet [0-100]: 
+Anna pisteet [0-100]:
 **76**
 Arvosana: 3
 
@@ -366,17 +368,17 @@ Arvosana: 3
 
 <sample-output>
 
-Anna pisteet [0-100]: 
-**95** 
+Anna pisteet [0-100]:
+**95**
 Arvosana: 5
 
 </sample-output>
 
 <sample-output>
 
-Anna pisteet [0-100]: 
-**-3** 
-Arvosana: mahdotonta! 
+Anna pisteet [0-100]:
+**-3**
+Arvosana: mahdotonta!
 
 </sample-output>
 
@@ -388,7 +390,7 @@ Arvosana: mahdotonta!
 Ehtolauseen sulkuihin asetettavan arvon tulee olla lausekkeen evaluoinnin jälkeen totuusarvotyyppinen. Totuusarvomuuttujan tyyppi on `boolean` ja arvo _true_ tai _false_.
 
 ```java
-boolean onkoTotta = true; 
+boolean onkoTotta = true;
 System.out.println("Totuusarvomuuttujan arvo on " + onkoTotta);
 ```
 
@@ -415,10 +417,10 @@ Aika vinhaa!
 
 Vertailuoperaattoreita voi käyttää myös ehtojen ulkopuolella. Tällöin vertailun tuloksena saatu totuusarvo asetetaan talteen totuusarvomuuttujaan myöhempää käyttöä varten.
 
-```java 
+```java
 int eka = 1;
-int toka = 3; 
-boolean onkoSuurempi = eka > toka; 
+int toka = 3;
+boolean onkoSuurempi = eka > toka;
 ```
 
 Yllä olevassa esimerkissä totuusarvomuuttuja `onkoSuurempi` sisältää nyt totuusarvon _false_. Yllä olevaa esimerkkiä voi myös jatkaa ja ottaa siihen mukaan ehtolauseen.
@@ -426,10 +428,10 @@ Yllä olevassa esimerkissä totuusarvomuuttuja `onkoSuurempi` sisältää nyt to
 ```java
 int eka = 1;
 int toka = 3;
-boolean onkoPienempi = eka < toka; 
+boolean onkoPienempi = eka < toka;
 
 if (onkoPienempi) {
-    System.out.println("1 on pienempi kuin 3!"); 
+    System.out.println("1 on pienempi kuin 3!");
 }
 ```
 
@@ -448,26 +450,26 @@ Yllä olevassa kuvassa ohjelmakoodia on suoritettu niin pitkään, että ohjelma
 
 Jakojäännös on hieman harvemmin käytetty operaatio, joka on kuitenkin varsin näppärä kun halutaan tarkistaa esimerkiksi luvun jaollisuutta. Jakojäännösoperaation merkki on `%`.
 
-```java 
+```java
 int jakojaannos = 7 % 2;
 System.out.println(jakojaannos); // tulostaa 1
-System.out.println(5 % 3); // tulostaa 2 
-System.out.println(7 % 4); // tulostaa 3 
-System.out.println(8 % 4); // tulostaa 0 
+System.out.println(5 % 3); // tulostaa 2
+System.out.println(7 % 4); // tulostaa 3
+System.out.println(8 % 4); // tulostaa 0
 System.out.println(1 % 2); // tulostaa 1
 ```
 
 Jos haluamme tietää onko käyttäjän syöttämä luku jaollinen neljälläsadalla, tarkastamme onko syötetyn luvun jakojäännös neljänsadan suhteen nolla.
 
-```java 
+```java
 Scanner lukija = new Scanner(System.in);
 
-int luku = Integer.valueOf(lukija.nextLine()); 
+int luku = Integer.valueOf(lukija.nextLine());
 int jakojaannos = luku % 400;
 
 if (jakojaannos == 0) {
     System.out.println("Luku " + luku + " on jaollinen neljälläsadalla.");
-} else { 
+} else {
     System.out.println("Luku " + luku + " ei ole jaollinen neljälläsadalla.");
 }
 ```
@@ -475,9 +477,9 @@ if (jakojaannos == 0) {
 Koska jakojäännös on samanlainen operaatio kuin muutkin laskut, voi sen asettaa osaksi valintakäskyä.
 
 ```java
-Scanner lukija = new Scanner(System.in); 
+Scanner lukija = new Scanner(System.in);
 
-int luku = Integer.valueOf(lukija.nextLine()); 
+int luku = Integer.valueOf(lukija.nextLine());
 
 if (luku % 400 == 0) {
     System.out.println("Luku " + luku + " on jaollinen neljälläsadalla.");
@@ -493,9 +495,9 @@ if (luku % 400 == 0) {
 
 Tee ohjelma, joka kysyy käyttäjältä luvun ja ilmoittaa, onko syötetty luku parillinen vai pariton.
 
-<sample-output> 
+<sample-output>
 
-Anna luku: 
+Anna luku:
 **2**
 Luku 2 on parillinen.
 
@@ -503,7 +505,7 @@ Luku 2 on parillinen.
 
 <sample-output>
 
-Anna luku: 
+Anna luku:
 **7**
 Luku 7 on pariton.
 
@@ -530,11 +532,11 @@ String toka = lukija.nextLine();
 if (eka == toka) {
     System.out.println("Merkkijonot olivat samat!");
 } else {
-    System.out.println("Merkkijonot olivat eri!"); 
+    System.out.println("Merkkijonot olivat eri!");
 }
 ```
 
-<sample-output> 
+<sample-output>
 
 Syötä ensimmäinen merkkijono
 **sama**
@@ -544,7 +546,7 @@ Merkkijonot olivat eri!
 
 </sample-output>
 
-<sample-output> 
+<sample-output>
 
 Syötä ensimmäinen merkkijono
 **sama**
@@ -562,7 +564,7 @@ Merkkijonojen vertailussa käytetään merkkijonomuuttujiin liittyvää `equals`
 Scanner lukija = new Scanner(System.in);
 
 System.out.println("Syötä merkkijono");
-String syote = lukija.nextLine(); 
+String syote = lukija.nextLine();
 
 if (syote.equals("merkkijono")) {
     System.out.println("Luit ohjeet oikein, hyvä!");
@@ -571,9 +573,9 @@ if (syote.equals("merkkijono")) {
 }
 ```
 
-<sample-output> 
+<sample-output>
 
-Syötä merkkijono 
+Syötä merkkijono
 **ok!**
 Metsään meni!
 
@@ -591,22 +593,22 @@ Komento equals kirjoitetaan merkkijonomuuttujan jälkeen siten, että se kiinnit
 
 Alla olevassa esimerkissä luetaan käyttäjältä kaksi merkkijonoa. Ensin tarkastetaan ovatko syötetyt merkkijonot samat, jonka jälkeen tarkastetaan onko syötettyjen merkkijonojen arvo "kaksi merkkijonoa".
 
-```java 
-Scanner lukija = new Scanner(System.in); 
+```java
+Scanner lukija = new Scanner(System.in);
 
-System.out.println("Syötä kaksi merkkijonoa"); 
-String eka = lukija.nextLine(); 
-String toka = lukija.nextLine(); 
+System.out.println("Syötä kaksi merkkijonoa");
+String eka = lukija.nextLine();
+String toka = lukija.nextLine();
 
 if (eka.equals(toka)) {
     System.out.println("Merkkijonot olivat samat!");
 } else {
     System.out.println("Merkkijonot olivat eri!");
-} 
+}
 
 if (eka.equals("kaksi merkkijonoa")) {
     System.out.println("Nokkelaa!");
-} 
+}
 
 if (toka.equals("kaksi merkkijonoa")) {
     System.out.println("Ovelaa!");
@@ -632,9 +634,9 @@ Ovelaa!
 
 </sample-output>
 
-<sample-output> 
+<sample-output>
 
-Syötä kaksi merkkijonoa 
+Syötä kaksi merkkijonoa
 **samat**
 **samat**
 Merkkijonot olivat samat!
@@ -669,17 +671,17 @@ Tervetuloa!
 
 Tee ohjelma, joka kysyy käyttäjältä kahta merkkijonoa. Mikäli merkkijonot ovat samat, ohjelma tulostaa "Samat sanat", muulloin ohjelma tulostaa "Ei sitten".
 
-<sample-output> 
+<sample-output>
 
-Syötä ensimmäinen merkkijono: 
+Syötä ensimmäinen merkkijono:
 **hei**
-Syötä toinen merkkijono: 
+Syötä toinen merkkijono:
 **hei**
 Samat sanat
 
 </sample-output>
 
-<sample-output> 
+<sample-output>
 
 Syötä ensimmäinen merkkijono:
 **hei**

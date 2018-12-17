@@ -29,6 +29,7 @@ import Youtube from './Youtube'
 import Quiznator from './Quiznator'
 import PleaseLogin from './PleaseLogin'
 import FloatImageRight from './FloatImageRight'
+import CodeStatesVisualizer from './CodeStatesVisualizer'
 
 import {
   Table,
@@ -48,6 +49,7 @@ const mapping = {
   'sample-output': SampleOutput,
   'please-login': PleaseLogin,
   'float-image-right': FloatImageRight,
+  'code-states-visualizer': CodeStatesVisualizer,
   youtube: Youtube,
   quiznator: Quiznator,
   table: Table,
