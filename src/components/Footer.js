@@ -4,6 +4,7 @@ import BackgroundImage from '../images/banner.svg'
 import { SIDEBAR_WIDTH } from './Sidebar'
 import { Card, CardContent } from '@material-ui/core'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import { Link } from 'gatsby'
 
 import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
 
@@ -110,6 +111,10 @@ class Footer extends React.Component {
                   Agile Education Research -tutkimusryhmä
                 </OutboundLink>
                 .
+              </ContentContainer>
+
+              <ContentContainer>
+                <Link to="/credits">Kiitokset ja materiaalista</Link>.
               </ContentContainer>
               <SocialContainer>
                 <OutboundLink

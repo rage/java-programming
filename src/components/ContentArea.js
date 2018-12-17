@@ -8,6 +8,7 @@ const ContentAreaContainer = styled.div`
     margin-left: ${SIDEBAR_WIDTH};
   }
   padding: 0 0.5rem;
+  margin-bottom: 3rem;
 `
 
 class ContentArea extends React.Component {
