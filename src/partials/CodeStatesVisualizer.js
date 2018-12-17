@@ -1,15 +1,16 @@
-import React, { lazy } from 'react'
+import React, { lazy, Suspense } from 'react'
 
 import 'code-states-visualizer/dist/app.css'
+import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
 const CodeStatesVisualizer = lazy(() => import('code-states-visualizer'))
 
-export default class CodeStatesVisualizerWrapper extends React.Component {
+class CodeStatesVisualizerWrapper extends React.Component {
   state = {
     render: false,
   }
 
   componentDidMount() {
-    // this.setState({ render: true })
+    this.setState({ render: true })
   }
 
   render() {
@@ -17,6 +18,12 @@ export default class CodeStatesVisualizerWrapper extends React.Component {
       return <div>Loading...</div>
     }
     const { input } = this.props
-    return <CodeStatesVisualizer input={input} />
+    return (
+      <Suspense fallback={<div>Loading...</div>}>
+        <CodeStatesVisualizer input={input} />
+      </Suspense>
+    )
   }
 }
+
+export default withSimpleErrorBoundary(CodeStatesVisualizerWrapper)
