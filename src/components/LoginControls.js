@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import Button from './Button'
 import { signOut, getCachedUserDetails } from '../services/moocfi'
-import { navigate } from 'gatsby'
 import LoginStateContext, {
   withLoginStateContext,
 } from '../contexes/LoginStateContext'

@@ -7,12 +7,6 @@ export default function withSimpleErrorBoundary(Component) {
     }
 
     static getDerivedStateFromError(error) {
-      let errorMessage = 'Tuntematon virhe'
-      try {
-        errorMessage = JSON.stringify(error, undefined, 2)
-      } catch (e) {
-        console.error('Could not stringify error:', e)
-      }
       return { error: error.toString() }
     }
 

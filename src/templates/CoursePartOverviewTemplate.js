@@ -7,7 +7,6 @@ import { navigate } from 'gatsby'
 import Layout from './Layout'
 
 import getNamedPartials from '../partials'
-import CoursePageFooter from '../components/CoursePageFooter'
 import { getCachedUserDetails } from '../services/moocfi'
 import './remark.css'
 import PagesContext from '../contexes/PagesContext'
@@ -26,11 +25,7 @@ const ContentWrapper = styled.div`
   }
 `
 
-const SectionIndicator = styled.h2``
-
-const Title = styled.h1`
-
-`
+const Title = styled.h1``
 
 export default class CoursePartOverviewTemplate extends React.Component {
   static contextType = LoginStateContext

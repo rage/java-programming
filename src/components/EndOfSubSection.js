@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
-import PagesInThisSection from '../partials/PagesInThisSection'
 import PagesContext from '../contexes/PagesContext'
 import { nthIndex } from '../util/strings'
 import { Link } from 'gatsby'
@@ -8,19 +7,6 @@ import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight as icon } from '@fortawesome/free-solid-svg-icons'
 import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
-
-const CoursePageFooterWrapper = styled.footer`
-  background-color: black;
-  color: white;
-  padding: 3rem;
-`
-
-const CoursePageFooterContent = styled.div`
-  display: flex;
-  justify-content: space-between;
-  max-width: 960px;
-  margin: 0 auto;
-`
 
 const StyledLink = styled(Link)`
   color: black;

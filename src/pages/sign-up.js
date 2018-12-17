@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { navigate } from 'gatsby'
-
 import Layout from '../templates/Layout'
 import CreateAccountForm from '../components/user/CreateAccountForm'
 import CourseOptionsEditor from '../components/user/CourseOptionsEditor'

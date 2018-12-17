@@ -141,7 +141,7 @@ class CourseOptionsEditor extends React.Component {
                   InputLabelProps={{
                     shrink:
                       this.state.first_name ||
-                      this.state.focused == 'first_name',
+                      this.state.focused === 'first_name',
                   }}
                   fullWidth
                   value={this.state.first_name}
@@ -160,7 +160,7 @@ class CourseOptionsEditor extends React.Component {
                   name="last_name"
                   InputLabelProps={{
                     shrink:
-                      this.state.last_name || this.state.focused == 'last_name',
+                      this.state.last_name || this.state.focused === 'last_name',
                   }}
                   fullWidth
                   value={this.state.last_name}
@@ -179,7 +179,7 @@ class CourseOptionsEditor extends React.Component {
                   InputLabelProps={{
                     shrink:
                       this.state.student_number ||
-                      this.state.focused == 'student_number',
+                      this.state.focused === 'student_number',
                   }}
                   fullWidth
                   value={this.state.student_number}

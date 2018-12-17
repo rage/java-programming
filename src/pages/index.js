@@ -1,8 +1,7 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
 import Layout from '../templates/Layout'
 import Banner from '../components/Banner'
-import MailinglistForm from '../components/MailinglistForm'
 import GatsbyLink from 'gatsby-link'
 import { Link } from 'gatsby'
 import { withLoginStateContext } from '../contexes/LoginStateContext'

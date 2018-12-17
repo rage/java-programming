@@ -101,7 +101,7 @@ const pheromones = {
   bindMouseClicks: function() {
     $(document).click(function(event) {
       var hash = $(event.target).attr('data-hash')
-      if (typeof hash == 'undefined') {
+      if (typeof hash === 'undefined') {
         return
       }
 
@@ -172,7 +172,7 @@ const pheromones = {
     scrollTimer: 0,
     lastScrollFireTime: 0,
     bindScroll: function() {
-      var listener = window.addEventListener(
+      window.addEventListener(
         'scroll',
         pheromones.onScroll,
         false

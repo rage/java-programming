@@ -12,7 +12,7 @@ import { Button, Paper, Card, CardContent } from '@material-ui/core'
 import Modal from '@material-ui/core/Modal'
 import LoginStateContext from '../contexes/LoginStateContext'
 import LoginControls from '../components/LoginControls'
-import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary';
+import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
 
 const accentColor = '#FAAA38'
 
@@ -98,7 +98,7 @@ class ProgrammingExercise extends React.Component {
   async componentDidMount() {
     this.setState({ render: true })
     if (!this.context.loggedIn) {
-      return;
+      return
     }
     await this.fetch()
   }
@@ -149,11 +149,10 @@ class ProgrammingExercise extends React.Component {
   }
 
   render() {
-    const { children, name, tmcname } = this.props
+    const { children, name } = this.props
     const tokenThreshHold = this.state?.exerciseDetails?.course
       ?.grant_model_solution_token_every_nth_completed_exercise
-    const totalTokens = this.state?.exerciseDetails?.course
-      ?.total_model_solution_tokens
+    //const _totalTokens = this.state?.exerciseDetails?.course?.total_model_solution_tokens
     const availableTokens = this.state?.exerciseDetails?.course
       ?.available_model_solution_tokens
 

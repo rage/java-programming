@@ -15,13 +15,12 @@ import LoginStateContext, {
   LoginStateContextProvider,
 } from '../contexes/LoginStateContext'
 import Container from '../components/Container'
-import Button from '../components/Button'
 
 import { loggedIn } from '../services/moocfi'
 import { capitalizeFirstLetter } from '../util/strings'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleUp as icon } from '@fortawesome/free-solid-svg-icons'
-import EndOfSubSection from '../components/EndOfSubSection';
+import EndOfSubSection from '../components/EndOfSubSection'
 
 const StyledIcon = styled(FontAwesomeIcon)`
   margin-right: 0.25rem;
@@ -29,11 +28,6 @@ const StyledIcon = styled(FontAwesomeIcon)`
 `
 
 const ContentWrapper = styled.div``
-
-const SectionIndicator = styled(Link)`
-  display: block;
-  color: #333 !important;
-`
 
 const UpLink = styled(Link)`
   color: #332c2cb3 !important;

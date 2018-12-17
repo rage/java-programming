@@ -10,7 +10,6 @@ import GatsbyLink from 'gatsby-link'
 import { Location } from '@reach/router'
 import Avatar from '@material-ui/core/Avatar'
 import Chip from '@material-ui/core/Chip'
-import FaceIcon from '@material-ui/icons/Face'
 
 import { faCalendarAlt as icon } from '@fortawesome/free-regular-svg-icons'
 import withSimpleErrorBoundary from '../../util/withSimpleErrorBoundary'

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { graphql, StaticQuery } from 'gatsby'
 import { Button } from '@material-ui/core'

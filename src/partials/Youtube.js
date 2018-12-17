@@ -94,4 +94,4 @@ const Youtube = props => {
   )
 }
 
-export default withSimpleErrorBoundary(YouTube)
+export default withSimpleErrorBoundary(Youtube)
