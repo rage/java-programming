@@ -28,14 +28,15 @@ const BannerWrapper = styled.div`
   h2 {
     color: #c0392b;
     background: white;
-      padding .5rem;
+    padding .5rem;
+    font-size: 1.4rem;
   }
 `
 
 const Banner = () => (
   <BannerWrapper>
     <h1>Ohjelmoinnin MOOC 2019</h1>
-    <h2>KURSSI KÄYNNISSÄ</h2>
+    <h2>Ohjelmoinnin alkeet kaikille, ilmaiseksi</h2>
   </BannerWrapper>
 )
 
