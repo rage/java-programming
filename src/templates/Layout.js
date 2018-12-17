@@ -18,6 +18,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 
 import { config as fontAwesomeConfig } from '@fortawesome/fontawesome-svg-core'
 import { canDoResearch } from '../services/moocfi'
+import Footer from '../components/Footer';
 
 fontAwesomeConfig.autoAddCss = false;
 
@@ -94,6 +95,7 @@ class Layout extends React.Component {
               <Sidebar />
               <TopBar />
               <ContentArea>{children}</ContentArea>
+              <Footer />
             </Fragment>
           )
         }}

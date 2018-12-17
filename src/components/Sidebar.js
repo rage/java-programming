@@ -21,7 +21,7 @@ const SidebarContainer = styled.div`
     `}
 
   @media only screen and (min-width: 1200px) {
-    height: 100vh;
+    height: 100%;
     width: ${SIDEBAR_WIDTH};
     position: fixed;
     top: 0;
