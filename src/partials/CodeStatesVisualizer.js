@@ -9,7 +9,7 @@ export default class CodeStatesVisualizerWrapper extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({ render: true })
+    // this.setState({ render: true })
   }
 
   render() {
