@@ -27,7 +27,8 @@ const StyledIcon = styled(FontAwesomeIcon)`
   font-size: 1em;
 `
 
-const ContentWrapper = styled.div``
+const ContentWrapper = styled.div`
+`
 
 const UpLink = styled(Link)`
   color: #332c2cb3 !important;

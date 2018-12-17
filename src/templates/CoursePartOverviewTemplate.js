@@ -19,6 +19,7 @@ import { loggedIn } from '../services/moocfi'
 
 const ContentWrapper = styled.div`
   margin-top: 1rem;
+  padding-bottom: 2rem;
 
   p {
     margin-bottom: 2rem;
