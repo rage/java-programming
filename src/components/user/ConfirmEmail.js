@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import EmailExample from '../../images/email-example.png'
 
 import styled from 'styled-components'
+import withSimpleErrorBoundary from '../../util/withSimpleErrorBoundary';
 
 const InfoBox = styled.div`
   margin-bottom: 2rem;
@@ -55,4 +56,4 @@ class ConfirmEmail extends React.Component {
   }
 }
 
-export default ConfirmEmail
+export default withSimpleErrorBoundary(ConfirmEmail)

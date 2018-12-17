@@ -13,6 +13,7 @@ import Loading from '../Loading'
 import { updateUserDetails, userDetails } from '../../services/moocfi'
 
 import styled from 'styled-components'
+import withSimpleErrorBoundary from '../../util/withSimpleErrorBoundary'
 
 const Row = styled.div`
   margin-bottom: 1.5rem;
@@ -123,9 +124,10 @@ class CourseOptionsEditor extends React.Component {
         <h1>Opiskelijan tiedot</h1>
         <Form>
           <InfoBox>
-            Kerro itsestäsi. Nämä tiedot auttavat suoritusten
-            merkitsemisessä ja kurssin järjestämisessä. Voit muokata tietoja myöhemmin kurssin asetuksista. Tietojen täyttämisen jälkeen
-            paina "Tallenna" sivun alareunasta.
+            Kerro itsestäsi. Nämä tiedot auttavat suoritusten merkitsemisessä ja
+            kurssin järjestämisessä. Voit muokata tietoja myöhemmin kurssin
+            asetuksista. Tietojen täyttämisen jälkeen paina "Tallenna" sivun
+            alareunasta.
           </InfoBox>
           <Loading loading={this.state.loading} heightHint="490px">
             <div>
@@ -235,18 +237,23 @@ class CourseOptionsEditor extends React.Component {
           <h2>Kurssilla tehtävästä tutkimuksesta</h2>
 
           <p>
-            Kurssilla tehdään oppimiseen liittyvää tutkimusta. Tällä tutkimuksella on useampia tavoitteita:
+            Kurssilla tehdään oppimiseen liittyvää tutkimusta. Tällä
+            tutkimuksella on useampia tavoitteita:
           </p>
 
           <ol>
             <li>
-              luoda oppimateriaali, joka ottaa yksilölliset erot huomioon ja reagoi tarvittaessa tarjoten kohdennetumpaa oppisisältöä
+              luoda oppimateriaali, joka ottaa yksilölliset erot huomioon ja
+              reagoi tarvittaessa tarjoten kohdennetumpaa oppisisältöä
             </li>
             <li>
-              kehittää digitaalisissa ympäristöissä tapahtuvaan oppimiseen liittyvää ymmärrystä ja tietoa, sekä
+              kehittää digitaalisissa ympäristöissä tapahtuvaan oppimiseen
+              liittyvää ymmärrystä ja tietoa, sekä
             </li>
             <li>
-              tukea tutkimustiedon kautta muita oppimateriaalien kehittäjiä ja oppimisen tutkijoita. Tämä johtaa luonnollisesti myös parempaan oppimiskokemukseen opiskelijoille.
+              tukea tutkimustiedon kautta muita oppimateriaalien kehittäjiä ja
+              oppimisen tutkijoita. Tämä johtaa luonnollisesti myös parempaan
+              oppimiskokemukseen opiskelijoille.
             </li>
           </ol>
 
@@ -325,4 +332,4 @@ class CourseOptionsEditor extends React.Component {
   }
 }
 
-export default CourseOptionsEditor
+export default withSimpleErrorBoundary(CourseOptionsEditor)

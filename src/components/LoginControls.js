@@ -9,6 +9,7 @@ import LoginStateContext, {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser as profileIcon } from '@fortawesome/free-solid-svg-icons'
 import styled from 'styled-components'
+import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
 
 const StyledIcon = styled(FontAwesomeIcon)`
   margin-right: 0.5rem;
@@ -56,4 +57,4 @@ class LoginControls extends React.Component {
   }
 }
 
-export default withLoginStateContext(LoginControls)
+export default withSimpleErrorBoundary(withLoginStateContext(LoginControls))

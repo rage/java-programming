@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
 
 const accentColor = '#CCC'
 
@@ -21,7 +22,8 @@ const Body = styled.div`
     margin-bottom: 0;
   }
 
-  em, strong {
+  em,
+  strong {
     color: red;
     font-weight: normal;
   }
@@ -33,7 +35,7 @@ const Note = styled.div`
   font-size: 0.75rem;
 `
 
-export default props => {
+const SampleOutput = props => {
   return (
     <Wrapper>
       <Note>Esimerkkitulostus</Note>
@@ -41,3 +43,5 @@ export default props => {
     </Wrapper>
   )
 }
+
+export default withSimpleErrorBoundary(SampleOutput)

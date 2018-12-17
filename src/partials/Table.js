@@ -7,23 +7,33 @@ import MaterialTableBody from '@material-ui/core/TableBody'
 import MaterialTableCell from '@material-ui/core/TableCell'
 import MaterialTableHead from '@material-ui/core/TableHead'
 import MaterialTableRow from '@material-ui/core/TableRow'
+import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
 
 const StyledTableCell = styled(MaterialTableCell)`
   padding: 1rem !important;
 `
 
-export const Table = props => (
+export const Table = withSimpleErrorBoundary(props => (
   <Paper>
     <MaterialTable {...props} />
   </Paper>
-)
+))
 
-export const TableBody = props => <MaterialTableBody {...props} />
+export const TableBody = props =>
+  withSimpleErrorBoundary(<MaterialTableBody {...props} />)
 
-export const TableCell = props => <StyledTableCell {...props} />
+export const TableCell = withSimpleErrorBoundary(props => (
+  <StyledTableCell {...props} />
+))
 
-export const TableTh = props => <StyledTableCell component="th" {...props} />
+export const TableTh = withSimpleErrorBoundary(props => (
+  <StyledTableCell component="th" {...props} />
+))
 
-export const TableHead = props => <MaterialTableHead {...props} />
+export const TableHead = withSimpleErrorBoundary(props => (
+  <MaterialTableHead {...props} />
+))
 
-export const TableRow = props => <MaterialTableRow {...props} />
+export const TableRow = withSimpleErrorBoundary(props => (
+  <MaterialTableRow {...props} />
+))

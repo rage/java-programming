@@ -1,5 +1,8 @@
 import React from 'react'
+import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
 
-export default props => {
+const Test = props => {
   return <div>{props.children}</div>
 }
+
+export default withSimpleErrorBoundary(Test)

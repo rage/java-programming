@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { TextField, Button } from '@material-ui/core'
+import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
 
 const Container = styled.div`
   padding: 3rem;
@@ -28,7 +29,7 @@ const FieldContainer = styled.div`
   }
 `
 
-export default class MailingListForm extends React.Component {
+class MailingListForm extends React.Component {
   constructor(props) {
     super(props)
     this.form = React.createRef()
@@ -67,3 +68,5 @@ export default class MailingListForm extends React.Component {
     )
   }
 }
+
+export default withSimpleErrorBoundary(MailingListForm)

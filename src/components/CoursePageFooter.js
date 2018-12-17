@@ -7,6 +7,7 @@ import { Link } from 'gatsby'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight as icon } from '@fortawesome/free-solid-svg-icons'
+import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
 
 const CoursePageFooterWrapper = styled.footer`
   background-color: black;
@@ -51,7 +52,7 @@ const ButtonWrapper = styled.div`
   align-items: center;
 `
 
-export default class CoursePageFooter extends React.Component {
+class CoursePageFooter extends React.Component {
   render() {
     return (
       <PagesContext.Consumer>
@@ -102,3 +103,5 @@ export default class CoursePageFooter extends React.Component {
     )
   }
 }
+
+export default withSimpleErrorBoundary(CoursePageFooter)

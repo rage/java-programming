@@ -6,6 +6,7 @@ import { capitalizeFirstLetter } from '../../util/strings'
 import { navigate } from 'gatsby'
 
 import styled from 'styled-components'
+import withSimpleErrorBoundary from '../../util/withSimpleErrorBoundary'
 
 const Row = styled.div`
   margin-bottom: 1.5rem;
@@ -239,4 +240,4 @@ class CreateAccountForm extends React.Component {
   }
 }
 
-export default CreateAccountForm
+export default withSimpleErrorBoundary(CreateAccountForm)

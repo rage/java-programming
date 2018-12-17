@@ -1,9 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
 
-const FloatImageRight = styled.div`
-`
+const FloatImageRightContainer = styled.div``
 
-export default ({ children }) => {
-  return <FloatImageRight>{children}</FloatImageRight>
+const FloatImageRight = ({ children }) => {
+  return <FloatImageRightContainer>{children}</FloatImageRightContainer>
 }
+
+export default withSimpleErrorBoundary(FloatImageRight)

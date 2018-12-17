@@ -3,13 +3,14 @@ import styled from 'styled-components'
 import ReduxActionAnalytics from 'redux-action-analytics'
 import * as storejs from 'store'
 import YouTube from 'react-youtube'
+import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
 
 let analytics = undefined
 
 initAnalytics()
 
 function initAnalytics() {
-  if (typeof window === "undefined") {
+  if (typeof window === 'undefined') {
     return
   }
   analytics = new ReduxActionAnalytics(
@@ -74,7 +75,7 @@ const VideoWrapper = styled.div`
   }
 `
 
-export default props => {
+const Youtube = props => {
   return (
     <VideoWrapper>
       <YouTube
@@ -92,3 +93,5 @@ export default props => {
     </VideoWrapper>
   )
 }
+
+export default withSimpleErrorBoundary(YouTube)

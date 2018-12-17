@@ -1,7 +1,8 @@
 import React from 'react'
 import logo from '../images/logo.png'
 import styled from 'styled-components'
-import "typeface-open-sans-condensed"
+import 'typeface-open-sans-condensed'
+import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
 
 const LogoImg = styled.img`
   width: 50px;
@@ -32,7 +33,7 @@ const StyledLink = styled.a`
   }
 `
 
-export default () => (
+const Logo = () => (
   <StyledLink href="https://mooc.fi">
     <LogoImg src={logo} />
     <LogoTypography variant="title" color="inherit">
@@ -40,3 +41,5 @@ export default () => (
     </LogoTypography>
   </StyledLink>
 )
+
+export default withSimpleErrorBoundary(Logo)

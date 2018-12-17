@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfoCircle, faUserGraduate } from '@fortawesome/free-solid-svg-icons'
+import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
 
 const Wrapper = styled.div`
   padding 1rem;
@@ -40,7 +41,7 @@ const variantToIcon = {
   learningObjectives: faUserGraduate,
 }
 
-export default props => {
+const TextBox = props => {
   return (
     <Wrapper style={{ '--color': variantToColor[props.variant] }}>
       <Header>
@@ -51,3 +52,5 @@ export default props => {
     </Wrapper>
   )
 }
+
+export default withSimpleErrorBoundary(TextBox)

@@ -5,6 +5,7 @@ import { Button } from '@material-ui/core'
 
 import Logo from './Logo'
 import TreeView from './TreeView'
+import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
 
 export const SIDEBAR_WIDTH = '20rem'
 
@@ -194,9 +195,11 @@ const query = graphql`
   }
 `
 
-export default props => (
+const SidebarWithData = props => (
   <StaticQuery
     query={query}
     render={data => <Sidebar data={data} {...props} />}
   />
 )
+
+export default withSimpleErrorBoundary(SidebarWithData)

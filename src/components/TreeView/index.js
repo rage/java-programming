@@ -1,6 +1,7 @@
 import React from 'react'
 import TreeViewItem from './TreeViewItem'
 import styled from 'styled-components'
+import withSimpleErrorBoundary from '../../util/withSimpleErrorBoundary'
 
 const StyledUl = styled.ul`
   margin-left: 0;
@@ -8,7 +9,7 @@ const StyledUl = styled.ul`
   padding-left: 0;
 `
 
-export default class TreeView extends React.Component {
+class TreeView extends React.Component {
   render() {
     return (
       <StyledUl>
@@ -19,3 +20,5 @@ export default class TreeView extends React.Component {
     )
   }
 }
+
+export default withSimpleErrorBoundary(TreeView)

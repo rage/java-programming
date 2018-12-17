@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
 import { CircularProgress } from '@material-ui/core'
+import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
 
 const LoadingWrapper = styled.div`
   padding: 5rem;
@@ -9,12 +10,14 @@ const LoadingWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   width: 100%;
-  ${props => props.heightHint && `
+  ${props =>
+    props.heightHint &&
+    `
     height: ${props.heightHint};
   `}
 `
 
-export default ({ children, loading, heightHint }) => {
+const Loading = ({ children, loading, heightHint }) => {
   if (loading) {
     return (
       <LoadingWrapper heightHint={heightHint}>
@@ -25,3 +28,5 @@ export default ({ children, loading, heightHint }) => {
 
   return <Fragment>{children}</Fragment>
 }
+
+export default withSimpleErrorBoundary(Loading)

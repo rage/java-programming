@@ -12,6 +12,7 @@ import { Button, Paper, Card, CardContent } from '@material-ui/core'
 import Modal from '@material-ui/core/Modal'
 import LoginStateContext from '../contexes/LoginStateContext'
 import LoginControls from '../components/LoginControls'
+import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary';
 
 const accentColor = '#FAAA38'
 
@@ -66,7 +67,7 @@ const LoginNagWrapper = styled.div`
   justify-content: center;
 `
 
-export default class ProgrammingExercise extends React.Component {
+class ProgrammingExercise extends React.Component {
   static contextType = LoginStateContext
 
   // {
@@ -265,3 +266,5 @@ export default class ProgrammingExercise extends React.Component {
     )
   }
 }
+
+export default withSimpleErrorBoundary(ProgrammingExercise)

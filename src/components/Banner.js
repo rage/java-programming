@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import Bruce from '../images/banner.svg'
+import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
 
-const Banner = styled.div`
+const BannerWrapper = styled.div`
   height: 30rem;
   max-height: 50vh;
   display: flex;
@@ -31,9 +32,11 @@ const Banner = styled.div`
   }
 `
 
-export default () => (
-  <Banner>
+const Banner = () => (
+  <BannerWrapper>
     <h1>Ohjelmoinnin MOOC 2019</h1>
     <h2>KURSSI KÄYNNISSÄ</h2>
-  </Banner>
+  </BannerWrapper>
 )
+
+export default withSimpleErrorBoundary(Banner)

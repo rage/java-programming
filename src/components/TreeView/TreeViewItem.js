@@ -13,6 +13,7 @@ import Chip from '@material-ui/core/Chip'
 import FaceIcon from '@material-ui/icons/Face'
 
 import { faCalendarAlt as icon } from '@fortawesome/free-regular-svg-icons'
+import withSimpleErrorBoundary from '../../util/withSimpleErrorBoundary'
 
 const ChildrenList = styled.ul`
   height: calc(var(--open-ratio) * var(--calculated-height) * 1px);
@@ -91,7 +92,7 @@ const StyledChip = styled(Chip)`
     width: 86px;
   }
 `
-export default class TreeViewItem extends React.Component {
+class TreeViewItem extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -187,3 +188,5 @@ function LinkWrapper(props) {
   }
   return <NavigationLink {...props} />
 }
+
+export default withSimpleErrorBoundary(TreeViewItem)

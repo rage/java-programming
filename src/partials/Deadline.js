@@ -2,8 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock as icon } from '@fortawesome/free-solid-svg-icons'
+import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
 
-const Deadline = styled.div`
+const DeadlineWrapper = styled.div`
   margin-bottom: 1rem;
   color: #6c757d;
   font-size: 0.9rem;
@@ -16,11 +17,13 @@ const StyledIcon = styled(FontAwesomeIcon)`
   font-size: 1em;
 `
 
-export default ({ children }) => {
+const Deadline = ({ children }) => {
   return (
-    <Deadline>
+    <DeadlineWrapper>
       <StyledIcon icon={icon} />
       Deadline: {children}
-    </Deadline>
+    </DeadlineWrapper>
   )
 }
+
+export default withSimpleErrorBoundary(Deadline)

@@ -5,6 +5,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 import { Divider, Paper } from '@material-ui/core'
+import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
 
 const PagesList = styled.ol`
   padding-left: 0;
@@ -103,4 +104,4 @@ const PagesInThisSection = ({ style }) => (
   </PagesContext.Consumer>
 )
 
-export default PagesInThisSection
+export default withSimpleErrorBoundary(PagesInThisSection)

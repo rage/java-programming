@@ -3,6 +3,7 @@ import { Card, CardContent } from '@material-ui/core'
 import styled from 'styled-components'
 import LoginControls from '../components/LoginControls'
 import LoginStateContext from '../contexes/LoginStateContext'
+import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
 
 const PleaseLoginWrapper = styled(Card)`
   margin-bottom: 2rem;
@@ -11,8 +12,7 @@ const PleaseLoginWrapper = styled(Card)`
 const Wrapper = styled.div`
   margin-bottom: 1rem;
 `
-
-export default class PleaseLogin extends React.Component {
+class PleaseLogin extends React.Component {
   static contextType = LoginStateContext
 
   render() {
@@ -23,7 +23,8 @@ export default class PleaseLogin extends React.Component {
       <PleaseLoginWrapper>
         <CardContent>
           <Wrapper>
-            Et ole kirjautunut sisään. Kaikki materiaalin osat eivät toimi ilman sisäänkirjautumista. Pääset kirjautumaan materiaaliin tästä:
+            Et ole kirjautunut sisään. Kaikki materiaalin osat eivät toimi ilman
+            sisäänkirjautumista. Pääset kirjautumaan materiaaliin tästä:
           </Wrapper>
           <div>
             <LoginControls />
@@ -33,3 +34,5 @@ export default class PleaseLogin extends React.Component {
     )
   }
 }
+
+export default withSimpleErrorBoundary(PleaseLogin)
