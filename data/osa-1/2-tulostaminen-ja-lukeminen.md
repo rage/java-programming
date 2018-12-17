@@ -205,7 +205,7 @@ Hei maailma!
 
 </sample-output>
 
-Toinen vaihtoehto on kahden `System.out.println`\-komennon käyttäminen, yksi kummallekin riville. Toinen on yhden `System.out.println`\-komennon käyttäminen siten, että tulostettava merkkijono sisältää rivinvaihtomerkin `\n`. Tämä näyttäisi ohjelmassa seuraavalta.
+Toinen vaihtoehto on kahden `System.out.println`-komennon käyttäminen, yksi kummallekin riville. Toinen on yhden `System.out.println`-komennon käyttäminen siten, että tulostettava merkkijono sisältää rivinvaihtomerkin `\n`. Tämä näyttäisi ohjelmassa seuraavalta.
 
 ```java
 public class Ohjelma {
@@ -240,7 +240,7 @@ niin edelleen.
 
 </programming-exercise>
 
-Mikäli merkkijonosta muodostuu hyvin pitkä, voi sen pilkkoa useampaan osaan. Tämä tapahtuu rajaamalla jokainen merkkijonon osa hipsuilla ja yhdistämällä osat `+`\-merkillä. Tällöin tulostettavan merkkijonon voi esittää useammalla rivillä, vaikka tulostuskomentoja olisi vain yksi.
+Mikäli merkkijonosta muodostuu hyvin pitkä, voi sen pilkkoa useampaan osaan. Tämä tapahtuu rajaamalla jokainen merkkijonon osa hipsuilla ja yhdistämällä osat `+`-merkillä. Tällöin tulostettavan merkkijonon voi esittää useammalla rivillä, vaikka tulostuskomentoja olisi vain yksi.
 
 ```java
 public class Ohjelma {
@@ -284,9 +284,7 @@ Tulostuslauseen tulostama tieto eli komennon _parametrit_ annetaan tulostuskomen
 Puolipisteellä `;` erotetaan lauseet toisistaan. Voisimme oikeastaan kirjoittaa koko ohjelman yhdelle riville -- mikä ei kuitenkaan ole kovin ymmärrettävää.
 
 ```java
-System.out.print("Hei ");
-System.out.print("maailma");
-System.out.print("!\n");
+System.out.print("Hei "); System.out.print("maailma"); System.out.print("!\n");
 ```
 
 <sample-output>
@@ -339,7 +337,7 @@ public class Kommentteja {
         // Tulostetaan
         System.out.println("Tulostettava teksti");
         System.out.println("Lisää tulostettavaa!");
-        /\* Seuraavaksi: - lisää tulostamisesta - lisää harjoittelua - muuttujat - ... \*/ System.out.println("Muuta tulostettavaa");
+        /* Seuraavaksi: - lisää tulostamisesta - lisää harjoittelua - muuttujat - ... */ System.out.println("Muuta tulostettavaa");
     }
 }
 ```
@@ -454,7 +452,7 @@ Passi ja hammasharja
 </programming-exercise>
 
 
-Tulostettavan merkkijonon voi koostaa useammista merkkijonoista `+`\-merkin avulla. Esimerkiksi alla oleva ohjelma tulostaa viestin "Hei maailma!" yhdelle riville.
+Tulostettavan merkkijonon voi koostaa useammista merkkijonoista `+`-merkin avulla. Esimerkiksi alla oleva ohjelma tulostaa viestin "Hei maailma!" yhdelle riville.
 
 ```java
   public class Ohjelma {
@@ -547,13 +545,13 @@ Hei Ada Lovelace!
 
 </sample-output>
 
-Huom! Kun käytät `System.out.println`\-komentoa, älä kirjoita komentoon merkkijonoa "Ada Lovelace", vaan hyödynnä tulostuksessa olemassaolevaa muuttujaa `nimi`.
+Huom! Kun käytät `System.out.println`-komentoa, älä kirjoita komentoon merkkijonoa "Ada Lovelace", vaan hyödynnä tulostuksessa olemassaolevaa muuttujaa `nimi`.
 
 </programming-exercise>
 
 ## Merkkijonon lukeminen käyttäjältä
 
-Tutustutaan syötteen lukemiseen käyttäjältä. Syötteen lukemiseen käytetään Javan valmista `Scanner`\-apuvälinettä. Apuväline tuodaan käyttöön lisäämällä komento `import java.util.Scanner;` ennen pääohjelmarungon aloitusta (`public class` ...), ja se luodaan komennolla `Scanner lukija = new Scanner(System.in);`. Tarkemmin ottaen tässä luodaan _lukija_\-niminen muuttuja, jota voidaan jatkossa käyttää käyttäjän kirjoittaman tekstin lukemiseen.
+Tutustutaan syötteen lukemiseen käyttäjältä. Syötteen lukemiseen käytetään Javan valmista `Scanner`-apuvälinettä. Apuväline tuodaan käyttöön lisäämällä komento `import java.util.Scanner;` ennen pääohjelmarungon aloitusta (`public class` ...), ja se luodaan komennolla `Scanner lukija = new Scanner(System.in);`. Tarkemmin ottaen tässä luodaan _lukija_-niminen muuttuja, jota voidaan jatkossa käyttää käyttäjän kirjoittaman tekstin lukemiseen.
 
 ```java
   import java.util.Scanner;
@@ -570,7 +568,7 @@ Tutustutaan syötteen lukemiseen käyttäjältä. Syötteen lukemiseen käytetä
 
 Älä hätäile vaikka pääohjelmarunko saattaa näyttää vaikeaselkoiselta! Jatkamme yhä ohjelmointia kommentilla _ohjelmakoodi_ merkittyyn kohtaan.
 
-Merkkijonon lukeminen käyttäjältä onnistuu `lukija`\-muuttujaan liittyvällä komennolla `nextLine()`. Mikäli käyttäjän syöttämä teksti halutaan tallentaa, tulee sitä varten esitellä merkkijonomuuttuja. Alla on esitelty ohjelma, joka kysyy käyttäjältä syötettä, lukee käyttäjän syöttämän merkkijonon, ja lopulta tulostaa käyttäjän syöttämän merkkijonon.
+Merkkijonon lukeminen käyttäjältä onnistuu `lukija`-muuttujaan liittyvällä komennolla `nextLine()`. Mikäli käyttäjän syöttämä teksti halutaan tallentaa, tulee sitä varten esitellä merkkijonomuuttuja. Alla on esitelty ohjelma, joka kysyy käyttäjältä syötettä, lukee käyttäjän syöttämän merkkijonon, ja lopulta tulostaa käyttäjän syöttämän merkkijonon.
 
 ```java
   // Tuodaan lukemiseen käytettävä Scanner-apuväline käyttöön
@@ -763,7 +761,7 @@ Hei Lilja
 </programming-exercise>
 
 
-Ohjelma voi kysyä käyttäjältä myös montaa merkkijonoa. Tämä toimii kysymällä jokaista haluttua merkkijonoa erikseen `nextLine()`\-komennolla.
+Ohjelma voi kysyä käyttäjältä myös montaa merkkijonoa. Tämä toimii kysymällä jokaista haluttua merkkijonoa erikseen `nextLine()`-komennolla.
 
 ```java
 import java.util.Scanner;

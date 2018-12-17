@@ -95,7 +95,7 @@ public class Esimerkki {
 }
 ```
 
-Muuttujan tyyppi kerrotaan kun muuttuja esitellään kertaa. Kun muuttujaan asetetaan uusi arvo, ei muuttujan tyyppiä enää kerrota.
+Muuttujan tyyppi kerrotaan kun muuttuja esitellään ensimmäistä kertaa. Kun muuttujaan asetetaan uusi arvo, ei muuttujan tyyppiä enää kerrota.
 
 ```java
 int luku = 10;
@@ -271,7 +271,7 @@ Muuttujien nimissä ei tule myöskään käyttää ääkkösiä. Voit korvata ä
 
 Muuttujan tyyppi kerrotaan muuttujan esittelyn yhteydessä. Esimerkiksi merkkijonon "teksti" sisältävä merkkijonomuuttuja luodaan lauseella `String merkkijono = "teksti";` ja kokonaisluvun 42 sisältävä kokonaislukumuuttuja luodaan lauseella `int luku = 42;`.
 
-Muuttujan tyyppi määrää arvot, joita muuttuja voi saada. `String`\-tyyppiset muuttujat saavat arvokseen merkkijonoja, `int`\-tyyppiset muuttujat saavat arvokseen kokonaislukuja, `double`\-tyyppiset muuttujat saavat arvokseen liukulukuja, ja `boolean`\-tyyppiset muuttujat saavat arvokseen totuusarvoja.
+Muuttujan tyyppi määrää arvot, joita muuttuja voi saada. `String`-tyyppiset muuttujat saavat arvokseen merkkijonoja, `int`-tyyppiset muuttujat saavat arvokseen kokonaislukuja, `double`-tyyppiset muuttujat saavat arvokseen liukulukuja, ja `boolean`-tyyppiset muuttujat saavat arvokseen totuusarvoja.
 
 Kunkin tyypin mahdolliset arvot ovat siis rajattuja. Esimerkiksi merkkijonomuuttuja ei voi sisältää kokonaislukuarvoa, eikä liukuluku voi sisältää totuusarvoa. Alla on listattu käyttämillemme muuttujille niiden mahdolliset arvoalueet.
 
@@ -286,7 +286,7 @@ Kunkin tyypin mahdolliset arvot ovat siis rajattuja. Esimerkiksi merkkijonomuutt
 
 ## Erityyppisten muuttujien lukeminen käyttäjältä
 
-Ohjelmiemme käyttämissä tekstipohjaisissa käyttöliittymissä syötteen lukeminen käyttäjältä tapahtuu aina merkkijonona, sillä käyttäjä kirjoittaa syötteen tekstinä. Merkkijonon lukeminen käyttäjältä on jo tuttua -- siihen käytetään Scanner-apuvälineen tarjoamaa `nextLine`\-komentoa.
+Ohjelmiemme käyttämissä tekstipohjaisissa käyttöliittymissä syötteen lukeminen käyttäjältä tapahtuu aina merkkijonona, sillä käyttäjä kirjoittaa syötteen tekstinä. Merkkijonon lukeminen käyttäjältä on jo tuttua -- siihen käytetään Scanner-apuvälineen tarjoamaa `nextLine`-komentoa.
 
 ```java
 import java.util.Scanner;

@@ -6,8 +6,8 @@ title: "Toiminnallisuuden toistaminen"
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
 * Tunnet käsitteen toistolause ja osaat luoda ohjelman, joka sisältää toistolauseen.
-* Osaat käyttää `break`\-komentoa toistolauseen suorituksen lopettamiseen ja toistolausetta seuraavaan käskyyn siirtymiseen.
-* Osaat käyttää `continue`\-komentoa toistolauseen alkuun palaamiseen.
+* Osaat käyttää `break`-komentoa toistolauseen suorituksen lopettamiseen ja toistolausetta seuraavaan käskyyn siirtymiseen.
+* Osaat käyttää `continue`-komentoa toistolauseen alkuun palaamiseen.
 * Osaat luoda ohjelman, joka lukee käyttäjältä syötettä kunnes käyttäjä syöttää tietynlaisen syötteen -- esim luku 0 tai merkkijono "loppu", jonka jälkeen ohjelma kertoo ennen lopettamista syötetyistä syötteistä (esim. syötteiden lukumäärä, lukujen tapauksessa summa ja keskiarvo).
 
 </text-box>
@@ -375,6 +375,8 @@ while (true) {
         System.out.println("Epäkelpo luku");
         continue;
     }
+
+    System.out.println(luku * luku);
 }
 ```
 
@@ -393,6 +395,8 @@ while (true) {
         System.out.println("Epäkelpo luku");
         continue;
     }
+
+    System.out.println(luku * luku);
 }
 ```
 
@@ -503,7 +507,99 @@ Huomaamme, että `if-else if-else`-rakenteelle on vaikea määritellä yksi selk
 
 Toistolauseita hyödynnetään usein asioiden laskemisessa. Esimerkiksi ohjelmat, joissa käsitellään määrittelemätöntä määrää käyttäjän syöttämiä lukuja perustuvat toistolauseseen. Tällaisissa ohjelmissa tulostetaan tyypillisesti jonkinlaisia tilastoja luetuista luvuista tai muista syötteistä toistolauseen jälkeen.
 
-Jotta ohjelma voi tulostaa toistolauseen jälkeen tietoja toistolauseen suorituksesta, tulee tietoa säilöä ja muokata toistolauseen aikana. Tämä tarkoittaa käytännössä aina sitä, että toistolausetta ennen tulee esitellä muuttuja, jota toistolauseessa käytetään.
+Jotta ohjelma voi tulostaa toistolauseen jälkeen tietoja toistolauseen suorituksesta, tulee tietoa säilöä ja muokata toistolauseen aikana. 
+
+Mikäli tiedon tallentamiseen käytettävä muuttuja esitellään toistolauseen lohkon sisällä, on muuttuja käytössä vain toistolauseen lohkon sisällä sekä sen alla määritellyissä lohkoissa, mutta ei toistolauseen lohkon ulkopuolella.
+
+Luodaan ohjelma, jonka tarkoituksena on laskea ja tulostaa käyttäjän syöttämien ykkösten lukumäärä. Tehdään ensin toimimaton versio ja tarkastellaan lohkojen toimintaa.
+
+```java
+Scanner lukija = new Scanner(System.in);
+
+// Tehtävänä lukujen lukemisen toistaminen
+while (true) {
+
+    // Tehtävänä ykkösten lukumäärän säilöminen
+    int ykkosia = 0;
+
+    System.out.println("Syötä luku (0 lopettaa): ");
+    // Tehtävänä yksittäisen luvun lukeminen
+    int luku = Integer.valueOf(lukija.nextLine());
+
+    // Tehtävänä toistolauseesta poistuminen kun
+    // käyttäjä syöttää luvun nolla
+    if (luku == 0) {
+        break;
+    }
+
+    // Tehtävänä ykkösten lukumäärän kasvattaminen
+    // yhdellä kun käyttäjä syöttää luvun yksi
+    if (luku == 1) {
+        ykkosia = ykkosia + 1;
+    }
+}
+
+// Tehtävänä havainnoitujen ykkösten lukumäärän tulostaminen
+// Tämä ei toimi, sillä muuttuja ykkosia on esitelty 
+// edellä olevan toistolauseen sisälläö
+System.out.println("Ykkösiä yhteensä: " + ykkosia);
+```
+
+Edellinen ohjelma ei toimi, sillä muuttuja `ykkosia` esitellään toistolauseen lohkon sisällä ja sitä yritetään käyttää ohjelman lopussa toistolauseen lohkon ulkopuolelta. Muuttuja on olemassa vain sen lohkon sisällä missä se on määritelty. Mikäli tulostus `System.out.println("Ykkösiä yhteensä: " + ykkosia);` olisi toistolauseen sisällä, ohjelma toimisi mutta ei toivotusti. Tarkastellaan tätä vielä seuraavaksi.
+
+
+```java
+Scanner lukija = new Scanner(System.in);
+
+// Tehtävänä lukujen lukemisen toistaminen
+while (true) {
+
+    // Tehtävänä ykkösten lukumäärän säilöminen
+    int ykkosia = 0;
+
+    System.out.println("Syötä luku (0 lopettaa): ");
+    // Tehtävänä yksittäisen luvun lukeminen
+    int luku = Integer.valueOf(lukija.nextLine());
+
+    // Tehtävänä toistolauseesta poistuminen kun
+    // käyttäjä syöttää luvun nolla
+    if (luku == 0) {
+        break;
+    }
+
+    // Tehtävänä ykkösten lukumäärän kasvattaminen
+    // yhdellä kun käyttäjä syöttää luvun yksi
+    if (luku == 1) {
+        ykkosia = ykkosia + 1;
+    }
+
+    // Tehtävänä havainnoitujen ykkösten lukumäärän tulostaminen
+    System.out.println("Ykkösiä yhteensä: " + ykkosia);
+}
+```
+
+Yllä oleva esimerkki toimii, mutta ei kuten toivomme. Alla ohjelman toimintaesimerkki.
+
+<sample-output>
+
+Syötä luku (0 lopettaa)
+**5**
+Ykkösiä yhteensä: 0
+Syötä luku (0 lopettaa)
+**1**
+Ykkösiä yhteensä: 1
+Syötä luku (0 lopettaa)
+**1**
+Ykkösiä yhteensä: 1
+Syötä luku (0 lopettaa)
+**2**
+Ykkösiä yhteensä: 0
+Syötä luku (0 lopettaa)
+**0**
+
+</sample-output>
+
+Mikäli haluat käyttää muuttujaa toistolauseen jälkeen (ja halutessasi toistolauseessa), tulee muuttuja esitellä ennen toistolausetta.
 
 Alla olevassa esimerkissä ohjelma laskee syötettyjen ykkösten lukumäärän. Syötteitä luetaan kunnes käyttäjä syöttää luvun 0, jonka jälkeen tulostetaan luettujen ykkösten lukumäärä. Ohjelmassa käytetään muuttujaa `ykkosia` ykkösten lukumäärän ylläpitoon.
 
