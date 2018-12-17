@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPencilAlt as icon } from '@fortawesome/free-solid-svg-icons'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import {
   fetchProgrammingExerciseDetails,
@@ -190,14 +191,14 @@ class ProgrammingExercise extends React.Component {
             <p>
               <p>
                 Linkki tehtävään Test My Code palautusympäristössä:{' '}
-                <a
+                <OutboundLink
                   href={`https://tmc.mooc.fi/exercises/${
                     this.state.exerciseDetails.id
                   }`}
                   rel="noopener noreferrer"
                 >{`https://tmc.mooc.fi/exercises/${
                   this.state.exerciseDetails.id
-                }`}</a>
+                }`}</OutboundLink>
               </p>
               {tokenThreshHold && (
                 <Fragment>

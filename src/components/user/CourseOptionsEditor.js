@@ -8,6 +8,8 @@ import {
   RadioGroup,
 } from '@material-ui/core'
 
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
+
 import Loading from '../Loading'
 
 import { updateUserDetails, userDetails } from '../../services/moocfi'
@@ -160,7 +162,8 @@ class CourseOptionsEditor extends React.Component {
                   name="last_name"
                   InputLabelProps={{
                     shrink:
-                      this.state.last_name || this.state.focused === 'last_name',
+                      this.state.last_name ||
+                      this.state.focused === 'last_name',
                   }}
                   fullWidth
                   value={this.state.last_name}
@@ -260,14 +263,14 @@ class CourseOptionsEditor extends React.Component {
           <p>
             Tällaisesta oppimisanalytiikaksi kutsutusta tutkimuksesta
             kiinnostuneiden kannattaa tutustua esimerkiksi artikkeliin{' '}
-            <a
+            <OutboundLink
               href="https://dl.acm.org/citation.cfm?id=2858798"
               target="_blank"
               rel="noopener noreferrer"
             >
               Educational Data Mining and Learning Analytics in Programming:
               Literature Review and Case Studies
-            </a>
+            </OutboundLink>
             .
           </p>
 

@@ -3,6 +3,7 @@ import React from 'react'
 import Layout from '../templates/Layout'
 import Container from '../components/Container'
 import { withLoginStateContext } from '../contexes/LoginStateContext'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const IndexPage = () => (
   <Layout>
@@ -22,13 +23,13 @@ const IndexPage = () => (
           hakulomake, jossa asetat Helsingin yliopiston tietojenkäsittelytieteen
           ohjelman haluamallesi prioriteetille. Löydät lisätietoja sähköisestä
           yhteishausta korkeakouluihin{' '}
-          <a
+          <OutboundLink
             href="https://opintopolku.fi/"
             target="_blank"
             rel="noopener noreferrer"
           >
             Opintopolku.fi
-          </a>
+          </OutboundLink>
           -portaalista.
         </p>
         <p>
@@ -66,22 +67,22 @@ const IndexPage = () => (
 
         <ul>
           <li>
-            <a
+            <OutboundLink
               href="https://www.helsinki.fi/fi/avoin-yliopisto/opiskelu/tule-opiskelemaan/tavoitteena-tutkinto"
               target="_blank"
               rel="noopener noreferrer"
             >
               Helsingin yliopiston avoimen yliopiston väylä
-            </a>
+            </OutboundLink>
           </li>
           <li>
-            <a
+            <OutboundLink
               href="https://www.helsinki.fi/fi/projektit/digital-education-for-all/"
               target="_blank"
               rel="noopener noreferrer"
             >
               Digital Education for All -hanke
-            </a>
+            </OutboundLink>
           </li>
         </ul>
       </section>

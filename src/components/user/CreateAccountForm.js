@@ -4,6 +4,7 @@ import { TextField, Button } from '@material-ui/core'
 import { createAccount, authenticate } from '../../services/moocfi'
 import { capitalizeFirstLetter } from '../../util/strings'
 import { navigate } from 'gatsby'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import styled from 'styled-components'
 import withSimpleErrorBoundary from '../../util/withSimpleErrorBoundary'
@@ -155,9 +156,9 @@ class CreateAccountForm extends React.Component {
         <Form onChange={this.validate}>
           <InfoBox>
             Tämä kurssi käyttää{' '}
-            <a href="https://mooc.fi" target="_blank" rel="noopener noreferrer">
+            <OutboundLink href="https://mooc.fi" target="_blank" rel="noopener noreferrer">
               mooc.fi
-            </a>{' '}
+            </OutboundLink>{' '}
             käyttäjätunnuksia. Jos olet aikaisemmin tehnyt mooc.fi -kursseja,
             voit käyttää sisäänkirjautumissivulla olemassaolevia tunnuksiasi.
             Tällä sivulla voit luoda uuden tunnuksen, joka toimii suurimmassa

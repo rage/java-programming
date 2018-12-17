@@ -8,6 +8,7 @@ import LoginStateContext, {
   withLoginStateContext,
 } from '../contexes/LoginStateContext'
 import Container from '../components/Container'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle as icon } from '@fortawesome/free-solid-svg-icons'
@@ -53,7 +54,10 @@ class MissingInfo extends React.Component {
           <p>
             Täällä voit muokata mooc.fi -tilisi asetuksia tämän kurssin osalta.
             Katso myös profiilisi mooc.fi:n Test My Code -palvelussa:{' '}
-            <a href="https://tmc.mooc.fi">https://tmc.mooc.fi</a>.
+            <OutboundLink href="https://tmc.mooc.fi" rel="noopener noreferrer">
+              https://tmc.mooc.fi
+            </OutboundLink>
+            .
           </p>
           <CourseOptionsEditor onComplete={this.onStepComplete} />
         </Container>

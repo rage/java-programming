@@ -3,6 +3,7 @@ import Layout from '../templates/Layout'
 import { authenticate } from '../services/moocfi'
 import { navigate, Link } from 'gatsby'
 import { TextField, Button } from '@material-ui/core'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import styled from 'styled-components'
 import LoginStateContext, {
@@ -77,13 +78,13 @@ class SignInPage extends React.Component {
             <Form>
               <InfoBox>
                 Tämä kurssi käyttää{' '}
-                <a
+                <OutboundLink
                   href="https://mooc.fi"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   mooc.fi
-                </a>{' '}
+                </OutboundLink>{' '}
                 käyttäjätunnuksia. Jos olet aikaisemmin tehnyt mooc.fi -kursseja
                 voit käyttää olemassaolevia tunnuksiasi.
               </InfoBox>
@@ -132,13 +133,13 @@ class SignInPage extends React.Component {
               <Link to="/sign-up">Luo uusi tunnus</Link>
             </Row>
             <Row>
-              <a
+              <OutboundLink
                 href="https://tmc.mooc.fi/password_reset_keys/new"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Unohdin salasanani
-              </a>
+              </OutboundLink>
             </Row>
           </FormContainer>
         </Container>
