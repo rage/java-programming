@@ -537,7 +537,7 @@ public class Ohjelma {
     public static void main(String[] args) {
         Scanner lukija = new Scanner(System.in);
         String teksti = lukija.nextLine();
-        int kokonaisluku = Integer.valueOf(lukija.nextLine();
+        int kokonaisluku = Integer.valueOf(lukija.nextLine());
         double liukuluku = Double.valueOf(lukija.nextLine()); 
         boolean totuusarvo = Boolean.valueOf(lukija.nextLine()); 
         
