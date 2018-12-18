@@ -318,7 +318,7 @@ public class Ohjelma {
     public static void main(String[] args) {
         // Tänne voit kirjoittaa ohjelmakoodia. Ohjelmasi voit ajaa
         // valitsemalla menusta Run->Run File tai painamalla Shift+F6
-    
+
 }
 ```
 
@@ -389,14 +389,14 @@ Merkkijonoliteraalin voi asettaa myös merkkijonomuotoisen muuttujan arvoksi. Mu
 Merkkijonomuotoinen muuttuja nimeltä `viesti`, jonka arvona on merkkijono "Hei maailma!", luodaan seuraavasti.
 
 ```java
-  String viesti = "Hei maailma!";
+String viesti = "Hei maailma!";
 ```
 
 Muuttujan luominen luo ohjelman käyttöön paikan, jonka sisältöön voi myöhemmin viitata. Viittaaminen tapahtuu muuttujan nimen avulla. Esimerkiksi merkkijonomuuttujan luominen ja tulostaminen tapahtuu seuraavalla tavalla.
 
 ```java
-  String viesti = "Hei maailma!";
-  System.out.println(viesti);
+String viesti = "Hei maailma!";
+System.out.println(viesti);
 ```
 
 <sample-output>
@@ -408,8 +408,8 @@ Hei maailma!
 Mikäli ohjelmassa olisi hipsut merkkijonomuuttujan `viesti` nimen ympärillä, tulostaisi ohjelma tekstin "viesti" muuttujan `viesti` arvon eli tekstin "Hei maailma!" sijaan.
 
 ```java
-  String viesti = "Hei maailma!";
-  System.out.println("viesti");
+String viesti = "Hei maailma!";
+System.out.println("viesti");
 ```
 
 <sample-output>
@@ -423,14 +423,14 @@ viesti
 Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
 
 ```java
-    public class PassiJaHammasharja {
+public class PassiJaHammasharja {
 
-        public static void main(String[] args) {
-          String viesti = "Passi ja hammaslanka";
+    public static void main(String[] args) {
+        String viesti = "Passi ja hammaslanka";
 
-          System.out.println(viesti);
-        }
+        System.out.println(viesti);
     }
+}
 ```
 
 Ohjelman suorittaminen tulostaa seuraavan tekstin.
@@ -455,25 +455,25 @@ Passi ja hammasharja
 Tulostettavan merkkijonon voi koostaa useammista merkkijonoista `+`-merkin avulla. Esimerkiksi alla oleva ohjelma tulostaa viestin "Hei maailma!" yhdelle riville.
 
 ```java
-  public class Ohjelma {
+public class Ohjelma {
 
-      public static void main(String[] args) {
-          System.out.println("Hei " + "maailma!");
-      }
-  }
+    public static void main(String[] args) {
+        System.out.println("Hei " + "maailma!");
+    }
+}
 ```
 
 Edellistä esimerkkiä noudattaen myös merkkijonomuuttujan arvon ja merkkijonoliteraalin arvo voidaan yhdistää.
 
 ```java
-  public class Ohjelma {
+public class Ohjelma {
 
-      public static void main(String[] args) {
-          String viesti = "Hei maailma!";
+    public static void main(String[] args) {
+        String viesti = "Hei maailma!";
 
-          System.out.println(viesti + "\n... ja maailmankaikkeus!");
-      }
-  }
+        System.out.println(viesti + "\n... ja maailmankaikkeus!");
+    }
+}
 ```
 
 <sample-output>
@@ -485,15 +485,15 @@ Hei maailma!
 Sama onnistuu myös useammalla osalla.
 
 ```java
-  public class Ohjelma {
+public class Ohjelma {
 
-      public static void main(String[] args) {
-          String alku = "My name is ";
-          String loppu = ", James Bond";
+    public static void main(String[] args) {
+        String alku = "My name is ";
+        String loppu = ", James Bond";
 
-          System.out.println(alku + "Bond" + loppu);
-      }
-  }
+        System.out.println(alku + "Bond" + loppu);
+    }
+}
 ```
 
 <sample-output>
@@ -528,13 +528,13 @@ kolme
 Tehtäväpohjassa on seuraavanlainen ohjelma.
 
 ```java
-    public class HeiAdaLovelace {
+public class HeiAdaLovelace {
 
-        public static void main(String[] args) {
-            String nimi = "Ada Lovelace";
+    public static void main(String[] args) {
+        String nimi = "Ada Lovelace";
 
-        }
     }
+}
 ```
 
 Muokkaa ohjelmaa siten, että ohjelmassa tulostetaan muuttujan `nimi` sisältö, ja että ohjelman tulostus on kokonaisuudessaan muotoa:
@@ -554,16 +554,16 @@ Huom! Kun käytät `System.out.println`-komentoa, älä kirjoita komentoon merkk
 Tutustutaan syötteen lukemiseen käyttäjältä. Syötteen lukemiseen käytetään Javan valmista `Scanner`-apuvälinettä. Apuväline tuodaan käyttöön lisäämällä komento `import java.util.Scanner;` ennen pääohjelmarungon aloitusta (`public class` ...), ja se luodaan komennolla `Scanner lukija = new Scanner(System.in);`. Tarkemmin ottaen tässä luodaan _lukija_-niminen muuttuja, jota voidaan jatkossa käyttää käyttäjän kirjoittaman tekstin lukemiseen.
 
 ```java
-  import java.util.Scanner;
+import java.util.Scanner;
 
-  public class Ohjelma {
+public class Ohjelma {
 
-      public static void main(String[] args) {
-          Scanner lukija = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner lukija = new Scanner(System.in);
 
-          // ohjelmakoodi
-      }
-  }
+        // ohjelmakoodi
+    }
+}
 ```
 
 Älä hätäile vaikka pääohjelmarunko saattaa näyttää vaikeaselkoiselta! Jatkamme yhä ohjelmointia kommentilla _ohjelmakoodi_ merkittyyn kohtaan.
@@ -571,25 +571,25 @@ Tutustutaan syötteen lukemiseen käyttäjältä. Syötteen lukemiseen käytetä
 Merkkijonon lukeminen käyttäjältä onnistuu `lukija`-muuttujaan liittyvällä komennolla `nextLine()`. Mikäli käyttäjän syöttämä teksti halutaan tallentaa, tulee sitä varten esitellä merkkijonomuuttuja. Alla on esitelty ohjelma, joka kysyy käyttäjältä syötettä, lukee käyttäjän syöttämän merkkijonon, ja lopulta tulostaa käyttäjän syöttämän merkkijonon.
 
 ```java
-  // Tuodaan lukemiseen käytettävä Scanner-apuväline käyttöön
-  import java.util.Scanner;
+// Tuodaan lukemiseen käytettävä Scanner-apuväline käyttöön
+import java.util.Scanner;
 
-  public class Ohjelma {
+public class Ohjelma {
 
-      public static void main(String[] args) {
-          // Luodaan lukemiseen käytettävä apuväline, jonka nimeksi tulee lukija
-          Scanner lukija = new Scanner(System.in);
+    public static void main(String[] args) {
+        // Luodaan lukemiseen käytettävä apuväline, jonka nimeksi tulee lukija
+        Scanner lukija = new Scanner(System.in);
 
-          // Tulostetaan käyttäjälle viesti "Syötä viesti: "
-          System.out.println("Syötä viesti: ");
+        // Tulostetaan käyttäjälle viesti "Syötä viesti: "
+        System.out.println("Syötä viesti: ");
 
-          // Luetaan käyttäjän syöttämä merkkijono ja asetetaan se muuttujan viesti arvoksi
-          String viesti = lukija.nextLine();
+        // Luetaan käyttäjän syöttämä merkkijono ja asetetaan se muuttujan viesti arvoksi
+        String viesti = lukija.nextLine();
 
-          // Tulostetaan muuttujan viesti sisältö
-          System.out.println(viesti);
-      }
-  }
+        // Tulostetaan muuttujan viesti sisältö
+        System.out.println(viesti);
+    }
+}
 ```
 
 Jatkossa tulostusesimerkkeihin merkitään käyttäjän syöttämä syöte punaisella värillä. Mikäli käyttäjä syöttäisi ohjelmaan tekstin "Hei maailma", olisi ohjelman suoritus seuraavanlainen.
@@ -605,20 +605,20 @@ Hei maailma
 Alla sama esimerkki, mutta siten, että käyttäjän syöttämä merkkijono tulostetaan tekstin "Viestisi oli " jälkeen.
 
 ```java
-  import java.util.Scanner;
+import java.util.Scanner;
 
-  public class Ohjelma {
+public class Ohjelma {
 
-      public static void main(String[] args) {
-          Scanner lukija = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner lukija = new Scanner(System.in);
 
-          System.out.println("Syötä viesti: ");
+        System.out.println("Syötä viesti: ");
 
-          String viesti = lukija.nextLine();
+        String viesti = lukija.nextLine();
 
-          System.out.println("Viestisi oli " + viesti);
-      }
-  }
+        System.out.println("Viestisi oli " + viesti);
+    }
+}
 ```
 
  <sample-output>
@@ -638,17 +638,17 @@ Kirjoita ohjelma, joka pyytää käyttäjää kirjoittamaan merkkijonon. Kun kä
 Tehtäväpohjan mukana tulee runko, joka sisältää Scanner-apuvälineen luomisen.
 
 ```java
-    import java.util.Scanner;
+import java.util.Scanner;
 
-    public class Viesti {
+public class Viesti {
 
-        public static void main(String[] args) {
-            Scanner lukija = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner lukija = new Scanner(System.in);
 
-            System.out.println("Kirjoita merkkijono!");
-            // toteuta ohjelma tänne
-        }
+        System.out.println("Kirjoita merkkijono!");
+        // toteuta ohjelma tänne
     }
+}
 ```
 
 Tulostusesimerkki kun käyttäjä syöttää merkkijonon "Heippa".
@@ -680,17 +680,17 @@ Kirjoita ohjelma, joka pyytää käyttäjää kirjoittamaan merkkijonon. Kun kä
 Tehtäväpohjan mukana tulee runko, joka sisältää Scanner-apuvälineen luomisen.
 
 ```java
-    import java.util.Scanner;
+import java.util.Scanner;
 
-    public class ViestiKolmesti {
+public class ViestiKolmesti {
 
-        public static void main(String[] args) {
-            Scanner lukija = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner lukija = new Scanner(System.in);
 
-            System.out.println("Kirjoita merkkijono!");
-            // toteuta ohjelma tänne
-        }
+        System.out.println("Kirjoita merkkijono!");
+        // toteuta ohjelma tänne
     }
+}
 ```
 
 Tulostusesimerkki kun käyttäjä syöttää merkkijonon "Heippa".
@@ -726,16 +726,16 @@ Kirjoita ohjelma, joka kysyy käyttäjältä nimeä käyttäen tekstiä "Mikä o
 Tehtäväpohjan mukana tulee runko, joka sisältää Scanner-apuvälineen luomisen.
 
 ```java
-    import java.util.Scanner;
+import java.util.Scanner;
 
-    public class Nimi {
+public class Nimi {
 
-        public static void main(String[] args) {
-            Scanner lukija = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner lukija = new Scanner(System.in);
 
-            // toteuta ohjelma tänne
-        }
+        // toteuta ohjelma tänne
     }
+}
 ```
 
 Tulostusesimerkki kun käyttäjä syöttää nimeksi Ada.

@@ -14,6 +14,7 @@ import './remark.css'
 import 'focus-visible'
 import 'typeface-open-sans'
 import 'typeface-roboto-slab'
+import 'typeface-roboto-mono'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
 import { config as fontAwesomeConfig } from '@fortawesome/fontawesome-svg-core'

@@ -47,6 +47,7 @@
     "tmc-client-js": "0.0.9",
     "typeface-open-sans": "0.0.54",
     "typeface-open-sans-condensed": "0.0.54",
+    "typeface-roboto-mono": "0.0.54",
     "typeface-roboto-slab": "0.0.54",
     "uuid": "^3.3.2",
     "visibilityjs": "^2.0.2"
