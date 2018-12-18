@@ -55,7 +55,7 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
+  "license": "Apache-2.0",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
