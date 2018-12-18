@@ -19,8 +19,9 @@ export const Table = withSimpleErrorBoundary(props => (
   </Paper>
 ))
 
-export const TableBody = props =>
-  withSimpleErrorBoundary(<MaterialTableBody {...props} />)
+export const TableBody = withSimpleErrorBoundary(props => (
+  <MaterialTableBody {...props} />
+))
 
 export const TableCell = withSimpleErrorBoundary(props => (
   <StyledTableCell {...props} />
