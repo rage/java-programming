@@ -8,23 +8,18 @@ code {
 
 .gatsby-highlight pre {
   border-radius: 10px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
-code.language-text {
+.gatsby-highlight code.language-text {
   padding: 0.2rem !important;
   margin-right: 0.4rem;
   padding-left: 0.4rem !important;
 }
 
-code, pre {
+.gatsby-highlight code, .gatsby-highlight pre {
   background-color: white !important;
 }
-
-pre {
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
-}
-
-/* //  */
 
 :not(pre) > code[class*='language-'] {
   background-color: rgb(243, 243, 243) !important;
