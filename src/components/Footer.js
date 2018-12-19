@@ -9,6 +9,7 @@ import { Link } from 'gatsby'
 import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
 
 import UHLogo from '../images/uh-logo.png'
+import MoocfiLogo from '../images/moocfi-logo-bw.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faTwitter,
@@ -79,6 +80,18 @@ const StyledCardContent = styled(CardContent)`
   justify-content: center;
 `
 
+const BrandsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  img {
+    height: 6rem;
+    width: auto;
+    margin: 1rem;
+  }
+`
+
 class Footer extends React.Component {
   render() {
     return (
@@ -139,15 +152,22 @@ class Footer extends React.Component {
                   <StyledIcon icon={faYoutube} size="3x" />
                 </OutboundLink>
               </SocialContainer>
-              <div>
+              <BrandsContainer>
                 <OutboundLink
                   href="https://helsinki.fi"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img alt="University of Helsinki" src={UHLogo} />
+                  <img alt="Helsingin yliopisto" src={UHLogo} />
                 </OutboundLink>
-              </div>
+                <OutboundLink
+                  href="https://mooc.fi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img alt="MOOC.fi" src={MoocfiLogo} />
+                </OutboundLink>
+              </BrandsContainer>
             </StyledCardContent>
           </StyledCard>
         </FooterContent>
