@@ -630,7 +630,7 @@ Syötä kaksi merkkijonoa
 **kaksi merkkijonoa**
 **maailma**
 Merkkijonot olivat eri!
-Ovelaa!
+Nokkelaa!
 
 </sample-output>
 
