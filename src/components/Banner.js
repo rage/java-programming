@@ -30,6 +30,7 @@ const BannerWrapper = styled.div`
     background: white;
     padding .5rem;
     font-size: 1.4rem;
+    margin: 0 1rem;
   }
 `
 
