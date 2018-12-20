@@ -10,6 +10,7 @@ import GatsbyLink from 'gatsby-link'
 import { Location } from '@reach/router'
 import Avatar from '@material-ui/core/Avatar'
 import Chip from '@material-ui/core/Chip'
+import Divider from '@material-ui/core/Divider';
 
 import { faCalendarAlt as icon } from '@fortawesome/free-regular-svg-icons'
 import withSimpleErrorBoundary from '../../util/withSimpleErrorBoundary'
@@ -91,6 +92,11 @@ const StyledChip = styled(Chip)`
     width: 86px;
   }
 `
+
+const StyledDivider = styled(Divider)`
+  margin: 1rem 16px !important;
+`
+
 class TreeViewItem extends React.Component {
   constructor(props) {
     super(props)
@@ -112,6 +118,9 @@ class TreeViewItem extends React.Component {
     }
   }
   render() {
+    if (this.props.item.separator) {
+      return <StyledDivider />
+    }
     return (
       <React.Fragment>
         <Location>

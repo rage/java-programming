@@ -34,6 +34,7 @@ const SidebarContainer = styled.div`
     display: flex;
   }
   @media only screen and (max-width: 1200px) {
+    width: 90%;
     max-width: 500px;
     margin: 0 auto;
   }
@@ -65,8 +66,7 @@ const MenuExpanderWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1rem;
-  margin-bottom: 0;
+  margin-top: 1rem;
   @media only screen and (min-width: 1200px) {
     display: none;
   }
@@ -94,6 +94,7 @@ var content2 = [
     title: 'Opettajille ja opinto-ohjaajille',
     path: '/opettajille',
   },
+  { separator: true },
 ]
 
 var futurePages = [
