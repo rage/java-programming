@@ -9,6 +9,8 @@ const ContentAreaContainer = styled.div`
   }
   padding: 0 0.5rem;
   background-color: #FCFCFC;
+  margin-bottom: 5rem;
+  min-height: 80vh;
 `
 
 class ContentArea extends React.Component {
