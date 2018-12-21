@@ -16,11 +16,14 @@ const StyledLink = styled(Link)`
   margin: 1rem 0;
   display: inline-block;
   width: 100%;
+  border-radius: 10px;
+  background-color: white;
+  transition: background-color 0.2s;
 
   &:hover {
     text-decoration: none;
-    font-weight: bold;
     color: black;
+    background-color: #eeeeee;
   }
 `
 
