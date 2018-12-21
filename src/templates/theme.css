@@ -67,10 +67,15 @@ p {
 }
 
 table {
-  table-layout:fixed;
   width: 100%;
   margin-bottom: 1rem;
   background-color: transparent;
+}
+
+@media only screen and (max-width: 500px) {
+  table {
+    table-layout: fixed;
+  }
 }
 
 .js-focus-visible :focus:not([data-focus-visible-added]) {
