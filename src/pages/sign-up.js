@@ -20,6 +20,9 @@ class SignInPage extends React.Component {
     this.setState(prevState => ({
       step: prevState.step + 1,
     }))
+    if (typeof window !== 'undefined') {
+      window.scrollTo(0, 0)
+    }
   }
 
   render() {
