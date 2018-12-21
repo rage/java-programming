@@ -24,5 +24,5 @@ code {
 :not(pre) > code[class*='language-'] {
   background-color: rgb(243, 243, 243) !important;
   color: rgb(20, 20, 20) !important;
-  white-space: pre;
+  white-space: pre-wrap;
 }
