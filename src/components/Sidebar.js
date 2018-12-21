@@ -7,6 +7,18 @@ import Logo from './Logo'
 import TreeView from './TreeView'
 import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+
+const StyledIcon = styled(FontAwesomeIcon)`
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  margin-left: 0.1rem;
+  color: var(--color);
+  font-size: 1.5em;
+`
+
 export const SIDEBAR_WIDTH = '20rem'
 
 const SidebarContainer = styled.div`
@@ -135,18 +147,6 @@ const MobileWrapperOrFragment = props => {
 }
 
 class Sidebar extends React.Component {
-  state = {
-    mobileMenuOpen: false,
-  }
-
-  toggleMobileMenu = () => {
-    this.setState(prev => {
-      return {
-        mobileMenuOpen: !prev.mobileMenuOpen,
-      }
-    })
-  }
-
   render() {
     const edges =
       this.props.data?.allMarkdownRemark?.edges.map(o => o.node?.frontmatter) ||
@@ -154,17 +154,27 @@ class Sidebar extends React.Component {
     let content = content2.concat(edges)
     content = content.concat(futurePages)
     return (
-      <MobileWrapperOrFragment mobileMenuOpen={this.state.mobileMenuOpen}>
+      <MobileWrapperOrFragment mobileMenuOpen={this.props.mobileMenuOpen}>
         <MenuExpanderWrapper>
           <Button
             variant="outlined"
             color="primary"
-            onClick={this.toggleMobileMenu}
+            onClick={this.props.toggleMobileMenu}
           >
-            {this.state.mobileMenuOpen ? 'Sulje valikko' : 'Avaa valikko'}
+            {this.props.mobileMenuOpen ? (
+              <span>
+                <StyledIcon icon={faTimes} />
+                Sulje valikko
+              </span>
+            ) : (
+              <span>
+                <StyledIcon icon={faBars} />
+                Avaa valikko
+              </span>
+            )}
           </Button>
         </MenuExpanderWrapper>
-        <SidebarContainer mobileMenuOpen={this.state.mobileMenuOpen}>
+        <SidebarContainer mobileMenuOpen={this.props.mobileMenuOpen}>
           <Brand>Ohjelmoinnin MOOC 2019</Brand>
           <TreeViewContainer>
             <TreeView data={content} />

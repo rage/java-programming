@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import Helmet from 'react-helmet'
 import Sidebar from '../components/Sidebar'
 import ContentArea from '../components/ContentArea'
@@ -7,6 +7,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import * as store from 'store'
 import withMaterialUiRoot from './withMaterialUiRoot'
 import Pheromones from '../util/pheromones'
+import styled from 'styled-components'
 
 import './reboot.css'
 import './theme.css'
@@ -19,9 +20,9 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 
 import { config as fontAwesomeConfig } from '@fortawesome/fontawesome-svg-core'
 import { canDoResearch } from '../services/moocfi'
-import Footer from '../components/Footer';
+import Footer from '../components/Footer'
 
-fontAwesomeConfig.autoAddCss = false;
+fontAwesomeConfig.autoAddCss = false
 
 const layoutQuery = graphql`
   query {
@@ -33,7 +34,20 @@ const layoutQuery = graphql`
   }
 `
 
+const Wrapper = styled.div`
+  ${props =>
+    props.mobileMenuOpen &&
+    `
+    height: 100vh;
+    overflow: hidden;
+  `}
+`
+
 class Layout extends React.Component {
+  state = {
+    mobileMenuOpen: false,
+  }
+
   componentDidMount() {
     const user = store.get('tmc.user')
     if (typeof window !== 'undefined' && user) {
@@ -67,6 +81,14 @@ class Layout extends React.Component {
     this.removePheromones = undefined
   }
 
+  toggleMobileMenu = () => {
+    this.setState(prev => {
+      return {
+        mobileMenuOpen: !prev.mobileMenuOpen,
+      }
+    })
+  }
+
   setQuiznatorUser = user => {
     window.Quiznator.setUser({
       id: user.username,
@@ -82,7 +104,7 @@ class Layout extends React.Component {
         query={layoutQuery}
         render={data => {
           return (
-            <Fragment>
+            <Wrapper mobileMenuOpen={this.state.mobileMenuOpen}>
               <Helmet
                 title={data.title.siteMetadata.title}
                 meta={[
@@ -93,11 +115,16 @@ class Layout extends React.Component {
                   },
                 ]}
               />
-              <Sidebar />
+              <Sidebar
+                mobileMenuOpen={this.state.mobileMenuOpen}
+                toggleMobileMenu={this.toggleMobileMenu}
+              />
               <TopBar />
-              <ContentArea>{children}</ContentArea>
+              <ContentArea mobileMenuOpen={this.state.mobileMenuOpen}>
+                {children}
+              </ContentArea>
               <Footer />
-            </Fragment>
+            </Wrapper>
           )
         }}
       />

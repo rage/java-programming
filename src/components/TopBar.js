@@ -8,6 +8,9 @@ const TopBarContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  @media only screen and (max-width: 1200px) {
+    justify-content: center;
+  }
 `
 
 class TopBar extends React.Component {
