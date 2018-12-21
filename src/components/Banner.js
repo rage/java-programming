@@ -13,6 +13,7 @@ const BannerWrapper = styled.div`
   margin-bottom: 2rem;
   background-color: #c0392b;
   background-image: url(${Bruce});
+  text-align: center;
   h1 {
     font-size: 2rem;
     color: #c0392b;
