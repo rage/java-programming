@@ -9,7 +9,7 @@ import {
   fetchProgrammingExerciseDetails,
   fetchProgrammingExerciseModelSolution,
 } from '../services/moocfi'
-import { Button, Paper, Card, CardContent } from '@material-ui/core'
+import { Button, Paper, Card, CardContent, Divider } from '@material-ui/core'
 import Modal from '@material-ui/core/Modal'
 import LoginStateContext from '../contexes/LoginStateContext'
 import LoginControls from '../components/LoginControls'
@@ -66,6 +66,18 @@ const LoginNagWrapper = styled.div`
   flex-direction: row;
   align-content: center;
   justify-content: center;
+`
+
+const StyledDivider = styled(Divider)`
+  margin: 1rem 16px !important;
+`
+
+const TokenContainer = styled.div`
+  margin-bottom: 1rem;
+  p {
+    font-size: 1rem;
+    color: #2e3032;
+  }
 `
 
 class ProgrammingExercise extends React.Component {
@@ -188,51 +200,46 @@ class ProgrammingExercise extends React.Component {
           </div>
 
           {this.context.loggedIn && this.state.exerciseDetails && (
-            <p>
-              <p>
-                Linkki tehtävään Test My Code palautusympäristössä:{' '}
-                <OutboundLink
-                  href={`https://tmc.mooc.fi/exercises/${
-                    this.state.exerciseDetails.id
-                  }`}
-                  rel="noopener noreferrer"
-                >{`https://tmc.mooc.fi/exercises/${
-                  this.state.exerciseDetails.id
-                }`}</OutboundLink>
-              </p>
+            <div>
               {tokenThreshHold && (
                 <Fragment>
-                  <p>
-                    Joka kerta kun olet saanut <i>{tokenThreshHold}</i>:ta
-                    tehtävää tehtyä, saat kolikon. Kolikoilla voi ostaa
-                    tehtävien vastauksia ja lunastaa itsesi mahdollisesta
-                    jumista.{' '}
-                    {availableTokens > 0 ? (
-                      <span>
-                        {' '}
-                        Käytössäsi on tällä hetkellä {availableTokens} kolikkoa.
-                      </span>
-                    ) : (
-                      <span>Sinulla ei ole vielä yhtään kolikkoa.</span>
-                    )}
-                  </p>
-                  <p>
-                    Pysyt katsomaan mallivastauksen ilman kolikkoja Test My Code
-                    -palvelusta sen jälkeen kun olet saanut tehtävän oikein.
-                  </p>
-                  {availableTokens > 0 && (
-                    <Button
-                      onClick={this.onShowModelSolution}
-                      variant="outlined"
-                      color="secondary"
-                    >
-                      Katso mallivastaus (kuluttaa tokenin)
-                    </Button>
-                  )}
+                  <StyledDivider />
+                  <TokenContainer>
+                    <p>
+                      Joka kerta kun olet saanut <i>{tokenThreshHold}</i>:ta
+                      tehtävää tehtyä, saat kolikon. Kolikoilla voi ostaa
+                      tehtävien vastauksia ja lunastaa itsesi mahdollisesta
+                      jumista.{' '}
+                      {availableTokens > 0 ? (
+                        <span>
+                          {' '}
+                          Käytössäsi on tällä hetkellä {availableTokens}{' '}
+                          kolikkoa.
+                        </span>
+                      ) : (
+                        <span>Sinulla ei ole vielä yhtään kolikkoa.</span>
+                      )}
+                    </p>
+                    <p>
+                      Pysyt katsomaan mallivastauksen ilman kolikkoja Test My
+                      Code -palvelusta sen jälkeen kun olet saanut tehtävän
+                      oikein.
+                    </p>
 
-                  <Button variant="outlined" onClick={this.onUpdate}>
-                    Päivitä
-                  </Button>
+                    {availableTokens > 0 && (
+                      <Button
+                        onClick={this.onShowModelSolution}
+                        variant="outlined"
+                        color="secondary"
+                      >
+                        Katso mallivastaus (kuluttaa tokenin)
+                      </Button>
+                    )}
+
+                    <Button variant="outlined" onClick={this.onUpdate}>
+                      Päivitä
+                    </Button>
+                  </TokenContainer>
 
                   <Modal
                     open={this.state.modelSolutionModalOpen}
@@ -261,8 +268,33 @@ class ProgrammingExercise extends React.Component {
                   </Modal>
                 </Fragment>
               )}
-              {/* <pre>{JSON.stringify(this.state.exerciseDetails, null, 2)}</pre> */}
-            </p>
+              <p>
+                Palauta tehtävä palvelimelle tarkistettavaksi Netbeans
+                ohjelmointiympäristössä:{' '}
+                <OutboundLink
+                  href="https://materiaalit.github.io/tmc-asennus/netbeans/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  ohjeet tehtävien palauttamiseen
+                </OutboundLink>
+                .
+              </p>
+              <p>
+                Voit myöhemmin katsoa palautuksiasi Test My Code
+                palautusympäristössä{' '}
+                <OutboundLink
+                  href={`https://tmc.mooc.fi/exercises/${
+                    this.state.exerciseDetails.id
+                  }?use_clients=1`}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  täältä
+                </OutboundLink>
+                .
+              </p>
+            </div>
           )}
         </Body>
       </Wrapper>
