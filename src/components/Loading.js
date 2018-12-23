@@ -17,7 +17,7 @@ const LoadingWrapper = styled.div`
   `}
 `
 
-const Loading = ({ children, loading, heightHint }) => {
+const Loading = ({ children, loading = true, heightHint = "500px" }) => {
   if (loading) {
     return (
       <LoadingWrapper heightHint={heightHint}>

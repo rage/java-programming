@@ -23,6 +23,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 import { config as fontAwesomeConfig } from '@fortawesome/fontawesome-svg-core'
 import { canDoResearch } from '../services/moocfi'
 import Footer from '../components/Footer'
+import PointsBalloon from '../components/PointsBalloon'
 
 fontAwesomeConfig.autoAddCss = false
 
@@ -133,6 +134,7 @@ class Layout extends React.Component {
                 <ContentArea mobileMenuOpen={this.state.mobileMenuOpen}>
                   {children}
                 </ContentArea>
+                <PointsBalloon />
                 <Footer />
               </Wrapper>
             )
