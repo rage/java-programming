@@ -46,12 +46,15 @@ class SignInPage extends React.Component {
         username: this.state.email,
         password: this.state.password,
       })
-      if (typeof window !== 'undefined') {
-        console.log('Navigating back')
-        window.history.back()
-        return
-      }
-      navigate('/')
+      setTimeout(() => {
+        // Give loginstate time to
+        if (typeof window !== 'undefined') {
+          console.log('Navigating back')
+          window.history.back()
+          return
+        }
+        navigate('/')
+      }, 100)
     } catch (error) {
       this.setState({ error: true, submitting: false })
       return
@@ -66,7 +69,7 @@ class SignInPage extends React.Component {
   }
 
   render() {
-    if (this.context.loggedIn) {
+    if (this.context.loggedIn && !this.state.submitting) {
       navigate('/')
       return <div>Redirecting....</div>
     }
