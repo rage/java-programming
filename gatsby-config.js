@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Ohjelmoinnin MOOC 2019"
+    title: "Ohjelmoinnin MOOC 2019",
+    siteUrl: `https://ohjelmointi-19.mooc.fi`,
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -112,6 +113,32 @@ module.exports = {
         head: false,
         // Setting this parameter is optional
         anonymize: true
+      }
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
+        // Exclude specific pages or groups of pages using glob parameters
+        // See: https://github.com/isaacs/minimatch
+        // The example below will exclude the single `path/to/page` and all routes beginning with `category`
+        exclude: ["/missing-info", "/profile", "/sign-in", "/sign-up", "/404"],
+        query: `
+        {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+
+          allSitePage {
+            edges {
+              node {
+                path
+              }
+            }
+          }
+      }`
       }
     }
   ]
