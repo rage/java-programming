@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Helmet from 'react-helmet'
 import Layout from '../templates/Layout'
 import Container from '../components/Container'
 import { withLoginStateContext } from '../contexes/LoginStateContext'
@@ -8,6 +8,7 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics'
 const IndexPage = () => (
   <Layout>
     <Container>
+      <Helmet title="Mahdollisuus opinto-oikeuteen" />
       <section id="yleistä">
         <h1>Mahdollisuus opinto-oikeuteen</h1>
         <p>

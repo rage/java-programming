@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import Layout from '../templates/Layout'
 import { authenticate } from '../services/moocfi'
 import { navigate, Link } from 'gatsby'
@@ -76,6 +77,7 @@ class SignInPage extends React.Component {
     return (
       <Layout>
         <Container>
+          <Helmet title="Kirjaudu sisään" />
           <FormContainer>
             <h1>Kirjaudu sisään</h1>
             <Form>

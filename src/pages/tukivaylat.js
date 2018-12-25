@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import Layout from '../templates/Layout'
@@ -8,6 +9,7 @@ import { withLoginStateContext } from '../contexes/LoginStateContext'
 const IndexPage = () => (
   <Layout>
     <Container>
+      <Helmet title="Tukiväylät" />
       <h1>Tukiväylät</h1>
 
       <p>

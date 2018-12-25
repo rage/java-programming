@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import rehypeReact from 'rehype-react'
 import { navigate, Link } from 'gatsby'
+import { Helmet } from 'react-helmet'
 
 import Layout from './Layout'
 
@@ -27,8 +28,7 @@ const StyledIcon = styled(FontAwesomeIcon)`
   font-size: 1em;
 `
 
-const ContentWrapper = styled.div`
-`
+const ContentWrapper = styled.div``
 
 const UpLink = styled(Link)`
   color: #332c2cb3 !important;
@@ -72,31 +72,29 @@ export default class CourseContentTemplate extends React.Component {
     )
     const parentSectionPath = `/${frontmatter.path.split(/\//g)[1]}`
     return (
-      <PagesContext.Provider
-        value={{
-          all: allPages,
-          current: frontmatter,
-        }}
-      >
-        <LoginStateContextProvider>
-          <Layout>
-            <Fragment>
-              <Container>
-                <ContentWrapper>
-                  <UpLink to={parentSectionPath}>
-                    <StyledIcon icon={icon} />
-                    {parentSectionName}
-                  </UpLink>
-                  <h1>{frontmatter.title}</h1>
-                  {renderAst(htmlAst)}
-                  <EndOfSubSection />
-                </ContentWrapper>
-              </Container>
-              <CoursePageFooter />
-            </Fragment>
-          </Layout>
-        </LoginStateContextProvider>
-      </PagesContext.Provider>
+      <Fragment>
+        <Helmet title={frontmatter.title} />
+        <PagesContext.Provider value={{ all: allPages, current: frontmatter }}>
+          <LoginStateContextProvider>
+            <Layout>
+              <Fragment>
+                <Container>
+                  <ContentWrapper>
+                    <UpLink to={parentSectionPath}>
+                      <StyledIcon icon={icon} />
+                      {parentSectionName}
+                    </UpLink>
+                    <h1>{frontmatter.title}</h1>
+                    {renderAst(htmlAst)}
+                    <EndOfSubSection />
+                  </ContentWrapper>
+                </Container>
+                <CoursePageFooter />
+              </Fragment>
+            </Layout>
+          </LoginStateContextProvider>
+        </PagesContext.Provider>
+      </Fragment>
     )
   }
 }

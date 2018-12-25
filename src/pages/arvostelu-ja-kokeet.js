@@ -1,8 +1,10 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 
 import Layout from '../templates/Layout'
 import Container from '../components/Container'
 import { withLoginStateContext } from '../contexes/LoginStateContext'
+
 
 import {
   Table,
@@ -15,6 +17,7 @@ import {
 const IndexPage = () => (
   <Layout>
     <Container>
+      <Helmet title="Arvostelu ja kokeet" />
       <section id="yleistä">
         <h1>Arvostelu ja kokeet</h1>
         <p>

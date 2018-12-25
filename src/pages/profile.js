@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import Helmet from 'react-helmet'
 import styled from 'styled-components'
 
 import Layout from '../templates/Layout'
@@ -49,6 +50,7 @@ class MissingInfo extends React.Component {
     return (
       <Layout>
         <Container>
+          <Helmet title="Profiili" />
           <h1>Profiili</h1>
 
           <p>

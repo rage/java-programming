@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import rehypeReact from 'rehype-react'
 import { navigate } from 'gatsby'
+import { Helmet } from 'react-helmet'
 
 import Layout from './Layout'
 
@@ -59,6 +60,7 @@ export default class CoursePartOverviewTemplate extends React.Component {
           current: frontmatter,
         }}
       >
+        <Helmet title={frontmatter.title} />
         <LoginStateContextProvider>
           <Layout>
             <Fragment>

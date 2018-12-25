@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 
 import Layout from '../templates/Layout'
 import Container from '../components/Container'
@@ -14,6 +15,7 @@ import {
 
 const IndexPage = () => (
   <Layout>
+    <Helmet title="Osaamistavoitteet" />
     <Container>
       <section id="yleistä">
         <h1>Osaamistavoitteet</h1>

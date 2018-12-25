@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import Layout from '../templates/Layout'
 import Container from '../components/Container'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
@@ -7,6 +8,7 @@ import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
 const Credits = () => (
   <Layout>
     <Container>
+      <Helmet title="Kiitokset ja materiaalista" />
       <h1>Kiitokset ja materiaalista</h1>
       <p>
         Kurssin on tehnyt Helsingin yliopiston{' '}

@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 
 import Layout from '../templates/Layout'
 import CreateAccountForm from '../components/user/CreateAccountForm'
@@ -37,6 +38,7 @@ class SignInPage extends React.Component {
 
     return (
       <Layout>
+        <Helmet title="Luo käyttäjätunnus" />
         <Container>{stepComponent}</Container>
       </Layout>
     )

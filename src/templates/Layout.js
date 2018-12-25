@@ -103,15 +103,22 @@ class Layout extends React.Component {
       <StaticQuery
         query={layoutQuery}
         render={data => {
+          const siteTitle = data.title.siteMetadata.title
           return (
             <Wrapper mobileMenuOpen={this.state.mobileMenuOpen}>
               <Helmet
-                title={data.title.siteMetadata.title}
+                defaultTitle={siteTitle}
+                titleTemplate={`%s - ${siteTitle}`}
                 meta={[
-                  { name: 'description', content: 'Ohjelmoinnin MOOC 2019' },
+                  {
+                    name: 'description',
+                    content:
+                      'Helsingin yliopiston kaikille avoin ja ilmainen ohjelmoinnin perusteet opettava verkkokurssi. Kurssilla perehdytään nykyaikaisen ohjelmoinnin perusideoihin sekä ohjelmoinnissa käytettävien työvälineiden lisäksi algoritmien laatimiseen. Kurssille osallistuminen ei vaadi ennakkotietoja ohjelmoinnista.',
+                  },
                   {
                     name: 'keywords',
-                    content: 'ohjelmointi, java, programming, CS1, MOOC, 2019, ohjelmointikurssi, avoin, ilmainen',
+                    content:
+                      'ohjelmointi, java, programming, CS1, MOOC, 2019, ohjelmointikurssi, avoin, ilmainen, helsingin yliopisto',
                   },
                 ]}
               />
