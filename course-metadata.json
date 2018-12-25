@@ -1,0 +1,40 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "name": "Ohjelmoinnin MOOC 2019",
+  "description": "Helsingin yliopiston kaikille avoin ja ilmainen ohjelmoinnin perusteet opettava verkkokurssi. Kurssilla perehdytään nykyaikaisen ohjelmoinnin perusideoihin sekä ohjelmoinnissa käytettävien työvälineiden lisäksi algoritmien laatimiseen. Kurssille osallistuminen ei vaadi ennakkotietoja ohjelmoinnista.",
+  "provider": {
+    "@type": "Organization",
+    "name": "MOOC.fi",
+    "sameAs": "https://mooc.fi"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "University of Helsinki",
+    "sameAs": "https://www.helsinki.fi/"
+  },
+  "hasCourseInstance": [
+    {
+      "@type": "CourseInstance",
+      "name": "Ohjelmoinnin MOOC 2019",
+      "courseMode": ["MOOC", "online"],
+      "location": {
+        "@type": "Place",
+        "name": "Exactum, Kumpulan kampus",
+        "address": "Gustaf Hällströmin katu 2b 00560 Helsinki, Finland"
+      },
+      "startDate": "2018-12-14",
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student",
+        "audienceType": "everyone"
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "name": "Finnish",
+        "alternateName": "fi"
+      },
+      "isAccessibleForFree": true
+    }
+  ]
+}
