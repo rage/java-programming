@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Bruce from '../images/banner.svg'
 import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
 
-const BannerWrapper = styled.div`
+const BannerWrapper = styled.header`
   height: 30rem;
   max-height: 50vh;
   display: flex;

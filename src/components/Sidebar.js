@@ -59,7 +59,7 @@ const LogoContainer = styled.div`
   align-items: center;
 `
 
-const TreeViewContainer = styled.div`
+const TreeViewContainer = styled.nav`
   flex: 1;
 `
 

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfoCircle, faUserGraduate } from '@fortawesome/free-solid-svg-icons'
 import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
 
-const Wrapper = styled.div`
+const Wrapper = styled.aside`
   padding 1rem;
   margin-bottom: 2rem;
   border-left: 0.2rem solid var(--color);

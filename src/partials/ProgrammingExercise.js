@@ -17,7 +17,7 @@ import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
 
 const accentColor = '#FAAA38'
 
-const Wrapper = styled.div`
+const ProgrammingExerciseWrapper = styled.section`
   padding 1rem;
   margin-bottom: 2rem;
   border-left: 0.2rem solid ${accentColor};
@@ -174,7 +174,7 @@ class ProgrammingExercise extends React.Component {
     }
 
     return (
-      <Wrapper>
+      <ProgrammingExerciseWrapper>
         <Header>
           <StyledIcon icon={icon} size="1x" />
           <HeaderMuted>Tehtävä: </HeaderMuted>
@@ -297,7 +297,7 @@ class ProgrammingExercise extends React.Component {
             </div>
           )}
         </Body>
-      </Wrapper>
+      </ProgrammingExerciseWrapper>
     )
   }
 }
