@@ -111,7 +111,7 @@ class Layout extends React.Component {
                   { name: 'description', content: 'Ohjelmoinnin MOOC 2019' },
                   {
                     name: 'keywords',
-                    content: 'ohjelmointi, java, programming, CS1',
+                    content: 'ohjelmointi, java, programming, CS1, MOOC, 2019, ohjelmointikurssi, avoin, ilmainen',
                   },
                 ]}
               />
