@@ -45,6 +45,9 @@ const FooterWrapper = styled.footer`
   @media only screen and (min-width: 1200px) {
     margin-left: ${SIDEBAR_WIDTH};
   }
+  a {
+    color: #006fe6;
+  }
 `
 
 const FooterBackground = styled.div`
@@ -134,6 +137,7 @@ class Footer extends React.Component {
                   href="https://twitter.com/moocfi"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Mooc.fi:n Twitter -profiili"
                 >
                   <StyledIcon icon={faTwitter} size="3x" />
                 </OutboundLink>
@@ -141,6 +145,7 @@ class Footer extends React.Component {
                   href="https://www.facebook.com/Moocfi"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Mooc.fi:n Facebook -sivu"
                 >
                   <StyledIcon icon={faFacebook} size="3x" />
                 </OutboundLink>
@@ -148,6 +153,7 @@ class Footer extends React.Component {
                   href="https://www.youtube.com/channel/UCkHoQ5p9skFdyjrV3_tnUrA"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Mooc.fi:n YouTube -kanava"
                 >
                   <StyledIcon icon={faYoutube} size="3x" />
                 </OutboundLink>

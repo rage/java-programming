@@ -15,30 +15,43 @@ const BannerWrapper = styled.div`
   background-image: url(${Bruce});
   text-align: center;
   h1 {
-    font-size: 2rem;
-    color: #c0392b;
-    background: white;
-    padding: .5rem;
-    margin: 1rem;
-    text-align: center;
-    @media only screen and (min-width: 720px) {
-      font-size: 3rem;
-    }
-
   }
   h2 {
+  }
+`
+
+const Heading = styled.div`
+  font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, Noto Sans, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-weight: 500;
+  font-size: 2rem;
+  color: #c0392b;
+  background: white;
+  padding: 0.5rem;
+  margin: 1rem;
+  text-align: center;
+  @media only screen and (min-width: 720px) {
+    font-size: 3rem;
+  }
+`
+
+const SubHeading = styled.div`
+    font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, 'Helvetica Neue', Arial, Noto Sans, sans-serif, 'Apple Color Emoji',
+      'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-weight: 500;
     color: #c0392b;
     background: white;
     padding .5rem;
     font-size: 1.4rem;
     margin: 0 1rem;
-  }
 `
 
 const Banner = () => (
   <BannerWrapper>
-    <h1>Ohjelmoinnin MOOC 2019</h1>
-    <h2>Ohjelmoinnin alkeet kaikille, ilmaiseksi</h2>
+    <Heading>Ohjelmoinnin MOOC 2019</Heading>
+    <SubHeading>Ohjelmoinnin alkeet kaikille, ilmaiseksi</SubHeading>
   </BannerWrapper>
 )
 
