@@ -5,7 +5,8 @@ import styled from 'styled-components'
 import ExpansionPanel from '@material-ui/core/ExpansionPanel'
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary'
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleDown as icon } from '@fortawesome/free-solid-svg-icons'
 
 import withSimpleErrorBoundary from '../../util/withSimpleErrorBoundary'
 import ExerciseSummary from './ExerciseSummary'
@@ -61,7 +62,7 @@ class ExercisesInThisSection extends React.Component {
   render() {
     return (
       <ExpansionPanel>
-        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+        <ExpansionPanelSummary expandIcon={<FontAwesomeIcon icon={icon} />}>
           Lista osan tehtävistä
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
