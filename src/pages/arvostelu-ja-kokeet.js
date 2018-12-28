@@ -5,7 +5,6 @@ import Layout from '../templates/Layout'
 import Container from '../components/Container'
 import { withLoginStateContext } from '../contexes/LoginStateContext'
 
-
 import {
   Table,
   TableBody,
@@ -46,19 +45,19 @@ const IndexPage = () => (
           8.6., ja 29.6.
         </p>
         <p>
-          Täydet tehtäväpisteet kustakin osasta saa tekemällä osan tehtävistä
-          vähintään 90%, puolet tekemällä noin 45% jne.
+          Täydet tehtäväpisteet kustakin osasta saa tekemällä osan kaikkien
+          tehtävien pisteistä vähintään 90%, puolet tekemällä noin 45% jne.
         </p>
         <p>
           Kokeeseen saa osallistua kun on tehnyt vähintään 25% jokaisen osan
-          tehtävistä. Aikatauluttamattomassa kurssissa kokeesta tulee saada
-          vähintään puolet kurssin pisteistä kurssin läpäiseksi.
+          tehtävien pisteistä. Aikatauluttamattomassa kurssissa kokeesta tulee
+          saada vähintään puolet kurssin pisteistä kurssin läpäiseksi.
         </p>
         <h2>Aikatauluttamaton kurssi</h2>
         <p>
           Aikatauluttamattomassa kurssiversiossa arvostelu perustuu täysin
           kokeeseen. Kokeeseen saa osallistua kun on tehnyt jokaisen osan
-          tehtävistä vähintään 90%.
+          tehtävien pisteistä vähintään 90%.
         </p>
         <p>
           Kurssin aikatauluttamaton versio julkaistaan aikataulutetun version
