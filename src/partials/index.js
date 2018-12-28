@@ -33,6 +33,7 @@ import PleaseLogin from './PleaseLogin'
 import FloatImageRight from './FloatImageRight'
 import CodeStatesVisualizer from './CodeStatesVisualizer'
 import PdfSlideshow from './PdfSlideshow'
+import ExercisesInThisSection from './ExercisesInThisSection'
 
 import {
   Table,
@@ -54,6 +55,7 @@ const mapping = {
   'float-image-right': FloatImageRight,
   'code-states-visualizer': CodeStatesVisualizer,
   'pdf-slideshow': PdfSlideshow,
+  'exercises-in-this-section': ExercisesInThisSection,
   youtube: Youtube,
   quiznator: Quiznator,
   table: Table,

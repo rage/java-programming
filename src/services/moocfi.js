@@ -210,7 +210,7 @@ function loginStateChanged() {
   })
 }
 
-function accessToken() {
+export function accessToken() {
   try {
     return store.get('tmc.user').accessToken || null
   } catch (error) {

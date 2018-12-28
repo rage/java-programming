@@ -47,7 +47,11 @@ export default class CoursePartOverviewTemplate extends React.Component {
   render() {
     const { data } = this.props
     const { frontmatter, htmlAst } = data.page
-    const allPages = data.allPages.edges.map(o => o.node?.frontmatter)
+    const allPages = data.allPages.edges.map(o => {
+      const res = o.node?.frontmatter
+      res.exercises = o.node?.moocfiExercises
+      return res
+    })
     const partials = getNamedPartials()
     const renderAst = new rehypeReact({
       createElement: React.createElement,
@@ -95,6 +99,10 @@ export const pageQuery = graphql`
           frontmatter {
             path
             title
+          }
+          moocfiExercises {
+            id
+            type
           }
         }
       }

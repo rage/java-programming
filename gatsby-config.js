@@ -140,6 +140,9 @@ module.exports = {
           }
       }`
       }
+    },
+    {
+      resolve: "gatsby-transformer-moocfi-exercises"
     }
   ]
 };
