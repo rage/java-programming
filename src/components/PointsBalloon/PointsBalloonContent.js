@@ -74,7 +74,7 @@ class PointsBalloonContent extends React.Component {
                 <OutboundLink href="https://tmc.mooc.fi/participants/me">
                   https://tmc.mooc.fi/participants/me
                 </OutboundLink>
-                . Kiitos kärsivällisyydestäsi!
+                . Huomaathan, että pisteisiisi vaikuttaa muutkin tehtävät kuin ohjelmointitehtävät, kuten vaikka materiaalin seassa olevat kyselyt. Näiden tehtävien pisteet eivät näy TMC:ssä. Kiitos kärsivällisyydestäsi!
               </p>
             </Fragment>
           </Loading>
