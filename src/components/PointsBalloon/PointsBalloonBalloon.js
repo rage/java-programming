@@ -11,7 +11,7 @@ const StyledIcon = styled(FontAwesomeIcon)`
 `
 
 const StyledFab = styled(Fab)`
-  background-color: #1976d2 !important;
+  background-color: #5b5d5f !important;
 `
 
 const PointsBalloonBalloon = ({ onClick }) => (
