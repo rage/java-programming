@@ -228,6 +228,8 @@ Poistutaanko?
 
 </sample-output>
 
+Huom! Joissakin Mac-käyttöjärjestelmissä tekstin **kyllä** syöttäminen ei onnistu merkistövirheen takia. Tutkimme ongelmaa. Tehtävän voi palauttaa TMC:lle vaikkei sen testaaminen manuaalisesti onnistuisi.
+
 </programming-exercise>
 
 
