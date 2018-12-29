@@ -10,7 +10,12 @@ const ExerciseSummaryWrapper = styled.div`
 const ExerciseSummary = ({ exercise, index, quizIdToTitle }) => {
   let description = 'Tuntematon tehtävätyyppi'
   if (exercise.type === 'quiznator') {
-    description = `Kysely: ${quizIdToTitle[exercise.id]}`
+    const name = quizIdToTitle[exercise.id]
+    if (name) {
+      description = `Kysely: ${name}`
+    } else {
+      description = "Kysely"
+    }
   }
   if (exercise.type === 'programming-exercise') {
     description = `Ohjelmointitehtävä: ${exercise.id}`
