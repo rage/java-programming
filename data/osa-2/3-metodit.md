@@ -730,7 +730,7 @@ public static int virheellinenMetodi() {
 Seuraava metodi taas toimii, sillä -- vaikka return-komennon alla on lähdekoodia -- jokainen metodin lause on mahdollista saavuttaa.
 
 ```java
-public static int virheellinenMetodi(int parametri) {
+public static int toimivaMetodi(int parametri) {
     if (parametri > 10) {
         return 10;
     }

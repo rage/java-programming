@@ -37,7 +37,7 @@ Luku on parillinen
 
 Ehtolauseen lauseke voi koostua useammasta osasta, joissa käytetään loogisia operaatioita **ja** `&&`, **tai** `||`, sekä **ei** `!`. 
 
-* Kahdesta lausekkeesta koostuva lauseke, joka yhdistetään ja-operaatiolla, on totta jos ja vain jos yhdistettävistä lausekkeista evaluoituvat todeksi. 
+* Kahdesta lausekkeesta koostuva lauseke, joka yhdistetään ja-operaatiolla, on totta jos ja vain jos yhdistettävistä lausekkeista molemmat evaluoituvat todeksi. 
 * Kahdesta lausekkeesta koostuva lauseke, joka yhdistetään tai-operaatiolla, on totta jos jompikumpi tai molemmat yhdistettävistä lausekkeista evaluoituvat todeksi. 
 * Loogista operaatiota ei käytetään totuusarvon muuntamiseen truesta falseksi tai falsesta trueksi.
 
@@ -666,7 +666,7 @@ Ja nyt laskettiin 2 + 3 + 4 + 5 + 6 + 7 + 8 = 35
 
 Tee ohjelma, joka laskee käyttäjän syöttämän luvun kertoman.
 
-Kertoma `n!` lasketaan kaavalla 1*2*3*...*n. Esimerkiksi luvun 4 kertoma on 24, eli 4! = 1*2*3*4 = 24. Lisäksi on määritelty, että luvun 0 kertoma on 1, eli 0! = 1.
+Kertoma `n!` lasketaan kaavalla 1 * 2 * 3 * ... * n. Esimerkiksi luvun 4 kertoma on 24, eli 4! = 1 * 2 * 3 * 4 = 24. Lisäksi on määritelty, että luvun 0 kertoma on 1, eli 0! = 1.
 
 Esimerkkitulostuksia:
 
