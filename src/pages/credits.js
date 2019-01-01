@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import Layout from '../templates/Layout'
 import Container from '../components/Container'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
-import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
+import { withLoginStateContext } from '../contexes/LoginStateContext'
 
 const Credits = () => (
   <Layout>
@@ -104,4 +104,4 @@ const Credits = () => (
   </Layout>
 )
 
-export default withSimpleErrorBoundary(Credits)
+export default withLoginStateContext(Credits)
