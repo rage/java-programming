@@ -24,18 +24,18 @@ const ChildrenList = styled.ul`
 const ListItem = styled.li`
   list-style-type: none;
   margin-bottom: 0;
-  padding: 0.75rem;
+  padding: 0.75em;
   display: flex;
   align-items: center;
 `
 
 const ListItemLabel = styled.div`
   flex: 1;
-  padding: 0.3rem;
+  padding: 0.3em;
 `
 
 const NavigationLink = styled(GatsbyLink)`
-  border-left: 0.5rem solid white;
+  border-left: 0.5em solid white;
   width: 100%;
   background-color: white;
   ${props =>
@@ -58,7 +58,7 @@ const DisabledItem = styled.div`
   opacity: 0.5;
   width: 100%;
   cursor: default !important;
-  border-left: 0.5rem solid white;
+  border-left: 0.5em solid white;
 `
 
 const ItemTitleWrapper = styled.div`
@@ -82,19 +82,19 @@ const ItemTitleWrapper = styled.div`
 
 const StyledIcon = styled(FontAwesomeIcon)`
   vertical-align: middle;
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
   transform: rotate(calc(var(--open-ratio) * 90deg));
 `
 
 const StyledChip = styled(Chip)`
   span {
-    width: 86px;
+    width: 6em;
   }
 `
 
 const StyledDivider = styled(Divider)`
-  margin: 1rem 16px !important;
+  margin: 1em 16px !important;
 `
 
 class TreeViewItem extends React.Component {

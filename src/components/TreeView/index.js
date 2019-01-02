@@ -5,7 +5,7 @@ import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
 
 const StyledUl = styled.ul`
   margin-left: 0;
-  margin-top: 0.5rem;
+  margin-top: 0.5em;
   padding-left: 0;
 `
 

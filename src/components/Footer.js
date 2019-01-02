@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import BackgroundImage from "../images/banner.svg"
-import { SIDEBAR_WIDTH } from "./Sidebar"
 import { Card, CardContent } from "@material-ui/core"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 import { Link } from "gatsby"
@@ -42,9 +41,6 @@ const GithubContainer = styled.div`
 const FooterWrapper = styled.footer`
   height: 35rem;
   position: relative;
-  @media only screen and (min-width: 1200px) {
-    margin-left: ${SIDEBAR_WIDTH};
-  }
   a {
     color: #006fe6;
   }

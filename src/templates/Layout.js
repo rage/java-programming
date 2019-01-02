@@ -24,6 +24,12 @@ import { config as fontAwesomeConfig } from "@fortawesome/fontawesome-svg-core"
 import { canDoResearch } from "../services/moocfi"
 import Footer from "../components/Footer"
 import PointsBalloon from "../components/PointsBalloon"
+import {
+  MEDIUM_SIDEBAR_WIDTH,
+  LARGE_SIDEBAR_WIDTH,
+  MEDIUM_LARGE_BREAKPOINT,
+  SMALL_MEDIUM_BREAKPOINT,
+} from "../util/constants"
 
 fontAwesomeConfig.autoAddCss = false
 
@@ -44,6 +50,18 @@ const Wrapper = styled.div`
     height: 100vh;
     overflow: hidden;
   `}
+`
+
+const SidebarPush = styled.div`
+  @media only screen and (min-width: ${SMALL_MEDIUM_BREAKPOINT}) {
+    margin-left: ${LARGE_SIDEBAR_WIDTH};
+  }
+  @media only screen and (max-width: ${MEDIUM_LARGE_BREAKPOINT}) {
+    margin-left: ${MEDIUM_SIDEBAR_WIDTH};
+  }
+  @media only screen and (max-width: ${SMALL_MEDIUM_BREAKPOINT}) {
+    margin-left: 0;
+  }
 `
 
 class Layout extends React.Component {
@@ -130,12 +148,14 @@ class Layout extends React.Component {
                   mobileMenuOpen={this.state.mobileMenuOpen}
                   toggleMobileMenu={this.toggleMobileMenu}
                 />
-                <TopBar />
-                <ContentArea mobileMenuOpen={this.state.mobileMenuOpen}>
-                  {children}
-                </ContentArea>
-                <PointsBalloon />
-                <Footer />
+                <SidebarPush>
+                  <TopBar />
+                  <ContentArea mobileMenuOpen={this.state.mobileMenuOpen}>
+                    {children}
+                  </ContentArea>
+                  <PointsBalloon />
+                  <Footer />
+                </SidebarPush>
               </Wrapper>
             )
           }}

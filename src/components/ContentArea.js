@@ -1,12 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import { SIDEBAR_WIDTH } from "./Sidebar"
 import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 
 const ContentAreaContainer = styled.main`
-  @media only screen and (min-width: 1200px) {
-    margin-left: ${SIDEBAR_WIDTH};
-  }
   padding: 0 0.5rem;
   background-color: #fcfcfc;
   margin-bottom: 5rem;

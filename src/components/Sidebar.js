@@ -10,16 +10,20 @@ import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
+import {
+  MEDIUM_LARGE_BREAKPOINT,
+  SMALL_MEDIUM_BREAKPOINT,
+  MEDIUM_SIDEBAR_WIDTH,
+  LARGE_SIDEBAR_WIDTH,
+} from "../util/constants"
 
 const StyledIcon = styled(FontAwesomeIcon)`
   vertical-align: middle;
-  margin-right: 0.5rem;
-  margin-left: 0.1rem;
+  margin-right: 0.5em;
+  margin-left: 0.1em;
   color: var(--color);
   font-size: 1.5em;
 `
-
-export const SIDEBAR_WIDTH = "20rem"
 
 const SidebarContainer = styled.div`
   display: flex;
@@ -32,9 +36,9 @@ const SidebarContainer = styled.div`
       display: none;
     `}
 
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: ${SMALL_MEDIUM_BREAKPOINT}) {
     height: 100%;
-    width: ${SIDEBAR_WIDTH};
+    width: ${LARGE_SIDEBAR_WIDTH};
     position: fixed;
     top: 0;
     left: 0;
@@ -45,7 +49,11 @@ const SidebarContainer = styled.div`
     overflow-y: scroll;
     display: flex;
   }
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: ${MEDIUM_LARGE_BREAKPOINT}) {
+    width: ${MEDIUM_SIDEBAR_WIDTH};
+    font-size: 0.85rem;
+  }
+  @media only screen and (max-width: ${SMALL_MEDIUM_BREAKPOINT}) {
     width: 90%;
     max-width: 500px;
     margin: 0 auto;
@@ -61,16 +69,17 @@ const LogoContainer = styled.div`
 
 const TreeViewContainer = styled.nav`
   flex: 1;
+  margin-bottom: 1em;
 `
 
 const Brand = styled.div`
   width: 100%;
   text-align: center;
-  padding: 1rem;
-  padding-top: 2rem;
+  padding: 1em;
+  padding-top: 2em;
   font-weight: bold;
   color: #c0392b;
-  font-size: 1.3rem;
+  font-size: 1.15em;
 `
 
 const MenuExpanderWrapper = styled.div`
@@ -78,8 +87,8 @@ const MenuExpanderWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 1rem;
-  @media only screen and (min-width: 1200px) {
+  margin-top: 1em;
+  @media only screen and (min-width: ${SMALL_MEDIUM_BREAKPOINT}) {
     display: none;
   }
 `
@@ -126,7 +135,7 @@ var futurePages = [
 ]
 
 const MobileWrapper = styled.div`
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: ${SMALL_MEDIUM_BREAKPOINT}) {
     width: 100%;
     height: 100%;
     position: fixed;

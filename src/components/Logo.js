@@ -5,16 +5,16 @@ import "typeface-open-sans-condensed"
 import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 
 const LogoImg = styled.img`
-  width: 50px;
-  height: 50px;
-  margin-right: 0.5rem;
+  width: 3.4em;
+  height: 3.4em;
+  margin-right: 0.5em;
   margin-bottom: 0;
 `
 
 const LogoTypography = styled.div`
   flex: 1;
   font-family: "Open Sans Condensed", sans-serif !important;
-  font-size: 1.75rem !important;
+  font-size: 1.75em !important;
 `
 
 const StyledLink = styled.a`
@@ -22,8 +22,8 @@ const StyledLink = styled.a`
   color: black;
   display: flex;
   align-items: center;
-  padding: 1rem;
-  padding-right: 1.7rem;
+  padding: 1em;
+  padding-right: 1.7em;
   height: 64px;
   background-color: white;
 
