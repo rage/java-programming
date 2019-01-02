@@ -1,10 +1,13 @@
 import React from "react"
 import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
 import styled from "styled-components"
+import { normalizeExerciseId } from "../../util/strings"
+import { Link } from "gatsby"
 
-const ExerciseSummaryWrapper = styled.div`
+const ExerciseSummaryWrapper = styled(Link)`
   padding-left: 1rem;
   margin-bottom: 0.5rem;
+  display: block;
 `
 
 const ExerciseSummary = ({ exercise, index, quizIdToTitle }) => {
@@ -20,8 +23,11 @@ const ExerciseSummary = ({ exercise, index, quizIdToTitle }) => {
   if (exercise.type === "programming-exercise") {
     description = `Ohjelmointitehtävä: ${exercise.id}`
   }
+  let anchorLinkDigest = normalizeExerciseId(`${exercise.type}-${exercise.id}`)
   return (
-    <ExerciseSummaryWrapper>
+    <ExerciseSummaryWrapper
+      to={`${exercise.parentPagePath}#${anchorLinkDigest}`}
+    >
       {index + 1}. {description}
     </ExerciseSummaryWrapper>
   )

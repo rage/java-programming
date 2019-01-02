@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
+import { normalizeExerciseId } from "../util/strings"
 
 const QuiznatorWrapper = styled.div`
   code {
@@ -26,7 +27,7 @@ class Quiznator extends React.Component {
       return <div>There should be quiz here but no quiz id is specified.</div>
     }
     return (
-      <QuiznatorWrapper>
+      <QuiznatorWrapper id={normalizeExerciseId(`quiznator-${id}`)}>
         <div
           id={`unloaded-quiznator-${id}`}
           className="quiznator-plugin"

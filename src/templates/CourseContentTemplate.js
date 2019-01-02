@@ -22,6 +22,8 @@ import { capitalizeFirstLetter } from "../util/strings"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowCircleUp as icon } from "@fortawesome/free-solid-svg-icons"
 import EndOfSubSection from "../components/EndOfSubSection"
+import { connectableObservableDescriptor } from "rxjs/internal/observable/ConnectableObservable"
+import { tryToScrollToSelector } from "../util/dom"
 
 const StyledIcon = styled(FontAwesomeIcon)`
   margin-right: 0.25rem;
@@ -54,6 +56,21 @@ export default class CourseContentTemplate extends React.Component {
     const research = userInfo?.extra_fields?.research
     if (research === undefined) {
       navigate("/missing-info")
+    }
+    if (typeof window !== "undefined" && window.location.hash) {
+      const selector = window.location.hash
+      setTimeout(() => {
+        tryToScrollToSelector(selector)
+      }, 100)
+      setTimeout(() => {
+        tryToScrollToSelector(selector)
+      }, 500)
+      setTimeout(() => {
+        tryToScrollToSelector(selector)
+      }, 1000)
+      setTimeout(() => {
+        tryToScrollToSelector(selector)
+      }, 2000)
     }
   }
 

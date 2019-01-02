@@ -11,3 +11,16 @@ export function nthIndex(str, pat, n) {
 export function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }
+
+export function normalizeExerciseId(string) {
+  return encodeURIComponent(
+    string
+      .toLowerCase()
+      .replace(/ö/g, "o")
+      .replace(/Ö/g, "O")
+      .replace(/ä/g, "a")
+      .replace(/Ä/g, "A")
+      .replace(/\s+/g, "-")
+      .replace(/[^A-Za-z0-9_-]/g, ""),
+  )
+}

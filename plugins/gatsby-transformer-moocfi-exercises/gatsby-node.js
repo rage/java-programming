@@ -1,6 +1,6 @@
-const GraphQLString = require('gatsby/graphql').GraphQLString
-const GraphQLList = require('gatsby/graphql').GraphQLList
-const GraphQLObjectType = require('gatsby/graphql').GraphQLObjectType
+const GraphQLString = require("gatsby/graphql").GraphQLString
+const GraphQLList = require("gatsby/graphql").GraphQLList
+const GraphQLObjectType = require("gatsby/graphql").GraphQLObjectType
 
 const quiznatorRegex = /<\s*quiznator\s*id\s*=\s*['"]\s*(\w+)\s*['"]\s*>/gm
 const programmingExerciseTagRegex = /<\s*programming-exercise\s+(.*)\s*>/gm
@@ -32,6 +32,12 @@ const ExerciseType = new GraphQLObjectType({
         return details.type
       },
     },
+    parentPagePath: {
+      type: GraphQLString,
+      resolve(details) {
+        return details.parentPagePath
+      },
+    },
   },
 })
 
@@ -43,23 +49,33 @@ exports.setFieldsOnGraphQLNodeType = ({ type }) => {
         resolve: (node, _fieldArgs) => {
           const source = node.rawMarkdownBody
           const quizzes = getMatches(source, quiznatorRegex, 1).map(res => {
-            return { id: res.match, location: res.location, type: 'quiznator' }
+            return {
+              id: res.match,
+              location: res.location,
+              type: "quiznator",
+              parentPagePath: node.frontmatter.path,
+            }
           })
           const programmingExercises = getMatches(
             source,
             programmingExerciseTagRegex,
-            1
+            1,
           ).map(res => {
-            let id = 'unknown'
+            let id = "unknown"
             try {
               const match = getMatches(
                 res.match,
                 programmingExerciseNameRegex,
-                1
+                1,
               )[0].match
               id = match.substr(1, match.length - 2)
             } catch (e) {}
-            return { id, location: res.location, type: 'programming-exercise' }
+            return {
+              id,
+              location: res.location,
+              type: "programming-exercise",
+              parentPagePath: node.frontmatter.path,
+            }
           })
 
           return programmingExercises.concat(quizzes).sort(function(a, b) {
