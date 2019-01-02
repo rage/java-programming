@@ -42,14 +42,14 @@ const NavigationLink = styled(GatsbyLink)`
     props.active === "t" &&
     `
     border-color: #f75b4b !important;
-    background-color: #ffeeed;
+    background-color: #edeaea;
   `}
 
   :hover {
     text-decoration: none;
     color: black;
-    background-color: #eeeeee;
-    border-color: #eeeeee;
+    background-color: #f5ebeb;
+    border-color: #f5ebeb;
     //filter: brightness(0.5);
   }
 `
