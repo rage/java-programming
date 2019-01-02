@@ -388,8 +388,8 @@ Kokeile toteuttamasi ohjelman toimintaa myös syötteillä, jotka eivät ole luk
 Merkkijonon muuntaminen liukuluvuksi tapahtuu komennolla `Double.valueOf`, jolle annetaan parametrina muunnettavan luvun sisältämä merkkijono.
 
 ```java
-String lukuMerkkijonona = "42.42"; 
-double luku = Double.valueOf(lukuMerkkijonona); 
+String lukuMerkkijonona = "42.42";
+double luku = Double.valueOf(lukuMerkkijonona);
 System.out.println(luku);
 ```
 
@@ -402,12 +402,12 @@ System.out.println(luku);
 Kuten kokonaislukujen tapauksessa, Scanneria käytettäessä lukeminen ja muuntaminen asetetaan yleensä sisäkkäin. Tämä tapahtuu seuraavasti.
 
 ```java
-import java.util.Scanner; 
+import java.util.Scanner;
 
 public class Ohjelma {
-    public static void main(String[] args) { 
-        Scanner lukija = new Scanner(System.in); 
-        System.out.println("Kirjoita luku "); 
+    public static void main(String[] args) {
+        Scanner lukija = new Scanner(System.in);
+        System.out.println("Kirjoita luku ");
         double luku = Double.valueOf(lukija.nextLine());
         System.out.println("Kirjoitit " + luku);
     }
@@ -416,7 +416,7 @@ public class Ohjelma {
 
 <sample-output>
 
-Kirjoita luku 
+Kirjoita luku
 **1234.2**
 Kirjoitit 1234.2
 
@@ -424,11 +424,11 @@ Kirjoitit 1234.2
 
 Liukulukutyyppiseen muuttujaan voi lukea myös kokonaisluvun. Tällöin luku muunnetaan liukulukutyyppiseksi automaattisesti. Alla oleva esimerkki näyttää edellisen ohjelman toiminnan kun käyttäjä syöttää kokonaisluvun.
 
-<sample-output> 
+<sample-output>
 
-Kirjoita luku 
-**18** 
-Kirjoitit 18.0 
+Kirjoita luku
+**18**
+Kirjoitit 18.0
 
 </sample-output>
 
@@ -438,18 +438,18 @@ Kirjoita ohjelma, joka kysyy käyttäjältä liukulukua. Tämän jälkeen ohjelm
 
 Alla on annettuna ohjelman esimerkkitulostuksia:
 
-<sample-output> 
+<sample-output>
 
-Syötä luku! 
-**3.14** 
-Syötit luvun 3.14 
+Syötä luku!
+**3.14**
+Syötit luvun 3.14
 
 </sample-output>
 
-<sample-output> 
+<sample-output>
 
-Syötä luku! 
-**2.718** 
+Syötä luku!
+**2.718**
 Syötit luvun 2.718
 
 </sample-output>
@@ -463,23 +463,23 @@ Merkkijonon muuntaminen kokonaisluvuksi tapahtui komennolla `Integer.valueOf` ja
 
 Totuusarvotyyppiset muuttujat voivat saada arvokseen vain `true` eli totta tai `false` eli epätotta. Kun merkkijonoa muunnetaan totuusarvotyyppiseksi, merkkijonon tulee olla "true" mikäli totuusarvon arvoksi halutaan `true`. Kirjoitusasulla ei ole väliä, eli myös "TRue" muuttuu totuusarvoksi `true`. Muut merkkijonot muuntuvat totuusarvoksi `false`.
 
-```java 
-import java.util.Scanner; 
+```java
+import java.util.Scanner;
 
-public class Ohjelma { 
+public class Ohjelma {
     public static void main(String[] args) {
-        Scanner lukija = new Scanner(System.in); 
-        System.out.println("Kirjoita totuusarvo "); 
+        Scanner lukija = new Scanner(System.in);
+        System.out.println("Kirjoita totuusarvo ");
         boolean arvo = Boolean.valueOf(lukija.nextLine());
-        System.out.println("Kirjoitit " + arvo); 
+        System.out.println("Kirjoitit " + arvo);
     }
 }
 ```
 
-<sample-output> 
+<sample-output>
 
-Kirjoita totuusarvo 
-**enpäs!** 
+Kirjoita totuusarvo
+**enpäs!**
 Kirjoitit false
 
 </sample-output>
@@ -487,7 +487,7 @@ Kirjoitit false
 <sample-output>
 
 Kirjoita totuusarvo
-**TRUE** 
+**TRUE**
 Kirjoitit true
 
 </sample-output>
@@ -495,7 +495,7 @@ Kirjoitit true
 <sample-output>
 
 Kirjoita totuusarvo
-**true** 
+**true**
 Kirjoitit true
 
 </sample-output>
@@ -509,8 +509,8 @@ Alla on annettuna ohjelman esimerkkitulostuksia:
 
 <sample-output>
 
-Syötä jotain! 
-**joulupukkia ei ole olemassa** 
+Syötä jotain!
+**joulupukkia ei ole olemassa**
 Totta vaiko ei? false
 
 </sample-output>
@@ -518,7 +518,7 @@ Totta vaiko ei? false
 <sample-output>
 
 Syötä jotain!
-**TRUE** 
+**TRUE**
 Totta vaiko ei? true
 
 </sample-output>
@@ -530,19 +530,19 @@ Totta vaiko ei? true
 
 Alla vielä yhteenveto:
 
-```java 
-import java.util.Scanner; 
+```java
+import java.util.Scanner;
 
-public class Ohjelma { 
+public class Ohjelma {
     public static void main(String[] args) {
         Scanner lukija = new Scanner(System.in);
         String teksti = lukija.nextLine();
         int kokonaisluku = Integer.valueOf(lukija.nextLine());
-        double liukuluku = Double.valueOf(lukija.nextLine()); 
-        boolean totuusarvo = Boolean.valueOf(lukija.nextLine()); 
-        
-        // jne 
-    } 
+        double liukuluku = Double.valueOf(lukija.nextLine());
+        boolean totuusarvo = Boolean.valueOf(lukija.nextLine());
+
+        // jne
+    }
 }
 ```
 
@@ -555,33 +555,33 @@ Alla on annettuna ohjelman esimerkkitulostuksia:
 <sample-output>
 
 Syötä merkkijono!
-**heippa** 
-Syötä kokonaisluku! 
-**11** 
-Syötä liukuluku! 
-**4.2** 
-Syötä totuusarvo! 
-**true** 
-Syötit merkkijonon heippa 
-Syötit kokonaisluvun 11 
-Syötit liukuluvun 4.2 
+**heippa**
+Syötä kokonaisluku!
+**11**
+Syötä liukuluku!
+**4.2**
+Syötä totuusarvo!
+**true**
+Syötit merkkijonon heippa
+Syötit kokonaisluvun 11
+Syötit liukuluvun 4.2
 Syötit totuusarvon true
 
 </sample-output>
 
-<sample-output> 
+<sample-output>
 
-Syötä merkkijono! 
-**oho!** 
-Syötä kokonaisluku! 
-**-4** 
-Syötä liukuluku! 
-**3200.1** 
+Syötä merkkijono!
+**oho!**
+Syötä kokonaisluku!
+**-4**
+Syötä liukuluku!
+**3200.1**
 Syötä totuusarvo!
-**false** 
-Syötit merkkijonon oho! 
-Syötit kokonaisluvun -4 
-Syötit liukuluvun 3200.1 
+**false**
+Syötit merkkijonon oho!
+Syötit kokonaisluvun -4
+Syötit liukuluvun 3200.1
 Syötit totuusarvon false
 
 </sample-output>

@@ -13,7 +13,7 @@ title: 'Ongelman osia ja niiden ratkaisumalleja'
 
 <quiznator id="5c24a9123cc3ec11bcd78bb3"></quiznator>
 
-Samat pienet ongelmat (tai "osaongelmat") toistuvat ohjelmissa yhä uudestaan ja uudestaan: "Lue käyttäjältä syötettä", "Laske lukujen summa", "Laske lukujen keskiarvo",  "Lue käyttäjältä syötettä kunnes", "Montako lukua käyttäjä on syöttänyt.", jne. 
+Samat pienet ongelmat (tai "osaongelmat") toistuvat ohjelmissa yhä uudestaan ja uudestaan: "Lue käyttäjältä syötettä", "Laske lukujen summa", "Laske lukujen keskiarvo",  "Lue käyttäjältä syötettä kunnes", "Montako lukua käyttäjä on syöttänyt.", jne.
 
 Tarkastellaan muutamia tällaisia ongelmia sekä niihin liittyviä ratkaisuja.
 
@@ -63,7 +63,7 @@ int toka = 2;
 int summa = eka + toka;
 
 // Tulostetaan laskuoperaation tulos
-System.out.println("Lukujen " + eka + " ja " + toka + " summa on " + summa);  
+System.out.println("Lukujen " + eka + " ja " + toka + " summa on " + summa);
 ```
 
 Sekä lukemista että laskemista sisältävä ohjelma yhdistää edelliset ratkaisumallit. Kahden käyttäjältä pyydetyn luvun tulon laskeva ohjelma on seuraavanlainen.
@@ -91,7 +91,7 @@ public class Ohjelma {
         int tulo = eka * toka;
 
         // Tulostetaan laskuoperaation tulos
-        System.out.println("Lukujen " + eka + " ja " + toka + " tulo on " + tulo);  
+        System.out.println("Lukujen " + eka + " ja " + toka + " tulo on " + tulo);
 
     }
 }
@@ -116,7 +116,7 @@ public class Ohjelma {
         int tulo = eka * toka;
 
         // Tulostetaan laskuoperaation tulos
-        System.out.println("Lukujen " + eka + " ja " + toka + " tulo on " + tulo);  
+        System.out.println("Lukujen " + eka + " ja " + toka + " tulo on " + tulo);
 
     }
 }
@@ -152,7 +152,7 @@ Kirjoita ohjelma, joka lukee käyttäjältä kokonaisluvun ja tulostaa luvun kor
 
 <programming-exercise name='Summan neliöjuuri' tmcname='osa02-Osa02_02.SummanNeliojuuri'>
 
-Kirjoita ohjelma, joka lukee käyttäjältä kaksi kokonaislukua ja tulostaa lukujen summan neliöjuuren. Ohjelman ei tarvitse käsitellä negatiivisia lukuja. Alla muutamia esimerkkejä.   
+Kirjoita ohjelma, joka lukee käyttäjältä kaksi kokonaislukua ja tulostaa lukujen summan neliöjuuren. Ohjelman ei tarvitse käsitellä negatiivisia lukuja. Alla muutamia esimerkkejä.
 
 <sample-output>
 
@@ -259,7 +259,7 @@ public class Ohjelma {
         if (summa > 100) { // jos summa on yli sata
             System.out.println("liikaa");
         } else if (summa < 0) { // jos summa on yli alle 0
-            System.out.println("liian vähän");  
+            System.out.println("liian vähän");
         } else { // muulloin
             System.out.println("ok");
         }
@@ -315,7 +315,7 @@ Luku 8 on suurempi kuin luku 4.
 **5**
 Luku -3 on pienempi kuin luku 5.
 
-</sample-output>  
+</sample-output>
 
 <sample-output>
 
@@ -332,7 +332,7 @@ Luku 1 on yhtä suuri kuin luku 1.
 
 Ongelmat, jotka pyytävät lukemaan käyttäjältä syötettä kunnes käyttäjä syöttää tietynlaisen syötteen, ratkeavat toistolauseen avulla. Kohtaa "kunnes" vastaa toistolauseissa ehtolause, joka sisältää toistolauseesta poistumiseen johtavan `break`-komennon.
 
-Alla oleva malli sisältää "lue käyttäjältä kunnes"-tyyppisten ohjelmien peruspalat. Nämä ovat ikuisesti toistaminen eli `while (true)`, toistolauseen sisällä oleva lukeminen eli tässä `String luettu = lukija.nextLine();`, ja toistolauseesta poistuminen eli toistolauseen sisällä olevan `if`-komennon sisältämä `break`-komento. Alla toistolauseesta poistutaan kun käyttäjä syöttää merkkijonon "lopeta". 
+Alla oleva malli sisältää "lue käyttäjältä kunnes"-tyyppisten ohjelmien peruspalat. Nämä ovat ikuisesti toistaminen eli `while (true)`, toistolauseen sisällä oleva lukeminen eli tässä `String luettu = lukija.nextLine();`, ja toistolauseesta poistuminen eli toistolauseen sisällä olevan `if`-komennon sisältämä `break`-komento. Alla toistolauseesta poistutaan kun käyttäjä syöttää merkkijonon "lopeta".
 
 
 ```java
@@ -366,7 +366,7 @@ public class Ohjelma {
 
 <programming-exercise name='Hip hip hurraa!' tmcname='osa02-Osa02_05.HipHipHurraa'>
 
-Kirjoita ohjelma, joka lukee käyttäjältä syötettä kunnes käyttäjä syöttää merkkijonon "lopeta". Kun käyttäjä syöttää merkkijonon "lopeta", ohjelma tulostaa merkkijonon "hurraa!", jonka jälkeen ohjelman suoritus päättyy. Muulloin, eli kun käyttäjä syöttää jotain muuta kuin merkkijonon "lopeta", ohjelma tulostaa merkkijonon "hip!". 
+Kirjoita ohjelma, joka lukee käyttäjältä syötettä kunnes käyttäjä syöttää merkkijonon "lopeta". Kun käyttäjä syöttää merkkijonon "lopeta", ohjelma tulostaa merkkijonon "hurraa!", jonka jälkeen ohjelman suoritus päättyy. Muulloin, eli kun käyttäjä syöttää jotain muuta kuin merkkijonon "lopeta", ohjelma tulostaa merkkijonon "hip!".
 
 Alla on muutamia esimerkkejä ohjelman odotetusta toiminnasta.
 
@@ -379,14 +379,14 @@ hip!
 **huuda**
 hip!
 **lopeta**
-hurraa!    
+hurraa!
 
 </sample-output>
 
 <sample-output>
 
 **lopeta**
-hurraa!    
+hurraa!
 
 </sample-output>
 
@@ -395,7 +395,7 @@ hurraa!
 **huuda**
 hip!
 **lopeta**
-hurraa!    
+hurraa!
 
 </sample-output>
 
@@ -459,7 +459,7 @@ if (keskiarvo < 0) {
 }
 ```
 
-**Lukeminen kunnes**: lukeminen "kunnes" tapahtuu toistolauseen avulla. Toistolause sisältää ehtolauseen, jossa poistutaan toistolauseesta kun käyttäjä syöttää halutun luvun. 
+**Lukeminen kunnes**: lukeminen "kunnes" tapahtuu toistolauseen avulla. Toistolause sisältää ehtolauseen, jossa poistutaan toistolauseesta kun käyttäjä syöttää halutun luvun.
 
 ```java
 Scanner lukija = new Scanner(System.in);
@@ -512,7 +512,7 @@ while (true) {
 double keskiarvo = 1.0 * summa / lukuja;
 ```
 
-Yhdistetään lopulta ohjelmaan vaihtoehtoinen toiminnallisuus, joka tekee asioita käyttäjän syötteen perusteella. 
+Yhdistetään lopulta ohjelmaan vaihtoehtoinen toiminnallisuus, joka tekee asioita käyttäjän syötteen perusteella.
 
 
 ```java
@@ -657,7 +657,7 @@ Alla on muutamia esimerkkejä ohjelman toiminnasta.
 2
 
 </sample-output>
-  
+
 </programming-exercise>
 
 
@@ -777,7 +777,7 @@ public class Ohjelma {
         while (true) {
             String syote = lukija.nextLine();
 
-            // kunnes 
+            // kunnes
             if (syote.equals("lopeta")) { // poistuminen
                 break;
             }
@@ -790,7 +790,7 @@ public class Ohjelma {
 
             // lukemisen jälkeen tehtävä toiminnallisuus
         }
-    
+
         // toistolauseen jälkeen tehtävä toiminnallisuus
 
     }
@@ -826,13 +826,13 @@ public class Ohjelma {
                 break;
             }
 
-            // rajataan pois luvut, jotka ovat suurempia 
+            // rajataan pois luvut, jotka ovat suurempia
             /// tai yhtä suuria kuin kymmenen
             if (luku >= 10) {
                 continue;
             }
 
-            // rajataan pois luvut, jotka ovat pienempiä 
+            // rajataan pois luvut, jotka ovat pienempiä
             // tai yhtä pieniä kuin nolla
             if (luku <= 0) {
                 continue;
@@ -841,7 +841,7 @@ public class Ohjelma {
             // lukemisen jälkeen tehtävä toiminnallisuus
             rajattujenLukujenLukumaara = rajattujenLukujenLukumaara + 1;
         }
-        
+
         // toistolauseen jälkeen tehtävä toiminnallisuus
         System.out.println(rajattujenLukujenLukumaara);
 
@@ -876,7 +876,7 @@ Alla muutamia ohjelman esimerkkitulosteita.
 
 <programming-exercise name='Positiivisten lukujen keskiarvo' tmcname='osa02-Osa02_10.PositiivistenLukujenKeskiarvo'>
 
-Kirjoita ohjelma, joka lukee käyttäjältä kokonaislukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelma tulostaa syötteessä esiintyneiden positiivisten (eli nollaa suurempien lukujen) keskiarvon. 
+Kirjoita ohjelma, joka lukee käyttäjältä kokonaislukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelma tulostaa syötteessä esiintyneiden positiivisten (eli nollaa suurempien lukujen) keskiarvon.
 
 Mikäli ohjelmassa ei syötetä yhtäkään positiivista lukua, ohjelman tulee tulostaa "keskiarvon laskeminen ei ole mahdollista".
 

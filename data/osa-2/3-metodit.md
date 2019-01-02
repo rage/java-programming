@@ -6,7 +6,7 @@ title: 'Ohjelman pilkkominen osiin: metodit'
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
 - Tunnet käsitteet metodi, metodin parametri, metodin palautusarvo ja ohjelman kutsupino.
-- Osaat luoda metodeja ja osaat kutsua metodeja sekä pääohjelmasta (`main`-metodi) että muiden metodien sisältä.      
+- Osaat luoda metodeja ja osaat kutsua metodeja sekä pääohjelmasta (`main`-metodi) että muiden metodien sisältä.
 - Osaat luoda parametrillisia ja parametrittomia metodeja, ja osaat luoda metodeja, jotka palauttavat arvon.
 
 </text-box>
@@ -29,7 +29,7 @@ String merkkijono = lukija.nextLine();
 sisältää yhden metodikutsun `lukija.nextLine()`. Usein metodin nimeen näyttää liittyvän piste, kuten yllä olevassa lauseessa. Oikeastaan tässäkin metodin nimi on pisteen oikeanpuoleinen osa, eli `nextLine()`. Pisteen vasemmanpuoleinen osa, eli tässä `lukija`, kertoo **kenen metodista on kyse**. Kyseessä on <em>lukijan</em> tarjoama metodi nextLine. Opimme hiukan myöhemmin tarkemmin mistä tässä pisteen vasemmanpuoleisessa osassa on kyse. Tarkka lukija tietysti huomaa, että `System.out.println()`:ssa on "kaksi pistettä". Metodin nimi tässä on println, ja `System.out` on se kenen metodista on kyse. Karkeasti ottaen `System.out` tarkoittaa koneen näyttöä.
 
 Vastaavasti lauseessa:
-  
+
 ```java
 int luku = Integer.valueOf(lukija.nextLine());
 ```
@@ -450,7 +450,7 @@ public static void main(String[] args) {
 1
 
 </sample-output>
-  
+
 </programming-exercise>
 
 
@@ -521,8 +521,8 @@ public static void main(String[] args) {
 6
 9
 
-</sample-output>  
-  
+</sample-output>
+
 </programming-exercise>
 
 
@@ -708,7 +708,7 @@ Kirjoita metodi `public static int numeroUno()`, joka palauttaa arvon 1.
 <programming-exercise name='Merkkijono' tmcname='osa02-Osa02_27.Merkkijono'>
 
 Kirjoita metodi `public static String merkkijono()`. Metodin tulee palauttaa itse päättämäsi merkkijono.
-  
+
 </programming-exercise>
 
 
@@ -717,7 +717,7 @@ Kirjoita metodi `public static String merkkijono()`. Metodin tulee palauttaa its
 Kun metodin suorituksessa päädytään komentoon `return`, metodin suoritus päättyy ja metodista palautetaan arvo sitä kutsuneelle metodille.
 
 Ohjelmointikielen kääntäjä sekä käyttämämme ohjelmointiympäristö tietää, että return-komentoa seuraavia lähdekoodirivejä ei koskaan suoriteta. Jos ohjelmoija lisää lähdekoodia return-komennon jälkeen paikkaan, mitä ei metodin suorituksessa voida koskaan saavuttaa, ohjelmointiympäristö antaa virheviesti.
-  
+
 Seuraavanlainen metodi on virheellinen ohjelmointiympäristön näkökulmasta.
 
 ```java

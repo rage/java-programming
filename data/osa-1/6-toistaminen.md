@@ -509,7 +509,7 @@ Huomaamme, että `if-else if-else`-rakenteelle on vaikea määritellä yksi selk
 
 Toistolauseita hyödynnetään usein asioiden laskemisessa. Esimerkiksi ohjelmat, joissa käsitellään määrittelemätöntä määrää käyttäjän syöttämiä lukuja perustuvat toistolauseseen. Tällaisissa ohjelmissa tulostetaan tyypillisesti jonkinlaisia tilastoja luetuista luvuista tai muista syötteistä toistolauseen jälkeen.
 
-Jotta ohjelma voi tulostaa toistolauseen jälkeen tietoja toistolauseen suorituksesta, tulee tietoa säilöä ja muokata toistolauseen aikana. 
+Jotta ohjelma voi tulostaa toistolauseen jälkeen tietoja toistolauseen suorituksesta, tulee tietoa säilöä ja muokata toistolauseen aikana.
 
 Mikäli tiedon tallentamiseen käytettävä muuttuja esitellään toistolauseen lohkon sisällä, on muuttuja käytössä vain toistolauseen lohkon sisällä sekä sen alla määritellyissä lohkoissa, mutta ei toistolauseen lohkon ulkopuolella.
 
@@ -542,7 +542,7 @@ while (true) {
 }
 
 // Tehtävänä havainnoitujen ykkösten lukumäärän tulostaminen
-// Tämä ei toimi, sillä muuttuja ykkosia on esitelty 
+// Tämä ei toimi, sillä muuttuja ykkosia on esitelty
 // edellä olevan toistolauseen sisälläö
 System.out.println("Ykkösiä yhteensä: " + ykkosia);
 ```
@@ -663,13 +663,13 @@ Ohjelman tulostusesimerkki:
 
 Syötä luku
 **5**
-Syötä luku 
+Syötä luku
 **22**
-Syötä luku 
+Syötä luku
 **9**
-Syötä luku 
+Syötä luku
 **-2**
-Syötä luku 
+Syötä luku
 **0**
 Lukuja yhteensä 4
 
