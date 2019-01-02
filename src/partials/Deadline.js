@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faClock as icon } from '@fortawesome/free-solid-svg-icons'
-import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
+import React from "react"
+import styled from "styled-components"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faClock as icon } from "@fortawesome/free-solid-svg-icons"
+import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 
 const DeadlineWrapper = styled.div`
   margin-bottom: 1rem;

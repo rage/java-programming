@@ -1,22 +1,22 @@
-import React from 'react'
-import styled from 'styled-components'
-import BackgroundImage from '../images/banner.svg'
-import { SIDEBAR_WIDTH } from './Sidebar'
-import { Card, CardContent } from '@material-ui/core'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
-import { Link } from 'gatsby'
+import React from "react"
+import styled from "styled-components"
+import BackgroundImage from "../images/banner.svg"
+import { SIDEBAR_WIDTH } from "./Sidebar"
+import { Card, CardContent } from "@material-ui/core"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { Link } from "gatsby"
 
-import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
+import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 
-import UHLogo from '../images/uh-logo.png'
-import MoocfiLogo from '../images/moocfi-logo-bw.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import UHLogo from "../images/uh-logo.png"
+import MoocfiLogo from "../images/moocfi-logo-bw.png"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faTwitter,
   faFacebook,
   faYoutube,
   faGithub,
-} from '@fortawesome/free-brands-svg-icons'
+} from "@fortawesome/free-brands-svg-icons"
 
 const StyledIcon = styled(FontAwesomeIcon)`
   color: black;
@@ -118,7 +118,7 @@ class Footer extends React.Component {
                 </OutboundLink>
               </GithubContainer>
               <ContentContainer>
-                Kurssin on tehnyt Helsingin yliopiston{' '}
+                Kurssin on tehnyt Helsingin yliopiston{" "}
                 <OutboundLink
                   href="https://www.helsinki.fi/en/researchgroups/data-driven-education"
                   target="_blank"

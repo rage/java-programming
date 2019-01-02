@@ -1,21 +1,21 @@
-import React, { Fragment } from 'react'
-import styled from 'styled-components'
+import React, { Fragment } from "react"
+import styled from "styled-components"
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPencilAlt as icon } from '@fortawesome/free-solid-svg-icons'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faPencilAlt as icon } from "@fortawesome/free-solid-svg-icons"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import {
   fetchProgrammingExerciseDetails,
   fetchProgrammingExerciseModelSolution,
-} from '../services/moocfi'
-import { Button, Paper, Card, CardContent, Divider } from '@material-ui/core'
-import Modal from '@material-ui/core/Modal'
-import LoginStateContext from '../contexes/LoginStateContext'
-import LoginControls from '../components/LoginControls'
-import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
+} from "../services/moocfi"
+import { Button, Paper, Card, CardContent, Divider } from "@material-ui/core"
+import Modal from "@material-ui/core/Modal"
+import LoginStateContext from "../contexes/LoginStateContext"
+import LoginControls from "../components/LoginControls"
+import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 
-const accentColor = '#FAAA38'
+const accentColor = "#FAAA38"
 
 const ProgrammingExerciseWrapper = styled.section`
   padding 1rem;
@@ -123,7 +123,7 @@ class ProgrammingExercise extends React.Component {
     let exerciseDetails = null
     try {
       exerciseDetails = await fetchProgrammingExerciseDetails(
-        this.props.tmcname
+        this.props.tmcname,
       )
     } catch (error) {
       console.error(error)
@@ -138,13 +138,13 @@ class ProgrammingExercise extends React.Component {
       let modelSolution = this.state.modelSolution
       if (!modelSolution) {
         modelSolution = await fetchProgrammingExerciseModelSolution(
-          this.state.exerciseDetails.id
+          this.state.exerciseDetails.id,
         )
       }
 
       this.setState({ modelSolutionModalOpen: true, modelSolution })
     } catch (err) {
-      console.error('Could not fetch model solution', err)
+      console.error("Could not fetch model solution", err)
     }
   }
 
@@ -209,11 +209,11 @@ class ProgrammingExercise extends React.Component {
                       Joka kerta kun olet saanut <i>{tokenThreshHold}</i>:ta
                       tehtävää tehtyä, saat kolikon. Kolikoilla voi ostaa
                       tehtävien vastauksia ja lunastaa itsesi mahdollisesta
-                      jumista.{' '}
+                      jumista.{" "}
                       {availableTokens > 0 ? (
                         <span>
-                          {' '}
-                          Käytössäsi on tällä hetkellä {availableTokens}{' '}
+                          {" "}
+                          Käytössäsi on tällä hetkellä {availableTokens}{" "}
                           kolikkoa.
                         </span>
                       ) : (
@@ -261,7 +261,7 @@ class ProgrammingExercise extends React.Component {
                                 </CardContent>
                               </Card>
                             )
-                          }
+                          },
                         )}
                       </ModalContent>
                     )}
@@ -270,7 +270,7 @@ class ProgrammingExercise extends React.Component {
               )}
               <p>
                 Palauta tehtävä palvelimelle tarkistettavaksi Netbeans
-                ohjelmointiympäristössä:{' '}
+                ohjelmointiympäristössä:{" "}
                 <OutboundLink
                   href="https://materiaalit.github.io/tmc-asennus/netbeans/"
                   rel="noopener noreferrer"
@@ -282,7 +282,7 @@ class ProgrammingExercise extends React.Component {
               </p>
               <p>
                 Voit myöhemmin katsoa palautuksiasi Test My Code
-                palautusympäristössä{' '}
+                palautusympäristössä{" "}
                 <OutboundLink
                   href={`https://tmc.mooc.fi/exercises/${
                     this.state.exerciseDetails.id

@@ -1,13 +1,13 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import { TextField, Button } from '@material-ui/core'
-import { createAccount, authenticate } from '../../services/moocfi'
-import { capitalizeFirstLetter } from '../../util/strings'
-import { navigate } from 'gatsby'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import React from "react"
+import { Link } from "gatsby"
+import { TextField, Button } from "@material-ui/core"
+import { createAccount, authenticate } from "../../services/moocfi"
+import { capitalizeFirstLetter } from "../../util/strings"
+import { navigate } from "gatsby"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
-import styled from 'styled-components'
-import withSimpleErrorBoundary from '../../util/withSimpleErrorBoundary'
+import styled from "styled-components"
+import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
 
 const Row = styled.div`
   margin-bottom: 1.5rem;
@@ -38,7 +38,7 @@ class CreateAccountForm extends React.Component {
         password: this.state.password,
         password_confirmation: this.state.password_confirmation,
       })
-      console.log('Created an account:', JSON.stringify(res))
+      console.log("Created an account:", JSON.stringify(res))
       await authenticate({
         username: this.state.email,
         password: this.state.password,
@@ -46,25 +46,25 @@ class CreateAccountForm extends React.Component {
       this.props.onComplete()
     } catch (error) {
       try {
-        let message = ''
+        let message = ""
         Object.entries(error).forEach(o => {
           const key = o[0]
           const value = o[1]
           value.forEach(msg => {
             let newMessage = capitalizeFirstLetter(
-              `${key.replace(/_/g, ' ')} ${msg}.`
+              `${key.replace(/_/g, " ")} ${msg}.`,
             )
-            if (newMessage === 'Email has already been taken.') {
+            if (newMessage === "Email has already been taken.") {
               newMessage =
-                'Sähköpostiosoitteesi on jo käytössä. Oletko tehnyt aikaisemmin mooc.fi:n kursseja?'
+                "Sähköpostiosoitteesi on jo käytössä. Oletko tehnyt aikaisemmin mooc.fi:n kursseja?"
             }
             message = `${message} ${newMessage}`
           })
         })
 
-        if (message === '') {
+        if (message === "") {
           message =
-            'Ongelma tunnuksen luonnissa. Virhe oli: ' + JSON.stringify(error)
+            "Ongelma tunnuksen luonnissa. Virhe oli: " + JSON.stringify(error)
         }
         this.setState({ error: message, submitting: false, errorObj: error })
       } catch (_error2) {
@@ -85,7 +85,7 @@ class CreateAccountForm extends React.Component {
 
   validate = () => {
     let newState = {
-      error: '',
+      error: "",
       errorObj: {},
     }
     const {
@@ -97,11 +97,11 @@ class CreateAccountForm extends React.Component {
       triedSubmitting,
     } = this.state
     if (email && validateEmail) {
-      if (email.indexOf('@') === -1) {
+      if (email.indexOf("@") === -1) {
         newState.error += "Sähköpostiosoitessa ei ole '@'-merkkiä. "
         newState.errorObj.email = "Sähköpostiosoitessa ei ole '@'-merkkiä. "
       }
-      if (email && email.indexOf('.') === -1) {
+      if (email && email.indexOf(".") === -1) {
         newState.error += "Sähköpostiosoitessa ei ole '.'-merkkiä. "
         newState.errorObj.email = "Sähköpostiosoitessa ei ole '.'-merkkiä. "
       }
@@ -109,15 +109,15 @@ class CreateAccountForm extends React.Component {
 
     if (password && password_confirmation && validatePassword) {
       if (password !== password_confirmation) {
-        newState.error += 'Salasana ja salasana uudestaan eivät olleet samoja. '
+        newState.error += "Salasana ja salasana uudestaan eivät olleet samoja. "
         newState.errorObj.password =
-          'Salasana ja salasana uudestaan eivät olleet samoja.'
+          "Salasana ja salasana uudestaan eivät olleet samoja."
         newState.errorObj.password_confirmation =
-          'Salasana ja salasana uudestaan eivät olleet samoja.'
+          "Salasana ja salasana uudestaan eivät olleet samoja."
       }
     }
 
-    if (newState.error === '') {
+    if (newState.error === "") {
       newState.error = false
       newState.canSubmit = true
     }
@@ -147,7 +147,7 @@ class CreateAccountForm extends React.Component {
 
   render() {
     if (this.context.loggedIn) {
-      navigate('/')
+      navigate("/")
       return <div>Redirecting...</div>
     }
     return (
@@ -155,10 +155,14 @@ class CreateAccountForm extends React.Component {
         <h1>Luo käyttäjätunnus</h1>
         <Form onChange={this.validate}>
           <InfoBox>
-            Tämä kurssi käyttää{' '}
-            <OutboundLink href="https://mooc.fi" target="_blank" rel="noopener noreferrer">
+            Tämä kurssi käyttää{" "}
+            <OutboundLink
+              href="https://mooc.fi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               mooc.fi
-            </OutboundLink>{' '}
+            </OutboundLink>{" "}
             käyttäjätunnuksia. Jos olet aikaisemmin tehnyt mooc.fi -kursseja,
             voit käyttää sisäänkirjautumissivulla olemassaolevia tunnuksiasi.
             Tällä sivulla voit luoda uuden tunnuksen, joka toimii suurimmassa
@@ -186,7 +190,7 @@ class CreateAccountForm extends React.Component {
           <Row>
             <TextField
               variant="outlined"
-              type={this.state.showPassword ? 'text' : 'password'}
+              type={this.state.showPassword ? "text" : "password"}
               label="Salasana"
               name="password"
               error={this.state.errorObj.password}
@@ -198,7 +202,7 @@ class CreateAccountForm extends React.Component {
           <Row>
             <TextField
               variant="outlined"
-              type={this.state.showPassword ? 'text' : 'password'}
+              type={this.state.showPassword ? "text" : "password"}
               label="Salasana uudestaan"
               name="password_confirmation"
               error={this.state.errorObj.password_confirmation}

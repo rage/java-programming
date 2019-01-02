@@ -1,9 +1,9 @@
-import React, { Fragment, lazy, Suspense } from 'react'
-import { Paper } from '@material-ui/core'
-import styled from 'styled-components'
-import withSimpleErrorBoundary from '../../util/withSimpleErrorBoundary'
-import Loading from '../../components/Loading'
-const PdfSlideshow = lazy(() => import('./PdfSlideshowLoader'))
+import React, { Fragment, lazy, Suspense } from "react"
+import { Paper } from "@material-ui/core"
+import styled from "styled-components"
+import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
+import Loading from "../../components/Loading"
+const PdfSlideshow = lazy(() => import("./PdfSlideshowLoader"))
 
 const HiddenLinkWrapper = styled.div`
   display: none;
@@ -28,7 +28,7 @@ class PdfSlideshowWrapper extends React.Component {
 
   componentDidMount() {
     const links = this.linkContainer.current
-    const path = links.querySelector('a').href
+    const path = links.querySelector("a").href
     this.setState({ render: true, path })
   }
 
@@ -44,7 +44,7 @@ class PdfSlideshowWrapper extends React.Component {
       )
     }
     return (
-      <Suspense fallback={<div style={{ height: '540px' }}>Loading...</div>}>
+      <Suspense fallback={<div style={{ height: "540px" }}>Loading...</div>}>
         <StyledPaper>
           <PdfSlideshow slideWidth={800} pdfLocation={this.state.path} />
         </StyledPaper>

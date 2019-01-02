@@ -1,8 +1,8 @@
-import React from 'react'
-import logo from '../images/logo.png'
-import styled from 'styled-components'
-import 'typeface-open-sans-condensed'
-import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
+import React from "react"
+import logo from "../images/logo.png"
+import styled from "styled-components"
+import "typeface-open-sans-condensed"
+import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 
 const LogoImg = styled.img`
   width: 50px;
@@ -13,7 +13,7 @@ const LogoImg = styled.img`
 
 const LogoTypography = styled.div`
   flex: 1;
-  font-family: 'Open Sans Condensed', sans-serif !important;
+  font-family: "Open Sans Condensed", sans-serif !important;
   font-size: 1.75rem !important;
 `
 

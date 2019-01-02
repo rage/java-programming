@@ -1,12 +1,12 @@
-import React, { Fragment } from 'react'
-import styled from 'styled-components'
-import PagesContext from '../contexes/PagesContext'
-import { nthIndex } from '../util/strings'
-import { Link } from 'gatsby'
+import React, { Fragment } from "react"
+import styled from "styled-components"
+import PagesContext from "../contexes/PagesContext"
+import { nthIndex } from "../util/strings"
+import { Link } from "gatsby"
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight as icon } from '@fortawesome/free-solid-svg-icons'
-import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faArrowRight as icon } from "@fortawesome/free-solid-svg-icons"
+import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 
 const StyledLink = styled(Link)`
   color: black;
@@ -47,7 +47,7 @@ class EndOfSubSection extends React.Component {
         {value => {
           const currentPath = value.current.path
           let sectionPath = currentPath
-          const sectionSeparator = nthIndex(currentPath, '/', 2)
+          const sectionSeparator = nthIndex(currentPath, "/", 2)
           if (sectionSeparator !== -1) {
             sectionPath = currentPath.substr(0, sectionSeparator)
           }
@@ -79,10 +79,10 @@ class EndOfSubSection extends React.Component {
           }
           return (
             <div>
-              Pääsit aliluvun loppuun!{' '}
+              Pääsit aliluvun loppuun!{" "}
               {nextPart && (
                 <Fragment>
-                  Jatka tästä seuraavaan osaan:{' '}
+                  Jatka tästä seuraavaan osaan:{" "}
                   <ButtonWrapper>
                     <StyledLink to={nextPart.path}>
                       <StyledIcon icon={icon} />

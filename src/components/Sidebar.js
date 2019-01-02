@@ -1,15 +1,15 @@
-import React from 'react'
-import styled from 'styled-components'
-import { graphql, StaticQuery } from 'gatsby'
-import { Button } from '@material-ui/core'
+import React from "react"
+import styled from "styled-components"
+import { graphql, StaticQuery } from "gatsby"
+import { Button } from "@material-ui/core"
 
-import Logo from './Logo'
-import TreeView from './TreeView'
-import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
+import Logo from "./Logo"
+import TreeView from "./TreeView"
+import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 
 const StyledIcon = styled(FontAwesomeIcon)`
   vertical-align: middle;
@@ -19,7 +19,7 @@ const StyledIcon = styled(FontAwesomeIcon)`
   font-size: 1.5em;
 `
 
-export const SIDEBAR_WIDTH = '20rem'
+export const SIDEBAR_WIDTH = "20rem"
 
 const SidebarContainer = styled.div`
   display: flex;
@@ -86,43 +86,43 @@ const MenuExpanderWrapper = styled.div`
 
 var content2 = [
   {
-    title: 'Tietoa kurssista',
-    path: '/',
+    title: "Tietoa kurssista",
+    path: "/",
   },
   {
-    title: 'Osaamistavoitteet',
-    path: '/osaamistavoitteet',
+    title: "Osaamistavoitteet",
+    path: "/osaamistavoitteet",
   },
   {
-    title: 'Arvostelu ja kokeet',
-    path: '/arvostelu-ja-kokeet',
+    title: "Arvostelu ja kokeet",
+    path: "/arvostelu-ja-kokeet",
   },
   {
-    title: 'Mahdollisuus opinto-oikeuteen',
-    path: '/opinto-oikeus',
+    title: "Mahdollisuus opinto-oikeuteen",
+    path: "/opinto-oikeus",
   },
-  { title: 'Tukiväylät', path: '/tukivaylat' },
+  { title: "Tukiväylät", path: "/tukivaylat" },
   {
-    title: 'Opettajille ja opinto-ohjaajille',
-    path: '/opettajille',
+    title: "Opettajille ja opinto-ohjaajille",
+    path: "/opettajille",
   },
   { separator: true },
 ]
 
 var futurePages = [
-  { title: 'Osa 3', tba: '11.1.2019' },
-  { title: 'Osa 4', tba: '25.1.2019' },
-  { title: 'Osa 5', tba: '1.2.2019' },
-  { title: 'Osa 6', tba: '8.2.2019' },
-  { title: 'Osa 7', tba: '15.2.2019' },
+  { title: "Osa 3", tba: "11.1.2019" },
+  { title: "Osa 4", tba: "25.1.2019" },
+  { title: "Osa 5", tba: "1.2.2019" },
+  { title: "Osa 6", tba: "8.2.2019" },
+  { title: "Osa 7", tba: "15.2.2019" },
   { separator: true },
-  { title: 'Osa 8', tba: '1.3.2019' },
-  { title: 'Osa 9', tba: '8.3.2019' },
-  { title: 'Osa 10', tba: '15.3.2019' },
-  { title: 'Osa 11', tba: '22.3.2019' },
-  { title: 'Osa 12', tba: '29.3.2019' },
-  { title: 'Osa 13', tba: '12.4.2019' },
-  { title: 'Osa 14', tba: '19.4.2019' },
+  { title: "Osa 8", tba: "1.3.2019" },
+  { title: "Osa 9", tba: "8.3.2019" },
+  { title: "Osa 10", tba: "15.3.2019" },
+  { title: "Osa 11", tba: "22.3.2019" },
+  { title: "Osa 12", tba: "29.3.2019" },
+  { title: "Osa 13", tba: "12.4.2019" },
+  { title: "Osa 14", tba: "19.4.2019" },
 ]
 
 const MobileWrapper = styled.div`

@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react'
-import styled from 'styled-components'
+import React, { Fragment } from "react"
+import styled from "styled-components"
 
-import { CircularProgress } from '@material-ui/core'
-import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
+import { CircularProgress } from "@material-ui/core"
+import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 
 const LoadingWrapper = styled.div`
   padding: 5rem;

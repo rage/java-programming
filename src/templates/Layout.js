@@ -1,29 +1,29 @@
-import React, { Fragment } from 'react'
-import Helmet from 'react-helmet'
-import Sidebar from '../components/Sidebar'
-import ContentArea from '../components/ContentArea'
-import TopBar from '../components/TopBar'
-import { StaticQuery, graphql } from 'gatsby'
-import * as store from 'store'
-import withMaterialUiRoot from './withMaterialUiRoot'
-import Pheromones from '../util/pheromones'
-import styled from 'styled-components'
+import React, { Fragment } from "react"
+import Helmet from "react-helmet"
+import Sidebar from "../components/Sidebar"
+import ContentArea from "../components/ContentArea"
+import TopBar from "../components/TopBar"
+import { StaticQuery, graphql } from "gatsby"
+import * as store from "store"
+import withMaterialUiRoot from "./withMaterialUiRoot"
+import Pheromones from "../util/pheromones"
+import styled from "styled-components"
 
-import courseMetaData from '../../course-metadata.json'
+import courseMetaData from "../../course-metadata.json"
 
-import './reboot.css'
-import './theme.css'
-import './remark.css'
-import 'focus-visible'
-import 'typeface-open-sans'
-import 'typeface-roboto-slab'
-import 'typeface-roboto-mono'
-import '@fortawesome/fontawesome-svg-core/styles.css'
+import "./reboot.css"
+import "./theme.css"
+import "./remark.css"
+import "focus-visible"
+import "typeface-open-sans"
+import "typeface-roboto-slab"
+import "typeface-roboto-mono"
+import "@fortawesome/fontawesome-svg-core/styles.css"
 
-import { config as fontAwesomeConfig } from '@fortawesome/fontawesome-svg-core'
-import { canDoResearch } from '../services/moocfi'
-import Footer from '../components/Footer'
-import PointsBalloon from '../components/PointsBalloon'
+import { config as fontAwesomeConfig } from "@fortawesome/fontawesome-svg-core"
+import { canDoResearch } from "../services/moocfi"
+import Footer from "../components/Footer"
+import PointsBalloon from "../components/PointsBalloon"
 
 fontAwesomeConfig.autoAddCss = false
 
@@ -52,10 +52,10 @@ class Layout extends React.Component {
   }
 
   componentDidMount() {
-    const user = store.get('tmc.user')
-    if (typeof window !== 'undefined' && user) {
-      if (typeof window.Quiznator === 'undefined') {
-        document.addEventListener('quiznatorLoaded', () => {
+    const user = store.get("tmc.user")
+    if (typeof window !== "undefined" && user) {
+      if (typeof window.Quiznator === "undefined") {
+        document.addEventListener("quiznatorLoaded", () => {
           this.setQuiznatorUser(user)
         })
       } else {
@@ -64,7 +64,7 @@ class Layout extends React.Component {
       if (canDoResearch()) {
         setTimeout(() => {
           this.removePheromones = Pheromones.init({
-            apiUrl: 'https://data.pheromones.io/',
+            apiUrl: "https://data.pheromones.io/",
             username: user.username,
             submitAfter: 20,
           })
@@ -75,8 +75,8 @@ class Layout extends React.Component {
 
   componentWillUnmount() {
     if (
-      typeof window === 'undefined' ||
-      typeof this.removePheromones === 'undefined'
+      typeof window === "undefined" ||
+      typeof this.removePheromones === "undefined"
     ) {
       return
     }
@@ -115,14 +115,14 @@ class Layout extends React.Component {
                   titleTemplate={`%s - ${siteTitle}`}
                   meta={[
                     {
-                      name: 'description',
+                      name: "description",
                       content:
-                        'Helsingin yliopiston kaikille avoin ja ilmainen ohjelmoinnin perusteet opettava verkkokurssi. Kurssilla perehdytään nykyaikaisen ohjelmoinnin perusideoihin sekä ohjelmoinnissa käytettävien työvälineiden lisäksi algoritmien laatimiseen. Kurssille osallistuminen ei vaadi ennakkotietoja ohjelmoinnista.',
+                        "Helsingin yliopiston kaikille avoin ja ilmainen ohjelmoinnin perusteet opettava verkkokurssi. Kurssilla perehdytään nykyaikaisen ohjelmoinnin perusideoihin sekä ohjelmoinnissa käytettävien työvälineiden lisäksi algoritmien laatimiseen. Kurssille osallistuminen ei vaadi ennakkotietoja ohjelmoinnista.",
                     },
                     {
-                      name: 'keywords',
+                      name: "keywords",
                       content:
-                        'ohjelmointi, java, programming, CS1, MOOC, 2019, ohjelmointikurssi, avoin, ilmainen, helsingin yliopisto',
+                        "ohjelmointi, java, programming, CS1, MOOC, 2019, ohjelmointikurssi, avoin, ilmainen, helsingin yliopisto",
                     },
                   ]}
                 />

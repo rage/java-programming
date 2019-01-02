@@ -1,10 +1,10 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import React from "react"
+import Helmet from "react-helmet"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
-import Layout from '../templates/Layout'
-import Container from '../components/Container'
-import { withLoginStateContext } from '../contexes/LoginStateContext'
+import Layout from "../templates/Layout"
+import Container from "../components/Container"
+import { withLoginStateContext } from "../contexes/LoginStateContext"
 
 const IndexPage = () => (
   <Layout>
@@ -25,11 +25,11 @@ const IndexPage = () => (
       </p>
 
       <p>
-        Pääset kanavalle tästä linkistä:{' '}
+        Pääset kanavalle tästä linkistä:{" "}
         <OutboundLink href="https://t.me/ohjelmointi19">
           https://t.me/ohjelmointi19
         </OutboundLink>
-        . Pääset Telegrammin selaimessa toimivaan versioon täältä:{' '}
+        . Pääset Telegrammin selaimessa toimivaan versioon täältä:{" "}
         <OutboundLink href="https://web.telegram.org/">
           https://web.telegram.org
         </OutboundLink>

@@ -1,6 +1,6 @@
-import React from 'react'
-import withSimpleErrorBoundary from '../../util/withSimpleErrorBoundary'
-import styled from 'styled-components'
+import React from "react"
+import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
+import styled from "styled-components"
 
 const ExerciseSummaryWrapper = styled.div`
   padding-left: 1rem;
@@ -8,8 +8,8 @@ const ExerciseSummaryWrapper = styled.div`
 `
 
 const ExerciseSummary = ({ exercise, index, quizIdToTitle }) => {
-  let description = 'Tuntematon tehtävätyyppi'
-  if (exercise.type === 'quiznator') {
+  let description = "Tuntematon tehtävätyyppi"
+  if (exercise.type === "quiznator") {
     const name = quizIdToTitle[exercise.id]
     if (name) {
       description = `Kysely: ${name}`
@@ -17,7 +17,7 @@ const ExerciseSummary = ({ exercise, index, quizIdToTitle }) => {
       description = "Kysely"
     }
   }
-  if (exercise.type === 'programming-exercise') {
+  if (exercise.type === "programming-exercise") {
     description = `Ohjelmointitehtävä: ${exercise.id}`
   }
   return (

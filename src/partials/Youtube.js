@@ -1,32 +1,32 @@
-import React from 'react'
-import styled from 'styled-components'
-import ReduxActionAnalytics from 'redux-action-analytics'
-import * as storejs from 'store'
-import YouTube from 'react-youtube'
-import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
+import React from "react"
+import styled from "styled-components"
+import ReduxActionAnalytics from "redux-action-analytics"
+import * as storejs from "store"
+import YouTube from "react-youtube"
+import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 
 let analytics = undefined
 
 initAnalytics()
 
 function initAnalytics() {
-  if (typeof window === 'undefined') {
+  if (typeof window === "undefined") {
     return
   }
   analytics = new ReduxActionAnalytics(
-    'https://usage.testmycode.io/api/v0/data',
-    'youtube-watch-stats',
-    'youtube-watch-stats',
+    "https://usage.testmycode.io/api/v0/data",
+    "youtube-watch-stats",
+    "youtube-watch-stats",
     10000,
     () => {
-      const user = storejs.get('tmc.user')
+      const user = storejs.get("tmc.user")
       if (user === undefined) {
         return {}
       }
       return {
         username: user.username,
       }
-    }
+    },
   )
 }
 
@@ -41,7 +41,7 @@ function onPlayerStateChange(event) {
 
 function onPlaybackRateChange(event) {
   const player = event.target
-  logAction('PLAYBACK_SPEED_CHANGED', player)
+  logAction("PLAYBACK_SPEED_CHANGED", player)
 }
 
 function logAction(action, player) {
@@ -83,8 +83,8 @@ const Youtube = props => {
         onStateChange={onPlayerStateChange}
         onPlaybackRateChange={onPlaybackRateChange}
         opts={{
-          height: '390',
-          width: '640',
+          height: "390",
+          width: "640",
           playerVars: {
             modestbranding: true,
           },

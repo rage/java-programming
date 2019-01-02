@@ -1,14 +1,14 @@
-import React, { Fragment } from 'react'
-import Button from './Button'
-import { signOut, getCachedUserDetails } from '../services/moocfi'
+import React, { Fragment } from "react"
+import Button from "./Button"
+import { signOut, getCachedUserDetails } from "../services/moocfi"
 import LoginStateContext, {
   withLoginStateContext,
-} from '../contexes/LoginStateContext'
+} from "../contexes/LoginStateContext"
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser as profileIcon } from '@fortawesome/free-solid-svg-icons'
-import styled from 'styled-components'
-import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faUser as profileIcon } from "@fortawesome/free-solid-svg-icons"
+import styled from "styled-components"
+import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 
 const StyledIcon = styled(FontAwesomeIcon)`
   margin-right: 0.5rem;
@@ -27,9 +27,9 @@ class LoginControls extends React.Component {
       return
     }
     const details = await getCachedUserDetails()
-    let name = `${details?.user_field?.first_name || ''} ${details?.user_field
-      ?.last_name || ''}`.trim()
-    if (name === '') {
+    let name = `${details?.user_field?.first_name || ""} ${details?.user_field
+      ?.last_name || ""}`.trim()
+    if (name === "") {
       name = details.email
     }
     this.setState({
@@ -38,7 +38,7 @@ class LoginControls extends React.Component {
   }
 
   state = {
-    name: 'Loading...',
+    name: "Loading...",
   }
 
   render() {

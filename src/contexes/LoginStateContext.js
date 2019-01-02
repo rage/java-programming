@@ -1,5 +1,5 @@
-import React from 'react'
-import { loggedIn, onLoginStateChanged } from '../services/moocfi'
+import React from "react"
+import { loggedIn, onLoginStateChanged } from "../services/moocfi"
 
 const LoginStateContext = React.createContext()
 

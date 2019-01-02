@@ -1,8 +1,8 @@
-import React from 'react'
-import Layout from '../templates/Layout'
-import Container from '../components/Container'
-import { withLoginStateContext } from '../contexes/LoginStateContext'
-import Helmet from 'react-helmet'
+import React from "react"
+import Layout from "../templates/Layout"
+import Container from "../components/Container"
+import { withLoginStateContext } from "../contexes/LoginStateContext"
+import Helmet from "react-helmet"
 
 const NotFoundPage = () => (
   <Layout>

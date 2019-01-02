@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-import LoginControls from './LoginControls';
-import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary';
+import React from "react"
+import styled from "styled-components"
+import LoginControls from "./LoginControls"
+import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 
 const TopBarContainer = styled.div`
   height: 4rem;
@@ -15,9 +15,11 @@ const TopBarContainer = styled.div`
 
 class TopBar extends React.Component {
   render() {
-    return <TopBarContainer>
-      <LoginControls />
-    </TopBarContainer>
+    return (
+      <TopBarContainer>
+        <LoginControls />
+      </TopBarContainer>
+    )
   }
 }
 

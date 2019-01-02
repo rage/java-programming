@@ -1,9 +1,9 @@
-import React from 'react'
-import Helmet from 'react-helmet'
+import React from "react"
+import Helmet from "react-helmet"
 
-import Layout from '../templates/Layout'
-import Container from '../components/Container'
-import { withLoginStateContext } from '../contexes/LoginStateContext'
+import Layout from "../templates/Layout"
+import Container from "../components/Container"
+import { withLoginStateContext } from "../contexes/LoginStateContext"
 
 import {
   Table,
@@ -11,7 +11,7 @@ import {
   TableCell,
   TableHead,
   TableRow,
-} from '@material-ui/core'
+} from "@material-ui/core"
 
 const IndexPage = () => (
   <Layout>

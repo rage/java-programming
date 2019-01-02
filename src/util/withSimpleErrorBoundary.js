@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 export default function withSimpleErrorBoundary(Component) {
   class SimpleErrorBoundary extends React.Component {

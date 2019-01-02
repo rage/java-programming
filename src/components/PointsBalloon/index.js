@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react'
-import LoginStateContext from '../../contexes/LoginStateContext'
-import withSimpleErrorBoundary from '../../util/withSimpleErrorBoundary'
-import styled from 'styled-components'
+import React, { Fragment } from "react"
+import LoginStateContext from "../../contexes/LoginStateContext"
+import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
+import styled from "styled-components"
 
-import PointsBalloonBalloon from './PointsBalloonBalloon'
-import PointsBalloonContent from './PointsBalloonContent'
+import PointsBalloonBalloon from "./PointsBalloonBalloon"
+import PointsBalloonContent from "./PointsBalloonContent"
 
 const PoitsBalloonContainer = styled.div`
   position: fixed;

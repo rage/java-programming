@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react'
-import PagesContext from '../contexes/PagesContext'
-import { nthIndex } from '../util/strings'
-import { Link } from 'gatsby'
-import styled from 'styled-components'
+import React, { Fragment } from "react"
+import PagesContext from "../contexes/PagesContext"
+import { nthIndex } from "../util/strings"
+import { Link } from "gatsby"
+import styled from "styled-components"
 
-import { Divider, Paper } from '@material-ui/core'
-import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
+import { Divider, Paper } from "@material-ui/core"
+import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 
 const PagesList = styled.ol`
   padding-left: 0;
@@ -53,7 +53,7 @@ const Title = styled.div`
   margin-bottom: 0.35em;
   color: rgba(0, 0, 0, 0.87);
   font-size: 1.5em;
-  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
   line-height: 1.33;
   letter-spacing: 0em;
@@ -69,7 +69,7 @@ const PagesInThisSection = ({ style }) => (
     {value => {
       const currentPath = value.current.path
       let sectionPath = currentPath
-      const sectionSeparator = nthIndex(currentPath, '/', 2)
+      const sectionSeparator = nthIndex(currentPath, "/", 2)
       if (sectionSeparator !== -1) {
         sectionPath = currentPath.substr(0, sectionSeparator)
       }

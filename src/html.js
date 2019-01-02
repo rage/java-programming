@@ -22,10 +22,8 @@ export default class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
-          <script>
-            window._QUIZNATOR_ENABLED = true;
-          </script>
-          <script src="https://quiznator.mooc.fi/javascripts/plugin-loader.min.js"></script>
+          <script>window._QUIZNATOR_ENABLED = true;</script>
+          <script src="https://quiznator.mooc.fi/javascripts/plugin-loader.min.js" />
         </body>
       </html>
     )

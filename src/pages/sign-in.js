@@ -1,16 +1,16 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import Layout from '../templates/Layout'
-import { authenticate } from '../services/moocfi'
-import { navigate, Link } from 'gatsby'
-import { TextField, Button } from '@material-ui/core'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import React from "react"
+import Helmet from "react-helmet"
+import Layout from "../templates/Layout"
+import { authenticate } from "../services/moocfi"
+import { navigate, Link } from "gatsby"
+import { TextField, Button } from "@material-ui/core"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
-import styled from 'styled-components'
+import styled from "styled-components"
 import LoginStateContext, {
   withLoginStateContext,
-} from '../contexes/LoginStateContext'
-import Container from '../components/Container'
+} from "../contexes/LoginStateContext"
+import Container from "../components/Container"
 
 const Row = styled.div`
   margin-bottom: 1.5rem;
@@ -49,12 +49,12 @@ class SignInPage extends React.Component {
       })
       setTimeout(() => {
         // Give loginstate time to
-        if (typeof window !== 'undefined') {
-          console.log('Navigating back')
+        if (typeof window !== "undefined") {
+          console.log("Navigating back")
           window.history.back()
           return
         }
-        navigate('/')
+        navigate("/")
       }, 100)
     } catch (error) {
       this.setState({ error: true, submitting: false })
@@ -63,15 +63,15 @@ class SignInPage extends React.Component {
   }
 
   state = {
-    email: '',
-    password: '',
+    email: "",
+    password: "",
     submitting: false,
     error: false,
   }
 
   render() {
     if (this.context.loggedIn && !this.state.submitting) {
-      navigate('/')
+      navigate("/")
       return <div>Redirecting....</div>
     }
     return (
@@ -82,14 +82,14 @@ class SignInPage extends React.Component {
             <h1>Kirjaudu sisään</h1>
             <Form>
               <InfoBox>
-                Tämä kurssi käyttää{' '}
+                Tämä kurssi käyttää{" "}
                 <OutboundLink
                   href="https://mooc.fi"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   mooc.fi
-                </OutboundLink>{' '}
+                </OutboundLink>{" "}
                 käyttäjätunnuksia. Jos olet aikaisemmin tehnyt mooc.fi -kursseja
                 voit käyttää olemassaolevia tunnuksiasi.
               </InfoBox>
@@ -109,7 +109,7 @@ class SignInPage extends React.Component {
                 <TextField
                   id="outlined-adornment-password"
                   variant="outlined"
-                  type={this.state.showPassword ? 'text' : 'password'}
+                  type={this.state.showPassword ? "text" : "password"}
                   label="Salasana"
                   fullWidth
                   value={this.state.password}

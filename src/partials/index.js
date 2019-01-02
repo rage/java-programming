@@ -20,20 +20,20 @@
 
 // export default getNamedPartials
 
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
-import Test from './Test'
-import PagesInThisSection from './PagesInThisSection'
-import ProgrammingExercise from './ProgrammingExercise'
-import TextBox from './TextBox'
-import SampleOutput from './SampleOutput'
-import Youtube from './Youtube'
-import Quiznator from './Quiznator'
-import PleaseLogin from './PleaseLogin'
-import FloatImageRight from './FloatImageRight'
-import CodeStatesVisualizer from './CodeStatesVisualizer'
-import PdfSlideshow from './PdfSlideshow'
-import ExercisesInThisSection from './ExercisesInThisSection'
+import Test from "./Test"
+import PagesInThisSection from "./PagesInThisSection"
+import ProgrammingExercise from "./ProgrammingExercise"
+import TextBox from "./TextBox"
+import SampleOutput from "./SampleOutput"
+import Youtube from "./Youtube"
+import Quiznator from "./Quiznator"
+import PleaseLogin from "./PleaseLogin"
+import FloatImageRight from "./FloatImageRight"
+import CodeStatesVisualizer from "./CodeStatesVisualizer"
+import PdfSlideshow from "./PdfSlideshow"
+import ExercisesInThisSection from "./ExercisesInThisSection"
 
 import {
   Table,
@@ -42,20 +42,20 @@ import {
   TableHead,
   TableRow,
   TableTh,
-} from './Table'
-import Deadline from './Deadline'
+} from "./Table"
+import Deadline from "./Deadline"
 
 const mapping = {
   test: Test,
-  'pages-in-this-section': PagesInThisSection,
-  'programming-exercise': ProgrammingExercise,
-  'text-box': TextBox,
-  'sample-output': SampleOutput,
-  'please-login': PleaseLogin,
-  'float-image-right': FloatImageRight,
-  'code-states-visualizer': CodeStatesVisualizer,
-  'pdf-slideshow': PdfSlideshow,
-  'exercises-in-this-section': ExercisesInThisSection,
+  "pages-in-this-section": PagesInThisSection,
+  "programming-exercise": ProgrammingExercise,
+  "text-box": TextBox,
+  "sample-output": SampleOutput,
+  "please-login": PleaseLogin,
+  "float-image-right": FloatImageRight,
+  "code-states-visualizer": CodeStatesVisualizer,
+  "pdf-slideshow": PdfSlideshow,
+  "exercises-in-this-section": ExercisesInThisSection,
   youtube: Youtube,
   quiznator: Quiznator,
   table: Table,

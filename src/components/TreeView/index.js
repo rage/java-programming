@@ -1,7 +1,7 @@
-import React from 'react'
-import TreeViewItem from './TreeViewItem'
-import styled from 'styled-components'
-import withSimpleErrorBoundary from '../../util/withSimpleErrorBoundary'
+import React from "react"
+import TreeViewItem from "./TreeViewItem"
+import styled from "styled-components"
+import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
 
 const StyledUl = styled.ul`
   margin-left: 0;

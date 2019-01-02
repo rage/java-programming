@@ -1,19 +1,19 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 
-import { Motion, spring } from 'react-motion'
+import { Motion, spring } from "react-motion"
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
-import { trackElementHeight } from '../../util/trackHeight'
-import GatsbyLink from 'gatsby-link'
-import { Location } from '@reach/router'
-import Avatar from '@material-ui/core/Avatar'
-import Chip from '@material-ui/core/Chip'
-import Divider from '@material-ui/core/Divider';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCaretRight } from "@fortawesome/free-solid-svg-icons"
+import { trackElementHeight } from "../../util/trackHeight"
+import GatsbyLink from "gatsby-link"
+import { Location } from "@reach/router"
+import Avatar from "@material-ui/core/Avatar"
+import Chip from "@material-ui/core/Chip"
+import Divider from "@material-ui/core/Divider"
 
-import { faCalendarAlt as icon } from '@fortawesome/free-regular-svg-icons'
-import withSimpleErrorBoundary from '../../util/withSimpleErrorBoundary'
+import { faCalendarAlt as icon } from "@fortawesome/free-regular-svg-icons"
+import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
 
 const ChildrenList = styled.ul`
   height: calc(var(--open-ratio) * var(--calculated-height) * 1px);
@@ -39,7 +39,7 @@ const NavigationLink = styled(GatsbyLink)`
   width: 100%;
   background-color: white;
   ${props =>
-    props.active === 't' &&
+    props.active === "t" &&
     `
     border-color: #f75b4b !important;
     background-color: #ffeeed;
@@ -126,7 +126,7 @@ class TreeViewItem extends React.Component {
         <Location>
           {({ navigate, location }) => {
             let active = location.pathname.startsWith(this.props.item.path)
-            if (this.props.item.path === '/') {
+            if (this.props.item.path === "/") {
               active = location.pathname === this.props.item.path
             }
             return (
@@ -140,18 +140,18 @@ class TreeViewItem extends React.Component {
                     <ItemTitleWrapper
                       className={`nav-item-${this.props.item.title
                         .toLowerCase()
-                        .replace(/ /g, '-')}`}
+                        .replace(/ /g, "-")}`}
                     >
                       {this.props.item.children && (
                         <StyledIcon
-                          style={{ '--open-ratio': `${openRatio}` }}
+                          style={{ "--open-ratio": `${openRatio}` }}
                           icon={faCaretRight}
                           size="1x"
                         />
                       )}
                       <LinkWrapper
-                        to={this.props.item.path || '#'}
-                        active={active ? 't' : 'f'}
+                        to={this.props.item.path || "#"}
+                        active={active ? "t" : "f"}
                         disabled={this.props.item.tba}
                       >
                         <ListItem onClick={this.onClick}>
@@ -172,7 +172,7 @@ class TreeViewItem extends React.Component {
                     {this.props.item.children && (
                       <ChildrenList
                         innerRef={this.childrenListRef}
-                        style={{ '--open-ratio': `${openRatio}` }}
+                        style={{ "--open-ratio": `${openRatio}` }}
                       >
                         {this.props.item.children.map(i => (
                           <TreeViewItem key={i.title} item={i} />

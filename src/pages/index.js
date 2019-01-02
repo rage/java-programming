@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react"
 
-import Layout from '../templates/Layout'
-import Banner from '../components/Banner'
-import GatsbyLink from 'gatsby-link'
-import { Link } from 'gatsby'
-import { withLoginStateContext } from '../contexes/LoginStateContext'
+import Layout from "../templates/Layout"
+import Banner from "../components/Banner"
+import GatsbyLink from "gatsby-link"
+import { Link } from "gatsby"
+import { withLoginStateContext } from "../contexes/LoginStateContext"
 
 import {
   Table,
@@ -12,8 +12,8 @@ import {
   TableCell,
   TableHead,
   TableRow,
-} from '@material-ui/core'
-import Container from '../components/Container'
+} from "@material-ui/core"
+import Container from "../components/Container"
 
 const IndexPage = () => (
   <Layout>
@@ -41,7 +41,7 @@ const IndexPage = () => (
           hakemiseen liittyvät tiedot huolellisesti. Esimerkiksi tehtävien
           aikarajoista EI voida joustaa lainkaan. Ehdot opinto-oikeuden
           saamiseksi päivittyvät lähempänä yhteishakua. Lisätietoa
-          opinto-oikeudesta saat{' '}
+          opinto-oikeudesta saat{" "}
           <GatsbyLink to="/opinto-oikeus">täältä</GatsbyLink>.
         </p>
         <p>

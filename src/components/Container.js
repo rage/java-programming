@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
+import styled from "styled-components"
+import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 
 const Container = styled.div`
   width: 90%;

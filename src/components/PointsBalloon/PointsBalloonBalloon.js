@@ -1,9 +1,9 @@
-import React from 'react'
-import withSimpleErrorBoundary from '../../util/withSimpleErrorBoundary'
-import Fab from '@material-ui/core/Fab'
-import styled from 'styled-components'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChartLine as icon } from '@fortawesome/free-solid-svg-icons'
+import React from "react"
+import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
+import Fab from "@material-ui/core/Fab"
+import styled from "styled-components"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faChartLine as icon } from "@fortawesome/free-solid-svg-icons"
 
 const StyledIcon = styled(FontAwesomeIcon)`
   color: white;

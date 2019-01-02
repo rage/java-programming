@@ -1,9 +1,9 @@
-import React from 'react'
-import { Card, CardContent } from '@material-ui/core'
-import styled from 'styled-components'
-import LoginControls from '../components/LoginControls'
-import LoginStateContext from '../contexes/LoginStateContext'
-import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
+import React from "react"
+import { Card, CardContent } from "@material-ui/core"
+import styled from "styled-components"
+import LoginControls from "../components/LoginControls"
+import LoginStateContext from "../contexes/LoginStateContext"
+import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 
 const PleaseLoginWrapper = styled(Card)`
   margin-bottom: 2rem;

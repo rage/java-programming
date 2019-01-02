@@ -1,8 +1,8 @@
-import React, { lazy, Suspense } from 'react'
+import React, { lazy, Suspense } from "react"
 
-import 'code-states-visualizer/dist/app.css'
-import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
-const CodeStatesVisualizer = lazy(() => import('code-states-visualizer'))
+import "code-states-visualizer/dist/app.css"
+import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
+const CodeStatesVisualizer = lazy(() => import("code-states-visualizer"))
 
 class CodeStatesVisualizerWrapper extends React.Component {
   state = {

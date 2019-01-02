@@ -1,11 +1,10 @@
-import React, { Fragment } from 'react'
-import LoginStateContext from '../../contexes/LoginStateContext'
-import withSimpleErrorBoundary from '../../util/withSimpleErrorBoundary'
-import { Modal, Paper, Button } from '@material-ui/core'
-import styled from 'styled-components'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
-import Loading from '../Loading'
-
+import React, { Fragment } from "react"
+import LoginStateContext from "../../contexes/LoginStateContext"
+import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
+import { Modal, Paper, Button } from "@material-ui/core"
+import styled from "styled-components"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
+import Loading from "../Loading"
 
 const StyledModal = styled(Modal)`
   z-index: 500 !important;
@@ -35,8 +34,8 @@ const Title = styled.h1`
 `
 
 const data = [
-  { group: 'Osa 1', Ohjelmointitehtävät: 80, Kyselyt: 20 },
-  { group: 'Osa 2', Ohjelmointitehtävät: 30, Kyselyt: 40 },
+  { group: "Osa 1", Ohjelmointitehtävät: 80, Kyselyt: 20 },
+  { group: "Osa 2", Ohjelmointitehtävät: 30, Kyselyt: 40 },
 ]
 
 class PointsBalloonContent extends React.Component {
@@ -69,12 +68,14 @@ class PointsBalloonContent extends React.Component {
               <p>
                 Tähän tulee visualisaatio edistymisestäsi heti kun olemme
                 saaneet tämän ominaisuuden toteutettua. Odotellessasi voit
-                tutkia edistymisestäsi ohjelmointitehtävissä
-                TMC:ssä:{' '}
+                tutkia edistymisestäsi ohjelmointitehtävissä TMC:ssä:{" "}
                 <OutboundLink href="https://tmc.mooc.fi/participants/me">
                   https://tmc.mooc.fi/participants/me
                 </OutboundLink>
-                . Huomaathan, että pisteisiisi vaikuttaa muutkin tehtävät kuin ohjelmointitehtävät, kuten vaikka materiaalin seassa olevat kyselyt. Näiden tehtävien pisteet eivät näy TMC:ssä. Kiitos kärsivällisyydestäsi!
+                . Huomaathan, että pisteisiisi vaikuttaa muutkin tehtävät kuin
+                ohjelmointitehtävät, kuten vaikka materiaalin seassa olevat
+                kyselyt. Näiden tehtävien pisteet eivät näy TMC:ssä. Kiitos
+                kärsivällisyydestäsi!
               </p>
             </Fragment>
           </Loading>

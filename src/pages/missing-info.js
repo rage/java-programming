@@ -1,27 +1,27 @@
-import React from 'react'
+import React from "react"
 
-import Layout from '../templates/Layout'
-import CourseOptionsEditor from '../components/user/CourseOptionsEditor'
-import { navigate } from 'gatsby'
+import Layout from "../templates/Layout"
+import CourseOptionsEditor from "../components/user/CourseOptionsEditor"
+import { navigate } from "gatsby"
 import LoginStateContext, {
   withLoginStateContext,
-} from '../contexes/LoginStateContext'
+} from "../contexes/LoginStateContext"
 
 class MissingInfo extends React.Component {
   static contextType = LoginStateContext
 
   onStepComplete = () => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       window.history.back()
       return
     }
-    navigate('/')
+    navigate("/")
   }
 
   render() {
     if (!this.context.loggedIn) {
-      if (typeof window !== 'undefined') {
-        navigate('/sign-in')
+      if (typeof window !== "undefined") {
+        navigate("/sign-in")
       }
       return <div>Redirecting...</div>
     }

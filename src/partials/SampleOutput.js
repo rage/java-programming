@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
-import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
+import React from "react"
+import styled from "styled-components"
+import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 
-const accentColor = '#CCC'
+const accentColor = "#CCC"
 
 const Wrapper = styled.div`
   padding 1rem;

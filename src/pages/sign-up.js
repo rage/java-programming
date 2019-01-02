@@ -1,14 +1,14 @@
-import React from 'react'
-import Helmet from 'react-helmet'
+import React from "react"
+import Helmet from "react-helmet"
 
-import Layout from '../templates/Layout'
-import CreateAccountForm from '../components/user/CreateAccountForm'
-import CourseOptionsEditor from '../components/user/CourseOptionsEditor'
-import ConfirmEmail from '../components/user/ConfirmEmail'
+import Layout from "../templates/Layout"
+import CreateAccountForm from "../components/user/CreateAccountForm"
+import CourseOptionsEditor from "../components/user/CourseOptionsEditor"
+import ConfirmEmail from "../components/user/ConfirmEmail"
 import LoginStateContext, {
   withLoginStateContext,
-} from '../contexes/LoginStateContext'
-import Container from '../components/Container'
+} from "../contexes/LoginStateContext"
+import Container from "../components/Container"
 
 class SignInPage extends React.Component {
   static contextType = LoginStateContext
@@ -21,7 +21,7 @@ class SignInPage extends React.Component {
     this.setState(prevState => ({
       step: prevState.step + 1,
     }))
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       window.scrollTo(0, 0)
     }
   }

@@ -1,21 +1,21 @@
-import React, { Fragment } from 'react'
-import Helmet from 'react-helmet'
-import styled from 'styled-components'
+import React, { Fragment } from "react"
+import Helmet from "react-helmet"
+import styled from "styled-components"
 
-import Layout from '../templates/Layout'
-import CourseOptionsEditor from '../components/user/CourseOptionsEditor'
-import { navigate } from 'gatsby'
+import Layout from "../templates/Layout"
+import CourseOptionsEditor from "../components/user/CourseOptionsEditor"
+import { navigate } from "gatsby"
 import LoginStateContext, {
   withLoginStateContext,
-} from '../contexes/LoginStateContext'
-import Container from '../components/Container'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+} from "../contexes/LoginStateContext"
+import Container from "../components/Container"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheckCircle as icon } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCheckCircle as icon } from "@fortawesome/free-solid-svg-icons"
 
-import Snackbar from '@material-ui/core/Snackbar'
-import SnackbarContent from '@material-ui/core/SnackbarContent'
+import Snackbar from "@material-ui/core/Snackbar"
+import SnackbarContent from "@material-ui/core/SnackbarContent"
 
 const StyledSnackbarContent = styled(SnackbarContent)`
   background-color: #43a047 !important;
@@ -33,7 +33,7 @@ class MissingInfo extends React.Component {
   }
 
   onStepComplete = () => {
-    this.setState({ successMessage: 'Tiedot tallennettu!' })
+    this.setState({ successMessage: "Tiedot tallennettu!" })
   }
 
   handleClose = () => {
@@ -42,8 +42,8 @@ class MissingInfo extends React.Component {
 
   render() {
     if (!this.context.loggedIn) {
-      if (typeof window !== 'undefined') {
-        navigate('/sign-in')
+      if (typeof window !== "undefined") {
+        navigate("/sign-in")
       }
       return <div>Redirecting...</div>
     }
@@ -55,7 +55,7 @@ class MissingInfo extends React.Component {
 
           <p>
             Täällä voit muokata mooc.fi -tilisi asetuksia tämän kurssin osalta.
-            Katso myös profiilisi mooc.fi:n Test My Code -palvelussa:{' '}
+            Katso myös profiilisi mooc.fi:n Test My Code -palvelussa:{" "}
             <OutboundLink href="https://tmc.mooc.fi" rel="noopener noreferrer">
               https://tmc.mooc.fi
             </OutboundLink>
@@ -65,8 +65,8 @@ class MissingInfo extends React.Component {
         </Container>
         <Snackbar
           anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'center',
+            vertical: "bottom",
+            horizontal: "center",
           }}
           open={this.state.successMessage}
           autoHideDuration={6000}
@@ -76,7 +76,7 @@ class MissingInfo extends React.Component {
             variant="success"
             message={
               <Fragment>
-                <StyledIcon icon={icon} />{' '}
+                <StyledIcon icon={icon} />{" "}
                 <span>{this.state.successMessage}</span>
               </Fragment>
             }

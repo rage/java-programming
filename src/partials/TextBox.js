@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInfoCircle, faUserGraduate } from '@fortawesome/free-solid-svg-icons'
-import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faInfoCircle, faUserGraduate } from "@fortawesome/free-solid-svg-icons"
+import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 
 const Wrapper = styled.aside`
   padding 1rem;
@@ -32,8 +32,8 @@ const Body = styled.div`
 `
 
 const variantToColor = {
-  hint: '#528afc',
-  learningObjectives: '#57b181',
+  hint: "#528afc",
+  learningObjectives: "#57b181",
 }
 
 const variantToIcon = {
@@ -43,7 +43,7 @@ const variantToIcon = {
 
 const TextBox = props => {
   return (
-    <Wrapper style={{ '--color': variantToColor[props.variant] }}>
+    <Wrapper style={{ "--color": variantToColor[props.variant] }}>
       <Header>
         <StyledIcon icon={variantToIcon[props.variant]} size="1x" />
         {props.name}

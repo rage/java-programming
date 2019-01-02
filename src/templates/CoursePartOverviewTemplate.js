@@ -1,22 +1,22 @@
-import React, { Fragment } from 'react'
-import { graphql } from 'gatsby'
-import styled from 'styled-components'
-import rehypeReact from 'rehype-react'
-import { navigate } from 'gatsby'
-import { Helmet } from 'react-helmet'
+import React, { Fragment } from "react"
+import { graphql } from "gatsby"
+import styled from "styled-components"
+import rehypeReact from "rehype-react"
+import { navigate } from "gatsby"
+import { Helmet } from "react-helmet"
 
-import Layout from './Layout'
+import Layout from "./Layout"
 
-import getNamedPartials from '../partials'
-import { getCachedUserDetails } from '../services/moocfi'
-import './remark.css'
-import PagesContext from '../contexes/PagesContext'
+import getNamedPartials from "../partials"
+import { getCachedUserDetails } from "../services/moocfi"
+import "./remark.css"
+import PagesContext from "../contexes/PagesContext"
 import LoginStateContext, {
   LoginStateContextProvider,
-} from '../contexes/LoginStateContext'
-import Container from '../components/Container'
+} from "../contexes/LoginStateContext"
+import Container from "../components/Container"
 
-import { loggedIn } from '../services/moocfi'
+import { loggedIn } from "../services/moocfi"
 
 const ContentWrapper = styled.div`
   margin-top: 1rem;
@@ -40,7 +40,7 @@ export default class CoursePartOverviewTemplate extends React.Component {
     let userInfo = await getCachedUserDetails()
     const research = userInfo?.extra_fields?.research
     if (research === undefined) {
-      navigate('/missing-info')
+      navigate("/missing-info")
     }
   }
 

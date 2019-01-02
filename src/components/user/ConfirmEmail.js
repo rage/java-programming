@@ -1,10 +1,10 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react"
+import { Link } from "gatsby"
 
-import EmailExample from '../../images/email-example.png'
+import EmailExample from "../../images/email-example.png"
 
-import styled from 'styled-components'
-import withSimpleErrorBoundary from '../../util/withSimpleErrorBoundary';
+import styled from "styled-components"
+import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
 
 const InfoBox = styled.div`
   margin-bottom: 2rem;
@@ -39,12 +39,10 @@ class ConfirmEmail extends React.Component {
         <InfoBox>
           <p>
             Olemme lähettäneet sähköpostiisi sähköpostiosoitteen
-            varmistuslinkin. Käy nyt sähköpostissasi ja varmista osoitteesi.{' '}
+            varmistuslinkin. Käy nyt sähköpostissasi ja varmista osoitteesi.{" "}
           </p>
 
-          <p>
-            Sähköpostin pitäisi näyttää tälläiseltä:
-          </p>
+          <p>Sähköpostin pitäisi näyttää tälläiseltä:</p>
 
           <StyledImage src={EmailExample} alt="Esimerkki sähköpostista" />
         </InfoBox>

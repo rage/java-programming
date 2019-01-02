@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
+import React from "react"
+import styled from "styled-components"
+import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 
 const QuiznatorWrapper = styled.div`
   code {
@@ -11,7 +11,7 @@ const QuiznatorWrapper = styled.div`
 class Quiznator extends React.Component {
   componentDidMount() {
     const { id } = this.props
-    if (!id || typeof window === 'undefined') {
+    if (!id || typeof window === "undefined") {
       return
     }
     if (!window.loadQuiz) {

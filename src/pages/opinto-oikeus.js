@@ -1,9 +1,9 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import Layout from '../templates/Layout'
-import Container from '../components/Container'
-import { withLoginStateContext } from '../contexes/LoginStateContext'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import React from "react"
+import Helmet from "react-helmet"
+import Layout from "../templates/Layout"
+import Container from "../components/Container"
+import { withLoginStateContext } from "../contexes/LoginStateContext"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 const IndexPage = () => (
   <Layout>
@@ -23,7 +23,7 @@ const IndexPage = () => (
           Ohjelmoinnin MOOCin kautta hakiessasi Sinun tulee täyttää päähaun
           hakulomake, jossa asetat Helsingin yliopiston tietojenkäsittelytieteen
           ohjelman haluamallesi prioriteetille. Löydät lisätietoja sähköisestä
-          yhteishausta korkeakouluihin{' '}
+          yhteishausta korkeakouluihin{" "}
           <OutboundLink
             href="https://opintopolku.fi/"
             target="_blank"

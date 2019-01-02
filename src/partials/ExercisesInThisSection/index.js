@@ -1,22 +1,22 @@
-import React from 'react'
-import PagesContext from '../../contexes/PagesContext'
-import { nthIndex } from '../../util/strings'
-import styled from 'styled-components'
-import ExpansionPanel from '@material-ui/core/ExpansionPanel'
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary'
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleDown as icon } from '@fortawesome/free-solid-svg-icons'
+import React from "react"
+import PagesContext from "../../contexes/PagesContext"
+import { nthIndex } from "../../util/strings"
+import styled from "styled-components"
+import ExpansionPanel from "@material-ui/core/ExpansionPanel"
+import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary"
+import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faAngleDown as icon } from "@fortawesome/free-solid-svg-icons"
 
-import withSimpleErrorBoundary from '../../util/withSimpleErrorBoundary'
-import ExerciseSummary from './ExerciseSummary'
-import { fetchManyQuizDetails } from '../../services/quiznator'
-import { flatten } from '../../util/arrays'
+import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
+import ExerciseSummary from "./ExerciseSummary"
+import { fetchManyQuizDetails } from "../../services/quiznator"
+import { flatten } from "../../util/arrays"
 
 const Title = styled.div`
   margin-bottom: 0.5em;
   color: rgba(0, 0, 0, 0.87);
-  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: bold;
   font-size: 1.25rem;
   letter-spacing: 0em;
@@ -34,7 +34,7 @@ class ExercisesInThisSection extends React.Component {
     const value = this.context
     const currentPath = value.current.path
     let sectionPath = currentPath
-    const sectionSeparator = nthIndex(currentPath, '/', 2)
+    const sectionSeparator = nthIndex(currentPath, "/", 2)
     if (sectionSeparator !== -1) {
       sectionPath = currentPath.substr(0, sectionSeparator)
     }
@@ -50,7 +50,7 @@ class ExercisesInThisSection extends React.Component {
 
     const allExercises = flatten(sectionPages.map(page => page.exercises))
     const quizIds = allExercises
-      .filter(o => o.type === 'quiznator')
+      .filter(o => o.type === "quiznator")
       .map(o => o.id)
     const quizDetails = await fetchManyQuizDetails(quizIds)
     const quizIdToTitle = {}

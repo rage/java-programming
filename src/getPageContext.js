@@ -1,12 +1,12 @@
 /* eslint-disable no-underscore-dangle */
 
-import { SheetsRegistry } from 'jss'
+import { SheetsRegistry } from "jss"
 import {
   createMuiTheme,
   createGenerateClassName,
-} from '@material-ui/core/styles'
-import red from '@material-ui/core/colors/red'
-import blue from '@material-ui/core/colors/blue'
+} from "@material-ui/core/styles"
+import red from "@material-ui/core/colors/red"
+import blue from "@material-ui/core/colors/blue"
 
 // A theme with custom primary and secondary color.
 // It's optional.
@@ -29,15 +29,15 @@ const theme = createMuiTheme({
   overrides: {
     MuiButton: {
       root: {
-        textTransform: 'none',
+        textTransform: "none",
       },
     },
     MuiTypography: {
       body2: {
-        fontSize: '16px',
+        fontSize: "16px",
       },
       subheading: {
-        fontSize: '18px',
+        fontSize: "18px",
       },
     },
   },

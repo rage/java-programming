@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import {
   TextField,
   Button,
@@ -6,16 +6,16 @@ import {
   Checkbox,
   Radio,
   RadioGroup,
-} from '@material-ui/core'
+} from "@material-ui/core"
 
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
-import Loading from '../Loading'
+import Loading from "../Loading"
 
-import { updateUserDetails, userDetails } from '../../services/moocfi'
+import { updateUserDetails, userDetails } from "../../services/moocfi"
 
-import styled from 'styled-components'
-import withSimpleErrorBoundary from '../../util/withSimpleErrorBoundary'
+import styled from "styled-components"
+import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
 
 const Row = styled.div`
   margin-bottom: 1.5rem;
@@ -48,7 +48,7 @@ class CourseOptionsEditor extends React.Component {
       },
       () => {
         this.validate()
-      }
+      },
     )
   }
 
@@ -143,7 +143,7 @@ class CourseOptionsEditor extends React.Component {
                   InputLabelProps={{
                     shrink:
                       this.state.first_name ||
-                      this.state.focused === 'first_name',
+                      this.state.focused === "first_name",
                   }}
                   fullWidth
                   value={this.state.first_name}
@@ -163,7 +163,7 @@ class CourseOptionsEditor extends React.Component {
                   InputLabelProps={{
                     shrink:
                       this.state.last_name ||
-                      this.state.focused === 'last_name',
+                      this.state.focused === "last_name",
                   }}
                   fullWidth
                   value={this.state.last_name}
@@ -182,7 +182,7 @@ class CourseOptionsEditor extends React.Component {
                   InputLabelProps={{
                     shrink:
                       this.state.student_number ||
-                      this.state.focused === 'student_number',
+                      this.state.focused === "student_number",
                   }}
                   fullWidth
                   value={this.state.student_number}
@@ -262,7 +262,7 @@ class CourseOptionsEditor extends React.Component {
 
           <p>
             Tällaisesta oppimisanalytiikaksi kutsutusta tutkimuksesta
-            kiinnostuneiden kannattaa tutustua esimerkiksi artikkeliin{' '}
+            kiinnostuneiden kannattaa tutustua esimerkiksi artikkeliin{" "}
             <OutboundLink
               href="https://dl.acm.org/citation.cfm?id=2858798"
               target="_blank"
