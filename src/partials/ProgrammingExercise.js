@@ -214,7 +214,7 @@ class ProgrammingExercise extends React.Component {
                     <StyledDivider />
                     <TokenContainer>
                       <p>
-                        Joka kerta kun olet saanut <i>{tokenThreshHold}</i>:ta
+                        Joka kerta kun olet saanut <i>{tokenThreshHold}</i>
                         tehtävää tehtyä, saat kolikon. Kolikoilla voi ostaa
                         tehtävien vastauksia ja lunastaa itsesi mahdollisesta
                         jumista.{" "}
