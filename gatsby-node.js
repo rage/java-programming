@@ -4,36 +4,42 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const path = require('path')
+const path = require("path")
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
   const courseMaterialTemplate = path.resolve(
-    `src/templates/CourseContentTemplate.js`
+    `src/templates/CourseContentTemplate.js`,
   )
 
   const coursePartOverviewTemplate = path.resolve(
-    `src/templates/CoursePartOverviewTemplate.js`
+    `src/templates/CoursePartOverviewTemplate.js`,
   )
 
-  return graphql(`
-    {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___path] }
-        limit: 1000
-      ) {
-        edges {
-          node {
-            frontmatter {
-              path
-              overview
-            }
+  const query = `
+  {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___path] }
+      limit: 1000${
+        process.env.NODE_ENV === "production"
+          ? `, filter: { frontmatter: { hidden: { ne: true } } }`
+          : ""
+      }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            path
+            overview
           }
         }
       }
     }
-  `).then(result => {
+  }
+    `
+
+  return graphql(query).then(result => {
     if (result.errors) {
       return Promise.reject(result.errors)
     }
