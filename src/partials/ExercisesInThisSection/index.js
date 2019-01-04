@@ -26,6 +26,7 @@ class ExercisesInThisSection extends React.Component {
   static contextType = PagesContext
 
   state = {
+    render: false,
     sectionPages: null,
     quizIdToTitle: null,
   }
@@ -57,9 +58,12 @@ class ExercisesInThisSection extends React.Component {
     quizDetails.forEach(o => {
       quizIdToTitle[o._id] = o.title
     })
-    this.setState({ sectionPages, quizIdToTitle })
+    this.setState({ sectionPages, quizIdToTitle, render: true })
   }
   render() {
+    if (!this.state.render) {
+      return <div>Loading...</div>
+    }
     return (
       <ExpansionPanel>
         <ExpansionPanelSummary expandIcon={<FontAwesomeIcon icon={icon} />}>
