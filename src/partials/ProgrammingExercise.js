@@ -170,6 +170,8 @@ class ProgrammingExercise extends React.Component {
     //const _totalTokens = this.state?.exerciseDetails?.course?.total_model_solution_tokens
     const availableTokens = this.state?.exerciseDetails?.course
       ?.available_model_solution_tokens
+    const modelSolutionTokenUsedOnThisExercise = this.state?.exerciseDetails
+      ?.model_solution_token_used_on_this_exercise
 
     if (!this.state.render) {
       return <div>Loading</div>
@@ -218,7 +220,9 @@ class ProgrammingExercise extends React.Component {
                         tehtävää tehtyä, saat kolikon. Kolikoilla voi ostaa
                         tehtävien vastauksia ja lunastaa itsesi mahdollisesta
                         jumista.{" "}
-                        {availableTokens > 0 ? (
+                        {availableTokens == 1 ? (
+                          <span> Käytössäsi on tällä hetkellä 1 kolikko.</span>
+                        ) : availableTokens > 0 ? (
                           <span>
                             {" "}
                             Käytössäsi on tällä hetkellä {availableTokens}{" "}
@@ -234,13 +238,18 @@ class ProgrammingExercise extends React.Component {
                         oikein.
                       </p>
 
-                      {availableTokens > 0 && (
+                      {(availableTokens > 0 ||
+                        modelSolutionTokenUsedOnThisExercise) && (
                         <Button
                           onClick={this.onShowModelSolution}
                           variant="outlined"
                           color="secondary"
                         >
-                          Katso mallivastaus (kuluttaa tokenin)
+                          Katso mallivastaus (
+                          {modelSolutionTokenUsedOnThisExercise
+                            ? "olet käyttänyt jo kolikon tähän mallivastaukseen"
+                            : "kuluttaa kolikon"}
+                          )
                         </Button>
                       )}
 
