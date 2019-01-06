@@ -179,7 +179,7 @@ Toinen
 </sample-output>
 
 
-<programming-exercise name='Kolmannen arvon tulostaminen'>
+<programming-exercise name='Kolmannen arvon tulostaminen' tmcname='osa03-Osa03_01.KolmannenArvonTulostaminen'>
 
 
 Ohjelmaan on toteutettu valmiina pohja, joka lukee käyttäjältä merkkijonoja ja lisää niitä listalle. Syötteiden lukeminen päätetään kun käyttäjä syöttää tyhjän merkkijonon. Ohjelma tulostaa tämän jälkeen listan ensimmäisen arvon.
@@ -213,7 +213,7 @@ Mari
 </programming-exercise>
 
 
-<programming-exercise name='Toisen ja kolmannen summa'>
+<programming-exercise name='Toisen ja kolmannen summa' tmcname='osa03-Osa03_02.ToisenJaKolmannenSumma'>
 
 
 Ohjelmaan on toteutettu valmiina pohja, joka lukee käyttäjältä kokonaistyyppisiä lukuja ja lisää niitä listalle. Lukeminen lopetetaan kun käyttäjä syöttää luvun 0. Ohjelma tulostaa tämän jälkeen listan ensimmäisen arvon.
@@ -281,7 +281,7 @@ public class Esimerkki {
 Virheviesti antaa myös pientä vinkkiä ArrayList-olion kapseloimasta toteutuksesta. Se kertoo metodit, joita kutsuttaessa virhe tapahtui. Ensin ohjelmassa on kutsuttu main-metodia. Tämän jälkeen main-metodissa on kutsuttu ArrayListin get-metodia. Tämän jälkeen ArrayListin get-metodissa on kutsuttu ArrayListin rangeCheck-metodia, jossa virhe tapahtuu. Tässä on myös hyvä esimerkki metodien nimennästä. Vaikka emme olekaan ennen kuulleet metodista `rangeCheck`, voimme arvata, että se tarkastaa onko arvo jollain halutulla alueella. Virhe johtuu siitä, että näin ei ollut.
 
 
-<programming-exercise name='IndexOutOfBoundsException'>
+<programming-exercise name='IndexOutOfBoundsException' tmcname='osa03-Osa03_03.IndexOutOfBoundsException'>
 
 
 Lista on erittäin hyödyllinen kun halutaan säilöä muuttujien arvoja myöhempää käsittelyä varten. Sillä on myös helpohko tehdä virheitä.
@@ -417,7 +417,7 @@ Listalla arvoja: 1
 </sample-output>
 
 
-<programming-exercise name='Listan koko'>
+<programming-exercise name='Listan koko' tmcname='osa03-Osa03_04.ListanKoko'>
 
 Tehtäväpohjassa on ohjelma, joka lukee käyttäjältä syötteitä. Muokkaa ohjelman toimintaa siten, että kun syötteiden lukeminen lopetetaan, ohjelma tulostaa listalla olevien arvojen lukumäärän.
 
@@ -630,7 +630,7 @@ Seuraavissa tehtävissä harjoitellaan listan ja indeksin käyttöä. Vaikka pys
 
 
 
-<programming-exercise name='Listan viimeinen arvo'>
+<programming-exercise name='Listan viimeinen arvo' tmcname='osa03-Osa03_05.ListanViimeinenArvo'>
 
 Tehtäväpohjassa on ohjelma, joka lukee käyttäjältä syötteitä ja lisää syötteet listalle. Syötteen lukeminen lopetetaan kun käyttäjä syöttää tyhjän merkkijonon.
 
@@ -670,7 +670,7 @@ Oskari
 
 
 
-<programming-exercise name='Ensimmäinen ja viimeinen arvo'>
+<programming-exercise name='Ensimmäinen ja viimeinen arvo' tmcname='osa03-Osa03_06.EnsimmainenJaViimeinenArvo'>
 
 
 
@@ -715,7 +715,7 @@ Oskari
 </programming-exercise>
 
 
-<programming-exercise name='Listan luvut'>
+<programming-exercise name='Listan luvut' tmcname='osa03-Osa03_07.ListanLuvut'>
 
 Ohjelmaan on toteutettu valmiina pohja, joka lukee käyttäjältä lukuja listalle. Syötteiden lukeminen päätetään kun käyttäjä syöttää luvun -1.
 
@@ -741,7 +741,7 @@ Lisää ohjelmaan toiminnallisuus, joka lukujen lukemisen jälkeen tulostaa käy
 </programming-exercise>
 
 
-<programming-exercise name='Luvut rajatulla alueella'>
+<programming-exercise name='Luvut rajatulla alueella' tmcname='osa03-Osa03_08.LuvutRajatullaAlueella'>
 
 
 Ohjelmaan on toteutettu valmiina pohja, joka lukee käyttäjältä lukuja listalle. Syötteiden lukeminen päätetään kun käyttäjä syöttää luvun -1.
@@ -785,7 +785,7 @@ Mihin? **2**
 </programming-exercise>
 
 
-<programming-exercise name='Listan suurin luku'>
+<programming-exercise name='Listan suurin luku' tmcname='osa03-Osa03_09.ListanSuurinLuku'>
 
 Ohjelmaan on toteutettu valmiina pohja, joka lukee käyttäjältä lukuja listalle. Syötteiden lukeminen päätetään kun käyttäjä syöttää luvun -1.
 
@@ -831,7 +831,7 @@ System.out.println("Listan pienin luku: " + pienin);
 </programming-exercise>
 
 
-<programming-exercise name='Kysytyn luvun indeksi'>
+<programming-exercise name='Kysytyn luvun indeksi' tmcname='osa03-Osa03_10.KysytynLuvunIndeksi'>
 
 Ohjelmaan on toteutettu valmiina pohja, joka lukee käyttäjältä lukuja listalle. Syötteiden lukeminen päätetään kun käyttäjä syöttää luvun -1.
 
@@ -869,7 +869,7 @@ Luku 8 on indeksissä 3
 </programming-exercise>
 
 
-<programming-exercise name='Pienimmän luvun indeksi'>
+<programming-exercise name='Pienimmän luvun indeksi' tmcname='osa03-Osa03_11.PienimmanLuvunIndeksi'>
 
 Toteuta ohjelma, joka lukee käyttäjältä lukuja. Kun käyttäjä syöttää luvun 9999, lukujen lukeminen lopetetaan. Ohjelma tulostaa tämän jälkeen pienimmän listalla olevan luvun sekä indeksit, joista pienin luku löytyy. Pienin luku voi siis esiintyä useamman kerran.
 
@@ -949,7 +949,7 @@ Yllä olevassa esimerkissä lista käydään läpi yksi listan arvo kerrallaan s
 
 
 
-<programming-exercise name='Listan lukujen summa'>
+<programming-exercise name='Listan lukujen summa' tmcname='osa03-Osa03_12.ListanLukujenSumma'>
 
 Ohjelmaan on toteutettu valmiina pohja, joka lukee käyttäjältä lukuja listalle. Syötteiden lukeminen päätetään kun käyttäjä syöttää luvun -1.
 
@@ -970,7 +970,7 @@ Summa: 93
 </programming-exercise>
 
 
-<programming-exercise name='Listan lukujen keskiarvo'>
+<programming-exercise name='Listan lukujen keskiarvo' tmcname='osa03-Osa03_13.ListanLukujenKeskiarvo'>
 
 Toteuta ohjelma, joka lukee käyttäjältä lukuja listalle. Syötteiden lukeminen päätetään kun käyttäjä syöttää luvun -1.
 
@@ -1108,7 +1108,7 @@ Toka löytyi yhä
 </sample-output>
 
 
-<programming-exercise name='Löytyykö listalta'>
+<programming-exercise name='Löytyykö listalta' tmcname='osa03-Osa03_14.LoytyykoListalta'>
 
 
 Tehtäväpohjassa on ohjelma, joka lukee käyttäjältä syötteitä. Lisää ohjelmaan toiminnallisuus, missä syötteiden lukemisen jälkeen kysytään vielä yhtä merkkijonoa. Ohjelma kertoo tämän jälkeen löytyikö käyttäjän syöttämä merkkijono listalta vai ei.
@@ -1212,7 +1212,7 @@ public static double keskiarvo(ArrayList<Integer> luvut) {
 ```
 
 
-<programming-exercise name='Tulosta rajatut'>
+<programming-exercise name='Tulosta rajatut' tmcname='osa03-Osa03_15.TulostaRajatut'>
 
 
 Luo tehtäväpohjaan metodi `public static void tulostaRajatutLuvut(ArrayList<Integer> luvut, int alaraja, int ylaraja)`. Metodin tulee tulostaa parametrina annetulta listalta ne luvut, joiden arvot ovat välillä [alaraja, ylaraja]. Alla on muutama esimerkki metodin toiminnasta.
@@ -1251,7 +1251,7 @@ Luvut välillä [3, 10]
 </programming-exercise>
 
 
-<programming-exercise name='Summa'>
+<programming-exercise name='Summa' tmcname='osa03-Osa03_16.Summa'>
 
 Luo tehtäväpohjaan metodi `public static int summa(ArrayList<Integer> luvut)`. Metodin tulee palauttaa parametrina annetun listan lukujen summa.
 
@@ -1327,7 +1327,7 @@ System.out.println(luvut);
 </sample-output>
 
 
-<programming-exercise name='Poista viimeinen'>
+<programming-exercise name='Poista viimeinen' tmcname='osa03-Osa03_17.PoistaViimeinen'>
 
 Luo tehtäväpohjaan metodi `public static void poistaViimeinen(ArrayList<String> mjonot)`. Metodin tulee poistaa parametrina saadusta listasta viimeisin arvo. Mikäli lista on tyhjä, metodin ei tule tehdä mitään.
 
