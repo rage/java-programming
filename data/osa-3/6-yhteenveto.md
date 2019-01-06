@@ -11,4 +11,4 @@ Kolmannessa osassa tutustuttiin lähdekoodin kommentoinnin sekä muuttujien nime
 Vastaa vielä alla olevaan kyselyyn.
 
 
-<quiznator id="5b9cd6146ade7d35a384806f"></quiznator>
+<quiznator id="5c31fec0017ffc13eddc4ebe"></quiznator>

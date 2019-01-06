@@ -311,7 +311,7 @@ Vastaavasti kutsumalla metodia `get` parametrilla 4, listalta haettaisiin viidet
 </text-box>
 
 
-<quiznator id="5a6a693c5eed25000480e6e9"></quiznator>
+<quiznator id="5c31fe3b017ffc13eddc4ebc"></quiznator>
 
 
 <text-box variant='hint' name='Useamman Javan valmiin työvälineen tuominen ohjelmaan'>
@@ -1071,9 +1071,9 @@ System.out.println("Paikka 1 eli toinen: " + lista.get(1));
 
 
 
-<quiznator id="5a6a68e15eed25000480e6e6"></quiznator>
+<quiznator id="5c31fe69ddb6b814af31cd57"></quiznator>
 
-<quiznator id="5a6a69045eed25000480e6e7"></quiznator>
+<quiznator id="5c31fe883972a914740fdc81"></quiznator>
 
 
 Arvon hakeminen listalta onnistuu listan metodilla **contains**. Metodi saa haettavan arvon parametrina ja palauttaa boolean-tyyppisen arvon (`true` tai `false`), joka kertoo löytyykö haettua arvoa listalta.
