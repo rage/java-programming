@@ -300,21 +300,10 @@ Koitappa uudelleen!
 
 Tee ohjelma, joka tunnistaa seuraavat käyttäjät:
 
-
-<table class="table">
-<tr>
-    <th>tunnus</th>
-    <th>salasana</th>
-</tr>
-<tr>
-    <td>aleksi</td>
-    <td>tappara</td>
-</tr>
-<tr>
-    <td>elina</td>
-    <td>kissa</td>
-</tr>
-</table>
+| tunnus  | salasana  |
+|---------|-----------|
+| aleksi  | tappara   |
+| elina   | kissa     |
 
 
 Ohjelma näyttää käyttäjälle henkilökohtaisen viestin tai ilmoittaa, jos tunnus tai salasana on väärin.

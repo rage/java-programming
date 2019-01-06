@@ -80,98 +80,41 @@ public class Ohjelma {
 ArrayList-muuttujan tyyppi on `ArrayList`. Listamuuttujaa esiteltäessä muuttujan tyypin lisäksi listalle määritellään siihen säilöttävien arvojen tyyppi -- **kaikki samalle listalle lisättävät arvot ovat saman tyyppisiä**. Esimerkiksi merkkijonoja sisältävän ArrayListin tyyppi on `ArrayList<String>` ja kokonaislukuja sisältävän ArrayListin tyyppi on `ArrayList<Integer>`. Listan luominen tapahtuu  komennolla `new ArrayList<>();`.
 
 
-## Miksi ArrayList<Integer> eikä ArrayList<int>?
+##  Listan sisältämien arvojen tyypin määrittely
 
-Tämä rajoitus liittyy siihen, miten ArrayList on toteutettu. Javan muuttujat voidaan jakaa kahteen kategoriaan: alkeistyyppisiin muuttujiin ja viittaustyyppisiin muuttujiin. **Alkeistyyppiset** muuttujat kuten `int` ja `double` sisältävät niihin liittyvät arvot. **Viittaustyyppiset** muuttujat taas, kuten esimerkiksi `ArrayList` sisältävät viitteen paikkaan, joka sisältää muuttujaan liittyvät arvot.
+Listan sisältämien arvojen tyyppien määrittelyssä muuttujista tulee käyttää niiden "isolla kirjaimella kirjoitettuja" versioita. Esimerkiksi int-tyyppisiä muuttujia sisältävä lista tulee määritellä muodossa `ArrayList<Integer>` ja double-tyyppisiä muuttujia sisältävä lista tulee määritellä muodossa `ArrayList<Double>`.
+
+Tämä liittyy siihen, miten ArrayList on toteutettu. Javan muuttujat voidaan jakaa kahteen kategoriaan: alkeistyyppisiin muuttujiin ja viittaustyyppisiin muuttujiin. **Alkeistyyppiset** muuttujat kuten `int` ja `double` sisältävät niihin liittyvät arvot. **Viittaustyyppiset** muuttujat taas, kuten esimerkiksi `ArrayList` sisältävät viitteen paikkaan, joka sisältää muuttujaan liittyvät arvot.
+
+Alkeistyyppiset muuttujat pystyvät sisältämään vain rajatun määrän tietoa, kun taas viitteen taakse tietoa voi säilöä lähes rajattomasti.
+
+Alla on kuvattuna eri tyyppisiä arvoja sisältävien listojen luominen.
+
+```java
+ArrayList<Integer> lista = new ArrayList<>();
+lista.add(1);
+```
+
+```java
+ArrayList<Double> lista = new ArrayList<>();
+lista.add(4.2);
+```
 
 
-Hieman yksinkertaistaen: alkeistyyppiset muuttujat pystyvät sisältämään vain rajatun määrän tietoa, kun taas viitteen taakse tietoa voi säilöä lähes rajattomasti.
+```java
+ArrayList<Boolean> lista = new ArrayList<>();
+lista.add(true);
+```
 
+```java
+ArrayList<String> lista = new ArrayList<>();
+lista.add("String on viittaustyyppinen muuttuja");
+```
 
-ArrayList olettaa, että sen sisältämät muuttujat ovat viittaustyyppisiä. Java muuntaa automaattisesti `int`-tyyppisen muuttujan `Integer`-tyyppiseksi kun se lisätään listalle, sama tapahtuu myös kun muuttuja haetaan listalta. Vastaava muunnos tapahtuu myös `double`-tyyppiselle muuttujalle, josta tulee `Double`-tyyppinen muuttuja.
-
-
-<table class="table">
-
-<tr>
-    <th>
-    Muuttujan tyyppi
-    </th>
-    <th>
-    Listalla
-    </th>
-    <th>
-    Esimerkki
-    </th>
-</tr>
-
-<tr>
-    <td>
-    int
-    </td>
-    <td>
-    Integer
-    </td>
-    <td>
-    ```java
-        ArrayList<Integer> lista = new ArrayList<>();
-        lista.add(1);
-
-    </td>
-</tr>
-
-<tr>
-    <td>
-    double
-    </td>
-    <td>
-    Double
-    </td>
-    <td>
-    ```java
-        ArrayList<Double> lista = new ArrayList<>();
-        lista.add(4.2);
-
-    </td>
-</tr>
-
-<tr>
-    <td>
-    boolean
-    </td>
-    <td>
-    Boolean
-    </td>
-    <td>
-    ```java
-        ArrayList<Boolean> lista = new ArrayList<>();
-        lista.add(true);
-
-    </td>
-</tr>
-
-<tr>
-    <td>
-    String
-    </td>
-    <td>
-    String
-    </td>
-    <td>
-    ```java
-        ArrayList<String> lista = new ArrayList<>();
-        lista.add("String on viittaustyyppinen muuttuja");
-
-    </td>
-</tr>
-
-</table>
+Kun lista on luotu, ArrayList olettaa, että sen sisältämät muuttujat ovat viittaustyyppisiä. Java muuntaa automaattisesti `int`-tyyppisen muuttujan `Integer`-tyyppiseksi kun se lisätään listalle, sama tapahtuu myös kun muuttuja haetaan listalta. Vastaava muunnos tapahtuu myös `double`-tyyppiselle muuttujalle, josta tulee `Double`-tyyppinen muuttuja. Tämä tarkoittaa sitä, että vaikka lista määritellään `Integer`-tyyppisiä arvoja sisältäväksi, voi siihen lisätä `int`-tyyppisiä arvoja.
 
 
 Palaamme tähän jatkossakin, sillä tämä jako alkeis- ja viittaustyyppisiin muuttujiin vaikuttaa ohjelmiimme myös muilla tavoin.
-
-
-
 
 
 
@@ -1448,91 +1391,34 @@ Toisen listan vika arvo Työntekijän eläkevakuutus
 
 Jokainen lista on oma erillinen kokonaisuutensa ja listan metodit käsittelevät aina sitä listaa, mille metodia kutsutaan. Alla on yhteenveto listan metodeista. Yhteenvedossa oletetaan, että luotava lista sisältää merkkijonotyyppisiä muuttujia.
 
-
-<table class="table">
-<tr>
-<th>
-Tavoite
-</th>
-<th>
-Metodi
-</th>
-<th>
-Esimerkki
-</th>
-</tr>
-<tr>
-<td>
-Lisää listalle
-</td>
-<td>
-`add(_merkkijono_)`
-</td>
-<td>
+* Listalle lisääminen tapahtuu metodilla `add`, jolle annetaan parametrina lisättävä arvo.
 ```java
 ArrayList<String> lista = new ArrayList<>();
 lista.add("hei maailma!");
 ```
-</td>
-</tr>
-<tr>
-<td>
-Listalla olevien alkioiden lukumäärä
-</td>
-<td>
-`size()`
-</td>
-<td>
+* Listalla olevien alkioiden lukumäärän saa selville parametrittomalla metodilla `size`, joka palauttaa kokonaisuvun.
 ```java
 ArrayList<String> lista = new ArrayList<>();
 int koko = lista.size();
 System.out.println(koko);
 ```
-</td>
-</tr>
-<tr>
-<td>
-Tietyssä indeksissä oleva arvo
-</td>
-<td>
-`get(_indeksi_)`
-</td>
-<td>
+* Listan tietyssä indeksissä oleva arvo haetaan metodilla `get`, jolle annetaan parametrina indeksi mistä haetaan.
 ```java
 ArrayList<String> lista = new ArrayList<>();
 lista.add("hei maailma!");
 String mjono = lista.get(0);
 System.out.println(mjono);
 ```
-</td>
-</tr>
-<tr>
-<td>
-Poista arvo
-</td>
-<td>
-`remove(_merkkijono_)`
-</td>
-<td>
+* Listalta poistaminen tapahtuu metodilla `remove`, jolle annetaan joko poistettava arvo tai  poistettavan arvon indeksi.
 ```java
 ArrayList<String> lista = new ArrayList<>();
+// poistetaan merkkijono "hei maailma!"
 lista.remove("hei maailma!");
+ // poistetaan indeksissä 3 oleva arvo
+lista.remove(3);
 ```
-</td>
-</tr>
-<tr>
-<td>
-Onko listalla
-</td>
-<td>
-`contains(_merkkijono_)`
-</td>
-<td>
+* Arvon olemassaolon tarkastaminen tapahtuu totuusarvon palauttavalla metodilla `contains`, joka saa parametrinaan haettavan arvon.
 ```java
 ArrayList<String> lista = new ArrayList<>();
 boolean oliko = lista.contains("hei maailma!");
 ```
-</td>
-</tr>
-</table>
-
