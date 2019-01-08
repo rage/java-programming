@@ -246,7 +246,7 @@ class ProgrammingExercise extends React.Component {
                         )}
                       </p>
                       <p>
-                        Pysyt katsomaan mallivastauksen ilman kolikkoja Test My
+                        Pystyt katsomaan mallivastauksen ilman kolikkoja Test My
                         Code -palvelusta sen jälkeen kun olet saanut tehtävän
                         oikein.
                       </p>
