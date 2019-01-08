@@ -172,7 +172,20 @@ class ProgrammingExercise extends React.Component {
       ?.available_model_solution_tokens
     const modelSolutionTokenUsedOnThisExercise = this.state?.exerciseDetails
       ?.model_solution_token_used_on_this_exercise
-
+    if (true) {
+      return (
+        <ProgrammingExerciseWrapper>
+          <Header>
+            <StyledIcon icon={icon} size="1x" />
+            <HeaderMuted>Tehtävä: </HeaderMuted>
+            {name}
+          </Header>
+          <Body>
+            <div>{children}</div>
+          </Body>
+        </ProgrammingExerciseWrapper>
+      )
+    }
     if (!this.state.render) {
       return <div>Loading</div>
     }
