@@ -14,11 +14,9 @@ import {
   TableRow,
 } from "@material-ui/core"
 import Container from "../components/Container"
-import Notification from "../components/Notification"
 
 const IndexPage = () => (
   <Layout>
-    <Notification />
     <Banner />
     <Container>
       <section id="yleistä">
