@@ -6,6 +6,7 @@ import { navigate } from "gatsby"
 import LoginStateContext, {
   withLoginStateContext,
 } from "../contexes/LoginStateContext"
+import Container from "../components/Container"
 
 class MissingInfo extends React.Component {
   static contextType = LoginStateContext
@@ -27,7 +28,9 @@ class MissingInfo extends React.Component {
     }
     return (
       <Layout>
-        <CourseOptionsEditor onComplete={this.onStepComplete} />
+        <Container>
+          <CourseOptionsEditor onComplete={this.onStepComplete} />
+        </Container>
       </Layout>
     )
   }

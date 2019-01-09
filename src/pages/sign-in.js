@@ -124,6 +124,7 @@ class SignInPage extends React.Component {
                   variant="contained"
                   color="primary"
                   fullWidth
+                  type="submit"
                 >
                   Kirjaudu sisään
                 </Button>
@@ -131,7 +132,7 @@ class SignInPage extends React.Component {
             </Form>
             {this.state.error && (
               <InfoBox>
-                <b>Invalid credentials</b>
+                <b>Virheelliset tunnukset, tarkista kirjoitusasu!</b>
               </InfoBox>
             )}
             <Row>

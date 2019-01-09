@@ -26,13 +26,13 @@ const FormContainer = styled.div`
 
 class CreateAccountForm extends React.Component {
   onClick = async e => {
+    e.preventDefault()
     this.setState({ submitting: true, triedSubmitting: true })
     if (!this.validate()) {
       this.setState({ canSubmit: false, submitting: false })
       return
     }
     try {
-      e.preventDefault()
       const res = await createAccount({
         email: this.state.email,
         password: this.state.password,
@@ -224,6 +224,7 @@ class CreateAccountForm extends React.Component {
               variant="contained"
               color="primary"
               fullWidth
+              type="submit"
             >
               Luo käyttäjätunnus
             </Button>
