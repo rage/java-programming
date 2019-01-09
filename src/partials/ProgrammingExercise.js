@@ -220,7 +220,7 @@ class ProgrammingExercise extends React.Component {
                         tehtävää tehtyä, saat kolikon. Kolikoilla voi ostaa
                         tehtävien vastauksia ja lunastaa itsesi mahdollisesta
                         jumista.{" "}
-                        {availableTokens == 1 ? (
+                        {availableTokens === 1 ? (
                           <span> Käytössäsi on tällä hetkellä 1 kolikko.</span>
                         ) : availableTokens > 0 ? (
                           <span>

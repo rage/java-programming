@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
-import styled from "styled-components"
 import AbGroupContext from "../../contexes/AbGroupContext"
 
 class OnlyForAbGroup extends Component {

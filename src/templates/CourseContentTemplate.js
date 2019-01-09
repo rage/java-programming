@@ -22,7 +22,6 @@ import { capitalizeFirstLetter } from "../util/strings"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowCircleUp as icon } from "@fortawesome/free-solid-svg-icons"
 import EndOfSubSection from "../components/EndOfSubSection"
-import { connectableObservableDescriptor } from "rxjs/internal/observable/ConnectableObservable"
 import { tryToScrollToSelector } from "../util/dom"
 
 const StyledIcon = styled(FontAwesomeIcon)`
