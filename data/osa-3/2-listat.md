@@ -300,11 +300,15 @@ Ohjelmassa näkyy myös tapa listan läpikäyntiin -- palaamme tähän tapaan my
 
 Listan paikkojen numerointi eli indeksöinti alkaa aina nollasta. Listan ensimmäinen arvo on indeksissä 0, toinen arvo indeksissä 1, kolmas arvo indeksissä 2 ja niin edelleen. Ohjelmissa indeksiä merkitään usein yksinkertaisesti muuttujalla nimeltä `i`.
 
-<img src="/img/drawings/arraylist.png">
+
+<div><img class="naytto" src="../img/drawings/arraylist.png"/></div>
+
 
 Ylläolevassa listassa ensimmäisenä on arvo 6 ja toisena arvo 1. Jos ylläolevaan listaan lisättäisiin uusi arvo kutsumalla `luvut`-listan metodia `add` parametrilla 8, menisi luku 8 listan indeksiin 6 eli seitsemänneksi luvuksi.
 
-<img src="/img/drawings/arraylist-add.png">
+
+<div><img class="naytto" src="../img/drawings/arraylist-add.png"/></div>
+
 
 Vastaavasti kutsumalla metodia `get` parametrilla 4, listalta haettaisiin viidettä lukua.
 

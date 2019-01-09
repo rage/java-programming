@@ -257,9 +257,7 @@ public static int puolitushaku(ArrayList<Integer> luvut, int haettava) {
 Alla on kuvakaappaus ohjelmointiympäristöstä. Kuvassa näkyvässä esimerkissä ohjelmaan on toteutettu metodi `public static int puolitushaku(ArrayList<Integer> luvut, int haettava)`, joka on kommentoitu yllä näytetyn esimerkin mukaisesti. Kun ohjelmoija kirjoittaa metodin nimeä, ohjelmointiympäristö näyttää ohjelmoijalle metodiin liittyvän dokumentaation -- Linux-koneilla lähdekoodin täydennykseen käytettävä ctrl+space näyttää NetBeansissa kuvassa näkyvän valikon.
 
 
-
-<img src="/img/material/puolitushaku-ide-kommentit.png">
-
+<div><img class="naytto" src="../img/material/puolitushaku-ide-kommentit.png"/></div>
 
 
 <text-box variant='hint' name='Yleiset vs. yksityiskohtaiset kommentit'>
