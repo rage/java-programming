@@ -7,9 +7,7 @@ hidden: true
 
 <deadline>4.2.2019</deadline>
 
-Tässä osassa opit lähdekoodin kommentointitapoja ja huomaat miten muuttujien ja metodien nimentä vaikuttaa ohjelman ymmärrettävyyteen. Opit käyttämään lista- ja taulukkorakenteita osana ohjelmia. Harjoittelet listan ja taulukon läpikäyntiä kahdella erilaisella toistolauseella (while ja for-each). Harjoittelet lisäksi merkkijonojen käsittelyä ja opit merkkijonoihin liittyviä metodeja.
-
-TODO: otat ensiaskeleet ohjelmien toiminnan miettimiseen.
+Tässä osassa opit lähdekoodin kommentointitapoja ja huomaat miten muuttujien ja metodien nimentä vaikuttaa ohjelman ymmärrettävyyteen. Opit käyttämään lista- ja taulukkorakenteita osana ohjelmia. Harjoittelet listan ja taulukon läpikäyntiä kahdella erilaisella toistolauseella (while ja for-each). Harjoittelet lisäksi merkkijonojen käsittelyä ja opit merkkijonoihin liittyviä metodeja. Otat myös ensiaskeleet ohjelmien testaamiseen.
 
 
 <please-login></please-login>

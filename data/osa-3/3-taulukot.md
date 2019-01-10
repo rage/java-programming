@@ -1,6 +1,6 @@
 ---
 path: '/osa-3/3-taulukot'
-title: 'Taulukot'
+title: 'Taulukot ja niissä olevan tiedon käsittely'
 hidden: true
 ---
 

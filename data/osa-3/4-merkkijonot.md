@@ -1,6 +1,6 @@
 ---
 path: '/osa-3/4-merkkijonot'
-title: 'Merkkijonot'
+title: 'Merkkijonojen käsittely'
 hidden: true
 ---
 

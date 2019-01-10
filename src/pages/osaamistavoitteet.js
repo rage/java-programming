@@ -66,6 +66,8 @@ const IndexPage = () => (
                 läpi while-toistolausetta ja indeksimuuttujaa käyttäen sekä
                 for-each -toistolausetta käyttäen. Tunnet merkkijonoon liittyviä
                 metodeja ja osaat pilkkoa merkkijonon pienempiin osiin.
+                Harjoittelet ohjelmien testaamista syötteitä ja tulosteita
+                vertailemalla.
               </TableCell>
             </TableRow>
             <TableRow>

@@ -1,6 +1,6 @@
 ---
 path: '/osa-3/2-listat'
-title: 'Listat'
+title: 'Listamuuttujan käyttö useamman arvon tallentamiseen'
 hidden: true
 ---
 

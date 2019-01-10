@@ -8,7 +8,7 @@ hidden: true
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
 - Tutustut ohjelmien testaamiseen.
-- Opit ensiaskeleet "input-output"-tyyppisestä ohjelmien testaamisesta, missä ohjelmalle annettavan syötteen perusteella päätellään tuloste.
+- Tutustut ohjelman toiminnan testaamiseen syötteitä ja tulosteita vertailemalla.
 
 </text-box>
 
@@ -78,7 +78,7 @@ if (summa == 0) {
 
 ## Alkuaskeleet ohjelmien automaattiseen testaukseen
 
-Kurssimateriaalin seitsemännessä osassa luodaan omia automaattisia testejä, joiden avulla voi testata ohjelman toimintaa. Aloitamme nyt polun automaattisten testien kirjoittamista kohti -- harjoittelemme ensin ns. input-output -testaamista, eli ohjelmien testaamista siten, että tietyt syötteet tuottavat tietynlaisen tulosteen.
+Kurssimateriaalin seitsemännessä osassa luodaan omia automaattisia testejä, joiden avulla voi testata ohjelman toimintaa. Aloitamme nyt polun automaattisten testien kirjoittamista kohti -- harjoittelemme ensin syötteiden ja tulosteiden vertaamiseen perustuvaa testaustapaa. Tässä testaustavassa ohjelmalle annetaan syöte, jonka jälkeen tarkastetaan onko tulostus odotettu.
 
 
 Pääset tutustumaan siis siihen, miten testit toimivat. Tässä osassa kirjoitat ohjelmallesi syötteen ja odotetun tuloksen, ja harjoitteluun käytetty työväline luo `testimetodin`, eli metodin, jota ohjelman testaamiseen voisi käyttää (palaamme näiden käyttöön tarkemmin materiaalin seitsemännessä osassa).
