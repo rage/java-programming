@@ -1,8 +1,8 @@
-import React, { lazy, Suspense } from 'react'
+import React, { lazy, Suspense } from "react"
 
-import 'crowdsorcerer/dist/app.css'
-import withSimpleErrorBoundary from '../util/withSimpleErrorBoundary'
-const CrowdSorcerer = lazy(() => import('crowdsorcerer'))
+import "crowdsorcerer/dist/app.css"
+import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
+const CrowdSorcerer = lazy(() => import("crowdsorcerer"))
 
 class CrowdSorcererWrapper extends React.Component {
   state = {
@@ -23,7 +23,11 @@ class CrowdSorcererWrapper extends React.Component {
 
     return (
       <Suspense fallback={<div>Loading...</div>}>
-        <CrowdSorcerer assignmentId={assignmentId} exercises={exercises} review={review} />
+        <CrowdSorcerer
+          assignmentId={assignmentId}
+          exercises={exercises}
+          review={review}
+        />
       </Suspense>
     )
   }
