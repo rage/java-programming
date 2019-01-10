@@ -36,6 +36,7 @@ import CodeStatesVisualizer from "./CodeStatesVisualizer"
 import PdfSlideshow from "./PdfSlideshow"
 import ExercisesInThisSection from "./ExercisesInThisSection"
 import AbStudy from "./AbStudy"
+import CrowdSorcerer from "./CrowdSorcerer"
 
 import {
   Table,
@@ -62,6 +63,7 @@ const mapping = {
   "exercises-in-this-section": ExercisesInThisSection,
   "ab-study": AbStudy,
   "only-for-ab-group": OnlyForAbGroup,
+  crowdsorcerer: CrowdSorcerer,
   youtube: Youtube,
   quiznator: Quiznator,
   table: Table,
