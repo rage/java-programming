@@ -1,62 +1,138 @@
 ---
 path: '/osa-3/5-crowdsorcerer'
-title: 'Tehtävän luominen'
+title: 'Pieniä askeleita ohjelmien testaamiseen'
 hidden: true
 ---
 
-# TODO
+
+<text-box variant='learningObjectives' name='Oppimistavoitteet'>
+
+- Tutustut ohjelmien testaamiseen.
+- Opit ensiaskeleet "input-output"-tyyppisestä ohjelmien testaamisesta, missä ohjelmalle annettavan syötteen perusteella päätellään tuloste.
+
+</text-box>
+
+Eräs ohjelmoinnin opiskelun osa-alue on ohjelmien testaamiseen ja virheiden etsimiseen liittyvät taidot. Yksinkertaisin tapa ohjelmissa olevien virheiden etsimiseen on ns. print-debuggaus, joka tarkoittaa tuloskomennon lisäämistä jokaiselle ohjelman rivillä. Tällöin ohjelman suorittaminen tulostaa viestejä, joiden perusteella voidaan tarkastella ohjelman toimintaa.
+
+Tarkastellaan alla olevaa ohjelmaa, jota käytetään ei-negatiivisten lukujen keskiarvon laskemiseen.
+
+```java
+Scanner lukija = new Scanner(System.in);
+int lukuja = 0;
+int summa = 0;
+
+while (true) {
+    System.out.println("Syötä luku, negatiivinen luku lopettaa");
+    int luku = Integer.valueOf(lukija.nextLine());
+    if (luku < 0) {
+        break;
+    }
+
+    lukuja = lukuja + 1;
+    summa = summa + luku;
+}
+
+if (summa == 0) {
+    System.out.println("Lukujen keskiarvoa ei voitu laskea.");
+} else {
+    System.out.println("Lukujen keskiarvo: " + (1.0 * summa / lukuja));
+}
+```
+
+Mikäli ohjelmassa olisi virhe, print-debuggauksella ohjelman toimintaa voisi purkaa lisäämällä print-komentoja sopiviin kohtiin. Alla olevassa esimerkissä on eräs mahdollinen esimerkki print-debukkauskomentoja sisältävästä ohjelmasta.
 
 
-#
-  Crowdsorcerer: Arvioi tehtäviä
+```java
+Scanner lukija = new Scanner(System.in);
+int lukuja = 0;
+int summa = 0;
+
+while (true) {
+    System.out.println("-- lukuja: " + lukuja + ", summa: " + summa);
+
+    System.out.println("Syötä luku, negatiivinen luku lopettaa");
+    int luku = Integer.valueOf(lukija.nextLine());
+    System.out.println("-- syötetty luku: " + luku);
+    if (luku < 0) {
+        System.out.println("-- luku negatiivinen, poistutaan toistolauseesta");
+        break;
+    }
+
+    lukuja = lukuja + 1;
+    summa = summa + luku;
+}
+
+System.out.println("-- toistolauseesta poistuttu");
+System.out.println("-- lukuja: " + lukuja + ", summa: " + summa);
+
+if (summa == 0) {
+    System.out.println("Lukujen keskiarvoa ei voitu laskea.");
+} else {
+    System.out.println("Lukujen keskiarvo: " + (1.0 * summa / lukuja));
+}
+```
 
 
-
-  Otetaan hetkeksi askel taaksepäin ja muistellaan viime osaa. Palataan tämän jälkeen takaisin olioiden pariin.
-
+<quiznator id="5c3740e43972a914740fe479"></quiznator>
 
 
-  Kurssin toisessa osassa loimme ensimmäisiä omia tehtäviä Crowdsorcererin avulla. Nyt on erinomainen hetki vertaisarviointiin -- on aika arvioida Crowdsorcereriin lähetettyjä tehtäviä! Anna vertaispalautetta kahdesta jonkun toisen kurssilaisen lähettämästä tehtävästä ja arvioi lopuksi itse tekemääsi tehtävää. Itse tekemäsi tehtävä näkyy vain jos olet tehnyt sen -- jos et tehnyt tehtävää, pääset arvioimaan yhden ylimääräisen tehtävän.
+## Alkuaskeleet ohjelmien automaattiseen testaukseen
+
+Kurssimateriaalin seitsemännessä osassa luodaan omia automaattisia testejä, joiden avulla voi testata ohjelman toimintaa. Aloitamme nyt polun automaattisten testien kirjoittamista kohti -- harjoittelemme ensin ns. input-output -testaamista, eli ohjelmien testaamista siten, että tietyt syötteet tuottavat tietynlaisen tulosteen.
 
 
-<text-box variant='hint' name='Vertaisarviointi' } do %>
+Pääset tutustumaan siis siihen, miten testit toimivat. Tässä osassa kirjoitat ohjelmallesi syötteen ja odotetun tuloksen, ja harjoitteluun käytetty työväline luo `testimetodin`, eli metodin, jota ohjelman testaamiseen voisi käyttää (palaamme näiden käyttöön tarkemmin materiaalin seitsemännessä osassa).
+
+- Kun luot testiä, keksi testille kuvaava `Nimi`. Esimerkiksi testi, joka testaa, että ohjelma tulostaa "Mau!" syötteellä "kissa", voisi olla nimeltään "tulostaMauJosSyoteOnKissa".
+- Päätä tämän jälkeen testin `Tyyppi`. Tähän tarjotaan kolme vaihtoehtoa: `Contains` tarkoittaa, että ohjelman tulostuksen täytyy sisältää antamasi tulos, `Does not contain` tarkoittaa, että se ei saa sisältää antamaasi tulosta, ja `Equals` tarkoittaa sitä, että ohjelman tulostuksen täytyy olla tarkalleen sama kuin antamasi tulos, merkkejä ja rivinvaihtoja myöten.
+- Kirjota tämän jälkeen syöte. Syöte kirjoitetaan merkkijonona. Rivinvaihdot syötteessä merkitään kenoviivalla ja n-kirjaimella. Esimerkiksi kolme riviä sisältävä syöte, jossa ensimmäisellä rivillä on merkkijono "hei", toisella "maailma", ja kolmannella "loppu", kirjoitetaan muodossa `hei\nmaailma\nloppu\n`.
+- Kirjoita lopulta odotettu tulos. Tulos kirjoitetaan merkkijonona. Mikäli tuloksessa pitäisi olla useampia rivejä, merkitään rivien erotukset rivinvaihdoilla, eli `\n`-merkillä.
+
+Antamistasi syötteestä, tuloksesta, nimestä ja tyypistä generoitu testi voi näyttää vaikkapa seuraavalta -- testin sisältämät "taikasanat" tulevat kurssin edetessä tutuksi:
 
 
-    Alla on kolme Crowdsorcereriin tehtyä tehtävää: kaksi jonkun kurssitoverisi lähettämää ja yksi itsearviointia varten. Niiden yhteydessä on muistin virkistykseksi ohjeistus, jonka pohjalta kyseiset tehtävänannot on tehty.
+```java
+@Test
+public void tulostaMauJosSyoteOnKissa() {
+	Submission.suorita(new Scanner(“kissa”));
+  // tässä ohjelmasi tulostus tallennetaan
+  // merkkijonoon metodinTulostus
+	String metodinTulostus = io.getSysOut();
+
+	String viesti = “Kun syöte oli: ‘kissa’, tulostus oli: ‘“ + metodinTulostus + “‘, mutta se ei ollut: ‘Mau!’.”;
+
+  // viesti näytetään tehtävän tekijälle,
+  // jos ohjelma ei mene testistä läpi
+	assertEquals(viesti, “Mau!”, metodinTulostus);
+  // komento assertEquals testaa sitä, että
+  // metodinTulostus on tarkalleen “Mau!”
+}
+```
+
+## Lukujen tarkkailua
+
+Alla olevassa testien kirjoittamisen harjoitteluun tarjoitetussa tehtävässä tarkkaillaan lukua.
+
+Lähdekoodin kohdalla on valmis malliratkaisu. Keksi sitä vastaava tehtävänanto ja kirjoita se lomakkeeseen. Kirjoita tämän jälkeen testejä kohtaan `Testit`. Lisää lopuksi myös tehtävälle tägejä, eli tehtävää kuvaavia avainsanoja.
+
+Mieti minkälaisilla syötteillä saisit testattua ohjelmaasi mahdollisimman hyvin. Tee ainakin kaksi erillistä testiä -- useamman testin lisääminen tapahtuu napilla `Lisää kenttä`!
+
+Tässä on vielä ensimmäisen testin mahdollinen sisältö:
+- Nimi: `yksiTulostaaPositiivinen`
+- Tyyppi: `Equals`
+- Syöte: `1\n`
+- Tulos: `positiivinen\n`
 
 
-
-    Tarkastele jokaisen tehtävän eri osia: tehtävänantoa, tehtäväpohjaa ja malliratkaisua sekä testaukseen käytettäviä syötteitä ja tulosteita. Arvioi niiden selkeyttä, vaikeutta ja sitä, kuinka hyvin ne vastaavat ohjeistukseensa.
-
+<crowdsorcerer id='21'></crowdsorcerer>
 
 
-    Voit vaihtaa näkymää tehtäväpohjan ja mallivastauksen välillä painamalla lähdekoodin yläpalkin painikkeita. Palautteenannon avuksi on annettu väittämiä. Voit valita kuinka samaa mieltä niiden kanssa olet painamalla hymiöitä. Annathan myös sanallista palautetta sille varattuun kenttään! Lisää vielä tehtävää mielestäsi kuvaavia tageja ja paina Lähetä.
+## Fibonacci
+
+Alla on annettuna ohjelma, joka tulostaa Fibonaccin lukujonon käyttäjän antamaan syötteeseen asti. Lue Fibonaccin lukujonosta lisää <a href="https://fi.wikipedia.org/wiki/Fibonaccin_lukujono">Wikipediasta</a>.
+
+Lähdekoodin kohdalla on valmis malliratkaisu. Keksi sitä vastaava tehtävänanto ja kirjoita se lomakkeeseen. Kirjoita tämän jälkeen testejä kohtaan `Testit`. Lisää lopuksi myös tehtävälle tägejä, eli tehtävää kuvaavia avainsanoja.
 
 
-
-    Anna arvio kummallekin vertaispalautetehtävälle ja lopuksi vielä omallesi.
-
-
-
-    Muista olla reilu ja ystävällinen. Hyvä palaute on rehellistä, mutta kannustavaa!
-
-
-
-    Voit halutessasi ladata arvioitavan tehtävän tehtäväpohjan ja malliratkaisun koneellesi, ja testata niiden käyttöä. Molemmat tulevat ZIP-paketeissa, jolloin sinun täytyy purkaa ne, ennen kuin voit avata ne NetBeansissä.
-
-
-
-
-<% partial 'partials/general_callout', locals: { name: 'Vertaisarvioitavien tehtävien ohjeistus: Ehtolause' } do %>
-
-    Tee tehtävä, jonka tarkoitus on laittaa opiskelija koodaamaan ohjelma, joka lukee käyttäjältä kokonaislukusyötteen, tarkastelee sitä ehtolauseen avulla ja tulostaa merkkijonon. Anna testejä vasten syöte-esimerkki ja ohjelman tuloste tuolla syötteellä.
-
-
-
-    Tehtävien vertaisarviointi vastaa kurssin pisteytyksessä yhtä ohjelmointitehtävää.
-
-
-
-
-<div class='crowdsorcerer-widget' data-assignment='10' peer-review data-exercises='3'></div>
+<crowdsorcerer id='22'></crowdsorcerer>
 

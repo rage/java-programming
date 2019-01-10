@@ -1,6 +1,6 @@
 ---
-path: '/osa-3/1-ohjelmien rakenteesta'
-title: 'Ohjelmien rakenteesta'
+path: '/osa-3/1-ohjelmien-ymmarrettavyydesta'
+title: 'Ohjelmien ymmärrettävyydestä'
 hidden: true
 ---
 

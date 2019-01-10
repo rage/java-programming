@@ -334,7 +334,7 @@ Virheellinen tunnus tai salasana!
 </sample-output>
 
 
-**HUOM:** muista, että merkkijonoja ei voi vertailla ==-operaatiolla!
+**HUOM:** muista, että merkkijonoja ei voi vertailla `==`-operaatiolla!
 
 
 **HUOM:** Todellisuudessa kirjautumistoiminnallisuutta ei tule toteuttaa, eikä yleensä toteutetakkaan näin. Kirjautumistoiminnallisuuden toteuttamiseen tutustutaan mm. web-ohjelmointiin liittyvillä kursseilla.
