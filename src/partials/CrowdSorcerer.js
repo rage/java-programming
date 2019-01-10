@@ -17,7 +17,7 @@ class CrowdSorcererWrapper extends React.Component {
     if (!this.state.render) {
       return <div>Loading...</div>
     }
-    const assignmentId = this.props.assignmentid
+    const assignmentId = this.props.id
     const exercises = this.props.exercisecount
     const review = this.props.peerreview
 

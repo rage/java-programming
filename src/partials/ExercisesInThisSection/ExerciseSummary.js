@@ -23,6 +23,9 @@ const ExerciseSummary = ({ exercise, index, quizIdToTitle }) => {
   if (exercise.type === "programming-exercise") {
     description = `Ohjelmointitehtävä: ${exercise.id}`
   }
+  if (exercise.type === "crowdsorcerer") {
+    description = "Crowdsorcerer"
+  }
   let anchorLinkDigest = normalizeExerciseId(`${exercise.type}-${exercise.id}`)
   return (
     <ExerciseSummaryWrapper
