@@ -90,6 +90,29 @@ int indeksi = Integer.valueOf(lukija.nextLine());
 System.out.println(luvut[indeksi]);
 ```
 
+Taulukossa olevan muuttujan voi tulostuksen sijaan hyvin esimerkiksi asettaa uuden muuttujan arvoksi.
+
+
+```java
+Scanner lukija = new Scanner(System.in);
+
+int[] luvut = new int[5];
+luvut[0] = 42;
+luvut[1] = 13;
+luvut[2] = 12;
+luvut[3] = 7;
+luvut[4] = 1;
+
+System.out.println("Mistä indeksistä haetaan? ");
+int indeksi = Integer.valueOf(lukija.nextLine());
+
+int luku = luvut[indeksi];
+System.out.println(luku);
+```
+
+
+<quiznator id="5c385a3b244fe21455cb2764"></quiznator>
+
 
 <programming-exercise name='Alkioiden arvojen vaihtaminen' tmcname='osa03-Osa03_18.AlkioidenArvojenVaihtaminen'>
 
