@@ -1,7 +1,7 @@
 ---
 path: '/osa-3/5-crowdsorcerer'
 title: 'Pieniä askeleita ohjelmien testaamiseen'
-hidden: true
+hidden: false
 ---
 
 
@@ -140,6 +140,7 @@ Testi 2:
 
 Käytä tehtävässä edellisiä testejä ja keksi ainakin muutama testi lisää. Mieti minkälaisilla syötteillä saisit testattua ohjelmaasi mahdollisimman hyvin. Tee ainakin kaksi erillistä testiä -- useamman testin lisääminen tapahtuu napilla `Lisää kenttä`!
 
+Huom! Kun lähetät testit tarkastettavaksi, työväline näyttää lisäksi yhteenvetoikkunan, joka sisältää termejä kuten 'tehtäväpohja' ja 'malliratkaisu'. Älä välitä näistä!
 
 <crowdsorcerer id='21'></crowdsorcerer>
 

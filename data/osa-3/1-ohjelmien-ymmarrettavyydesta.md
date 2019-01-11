@@ -1,7 +1,7 @@
 ---
 path: '/osa-3/1-ohjelmien-ymmarrettavyydesta'
 title: 'Ohjelmien ymmärrettävyydestä'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>

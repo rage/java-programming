@@ -1,7 +1,7 @@
 ---
 path: '/osa-3/3-taulukot'
 title: 'Taulukot ja niissä olevan tiedon käsittely'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
