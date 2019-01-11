@@ -22,13 +22,15 @@ class CrowdSorcererWrapper extends React.Component {
     const review = this.props.peerreview
 
     return (
-      <Suspense fallback={<div>Loading...</div>}>
-        <CrowdSorcerer
-          assignmentId={assignmentId}
-          exercises={exercises}
-          review={review}
-        />
-      </Suspense>
+      <div id={`crowdsorcerer-${assignmentId}`}>
+        <Suspense fallback={<div>Loading...</div>}>
+          <CrowdSorcerer
+            assignmentId={assignmentId}
+            exercises={exercises}
+            review={review}
+          />
+        </Suspense>
+      </div>
     )
   }
 }
