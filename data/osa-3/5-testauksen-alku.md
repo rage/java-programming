@@ -1,5 +1,5 @@
 ---
-path: '/osa-3/5-crowdsorcerer'
+path: '/osa-3/5-testauksen-alku'
 title: 'Pieniä askeleita ohjelmien testaamiseen'
 hidden: false
 ---
