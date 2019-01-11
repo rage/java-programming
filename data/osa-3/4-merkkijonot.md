@@ -198,7 +198,7 @@ int kokonaisluku = Integer.valueOf(lukija.nextLine());
 
 ## Merkkijonojen vertailu ja equals
 
-Merkkijonoja ei voi vertailla yhtäsuuri kuin (_==_) operaatiolla.  Merkkijonojen vertailuun käytetään erillistä `equals`-komentoa, joka liittyy aina verrattavaan merkkijonoon.
+Merkkijonoja ei voi vertailla yhtäsuuri kuin operaatiolla `==`.  Merkkijonojen vertailuun käytetään erillistä `equals`-komentoa, joka liittyy aina verrattavaan merkkijonoon.
 
 ```java
 String teksti = "kurssi";
@@ -681,7 +681,7 @@ Voit olettaa, että haettava merkkijono ei itsessään sisällä toistuvaa hahmo
 ## Merkkijonojen pilkkominen pienempiin osiin
 
 
-Merkkijonon pilkkominen useampaan osaan tapahtuu merkkijonon tarjoamalla metodilla `split`, jolle annetaan parametrina merkkijono, jonka kohdalta käsiteltävä merkkijono jaetaan osiin. Metodi palauttaa merkkijonotaulukon, jonka indeksit sisältävät pilkotun merkkijonon osat. Metodi toimii seuraavasti:
+Merkkijonon pilkkominen useampaan osaan tapahtuu merkkijonon tarjoamalla metodilla `split`, jolle annetaan parametrina merkkijono, jonka kohdalta käsiteltävä merkkijono jaetaan osiin. Metodi palauttaa taulukon, joka sisältää merkkijonoja. Taulukon indekseissä on pilkotun merkkijonon osat. Metodi toimii seuraavasti:
 
 
 ```java

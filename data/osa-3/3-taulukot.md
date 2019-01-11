@@ -448,6 +448,8 @@ Lohkoalustusta käytettäessä taulukon koko on aina täsmälleen lohkossa mää
 // indeksi       0   1    2    3   4   5     6     7
 int[] luvut = {100,  1,  42,  23,  1,  1, 3200, 3201};
 
-System.out.println(luvut[0]);  // tulostaa luvun taulukon indeksistä 0, eli luvun 100
-System.out.println(luvut[2]);  // tulostaa luvun taulukon indeksistä 2, eli luvun 42
+// tulostaa luvun taulukon indeksistä 0, eli luvun 100
+System.out.println(luvut[0]);
+// tulostaa luvun taulukon indeksistä 2, eli luvun 42
+System.out.println(luvut[2]);
 ```
