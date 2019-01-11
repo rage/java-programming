@@ -77,6 +77,12 @@ class PointsBalloonContent extends React.Component {
                 kyselyt. Näiden tehtävien pisteet eivät näy TMC:ssä. Kiitos
                 kärsivällisyydestäsi!
               </p>
+              <p>
+                <b>
+                  Varmista odotellessasi että olet tehnyt kaikki kohdassa "Lista
+                  osan tehtävistä" listatut tehtävät.
+                </b>
+              </p>
             </Fragment>
           </Loading>
         </ModalContent>
