@@ -233,9 +233,12 @@ class ProgrammingExercise extends React.Component {
                         )}
                       </p>
                       <p>
-                        Pystyt katsomaan mallivastauksen ilman kolikkoja Test My
-                        Code -palvelusta sen jälkeen kun olet saanut tehtävän
-                        oikein.
+                        Kolikkoja kuluu vain silloin kun painat tämän tekstin
+                        alapuolella olevaa nappia, jossa lukee "kuluttaa
+                        kolikon". Pystyt katsomaan mallivastauksen ilman
+                        kolikkoja Test My Code -palvelusta joko Netbeanssin tai
+                        TMC:n nettisivun kautta sen jälkeen kun olet saanut
+                        tehtävän oikein.
                       </p>
 
                       {(availableTokens > 0 ||
