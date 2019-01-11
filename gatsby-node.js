@@ -7,7 +7,14 @@
 const path = require("path")
 
 exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
+
+  createRedirect({
+    fromPath: `/osa-1/4-muuttujat`,
+    isPermanent: true,
+    redirectInBrowser: true,
+    toPath: `/osa-1/4-laskentaa`,
+  })
 
   const courseMaterialTemplate = path.resolve(
     `src/templates/CourseContentTemplate.js`,
