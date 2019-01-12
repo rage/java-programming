@@ -24,6 +24,8 @@ exports.createPages = ({ actions, graphql }) => {
     `src/templates/CoursePartOverviewTemplate.js`,
   )
 
+  const infoPageTemplate = path.resolve(`src/templates/InfoPageTemplate.js`)
+
   const query = `
   {
     allMarkdownRemark(
@@ -39,6 +41,7 @@ exports.createPages = ({ actions, graphql }) => {
           frontmatter {
             path
             overview
+            information_page
           }
         }
       }
@@ -60,6 +63,9 @@ exports.createPages = ({ actions, graphql }) => {
       let template = courseMaterialTemplate
       if (node.frontmatter.overview) {
         template = coursePartOverviewTemplate
+      }
+      if (node.frontmatter.information_page) {
+        template = infoPageTemplate
       }
       createPage({
         path: node.frontmatter.path,
