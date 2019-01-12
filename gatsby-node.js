@@ -67,6 +67,10 @@ exports.createPages = ({ actions, graphql }) => {
       if (node.frontmatter.information_page) {
         template = infoPageTemplate
       }
+      if (!node.frontmatter.path) {
+        // To prevent a bug that happens in development from time to time
+        return;
+      }
       createPage({
         path: node.frontmatter.path,
         component: template,
