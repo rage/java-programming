@@ -51,6 +51,11 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
+    if (!result.data.allMarkdownRemark) {
+      console.log("No markdown pages generated. Did you hide all of them?")
+      return
+    }
+
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       let template = courseMaterialTemplate
       if (node.frontmatter.overview) {
