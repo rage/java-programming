@@ -5,6 +5,7 @@ import styled from "styled-components"
 import Loading from "../Loading"
 import { fetchProgress } from "../../services/progress"
 import PagesContext from "../../contexes/PagesContext"
+import PartProgress from "./PartProgress"
 
 const StyledModal = styled(Modal)`
   z-index: 500 !important;
@@ -23,7 +24,7 @@ const ModalContent = styled(Paper)`
   right: 1.5rem;
   bottom: 1.5rem;
   z-index: 200 !important;
-  font-size: 0.7rem;
+  font-size: 1rem;
 `
 
 const ModalControls = styled.div`
@@ -72,7 +73,7 @@ class PointsBalloonContent extends React.Component {
       >
         <ModalContent>
           <ModalControls>
-            <Title>Edistyminen</Title>
+            <Title>Edistyminen (beta)</Title>
             <Button onClick={this.handleClose}>Sulje</Button>
           </ModalControls>
           <Loading loading={!this.state.data && !this.state.error}>
@@ -83,7 +84,12 @@ class PointsBalloonContent extends React.Component {
                   {this.state.error}
                 </div>
               ) : (
-                <pre>{JSON.stringify(this.state.data, undefined, 2)}</pre>
+                <div>
+                  {this.state.data &&
+                    Object.entries(this.state.data).map(([name, data]) => {
+                      return <PartProgress name={name} data={data} />
+                    })}
+                </div>
               )}
             </Fragment>
           </Loading>

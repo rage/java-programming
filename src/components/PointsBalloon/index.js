@@ -18,7 +18,7 @@ class PointsBalloon extends React.Component {
 
   state = {
     render: false,
-    open: true,
+    open: false,
   }
 
   componentDidMount() {
