@@ -6,7 +6,7 @@ import styled from "styled-components"
 import PointsBalloonBalloon from "./PointsBalloonBalloon"
 import PointsBalloonContent from "./PointsBalloonContent"
 
-const PoitsBalloonContainer = styled.div`
+const PointsBalloonContainer = styled.div`
   position: fixed;
   right: 1.5rem;
   bottom: 1.5rem;
@@ -18,7 +18,7 @@ class PointsBalloon extends React.Component {
 
   state = {
     render: false,
-    open: false,
+    open: true,
   }
 
   componentDidMount() {
@@ -38,13 +38,15 @@ class PointsBalloon extends React.Component {
       return <Fragment />
     }
     return (
-      <PoitsBalloonContainer>
+      <PointsBalloonContainer>
         {!this.state.open && <PointsBalloonBalloon onClick={this.onClick} />}
-        <PointsBalloonContent
-          open={this.state.open}
-          handleClose={this.onClose}
-        />
-      </PoitsBalloonContainer>
+        {this.state.open && (
+          <PointsBalloonContent
+            open={this.state.open}
+            handleClose={this.onClose}
+          />
+        )}
+      </PointsBalloonContainer>
     )
   }
 }

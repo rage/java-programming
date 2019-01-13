@@ -1,10 +1,10 @@
 import React, { Fragment } from "react"
-import LoginStateContext from "../../contexes/LoginStateContext"
 import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
 import { Modal, Paper, Button } from "@material-ui/core"
 import styled from "styled-components"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
 import Loading from "../Loading"
+import { fetchProgress } from "../../services/progress"
+import PagesContext from "../../contexes/PagesContext"
 
 const StyledModal = styled(Modal)`
   z-index: 500 !important;
@@ -16,11 +16,14 @@ const ModalContent = styled(Paper)`
   background-color: white;
   width: 100%;
   max-width: 450px;
-  height: 500px;
+  height: 700px;
+  max-height: 90vh;
+  overflow-y: scroll;
   position: fixed;
   right: 1.5rem;
   bottom: 1.5rem;
   z-index: 200 !important;
+  font-size: 0.7rem;
 `
 
 const ModalControls = styled.div`
@@ -33,22 +36,31 @@ const Title = styled.h1`
   font-size: 1.5rem;
 `
 
-const data = [
-  { group: "Osa 1", Ohjelmointitehtävät: 80, Kyselyt: 20 },
-  { group: "Osa 2", Ohjelmointitehtävät: 30, Kyselyt: 40 },
-]
-
 class PointsBalloonContent extends React.Component {
-  static contextType = LoginStateContext
+  static contextType = PagesContext
 
   state = {
     render: false,
     data: null,
+    error: null,
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     this.setState({ render: true })
-    this.setState({ data })
+    try {
+      let data = await fetchProgress(this.context)
+      this.setState({ data })
+    } catch (e) {
+      this.setState({ error: e.toString() })
+    }
+  }
+
+  handleClose = () => {
+    this.setState({
+      data: null,
+      error: null,
+    })
+    this.props.handleClose()
   }
 
   render() {
@@ -61,28 +73,18 @@ class PointsBalloonContent extends React.Component {
         <ModalContent>
           <ModalControls>
             <Title>Edistyminen</Title>
-            <Button onClick={this.props.handleClose}>Sulje</Button>
+            <Button onClick={this.handleClose}>Sulje</Button>
           </ModalControls>
-          <Loading loading={!this.state.data}>
+          <Loading loading={!this.state.data && !this.state.error}>
             <Fragment>
-              <p>
-                Tähän tulee visualisaatio edistymisestäsi heti kun olemme
-                saaneet tämän ominaisuuden toteutettua. Odotellessasi voit
-                tutkia edistymisestäsi ohjelmointitehtävissä TMC:ssä:{" "}
-                <OutboundLink href="https://tmc.mooc.fi/participants/me">
-                  https://tmc.mooc.fi/participants/me
-                </OutboundLink>
-                . Huomaathan, että pisteisiisi vaikuttaa muutkin tehtävät kuin
-                ohjelmointitehtävät, kuten vaikka materiaalin seassa olevat
-                kyselyt. Näiden tehtävien pisteet eivät näy TMC:ssä. Kiitos
-                kärsivällisyydestäsi!
-              </p>
-              <p>
-                <b>
-                  Varmista odotellessasi että olet tehnyt kaikki kohdassa "Lista
-                  osan tehtävistä" listatut tehtävät.
-                </b>
-              </p>
+              {this.state.error ? (
+                <div>
+                  Edistymisen hakeminen kaatui seuraavaan virheeseen:{" "}
+                  {this.state.error}
+                </div>
+              ) : (
+                <pre>{JSON.stringify(this.state.data, undefined, 2)}</pre>
+              )}
             </Fragment>
           </Loading>
         </ModalContent>

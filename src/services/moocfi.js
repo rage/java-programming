@@ -196,6 +196,19 @@ export async function fetchProgrammingExerciseModelSolution(exerciseId) {
   return res.data
 }
 
+export async function fetchProgrammingProgress(exerciseName) {
+  const res = await axios.get(
+    `${BASE_URL}/org/${ORGANIZATION}/courses/${COURSE}/users/current/progress`,
+    {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${accessToken()}`,
+      },
+    },
+  )
+  return res.data?.points_by_group
+}
+
 export function canDoResearch() {
   try {
     return store.get("tmc.user.details")?.extra_fields?.research === "1"
