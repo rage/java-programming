@@ -25,13 +25,17 @@ Avaa joko issue tai muutosehdoitus kurssin Github-repossa: https://github.com/ra
 
 Seuraa tätä ohjetta ongelman ratkaisemiseksi: https://materiaalit.github.io/tmc-asennus/macos-verkkoongelma/.
 
+### Netbeanssin asennusohjelma ei avaudu macOS:lla
+
+Kokele painaa asennusohjelmaa hiiren oikealla näppäimellä ja valitse Avaa/Open.
+
 ### Saan testejä ajattaessa virheviestin, joka valittaa JAVA_HOME:sta
 
 Seuraa tätä ohjetta ongelman ratkaisemiseksi: [https://materiaalit.github.io/tmc-asennus/java\_home\_not\_found/](https://materiaalit.github.io/tmc-asennus/java_home_not_found/).
 
 ### Netbeans tai netbeanssin asennusohjelma ei avaannu tai näyttää avauduttuaan oudolta.
 
-Varmista, että sinulla on Javan kehitystyökalujen versio 8 asennettuna. Kurssilla käytetty ohjelmointiympäristö ei toimi kunnolla uudemmilla Javan versioilla.
+Varmista, että sinulla on Javan kehitystyökalujen versio 8 asennettuna. Kurssilla käytetty ohjelmointiympäristö ei toimi kunnolla uudemmilla Javan versioilla. Jos törmäät ongelmaan, kokeile poistaa koneeltasi Javan JDK:n uudemmat versiot ja sitten asenna Netbeans with TMC uudestaan.
 
 ### En voi aloittaa kurssia, koska en tiedä minne ilmoittautua
 
