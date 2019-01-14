@@ -32,7 +32,7 @@ const CustomLabel = ({ x, y, stroke, value }) => {
 
 const PartProgress = ({ name, data, appliesForStudyRight }) => {
   const allChartData = Object.entries(data).map(([tool, data]) => {
-    return { tool, progress: data.progress * 100 }
+    return { tool, progress: Math.floor(data.progress * 100 + 0.000000001) }
   })
   let nPointsSum = 0
   let maxPointsSum = 0
@@ -44,7 +44,7 @@ const PartProgress = ({ name, data, appliesForStudyRight }) => {
   let totalProgress = Math.floor((nPointsSum / maxPointsSum) * 100) / 100
   allChartData.push({
     tool: "Tehtäväpisteet yhteensä",
-    progress: totalProgress * 100,
+    progress: Math.floor(totalProgress * 100 + 0.000000001),
   })
   return (
     <PartProgressContainer>
