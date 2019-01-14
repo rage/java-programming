@@ -41,7 +41,7 @@ class AbStudy extends Component {
 
   async componentDidMount() {
     this.setState({ render: true })
-    if (!this.props.id) {
+    if (!this.props.id || !this.context.loggedIn) {
       return
     }
     try {
@@ -61,6 +61,25 @@ class AbStudy extends Component {
         <Wrapper>
           Ladataan kurssisisällön osaa...
           <Loading heightHint="200px" />
+        </Wrapper>
+      )
+    }
+    if (!this.context.loggedIn) {
+      return (
+        <Wrapper>
+          <MessageWrapper>
+            <StyledIcon icon={icon} />
+            <div>
+              <P>
+                Tässä kohtaa materiaalia on sisältöä, joka näkyy vain
+                sisäänkirjautuneille käyttäjille. Kirjaudu sisään nähdäksesi
+                sen.
+              </P>
+              <div>
+                <LoginControls />
+              </div>
+            </div>
+          </MessageWrapper>
         </Wrapper>
       )
     }
@@ -87,25 +106,6 @@ class AbStudy extends Component {
         <Wrapper>
           Tässä kohtaa on sisältöä, joka ei ole oikein määritelty. Syy: id
           puuttuu.
-        </Wrapper>
-      )
-    }
-    if (!this.context.loggedIn) {
-      return (
-        <Wrapper>
-          <MessageWrapper>
-            <StyledIcon icon={icon} />
-            <div>
-              <P>
-                Tässä kohtaa materiaalia on sisältöä, joka näkyy vain
-                sisäänkirjautuneille käyttäjille. Kirjaudu sisään nähdäksesi
-                sen.
-              </P>
-              <div>
-                <LoginControls />
-              </div>
-            </div>
-          </MessageWrapper>
         </Wrapper>
       )
     }
