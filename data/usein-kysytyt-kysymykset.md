@@ -27,7 +27,7 @@ Seuraa tätä ohjetta ongelman ratkaisemiseksi: https://materiaalit.github.io/tm
 
 ### Saan testejä ajattaessa virheviestin, joka valittaa JAVA_HOME:sta
 
-Seuraa tätä ohjetta ongelman ratkaisemiseksi: https://materiaalit.github.io/tmc-asennus/java_home_not_found/.
+Seuraa tätä ohjetta ongelman ratkaisemiseksi: [https://materiaalit.github.io/tmc-asennus/java\_home\_not\_found/](https://materiaalit.github.io/tmc-asennus/java_home_not_found/).
 
 ### Netbeans tai netbeanssin asennusohjelma ei avaannu tai näyttää avauduttuaan oudolta.
 
@@ -44,3 +44,15 @@ Aikatauluton kurssi julkaistaan ensimmäisen deadlinen jälkeen. Huomaathan kuit
 ### Kurssimateriaalin uuden osan pitäisi olla julki tänään, mutta en näe sitä
 
 Emme takaa mihin kellonaikaan kurssimateriaalin uusi osa ilmestyy. Vaikka materiaali on yleensä julkaistu noin puolen päivän maissa, julkaisu saattaa venyä myöhempään. Kiitos kärsivällisyydestäsi!
+
+### Työ- ja elinkeinotoimisto haluaa minulta selvityksen kurssista
+
+Ohjaa TE-toimisto tälle sivulle:
+
+Ohjelmoinnin MOOC on kaikille avoin ja ilmainen verkkokurssi. Kurssin käymistä voi verrata kirjan lainaamiseen kirjastosta. Kirjastosta lainattava kirja saattaa liittyä johonkin yliopisto-opintoihin liittyvään kurssiin. Aivan samalla tavalla kuin kirjastosta lainattava kirja, verkkokurssimme on luettavissa huvin ja itsensä sivistämisen vuoksi tai yliopisto-opintojen edistämiseksi.
+
+Ohjelmoinnin MOOC on Helsingin yliopiston kurssien Ohjelmoinnin perusteet (5 opintopistettä) ja Ohjelmoinnin jatkokurssi (5 opintopistettä) kurssimateriaali. Kurssin suorittajat eivät kuitenkaan automaattisesti ole Helsingin yliopiston opiskelijoita, emmekä pakota ketään suorittamaan kurssia opintopisteisiin johtavassa muodossa. Kurssista voi kuitenkin halutessaan -- ja kurssin menestyksekkäästi suorittamalla -- saada opintopisteitä.
+
+### Saan tukea Työ- ja elinkeinotoimistolta. Voinko silti tehdä kurssin?
+
+Sovi asiasta etukäteen TE-toimistosi kanssa. TE-toimistot eivät valitettavasti käsittele kurssiimme liittyviä asioita yhdenmukaisesti. Jotkut ovat evänneet tukia jo kurssillemme osallistumisesta, vaikkei tavoitteena olisi opintopisteet tai opinnot. Toisaalta toiset TE-toimistot ovat suositelleet kurssia ja jopa ohjanneet ihmisiä kurssille ilman tukien epäämistä.

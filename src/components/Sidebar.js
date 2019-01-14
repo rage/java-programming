@@ -115,6 +115,10 @@ var content2 = [
     title: "Opettajille ja opinto-ohjaajille",
     path: "/opettajille",
   },
+  {
+    title: "Usein kysytyt kysymykset",
+    path: "/usein-kysytyt-kysymykset",
+  },
   { separator: true },
 ]
 
