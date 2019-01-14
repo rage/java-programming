@@ -75,9 +75,6 @@ class AbStudy extends Component {
                 sisäänkirjautuneille käyttäjille. Kirjaudu sisään nähdäksesi
                 sen.
               </P>
-              <div>
-                <LoginControls />
-              </div>
             </div>
           </MessageWrapper>
         </Wrapper>
@@ -93,9 +90,6 @@ class AbStudy extends Component {
                 Kurssisisällön osaa ei pystytty lataamaan virheen takia:{" "}
                 <pre>{this.state.error}</pre>
               </P>
-              <div>
-                <LoginControls />
-              </div>
             </div>
           </MessageWrapper>
         </Wrapper>
