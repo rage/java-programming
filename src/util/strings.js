@@ -21,6 +21,7 @@ export function normalizeExerciseId(string) {
       .replace(/ä/g, "a")
       .replace(/Ä/g, "A")
       .replace(/\s+/g, "-")
-      .replace(/[^A-Za-z0-9_-]/g, ""),
+      .replace(/[^A-Za-z0-9_-]/g, "")
+      .replace(/-+/g, "-"),
   )
 }

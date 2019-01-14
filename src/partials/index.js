@@ -48,6 +48,13 @@ import {
 } from "./Table"
 import Deadline from "./Deadline"
 import OnlyForAbGroup from "./AbStudy/OnlyForAbGroup"
+import H3 from "./Headers/H3"
+import H1 from "./Headers/H1"
+import H2 from "./Headers/H2"
+import H4 from "./Headers/H4"
+import H5 from "./Headers/H5"
+import H6 from "./Headers/H6"
+import TableOfContents from "./TableOfContents"
 
 const mapping = {
   test: Test,
@@ -63,6 +70,7 @@ const mapping = {
   "exercises-in-this-section": ExercisesInThisSection,
   "ab-study": AbStudy,
   "only-for-ab-group": OnlyForAbGroup,
+  "table-of-contents": TableOfContents,
   crowdsorcerer: CrowdSorcerer,
   youtube: Youtube,
   quiznator: Quiznator,
@@ -74,6 +82,12 @@ const mapping = {
   th: TableTh,
   deadline: Deadline,
   a: OutboundLink,
+  h1: H1,
+  h2: H2,
+  h3: H3,
+  h4: H4,
+  h5: H5,
+  h6: H6,
 }
 
 export default () => {
