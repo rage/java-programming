@@ -6,6 +6,7 @@ import Loading from "../Loading"
 import { fetchProgress } from "../../services/progress"
 import PagesContext from "../../contexes/PagesContext"
 import PartProgress from "./PartProgress"
+import { getCachedUserDetails } from "../../services/moocfi"
 
 const StyledModal = styled(Modal)`
   z-index: 500 !important;
@@ -44,13 +45,17 @@ class PointsBalloonContent extends React.Component {
     render: false,
     data: null,
     error: null,
+    appliesForStudyRight: null,
   }
 
   async componentDidMount() {
     this.setState({ render: true })
     try {
       let data = await fetchProgress(this.context)
-      this.setState({ data })
+      let userDetails = await getCachedUserDetails()
+      const appliesForStudyRight =
+        userDetails?.extra_fields?.applies_for_study_right === "t"
+      this.setState({ data, appliesForStudyRight })
     } catch (e) {
       this.setState({ error: e.toString() })
     }
@@ -87,7 +92,13 @@ class PointsBalloonContent extends React.Component {
                 <div>
                   {this.state.data &&
                     Object.entries(this.state.data).map(([name, data]) => {
-                      return <PartProgress name={name} data={data} />
+                      return (
+                        <PartProgress
+                          appliesForStudyRight={this.state.appliesForStudyRight}
+                          name={name}
+                          data={data}
+                        />
+                      )
                     })}
                 </div>
               )}

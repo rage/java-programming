@@ -40,9 +40,11 @@ class CourseOptionsEditor extends React.Component {
         first_name: data.user_field?.first_name,
         last_name: data.user_field?.last_name,
         student_number: data.user_field?.organizational_id,
-        applies_for_study_right: data.extra_fields?.applies_for_study_right,
-        digital_education_for_all: data.extra_fields?.digital_education_for_all,
-        marketing: data.extra_fields?.marketing,
+        applies_for_study_right:
+          data.extra_fields?.applies_for_study_right === "t",
+        digital_education_for_all:
+          data.extra_fields?.digital_education_for_all === "t",
+        marketing: data.extra_fields?.marketing === "t",
         research: data.extra_fields?.research,
         loading: false,
       },

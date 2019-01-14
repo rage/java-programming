@@ -152,6 +152,7 @@ export async function updateUserDetails({ extraFields, userField }) {
     },
     { headers: { Authorization: `Bearer ${accessToken()}` } },
   )
+  store.remove("tmc.user.details")
   await userDetails()
   return res
 }

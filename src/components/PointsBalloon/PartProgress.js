@@ -6,12 +6,20 @@ const PartProgressContainer = styled.div`
   margin-bottom: 0.5rem;
 `
 
+const SmallP = styled.p`
+  font-size: 0.8rem;
+`
+
+const LargeP = styled.p`
+  font-size: 1rem;
+`
+
 const CustomLabel = ({ x, y, stroke, value }) => {
   return (
     <text
       x={x}
       y={y}
-      dy={25}
+      dy={23}
       dx={12}
       fill={stroke}
       fontSize={10}
@@ -22,7 +30,7 @@ const CustomLabel = ({ x, y, stroke, value }) => {
   )
 }
 
-const PartProgress = ({ name, data }) => {
+const PartProgress = ({ name, data, appliesForStudyRight }) => {
   const allChartData = Object.entries(data).map(([tool, data]) => {
     return { tool, progress: data.progress * 100 }
   })
@@ -58,11 +66,19 @@ const PartProgress = ({ name, data }) => {
             />
           </Bar>
         </BarChart>
-        <div>
+        <LargeP>
           Osasta saadut kurssipisteet:{" "}
           {Math.floor(Math.min(100, totalProgress * 111.112))}
           /100.
-        </div>
+        </LargeP>
+        {appliesForStudyRight && (
+          <SmallP>
+            Opinto-oikeuteen vaaditaan 90% ohjelmointitehtävien pisteistä.
+            Edistymisesi tällä hetkellä:{" "}
+            {allChartData.find(o => o.tool === "Ohjelmointitehtävät")?.progress}
+            %.
+          </SmallP>
+        )}
       </div>
     </PartProgressContainer>
   )
