@@ -32,7 +32,7 @@ export async function fetchQuiznatorProgress() {
   const quizIdInformation = await fetchQuizIds()
   const allQuizIds = flatten(quizIdInformation.map(o => o.quizIds))
   const progress = await fetchProgressByQuizIds(allQuizIds)
-  const allAnswered = progress.answered.map(o => o._id)
+  const allAnswered = (progress.answered || []).map(o => o._id)
   partToTag.forEach(({ part, tag }) => {
     const relevant = quizIdInformation
       .filter(o => {
