@@ -1,6 +1,9 @@
 import React from "react"
+import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
 import styled from "styled-components"
-import { BarChart, Bar, XAxis, YAxis, LabelList } from "recharts"
+import { BarChart, Bar, XAxis, YAxis, LabelList, Tooltip } from "recharts"
+import { improveGroupName } from "../../util/strings"
+import CustomTooltip from "./CustomTooltip"
 
 const PartProgressContainer = styled.div`
   margin-bottom: 0.5rem;
@@ -20,7 +23,7 @@ const CustomLabel = ({ x, y, stroke, value }) => {
       x={x}
       y={y}
       dy={23}
-      dx={12}
+      dx={value === 0 ? 20 : value}
       fill={stroke}
       fontSize={10}
       textAnchor="middle"
@@ -32,7 +35,12 @@ const CustomLabel = ({ x, y, stroke, value }) => {
 
 const PartProgress = ({ name, data, appliesForStudyRight }) => {
   const allChartData = Object.entries(data).map(([tool, data]) => {
-    return { tool, progress: Math.floor(data.progress * 100 + 0.000000001) }
+    return {
+      tool,
+      progress: Math.floor(data.progress * 100 + 0.000000001),
+      n_points: data.n_points,
+      max_points: data.max_points,
+    }
   })
   let nPointsSum = 0
   let maxPointsSum = 0
@@ -45,10 +53,12 @@ const PartProgress = ({ name, data, appliesForStudyRight }) => {
   allChartData.push({
     tool: "Tehtäväpisteet yhteensä",
     progress: Math.floor(totalProgress * 100 + 0.000000001),
+    n_points: nPointsSum,
+    max_points: maxPointsSum,
   })
   return (
     <PartProgressContainer>
-      <b>{name}</b>
+      <b>{improveGroupName(name)}</b>
       <div>
         <BarChart
           layout="vertical"
@@ -56,6 +66,7 @@ const PartProgress = ({ name, data, appliesForStudyRight }) => {
           height={60 * allChartData.length}
           data={allChartData}
         >
+          <Tooltip content={<CustomTooltip />} />
           <XAxis domain={[0, 100]} dataKey="progress" type="number" />
           <YAxis width={142} type="category" dataKey="tool" />
           <Bar dataKey="progress" fill="#f1a9a0">
@@ -84,4 +95,4 @@ const PartProgress = ({ name, data, appliesForStudyRight }) => {
   )
 }
 
-export default PartProgress
+export default withSimpleErrorBoundary(PartProgress)

@@ -12,6 +12,23 @@ export function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }
 
+export function removeLeadingZeros(string) {
+  return string.replace(/^0+/, "")
+}
+
+export function splitGroupNameToWordAndNumber(string) {
+  return string.split(/(\d+)/)
+}
+
+export function improveGroupName(string) {
+  var stringParts = splitGroupNameToWordAndNumber(string)
+  return (
+    capitalizeFirstLetter(stringParts[0]) +
+    " " +
+    removeLeadingZeros(stringParts[1])
+  )
+}
+
 export function normalizeExerciseId(string) {
   return encodeURIComponent(
     string
