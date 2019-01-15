@@ -12,7 +12,7 @@
     "babel-plugin-styled-components": "^1.10.0",
     "code-states-visualizer": "^0.1.1",
     "core-js": "^2.6.1",
-    "crowdsorcerer": "^0.1.18",
+    "crowdsorcerer": "^0.1.20",
     "fetch-ponyfill": "^6.0.2",
     "focus-visible": "^4.1.5",
     "gatsby": "^2.0.91",
