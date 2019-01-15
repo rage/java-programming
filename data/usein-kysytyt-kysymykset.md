@@ -25,6 +25,8 @@ Avaa joko issue tai muutosehdoitus kurssin Github-repossa: https://github.com/ra
 
 Seuraa tätä ohjetta ongelman ratkaisemiseksi: https://materiaalit.github.io/tmc-asennus/macos-verkkoongelma/.
 
+Jos tämä ei auta, kokeile vaihtaa Netbeanssin asetuksista proxy setting vaihtoehtoon "no proxy".
+
 ### Netbeanssin asennusohjelma ei avaudu macOS:lla
 
 Kokele painaa asennusohjelmaa hiiren oikealla näppäimellä ja valitse Avaa/Open.
