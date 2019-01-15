@@ -523,7 +523,7 @@ kolme
 
 </sample-output>
 
-<programming-exercise name='Hei Ada Lovelace!' tmcname='osa01-Osa01_06.HeiAdaLovelace'>
+<programming-exercise name='Hei Ada Lovelace!' tmcname='osa01-Osa01_06.HelAdaLovelace'>
 
 Tehtäväpohjassa on seuraavanlainen ohjelma.
 
