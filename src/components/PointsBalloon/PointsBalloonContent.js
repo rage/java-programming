@@ -7,6 +7,7 @@ import { fetchProgress } from "../../services/progress"
 import PagesContext from "../../contexes/PagesContext"
 import PartProgress from "./PartProgress"
 import { getCachedUserDetails } from "../../services/moocfi"
+import { SMALL_MEDIUM_BREAKPOINT } from "../../util/constants"
 
 const StyledModal = styled(Modal)`
   z-index: 500 !important;
@@ -26,6 +27,12 @@ const ModalContent = styled(Paper)`
   bottom: 1.5rem;
   z-index: 200 !important;
   font-size: 1rem;
+  @media only screen and (max-width: ${SMALL_MEDIUM_BREAKPOINT}) {
+    right: 0rem;
+    bottom: 0rem;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
 `
 
 const ModalControls = styled.div`
