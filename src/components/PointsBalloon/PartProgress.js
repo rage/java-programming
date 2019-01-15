@@ -23,7 +23,7 @@ const CustomLabel = ({ x, y, stroke, value }) => {
       x={x}
       y={y}
       dy={23}
-      dx={value === 0 ? 20 : value}
+      dx={value < 15 ? 12 : value}
       fill={stroke}
       fontSize={10}
       textAnchor="middle"
