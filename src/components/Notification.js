@@ -7,6 +7,7 @@ import styled from "styled-components"
 import { Typography } from "@material-ui/core"
 import LoginStateContext from "../contexes/LoginStateContext"
 import * as store from "store"
+import { Link } from "gatsby"
 
 const StyledInfoIcon = styled(InfoIcon)`
   vertical-align: middle;
@@ -32,7 +33,6 @@ export default class Notification extends React.Component {
 
   componentDidMount() {
     this.setState({ render: true })
-    store.set("pajanotification.shown", true)
   }
 
   handleClick = () => {
@@ -45,7 +45,7 @@ export default class Notification extends React.Component {
     }
 
     this.setState({ open: false })
-    store.set("pajanotification.shown", true)
+    store.set("pajanotification.shown2", true)
   }
 
   handleRefresh = () => {
@@ -53,7 +53,7 @@ export default class Notification extends React.Component {
   }
 
   render() {
-    if (!this.state.render || store.get("pajanotification.shown")) {
+    if (!this.state.render || store.get("pajanotification.shown2")) {
       return <div />
     }
     return (
@@ -70,7 +70,11 @@ export default class Notification extends React.Component {
                 Pajaohjausta on nyt saatavilla! Ensimmäinen paja on huomenna
                 torstaina 16.1. klo 12-19 Helsingin Kumpulan kampuksella. Kaikki
                 ovat tervetulleita pajaan! Muut paja-ajat ja tarkemmat ohjeet
-                löytyvät <a href="/tukivaylat">tukiväylät</a>-sivulta.
+                löytyvät{" "}
+                <Link onClick={this.handleClose} to="/tukivaylat">
+                  tukiväylät
+                </Link>
+                -sivulta.
               </StyledTypography>
             </Fragment>
           }
