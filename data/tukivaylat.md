@@ -19,7 +19,7 @@ Jos kysyt kanavalta apua ohjelmointitehtävään, voit liittää kysymykseesi my
 
 ## Pajaohjaus
 
-Tammikuusta 2019 lähtien kurssille tulee mahdollisuus pajaohjaukseen Helsingin yliopiston kumpulan kampuksella olevassa Exactum-rakennuksessa. Kaikki ovat tervetulleita pajaan!
+Kurssilla on mahdollisuus saada hyvää ohjelmointiseuraa sekä saada apua tehtäviin, ohjelmointiin ja teknisiin ongelmiin tulemalla kurssin pajaan! Paja sijaitsee Helsingin yliopiston kumpulan kampuksella olevassa Exactum-rakennuksessa. Kaikki ovat tervetulleita pajaan!
 
 Katso Exactum-rakennuksen tarkempi sijainti seuraavasta linkistä: https://www.google.com/maps?hl=en&q=Exactum,+Kumpula+Campus,+Pietari+Kalmin+katu+5,+00560+Helsinki
 
