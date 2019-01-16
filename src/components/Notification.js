@@ -32,7 +32,7 @@ export default class Notification extends React.Component {
 
   componentDidMount() {
     this.setState({ render: true })
-    store.set("paja.closed", true)
+    store.set("pajanotification.shown", true)
   }
 
   handleClick = () => {
@@ -45,7 +45,7 @@ export default class Notification extends React.Component {
     }
 
     this.setState({ open: false })
-    store.set("paja.closed", true)
+    store.set("pajanotification.shown", true)
   }
 
   handleRefresh = () => {
@@ -53,12 +53,8 @@ export default class Notification extends React.Component {
   }
 
   render() {
-    if (
-      !this.state.render ||
-      !this.context.loggedIn ||
-      store.get("paja.closed")
-    ) {
-      return <Fragment />
+    if (!this.state.render || store.get("pajanotification.shown") === "true") {
+      return <div />
     }
     return (
       <Fragment>
