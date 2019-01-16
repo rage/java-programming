@@ -72,9 +72,9 @@ export default class Notification extends React.Component {
               <StyledInfoIcon />
               <StyledTypography>
                 Pajaohjausta on nyt saatavilla! Ensimmäinen paja on huomenna
-                torstaina 16.1. klo 12-19 Helsingin Kumpulan kampuksella. Muut
-                paja-ajat ja tarkemmat ohjeet löytyvät{" "}
-                <a href="/tukivaylat">tukiväylät</a>-sivulta.
+                torstaina 16.1. klo 12-19 Helsingin Kumpulan kampuksella. Kaikki
+                ovat tervetulleita pajaan! Muut paja-ajat ja tarkemmat ohjeet
+                löytyvät <a href="/tukivaylat">tukiväylät</a>-sivulta.
               </StyledTypography>
             </Fragment>
           }
