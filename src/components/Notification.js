@@ -53,7 +53,7 @@ export default class Notification extends React.Component {
   }
 
   render() {
-    if (!this.state.render || store.get("pajanotification.shown") === "true") {
+    if (!this.state.render || store.get("pajanotification.shown")) {
       return <div />
     }
     return (
