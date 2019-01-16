@@ -1,6 +1,7 @@
 import React from "react"
 import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
 import styled from "styled-components"
+import { SMALL_MEDIUM_BREAKPOINT } from "../../util/constants"
 
 const StyledTooltip = styled.div`
   background: white;
@@ -9,6 +10,11 @@ const StyledTooltip = styled.div`
   p {
     margin-bottom: 0 !important;
     font-size: 0.9rem;
+  }
+  @media only screen and (max-width: ${SMALL_MEDIUM_BREAKPOINT}) {
+    p {
+      font-size: 0.75rem;
+    }
   }
 `
 
