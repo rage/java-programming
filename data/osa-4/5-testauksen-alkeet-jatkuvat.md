@@ -8,6 +8,13 @@ hidden: true
 
 TODO: tee
 
+
+TODO: mainitse, että testejä pitää tehdä vähintään kolme
+
+<crowdsorcerer id='23'></crowdsorcerer>
+
+<crowdsorcerer id='24'></crowdsorcerer>
+
 #
   Suunnittele oma tehtävä: Listat
 <% end %>
