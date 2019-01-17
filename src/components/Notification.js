@@ -69,10 +69,9 @@ export default class Notification extends React.Component {
               <StyledTypography>
                 Pajaohjausta on nyt saatavilla! Pajasta saa apua tehtäviin,
                 ohjelmointiin ja teknisiin ongelmiin sekä hyvää
-                ohjelmointiseuraa. Ensimmäinen paja on tänään torstaina 17.1.
-                klo 12-19 Helsingin Kumpulan kampuksella. Kaikki ovat
-                tervetulleita pajaan! Muut paja-ajat ja tarkemmat ohjeet
-                löytyvät{" "}
+                ohjelmointiseuraa. Paja sijaitsee Helsingin Kumpulan
+                kampuksella. Kaikki ovat tervetulleita pajaan! Muut paja-ajat ja
+                tarkemmat ohjeet löytyvät{" "}
                 <Link onClick={this.handleClose} to="/tukivaylat">
                   tukiväylät
                 </Link>
