@@ -12,8 +12,14 @@ hidden: true
 
 </text-box>
 
+TODO: lead in
 
-<pdfslideshow path='../slideshows/johdatus-olio-ohjelmointiin.pdf'></pdfslideshow>
+<pdf-slideshow>
+
+[a](../slideshows/johdatus-olio-ohjelmointiin.pdf)
+
+</pdf-slideshow>
+
 
 TODO: quiz
 

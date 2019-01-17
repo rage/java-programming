@@ -54,11 +54,11 @@ Luokasta luodaan olio aina kutsumalla olion luovaa metodia eli **konstruktoria**
 
 Luokka kuvaa siitä luotavien olioiden "rakennuspiirustukset". Otetaan analogia tietokoneiden ulkopuoleisesta maailmasta. Rintamamiestalot lienevät monille tuttuja. Voidaan ajatella, että jossain on olemassa piirustukset jotka määrittelevät minkälainen rintamamiestalo on. Piirrustukset ovat luokka, eli ne määrittelevät minkälaisia olioita luokasta voidaan luoda:
 
-<img src="/img/rintamamiestalo-rakennuspiirrustus.jpg"/>
+<img src="../img/rintamamiestalo-rakennuspiirrustus.jpg"/>
 
 Yksittäiset oliot eli rintamamiestalot on tehty samojen piirustusten perusteella, eli ne ovat saman luokan ilmentymiä. Yksittäisten olioiden tila eli ominaisuudet (esim. seinien väri, katon rakennusmateriaali ja väri, kivijalan väri, ovien rakennusmateriaali ja väri, ...) vaihtelevat. Seuraavassa yksi "rintamamiestalo-luokan olio":
 
-<img src="/img/rintamamiestalo.jpg" height=250 />
+<img src="../img/rintamamiestalo.jpg" />
 
 </text-box>
 
@@ -149,11 +149,11 @@ public class Henkilo {
 
 NetBeansissa uuden tiedoston luomisen jälkeinen tilanne näyttää seuraavalta. Alla olevassa kuvassa Hiekkalaatikkotehtävään on lisätty luokka `Henkilo`.
 
-<img src="/img/material/luokka-luotuna.png">
+<img src="../img/material/luokka-luotuna.png">
 
 Luokkaa kuvaamaan voi piirtää myös luokkakaavion, jonka merkintätekniikkaan tutustutaan tässä samalla. Henkilo-niminen luokka, jossa ei ole mitään sisällä näyttää seuraavalta:
 
-<img src="/img/diagrams/luokkakaavio-henkilo.png">
+<img src="../img/diagrams/luokkakaavio-henkilo.png">
 
 Luokka määrittelee luokasta luotavien olioiden ominaisuudet ja toiminnallisuudet. Päätetään, että jokaisella henkilöoliolla on nimi ja ikä. Nimi on luonnollista esittää merkkijonona, eli Stringinä, ja ikä taas kokonaislukuna. Lisätään nämä rakennuspiirustuksiimme:
 
@@ -170,7 +170,7 @@ Oliomuuttujat kirjoitetaan luokan määrittelyä `public class Henkilo {` seuraa
 
 Luokkaakaaviossa luokkaan liittyvät muuttujat määritellään muodossa "muuttujanNimi: muuttujanTyyppi". Miinusmerkki ennen muuttujan nimeä kertoo, että muuttuja on kapseloitu (sillä on avainsana private).
 
-<img src="/img/diagrams/luokkakaavio-henkilo-ika-ja-nimi.png">
+<img src="../img/diagrams/luokkakaavio-henkilo-ika-ja-nimi.png">
 
 Olemme nyt määritelleet rakennuspiirustukset -- luokan -- henkilöoliolle. Jokaisella uudella henkilöolioilla on muuttujat `nimi` ja `ika`, joissa voi olla oliokohtainen arvo. Henkilöiden "tila" koostuu niiden nimeen ja ikään asetetuista arvoista.
 
@@ -181,7 +181,7 @@ Uuden luokan saa lisättyä NetBeansissa seuraavasti: Ruudun vasemmalla reunalla
 
 Tässä tehtävässä harjoittelet luokan luomista. Luo tehtäväpohjaan luokka nimeltä `Koira` ja lisää sille oliomuuttujat `private String nimi`, `private String rotu` ja `private int ika`. Luokkakaaviona luokka näyttää seuraavalta:
 
-<img src="/img/diagrams/luokkakaavio-teht-koira.png" alt="[Koira|-nimi:String;-rotu:String;-ika:int]">
+<img src="../img/diagrams/luokkakaavio-teht-koira.png" alt="[Koira|-nimi:String;-rotu:String;-ika:int]">
 
 Luokalla ei vielä oikeastaan tee mitään, mutta tämän askeleen harjoittelusta on hyötyä myöhempää ajatellen.
 
@@ -225,7 +225,7 @@ Koska oliomuuttujat on määritelty konstruktorin aaltosulkujen ulkopuolella, vo
 
 Nyt luokkakaavioon on merkitty luokan nimen ja muuttujien lisäksi myös konstruktori. Konstruktori saa public-näkyvyysmääreen takia eteen plussan, jonka lisäksi siitä merkitään sen nimi ja parametrin tyypit (tässä `+ Henkilo(String)`).
 
-<img src="/img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori.png">
+<img src="../img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori.png">
 
 
 <programming-exercise name='Huone' tmcname='osa04-Osa04_14.Huone'>
@@ -234,7 +234,7 @@ Uuden luokan saa lisättyä seuraavasti: Ruudun vasemmalla reunalla on projektil
 
 Luo luokka nimeltä `Huone`. Huoneella on oliomuuttujina `private String koodi`, esimerkiksi "B221", ja `private int istumapaikat`, esimerkiksi 30. Luo tämän jälkeen konstruktori `public Huone(String luokanKoodi, int istumapaikkojenMaara)`, minkä avulla oliomuuttujiin asetetaan arvot.
 
-<img src="/img/diagrams/luokkakaavio-teht-huone.png" alt="[Huone|-koodi:String;-istumapaikat:int|+Huone(String‚ int)]">
+<img src="../img/diagrams/luokkakaavio-teht-huone.png" alt="[Huone|-koodi:String;-istumapaikat:int|+Huone(String‚ int)]">
 
 Tälläkään luokalla ei vielä oikeastaan tee mitään, mutta seuraavassa tehtävässä luokastamme tehty olio osaa jo tulostaa tekstiä.
 
@@ -308,7 +308,7 @@ Metodeistamme puuttuu jatkossa määre `static` mikäli ne käsittelevät kyseis
 
 Luokkakaavioon on merkitty luokan nimen, oliomuuttujien ja konstruktorin lisäksi nyt myös metodi `tulostaHenkilo`. Koska metodilla on `public`-määre, tulee sille alkuun plus, jota seuraa metodin nimi. Metodille ei ole määritelty parametreja, joten ei myöskään piirretä metodin sulkujen sisälle. Metodille merkitään myös tieto siitä, että se ei palauta arvoa, tässä `void`.
 
-<img src="/img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta.png">
+<img src="../img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta.png">
 
 Metodin `tulostaHenkilo` sisällä on yksi koodirivi joka käyttää hyväkseen oliomuuttujia `nimi` ja `ika` -- luokkakaavio ei kerro sisäisestä toteutuksesta. Olion sisäisiin muuttujiin viitataan etuliitteellä `this`. Kaikki olion muuttujat ovat siis näkyvillä ja käytettävissä metodin sisällä.
 
@@ -441,7 +441,7 @@ Metodi kirjoitetaan `tulostaHenkilo`-metodin tapaan luokan `Henkilo` sisälle. M
 
 Myös luokkakaavio päivittyy.
 
-<img src="/img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta-ja-vanhene.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(String);+tulostaHenkilo():void;+vanhene():void]">
+<img src="../img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta-ja-vanhene.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(String);+tulostaHenkilo():void;+vanhene():void]">
 
 Kutsutaan metodia ja katsotaan mitä tapahtuu:
 
@@ -825,7 +825,7 @@ public class Henkilo {
 
 Luokka kokonaisuudessaan:
 
-<img src="/img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta-ja-vanhene-ja-palautaika.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(String);+tulostaHenkilo():void;+vanhene():void;+palautaIka():int]">
+<img src="../img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta-ja-vanhene-ja-palautaika.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(String);+tulostaHenkilo():void;+vanhene():void;+palautaIka():int]">
 
 Havainnollistetaan metodin toimintaa:
 
@@ -861,16 +861,16 @@ Pekka ja Antti yhteensä 3 vuotta
 </sample-output>
 
 
-<quiznator id='59bd00596ee1930004e5f921'></quiznator>
+<quiznator id='5c409ea9fd9fd71425c5f871'></quiznator>
 
-<quiznator id='5a57bcce574f0b000439a331'></quiznator>
+<quiznator id='5c409ecd017ffc13eddc6d37'></quiznator>
 
 
 <programming-exercise name='Henkilo' tmcname='osa04-Osa04_20.Henkilo'>
 
 Luo luokka Henkilo (ei öötä!). Luokan Henkilo tulee sisältää seuraavan luokkakaavion määrittelemät ominaisuudet.
 
-<img src="/img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta-ja-vanhene-ja-palautaika.png">
+<img src="../img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta-ja-vanhene-ja-palautaika.png">
 
 Luokkakaaviossa ei kuitenkaan kerrota *miten* esimerkiksi metodien tulee toimia. Tässä vielä tarkennus luokkakaavion lisäksi.
 
@@ -1018,7 +1018,7 @@ Metodi `getNimi` palauttaa oliomuuttujan `nimi` kutsujalle. Metodin nimi on hiem
 
 Luokka kokonaisuudessaan:
 
-<img src="/img/diagrams/luokkakaavio-henkilo-getterit.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(String);+tulostaHenkilo():void;+vanhene():void;+palautaIka():int;+taysiIkainen():boolean;+getNimi():String]">
+<img src="../img/diagrams/luokkakaavio-henkilo-getterit.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(String);+tulostaHenkilo():void;+vanhene():void;+palautaIka():int;+taysiIkainen():boolean;+getNimi():String]">
 
 Muotoillaan pääohjelma käyttämään uutta "getteri"-metodia:
 
@@ -1199,7 +1199,7 @@ My name is Bond, Ionic Bond
 
 Helsingin Yliopiston opiskelijaruokaloissa eli Unicafeissa opiskelijat maksavat lounaansa käyttäen maksukorttia. Lopullinen Maksukortti tulee näyttämään luokkakaaviona seuraavalta:
 
-<img src="/img/diagrams/luokkakaavio-teht-maksukortti.png" alt="[Maksukortti|-saldo:double|+Maksukortti(double);+syoEdullisesti():void;+syoMaukkaasti():void;+lataaRahaa(double):void;+toString():String]">
+<img src="../img/diagrams/luokkakaavio-teht-maksukortti.png" alt="[Maksukortti|-saldo:double|+Maksukortti(double);+syoEdullisesti():void;+syoMaukkaasti():void;+lataaRahaa(double):void;+toString():String]">
 
 Tässä tehtäväsäsarjassa tehdään luokka `Maksukortti`, jonka tarkoituksena on jäljitellä Unicafeissa tapahtuvaa maksutoimintaa.
 
