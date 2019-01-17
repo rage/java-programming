@@ -63,7 +63,7 @@ Yksittäiset oliot eli rintamamiestalot on tehty samojen piirustusten perusteell
 </text-box>
 
 
-<programming-exercise name='Ensimmäinen tilisi'>
+<programming-exercise name='Ensimmäinen tilisi' tmcname='osa04-Osa04_11.EnsimmainenTilisi'>
 
 Tehtäväpohjan mukana tulee valmis luokka `Tili`. Luokan `Tili` olio esittää pankkitiliä, jolla on saldo (eli jossa on jokin määrä rahaa). Tilejä käytetään näin:
 
@@ -90,7 +90,7 @@ Tee ohjelma, joka luo tilin jonka saldo on 100.0, panee tilille 20.0 ja tulostaa
 </programming-exercise>
 
 
-<programming-exercise name='Ensimmäinen tilisiirtosi'>
+<programming-exercise name='Ensimmäinen tilisiirtosi' tmcname='osa04-Osa04_12.EnsimmainenTilisiirtosi'>
 
 Tässäkin tehtävässä on käytössä edellisessä tehtävässä mukana ollut luokka `Tili`.
 
@@ -175,7 +175,7 @@ Luokkaakaaviossa luokkaan liittyvät muuttujat määritellään muodossa "muuttu
 Olemme nyt määritelleet rakennuspiirustukset -- luokan -- henkilöoliolle. Jokaisella uudella henkilöolioilla on muuttujat `nimi` ja `ika`, joissa voi olla oliokohtainen arvo. Henkilöiden "tila" koostuu niiden nimeen ja ikään asetetuista arvoista.
 
 
-<programming-exercise name='Koiran ominaisuudet'>
+<programming-exercise name='Koiran ominaisuudet' tmcname='osa04-Osa04_13.KoiranOminaisuudet'>
 
 Uuden luokan saa lisättyä NetBeansissa seuraavasti: Ruudun vasemmalla reunalla on projektilistaus (Projects). Paina projektin nimen kohdalla hiiren oikeaa nappia. Valitse avautuvasta valikosta *New* ja *Java Class*. Anna luokan nimeksi (Class Name) `Koira`.
 
@@ -228,7 +228,7 @@ Nyt luokkakaavioon on merkitty luokan nimen ja muuttujien lisäksi myös konstru
 <img src="/img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori.png">
 
 
-<programming-exercise name='Huone'>
+<programming-exercise name='Huone' tmcname='osa04-Osa04_14.Huone'>
 
 Uuden luokan saa lisättyä seuraavasti: Ruudun vasemmalla reunalla on projektilistaus. Paina projektin nimen kohdalla hiiren oikeaa nappia. Valitse avautuvasta valikosta *New* ja *Java Class*. Jos haluat että luokan nimi on Huone, aseta luokan nimeksi (Class Name) `Huone`.
 
@@ -347,7 +347,7 @@ Sama screencastina:
 &nbsp;
 
 
-<programming-exercise name='Pilli'>
+<programming-exercise name='Pilli' tmcname='osa04-Osa04_15.Pilli'>
 
 Luo luokka nimeltä `Pilli`. Pillillä on oliomuuttujina `private String aani`. Luo tämän jälkeen konstruktori `public Pilli(String pillinAani)`, minkä avulla luodaan uusi pilli, jolle annetaan ääni.
 
@@ -376,7 +376,7 @@ Kvaak
 </programming-exercise>
 
 
-<programming-exercise name='Ovi'>
+<programming-exercise name='Ovi' tmcname='osa04-Osa04_16.Ovi'>
 
 Luo luokka nimeltä `Ovi`. Ovella ei ole oliomuuttujia. Luo sille parametriton konstruktori (tai käytä oletuskonstruktoria).  Luo tämän jälkeen ovelle metodi `public void koputa()`, jota kutsuttaessa tulostuu viesti "Who's there?".
 
@@ -400,7 +400,7 @@ Who's there?
 </programming-exercise>
 
 
-<programming-exercise name='Tuote'>
+<programming-exercise name='Tuote' tmcname='osa04-Osa04_17.Tuote'>
 
 Luo luokka `Tuote` joka esittää kaupan tuotetta jolla on hinta, lukumäärä ja nimi.
 
@@ -494,7 +494,7 @@ public class Henkilo {
 }
 ```
 
-<programming-exercise name='Vähenevä laskuri (4 osaa)'>
+<programming-exercise name='Vähenevä laskuri (4 osaa)' tmcname='osa04-Osa04_18.VahenevaLaskuri'>
 
 Tässä tehtävässä on useampi osa. Jokainen osa vastaa yhtä tehtäväpistettä.
 
@@ -667,7 +667,7 @@ arvo: 100
 </programming-exercise>
 
 
-<programming-exercise name='Velka'>
+<programming-exercise name='Velka' tmcname='osa04-Osa04_19.Velka'>
 
 Luo luokka `Velka`, jolla on double-tyyppiset oliomuuttujat `saldo` ja `korkokerroin`. Saldo ja korkokerroin annetaan konstruktorin parametrina `public Velka(double saldoAlussa, double korkokerroinAlussa)`.
 
@@ -866,7 +866,7 @@ Pekka ja Antti yhteensä 3 vuotta
 <quiznator id='5a57bcce574f0b000439a331'></quiznator>
 
 
-<programming-exercise name='Henkilo'>
+<programming-exercise name='Henkilo' tmcname='osa04-Osa04_20.Henkilo'>
 
 Luo luokka Henkilo (ei öötä!). Luokan Henkilo tulee sisältää seuraavan luokkakaavion määrittelemät ominaisuudet.
 
@@ -911,7 +911,7 @@ Pekka ja Antti yhteensä 3 vuotta
 </programming-exercise>
 
 
-<programming-exercise name='Musiikkikappale'>
+<programming-exercise name='Musiikkikappale' tmcname='osa04-Osa04_21.Musiikkikappale'>
 
 Luo luokka nimeltä `Musiikkikappale`. Musiikkikappaleella on oliomuuttujat `nimi` (merkkijono) ja `pituus` sekunteina (kokonaisluku). Molemmat asetetaan konstruktorissa `public Musiikkikappale(String kappaleenNimi, int kappaleenPituus)`. Lisää oliolle myös metodit `public String nimi()`, joka palauttaa kappaleen nimen, ja `public int pituus()`, joka palauttaa kappaleen pituuden.
 
@@ -1061,7 +1061,7 @@ Pekka on täysi-ikäinen
 </sample-output>
 
 
-<programming-exercise name='Elokuva'>
+<programming-exercise name='Elokuva' tmcname='osa04-Osa04_22.Elokuva'>
 
 Luo luokka Elokuva, jolla on oliomuuttujat `nimi` (String) ja `ikaraja` (int). Tee luokalle konstruktori `public Elokuva(String elokuvanNimi, int elokuvanIkaraja)` sekä metodit `public String nimi()` ja `public int ikaraja()`. Ensimmäinen palauttaa elokuvan nimen ja toinen elokuvan ikärajan.
 
@@ -1156,7 +1156,7 @@ Olioscreencastin toinen osa:
 &nbsp;
 
 
-<programming-exercise name='Agentti'>
+<programming-exercise name='Agentti' tmcname='osa04-Osa04_23.Agentti'>
 
 Tehtäväpohjassa on määriteltynä luokka Agentti, jolla on etunimi ja sukunimi. Luokalle on määritelty metodi `tulosta`, joka luo seuraavanlaisen merkkijonoesityksen.
 
@@ -1195,7 +1195,7 @@ My name is Bond, Ionic Bond
 </programming-exercise>
 
 
-<programming-exercise name='Maksukortti (6 osaa)'>
+<programming-exercise name='Maksukortti (6 osaa)' tmcname='osa04-Osa04_24.Maksukortti'>
 
 Helsingin Yliopiston opiskelijaruokaloissa eli Unicafeissa opiskelijat maksavat lounaansa käyttäen maksukorttia. Lopullinen Maksukortti tulee näyttämään luokkakaaviona seuraavalta:
 
@@ -1565,7 +1565,7 @@ public void setPituus(int pituus) {
 ```
 
 
-<programming-exercise name='Kertoja'>
+<programming-exercise name='Kertoja' tmcname='osa04-Osa04_25.Kertoja'>
 
 Luo luokka `Kertoja` jolla on:
 
@@ -1627,7 +1627,7 @@ Olioscreencastin kolmas osa:
 &nbsp;
 
 
-<programming-exercise name='Lukutilasto (4 osaa)'>
+<programming-exercise name='Lukutilasto (4 osaa)' tmcname='osa04-Osa04_26.Lukutilasto'>
 
 <h2>Lukujen määrä</h2>
 

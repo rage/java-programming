@@ -197,7 +197,7 @@ for (Henkilo henkilo: henkilot) {
 }
 ```
 
-<programming-exercise name='Televisio-ohjelmat'>
+<programming-exercise name='Televisio-ohjelmat' tmcname='osa04-Osa04_27.TelevisioOhjelmat'>
 
 Tehtäväpohjassa on valmiina televisio-ohjelmaa kuvaava luokka TelevisioOhjelma. Luokalla on oliomuuttujat nimi ja pituus, konstruktori, ja muutamia metodeja.
 
@@ -225,7 +225,7 @@ Miehen puolikkaat, 30 minuuttia
 </programming-exercise>
 
 
-<programming-exercise name='Kirjat (2 osaa)'>
+<programming-exercise name='Kirjat (2 osaa)' tmcname='osa04-Osa04_28.Kirjat'>
 
 Toteuta ohjelma, joka ensin lukee kirjojen tietoja käyttäjältä. Jokaisesta kirjasta tulee lukea kirjan nimi, sivujen lukumäärä sekä kirjoitusvuosi. Kirjojen lukeminen lopetetaan kun käyttäjä syöttää tyhjän kirjan nimen.
 

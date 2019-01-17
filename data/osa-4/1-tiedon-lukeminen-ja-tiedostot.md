@@ -44,7 +44,7 @@ Yllä Scanner-luokan konstruktorille annetaan parametrina järjestelmän syöte 
 
 
 
-<programming-exercise name='Merkkijonojen lukumäärä'>
+<programming-exercise name='Merkkijonojen lukumäärä' tmcname='osa04-Osa04_01.MerkkijonojenLukumaara'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä merkkijonoja kunnes käyttäjä syöttää merkkijonon "loppu". Tämän jälkeen ohjelma tulostaa luettujen merkkijonojen lukumäärän. Merkkijonoa "loppu" ei tule huomioida syötettyjen merkkijonojen lukumäärän laskemisessa. Alla muutamia esimerkkejä ohjelman toiminnasta.
 
@@ -98,7 +98,7 @@ while (true) {
 ```
 
 
-<programming-exercise name='Kuutiot'>
+<programming-exercise name='Kuutiot' tmcname='osa04-Osa04_02.Kuutiot'>
 
 Kirjoita ohjelma, joka lukee merkkijonoja käyttäjältä kunnes käyttäjä syöttää merkkijonon "loppu". Mikäli syöte ei ole "loppu", ohjelman tulee käsitellä syöte lukuna ja tulostaa syötetyn luvun kuutio (eli luku * luku * luku). Alla on muutamia tulostusesimerkkejä
 
@@ -137,7 +137,7 @@ Tietokoneissa on useampia ohjelmia tiedostojen selaamiseen ja nämä ohjelmistot
 Myös käyttämämme ohjelmointiympäristö tarjoaa mahdollisuuden ohjelmointiympäristössä olevien projektien sisältämien tiedostojen selaamiseen. Voit käydä tarkastelemassa NetBeansissa kaikkia projektiin liittyviä tiedostoja valitsemalla `Files`-välilehden, joka löytyy `Projects`-välilehden kanssa samasta paikasta. Mikäli `Files`-välilehteä ei löydy, saa sen auki myös `Window`-valikosta. Klikkaamalla projektin auki, näet kaikki siihen liittyvät tiedostot.
 
 
-<programming-exercise name='Uuden tiedoston luominen'>
+<programming-exercise name='Uuden tiedoston luominen' tmcname='osa04-Osa04_03.UudenTiedostonLuominen'>
 
 Tässä tehtävässä ei ohjelmoida, vaan tutustutaan tiedoston luomiseen.
 
@@ -179,7 +179,7 @@ try (Scanner tiedostonLukija = new Scanner(new File("tiedosto.txt"))) {
 Oletuksena (eli kutsuttaessa `new Scanner(new File("tiedosto.txt"))`) tiedosto luetaan projektin juuresta eli kansiosta, joka sisältää kansion `src` sekä tiedoston `pom.xml` (ja mahdollisesti myös muita tiedostoja). Tämän kansion sisältöä voi tarkastella NetBeansin Files-välilehdeltä.
 
 
-<programming-exercise name='Tiedoston tulostaminen'>
+<programming-exercise name='Tiedoston tulostaminen' tmcname='osa04-Osa04_04.TiedostonTulostaminen'>
 
 Kirjoita ohjelma, joka tulostaa tiedoston nimeltä "data.txt" sisällön siten, että kukin tiedoston rivi tulee tulostuksessa omalle rivilleen.
 
@@ -204,7 +204,7 @@ maailma
 </programming-exercise>
 
 
-<programming-exercise name='Kysytyn tiedoston tulostaminen'>
+<programming-exercise name='Kysytyn tiedoston tulostaminen' tmcname='osa04-Osa04_05.KysytynTiedostonTulostaminen'>
 
 Kirjoita ohjelma, joka kysyy käyttäjältä merkkijonoa ja tulostaa tämän jälkeen käyttäjän syöttämän nimisen tiedoston sisällön. Voit olettaa, että käyttäjä syöttää tiedoston, joka löytyy ohjelmasta.
 
@@ -255,7 +255,7 @@ try (Scanner tiedostonLukija = new Scanner(new File("tiedosto.txt"))) {
 ```
 
 
-<programming-exercise name='Vieraslista tiedostosta'>
+<programming-exercise name='Vieraslista tiedostosta' tmcname='osa04-Osa04_06.VieraslistaTiedostosta'>
 
 Tehtäväpohjassa on valmiina toiminnallisuus vieraslistaohjelmaan, missä käyttäjän syöttämien nimien olemassaolo tarkistetaan vieraslistalta.
 
@@ -307,7 +307,7 @@ alicia
 </programming-exercise>
 
 
-<programming-exercise name='Löytyykö tiedostosta?'>
+<programming-exercise name='Löytyykö tiedostosta?' tmcname='osa04-Osa04_07.LoytyykoTiedostosta'>
 
 Tehtäväpohjassa tulee kaksi tekstitiedostoa: `nimet.txt` ja `toiset-nimet.txt`. Kirjoita ohjelma, joka kysyy ensin käyttäjältä luettavan tiedoston nimeä, jonka jälkeen käyttäjältä kysytään etsittävää merkkijonoa. Tämän jälkeen ohjelma lukee tiedoston ja etsii tiedostosta haluttua merkkijonoa.
 
@@ -346,7 +346,7 @@ Tiedoston olematon.txt lukeminen epäonnistui.
 </programming-exercise>
 
 
-<programming-exercise name='Mittaukset tiedostosta'>
+<programming-exercise name='Mittaukset tiedostosta' tmcname='osa04-Osa04_08.MittauksetTiedostosta'>
 
 Toteuta ohjelma, joka lukee käyttäjältä tiedoston nimen sekä hyväksyttävien lukujen ala- ja ylärajan. Tämän jälkeen ohjelma lukee tiedoston sisältämät luvut (jokainen luku on omalla rivillään) ja ottaa huomioon vain ne luvut, jotka ovat annetulla lukuvälillä. Lopulta ohjelma tulostaa annetulla lukuvälillä olleiden lukujen lukumäärän.
 
@@ -526,7 +526,7 @@ urho on syntynyt vuonna 1900
 </sample-output>
 
 
-<programming-exercise name='Nuorin'>
+<programming-exercise name='Nuorin' tmcname='osa04-Osa04_09.Nuorin'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä henkilöiden nimiä ja ikiä. Kunkin henkilön nimi ja ikä syötetään samalla rivillä. Nimi ja ikä on pilkulla erotettu. Kun käyttäjä syöttää merkkijonon "loppu", lukeminen lopetetaan. Tämän jälkeen ohjelma tulostaa nuorimman henkilön nimen. Voit olettaa, että nuorin henkilö on yksikäsitteinen, eli syötteessä ei ole useampia saman ikäisiä (nuorimpia) henkilöitä.
 
@@ -546,7 +546,7 @@ Nuorin oli: aamu
 </programming-exercise>
 
 
-<programming-exercise name='Vanhin tiedostosta'>
+<programming-exercise name='Vanhin tiedostosta' tmcname='osa04-Osa04_10.VanhinTiedostosta'>
 
 Tässä tehtävässä käsitellään CSV-muodossa tallennettuja tiedostoja, jotka sisältävät riveittän pilkuilla eroteltuna nimiä ja ikiä. Tiedoston muoto on esimerkiksi seuraava:
 

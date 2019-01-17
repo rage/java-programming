@@ -15,3 +15,5 @@ hidden: true
 
 <pdfslideshow path='../slideshows/johdatus-olio-ohjelmointiin.pdf'></pdfslideshow>
 
+TODO: quiz
+
