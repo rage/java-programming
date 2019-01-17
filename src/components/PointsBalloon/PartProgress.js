@@ -4,6 +4,7 @@ import styled from "styled-components"
 import { BarChart, Bar, XAxis, YAxis, LabelList, Tooltip } from "recharts"
 import { improveGroupName } from "../../util/strings"
 import CustomTooltip from "./CustomTooltip"
+import { SMALL_MEDIUM_BREAKPOINT } from "../../util/constants"
 
 const PartProgressContainer = styled.div`
   margin-bottom: 0.5rem;
@@ -15,6 +16,13 @@ const SmallP = styled.p`
 
 const LargeP = styled.p`
   font-size: 1rem;
+`
+
+const StyledBarChart = styled(BarChart)`
+  margin: 0 auto;
+  @media only screen and (max-width: ${SMALL_MEDIUM_BREAKPOINT}) {
+    font-size: 0.75rem;
+  }
 `
 
 const CustomLabel = ({ x, y, stroke, value }) => {
@@ -34,6 +42,14 @@ const CustomLabel = ({ x, y, stroke, value }) => {
 }
 
 const PartProgress = ({ name, data, appliesForStudyRight }) => {
+  var BAR_CHART_WIDTH = 375
+  var BAR_CHART_Y_AXIS_WIDTH = 142
+
+  if (window.innerWidth < SMALL_MEDIUM_BREAKPOINT.slice(0, -2)) {
+    BAR_CHART_WIDTH = 300
+    BAR_CHART_Y_AXIS_WIDTH = 110
+  }
+
   const allChartData = Object.entries(data).map(([tool, data]) => {
     return {
       tool,
@@ -60,15 +76,19 @@ const PartProgress = ({ name, data, appliesForStudyRight }) => {
     <PartProgressContainer>
       <b>{improveGroupName(name)}</b>
       <div>
-        <BarChart
+        <StyledBarChart
           layout="vertical"
-          width={350}
+          width={BAR_CHART_WIDTH}
           height={60 * allChartData.length}
           data={allChartData}
         >
           <Tooltip content={<CustomTooltip />} />
           <XAxis domain={[0, 100]} dataKey="progress" type="number" />
-          <YAxis width={142} type="category" dataKey="tool" />
+          <YAxis
+            width={BAR_CHART_Y_AXIS_WIDTH}
+            type="category"
+            dataKey="tool"
+          />
           <Bar dataKey="progress" fill="#f1a9a0">
             <LabelList
               content={CustomLabel}
@@ -76,7 +96,7 @@ const PartProgress = ({ name, data, appliesForStudyRight }) => {
               position="middle"
             />
           </Bar>
-        </BarChart>
+        </StyledBarChart>
         <LargeP>
           Osasta saadut kurssipisteet:{" "}
           {Math.floor(Math.min(100, totalProgress * 111.112))}

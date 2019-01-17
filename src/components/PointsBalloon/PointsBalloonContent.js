@@ -32,6 +32,7 @@ const ModalContent = styled(Paper)`
     bottom: 0rem;
     border-bottom-left-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
+    padding: 1rem;
   }
 `
 
