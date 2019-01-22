@@ -29,7 +29,10 @@ class MissingInfo extends React.Component {
     return (
       <Layout>
         <Container>
-          <CourseOptionsEditor onComplete={this.onStepComplete} />
+          <CourseOptionsEditor
+            courseVariant="nodl"
+            onComplete={this.onStepComplete}
+          />
         </Container>
       </Layout>
     )

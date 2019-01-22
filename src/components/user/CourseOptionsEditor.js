@@ -57,11 +57,14 @@ class CourseOptionsEditor extends React.Component {
   onClick = async e => {
     e.preventDefault()
     this.setState({ submitting: true })
-    const extraFields = {
+    let extraFields = {
       applies_for_study_right: this.state.applies_for_study_right,
       digital_education_for_all: this.state.digital_education_for_all,
       marketing: this.state.marketing,
       research: this.state.research,
+    }
+    if (this.props.courseVariant) {
+      extraFields["course_variant"] = this.props.courseVariant
     }
     const userField = {
       first_name: this.state.first_name,

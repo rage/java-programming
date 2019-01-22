@@ -31,7 +31,12 @@ class SignInPage extends React.Component {
     if (this.state.step === 1) {
       stepComponent = <CreateAccountForm onComplete={this.onStepComplete} />
     } else if (this.state.step === 2) {
-      stepComponent = <CourseOptionsEditor onComplete={this.onStepComplete} />
+      stepComponent = (
+        <CourseOptionsEditor
+          courseVariant="nodl"
+          onComplete={this.onStepComplete}
+        />
+      )
     } else {
       stepComponent = <ConfirmEmail onComplete={this.onStepComplete} />
     }
