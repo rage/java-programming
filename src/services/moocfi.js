@@ -7,7 +7,6 @@ import uuidv4 from "uuid/v4"
 const { fetch } = fetchPonyfill()
 const BASE_URL = "https://tmc.mooc.fi/api/v8"
 const ORGANIZATION = "mooc"
-const COURSE = "2019-ohjelmointi"
 
 const tmcClient = new TmcClient(
   "59a09eef080463f90f8c2f29fbf63014167d13580e1de3562e57b9e6e4515182",
@@ -173,7 +172,7 @@ export function updatePassword(currentPassword, password, confirmPassword) {
 
 export async function fetchProgrammingExerciseDetails(exerciseName) {
   const res = await axios.get(
-    `${BASE_URL}/org/${ORGANIZATION}/courses/${COURSE}/exercises/${exerciseName}`,
+    `${BASE_URL}/org/${ORGANIZATION}/courses/${await getCourse()}/exercises/${exerciseName}`,
     {
       headers: {
         "Content-Type": "application/json",
@@ -199,7 +198,7 @@ export async function fetchProgrammingExerciseModelSolution(exerciseId) {
 
 export async function fetchProgrammingProgress(exerciseName) {
   const res = await axios.get(
-    `${BASE_URL}/org/${ORGANIZATION}/courses/${COURSE}/users/current/progress`,
+    `${BASE_URL}/org/${ORGANIZATION}/courses/${await getCourse()}/users/current/progress`,
     {
       headers: {
         "Content-Type": "application/json",
@@ -230,4 +229,16 @@ export function accessToken() {
   } catch (error) {
     return null
   }
+}
+
+export async function getCourseVariant() {
+  const userDetails = await getCachedUserDetails()
+  return userDetails?.extra_fields?.course_variant || "regular"
+}
+
+async function getCourse() {
+  if ((await getCourseVariant()) === "nodl") {
+    return "2019-ohjelmointi-nodl"
+  }
+  return "2019-ohjelmointi"
 }

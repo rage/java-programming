@@ -12,7 +12,11 @@ import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import Loading from "../Loading"
 
-import { updateUserDetails, userDetails } from "../../services/moocfi"
+import {
+  updateUserDetails,
+  userDetails,
+  getCourseVariant,
+} from "../../services/moocfi"
 
 import styled from "styled-components"
 import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
@@ -35,6 +39,7 @@ const FormContainer = styled.div`
 class CourseOptionsEditor extends React.Component {
   async componentDidMount() {
     const data = await userDetails()
+    const courseVariant = await getCourseVariant()
     this.setState(
       {
         first_name: data.user_field?.first_name,
@@ -46,6 +51,7 @@ class CourseOptionsEditor extends React.Component {
           data.extra_fields?.digital_education_for_all === "t",
         marketing: data.extra_fields?.marketing === "t",
         research: data.extra_fields?.research,
+        currentCourseVariant: courseVariant,
         loading: false,
       },
       () => {
@@ -137,6 +143,21 @@ class CourseOptionsEditor extends React.Component {
             alareunasta.
           </InfoBox>
           <Loading loading={this.state.loading} heightHint="490px">
+            <div>
+              {this.props.courseVariant === "nodl" && (
+                <InfoBox>
+                  Olet mukana aikatauluttomassa kurssissa, koska aikataulutetun
+                  kurssin ensimmäinen deadline on jo mennyt.
+                </InfoBox>
+              )}
+            </div>
+
+            <div>
+              {!this.props.courseVariant &&
+                this.state.currentCourseVariant === "nodl" && (
+                  <InfoBox>Olet mukana aikatauluttomassa kurssissa.</InfoBox>
+                )}
+            </div>
             <div>
               <Row>
                 <TextField
