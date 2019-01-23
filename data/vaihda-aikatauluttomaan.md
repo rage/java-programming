@@ -7,7 +7,9 @@ information_page: true
 
 **Kannattaa pysyä aikataulullisessa versiossa**
 
-Aikataulullisella kurssilla on monia etuja verrattuna aikatauluttomaan kurssiin. Ohjelmointitehtävien lataaminen vaatii vain 25% edellisen osan ohjelmointitehtävien pisteistä, kun taas aikatauluttomalla kurssilla raja on 90%. Sama raja koskee myös verkkotentteihin osallistumista, joiden kautta saat opintosuoritukset kursseista Ohjelmoinnin perusteet ja Ohjelmoinnin jatkokurssi. Joudut siis tekemään huomattavasti enemmän työtä aikatauluttomalla kurssilla. Lisäksi kurssiarvostelu perustuu aikatauluttomalla kurssilla pelkästään verkkotenttiin, kun taas aikataulullisella kurssilla arvostelussa otetaan huomioon myös tehtäväpisteet. Sinun täytyy siis pärjätä huomattavasti paremmin aikatauluttoman kurssin kokeessa saadaksesi saman arvosanan. Lisätietoa tästä löytyy sivupalkin osiosta Arvostelu ja kokeet.
+Aikataulullisella kurssilla on monia etuja verrattuna aikatauluttomaan kurssiin. Ohjelmointitehtävien lataaminen vaatii vain 25% edellisen osan ohjelmointitehtävien pisteistä, kun taas aikatauluttomalla kurssilla raja on 90%. Sama raja koskee myös verkkotentteihin osallistumista, joiden kautta saat opintosuoritukset kursseista Ohjelmoinnin perusteet ja Ohjelmoinnin jatkokurssi. Joudut siis tekemään huomattavasti enemmän työtä aikatauluttomalla kurssilla.
+
+Lisäksi kurssiarvostelu perustuu aikatauluttomalla kurssilla pelkästään verkkotenttiin, kun taas aikataulullisella kurssilla arvostelussa otetaan huomioon myös tehtäväpisteet. Sinun täytyy siis pärjätä huomattavasti paremmin aikatauluttoman kurssin kokeessa saadaksesi saman arvosanan. Lisätietoa tästä löytyy sivupalkin osiosta Arvostelu ja kokeet.
 
 Aikaisempien kurssien perusteella ne, jotka jatkavat aikataulullisella kurssilla pärjäävät paremmin kurssikokeissa kuin ne, jotka vaihtavat aikatauluttomaan. Aikatauluttomassa kurssissa riskinä on myös, että kurssi jää kesken, kun ei ole aikarajoja motivoimassa tehtävien tekoa.
 
