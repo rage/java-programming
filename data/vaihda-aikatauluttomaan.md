@@ -5,6 +5,8 @@ hidden: false
 information_page: true
 ---
 
+<notice>HUOMAATHAN, että aikatauluttomalta kurssilta EI VOI HAKEA yliopiston opinto-oikeutta.</notice>
+
 **Kannattaa pysyä aikataulullisessa versiossa**
 
 Aikataulullisella kurssilla on monia etuja verrattuna aikatauluttomaan kurssiin. Ohjelmointitehtävien lataaminen vaatii vain 25% edellisen osan ohjelmointitehtävien pisteistä, kun taas aikatauluttomalla kurssilla raja on 90%. Sama raja koskee myös verkkotentteihin osallistumista, joiden kautta saat opintosuoritukset kursseista Ohjelmoinnin perusteet ja Ohjelmoinnin jatkokurssi. Joudut siis tekemään huomattavasti enemmän työtä aikatauluttomalla kurssilla.
