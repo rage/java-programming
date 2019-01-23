@@ -7,7 +7,7 @@ information_page: true
 
 <notice>HUOMAATHAN, että aikatauluttomalta kurssilta EI VOI HAKEA yliopiston opinto-oikeutta.</notice>
 
-**Kannattaa pysyä aikataulullisessa versiossa**
+## Kannattaa pysyä aikataulullisessa versiossa
 
 Aikataulullisella kurssilla on monia etuja verrattuna aikatauluttomaan kurssiin. Ohjelmointitehtävien lataaminen vaatii vain 25% edellisen osan ohjelmointitehtävien pisteistä, kun taas aikatauluttomalla kurssilla raja on 90%. Sama raja koskee myös verkkotentteihin osallistumista, joiden kautta saat opintosuoritukset kursseista Ohjelmoinnin perusteet ja Ohjelmoinnin jatkokurssi. Joudut siis tekemään huomattavasti enemmän työtä aikatauluttomalla kurssilla.
 
@@ -19,13 +19,13 @@ Kolmas etu aikataulullisessa kurssissa on, että vain aikataulutetulta kurssilta
 
 On siis järkevää jatkaa aikataulullisella kurssilla niin kauan, kun ehdit tehdä tehtävät aikarajojen puitteissa.
 
-**Miksi tehtäväpalautukseni pitää siirtää?**
+## Miksi tehtäväpalautukseni pitää siirtää?
 
 Jotta voit jatkaa ohjelmointitehtäviä aikatauluttomalla kurssilla siitä mihin jäit aikataulullisella, tehtäväpalautuksesi pitää siirtää aikatauluttomalle kurssille. Ohjelmointitehtäviä voi ladata NetBeansissa vasta, kun on saanut tietyn osuuden edellisen osan ohjelmointitehtävien pisteistä. Tehtäväpalautusten siirto antaa sinulle aikatauluttomalle kurssille ne tehtäväpisteet, jotka sait aikataululliselta kurssilta.
 
 HUOM! Aikatauluttomalla kurssilla on eri pisterajavaatimus sille, että voi ladata seuraavan osan tehtäviä. Aikataulullisella kurssilla voi ladata seuraavan osan tehtävät, kun on saanut vähintään 25% edellisen osan ohjelmointitehtävien pisteistä. Aikatauluttomalla kurssilla tämä pisteraja on 90% edellisen osan pisteistä. Saatat siis joutua tekemään lisää ohjelmointitehtäviä edellisistä osista, ennen kuin saat ladattua sen osan tehtävät, jonka parissa työskentelit aikataulullisellla kurssilla.
 
-**Miten siirrän tehtäväpalautukseni?**
+## Miten siirrän tehtäväpalautukseni?
 
 <notice>HUOMAATHAN, että aikatauluttomalta kurssilta EI VOI HAKEA yliopiston opinto-oikeutta.</notice>
 
@@ -57,6 +57,8 @@ Mikäli haluat siirtyä aikatauluttomalle kurssille, lue seuraavat ohjeet huolel
 
 13) Lataa NetBeansin tarjoamat uudet tehtäväpohjat. Netbeans saattaa tässä yhteydessä ladata tyhjiä tehtäväpohjia myös jo aiemmin tekemillesi aikatauluttoman kurssin tehtäville. Tarkista TMC-profiilistasi (http://tmc.mooc.fi/participants/me), mitkä tehtävät voit jättää huomiotta. Jos NetBeans ei tarjoa uusia tehtäväpohjia, paina NetBeansin yläpalkin TMC-valikosta "Download/update exercises".
 
-14) Mikäli kohtaat ongelmia, ota rohkeasti yhteyttä sähköpostitse osoitteeseen mailto:mooc@cs.helsinki.fi.
+14) Lopuksi kirjaudu kurssimateriaalissa ulos ja uudestaan sisään, jotta materiaalissa olevat pistevisualisaatiot päivittyvät.
+
+15) Mikäli kohtaat ongelmia, ota rohkeasti yhteyttä sähköpostitse osoitteeseen mailto:mooc@cs.helsinki.fi.
 
 <notice>HUOMAATHAN, että aikatauluttomalta kurssilta EI VOI HAKEA yliopiston opinto-oikeutta.</notice>

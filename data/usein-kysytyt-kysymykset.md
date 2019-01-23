@@ -33,7 +33,7 @@ Kokele painaa asennusohjelmaa hiiren oikealla näppäimellä ja valitse Avaa/Ope
 
 ### Saan testejä ajattaessa virheviestin, joka valittaa JAVA_HOME:sta
 
-Seuraa tätä ohjetta ongelman ratkaisemiseksi: [https://materiaalit.github.io/tmc-asennus/java\_home\_not\_found/](https://materiaalit.github.io/tmc-asennus/java_home_not_found/).
+Seuraa tätä ohjetta ongelman ratkaisemiseksi: [https://materiaalit.github.io/tmc-asennus/java_home_not_found/](https://materiaalit.github.io/tmc-asennus/java_home_not_found/).
 
 ### Netbeans tai netbeanssin asennusohjelma ei avaannu tai näyttää avauduttuaan oudolta.
 
@@ -66,3 +66,11 @@ Sovi asiasta etukäteen TE-toimistosi kanssa. TE-toimistot eivät valitettavasti
 ### Saako kursseista jonkinlaisen virallisen opintosuoritusotteen? Ja miten hyväksiluen sen oppilaitoksessani?
 
 Kurssin päätteeksi voi osallistua Helsingin yliopiston Avoimen yliopiston tarjoamiin verkkotentteihin kursseista Ohjelmoinnin perusteet ja Ohjelmoinnin jatkokurssi. Jos nämä verkkotentit läpäisee hyväksytysti, Avoimelta yliopistolta saa viralliset kurssisuoritteet. Ne kelpaavat todennäköisesti hyväksilukemista varten, mutta kannattaa varmistaa asia vielä oman oppilaitoksen opintovastaavalta.
+
+### Miten vaihdan aikataululliselta kurssilta aikatauluttomaan?
+
+Lue tämä ohje: [vaihtaminen aikatauluttomaan versioon](/vaihda-aikatauluttomaan).
+
+### Testien ajamis- ja lähettämispainikkeet ovat Netbeanssissa harmaita
+
+Jos olet aikataulutetussa kurssissa niin ota huomioon että ensimmäsen osan deadline oli 21.1.2019. Katso myös ohje: [vaihtaminen aikatauluttomaan versioon](/vaihda-aikatauluttomaan).
