@@ -7,15 +7,17 @@ information_page: true
 
 <notice>HUOMAATHAN, että aikatauluttomalta kurssilta EI VOI HAKEA yliopiston opinto-oikeutta.</notice>
 
+Tämä ohje on suunnattu ensisijaisesti heille, jotka ole ehtineet tehdä aikataulutetun kurssin tehtäviä osien määräaikojen puitteissa. Jos siis olet tehtävien kanssa aikataulussa, sinun ei kannata vaihtaa aikatauluttomalle versiolle kurssista.
+
 ## Kannattaa pysyä aikataulullisessa versiossa
 
-Aikataulullisella kurssilla on monia etuja verrattuna aikatauluttomaan kurssiin. Ohjelmointitehtävien lataaminen vaatii vain 25% edellisen osan ohjelmointitehtävien pisteistä, kun taas aikatauluttomalla kurssilla raja on 90%. Sama raja koskee myös verkkotentteihin osallistumista, joiden kautta saat opintosuoritukset kursseista Ohjelmoinnin perusteet ja Ohjelmoinnin jatkokurssi. Joudut siis tekemään huomattavasti enemmän työtä aikatauluttomalla kurssilla.
+Aikataulullisella kurssilla on monia etuja verrattuna aikatauluttomaan kurssiin. Ohjelmointitehtävien lataaminen vaatii vain 25% edellisen osan ohjelmointitehtävien pisteistä, kun taas aikatauluttomalla kurssilla raja on 90%. Sama raja koskee myös verkkotentteihin osallistumista, joiden kautta saat opintosuoritukset kursseista Ohjelmoinnin perusteet ja Ohjelmoinnin jatkokurssi. Joudut siis tekemään huomattavasti enemmän työtä aikatauluttomalla kurssilla. Tämä työnmäärä tosin jakaantuu sitten pidemmälle aikavälille.
 
-Lisäksi kurssiarvostelu perustuu aikatauluttomalla kurssilla pelkästään verkkotenttiin, kun taas aikataulullisella kurssilla arvostelussa otetaan huomioon myös tehtäväpisteet. Sinun täytyy siis pärjätä huomattavasti paremmin aikatauluttoman kurssin kokeessa saadaksesi saman arvosanan. Lisätietoa tästä löytyy sivupalkin osiosta Arvostelu ja kokeet.
+Lisäksi kurssiarvostelu perustuu aikatauluttomalla kurssilla pelkästään verkkotenttiin, kun taas aikataulullisella kurssilla arvostelussa otetaan huomioon myös tehtäväpisteet. Sinun täytyy siis pärjätä huomattavasti paremmin aikatauluttoman kurssin kokeessa saadaksesi saman arvosanan, kun koepisteitä ei voi kompensoida tehtävillä. Lisätietoa tästä löytyy sivupalkin osiosta Arvostelu ja kokeet.
 
-Aikaisempien kurssien perusteella ne, jotka jatkavat aikataulullisella kurssilla pärjäävät paremmin kurssikokeissa kuin ne, jotka vaihtavat aikatauluttomaan. Aikatauluttomassa kurssissa riskinä on myös, että kurssi jää kesken, kun ei ole aikarajoja motivoimassa tehtävien tekoa.
+Aikatauluttomassa kurssissa on riskinä, että kurssi jää kesken, kun ei ole aikarajoja motivoimassa tehtävien tekoa. Lisähyötynä on myös se, että kurssin tukikanava on aktiivisempi aikataulutetun kurssin aikana, kun kurssilla on enemmän kanssaopiskelijoita.
 
-Kolmas etu aikataulullisessa kurssissa on, että vain aikataulutetulta kurssilta voi hakea opinto-oikeutta Helsingin yliopiston tietojenkäsittelytieteen osastolle. Lisätietoja tästä löytyy sivupalkin osiosta "Mahdollisuus opinto-oikeuteen".
+Luultavasti tärkein etu aikataulullisessa kurssissa on, että vain aikataulutetulta kurssilta voi hakea opinto-oikeutta Helsingin yliopiston tietojenkäsittelytieteen osastolle. Lisätietoja tästä löytyy sivupalkin osiosta "Mahdollisuus opinto-oikeuteen".
 
 On siis järkevää jatkaa aikataulullisella kurssilla niin kauan, kun ehdit tehdä tehtävät aikarajojen puitteissa.
 
