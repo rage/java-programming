@@ -13,6 +13,10 @@ Tässä usein kysyttyjä kysymyksiä ja ongelmia. Jos et löydä kysymykseesi va
 
 Varmista että sinulla on uusin versio TMC liitännäisestä valitsemalla Netbeanssin ylävalikosta `Help` -> `Check for Updates`.
 
+### Netbeans jäätyy tehtävän palauteikkunan avautuessa
+
+Ongelma pitäisi olla korjattu TMC liitännäisen uusimmassa versiossa. Saat sen ladattua valitsemalla Netbeanssin yläpalkista <code>Help</code> -> <code>Check for updates</code> ja seuraamalla näytölle tulevia ohjeita.
+
 ### Ohjelmointitehtävässä on mielestäni virhe
 
 Varmista, että ongelma ei ole omassa koodissasi. Kysy tarvittaessa apua kurssin tukikanavilla. Kokeile myös onko tehtävään saatavilla päivitystä valitsemalla Netbeanssin yläpalkista `TMC` -> `Download or update exercises`. Jos näidenkin toimenpiteiden jälkeen vaikuttaa siltä, että virhe on tehtävässä, avaa uusi issue kurssin Github-repossa: https://github.com/rage/ohjelmointi-19.
@@ -77,7 +81,7 @@ Jos olet aikataulutetussa kurssissa niin ota huomioon että ensimmäsen osan dea
 
 ### Tarvitsenko Helsingin yliopiston tunnukset?
 
-Kaikki jotka haluavat osallistua Avoimen yliopiston tentteihin tai pystyä lukemaan Moodlea tarvii noi HY:n tunnukset. Jos tekee täysin omaksi ilokseen kurssia niin silloin ei ole pakollista, tosin vaikka tekisi vain omaksi ilokseen niin suosittelisimme tenttien tekemistä ja noiden toisten tunnusten hankkimista. Tunnukset voi hankkia täältä: https://helpdesk.it.helsinki.fi/ohjeet/kirjautuminen-ja-yhteydet/kayttajatunnus/ohjeet-yliopiston-kayttajatunnuksen-aktivointiin
+Kaikki jotka haluavat osallistua Avoimen yliopiston tentteihin tai pystyä lukemaan Moodlea tarvii Helsingin yliopiston tunnukset. Jos tekee täysin omaksi ilokseen kurssia niin silloin ei ole pakollista, tosin vaikka tekisi vain omaksi ilokseen niin suosittelisimme tenttien tekemistä ja noiden toisten tunnusten hankkimista. Tunnukset voi hankkia täältä: https://helpdesk.it.helsinki.fi/ohjeet/kirjautuminen-ja-yhteydet/kayttajatunnus/ohjeet-yliopiston-kayttajatunnuksen-aktivointiin
 
 ### Aion hakea opiskelupaikkaa MOOCin kautta. Pitääkö minun osallistua Avoimen yliopiston tentteihin?
 
