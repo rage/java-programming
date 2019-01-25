@@ -74,3 +74,11 @@ Lue tämä ohje: [vaihtaminen aikatauluttomaan versioon](/vaihda-aikatauluttomaa
 ### Testien ajamis- ja lähettämispainikkeet ovat Netbeanssissa harmaita
 
 Jos olet aikataulutetussa kurssissa niin ota huomioon että ensimmäsen osan deadline oli 21.1.2019. Katso myös ohje: [vaihtaminen aikatauluttomaan versioon](/vaihda-aikatauluttomaan).
+
+### Tarvitsenko Helsingin yliopiston tunnukset?
+
+Kaikki jotka haluavat osallistua Avoimen yliopiston tentteihin tai pystyä lukemaan Moodlea tarvii noi HY:n tunnukset. Jos tekee täysin omaksi ilokseen kurssia niin silloin ei ole pakollista, tosin vaikka tekisi vain omaksi ilokseen niin suosittelisimme tenttien tekemistä ja noiden toisten tunnusten hankkimista. Tunnukset voi hankkia täältä: https://helpdesk.it.helsinki.fi/ohjeet/kirjautuminen-ja-yhteydet/kayttajatunnus/ohjeet-yliopiston-kayttajatunnuksen-aktivointiin
+
+### Aion hakea opiskelupaikkaa MOOCin kautta. Pitääkö minun osallistua Avoimen yliopiston tentteihin?
+
+Näyttökokeeseen saa kutsun, jos saa vähintään 90% kaikkien kurssin osien ohjelmointitehtävistä. Tentteihin osallistuminen ei ole pakollista tähän. Suosittelemme kuitenkin kaikille Avoimen yliopiston tentteihin osallistumista, koska vain niin voi varmistaa saavansa kurssisuoritukset. Pelkkään näyttökokeeseen osallistuminen ei takaa kurssisuorituksia. Käymällä Avoimen tentit suoritukset saa myös silloin, jos päätyy yliopistolle normaalin pääsykokeen tai Avoimen väylän kautta, tai jos aloittaa opiskelemaan muuta alaa.
