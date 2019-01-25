@@ -117,7 +117,7 @@ public void tulostaMauJosSyoteOnKissa() {
 
 ## Lukujen tarkkailua
 
-Alla olevassa testien kirjoittamisen harjoitteluun tarjoitetussa tehtävässä tarkkaillaan käyttäjän syöttämää lukua ja tulostetaan siihen liittyvä sopiva viesti.
+Alla olevassa testien kirjoittamisen harjoitteluun tarkoitetussa tehtävässä tarkkaillaan käyttäjän syöttämää lukua ja tulostetaan siihen liittyvä sopiva viesti.
 
 Lähdekoodin kohdalla on valmis koodi. Keksi koodia vastaava tehtävänanto -- eli ohjeistus, joka johtaisi koodin tuottamiseen. Kirjoita tehtäväanto lomakkeen kohtaan `Tehtävänanto`. Kirjoita tämän jälkeen testejä kohtaan `Testit`. Lisää lopuksi myös tehtävälle tägejä, eli tehtävää kuvaavia avainsanoja.
 
