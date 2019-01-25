@@ -336,7 +336,7 @@ public static void listaaAlkiot(int[] kokonaislukuTaulukko) {
     System.out.println("taulukon alkiot ovat: ");
     int indeksi = 0;
     while (indeksi < kokonaislukuTaulukko.length) {
-        int luku = kokonaislukuTaulukko[indeksi]
+        int luku = kokonaislukuTaulukko[indeksi];
         System.out.print(luku + " ");
         indeksi = indeksi + 1;
     }
