@@ -681,7 +681,7 @@ Voit olettaa, että haettava merkkijono ei itsessään sisällä toistuvaa hahmo
 ## Merkkijonojen pilkkominen pienempiin osiin
 
 
-Merkkijonon pilkkominen useampaan osaan tapahtuu merkkijonon tarjoamalla metodilla `split`, jolle annetaan parametrina merkkijono, jonka kohdalta käsiteltävä merkkijono jaetaan osiin. Tässä esimerkissä merkkijono jaetaan palasiin "\\s+":n mukaan, joka on [säännöllinen lauseke](https://fi.wikipedia.org/wiki/Säännöllinen_lauseke) (engl. regular expression) ja sisältää kaikki "tyhjät merkit" eli välilyönnit, rivinvaihdot, tabulaattorimerkit jne. Metodi palauttaa taulukon, joka sisältää merkkijonoja. Taulukon indekseissä on pilkotun merkkijonon osat. Metodi toimii seuraavasti:
+Merkkijonon pilkkominen useampaan osaan tapahtuu merkkijonon tarjoamalla metodilla `split`, jolle annetaan parametrina merkkijono, jonka kohdalta käsiteltävä merkkijono jaetaan osiin. Tässä esimerkissä merkkijono jaetaan palasiin `\\s+`:n mukaan, joka on [säännöllinen lauseke](https://fi.wikipedia.org/wiki/Säännöllinen_lauseke) (engl. regular expression) ja sisältää kaikki "tyhjät merkit" eli välilyönnit, rivinvaihdot, tabulaattorimerkit jne. Metodi palauttaa taulukon, joka sisältää merkkijonoja. Taulukon indekseissä on pilkotun merkkijonon osat. Metodi toimii seuraavasti:
 
 
 ```java
