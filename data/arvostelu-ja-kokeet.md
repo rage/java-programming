@@ -23,7 +23,7 @@ Ohjelmoinnin jatkokurssia vastaava koe suoritetaan materiaalin osien 8-14 jälke
 - 8.6.
 - 29.6.
 
-Täydet tehtäväpisteet kustakin osasta saa tekemällä osan kaikkien tehtävien pisteistä vähintään 90%, puolet tekemällä noin 45% jne.
+Täydet tehtäväpisteet kustakin osasta saa tekemällä osan kaikkien tehtävien pisteistä vähintään 90%, puolet tekemällä noin 45% jne. Huomaathan, että mikäli haet opiskelupaikkaa Ohjelmoinnin MOOCin kautta, tulee sinun saada vähintään 90% jokaisen osan ohjelmoinitehtäväpisteistä. Omat ohjelmointitehtäväpisteet näkee helpoiten materiaalin pistevisualisaatiosta, jonka saa auki klikkaamalla sinistä palloa sivun oikeassa alareunassa.
 
 Kokeeseen saa osallistua kun on tehnyt vähintään 25% jokaisen osan tehtävien pisteistä. Aikatauluttamattomassa kurssissa kokeesta tulee saada vähintään puolet kurssin pisteistä kurssin läpäiseksi.
 
