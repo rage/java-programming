@@ -28,6 +28,10 @@ export async function fetchQuiznatorProgress() {
       part: "osa03",
       tag: "ohjelmoinnin-mooc-2019-3",
     },
+    {
+      part: "osa04",
+      tag: "ohjelmoinnin-mooc-2019-4",
+    },
   ]
   const quizIdInformation = await fetchQuizIds()
   const allQuizIds = flatten(quizIdInformation.map(o => o.quizIds))
