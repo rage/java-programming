@@ -56,6 +56,7 @@ import H5 from "./Headers/H5"
 import H6 from "./Headers/H6"
 import TableOfContents from "./TableOfContents"
 import Notice from "./Notice"
+import RegistrationLink from "./RegistrationLink"
 
 const mapping = {
   test: Test,
@@ -72,6 +73,7 @@ const mapping = {
   "ab-study": AbStudy,
   "only-for-ab-group": OnlyForAbGroup,
   "table-of-contents": TableOfContents,
+  "registration-link": RegistrationLink,
   notice: Notice,
   crowdsorcerer: CrowdSorcerer,
   youtube: Youtube,
