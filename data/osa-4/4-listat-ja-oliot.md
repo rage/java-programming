@@ -1,8 +1,17 @@
 ---
 path: '/osa-4/4-listat-ja-oliot'
 title: 'Listat ja oliot'
-hidden: true
+hidden: false
 ---
+
+
+<text-box variant='learningObjectives' name='Oppimistavoitteet'>
+
+- Osaat lisätä olioita listalle.
+- Osaat käydä listalla olevia olioita läpi.
+
+</text-box>
+
 
 Edellisessä osassa tutuksi tulleet listat ovat olioita, joihin pystyy lisäämään arvoja. Listalle lisättyjä arvoja voidaan tarkastella indeksin perusteella, ja listalla olevia arvoja voidaan etsiä ja poistaa. Kaikkia listan tarjoamia toimintoja käytetään listan tarjoamien metodien kautta.
 

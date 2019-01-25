@@ -2,12 +2,12 @@
 path: '/osa-4'
 title: 'Osa 4'
 overview: true
-hidden: true
+hidden: false
 ---
 
 <deadline>11.2.2019</deadline>
 
-Tässä osassa tutustut käsitteisiin tiedosto ja tiedostojärjestelmä sekä opit lukemaan merkkijonomuotoista tietoa tiedostosta. Otat ensiaskeleet olio-ohjelmointiin ja opit olio-ohjelmoinnin keskeiset käsitteet kuten luokka ja olio. Opit luomaan luokkia ja olioita sekä käyttämään niitä osana toteuttamiasi ohjelmia. Jatkat myös pieniä askeleita ohjelmien testaamisen parissa.
+Tässä osassa tutustut käsitteisiin tiedosto ja tiedostojärjestelmä sekä opit lukemaan merkkijonomuotoista tietoa tiedostosta. Otat ensiaskeleet olio-ohjelmointiin ja opit olio-ohjelmoinnin keskeiset käsitteet kuten luokka ja olio. Opit luomaan luokkia ja olioita sekä käyttämään niitä osana toteuttamiasi ohjelmia.
 
 
 <please-login></please-login>

@@ -1,7 +1,7 @@
 ---
 path: '/osa-4/3-luokka-ja-olio'
 title: 'Luokka ja olio'
-hidden: true
+hidden: false
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 path: '/osa-4/1-tiedon-lukeminen-ja-tiedostot'
 title: 'Tiedon lukeminen ja tiedostot'
-hidden: true
+hidden: false
 ---
 
 
