@@ -32,6 +32,38 @@ export async function fetchQuiznatorProgress() {
       part: "osa04",
       tag: "ohjelmoinnin-mooc-2019-4",
     },
+    {
+      part: "osa05",
+      tag: "ohjelmoinnin-mooc-2019-5",
+    },
+    {
+      part: "osa06",
+      tag: "ohjelmoinnin-mooc-2019-6",
+    },
+    {
+      part: "osa07",
+      tag: "ohjelmoinnin-mooc-2019-7",
+    },
+    {
+      part: "osa08",
+      tag: "ohjelmoinnin-mooc-2019-8",
+    },
+    {
+      part: "osa09",
+      tag: "ohjelmoinnin-mooc-2019-9",
+    },
+    {
+      part: "osa010",
+      tag: "ohjelmoinnin-mooc-2019-10",
+    },
+    {
+      part: "osa11",
+      tag: "ohjelmoinnin-mooc-2019-11",
+    },
+    {
+      part: "osa12",
+      tag: "ohjelmoinnin-mooc-2019-12",
+    },
   ]
   const quizIdInformation = await fetchQuizIds()
   const allQuizIds = flatten(quizIdInformation.map(o => o.quizIds))
