@@ -12,7 +12,7 @@ hidden: true
 
 </text-box>
 
-TODO: lead in
+Aloitamme nyt ensiaskeleet olio-ohjelmointiin hyvin perinteisen teknologian eli diaesityksen kautta. Käy esitys läpi ja vastaa alla olevaan kysymykseen.
 
 <pdf-slideshow>
 
@@ -20,6 +20,5 @@ TODO: lead in
 
 </pdf-slideshow>
 
-
-TODO: quiz
+<quiznator id="5c4aa67b3972a9147410161a"></quiznator>
 

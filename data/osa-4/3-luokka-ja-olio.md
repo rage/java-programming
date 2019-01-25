@@ -10,12 +10,11 @@ hidden: true
 - Tunnet käsitteet luokka, olio, konstruktori, olion metodit ja olion muuttujat (eli oliomuuttujat).
 - Ymmärrät että luokka määrää olion muuttujat ja metodit, ja tiedät että oliomuuttujien arvot ovat oliokohtaisia.
 - Osaat luoda luokkia ja olioita ja osaat käyttää olioita osana ohjelmia.
-- Osaat käsitellä listalla olevia olioita.
 
 </text-box>
 
 
-Tutustuimme hetki sitten ensimmäistä kertaa termeihin olio ja luokka. Aloitamme nyt matkan olio-ohjelmoinnin pariin.
+Tutustuimme hetki sitten ensimmäistä kertaa termeihin olio ja luokka. Aloitamme nyt matkan olio-ohjelmoinnin pariin. Aluksi keskiössä on käsitteiden ja tiedon kuvaaminen luokkien ja olioiden avulla, jonka jälkeen tutustumme toiminnallisuuden eli metodien lisäämiseen.
 
 Olio-ohjelmoinnissa on kyse ratkaistavassa ongelmassa esiintyvien käsitteiden eristämisestä omiksi kokonaisuuksikseen sekä näiden kokonaisuuksien käyttämistä ongelman ratkaisemisessa. Kun ongelmaan liittyvät käsitteet on tunnistettu, niistä voidaan myös keskustella. Toisin ajatellen, ratkaistavasta ongelmasta muodostetaan abstraktioita, joiden avulla ongelmaa on helpompi käsitellä.
 

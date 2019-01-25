@@ -1,8 +1,16 @@
 ---
-path: '/osa-4/5-testauksen-alkeet-jatkuvat'
+path: '/osa-5/5-testauksen-alkeet-jatkuvat'
 title: 'Pienet askeleet ohjelmien testaamiseen jatkuvat'
 hidden: true
 ---
+
+
+<text-box variant='learningObjectives' name='Oppimistavoitteet'>
+
+- yksikkötestaus
+
+</text-box>
+
 
 
 
@@ -53,5 +61,3 @@ TODO: mainitse, että testejä pitää tehdä vähintään kolme
 
 
 <% end %>
-
-<crowdsorcerer id='11'></div>
