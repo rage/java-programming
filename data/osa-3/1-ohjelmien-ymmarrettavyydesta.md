@@ -185,7 +185,7 @@ Lähdekoodi, missä muuttujien nimet on selkeitä, on helpommin ymmärrettävä�
 
 
 
-Tarkasteltava ohjelma sisältää hakualgoritmi nimeltä "puolitushaku". Palaamme puolitushaun toimintaan myöhemmin kurssilla. Paras tapa ymmärrettävyyden lisäämiselle tässä vaiheessa olisi hakualgoritmin toiminnallisuuden "piilottavan" metodin luominen. Luodaan hakualgoritmista metodi ja nimetään se sopivasti.
+Tarkasteltava ohjelma sisältää hakualgoritmin nimeltä "puolitushaku". Palaamme puolitushaun toimintaan myöhemmin kurssilla. Paras tapa ymmärrettävyyden lisäämiselle tässä vaiheessa olisi hakualgoritmin toiminnallisuuden "piilottavan" metodin luominen. Luodaan hakualgoritmista metodi ja nimetään se sopivasti.
 
 
 ```java
