@@ -17,7 +17,6 @@ const StyledLink = styled(Link)`
   display: inline-block;
   width: 100%;
   border-radius: 10px;
-  background-color: white;
   transition: background-color 0.2s;
 
   &:hover {
@@ -91,6 +90,10 @@ class EndOfSubSection extends React.Component {
                   </ButtonWrapper>
                 </Fragment>
               )}
+              <p>
+                Muistathan tarkistaa pistetilanteesi materiaalin oikeassa
+                alareunassa olevasta pallosta!
+              </p>
             </div>
           )
         }}
