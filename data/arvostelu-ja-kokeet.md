@@ -11,13 +11,23 @@ Ohjelmoinnin MOOC sisältää Helsingin yliopiston kurssit Ohjelmoinnin perustee
 
 Aikataulutetussa kurssissa arvostelu perustuu sekä tehtyihin tehtäviin (50% kokonaispisteistä) että kokeeseen (50% kokonaispisteistä).
 
-Ohjelmoinnin perusteita vastaava koe suoritetaan materiaalin osien 1-7 jälkeen. Arvosanasta puolet muodostuu osien 1-7 tehdyistä tehtävistä ja puolet kokeesta. Osien 1-7 kokeita järjestetään 5.3., 14.4., ja 8.5.
+Ohjelmoinnin perusteita vastaava koe suoritetaan materiaalin osien 1-7 jälkeen. Arvosanasta puolet muodostuu osien 1-7 tehdyistä tehtävistä ja puolet kokeesta. Osien 1-7 kokeita järjestetään seuraavasti:
 
-Ohjelmoinnin jatkokurssia vastaava koe suoritetaan materiaalin osien 8-14 jälkeen. Arvosanasta puolet muodostuu osien 8-14 tehdyistä tehtävistä ja puolet kokeesta. Osien 8-14 kokeita järjestetään 8.5., 8.6., ja 29.6.
+- 5.3.
+- 14.4.
+- 8.5.
+
+Ohjelmoinnin jatkokurssia vastaava koe suoritetaan materiaalin osien 8-14 jälkeen. Arvosanasta puolet muodostuu osien 8-14 tehdyistä tehtävistä ja puolet kokeesta. Osien 8-14 kokeita järjestetään seuraavasti:
+
+- 8.5.
+- 8.6.
+- 29.6.
 
 Täydet tehtäväpisteet kustakin osasta saa tekemällä osan kaikkien tehtävien pisteistä vähintään 90%, puolet tekemällä noin 45% jne.
 
 Kokeeseen saa osallistua kun on tehnyt vähintään 25% jokaisen osan tehtävien pisteistä. Aikatauluttamattomassa kurssissa kokeesta tulee saada vähintään puolet kurssin pisteistä kurssin läpäiseksi.
+
+Kurssilla saa osallistua halutessaan useampaan kokeeseen. Opintorekisteriin jää paras suoritus.
 
 ## Aikatauluttamaton kurssi
 
