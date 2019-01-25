@@ -36,3 +36,5 @@ Exactum-rakennuksen aulassa olevasta infonäytöstä löytää salin tarkemman s
 ## Moodle-foorumi
 
 Kurssin osallistujilla on käytössä keskustelufoorumi, joka on Moodle-järjestelmässä. Pääset Moodleen tekemällä "koe ja moodle" -ilmoittautumisen. Ilmoittautuminen on pakollinen kaikille niille, jotka haluavat päästä kurssin Moodleen tai osallistua kurssin kokeeseen. Kokeeseen tulee osallistua, mikäli haluaa kurssista virallisen opintosuorituksen. Mikäli et halua pääsyä kurssin Moodleen, mutta haluat kokeeseen, tee ilmoittautuminen silti jo nyt. Ilmoittautuminen koskee myös Helsingin yliopiston opiskelijoita ja myös niitä, jotka ovat ilmoittautuneet kurssille jossakin muualla.
+
+Linkki: <registration-link></registration-link>.

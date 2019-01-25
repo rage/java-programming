@@ -73,7 +73,3 @@ Ohjelmoinnin MOOCista annetaan kaksi arvosanaa, jotka vastaavat kursseja Ohjelmo
     </tr>
     </tbody>
 </table>
-
-## Kokeeseen ilmoittautuminen
-
-Kokeeseen voi ilmoittautua seuraavasta linkistä: <registration-link></registration-link>.
