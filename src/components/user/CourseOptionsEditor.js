@@ -6,6 +6,8 @@ import {
   Checkbox,
   Radio,
   RadioGroup,
+  Card,
+  CardContent,
 } from "@material-ui/core"
 
 import { OutboundLink } from "gatsby-plugin-google-analytics"
@@ -20,6 +22,8 @@ import {
 
 import styled from "styled-components"
 import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faInfoCircle as icon } from "@fortawesome/free-solid-svg-icons"
 
 const Row = styled.div`
   margin-bottom: 1.5rem;
@@ -34,6 +38,10 @@ const InfoBox = styled.div`
 const FormContainer = styled.div`
   height: 100%;
   margin-top: 2rem;
+`
+
+const StyledIcon = styled(FontAwesomeIcon)`
+  margin-right: 0.25rem;
 `
 
 class CourseOptionsEditor extends React.Component {
@@ -134,6 +142,46 @@ class CourseOptionsEditor extends React.Component {
   render() {
     return (
       <FormContainer>
+        <Loading loading={this.state.loading} heightHint="5px">
+          <div>
+            {this.props.courseVariant === "nodl" && (
+              <InfoBox>
+                <Card>
+                  <CardContent>
+                    <StyledIcon icon={icon} />
+                    Olet tekemässä kurssin aikataulutonta versiota, koska
+                    aikataulutetun kurssin ensimmäinen deadline on jo mennyt.
+                  </CardContent>
+                </Card>
+              </InfoBox>
+            )}
+          </div>
+
+          <div>
+            {!this.props.courseVariant &&
+              this.state.currentCourseVariant === "nodl" && (
+                <InfoBox>
+                  <Card>
+                    <CardContent>
+                      <StyledIcon icon={icon} />
+                      Olet tekemässä kurssin aikataulutonta versiota.
+                    </CardContent>
+                  </Card>
+                </InfoBox>
+              )}
+            {!this.props.courseVariant &&
+              this.state.currentCourseVariant !== "nodl" && (
+                <InfoBox>
+                  <Card>
+                    <CardContent>
+                      <StyledIcon icon={icon} />
+                      Olet tekemässä kurssin aikataulutettua versiota.
+                    </CardContent>
+                  </Card>
+                </InfoBox>
+              )}
+          </div>
+        </Loading>
         <h1>Opiskelijan tiedot</h1>
         <Form>
           <InfoBox>
@@ -143,21 +191,6 @@ class CourseOptionsEditor extends React.Component {
             alareunasta.
           </InfoBox>
           <Loading loading={this.state.loading} heightHint="490px">
-            <div>
-              {this.props.courseVariant === "nodl" && (
-                <InfoBox>
-                  Olet mukana aikatauluttomassa kurssissa, koska aikataulutetun
-                  kurssin ensimmäinen deadline on jo mennyt.
-                </InfoBox>
-              )}
-            </div>
-
-            <div>
-              {!this.props.courseVariant &&
-                this.state.currentCourseVariant === "nodl" && (
-                  <InfoBox>Olet mukana aikatauluttomassa kurssissa.</InfoBox>
-                )}
-            </div>
             <div>
               <Row>
                 <TextField
