@@ -37,7 +37,10 @@ Exactum-rakennuksen aulassa olevasta infonäytöstä löytää salin tarkemman s
 
 Kurssin osallistujilla on käytössä keskustelufoorumi, joka on Moodle-järjestelmässä. Pääset Moodleen tekemällä "koe ja moodle" -ilmoittautumisen. Ilmoittautuminen on pakollinen kaikille niille, jotka haluavat päästä kurssin Moodleen tai osallistua kurssin kokeeseen. Kokeeseen tulee osallistua, mikäli haluaa kurssista virallisen opintosuorituksen. Mikäli et halua pääsyä kurssin Moodleen, mutta haluat kokeeseen, tulee ilmoittautuminen silti tehdä. Ilmoittautuminen koskee kaikkia kurssilaisia, eli myös Helsingin yliopiston opiskelijoita ja myös niitä, jotka ovat ilmoittautuneet kurssille jossakin muualla.
 
-Jotta Moodle-foorumille voi ilmoittautua, tarvitset Helsingin yliopiston käyttäjätunnukset. Saat tunnukset seuraamalla Helsingin yliopiston ohjetta käyttäjätunnusten aktivointiin: https://helpdesk.it.helsinki.fi/ohjeet/kirjautuminen-ja-yhteydet/kayttajatunnus/ohjeet-yliopiston-kayttajatunnuksen-aktivointiin
+1. Ensiksi ilmoittaudu Avoimen yliopiston järjestelmään, jotta saat käyttöoikeuden Moodleen: <registration-link></registration-link>. Huom! Avoimen yliopiston sivuille on tullut epähuomiossa muita ilmoittautumisivuja, joissa on tämän sivun kanssa ristiriitaista tietoa. Kuitenkin tämä meidän tarjoama ilmottautumislinkki on se minne sinun täytyy ilmoittautua -- ei väliä oletko aikataulullisella tai aikatauluttomalla kurssilla.
 
+2. Odota 24h, jotta avoin voi seuraavana yönä siirtää tietosi järjestelmiensä välillä
 
-Kun olet saanut Helsingin yliopiston käyttäjätunnukset, voit ilmoittautua Moodleen koetta ja/tai keskustelufoorumia varten. Linkki koe ja moodle -ilmoittautumiseen: <registration-link></registration-link>.
+3. Luo Helsingin yliopiston käyttäjätunnukset. Saat tunnukset seuraamalla Helsingin yliopiston ohjetta käyttäjätunnusten aktivointiin: https://helpdesk.it.helsinki.fi/ohjeet/kirjautuminen-ja-yhteydet/kayttajatunnus/ohjeet-yliopiston-kayttajatunnuksen-aktivointiin
+
+4. Pääset Moodleen osoitteessa https://moodle.helsinki.fi/course/view.php?id=29366
