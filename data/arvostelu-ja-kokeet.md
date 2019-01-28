@@ -84,4 +84,4 @@ Huomaathan, että avoimen yliopiston sivuille on luotu epähuomiossa ylimäärä
 
 Kokeet eivät ole vielä toistaiseksi ajankohtaisia kun ensimmäinen koe on vasta 5.3., niin emme ole vielä kirjoittaneet ohjeita miten tämä ilmoittautuminen onnistuu. Ilmoittautumisohjeet tulevat myöhemmin tälle sivulle ja niistä lähetetään hyvissä ajoin tietoa kurssin osaanottajille sähköpostitse.
 
-Koeilmoittautumisen tekeminen myöhässä ei pudota sinua kurssilta! Esimerkiksi jos et ole tehnyt ilmoittautumista ennen 5.3. järjestettävää koetta, voit mennä silloin 14.4 järjestettävään kokeeseen.
+Koeilmoittautumisen tekeminen myöhässä ei pudota sinua kurssilta! Esimerkiksi jos et ole tehnyt ilmoittautumista ennen 5.3. järjestettävää koetta, voit aina mennä 14.4 järjestettävään kokeeseen.
