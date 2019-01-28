@@ -76,7 +76,7 @@ Ohjelmoinnin MOOCista annetaan kaksi arvosanaa, jotka vastaavat kursseja Ohjelmo
 
 ## Kokeeseen ilmoittautuminen
 
-Kurssin kokeeseen osallistuaksesi täytyy tehdä muodollinen kokeeseen ilmoittautuminen, jotta pääset kirjautumaan sisään avoimen yliopiston koeympäristöön. Ilmoittautuminen ei vaikuta muuhun kuin siihen että pääset koeympäristöön, eli sen väärin tekeminen ei pudota sinua pois aikataululliselta tai aikatauluttomalta kurssilta.
+Kurssin kokeeseen osallistuaksesi sinun täytyy tehdä muodollinen kokeeseen ilmoittautuminen, jotta pääset kirjautumaan sisään avoimen yliopiston koeympäristöön. Ilmoittautuminen ei vaikuta muuhun kuin siihen että pääset koeympäristöön, eli sen väärin tekeminen ei pudota sinua pois aikataululliselta tai aikatauluttomalta kurssilta.
 
 Kokeeseen ilmoittautumiseen ei ole deadlineä, mutta joudut tekemään sen vähintään kaksi päivää ennen sen kokeen päivää, johon haluat osallistua. Esimerkiksi jos haluat osallistua 5.3. järjestettävään kokeeseen, sinun täytyy tehdä tämä ilmoittautuminen viimeistään 3.3. Vastaavasti, jos haluat osallistua 14.4. järjestettävään kokeeseen, sinun täytyy tehdä tämä ilmoittautuminen viimeistään 12.4.
 
