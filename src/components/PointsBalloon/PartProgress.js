@@ -5,6 +5,7 @@ import { BarChart, Bar, XAxis, YAxis, LabelList, Tooltip } from "recharts"
 import { improveGroupName } from "../../util/strings"
 import CustomTooltip from "./CustomTooltip"
 import { SMALL_MEDIUM_BREAKPOINT } from "../../util/constants"
+import { getCourseVariant } from "../../services/moocfi"
 
 const PartProgressContainer = styled.div`
   margin-bottom: 0.5rem;
@@ -102,14 +103,23 @@ const PartProgress = ({ name, data, appliesForStudyRight }) => {
           {Math.floor(Math.min(100, totalProgress * 111.112))}
           /100.
         </LargeP>
-        {appliesForStudyRight && (
-          <SmallP>
-            Opinto-oikeuteen vaaditaan 90% ohjelmointitehtävien pisteistä.
-            Edistymisesi tällä hetkellä:{" "}
-            {allChartData.find(o => o.tool === "Ohjelmointitehtävät")?.progress}
-            %.
-          </SmallP>
-        )}
+        {appliesForStudyRight &&
+          (getCourseVariant() === "nodl" ? (
+            <SmallP>
+              Olet aikatauluttomalla kurssilla, josta ei voi hakea
+              opinto-oikeutta.
+            </SmallP>
+          ) : (
+            <SmallP>
+              Opinto-oikeuteen vaaditaan 90% aikataulutetun kurssin
+              ohjelmointitehtävien pisteistä. Edistymisesi tällä hetkellä:{" "}
+              {
+                allChartData.find(o => o.tool === "Ohjelmointitehtävät")
+                  ?.progress
+              }
+              %.
+            </SmallP>
+          ))}
       </div>
     </PartProgressContainer>
   )
