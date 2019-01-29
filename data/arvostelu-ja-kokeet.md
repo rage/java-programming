@@ -33,7 +33,7 @@ Kurssilla saa osallistua halutessaan useampaan kokeeseen. Opintorekisteriin jä�
 
 Aikatauluttamattomassa kurssiversiossa arvostelu perustuu täysin kokeeseen. Kokeeseen saa osallistua kun on tehnyt jokaisen osan tehtävien pisteistä vähintään 90%.
 
-Kurssin aikatauluttamaton versio julkaistaan aikataulutetun version ensimmäisen määräajan jälkeen (21.1.2019). Aikatauluttamattoman kurssin koeaikataulu julkaistaan myöhemmin.
+Kurssin aikatauluttamaton versio julkaistaan aikataulutetun version jälkeen. Aikatauluttamattomalla kurssilla on sama koeaikataulu kuin aikataulutetulla kurssilla.
 
 ## Arvosanan muodostuminen
 
@@ -74,14 +74,24 @@ Ohjelmoinnin MOOCista annetaan kaksi arvosanaa, jotka vastaavat kursseja Ohjelmo
     </tbody>
 </table>
 
+
 ## Kokeeseen ilmoittautuminen
 
-Kurssin kokeeseen osallistuaksesi sinun täytyy tehdä muodollinen kokeeseen ilmoittautuminen, jotta pääset kirjautumaan sisään avoimen yliopiston koeympäristöön. Ilmoittautuminen ei vaikuta muuhun kuin siihen että pääset koeympäristöön, eli sen väärin tekeminen ei pudota sinua pois aikataululliselta tai aikatauluttomalta kurssilta.
 
-Kokeeseen ilmoittautumiseen ei ole deadlineä, mutta joudut tekemään sen vähintään kaksi päivää ennen sen kokeen päivää, johon haluat osallistua. Esimerkiksi jos haluat osallistua 5.3. järjestettävään kokeeseen, sinun täytyy tehdä tämä ilmoittautuminen viimeistään 3.3. Vastaavasti, jos haluat osallistua 14.4. järjestettävään kokeeseen, sinun täytyy tehdä tämä ilmoittautuminen viimeistään 12.4.
+Kurssin kokeeseen osallistuaksesi sinun täytyy tehdä muodollinen kokeeseen ilmoittautuminen, jotta pääset kirjautumaan Helsingin yliopiston Avoimen yliopiston koeympäristöön.
 
-Huomaathan, että avoimen yliopiston sivuille on luotu epähuomiossa ylimääräisiä ilmoittautumissivuja, joista voi ymmärtää että olet tippunut pois kurssilta. Älä välitä näistä avoimen yliopiston muista ilmoittautumissivuista, vaan seuraa vain tällä sivulla (ohjelmointi-19.mooc.fi) olevia ohjeita. Tähän muodolliseen ilmoittautumiseen on vain yksi oikea ilmoittautumislinkki, jonka tulee löytymään tältä sivustolta (ohjelmointi-19.mooc.fi). Tämä tämän sivun antama linkki on siis ainoa oikea kokeen ilmoittautumislinkki sekä kurssin aikataulullisessa että aikatauluttomassa versiossa.
 
-Kokeet eivät ole vielä toistaiseksi ajankohtaisia kun ensimmäinen koe on vasta 5.3., niin emme ole vielä kirjoittaneet ohjeita miten tämä ilmoittautuminen onnistuu. Ilmoittautumisohjeet tulevat myöhemmin tälle sivulle ja niistä lähetetään hyvissä ajoin tietoa kurssin osaanottajille sähköpostitse.
+Ilmoittaudu kokeeseen vähintään kaksi päivää ennen koepäivää, johon olet aikeissa osallistua. Esimerkiksi jos haluat osallistua 5.3. järjestettävään kokeeseen, sinun täytyy tehdä tämä ilmoittautuminen viimeistään 3.3. Vastaavasti, jos haluat osallistua 14.4. järjestettävään kokeeseen, sinun täytyy tehdä tämä ilmoittautuminen viimeistään 12.4.
 
-Koeilmoittautumisen tekeminen myöhässä ei pudota sinua kurssilta! Esimerkiksi jos et ole tehnyt ilmoittautumista ennen 5.3. järjestettävää koetta, voit aina mennä 14.4 järjestettävään kokeeseen. Kurssilla pysyt kuhan vaan sinulla on TMC:ssä valittuna oikea kurssi ja palautat tehtävät ennen niiden mahdollista deadlinea.
+
+Myöhässä ilmoittautuminen ei pudota sinua kurssilta, mutta voit joutua osallistumaan vasta seuraavaan kokeeseen. Esimerkiksi mikäli ilmoittaudut vasta 4.3., et voi osallistua 5.3. järjestettävään kokeeseen. Tällöin 14.4 järjestettävä koe on ensimmäinen koe, johon voit osallistua.
+
+
+Tarkemmat ilmoittautumisohjeet tulevat myöhemmin tälle sivulle ja niistä lähetetään hyvissä ajoin tietoa kurssin osaanottajille sähköpostitse.
+
+
+
+Huom! Helsingin yliopiston Avoimen yliopiston sivuille on luotu epähuomiossa ylimääräisiä ilmoittautumissivuja, joista voi ymmärtää että olet tippunut pois kurssilta. Älä välitä näistä avoimen yliopiston muista ilmoittautumissivuista, vaan seuraa vain tällä sivulla (ohjelmointi-19.mooc.fi) olevia ohjeita. Tähän muodolliseen ilmoittautumiseen on vain yksi oikea ilmoittautumislinkki, jonka tulee löytymään tältä sivustolta (ohjelmointi-19.mooc.fi). Tämä tämän sivun antama linkki on siis ainoa oikea kokeen ilmoittautumislinkki sekä kurssin aikataulullisessa että aikatauluttomassa versiossa.
+
+
+
