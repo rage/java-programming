@@ -23,7 +23,7 @@ Ohjelmoinnin jatkokurssia vastaava koe suoritetaan materiaalin osien 8-14 jälke
 - 8.6.
 - 29.6.
 
-Jokaisesta osan kaikista tehtävistä saa tehtäväpisteitä. Löydät osan kaikki tehtävät valitsemalla kyseisen osan yleisnäkymästä "Lista osan tehtävistä". Näet tehtäväpisteesi kurssimateriaalin oikeassa alakulmassa olevasta pistevisualisaatiosta kohdan "Tehtäväpisteet yhteensä" kohdalta.
+Jokaisen osan kaikista tehtävistä saa tehtäväpisteitä. Löydät osan kaikki tehtävät valitsemalla kyseisen osan yleisnäkymästä "Lista osan tehtävistä". Näet tehtäväpisteesi kurssimateriaalin oikeassa alakulmassa olevasta pistevisualisaatiosta kohdan "Tehtäväpisteet yhteensä" kohdalta.
 
 Tehtäväpisteet muutetaan kurssipisteiksi siten, että täydet kurssipisteet kustakin osasta saa kun tehtäväpisteitä on yli 90%, ja puolet kurssipisteitä saa kun tehtäväpisteitä on noin 45% jne. Näet saamasi kurssipisteet pistevisualisaation kohdasta "Osasta saadut kurssipisteet". Aikataulutetussa kurssissa kurssin arvosana tulee määräytymään näiden kurssipisteiden ja kokeesta saatujen pisteiden perusteella.
 
