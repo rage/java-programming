@@ -7,7 +7,8 @@ hidden: true
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
-- yksikkötestaus
+- Tunnet termin yksikkötestaus.
+- Tutustut yksikkötestien kirjoittamiseen JUnit-kirjaston avulla.
 
 </text-box>
 
