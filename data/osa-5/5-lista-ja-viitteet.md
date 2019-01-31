@@ -44,16 +44,16 @@ for (Henkilo henkilo: henkilot) {
 
 <sample-output>
 
-  Juhana, ikä 3 vuotta
-  Matti, ikä 1 vuotta
-  Martin, ikä 1 vuotta
+Juhana, ikä 3 vuotta
+Matti, ikä 1 vuotta
+Martin, ikä 1 vuotta
 
 </sample-output>
 
 Listalle on kopioituna viitteet olioihin. Yllä olevassa esimerkissä muuttujan `juhana` arvona on sama viite kuin listalla, joten "Juhanan" ikä muuttuu myös jos hän vanhenee listan ulkopuolella.
 
 
-<img src="/img/drawings/henkilot-ja-juhana.png"/>
+<img src="../img/drawings/henkilot-ja-juhana.png"/>
 
 
 ## Lista oliomuuttujana

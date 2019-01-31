@@ -8,9 +8,7 @@ hidden: true
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
 - Tunnet käsitteet alkeistyyppinen muuttuja ja viittaustyyppinen muuttuja.
-
 -  Tiedät minkälaisia alkeistyyppisiä muuttujia Javassa on, ja tiedät että erilaisia viittaustyyppisiä muuttujia voi olla käytännössä rajaton määrä.
-
 -  Tiedät miten alkeis- ja viittaustyyppisten muuttujien käyttäytyminen eroaa toisistaan kun muuttujaan asetetaan arvoa ja kun muuttujaa käytetään metodin parametrina.
 
 </text-box>
@@ -165,26 +163,25 @@ Kutsun osat ovat seuravat:
 - Mitä tahansa uutta muuttujaa esiteltäessä tulee ensin kertoa esiteltävän muuttujan tyyppi. Alla esitellään muuttuja, jonka tyyppi on `Nimi`. Jotta ohjelman suorittaminen onnistuu, tulee käytössä olla luokka nimeltä `Nimi`.
 
 ```java
-<strong>Nimi</strong> leevi = new Nimi("Leevi");
+Nimi ...
 ```
-
 
 - Muuttujan esittelyn yhteydessä kerrotaan muuttujan nimi. Muuttujan arvoon voi myöhemmin viitata muuttujan nimen perusteella. Alla muuttujan nimeksi on määritelty leevi.
 
 ```java
-Nimi <strong>leevi</strong> = new Nimi("Leevi");
+Nimi leevi ...
 ```
 
 - Muuttujaan voidaan asettaa arvo. Luokista luodaan olioita kutsumalla konstruktoria, joka määrittelee luotavan olion oliomuuttujiin asetettavat arvot. Alla oletetaan, että luokassa `Nimi` on konstruktori, joka saa parametrikseen merkkijonon.
 
 ```java
-Nimi leevi = <strong>new Nimi("Leevi");</strong>
+... new Nimi("Leevi");
 ```
 
 - Konstruktorikutsu palauttaa arvon, joka on viite luotuun olioon. Yhtäsuuruusmerkki kertoo ohjelmalle, että yhtäsuuruusmerkin oikealla puolella olevan lausekkeen arvo tulee kopioida yhtäsuuruusmerkin vasemmalla puolella olevan muuttujan arvoksi. Konstruktorikutsun palauttama viite juuri luotuun olioon kopioidaan muuttujan `leevi` arvoksi.
 
 ```java
-Nimi leevi <strong>=</strong> new Nimi("Leevi");
+Nimi leevi = new Nimi("Leevi");
 ```
 
 
@@ -273,7 +270,7 @@ Ohjelman suoritus alkaa main-metodin ensimmäiseltä riviltä. Main-metodin ensi
 *Alla olevissa piirroksissa vasemmalla puolella on kutsupino, oikealla ohjelman muisti.*
 
 
-<img src="/img/drawings/eka-1.png"/>
+<img src="../img/drawings/eka-1.png"/>
 
 
 Main-metodin kolmannella rivillä tulostetaan muuttujan eka arvo. Metodikutsu System.out.println etsii sille parametrina annetulta viittaustyyppiseltä muuttujalta toString-metodia. Henkilo-luokalla on metodi toString, joten metodia kutsutaan eka-muuttujan osoittamalle oliolle. Oliossa olevan muuttujan nimi arvo on "Eka" ja syntymävuoden arvo on 1970. Tulostukseksi tulee "Eka (1970)".
@@ -282,13 +279,13 @@ Main-metodin kolmannella rivillä tulostetaan muuttujan eka arvo. Metodikutsu Sy
 Neljännellä rivillä kutsutaan nuorenna-metodia, jolle annetaan parametriksi muuttuja eka. Metodia `nuorenna` kutsuttaessa sille parametrina annetun muuttujan arvo kopioituu metodin `nuorenna` käyttöön. Metodin `main` suoritus jää odottamaan kutsupinoon. Koska muuttuja eka on viittaustyyppinen, kopioituu metodin käyttöön aiemmin luotu viite. Metodin suorituksen lopussa tilanne on seuraava -- metodi kasvattaa parametrina saamansa olion syntymävuotta yhdellä.
 
 
-<img src="/img/drawings/eka-2.png"/>
+<img src="../img/drawings/eka-2.png"/>
 
 
 Kun metodin nuorenna suoritus loppuu, palataan takaisin main-metodiin. Nuorenna-metodin suoritukseen liittyvät tiedot katoavat kutsupinosta.
 
 
-<img src="/img/drawings/eka-3.png"/>
+<img src="../img/drawings/eka-3.png"/>
 
 
 Metodikutsusta palaamisen jälkeen suoritetaan taas muuttujan eka arvon tulostaminen. Muuttujan eka osoittamaa oliota on muutettu metodikutsun `nuorenna` yhteydessä: olion `syntymavuosi`-muuttujaa kasvatettiin yhdellä. Tulostukseksi tulee lopulta "Eka (1971)".
@@ -297,13 +294,13 @@ Metodikutsusta palaamisen jälkeen suoritetaan taas muuttujan eka arvon tulostam
 Tämän jälkeen ohjelmassa esitellään uusi Henkilo-tyyppinen muuttuja toka. Muuttujaan toka kopioidaan muuttujan eka arvo, eli muuttujan toka arvoksi tulee viite jo olemassaolevaan Henkilo-olioon.
 
 
-<img src="/img/drawings/eka-4.png"/>
+<img src="../img/drawings/eka-4.png"/>
 
 
 Tämän jälkeen kutsutaan metodia nuorenna, jolle annetaan parametriksi muuttuja toka. Metodia kutsuttaessa parametriksi annetun muuttujan arvo kopioituu metodin arvoksi. Metodi saa siis käyttöönsä muuttujan toka sisältämän viitteen. Metodin suorituksen lopuksi metodin viittaaman olion syntymävuosi on kasvanut yhdellä.
 
 
-<img src="/img/drawings/eka-5.png"/>
+<img src="../img/drawings/eka-5.png"/>
 
 
 Lopulta metodin suoritus päättyy, ja ohjelman suoritus palaa takaisin main-metodiin. Main-metodissa tulostetaan vielä kerran muuttujan eka arvo. Tulostukseksi tulee lopulta "Eka (1972)".

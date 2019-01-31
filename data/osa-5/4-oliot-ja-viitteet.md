@@ -83,7 +83,7 @@ Konstruktorikutsun `new` yhteydessä tapahtuu monta asiaa. Ensin tietokoneen mui
 Konstruktorikutsu palauttaa viitteen olioon. **Viite** on tieto olioon liittyvien tietojen paikasta.
 
 
-<img src="/img/drawings/olio-joan.png"/>
+<img src="../img/drawings/olio-joan.png"/>
 
 
 Muuttujan arvoksi asetetaan siis viite, eli tieto olioon liittyvien tietojen paikasta. Yllä oleva kuva paljastaa myös sen, että merkkijonot -- kuten henkilömme nimi -- ovat myös olioita.
@@ -105,10 +105,10 @@ Henkilo ball = joan;
 Lause `Henkilo ball = joan;` luo uuden henkilömuuttujan `ball`, jonka arvoksi kopioidaan muuttujan `joan` arvo. Tämä saa aikaan sen, että `ball` viittaa samaan olioon kuin `joan`.
 
 
-<img src="/img/drawings/olio-joan-ja-ball.png"/>
+<img src="../img/drawings/olio-joan-ja-ball.png"/>
 
 
-Tarkastellan samaa esimerkkiä hieman pidemmälle.
+Tarkastellaan samaa esimerkkiä hieman pidemmälle.
 
 
 ```java
@@ -136,7 +136,7 @@ Joan Ball -- eli henkilöolio, johon viite muuttujassa `joan` osoittaa -- on alu
 Olion sisäinen tila ei kopioidu muuttujan arvoa asetettaessa. Lauseessa `Henkilo ball = joan;` ei luoda uutta oliota -- muuttujan ball arvoksi asetetaan kopio muuttujan joan arvosta, eli viite olioon.
 
 
-<img src="/img/drawings/olio-joan-ja-ball-2.png"/>
+<img src="../img/drawings/olio-joan-ja-ball-2.png"/>
 
 
 Seuraavassa esimerkkiä on jatkettu siten, että `joan`-muuttujaa varten luodaan uusi olio, jonka viite asetetaan muuttujan arvoksi. Muuttuja `ball` viittaa yhä aiemmin luotuun olioon.
@@ -172,7 +172,7 @@ Joan B., ikä 0 vuotta
 Muuttujassa `joan` on siis alussa viite yhteen olioon, mutta lopussa sen arvoksi on kopioitu toisen muuttujan viite. Seuraavassa kuva tilanteesta viimeisen koodirivin jälkeen.
 
 
-<img src="/img/drawings/olio-joan-ja-ball-3.png"/>
+<img src="../img/drawings/olio-joan-ja-ball-3.png"/>
 
 
 ## Viittaustyyppisen muuttujan arvo `null`
@@ -200,7 +200,7 @@ ball = null;
 Viimeisen rivin jälkeen ohjelman tila on seuraavanlainen.
 
 
-<img src="/img/drawings/olio-joan-ja-ball-null.png"/>
+<img src="../img/drawings/olio-joan-ja-ball-null.png"/>
 
 Olioon, jonka nimi on Joan Ball, ei enää viittaa kukaan. Oliosta on siis tullut "roska". Java-ohjelmointikielessä ohjelmoijan ei tarvitse huolehtia ohjelman käyttämästä muistista. Javan automaattinen roskienkerääjä käy siivoamassa roskaksi joutuneet oliot aika ajoin. Jos automaattista roskien keruuta ei tapahtuisi, jäisivät roskaksi joutuneet oliot varaamaan muistia ohjelman suorituksen loppuun asti.
 
@@ -372,7 +372,7 @@ Henkilöoliolla on nyt oliomuuttujat `nimi` ja `syntymapaiva`. Muuttuja `nimi` o
 Molemmat muuttujat sisältävät arvon olioon. Henkilöolio sisältää siis kaksi viitettä. Alla olevassa kuvassa paino ja pituus on jätetty huomiotta.
 
 
-<img src="/img/drawings/muhammad-ja-pascal.png"/>
+<img src="../img/drawings/muhammad-ja-pascal.png"/>
 
 
 Pääohjelmalla on nyt siis langan päässä kaksi Henkilö-olioa. Henkilöllä on nimi ja syntymäpäivä. Koska molemmat ovat olioita, ovat ne henkilöllä langan päässä.
@@ -434,9 +434,7 @@ Leevi, kaverina Hulda, joka on sekarotuinen koira
 
 ##  Olio metodin parametrina
 
-
 Olemme nähneet että metodien parametrina voi olla alkeis- ja viittaustyyppisiä muuttujia. Koska oliot ovat viittaustyyppisiä muuttujia, voi metodin parametriksi määritellä minkä tahansa tyyppisen olion. Demonstroidaan tätä esimerkillä.
-
 
 Painonvartijoihin hyväksytään jäseniksi henkilöitä, joiden painoindeksi ylittää annetun rajan. Kaikissa painonvartijayhdistyksissä raja ei ole sama. Tehdään painonvartijayhdistystä vastaava luokka. Olioa luotaessa konstruktorille annetaan parametriksi pienin painoindeksi, jolla yhdistyksen jäseneksi pääsee.
 
@@ -471,7 +469,6 @@ public class PainonvartijaYhdistys {
     }
 }
 ```
-
 
 Painonvartijayhdistys-olion metodille `hyvaksytaanJaseneksi` annetaan siis parametrina `Henkilo`-olio. Kuten aiemmin, muuttujan arvo -- eli tässä viite -- kopioituu metodin käyttöön. Metodissa käsitellään kopioitua viitettä ja kutsutaan parametrina saadun henkilön metodia `painoIndeksi`.
 
@@ -657,9 +654,11 @@ public static void main(String[] args) {
 Tulostuu:
 
 <sample-output>
+
 punnituksia tehty 0
 punnituksia tehty 2
 punnituksia tehty 6
+
 </sample-output>
 
 </programming-exercise>

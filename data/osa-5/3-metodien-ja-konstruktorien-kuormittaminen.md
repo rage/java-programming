@@ -40,7 +40,7 @@ public class Henkilo {
     }
 
     public boolean taysiIkainen() {
-        if (this.ika &lt; 18) {
+        if (this.ika < 18) {
             return false;
         }
 
