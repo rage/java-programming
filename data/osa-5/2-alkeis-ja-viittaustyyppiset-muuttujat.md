@@ -306,9 +306,9 @@ Tämän jälkeen kutsutaan metodia nuorenna, jolle annetaan parametriksi muuttuj
 Lopulta metodin suoritus päättyy, ja ohjelman suoritus palaa takaisin main-metodiin. Main-metodissa tulostetaan vielä kerran muuttujan eka arvo. Tulostukseksi tulee lopulta "Eka (1972)".
 
 
-<quiznator id='59d2aa2945370b0004080777'></quiznator>
+<quiznator id='5c534c84244fe21455cb6ef4'></quiznator>
 
-<quiznator id='59d2ab9045370b000408077b'></quiznator>
+<quiznator id='5c534ccfc41ed4148d96b340'></quiznator>
 
 
 
