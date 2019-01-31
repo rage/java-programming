@@ -11,19 +11,23 @@ Ohjelmoinnin MOOC sisältää Helsingin yliopiston kurssit Ohjelmoinnin perustee
 
 Aikataulutetussa kurssissa arvostelu perustuu sekä tehtyihin tehtäviin (50% kokonaispisteistä) että kokeeseen (50% kokonaispisteistä).
 
-Ohjelmoinnin perusteita vastaava koe suoritetaan materiaalin osien 1-7 jälkeen. Arvosanasta puolet muodostuu osien 1-7 tehdyistä tehtävistä ja puolet kokeesta. Osien 1-7 kokeita järjestetään seuraavasti:
+Ohjelmoinnin perusteita vastaava koe suoritetaan materiaalin osien 1-7 jälkeen. Arvosanasta puolet muodostuu osien 1-7 kurssipisteistä ja puolet kokeesta. Osien 1-7 kokeita järjestetään seuraavasti:
 
 - 5.3.
 - 14.4.
 - 8.5.
 
-Ohjelmoinnin jatkokurssia vastaava koe suoritetaan materiaalin osien 8-14 jälkeen. Arvosanasta puolet muodostuu osien 8-14 tehdyistä tehtävistä ja puolet kokeesta. Osien 8-14 kokeita järjestetään seuraavasti:
+Ohjelmoinnin jatkokurssia vastaava koe suoritetaan materiaalin osien 8-14 jälkeen. Arvosanasta puolet muodostuu osien 8-14 kurssipisteistä ja puolet kokeesta. Osien 8-14 kokeita järjestetään seuraavasti:
 
 - 8.5.
 - 8.6.
 - 29.6.
 
-Täydet tehtäväpisteet kustakin osasta saa tekemällä osan kaikkien tehtävien pisteistä vähintään 90%, puolet tekemällä noin 45% jne. Huomaathan, että mikäli haet opiskelupaikkaa Ohjelmoinnin MOOCin kautta, tulee sinun saada vähintään 90% jokaisen osan ohjelmoinitehtäväpisteistä. Omat ohjelmointitehtäväpisteet näkee helpoiten materiaalin pistevisualisaatiosta, jonka saa auki klikkaamalla sinistä palloa sivun oikeassa alareunassa.
+Jokaisen osan kaikista tehtävistä saa tehtäväpisteitä. Löydät osan kaikki tehtävät valitsemalla kyseisen osan yleisnäkymästä "Lista osan tehtävistä". Näet tehtäväpisteesi kurssimateriaalin oikeassa alakulmassa olevasta pistevisualisaatiosta kohdan "Tehtäväpisteet yhteensä" kohdalta.
+
+Tehtäväpisteet muutetaan kurssipisteiksi siten, että täydet kurssipisteet kustakin osasta saa kun tehtäväpisteitä on yli 90%, ja puolet kurssipisteitä saa kun tehtäväpisteitä on noin 45% jne. Näet saamasi kurssipisteet pistevisualisaation kohdasta "Osasta saadut kurssipisteet". Aikataulutetussa kurssissa kurssin arvosana tulee määräytymään näiden kurssipisteiden ja kokeesta saatujen pisteiden perusteella.
+
+Mikäli haet opiskelupaikkaa Ohjelmoinnin MOOCin kautta, saadaksesi kutsun näyttökokeeseen tulee sinun saada vähintään 90% jokaisen osan ohjelmoinitehtävien pisteistä. Omat ohjelmointitehtävien pisteet näkee helpoiten materiaalin pistevisualisaatiosta, jonka saa auki klikkaamalla sinistä palloa sivun oikeassa alareunassa.
 
 Kokeeseen saa osallistua kun on tehnyt vähintään 25% jokaisen osan tehtävien pisteistä. Aikatauluttamattomassa kurssissa kokeesta tulee saada vähintään puolet kurssin pisteistä kurssin läpäiseksi.
 
