@@ -4,31 +4,17 @@ title: 'Metodien ja konstruktorien kuormittaminen'
 hidden: true
 ---
 
-
-#
-  Metodien ja konstruktorien kuormittaminen
-<% end %>
-
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
-  <ul>
-    <li>
-      Tunnet käsitteen kuormittaminen.
-    </li>
-    <li>
-      Osaat luoda luokalle useampia konstruktoreita.
-    </li>
-    <li>
-      Osaat luoda luokkaan useampia samannimisiä metodeja.
-    </li>
-  </ul>
+- Tunnet käsitteen kuormittaminen.
+- Osaat luoda luokalle useampia konstruktoreita.
+- Osaat luoda luokkaan useampia samannimisiä metodeja.
 
-<% end %>
+</text-box>
 
 
-<p>
-  Palataan jälleen henkilöitä käsittelevän luokan pariin. Luokka `Henkilo` näyttää tällä hetkellä seuraavalta:
-</p>
+Palataan jälleen henkilöitä käsittelevän luokan pariin. Luokka `Henkilo` näyttää tällä hetkellä seuraavalta:
+
 
 ```java
 public class Henkilo {
@@ -91,11 +77,11 @@ public class Henkilo {
         return this.nimi;
     }
 }
-<% end %>
+```
 
-<p>
-  Kaikki henkilöoliot ovat luontihetkellä 0-vuotiaita, sillä konstruktori asettaa uuden henkilön ika-oliomuuttujan arvoksi 0:
-</p>
+
+Kaikki henkilöoliot ovat luontihetkellä 0-vuotiaita, sillä konstruktori asettaa uuden henkilön `ika`-oliomuuttujan arvoksi 0:
+
 
 ```java
 public Henkilo(String nimi) {
@@ -104,15 +90,14 @@ public Henkilo(String nimi) {
     this.paino = 0;
     this.pituus = 0;
 }
-<% end %>
+```
 
-##
-  Konstruktorin kuormittaminen
-<% end %>
 
-<p>
+##  Konstruktorin kuormittaminen
+
+
   Haluaisimme luoda henkilöitä myös siten, että konstruktorin parametrina annettaisiin ikä nimen lisäksi. Tämä onnistuu, sillä konstruktoreja voi olla useita. Tehdään vaihtoehtoinen konstruktori. Vanhaa konstruktoria ei tarvise poistaa.
-</p>
+
 
 ```java
 public Henkilo(String nimi) {
@@ -128,11 +113,11 @@ public Henkilo(String nimi, int ika) {
     this.paino = 0;
     this.pituus = 0;
 }
-<% end %>
+```
 
-<p>
-  Nyt olioiden luonti onnistuu kahdella vaihtoehtoisella tavalla:
-</p>
+
+Nyt olioiden luonti onnistuu kahdella vaihtoehtoisella tavalla:
+
 
 ```java
 public static void main(String[] args) {
@@ -142,37 +127,33 @@ public static void main(String[] args) {
     System.out.println(pekka);
     System.out.println(ada);
 }
-<% end %>
+```
 
 <sample-output>
+
 Pekka, ikä 24 vuotta
 Ada, ikä 0 vuotta
-<% end %>
 
-<p>
-  Tekniikkaa jossa luokalla on kaksi konstruktoria, kutsutaan <em>konstruktorin kuormittamiseksi</em>. Luokalla voi siis olla useita konstruktoreja, jotka poikkeavat toisistaanparametriensa määrältä tai tyypeiltä. Ei kuitenkaan ole mahdollista tehdä kahta erilaista konstruktoria joilla on täysin saman tyyppiset parametrit. Emme siis voi edellisten lisäksi lisätä konstruktoria `public Henkilo(String nimi, int paino)` sillä Javan on mahdoton erottaa tätä kaksiparametrisesta konstruktorissa, jossa luku tarkoittaa ikää.
-</p>
+</sample-output>
 
 
-##
-  Oman konstruktorin kutsuminen
-<% end %>
+Tekniikkaa jossa luokalla on kaksi konstruktoria, kutsutaan *konstruktorin kuormittamiseksi*. Luokalla voi siis olla useita konstruktoreja, jotka poikkeavat toisistaanparametriensa määrältä tai tyypeiltä. Ei kuitenkaan ole mahdollista tehdä kahta erilaista konstruktoria joilla on täysin saman tyyppiset parametrit. Emme siis voi edellisten lisäksi lisätä konstruktoria `public Henkilo(String nimi, int paino)` sillä Javan on mahdoton erottaa tätä kaksiparametrisesta konstruktorissa, jossa luku tarkoittaa ikää.
 
-<p>
-  Mutta hetkinen, aiemmin todettiin että "copy-paste"-koodi ei ole hyvä idea. Kun tarkastellaan edellä tehtyjä kuormitettuja konstruktoreita, niissä on aika paljon samaa. Emme ole oikein tyytyväisiä tilanteeseen.
-</p>
 
-<p>
-  Konstruktoreista ylempi, eli nimen parametrinaan saava konstruktori, on oikeastaan alemman, eli nimen ja iän parametrinaan saavan konstruktorin, erikoistapaus. Entä jos ylempi konstruktori voisi "kutsua" alempaa konstruktoria?
-</p>
+## Oman konstruktorin kutsuminen
 
-<p>
-  Tämä onnistuu, sillä konstruktorin sisältä voi kutsua toista konstruktoria juuri tähän olioon liittyvän `this`-ilmauksen avulla!
-</p>
 
-<p>
-  Muutetaan ylempää konstruktoria siten, että se ei itse tee mitään vaan ainoastaan kutsuu alempaa konstruktoria ja pyytää sitä asettamaan iäksi 0:
-</p>
+Mutta hetkinen, aiemmin todettiin että "copy-paste"-koodi ei ole hyvä idea. Kun tarkastellaan edellä tehtyjä kuormitettuja konstruktoreita, niissä on aika paljon samaa. Emme ole oikein tyytyväisiä tilanteeseen.
+
+
+Konstruktoreista ylempi, eli nimen parametrinaan saava konstruktori, on oikeastaan alemman, eli nimen ja iän parametrinaan saavan konstruktorin, erikoistapaus. Entä jos ylempi konstruktori voisi "kutsua" alempaa konstruktoria?
+
+
+Tämä onnistuu, sillä konstruktorin sisältä voi kutsua toista konstruktoria juuri tähän olioon liittyvän `this`-ilmauksen avulla!
+
+
+Muutetaan ylempää konstruktoria siten, että se ei itse tee mitään vaan ainoastaan kutsuu alempaa konstruktoria ja pyytää sitä asettamaan iäksi 0:
+
 
 ```java
 public Henkilo(String nimi) {
@@ -185,15 +166,13 @@ public Henkilo(String nimi, int ika) {
     this.paino = 0;
     this.pituus = 0;
 }
-<% end %>
+```
 
-<p>
-  Oman konstruktorin kutsu `this(nimi, 0);` saattaa vaikuttaa erikoiselta. Asiaa voi vaikka ajatella siten, että kutsun kohdalle tulee "copy-pastena" automaattisesti alemman konstruktorin koodi, siten että ika parametrin arvoksi tulee 0. Huom! Jos konstruktorista kutsutaan toista konstruktoria, tulee konstruktorin kutsun olla ensimmäinen toiminto konstruktorin sisällä.
-</p>
+Oman konstruktorin kutsu `this(nimi, 0);` saattaa vaikuttaa erikoiselta. Asiaa voi vaikka ajatella siten, että kutsun kohdalle tulee "copy-pastena" automaattisesti alemman konstruktorin koodi, siten että ika parametrin arvoksi tulee 0. Huom! Jos konstruktorista kutsutaan toista konstruktoria, tulee konstruktorin kutsun olla ensimmäinen toiminto konstruktorin sisällä.
 
-<p>
-  Olioiden luonti onnistuu aivan kuten edellisessä esimerkissä:
-</p>
+
+Olioiden luonti onnistuu aivan kuten edellisessä esimerkissä:
+
 
 ```java
 public static void main(String[] args) {
@@ -203,23 +182,23 @@ public static void main(String[] args) {
     System.out.println(pekka);
     System.out.println(esko);
 }
-<% end %>
+```
 
 <sample-output>
+
 Pekka, ikä 24 vuotta
 Esko, ikä 0 vuotta
-<% end %>
+
+</sample-output>
+
+<quiznator id='5bae770fc68dfe01d43637bc'></quiznator>
 
 
-<%= partial 'partials/quiz', locals: { id: '5bae770fc68dfe01d43637bc' } %>
+## Metodin kuormittaminen
 
-##
-  Metodin kuormittaminen
-<% end %>
 
-<p>
-  Konstruktorien tapaan myös metodeja voi kuormittaa, eli samannimisestä metodista voi olla useita versioita. Jälleen eri versioiden parametrien tyyppien on oltava erilaiset. Tehdään `vanhene`-metodista toinen versio, joka mahdollistaa henkilön vanhentamisen parametrina olevalla vuosimäärällä:
-</p>
+Konstruktorien tapaan myös metodeja voi kuormittaa, eli samannimisestä metodista voi olla useita versioita. Jälleen eri versioiden parametrien tyyppien on oltava erilaiset. Tehdään `vanhene`-metodista toinen versio, joka mahdollistaa henkilön vanhentamisen parametrina olevalla vuosimäärällä:
+
 
 ```java
 public void vanhene() {
@@ -229,11 +208,10 @@ public void vanhene() {
 public void vanhene(int vuodet) {
     this.ika = this.ika + vuodet;
 }
-<% end %>
+```
 
-<p>
-  Seuraavassa "Pekka" syntyy 24-vuotiaana, vanhenee ensin vuoden ja sitten 10 vuotta:
-</p>
+Seuraavassa "Pekka" syntyy 24-vuotiaana, vanhenee ensin vuoden ja sitten 10 vuotta:
+
 
 ```java
 public static void main(String[] args) {
@@ -246,25 +224,25 @@ public static void main(String[] args) {
     pekka.vanhene(10);
     System.out.println(pekka);
 }
-<% end %>
+```
 
-<p>
-  Tulostuu:
-</p>
+Tulostuu:
+
 
 <sample-output>
+
 Pekka, ikä 24 vuotta
 Pekka, ikä 25 vuotta
 Pekka, ikä 35 vuotta
-<% end %>
 
-<p>
-  Henkilöllä on nyt siis käytännössä kaksi kappaletta `vanhene`-nimisiä metodeja. Se kumpi metodeista valitaan suoritettavaksi, riippuu metodikutsussa käytettyjen parametrien määrästä.
-</p>
+</sample-output>
 
-<p>
-  Ohjelmaa voi muokata myös niin, että parametriton metodi `vanhene` toteutetaan metodin `vanhene(int vuodet)` avulla:
-</p>
+
+Henkilöllä on nyt siis käytännössä kaksi kappaletta `vanhene`-nimisiä metodeja. Se kumpi metodeista valitaan suoritettavaksi, riippuu metodikutsussa käytettyjen parametrien määrästä.
+
+
+Ohjelmaa voi muokata myös niin, että parametriton metodi `vanhene` toteutetaan metodin `vanhene(int vuodet)` avulla:
+
 
 ```java
 public void vanhene() {
@@ -274,107 +252,85 @@ public void vanhene() {
 public void vanhene(int vuodet) {
     this.ika = this.ika + vuodet;
 }
-<% end %>
+```
 
 
-<%= partial 'partials/quiz', locals: { id: '5bae75b000b2e30284f440cb' } %>
+<quiznator id='5bae75b000b2e30284f440cb'></quiznator>
 
-<p>
-  <%= partial 'partials/youtube_2', locals: { id: 'b6YmqoQopvs' } %>
-</p>
+<youtube id='b6YmqoQopvs'></youtube>
 
 
-<programming-exercise name='Monta konstruktoria', model_solution: '51755' } do %>
 
-  <p>
-    Tehtäväpohjassa on luokka `Esine`, joka kuvaa kaupassa olevaa esinettä. Jokaisella esineellä on nimi, sijainti sekä paino.
-  </p>
+<programming-exercise name='Monta konstruktoria'>
 
-  <p>
-    Lisää luokkaan `Esine` seuraavat kolme konstruktoria:
-  </p>
+Tehtäväpohjassa on luokka `Esine`, joka kuvaa kaupassa olevaa esinettä. Jokaisella esineellä on nimi, sijainti sekä paino.
 
-  <ul>
-    <li>
-      `public Esine(String nimi)` luo esineen annetulla nimellä. Esineen sijainniksi tulee "pientavarahylly" ja painoksi 1.
-    </li>
-    <li>
-      `public Esine(String nimi, String sijainti)` luo esineen annetulla nimellä ja sijainnilla. Esineen painoksi tulee 1.
-    </li>
-    <li>
-      `public Esine(String nimi, int paino)` luo esineen annetulla nimellä ja painolla. Esineen sijainniksi tulee "varasto".
-    </li>
-  </ul>
 
-  <p>
-    Voit kokeilla ohjelmasi toimintaa seuraavalla koodilla:
-  </p>
+Lisää luokkaan `Esine` seuraavat kolme konstruktoria:
+
+- `public Esine(String nimi)` luo esineen annetulla nimellä. Esineen sijainniksi tulee "pientavarahylly" ja painoksi 1.
+
+- `public Esine(String nimi, String sijainti)` luo esineen annetulla nimellä ja sijainnilla. Esineen painoksi tulee 1.
+
+- `public Esine(String nimi, int paino)` luo esineen annetulla nimellä ja painolla. Esineen sijainniksi tulee "varasto".
+
+
+Voit kokeilla ohjelmasi toimintaa seuraavalla koodilla:
 
 
 ```java
-  Esine mitta = new Esine("Mitta");
-  Esine laasti = new Esine("Laasti", "remonttitavarat");
-  Esine rengas = new Esine("Rengas", 5);
+Esine mitta = new Esine("Mitta");
+Esine laasti = new Esine("Laasti", "remonttitavarat");
+Esine rengas = new Esine("Rengas", 5);
 
-  System.out.println(mitta);
-  System.out.println(laasti);
-  System.out.println(rengas);
-<% end %>
+System.out.println(mitta);
+System.out.println(laasti);
+System.out.println(rengas);
+```
+
 
 <sample-output>
-  Mitta (1 kg) löytyy sijainnista pientavarahylly
-  Laasti (1 kg) löytyy sijainnista remonttitavarat
-  Rengas (5 kg) löytyy sijainnista varasto
-<% end %>
 
-<% end %>
+Mitta (1 kg) löytyy sijainnista pientavarahylly
+Laasti (1 kg) löytyy sijainnista remonttitavarat
+Rengas (5 kg) löytyy sijainnista varasto
+
+</sample-output>
+
+</programming-exercise>
 
 
-<programming-exercise name='Kuormitettu laskuri (2 osaa)', model_solution: '51756' } do %>
+<programming-exercise name='Kuormitettu laskuri (2 osaa)'>
 
-  <h2>Monta konstruktoria</h2>
 
-  <p>
-    Toteuta luokka `Laskuri`, joka sisältää luvun, jota voi vähentää ja suurentaa. Luokalla tulee olla seuraavat konstruktorit:
-  </p>
+<h2>Monta konstruktoria</h2>
 
-  <ul>
-    <li>
-      `public Laskuri(int alkuarvo)` asettaa laskurin alkuarvoksi parametrin `alkuarvo` arvon.
-    </li>
-    <li>
-      `public Laskuri()` laskurin alkuarvoksi tulee 0.
-    </li>
-  </ul>
 
-  <p>
-    ja seuraavat metodit:
-  </p>
+Toteuta luokka `Laskuri`, joka sisältää luvun, jota voi vähentää ja suurentaa. Luokalla tulee olla seuraavat konstruktorit:
 
-  <ul>
-    <li>
-      `public int arvo()` palauttaa laskurin tämänhetkisen arvon
-    </li>
-    <li>
-      `public void lisaa()` lisää laskurin arvoa yhdellä
-    </li>
-    <li>
-      `public void vahenna()` vähentää laskurin arvoa yhdellä
-    </li>
-  </ul>
 
-  <h2>Vaihtoehtoiset metodit</h2>
+- `public Laskuri(int alkuarvo)` asettaa laskurin alkuarvoksi parametrin `alkuarvo` arvon.
 
-  <p>
-    Tee laskurin metodeista `lisaa` ja `vahenna` myös yksiparametriset versiot:
-  </p>
+- `public Laskuri()` laskurin alkuarvoksi tulee 0.
 
-  <ul>
-    <li>
-      `public void lisaa(int lisays)` lisää laskurin arvoa parametrina annetun luvun verran. Jos parametrin arvo on negatiivinen, ei laskurin arvo muutu.
-    </li>
-    <li>
-      `public void vahenna(int vahennys)` vähentää laskurin arvoa parametrina annetun luvun verran. Jos parametrin arvo on negatiivinen, ei laskurin arvo muutu.
-    </li>
-  </ul>
-<% end %>
+
+ja seuraavat metodit:
+
+- `public int arvo()` palauttaa laskurin tämänhetkisen arvon
+
+- `public void lisaa()` lisää laskurin arvoa yhdellä
+
+- `public void vahenna()` vähentää laskurin arvoa yhdellä
+
+
+<h2>Vaihtoehtoiset metodit</h2>
+
+
+Tee laskurin metodeista `lisaa` ja `vahenna` myös yksiparametriset versiot:
+
+
+- `public void lisaa(int lisays)` lisää laskurin arvoa parametrina annetun luvun verran. Jos parametrin arvo on negatiivinen, ei laskurin arvo muutu.
+
+- `public void vahenna(int vahennys)` vähentää laskurin arvoa parametrina annetun luvun verran. Jos parametrin arvo on negatiivinen, ei laskurin arvo muutu.
+
+</programming-exercise>
