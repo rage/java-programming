@@ -1420,13 +1420,13 @@ Kappaleet olivat samat.
 </programming-exercise>
 
 
-<programming-exercise name='Henkilövertailu TODO testit' tmcname='osa05-Osa05_13.Henkilovertailu'>
+<programming-exercise name='Henkilövertailu' tmcname='osa05-Osa05_13.Henkilovertailu'>
 
 Tehtäväpohjassa on luokka `Henkilo`, johon liittyy `Paivays`-olio. Lisää luokalle Henkilo metodi `public boolean equals(Object verrattava)`, jonka avulla voidaan verrata henkilöiden samuutta. Vertailussa tulee verrata kaikkien henkilön muuttujien yhtäsuuruutta (ml. syntymäpäivä).
 
 **Huom!** Muistathan, että et voi verrata syntymäpäivää-olioita yhtäsuuruusmerkillä!
 
-Alla testikoodia ohjelman testaamiseen.
+Tehtäväpohjassa ei ole ohjelman oikeellisutta tarkastavia testejä. Palauta tehtävä vasta kun vertailu toimii oikein. Alla koodia ohjelman testaamiseen.
 
 
 ```java
