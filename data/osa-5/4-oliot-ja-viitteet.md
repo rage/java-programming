@@ -265,7 +265,7 @@ Käy huonosti. Tämä on ehkä ensimmäinen kerta kun näet tekstin **NullPointe
 Voimme luvata, että tulet näkemään edellisen virheen vielä uudelleen. Tällöin ensimmäinen askel on etsiä muuttujia, joiden arvona saattaisi olla `null`. Virheilmoitus on onneksi myös hyödyllinen: se kertoo millä rivillä virhe tapahtuu. Kokeile vaikka itse!
 
 
-<programming-exercise name='NullPointerException'>
+<programming-exercise name='NullPointerException' tmcname='osa05-Osa05_07.NullPointerException'>
 
 Toteuta ohjelma, jonka suorittaminen aiheuttaa virheen NullPointerException. Virheen tulee tapahtua heti kun ohjelma suoritetaan -- älä siis esimerkiksi lue käyttäjältä syötettä.
 
@@ -410,7 +410,7 @@ Käytämme edellä omaa luokkaa `Paivays` päivämäärän esittämiseen, sillä
 </text-box>
 
 
-<programming-exercise name='Henkilö ja lemmikki'>
+<programming-exercise name='Henkilö ja lemmikki' tmcname='osa05-Osa05_08.HenkiloJaLemmikki'>
 
 
 Tehtäväpohjassa tulee kaksi luokkaa, `Henkilo` ja `Lemmikki`. Jokaisella henkilöllä on yksi lemmikki. Täydennä luokan `Henkilo` metodia `public String toString` siten, että metodi palauttaa merkkijonon, joka kertoo henkilön nimen lisäksi lemmikin nimen ja rodun.
@@ -528,7 +528,7 @@ Joillain Linux-koneilla, kuten Kumpulassa olevilla koneilla, tämä saadaan aika
 <youtube id='aSFT6UnyvE0'></youtube>
 
 
-<programming-exercise name='Kasvatuslaitos (3 osaa)'>
+<programming-exercise name='Kasvatuslaitos (3 osaa)' tmcname='osa05-Osa05_09.Kasvatuslaitos'>
 
 
 Tehtäväpohjassasi on valmiina jo tutuksi tullut luokka `Henkilo` sekä runko luokalle `Kasvatuslaitos`. Kasvatuslaitosoliot käsittelevät ihmisiä eri tavalla, esim. punnitsevat ja syöttävät ihmisiä. Rakennamme tässä tehtävässä kasvatuslaitoksen. Luokan Henkilö koodiin ei tehtävässä ole tarkoitus koskea!
@@ -664,7 +664,7 @@ punnituksia tehty 6
 </programming-exercise>
 
 
-<programming-exercise name='Maksukortti ja Kassapääte (4 osaa)'>
+<programming-exercise name='Maksukortti ja Kassapääte (4 osaa)' tmcname='osa05-Osa05_10.MaksukorttiJaKassapaate'>
 
 
 <h2>"Tyhmä" Maksukortti</h2>
@@ -1144,7 +1144,7 @@ public class Henkilo {
 Nyt päivämäärän konkreettinen vertailu on toteutettu luokassa, johon se loogisesti (luokkien nimien perusteella) kuuluukin.
 
 
-<programming-exercise name='Asuntovertailu (3 osaa)'>
+<programming-exercise name='Asuntovertailu (3 osaa)' tmcname='osa05-Osa05_11.Asuntovertailu'>
 
 Asuntovälitystoimiston tietojärjestelmässä kuvataan myynnissä olevaa asuntoa seuraavasta luokasta tehdyillä olioilla:
 
@@ -1393,7 +1393,7 @@ public class Henkilo {
 ```
 
 
-<programming-exercise name='Kappale'>
+<programming-exercise name='Kappale' tmcname='osa05-Osa05_12.Kappale'>
 
 Tehtäväpohjassa on luokka `Kappale`, jonka perusteella voidaan luoda musiikkikappaleita esittäviä olioita. Lisää luokkaan kappale metodi `equals`, jonka avulla voidaan tarkastella musiikkikappaleiden samankaltaisuutta.
 
@@ -1420,7 +1420,7 @@ Kappaleet olivat samat.
 </programming-exercise>
 
 
-<programming-exercise name='Henkilövertailu TODO testit'>
+<programming-exercise name='Henkilövertailu TODO testit' tmcname='osa05-Osa05_13.Henkilovertailu'>
 
 Tehtäväpohjassa on luokka `Henkilo`, johon liittyy `Paivays`-olio. Lisää luokalle Henkilo metodi `public boolean equals(Object verrattava)`, jonka avulla voidaan verrata henkilöiden samuutta. Vertailussa tulee verrata kaikkien henkilön muuttujien yhtäsuuruutta (ml. syntymäpäivä).
 
@@ -1576,7 +1576,7 @@ public class Tehdas {
 ```
 
 
-<programming-exercise name='Päiväys (3 osaa)'>
+<programming-exercise name='Päiväys (3 osaa)' tmcname='osa05-Osa05_14.Paivays'>
 
 Tehtäväpohjan mukana tulee luokka `Paivays`, jossa päivämäärä talletetaan oliomuuttujien `vuosi`, `kuukausi`, ja `paiva` avulla:
 
@@ -1715,7 +1715,7 @@ Tämä johtuu siitä, että tavallinen sijoitus kopioi ainoastaan viitteen olioo
 </programming-exercise>
 
 
-<programming-exercise name='Raha (3 osaa)'>
+<programming-exercise name='Raha (3 osaa)' tmcname='osa05-Osa05_15.Raha'>
 
 
 Maksukortti-tehtävässä käytimme rahamäärän tallettamiseen double-tyyppistä oliomuuttujaa. Todellisissa sovelluksissa näin ei kannata tehdä, sillä kuten jo olemme nähneet, doubleilla laskenta ei ole tarkkaa. Onkin järkevämpää toteuttaa rahamäärän käsittely oman luokkansa avulla. Seuraavassa on luokan runko:

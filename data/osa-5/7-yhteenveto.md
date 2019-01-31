@@ -5,16 +5,9 @@ hidden: true
 ---
 
 
-#
-  Yhteenveto
-<% end %>
+Viidennessä osassa syvennyttiin olioiden maailmaan. Tarkastelimme alkeis- ja viittaustyyppisten muuttujien eroa. Tutustuimme metodien ja konstruktorien kuormittamiseen, harjoittelimme olioiden käyttöä oliomuuttujina sekä metodin parametrina ja paluuarvona. Harjoittelimme olioiden vertailuun käytettävien metodien luomista, ja käsittelimme olioita listalla sekä listoja oliomuuttujana.
 
-<p>
-  Viidennessä osassa syvennyttiin olioiden maailmaan. Tarkastelimme alkeis- ja viittaustyyppisten muuttujien eroa. Tutustuimme metodien ja konstruktorien kuormittamiseen, harjoittelimme olioiden käyttöä oliomuuttujina sekä metodin parametrina ja paluuarvona. Harjoittelimme olioiden vertailuun käytettävien metodien luomista, ja käsittelimme olioita listalla sekä listoja oliomuuttujana.
-</p>
 
-<p>
-  Vastaa vielä alla olevaan kyselyyn.
-</p>
+Vastaa vielä alla olevaan kyselyyn.
 
-<%= partial 'partials/quiz', locals: { id: '5bae731a1abfdc0230c32a80' } %>
+<quiznator id='5bae731a1abfdc0230c32a80'></quiznator>

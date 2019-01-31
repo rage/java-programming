@@ -261,7 +261,7 @@ public void vanhene(int vuodet) {
 
 
 
-<programming-exercise name='Monta konstruktoria'>
+<programming-exercise name='Monta konstruktoria' tmcname='osa05-Osa05_05.MontaKonstruktoria'>
 
 Tehtäväpohjassa on luokka `Esine`, joka kuvaa kaupassa olevaa esinettä. Jokaisella esineellä on nimi, sijainti sekä paino.
 
@@ -300,8 +300,8 @@ Rengas (5 kg) löytyy sijainnista varasto
 </programming-exercise>
 
 
-<programming-exercise name='Kuormitettu laskuri (2 osaa)'>
 
+<programming-exercise name='Kuormitettu laskuri (2 osaa)' tmcname='osa05-Osa05_06.KuormitettuLaskuri'>
 
 <h2>Monta konstruktoria</h2>
 

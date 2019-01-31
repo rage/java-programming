@@ -1,6 +1,6 @@
 ---
-path: '/osa-5/5-lista-ja-viitteet'
-title: 'Lista ja viitteet'
+path: '/osa-5/5-listat-ja-viitteet'
+title: 'Listat ja viitteet'
 hidden: true
 ---
 
@@ -108,7 +108,7 @@ Teuvo, maanteiden kuningas
 </sample-output>
 
 
-<programming-exercise name='Ruokalista (3 osaa)'>
+<programming-exercise name='Ruokalista (3 osaa)' tmcname='osa05-Osa05_16.Ruokalista'>
 
 Kumpulan kampuksella Helsingissä toimivaan Unicafe-nimiseen gourmet-ravintolaan tarvitaan uusi ruokalista. Keittiömestari tietää ohjelmoinnista, ja haluaa listan hallinnointiin tietokonejärjestelmän. Toteutetaan tässä tehtävässä järjestelmän sydän, luokka Ruokalista.
 
@@ -321,7 +321,7 @@ suurin painoindeksi on jäsenellä Petri
 </sample-output>
 
 
-<programming-exercise name='Lahjapakkaamo (2 osaa)'>
+<programming-exercise name='Lahjapakkaamo (2 osaa)' tmcname='osa05-Osa05_17.Lahjapakkaamo'>
 
 Tässä tehtävässä harjoitellaan lahjojen pakkaamista. Tehdään luokat `Lahja` ja `Pakkaus`. Lahjalla on nimi ja paino, ja Pakkaus sisältää lahjoja.
 

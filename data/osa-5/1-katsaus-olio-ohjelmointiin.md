@@ -198,7 +198,7 @@ while (true) {
 Edellä toteuttamamme kello on olio, jonka toiminta perustuu "yksinkertaisimpiin" olioihin eli viisareihin. Tämä on juuri **olio-ohjelmoinnin suuri idea: ohjelma rakennetaan pienistä selkeistä yhteistoiminnassa olevista olioista**.
 
 
-<programming-exercise name='Sekuntikello'>
+<programming-exercise name='Sekuntikello' tmcname='osa05-Osa05_01.Sekuntikello'>
 
 
 Tehtäväpohjassa tulee edellä kuvattu luokka `Viisari`. Toteuta materiaalin `Kello`-luokkaa mukaillen luokka `Sekuntikello`.
@@ -398,7 +398,7 @@ System.out.println(eka.pintaAla());
 </sample-output>
 
 
-<programming-exercise name='Kirja'>
+<programming-exercise name='Kirja' tmcname='osa05-Osa05_02.Kirja'>
 
 Luo kirjaa esittävä luokka `Kirja`. Jokaisella kirjalla on kirjailija, nimi ja sivujen lukumäärä.
 
@@ -420,7 +420,7 @@ J. K. Rowling, Harry Potter ja viisasten kivi, 223 sivua
 </programming-exercise>
 
 
-<programming-exercise name='Kuutio'>
+<programming-exercise name='Kuutio' tmcname='osa05-Osa05_03.Kuutio'>
 
 Luo kuutiota (eli säännöllistä kuusitahokasta) esittävä luokka `Kuutio`. Luo luokalle konstruktori `public Kuutio(int sarmanPituus)`, joka saa parametrinaan kuution särmän pituuden.
 
@@ -456,7 +456,7 @@ Kuution särmän pituus on 2, tilavuus on 8
 </programming-exercise>
 
 
-<programming-exercise name='Harjoitusapuri'>
+<programming-exercise name='Harjoitusapuri' tmcname='osa05-Osa05_04.Harjoitusapuri'>
 
 
 <a href="https://fi.wikipedia.org/wiki/Karvosen_kaava" target="_blank" norel>Karvosen kaavan</a> avulla voidaan laskea tavoitesyke fyysistä harjoittelua varten. Tavoitesykkeen laskeminen perustuu kaavaan `(maksimisyke - leposyke) * (tavoitesykeprosentti) + leposyke`, missä tavoitesyke annetaan prosenttina maksimisykkeestä.
