@@ -30,7 +30,6 @@ import {
   MEDIUM_LARGE_BREAKPOINT,
   SMALL_MEDIUM_BREAKPOINT,
 } from "../util/constants"
-import Notification from "../components/Notification"
 
 fontAwesomeConfig.autoAddCss = false
 
@@ -123,7 +122,6 @@ class Layout extends React.Component {
 
     return (
       <Fragment>
-        <Notification />
         <StaticQuery
           query={layoutQuery}
           render={data => {
