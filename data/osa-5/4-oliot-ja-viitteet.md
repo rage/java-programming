@@ -1,7 +1,7 @@
 ---
 path: '/osa-5/4-oliot-ja-viitteet'
 title: 'Oliot ja viitteet'
-hidden: true
+hidden: false
 ---
 
 

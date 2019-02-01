@@ -1,7 +1,7 @@
 ---
 path: '/osa-5/5-listat-ja-viitteet'
 title: 'Listat ja viitteet'
-hidden: true
+hidden: false
 ---
 
 

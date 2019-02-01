@@ -1,7 +1,7 @@
 ---
 path: '/osa-5/6-testauksen-alkeet-jatkuvat'
 title: 'Pienet askeleet ohjelmien testaamiseen jatkuvat'
-hidden: true
+hidden: false
 ---
 
 
