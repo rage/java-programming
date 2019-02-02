@@ -561,7 +561,7 @@ aamu,1
 
 </sample-data>
 
-Tehtävänäsi on kirjoita ohjelma, joka ensin kysyy käyttäjältä luettavan tiedoston nimen, jonka jälkeen ohjelma käy tiedoston läpi ja etsii sieltä vanhimman henkilön nimen. Voit olettaa, että vanhin henkilö on aina yksikäsitteinen, eli tiedostossa ei ole useampaa saman ikäistä henkilöä. Esimerkiksi yllä olevalla tiedostolla -- mikäli tiedoston nimi olisi "data.txt" -- ohjelman suoritus olisi seuraava.
+Tehtävänäsi on kirjoittaa ohjelma, joka ensin kysyy käyttäjältä luettavan tiedoston nimen, jonka jälkeen ohjelma käy tiedoston läpi ja etsii sieltä vanhimman henkilön nimen. Voit olettaa, että vanhin henkilö on aina yksikäsitteinen, eli tiedostossa ei ole useampaa saman ikäistä henkilöä. Esimerkiksi yllä olevalla tiedostolla -- mikäli tiedoston nimi olisi "data.txt" -- ohjelman suoritus olisi seuraava.
 
 <sample-output>
 
