@@ -159,7 +159,7 @@ public class Kello() {
     public Kello() {
         this.tunnit = new Viisari(24);
         this.minuutit = new Viisari(60);
-        this.tunnit = new Viisari(60);
+        this.sekunnit = new Viisari(60);
     }
 
     public void etene() {
