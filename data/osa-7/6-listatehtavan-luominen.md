@@ -1,5 +1,5 @@
 ---
-path: '/osa-6/5-tehtavan-luominen'
+path: '/osa-7/5-tehtavan-luominen'
 title: 'Ohjelmointitehtävän luominen'
 hidden: true
 ---
@@ -125,4 +125,42 @@ hidden: true
 <% end %>
 
 <div class='crowdsorcerer-widget' data-assignment='11' peer-review data-exercises='3'></div>
+
+
+
+
+#
+  Suunnittele oma tehtävä: Hajautustaulu
+</sample-output>
+
+
+  Tässä kohtaa kertaat hajautustauluja ja pääset taas pohtimaan tehtävää tulevia sukupolvia varten. Jos et ole tehtävien luomiseen käytettävää CrowdSorcerer-työvälinettä aiemmin, käy katsomassa opasvideo toisen osan materiaalista.
+
+
+
+<% partial 'partials/general_callout', locals: { name: 'Suunnittele oma tehtävä: HashMap' } do %>
+
+
+    Keksi tehtävä, jossa käytetään HashMappia. Tehtäväpohjassa on valmiina komennon kysyminen ja toistolause, joka jatkuu kunnes ohjelman käyttäjä kirjoittaa komennon "lopeta".
+
+
+
+    **Huom!** Tässä sinun täytyy syöttää jokaiselle testitapaukselle useampi syöte. Useamman syötteen saat annettua, kun laitat rivinvaihdon `\n` jokaisen syötteen väliin. Lisäksi lopeta jokainen testisyöte tekstillä `lopeta`, jotta testissä silmukan suoritus lakkaa.
+
+
+
+    Esimerkiksi jos haluat antaa testisyötteeksi "kissa", "koira", "lopeta", syötä input-kenttään teksti `kissa\nkoira\nlopeta`.
+
+
+
+    Muista merkitä malliratkaisurivit ohjelmaan -- näin ratkaisu ei tule suoraan käyttäjälle näkyvään.
+
+
+
+    Tehtävien luomistehtävät vastaavat kurssin pisteytyksessä ohjelmointitehtävää.
+
+
+<% end %>
+
+<div class='crowdsorcerer-widget' data-assignment='12'></div>
 

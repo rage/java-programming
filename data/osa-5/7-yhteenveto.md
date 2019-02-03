@@ -1,5 +1,5 @@
 ---
-path: '/osa-5/7-testauksen-alkeet-jatkuvat'
+path: '/osa-5/7-yhteenveto'
 title: 'Yhteenveto'
 hidden: false
 ---
