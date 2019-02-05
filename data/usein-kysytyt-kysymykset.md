@@ -86,3 +86,19 @@ Kaikki jotka haluavat osallistua Avoimen yliopiston tentteihin tai pystyä lukem
 ### Aion hakea opiskelupaikkaa MOOCin kautta. Pitääkö minun osallistua Avoimen yliopiston tentteihin?
 
 Näyttökokeeseen saa kutsun, jos saa vähintään 90% kaikkien kurssin osien ohjelmointitehtävistä. Tentteihin osallistuminen ei ole pakollista tähän. Suosittelemme kuitenkin kaikille Avoimen yliopiston tentteihin osallistumista, koska vain niin voi varmistaa saavansa kurssisuoritukset. Pelkkään näyttökokeeseen osallistuminen ei takaa kurssisuorituksia. Käymällä Avoimen tentit suoritukset saa myös silloin, jos päätyy yliopistolle normaalin pääsykokeen tai Avoimen väylän kautta, tai jos aloittaa opiskelemaan muuta alaa.
+
+### Mihin asti voin tehdä aikataulutonta kurssia?
+
+Aikataulutonta kurssia voi tehdä näillä näkymin vuoden loppuun asti.
+
+### Miten perun kurssiosallistumiseni?
+
+Kurssiosallistumista ei tarvitse erikseen perua. Riittää, että lopettaa kurssin tekemisen.
+
+Jos osallistumisen esteenä on muut kiireet, kannattaa harkita aikatauluttomalle kurssille siirtymistä. Tällöin kurssia voi tehdä rennompaa tahtia. [vaihtaminen aikatauluttomaan versioon](/vaihda-aikatauluttomaan)
+
+Jos kurssi tuntuu liian hankalalta, kannattaa hakea apua tukiväyliltämme ennen kurssin lopettamista. [Tukiväylät](/tukivaylat)
+
+### Pääsenkö käsiksi kaikkiin kurssin osiin heti aikatauluttomalla kurssilla?
+
+Valitettavasti et voi. Osien julkaisupäivät koskevat sekä aikataulullista että aikataulutonta kurssia.
