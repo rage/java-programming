@@ -10,6 +10,7 @@ import LoginStateContext, {
 } from "../contexes/LoginStateContext"
 import Container from "../components/Container"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { getCachedUserDetails } from "../services/moocfi"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCheckCircle as icon } from "@fortawesome/free-solid-svg-icons"
@@ -40,6 +41,18 @@ class MissingInfo extends React.Component {
     this.setState({ successMessage: null })
   }
 
+  async componentDidMount() {
+    if (!this.context.loggedIn) {
+      return
+    }
+
+    let userInfo = await getCachedUserDetails()
+    const research = userInfo?.extra_fields?.research
+    if (research === undefined) {
+      navigate("/missing-info")
+    }
+  }
+
   render() {
     if (!this.context.loggedIn) {
       if (typeof window !== "undefined") {
@@ -47,6 +60,7 @@ class MissingInfo extends React.Component {
       }
       return <div>Redirecting...</div>
     }
+
     return (
       <Layout>
         <Container>
