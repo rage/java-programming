@@ -25,6 +25,10 @@ Varmista, että ongelma ei ole omassa koodissasi. Kysy tarvittaessa apua kurssin
 
 Avaa joko issue tai muutosehdoitus kurssin Github-repossa: https://github.com/rage/ohjelmointi-19.
 
+### Miten saan ladattua seuraavan osan ohjelmointitehtävät?
+
+NetBeans -liitännäinen tarjoaa sinulle seuraavan osan tehtäviä, kun olet saanut tarpeeksi edellisen osan ohjelmointitehtävien pisteistä. Aikataulullisella kurssilla tämä raja on 25% ja aikatauluttomalla kurssilla tämä raja on 90%.
+
 ### Tehtävien lataaminen ja palauttaminen on hidasta macOS -käyttöjärjestelmällä
 
 Seuraa tätä ohjetta ongelman ratkaisemiseksi: https://materiaalit.github.io/tmc-asennus/macos-verkkoongelma/.
