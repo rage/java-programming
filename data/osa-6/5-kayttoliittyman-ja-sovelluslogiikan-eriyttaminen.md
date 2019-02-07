@@ -39,12 +39,12 @@ Syötä koepisteet: **49**
 Syötä koepisteet: **48**
 Syötä koepisteet:
 
-5: ***
-4: ***
-3: *
+5: \*\*\*
+4: \*\*\*
+3: \*
 2:
-1: ***
-0: **
+1: \*\*\*
+0: \*\*
 
 </sample-output>
 
@@ -393,12 +393,12 @@ Syötä koepisteet: **56**
 Syötä koepisteet: **61**
 Syötä koepisteet:
 
-5: *
-4: **
+5: \*
+4: \*\*
 3:
-2: *
-1: **
-0: *
+2: \*
+1: \*\*
+0: \*
 Koepisteiden keskiarvo: 68.14285714285714
 Arvosanojen keskiarvo: 2.4285714285714284
 

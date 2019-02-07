@@ -16,7 +16,7 @@ hidden: true
 
 ## Samuudesta kertova metodi "equals"
 
-Metodia `<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object" target="_blank" rel="noopener">equals</a>` käytetään kahden olion yhtäsuuruusvertailuun. Metodia on jo käytetty muun muassa `String`-olioiden yhteydessä, jonka lisäksi olemme harjoitelleet equals-metodin luomista omiin luokkiimme.
+Metodia <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object" target="_blank">equals</a> käytetään kahden olion yhtäsuuruusvertailuun. Metodia on jo käytetty muun muassa `String`-olioiden yhteydessä, jonka lisäksi olemme harjoitelleet equals-metodin luomista omiin luokkiimme.
 
 
 ```java

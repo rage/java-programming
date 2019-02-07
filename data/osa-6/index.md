@@ -8,7 +8,7 @@ hidden: true
 <deadline>25.2.2019</deadline>
 
 
-Tässä osassa opit miksi joissakin metodeissa on määre static ja miksi joissain sitä ei ole. Tutustut hajautustauluun ja opit käyttämään sitä ohjelmissasi. Opit ryhmittelemään tietoa hajautustaulun avulla, ja harjoittelet ohjelman jakamista käyttöliittymästä vastaavaan osaan ja sovelluslogiikasta vastaavaan osaan.
+Tässä osassa opit miksi joissakin metodeissa on määre static ja miksi joissain sitä ei ole. Tutustut hajautustauluun ja opit käyttämään sitä ohjelmissasi. Opit ryhmittelemään tietoa hajautustaulun avulla. Harjoittelet ohjelman jakamista käyttöliittymästä vastaavaan osaan ja sovelluslogiikasta vastaavaan osaan.
 
 <please-login></please-login>
 

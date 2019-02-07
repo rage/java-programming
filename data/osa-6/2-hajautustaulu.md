@@ -82,7 +82,7 @@ Luo `main`-metodissa uusi `HashMap<String,String>`-olio. Tallenna luomaasi olioo
 
 Tämän jälkeen hae HashMapistä mikaelin lempinimi ja tulosta se.
 
-TODO: Tehtävässä ei ole automaattisia testejä.
+Tehtävässä ei ole automaattisia testejä. Palauta tehtävä kun se toimii mielestäsi oikein.
 
 </programming-exercise>
 
@@ -604,7 +604,6 @@ tulostaArvotJosAvaimessa(taulu, "ne");
 ```
 
 <sample-output>
-
 esim.
 jne.
 yms.
@@ -613,7 +612,6 @@ esim.
 yms.
 ---
 ja niin edelleen
-
 </sample-output>
 
 Huom! Tulostusjärjestys voi poiketa yllä esitetystä, sillä hajautustaulun sisäinen toteutus ei takaa olioiden järjestystä.
@@ -667,7 +665,6 @@ tulostaArvoJosNimessa(taulu, "ennakko");
 ```
 
 <sample-output>
-
 Nimi: Ylpeys ja ennakkoluulo (1813)
 Sisältö: ...
 Nimi: Järki ja tunteet (1811)
@@ -675,7 +672,6 @@ Sisältö: ...
 ---
 Nimi: Ylpeys ja ennakkoluulo (1813)
 Sisältö: ...
-
 </sample-output>
 
 Huom! Tulostusjärjestys voi poiketa yllä esitetystä, sillä hajautustaulun sisäinen toteutus ei takaa olioiden järjestystä.
