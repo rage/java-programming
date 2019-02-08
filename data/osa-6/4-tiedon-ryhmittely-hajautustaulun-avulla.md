@@ -1,7 +1,7 @@
 ---
 path: '/osa-6/4-tiedon-ryhmittely-hajautustaulun-avulla'
 title: 'Tiedon ryhmittely hajautustaulun avulla'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>

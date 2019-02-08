@@ -1,7 +1,7 @@
 ---
 path: '/osa-6/6-ongelmasta-kokonaisuuteen-ja-takaisin-osiin'
 title: 'Ongelmasta kokonaisuuteen ja takaisin osiin'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>

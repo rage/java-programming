@@ -1,7 +1,7 @@
 ---
 path: '/osa-6/3-olioiden-samankaltaisuus'
 title: 'Olioiden samankaltaisuus'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>

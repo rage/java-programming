@@ -1,7 +1,7 @@
 ---
 path: '/osa-6/2-hajautustaulu'
 title: 'Hajautustaulu'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>

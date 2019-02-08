@@ -1,7 +1,7 @@
 ---
 path: '/osa-6/1-luokka-ja-oliometodit'
 title: 'Luokka- ja oliometodit: määre static'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
