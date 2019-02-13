@@ -9,8 +9,9 @@ hidden: true
 
 Tässä osassa opit erilaisista ohjelmointiparadigmoista. Osan läpikäytyäsi tiedät proseduraalisen ohjelmoinnin ja olio-ohjelmoinnin eroista ja osaat toteuttaa ohjelmia kumpaakin ohjelmointiparadigmaa noudattaen. Opit käsitteen algoritmi sekä sanan algoritmi alkuperän, ja opit käyttämään muutamia järjestämis- ja hakualgoritmeja. Opit myös kirjoittamaan yksikkötestejä ja harjoittelet testivetoisen ohjelmistokehityksen perusaskeleita. Teet myös muutaman tehtävän tuleville kurssilaisille.
 
-**Huom!** Ohjelmoinnin MOOCin Helsingin yliopiston Ohjelmoinnin perusteet -kurssin kattava alkuosa eli osat 1-7 päättyy tämän osan suorittamiseen. Osan 7 tekemisen jälkeen tehdään kurssikoe, josta voi saada 5 opintopistettä. Katso tarkemmin kohdasta [arvostelu-ja-kokeet](arvostelu-ja-kokeet) , joka tehdään verkossa Helsingin yliopiston Moodle-järjestelmässä. Mikäli et ole Helsingin yliopiston läsnäoleva opiskelija tai muuten ilmoittautunut kurssille vielä ilmoittautunut
+**Huom!** Ohjelmoinnin MOOCin Helsingin yliopiston Ohjelmoinnin perusteet -kurssin kattava alkuosa eli osat 1-7 päättyy tämän osan suorittamiseen. Osan 7 tekemisen jälkeen tehdään kurssikoe, josta voi saada 5 opintopistettä. Katso tarkempia tietoja kohdasta [Arvostelu ja kokeet](/arvostelu-ja-kokeet). Mikäli et ole Helsingin yliopiston läsnäoleva opiskelija ja et ole ilmoittautunut kurssille Helsingin yliopiston Avoimen yliopiston kautta, tee ilmoittautuminen nyt.
 
+Tarkemmat ohjeet koelmoittatumiseen löydät sivulta[Koe ja Moodle-ilmoittautuminen](/koe-ja-moodle-ilmoittautuminen).
 
 <please-login></please-login>
 
