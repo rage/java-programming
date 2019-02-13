@@ -31,7 +31,7 @@ Ilmoittautuminen on pakollinen kaikille niille, jotka haluavat osallistua kurssi
 
 ## Katso myös
 
-* [Mistä tiedän onnistuinko koeilmoittautumisessa](/usein-kysytyt-kysymykset#heading-mista-tiedan-onnistuinko-koeilmoittautumisessa).
+* [Mistä tiedän onnistuinko koeilmoittautumisessa?](/usein-kysytyt-kysymykset#heading-mista-tiedan-onnistuinko-koeilmoittautumisessa)
 * [Täytyykö kokeeseen ilmoittautua vielä erikseen jos on jo ilmoittautunut kurssin Moodleen?](/usein-kysytyt-kysymykset#heading-taytyyko-kokeeseen-ilmoittautua-viela-erikseen-jos-on-jo-ilmoittautunut-kurssin-moodleen)
 * [Liittyykö koeilmoittautuminen johonkin tiettyyn koepäivään?](/usein-kysytyt-kysymykset#heading-liittyyko-koeilmoittautuminen-johonkin-tiettyyn-koepaivaan)
 * [Miten kurssin loppuosan kokeesen ilmoittaudutaan?](/usein-kysytyt-kysymykset#heading-miten-kurssin-loppuosan-kokeesen-ilmoittaudutaan)
