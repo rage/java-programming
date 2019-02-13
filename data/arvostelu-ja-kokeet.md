@@ -29,13 +29,13 @@ Tehtäväpisteet muutetaan kurssipisteiksi siten, että täydet kurssipisteet ku
 
 Mikäli haet opiskelupaikkaa Ohjelmoinnin MOOCin kautta, saadaksesi kutsun näyttökokeeseen tulee sinun saada vähintään 90% jokaisen osan ohjelmoinitehtävien pisteistä. Omat ohjelmointitehtävien pisteet näkee helpoiten materiaalin pistevisualisaatiosta, jonka saa auki klikkaamalla sinistä palloa sivun oikeassa alareunassa.
 
-Kokeeseen saa osallistua kun on tehnyt vähintään 25% jokaisen osan tehtävien pisteistä. Aikatauluttamattomassa kurssissa kokeesta tulee saada vähintään puolet kurssin pisteistä kurssin läpäiseksi.
+Kokeeseen saa osallistua kun on tehnyt vähintään 25% jokaisen osan ohjelmointitehtävien pisteistä. Aikatauluttamattomassa kurssissa kokeesta tulee saada vähintään puolet kurssin pisteistä kurssin läpäiseksi.
 
 Kurssilla saa osallistua halutessaan useampaan kokeeseen. Opintorekisteriin jää paras suoritus.
 
 ## Aikatauluttamaton kurssi
 
-Aikatauluttamattomassa kurssiversiossa arvostelu perustuu täysin kokeeseen. Kokeeseen saa osallistua kun on tehnyt jokaisen osan tehtävien pisteistä vähintään 90%.
+Aikatauluttamattomassa kurssiversiossa arvostelu perustuu täysin kokeeseen. Kokeeseen saa osallistua kun on saanut jokaisen osan ohjelmointitehtävien pisteistä vähintään 90%.
 
 Kurssin aikatauluttamaton versio julkaistaan aikataulutetun version jälkeen. Aikatauluttamattomalla kurssilla on sama koeaikataulu kuin aikataulutetulla kurssilla.
 
