@@ -114,3 +114,15 @@ Ohjeet kurssin kokeeseen ilmoittautumiseen löytyvät [täältä](/koe-ja-moodle
 ### Mistä tiedän onnistuinko koeilmoittautumisessa?
 
 Kun kirjautuminen kurssin Moodleen onnistuu, olet tehnyt koeilmoittautumisen.
+
+### Täytyykö kokeeseen ilmoittautua vielä erikseen jos on jo ilmoittautunut kurssin Moodleen?
+
+Ei tarvitse ilmoittautua erikseen -- kurssin kokeeseen ja Moodleen ilmoittautuminen on sama.
+
+### Liittyykö koeilmoittautuminen johonkin tiettyyn koepäivään?
+
+Ei liity. Koeilmoittautumisella voit osallistua mihin tahansa kokeeseen.
+
+### Miten kurssin loppuosan kokeesen ilmoittaudutaan?
+
+Kurssin loppuosan (osat 8-14) kokeen tiedot päivittyvät kurssisivulle myöhemmin.
