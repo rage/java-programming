@@ -54,13 +54,13 @@ const IndexPage = () => (
         <h2>Kurssin kaksi versiota</h2>
 
         <p>
-          Kurssista julkaistaan aluksi aikataulutettu versio, jossa on
-          viikoittaiset deadlinet. Myöhemmin kurssista aukeaa myös aikatauluton
-          versio, jossa tehtäviä voi tehdä täysin omaan tahtiin. Aikatauluttoman
-          kurssin tehtävät julkaistaan aina aikataulutetun kurssin jälkeen. Voit
-          siirtyä aikataululliselta kurssilta aikatauluttomaan mikäli niin
-          haluat. Kurssin vaihtaminen toiseen suuntaan ei ole mahdollista.
-          Huomaa kuitenkin että aikatauluttomasta versiosta ei voi hakea
+          Kurssista on kaksi versiota: aikataulutettu versio, jossa on
+          viikoittaiset deadlinet ja aikatauluton versio, jossa tehtäviä voi
+          tehdä täysin omaan tahtiin. Aikatauluttoman kurssin tehtävät
+          julkaistaan aina aikataulutetun kurssin jälkeen. Voit siirtyä
+          aikataululliselta kurssilta aikatauluttomaan mikäli niin haluat.
+          Kurssin vaihtaminen toiseen suuntaan ei ole mahdollista. Huomaa
+          kuitenkin että aikatauluttomasta versiosta ei voi hakea
           opinto-oikeutta.
         </p>
       </section>
