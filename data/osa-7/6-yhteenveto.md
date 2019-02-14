@@ -15,5 +15,4 @@ Vastaa vielä alla oleviin kyselyihin.
 
 <quiznator id='5c64220d017ffc13eddcc9d4'></quiznator>
 
-
-TODO: ELOMAKE
+<quiznator id="5c654a9fddb6b814af32492c"></quiznator>
