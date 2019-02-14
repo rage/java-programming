@@ -79,7 +79,7 @@ Ohjelmoinnin aloittamiseen tarvitset seuraavat asiat.
 2.  Javan (Java JDK).
 3.  NetBeans with TMC-ohjelmointiympäristön.
 
-Ohjeistus oleellisten työvälineiden asentamiseen sekä kurssilla tarvittavan käyttäjätunnuksen luomiseen löytyy osoitteesta [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Valitse organisaatioksi "MOOC" ja kurssiksi "Ohjelmoinnin MOOC 2019".
+Ohjeistus oleellisten työvälineiden asentamiseen sekä kurssilla tarvittavan käyttäjätunnuksen luomiseen löytyy osoitteesta [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Valitse organisaatioksi "MOOC" ja kurssiksi "Ohjelmoinnin MOOC 2019 (aikatauluton)".
 
 [Ohjeisiin!](https://materiaalit.github.io/tmc-asennus/netbeans/)
 
