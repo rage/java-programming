@@ -5,20 +5,17 @@ hidden: false
 information_page: true
 ---
 
-Moodlea voi käyttää sekä keskustelualustana että koealustana. Seuraavat ohjeet pätevät sekä halutessasi ilmoittautua Moodle-foorumiin että halutessasi ilmoittautua kurssin kokeeseen.
+Kurssilla käytetään Moodlea sekä keskustelualustana että koealustana. Seuraavat ohjeet pätevät sekä halutessasi ilmoittautua Moodle-foorumiin että halutessasi ilmoittautua kurssin kokeeseen. Jos olet aikaisemmin ilmoittautunut kurssin Moodleen, olet myös samalla ilmoittautunut kurssin kokeeseen.
 
-Kurssin kokeeseen osallistuaksesi sinun täytyy tehdä muodollinen kokeeseen ilmoittautuminen, jotta pääset kirjautumaan Helsingin yliopiston Avoimen yliopiston koeympäristöön.
+Kurssin kokeeseen osallistuaksesi sinun täytyy tehdä muodollinen kokeeseen ilmoittautuminen, jotta pääset kirjautumaan Helsingin yliopiston Avoimen yliopiston koeympäristöön (Moodle).
 
 Ilmoittaudu kokeeseen vähintään kaksi päivää ennen koepäivää, johon olet aikeissa osallistua. Esimerkiksi jos haluat osallistua 5.3. järjestettävään kokeeseen, sinun täytyy tehdä tämä ilmoittautuminen viimeistään 3.3. Vastaavasti, jos haluat osallistua 14.4. järjestettävään kokeeseen, sinun täytyy tehdä tämä ilmoittautuminen viimeistään 12.4.
 
 Myöhässä ilmoittautuminen ei pudota sinua kurssilta, mutta voit joutua osallistumaan vasta seuraavaan kokeeseen. Esimerkiksi mikäli ilmoittaudut vasta 4.3., et voi osallistua 5.3. järjestettävään kokeeseen. Tällöin 14.4 järjestettävä koe on ensimmäinen koe, johon voit osallistua.
 
-Tarkemmat ilmoittautumisohjeet tulevat myöhemmin tälle sivulle ja niistä lähetetään hyvissä ajoin tietoa kurssin osaanottajille sähköpostitse.
-
 Huom! Helsingin yliopiston Avoimen yliopiston sivuille on luotu epähuomiossa ylimääräisiä ilmoittautumissivuja, joista voi ymmärtää että olet tippunut pois kurssilta. Älä välitä näistä avoimen yliopiston muista ilmoittautumissivuista, vaan seuraa vain tällä sivulla (ohjelmointi-19.mooc.fi) olevia ohjeita. Tähän muodolliseen ilmoittautumiseen on vain yksi oikea ilmoittautumislinkki, jonka tulee löytymään tältä sivustolta (ohjelmointi-19.mooc.fi). Tämä tämän sivun antama linkki on siis ainoa oikea kokeen ilmoittautumislinkki sekä kurssin aikataulullisessa että aikatauluttomassa versiossa.
 
-Katso tarkemmat kokeiden ajankohdat sivulta [/arvostelu-ja-kokeet](Arvostelu ja kokeet).
-
+Katso tarkemmat kokeiden ajankohdat sivulta [Arvostelu ja kokeet](/arvostelu-ja-kokeet).
 
 ## Moodle-ilmoittautuminen
 
@@ -32,5 +29,9 @@ Ilmoittautuminen on pakollinen kaikille niille, jotka haluavat osallistua kurssi
 
 4. Pääset Moodleen osoitteessa https://moodle.helsinki.fi/course/view.php?id=29366
 
+## Katso myös
 
-Katso myös ["Mistä tiedän onnistuinko koeilmoittautumisessa"](/usein-kysytyt-kysymykset#heading-mista-tiedan-onnistuinko-koeilmoittautumisessa).
+* [Mistä tiedän onnistuinko koeilmoittautumisessa?](/usein-kysytyt-kysymykset#heading-mista-tiedan-onnistuinko-koeilmoittautumisessa)
+* [Täytyykö kokeeseen ilmoittautua vielä erikseen jos on jo ilmoittautunut kurssin Moodleen?](/usein-kysytyt-kysymykset#heading-taytyyko-kokeeseen-ilmoittautua-viela-erikseen-jos-on-jo-ilmoittautunut-kurssin-moodleen)
+* [Liittyykö koeilmoittautuminen johonkin tiettyyn koepäivään?](/usein-kysytyt-kysymykset#heading-liittyyko-koeilmoittautuminen-johonkin-tiettyyn-koepaivaan)
+* [Miten kurssin loppuosan kokeesen ilmoittaudutaan?](/usein-kysytyt-kysymykset#heading-miten-kurssin-loppuosan-kokeesen-ilmoittaudutaan)
