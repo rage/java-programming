@@ -9,7 +9,7 @@ Seitsemännessa osassa tutustuttiin käsitteeseen ohjelmointiparadigma ja vertai
 
 **Huom!** Ohjelmoinnin MOOCin Helsingin yliopiston Ohjelmoinnin perusteet -kurssin kattava alkuosa eli osat 1-7 päättyy tämän osan suorittamiseen. Osan 7 tekemisen jälkeen tehdään kurssikoe, josta voi saada 5 opintopistettä. Katso tarkempia tietoja kohdasta [Arvostelu ja kokeet](/arvostelu-ja-kokeet). Mikäli et ole Helsingin yliopiston läsnäoleva opiskelija ja et ole ilmoittautunut kurssille Helsingin yliopiston Avoimen yliopiston kautta, tee ilmoittautuminen nyt.
 
-Tarkemmat ohjeet koelmoittatumiseen löydät sivulta [Koe ja Moodle-ilmoittautuminen](/koe-ja-moodle-ilmoittautuminen).
+Tarkemmat ohjeet koeilmoittatumiseen löydät sivulta [Koe ja Moodle-ilmoittautuminen](/koe-ja-moodle-ilmoittautuminen).
 
 Vastaa vielä alla oleviin kyselyihin.
 
@@ -18,4 +18,3 @@ Vastaa vielä alla oleviin kyselyihin.
 <quiznator id="5c654a9fddb6b814af32492c"></quiznator>
 
 <quiznator id="5c668d2099236814c5bbb8f6"></quiznator>
-
