@@ -1,7 +1,7 @@
 ---
 path: '/osa-7/5-laajempia-tehtavia'
 title: 'Laajempia ohjelmointitehtäviä'
-hidden: true
+hidden: false
 ---
 
 

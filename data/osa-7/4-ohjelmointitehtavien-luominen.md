@@ -1,14 +1,16 @@
 ---
 path: '/osa-7/4-ohjelmointitehtavien-luominen'
 title: 'Ohjelmointitehtävien luominen'
-hidden: true
+hidden: false
 ---
 
 
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
-- yksikkötestaus
+- Kertaat listan ja hajautustaulun käyttöä.
+- Harjoittelet ohjelmointiohjeiden kirjoittamista tehtävänannon muodossa.
+- Kertaat ohjelmien testaamista syöte-tuloste -parien avulla.
 
 </text-box>
 
@@ -43,8 +45,6 @@ Huom! Voit syöttää useamman rivin merkitsemällä rivinvaihdot syötteeseen. 
 Tehtävien luomistehtävät vastaavat kurssin pisteytyksessä ohjelmointitehtävää.
 
 
-<!-- ## TODO, tähän listatehtävän input -->
-
 <crowdsorcerer id='26'></crowdsorcerer>
 
 
@@ -62,6 +62,5 @@ Muista merkitä malliratkaisurivit ohjelmaan -- näin ratkaisu ei tule suoraan k
 
 Tehtävien luomistehtävät vastaavat kurssin pisteytyksessä ohjelmointitehtävää.
 
-<!-- ## TODO: tähän hashmaptehtävän input -->
 <crowdsorcerer id='27'></crowdsorcerer>
 

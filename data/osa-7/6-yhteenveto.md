@@ -1,7 +1,7 @@
 ---
 path: '/osa-7/6-yhteenveto-ja-koeasiaa'
 title: 'Yhteenveto ja koeasiaa'
-hidden: true
+hidden: false
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 path: '/osa-7/3-automaattinen-testaaminen'
 title: 'Ohjelmien automaattinen testaaminen'
-hidden: true
+hidden: false
 ---
 
 
