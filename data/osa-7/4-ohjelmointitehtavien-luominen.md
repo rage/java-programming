@@ -62,5 +62,10 @@ Muista merkitä malliratkaisurivit ohjelmaan -- näin ratkaisu ei tule suoraan k
 
 Tehtävien luomistehtävät vastaavat kurssin pisteytyksessä ohjelmointitehtävää.
 
-<crowdsorcerer id='27'></crowdsorcerer>
+<notice>
 
+**Huom! Jos et pysty kirjoittamaan alla olevassa CrowdSorcererissa while-loopin sisälle ollenkaan, saat korjattua tilanteen painamalla "Nollaa lähdekoodi".**
+
+</notice>
+
+<crowdsorcerer id='27'></crowdsorcerer>
