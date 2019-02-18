@@ -13,7 +13,7 @@ Ilmoittaudu kokeeseen vähintään kaksi päivää ennen koepäivää, johon ole
 
 Myöhässä ilmoittautuminen ei pudota sinua kurssilta, mutta voit joutua osallistumaan vasta seuraavaan kokeeseen. Esimerkiksi mikäli ilmoittaudut vasta 4.3., et voi osallistua 5.3. järjestettävään kokeeseen. Tällöin 14.4 järjestettävä koe on ensimmäinen koe, johon voit osallistua.
 
-Huom! Helsingin yliopiston Avoimen yliopiston sivuille on luotu epähuomiossa ylimääräisiä ilmoittautumissivuja, joista voi ymmärtää että olet tippunut pois kurssilta. Älä välitä näistä avoimen yliopiston muista ilmoittautumissivuista, vaan seuraa vain tällä sivulla (ohjelmointi-19.mooc.fi) olevia ohjeita. Tähän muodolliseen ilmoittautumiseen on vain yksi oikea ilmoittautumislinkki, jonka tulee löytymään tältä sivustolta (ohjelmointi-19.mooc.fi). Tämä tämän sivun antama linkki on siis ainoa oikea kokeen ilmoittautumislinkki sekä kurssin aikataulullisessa että aikatauluttomassa versiossa.
+Huom! Helsingin yliopiston Avoimen yliopiston sivuille on luotu epähuomiossa ylimääräisiä ilmoittautumissivuja, joista voi ymmärtää että olet tippunut pois kurssilta. Älä välitä näistä avoimen yliopiston muista ilmoittautumissivuista, vaan seuraa alla olevia ohjeita. Tähän muodolliseen ilmoittautumiseen on vain yksi oikea ilmoittautumislinkki, joka löytyy alempaa. Tämä tämän sivun antama linkki on siis ainoa oikea kokeen ilmoittautumislinkki sekä kurssin aikataulullisessa että aikatauluttomassa versiossa.
 
 Katso tarkemmat kokeiden ajankohdat sivulta [Arvostelu ja kokeet](/arvostelu-ja-kokeet).
 
