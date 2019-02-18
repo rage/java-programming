@@ -85,7 +85,7 @@ Jos olet aikataulutetussa kurssissa niin ota huomioon että ensimmäsen osan dea
 
 ### Tarvitsenko Helsingin yliopiston tunnukset?
 
-Kaikki jotka haluavat osallistua Avoimen yliopiston tentteihin tai pystyä lukemaan Moodlea tarvii Helsingin yliopiston tunnukset. Jos tekee täysin omaksi ilokseen kurssia niin silloin ei ole pakollista, tosin vaikka tekisi vain omaksi ilokseen niin suosittelisimme tenttien tekemistä ja noiden toisten tunnusten hankkimista. Tunnukset voi hankkia täältä: https://helpdesk.it.helsinki.fi/ohjeet/kirjautuminen-ja-yhteydet/kayttajatunnus/ohjeet-yliopiston-kayttajatunnuksen-aktivointiin
+Kaikki jotka haluavat osallistua Avoimen yliopiston tentteihin tai pystyä lukemaan Moodlea tarvii Helsingin yliopiston tunnukset. Jos tekee täysin omaksi ilokseen kurssia niin silloin ei ole pakollista, tosin vaikka tekisi vain omaksi ilokseen niin suosittelisimme tenttien tekemistä ja noiden toisten tunnusten hankkimista. Ohjeet tunnuksen hankkimiseen löytyy täältä: [koe ja moodle ilmoittautuminen](/koe-ja-moodle-ilmoittautuminen).
 
 ### Aion hakea opiskelupaikkaa MOOCin kautta. Pitääkö minun osallistua Avoimen yliopiston tentteihin?
 
