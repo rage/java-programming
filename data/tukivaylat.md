@@ -29,6 +29,8 @@ Ohjausta järjestetään Exactum-rakennuksen salissa BK107 seuraavina aikoina:
 - Torstaisin klo 12-19
 - Perjantaisin klo 10-14
 
+Huom! Tenttiviikolla eli 4-8.3. ohjausta on vain maanantaina 4.3.
+
 Tarkennamme poikkeuspäiviä kurssin edetessä.
 
 Exactum-rakennuksen aulassa olevasta infonäytöstä löytää salin tarkemman sijainnin. Voit myös kysyä salin sijaintia aulan vahtimestareilta sekä kampuksen henkilökunnalta ja opiskelijoilta.
