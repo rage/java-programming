@@ -14,11 +14,7 @@ import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import Loading from "../Loading"
 
-import {
-  updateUserDetails,
-  userDetails,
-  getCourseVariant,
-} from "../../services/moocfi"
+import { updateUserDetails, userDetails } from "../../services/moocfi"
 
 import styled from "styled-components"
 import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"

@@ -1,21 +1,9 @@
 import React, { Fragment, Component } from "react"
 import styled from "styled-components"
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faPencilAlt as icon } from "@fortawesome/free-solid-svg-icons"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
-
-import {
-  fetchProgrammingExerciseDetails,
-  fetchProgrammingExerciseModelSolution,
-} from "../../services/moocfi"
-import { Button, Paper, Card, CardContent, Divider } from "@material-ui/core"
+import { fetchProgrammingExerciseModelSolution } from "../../services/moocfi"
+import { Button, Paper, Card, CardContent } from "@material-ui/core"
 import Modal from "@material-ui/core/Modal"
-import LoginStateContext from "../../contexes/LoginStateContext"
-import LoginControls from "../../components/LoginControls"
 import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
-import { normalizeExerciseId } from "../../util/strings"
-import Loading from "../../components/Loading"
 
 const ModalContent = styled(Paper)`
   padding: 5rem;
