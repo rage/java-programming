@@ -158,7 +158,7 @@ Täydennä ohjelmaa siten, että ohjelma tulostaa myös arvosanajakauman. Arvosa
     <td>4</td>
   </tr>
   <tr>
-    <td>>= 91</td>
+    <td>>= 90</td>
     <td>5</td>
   </tr>
 </table>
