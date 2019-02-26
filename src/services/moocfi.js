@@ -233,7 +233,7 @@ export function accessToken() {
 
 export async function getCourseVariant() {
   const userDetails = await getCachedUserDetails()
-  return userDetails?.extra_fields?.course_variant || "regular"
+  return userDetails?.extra_fields?.course_variant || "dl"
 }
 
 async function getCourse() {
