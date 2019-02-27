@@ -7,46 +7,47 @@ information_page: true
 
 Ohjelmoinnin MOOC sisältää Helsingin yliopiston kurssit Ohjelmoinnin perusteet (materiaalin osat 1-7) ja Ohjelmoinnin jatkokurssi (materiaalin osat 8-14). Kummastakin osasta järjestetään verkossa tehtävä koe, ja kummastakin osasta saa erillisen arvosanan. Ohjelmoinnin MOOCista on kaksi versiota: aikataulutettu kurssi ja aikatauluttamaton kurssi. Näiden arvostelu poikkeaa hieman toisistaan.
 
-## Aikataulutettu kurssi
+Ohjelmoinnin perusteita vastaava koe suoritetaan materiaalin osien 1-7 jälkeen. Ohjelmoinnin jatkokurssia vastaava koe puolestaan suoritetaan materiaalin osien 8-14 jälkeen.
 
-Aikataulutetussa kurssissa arvostelu perustuu sekä tehtyihin tehtäviin (50% kokonaispisteistä) että kokeeseen (50% kokonaispisteistä).
+Molempia kokeita järjestetään useana eri päivänä. Voit osallistua kokeisiin minä tahansa koepäivänä. Kurssilla saa osallistua halutessaan useampaan kokeeseen. Opintorekisteriin jää paras suoritus.
 
-Ohjelmoinnin perusteita vastaava koe suoritetaan materiaalin osien 1-7 jälkeen. Arvosanasta puolet muodostuu osien 1-7 kurssipisteistä ja puolet kokeesta. Osien 1-7 kokeita järjestetään seuraavasti:
+Osien 1-7 kokeita järjestetään seuraavasti:
 
 - 5.3.
 - 14.4.
 - 8.5.
 
-Ohjelmoinnin jatkokurssia vastaava koe suoritetaan materiaalin osien 8-14 jälkeen. Arvosanasta puolet muodostuu osien 8-14 kurssipisteistä ja puolet kokeesta. Osien 8-14 kokeita järjestetään seuraavasti:
+ Osien 8-14 kokeita järjestetään seuraavasti:
 
 - 8.5.
 - 8.6.
 - 29.6.
 
+Kokeet tehdään Avoimen yliopiston verkkoympäristössä. Kokeen voi aloittaa koepäivänä mihin kellonaikaan haluaa.
+
+## Kokeeseen ilmoittautuminen
+
+Ohjeet koeilmoittautumiseen löytyvät sivulta [Koe ja Moodle-ilmoittautuminen](/koe-ja-moodle-ilmoittautuminen).
+
+
+## Kurssin pisteytys
+
 Jokaisen osan kaikista tehtävistä saa tehtäväpisteitä. Löydät osan kaikki tehtävät valitsemalla kyseisen osan yleisnäkymästä "Lista osan tehtävistä". Näet tehtäväpisteesi kurssimateriaalin oikeassa alakulmassa olevasta pistevisualisaatiosta kohdan "Tehtäväpisteet yhteensä" kohdalta.
 
-Tehtäväpisteet muutetaan kurssipisteiksi siten, että täydet kurssipisteet kustakin osasta saa kun tehtäväpisteitä on yli 90%, ja puolet kurssipisteitä saa kun tehtäväpisteitä on noin 45% jne. Näet saamasi kurssipisteet pistevisualisaation kohdasta "Osasta saadut kurssipisteet". Aikataulutetussa kurssissa kurssin arvosana tulee määräytymään näiden kurssipisteiden ja kokeesta saatujen pisteiden perusteella.
+Tehtäväpisteet muutetaan kurssipisteiksi siten, että täydet kurssipisteet kustakin osasta saa kun tehtäväpisteitä on yli 90%, ja puolet kurssipisteitä saa kun tehtäväpisteitä on noin 45% jne. Näet saamasi kurssipisteet pistevisualisaation kohdasta "Osasta saadut kurssipisteet".
 
-Mikäli haet opiskelupaikkaa Ohjelmoinnin MOOCin kautta, saadaksesi kutsun näyttökokeeseen tulee sinun saada vähintään 90% jokaisen osan ohjelmoinitehtävien pisteistä. Omat ohjelmointitehtävien pisteet näkee helpoiten materiaalin pistevisualisaatiosta, jonka saa auki klikkaamalla sinistä palloa sivun oikeassa alareunassa.
+Huomaa, että mikäli haet opiskelupaikkaa Ohjelmoinnin MOOCin kautta, saadaksesi kutsun näyttökokeeseen tulee sinun saada vähintään 90% jokaisen osan ohjelmointitehtävien pisteistä. Omat ohjelmointitehtävien pisteet näkee helpoiten materiaalin pistevisualisaatiosta, jonka saa auki klikkaamalla sinistä palloa sivun oikeassa alareunassa. Tämä vaatimus eroaa siis yleisestä kurssin arvostelusta.
 
-Kokeeseen saa osallistua kun on tehnyt vähintään 25% jokaisen osan ohjelmointitehtävien pisteistä. Aikatauluttamattomassa kurssissa kokeesta tulee saada vähintään puolet kurssin pisteistä kurssin läpäiseksi.
+## Kurssin arvostelu
 
-Kurssilla saa osallistua halutessaan useampaan kokeeseen. Opintorekisteriin jää paras suoritus.
+### Arvosteluasteikko
 
-## Aikatauluttamaton kurssi
-
-Aikatauluttamattomassa kurssiversiossa arvostelu perustuu täysin kokeeseen. Kokeeseen saa osallistua kun on saanut jokaisen osan ohjelmointitehtävien pisteistä vähintään 90%.
-
-Kurssin aikatauluttamaton versio julkaistaan aikataulutetun version jälkeen. Aikatauluttamattomalla kurssilla on sama koeaikataulu kuin aikataulutetulla kurssilla.
-
-## Arvosanan muodostuminen
-
-Ohjelmoinnin MOOCista annetaan kaksi arvosanaa, jotka vastaavat kursseja Ohjelmoinnin perusteet ja Ohjelmoinnin jatkokurssi. Kumpikin arvostellaan seuraavalla asteikolla:
+Ohjelmoinnin MOOCista annetaan kaksi arvosanaa, jotka vastaavat kursseja Ohjelmoinnin perusteet (osat 1-7) ja Ohjelmoinnin jatkokurssi (osat 8-14). Kumpikin arvostellaan seuraavalla asteikolla:
 
 <table>
     <thead>
     <tr>
-        <th>Pisteet</th>
+        <th>Kokonaispisteet</th>
         <th>Arvosana</th>
     </tr>
     </thead>
@@ -78,7 +79,18 @@ Ohjelmoinnin MOOCista annetaan kaksi arvosanaa, jotka vastaavat kursseja Ohjelmo
     </tbody>
 </table>
 
+Arvostelu toimii käytännössä kurssin eri versioilla seuraavasti:
 
-## Kokeeseen ilmoittautuminen
+#### Aikataulutettu kurssi
 
-Ohjeet koeilmoittautumiseen löytyvät sivulta [Koe ja Moodle-ilmoittautuminen](/koe-ja-moodle-ilmoittautuminen).
+Aikataulutetussa kurssissa arvostelu perustuu sekä tehtyihin tehtäviin (50% kokonaispisteistä) että kokeeseen (50% kokonaispisteistä). Tämä tarkoittaa sitä, että arvosteluasteikon kokonaispisteet saadaan laskemalla tämän sivun pistevisualisaation (sininen pallo oikeassa alakulmassa) kurssipisteet ja saamasi koepisteet yhteen.
+
+Kokeeseen saa osallistua kun on tehnyt vähintään 25% jokaisen osan ohjelmointitehtävien pisteistä.
+
+#### Aikatauluttamaton kurssi
+
+Aikatauluttamattomassa kurssiversiossa arvostelu perustuu täysin kokeeseen. Tällä kurssin versiolla arvosteluasteikon kokonaispisteet ovat siis pelkästään koepisteet.
+
+Kokeeseen saa osallistua kun on saanut jokaisen osan ohjelmointitehtävien pisteistä vähintään 90%.
+
+Aikatauluttamattomassa kurssissa kokeesta tulee saada vähintään puolet kurssin pisteistä kurssin läpäiseksi.
