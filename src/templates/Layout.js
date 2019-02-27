@@ -5,7 +5,6 @@ import ContentArea from "../components/ContentArea"
 import TopBar from "../components/TopBar"
 import { StaticQuery, graphql } from "gatsby"
 import * as store from "store"
-import withMaterialUiRoot from "./withMaterialUiRoot"
 import Pheromones from "../util/pheromones"
 import styled from "styled-components"
 
@@ -30,6 +29,7 @@ import {
   MEDIUM_LARGE_BREAKPOINT,
   SMALL_MEDIUM_BREAKPOINT,
 } from "../util/constants"
+import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 
 fontAwesomeConfig.autoAddCss = false
 
@@ -169,4 +169,4 @@ class Layout extends React.Component {
   }
 }
 
-export default withMaterialUiRoot(Layout)
+export default withSimpleErrorBoundary(Layout)

@@ -9,8 +9,7 @@ import {
   fetchProgrammingExerciseDetails,
   fetchProgrammingExerciseModelSolution,
 } from "../../services/moocfi"
-import { Button, Paper, Card, CardContent, Divider } from "@material-ui/core"
-import Modal from "@material-ui/core/Modal"
+import { Divider } from "@material-ui/core"
 import LoginStateContext from "../../contexes/LoginStateContext"
 import LoginControls from "../../components/LoginControls"
 import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"

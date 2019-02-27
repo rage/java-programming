@@ -14,16 +14,14 @@ import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import Loading from "../Loading"
 
-import {
-  updateUserDetails,
-  userDetails,
-  getCourseVariant,
-} from "../../services/moocfi"
+import { updateUserDetails, userDetails } from "../../services/moocfi"
 
 import styled from "styled-components"
 import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faInfoCircle as icon } from "@fortawesome/free-solid-svg-icons"
+import DropdownMenu from "../DropdownMenu"
+import { Link } from "gatsby"
 
 const Row = styled.div`
   margin-bottom: 1.5rem;
@@ -47,7 +45,6 @@ const StyledIcon = styled(FontAwesomeIcon)`
 class CourseOptionsEditor extends React.Component {
   async componentDidMount() {
     const data = await userDetails()
-    const courseVariant = await getCourseVariant()
     this.setState(
       {
         first_name: data.user_field?.first_name,
@@ -59,7 +56,7 @@ class CourseOptionsEditor extends React.Component {
           data.extra_fields?.digital_education_for_all === "t",
         marketing: data.extra_fields?.marketing === "t",
         research: data.extra_fields?.research,
-        currentCourseVariant: courseVariant,
+        currentCourseVariant: data.extra_fields?.course_variant,
         loading: false,
       },
       () => {
@@ -76,9 +73,7 @@ class CourseOptionsEditor extends React.Component {
       digital_education_for_all: this.state.digital_education_for_all,
       marketing: this.state.marketing,
       research: this.state.research,
-    }
-    if (this.props.courseVariant) {
-      extraFields["course_variant"] = this.props.courseVariant
+      course_variant: this.state.currentCourseVariant,
     }
     const userField = {
       first_name: this.state.first_name,
@@ -139,49 +134,13 @@ class CourseOptionsEditor extends React.Component {
     }))
   }
 
+  setSelectedVariant = value => {
+    this.setState({ currentCourseVariant: value })
+  }
+
   render() {
     return (
       <FormContainer>
-        <Loading loading={this.state.loading} heightHint="5px">
-          <div>
-            {this.props.courseVariant === "nodl" && (
-              <InfoBox>
-                <Card>
-                  <CardContent>
-                    <StyledIcon icon={icon} />
-                    Olet tekemässä kurssin aikataulutonta versiota, koska
-                    aikataulutetun kurssin ensimmäinen deadline on jo mennyt.
-                  </CardContent>
-                </Card>
-              </InfoBox>
-            )}
-          </div>
-
-          <div>
-            {!this.props.courseVariant &&
-              this.state.currentCourseVariant === "nodl" && (
-                <InfoBox>
-                  <Card>
-                    <CardContent>
-                      <StyledIcon icon={icon} />
-                      Olet tekemässä kurssin aikataulutonta versiota.
-                    </CardContent>
-                  </Card>
-                </InfoBox>
-              )}
-            {!this.props.courseVariant &&
-              this.state.currentCourseVariant !== "nodl" && (
-                <InfoBox>
-                  <Card>
-                    <CardContent>
-                      <StyledIcon icon={icon} />
-                      Olet tekemässä kurssin aikataulutettua versiota.
-                    </CardContent>
-                  </Card>
-                </InfoBox>
-              )}
-          </div>
-        </Loading>
         <h1>Opiskelijan tiedot</h1>
         <Form>
           <InfoBox>
@@ -251,6 +210,37 @@ class CourseOptionsEditor extends React.Component {
                   onBlur={this.handleUnFocus}
                 />
               </Row>
+
+              <Row>
+                <DropdownMenu
+                  selectedVariant={
+                    this.state.currentCourseVariant ||
+                    this.props.courseVariant ||
+                    "dl"
+                  }
+                  setSelectedVariant={this.setSelectedVariant}
+                />
+              </Row>
+              {!this.props.courseVariant &&
+                (this.state.currentCourseVariant === "nodl" ||
+                  this.state.currentCourseVariant === "ohja-nodl") && (
+                  <Row>
+                    <InfoBox>
+                      <Card>
+                        <CardContent>
+                          <StyledIcon icon={icon} />
+                          Jos olet vaihtamassa aikataulullisesta kurssista
+                          aikatauluttomaan, katso tämä ohje ohjelmointitehtävien
+                          pisteiden siirtämiseksi:{" "}
+                          <Link to="/vaihda-aikatauluttomaan">
+                            Kurssin vaihto aikatauluttomaan versioon
+                          </Link>
+                          .
+                        </CardContent>
+                      </Card>
+                    </InfoBox>
+                  </Row>
+                )}
 
               <Row>
                 <FormControlLabel
