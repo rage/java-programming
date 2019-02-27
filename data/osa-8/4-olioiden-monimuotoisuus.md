@@ -170,7 +170,7 @@ i
 </sample-output>
 
 
-<programming-exercise name='Joukkoja (2 osaa)'>
+<programming-exercise name='Joukkoja (2 osaa)' tmcname='osa08-Osa08_11.Joukkoja' nocoins='true'>
 
 Tässä tehtävässä teemme eliöita ja eliöistä koostuvia laumoja jotka liikkuvat ympäriinsä. Eliöiden sijaintien ilmoittamiseen käytetään *kaksiulotteista koordinaatistoa*. Jokaiseen sijaintiin liittyy kaksi lukua, `x`- ja `y`-koordinaatti. Koordinaatti `x` kertoo, kuinka pitkällä "nollapisteestä" mitattuna sijainti on vaakasuunnassa, ja koordinaatti `y` vastaavasti kuinka pitkällä sijainti on pystysuunnassa. Jos koordinaatiston käsite ei ole tuttu, voit lukea siitä lisää esimerkiksi <a href="http://fi.wikipedia.org/wiki/Koordinaatisto">wikipediasta</a>.
 
@@ -245,7 +245,7 @@ x: 19; y: 107
 </programming-exercise>
 
 
-<programming-exercise name='Eläimiä (4 osaa)'>
+<programming-exercise name='Eläimiä (4 osaa)' tmcname='osa08-Osa08_12.Elaimia'>
 
 Tässä tehtävässä demonstroit perinnän ja rajapintojen käyttöä.
 

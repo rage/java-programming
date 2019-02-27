@@ -163,7 +163,7 @@ volkswagen
 Kuten huomaat, luokalla `Moottori` on käytössä luokassa `Osa` määritellyt metodit.
 
 
-<programming-exercise name='ABC (2 osaa)'>
+<programming-exercise name='ABC (2 osaa)' tmcname='osa08-Osa08_01.ABC'>
 
 Harjoitellaan tässä luokkien luomista ja perintää.
 
@@ -303,9 +303,7 @@ public String toString() {
 ```
 
 
-<programming-exercise name='Henkilö ja perilliset (5 osaa)'>
-
-
+<programming-exercise name='Henkilö ja perilliset (5 osaa)' tmcname='osa08-Osa08_02.HenkiloJaPerilliset' nocoins='true'>
 
 
 <h2>Henkilo</h2>
@@ -331,11 +329,10 @@ Esko Ukkonen
 <h2>Opiskelija</h2>
 
 
-  Luo luokka `Opiskelija` joka perii luokan `Henkilo`.
+Luo luokka `Opiskelija` joka perii luokan `Henkilo`.
 
 
-
-  Opiskelijalla on aluksi 0 opintopistettä. Aina kun opiskelija opiskelee, opintopistemäärä kasvaa. Luokan tulee toimia seuraavan esimerkin mukaisesti.
+Opiskelijalla on aluksi 0 opintopistettä. Aina kun opiskelija opiskelee, opintopistemäärä kasvaa. Luokan tulee toimia seuraavan esimerkin mukaisesti.
 
 
 ```java
@@ -820,7 +817,7 @@ Yllä oleva luokka `Tilaus` on nyt parempi. Metodi `postitusosoite` käyttää *
 Nyt asiakkaan muuttaessa tarvitsee muuttaa vain asiakkaan tietoja, tilauksiin ei tarvitse tehdä muutoksia.
 
 
-<programming-exercise name='Varastointia (7 osaa)'>
+<programming-exercise name='Varastointia (7 osaa)' tmcname='osa08-Osa08_03.Varastointia'>
 
 
 Tehtäväpohjassa tulee mukana luokka `Varasto`, jonka tarjoamat konstruktorit ja metodit ovat seuraavat:
@@ -1199,7 +1196,7 @@ Valinta: **0**
 Rajapintojen ja abstraktien luokkien suurin ero on siinä, että abstrakteissa luokissa voidaan määritellä metodien lisäksi myös oliomuuttujia sekä konstruktoreja. Koska abstrakteihin luokkiin voidaan määritellä toiminnallisuutta, voidaan niitä käyttää esimerkiksi oletustoiminnallisuuden määrittelyyn. Yllä käyttöliittymä käytti abstraktissa luokassa määriteltyä toiminnan nimen tallentamista.
 
 
-<programming-exercise name='Erilaisia laatikoita (3 osaa)'>
+<programming-exercise name='Erilaisia laatikoita (3 osaa)' tmcname='osa08-Osa08_04.ErilaisiaLaatikoita'>
 
 Tehtäväpohjan mukana tulee luokat `Tavara` ja `Laatikko`. Luokka `Laatikko` on abstrakti luokka, jossa useamman tavaran lisääminen on toteutettu siten, että kutsutaan aina `lisaa`-metodia. Yhden tavaran lisäämiseen tarkoitettu metodi `lisaa` on abstrakti, joten jokaisen `Laatikko`-luokan perivän laatikon tulee toteuttaa se. Tehtävänäsi on muokata luokkaa `Tavara` ja toteuttaa muutamia erilaisia laatikoita luokan `Laatikko` pohjalta.
 

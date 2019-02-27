@@ -146,7 +146,7 @@ Harjoittelu tekee mestarin. Keksi ja tee omia kokeiluja ja projekteja.
 </sample-output>
 
 
-<programming-exercise name='Palvelusvelvollinen (2 osaa)'>
+<programming-exercise name='Palvelusvelvollinen (2 osaa)' tmcname='osa08-Osa08_05.Palvelusvelvollinen'>
 
 
 Tehtäväpohjassa on valmiina rajapinta `Palvelusvelvollinen`, jossa on seuraavat toiminnot:
@@ -396,7 +396,7 @@ Ohjelmassa Vernan listalle kutsuttu `lue`-metodi käy kaikki sen sisältämät `
 Kuten huomaat, ohjelmassa on jo hyvin paljon viitteitä. Kannattaa piirtää ohjelman tilaa askeleittain paperille, ja hahmotella miten `vernanLista`-oliolle tapahtuva metodikutsu `lue` etenee!
 
 
-<programming-exercise name='Tavaroita ja laatikoita (4 osaa)'>
+<programming-exercise name='Tavaroita ja laatikoita (4 osaa)' tmcname='osa08-Osa08_06.TavaroitaJaLaatikoita' nocoins='true'>
 
 
 <h2>Talletettavia</h2>
@@ -689,7 +689,7 @@ Isoilla listoille voimme nähdä huomattaviakin suorituskykyeroja. Linkitetyn li
 Tällä ohjelmointikurssilla eteen tulevissa tilanteissa kannattanee käytännössä valita aina ArrayList. "Rajapintoihin ohjelmointi" kuitenkin kannattaa: toteuta ohjelmasi siten, että käytät tietorakenteita rajapintojen kautta.
 
 
-<programming-exercise name='List metodin parametrina'>
+<programming-exercise name='List metodin parametrina' tmcname='osa08-Osa08_07.ListMetodinParametrina'>
 
 
 Toteuta pääohjelmaluokkaan luokkametodi `palautaKoko`, joka saa parametrina List-olion ja palauttaa sen koon kokonaislukuna.
@@ -753,7 +753,8 @@ Metodi `keySet` palauttaa `Set`-rajapinnan toteuttavan joukon alkioita. `Set`-ra
 
 
 
-<programming-exercise name='Map metodin parametrina'>
+<programming-exercise name='Map metodin parametrina' tmcname='osa08-Osa08_08.MapMetodinParametrina'>
+
 
 Toteuta pääohjelmaluokkaan luokkametodi `palautaKoko`, joka saa parametrina Map-olion ja palauttaa sen koon kokonaislukuna.
 
@@ -805,7 +806,7 @@ kaksi
 Huomaa että HashSet ei ota millään tavalla kantaa joukon alkioiden järjestykseen. Mikäli HashSet-olioon lisätään omista luokista tehtyjä olioita, tulee niille olla määriteltynä metodit `equals` ja `hashCode`.
 
 
-<programming-exercise name='Set metodin parametrina'>
+<programming-exercise name='Set metodin parametrina' tmcname='osa08-Osa08_09.SetMetodinParametrina'>
 
 Toteuta pääohjelmaluokkaan luokkametodi `palautaKoko`, joka saa parametrina Set-olion ja palauttaa sen koon kokonaislukuna.
 
@@ -885,7 +886,8 @@ tsemppiä
 Seuraavassa tehtävässä rakennetaan verkkokauppaan liittyvää toiminnallisuutta ja harjoitellaan luokkien käyttämistä niiden tarjoamien rajapintojen kautta.
 
 
-<programming-exercise name='Verkkokauppa (8 osaa)' nocoins='true'>
+<programming-exercise name='Verkkokauppa (8 osaa)' tmcname='osa08-Osa08_10.Verkkokauppa' nocoins='true'>
+
 
 Teemme tehtävässä muutamia verkkokaupan hallinnointiin soveltuvia ohjelmakomponentteja.
 
