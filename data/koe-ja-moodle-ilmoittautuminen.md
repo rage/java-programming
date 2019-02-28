@@ -25,9 +25,11 @@ Ilmoittautuminen on pakollinen kaikille niille, jotka haluavat osallistua kurssi
 
 2. Odota 24h, jotta avoin voi seuraavana yönä siirtää tietosi järjestelmiensä välillä
 
-3. Luo Helsingin yliopiston käyttäjätunnukset. Saat tunnukset seuraamalla Helsingin yliopiston ohjetta käyttäjätunnusten aktivointiin: https://helpdesk.it.helsinki.fi/ohjeet/kirjautuminen-ja-yhteydet/kayttajatunnus/ohjeet-yliopiston-kayttajatunnuksen-aktivointiin. Huom! Osa oppilaista on raportoinut, että aktivointi ei toimi Safari-selaimella. Suosittelemme että teet aktivoinnin joko Chromella tai Firefoxilla.
+3. Jos sinulla on jo Helsingin yliopiston käyttäjätunnukset, siirry kohtaan 5.
 
-4. Pääset Moodleen osoitteessa https://moodle.helsinki.fi/course/view.php?id=29366 - Moodle-alueen salasana on "ohjelmointi-19"
+4. Luo Helsingin yliopiston käyttäjätunnukset. Saat tunnukset seuraamalla Helsingin yliopiston ohjetta käyttäjätunnusten aktivointiin: https://helpdesk.it.helsinki.fi/ohjeet/kirjautuminen-ja-yhteydet/kayttajatunnus/ohjeet-yliopiston-kayttajatunnuksen-aktivointiin. Huom! Osa oppilaista on raportoinut, että aktivointi ei toimi Safari-selaimella. Suosittelemme että teet aktivoinnin joko Chromella tai Firefoxilla.
+
+5. Pääset Moodleen osoitteessa https://moodle.helsinki.fi/course/view.php?id=29366 - Moodle-alueen salasana on "ohjelmointi-19". Kirjaudu Moodleen Helsingin yliopiston tunnuksilla -- yritä välttää sisäänkirjautumista HAKA:n kautta.
 
 ## Katso myös
 
