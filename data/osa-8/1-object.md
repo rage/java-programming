@@ -4,7 +4,6 @@ title: 'Object'
 hidden: true
 ---
 
-
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
 - Tiedät että Java-ohjelmointikielessä jokainen luokka perii luokan Object.
@@ -13,6 +12,8 @@ hidden: true
 
 </text-box>
 
+
+Tarkastellaan Javan luokkia ja kerrataan samalla hieman aiemmin opittuja luokkiin liittyviä ominaisuuksia.
 
 Tutkitaan seuraavaa luokkaa `Kirja`, jolla ei ole metodia `public String toString()`, ja ohjelmaa joka yrittää tulostaa `Kirja`-luokasta luodun olion `System.out.println()`-komennolla.
 
@@ -201,13 +202,13 @@ Kirjat olivat samat
 
 </sample-output>
 
-<quiznator id="5bd76bd68138f12a7e536db7"></quiznator>
+<quiznator id="5c78294899236814c5bbddb0"></quiznator>
 
 
 Monet Javan valmiit tietorakenteet tukeutuvat `equals`-metodiin osana sisäistä toimintaansa. Esimerkiksi luokan `ArrayList` `contains` ja `remove`-metodit hyödyntävät olioiden yhtäsuuruutta olion etsimisessä. Vastaavasti luokan `HashMap` toiminnallisuus perustuu equalsiin -- equalsin lisäksi metodi hashCode on oleellinen.
 
 
-<quiznator id="5bd76c17e8e5d029fd7814b1"></quiznator>
+<quiznator id="5c78298b3972a914741081a8"></quiznator>
 
 
 ## Hajautusarvo "hashCode"

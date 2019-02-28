@@ -5,102 +5,48 @@ hidden: true
 ---
 
 
-TODO: tänne crowdsorcerer-tehtävien vertaisarviointi
-
-
-#
-  Ohjelmien testaaminen
-
-
-
-
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
+- Kertaat ArrayListin ja HashMapin toimintaa
+- Harjoittelet ohjelmakoodin ja testien lukemista
 
-    -
-      Kertaat ohjelmien testaamista.
+</text-box>
 
-    -
-      Mietit input-output -tyyppistä testausta, missä syötteen perusteella päätellään tuloste.
+Kurssin seitsemännessä osassa luotiin omia ohjelmointitehtäviä, joita tuleville kursseille osallistuvat voivat käyttää ohjelmoinnin harjoitteluun. Tässä kohtaa pääset vertaisarvioimaan muiden tekemiä tehtäviä.
 
+Vertaisarvioit yhteensä kuusi tehtävää. Kolme tehtävistä liittyy listoihin ja kolme hajautustauluihin. Pohdi jokaisen kohdalla tehtävänannon TODO: tähän ne ominaisuudet mitä vertaisarvioissa tarkastellaan.
 
-
-<text-box>
-
-
-  Olet ehkä jo käyttänyt CrowdSorcereria Ohjelmoinnin perusteissa. Jos et, voit käydä palauttamassa ohjeet mieleesi kurssimateriaalin <a href="/part2/">toisessa osassa</a>.
+Alla on annettuna ensin tehtävän luomiseen tarkoitettu tehtävänanto, jota seuraa kolme vertaisarvioitavaa tehtävää. Kukin vertaisarviointi lasketaan pisteytyksessä yhden tehtävän arvoiseksi. Ensin tulee kolme listoihin liittyvää tehtävää, sitten kolme hajautustauluihin liittyvää tehtävää.
 
 
+## Suunnittele oma tehtävä: Listat
 
-  Syvennymme hiljalleen ohjelmoinnin jatkokurssilla ohjelmien testaamiseen CrowdSorcererin kanssa. Aiemmin testasit luomiasi ohjelmia antamalla syötteen ja sitä vastaavan tuloksen. Ohjelma ajettiin antamallasi syötteellä ja sen tulosta verrattiin tulokseesi.
+Suunnittele tehtävä, joka harjoituttaa listojen käsittelyä ja tietojen hakemista niistä. Tehtävän tekijän on tarkoitus kirjoittaa ratkaisunsa Lähdekoodi-kentän Submission-luokan metodiin suorita().
 
+Tee suorita()-metodin sisään valmiiksi lista tai listoja, jotka sisältävät oman valintasi mukaan joko merkkijonoja, kokonaislukuja tai liukulukuja. Täytä listan arvot valmiiksi.
 
+Ohjeista tulevaa tehtävän ratkaisijaa kysymään käyttäjältä komentoa, jonka jälkeen listalta haetaan komennon perusteella jotakin tietoa, joka sen jälkeen tulostetaan. Jos annettu käsky ei ole sallittujen listalla, tulee ohjelman tulostaa jokin virheviesti.
 
-  Nyt pääset tutustumaan lisää siihen, miten testit toimivat. Kuten aiemminkin, kirjoitat ohjelmallesi syötteet ja tulokset, mutta nyt näet testimetodin, joka niistä generoituu. Keksit myös itse testeillesi nimet ja testaustyypin. Nimen on tarkoitus olla kuvaava: esimerkiksi testi, joka testaa, että ohjelma tulostaa "Mau!" syötteellä "kissa", voisi olla nimeltään "tulostaMauJosSyoteOnKissa".
+Esimerkiksi yksi tälläinen tehtävä voisi sisältää listan kokonaislukuja, ja käskyt voisivat olla: "suurin", "pienin" ja "keskiarvo". Kun tuleva tehtävän ratkaisija antaa käskyn "keskiarvo", ohjelma tulostaa listan lukujen keskiarvon ja niin edelleen. Keksi kuitenkin tehtävällesi omat sallitut käskyt.
 
+Muista merkitä ainakin käskyyn reagointiin liittyvät rivit malliratkaisuriveiksi -- näin ratkaisu ei tule suoraan tehtäväpohjaan. Vastaavasti älä merkitse listan luontia tai sen arvoja lisäävää koodia malliratkaisuriveiksi, sillä se on tarkoitus jättää tehtäväpohjaan.
 
-
-  Testaustyypillä tarkoitetaan tässä tapaa, jolla antamaasi tulosta verrataan ohjelman tulokseen. Contains tarkoittaa, että ohjelman tulostuksen täytyy sisältää antamasi tulos, Does not contain tarkoittaa, että se ei saa sisältää antamaasi tulosta, ja Equals tarkoittaa sitä, että ohjelman tulostuksen täytyy olla tarkalleen sama kuin antamasi tulos, merkkejä ja rivinvaihtoja myöten.
-
-
-
-  Antamistasi syötteestä, tuloksesta, nimestä ja tyypistä generoitu testi voi näyttää vaikkapa tältä:
-
+Huom! Voit syöttää useamman rivin merkitsemällä rivinvaihdot syötteeseen. Esimerkiksi syöte `yksi\nkaksi\nloppu` sisältää syötteet `yksi` `kaksi` ja `loppu`. Vastaavasti tulos `1\n2\n3` olettaa, että tulostuksen tulee olla `1` `2` ja `3` tässä järjestyksessä.
 
 
-```java
-@Test
-public void tulostaMauJosSyoteOnKissa() {
-	Submission.suorita(new Scanner(“kissa”));
-	String metodinTulostus = io.getSysOut(); // tässä ohjelmasi tulostus tallennetaan
-                                                 // olioon metodinTulostus
-	String viesti = “Kun syöte oli: ‘kissa’, tulostus oli: ‘“ + metodinTulostus + “‘, mutta se ei ollut: ‘Mau!’.”;
-        // viesti näytetään tehtävän tekijälle, jos ohjelma ei mene testistä läpi
-	assertEquals(viesti, “Mau!”, metodinTulostus); // assertEquals testaa sitä, että
-                                                       // metodinTulostus on tarkalleen “Mau!”
-}
-```
-
-
-  CrowdSorcerer yhdistää nämä testimetodit yhteen testaustiedostoon, jonka se sitten lähettää ohjelmakoodin mukana testauspalvelimelle. Jatkossa pääset luomaan itse kokonaisia testitiedostoja!
+<crowdsorcerer id='26' peerreview='true' exercisecount='3'></crowdsorcerer>
 
 
 
-  Kuten aiemminkin, testejä täytyy olla vähintään yksi, mutta pyri miettimään, miten saisit ohjelmasi testattua mahdollisimman kattavasti. Esimerkiksi ehtolauseita sisältävästä ohjelmasta tulisi aina käydä läpi kaikki ehtojen luomat haarat.
+##  Suunnittele oma tehtävä: Hajautustaulu
+
+Keksi tehtävä, jossa käytetään HashMappia. Tehtäväpohjassa on valmiina komennon kysyminen ja toistolause, joka jatkuu kunnes ohjelman käyttäjä kirjoittaa komennon "lopeta".
+
+**Huom!** Tässä sinun täytyy syöttää jokaiselle testitapaukselle useampi syöte. Useamman syötteen saat annettua, kun laitat rivinvaihdon `\n` jokaisen syötteen väliin. Lisäksi lopeta jokainen testisyöte tekstillä `lopeta`, jotta testissä silmukan suoritus lakkaa.
+
+Esimerkiksi jos haluat antaa testisyötteeksi "kissa", "koira", "lopeta", syötä input-kenttään teksti `kissa\nkoira\nlopeta`.
+
+Muista merkitä malliratkaisurivit ohjelmaan -- näin ratkaisu ei tule suoraan käyttäjälle näkyvään.
 
 
-
-  Nyt pääset laatimaan testejä seuraaville kahdelle tehtävälle.
-
-
-<% partial 'partials/general_callout', locals: { name: 'Suunnittele testitapaukset valmiille malliratkaisulle 1' } do %>
-
-
-    Lähdekoodin kohdalla on valmis malliratkaisu. Keksi sitä vastaava tehtävänanto ja anna testitapaukset. Lähetettyäsi tehtävän saat tiedon siitä, menivätkö testisi läpi. Jos eivät, lue virheviesti ja lähdekoodi uudestaan ja korjaa testisi menemään läpi.
-
-
-
-    Tehtävien luomistehtävät käsitellään pisteytyksessä bonuksena.
-
-
-<% end %>
-
-<div class='crowdsorcerer-widget' data-assignment='14'></div>
-
-<% partial 'partials/general_callout', locals: { name: 'Suunnittele testitapaukset valmiille malliratkaisulle 2' } do %>
-
-
-    Lähdekoodin kohdalla on valmis malliratkaisu. Keksi sitä vastaava tehtävänanto ja anna testitapaukset. Lähetettyäsi tehtävän saat tiedon siitä, menivätkö testisi läpi. Jos eivät, lue virheviesti ja lähdekoodi uudestaan ja korjaa testisi menemään läpi.
-
-
-    Fibonaccin lukujonosta voit lukea <a href="https://fi.wikipedia.org/wiki/Fibonaccin_lukujono">Wikipediasta</a>.
-
-
-
-    Tehtävien luomistehtävät käsitellään pisteytyksessä bonuksena.
-
-
-<% end %>
-
-<div class='crowdsorcerer-widget' data-assignment='13'></div>
-
+<crowdsorcerer id='27' peerreview='true' exercisecount='3'></crowdsorcerer>
