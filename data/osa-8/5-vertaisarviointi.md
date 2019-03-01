@@ -1,7 +1,7 @@
 ---
 path: '/osa-8/5-vertaisarviointi'
 title: 'Tehtävien arviointi'
-hidden: false
+hidden: true
 ---
 
 

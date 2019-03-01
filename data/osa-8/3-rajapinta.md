@@ -1,7 +1,7 @@
 ---
 path: '/osa-8/3-rajapinta'
 title: 'Rajapinta'
-hidden: false
+hidden: true
 ---
 
 

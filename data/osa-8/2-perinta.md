@@ -1,7 +1,7 @@
 ---
 path: '/osa-8/2-perinta'
 title: 'Luokan periminen'
-hidden: false
+hidden: true
 ---
 
 
