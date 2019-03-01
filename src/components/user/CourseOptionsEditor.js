@@ -20,7 +20,7 @@ import styled from "styled-components"
 import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faInfoCircle as icon } from "@fortawesome/free-solid-svg-icons"
-import DropdownMenu from "../DropdownMenu"
+import DropdownMenu from "./DropdownMenu"
 import { Link } from "gatsby"
 
 const Row = styled.div`

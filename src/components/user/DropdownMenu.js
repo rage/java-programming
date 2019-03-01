@@ -6,7 +6,7 @@ import InputLabel from "@material-ui/core/InputLabel"
 import MenuItem from "@material-ui/core/MenuItem"
 import FormControl from "@material-ui/core/FormControl"
 import Select from "@material-ui/core/Select"
-import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
+import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
 
 const StyledFormControl = styled(FormControl)`
   width: 100%;
@@ -42,8 +42,12 @@ const DropdownMenu = ({ selectedVariant, setSelectedVariant }) => {
       >
         <MenuItem value={"dl"}>Aikataulutettu Ohjelmoinnin MOOC</MenuItem>
         <MenuItem value={"nodl"}>Aikatauluton Ohjelmoinnin MOOC</MenuItem>
-        {/* <MenuItem value={'ohja-dl'}>Aloitan kurssin aikataulutettuna osasta 8 (Ohjelmoinnin jatkokurssi)</MenuItem>
-        <MenuItem value={'ohja-nodl'}>Aloitan kurssin aikatauluttomana osasta 8 (Ohjelmoinnin jatkokurssi)</MenuItem> */}
+        <MenuItem value={"ohja-dl"}>
+          Aloitan kurssin aikataulutettuna osasta 8 (Ohjelmoinnin jatkokurssi)
+        </MenuItem>
+        <MenuItem value={"ohja-nodl"}>
+          Aloitan kurssin aikatauluttomana osasta 8 (Ohjelmoinnin jatkokurssi)
+        </MenuItem>
       </Select>
     </StyledFormControl>
   )

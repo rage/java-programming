@@ -11,7 +11,7 @@ Tämän materiaalin osat 1-7 liittyvät Helsingin yliopiston kurssiin Ohjelmoinn
 
 Kurssin tehtäviä tehdään Test My Code (TMC) -järjestelmässä. Ohjeita TMC-järjestelmän käyttöönottoon löytyy tämän kurssimateriaalin ensimmäisestä osasta.
 
-Mikäli et ole osallistunut kurssiin ensimmäisestä osasta lähtien, vaan tulet mukaan vain Ohjelmoinnin jatkokurssia vastaavalle osalle, valitse TMC:n Settings-valikosta kurssi TODO. Kertaathan tällöin myös materiaalin osat 1-7.
+Mikäli et ole osallistunut kurssiin ensimmäisestä osasta lähtien, vaan tulet mukaan vain Ohjelmoinnin jatkokurssia vastaavalle osalle, valitse TMC:n Settings-valikosta kurssi TODO. Lisäksi valitse tämän materiaalin asetuksien kohdan "Minkä kurssin version pisteet ja kolikot haluat nähdä?" vaihtoehto "Aloitan kurssin osasta 8". Muista myös kerrata materiaalin osat 1-7.
 
 <hr/>
 
