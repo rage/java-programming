@@ -21,7 +21,7 @@ Katso tarkemmat kokeiden ajankohdat sivulta [Arvostelu ja kokeet](/arvostelu-ja-
 
 Ilmoittautuminen on pakollinen kaikille niille, jotka haluavat osallistua kurssin kokeeseen. Ilmoittautuminen koskee kaikkia kurssilaisia, eli myös Helsingin yliopiston opiskelijoita ja myös niitä, jotka ovat ilmoittautuneet kurssille jossakin muualla.
 
-1. Ensiksi ilmoittaudu Avoimen yliopiston järjestelmään, jotta saat käyttöoikeuden Moodleen: <registration-link></registration-link>. Huom! Avoimen yliopiston sivuille on tullut epähuomiossa muita ilmoittautumisivuja, joissa on tämän sivun kanssa ristiriitaista tietoa. Kuitenkin tämä meidän tarjoama ilmottautumislinkki on se minne sinun täytyy ilmoittautua -- ei väliä oletko aikataulullisella tai aikatauluttomalla kurssilla.
+1. Ensiksi tee Avoimen yliopiston ilmainen ilmoittautuminen täältä: <registration-link></registration-link>. Huom! Avoimen yliopiston sivuille on tullut epähuomiossa muita ilmoittautumisivuja, joissa on tämän sivun kanssa ristiriitaista tietoa. Kuitenkin tämä meidän tarjoama ilmottautumislinkki on se minne sinun täytyy ilmoittautua -- ei väliä oletko aikataulullisella tai aikatauluttomalla kurssilla.
 
 2. Odota 24h, jotta avoin voi seuraavana yönä siirtää tietosi järjestelmiensä välillä
 
