@@ -117,7 +117,7 @@ Kun kirjautuminen kurssin Moodleen Helsingin yliopiston tunnuksilla onnistuu ja 
 
 Jos sinulla ei ole ollut ennen tätä kurssia Helsingin yliopiston käyttäjätunnusta ja pääset kirjautumaan kurssin Moodleen, olet varmasti tehnyt koeilmoittautumisen.
 
-Jos sinulla on ollut jo ennen tätä kurssia Helsingin yliopiston käyttäjätunnus ja et muista oletko käynyt täyttämässä [koe ja moodle ilmoittautumisen](/koe-ja-moodle-ilmoittautuminen) kohdan 1. ilmoittautumislomaketta, käy täyttämässä se uudestaan jotta varmasti olet tehnyt tarvittavat ilmoittautumiset.
+Jos sinulla on ollut jo ennen tätä kurssia Helsingin yliopiston käyttäjätunnus sinun täytyy muistaa oletko käynyt täyttämässä [koe ja moodle ilmoittautumisen](/koe-ja-moodle-ilmoittautuminen) kohdan 1. ilmoittautumislomakkeen. Jos et muista oletko täyttänyt sen aikaisemmin, käy täyttämässä se uudestaan jotta varmasti olet tehnyt tarvittavat ilmoittautumiset.
 
 ### Täytyykö kokeeseen ilmoittautua vielä erikseen jos on jo ilmoittautunut kurssin Moodleen?
 
