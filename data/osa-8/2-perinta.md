@@ -698,6 +698,8 @@ Metodikutsun aikaansaama toimintoketju siis on monivaiheinen. Periaate on kuiten
 <quiznator id="5c782a0c244fe21455cbc288"></quiznator>
 
 
+<quiznator id="5c78fe41244fe21455cbc384"></quiznator>
+
 ## Milloin perintää kannattaa käyttää?
 
 

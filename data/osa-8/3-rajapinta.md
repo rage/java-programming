@@ -643,6 +643,8 @@ public class Tehdas {
 ```
 
 
+<quiznator id="5c78ff60c41ed4148d97065d"></quiznator>
+
 <text-box variant='hint' name='Luokkien välisten riippuvuuksien vähentäminen'>
 
 Rajapintojen käyttö ohjelmoinnissa mahdollistaa luokkien välisten riippuvaisuuksien vähentämisen. Esimerkissämme Pakkaaja ei ole riippuvainen rajapinnan Talletettava-toteuttavista luokista vaan ainoastaan rajapinnasta. Tämä mahdollistaa rajapinnan toteuttavien luokkien lisäämisen ohjelmaan ilman tarvetta muuttaa luokkaa Pakkaaja. Myöskään pakkaaja-luokkaa käyttäviin luokkiin uusien Talletettava-rajapinnan toteuttavien luokkien lisääminen ei vaikuta.
