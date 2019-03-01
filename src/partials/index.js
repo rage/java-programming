@@ -54,6 +54,7 @@ import H2 from "./Headers/H2"
 import H4 from "./Headers/H4"
 import H5 from "./Headers/H5"
 import H6 from "./Headers/H6"
+import Hr from "./Hr"
 import TableOfContents from "./TableOfContents"
 import Notice from "./Notice"
 import RegistrationLink from "./RegistrationLink"
@@ -92,6 +93,7 @@ const mapping = {
   h4: H4,
   h5: H5,
   h6: H6,
+  hr: Hr,
 }
 
 export default () => {
