@@ -119,12 +119,10 @@ var content2 = [
     title: "Usein kysytyt kysymykset",
     path: "/usein-kysytyt-kysymykset",
   },
-  { separator: true },
+  { separator: true, title: "Ohjelmoinnin perusteet" },
 ]
 
 var futurePages = [
-  { separator: true },
-  { title: "Osa 8", tba: "1.3.2019" },
   { title: "Osa 9", tba: "8.3.2019" },
   { title: "Osa 10", tba: "15.3.2019" },
   { title: "Osa 11", tba: "22.3.2019" },
@@ -163,6 +161,12 @@ class Sidebar extends React.Component {
     }
     let content = content2.concat(edges)
     content = content.concat(futurePages)
+    let middlepoint = content.findIndex(o => o.title === "Osa 7")
+    content.splice(middlepoint + 1, 0, {
+      separator: true,
+      title: "Ohjelmoinnin jatkokurssi",
+    })
+
     return (
       <MobileWrapperOrFragment mobileMenuOpen={this.props.mobileMenuOpen}>
         <MenuExpanderWrapper>
