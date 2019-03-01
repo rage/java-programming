@@ -14,12 +14,12 @@ Molempia kokeita järjestetään useana eri päivänä. Voit osallistua kokeisii
 Osien 1-7 kokeita järjestetään seuraavasti:
 
 - 5.3.
-- 14.4.
-- 8.5.
+- 13.4.
+- 7.5.
 
  Osien 8-14 kokeita järjestetään seuraavasti:
 
-- 8.5.
+- 7.5.
 - 8.6.
 - 29.6.
 

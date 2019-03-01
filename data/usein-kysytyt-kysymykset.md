@@ -49,7 +49,9 @@ Varmista, että sinulla on Javan kehitystyökalujen versio 8 asennettuna. Kurssi
 
 ### En voi aloittaa kurssia, koska en tiedä minne ilmoittautua
 
-Kurssin aloittamiseen ei tarvitse ilmoittautumista. Älä ilmoittaudu minnekkään ellei kurssin sivu (ohjelmointi-19.mooc.fi) erikseen kehoita sinua tekemään niin.
+Kurssin aloittamiseen ei tarvitse ilmoittautumista. Älä ilmoittaudu minnekkään ellei kurssin sivu (ohjelmointi-19.mooc.fi) erikseen kehoita sinua tekemään niin. Kurssin kokeeseen on erikseen ilmoittautuminen täällä: [koe ja moodle ilmoittautuminen](/koe-ja-moodle-ilmoittautuminen).
+
+Valitettavasti avoimen yliopiston yliopiston sivulle ja courses.helsinki.fi:hin on epähuomiossa luotu kurssille ylimääräisiä ilmoittautumissivuja, joista voi saada käsityksen että kurssille ei pääse mukaan tai että joutuu kurssin väärään versioon jos ei ilmoitttaudu näillä sivuilla. Tämä tieto ei kuitenkaan pidä paikkaansa.
 
 ### Milloin voin aloittaa aikatauluttoman kurssin?
 
