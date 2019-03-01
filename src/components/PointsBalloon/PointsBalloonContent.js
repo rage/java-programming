@@ -5,9 +5,9 @@ import styled from "styled-components"
 import Loading from "../Loading"
 import { fetchProgress } from "../../services/progress"
 import PagesContext from "../../contexes/PagesContext"
-import PartProgress from "./PartProgress"
 import { getCachedUserDetails } from "../../services/moocfi"
 import { SMALL_MEDIUM_BREAKPOINT } from "../../util/constants"
+import CourseProgress from "./CourseProgress"
 
 const StyledModal = styled(Modal)`
   z-index: 500 !important;
@@ -54,6 +54,7 @@ class PointsBalloonContent extends React.Component {
     data: null,
     error: null,
     appliesForStudyRight: null,
+    currentCourseVariant: null,
   }
 
   async componentDidMount() {
@@ -63,7 +64,8 @@ class PointsBalloonContent extends React.Component {
       let userDetails = await getCachedUserDetails()
       const appliesForStudyRight =
         userDetails?.extra_fields?.applies_for_study_right === "t"
-      this.setState({ data, appliesForStudyRight })
+      const currentCourseVariant = userDetails?.extra_fields?.course_variant
+      this.setState({ data, appliesForStudyRight, currentCourseVariant })
     } catch (e) {
       this.setState({ error: e.toString() })
     }
@@ -98,16 +100,11 @@ class PointsBalloonContent extends React.Component {
                 </div>
               ) : (
                 <div>
-                  {this.state.data &&
-                    Object.entries(this.state.data).map(([name, data]) => {
-                      return (
-                        <PartProgress
-                          appliesForStudyRight={this.state.appliesForStudyRight}
-                          name={name}
-                          data={data}
-                        />
-                      )
-                    })}
+                  <CourseProgress
+                    data={this.state.data}
+                    appliesForStudyRight={this.state.appliesForStudyRight}
+                    currentCourseVariant={this.state.currentCourseVariant}
+                  />
                 </div>
               )}
             </Fragment>
