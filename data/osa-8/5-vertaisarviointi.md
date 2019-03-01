@@ -14,7 +14,7 @@ hidden: false
 
 Kurssin seitsemännessä osassa luotiin omia ohjelmointitehtäviä, joita tuleville kursseille osallistuvat voivat käyttää ohjelmoinnin harjoitteluun. Tässä kohtaa pääset vertaisarvioimaan muiden tekemiä tehtäviä.
 
-Vertaisarvioit yhteensä kuusi tehtävää. Kolme tehtävistä liittyy listoihin ja kolme hajautustauluihin. Pohdi jokaisen kohdalla tehtävänannon TODO: tähän ne ominaisuudet mitä vertaisarvioissa tarkastellaan.
+Vertaisarvioit yhteensä kuusi tehtävää. Kolme tehtävistä liittyy listoihin ja kolme hajautustauluihin. Pohdit jokaisen tehtävän kohdalla mm. tehtävänannon selkeyttä, sopivuutta sekä testien toimintaa.
 
 Alla on annettuna ensin tehtävän luomiseen tarkoitettu tehtävänanto, jota seuraa kolme vertaisarvioitavaa tehtävää. Kukin vertaisarviointi lasketaan pisteytyksessä yhden tehtävän arvoiseksi. Ensin tulee kolme listoihin liittyvää tehtävää, sitten kolme hajautustauluihin liittyvää tehtävää.
 
