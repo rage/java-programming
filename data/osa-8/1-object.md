@@ -1,7 +1,7 @@
 ---
 path: '/osa-8/1-object'
 title: 'Object'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
