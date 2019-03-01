@@ -107,7 +107,7 @@ Jos kurssi tuntuu liian hankalalta, kannattaa hakea apua tukiväyliltämme ennen
 
 ### Pääsenkö käsiksi kaikkiin kurssin osiin heti aikatauluttomalla kurssilla?
 
-Valitettavasti et voi. Osien julkaisupäivät koskevat sekä aikataulullista että aikataulutonta kurssia.
+Valitettavasti et. Osien julkaisupäivät koskevat sekä aikataulullista että aikataulutonta kurssia.
 
 ### Miten ilmoittaudun kurssikokeeseen?
 
@@ -129,7 +129,7 @@ Ei tarvitse ilmoittautua erikseen -- kurssin kokeeseen ja Moodleen ilmoittautumi
 
 Ei liity. Koeilmoittautumisella voit osallistua mihin tahansa kokeeseen.
 
-### Miten kurssin loppuosan kokeesen ilmoittaudutaan?
+### Miten kurssin loppuosan kokeeseen ilmoittaudutaan?
 
 Kurssin loppuosan (osat 8-14) kokeen tiedot päivittyvät kurssisivulle myöhemmin.
 

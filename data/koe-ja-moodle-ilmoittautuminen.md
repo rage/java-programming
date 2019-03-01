@@ -15,12 +15,13 @@ Myöhässä ilmoittautuminen ei pudota sinua kurssilta, mutta voit joutua osalli
 
 Huom! Helsingin yliopiston Avoimen yliopiston sivuille on luotu epähuomiossa ylimääräisiä ilmoittautumissivuja, joista voi ymmärtää että olet tippunut pois kurssilta. Älä välitä näistä avoimen yliopiston muista ilmoittautumissivuista, vaan seuraa alla olevia ohjeita. Tähän muodolliseen ilmoittautumiseen on vain yksi oikea ilmoittautumislinkki, joka löytyy alempaa. Tämä tämän sivun antama linkki on siis ainoa oikea kokeen ilmoittautumislinkki sekä kurssin aikataulullisessa että aikatauluttomassa versiossa.
 
+Huom! Koe on täysin maksuton, vaikka Avoimen yliopiston ilmoittautumisessa saatetaankin pyytää hyväksymään maksuehdot.
+
 Katso tarkemmat kokeiden ajankohdat sivulta [Arvostelu ja kokeet](/arvostelu-ja-kokeet).
 
 ## Moodle-ilmoittautuminen
 
 Ilmoittautuminen on pakollinen kaikille niille, jotka haluavat osallistua kurssin kokeeseen. Ilmoittautuminen koskee kaikkia kurssilaisia, eli myös Helsingin yliopiston opiskelijoita ja myös niitä, jotka ovat ilmoittautuneet kurssille jossakin muualla.
-
 
 1. Ensiksi tee Avoimen yliopiston ilmainen koeilmoittautuminen täältä: <registration-link></registration-link>.
 <br><br>Huom 1! Avoimen yliopiston sivuille on tullut epähuomiossa muita ilmoittautumisivuja, joissa on tämän sivun kanssa ristiriitaista tietoa. Kuitenkin tämä meidän tarjoama ilmottautumislinkki on se minne sinun täytyy ilmoittautua -- ei väliä oletko aikataulullisella tai aikatauluttomalla kurssilla.
