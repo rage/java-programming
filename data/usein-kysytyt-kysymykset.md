@@ -87,7 +87,7 @@ Jos olet aikataulutetussa kurssissa niin ota huomioon että ensimmäsen osan dea
 
 ### Tarvitsenko Helsingin yliopiston tunnukset?
 
-Kaikki jotka haluavat osallistua Avoimen yliopiston tentteihin tai pystyä lukemaan Moodlea tarvii Helsingin yliopiston tunnukset. Jos tekee täysin omaksi ilokseen kurssia niin silloin ei ole pakollista, tosin vaikka tekisi vain omaksi ilokseen niin suosittelisimme tenttien tekemistä ja noiden toisten tunnusten hankkimista. Ohjeet tunnuksen hankkimiseen löytyy täältä: [koe ja moodle ilmoittautuminen](/koe-ja-moodle-ilmoittautuminen).
+Kaikki jotka haluavat osallistua kurssin ilmaisiin tentteihin tai pystyä lukemaan Moodlea tarvii Helsingin yliopiston tunnukset. Jos tekee täysin omaksi ilokseen kurssia niin silloin ei ole pakollista, tosin vaikka tekisi vain omaksi ilokseen niin suosittelisimme tenttien tekemistä ja noiden toisten tunnusten hankkimista. Ohjeet tunnuksen hankkimiseen löytyy täältä: [koe ja moodle ilmoittautuminen](/koe-ja-moodle-ilmoittautuminen).
 
 ### Aion hakea opiskelupaikkaa MOOCin kautta. Pitääkö minun osallistua Avoimen yliopiston tentteihin?
 
@@ -135,7 +135,7 @@ Kurssin loppuosan (osat 8-14) kokeen tiedot päivittyvät kurssisivulle myöhemm
 
 ### Löysin Avoimen yliopiston sivulta yleiset ohjeet kokeeseen ilmoittautumiseen. Voinko seurata niitä?
 
-Et voi seurata avoimen yliopiston yleisiä koeilmoittautumisohjeita. Ainoat oikeat ohjeet kokeeseen ilmoittautumiseen löytyy täältä: [koe ja moodle ilmoittautuminen](/koe-ja-moodle-ilmoittautuminen).
+Tämä kurssi ei seuraa Avoimen yliopiston yleisiä koeilmoittautumisohjeita. Ohjeet kokeeseen ilmoittautumiseen löytyy täältä: [koe ja moodle ilmoittautuminen](/koe-ja-moodle-ilmoittautuminen).
 
 ### Löysin koeilmoittautumisen vasta koepäivänä. Voinko silti osallistua kokeeseen?
 

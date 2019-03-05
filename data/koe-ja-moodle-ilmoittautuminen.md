@@ -13,7 +13,7 @@ Ilmoittaudu kokeeseen vähintään kaksi päivää ennen koepäivää, johon ole
 
 Myöhässä ilmoittautuminen ei pudota sinua kurssilta, mutta voit joutua osallistumaan vasta seuraavaan kokeeseen jos sinulla ei ole vielä Helsingin yliopiston käyttäjätunnuksia. Esimerkiksi mikäli ilmoittaudut vasta 4.3., et välttämättä voi osallistua 5.3. järjestettävään kokeeseen. Tällöin 13.4 järjestettävä koe on ensimmäinen koe, johon voit osallistua.
 
-Huom! Me loimme vahingossa Helsingin yliopiston Avoimen yliopiston sivuille ylimääräisiä ilmoittautumissivuja, joista voi ymmärtää että olet tippunut pois kurssilta. Älä välitä näistä avoimen yliopiston muista ilmoittautumissivuista, vaan seuraa alla olevia ohjeita. Tähän muodolliseen ilmoittautumiseen on vain yksi oikea ilmoittautumislinkki, joka löytyy alempaa. Tämä tämän sivun antama linkki on siis ainoa oikea kokeen ilmoittautumislinkki sekä kurssin aikataulullisessa että aikatauluttomassa versiossa.
+Huom! Me loimme vahingossa Helsingin yliopiston Avoimen yliopiston sivuille ylimääräisiä ilmoittautumissivuja, joista voi ymmärtää että olet tippunut pois kurssilta. Älä välitä näistä muista ilmoittautumissivuista, vaan seuraa alla olevia ohjeita. Tähän muodolliseen ilmoittautumiseen on vain yksi oikea ilmoittautumislinkki, joka löytyy alempaa. Tämä tämän sivun antama linkki on siis ainoa oikea kokeen ilmoittautumislinkki sekä kurssin aikataulullisessa että aikatauluttomassa versiossa.
 
 Huom! Koe on täysin maksuton, vaikka ilmoittautumisessa saatetaankin pyytää hyväksymään maksuehdot.
 

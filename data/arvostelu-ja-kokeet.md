@@ -23,7 +23,7 @@ Osien 1-7 kokeita järjestetään seuraavasti:
 - 8.6.
 - 29.6.
 
-Kokeet tehdään Avoimen yliopiston verkkoympäristössä. Kokeen voi aloittaa koepäivänä mihin kellonaikaan haluaa.
+Kokeet tehdään Moodle-verkkoympäristössä. Kokeen voi aloittaa koepäivänä mihin kellonaikaan haluaa.
 
 ## Kokeeseen ilmoittautuminen
 
