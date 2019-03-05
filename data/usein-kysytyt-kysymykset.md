@@ -132,3 +132,13 @@ Ei liity. Koeilmoittautumisella voit osallistua mihin tahansa kokeeseen.
 ### Miten kurssin loppuosan kokeesen ilmoittaudutaan?
 
 Kurssin loppuosan (osat 8-14) kokeen tiedot päivittyvät kurssisivulle myöhemmin.
+
+### Löysin Avoimen yliopiston sivulta yleiset ohjeet kokeeseen ilmoittautumiseen. Voinko seurata niitä?
+
+Et voi seurata avoimen yliopiston yleisiä koeilmoittautumisohjeita. Ainoat oikeat ohjeet kokeeseen ilmoittautumiseen löytyy täältä: [koe ja moodle ilmoittautuminen](/koe-ja-moodle-ilmoittautuminen).
+
+### Löysin koeilmoittautumisen vasta koepäivänä. Voinko silti osallistua kokeeseen?
+
+Jos sinulla ei ole Helsingin yliopiston käyttäjätunnuksia, voit osallistua vasta seuraavana koepäivänä järjestettävään kokeeseen.
+
+Jos sinulla on jo Helsingin yliopiston käyttäjätunnukset, voit osallistua kokeeseen, jos käyt tekemässä koeilmoittautumisen nyt täyttämällä [koe ja moodle ilmoittautumisen](/koe-ja-moodle-ilmoittautuminen) kohdan 1. ilmoittautumislomakkeen.
