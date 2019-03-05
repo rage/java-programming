@@ -44,4 +44,4 @@ Ilmoittautuminen on pakollinen kaikille niille, jotka haluavat osallistua kurssi
 * [Miten kurssin loppuosan kokeeseen ilmoittaudutaan?](/usein-kysytyt-kysymykset#heading-miten-kurssin-loppuosan-kokeeseen-ilmoittaudutaan)
 * [Löysin Avoimen yliopiston sivulta yleiset ohjeet kokeeseen ilmoittautumiseen. Voinko seurata niitä?](/usein-kysytyt-kysymykset#heading-loysin-avoimen-yliopiston-sivulta-yleiset-ohjeet-kokeeseen-ilmoittautumiseen-voinko-seurata-niita)
 * [Löysin koeilmoittautumisen vasta koepäivänä. Voinko silti osallistua kokeeseen?](/usein-kysytyt-kysymykset#heading-loysin-koeilmoittautumisen-vasta-koepaivana-voinko-silti-osallistua-kokeeseen)
-* [Kokeen piti olla ilmainen, mutta Avoimen ilmoittautumisessa puhutaan maksuehdoista](/usein-kysytyt-kysymykset/#heading-kokeen-piti-olla-ilmainen-mutta-avoimen-ilmoittautumisessa-puhutaan-maksuehdoista)
+* [Kokeen piti olla ilmainen, mutta koeilmoittautumisessa puhutaan maksuehdoista](/usein-kysytyt-kysymykset/#heading-kokeen-piti-olla-ilmainen-mutta-koeilmoittautumisessa-puhutaan-maksuehdoista)
