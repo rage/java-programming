@@ -25,6 +25,7 @@ Ilmoittautuminen on pakollinen kaikille niille, jotka haluavat osallistua kurssi
 1. Ensiksi tee Avoimen yliopiston ilmainen koeilmoittautuminen täältä: <registration-link></registration-link>.
 <br><br>Huom 1! Avoimen yliopiston sivuille on tullut epähuomiossa muita ilmoittautumisivuja, joissa on tämän sivun kanssa ristiriitaista tietoa. Kuitenkin tämä meidän tarjoama ilmottautumislinkki on se minne sinun täytyy ilmoittautua -- ei väliä oletko aikataulullisella tai aikatauluttomalla kurssilla.
 <br><br>Huom 2! Avoin yliopisto kutsuu itse tätä koeilmoittautumista kurssiilmoittautumiseksi. Tällä kurssilla kuitenkin tämä ilmoittautuminen toimii kokeeseen ilmoittatumisena.<br><br>
+<br><br>Huom 3! Ilmoittautumisen jälkeen Avoimen sivu tarjoaa Avoimen Yliopiston yleisiä tentti-ilmoittautumiskäytäntöjä. Älä välitä näistä käytännöistä, ne eivät koske tätä kurssia.<br><br>
 
 2. Jos sinulla on jo Helsingin yliopiston käyttäjätunnukset, siirry kohtaan 5.
 
