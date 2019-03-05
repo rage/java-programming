@@ -40,7 +40,7 @@ TODO: pois.
 
 
 
-<% partial 'partials/general_callout', locals: { name: 'Ohjeistus muistin virkistämiseksi: Suunnittele testitapaukset valmiille malliratkaisulle 1' } do %>
+<% partial 'partials/general_callout', locals: { name: 'Ohjeistus muistin virkistämiseksi: Suunnittele testitapaukset valmiille malliratkaisulle 1'>
 
 
     Lähdekoodin kohdalla on valmis malliratkaisu. Keksi sitä vastaava tehtävänanto ja anna testitapaukset. Lähetettyäsi tehtävän saat tiedon siitä, menivätkö testisi läpi. Jos eivät, lue virheviesti ja lähdekoodi uudestaan ja korjaa testisi menemään läpi.
@@ -55,7 +55,7 @@ TODO: pois.
 <div class='crowdsorcerer-widget' data-assignment='14' peer-review data-exercises='3'></div>
 
 
-<% partial 'partials/general_callout', locals: { name: 'Ohjeistus muistin virkistämiseksi: Suunnittele testitapaukset valmiille malliratkaisulle 2' } do %>
+<% partial 'partials/general_callout', locals: { name: 'Ohjeistus muistin virkistämiseksi: Suunnittele testitapaukset valmiille malliratkaisulle 2'>
 
 
     Lähdekoodin kohdalla on valmis malliratkaisu. Keksi sitä vastaava tehtävänanto ja anna testitapaukset. Lähetettyäsi tehtävän saat tiedon siitä, menivätkö testisi läpi. Jos eivät, lue virheviesti ja lähdekoodi uudestaan ja korjaa testisi menemään läpi.

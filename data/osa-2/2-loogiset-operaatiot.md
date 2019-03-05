@@ -543,9 +543,7 @@ while (true) {
 System.out.println(tulos);
 ```
 
-<p>
-  Saman toiminnallisuuden voi toteuttaa myös seuraavasti.
-</p>
+Saman toiminnallisuuden voi toteuttaa myös seuraavasti.
 
 ```java
 int tulos = 0;
