@@ -142,3 +142,7 @@ Et voi seurata avoimen yliopiston yleisiä koeilmoittautumisohjeita. Ainoat oike
 Jos sinulla ei ole Helsingin yliopiston käyttäjätunnuksia, voit osallistua vasta seuraavana koepäivänä järjestettävään kokeeseen.
 
 Jos sinulla on jo Helsingin yliopiston käyttäjätunnukset, voit osallistua kokeeseen, jos käyt tekemässä koeilmoittautumisen nyt täyttämällä [koe ja moodle ilmoittautumisen](/koe-ja-moodle-ilmoittautuminen) kohdan 1. ilmoittautumislomakkeen.
+
+### Kokeen piti olla ilmainen, mutta Avoimen ilmoittautumisessa puhutaan maksuehdoista
+
+Koe on täysin ilmainen. Avoimen ilmoittautumisessa puhutaan maksuehdoista, koska he käyttävät heidän yleistä ilmoittaumispohjaa, ja heidän jotkut muut kurssit ovat maksullisia. Tällä kurssilla on kuitenkin erityissopimus Avoimen kanssa, joten sinun ei tarvitse maksaa kurssista tai kokeesta mitään.

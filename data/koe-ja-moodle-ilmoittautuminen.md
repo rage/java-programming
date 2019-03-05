@@ -41,6 +41,7 @@ Ilmoittautuminen on pakollinen kaikille niille, jotka haluavat osallistua kurssi
 * [Mistä tiedän onnistuinko koeilmoittautumisessa?](/usein-kysytyt-kysymykset#heading-mista-tiedan-onnistuinko-koeilmoittautumisessa)
 * [Täytyykö kokeeseen ilmoittautua vielä erikseen jos on jo ilmoittautunut kurssin Moodleen?](/usein-kysytyt-kysymykset#heading-taytyyko-kokeeseen-ilmoittautua-viela-erikseen-jos-on-jo-ilmoittautunut-kurssin-moodleen)
 * [Liittyykö koeilmoittautuminen johonkin tiettyyn koepäivään?](/usein-kysytyt-kysymykset#heading-liittyyko-koeilmoittautuminen-johonkin-tiettyyn-koepaivaan)
-* [Miten kurssin loppuosan kokeesen ilmoittaudutaan?](/usein-kysytyt-kysymykset#heading-miten-kurssin-loppuosan-kokeesen-ilmoittaudutaan)
+* [Miten kurssin loppuosan kokeeseen ilmoittaudutaan?](/usein-kysytyt-kysymykset#heading-miten-kurssin-loppuosan-kokeeseen-ilmoittaudutaan)
 * [Löysin Avoimen yliopiston sivulta yleiset ohjeet kokeeseen ilmoittautumiseen. Voinko seurata niitä?](/usein-kysytyt-kysymykset#heading-loysin-avoimen-yliopiston-sivulta-yleiset-ohjeet-kokeeseen-ilmoittautumiseen-voinko-seurata-niita)
 * [Löysin koeilmoittautumisen vasta koepäivänä. Voinko silti osallistua kokeeseen?](/usein-kysytyt-kysymykset#heading-loysin-koeilmoittautumisen-vasta-koepaivana-voinko-silti-osallistua-kokeeseen)
+* [Kokeen piti olla ilmainen, mutta Avoimen ilmoittautumisessa puhutaan maksuehdoista](/usein-kysytyt-kysymykset/#heading-kokeen-piti-olla-ilmainen-mutta-avoimen-ilmoittautumisessa-puhutaan-maksuehdoista)
