@@ -51,7 +51,7 @@ Varmista, että sinulla on Javan kehitystyökalujen versio 8 asennettuna. Kurssi
 
 Kurssin aloittamiseen ei tarvitse ilmoittautumista. Älä ilmoittaudu minnekkään ellei kurssin sivu (ohjelmointi-19.mooc.fi) erikseen kehoita sinua tekemään niin. Kurssin kokeeseen on erikseen ilmoittautuminen täällä: [koe ja moodle ilmoittautuminen](/koe-ja-moodle-ilmoittautuminen).
 
-Valitettavasti avoimen yliopiston yliopiston sivulle ja courses.helsinki.fi:hin on epähuomiossa luotu kurssille ylimääräisiä ilmoittautumissivuja, joista voi saada käsityksen että kurssille ei pääse mukaan tai että joutuu kurssin väärään versioon jos ei ilmoitttaudu näillä sivuilla. Tämä tieto ei kuitenkaan pidä paikkaansa.
+Valitettavasti me loimme vahingossa avoimen yliopiston yliopiston sivulle ja courses.helsinki.fi:hin kurssille ylimääräisiä ilmoittautumissivuja, joista voi saada käsityksen että kurssille ei pääse mukaan tai että joutuu kurssin väärään versioon jos ei ilmoitttaudu näillä sivuilla. Tämä tieto ei kuitenkaan pidä paikkaansa.
 
 ### Milloin voin aloittaa aikatauluttoman kurssin?
 
@@ -87,7 +87,7 @@ Jos olet aikataulutetussa kurssissa niin ota huomioon että ensimmäsen osan dea
 
 ### Tarvitsenko Helsingin yliopiston tunnukset?
 
-Kaikki jotka haluavat osallistua Avoimen yliopiston tentteihin tai pystyä lukemaan Moodlea tarvii Helsingin yliopiston tunnukset. Jos tekee täysin omaksi ilokseen kurssia niin silloin ei ole pakollista, tosin vaikka tekisi vain omaksi ilokseen niin suosittelisimme tenttien tekemistä ja noiden toisten tunnusten hankkimista. Ohjeet tunnuksen hankkimiseen löytyy täältä: [koe ja moodle ilmoittautuminen](/koe-ja-moodle-ilmoittautuminen).
+Kaikki jotka haluavat osallistua kurssin ilmaisiin tentteihin tai pystyä lukemaan Moodlea tarvii Helsingin yliopiston tunnukset. Jos tekee täysin omaksi ilokseen kurssia niin silloin ei ole pakollista, tosin vaikka tekisi vain omaksi ilokseen niin suosittelisimme tenttien tekemistä ja noiden toisten tunnusten hankkimista. Ohjeet tunnuksen hankkimiseen löytyy täältä: [koe ja moodle ilmoittautuminen](/koe-ja-moodle-ilmoittautuminen).
 
 ### Aion hakea opiskelupaikkaa MOOCin kautta. Pitääkö minun osallistua Avoimen yliopiston tentteihin?
 
@@ -107,7 +107,7 @@ Jos kurssi tuntuu liian hankalalta, kannattaa hakea apua tukiväyliltämme ennen
 
 ### Pääsenkö käsiksi kaikkiin kurssin osiin heti aikatauluttomalla kurssilla?
 
-Valitettavasti et voi. Osien julkaisupäivät koskevat sekä aikataulullista että aikataulutonta kurssia.
+Valitettavasti et. Osien julkaisupäivät koskevat sekä aikataulullista että aikataulutonta kurssia.
 
 ### Miten ilmoittaudun kurssikokeeseen?
 
@@ -129,6 +129,20 @@ Ei tarvitse ilmoittautua erikseen -- kurssin kokeeseen ja Moodleen ilmoittautumi
 
 Ei liity. Koeilmoittautumisella voit osallistua mihin tahansa kokeeseen.
 
-### Miten kurssin loppuosan kokeesen ilmoittaudutaan?
+### Miten kurssin loppuosan kokeeseen ilmoittaudutaan?
 
 Kurssin loppuosan (osat 8-14) kokeen tiedot päivittyvät kurssisivulle myöhemmin.
+
+### Löysin Avoimen yliopiston sivulta yleiset ohjeet kokeeseen ilmoittautumiseen. Voinko seurata niitä?
+
+Tämä kurssi ei seuraa Avoimen yliopiston yleisiä koeilmoittautumisohjeita. Ohjeet kokeeseen ilmoittautumiseen löytyy täältä: [koe ja moodle ilmoittautuminen](/koe-ja-moodle-ilmoittautuminen).
+
+### Löysin koeilmoittautumisen vasta koepäivänä. Voinko silti osallistua kokeeseen?
+
+Jos sinulla ei ole Helsingin yliopiston käyttäjätunnuksia, voit osallistua vasta seuraavana koepäivänä järjestettävään kokeeseen.
+
+Jos sinulla on jo Helsingin yliopiston käyttäjätunnukset, voit osallistua kokeeseen, jos käyt tekemässä koeilmoittautumisen nyt täyttämällä [koe ja moodle ilmoittautumisen](/koe-ja-moodle-ilmoittautuminen) kohdan 1. ilmoittautumislomakkeen.
+
+### Kokeen piti olla ilmainen, mutta koeilmoittautumisessa puhutaan maksuehdoista
+
+Koe on täysin ilmainen. Koeilmoittautumisessa puhutaan maksuehdoista, koska monet muut Avoimen yliopiston kurssit ovat maksullisia. Tämä kurssi on kuitenkin ilmainen, joten ehdoista huolimatta sinun ei tarvitse maksaa kurssista tai kokeesta mitään.
