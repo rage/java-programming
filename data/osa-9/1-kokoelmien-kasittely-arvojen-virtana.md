@@ -145,7 +145,7 @@ Lyhyt yhteenveto tähän mennessä tutuiksi tulleista virtaan liittyvistä metod
 </table>
 
 
-<programming-exercise name='Lukujen keskiarvo'>
+<programming-exercise name='Lukujen keskiarvo' tmcname='osa09-Osa09_01.LukujenKeskiarvo'>
 
 Toteuta ohjelma, joka lukee käyttäjältä syötteitä. Jos käyttäjä syöttää merkkijonon "loppu", lukeminen lopetetaan. Muut syötteet ovat lukuja. Kun käyttäjä syöttää merkkijonon "loppu", ohjelman tulee tulostaa syötettyjen lukujen keskiarvo.
 
@@ -178,7 +178,7 @@ Lukujen keskiarvo: 0.6666666666666666
 </programming-exercise>
 
 
-<programming-exercise name='Tiettyjen lukujen keskiarvo'>
+<programming-exercise name='Tiettyjen lukujen keskiarvo' tmcname='osa09-Osa09_02.TiettyjenLukujenKeskiarvo'>
 
 Toteuta ohjelma, joka lukee käyttäjältä syötteitä. Jos käyttäjä syöttää merkkijonon "loppu", lukeminen lopetetaan. Muut syötteet ovat lukuja. Kun käyttäjä syöttää merkkijonon "loppu", syötteiden lukeminen lopetetaan.
 
@@ -332,7 +332,7 @@ ArrayList<Integer> luvut = lista.stream()
 ```
 
 
-<programming-exercise name='Positiiviset luvut'>
+<programming-exercise name='Positiiviset luvut' tmcname='osa09-Osa09_03.PositiivisetLuvut'>
 
 Toteuta tehtäväpohjaan luokkametodi `public static List<Integer> positiiviset(List<Integer> luvut)`, joka saa parametrinaan lukulistan ja jonka tulee palauttaa uusi lukulista, joka sisältää parametrina saadun listan sisältämät positiiviset luvut.
 
@@ -418,10 +418,10 @@ positiiviset.stream()
 </sample-output>
 
 
-<quiznator id='5bddfffadefd072a63becc50'></quiznator>
+<quiznator id='5c816449c41ed4148d97162b'></quiznator>
 
 
-<programming-exercise name='Jaolliset'>
+<programming-exercise name='Jaolliset' tmcname='osa09-Osa09_04.Jaolliset'>
 
 Tehtäväpohjassa on annettuna metodirunko `public static ArrayList<Integer&gt jaolliset(ArrayList<Integer> luvut)`. Toteuta metodirunkoon toiminnallisuus, joka kerää parametrina saadulta listalta kahdella, kolmella tai viidellä jaolliset luvut, ja palauttaa ne uudessa listassa. Metodille parametrina annetun listan ei tule muuttua.
 
@@ -579,7 +579,7 @@ henkilot.stream()
 Yllä kuvattu `distinct`-metodi hyödyntää olioiden `equals`-metodia yhtäsuuruuden tarkasteluun. Metodi `sorted` taas osaa järjestää olioita, joilla on tieto siitä, miten olio tulee järjestää -- näitä ovat esimerkiksi luvut ja merkkijonot.
 
 
-<programming-exercise name='Luettujen arvojen tulostaminen'>
+<programming-exercise name='Luettujen arvojen tulostaminen' tmcname='osa09-Osa09_05.LuettujenArvojenTulostaminen'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä merkkijonoja. Lukeminen tulee lopettaa kun käyttäjä syöttää tyhjän merkkijonon. Tulosta tämän jälkeen käyttäjän syöttämät merkkijonot.
 
@@ -598,7 +598,7 @@ kolmas
 </programming-exercise>
 
 
-<programming-exercise name='Rajatut luvut'>
+<programming-exercise name='Rajatut luvut' tmcname='osa09-Osa09_06.RajatutLuvut'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä lukuja. Kun käyttäjä syöttää negatiivisen luvun, lukeminen lopetetaan. Tulosta tämän jälkeen ne luvut, jotka ovat välillä 1-5.
 
@@ -619,7 +619,7 @@ Kirjoita ohjelma, joka lukee käyttäjältä lukuja. Kun käyttäjä syöttää 
 </programming-exercise>
 
 
-<programming-exercise name='Uniikit sukunimet'>
+<programming-exercise name='Uniikit sukunimet' tmcname='osa09-Osa09_07.UniikitSukunimet'>
 
 Tehtäväpohjaan on hahmoteltu ohjelmaa, joka lukee käyttäjältä syötteenä henkilötietoja. Täydennä ohjelmaa siten, että tietojen lukemisen jälkeen ohjelma tulostaa henkilöiden uniikit sukunimet aakkosjärjestyksessä.
 
@@ -755,7 +755,7 @@ kirjat.stream()
 ```
 
 
-<programming-exercise name='Painon laskemista (2 osaa)'>
+<programming-exercise name='Painon laskemista (2 osaa)' tmcname='osa09-Osa09_08.PainonLaskemista'>
 
 Tehtäväpohjassa on tutuhko tehtävä "Tavara, Matkalaukku ja Lastiruuma". Tässä tehtävässä tarkoituksenasi on muuttaa toistolausetta käyttävät metodit virtaa käyttäviksi metodeiksi. Lopputuloksessa ei tule esiintyä `while (...)` tai `for (...)`-toistolauseita.
 
@@ -788,7 +788,7 @@ Virhe: tiedosto.txt (No such file or directory)
 
 </sample-output>
 
-<programming-exercise name='Tiedoston rivit'>
+<programming-exercise name='Tiedoston rivit' tmcname='osa09-Osa09_09.TiedostonRivit'>
 
 Toteuta tehtäväpohjaan staattinen metodi `public static List<String> lue(String tiedosto)`, joka lukee parametrina annetun merkkijonon nimisestä tiedostosta rivit ja palauttaa ne merkkijonolistana.
 
@@ -838,7 +838,7 @@ try {
 // nyt presidentit ovat listalla henkilöolioina
 ```
 
-<programming-exercise name='Kirjat tiedostosta'>
+<programming-exercise name='Kirjat tiedostosta' tmcname='osa09-Osa09_10.KirjatTiedostosta' nocoins='true'>
 
 Toteuta tehtäväpohjaan luokkametodi `public static List<Kirja> lueKirjat(String tiedosto)`, joka lukee parametrina annetun tiedoston ja muodostaa tiedoston riveistä kirjoja.
 

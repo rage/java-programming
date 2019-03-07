@@ -152,9 +152,9 @@ System.out.println(luvut.toString());
 
 StringBuilderin käyttö on suurien merkkijonojen luomisessa tehokkaampaa kuin merkkijonojen luominen `+`-operaatiolla.
 
-<quiznator id='5bded8c283601b299c268708'></quiznator>
+<quiznator id='5c81657dddb6b814af328109'></quiznator>
 
-<quiznator id='5bded9a8e921f629a8dfd8dc'></quiznator>
+<quiznator id='5c8165c814524713f95a7607'></quiznator>
 
 
 ## Säännölliset lausekkeet
@@ -383,10 +383,10 @@ Samassa säännöllisessä lausekkeessa voi käyttää myös useampia toistomerk
 Merkkiryhmän avulla voi määritellä lyhyesti joukon merkkejä. Merkit kirjoitetaan hakasulkujen sisään, ja merkkivälin voi määrittää viivan avulla. Esimerkiksi merkintä `[145]` tarkoittaa samaa kuin `(1|4|5)` ja merkintä `[2-36-9]` tarkoittaa samaa kuin `(2|3|6|7|8|9)`. Vastaavasti merkintä `[a-c]*` määrittelee säännöllisen lausekkeen, joka vaatii että merkkijono sisältää vain merkkejä `a`, `b` ja `c`.
 
 
-<quiznator id='5bde0106e8e5d029fd781ab3'></quiznator>
+<quiznator id='5c8166fcfd9fd71425c68dbd'></quiznator>
 
 
-<programming-exercise name='Säännölliset lausekkeet (3 osaa)'>
+<programming-exercise name='Säännölliset lausekkeet (3 osaa)' tmcname='osa09-Osa09_15.SaannollisetLausekkeet'>
 
 Harjoitellaan hieman säännöllisten lausekkeiden käyttöä. Tehtävissä haetut metodit tehdään luokkaan `Tarkistin`.
 
@@ -603,9 +603,7 @@ System.out.println(Vari.VIHREA.getKoodi());
 ```
 
 <sample-output>
-
 #00FF00
-
 </sample-output>
 
 
@@ -714,7 +712,7 @@ public class Kasi {
 ```
 
 
-<programming-exercise name='Enum ja Iteraattori (4 osaa)' nocoins='true'>
+<programming-exercise name='Enum ja Iteraattori (4 osaa)' tmcname='osa09-Osa09_16.EnumJaIteraattori' nocoins='true'>
 
 Tehdään ohjelma pienen yrityksen henkilöstön hallintaan.
 
@@ -791,7 +789,7 @@ Elina, FT
 </programming-exercise>
 
 
-<programming-exercise name='Kortit ojennukseen (6 osaa)'>
+<programming-exercise name='Kortit ojennukseen (6 osaa)' tmcname='osa09-Osa09_17.KortitOjennukseen'>
 
 Tehtäväpohjan mukana on luokka, jonka oliot kuvaavat pelikortteja. Kortilla on arvo ja maa. Kortin arvo on esitetään numerona *2, 3, ..., 14* ja maa *Risti, Ruutu, Hertta* tai *Pata*. Ässä on siis arvo 14. Arvo esitetään kokonaislukuna ja maa enum-tyyppisenä oliona. Kortilla on myös metodi toString, jota käyttäen kortin arvo ja maa tulostuvat "ihmisystävällisesti".
 

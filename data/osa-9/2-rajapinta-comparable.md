@@ -115,17 +115,17 @@ matti (187)
 </sample-output>
 
 
-<quiznator id='5bde0033c6014229d5b536f9'></quiznator>
+<quiznator id='5c81648cc41ed4148d97162d'></quiznator>
 
 
-<programming-exercise name='Palkkajärjestys'>
+<programming-exercise name='Palkkajärjestys' tmcname='osa09-Osa09_11.Palkkajarjestys'>
 
 Saat valmiin luokan Ihminen. Ihmisellä on nimi- ja palkkatiedot. Toteuta Ihminen-luokassa `Comparable`-rajapinta siten, että `compareTo`-metodi lajittelee ihmiset palkan mukaan järjestykseen isoimmasta palkasta pienimpään.
 
 </programming-exercise>
 
 
-<programming-exercise name='Opiskelijat nimijärjestykseen'>
+<programming-exercise name='Opiskelijat nimijärjestykseen' tmcname='osa09-Osa09_12.OpiskelijatNimijarjestykseen'>
 
 Saat valmiin luokan Opiskelija. Opiskelijalla on nimi. Toteuta Opiskelija-luokassa `Comparable`-rajapinta siten, että `compareTo`-metodi lajittelee opiskelijat nimen mukaan aakkosjärjestykseen.
 
@@ -294,7 +294,7 @@ Mary Coombs
 </sample-output>
 
 
-<programming-exercise name='Lukutaitovertailu (2 osaa)'>
+<programming-exercise name='Lukutaitovertailu (2 osaa)' tmcname='osa09-Osa09_13.Lukutaitovertailu'>
 
 Käytetään tässä tehtävässä UNESCOn avointa dataa lukutaidosta. Data sisältää tilastot eri maiden arvioiduista tai raportoiduista lukutaidoista viimeisen kahden vuoden ajalta. Tehtäväpohjassa mukana oleva tiedosto `lukutaito.csv` sisältää arviot sekä yli 15-vuotiaiden naisten että yli 15-vuotiaiden miesten lukutaidosta. Tiedoston lukutaito.csv yksittäisen rivin muoto on seuraava: teema, ikäryhmä, sukupuoli, maa, vuosi, lukutaitoprosentti. Alla on esimerkkinä tiedoston viisi ensimmäistä riviä.
 
@@ -405,7 +405,7 @@ C (2001)
 </sample-output>
 
 
-<programming-exercise name='Kirjallisuutta (3 osaa)'>
+<programming-exercise name='Kirjallisuutta (3 osaa)' tmcname='osa09-Osa09_14.Kirjallisuutta'>
 
 Tee ohjelma, joka lukee käyttäjältä kirjoja ja niiden minimikohdeikiä. Minimikohdeiällä tarkoitetaan pienintä ikää vuosina, jolle kyseistä kirjaa suositellaan.
 

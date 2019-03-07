@@ -7,8 +7,8 @@ hidden: true
 
 <deadline>25.3.2019</deadline>
 
-TODO:
-Osaat käsitellä tietokokoelmia virran avulla. Osaat rajata virran arvoja (filter) sekä muuntaa virran arvojen tyyppiä (map). Tunnet käsitteen lambda-lauseke. Osaat järjestää olioita Javan valmista Comparable-rajapintaa hyödyntäen. Tunnet käsitteet säännöllinen lauseke, lueteltu tyyppi, ja iteraattori, ja osaat hyödyntää näitä ohjelmissasi.
+
+Tässä osassa syvennytään tietokokoelmien käsittelyyn virtojen avulla. Opit luomaan virran tietokokoelmasta, rajaamaan virran arvoja, muuntamaan virran arvoja muodosta toiseen, ja keräämään virran arvoja toiseen tietokokoelmaan. Tutustut käsitteeseen lambdalauseke ja opit käyttämään sitä ohjemissasi. Opit järjestämään olioita Javan valmista Comparable-rajapintaa hyödyntäen ja tutustut muutamaan muuhunkin yleishyödylliseen työvälineeseen kuten säännöllinen lauseke, lueteltu tyyppi, ja iteraattori.
 
 <please-login></please-login>
 
