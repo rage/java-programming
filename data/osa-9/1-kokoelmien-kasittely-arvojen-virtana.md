@@ -1,7 +1,7 @@
 ---
 path: '/osa-9/1-kokoelmien-kasittely-virtana'
 title: 'Kokoelmien käsittely arvojen virtana'
-hidden: true
+hidden: false
 ---
 
 
@@ -12,6 +12,8 @@ hidden: true
 - Tunnet yleisimmät virran metodit ja osaat jaotella ne välioperaatioihin ja pääteoperaatioihin.
 
 </text-box>
+
+<quiznator id="5c822807ddb6b814af3281a9"></quiznator>
 
 
 Tutustutaan kokoelmien kuten listojen läpikäyntiin arvojen virtana (stream). Virta on menetelmä tietoa sisältävän kokoelman läpikäyntiin siten, että ohjelmoija määrittelee kullekin arvolle suoritettavan toiminnallisuuden. Indeksistä tai kullakin hetkellä käsiteltävästä muuttujasta ei pidetä kirjaa.
