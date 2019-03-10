@@ -425,7 +425,7 @@ positiiviset.stream()
 
 <programming-exercise name='Jaolliset' tmcname='osa09-Osa09_04.Jaolliset'>
 
-Tehtäväpohjassa on annettuna metodirunko `public static ArrayList<Integer&gt jaolliset(ArrayList<Integer> luvut)`. Toteuta metodirunkoon toiminnallisuus, joka kerää parametrina saadulta listalta kahdella, kolmella tai viidellä jaolliset luvut, ja palauttaa ne uudessa listassa. Metodille parametrina annetun listan ei tule muuttua.
+Tehtäväpohjassa on annettuna metodirunko `public static ArrayList<Integer> jaolliset(ArrayList<Integer> luvut)`. Toteuta metodirunkoon toiminnallisuus, joka kerää parametrina saadulta listalta kahdella, kolmella tai viidellä jaolliset luvut, ja palauttaa ne uudessa listassa. Metodille parametrina annetun listan ei tule muuttua.
 
 ```java
 ArrayList<Integer> luvut = new ArrayList<>();
@@ -774,7 +774,7 @@ Alla olevassa esimerkissä luetaan tiedoston "tiedosto.txt" kaikki rivit ja lis�
 List<String> rivit = new ArrayList<>();
 
 try {
-    Files.lines(Paths.get("tiedosto.txt")).forEach(rivi -&gt rivit.add(rivi));
+    Files.lines(Paths.get("tiedosto.txt")).forEach(rivi -> rivit.add(rivi));
 } catch (Exception e) {
     System.out.println("Virhe: " + e.getMessage());
 }
