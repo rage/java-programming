@@ -397,6 +397,11 @@ for (Elokuva e: elokuvat) {
 
 <sample-output>
 
+A (2000)
+B (1999)
+C (2001)
+D (2000)
+
 B (1999)
 A (2000)
 D (2000)
