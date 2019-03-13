@@ -1,22 +1,24 @@
 ---
-path: '/osa-10/x-vertaisarviointi'
-title: 'Vertaisarviointi (hidden)'
+path: '/osa-10/5-tehtavan-luominen'
+title: 'Tehtävän luominen'
 hidden: true
 ---
 
 
-# 
+TODO: tänne listatehtävä / crowdsorcerer
+
+#
   Ohjelmien testaaminen
 <% end %>
 
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
-  
-    - 
+
+    -
       Kertaat automaattisten testien kirjoittamista.
-    
-  
+
+
 
 </text-box>
 
@@ -38,13 +40,13 @@ hidden: true
 
 <% partial 'partials/general_callout', locals: { name: 'Kirjoita testit valmiille malliratkaisulle 1'>
 
-  
-    Lähdekoodin kohdalla on valmis malliratkaisu. Keksi sitä vastaava tehtävänanto ja kirjoita testit luokan Submission metodille vertaile. Lähetettyäsi tehtävän saat tiedon siitä, kääntyikö testikoodi ja menivätkö testisi läpi. Jos eivät, lue virheviesti ja lähdekoodi uudestaan ja korjaa testisi sen mukaisesti.
-  
 
-  
+    Lähdekoodin kohdalla on valmis malliratkaisu. Keksi sitä vastaava tehtävänanto ja kirjoita testit luokan Submission metodille vertaile. Lähetettyäsi tehtävän saat tiedon siitä, kääntyikö testikoodi ja menivätkö testisi läpi. Jos eivät, lue virheviesti ja lähdekoodi uudestaan ja korjaa testisi sen mukaisesti.
+
+
+
     Tehtävien luomistehtävät käsitellään pisteytyksessä bonuksena.
-  
+
 
 <% end %>
 
@@ -52,16 +54,16 @@ hidden: true
 
 <% partial 'partials/general_callout', locals: { name: 'Kirjoita testit valmiille malliratkaisulle 2'>
 
-  
-    Lähdekoodin kohdalla on valmis malliratkaisu. Keksi sitä vastaava tehtävänanto ja kirjoita testit luokan Submission metodille annaKokonaisluku. Huomaa, että lähdekoodissa ei käytetä ääkkösiä.
-  
-  
-    Lähetettyäsi tehtävän saat tiedon siitä, kääntyikö testikoodi ja menivätkö testisi läpi. Jos eivät, lue virheviesti ja lähdekoodi uudestaan ja korjaa testisi sen mukaisesti.
-  
 
-  
+    Lähdekoodin kohdalla on valmis malliratkaisu. Keksi sitä vastaava tehtävänanto ja kirjoita testit luokan Submission metodille annaKokonaisluku. Huomaa, että lähdekoodissa ei käytetä ääkkösiä.
+
+
+    Lähetettyäsi tehtävän saat tiedon siitä, kääntyikö testikoodi ja menivätkö testisi läpi. Jos eivät, lue virheviesti ja lähdekoodi uudestaan ja korjaa testisi sen mukaisesti.
+
+
+
     Tehtävien luomistehtävät käsitellään pisteytyksessä bonuksena.
-  
+
 
 <% end %>
 

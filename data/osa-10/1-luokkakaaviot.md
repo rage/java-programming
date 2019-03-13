@@ -20,6 +20,7 @@ Luokkaaviossa kuvattavat luokat vastaavat ohjelmakoodin luokkia. Kaavioissa kuva
 
 Tutustumme seuraavaksi luokkakaavioiden merkintään ja tulkintaan. Opimme samalla <a href="https://fi.wikipedia.org/wiki/UML-mallinnus" target="_blank" norel>UML</a>-kielen luokkakaavioiden kuvaamiseen -- yhteisen kielen avulla eri ihmisten piirtämät luokkakaaviot ovat kaikkien ymmärrettävissä.
 
+<br/>
 
 ## Luokan ja sen attribuuttien kuvaaminen
 
@@ -57,7 +58,7 @@ public class Henkilo {
 }
 ```
 
-Luokkakaaviossa konstruktori (ja metodit) merkitään oliomuuttujien jälkeen. Oliomuuttujien alapuolelle lisätään viiva, jonka jälkeen tulee konstruktori (ja metodit). Konstruktori saa näkyvyysmääreen public takia eteen plussan, jonka lisäksi siitä merkitään nimi sekä parametrien nimet ja niiden tyypit (tässä `+ Henkilo(nimi: String)`).
+Luokkakaaviossa konstruktori (ja metodit) merkitään oliomuuttujien jälkeen. Oliomuuttujien alapuolelle lisätään viiva, jonka jälkeen tulee konstruktori (ja metodit). Konstruktori saa näkyvyysmääreen public takia eteen plussan, jonka lisäksi siitä merkitään nimi sekä parametrien nimet ja niiden tyypit. Yllä olevan luokan konstruktori merkitään muodossa `+ Henkilo(nimi: String)`.
 
 Parametrit noudattavat siis samaa määrittelymuotoa kuin oliomuuttujat, eli "muuttujanNimi: muuttujanTyyppi".
 
@@ -93,7 +94,7 @@ Luokkakaaviossa metodi merkitään konstruktorin kanssa samaan alueeseen -- kons
 <text-box variant='hint' name='Luokkakaavio kertoo luokat, muuttujat, konstruktorit, ja metodit'>
 
 Luokkakaaviossa kuvataan luokat, muuttujat, konstruktorit, ja metodit sekä luokkien väliset yhteydet. Luokkakaavio ei kuitenkaan kerro mitään konstruktorien ja metodien sisäisestä toteutuksesta. Luokkakaaviolla kerrotaan siis olioiden rakenteesta, mutta luokkakaaviot eivät itsessään määrittele toiminnallisuutta.
-  
+
 Esimerkiksi metodi `tulostaHenkilo` hyödyntää oliomuuttujia `nimi` ja `ika`, mutta luokkakaaviossa tämä ei näy millään tavalla.
 
 </text-box>
@@ -136,10 +137,10 @@ Alla olevassa luokkakaaviossa on kuvattuna luokka Asiakas. Toteuta luokka tehtä
 <programming-exercise name='Kirja ja lentokone'>
 
 Alla olevassa luokkakaaviossa on kuvattuna luokat Kirja ja Lentokone. Toteuta luokat tehtäväpohjaan.
-  
+
 <img src="../img/exercises/luokkakaavio-kirja-ja-lentokone.png" alt="[Kirja|-nimi:String;-kirjoittaja:String;-sivuja:int]
     [Lentokone|-tunnus:String;-malli:String;-kayttoonottovuosi:int]">
-  
+
 </programming-exercise>
 
 
@@ -186,7 +187,7 @@ Mikäli kirjalla voi olla useita kirjoittajia, kirjoittajat merkitään luokkaan
 public class Kirja {
     private String nimi;
     private String kustantaja;
-    private ArrayList&lt;Henkilo&gt; kirjoittajat;
+    private ArrayList<Henkilo> kirjoittajat;
 
     // konstruktorit ja metodit
 }
@@ -204,11 +205,11 @@ Metodit merkitään luokkakaavioon normaalisti. Alla luokkaan Kirja on lisätty 
 public class Kirja {
     private String nimi;
     private String kustantaja;
-    private ArrayList&lt;Henkilo&gt; kirjoittajat;
+    private ArrayList<Henkilo> kirjoittajat;
 
     // konstruktori
 
-    public ArrayList&lt;Henkilo&gt; getKirjoittajat() {
+    public ArrayList<Henkilo> getKirjoittajat() {
         return this.kirjoittajat;
     }
 
@@ -221,17 +222,17 @@ public class Kirja {
 <img src="../img/diagrams/luokkakaavio-kirja-nimi-ja-kustantaja-ja-kirjoittajat-ja-metodit.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(nimi:String);+tulostaHenkilo():void;+getNimi():String][Kirja|-nimi:String;-julkaisija:String|+getKirjoittajat():ArrayList;+lisaaKirjoittaja(kirjoittaja:Henkilo)][Kirja]-*>[Henkilo]">
 
 
-Ylläolevaan kaavioon voisi lisätä vielä ArrayListin sisältämien arvojen tyypin `ArrayList&lt;Henkilo&gt;` sekä yhteyttä tarkentavan määreen "kirjoittajat".
+Ylläolevaan kaavioon voisi lisätä vielä ArrayListin sisältämien arvojen tyypin `ArrayList<Henkilo>` sekä yhteyttä tarkentavan määreen "kirjoittajat".
 
 
 <programming-exercise name='Naytos ja lippu'>
-  
+
 Alla on kuvattu kaksi luokkaa, Naytos ja Lippu, sekä niiden välinen yhteys. Alla olevassa kuvassa tähti on luokan Lippu-päädyssä -- tässä tapauksessa tähti antaa lisätietoa yhteydestä; vaikkei näytös tiedä näytökseen myydyistä lipuista, voi lippuja silti myydä näytökseen monia.
-  
+
 Toteuta kuvatut luokat tehtäväpohjaan.
-  
+
 <img src="../img/exercises/luokkakaavio-naytos-ja-lippu.png" alt="[Naytos|-elokuva:String;-aika:String]<-*[Lippu|-paikka:int;-koodi:int]">
-  
+
 </programming-exercise>
 
 
@@ -256,7 +257,7 @@ public class Henkilo {
 public class Kirja {
     private String nimi;
     private String kustantaja;
-    private ArrayList&lt;Henkilo&gt; kirjoittajat;
+    private ArrayList<Henkilo> kirjoittajat;
 
     // ..
 }
@@ -278,7 +279,7 @@ import java.util.ArrayList;
 public class Henkilo {
     private String nimi;
     private int ika;
-    private ArrayList&lt;Kirja&gt; kirja;
+    private ArrayList<Kirja> kirja;
 
     // ...
 }
@@ -290,7 +291,7 @@ public class Henkilo {
 Alla on kuvattu kaksi luokkaa, Opiskelija ja Korkeakoulu, sekä niiden välinen yhteys. Toteuta kuvatut luokat tehtäväpohjaan.
 
 <img src="../img/exercises/luokkakaavio-opiskelija-ja-korkeakoulu.png" alt="[Opiskelija|-opiskelijanumero:int;-nimi:String]*-[Korkeakoulu|-nimi:String]">
-  
+
 </programming-exercise>
 
 
@@ -306,7 +307,7 @@ Alla olevaan esimerkkiin on kirjoitettu auki muistavaa tuotevarastoa käsittelev
 <img src="../img/diagrams/luokkakaavio-muistava-tuotevarasto.png" alt="[Varasto|-tilavuus:double;-saldo:double|+Varasto(tilavuus:double);+getSaldo():double;+getTilavuus():double;+paljonkoMahtuu():double;+lisaaVarastoon(maara:double):void;+otaVarastosta(maara:double):double;+toString():String][Tuotevarasto|-nimi:String|+Tuotevarasto(nimi:String، tilavuus:double);+getNimi():String;+setNimi(nimi:String):String;+toString():String][Muutoshistoria|-tilanteet:ArrayList|+Muutoshistoria();+lisaa(tilanne:double);+nollaa():void;...][MuistavaTuotevarasto||+MuistavaTuotevarasto(nimi:String، tilavuus:double،alkusaldo:double);+historia():String;+tulostaAnalyysi():void;+lisaaVarastoon(maara:double);+otaVarastosta(maara:double):double][Varasto]^-[Tuotevarasto][Tuotevarasto]^-[MuistavaTuotevarasto][Muutoshistoria]<-[MuistavaTuotevarasto]" />
 
 
-Abstraktien luokkien perintä toimii lähes samalla tavalla. Abstraktit luokat kuitenkin merkitään luokkakaavioon siten, että luokan nimen yläpuolella lukee `&lt;&lt;abstract&gt;&gt;`. Tämän lisäksi luokan nimi ja luokassa määritellyt abstraktit metodit kuvataan kursiivilla.
+Abstraktien luokkien perintä toimii lähes samalla tavalla. Abstraktit luokat kuitenkin merkitään luokkakaavioon siten, että luokan nimen yläpuolella lukee `<<abstract>>`. Tämän lisäksi luokan nimi ja luokassa määritellyt abstraktit metodit kuvataan kursiivilla.
 
 
 <img src="../img/diagrams/luokkakaavio-abstraktit.png" />
@@ -317,15 +318,15 @@ Abstraktien luokkien perintä toimii lähes samalla tavalla. Abstraktit luokat k
 Alla on kuvattu kaksi luokkaa, Pelaaja ja Tekoaly, sekä niiden välinen yhteys. Toteuta kuvatut luokat tehtäväpohjaan.
 
 <img src="../img/exercises/luokkakaavio-pelaaja-ja-tekoaly.png" alt="[Pelaaja|-nimi:String|+pelaa():void;+tulostaNimi():void]^-[Tekoaly||+pelaa():void;+lisaaSiirto(siirto:String):void]">
-  
+
 Tähän tehtävään ei ole erillistä mallivastausta.
-  
+
 </programming-exercise>
 
 
 ## Rajapinnat luokkakaavioissa
 
-Rajapinnat merkitään luokkakaavioissa muodossa `&lt;&lt;interface&gt;&gt;` RajapintaLuokanNimi. Tarkastellaan esimerkkinä rajapintaa Luettava.
+Rajapinnat merkitään luokkakaavioissa muodossa `<<interface>>` RajapintaLuokanNimi. Tarkastellaan esimerkkinä rajapintaa Luettava.
 
 
 ```java
@@ -348,21 +349,21 @@ Rajapinnan toteuttaminen merkitään katkoviivalla ja kolmiolla. Alla on kuvattu
 Alla on kuvattuna rajapinta Tallennettava sekä luokka Henkilo. Toteuta luokkakaaviossa kuvattu sisältö tehtäväpohjaan.
 
 <img  src="../img/exercises/luokkakaavio-tallennettava-henkilo.png" alt="[<<interface>> Tallennettava||+tallenna():void;+poista():void;+lataa(osoite:String):void]^-.-[Henkilo|-nimi:String;-osoite:String]">
-  
+
 
 </programming-exercise>
 
 
 <text-box variant='hint' name='Miten näitä kannattaa piirtää?'>
-  
+
 Luokkakaaviot ovat erinomainen tapa kuvata ongelma-aluetta ja ongelman muotoa muille. Niiden käyttö on erittäin hyödyllistä myös silloin, kun ohjelmoija suunnittelee useammasta luokasta koostuvan ohjelman rakennetta.
 
-  
+
 Luokkakaavioita piirretään ohjelman suunnitteluvaiheessa usein esimerkiksi valkotaulua tai isompaa paperiarkkia käyttäen. Luokkakaaviot kannattaa ajatella poisheitettävinä tuotoksina, jotka auttavat ohjelman rakennuksessa. Kaavion piirtämiseen -- eli tyylin oikeellisuuteen ja yksityiskohtiin -- ei kannata käyttää liian pitkään aikaa. Vastaavasti kaavio kannattaa piirtää sopivalla abstraktiotasolla. Esimerkiksi kymmeniä luokkia sisältävään luokkakaavioon ei kannata merkitä jokaisen luokan jokaista metodia ja muuttujaa: oleellista on, että kaaviosta saa luotua nopean yleiskuvan.
-  
+
 
 Materiaalissa käytetyt luokkakaaviot on piirretty <a href="https://yuml.me/" target="_blank" norel>yUML</a>:n, <a href="https://creately.com" target="_blank" norel>Creately</a>n, ja <a href="https://www.draw.io/" target="_blank" norel>draw.io</a>:n. Myös NetBeansiin löytyy välineitä luokkakaavioiden luomiseen -- esimerkiksi <a href="http://plugins.netbeans.org/plugin/55435/easyuml" target="_blank" norel>easyUML</a> mahdollistaa luokkakaavioiden luomisen suoraan projektin koodista.
-  
+
 
 </text-box>
 
@@ -370,7 +371,7 @@ Materiaalissa käytetyt luokkakaaviot on piirretty <a href="https://yuml.me/" ta
 <programming-exercise name='Isompi luokkakaavio'>
 
 Alla on kuvattuna isompi luokkakaavio, jossa on luokat A, B, C, D ja E, sekä rajapinnat IA, IB ja IC. Toteuta luokkakaavion kuvaama sisältö tehtäväpohjaan.
-  
+
 <img  src="../img/exercises/luokkakaavio-iso-abstrakti.png" alt="[<<interface>>;IA][<<interface>>;IB][<<interface>>;IC][A]-.-^[<<interface>>;IA][B]-.-^[<<interface>>;IB][C]-.-^[<<interface>>;IC][D]->[<<interface>>;IA][E]*-*[C][C]-^[B][B]-^[A]">
 
 </programming-exercise>

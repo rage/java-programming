@@ -10,7 +10,8 @@ hidden: true
 - Tiedät mitä pakkaukset ovat ja osaat asettaa luokkia pakkauksiin.
 - Tiedät mistä Javassa käytetyn `import`-lauseen osat muodostuvat.
 
-</programming-exercise>
+</text-box>
+
 
 Ohjelmaa varten toteutettujen luokkien määrän kasvaessa toiminnallisuuksien ja metodien muistaminen vaikeutuu. Muistamista helpottaa luokkien järkevä nimentä sekä luokkien suunnittelu siten, että jokaisella luokalla on yksi selkeä vastuu. Tämän lisäksi luokat kannattaa jakaa toiminnallisuutta, käyttötarkoitusta tai jotain muuta loogista kokonaisuutta kuvaaviin pakkauksiin.
 
@@ -75,7 +76,7 @@ Hello packageworld: pakkausten ABC!
 
 </sample-output>
 
-Jatkossa *kaikissa* tehtävissämme käytetään pakkauksia. Luodaan seuraavaksi ensimmäiset pakkaukset itse.
+Jatkossa *lähes kaikissa* tehtävissämme käytetään pakkauksia. Luodaan seuraavaksi ensimmäiset pakkaukset itse.
 
 
 <programming-exercise name='Ensimmäisiä pakkauksia (3 osaa)'>
@@ -138,7 +139,7 @@ Päivitetään käyttöliittymää
 <programming-exercise name='Kolme pakkausta'>
 
 Luo tehtäväpohjaan kolme pakkausta `a`, `b` ja `c`. Luo pakkauksen `a` sisälle luokka `A`, pakkauksen `b` sisälle luokka `B`, ja pakkauksen `c` sisälle luokka `C`. Luokissa ei tarvita oliomuuttujia, konstruktoreja tai metodeja.
-  
+
 </programming-exercise>
 
 
@@ -146,11 +147,13 @@ Luo tehtäväpohjaan kolme pakkausta `a`, `b` ja `c`. Luo pakkauksen `a` sisäll
 ## Hakemistorakenne tiedostojärjestelmässä
 
 
-Kaikki NetBeansissa näkyvät projektit ovat tietokoneesi *<a href="http://fi.wikipedia.org/wiki/Tiedostoj%C3%A4rjestelm%C3%A4" target="_blank" rel="noopener">tiedostojärjestelmässä</a>* tai jollain keskitetyllä levypalvelimella. Jokaiselle projektille on olemassa oma hakemisto, jonka sisällä on projektiin liittyvät tiedostot ja hakemistot.
+Kaikki NetBeansissa näkyvät projektit ovat tietokoneesi <a href="http://fi.wikipedia.org/wiki/Tiedostoj%C3%A4rjestelm%C3%A4" target="_blank">tiedostojärjestelmässä</a> tai jollain keskitetyllä levypalvelimella. Jokaiselle projektille on olemassa oma hakemisto, jonka sisällä on projektiin liittyvät tiedostot ja hakemistot.
 
-Projektin hakemistossa `src` on ohjelmaan liittyvät lähdekoodit. Jos luokan pakkauksena on kirjasto, sijaitsee luokka projektin lähdekoodihakemiston `src/main/java/kirjasto`-kansiossa. NetBeansissa voi käydä katsomassa projektien konkreettista rakennetta *Files*-välilehdeltä joka on normaalisti *Projects*-välilehden vieressä. Jos et näe välilehteä *Files*, saa sen näkyville valitsemalla vaihtoehdon *Files* valikosta *Window*.
+<br/>
 
-Sovelluskehitystä tehdään normaalisti *Projects*-välilehdeltä, jossa NetBeans on piilottanut projektiin liittyviä tiedostoja joista ohjelmoijan ei tarvitse välittää.
+Projektin hakemistossa `src/main/java` on ohjelmaan liittyvät lähdekoodit. Jos luokan pakkauksena on kirjasto, sijaitsee luokka projektin lähdekoodihakemiston `src/main/java/kirjasto`-kansiossa. NetBeansissa voi käydä katsomassa projektien konkreettista rakennetta **Files**-välilehdeltä joka on normaalisti **Projects**-välilehden vieressä. Jos et näe välilehteä **Files**, saa sen näkyville valitsemalla vaihtoehdon **Files** valikosta **Window**.
+
+Sovelluskehitystä tehdään normaalisti **Projects**-välilehdeltä, jossa NetBeans on piilottanut projektiin liittyviä tiedostoja joista ohjelmoijan ei tarvitse välittää.
 
 
 ## Pakkaukset ja näkyvyysmääreet
@@ -465,14 +468,14 @@ import lentokentta.domain.Paikka;
 
 public class Lentohallinta {
 
-    private Map&lt;String, Lentokone&gt; lentokoneet;
-    private Map&lt;String, Lento&gt; lennot;
-    private Map&lt;String, Paikka&gt; paikat;
+    private Map<String, Lentokone> lentokoneet;
+    private Map<String, Lento> lennot;
+    private Map<String, Paikka> paikat;
 
     public Lentohallinta() {
-        this.lennot = new HashMap&lt;&gt;();
-        this.lentokoneet = new HashMap&lt;&gt;();
-        this.paikat = new HashMap&lt;&gt;();
+        this.lennot = new HashMap<>();
+        this.lentokoneet = new HashMap<>();
+        this.paikat = new HashMap<>();
     }
 
     public void lisaaLentokone(String tunnus, int kapasiteetti) {
@@ -488,11 +491,11 @@ public class Lentohallinta {
         this.lennot.put(lento.toString(), lento);
     }
 
-    public Collection&lt;Lentokone&gt; getLentokoneet() {
+    public Collection<Lentokone> getLentokoneet() {
         return this.lentokoneet.values();
     }
 
-    public Collection&lt;Lento&gt; getLennot() {
+    public Collection<Lento> getLennot() {
         return this.lennot.values();
     }
 
@@ -547,7 +550,7 @@ public class Tekstikayttoliittyma {
             System.out.println("[2] Lisää lento");
             System.out.println("[x] Poistu hallintamoodista");
 
-            System.out.print("&gt; ");
+            System.out.print("> ");
             String vastaus = lukija.nextLine();
 
             if (vastaus.equals("1")) {
@@ -592,7 +595,7 @@ public class Tekstikayttoliittyma {
             System.out.println("[3] Tulosta lentokoneen tiedot");
             System.out.println("[x] Lopeta");
 
-            System.out.print("&gt; ");
+            System.out.print("> ");
             String vastaus = lukija.nextLine();
             if (vastaus.equals("1")) {
                 tulostaLentokoneet();
@@ -646,15 +649,21 @@ public class Tekstikayttoliittyma {
 <programming-exercise name='Lentokenttä (2 osaa)'>
 
 Tässä tehtävässä toteutat edellä kuvatun sovelluksen. Saat suunnitella rakenteen vapaasti, tai voit noudattaa edellä kuvattua rakennetta. Käyttöliittymän ulkomuoto sekä vaaditut komennot on määritelty ennalta. Tehtävä on kahden yksittäisen tehtäväpisteen arvoinen.
-  
+
 **Huom: jotta testit toimisivat, saat luoda ohjelmassasi vain yhden Scanner-olion käyttäjän syötteen lukemiseen.**
 
 Lentokenttä-tehtävässä toteutetaan lentokentän hallintasovellus. Lentokentän hallintasovelluksessa hallinnoidaan lentokoneita ja lentoja. Lentokoneista tiedetään aina tunnus ja kapasiteetti. Lennoista tiedetään lennon lentokone, lähtöpaikan tunnus (esim. <a href="http://en.wikipedia.org/wiki/Helsinki_Airport" target="_blank" rel="noopener">HEL</a>) ja kohdepaikan tunnus (esim. <a href="http://en.wikipedia.org/wiki/Batman_Airport" target="_blank" rel="noopener">BAL</a>).
-  
+
+<br/>
+
 Sekä lentokoneita että lentoja voi olla useita. Samalla lentokoneella voidaan myös lentää useita eri lentoja.
-  
+
 Sovelluksen tulee toimia kahdessa vaiheessa: ensin syötetään lentokoneiden ja lentojen tietoja hallintakäyttöliittymässä, jonka jälkeen siirrytään lentopalvelun käyttöön. Lentopalvelussa on kolme toimintoa; lentokoneiden tulostaminen, lentojen tulostaminen, ja lentokoneen tietojen tulostaminen. Tämän lisäksi käyttäjä voi poistua ohjelmasta valitsemalla vaihtoehdon `x`. Jos käyttäjä syöttää epäkelvon komennon, kysytään komentoa uudestaan.
-  
+
+
+**Ohjelman tulee käynnistyä kun pakkauksessa `lentokentta` olevan luokan Main metodi main suoritetaan.**
+
+Ohjelman esimerkkitulostus alla:
 
 <sample-output>
 
@@ -749,9 +758,6 @@ Valitse toiminto:
 
 **Huom2:** älä käytä luokkien nimissä skandeja, ne saattavat aiheuttaa ongelmia testeihin!
 
-
-
-***Ohjelman tulee käynnistyä kun pakkauksessa `lentokentta` olevan luokan Main metodi main suoritetaan.***
 
 
 </programming-exercise>

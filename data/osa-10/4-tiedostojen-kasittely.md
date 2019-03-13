@@ -14,7 +14,7 @@ hidden: true
 
 Olemme aiemmin oppineet menetelmiä tekstitiedostojen lukemiseen. Mikäli nämä eivät ole tuoreessa muistissa, kertaa kurssimateriaalin neljäs osa sopivilta osin.
 
-Tarkastellaan seuraavaksi tiedostoon kirjoittamista. Luokka `<a href="https://docs.oracle.com/javase/8/docs/api/java/io/PrintWriter.html">PrintWriter</a>` tarjoaa toiminnallisuuden tiedostoon kirjoittamiseen. Luokan `PrintWriter` konstruktorille annetaan parametrina kohdetiedoston sijaintia kuvaava merkkijono.
+Tarkastellaan seuraavaksi tiedostoon kirjoittamista. Luokka <a href="https://docs.oracle.com/javase/8/docs/api/java/io/PrintWriter.html">PrintWriter</a> tarjoaa toiminnallisuuden tiedostoon kirjoittamiseen. Luokan `PrintWriter` konstruktorille annetaan parametrina kohdetiedoston sijaintia kuvaava merkkijono.
 
 
 ```java
@@ -57,11 +57,12 @@ Yllä olevaa metodia kutsuttaessa luodaan tiedosto "paivakirja.txt" johon kirjoi
 
 Mikäli tiedostoja haluaa käsitellä siten, että kirjoitus tapahtuu olemassaolevan tiedoston perään, kannattaa kirjoituksessa käyttää <a href="https://docs.oracle.com/javase/8/docs/api/java/io/FileWriter.html" target="_blank" norel>FileWriter</a>-luokkaa.
 
+<br/>
 
 <programming-exercise name='Muistava sanakirja (4 osaa)' nocoins='true'>
 
 Tässä tehtävässä laajennetaan sanakirjaa siten, että sanat voidaan lukea tiedostosta ja kirjoittaa tiedostoon. Sanakirjan tulee myös osata kääntää molempiin suuntiin, suomesta vieraaseen kieleen sekä toiseen suuntaan (tehtävässä oletetaan hieman epärealistisesti, että suomen kielessä ja vieraassa kielessä ei ole yhtään samalla tavalla kirjoitettavaa sanaa). Tehtävänäsi on luoda sanakirja luokkaan `MuistavaSanakirja`. Toteuta luokka pakkaukseen `sanakirja`.
-  
+
 
 <h2>Muistiton perustoiminnallisuus</h2>
 
@@ -257,7 +258,7 @@ Maatiloilla on lypsäviä eläimiä, jotka tuottavat maitoa.  Maatilat eivät it
 Rakennetaan maidon elämää kuvaava simulaattori, joskin meijerit jäävät toteutuksestamme toistaiseksi pois.
 
 Simulaattorin lopullinen rakenne kutakuinkin noudattaa seuraavaa luokkakaaviota.
-  
+
 
 <img src="../img/diagrams/luokkakaavio-maatilasimulaattori.png" alt="[Maitosailio|-tilavuus:double;-saldo:double][Lehma][&lt;&lt;interface&gt;&gt; Eleleva][&lt;&lt;interface&gt;&gt; Lypsava][Lypsyrobotti][Maatila|-omistaja:String][Navetta][Navetta]-&gt;[Maitosailio][Navetta]-&gt;[Lypsyrobotti][Maatila]-&gt;[Navetta][Maatila]-&gt;*[Lehma][Maatila]-.-^[&lt;&lt;interface&gt;&gt; Eleleva][Lehma]-.-^[&lt;&lt;interface&gt;&gt; Eleleva][Lehma]-.-^[&lt;&lt;interface&gt;&gt; Lypsava]">
 
@@ -281,9 +282,9 @@ Jotta maito pysyisi tuoreena, täytyy se säilöä sille tarkoitettuun säiliö�
 Huomaa, että teet <em>kaksi konstruktoria</em>. Kutsuttava konstruktori määräytyy sille annettujen parametrien perusteella. Jos kutsut `new Maitosailio()`, suoritetaan ensimmäisen konstruktorin lähdekoodi. Toista konstruktoria taas kutsutaan antamalla konstruktorille parametrina tilavuus, esim. `new Maitosailio(300.0)`.
 
 Toteuta `Maitosailio`-luokalle myös `toString()`-metodi, jolla kuvaat sen tilaa. Ilmaistessasi säiliön tilaa `toString()`-metodissa, pyöristä litramäärät ylöspäin käyttäen `Math`-luokan tarjoamaa `ceil()`-metodia.
-  
+
 Testaa maitosailiötä seuraavalla ohjelmapätkällä:
-  
+
 
 ```java
 Maitosailio sailio = new Maitosailio();
@@ -306,17 +307,17 @@ System.out.println(sailio);
 <h2>Lehmä</h2>
 
 Saadaksemme maitoa tarvitsemme myös lehmiä. Lehmällä on nimi ja utareet. Utareiden tilavuus on satunnainen luku väliltä 15 ja 40, luokkaa `Random` voi käyttäää satunnaislukujen arpomiseen, esimerkiksi  `int luku = 15 + new Random().nextInt(26);`. Luokalla `Lehma` on seuraavat toiminnot:
-  
+
 - <strong>public Lehma()</strong> luo uuden lehmän satunnaisesti valitulla nimellä
 - <strong>public Lehma(String nimi)</strong> luo uuden lehmän annetulla nimellä
 - <strong>public String getNimi()</strong> palauttaa lehmän nimen
 - <strong>public double getTilavuus()</strong> palauttaa utareiden tilavuuden
 - <strong>public double getMaara()</strong> palauttaa utareissa olevan maidon määrän
 - <strong>public String toString()</strong> palauttaa lehmää kuvaavan merkkijonon (ks. esimerkki alla)
-  
-  
+
+
 `Lehma` toteuttaa myös rajapinnat: `Lypsava`, joka kuvaa lypsämiskäyttäytymistä, ja `Eleleva`, joka kuvaa elelemiskäyttäytymistä.
-  
+
 
 ```java
 public interface Lypsava {
@@ -329,11 +330,11 @@ public interface Eleleva {
 ```
 
 Lehmää lypsettäessä sen koko maitovarasto tyhjennetään jatkokäsittelyä varten. Lehmän elellessä sen maitovarasto täyttyy hiljalleen. Suomessa maidontuotannossa käytetyt lehmät tuottavat keskimäärin noin 25-30 litraa maitoa päivässä. Simuloidaan tätä tuotantoa tuottamalla noin 0.7 - 2 litraa tunnissa.
-    
+
 Simuloi tuotantoa tuottamalla noin 0.7 - 2 litraa tunnissa. Random-luokan metodista `nextDouble`, joka palauttaa satunnaisluvun 0 ja 1 välillä lienee tässä hyötyä.
-    
+
 Lisäksi, jos lehmälle ei anneta nimeä, valitse sille nimi satunnaisesti seuraavasta taulukosta. Tässä on hyötyä Random-luokan metodista `nextInt`, jolle annetaan parametrina yläraja. Kannattaa tutustua Random-luokan toimintaan erikseen ennen kuin lisää sen osaksi tätä ohjelmaa.
-  
+
 
 ```java
 private static final String[] NIMIA = new String[]{
@@ -344,9 +345,9 @@ private static final String[] NIMIA = new String[]{
     "Nina", "Nyytti", "Papu", "Pullukka", "Pulu",
     "Rima", "Soma", "Sylkki", "Valpu", "Virpi"};
 ```
-  
+
 Toteuta luokka Lehma ja testaa sen toimintaa seuraavan ohjelmapätkän avulla.
-  
+
 
 ```java
 Lehma lehma = new Lehma();
@@ -399,7 +400,7 @@ Nykyaikaisilla maatiloilla lypsyrobotit hoitavat lypsämisen. Jotta lypsyrobotti
 - <strong>public void lypsa(Lypsava lypsava)</strong> lypsää lehmän robottiin kiinnitettyyn maitosäiliöön. Jos robottiin ei ole kiinnitetty maitosäiliötä, ohjelma ilmoittaa että maito menee hukkaan.
 
 Toteuta luokka Lypsyrobotti ja testaa sitä seuraavien ohjelmanpätkien avulla. Varmista että lypsyrobotti voi lypsää kaikkia Lypsava-rajapinnan toteuttavia olioita!
-  
+
 ```java
 Lypsyrobotti lypsyrobotti = new Lypsyrobotti();
 Lehma lehma = new Lehma();
@@ -421,10 +422,10 @@ Maitosailio sailio = new Maitosailio();
 lypsyrobotti.setMaitosailio(sailio);
 System.out.println("Säiliö: " + sailio);
 
-for (int i = 0; i &lt; 2; i++) {
+for (int i = 0; i < 2; i++) {
     System.out.println(lehma);
     System.out.println("Elellään..");
-    for (int j = 0; j &lt; 5; j++) {
+    for (int j = 0; j < 5; j++) {
         lehma.eleleTunti();
     }
     System.out.println(lehma);
@@ -456,7 +457,7 @@ Säiliö: 14.0/2000.0
 
 <h2>Navetta</h2>
 
-  
+
 Lehmät hoidetaan (eli tässä tapauksessa lypsetään) navetassa. Alkukantaisissa navetoissa on maitosäiliö ja tilaa yhdelle lypsyrobotille. Huomaa että lypsyrobottia asennettaessa se kytketään juuri kyseisen navetan maitosäiliöön.  Jos navetassa ei ole lypsyrobottia, ei siellä voida myöskään hoitaa lehmiä. Toteuta luokka `Navetta` jolla on seuraavat konstruktorit ja metodit:
 
 
@@ -470,7 +471,7 @@ Lehmät hoidetaan (eli tässä tapauksessa lypsetään) navetassa. Alkukantaisis
 
 
 Testaa luokkaa `Navetta` seuraavan ohjelmapätkän avulla.
-  
+
 
 ```java
 Navetta navetta = new Navetta(new Maitosailio());
@@ -486,7 +487,7 @@ ammu.eleleTunti();
 navetta.hoida(ammu);
 System.out.println("Navetta: " + navetta);
 
-List&lt;Lehma&gt; lehmaLista = new ArrayList&lt;&gt;();
+List<Lehma> lehmaLista = new ArrayList<>();
 lehmaLista.add(ammu);
 lehmaLista.add(new Lehma());
 
@@ -509,9 +510,9 @@ Navetta: 9.6/2000.0
 
 
 <h2>Maatila</h2>
-  
+
 Maatilalla on omistaja ja siihen kuuluu navetta sekä joukko lehmiä. Maatila toteuttaa myös aiemmin nähdyn rajapinnan `Eleleva`, jonka metodia `eleleTunti()`-kutsumalla kaikki maatilaan liittyvät lehmät elelevät tunnin.  Toteuta luokka maatila siten, että se toimii seuraavien esimerkkiohjelmien mukaisesti.
- 
+
 ```java
 Maitosailio sailio = new Maitosailio();
 Navetta navetta = new Navetta(sailio);
@@ -521,8 +522,8 @@ System.out.println(maatila);
 
 System.out.println(maatila.getOmistaja() + " on ahkera mies!");
 ```
-  
-Odotettu tulostus:  
+
+Odotettu tulostus:
 
 <sample-output>
 Maatilan omistaja: Esko
@@ -539,7 +540,7 @@ maatila.lisaaLehma(new Lehma());
 System.out.println(maatila);
 ```
 
-Odotettu tulostus:  
+Odotettu tulostus:
 
 <sample-output>
 Maatilan omistaja: Esko
@@ -565,7 +566,7 @@ System.out.println(maatila);
 
 
 Odotettu tulostus:
-  
+
 
 <sample-output>
 Maatilan omistaja: Esko
@@ -604,7 +605,7 @@ Lehmät:
     Hento 0.0/34.0
 </sample-output>
 
-  
+
 Edellä otettiin ensiaskeleet simulaattorin tekemiseen. Ohjelmaa voisi jatkaa vaikkapa lisäämällä maitoauton sekä luomalla useampia navettoja. Maitoautot voisivat kulkea tehtaalle, jossa tehtäisiin juustoa, jnejne..
-  
+
 </programming-exercise>
