@@ -79,7 +79,7 @@ Hello packageworld: pakkausten ABC!
 Jatkossa *lähes kaikissa* tehtävissämme käytetään pakkauksia. Luodaan seuraavaksi ensimmäiset pakkaukset itse.
 
 
-<programming-exercise name='Ensimmäisiä pakkauksia (3 osaa)'>
+<programming-exercise name='Ensimmäisiä pakkauksia (3 osaa)' tmcname='osa10-Osa10_08.EnsimmaisiaPakkauksia'>
 
 
 <h2>Käyttöliittymä-rajapinta</h2>
@@ -136,7 +136,7 @@ Päivitetään käyttöliittymää
 </programming-exercise>
 
 
-<programming-exercise name='Kolme pakkausta'>
+<programming-exercise name='Kolme pakkausta' tmcname='osa10-Osa10_09.KolmePakkausta'>
 
 Luo tehtäväpohjaan kolme pakkausta `a`, `b` ja `c`. Luo pakkauksen `a` sisälle luokka `A`, pakkauksen `b` sisälle luokka `B`, ja pakkauksen `c` sisälle luokka `C`. Luokissa ei tarvita oliomuuttujia, konstruktoreja tai metodeja.
 
@@ -505,7 +505,8 @@ public class Lentohallinta {
 }
 ```
 
-TODO: quiznator -- kerro omin sanoin luokan toiminta, keskity erityisesti hasmhmapin toimintaan -- miksi map?
+<quiznator id="5c895b0c99236814c5bbfc8f"></quiznator>
+
 
 ### Tekstikäyttöliittymä
 
@@ -646,7 +647,7 @@ public class Tekstikayttoliittyma {
 ```
 
 
-<programming-exercise name='Lentokenttä (2 osaa)'>
+<programming-exercise name='Lentokenttä (2 osaa)' tmcname='osa10-Osa10_10.Lentokentta'>
 
 Tässä tehtävässä toteutat edellä kuvatun sovelluksen. Saat suunnitella rakenteen vapaasti, tai voit noudattaa edellä kuvattua rakennetta. Käyttöliittymän ulkomuoto sekä vaaditut komennot on määritelty ennalta. Tehtävä on kahden yksittäisen tehtäväpisteen arvoinen.
 

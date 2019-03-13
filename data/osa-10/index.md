@@ -7,11 +7,9 @@ hidden: true
 
 <deadline>1.4.2019</deadline>
 
-TODO:
-Osaat ...
 
+Tämän osan jälkeen osaat tulkita yksinkertaisia luokkakaavioita ja osaat rakentaa ohjelmia luokkaakavioiden perusteella. Tiedät mitä Javan pakkaukset ovat, tiedät mistä `import`-lauseen osat muodostuvat, ja osaat asettaa luokkasi pakkauksiin. Harjoittelet Javan poikkeusten käyttöä ja opit sekä niiden käsittelyn että niiden eteenpäin heittämisen. Opit kirjoittamaan tietoa tiedostoon ohjelmallisesti ja kertaat yksikkötestien kirjoittamista uutta ohjelmointitehtävää luodessasi.
 
-Tunnet luokkakaaviot ja osaat tulkita ja rakentaa ohjelmia luokkakaavioiden perusteella. Osaat käyttää Javan pakkauksia ja tiedät mistä `import`-lauseen osat muodostuvat. Tunnet Javan erilaisia poikkeuksia ja osaat käsitellä sekä heittää niitä eteenpäin. Osaat kirjoittaa tietoa tiedostoon ohjelmallisesti.
 
 <please-login></please-login>
 

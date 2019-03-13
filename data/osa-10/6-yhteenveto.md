@@ -4,12 +4,10 @@ title: 'Yhteenveto'
 hidden: true
 ---
 
-TODO
 
-Kymmenennessä osassa eli Ohjelmoinnin jatkokurssin kolmannessa osassa tutustuimme luokkakaavioihin ja pakkauksiin. Luokkakaavioita käytetään ohjelmien rakenteen kuvaamiseen ja pakkauksia ohjelman rakenteen jakamiseen loogisiin osakokonaisuuksiin. Edellä mainittujen lisäksi tutustuimme poikkeuksiin sekä tiedostoon kirjoittamiseen, ja lopuksi kertasimme lyhyesti testien kirjoittamista.
+Kymmenennessä osassa osassa tutustuimme luokkakaavioihin ja pakkauksiin. Otimme ensimmäisiä askeleita ohjelmien rakenteen kuvaamiseen ja ohjelman rakenteen jakamiseen loogisiin osakokonaisuuksiin. Tutustuimme poikkeuksien käsittelyyn ja niiden eteenpäin heittämiseen, ja harjoittelimme tiedostosta lukemista sekä tiedostoon kirjoittamista. Kertasimme myös testien kirjoittamista.
 
 Vastaa vielä alla olevaan kyselyyn.
 
-
-<quiznator id='5be81cf20da4eb3df8c0429a'></quiznator>
+<quiznator id='5c895ab2017ffc13eddd1169'></quiznator>
 

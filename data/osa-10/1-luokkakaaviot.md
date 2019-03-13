@@ -126,7 +126,7 @@ public class Henkilo {
 <img src="../img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta-ja-getnimi.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(nimi:String);+tulostaHenkilo():void;+getNimi():String]">
 
 
-<programming-exercise name='Asiakas'>
+<programming-exercise name='Asiakas' tmcname='osa10-Osa10_01.Asiakas'>
 
 Alla olevassa luokkakaaviossa on kuvattuna luokka Asiakas. Toteuta luokka tehtäväpohjaan.
 
@@ -134,7 +134,7 @@ Alla olevassa luokkakaaviossa on kuvattuna luokka Asiakas. Toteuta luokka tehtä
 
 </programming-exercise>
 
-<programming-exercise name='Kirja ja lentokone'>
+<programming-exercise name='Kirja ja lentokone' tmcname='osa10-Osa10_02.KirjaJaLentokone'>
 
 Alla olevassa luokkakaaviossa on kuvattuna luokat Kirja ja Lentokone. Toteuta luokat tehtäväpohjaan.
 
@@ -225,7 +225,7 @@ public class Kirja {
 Ylläolevaan kaavioon voisi lisätä vielä ArrayListin sisältämien arvojen tyypin `ArrayList<Henkilo>` sekä yhteyttä tarkentavan määreen "kirjoittajat".
 
 
-<programming-exercise name='Naytos ja lippu'>
+<programming-exercise name='Naytos ja lippu' tmcname='osa10-Osa10_03.NaytosJaLippu'>
 
 Alla on kuvattu kaksi luokkaa, Naytos ja Lippu, sekä niiden välinen yhteys. Alla olevassa kuvassa tähti on luokan Lippu-päädyssä -- tässä tapauksessa tähti antaa lisätietoa yhteydestä; vaikkei näytös tiedä näytökseen myydyistä lipuista, voi lippuja silti myydä näytökseen monia.
 
@@ -286,7 +286,7 @@ public class Henkilo {
 ```
 
 
-<programming-exercise name='Opiskelija ja korkeakoulu'>
+<programming-exercise name='Opiskelija ja korkeakoulu' tmcname='osa10-Osa10_04.OpiskelijaJaKorkeakoulu'>
 
 Alla on kuvattu kaksi luokkaa, Opiskelija ja Korkeakoulu, sekä niiden välinen yhteys. Toteuta kuvatut luokat tehtäväpohjaan.
 
@@ -313,7 +313,7 @@ Abstraktien luokkien perintä toimii lähes samalla tavalla. Abstraktit luokat k
 <img src="../img/diagrams/luokkakaavio-abstraktit.png" />
 
 
-<programming-exercise name='Pelaaja ja tekoäly' nocoins='true'>
+<programming-exercise name='Pelaaja ja tekoäly' nocoins='true' tmcname='osa10-Osa10_05.PelaajaJaTekoaly'>
 
 Alla on kuvattu kaksi luokkaa, Pelaaja ja Tekoaly, sekä niiden välinen yhteys. Toteuta kuvatut luokat tehtäväpohjaan.
 
@@ -344,7 +344,7 @@ Rajapinnan toteuttaminen merkitään katkoviivalla ja kolmiolla. Alla on kuvattu
 <img src="../img/diagrams/luokkakaavio-kirja-toteuttaa-luettavan.png" alt="[<<interface>> Luettava][Kirja]-.-^[<<interface>> Luettava]">
 
 
-<programming-exercise name='Tallennettava henkilo'>
+<programming-exercise name='Tallennettava henkilo' tmcname='osa10-Osa10_06.TallennettavaHenkilo'>
 
 Alla on kuvattuna rajapinta Tallennettava sekä luokka Henkilo. Toteuta luokkakaaviossa kuvattu sisältö tehtäväpohjaan.
 
@@ -368,7 +368,7 @@ Materiaalissa käytetyt luokkakaaviot on piirretty <a href="https://yuml.me/" ta
 </text-box>
 
 
-<programming-exercise name='Isompi luokkakaavio'>
+<programming-exercise name='Isompi luokkakaavio' tmcname='osa10-Osa10_07.IsompiLuokkakaavio'>
 
 Alla on kuvattuna isompi luokkakaavio, jossa on luokat A, B, C, D ja E, sekä rajapinnat IA, IB ja IC. Toteuta luokkakaavion kuvaama sisältö tehtäväpohjaan.
 

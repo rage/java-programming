@@ -300,7 +300,7 @@ Exception in thread "..." java.lang.IllegalArgumentException: Arvosanan tulee ol
 Jos poikkeus on esimerkiksi tyyppiä IllegalArgumentException, tai yleisemmin ajonaikainen poikkeus, ei sen heittämisestä tarvitse kirjoittaa erikseen metodin määrittelyyn.
 
 
-<programming-exercise name='Parametrien validointi (2 osaa)'>
+<programming-exercise name='Parametrien validointi (2 osaa)' tmcname='osa10-Osa10_11.ParametrienValidointi'>
 
 Harjoitellaan hieman parametrien validointia `IllegalArgumentException`-poikkeuksen avulla. Tehtäväpohjassa tulee kaksi luokkaa, `Henkilo` ja `Laskin`. Muuta luokkia seuraavasti:
 
@@ -398,7 +398,7 @@ Stack tracen lukeminen tapahtuu alhaalta ylöspäin. Alimpana on ensimmäinen ku
 
 
 
-<programming-exercise name='Sensorit ja lämpötila (4 osaa)'>
+<programming-exercise name='Sensorit ja lämpötila (4 osaa)' tmcname='osa10-Osa10_12.SensoritJaLampotila'>
 
 
 Kaikki luotavat luokat tulee sijoittaa pakkaukseen `sovellus`.
@@ -455,6 +455,8 @@ Tee luokka `Lampomittari`, joka toteuttaa rajapinnan `Sensori`.
 Aluksi lämpömittari on poissa päältä. Kutsuttaessa metodia `mittaa` kun mittari on päällä mittari arpoo luvun väliltä -30...30 ja palauttaa sen kutsujalle. Jos mittari ei ole päällä, heitetään poikkeus `IllegalStateException`.
 
 Käytä Javan valmista luokkaa <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html" target="_blank" rel="noopener">Random</a> satunnaisen luvun arpomiseen. Saat luvun väliltä 0...60 kutsulla `new Random().nextInt(61);` -- väliltä -30...30 arvotun luvun saa vähentämällä väliltä 0...60 olevasta luvusta sopiva luku.
+
+<br/>
 
 
 <h2>Keskiarvosensori</h2>
