@@ -7,65 +7,44 @@ hidden: true
 
 TODO: tänne listatehtävä / crowdsorcerer
 
-#
-  Ohjelmien testaaminen
-<% end %>
-
-
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
 
     -
-      Kertaat automaattisten testien kirjoittamista.
+      TODO
 
 
 
 </text-box>
 
 
-  Kuten viikolla 8 lupailtiin, nyt pääset kirjoittamaan testejä itse suoraan testikoodiin. CrowdSorcerer-tehtävän malliratkaisu on taas annettu valmiina. Sinun tehtäväsi on keksiä sille tehtävänanto ja kirjoittaa sille testit.
+Tässä osassa pääset suunnittelemaan CrowdSorcerer-työkalua käyttämällä oman ohjelmointitehtävän, jota käytetään myöhemmillä kursseilla.
+Käy aluksi kertaamassa CrowdSorcererin käyttöä kurssin <a href="https://ohjelmointi-19.mooc.fi/osa-7/4-ohjelmointitehtavien-luominen">seitsemännestä osasta</a> ja lue sitten alla oleva ohjeistus tehtävän suunnittelua varten.
 
 
+## Suunnittele oma tehtävä: Listat
 
-  Testikoodin pohja on annettu valmiiksi. Kirjoita vähintään kolme testiä, jotka testaavat tehtävien lähdekoodeissa annettuja metodeja "vertaile" ja "annaKokonaisluku". Pyri miettimään, miten saisit ohjelmasi testattua mahdollisimman kattavasti. Mikäli et muista miten yksikkötestien kirjoittaminen onnistuu, kertaa kurssimateriaalin <a href="/part7/">seitsemännen osan</a> sisällöstä luku 3.5: Yksikkötestaus.
+Suunnittele tehtävä, joka harjoituttaa listojen käsittelyä ja tietojen hakemista niistä. Tehtävän tekijän on tarkoitus tehtävässä luoda haluamallasi tavalla nimetty metodi Lähdekoodi-kentän Submission-luokkaan. Ohjeista tehtävänannossa tehtävän tekijää tekemään tehtävässä metodi, joka
+1. palauttaa haluamasi tyyppisen muuttujan, esimerkiksi merkkijonon (HUOM! Älä tässä tehtävässä käytä void-tyyppisiä metodeja),
+2. on haluamasi niminen ja
+3. jolla on haluamasi tyyppiset parametrit.
 
+Esimerkiksi, jos tehtävässäsi on tarkoitus tehdä seuraavanlainen metodi:
 
+```java
+public String listanPisin(ArrayList<String> lista) {
+    // koodia
+}
+```
 
-  Nyt pääset laatimaan testejä seuraaville kahdelle tehtävälle.
-
-
-<p style="font-size:130%;">
-  <b style="color:Tomato;">HUOM!</b> CrowdSorcererissa oli pieni vika, jonka vuoksi tehtävien lähetys ei onnistunut. Jos tämä vika ilmenee vielä, ota kirjoittamasi tehtävänanto ja testikoodi talteen (esimerkiksi johonkin tekstieditoriin) ja päivitä sivu.
-
-
-<% partial 'partials/general_callout', locals: { name: 'Kirjoita testit valmiille malliratkaisulle 1'>
-
-
-    Lähdekoodin kohdalla on valmis malliratkaisu. Keksi sitä vastaava tehtävänanto ja kirjoita testit luokan Submission metodille vertaile. Lähetettyäsi tehtävän saat tiedon siitä, kääntyikö testikoodi ja menivätkö testisi läpi. Jos eivät, lue virheviesti ja lähdekoodi uudestaan ja korjaa testisi sen mukaisesti.
-
-
-
-    Tehtävien luomistehtävät käsitellään pisteytyksessä bonuksena.
+niin metodin on tarkoitus palauttaa merkkijono, sen nimen tulee olla 'listanPisin' ja parametriksi tulee antaa ArrayList&lt;String&gt;-tyyppinen muuttuja.
 
 
-<% end %>
+Tehtävässä voidaan vaikkapa ensin main()-metodissa kysyä käyttäjältä arvoja, jotka tallennetaan listaan, ja sitten noita arvoja käsitellään jollain tavalla metodissa.
 
-<div class='crowdsorcerer-widget' data-assignment='17'></div>
+Kirjoita tehtävän tekijälle selkeä tehtävänanto ja tee tehtävälle malliratkaisu (muista erotella malliratkaisurivit tehtävän tekijää auttavasta tehtäväpohjasta!) sekä testikoodiin vähintään kolme testiä. Testeissä on tarkoitus testata luomaasi metodia; main()-metodia ei tällä kertaa tarvitse testata.
 
-<% partial 'partials/general_callout', locals: { name: 'Kirjoita testit valmiille malliratkaisulle 2'>
+Tehtävien luomistehtävät vastaavat kurssin pisteytyksessä ohjelmointitehtävää.
 
-
-    Lähdekoodin kohdalla on valmis malliratkaisu. Keksi sitä vastaava tehtävänanto ja kirjoita testit luokan Submission metodille annaKokonaisluku. Huomaa, että lähdekoodissa ei käytetä ääkkösiä.
-
-
-    Lähetettyäsi tehtävän saat tiedon siitä, kääntyikö testikoodi ja menivätkö testisi läpi. Jos eivät, lue virheviesti ja lähdekoodi uudestaan ja korjaa testisi sen mukaisesti.
-
-
-
-    Tehtävien luomistehtävät käsitellään pisteytyksessä bonuksena.
-
-
-<% end %>
-
-<div class='crowdsorcerer-widget' data-assignment='19'></div>
+<crowdsorcerer id='28'></crowdsorcerer>
 
