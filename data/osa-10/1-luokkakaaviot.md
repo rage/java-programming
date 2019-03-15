@@ -375,3 +375,6 @@ Alla on kuvattuna isompi luokkakaavio, jossa on luokat A, B, C, D ja E, sekä ra
 <img  src="../img/exercises/luokkakaavio-iso-abstrakti.png" alt="[<<interface>>;IA][<<interface>>;IB][<<interface>>;IC][A]-.-^[<<interface>>;IA][B]-.-^[<<interface>>;IB][C]-.-^[<<interface>>;IC][D]->[<<interface>>;IA][E]*-*[C][C]-^[B][B]-^[A]">
 
 </programming-exercise>
+
+
+<quiznator id="5c8b61cb244fe21455cbe44c"></quiznator>
