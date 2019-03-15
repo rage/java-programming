@@ -1,7 +1,7 @@
 ---
 path: '/osa-10/6-yhteenveto'
 title: 'Yhteenveto'
-hidden: true
+hidden: false
 ---
 
 
@@ -10,4 +10,3 @@ Kymmenennessä osassa osassa tutustuimme luokkakaavioihin ja pakkauksiin. Otimme
 Vastaa vielä alla olevaan kyselyyn.
 
 <quiznator id='5c895ab2017ffc13eddd1169'></quiznator>
-

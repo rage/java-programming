@@ -1,7 +1,7 @@
 ---
 path: '/osa-10/3-poikkeukset'
 title: 'Poikkeukset'
-hidden: true
+hidden: false
 ---
 
 
@@ -545,4 +545,3 @@ mittaukset: [-10, -4, 5]
 </sample-output>
 
 </programming-exercise>
-
