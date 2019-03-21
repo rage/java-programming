@@ -28,7 +28,7 @@ Tutustutaan virran käyttöön konkreettisen esimerkin kautta. Tarkastellaan seu
 ```java
 // alustetaan lukija ja lista, johon syotteet luetaan
 Scanner lukija = new Scanner(System.in);
-List<String> syotteet = new ArrayList<>()
+List<String> syotteet = new ArrayList<>();
 
 // luetaan syotteet
 while (true) {
@@ -234,7 +234,7 @@ Kyseinen kirjoitusmuoto, *lambda-lauseke*, on Javan tarjoama lyhenne ns. anonyym
 *virta*.filter(luku -> luku > 5).*jatkokäsittely*
 
 // on sama kuin
-*virta*.filter((Integer luku) ->
+*virta*.filter((Integer luku) -> {
     if (luku > 5) {
         return true;
     }
