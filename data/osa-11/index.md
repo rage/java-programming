@@ -7,9 +7,8 @@ hidden: true
 
 <deadline>8.4.2019</deadline>
 
-TODO:
 
-Tiedät mitä geneeriset tyyppiparametrit ovat ja osaat luoda luokkia jotka käyttävät niitä. Tiedät pääpiirteittäin ArrayListin ja HashMapin sisäisen toteutuksen ja osaat luoda niistä yksinkertaistetut omat versiot. Tiedät miten satunnaislukuja luodaan ja osaat käyttää Javan valmiita välineitä satunnaislukujen luomiseen. Tunnet menetelmiä moniulotteisen tiedon esittämiseen ja osaat luoda sekä käsitellä moniulotteisia taulukoita.
+Tämän osan jälkeen tiedät mitä geneeriset tyyppiparametrit ovat ja mitä merkintä `ArrayList<String>` tarkoittaa. Osaat myös luoda luokkia, joissa käytetään geneerisiä tyyppiparametreja. Tutustut ArrayListin ja HashMapin sisäiseen toteutukseen ja luot niistä yksinkertaiset omat versiot. Opit luomaan satunnaislukuja ja harjoittelet Javan valmiiden välineiden käyttöä satunnaislukujen luomiseen. Tutustut  moniulotteisen tiedon esittämiseen ja opit luomaan ja käsittelemään moniulotteisia taulukoita.
 
 
 <please-login></please-login>
