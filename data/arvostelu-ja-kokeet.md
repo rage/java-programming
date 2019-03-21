@@ -97,7 +97,7 @@ Kokeeseen saa osallistua kun on saanut jokaisen osan ohjelmointitehtävien piste
 
 #### Koeleikkuri
 
-Molemmissa kursseissa kokeesta tulee saada vähintään puolet kurssin pisteistä kurssin läpäiseksi.
+Molemmissa kursseissa kokeesta tulee saada vähintään puolet kokeen pisteistä kurssin läpäiseksi.
 
 ### Näyttökokeet
 
