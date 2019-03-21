@@ -50,7 +50,7 @@ Kirjoitettua "koodia" kutsutaan **lähdekoodiksi**. Lähdekoodi koostuu lauseist
 System.out.println("Hei maailma");
 ```
 
-Lause `System.out.println` on Java-ohjelmointikielen valmiiksi tarjoama komento, jota käytetään merkkijonon tulostamiseen. Komento käytännössä käskee tietokonetta tulostamaan sille sulkeiden sisällä hipsuissa annetun merkkijonon. Komennon pääte `ln` on lyhenne sanasta _line_, eli komentoa käyttämällä merkkijonon jälkeen tulostetaan myös rivinvaihto. Lauseen loppuun kirjoitetaan puolipiste `;`.
+Lause `System.out.println` on Java-ohjelmointikielen valmiiksi tarjoama komento, jota käytetään merkkijonon tulostamiseen. Komento käytännössä käskee tietokonetta tulostamaan sille sulkeiden sisällä lainausmerkeissä (joita ohjelmoijat kutsuvat usein 'hipsuiksi') annetun merkkijonon. Komennon pääte `ln` on lyhenne sanasta _line_, eli komentoa käyttämällä merkkijonon jälkeen tulostetaan myös rivinvaihto. Lauseen loppuun kirjoitetaan puolipiste `;`.
 
 Java-ohjelmat vaativat toimiakseen kurssin aikana tutuksi tulevan rungon. Ohjelman runko on seuraavanlainen.
 
