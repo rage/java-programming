@@ -53,7 +53,7 @@ export async function fetchQuiznatorProgress() {
       tag: "ohjelmoinnin-mooc-2019-9",
     },
     {
-      part: "osa010",
+      part: "osa10",
       tag: "ohjelmoinnin-mooc-2019-10",
     },
     {

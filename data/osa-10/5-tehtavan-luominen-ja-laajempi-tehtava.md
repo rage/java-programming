@@ -1,7 +1,7 @@
 ---
 path: '/osa-10/5-tehtavan-luominen-ja-laajempi-tehtava'
 title: 'Tehtävän luominen ja laajempi tehtävä'
-hidden: true
+hidden: false
 ---
 
 

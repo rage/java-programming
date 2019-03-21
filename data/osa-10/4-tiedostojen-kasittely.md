@@ -1,7 +1,7 @@
 ---
 path: '/osa-10/4-tiedostojen-kasittely'
 title: 'Tiedostojen käsittely'
-hidden: true
+hidden: false
 ---
 
 
@@ -252,4 +252,3 @@ sanakirja.tallenna();
 Eli käytön aluksi ladataan sanakirja tiedostosta ja lopussa tallennetaan se takaisin tiedostoon jotta sanakirjaan tehdyt muutokset pysyvät voimassa seuraavallekin käynnistyskerralle.
 
 </programming-exercise>
-

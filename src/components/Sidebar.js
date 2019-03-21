@@ -123,7 +123,6 @@ var content2 = [
 ]
 
 var futurePages = [
-  { title: "Osa 10", tba: "15.3.2019" },
   { title: "Osa 11", tba: "22.3.2019" },
   { title: "Osa 12", tba: "29.3.2019" },
   { title: "Osa 13", tba: "12.4.2019" },
@@ -158,6 +157,12 @@ class Sidebar extends React.Component {
     if (process.env.NODE_ENV === "production") {
       edges = edges.filter(o => !o.hidden)
     }
+    edges.sort((a, b) =>
+      a.title.localeCompare(b.title, undefined, {
+        numeric: true,
+        sensitivity: "base",
+      }),
+    )
     let content = content2.concat(edges)
     content = content.concat(futurePages)
     let middlepoint = content.findIndex(o => o.title === "Osa 7")

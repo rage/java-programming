@@ -1,7 +1,7 @@
 ---
 path: '/osa-10/2-pakkaukset'
 title: 'Pakkaukset'
-hidden: true
+hidden: false
 ---
 
 
@@ -762,5 +762,3 @@ Valitse toiminto:
 
 
 </programming-exercise>
-
-
