@@ -8,7 +8,9 @@ hidden: true
 <deadline>8.4.2019</deadline>
 
 TODO:
-Osaat...
+
+Tiedät mitä geneeriset tyyppiparametrit ovat ja osaat luoda luokkia jotka käyttävät niitä. Tiedät pääpiirteittäin ArrayListin ja HashMapin sisäisen toteutuksen ja osaat luoda niistä yksinkertaistetut omat versiot. Tiedät miten satunnaislukuja luodaan ja osaat käyttää Javan valmiita välineitä satunnaislukujen luomiseen. Tunnet menetelmiä moniulotteisen tiedon esittämiseen ja osaat luoda sekä käsitellä moniulotteisia taulukoita.
+
 
 <please-login></please-login>
 
