@@ -206,7 +206,7 @@ Ohjelmoija voi myös jättää poikkeuksen käsittelemättä ja *siirtää vastu
 
 
 ```java
-public List<String> lue(String tiedosto) <strong>throws Exception</strong> {
+public List<String> lue(String tiedosto) throws Exception {
     ArrayList<String> rivit = new ArrayList<>();
     Files.lines(Paths.get(tiedosto)).forEach(rivi -> rivit.add(rivi));
     return rivit;
