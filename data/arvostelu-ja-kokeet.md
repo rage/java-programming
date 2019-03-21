@@ -95,7 +95,9 @@ Aikatauluttamattomassa kurssiversiossa arvostelu perustuu täysin kokeeseen. Tä
 
 Kokeeseen saa osallistua kun on saanut jokaisen osan ohjelmointitehtävien pisteistä vähintään 90%.
 
-Aikatauluttamattomassa kurssissa kokeesta tulee saada vähintään puolet kurssin pisteistä kurssin läpäiseksi.
+#### Koeleikkuri
+
+Molemmissa kursseissa kokeesta tulee saada vähintään puolet kurssin pisteistä kurssin läpäiseksi.
 
 ### Näyttökokeet
 
