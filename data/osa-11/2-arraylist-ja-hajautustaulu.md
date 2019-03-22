@@ -77,6 +77,9 @@ Taulukossa on 4 alkiota.
 </sample-output>
 
 
+<quiznator id='5c94ab76fd9fd71425c6b085'></quiznator>
+
+
 <programming-exercise name='Rajatut taulukossa' tmcname='osa11-Osa11_03.RajatutTaulukossa'>
 
 Luo luokkaan `Ohjelma` luokkametodi `public static int summa(int[] taulukko, int mista, int mihin, int pienin, int suurin)`. Metodin tulee laskea sille parametrina annetusta taulukosta indeksien mista ja mihin välillä olevien arvojen summa. Summaan otetaan mukaan vain ne arvot, jotka ovat suurempia tai yhtäsuuria kuin pienin ja pienempiä tai yhtä pieniä kuin suurin.
@@ -718,6 +721,8 @@ private void kopioi(Lista<Pari<K, V>>[] uusi, int indeksista) {
     }
 }
 ```
+
+<quiznator id='5c94ad8bddb6b814af32a379'></quiznator>
 
 Nyt kopioi-metodia voidaan kutsua kasvata-metodista.
 

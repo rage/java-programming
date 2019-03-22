@@ -8,7 +8,7 @@ hidden: true
 <deadline>8.4.2019</deadline>
 
 
-Tämän osan jälkeen tiedät mitä geneeriset tyyppiparametrit ovat ja mitä merkintä `ArrayList<String>` tarkoittaa. Osaat myös luoda luokkia, joissa käytetään geneerisiä tyyppiparametreja. Tutustut ArrayListin ja HashMapin sisäiseen toteutukseen ja luot niistä yksinkertaiset omat versiot. Opit luomaan satunnaislukuja ja harjoittelet Javan valmiiden välineiden käyttöä satunnaislukujen luomiseen. Tutustut  moniulotteisen tiedon esittämiseen ja opit luomaan ja käsittelemään moniulotteisia taulukoita.
+Tämän osan jälkeen tiedät mitä geneeriset tyyppiparametrit ovat ja mitä merkintä ArrayList&lt;String&gt; tarkoittaa. Osaat myös luoda luokkia, joissa käytetään geneerisiä tyyppiparametreja. Tutustut ArrayListin ja HashMapin sisäiseen toteutukseen ja luot niistä yksinkertaiset omat versiot. Opit luomaan satunnaislukuja ja harjoittelet Javan valmiiden välineiden käyttöä satunnaislukujen luomiseen. Tutustut  moniulotteisen tiedon esittämiseen ja opit luomaan ja käsittelemään moniulotteisia taulukoita.
 
 
 <please-login></please-login>

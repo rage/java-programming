@@ -64,6 +64,14 @@ export async function fetchQuiznatorProgress() {
       part: "osa12",
       tag: "ohjelmoinnin-mooc-2019-12",
     },
+    {
+      part: "osa13",
+      tag: "ohjelmoinnin-mooc-2019-13",
+    },
+    {
+      part: "osa14",
+      tag: "ohjelmoinnin-mooc-2019-14",
+    },
   ]
   const quizIdInformation = await fetchQuizIds()
   const allQuizIds = flatten(quizIdInformation.map(o => o.quizIds))
