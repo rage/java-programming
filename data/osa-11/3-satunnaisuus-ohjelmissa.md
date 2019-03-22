@@ -1,7 +1,7 @@
 ---
 path: '/osa-11/3-satunnaisuus-ohjelmissa'
 title: 'Satunnaisuus ohjelmissa'
-hidden: true
+hidden: false
 ---
 
 

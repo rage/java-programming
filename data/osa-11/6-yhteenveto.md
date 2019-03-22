@@ -1,7 +1,7 @@
 ---
 path: '/osa-11/6-yhteenveto'
 title: 'Yhteenveto'
-hidden: true
+hidden: false
 ---
 
 

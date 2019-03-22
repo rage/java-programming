@@ -1,7 +1,7 @@
 ---
 path: '/osa-11/4-moniulotteinen-tieto'
 title: 'Moniulotteinen tieto'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
@@ -224,11 +224,9 @@ Lukujen lisäämiseen liittyy kaksi sääntöä:
 1. Jos siirtymä tapahtuu siten, että mennään taikaneliön alueen ulkopuolelle, hypätään toiselle laidalle. Jos siis mennään "oikealta yli" mennään vasempaan laitaan ja jos mennään "ylhäältä yli" mennään alalaitaan.
 2. Jos kohdassa on jo luku, ei mennäkään ylös ja oikealle, vaan astutaan yksi askel alaspäin.
 
+Käy katsomassa yllä kuvatun algoritmin visualisaatio Wikipedian sivulta <a href="https://en.wikipedia.org/wiki/Siamese_method" target="_blank">Siamese method</a>.
 
-<figure>
-<img src="../img/taikaneliot-siamese.gif"/>
-<figcaption>Siamese method -algoritmin suoritus. Kuva Wikipediasta (<a href="https://en.wikipedia.org/wiki/Siamese_method" target="_blank">Siamese method</a>).</figcaption>
-</figure>
+<br/>
 
 Toteuta parittomien taikalukujen luominen luokan `Taikaneliotehdas` metodiin `luoTaikanelio`. Metodin tarvitsee toimia vain tilanteissa, missä neliön leveys on pariton luku.
 
