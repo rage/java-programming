@@ -31,7 +31,7 @@ int[][] kaksiulotteinenTaulukko = new int[rivit][sarakkeet];
 
 System.out.println("rivi, sarake, arvo");
 for (int rivi = 0; rivi < kaksiulotteinenTaulukko.length; rivi++) {
-    for (int sarake = 0; sarake < kaksiulotteinenTaulukko[y].length; sarake++) {
+    for (int sarake = 0; sarake < kaksiulotteinenTaulukko[rivi].length; sarake++) {
         int arvo = kaksiulotteinenTaulukko[rivi][sarake];
         System.out.println("" + rivi + ", " + sarake + ", " + arvo);
     }
@@ -67,7 +67,7 @@ kaksiulotteinenTaulukko[1][0] = 8;
 
 System.out.println("rivi, sarake, arvo");
 for (int rivi = 0; rivi < kaksiulotteinenTaulukko.length; rivi++) {
-    for (int sarake = 0; sarake < kaksiulotteinenTaulukko[y].length; sarake++) {
+    for (int sarake = 0; sarake < kaksiulotteinenTaulukko[rivi].length; sarake++) {
         int arvo = kaksiulotteinenTaulukko[rivi][sarake];
         System.out.println("" + rivi + ", " + sarake + ", " + arvo);
     }
