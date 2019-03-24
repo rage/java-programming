@@ -74,7 +74,7 @@ class SignInPage extends React.Component {
         try {
           if (typeof window !== "undefined") {
             console.log("Navigating back")
-            window.history.back()
+            window.history.go(-1)
             return
           }
           navigate("/")
