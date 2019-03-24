@@ -228,7 +228,7 @@ Käy katsomassa yllä kuvatun algoritmin visualisaatio Wikipedian sivulta <a hre
 
 <br/>
 
-Toteuta parittomien taikalukujen luominen luokan `Taikaneliotehdas` metodiin `luoTaikanelio`. Metodin tarvitsee toimia vain tilanteissa, missä neliön leveys on pariton luku.
+Toteuta luokkaan `Taikaneliotehdas` metodi `luoTaikanelio` joka palauttaa taikaneliön jonka sivun pituus annetaan parametrina. Metodin tarvitsee toimia vain tilanteissa, missä neliön leveys on pariton luku.
 
 </programming-exercise>
 
