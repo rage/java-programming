@@ -10,6 +10,11 @@ hidden: true
 TODO:
 Osaat...
 
+
+
+Tutustut graafisten käyttöliittymien ohjelmointiin. Tunnet muutamia käyttöliittymäkomponentteja, käyttöliittymäkomponenttien asettelun mekanismeja, sekä osaat käsitellä käyttöliittymän tapahtumia. Osaat tehdä käyttöliittymiä, jotka sisältävät useamman näkymän.
+
+
 <please-login></please-login>
 
 <pages-in-this-section></pages-in-this-section>
