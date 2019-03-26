@@ -135,7 +135,9 @@ class TreeViewItem extends React.Component {
       <React.Fragment>
         <Location>
           {({ navigate, location }) => {
-            let active = location.pathname.startsWith(this.props.item.path)
+            let active =
+              location.pathname === this.props.item.path ||
+              location.pathname.includes(this.props.item.path + "/")
             if (this.props.item.path === "/") {
               active = location.pathname === this.props.item.path
             }
