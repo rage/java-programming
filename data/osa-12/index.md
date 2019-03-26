@@ -7,12 +7,8 @@ hidden: true
 
 <deadline>15.4.2019</deadline>
 
-TODO:
-Osaat...
 
-
-
-Tutustut graafisten käyttöliittymien ohjelmointiin. Tunnet muutamia käyttöliittymäkomponentteja, käyttöliittymäkomponenttien asettelun mekanismeja, sekä osaat käsitellä käyttöliittymän tapahtumia. Osaat tehdä käyttöliittymiä, jotka sisältävät useamman näkymän.
+Tämän osan jälkeen osaat luoda graafisia käyttöliittymiä, lisätä graafisiin käyttöliittymiin käyttöliittymäkomponentteja, sekä reagoida käyttöliittymissä tapahtuviin tapahtumiin. Osaat myös tehdä käyttöliittymiä, jotka sisältävät useamman näkymän.
 
 
 <please-login></please-login>
