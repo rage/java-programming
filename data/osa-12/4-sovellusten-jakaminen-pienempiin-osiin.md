@@ -50,7 +50,7 @@ Kun yllä olevan luokan `main`-metodi suoritetaan, käynnistyy `JavaFxSovellus`-
 
 Sovellukselle voi antaa myös käynnistyksenaikaisia parametreja osana `launch`-metodia. Metodi `launch` saa käynnistettävän luokan lisäksi rajattoman määrän merkkijonoja, joita voi käyttää osana käynnistystä. Nämä merkkijonot on saatavilla sovelluksen käynnistyksen yhteydessä `getParameters`-metodikutsulla.
 
-Metodi `getParameters()` palauttaa <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/application/Application.Parameters.html" target="_blank" norel>Parameters</a>-tyyppisen olion, jonka metodilla `getNamed` saa käyttöönsä avain-arvo -pareja sisältävän hajautustaulun. Avain-arvo -parit annetaan launch-metodille muodossa `--avain=arvo`. Alla olevassa esimerkissä otsikko muodostetaan kahdesta parametrista: `organisaatio` ja `kurssi`.
+Metodi `getParameters()` palauttaa [Parameters](https://docs.oracle.com/javase/8/javafx/api/javafx/application/Application.Parameters.html)-tyyppisen olion, jonka metodilla `getNamed` saa käyttöönsä avain-arvo -pareja sisältävän hajautustaulun. Avain-arvo -parit annetaan launch-metodille muodossa `--avain=arvo`. Alla olevassa esimerkissä otsikko muodostetaan kahdesta parametrista: `organisaatio` ja `kurssi`.
 
 
 ```java

@@ -16,8 +16,9 @@ Tutustutaan seuraavaksi graafisten käyttöliittymien luomiseen. Graafisia käyt
 
 Siinä missä tekstikäyttöliittymissä toiminnallisuus kytketään tietyn muotoiseen syötteeseen, graafisissa käyttöliittymissä toiminnallisuus lisätään käyttöliittymäkomponentteihin. Ohjelmoija esimerkiksi lisää käyttöliittymässä olevaan nappiin metodin, joka käsittelee napin painallukseen liittyvän tapahtuman.
 
-Käytämme graafisten käyttöliittymien luomiseen Javan <a href="https://en.wikipedia.org/wiki/JavaFX" target="_blank" rel="noopener">JavaFX</a> käyttöliittymäkirjastoa. Toteuttamamme sovellukset ovat työpöytäsovelluksia.
+Käytämme graafisten käyttöliittymien luomiseen Javan [JavaFx](https://en.wikipedia.org/wiki/JavaFX) käyttöliittymäkirjastoa. Toteuttamamme sovellukset ovat työpöytäsovelluksia.
 
+<br/>
 
 <text-box variant='hint' name='Graafiset käyttöliittymät ja tarvittavat kirjastot'>
 
@@ -27,7 +28,7 @@ Graafisten käyttöliittymien luomiseen käytetään JavaFX-nimistä kirjastoa. 
 user@kone:~$ sudo apt-get install openjfx
 ```
 
-Tehtäväpohjissa käytetään JavaFx-ohjelmien testaamiseen <a href="https://github.com/TestFX/TestFX/wiki" target="_blank" norel>TestFX</a>-nimistä apukirjastoa. Kirjasto tulee tehtäväpohjien mukana.
+Tehtäväpohjissa käytetään JavaFx-ohjelmien testaamiseen [TestFX](https://github.com/TestFX/TestFX/wiki)-nimistä apukirjastoa. Kirjasto tulee tehtäväpohjien mukana.
 
 </text-box>
 
@@ -62,10 +63,10 @@ Kun ohjelman käynnistää, sovellus näyttää seuraavalta.
 
 
 
-Mitä ohjelmassa oikein tapahtuu? Luokkamme JavaFxSovellus perii JavaFx-käyttöliittymäkirjaston luokan <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/application/Application.html" target="_blank" rel="noopener">Application</a>, joka tarjoaa rungon graafisten käyttöliittymien luomiseen. Sovellus käynnistetään Application-luokalta perittävällä metodilla <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/application/Application.html#launch-java.lang.Class-java.lang.String...--" target="_blank" rel="noopener">launch</a>, jolle annetaan parametrina käynnistettävän luokan nimi muodossa <em>LuokanNimi.class</em> -- yllä luokan nimi on JavaFxSovellus, joten metodille launch annetaan parametrina `JavaFxSovellus.class`.
+Mitä ohjelmassa oikein tapahtuu? Luokkamme JavaFxSovellus perii JavaFx-käyttöliittymäkirjaston luokan [Application](https://docs.oracle.com/javase/8/javafx/api/javafx/application/Application.html), joka tarjoaa rungon graafisten käyttöliittymien luomiseen. Sovellus käynnistetään Application-luokalta perittävällä metodilla [launch](https://docs.oracle.com/javase/8/javafx/api/javafx/application/Application.html#launch-java.lang.Class-java.lang.String...--), jolle annetaan parametrina käynnistettävän luokan nimi muodossa *LuokanNimi.class* -- yllä luokan nimi on JavaFxSovellus, joten metodille launch annetaan parametrina `JavaFxSovellus.class`.
 
 
-Kun metodia launch kutsutaan, Application-luokassa sijaitseva metodi luo parametrina annetusta luokasta (tässä JavaFxSovellus) uuden olion ja kutsuu sen init-metodia. Metodi init on määritelty luokassa Application, ja sitä käytetään esimerkiksi ohjelmassa käytettävien olioiden alustamiseen. Metodin init kutsumisen jälkeen ohjelma kutsuu metodia start, joka saa parametrinaan ikkunaa kuvaavan <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/stage/Stage.html" target="_blank" rel="noopener">Stage</a>-olion. Yllä tehdyssä start-metodin toteutuksessa parametrina saadulle Stage-tyyppiselle ikkunaoliolle asetetaan otsikko metodilla setTitle, jonka jälkeen kutsutaan ikkunan näyttämiseen johtavaa metodia show. Lopulta ohjelma jää kuuntelemaan käyttöliittymässä tapahtuvia tapahtumia kuten ikkunan sulkemista, joka johtaa sovelluksen sammumiseen.
+Kun metodia launch kutsutaan, Application-luokassa sijaitseva metodi luo parametrina annetusta luokasta (tässä JavaFxSovellus) uuden olion ja kutsuu sen init-metodia. Metodi init on määritelty luokassa Application, ja sitä käytetään esimerkiksi ohjelmassa käytettävien olioiden alustamiseen. Metodin init kutsumisen jälkeen ohjelma kutsuu metodia start, joka saa parametrinaan ikkunaa kuvaavan [Stage](https://docs.oracle.com/javase/8/javafx/api/javafx/stage/Stage.html)-olion. Yllä tehdyssä start-metodin toteutuksessa parametrina saadulle Stage-tyyppiselle ikkunaoliolle asetetaan otsikko metodilla setTitle, jonka jälkeen kutsutaan ikkunan näyttämiseen johtavaa metodia show. Lopulta ohjelma jää kuuntelemaan käyttöliittymässä tapahtuvia tapahtumia kuten ikkunan sulkemista, joka johtaa sovelluksen sammumiseen.
 
 
 <programming-exercise name='Sovellukseni' tmcname=''>
@@ -77,7 +78,7 @@ Luo tehtäväpohjassa olevaan luokkaan graafinen käyttöliittymä, jonka otsikk
 
 ## Käyttöliittymän rakenne
 
-Graafiset käyttöliittymät koostuvat oleellisesti kolmesta osasta. Stage-olio toimii ohjelman ikkunana. Stage-oliolle asetetaan <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Scene.html" target="_blank" rel="noopener">Scene</a>-olio, joka kuvastaa ikkunassa olevaa näkymää. Scene-olio taas sisältää näkymään liittyvien komponenttien asettelusta vastaavan olion (esim. FlowPane), joka taas sisältää konkreettiset käyttöliittymäkomponentit.
+Graafiset käyttöliittymät koostuvat oleellisesti kolmesta osasta. Stage-olio toimii ohjelman ikkunana. Stage-oliolle asetetaan [Scene](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Scene.html)-olio, joka kuvastaa ikkunassa olevaa näkymää. Scene-olio taas sisältää näkymään liittyvien komponenttien asettelusta vastaavan olion (esim. FlowPane), joka taas sisältää konkreettiset käyttöliittymäkomponentit.
 
 Alla oleva ohjelma luo käyttöliittymän, jossa on yksittäinen nappi.
 

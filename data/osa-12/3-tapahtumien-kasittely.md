@@ -13,7 +13,7 @@ hidden: true
 
 Edellä toteuttamamme käyttöliittymät eivät reagoi käyttöliittymässä tehtyihin tapahtumiin. Reagoimattomuus ei johdu käyttöliittymäkomponenteista, vaan siitä että emme ole lisänneet käyttöliittymäkomponentteihin tapahtumien käsittelyyn tarvittavaa toiminnallisuutta.
 
-Nappien painaminen käsitellään <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/event/EventHandler.html" target="_blank" rel="noopener">EventHandler</a>-rajapinnan toteuttavalla luokalla. Tapahtuman tyyppi on tällöin <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/event/ActionEvent.html" target="_blank" rel="noopener">ActionEvent</a>. Rajapinnan toteutukseen määritellään <em>mitä tehdään</em> silloin, kun käyttäjä painaa nappia.
+Nappien painaminen käsitellään [EventHandler](https://docs.oracle.com/javase/8/javafx/api/javafx/event/EventHandler.html)-rajapinnan toteuttavalla luokalla. Tapahtuman tyyppi on tällöin [ActionEvent](https://docs.oracle.com/javase/8/javafx/api/javafx/event/ActionEvent.html). Rajapinnan toteutukseen määritellään *mitä tehdään* silloin, kun käyttäjä painaa nappia.
 
 
 ```java
@@ -39,8 +39,7 @@ nappi.setOnAction((event) -> {
 Kun edellä olevaa nappi painetaan, konsoliin tulostetaan teksti "Painettu!".
 
 
-Käyttöliittymäkomponentteihin liitetyt <strong>tapahtumankäsittelijät</strong> kuten edellä käytetty EventHandler liittyvät aina tiettyihin käyttöliittymäkomponentteihin. Aina kun käyttöliittymäkomponentille tehdään toiminto, esimerkiksi napille napin painaminen, jokaista kyseiseen käyttöliittymäkomponenttiin liitettyä tapahtumankäsittelijää kutsutaan, ja niihin liittyvä ohjelmakoodi suoritetaan.
-
+Käyttöliittymäkomponentteihin liitetyt **tapahtumankäsittelijät** kuten edellä käytetty EventHandler liittyvät aina tiettyihin käyttöliittymäkomponentteihin. Aina kun käyttöliittymäkomponentille tehdään toiminto, esimerkiksi napille napin painaminen, jokaista kyseiseen käyttöliittymäkomponenttiin liitettyä tapahtumankäsittelijää kutsutaan, ja niihin liittyvä ohjelmakoodi suoritetaan.
 
 
 Haluamme usein että tapahtumankäsittelijä muokkaa jonkun olion tilaa. Päästäksemme olioon käsiksi, tulee tapahtumankäsittelijällä olla viite käsiteltävään olioon. Pohditaan seuraavaa käyttöliittymää jossa on kaksi tekstikenttää sekä nappi.
@@ -122,7 +121,7 @@ Lisää tämän jälkeen sovellukseen toiminnallisuus, missä napin painaminen j
 </programming-exercise>
 
 
-Käytettävä tapahtumankäsittelijä riippuu käyttöliittymäkomponentista, johon tapahtumankäsittelijä kytketään. Jos haluaisimme seurata tekstikenttään tapahtuvia muutoksia merkki merkiltä, käyttäisimme rajapintaa <a href="https://docs.oracle.com/javafx/2/api/javafx/beans/value/ChangeListener.html" target="_blank" rel="noopener">ChangeListener</a>.  Alla olevassa esimerkissä vasempaan tekstikenttään on kytketty rajapinnan ChangeListener toteuttava olio, joka sekä tulostaa muutokset tekstikonsoliin että asettaa aina uuden arvon oikealla olevaan tekstikenttään.
+Käytettävä tapahtumankäsittelijä riippuu käyttöliittymäkomponentista, johon tapahtumankäsittelijä kytketään. Jos haluaisimme seurata tekstikenttään tapahtuvia muutoksia merkki merkiltä, käyttäisimme rajapintaa [ChangeListener](https://docs.oracle.com/javafx/2/api/javafx/beans/value/ChangeListener.html).  Alla olevassa esimerkissä vasempaan tekstikenttään on kytketty rajapinnan ChangeListener toteuttava olio, joka sekä tulostaa muutokset tekstikonsoliin että asettaa aina uuden arvon oikealla olevaan tekstikenttään.
 
 
 ```java

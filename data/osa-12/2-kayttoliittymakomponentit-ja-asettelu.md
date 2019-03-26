@@ -16,7 +16,7 @@ hidden: true
 Graafisia käyttöliittymiä luodessa ohjelmoijat tyypillisesti hyödyntävät valmiiden käyttöliittymäkirjastojen tarjoamia osia sovellusten laatimiseen. Ohjelmoijan ei esimerkiksi kannata toteuttaa käyttöliittymän nappia tyhjästä (eli luoda luokkaa, joka piirtää napin sekä mahdollistaa siihen liittyvien toiminnallisuuksien käsittelyn), sillä vastaava komponentti löytyy yleensä käyttöliittymäkirjastoista valmiina. Tutustutaan seuraavaksi muutamaan käyttöliittymäkomponenttiin.
 
 
-Tekstin näyttäminen tapahtuu <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/Label.html" target="_blank" rel="noopener">Label</a>-luokan avulla. Label tarjoaa käyttöliittymäkomponentin, jolle voi asettaa tekstiä ja jonka sisältämää tekstiä voi muokata metodien avulla. Näytettävä teksti asetetaan joko konstruktorissa tai erillisellä `setText`-metodilla.
+Tekstin näyttäminen tapahtuu [Label](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/Label.html)-luokan avulla. Label tarjoaa käyttöliittymäkomponentin, jolle voi asettaa tekstiä ja jonka sisältämää tekstiä voi muokata metodien avulla. Näytettävä teksti asetetaan joko konstruktorissa tai erillisellä `setText`-metodilla.
 
 
 ```java
@@ -52,7 +52,7 @@ public class JavaFxSovellus extends Application {
 <img src="../img/material/gui-tekstielementti.png" alt="Ikkuna, jossa on tekstikomponentti. Ikkunassa näkyy teksti 'Tekstielementti'."/>
 
 
-Käyttöliittymään saa painikkeita <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/Button.html" target="_blank" rel="noopener">Button</a>-luokan avulla. Napin lisääminen käyttöliittymään tapahtuu aivan kuten tekstikomponentin lisääminen.
+Käyttöliittymään saa painikkeita [Button](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/Button.html)-luokan avulla. Napin lisääminen käyttöliittymään tapahtuu aivan kuten tekstikomponentin lisääminen.
 
 
 ```java
@@ -131,10 +131,9 @@ Sovellus näyttää seuraavalta.
 <img src="../img/material/gui-nappi-ja-teksti.png" alt="Ikkuna, jossa on nappi sekä tekstikomponentti. Napissa on teksti 'Tämä on nappi' ja tekstikomponentti sisältää tekstin 'Tekstielementti'."/>
 
 
-Osoitteessa <a href="https://docs.oracle.com/javase/8/javafx/user-interface-tutorial/" target="_blank" rel="noopener">https://docs.oracle.com/javase/8/javafx/user-interface-tutorial/</a> on listattuna joukko valmiita käyttöliittymäkomponentteja. Sivu tarjoaa myös esimerkkejä käyttöliittymäkomponenttien käytöstä.
+Osoitteessa [https://docs.oracle.com/javase/8/javafx/user-interface-tutorial/](https://docs.oracle.com/javase/8/javafx/user-interface-tutorial/) on listattuna joukko valmiita käyttöliittymäkomponentteja. Sivu tarjoaa myös esimerkkejä käyttöliittymäkomponenttien käytöstä.
 
-
-Käyttöliittymäkomponentteja on huomattava määrä. Niiden opiskeluun kannattaa käyttää verkossa olevia valmiita oppaita kuten edellä mainittua osoitetta <a href="https://docs.oracle.com/javase/8/javafx/user-interface-tutorial/" target="_blank" rel="noopener">https://docs.oracle.com/javase/8/javafx/user-interface-tutorial/</a>. Käyttöliittymäkomponentteja kannattaa kokeilla aluksi erikseen siten, että kokeilee yhden komponentin lisäämistä ja tarkastelee sen toimintaa.
+Käyttöliittymäkomponentteja on huomattava määrä. Niiden opiskeluun kannattaa käyttää verkossa olevia valmiita oppaita kuten edellä mainittua verkkosivua. Käyttöliittymäkomponentteja kannattaa kokeilla aluksi erikseen siten, että kokeilee yhden komponentin lisäämistä ja tarkastelee sen toimintaa.
 
 TODO: quiznator, kerro mikä komponentti bla on ja miten sitä käytetään
 
@@ -152,7 +151,7 @@ Luo edellistä esimerkkiä seuraten tehtäväpohjassa olevaan luokkaan käyttöl
 
 <programming-exercise name='Nappi ja tekstikenttä' tmcname=''>
 
-Luo tehtäväpohjassa olevaan luokkaan graafinen käyttöliittymä, jossa on nappi ja tekstikenttä. Tekstikentän saa toteutettua luokalla <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/TextField.html" target="_blank" rel="noopener">TextField</a>. Napin tulee olla tekstikentän vasemmalla puolella tai yläpuolella.
+Luo tehtäväpohjassa olevaan luokkaan graafinen käyttöliittymä, jossa on nappi ja tekstikenttä. Tekstikentän saa toteutettua luokalla [TextField](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/TextField.html). Napin tulee olla tekstikentän vasemmalla puolella tai yläpuolella.
 
 </programming-exercise>
 
@@ -162,14 +161,14 @@ Luo tehtäväpohjassa olevaan luokkaan graafinen käyttöliittymä, jossa on nap
 
 Jokaisella käyttöliittymäkomponentilla on käyttöliittymässä sijainti. Komponentin sijainnin määrää käytössä oleva käyttöliittymäkomponenttien asetteluun käytettävä luokka.
 
-Edellisissä esimerkeissä käytimme käyttöliittymäkomponenttien asetteluun <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/FlowPane.html" target="_blank" rel="noopener">FlowPane</a>-nimistä luokkaa. FlowPanen avulla käyttöliittymään lisättävät komponentit tulevat vierekkäin. Jos ikkunan koko pienenee siten, että kaikki komponentit eivät mahdu vierekkäin, rivitetään komponentit automaattisesti. Alla olevassa kuvassa edellisen esimerkin tuottamaa sovellusta on kavennettu, jolloin komponentit ovat rivittyneet automaattisesti.
+Edellisissä esimerkeissä käytimme käyttöliittymäkomponenttien asetteluun [FlowPane](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/FlowPane.html)-nimistä luokkaa. FlowPanen avulla käyttöliittymään lisättävät komponentit tulevat vierekkäin. Jos ikkunan koko pienenee siten, että kaikki komponentit eivät mahdu vierekkäin, rivitetään komponentit automaattisesti. Alla olevassa kuvassa edellisen esimerkin tuottamaa sovellusta on kavennettu, jolloin komponentit ovat rivittyneet automaattisesti.
 
 <img src="../img/material/gui-nappi-ja-teksti-rivitetty.png" alt="Ikkuna, jossa on nappi sekä tekstikomponentti. Napissa on teksti 'Tämä on nappi' ja tekstikomponentti sisältää tekstin 'Tekstielementti'. Ikkunan leveys on niin pieni, että komponentit ovat omilla riveillään."/>
 
 
 ### BorderPane
 
-<a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/BorderPane.html" target="_blank" norel>BorderPane</a>-luokan avulla käyttöliittymäkomponentit voidaan asetella viiteen pääkohtaan käyttöliittymässä: ylälaita, oikea laita, alalaita, vasen laita ja keskikohta. Perinteiset sovellukset, kuten käyttämäsi web-selain hyödyntävät tätä asettelua. Ylälaidassa on valikko sekä osoiterivi, ja keskellä on sivun sisältö.
+[BorderPane](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/BorderPane.html)-luokan avulla käyttöliittymäkomponentit voidaan asetella viiteen pääkohtaan käyttöliittymässä: ylälaita, oikea laita, alalaita, vasen laita ja keskikohta. Perinteiset sovellukset, kuten käyttämäsi web-selain hyödyntävät tätä asettelua. Ylälaidassa on valikko sekä osoiterivi, ja keskellä on sivun sisältö.
 
 
 ```java
@@ -216,7 +215,7 @@ Luo tehtäväpohjassa olevaan luokkaan graafinen käyttöliittymä, joka käytt�
 
 ### HBox
 
-<a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/HBox.html" target="_blank" norel>HBox</a>-luokan avulla käyttöliittymäkomponentit asetellaan riviin.
+[HBox](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/HBox.html)-luokan avulla käyttöliittymäkomponentit asetellaan riviin.
 
 
 ```java
@@ -261,7 +260,8 @@ public void start(Stage ikkuna) {
 <img src="../img/material/gui-hbox-spacing.png" alt="Käyttöliittymäkomponentit on asetettu riviin HBox-asettelun avulla. Komponenttien välillä on 10 pikseliä eroa."/>
 
 
-Luokka <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/VBox.html" target="_blank">VBox</a> toimii vastaavasti, mutta asettelee käyttöliittymäkomponentit allekkain.
+
+Luokka [VBox](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/VBox.html) toimii vastaavasti, mutta asettelee käyttöliittymäkomponentit allekkain.
 
 
 <img src="../img/material/gui-vbox-spacing.png" alt="Käyttöliittymäkomponentit on asetettu allekkain VBox-asettelun avulla. Komponenttien välillä on 10 pikseliä eroa."/>
@@ -269,8 +269,7 @@ Luokka <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/
 
 ### GridPane
 
-
-<a href="https://docs.oracle.com/javafx/2/api/javafx/scene/layout/GridPane.html" target="_blank" rel="noopener">GridPane</a>-luokan avulla käyttöliittymäkomponentit asetellaan ruudukkoon. Alla olevassa esimerkissä luodaan 3x3-kokoinen ruudukko, jossa jokaisessa ruudussa on nappi.
+[GridPane](https://docs.oracle.com/javafx/2/api/javafx/scene/layout/GridPane.html)-luokan avulla käyttöliittymäkomponentit asetellaan ruudukkoon. Alla olevassa esimerkissä luodaan 3x3-kokoinen ruudukko, jossa jokaisessa ruudussa on nappi.
 
 
 ```java
