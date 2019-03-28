@@ -7,70 +7,42 @@ hidden: true
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
-- Kertaat automaattisten testien kirjoittamista.
+- Kertaat HashMapin toimintaa
+- Harjoittelet testien kirjoittamista
 
 </text-box>
 
-TODO: tänne hashmapia käyttävä tehtävä
+
+Tässä osassa pääset jälleen suunnittelemaan oman ohjelmointitehtävän. Mikäli CrowdSorcererin käyttö on päässyt unohtumaan, käy kertaamassa sitä kurssin <a href="https://ohjelmointi-19.mooc.fi/osa-7/4-ohjelmointitehtavien-luominen">seitsemännestä osasta</a>.
+
+<br/>
 
 
-Kurssin aikana olet päässyt harjoittelemaan testien kirjoittamista. Nyt on aika viimeiselle vaiheelle: saat luoda itse koko tehtävän alusta loppuun, lähdekoodia ja testejä myöten.
+## Suunnittele oma tehtävä: Hajautustaulut
 
+Suunnittele ohjelmointitehtävä, jonka avulla ohjelmoija voi harjoitella hajautustaulujen käsittelyä, kuten esimerkiksi tiedon hakemista siitä.
 
+Toteuta tehtävänanto siten, että tehtävän ratkaisijan tulee kirjoittaa yksi tai useampi luokkametodi.
 
-Mikäli se, miten tehtäviä luodaan, on unohtunut, voit käydä palauttamassa ohjeet mieleesi kurssimateriaalin <a href="/part2/">toisessa osassa</a>. Muistathan erityisesti erotella lähdekoodista vain malliratkaisuun kuuluvat rivit, jotta ne eivät näy tehtävää tekevälle.
+Kirjoita ohjelmointitehtävälle tehtävänanto, malliratkaisu ja automaattiset testit (vähintään 3). Huomaa, että metodisi tulee sijaitsemaan luokassa `Submission`, joten luokkametodien kutsu tapahtuu muodossa `Submission.metodi()`. Merkitse malliratkaisuun tulevilta ohjelmoijilta piilotettavat rivit lähdekoodinäkymän vasemmalta laidalta rukseja painamalla.
 
+Kun kirjoitat tehtävänantoa, pyri mahdollisimman tarkkoihin ohjeisiin. Kerro ohjelmoijalle mm.
+1. Minkä niminen tai minkä nimisiä metodeja tulee luoda.
+2. Mitä metodin tulee palauttaa (Pyydä toteuttamaan vain metodeja, jotka palauttavat arvon)
+3. Mitä parametreja metodit saavat.
 
-<% partial 'partials/general_callout', locals: { name: 'Suunnittele oma tehtävä: Kurssin kertausta'>
-
-
-Tehtävänäsi on suunnitella ja luoda tehtävä. Tehtävässä opiskelijaa tulee pyytää luomaan yksi tai useampi luokkametodi, joka saa parametrinaan jotain, ja joka lopulta palauttaa jotain. Metodin tulee siis olla muotoa `public static <em>palautus</em> <em>metodinNimi</em>(<em>parametrit</em>)`. Ohjelman käynnistämiseen kutsuttava metodi voi kutsua myös muita metodeja.
-
-
-
-Kirjoita ohjelmaan liittyvälle metodillesi (tai metodeillesi) kattavat testit. Huomaa, että metodisi tulee sijaitsemaan luokassa `Submission`, joten luokkametodien kutsu tapahtuu muodossa `Submission.metodi()`.
-
-
-
-Alla on annettu kaksi esimerkkiä ohjelman käynnistävästä metodista sekä sen testistä.
+Voit lisäksi antaa esimerkkikoodia tai vaikkapa esimerkkisyötteitä, joiden perusteella ohjelmaa voi testata.
 
 
 
-Ensimmäisessä esimerkissä metodi saa parametrinaan Scanner-olion, lukee sen rivit ja palauttaa rivit sisältävän merkkijonon. Ohjelman käynnistävä metodi luokassa Submission.
-
-
-```java
-public static String lueJaTulosta(Scanner syote) {
-    String tulostus = "";
-    while (syote.hasNextLine()) {
-        tulostus = tulostus = syote.nextLine();
-    }
-    return tulostus;
-}
-```
-
-
-Metodin testi luokkaan SubmissionTest.
+Alla on esimerkki metodista, joka tehtävän tekijän kuuluu luoda, sekä sen testistä. Siinä metodi saa parametrinaan HashMapin, jonka avaimet ovat merkkijonoja ja arvot kokonaislukuja, sekä kokonaisluvun. Metodi palauttaa listan niistä avaimista, joita vastaavat arvot ovat suurempia kuin käyttäjän metodille antama kokonaisluku.
 
 
 ```java
-@Test
-public void testaaSyote() {
-    Scanner syote = new Scanner("hei\nmaailma\n");
-    String tulostus = Submission.lueJaTulosta(syote);
-    assertEquals("heimaailma", tulostus);
-}
-```
-
-
-Toisessa esimerkissä metodi saa parametrinaan merkkijonoja sisältävän listan sekä merkkijonon, ja metodi palauttaa listan joka sisältää vain ne merkkijonot joissa esiintyy käyttäjän metodille antama merkkijono.
-
-
-```java
-public static ArrayList<String> rajaa(ArrayList<String> sanat, String pitaaSisaltaa) {
+public static ArrayList<String> rajaa(HashMap<String, Integer> luvut, int vertailtavaLuku) {
     ArrayList<String> uusi = new ArrayList<>();
-    for (String sana: sanat) {
-        if (sana.contains(pitaaSisaltaa)) {
+    for (String sana: luvut.keySet()) {
+        if (luvut.get(sana) > vertailtavaLuku) {
             uusi.add(sana);
         }
     }
@@ -85,23 +57,21 @@ Metodin testi luokkaan SubmissionTest.
 
 ```java
 @Test
-public void testaaSyote() {
-    ArrayList<String> sanat = new ArrayList<>();
-    sanat.add("eka");
-    sanat.add("toka");
-    sanat.add("kolmas");
+public void palautusOikeinKunHajautustaulussaKolmeArvoa() {
+    HashMap<String, Integer> luvut = new HashMap<>();
+    luvut.put("sormet", 10);
+    luvut.put("kädet", 2);
+    luvut.put("Helsingin väkiluku", 643272);
 
-    ArrayList<String> sanat = Submission.rajaa(sanat, "ok");
+    ArrayList<String> sanat = Submission.rajaa(luvut, 9);
 
-    assertEquals(1, sanat.size());
-    assertEquals("toka", sanat.get(0));
+    assertEquals(2, luvut.size());
+    assertEquals("sormet", sanat.get(0));
 }
 ```
 
+Tehtävien luomistehtävät vastaavat kurssin pisteytyksessä ohjelmointitehtävää.
 
-Tee tehtävästäsi edellisiä esimerkkejä laajempi -- voit erityisesti antaa lisää parametreja ohjelman käynnistämiseen käytettävälle metodille. Myös ohjelman käynnistävä metodi voi palauttaa jotain muuta kuten esimerkiksi listan tai hajautustaulun (muistathan tällöin tarvittavat importit). Tehtävien luomistehtävät käsitellään pisteytyksessä bonuksena.
+Kirjoita tehtäväsi alla olevaan ikkunaan.
 
-
-<% end %>
-
-<div class='crowdsorcerer-widget' data-assignment='20'></div>
+<crowdsorcerer id='29'></crowdsorcerer>
