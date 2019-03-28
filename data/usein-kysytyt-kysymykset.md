@@ -155,3 +155,7 @@ Jos sinulla on jo Helsingin yliopiston käyttäjätunnukset, voit osallistua kok
 ### Kokeen piti olla ilmainen, mutta koeilmoittautumisessa puhutaan maksuehdoista
 
 Koe on täysin ilmainen. Koeilmoittautumisessa puhutaan maksuehdoista, koska monet muut Avoimen yliopiston kurssit ovat maksullisia. Tämä kurssi on kuitenkin ilmainen, joten ehdoista huolimatta sinun ei tarvitse maksaa kurssista tai kokeesta mitään.
+
+### Milloin näyttökoe järjestetään?
+
+Lue tietoja näyttökokeista täältä: [Mahdollisuus opinto-oikeuteen](/opinto-oikeus#heading-nayttokokeet)

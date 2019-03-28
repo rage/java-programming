@@ -22,3 +22,23 @@ Helsingin yliopiston tietojenkäsittelytieteen kandiohjelmaan on mahdollista hak
 [Helsingin yliopiston avoimen yliopiston väylä](https://www.helsinki.fi/fi/avoin-yliopisto/opiskelu/tule-opiskelemaan/tavoitteena-tutkinto)
 
 [Digital Education for All -hanke](https://www.helsinki.fi/fi/projektit/digital-education-for-all/)
+
+### Näyttökokeet
+
+Tähän osioon tulee lisää tietoa lähempänä näyttökoeaikoja.
+
+Näyttökoetta varten järjestetään useita koetilaisuuksia. Opinto-oikeutta hakeakseen pitää ilmoittautua koetilaisuuteen. Ilmoittautumisohjeet tulevat sähköpostitse kutsussa kokeeseen.
+
+Kaikki koetilaisuudet järjestetään Helsingin yliopiston Kumpulan kampuksella. Koesali ja reittiohjeet kampukselle kerrotaan näyttökoekutsussa.
+
+#### Koeajat
+
+Näyttökoetilaisuuksia järjestetään toukokuun alussa välillä 2.5.-15.5. arkipäivisin.
+
+Koeaikoja tulee olemaan aamusta iltaan. Koe kestää noin kaksi ja puoli tuntia. Tarkemmat kellonajat tulevat tänne myöhemmin.
+
+#### Kutsu
+
+Kokeeseen saa kutsun sähköpostitse siihen sähköpostiosoitteeseen, jolla rekisteröityi kurssimateriaaleihin. Kutsu lähetetään kaikille, jotka ovat saaneet vähintään 90% jokaisen osan ohjelmointitehtävien pisteistä ja jotka ovat hakeneet tämän kevään yhteishaussa Helsingin yliopiston tietojenkäsittelytieteen osastolle.
+
+Kutsussa on ohjeet, miten voi ilmoittautua koetilaisuuteen. Lisätietoja kutsusta tulee myöhemmin tänne.

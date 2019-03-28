@@ -101,20 +101,4 @@ Molemmissa kursseissa kokeesta tulee saada vähintään puolet kokeen pisteistä
 
 ### Näyttökokeet
 
-Tähän osioon tulee lisää tietoa lähempänä näyttökoeaikoja.
-
-Näyttökoetta varten järjestetään useita koetilaisuuksia. Opinto-oikeutta hakeakseen pitää ilmoittautua koetilaisuuteen. Ilmoittautumisohjeet tulevat sähköpostitse kutsussa kokeeseen.
-
-Kaikki koetilaisuudet järjestetään Helsingin yliopiston Kumpulan kampuksella. Koesali ja reittiohjeet kampukselle kerrotaan näyttökoekutsussa.
-
-#### Koeajat
-
-Näyttökoetilaisuuksia järjestetään toukokuun alussa välillä 2.5.-15.5. arkipäivisin.
-
-Koeaikoja tulee olemaan aamusta iltaan. Koe kestää noin kaksi ja puoli tuntia. Tarkemmat kellonajat tulevat tänne myöhemmin.
-
-#### Kutsu
-
-Kokeeseen saa kutsun sähköpostitse siihen sähköpostiosoitteeseen, jolla rekisteröityi kurssimateriaaleihin. Kutsu lähetetään kaikille, jotka ovat saaneet vähintään 90% jokaisen osan ohjelmointitehtävien pisteistä ja jotka ovat hakeneet tämän kevään yhteishaussa Helsingin yliopiston tietojenkäsittelytieteen osastolle.
-
-Kutsussa on ohjeet, miten voi ilmoittautua koetilaisuuteen. Lisätietoja kutsusta tulee myöhemmin tänne.
+Lue tietoja näyttökokeista täältä: [Mahdollisuus opinto-oikeuteen](/opinto-oikeus#heading-nayttokokeet)
