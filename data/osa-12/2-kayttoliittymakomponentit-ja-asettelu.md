@@ -1,7 +1,7 @@
 ---
 path: '/osa-12/2-kayttoliittymakomponentit-ja-niiden-asettelu'
 title: 'Käyttöliittymäkomponentit ja niiden asettelu'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
@@ -135,21 +135,21 @@ Osoitteessa [https://docs.oracle.com/javase/8/javafx/user-interface-tutorial/](h
 
 Käyttöliittymäkomponentteja on huomattava määrä. Niiden opiskeluun kannattaa käyttää verkossa olevia valmiita oppaita kuten edellä mainittua verkkosivua. Käyttöliittymäkomponentteja kannattaa kokeilla aluksi erikseen siten, että kokeilee yhden komponentin lisäämistä ja tarkastelee sen toimintaa.
 
-TODO: quiznator, kerro mikä komponentti bla on ja miten sitä käytetään
+<quiznator id='5c9dc72299236814c5bc20b4'></quiznator>
 
 Kun yksittäiset komponentit tulevat tutuksi, on niiden käyttäminen suoraviivaisempaa. Lähes kaikille komponenteille yhteistä on se, miten ne lisätään sovellukseen. Kun osaat lisätä yhden komponentin käyttöliittymään, osaat lisätä käytännössä lähes kaikki komponentit käyttöliittymään.
 
 Ainoa merkittävä ero käyttöliittymäkomponenttien lisäämisessä liittyy siihen, että mihin kohtaan käyttöliittymää komponentin haluaa lisätä. Tarkastellaan käyttöliittymäkomponenttien asettelua kohta.
 
 
-<programming-exercise name='Nappi ja tekstielementti' tmcname=''>
+<programming-exercise name='Nappi ja tekstielementti' tmcname='osa12-Osa12_02.NappiJaTekstielementti'>
 
 Luo edellistä esimerkkiä seuraten tehtäväpohjassa olevaan luokkaan käyttöliittymä, jossa on nappi (Button) ja tekstikomponentti (Label). Napin tulee olla tekstikomponentin vasemmalla puolella tai yläpuolella.
 
 </programming-exercise>
 
 
-<programming-exercise name='Nappi ja tekstikenttä' tmcname=''>
+<programming-exercise name='Nappi ja tekstikenttä' tmcname='osa12-Osa12_03.NappiJaTekstikentta'>
 
 Luo tehtäväpohjassa olevaan luokkaan graafinen käyttöliittymä, jossa on nappi ja tekstikenttä. Tekstikentän saa toteutettua luokalla [TextField](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/TextField.html). Napin tulee olla tekstikentän vasemmalla puolella tai yläpuolella.
 
@@ -206,7 +206,7 @@ public class JavaFxSovellus extends Application {
 <img src="../img/material/gui-borderpane.png" alt="BorderPane-asettelua käyttävä käyttöliittymä, jossa jokaiseen pääkohtaan on asetettu tekstikomponentti."/>
 
 
-<programming-exercise name='BorderPane' tmcname=''>
+<programming-exercise name='BorderPane' tmcname='osa12-Osa12_04.BorderPane'>
 
 Luo tehtäväpohjassa olevaan luokkaan graafinen käyttöliittymä, joka käyttää BorderPane-luokkaa käyttöliittymäkomponenttien asetteluun. Lisää ylälaitaan tekstikomponentti, jossa on teksti "NORTH", oikeaan laitaan tekstikomponentti, jossa on teksti "EAST", ja alalaitaan tekstikomponentti, jossa on teksti "SOUTH".
 
@@ -349,7 +349,7 @@ public class JavaFxSovellus extends Application {
 <img src="../img/material/gui-useampi.png" alt="Samassa käyttöliittymässä käytetty useampaa asettelijaa. BorderPane luo rungon, ylälaidassa on HBox ja vasemmassa laidassa VBox. Keskellä olevaan tekstilaatikkoon on kirjoitettu tekstiä."/>
 
 
-<programming-exercise name='Tekstitilastointia' tmcname=''>
+<programming-exercise name='Tekstitilastointia' tmcname='osa12-Osa12_05.Tekstitilastointia'>
 
 Luo tehtäväpohjassa olevaan luokkaan sovellus, joka käyttää BorderPane-luokkaa asetteluun. Keskellä tulee olla TextArea-luokasta luotu tekstikenttä, ja alalaidassa kolme tekstikomponenttia. Aseta alalaidan tekstikomponentit HBox-olion sisään. Ensimmäisessä tekstikomponentissa tulee olla teksti "Kirjaimia: 0". Toisessa tekstikomponentissa tulee olla teksti "Sanoja: 0". Kolmannessa tekstikomponentissa tulee olla teksti "Pisin sana on:".
 

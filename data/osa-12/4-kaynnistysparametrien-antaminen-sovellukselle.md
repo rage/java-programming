@@ -1,7 +1,7 @@
 ---
-path: '/osa-12/3-kaynnistysparametreja-sovellukselle'
+path: '/osa-12/4-kaynnistysparametreja-sovellukselle'
 title: 'Käynnistysparametreja sovellukselle'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
@@ -95,7 +95,7 @@ public class Main {
 
 Parametreja käyttämällä ohjelmalle voisi kertoa esimerkiksi henkilöiden tallentamiseen ja lataamiseen käytetyn tiedoston nimen tai vaikkapa verkko-osoitteen.
 
-<programming-exercise name='Käyttäjän otsikko' tmcname=''>
+<programming-exercise name='Käyttäjän otsikko' tmcname='osa12-Osa12_08.KayttajanOtsikko'>
 
 Kirjoita ohjelma, joka kysyy tekstikäyttöliittymässä käyttäjältä sovelluksen otsikkoa. Kun käyttäjä syöttää otsikon tekstikäyttöliittymään ja painaa enter, käyttäjälle näytetään graafinen käyttöliittymä, jonka otsikkona on käyttäjän syöttämä otsikko.
 

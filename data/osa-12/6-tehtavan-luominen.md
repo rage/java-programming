@@ -1,7 +1,7 @@
 ---
-path: '/osa-12/3-tehtavan-luominen'
+path: '/osa-12/6-tehtavan-luominen'
 title: 'Tehtävän luominen'
-hidden: true
+hidden: false
 ---
 
 
@@ -13,7 +13,7 @@ hidden: true
 </text-box>
 
 
-Tässä osassa pääset jälleen suunnittelemaan oman ohjelmointitehtävän. Mikäli CrowdSorcererin käyttö on päässyt unohtumaan, käy kertaamassa sitä kurssin <a href="https://ohjelmointi-19.mooc.fi/osa-7/4-ohjelmointitehtavien-luominen">seitsemännestä osasta</a>.
+Tässä osassa pääset jälleen suunnittelemaan oman ohjelmointitehtävän. Mikäli CrowdSorcererin käyttö on päässyt unohtumaan, käy kertaamassa sitä kurssin [seitsemännestä osasta](https://ohjelmointi-19.mooc.fi/osa-7/4-ohjelmointitehtavien-luominen).
 
 <br/>
 
@@ -34,8 +34,7 @@ Kun kirjoitat tehtävänantoa, pyri mahdollisimman tarkkoihin ohjeisiin. Kerro o
 Voit lisäksi antaa esimerkkikoodia tai vaikkapa esimerkkisyötteitä, joiden perusteella ohjelmaa voi testata.
 
 
-
-Alla on esimerkki metodista, joka tehtävän tekijän kuuluu luoda, sekä sen testistä. Siinä metodi saa parametrinaan HashMapin, jonka avaimet ovat merkkijonoja ja arvot kokonaislukuja, sekä kokonaisluvun. Metodi palauttaa listan niistä avaimista, joita vastaavat arvot ovat suurempia kuin käyttäjän metodille antama kokonaisluku.
+Alla on esimerkki metodista, joka tehtävän tekijän kuuluu luoda, sekä sen testistä. Esimerkissä metodi saa parametrinaan HashMapin, jonka avaimet ovat merkkijonoja ja arvot kokonaislukuja, sekä kokonaisluvun. Metodi palauttaa listan niistä avaimista, joita vastaavat arvot ovat suurempia kuin käyttäjän metodille antama kokonaisluku.
 
 
 ```java

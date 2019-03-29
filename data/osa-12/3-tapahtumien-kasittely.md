@@ -1,7 +1,7 @@
 ---
 path: '/osa-12/3-tapahtumien-kasittely'
 title: 'Tapahtumien käsittely'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
@@ -103,7 +103,7 @@ Nyt nappia painettaessa vasemman tekstikentän sisältö kopioituu oikealla olev
 Huom! Toteutettava metodi pystyy käyttämään metodin edellä määriteltyjä olioita, mikäli käytettävien olioiden arvoa ei aseteta ohjelmassa uudestaan yhtäsuuruusmerkillä (eli viitteet eivät muutu).
 
 
-<programming-exercise name='Ilmoitin' tmcname=''>
+<programming-exercise name='Ilmoitin' tmcname='osa12-Osa12_06.Ilmoitin'>
 
 
 Toteuta tehtäväpohjassa olevaan luokkaan käyttöliittymä, jossa on kolme käyttöliittymäkomponenttia. Ylin komponentti on tekstikenttä (TextField), keskimmäinen komponentti nappi (Button), ja alin komponentti tekstikomponentti (Label). Asettele komponentit VBox-luokan avulla. Käyttöliittymän tulee näyttää (esimerkiksi) seuraavalta.
@@ -166,7 +166,7 @@ vasenTeksti.textProperty().addListener((muutos, vanhaArvo, uusiArvo) -> {
 ```
 
 
-<programming-exercise name='Tekstitilastointia, osa II' tmcname=''>
+<programming-exercise name='Tekstitilastointia, osa II' tmcname='osa12-Osa12_07.TekstitilastointiaOsa2'>
 
 
 Kopioi tehtävässä Tekstitilastointia tekemäsi toteutus tehtäväpohjassa olevaan luokkaan ja liitä mukaan yllä olevassa esimerkissä oleva toiminnallisuus tilastojen laskemiseen. Lopputuloksena ohjelman pitäisi laskea kirjoitetusta tekstistä tilastoja, jotka päivittyvät automaattisesti sovellukseen.

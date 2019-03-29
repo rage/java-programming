@@ -1,7 +1,7 @@
 ---
 path: '/osa-12/5-useampi-nakyma'
 title: 'Useampi näkymä'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
@@ -60,7 +60,7 @@ public class EdesTakaisinSovellus extends Application {
 Edellä olevan sovelluksen käynnistäminen luo käyttöliittymän, jossa siirtyminen näkymästä toiseen onnistuu nappia painamalla.
 
 
-<programming-exercise name='Useampi Näkymä' tmcname=''>
+<programming-exercise name='Useampi Näkymä' tmcname='osa12-Osa12_09.UseampiNakyma'>
 
 Luo tehtäväpohjassa olevaan luokkaan UseampiNakyma sovellus, joka sisältää kolme erillistä näkymää. Näkymät ovat seuraavat:
 
@@ -167,7 +167,7 @@ public class SalattuSovellus extends Application {
 Esimerkissä on hyödynnetty sekä GridPanen että StackPanen asettelussa niiden tarjoamia setPrefSize ja setAlignment-metodeja. Metodilla setPrefSize annetaan asettelulle toivottu koko, ja metodilla setAlignment kerrotaan miten asettelun sisältö tulee ryhmittää. Parametrilla Pos.CENTER toivotaan asettelua näkymän keskelle.
 
 
-<programming-exercise name='Tervehtijä' tmcname=''>
+<programming-exercise name='Tervehtijä' tmcname='osa12-Osa12_10.Tervehtija'>
 
 Luo tehtäväpohjassa olevaan luokkaan TervehtijaSovellus sovellus, jossa on kaksi näkymää. Ensimmäisessä näkymässä on tekstikenttä, jolla kysytään käyttäjän nimeä. Toisessa näkymässä käyttäjälle näytetään tervehdysteksti. Tervehdystekstin tulee olla muotoa "Tervetuloa nimi!", missä nimen paikalle tulee käyttäjän kirjoittama nimi.
 
@@ -266,7 +266,7 @@ Sovellus toimii seuraavalla tavalla:
 <img src="../img/material/gui-nakyman-vaihto.gif" alt="Sovellus, joka sisältää valikon. Valikossa olevia nappeja painamalla voidaan vaihtaa sovelluksessa näkyvää sisältöä."/>
 
 
-<programming-exercise name='Vitsi' tmcname=''>
+<programming-exercise name='Vitsi' tmcname='osa12-Osa12_11.Vitsi'>
 
 Luo tehtäväpohjassa olevaan luokkaan VitsiSovellus sovellus, jota käytetään yhden vitsin selittämiseen. Sovellus tarjoaa kolme nappia sisältävän valikon sekä näitä nappeja painamalla näytettävät sisällöt. Ensimmäinen nappi (teksti "Vitsi") näyttää vitsiin liittyvän kysymyksen, toinen nappi (teksti "Vastaus") näyttää vitsin kysymykseen liittyvän vastauksen, ja kolmas nappi (teksti "Selitys") näyttää vitsin selityksen.
 
@@ -669,7 +669,7 @@ public class HarjoitteluSovellus extends Application {
 }
 ```
 
-<programming-exercise name='Sanojen harjoittelua' tmcname=''>
+<programming-exercise name='Sanojen harjoittelua' tmcname='osa12-Osa12_12.SanojenHarjoittelu'>
 
 Tässä tehtävässä laadit edellä olevaa materiaalia noudattaen sanojen harjoitteluun tarkoitetun sovelluksen. Sovelluksen tulee käynnistyä kun luokan SanaharjoitteluSovellus main-metodi suoritetaan.
 
@@ -686,7 +686,7 @@ Sovelluksessa ei ole automaattisia testejä -- palauta tehtävä kun sovellus to
 </programming-exercise>
 
 
-<programming-exercise name='Ristinolla (3 osaa)' tmcname=''>
+<programming-exercise name='Ristinolla (3 osaa)' tmcname='osa12-Osa12_13.Ristinolla'>
 
 Tässä tehtävässä toteutat 3x3-kokoisen ristinollapelin. Tehtävä on jaettu kolmeen osaan: ensin luodaan käyttöliittymän osat, sitten nappien toiminnallisuus, ja lopuksi mahdollisuus pelin loppuun pelaamiseen.
 
