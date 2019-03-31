@@ -10,6 +10,8 @@ hidden: true
 TODO:
 Osaat ...
 
+Tunnet menetelmiä tiedon visualisointiin ja osaat käyttää Javan valmiiksi tarjoamia kaavioita (viivakaavio, pylväskaavio). Osaat käyttää Javan tarjoamia välineitä yksinkertaisten piirrosten luomiseen. Osaat näyttää kuvia sekä soittaa äänitiedostoja. Luot suuremman ohjelman esimerkkiä noudattaen.
+
 <please-login></please-login>
 
 <pages-in-this-section></pages-in-this-section>
