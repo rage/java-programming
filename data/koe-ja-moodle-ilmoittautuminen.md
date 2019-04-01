@@ -9,7 +9,7 @@ Kurssilla käytetään Moodlea sekä keskustelualustana että koealustana. Seura
 
 Kurssin kokeeseen osallistuaksesi sinun täytyy tehdä muodollinen kokeeseen ilmoittautuminen. Kokeeseen ilmoittautuminen on tässä alempana olevan "Moodle-ilmoittautuminen" -ohjeen kohta 1. Älä seuraa muita ilmoittautumisohjeita kokeeseen.
 
-Ilmoittaudu kokeeseen vähintään kaksi päivää ennen koepäivää, johon olet aikeissa osallistua. Esimerkiksi jos haluat osallistua 5.3. järjestettävään kokeeseen, sinun täytyy tehdä tämä ilmoittautuminen viimeistään 3.3. Vastaavasti, jos haluat osallistua 14.4. järjestettävään kokeeseen, sinun täytyy tehdä tämä ilmoittautuminen viimeistään 12.4.
+Ilmoittaudu kokeeseen vähintään kaksi päivää ennen koepäivää, johon olet aikeissa osallistua. Esimerkiksi jos haluat osallistua 5.3. järjestettävään kokeeseen, sinun täytyy tehdä tämä ilmoittautuminen viimeistään 3.3. Vastaavasti, jos haluat osallistua 13.4. järjestettävään kokeeseen, sinun täytyy tehdä tämä ilmoittautuminen viimeistään 11.4.
 
 Myöhässä ilmoittautuminen ei pudota sinua kurssilta, mutta voit joutua osallistumaan vasta seuraavaan kokeeseen jos sinulla ei ole vielä Helsingin yliopiston käyttäjätunnuksia. Esimerkiksi mikäli ilmoittaudut vasta 4.3., et välttämättä voi osallistua 5.3. järjestettävään kokeeseen. Tällöin 13.4 järjestettävä koe on ensimmäinen koe, johon voit osallistua.
 
