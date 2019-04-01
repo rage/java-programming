@@ -13,15 +13,18 @@ Molempia kokeita järjestetään useana eri päivänä. Voit osallistua kokeisii
 
 Osien 1-7 kokeita järjestetään seuraavasti:
 
-- 5.3.
 - 13.4.
 - 7.5.
+- 8.6.
+- 29.6.
 
  Osien 8-14 kokeita järjestetään seuraavasti:
 
 - 7.5.
 - 8.6.
 - 29.6.
+
+Koepäiviä tulee myöhemmin lisää. Niitä lisätään tänne sitä mukaa kun ne vahvistuvat. Viimeinen tenttipäivä tulee olemaan 4.1.2020 sekä osille 1-7 että osille 8-14.
 
 Kokeet tehdään Moodle-verkkoympäristössä. Kokeen voi aloittaa koepäivänä mihin kellonaikaan haluaa.
 
