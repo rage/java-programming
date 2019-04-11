@@ -49,6 +49,7 @@ class CourseOptionsEditor extends React.Component {
       {
         first_name: data.user_field?.first_name,
         last_name: data.user_field?.last_name,
+        email: data.email,
         student_number: data.user_field?.organizational_id,
         applies_for_study_right:
           data.extra_fields?.applies_for_study_right === "t",
@@ -98,6 +99,7 @@ class CourseOptionsEditor extends React.Component {
     research: undefined,
     first_name: undefined,
     last_name: undefined,
+    email: undefined,
     student_number: undefined,
     loading: true,
     focused: null,
@@ -141,6 +143,15 @@ class CourseOptionsEditor extends React.Component {
   render() {
     return (
       <FormContainer>
+        <Loading loading={this.state.loading} heightHint="490px">
+          <InfoBox>
+            <Card>
+              <CardContent>
+                Olet kirjautunut tunnuksella {this.state.email} sisään
+              </CardContent>
+            </Card>
+          </InfoBox>
+        </Loading>
         <h1>Opiskelijan tiedot</h1>
         <Form>
           <InfoBox>
