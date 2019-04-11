@@ -13,33 +13,39 @@ hidden: true
 
 </text-box>
 
-<a href="https://en.wikipedia.org/wiki/Asteroids_(video_game)" target="_blank">Asteroids</a> on <a href="https://en.wikipedia.org/wiki/Atari,_Inc." target="_blank">Atari</a>n kehittämä ja vuonna 1979 julkaisema tietokonepeliklassikko. Pelissä pelaaja ohjaa kolmionmuotoista avaruusalusta, ja pelin tavoitteena on tuhota asteroideja niitä ampuen.
-
-<br/>
+[Asteroids](https://en.wikipedia.org/wiki/Asteroids_(video_game)) on [Atari](https://en.wikipedia.org/wiki/Atari,_Inc.)n kehittämä ja vuonna 1979 julkaisema tietokonepeliklassikko. Pelissä pelaaja ohjaa kolmionmuotoista avaruusalusta, ja pelin tavoitteena on tuhota asteroideja niitä ampuen.
 
 Seuraavaksi tehdään laajempi esimerkki, missä toteutetaan osa Asteroids-pelistä. Peli on myös kurssin tehtävänä -- tee peli esimerkkiä seuraten annettuun tehtäväpohjaan (esimerkin lopussa).
-
 
 Peli koostetaan useammassa osassa, jotka ovat seuraavat:
 
 - Peliruudun luominen
-- Aluksen luominen
-- Aluksen kääntäminen
-- Aluksen liikuttaminen
-- Asteroidin luominen
-- Aluksen ja asteroidin törmääminen
-- Useampi asteroidi
-- Ruudussa pysyminen
-- Ammukset
-- Pisteiden lisääminen
-- Lisää asteroideja
 
+- Aluksen luominen
+
+- Aluksen kääntäminen
+
+- Aluksen liikuttaminen
+
+- Asteroidin luominen
+
+- Aluksen ja asteroidin törmääminen
+
+- Useampi asteroidi
+
+- Ruudussa pysyminen
+
+- Ammukset
+
+- Pisteiden lisääminen
+
+- Asteroidien jatkuva lisääminen
+
+Aloitetaan ohjelman luominen peliruudun luomisesta.
 
 ## Peliruudun luominen
 
-Rakennetaan ohjelma niin, että ohjelman ruutu voi sisältää vapaavalintaisen määrän elementtejä, joiden sijaintiin käytettävä asettelu ei ota kantaa. Tähän sopii hyvin luokka <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/Pane.html" target="_blank">Pane</a>. Luokka Pane sisältää edellisestä <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/collections/ObservableList.html" target="_blank">ObservableList</a>-tyyppisen listan lapsielementtejä. Listaan pääsee käsiksi Pane-luokan metodin `getChildren`-kautta.
-
-<br/>
+Rakennetaan ohjelma niin, että ohjelman ruutu voi sisältää vapaavalintaisen määrän elementtejä, joiden sijaintiin käytettävä asettelu ei ota kantaa. Tähän sopii hyvin luokka [Pane](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/Pane.html). Luokka Pane sisältää edellisestä [ObservableList](https://docs.oracle.com/javase/8/javafx/api/javafx/collections/ObservableList.html)-tyyppisen listan lapsielementtejä. Listaan pääsee käsiksi Pane-luokan metodin `getChildren`-kautta.
 
 Alla olevassa esimerkissä on ohjelma, joka luo 300 pikseliä leveän ja 200 pikseliä korkean ruudun. Ruudussa on kohdassa 30, 50 ympyrä, jonka säde on 10 pikseliä. Tietokoneohjelmissa koordinaatiston origo on tyypillisesti ikkunan vasemmassa yläkulmassa. Lisäksi y-koordinaatin arvo kasvaa alaspäin mennessä.
 
@@ -104,7 +110,7 @@ public class AsteroidsSovellus extends Application {
 ## Aluksen luominen
 
 
-Luodaan ohjelmaan seuraavaksi alus. Asteroidsissa alus on kolmio. Kolmion esittäminen onnistuu monikulmiota kuvaavan <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/shape/Polygon.html" target="_blank">Polygon</a>-luokan avulla. Monikulmion kulmat asetetaan Polygon-oliolle joko konstruktorin parametrina tai Polygon-luokan sisältämään listaan. Listaan pääsee käsiksi metodilla `getPoints`.
+Luodaan ohjelmaan seuraavaksi alus. Asteroidsissa alus on kolmio. Kolmion esittäminen onnistuu monikulmiota kuvaavan [Polygon](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/shape/Polygon.html)-luokan avulla. Monikulmion kulmat asetetaan Polygon-oliolle joko konstruktorin parametrina tai Polygon-luokan sisältämään listaan. Listaan pääsee käsiksi metodilla `getPoints`.
 
 Alla olevassa esimerkissä ruutuun on lisätty 100 pikseliä leveä ja 50 pikseliä korkea suunnikas, joka on luotu Polygon-luokan avulla.
 
@@ -188,7 +194,7 @@ public class AsteroidsSovellus extends Application {
 
 ## Aluksen kääntäminen: Näppäimistön kuuntelija, osa 1
 
-Luokat kuten Polygon ja Circle perivät JavaFx:n <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html" target="_blank">Node</a>-luokan. Node-luokalla on valmiina muuttuja `rotate`, joka kuvaa esineen käännöstä asteina. Minkä tahansa Node-luokan perivän olion kääntäminen on siis melko suoraviivaista -- tarvitsee vain käyttää valmista metodia `setRotate`. Metodille annetaan parametrina käännöksen asteluku.
+Luokat kuten Polygon ja Circle perivät JavaFx:n [Node](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html)-luokan. Node-luokalla on valmiina muuttuja `rotate`, joka kuvaa esineen käännöstä asteina. Minkä tahansa Node-luokan perivän olion kääntäminen on siis melko suoraviivaista -- tarvitsee vain käyttää valmista metodia `setRotate`. Metodille annetaan parametrina käännöksen asteluku.
 
 <br/>
 
@@ -319,9 +325,7 @@ AnimationTimer-luokan maetodia `handle` kutsutaan noin 60 kertaa sekunnissa. Nyt
 
 Alustamme pystyy nyt kääntämään. Lisätään seuraavaksi mahdollisuus liikkumiseen. Alus voi liikkua mihin tahansa ilmansuuntaan, eli liikkeen kuvaamiseen tarvitaan sekä x- että y-koordinaatin arvo. Konkreettinen liikkuminen tapahtuu muuntamalla alusta kuvaavan polygonin sijaintia ohjelman edetessä.
 
-Hyödynnetään Javan valmista <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/geometry/Point2D.html" target="_blank">Point2D</a>-luokkaa liikkeen kuvaamiseen -- luokalla on sekä x- että y-koordinaatti.
-
-<br/>
+Hyödynnetään Javan valmista [Point2D](https://docs.oracle.com/javase/8/javafx/api/javafx/geometry/Point2D.html)-luokkaa liikkeen kuvaamiseen -- luokalla on sekä x- että y-koordinaatti.
 
 Ensimmäinen testiversio on liike-muuttujan luominen sekä sen lisääminen AnimationTimer-luokan handle-metodiin.
 
@@ -449,9 +453,8 @@ new AnimationTimer() {
 
 Alus liikkuu, mutta aluksen liikettä ei voi vielä muuttaa. Lisätään alukselle kiihdytystoiminnallisuus. Kiihdytyksen tulee toimia niin, että aluksen nopeus kiihtyy aluksen osoittamaan suuntaan. Saamme kiihdytyksen monikulmion asteesta, jonka saa selville metodilla `getRotate()`. Olemme käyttäneet tätä jo paljon alusta kääntäessä.
 
-Kiihdytyksen suunta saadaan selville sini- ja kosinifunktion avulla. Nämä löytyvät Javan valmiista <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html" target="_blank">Math</a>-luokasta. Metodit saavat parametrina asteen radiaaneina, joten joudumme hyödyntämään myös Math-luokan asteiden radiaaneiksi muuttavaa metodia.
+Kiihdytyksen suunta saadaan selville sini- ja kosinifunktion avulla. Nämä löytyvät Javan valmiista [Math](https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html)-luokasta. Metodit saavat parametrina asteen radiaaneina, joten joudumme hyödyntämään myös Math-luokan asteiden radiaaneiksi muuttavaa metodia.
 
-<br/>
 
 ```java
 double muutosX = Math.cos(Math.toRadians(*kulmaAsteina*));
@@ -663,9 +666,7 @@ public boolean tormaa(Hahmo toinen) {
 }
 ```
 
-Luokalla <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/shape/Shape.html" target="_blank">Shape</a>, jonka Polygon <em>myös</em> perii, on törmäyksen tarkastamista varten varsin näppärä metodi. Metodi <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/shape/Shape.html#intersect-javafx.scene.shape.Shape-javafx.scene.shape.Shape-" target="_blank">public static Shape intersect(Shape shape1, Shape shape2)</a> palauttaa kahden Shape-tyyppisen olion leikkausalueen.
-
-<br/>
+Luokalla [Shape](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/shape/Shape.html), jonka Polygon *myös* perii, on törmäyksen tarkastamista varten varsin näppärä metodi. Metodi [public static Shape intersect(Shape shape1, Shape shape2)](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/shape/Shape.html#intersect-javafx.scene.shape.Shape-javafx.scene.shape.Shape-) palauttaa kahden Shape-tyyppisen olion leikkausalueen.
 
 Jos alue on tyhjä, törmäystä ei ole tapahtunut. Muokataan törmäysten tarkistamista siten, että se hyödyntää edellä mainittua metodia.
 
@@ -770,9 +771,7 @@ Ohjelman käynnistyessä siinä on nyt useampia asteroideja.
 
 Tällä hetkellä jokainen asteroidi näyttää samalta ja liikkuu samalla tavalla. Olisi hienoa, jos asteroideissa olisi vähän vaihtelua. Muokataan Asteroidi-luokkaa siten, että luokalla on erillinen metodi asteroidin rakenteen arpomiseen. Sovitaan, että asteroidit ovat aina viisikulmaisia, ja että niiden perusmuoto on viisikulmio. Luodaan vaihtelua asteroideihin muokkaamalla niiden kulmien sijainteja hieman.
 
-Viisikulmion kulmien laskemiseen saa apua osoitteesta <a href="http://mathworld.wolfram.com/Pentagon.html" target=_blank">http://mathworld.wolfram.com/Pentagon.html</a>. Alla on sovellettu linkin takana olevaa kaavaa, jonka lisäksi monikulmion koko on vaihteleva sekä monikulmion kulmien sijainnit voivat vaihdella hieman.
-
-<br/>
+Viisikulmion kulmien laskemiseen saa apua osoitteesta [http://mathworld.wolfram.com/Pentagon.html](http://mathworld.wolfram.com/Pentagon.html. Alla on sovellettu linkin takana olevaa kaavaa, jonka lisäksi monikulmion koko on vaihteleva sekä monikulmion kulmien sijainnit voivat vaihdella hieman.
 
 ```java
 import java.util.Random;
@@ -1115,9 +1114,8 @@ public void start(Stage stage) throws Exception {
 
 <img src="../img/material/asteroids-pisteet.png" alt="Ikkuna, jossa on teksti pisteet. Pisteet on nollassa."/>
 
-Yllä olevassa esimerkissä pisteet ovat aina 0. Haluamme kuitenkin muuttuvat pisteet. Yksi näppärä väline tähän on luokka <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html" target="_blank">AtomicInteger</a>, joka tarjoaa kokonaisluvun kapseloituna oliona. AtomicInteger mahdollistaa myös pisteiden kasvattamisen metodikutsun yhteydessä.
+Yllä olevassa esimerkissä pisteet ovat aina 0. Haluamme kuitenkin muuttuvat pisteet. Yksi näppärä väline tähän on luokka [AtomicInteger](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html), joka tarjoaa kokonaisluvun kapseloituna oliona. AtomicInteger mahdollistaa myös pisteiden kasvattamisen metodikutsun yhteydessä.
 
-<br/>
 
 ```java
 @Override
@@ -1171,7 +1169,7 @@ Nyt, olettaen että pisteiden kasvatus on poistettu animationtimerin alusta, pis
 <img src="../img/material/asteroids-ammuskelua.gif" alt="Like a boss."/>
 
 
-## Lisää asteroideja
+## Asteroidien jatkuva lisääminen
 
 Kun osumme asteroideihin, ne katoavat ja ammuttava loppuu kesken. Tämä ei ole hyväksyttävää!
 
@@ -1193,7 +1191,7 @@ if(Math.random() < 0.005) {
 <img src="../img/material/asteroids-ready.gif" alt="Like a boss."/>
 
 
-<programming-exercise name='Asteroids (4 osaa)'>
+<programming-exercise name='Asteroids (4 osaa)' tmcname='osa13-Osa13_09.Asteroids' nocoins='true'>
 
 Tehtäväpohjassa on tyhjä ohjelmapohja. Toteuta tehtävään edellistä laajempaa esimerkkiä seuraten Asteroids-peli.
 

@@ -15,7 +15,7 @@ hidden: true
 
 Sananlasku "a picture is worth a thousand words" eli "yksi kuva kertoo enemmän kuin tuhat sanaa" kuvaa hyvin tiedon visualisoinnin tavoitetta. Tiedon visualisoinnilla pyritään tilanteeseen, missä tieto esitetään tiiviissä mutta ymmärrettävässä muodossa. Visualisaatioilla voi korostaa tärkeitä asioita ja käyttäjälle voi esimerkiksi tehdä yhteenvetoja datasta.
 
-Alla olevassa kuvassa on kuva sovelluksesta, joka mahdollistaa pyöräilijätilastojen tarkastelun. Käytetyt tilastot on noudettu osoitteessa <a href="https://www.avoindata.fi/data/fi/dataset/helsingin-pyorailijamaarat" target="_blank" rel="noopener">https://www.avoindata.fi/data/fi/dataset/helsingin-pyorailijamaarat</a> olevasta Helsingin kaupunkisuunnitteluviraston tietoaineistosta (CC-BY).
+Alla olevassa kuvassa on kuva sovelluksesta, joka mahdollistaa pyöräilijätilastojen tarkastelun. Käytetyt tilastot on noudettu osoitteessa [https://www.avoindata.fi/data/fi/dataset/helsingin-pyorailijamaarat](https://www.avoindata.fi/data/fi/dataset/helsingin-pyorailijamaarat) olevasta Helsingin kaupunkisuunnitteluviraston tietoaineistosta (CC-BY).
 
 <br/>
 
@@ -61,11 +61,9 @@ Tutustutaan tässä muutamaan tiedon visualisointiin käytettävään kaavioon s
 
 ## Kaaviot
 
-Java tarjoaa paljon valmiita luokkia kaavioiden piirtämiseen. Osoitteessa <a href="https://docs.oracle.com/javafx/2/api/javafx/scene/chart/package-summary.html" target="_blank" rel="noopener">https://docs.oracle.com/javafx/2/api/javafx/scene/chart/package-summary.html</a> on linkkejä JavaFx:n erilaisiin kaaviotyyppeihin. Kaaviotyypit sisältävät muunmuassa aluekaavion, pylväskaavion, viivakaavion sekä piirakkakaavion.
+Java tarjoaa [paljon valmiita luokkia](https://docs.oracle.com/javafx/2/api/javafx/scene/chart/package-summary.html) kaavioiden piirtämiseen. Kaaviotyypit sisältävät muunmuassa aluekaavion, pylväskaavion, viivakaavion sekä piirakkakaavion.
 
-<br/>
-
-Tutustutaan tässä viivakaavion sekä pylväskaavion käyttöön. Kannattaa myös tutustua osoitteessa <a href="http://docs.oracle.com/javafx/2/charts/jfxpub-charts.htm" target="_blank" rel="noopener">http://docs.oracle.com/javafx/2/charts/jfxpub-charts.htm</a> olevaan Oraclen oppaaseen aiheesta.
+Tutustutaan tässä viivakaavion ja pylväskaavion käyttöön. Kannattaa myös tutustua osoitteessa [https://docs.oracle.com/javafx/2/charts/jfxpub-charts.htm](https://docs.oracle.com/javafx/2/charts/jfxpub-charts.htm) olevaan Oraclen oppaaseen aiheesta.
 
 <br/>
 
@@ -75,7 +73,7 @@ Tutustutaan tässä viivakaavion sekä pylväskaavion käyttöön. Kannattaa my�
 Viivakaaviota käytetään esimerkiksi ajan yli tapahtuvan muutoksen kuvaamiseen. Tieto kuvataan kaksiulotteisessa koordinaatistossa sijaitsevien pisteiden läpi piirretyllä viivalla, missä x-koordinaatti kuvaa ajanhetkeä ja y-koordinaatti muuttujan arvoa kullakin ajanhetkellä. Viivakaavio voi sisältää myös useampia muuttujia.
 
 
-Viivakaaviota voi käyttää esimerkiksi Tilastokeskuksen tarjoaman puolueiden äänimääriä ja suhteellista kannatusta kunnallisvaaleissa vuosina 1968-2008 kuvaavan tiedon visualisointiin. Alkuperäinen data löytyy osoitteesta <a href="http://tilastokeskus.fi/til/kvaa/2008/kvaa_2008_2010-07-30_tau_002.html" target="_blank" rel="noopener">http://tilastokeskus.fi/til/kvaa/2008/kvaa_2008_2010-07-30_tau_002.html</a>. Datasta on poimittu visualisointia varten muutama piste -- keskitymme tässä suhteelliseen kannatukseen. Käytössä oleva data on seuraavanlainen -- datan erottelussa on käytetty sarkainmerkkiä ('\t').
+Viivakaaviota voi käyttää esimerkiksi Tilastokeskuksen tarjoaman puolueiden äänimääriä ja suhteellista kannatusta kunnallisvaaleissa vuosina 1968-2008 kuvaavan tiedon visualisointiin. Alkuperäinen data löytyy osoitteesta [https://tilastokeskus.fi/til/kvaa/2008/kvaa_2008_2010-07-30\_tau\_002.html](https://tilastokeskus.fi/til/kvaa/2008/kvaa_2008_2010-07-30_tau_002.html). Datasta on poimittu visualisointia varten muutama piste -- keskitymme tässä suhteelliseen kannatukseen. Käytössä oleva data on seuraavanlainen -- datan erottelussa on käytetty sarkainmerkkiä ('\t').
 
 <br/>
 
@@ -161,7 +159,7 @@ public void start(Stage ikkuna) {
 ```
 
 
-Kun käynnistämme sovelluksen, huomaamme muutamia ongelmia (kokeile sovellusta ja katso miltä data näyttää). Koordinaatiston akseleiden luomiseen käytetty luokka <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/chart/NumberAxis.html" target="_blank" rel="noopener">NumberAxis</a> tarjoaa onneksemme myös toisenlaisen konstruktorin. NumberAxin-luokan konstruktorille voi määritellä myös ala- ja yläraja sekä välien määrän näytettyjen numeroiden välillä. Määritellään alarajaksi 1968, ylärajaksi 2008, ja välien määräksi 4.
+Kun käynnistämme sovelluksen, huomaamme muutamia ongelmia (kokeile sovellusta ja katso miltä data näyttää). Koordinaatiston akseleiden luomiseen käytetty luokka [NumberAxis](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/chart/NumberAxis.html) tarjoaa onneksemme myös toisenlaisen konstruktorin. NumberAxin-luokan konstruktorille voi määritellä myös ala- ja yläraja sekä välien määrän näytettyjen numeroiden välillä. Määritellään alarajaksi 1968, ylärajaksi 2008, ja välien määräksi 4.
 
 <br/>
 
@@ -265,7 +263,7 @@ arvot.keySet().stream().forEach(puolue -> {
 ```
 
 
-<programming-exercise name='Shanghai'>
+<programming-exercise name='Shanghai' tmcname='osa13-Osa13_01.Shanghai'>
 
 Yliopistoja vertaillaan vuosittain. Eräs kansainvälisesti tunnistettu arvioijataho on Shanghai Ranking Consultancy, joka julkaisee vuosittain listan kansainvälisesti tunnistetuista yliopistoista. Lista sisältää myös yliopiston sijan maailmanlaajuisessa vertailussa. Helsingin yliopiston sijoitus on vuosina 2007-2017 ollut seuraava:
 
@@ -292,7 +290,7 @@ Sovelluksen tuottama tulos näyttää esimerkiksi seuraavanlaiselta:
 </programming-exercise>
 
 
-<programming-exercise name='Puolueet'>
+<programming-exercise name='Puolueet' tmcname='osa13-Osa13_02.Puolueet'>
 
 Luo tehtäväpohjassa olevaan luokkaan PuolueetSovellus ohjelma, joka näyttää puolueiden suhteellisen kannatuksen vuosina 1968-2008. Käytössä on edellisissä esimerkeissä käytetty data, joka löytyy tiedostosta "puoluedata.tsv".
 
@@ -331,12 +329,12 @@ Sovelluksen tuottaman visualisaation tulee näyttää kutakuinkin seuraavanlaise
 &nbsp;
 
 
-*Dataa vastaaviin kaavioihin löytyy muunmuassa Tilastokeskuksen <a href="https://pxnet2.stat.fi/PXWeb/pxweb/fi/StatFin/" target="_blank" norel>PX-Web-tietokannoista</a>.*
+*Dataa vastaaviin kaavioihin löytyy muunmuassa Tilastokeskuksen [PX-Web-tietokannoista](https://pxnet2.stat.fi/PXWeb/pxweb/fi/StatFin/).*
 
 </programming-exercise>
 
 
-<programming-exercise name='Säästölaskuri (3 osaa)'>
+<programming-exercise name='Säästölaskuri (3 osaa)' tmcname='osa13-Osa13_03.Saastolaskuri'>
 
 Toteutetaan tässä tehtävässä sovellus, jota käytetään säästämiseen liittyvien mahdollisten tuottojen tarkasteluun. Laskuri tarjoaa mahdollisuuden sekä kuukausittaisen säästön määrittelyyn että vuosittaisen koron määrittelyyn, ja näyttää säästösumman kasvun kolmenkymmenen vuoden aikana yli.
 
@@ -390,7 +388,7 @@ Kuvassa huomaamme ns. "korkoa korolle"-efektin, joskin hyvin optimistiselle koro
 
 Pylväskaavioita käytetään kategorisen datan visualisointiin. Tieto kuvataan pylväinä, missä jokainen pylväs kuvaa tiettyä kategoriaa, ja pylvään korkeus (tai pituus) kategoriaan liittyvää arvoa. Pylväskaavioilla kuvattavasta datasta esimerkkejä ovat esimerkiksi maiden asukasluvut tai kauppojen tai tuotteiden markkinaosuudet.
 
-Tarkastellaan pylväskaavion käyttöä pohjoismaiden asukaslukujen visualisointiin. Käytetty data on Wikipedian pohjoismaita kuvaavasta artikkelista osoitteesta <a href="https://fi.wikipedia.org/wiki/Pohjoismaat" target="_blank" rel="noopener">https://fi.wikipedia.org/wiki/Pohjoismaat</a> (noudettu 10.4.2017, asukasluvut ovat vuoden 2015 arvioita).
+Tarkastellaan pylväskaavion käyttöä pohjoismaiden asukaslukujen visualisointiin. Käytetty data on Wikipedian pohjoismaita kuvaavasta artikkelista osoitteesta [https://fi.wikipedia.org/wiki/Pohjoismaat](https://fi.wikipedia.org/wiki/Pohjoismaat) (noudettu 10.4.2017, asukasluvut ovat vuoden 2015 arvioita).
 
 <br/>
 
@@ -403,7 +401,7 @@ Tanska, 5678348
 </pre>
 
 
-Pylväskaavio luodaan JavaFx:n luokan <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/chart/BarChart.html" target="_blank" rel="noopener">BarChart</a> avulla. Kuten viivakaavion käyttö, myös pylväskaavion käyttö vaatii käytettävien koordinaatistojen määrittelyn sekä tiedon lisäämisen kaavioon. Toisin kuin viivakaavioesimerkissä, tässä käytämme x-akselin määrittelyssä kategorista kategorista <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/chart/CategoryAxis.html" target="_blank" rel="noopener">CategoryAxis</a>-luokkaa. Kun käytössä on CategoryAxis-luokka, kaavion akselin arvojen tyyppi on String, mikä tulee näkyä myös kaavioon lisättävässä datassa.
+Pylväskaavio luodaan JavaFx:n luokan [BarChart](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/chart/BarChart.html avulla. Kuten viivakaavion käyttö, myös pylväskaavion käyttö vaatii käytettävien koordinaatistojen määrittelyn sekä tiedon lisäämisen kaavioon. Toisin kuin viivakaavioesimerkissä, tässä käytämme x-akselin määrittelyssä kategorista kategorista [CategoryAxis](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/chart/CategoryAxis.html)-luokkaa. Kun käytössä on CategoryAxis-luokka, kaavion akselin arvojen tyyppi on String, mikä tulee näkyä myös kaavioon lisättävässä datassa.
 
 <br/>
 
@@ -441,7 +439,7 @@ Kuten huomaat, kun x-akseli on määritelty luokan CategoryAxis avulla, kaavio n
 
 
 
-<programming-exercise name='Epäreilua mainontaa'>
+<programming-exercise name='Epäreilua mainontaa' tmcname='osa13-Osa13_04.EpareiluaMainontaa'>
 
 Sanonnan "Vale, emävale, tilasto" mukaan mikään ei valehtele kuin tilasto. Sanonta ei ehkäpä ole täysin väärässä, sillä tilastoja luodaan silloin tällöin tahallisesti epäselviksi.
 
@@ -457,7 +455,7 @@ Tässä tehtävässä ei ole automaattisia testejä eikä mallivastausta, joten 
 </programming-exercise>
 
 
-<programming-exercise name='Pyöräilijätilastot'>
+<programming-exercise name='Pyöräilijätilastot' tmcname='osa13-Osa13_05.Pyorailijatilastot'>
 
 Tehtäväpohjassa tulee mukana valmis sovellus, jota on käytetty pyöräilijätilastojen näyttöön viivakaaviona. Muokkaa sovellusta siten, että sovellus käyttää viivakaavion sijaan  pylväskaaviota. Kaikki viitteet viivakaavioon tulee poistaa muokkauksen yhteydessä.
 
@@ -470,12 +468,12 @@ Tehtäväpohjassa tulee mukana valmis sovellus, jota on käytetty pyöräilijät
 Ohjelmistoja käytetään myös jatkuvasti muuttuvan tiedon visualisaatioon. Esimerkiksi osakekurssien seurantaan käytetyt ohjelmistot hakevat jatkuvasti uusinta tietoa osakekursseista ja näyttävät tietoa käyttäjälle. Vastaavasti sääohjelmistot hakevat mittausasemien tietoja, ja näyttävät viimeisimmän tiedon käyttäjälle. Samalla tavoin toimivat myös palvelinohjelmistojen seurantaan kehitetyt ohjelmistot, jotka tietyin aikavälein tarkastavat vastaako palvelinohjelmisto pyyntöihin.
 
 
-Luokkaa <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/animation/AnimationTimer.html" target="_blank" rel="noopener">AnimationTimer</a> voidaan hyödyntää myös jatkuvasti muuttuvan tiedon visualisoinnissa. AnimationTimer-luokan avulla voidaan luoda sovellus, joka hakee tai luo uutta tietoa ajoittain sovellukseen.
+Luokkaa [AnimationTimer](https://docs.oracle.com/javase/8/javafx/api/javafx/animation/AnimationTimer.html) voidaan hyödyntää myös jatkuvasti muuttuvan tiedon visualisoinnissa. AnimationTimer-luokan avulla voidaan luoda sovellus, joka hakee tai luo uutta tietoa ajoittain sovellukseen.
 
 <br/>
 
 
-Alla olevassa esimerkissä havainnollistetaan <a href="https://fi.wikipedia.org/wiki/Suurten_lukujen_laki" target="_blank" rel="noopener">suurten lukujen lakia</a>. Suurten lukujen laki on todennäköisyyslaskentaan liittyvä ilmiö, joka kertoo, erttä satunnaismuuttujan keskiarvo lähestyy satunnaismuuttujan odotusarvoa kun toistojen määrä kasvaa. Käytännössä esimerkiksi kuusisivuisen nopan heittojen keskiarvo lähestyy heittojen lukumäärän kasvaessa lukua 3.5. Vastaavasti kolikkoa heitettäessä kruunien ja klaavojen suhde lähestyy "fifti-fifti"-jakoa kun kolikonheittojen määrä kasvaa.
+Alla olevassa esimerkissä havainnollistetaan [suurten lukujen lakia](https://fi.wikipedia.org/wiki/Suurten_lukujen_laki). Suurten lukujen laki on todennäköisyyslaskentaan liittyvä ilmiö, joka kertoo, erttä satunnaismuuttujan keskiarvo lähestyy satunnaismuuttujan odotusarvoa kun toistojen määrä kasvaa. Käytännössä esimerkiksi kuusisivuisen nopan heittojen keskiarvo lähestyy heittojen lukumäärän kasvaessa lukua 3.5. Vastaavasti kolikkoa heitettäessä kruunien ja klaavojen suhde lähestyy "fifti-fifti"-jakoa kun kolikonheittojen määrä kasvaa.
 
 <br/>
 
@@ -538,9 +536,7 @@ Alla olevassa kuvassa on esimerkki sovelluksen toiminnassa. Kuvassa noppaa on he
 
 Tarkkasilmäiset lukijat saattoivat huomata, että sovelluksen lähdekoodissa kaaviota ei piirretty uudestaan datan lisäämisen yhteydessä. Mitä ihmettä?
 
-Kaaviot kuten LineChart ja BarChart käyttävät sisäisen tiedon säilömiseen <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/collections/ObservableList.html" target="_blank" rel="noopener">ObservableList</a>-rajapinnan toteuttavaa tietorakennetta. ObservableList-rajapinnan toteuttavat kokoelmat tarjoavat mahdollisuuden kokoelmissa tapahtuvien muutosten kuunteluun. Kun listalle lisätään uusi tietue, esimerkiksi uusi keskiarvoa kuvaava piste, kertoo lista muutoksesta kaikille listan muutoksia kuunteleville olioille. Kaavioiden kuten LineChart ja BarChart sisäinen toteutus on tehty siten, että ne kuuntelevat muutoksia niiden näyttämään tietoon. Jos tieto muuttuu, päivittyy kaavio automaattisesti.
-
-<br/>
+Kaaviot kuten LineChart ja BarChart käyttävät sisäisen tiedon säilömiseen [ObservableList](https://docs.oracle.com/javase/8/javafx/api/javafx/collections/ObservableList.html)-rajapinnan toteuttavaa tietorakennetta. ObservableList-rajapinnan toteuttavat kokoelmat tarjoavat mahdollisuuden kokoelmissa tapahtuvien muutosten kuunteluun. Kun listalle lisätään uusi tietue, esimerkiksi uusi keskiarvoa kuvaava piste, kertoo lista muutoksesta kaikille listan muutoksia kuunteleville olioille. Kaavioiden kuten LineChart ja BarChart sisäinen toteutus on tehty siten, että ne kuuntelevat muutoksia niiden näyttämään tietoon. Jos tieto muuttuu, päivittyy kaavio automaattisesti.
 
 Joissain tilanteissa jatkuvasti muuttuvasta datasta halutaan näkyville esimerkiksi vain viimeiset 100 havaintoa. Tämä onnistuisi edellisessä esimerkissä asettamalla x-akselia kuvaavan NumberAxis-olion arvojen arvailu pois päältä (metodi setAutoRanging(false)) sekä lisäämällä seuraavan tarkistuksen AnimationTimer-luokan handle-metodin loppuun.
 
@@ -554,17 +550,3 @@ if (keskiarvo.getData().size() > 100) {
 ```
 
 Nyt sovellus näyttää käyttäjälle aina vain viimeiset 100 arvoa.
-
-
-<text-box variant='hint' name='Avointa dataa tarjoavat rajapinnat'>
-
-Verkko on täynnä ilmaisia rajapintoja, eli tässä tapauksessa verkko-osoitteita, joista käyttäjä voi käydä hakemassa tietoa. Osoitteessa <a href="https://www.programmableweb.com/" target="_blank" rel="noopener">https://www.programmableweb.com/</a> oleva palvelu tarjoaa palvelun avointen rajapintojen hakemiseen.
-
-<br/>
-
-Ohjelmoija voisi halutessaan vaikkapa visualisoida maanjäristyksiä. Osoitteessa <a href="http://www.seismi.org/api/eqs/" target="_blank" rel="noopener">http://www.seismi.org/api/eqs/</a> tarjotaan kerran tunnissa päivittyvä listaus maailmalla viimeksi tapahtuneista maanjäristyksistä (data on kuvattu <a href="https://en.wikipedia.org/wiki/JSON" target="_blank" rel="noopener">JSON</a>-muodossa). Vastaavasti ohjelmoija voisi tehdä <a href="http://dev.hsl.fi/" target="_blank" rel="noopener">Helsingin seudun liikenteen</a> tarjoamista rajapinnoista sopivan palvelun.
-
-<br/>
-
-</text-box>
-

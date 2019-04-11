@@ -9,5 +9,4 @@ Kolmannessatoista osassa eli Ohjelmoinnin jatkokurssin kuudennessa osassa tutust
 
 Vastaa vielä seuraavaan kyselyyn.
 
-TODO:
-<%= partial 'partials/quiz', locals: { id: '5bf95250bc25243d95b3c21f' } %>
+<quiznator id="5caf7dcdfd9fd71425c6d7ab"></quiznator>

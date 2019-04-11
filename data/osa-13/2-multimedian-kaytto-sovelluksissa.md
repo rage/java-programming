@@ -14,18 +14,15 @@ hidden: true
 </text-box>
 
 
-Tutustutaan lyhyesti multimedian käyttöön JavaFX-sovelluksissa.
+Tutustutaan seuraavaksi lyhyesti multimedian käyttöön JavaFX-sovelluksissa.
 
 
 ## Piirtäminen
 
-JavaFX-käyttöliittymäkirjastossa piirtämiseen käytetään <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/canvas/Canvas.html" target="_blank" rel="noopener">Canvas</a>-oliota. Canvas-olio edustaa tyhjää taulua, johon voi piirtää. Piirtäminen tapahtuu Canvas-oliolta saatavalla <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/canvas/GraphicsContext.html" target="_blank" rel="noopener">GraphicsContext</a>-oliolla.
+JavaFX-käyttöliittymäkirjastossa piirtämiseen käytetään [Canvas](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/canvas/Canvas.html)-oliota. Canvas-olio edustaa tyhjää taulua, johon voi piirtää. Piirtäminen tapahtuu Canvas-oliolta saatavalla [GraphicsContext](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/canvas/GraphicsContext.html)-oliolla.
 
-<br/>
 
-Alla olevassa esimerkissä on luotu yksinkertainen piirto-ohjelma. Ohjelmassa luodaan 640 pikseliä leveä ja 480 pikseliä korkea piirtoalusta, joka asetetaan BorderPane-asettelun keskelle. Tämän lisäksi luodaan piirtovärin valintaan käytettävä <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/ColorPicker.html" target="_blank" rel="noopener">ColorPicker</a>-olio, jolta saa tietoonsa kullakin hetkellä valittuna olevan värin. Värin valitsin asetetaan BorderPane-asettelun oikealle laidalle. Piirtoalustaan lisätään hiiren liikkumista kuunteleva tapahtuman käsittelijä. Kun hiirtä liikutetaan nappi pohjassa (onMouseDragged), kutsutaan GraphicsContext-olion värin asetusmetodia sekä piirretään hiiren kohtaan pieni ympyrä.
-
-<br/>
+Alla olevassa esimerkissä on luotu yksinkertainen piirto-ohjelma. Ohjelmassa luodaan 640 pikseliä leveä ja 480 pikseliä korkea piirtoalusta, joka asetetaan BorderPane-asettelun keskelle. Tämän lisäksi luodaan piirtovärin valintaan käytettävä [ColorPicker](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/ColorPicker.html)-olio, jolta saa tietoonsa kullakin hetkellä valittuna olevan värin. Värin valitsin asetetaan BorderPane-asettelun oikealle laidalle. Piirtoalustaan lisätään hiiren liikkumista kuunteleva tapahtuman käsittelijä. Kun hiirtä liikutetaan nappi pohjassa (onMouseDragged), kutsutaan GraphicsContext-olion värin asetusmetodia sekä piirretään hiiren kohtaan pieni ympyrä.
 
 ```java
 // pakkaus
@@ -78,7 +75,7 @@ Sovellus näyttää seuraavanlaiselta. Alla sovellusta on käytetty jo hieman pi
 <img src="../img/material/gui-paint.png" alt="Yksinkertainen piirto-ohjelma. Käyttäjä voi piirtää pitämällä hiirtä pohjassa. Oikeassa laidassa on värin valintaan käytettävä ColorPicker-olio."/>
 
 
-<programming-exercise name='Hymiö'>
+<programming-exercise name='Hymiö' tmcname='osa13-Osa13_06.Hymio'>
 
 Luo tehtäväpohjassa olevaan luokkaan graafinen käyttöliittymä. Lisää graafiseen käyttöliittymään asettelusta vastaava BorderPane-olio. Lisää BorderPanen keskellä Canvas-olio. Piirrä tämän jälkeen Canvas-olioon liittyvän GraphicsContext-olion avulla hymiö. Käytä taustan värinä valkoista (Color.WHITE) ja hymiön värinä mustaa (Color.BLACK).
 
@@ -91,9 +88,7 @@ Tehtävän testit tarkastavat vain, että piirrät ikkunaan. Palauta tehtävä v
 
 ## Kuvat
 
-Kuvan näyttämiseen osana sovellusta on useita tapoja. Eräs suoraviivainen lähestymistapa hyödyntää JavaFx:n <a href="https://docs.oracle.com/javafx/2/api/javafx/scene/image/Image.html" target="_blank">Image</a> ja <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/image/ImageView.html" target="_blank">ImageView</a> luokkia.
-
-<br/>
+Kuvan näyttämiseen osana sovellusta on useita tapoja. Eräs suoraviivainen lähestymistapa hyödyntää JavaFx:n [Image](https://docs.oracle.com/javafx/2/api/javafx/scene/image/Image.html) ja [ImageView](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/image/ImageView.html) luokkia.
 
 Image-luokalle annetaan parametrina avattavan kuvatiedoston nimi -- nimeä tulee edeltää etuliite `file:`, joka kertoo kuvan olevan tiedosto. Alla olevassa esimerkissä ladataan tiedosto `humming.jpg`, joka annetaan luotavalle ImageView-oliolle parametrina. Tämän jälkeen ImageView-olio asetetaan Pane-asetteluun -- Pane-asettelu ei ota mm. kantaa sen sisältävien elementtien sijaintiin. Lopulta asettelu asetetaan osaksi Scene-oliota ja se asetetaan näkyville.
 
@@ -136,9 +131,7 @@ Ohjelman suorittaminen luo seuraavanlaisen ikkunan. Tässä oletetaan, että tie
 <img src="../img/material/image-ja-imageview.png" />
 
 
-Esimerkissä käytetään <a href="https://www.flickr.com/photos/15323831@N05" target="_blank">Linda Tanner</a>in kuvaa osoitteesta <a href="http://www.freestockphotos.biz/stockphoto/17874" target="_blank">http://www.freestockphotos.biz/stockphoto/17874</a>. Kuva on lisensoitu <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">Creative Commons CC BY 2.0</a>-lisenssillä.
-
-<br/>
+Esimerkissä käytetään [Linda Tanner](https://www.flickr.com/photos/15323831@N05)in kuvaa osoitteesta [http://www.freestockphotos.biz/stockphoto/17874](http://www.freestockphotos.biz/stockphoto/17874). Kuva on lisensoitu [Creative Commons CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)-lisenssillä.
 
 ImageView-olio tarjoaa joukon menetelmiä kuvan (yksinkertaiseen käsittelyyn). Kuvaa voi muunmuassa kääntää, sen kokoa voi muuttaa, ja sitä voi siirtää ruudulla. Alla olevassa esimerkissä kuva on käännetty ympäri, sen koko on puolitettu, ja sitä on siirretty hieman oikealle.
 
@@ -167,9 +160,7 @@ public void start(Stage stage) {
 <img src="../img/material/humming-kaannetty.png" />
 
 
-ImageView-luokka tarjoaa pääsyn kuvaan, mutta sen kautta ei pääse yksittäisiin pikseleihin (eli yksittäisiin yhtä väriä sisältäviin pieniin "ruutuihin", joista kuva koostuu). Kuvan yksittäisiä pikseleitä voi lukea Image-oliosta saatavan <a href="https://docs.oracle.com/javafx/2/api/javafx/scene/image/PixelReader.html" target="_blank">PixelReader</a>-olion avulla. PixelReader-olion avulla voidaan käydä koko kuva läpi pikseli pikseliltä, samalla kuvaa erilliseen <a href="https://docs.oracle.com/javafx/2/api/javafx/scene/image/WritableImage.html" target="_blank">WritableImage</a>-olioon kirjoittaen.
-
-<br/>
+ImageView-luokka tarjoaa pääsyn kuvaan, mutta sen kautta ei pääse yksittäisiin pikseleihin (eli yksittäisiin yhtä väriä sisältäviin pieniin "ruutuihin", joista kuva koostuu). Kuvan yksittäisiä pikseleitä voi lukea Image-oliosta saatavan [PixelReader](https://docs.oracle.com/javafx/2/api/javafx/scene/image/PixelReader.html)-olion avulla. PixelReader-olion avulla voidaan käydä koko kuva läpi pikseli pikseliltä, samalla kuvaa erilliseen [WritableImage](https://docs.oracle.com/javafx/2/api/javafx/scene/image/WritableImage.html)-olioon kirjoittaen.
 
 Alla olevassa esimerkissä kuva kopioidaan pikseli pikseliltä erilliselle WritableImage-oliolle, joka näytetään sovelluksessa.
 
@@ -218,7 +209,7 @@ Kuvan ulkomuoto ei ole muuttunut lainkaan.
 <img src="../img/material/image-ja-imageview.png" />
 
 
-<programming-exercise name='Kollaasi (3 osaa)'>
+<programming-exercise name='Kollaasi (3 osaa)' tmcname='osa13-Osa13_07.Kollaasi'>
 
 Andy Warhol tuli tutuksi kuvakollaaseista, joissa yksi tai useampi kuva toistui useampaan otteeseen esimerkiksi eri väreissä.
 
@@ -250,9 +241,8 @@ Kun olet saanut muodostettua ruudukon, muokkaa kuvaa vielä siten, että kuvassa
 
 <img src="../img/kollaasi-monalisa-neg.png" />
 
-*Tehtäväpohjan mukana tuleva Mona Lisa -kuva on noudettu Wikimedian osoitteesta <a href="https://commons.wikimedia.org/wiki/Category:Mona_Lisa" target="_blank">https://commons.wikimedia.org/wiki/Category:Mona_Lisa</a>. Käytetty kuva on vapaasti käytettävissä.*
+*Tehtäväpohjan mukana tuleva Mona Lisa -kuva on noudettu Wikimedian osoitteesta [https://commons.wikimedia.org/wiki/Category:Mona_Lisa](https://commons.wikimedia.org/wiki/Category:Mona_Lisa). Käytetty kuva on vapaasti käytettävissä.*
 
-<br/>
 
 </programming-exercise>
 
@@ -262,7 +252,7 @@ Kun olet saanut muodostettua ruudukon, muokkaa kuvaa vielä siten, että kuvassa
 Äänitiedostojen käsittelyyn löytyy myös useampia menetelmiä, joista tässä käsitellään yksi tapa. Tapa liittyy äänitiedostojen käsittelyyn äänileikkeinä (audioclip), jotka ovat esimerkiksi ääniefektejä ym.
 
 
-Esimerkissä käytetään Daniel Simionin <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons Attribution 3.0</a> -lisenssillä julkaisemaa äänitiedostoa. Äänitiedoston voi kuunnella alla. Äänitiedosto on noudettu osoitteessa <a href="http://soundbible.com/" target="_blank">http://soundbible.com/</a> olevasta palvelusta.
+Esimerkissä käytetään Daniel Simionin [Creative Commons Attribution 3.0](https://creativecommons.org/licenses/by/3.0/)-lisenssillä julkaisemaa äänitiedostoa. Äänitiedoston voi kuunnella alla. Äänitiedosto on noudettu osoitteessa [http://soundbible.com/](http://soundbible.com/ olevasta palvelusta.
 
 <br/>
 
@@ -304,24 +294,21 @@ public class AudioClipApplication extends Application {
 }
 ```
 
-<programming-exercise name='Hurraa'>
+<programming-exercise name='Hurraa' tmcname='osa13-Osa13_08.Hurraa'>
 
 Tehtäväpohjan juurikansiossa on tiedosto `Applause-Yannick_Lemieux.wav`, joka sisältää hurrausäänen. Tehtävänäsi on luoda sovellus, missä on "Hurraa"-nappi. Kun käyttäjä painaa nappia, sovelluksen tulee soittaa edellä mainittu äänitiedosto.
 
 <img src="../img/material/hurraa-nappi.png"/>
 
-*Äänitiedosto on Yannick Lemieuxin nauhoittama. Tiedosto on lisensoitu Creative Commonsin Attribuutiolisenssillä (<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">https://creativecommons.org/licenses/by/3.0/</a>).*
+*Äänitiedosto on Yannick Lemieuxin nauhoittama. Tiedosto on lisensoitu Creative Commonsin Attribuutiolisenssillä [https://creativecommons.org/licenses/by/3.0/](https://creativecommons.org/licenses/by/3.0/).*
 
 
 </programming-exercise>
 
 
-
 <text-box variant='hint' name='Mediasoittimen luominen'>
 
-Osoitteessa <a href="https://examples.javacodegeeks.com/desktop-java/javafx/javafx-media-api/" target="_blank">https://examples.javacodegeeks.com/desktop-java/javafx/javafx-media-api/</a> on opas mediasoittimen luomiseen. Opas on varsin hyvä lähtökohta mikäli äänten soittaminen ja käsittely ohjelmallisesti kiinnostaa.
-
-<br/>
+Osoitteessa [https://examples.javacodegeeks.com/desktop-java/javafx/javafx-media-api/](https://examples.javacodegeeks.com/desktop-java/javafx/javafx-media-api/) on opas mediasoittimen luomiseen. Opas on varsin hyvä lähtökohta mikäli äänten soittaminen ja käsittely ohjelmallisesti kiinnostaa.
 
 </text-box>
 

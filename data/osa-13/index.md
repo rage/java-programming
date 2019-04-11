@@ -7,10 +7,7 @@ hidden: true
 
 <deadline>29.4.2019</deadline>
 
-TODO:
-Osaat ...
-
-Tunnet menetelmiä tiedon visualisointiin ja osaat käyttää Javan valmiiksi tarjoamia kaavioita (viivakaavio, pylväskaavio). Osaat käyttää Javan tarjoamia välineitä yksinkertaisten piirrosten luomiseen. Osaat näyttää kuvia sekä soittaa äänitiedostoja. Luot suuremman ohjelman esimerkkiä noudattaen.
+Tämän osan jälkeen tunnet menetelmiä tiedon visualisointiin ja osaat käyttää Javan valmiiksi tarjoamia kaavioita (viivakaavio, pylväskaavio). Osaat luoda yksinkertaisia piirroksia Javan tarjoamilla välineillä ja osaat käsitellä kuvia. Opit soittamaan äänitiedostoja. Tässä osassa luot myös hieman suuremman ohjelman -- Asteroids-pelin -- esimerkkiä noudattaen.
 
 <please-login></please-login>
 
