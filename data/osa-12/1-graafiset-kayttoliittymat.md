@@ -32,6 +32,12 @@ Tehtäväpohjissa käytetään JavaFx-ohjelmien testaamiseen [TestFX](https://gi
 
 </text-box>
 
+<text-box variant='hint' name='Tarvittavat oikeudet macOS:lla tehtävien testeihin'>
+
+Tämän osan tehtävissä osa testeistä odottaa, että tmcbeans saa vapaasti liikuttaa kursoria näytöllä. macOS-käyttöjärjestelmällä (Apple-tietokoneet) tähän tarvitsee antaa erikseen tmcbeansille oikeus. Täältä löytyy ohjeet, miten oikeus myönnetään: [macOS ohjeet](/macos-ohjeet)
+
+</text-box>
+
 Yksinkertaisen ikkunan luominen onnistuu JavaFX:n avulla seuraavanlaisella ohjelmalla.
 
 

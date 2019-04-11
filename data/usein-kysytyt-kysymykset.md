@@ -39,6 +39,10 @@ Jos tämä ei auta, kokeile vaihtaa Netbeanssin asetuksista proxy setting vaihto
 
 Kokele painaa asennusohjelmaa hiiren oikealla näppäimellä ja valitse Avaa/Open.
 
+### Osan 12 tehtävien testit eivät toimi macOS-tietokoneellani
+
+Katso tämä ohje: [macOS ohjeet](/macos-ohjeet)
+
 ### Saan testejä ajattaessa virheviestin, joka valittaa JAVA_HOME:sta
 
 Seuraa tätä ohjetta ongelman ratkaisemiseksi: [https://materiaalit.github.io/tmc-asennus/java_home_not_found/](https://materiaalit.github.io/tmc-asennus/java_home_not_found/).
