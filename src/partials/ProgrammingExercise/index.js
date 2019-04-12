@@ -4,6 +4,7 @@ import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPencilAlt as icon } from "@fortawesome/free-solid-svg-icons"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { get } from "lodash"
 
 import {
   fetchProgrammingExerciseDetails,
@@ -66,6 +67,18 @@ const LoginNagWrapper = styled.div`
 
 const StyledDivider = styled(Divider)`
   margin: 1rem 16px !important;
+`
+
+const PointsWrapper = styled.span`
+  float: right;
+  color: #45484b;
+`
+
+const Small = styled.div`
+  p {
+    font-size: 0.9rem;
+    color: #333;
+  }
 `
 
 class ProgrammingExercise extends React.Component {
@@ -156,6 +169,8 @@ class ProgrammingExercise extends React.Component {
       return <div>Loading</div>
     }
 
+    const points = get(this.state, "exerciseDetails.available_points.length")
+
     return (
       <ProgrammingExerciseWrapper
         id={normalizeExerciseId(`programming-exercise-${name}`)}
@@ -164,11 +179,32 @@ class ProgrammingExercise extends React.Component {
           <StyledIcon icon={icon} size="1x" />
           <HeaderMuted>Tehtävä: </HeaderMuted>
           {name}
+          {points && points > 1 && (
+            <PointsWrapper>{points} pisteen tehtävä</PointsWrapper>
+          )}
         </Header>
         <Body>
           <div>
             {this.context.loggedIn ? (
               <div>
+                {points && points > 1 && (
+                  <Small>
+                    <p>
+                      Huom! Voit saada keskeneräisestä ratkaisusta osan tehtävän
+                      pisteistä käyttämällä NetBeansin "submit"-nappia.
+                      Lisätietoa ohjelmointitehtävien palautusohjeissa:{" "}
+                      <OutboundLink
+                        href="https://materiaalit.github.io/tmc-asennus/netbeans/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        ohjeet tehtävien palauttamiseen
+                      </OutboundLink>
+                      .
+                    </p>
+                    <StyledDivider />
+                  </Small>
+                )}
                 {children}
                 {this.state.exerciseDetails === null && (
                   <div>Error loading exercise details</div>
@@ -200,7 +236,7 @@ class ProgrammingExercise extends React.Component {
                 {this.state.exerciseDetails && (
                   <Fragment>
                     <p>
-                      Palauta tehtävä palvelimelle tarkistettavaksi Netbeans
+                      Palauta tehtävä palvelimelle tarkistettavaksi NetBeans
                       ohjelmointiympäristössä:{" "}
                       <OutboundLink
                         href="https://materiaalit.github.io/tmc-asennus/netbeans/"
