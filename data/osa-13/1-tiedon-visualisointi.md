@@ -1,7 +1,7 @@
 ---
 path: '/osa-13/1-tiedon-visualisointi'
 title: 'Tiedon visualisointi'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
@@ -429,6 +429,7 @@ public void start(Stage ikkuna) {
 }
 ```
 
+<quiznator id="5cb02d5dddb6b814af32ca5a"></quiznator>
 
 Edellinen lähdekoodi tuottaa seuraavanlaisen kaavion.
 

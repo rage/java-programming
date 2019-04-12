@@ -1,7 +1,7 @@
 ---
 path: '/osa-13/2-multimedian-kaytto-sovelluksissa'
 title: 'Multimedian käyttö sovelluksissa'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
