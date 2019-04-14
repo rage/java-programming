@@ -112,7 +112,7 @@ Toteuta tehtäväpohjassa olevaan luokkaan käyttöliittymä, jossa on kolme kä
 <img src="../img/material/gui-ilmoitin-1.png" alt="."/>
 
 
-Lisää tämän jälkeen sovellukseen toiminnallisuus, missä napin painaminen johtaa siihen, että tekstikentän teksti kopioituu tekstikomponentin arvoksi. Alla olevassa esimerkissä tekstikenttään on kirjoitettu teksti "hei mualima!", jonka jälkeen nappia on painettu.
+Lisää tämän jälkeen sovellukseen toiminnallisuus, jossa napin painaminen johtaa siihen, että tekstikentän teksti kopioituu tekstikomponentin arvoksi. Alla olevassa esimerkissä tekstikenttään on kirjoitettu teksti "hei mualima!", jonka jälkeen nappia on painettu.
 
 
 <img src="../img/material/gui-ilmoitin-2.png" alt="."/>
