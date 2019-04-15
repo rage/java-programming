@@ -5,17 +5,13 @@ hidden: false
 information_page: true
 ---
 
-Kurssilla käytetään Moodlea sekä keskustelualustana että koealustana. Seuraavat ohjeet pätevät sekä halutessasi ilmoittautua Moodle-foorumiin että halutessasi ilmoittautua kurssin kokeeseen. Jos olet aikaisemmin ilmoittautunut kurssin Moodleen, olet myös samalla ilmoittautunut kurssin kokeeseen.
+Kurssilla käytetään Moodlea sekä keskustelualustana että verkkotenttien alustana. Kun haluat osallistua kurssien verkkotentteihin tai keskusteluihin Moodlessa, tulee sinun ilmoittautua Avoimeen yliopistoon opiskelijaksi (ellet ole jo HY:n opiskelija). Kurssi-ilmoittautuminen on pakollista kaikille niille, jotka haluavat saada opintopisteet ja suoritusotteen kurssista. **Ohjelmoinnin perusteet** ja **Ohjelmoinnin jatkokurssilla** tulee tehdä erilliset kurssi-ilmoittautumiset kokeita varten.
 
-Kurssin kokeeseen osallistuaksesi sinun täytyy tehdä muodollinen kokeeseen ilmoittautuminen. Kokeeseen ilmoittautuminen on tässä alempana olevan "Moodle-ilmoittautuminen" -ohjeen kohta 1. Älä seuraa muita ilmoittautumisohjeita kokeeseen.
+Ohjelmoinnin perusteet vastaa materiaalin osia 1-7 ja Ohjelmoinnin jatkokurssi materiaalin osia 8-14. Molemmat ovat 5 opintopisteen arvoisia kursseja.
 
-Ilmoittaudu kokeeseen vähintään kaksi päivää ennen koepäivää, johon olet aikeissa osallistua. Esimerkiksi jos haluat osallistua 5.3. järjestettävään kokeeseen, sinun täytyy tehdä tämä ilmoittautuminen viimeistään 3.3. Vastaavasti, jos haluat osallistua 13.4. järjestettävään kokeeseen, sinun täytyy tehdä tämä ilmoittautuminen viimeistään 11.4.
+Kun ilmoittaudut kurssille, saat automaattisesti oikeuden kaikkiin tenttimiskertoihin. Tentteihin ei siis Ohjelmoinnin MOOCissa ilmoittauduta erikseen. Huomioi, että ilmoittautuminen tulee tehdä viimeistään kaksi vuorokautta ennen tenttiä.
 
-Myöhässä ilmoittautuminen ei pudota sinua kurssilta, mutta voit joutua osallistumaan vasta seuraavaan kokeeseen jos sinulla ei ole vielä Helsingin yliopiston käyttäjätunnuksia. Esimerkiksi mikäli ilmoittaudut vasta 4.3., et välttämättä voi osallistua 5.3. järjestettävään kokeeseen. Tällöin 13.4 järjestettävä koe on ensimmäinen koe, johon voit osallistua.
-
-Huom! Me loimme vahingossa Helsingin yliopiston Avoimen yliopiston sivuille ylimääräisiä ilmoittautumissivuja, joista voi ymmärtää että olet tippunut pois kurssilta. Älä välitä näistä muista ilmoittautumissivuista, vaan seuraa alla olevia ohjeita. Tähän muodolliseen ilmoittautumiseen on vain yksi oikea ilmoittautumislinkki, joka löytyy alempaa. Tämä tämän sivun antama linkki on siis ainoa oikea kokeen ilmoittautumislinkki sekä kurssin aikataulullisessa että aikatauluttomassa versiossa.
-
-Huom! Koe on täysin maksuton, vaikka ilmoittautumisessa saatetaankin pyytää hyväksymään maksuehdot.
+Ei ole merkitystä, ilmoittaudutko kurssille tämän sivun linkistä vai Avoimen yliopiston sivujen kautta. Huomioithan, että käytäntöä on muutettu, joten sinun tulee ilmoittautua kurssille alla olevien ohjeiden mukaisesti, tai Avoimen yliopiston sivustolla.
 
 Katso tarkemmat kokeiden ajankohdat sivulta [Arvostelu ja kokeet](/arvostelu-ja-kokeet).
 
@@ -23,18 +19,22 @@ Katso tarkemmat kokeiden ajankohdat sivulta [Arvostelu ja kokeet](/arvostelu-ja-
 
 Ilmoittautuminen on pakollinen kaikille niille, jotka haluavat osallistua kurssin kokeeseen. Ilmoittautuminen koskee kaikkia kurssilaisia, eli myös Helsingin yliopiston opiskelijoita ja myös niitä, jotka ovat ilmoittautuneet kurssille jossakin muualla.
 
-1. Ensiksi tee Avoimen yliopiston ilmainen koeilmoittautuminen täältä: <registration-link></registration-link>.
-<br><br>Huom 1! Me loimme vahingingossa Avoimen yliopiston sivuille muita ilmoittautumisivuja, joissa on tämän sivun kanssa ristiriitaista tietoa. Kuitenkin tämä meidän tarjoama ilmottautumislinkki on se minne sinun täytyy ilmoittautua -- ei väliä oletko aikataulullisella tai aikatauluttomalla kurssilla.
-<br><br>Huom 2! Avoin yliopisto kutsuu koeilmoittautumista kurssi-ilmoittautumiseksi. Tällä kurssilla kuitenkin tämä ilmoittautuminen toimii kokeeseen ilmoittatumisena.<br><br>
-<br><br>Huom 3! Ilmoittautumisen jälkeen Avoimen sivu tarjoaa Avoimen Yliopiston yleisiä tentti-ilmoittautumiskäytäntöjä. Nämä käytännöt eivät koske tätä kurssia.<br><br>
+1. Ensiksi tee Avoimen yliopiston ilmainen kurssi-ilmoittautuminen.
+
+Jos olet osallistumassa kurssille Ohjelmoinnin perusteet, ilmoittaudu tästä: [https://www.avoin.helsinki.fi/palvelut/esittely.aspx?o=127404110](https://www.avoin.helsinki.fi/palvelut/esittely.aspx?o=127404110).
+
+Jos olet osallistumassa kurssille Ohjelmoinnin jatkokurssi, ilmoittaudu tästä: [https://www.avoin.helsinki.fi/palvelut/esittely.aspx?o=127404483](https://www.avoin.helsinki.fi/palvelut/esittely.aspx?o=127404483).
+
+Jos olet osallistumassa kummallekin kurssille, ilmoittaudu molempien linkkien kautta.
 
 2. Jos sinulla on jo Helsingin yliopiston käyttäjätunnukset, siirry kohtaan 5.
 
-3. Odota 24h, jotta tietosi voi siirtyä seuraavana yönä järjestelmien välillä
+3. Odota 24 tuntia, jotta tietosi voi siirtyä seuraavana yönä järjestelmien välillä.
 
-4. Luo Helsingin yliopiston käyttäjätunnukset. Saat tunnukset seuraamalla Helsingin yliopiston ohjetta käyttäjätunnusten aktivointiin: https://helpdesk.it.helsinki.fi/ohjeet/kirjautuminen-ja-yhteydet/kayttajatunnus/ohjeet-yliopiston-kayttajatunnuksen-aktivointiin. Huom! Osa oppilaista on raportoinut, että aktivointi ei toimi Safari-selaimella. Suosittelemme että teet aktivoinnin joko Chromella tai Firefoxilla.
+4. Luo Helsingin yliopiston käyttäjätunnukset. Saat tunnukset seuraamalla Helsingin yliopiston ohjetta käyttäjätunnusten aktivointiin: [https://helpdesk.it.helsinki.fi/oheet/kirjautuminen-ja-yhteydet/kayttajatunnus/ohjeet-yliopiston-kayttajatunnuksen-aktivointiin](https://helpdesk.it.helsinki.fi/oheet/kirjautuminen-ja-yhteydet/kayttajatunnus/ohjeet-yliopiston-kayttajatunnuksen-aktivointiin). Huom! Osa oppilaista on raportoinut, että aktivointi ei toimi Safari-selaimella. Suosittelemme että teet aktivoinnin joko Chromella tai Firefoxilla.
 
-5. Pääset Moodleen osoitteessa https://moodle.helsinki.fi/course/view.php?id=29366 - Moodle-alueen salasana on "ohjelmointi-19". Kirjaudu Moodleen Helsingin yliopiston tunnuksilla -- yritä välttää sisäänkirjautumista HAKA:n kautta.
+5. Pääset Moodleen osoitteessa https://moodle.helsinki.fi/course/view.php?id=29366 - Moodle-alueen salasana on "ohjelmointi-19". Kirjaudu Moodleen Helsingin yliopiston tunnuksilla — yritä välttää sisäänkirjautumista HAKA:n kautta.
+
 
 ## Katso myös
 
