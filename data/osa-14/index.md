@@ -7,10 +7,7 @@ hidden: true
 
 <deadline>6.5.2019</deadline>
 
-
-TODO:
-Osaat ...
-Tunnet menetelmiä simulaatioiden luomiseen ja kertaat kaksiulotteisten taulukkojen käyttöä. Tiedät, että muiden kirjoittamia kirjastoja voi käyttää osana omia ohjemia.  Kertaat käsitettä yksikkötesti ja tunnet pääpiirteittäin käsitteen testikattavuus.
+Tämän osan jälkeen tunnet menetelmiä simulaatioiden luomiseen ja olet kerrannut kaksiulotteisten taulukoiden käyttöä. Tiedät, että muiden kirjoittamia kirjastoja voi käyttää osana omia ohjemia, ja olet ottanut ensiaskeleet tietokannan käyttöön. Kertaat myös käsitettä yksikkötesti ja opit käsitteen testikattavuus.
 
 <please-login></please-login>
 
