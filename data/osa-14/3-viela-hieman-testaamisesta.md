@@ -1,7 +1,7 @@
 ---
 path: '/osa-14/3-viela-hieman-testaamisesta'
 title: 'Vielä hieman testaamisesta'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
@@ -78,7 +78,7 @@ public class EsimerkkiTest {
 }
 ```
 
-<programming-exercise name='Testausta' tmcname='osa14-Osa14_06.Testausta'>
+<programming-exercise name='Testausta' tmcname='osa14-Osa14_06.Testausta' nocoins="1">
 
 Tässä tehtävässä harjoittelet ohjelman kirjoittamista sekä sen testaamista.
 
@@ -132,3 +132,5 @@ Huom! Ohjelman toiminnallisuuden lisäksi tehtävässä tulee kirjoittaa ohjelma
 
 </programming-exercise>
 
+
+<quiznator id="5cb968ecc99c4e46a4398e3a"></quiznator>

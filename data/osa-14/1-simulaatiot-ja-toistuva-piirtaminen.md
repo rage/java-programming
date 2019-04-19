@@ -1,7 +1,7 @@
 ---
 path: '/osa-14/1-simulaatiot-ja-toistuva-piirtaminen'
 title: 'Simulaatiot ja toistuva piirtäminen'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
@@ -323,8 +323,6 @@ Tässä tehtävässä luodaan [falling sand game](https://en.wikipedia.org/wiki/
 <img src="../img/material/gui-simulaatio.gif" alt="Esimerkki hiekkaranta-simulaation toiminnasta." />
 
 
-&nbsp;
-
 *Tehtävässä käytetään `enum`-tyyppistä luokkaa `Tyyppi`. Javassa ohjelmoija voi määritellä rajatulle määrälle käsitteitä `enum`-tyyppisen luokan, jossa näille käsitteille annetaan nimi. Luokka on seuraavanlainen.*
 
 
@@ -375,8 +373,6 @@ Kun metodit toimivat, sovelluksen toiminta on seuraava.
 <img src="../img/material/gui-simulaatio-metalli.gif" alt="Esimerkki hiekkaranta-simulaation toiminnasta." />
 
 
-&nbsp;
-
 
 <h2>Hiekka</h2>
 
@@ -390,8 +386,6 @@ Huom! Toteuta simulaatio siten, että y-koordinaatti on "käänteinen". Simulaat
 <img src="../img/material/gui-simulaatio-metalli-ja-hiekka.gif" alt="Esimerkki hiekkaranta-simulaation toiminnasta. Kuvassa hiekka toimii metallin kanssa." />
 
 
-&nbsp;
-
 
 <h2>Vesi</h2>
 
@@ -402,7 +396,6 @@ Muokkaa loputa sovellusta siten, että hiekka syrjäyttää veden. Kun lisäät 
 
 <img src="../img/material/gui-simulaatio.gif" alt="Esimerkki hiekkaranta-simulaation toiminnasta." />
 
-&nbsp;
 
 Kun olet saanut kaikki neljännentoista osan tehtävät valmiiksi, voit palauta tähän tehtävään ja lähteä toteuttamaan uusia toiminnallisuuksia. Miten toteuttaisit esimerkiksi laavan?
 

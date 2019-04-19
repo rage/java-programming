@@ -1,7 +1,7 @@
 ---
 path: '/osa-14/2-maven-ja-kolmannen-osapuolen-kirjastot'
 title: 'Maven ja kolmannen osapuolen kirjastot'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
@@ -70,7 +70,7 @@ Tässä tehtävässä tarkoituksenasi on muokata käyttöliittymää siten, ett�
 Odotettu sovelluksen toiminta on seuraava:
 
 
-<sample-output>
+```
 
 Syötä komento:
 1) listaa
@@ -78,7 +78,7 @@ Syötä komento:
 3) aseta tehdyksi
 4) poista
 x) lopeta
-> **1**
+> 1
 Listataan tietokannan tiedot
 
 Syötä komento:
@@ -87,12 +87,12 @@ Syötä komento:
 3) aseta tehdyksi
 4) poista
 x) lopeta
-> **2**
+> 2
 Lisätään tehtävää
 Syötä nimi
-**koodaa**
+koodaa
 Syötä kuvaus
-**koodaa paljon**
+koodaa paljon
 
 Syötä komento:
 1) listaa
@@ -100,12 +100,12 @@ Syötä komento:
 3) aseta tehdyksi
 4) poista
 x) lopeta
-> **2**
+> 2
 Lisätään tehtävää
 Syötä nimi
-**tee ruokaa**
+tee ruokaa
 Syötä kuvaus
-**riisipuuroa**
+riisipuuroa
 
 Syötä komento:
 1) listaa
@@ -113,7 +113,7 @@ Syötä komento:
 3) aseta tehdyksi
 4) poista
 x) lopeta
-> **1**
+> 1
 Listataan tietokannan tiedot
 Todo{id=1, nimi=koodaa, kuvaus=koodaa paljon, valmis=false}
 Todo{id=2, nimi=tee ruokaa, kuvaus=riisipuuroa, valmis=false}
@@ -124,10 +124,10 @@ Syötä komento:
 3) aseta tehdyksi
 4) poista
 x) lopeta
-> **3**
+> 3
 
 Mikä asetetaan tehdyksi (syötä id)?
-**2**
+2
 
 Syötä komento:
 1) listaa
@@ -135,7 +135,7 @@ Syötä komento:
 3) aseta tehdyksi
 4) poista
 x) lopeta
-> **1**
+> 1
 Listataan tietokannan tiedot
 Todo{id=1, nimi=koodaa, kuvaus=koodaa paljon, valmis=false}
 Todo{id=2, nimi=tee ruokaa, kuvaus=riisipuuroa, valmis=true}
@@ -146,10 +146,10 @@ Syötä komento:
 3) aseta tehdyksi
 4) poista
 x) lopeta
-> **4**
+> 4
 
 Mikä poistetaan (syötä id)?
-**2**
+2
 
 Syötä komento:
 1) listaa
@@ -157,7 +157,7 @@ Syötä komento:
 3) aseta tehdyksi
 4) poista
 x) lopeta
-> **1**
+> 1
 Listataan tietokannan tiedot
 Todo{id=1, nimi=koodaa, kuvaus=koodaa paljon, valmis=false}
 
@@ -167,10 +167,10 @@ Syötä komento:
 3) aseta tehdyksi
 4) poista
 x) lopeta
-> **3**
+> 3
 
 Mikä asetetaan tehdyksi (syötä id)?
-**1**
+1
 
 Syötä komento:
 1) listaa
@@ -178,7 +178,7 @@ Syötä komento:
 3) aseta tehdyksi
 4) poista
 x) lopeta
-> **1**
+> 1
 Listataan tietokannan tiedot
 Todo{id=1, nimi=koodaa, kuvaus=koodaa paljon, valmis=true}
 
@@ -188,10 +188,10 @@ Syötä komento:
 3) aseta tehdyksi
 4) poista
 x) lopeta
-> **x**
+> x
 Kiitos!
 
-</sample-output>
+```
 
 Tehtävässä toteuttamasi tekstikäyttöliittymä ei oikeastaan poikkea millään tavalla aiemmin toteuttamistamme tekstikäyttöliittymistä. Toisin kuin ennen, nyt tieto vain tallennetaan tietokantaan: *tallennetut tiedot ovat sovelluksen käytössä myös seuraavan käynnistyksen yhteydessä.*
 
@@ -214,10 +214,12 @@ Oracle tarjoaa [javapackager](https://docs.oracle.com/javase/8/docs/technotes/to
 
 Edellä mainittuja ohjeita seuraamalla voit tehdä luomistasi ohjelmista versiot, joita voit jakaa myös muille. Ohjeiden käyttämä kirjasto on paketoitu myös Mavenin käyttöön ns. liitännäiseksi, kts. [https://github.com/javafx-maven-plugin/javafx-maven-plugin](https://github.com/javafx-maven-plugin/javafx-maven-plugin).
 
+Muitakin vaihtoehtoja paketointiin on, kuten vaikkapa [JavaPackager](https://github.com/fvarrui/JavaPackager)-maven liitännäinen.
+
 
 ## Muut ympäristöt
 
-Java on yksi maailman eniten käytetyistä ohjelmointikielistä ja sitä käytetään myös mm. Android-kännyköissä. Kurssin aikana harjoittelemamme käyttöliittymien luomistekniikka ei ole rajoitettu vain työpöytäsovelluksiin, vaikka JavaFX onkin niihin ensisijaisesti suunnattu. Mikäli haluat siirtää JavaFX-sovelluksia kännykkään, on sitä varten luotu [JavaFXPorts](http://docs.gluonhq.com/javafxports/)-projekti. JavaFXPorts-projektin avulla voit tehdä mobiilisovelluksia JavaFX-kirjastoa käyttäen. Osoitteessa [http://docs.gluonhq.com/javafxports/](http://docs.gluonhq.com/javafxports/) on tähän lisää ohjeistusta.
+Java on yksi maailman eniten käytetyistä ohjelmointikielistä ja sitä käytetään myös mm. Android-kännyköissä. Kurssin aikana harjoittelemamme käyttöliittymien luomistekniikka ei ole rajoitettu vain työpöytäsovelluksiin, vaikka JavaFX onkin niihin ensisijaisesti suunnattu. Mikäli haluat siirtää JavaFX-sovelluksia kännykkään, on sitä varten luotu [JavaFXPorts](https://gluonhq.com/products/mobile/javafxports/)-projekti. JavaFXPorts-projektin avulla voit tehdä mobiilisovelluksia JavaFX-kirjastoa käyttäen. Osoitteessa [https://docs.gluonhq.com/javafxports/](https://docs.gluonhq.com/javafxports/) on tähän lisää ohjeistusta.
 
 
 Mobiilisovellusten kehittämisestä enemmän kiinnostuneiden kannattaa tutustua Androidin sovelluskehittäjille luomaan sivustoon, joka löytyy osoitteessa [https://developer.android.com/guide/](https://developer.android.com/guide/). Käymäsi ohjelmoinnin perusteet ja ohjelmoinnin jatkokurssi antaa näihin hyvän lähtökohdan. Vastaavasti, mikäli yksinkertaisten (mobiili)pelien kehittäminen kiinnostaa, tutustu esimerkiksi [FXGL](https://github.com/AlmasB/FXGL/wiki)-kirjastoon.
