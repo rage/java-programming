@@ -25,11 +25,11 @@ Helsingin yliopiston tietojenkäsittelytieteen kandiohjelmaan on mahdollista hak
 
 ### Näyttökokeet
 
-Tähän osioon tulee lisää tietoa lähempänä näyttökoeaikoja.
-
 Näyttökoetta varten järjestetään useita koetilaisuuksia. Opinto-oikeutta hakeakseen pitää ilmoittautua koetilaisuuteen. Ilmoittautumisohjeet tulevat sähköpostitse kutsussa kokeeseen.
 
 Kaikki koetilaisuudet järjestetään Helsingin yliopiston Kumpulan kampuksella. Koesali ja reittiohjeet kampukselle kerrotaan näyttökoekutsussa.
+
+Lisätietoja näyttökokeesta: [Näyttökokeesta](./nayttokokeesta)
 
 #### Koeajat
 
@@ -39,6 +39,6 @@ Koeaikoja tulee olemaan aamusta iltaan. Koe kestää noin kaksi ja puoli tuntia.
 
 #### Kutsu
 
-Kokeeseen saa kutsun sähköpostitse siihen sähköpostiosoitteeseen, jolla rekisteröityi kurssimateriaaleihin. Kutsu lähetetään kaikille, jotka ovat saaneet vähintään 90% jokaisen osan ohjelmointitehtävien pisteistä ja jotka ovat hakeneet tämän kevään yhteishaussa Helsingin yliopiston tietojenkäsittelytieteen osastolle.
+Kokeeseen saa kutsun sähköpostitse siihen sähköpostiosoitteeseen, jolla rekisteröityi kurssimateriaaleihin. Kutsu lähetetään kaikille, jotka ovat saaneet vähintään 90% jokaisen osan ohjelmointitehtävien pisteistä ja jotka ovat valinneet kurssimateriaalin Profiili-asetuksista kohdan "Aion hakea aikataulutetun Ohjelmoinnin MOOCin kautta opinto-oikeutta Helsingin yliopistoon." Tämän pääsee asettamaan painamalla sivuston yläreunasta omaa nimeään/sähköpostiosoitettaan. Tarvittava asetus löytyy avautuvan Profiili-sivun "Opiskelijan tiedot"-osasta.
 
-Kutsussa on ohjeet, miten voi ilmoittautua koetilaisuuteen. Lisätietoja kutsusta tulee myöhemmin tänne.
+Kutsussa on ohjeet, miten voi ilmoittautua koetilaisuuteen.
