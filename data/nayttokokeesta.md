@@ -5,6 +5,12 @@ hidden: false
 information_page: true
 ---
 
+Tämä sivu koskee niitä opiskelijoita, jotka hakevat opinto-oikeutta aikataulullisen Ohjelmoinnin MOOC -kurssin kautta.
+
+Näyttökoe on vain opinto-oikeutta hakemista varten. Mikäli tavoitteenasi on saada kurssisuoritukset, tulee sinun suorittaa Avoimen yliopiston tarjoamat verkkotentit kursseista Ohjelmoinnin perusteet ja Ohjelmoinnin jatkokurssi. Katso tietoa verkkotenteistä täältä: [Arvostelu ja kokeet](./arvostelu-ja-kokeet)
+
+**HUOM** Vaikka olisit hakemassa opinto-oikeutta näyttökokeen avulla, osallistu myös Avoimen yliopiston tarjoamiin verkkotentteihin varmistaaksesi kurssisuoritusten saannin.
+
 ## Yleistä tietoa näyttökokeesta
 
 Näyttökoe kestää kaksi ja puoli tuntia. Näyttökokeessa on
@@ -21,7 +27,7 @@ osoitteessa Pietari Kalmin katu 5, 00560 Helsinki.
 Katso: [www.helsinki.fi/fi/kumpulan-kampus](www.helsinki.fi/fi/kumpulan-kampus). Exactumissa on viitoitus
 oikeaan huoneeseen.
 
-### Kutsu
+### Kutsu näyttökokeeseen
 
 Kokeeseen saa kutsun sähköpostitse siihen sähköpostiosoitteeseen, jolla rekisteröityi kurssimateriaaleihin. Kutsu lähetetään kaikille, jotka ovat saaneet vähintään 90% jokaisen osan ohjelmointitehtävien pisteistä ja jotka ovat valinneet kurssimateriaalin Profiili-asetuksista kohdan "Aion hakea aikataulutetun Ohjelmoinnin MOOCin kautta opinto-oikeutta Helsingin yliopistoon." Tämän pääsee asettamaan painamalla sivuston yläreunasta omaa nimeään/sähköpostiosoitettaan. Tarvittava asetus löytyy avautuvan Profiili-sivun "Opiskelijan tiedot"-osasta.
 
@@ -48,7 +54,7 @@ näyttökoetta hieman palautella ohjelmointirutiinia sormenpäihin.
 
 ## Edellisten vuosien näyttökoetehtäviä
 
-Voit katsoa tästä vuosien 2016, 2017 ja 2018 näyttökoetehtävät saadaksesi jonkinlaisen kuvan siitä, mitä kokeen ohjelmointiosiossa kysytään.
+Alla on linkit vuosien 2016, 2017 ja 2018 näyttökoetehtävien ohjelmointiosioihin. Näyttökokeiden tehtävät on tyypillisesti mitoitettu siten, että koeajassa ei ehdi tekemään kaikkia tehtäviä.
 
 [2016 näyttökokeen ohjelmointiosio](./old-exams/2016.pdf)
 
