@@ -13,7 +13,7 @@ Näyttökoe on vain opinto-oikeutta hakemista varten. Mikäli tavoitteenasi on s
 
 ## Yleistä tietoa näyttökokeesta
 
-Näyttökoe kestää kaksi ja puoli tuntia. Näyttökokeessa on
+Näyttökokeessa on aikaa kaksi ja puoli tuntia. Koetilaisuus saattaa kuitenkin kestää kolme tuntia riippuen miten nopeasti tilaisuudessa päästään aloittamaan. Näyttökokeessa on
 Ohjelmoinnin MOOCin laajempien tehtävien tapainen ohjelmointitehtävä tai
 ohjelmointitehtäviä, sekä mahdollisesti muuta sisältöä. Voit katsoa tältä sivulta alempaa edellisten vuosien näyttökokeiden ohjelmointiosioita.
 
