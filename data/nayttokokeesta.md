@@ -56,6 +56,8 @@ näyttökoetta hieman palautella ohjelmointirutiinia sormenpäihin.
 
 Alla on linkit vuosien 2016, 2017 ja 2018 näyttökoetehtävien ohjelmointiosioihin. Näyttökokeiden tehtävät on tyypillisesti mitoitettu siten, että koeajassa ei ehdi tekemään kaikkia tehtäviä.
 
+Näiden näyttökokeiden arvostelussa arvostettiin enemmän pientä määrää hyvin toimivia toiminnallisuuksia kuin suurta määrää ei-toimivia toiminnallisuuksia. Käytännössä vain toimivat osuudet olivat tärkeitä.
+
 [2016 näyttökokeen ohjelmointiosio](./old-exams/2016.pdf)
 
 [2017 näyttökokeen ohjelmointiosio](./old-exams/2017.pdf)
