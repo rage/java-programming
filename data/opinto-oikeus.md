@@ -35,7 +35,7 @@ Lisätietoja näyttökokeesta: [Näyttökokeesta](./nayttokokeesta)
 
 Näyttökoetilaisuuksia järjestetään toukokuun alussa välillä 2.5.-15.5. arkipäivisin.
 
-Koeaikoja tulee olemaan aamusta iltaan. Koe kestää noin kaksi ja puoli tuntia. Tarkemmat kellonajat tulevat tänne myöhemmin.
+Koeaikoja tulee olemaan aamusta iltaan. Varaa kokeeseen aikaa kolme tuntia.
 
 #### Kutsu
 

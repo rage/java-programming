@@ -66,4 +66,6 @@ Näiden näyttökokeiden arvostelussa arvostettiin enemmän pientä määrää h
 
 ## Heräsikö kysyttävää?
 
-Moodle-foorumillamme on uusi osio 'Näyttökoe', jossa voi kysyä kysymyksiä näyttökokeeseen liittyen. Ohjeet Moodle-alustalle liittymisestä löytyvät täältä alakohdasta Moodle-foorumi: [Tukiväylät](./tukivaylat)
+Moodle-foorumillamme on uusi osio 'Näyttökoe', jossa voi kysyä kysymyksiä näyttökokeeseen liittyen. Ohjeet Moodle-alustalle liittymisestä löytyvät täältä alakohdasta Moodle-foorumi: [Tukiväylät](/tukivaylat)
+
+Katso myös sivu [Mahdollisuus opinto-oikeuteen](/opinto-oikeus).
