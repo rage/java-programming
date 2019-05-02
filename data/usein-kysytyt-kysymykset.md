@@ -146,7 +146,7 @@ Ei liity. Koeilmoittautumisella voit osallistua mihin tahansa kokeeseen.
 
 ### Miten kurssin loppuosan kokeeseen ilmoittaudutaan?
 
-Kurssin loppuosan (osat 8-14) kokeen tiedot päivittyvät kurssisivulle myöhemmin.
+Kurssin loppuosan (osat 8-14) kokeeseen pääset ilmoittautumaan täyttämällä [koe ja moodle ilmoittautumisen](/koe-ja-moodle-ilmoittautuminen) kohdan 1. ilmoittautumislomakkeen ohjelmoinnin jatkokurssin osalta.
 
 ### Löysin Avoimen yliopiston sivulta yleiset ohjeet kokeeseen ilmoittautumiseen. Voinko seurata niitä?
 
