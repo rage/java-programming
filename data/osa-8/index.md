@@ -5,7 +5,29 @@ overview: true
 hidden: false
 ---
 
-<deadline>18.3.2019</deadline>
+<only-for-course-variant variant="dl">
+  <deadline>18.3.2019</deadline>
+</only-for-course-variant>
+
+<only-for-course-variant variant="nodl">
+  <deadline>4.1.2020</deadline>
+</only-for-course-variant>
+
+<only-for-course-variant variant="ohja-dl">
+  <deadline>18.3.2019</deadline>
+</only-for-course-variant>
+
+<only-for-course-variant variant="ohja-nodl">
+  <deadline>20.1.2019</deadline>
+</only-for-course-variant>
+
+<only-for-course-variant variant="kesa-dl">
+  <deadline>8.7.2019</deadline>
+</only-for-course-variant>
+
+<only-for-not-logged-in>
+  <deadline>Kirjaudu sisään nähdäksesi deadlinen tälle osalle</deadline>
+</only-for-not-logged-in>
 
 Tässä osassa tutustut olio-ohjelmoinnin kahteen keskeiseen käsitteeseen eli perintään ja rajapintoihin. Opit luomaan luokkia, jotka periytyvät toisesta luokasta ja opit luomaan luokkia, jotka toteuttavat yhden tai useamman rajapinnan. Tulet myös huomaamaan, että olio voidaan esittää kaikkien sen todellisten tyyppien avulla.
 

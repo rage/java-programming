@@ -5,7 +5,29 @@ overview: true
 hidden: false
 ---
 
-<deadline>18.2.2019</deadline>
+<only-for-course-variant variant="dl">
+  <deadline>18.2.2019</deadline>
+</only-for-course-variant>
+
+<only-for-course-variant variant="nodl">
+  <deadline>4.1.2020</deadline>
+</only-for-course-variant>
+
+<only-for-course-variant variant="ohja-dl">
+  <deadline>Tämä osa ei ole osa profiilista valitsemaasi kurssia</deadline>
+</only-for-course-variant>
+
+<only-for-course-variant variant="ohja-nodl">
+  <deadline>Tämä osa ei ole osa profiilista valitsemaasi kurssia</deadline>
+</only-for-course-variant>
+
+<only-for-course-variant variant="kesa-dl">
+  <deadline>10.6.2019</deadline>
+</only-for-course-variant>
+
+<only-for-not-logged-in>
+  <deadline>Kirjaudu sisään nähdäksesi deadlinen tälle osalle</deadline>
+</only-for-not-logged-in>
 
 
 Tässä osassa jatkat matkaasi olio-ohjelmoinnin saloihin. Opit Javan alkeis- ja viittaustyyppisistä muuttujista sekä niiden eroista. Opit kuormittamaan konstruktoreja ja metodeja eli luomaan useita konstruktoreja ja useita samannimisiä metodeja. Tutustut olioiden samankaltaisuuden vertailuun ja opit luomaan olioiden vertailussa käytettävän equals-metodin omiin luokkiisi. Harjoittelet olioiden käyttöä oliomuuttujina ja metodien paluuarvona. Opettelet lisäksi listojen käyttöä oliomuuttujina sekä harjoittelet yksikkötestien kirjoittamista.

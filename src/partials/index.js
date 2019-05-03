@@ -59,6 +59,8 @@ import TableOfContents from "./TableOfContents"
 import Notice from "./Notice"
 import RegistrationLink from "./RegistrationLink"
 import RegistrationLink2 from "./RegistrationLink2"
+import OnlyForCourseVariant from "./OnlyForCourseVariant"
+import OnlyForNotLoggedIn from "./OnlyForNotLoggedIn"
 
 const mapping = {
   test: Test,
@@ -74,6 +76,8 @@ const mapping = {
   "exercises-in-this-section": ExercisesInThisSection,
   "ab-study": AbStudy,
   "only-for-ab-group": OnlyForAbGroup,
+  "only-for-course-variant": OnlyForCourseVariant,
+  "only-for-not-logged-in": OnlyForNotLoggedIn,
   "table-of-contents": TableOfContents,
   "registration-link": RegistrationLink,
   "registration-link-ohja": RegistrationLink2,

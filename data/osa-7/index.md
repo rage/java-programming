@@ -5,7 +5,29 @@ overview: true
 hidden: false
 ---
 
-<deadline>4.3.2019</deadline>
+<only-for-course-variant variant="dl">
+  <deadline>4.3.2019</deadline>
+</only-for-course-variant>
+
+<only-for-course-variant variant="nodl">
+  <deadline>4.1.2020</deadline>
+</only-for-course-variant>
+
+<only-for-course-variant variant="ohja-dl">
+  <deadline>Tämä osa ei ole osa profiilista valitsemaasi kurssia</deadline>
+</only-for-course-variant>
+
+<only-for-course-variant variant="ohja-nodl">
+  <deadline>Tämä osa ei ole osa profiilista valitsemaasi kurssia</deadline>
+</only-for-course-variant>
+
+<only-for-course-variant variant="kesa-dl">
+  <deadline>24.6.2019</deadline>
+</only-for-course-variant>
+
+<only-for-not-logged-in>
+  <deadline>Kirjaudu sisään nähdäksesi deadlinen tälle osalle</deadline>
+</only-for-not-logged-in>
 
 Tässä osassa opit erilaisista ohjelmointiparadigmoista. Osan läpikäytyäsi tiedät proseduraalisen ohjelmoinnin ja olio-ohjelmoinnin eroista ja osaat toteuttaa ohjelmia kumpaakin ohjelmointiparadigmaa noudattaen. Opit käsitteen algoritmi sekä sanan algoritmi alkuperän, ja opit käyttämään muutamia järjestämis- ja hakualgoritmeja. Opit myös kirjoittamaan yksikkötestejä ja harjoittelet testivetoisen ohjelmistokehityksen perusaskeleita. Teet myös muutaman tehtävän tuleville kurssilaisille ja osallistut ohjelmointiosaamistasi arvioiviin kyselyihin.
 

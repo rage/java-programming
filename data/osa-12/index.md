@@ -5,7 +5,29 @@ overview: true
 hidden: false
 ---
 
-<deadline>15.4.2019</deadline>
+<only-for-course-variant variant="dl">
+  <deadline>15.4.2019</deadline>
+</only-for-course-variant>
+
+<only-for-course-variant variant="nodl">
+  <deadline>4.1.2020</deadline>
+</only-for-course-variant>
+
+<only-for-course-variant variant="ohja-dl">
+  <deadline>15.4.2019</deadline>
+</only-for-course-variant>
+
+<only-for-course-variant variant="ohja-nodl">
+  <deadline>20.1.2019</deadline>
+</only-for-course-variant>
+
+<only-for-course-variant variant="kesa-dl">
+  <deadline>5.8.2019</deadline>
+</only-for-course-variant>
+
+<only-for-not-logged-in>
+  <deadline>Kirjaudu sisään nähdäksesi deadlinen tälle osalle</deadline>
+</only-for-not-logged-in>
 
 
 Tämän osan jälkeen osaat luoda graafisia käyttöliittymiä, lisätä graafisiin käyttöliittymiin käyttöliittymäkomponentteja, sekä reagoida käyttöliittymissä tapahtuviin tapahtumiin. Osaat myös tehdä käyttöliittymiä, jotka sisältävät useamman näkymän.

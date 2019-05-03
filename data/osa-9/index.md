@@ -5,7 +5,29 @@ overview: true
 hidden: false
 ---
 
-<deadline>25.3.2019</deadline>
+<only-for-course-variant variant="dl">
+  <deadline>25.3.2019</deadline>
+</only-for-course-variant>
+
+<only-for-course-variant variant="nodl">
+  <deadline>4.1.2020</deadline>
+</only-for-course-variant>
+
+<only-for-course-variant variant="ohja-dl">
+  <deadline>25.3.2019</deadline>
+</only-for-course-variant>
+
+<only-for-course-variant variant="ohja-nodl">
+  <deadline>20.1.2019</deadline>
+</only-for-course-variant>
+
+<only-for-course-variant variant="kesa-dl">
+  <deadline>15.7.2019</deadline>
+</only-for-course-variant>
+
+<only-for-not-logged-in>
+  <deadline>Kirjaudu sisään nähdäksesi deadlinen tälle osalle</deadline>
+</only-for-not-logged-in>
 
 
 Tässä osassa syvennytään tietokokoelmien käsittelyyn virtojen avulla. Opit luomaan virran tietokokoelmasta, rajaamaan virran arvoja, muuntamaan virran arvoja muodosta toiseen, ja keräämään virran arvoja toiseen tietokokoelmaan. Tutustut käsitteeseen lambdalauseke ja opit käyttämään sitä ohjemissasi. Opit järjestämään olioita Javan valmista Comparable-rajapintaa hyödyntäen ja tutustut muutamaan muuhunkin yleishyödylliseen työvälineeseen kuten säännöllinen lauseke, lueteltu tyyppi, ja iteraattori.
