@@ -23,7 +23,7 @@ Ilmoittautuminen on pakollinen kaikille niille, jotka haluavat osallistua kurssi
 
 Jos olet tekemässä osia 1-7 (Ohjelmoinnin perusteet), ilmoittaudu tästä: <registration-link></registration-link>.
 
-Jos olet tekemässä osia 8-14 (Ohjelmoinnin jatkokurssi), ilmoittaudu tästä: [https://www.avoin.helsinki.fi/palvelut/esittely.aspx?o=127404483](https://www.avoin.helsinki.fi/palvelut/esittely.aspx?o=127404483).
+Jos olet tekemässä osia 8-14 (Ohjelmoinnin jatkokurssi), ilmoittaudu tästä: <registration-link-ohja></registration-link-ohja>.
 
 Jos aiot tehdä sekä osia 1-7 että 8-14, ilmoittaudu molempien linkkien kautta, jotta voit osallistua molempien kokeisiin ja saat suoritusmerkinnät Avoimelta yliopistolta..
 

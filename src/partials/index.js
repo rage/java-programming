@@ -58,6 +58,7 @@ import Hr from "./Hr"
 import TableOfContents from "./TableOfContents"
 import Notice from "./Notice"
 import RegistrationLink from "./RegistrationLink"
+import RegistrationLink2 from "./RegistrationLink2"
 
 const mapping = {
   test: Test,
@@ -75,6 +76,7 @@ const mapping = {
   "only-for-ab-group": OnlyForAbGroup,
   "table-of-contents": TableOfContents,
   "registration-link": RegistrationLink,
+  "registration-link-ohja": RegistrationLink2,
   notice: Notice,
   crowdsorcerer: CrowdSorcerer,
   youtube: Youtube,

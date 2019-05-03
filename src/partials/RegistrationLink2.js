@@ -8,9 +8,9 @@ const summerStart = moment("18/03/2019", "DD/MM/YYYY")
 const autumnStart = moment("30/08/2019", "DD/MM/YYYY")
 
 const springLink =
-  "https://www.avoin.helsinki.fi/palvelut/esittely.aspx?o=127404110"
+  "https://www.avoin.helsinki.fi/palvelut/esittely.aspx?o=127404483"
 const summerLink =
-  "https://www.avoin.helsinki.fi/palvelut/esittely.aspx?o=127952762"
+  "https://www.avoin.helsinki.fi/palvelut/esittely.aspx?o=127954470"
 const autumnLink = "TODO: lisää linkki"
 
 function getLink() {
@@ -24,8 +24,8 @@ function getLink() {
   return springLink
 }
 
-const RegistrationLink = () => {
+const RegistrationLink2 = () => {
   return <OutboundLink href={getLink()}>{getLink()}</OutboundLink>
 }
 
-export default withSimpleErrorBoundary(RegistrationLink)
+export default withSimpleErrorBoundary(RegistrationLink2)
