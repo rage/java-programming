@@ -92,6 +92,8 @@ Aikataulutetussa kurssissa arvostelu perustuu sekä tehtyihin tehtäviin (50% ko
 
 Kokeeseen saa osallistua kun on tehnyt vähintään 25% jokaisen osan ohjelmointitehtävien pisteistä.
 
+Tämä koskee myös kesän aikataulutettua kurssia.
+
 #### Aikatauluttamaton kurssi
 
 Aikatauluttamattomassa kurssiversiossa arvostelu perustuu täysin kokeeseen. Tällä kurssin versiolla arvosteluasteikon kokonaispisteet ovat siis pelkästään koepisteet.

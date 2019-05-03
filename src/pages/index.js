@@ -75,6 +75,13 @@ const IndexPage = () => (
           Ensimmäisen osan tehtävät tulee palauttaa 13.5. klo 23:59:00 mennessä.
         </p>
 
+        <p>
+          Mikäli olet tekemässä Kesän aikataulutettua versiota kurssista
+          (Ohjelmoinnin perusteet), valitse kurssin profiilista kohdasta "Minkä
+          kurssin version pisteet, deadlinet ja kolikot haluat nähdä."
+          vaihtoehto "Kesän aikataulutettu Ohjelmoinnin MOOC"
+        </p>
+
         <Table>
           <TableHead>
             <TableRow>
