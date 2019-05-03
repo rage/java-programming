@@ -128,13 +128,8 @@ Ohjeet kurssin kokeeseen ilmoittautumiseen löytyvät [täältä](/koe-ja-moodle
 
 ### Mistä tiedän onnistuinko koeilmoittautumisessa?
 
-Ensimmäinen koe: Kun kirjautuminen kurssin Moodleen Helsingin yliopiston tunnuksilla onnistuu ja olet käynyt täyttämässä [koe ja moodle ilmoittautumisen](/koe-ja-moodle-ilmoittautuminen) kohdan 1. ilmoittautumislomakkeen, olet tehnyt koeilmoittautumisen.
-
-Jos sinulla ei ole ollut ennen tätä kurssia Helsingin yliopiston käyttäjätunnusta ja pääset kirjautumaan kurssin Moodleen, olet varmasti tehnyt koeilmoittautumisen.
-
-Jos sinulla on ollut jo ennen tätä kurssia Helsingin yliopiston käyttäjätunnus sinun täytyy muistaa oletko käynyt täyttämässä [koe ja moodle ilmoittautumisen](/koe-ja-moodle-ilmoittautuminen) kohdan 1. ilmoittautumislomakkeen. Jos et muista oletko täyttänyt sen aikaisemmin, käy täyttämässä se uudestaan jotta varmasti olet tehnyt tarvittavat ilmoittautumiset.
-
-Toinen koe: Sinun täytyy muistaa oletko käynyt täyttämässä [koe ja moodle ilmoittautumisen](/koe-ja-moodle-ilmoittautuminen) kohdan 1. ilmoittautumislomakkeen ohjelmoinnin jatkokurssin osalta.
+Sinun täytyy muistaa oletko käynyt täyttämässä [koe ja moodle ilmoittautumisen](/koe-ja-moodle-ilmoittautuminen) "Avoimen yliopiston kurssi-ilmoittautuminen":n kohdan 1. ilmoittautumislomakkket.
+Muista tehdä ilmoittautuminen molemmille kurssin puolikkaille ("Ohjelmoinnin Perusteet" ja "Ohjelmoinnin jatkokurssi").
 
 ### Täytyykö kokeeseen ilmoittautua vielä erikseen jos on jo ilmoittautunut kurssin Moodleen?
 
@@ -146,7 +141,7 @@ Ei liity. Koeilmoittautumisella voit osallistua mihin tahansa kokeeseen.
 
 ### Miten kurssin loppuosan kokeeseen ilmoittaudutaan?
 
-Kurssin loppuosan (osat 8-14) kokeeseen pääset ilmoittautumaan täyttämällä [koe ja moodle ilmoittautumisen](/koe-ja-moodle-ilmoittautuminen) kohdan 1. ilmoittautumislomakkeen ohjelmoinnin jatkokurssin osalta.
+Kurssin loppuosan (osat 8-14) kokeeseen pääset ilmoittautumaan täyttämällä [koe ja moodle ilmoittautumisen](/koe-ja-moodle-ilmoittautuminen) "Avoimen yliopiston kurssi-ilmoittautuminen":n kohdan 1. ilmoittautumislomakkeen Ohjelmoinnin Jatkokurssin osalta.
 
 ### Löysin Avoimen yliopiston sivulta yleiset ohjeet kokeeseen ilmoittautumiseen. Voinko seurata niitä?
 
@@ -160,7 +155,7 @@ Jos sinulla on jo Helsingin yliopiston käyttäjätunnukset, voit osallistua kok
 
 ### Kokeen piti olla ilmainen, mutta koeilmoittautumisessa puhutaan maksuehdoista
 
-Koe on täysin ilmainen. Koeilmoittautumisessa puhutaan maksuehdoista, koska monet muut Avoimen yliopiston kurssit ovat maksullisia. Tämä kurssi on kuitenkin ilmainen, joten ehdoista huolimatta sinun ei tarvitse maksaa kurssista tai kokeesta mitään.
+Koe on täysin ilmainen. Koeilmoittautumisessa (= Avoimen yliopiston kurssi-ilmoittautuminen) puhutaan maksuehdoista, koska monet muut Avoimen yliopiston kurssit ovat maksullisia. Tämä kurssi on kuitenkin ilmainen, joten ehdoista huolimatta sinun ei tarvitse maksaa kurssista tai kokeesta mitään.
 
 ### Milloin näyttökoe järjestetään?
 

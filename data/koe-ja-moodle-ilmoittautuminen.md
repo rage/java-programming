@@ -9,23 +9,23 @@ Kurssilla käytetään Moodlea sekä keskustelualustana että verkkotenttien alu
 
 Ohjelmoinnin perusteet vastaa materiaalin osia 1-7 ja Ohjelmoinnin jatkokurssi materiaalin osia 8-14. Molemmat ovat 5 opintopisteen arvoisia kursseja.
 
-Kun ilmoittaudut kurssille, saat automaattisesti oikeuden kaikkiin tenttimiskertoihin. Tentteihin ei siis Ohjelmoinnin MOOCissa ilmoittauduta erikseen. Huomioi, että ilmoittautuminen tulee tehdä viimeistään kaksi vuorokautta ennen tenttiä.
+Kun teet Avoimen yliopiston kurssi-ilmoittautumisen, saat automaattisesti oikeuden kaikkiin tenttimiskertoihin. Tentteihin ei siis Ohjelmoinnin MOOCissa ilmoittauduta erikseen. Huomioi, että ilmoittautuminen tulee tehdä viimeistään kaksi vuorokautta ennen tenttiä.
 
-Ei ole merkitystä, ilmoittaudutko kurssille tämän sivun linkistä vai Avoimen yliopiston sivujen kautta. Huomioithan, että käytäntöä on muutettu, joten sinun tulee ilmoittautua kurssille alla olevien ohjeiden mukaisesti, tai Avoimen yliopiston sivustolla.
+<b>Huom! Jos et osallistu tenttiin, avoimen yliopiston kurssi-ilmoittautuminen ei ole pakollinen. Avoimen yliopiston kurssi-ilmoittautumisen pystyy tekemään tälle kurssille vuoden 2019 loppuun asti.</b> Jos avoimen ilmoittautumislomake vanhenee, päivitämme tänne sivulle uuden lomakkeen. Ilmoittautumislinkin muuttuminen ei vaikuta kurssin arvosteluun.  Ei ole merkitystä, teetkö avoimen yliopiston kurssi-ilmoittautumisen sivun linkistä vai Avoimen yliopiston sivujen kautta.
 
 Katso tarkemmat kokeiden ajankohdat sivulta [Arvostelu ja kokeet](/arvostelu-ja-kokeet).
 
-## Moodle-ilmoittautuminen
+## Avoimen yliopiston kurssi-ilmoittautuminen
 
 Ilmoittautuminen on pakollinen kaikille niille, jotka haluavat osallistua kurssin kokeeseen. Ilmoittautuminen koskee kaikkia kurssilaisia, eli myös Helsingin yliopiston opiskelijoita ja myös niitä, jotka ovat ilmoittautuneet kurssille jossakin muualla.
 
-1. Ensiksi tee Avoimen yliopiston ilmainen kurssi-ilmoittautuminen.
+1. Pääset Moodleen ja kokeeseen kun teet Avoimen yliopiston ilmaisen kurssi-ilmoittautuminen.
 
-Jos olet osallistumassa kurssille Ohjelmoinnin perusteet, ilmoittaudu tästä: [https://www.avoin.helsinki.fi/palvelut/esittely.aspx?o=127404110](https://www.avoin.helsinki.fi/palvelut/esittely.aspx?o=127404110).
+Jos olet tekemässä osia 1-7 (Ohjelmoinnin perusteet), ilmoittaudu tästä: <registration-link></registration-link>.
 
-Jos olet osallistumassa kurssille Ohjelmoinnin jatkokurssi, ilmoittaudu tästä: [https://www.avoin.helsinki.fi/palvelut/esittely.aspx?o=127404483](https://www.avoin.helsinki.fi/palvelut/esittely.aspx?o=127404483).
+Jos olet tekemässä osia 8-14 (Ohjelmoinnin jatkokurssi), ilmoittaudu tästä: [https://www.avoin.helsinki.fi/palvelut/esittely.aspx?o=127404483](https://www.avoin.helsinki.fi/palvelut/esittely.aspx?o=127404483).
 
-Jos olet osallistumassa kummallekin kurssille, ilmoittaudu molempien linkkien kautta.
+Jos aiot tehdä sekä osia 1-7 että 8-14, ilmoittaudu molempien linkkien kautta, jotta voit osallistua molempien kokeisiin ja saat suoritusmerkinnät Avoimelta yliopistolta..
 
 2. Jos sinulla on jo Helsingin yliopiston käyttäjätunnukset, siirry kohtaan 5.
 
