@@ -247,5 +247,8 @@ async function getCourse() {
   if (variant === "ohja-nodl") {
     return "2019-mooc-vain-jatkokurssi-nodl"
   }
+  if (variant === "kesa-dl") {
+    return "2019-ohjelmointi-kesa"
+  }
   return "2019-ohjelmointi"
 }
