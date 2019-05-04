@@ -21,7 +21,9 @@ Ilmoittautuminen on pakollinen kaikille niille, jotka haluavat osallistua kurssi
 
 1. Pääset Moodleen ja kokeeseen kun teet Avoimen yliopiston ilmaisen kurssi-ilmoittautuminen.
 
-Jos olet tekemässä osia 1-7 (Ohjelmoinnin perusteet), ilmoittaudu tästä: <registration-link></registration-link>. Jos olet tekemässä osia 8-14 (Ohjelmoinnin jatkokurssi), ilmoittaudu tästä: <registration-link-ohja></registration-link-ohja>. Jos aiot tehdä sekä osia 1-7 että 8-14, ilmoittaudu molempien linkkien kautta, jotta voit osallistua molempien kokeisiin ja saat suoritusmerkinnät Avoimelta yliopistolta..
+    * Jos olet tekemässä osia 1-7 (Ohjelmoinnin perusteet), ilmoittaudu tästä: <registration-link></registration-link>.
+    * Jos olet tekemässä osia 8-14 (Ohjelmoinnin jatkokurssi), ilmoittaudu tästä: <registration-link-ohja></registration-link-ohja>.
+    * Jos aiot tehdä sekä osia 1-7 että 8-14, ilmoittaudu molempien linkkien kautta, jotta voit osallistua molempien kokeisiin ja saat suoritusmerkinnät Avoimelta yliopistolta..
 
 2. Jos sinulla on jo Helsingin yliopiston käyttäjätunnukset, siirry kohtaan 5.
 
