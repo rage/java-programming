@@ -4,7 +4,7 @@ import { OutboundLink } from "gatsby-plugin-google-analytics"
 import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 
 const start = moment("01/01/2018", "DD/MM/YYYY")
-const summerStart = moment("18/03/2019", "DD/MM/YYYY")
+const summerStart = moment("20/05/2019", "DD/MM/YYYY")
 const autumnStart = moment("30/08/2019", "DD/MM/YYYY")
 
 const springLink =
