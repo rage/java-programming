@@ -82,6 +82,15 @@ const IndexPage = () => (
           vaihtoehto "Kesän aikataulutettu Ohjelmoinnin MOOC"
         </p>
 
+        <p>
+          Huom! Voit tehdä myös kesällä aikataulutonta versiota kurssista.
+          Valitse tällöin kurssin profiilista kohdasta "Minkä kurssin version
+          pisteet, deadlinet ja kolikot haluat nähdä." vaihtoehto "Aikatauluton
+          ohjelmoinnin MOOC". Lisäksi valitse sama kurssi kun aloitat
+          ohjelmoimaan NetBeanssissa. Tälloin voit tehdä kutakin osaa vuoden
+          loppuun asti.
+        </p>
+
         <Table>
           <TableHead>
             <TableRow>
