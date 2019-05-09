@@ -11,7 +11,7 @@ Ohjelmoinnin perusteet vastaa materiaalin osia 1-7 ja Ohjelmoinnin jatkokurssi m
 
 Kun teet Avoimen yliopiston kurssi-ilmoittautumisen, saat automaattisesti oikeuden kaikkiin tenttimiskertoihin. Tentteihin ei siis Ohjelmoinnin MOOCissa ilmoittauduta erikseen. Huomioi, että ilmoittautuminen tulee tehdä viimeistään kaksi vuorokautta ennen tenttiä.
 
-<b>Huom! Jos et osallistu tenttiin, avoimen yliopiston kurssi-ilmoittautuminen ei ole pakollinen. Avoimen yliopiston kurssi-ilmoittautumisen pystyy tekemään tälle kurssille vuoden 2019 loppuun asti.</b> Jos avoimen ilmoittautumislomake vanhenee, päivitämme tänne sivulle uuden lomakkeen. Ilmoittautumislinkin muuttuminen ei vaikuta kurssin arvosteluun.  Ei ole merkitystä, teetkö avoimen yliopiston kurssi-ilmoittautumisen sivun linkistä vai Avoimen yliopiston sivujen kautta.
+Ei ole merkitystä, teetkö avoimen yliopiston kurssi-ilmoittautumisen sivun linkistä vai Avoimen yliopiston sivujen kautta.
 
 Katso tarkemmat kokeiden ajankohdat sivulta [Arvostelu ja kokeet](/arvostelu-ja-kokeet).
 

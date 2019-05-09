@@ -8,10 +8,11 @@ const summerStart = moment("18/03/2019", "DD/MM/YYYY")
 const autumnStart = moment("06/05/2019", "DD/MM/YYYY")
 
 const springLink =
-  "https://www.avoin.helsinki.fi/palvelut/esittely.aspx?o=127404110"
+  "https://www.avoin.helsinki.fi/palvelut/esittely.aspx?o=127404483"
 const summerLink =
-  "https://www.avoin.helsinki.fi/palvelut/esittely.aspx?o=127952762"
-const autumnLink = "TODO: lisää linkki"
+  "https://www.avoin.helsinki.fi/palvelut/esittely.aspx?o=127404483"
+const autumnLink =
+  "https://www.avoin.helsinki.fi/palvelut/esittely.aspx?o=127404483"
 
 function getLink() {
   const currentDate = moment()
