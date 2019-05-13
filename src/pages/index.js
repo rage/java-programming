@@ -72,7 +72,7 @@ const IndexPage = () => (
           kokonaisuudessaan saatavilla kurssin alusta lähtien. Tämä mahdollistaa
           kurssin tekemisen nopeammalla tahdilla, mikäli niin haluaa tehdä.
           Normaalissa kesän aikataulussa kunkin osan tekemiseen on noin viikko.
-          Ensimmäisen osan tehtävät tulee palauttaa 13.5. klo 23:59:00 mennessä.
+          Ensimmäisen osan tehtävät tulee palauttaa 20.5. klo 23:59:00 mennessä.
         </p>
 
         <p>
@@ -101,11 +101,11 @@ const IndexPage = () => (
           <TableBody>
             <TableRow>
               <TableCell>Osa 1</TableCell>
-              <TableCell>13.5.2019</TableCell>
+              <TableCell>20.5.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 2</TableCell>
-              <TableCell>20.5.2019</TableCell>
+              <TableCell>24.5.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 3</TableCell>
@@ -166,6 +166,13 @@ const IndexPage = () => (
             tehtäväpalvelimen kelloa, joka on Suomen ajassa. Huomaa, että oman
             koneesi kello voi olla jäljessä tai edellä, joten älä jätä tehtävien
             tekemistä ja palauttamista viime hetkeen.
+          </b>
+        </p>
+
+        <p>
+          <b>
+            (Edit 13.5.) 1. ja 2. osan määräaikoja on pidennetty 
+            (13.5. -> 20.5.),(20.5. -> 24.5.). 
           </b>
         </p>
       </section>
