@@ -162,7 +162,7 @@ const IndexPage = () => (
           <b>
             Määräajat ovat aina maanantaisin. Määräaikojen kellonajat ovat aina
             23:59:00 – osan 1 tehtävät tulee palauttaa siis viimeistään
-            13.5.2019 klo 23:59:00. Virallisena määräaikana käytetään
+            <s>13.5.2019</s> 20.5.2019 klo 23:59:00. Virallisena määräaikana käytetään
             tehtäväpalvelimen kelloa, joka on Suomen ajassa. Huomaa, että oman
             koneesi kello voi olla jäljessä tai edellä, joten älä jätä tehtävien
             tekemistä ja palauttamista viime hetkeen.
