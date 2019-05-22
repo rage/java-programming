@@ -17,7 +17,7 @@ Lisäksi kurssiarvostelu perustuu aikatauluttomalla kurssilla pelkästään verk
 
 Aikatauluttomassa kurssissa on riskinä, että kurssi jää kesken, kun ei ole aikarajoja motivoimassa tehtävien tekoa. Lisähyötynä on myös se, että kurssin tukikanava on aktiivisempi aikataulutetun kurssin aikana, kun kurssilla on enemmän kanssaopiskelijoita.
 
-Luultavasti tärkein etu aikataulullisessa kurssissa on, että vain aikataulutetulta kurssilta voi hakea opinto-oikeutta Helsingin yliopiston tietojenkäsittelytieteen osastolle. Lisätietoja tästä löytyy sivupalkin osiosta "Mahdollisuus opinto-oikeuteen".
+Luultavasti tärkein etu aikataulullisessa kurssissa on, että vain aikataulutetulta kurssilta voi hakea opinto-oikeutta Helsingin yliopiston tietojenkäsittelytieteen osastolle. Lisätietoja tästä löytyy sivupalkin osiosta "Mahdollisuus opinto-oikeuteen". **HUOM!** Kesän aikataulutetulta kurssilta ei voi saada opinto-oikeutta.
 
 On siis järkevää jatkaa aikataulullisella kurssilla niin kauan, kun ehdit tehdä tehtävät aikarajojen puitteissa.
 
@@ -39,6 +39,8 @@ Mikäli haluat siirtyä aikatauluttomalle kurssille, lue seuraavat ohjeet huolel
 
     Jos aloitit kurssin osasta 8, mene sivulle [https://tmc.mooc.fi/org/mooc/courses/434/migrate\_to\_other\_course/435](https://tmc.mooc.fi/org/mooc/courses/434/migrate_to_other_course/435)
 
+    Jos olet kesän aikataulutetulla kurssilla, mene sivulle [https://tmc.mooc.fi/org/mooc/courses/474/migrate_to_other_course/425](https://tmc.mooc.fi/org/mooc/courses/474/migrate_to_other_course/425)
+
 3) Lue HUOLELLA sivun ohje.
 
 4) Vahinkojen välttämiseksi sinun tulee täyttää sivulla olevat kentät.
@@ -49,9 +51,11 @@ Mikäli haluat siirtyä aikatauluttomalle kurssille, lue seuraavat ohjeet huolel
 
     Jos aloitit kurssin osasta 8, tähän kenttään tulee laittaa ```mooc-2019-mooc-vain-jatkokurssi```
 
+    Jos olet kesän aikataulutetulla kurssilla, tähän kenttään tulee laittaa ```mooc-2019-ohjelmointi-kesa```
+
 6) Kenttään "... where to ..." tulee laittaa sen kurssin tunnus, jolle pisteet siirretään.
 
-    Jos aloitit kurssin osasta 1, tähän kenttään tulee laittaa ```mooc-2019-ohjelmointi-nodl```
+    Jos aloitit kurssin osasta 1 tai olet kesän aikataulutetulla kurssilla, tähän kenttään tulee laittaa ```mooc-2019-ohjelmointi-nodl```
 
     Jos aloitit kurssin osasta 8, tähän kenttään tulee laittaa ```mooc-2019-mooc-vain-jatkokurssi-nodl```
 
@@ -67,7 +71,7 @@ Mikäli haluat siirtyä aikatauluttomalle kurssille, lue seuraavat ohjeet huolel
 
 12) Vaihda Netbeansin TMC-asetuksista kurssiksi aikatauluton versio. TMC-asetuksiin pääsee käsiksi painamalla NetBeansin ylävalikosta "TMC", ja avautuvasta listasta "Settings".
 
-    Jos aloitit kurssin osasta 1, vaihda kurssiksi "Ohjelmoinnin MOOC 2019 (aikatauluton)"
+    Jos aloitit kurssin osasta 1 tai olet kesän aikataulutetulla kurssilla, vaihda kurssiksi "Ohjelmoinnin MOOC 2019 (aikatauluton)"
 
     Jos aloitit kurssin osasta 8, vaihda kurssiksi "Ohjelmoinnin MOOC 2019 -- Aloitan osasta 8 (aikatauluton)"
 
