@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
-import { loggedIn } from "../services/moocfi"
 import LoginStateContext from "../contexes/LoginStateContext"
 
 class OnlyForNotLoggedIn extends Component {
