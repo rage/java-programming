@@ -24,7 +24,7 @@ Käytämme graafisten käyttöliittymien luomiseen Javan [JavaFx](https://en.wik
 
 Graafisten käyttöliittymien luomiseen käytetään JavaFX-nimistä kirjastoa. Linux-koneilla joudut -- riippuen Javan asennuksesta -- asentamaan myös openjfx-kirjaston. Tämän asentaminen onnistuu Ubuntussa (komentoriviltä) komennolla:
 
-```console
+```bash
 user@kone:~$ sudo apt-get install openjfx
 ```
 
@@ -128,5 +128,3 @@ Käyttöliittymäkomponentit lisätään niiden asettelusta vastaavan olion -- e
 
 
 Käyttöliittymän rakenne on siis lyhyesti seuraava. Ikkuna sisältää Scene-olion. Scene-olio sisältää käyttöliittymäkomponenttien asettelusta vastaavan olion. Käyttöliittymäkomponenttien asettelusta vastaava olio voi sisältää sekä käyttöliitymäkomponentteja, että käyttöliittymäkomponenttien asettelusta vastaavia olioita.
-
-

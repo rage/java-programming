@@ -377,6 +377,7 @@ class CourseOptionsEditor extends React.Component {
             <Button
               onClick={this.onClick}
               disabled={this.state.submitting || this.state.error}
+              loading={this.state.submitting}
               variant="contained"
               color="primary"
               fullWidth

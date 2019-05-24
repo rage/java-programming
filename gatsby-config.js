@@ -1,5 +1,5 @@
 const red = require("@material-ui/core/colors/red").default
-const blue = require("@material-ui/core/colors/blue").default
+const blue = require("@material-ui/core/colors/red").default
 
 module.exports = {
   siteMetadata: {
@@ -104,7 +104,7 @@ module.exports = {
               }
             }
           },
-          `gatsby-remark-component`
+          `@rstacruz/gatsby-remark-component`
         ]
       }
     },
@@ -147,42 +147,9 @@ module.exports = {
     {
       resolve: "gatsby-transformer-moocfi-exercises"
     },
+    `gatsby-plugin-top-layout`,
     {
       resolve: 'gatsby-plugin-material-ui',
-      options: {
-        theme: {
-          palette: {
-            primary: {
-              light: blue[300],
-              main: blue[500],
-              dark: blue[700],
-            },
-            secondary: {
-              light: red[300],
-              main: red[500],
-              dark: red[700],
-            },
-          },
-          typography: {
-            useNextVariants: true,
-          },
-          overrides: {
-            MuiButton: {
-              root: {
-                textTransform: "none",
-              },
-            },
-            MuiTypography: {
-              body2: {
-                fontSize: "16px",
-              },
-              subheading: {
-                fontSize: "18px",
-              },
-            },
-          },
-        }
-      }
     },
     `gatsby-plugin-meta-redirect` // make sure to put last in the array
   ]
