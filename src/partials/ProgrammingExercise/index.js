@@ -17,6 +17,7 @@ import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
 import { normalizeExerciseId } from "../../util/strings"
 import Loading from "../../components/Loading"
 import Coins from "./Coins"
+import ExerciseDescription from "./ExerciseDescription"
 
 const accentColor = "#FAAA38"
 
@@ -190,8 +191,8 @@ class ProgrammingExercise extends React.Component {
                 {points && points > 1 && (
                   <Small>
                     <p>
-                      Huom! Voit saada keskeneräisestä ratkaisusta osan tehtävän
-                      pisteistä käyttämällä NetBeansin "submit"-nappia.
+                      Huom! Voit saada yksittäisen osan ratkaisusta osan
+                      tehtävän pisteistä käyttämällä NetBeansin "submit"-nappia.
                       Lisätietoa ohjelmointitehtävien palautusohjeissa:{" "}
                       <OutboundLink
                         href="https://materiaalit.github.io/tmc-asennus/netbeans/"
@@ -205,7 +206,7 @@ class ProgrammingExercise extends React.Component {
                     <StyledDivider />
                   </Small>
                 )}
-                {children}
+                <ExerciseDescription>{children}</ExerciseDescription>
                 {this.state.exerciseDetails === null && (
                   <div>Error loading exercise details</div>
                 )}
