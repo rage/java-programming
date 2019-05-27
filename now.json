@@ -1,11 +1,4 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@now/static-build",
-      "config": { "distDir": "public" }
-    }
-  ],
+  "type": "static",
   "alias": "ohjelmointi-19.mooc.fi"
 }
