@@ -71,9 +71,14 @@ class Coins extends Component {
           <Fragment>
             <TokenContainer>
               <p>
-                Joka kerta kun olet saanut <i>{tokenThreshHold}</i> tehtävää
-                tehtyä, saat kolikon. Kolikoilla voi ostaa tehtävien vastauksia
-                ja lunastaa itsesi mahdollisesta jumista.{" "}
+                Mallivastauksen voi katsoa joko ennen tehtävän ratkaisemista tai
+                tehtävän ratkaisemisen jälkeen. Jos haluat katsoa vastauksen
+                ennen ratkaisemista, joudut käyttämään mallivastauskolikoita.
+              </p>
+              <p>
+                Saat aina uuden mallivastauskolikon, kun olet saanut{" "}
+                <i>{tokenThreshHold}</i> tehtävää tehtyä. Kolikoilla voi ostaa
+                tehtävien vastauksia ja lunastaa itsesi mahdollisesta jumista.{" "}
                 {availableTokens === 1 ? (
                   <span> Käytössäsi on tällä hetkellä 1 kolikko.</span>
                 ) : availableTokens > 0 ? (
@@ -99,6 +104,7 @@ class Coins extends Component {
                   onClick={this.onShowModelSolution}
                   variant="outlined"
                   color="secondary"
+                  style={{ marginRight: "0.5rem" }}
                 >
                   Katso mallivastaus (
                   {modelSolutionTokenUsedOnThisExercise
