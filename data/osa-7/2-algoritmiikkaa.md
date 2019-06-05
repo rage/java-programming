@@ -93,7 +93,7 @@ Seuraava koodi esittelee metodin toimintaa:
 ```java
 // indeksit:   0  1  2  3  4
 int[] luvut = {6, 5, 8, 7, 11};
-System.out.println("Pienimmän indeksi: " + new Paaohjelma.pienimmanIndeksi(luvut));
+System.out.println("Pienimmän indeksi: " + Paaohjelma.pienimmanIndeksi(luvut));
 ```
 
 <sample-output>
