@@ -99,9 +99,9 @@ System.out.println(summa(luvut, -1, 999, -10, 10));
 <sample-output>
 
 0
+0
 3
 3
-2
 14
 
 </sample-output>
