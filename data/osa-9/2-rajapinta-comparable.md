@@ -244,7 +244,7 @@ henkilot.stream().forEach(h -> System.out.println(h.getNimi()));
 
 System.out.println();
 
-Collections.sort(henkilot, (h1, h2) -> return h1.getSyntymavuosi() - h2.getSyntymavuosi());
+Collections.sort(henkilot, (h1, h2) -> h1.getSyntymavuosi() - h2.getSyntymavuosi());
 
 henkilot.stream().forEach(h -> System.out.println(h.getNimi()));
 ```
