@@ -449,7 +449,7 @@ Olion kutsuttavissa olevat metodit määrittyvät muuttujan tyypin kautta. Esime
 Henkilo olli = new Opiskelija("Olli", "Ida Albergintie 1 00400 Helsinki");
 olli.opintopisteita();        // EI TOIMI!
 olli.opiskele();              // EI TOIMI!
-String.out.println(olli);   // olli.toString() TOIMII
+System.out.println(olli);   // olli.toString() TOIMII
 ```
 
 Oliolla on siis käytössä jokainen sen tyyppiin sekä sen yliluokkiin ja rajapintoihin liittyvä metodi. Esimerkiksi Opiskelija-tyyppisellä oliolla on käytössä Henkilo-luokassa määritellyt metodit sekä Object-luokassa määritellyt metodit.
@@ -463,14 +463,14 @@ Seuraavassa esimerkissä kahta opiskelijaa käsitellään erityyppisten muuttuji
 
 ```java
 Opiskelija olli = new Opiskelija("Olli", "Ida Albergintie 1 00400 Helsinki");
-String.out.println(olli);
-Henkilo olliHenkilo = new Opiskelija("Olli", "Ida Albergintie 1 00400 Helsinki")
+System.out.println(olli);
+Henkilo olliHenkilo = new Opiskelija("Olli", "Ida Albergintie 1 00400 Helsinki");
 System.out.println(olliHenkilo);
-Object olliObject = new Opiskelija("Olli", "Ida Albergintie 1 00400 Helsinki")
+Object olliObject = new Opiskelija("Olli", "Ida Albergintie 1 00400 Helsinki");
 System.out.println(olliObject);
 
 Object liisa = new Opiskelija("Liisa", "Väinö Auerin katu 20 00500 Helsinki");
-String.out.println(liisa);
+System.out.println(liisa);
 ```
 
 <sample-output>
