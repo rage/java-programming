@@ -315,7 +315,7 @@ Jokaisen ohjelmoijan on hyvä ymmärtää hieman tietokoneohjelman käytössä o
 Taulukko-olion arvo on viite eli oikeastaan tieto muistipaikasta, missä olion tiedot ovat. Sanomalla `taulukko[0]` viitataan taulukon ensimmäiseen alkioon. Lausekkeen `taulukko[0]` voi lukea muodossa "mene taulukon alkuun ja siirry eteenpäin 0 kertaa taulukon sisältämän muuttujan koko -- anna siitä kohdasta eteenpäin muuttujan koon verran tietoa". Vastaavasti `taulukko[2]` voidaan lukea muodossa "mene taulukon alkuun ja siirry eteenpäin 2 kertaa taulukon sisältämän muuttujan koko -- anna siitä kohdasta eteenpäin muuttujan koon verran tietoa".
 
 
-Javassa int-tyyppinen muuttuja on 32-bitin kokoinen ja se voi esittää korkeintaan 2<sup>32</sup>-1 kokoista lukua. Kun luodaan int-taulukko, jossa on esimerkiksi 4 paikkaa, muistista varataan kokonaislukuja varten 4*32 bittiä. Sanomalla int-tyyppiselle taulukolle `taulukko[2]`, luetaan 32 bittiä alkaen kohdasta taulukon alku + 2 * 32 bittiä.
+Javassa int-tyyppinen muuttuja on 32-bitin kokoinen. Yksi bitti varataan etumerkille, joten se voi esittää korkeintaan 2<sup>31</sup>-1 kokoista lukua. Kun luodaan int-taulukko, jossa on esimerkiksi 4 paikkaa, muistista varataan kokonaislukuja varten 4*32 bittiä. Sanomalla int-tyyppiselle taulukolle `taulukko[2]`, luetaan 32 bittiä alkaen kohdasta taulukon alku + 2 * 32 bittiä.
 
 
 
