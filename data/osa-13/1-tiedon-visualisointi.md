@@ -372,7 +372,7 @@ Sovellus näyttää tämän vaiheen jälkeen (esimerkiksi) seuraavalta. Alla kuu
 
 Muokkaa käyttöliittymää siten, että koron näyttäminen sovelluksessa toimii. Tämän jälkeen sovelluksen tulee näyttää kaksi viivaa, yksi viivoista näyttää pelkän talletuksen, ja toinen viiva näyttää talletuksen korkoineen.
 
-Laske korko vuosittain vuoden lopussa olevan tallennuksen perusteella (eli hieman optimistisesti). Esimerkiksi kun kuukausittainen tallennus on 50 ja korko 5%, tulee kuukausikohtaisten korkojen olla [(0, 0), (1, 52.5), (2, 107.625), (3, 165.50625), ...] -- huomaa, että kaavioon tulee kuitenkin vuosittaiset tilanteet.
+Laske korko vuosittain vuoden lopussa olevan tallennuksen perusteella (eli hieman optimistisesti). Esimerkiksi kun kuukausittainen tallennus on 50 ja vuosikorko 5%, tulee vuosittaisten summien korkoineen olla [(0, 0), (1, 630), (2, 1291.5), (3, 1986.075), ...]
 
 Sovellus näyttää tämän vaiheen jälkeen (esimerkiksi) seuraavalta. Alla kuukausittaisen tallennuksen arvoksi on valittu 50 ja koroksi 10 (eli 10% korko).
 
