@@ -54,7 +54,7 @@ rivi, sarake, arvo
 
 Yllä huomataan että `int`-tyyppisten muuttujien oletusarvo on 0.
 
-Voimme muuttaa taulukon arvoja kuten ennenkin. Alla asetamme kahteen kohtaan uudet arvot.
+Voimme muuttaa taulukon arvoja kuten ennenkin. Alla asetamme kolmeen kohtaan uudet arvot.
 
 ```java
 int rivit = 2;
