@@ -273,7 +273,7 @@ Lisää luokkaan `Paaohjelma` seuraavat luokkametodit:
 
 - `public static void jarjestaLuvut(ArrayList<Integer> luvut)` järjestää lukuja sisältävän listan.
 
-- `public static void jarjestaMerkkijonot(ArrayList<String> luvut)` järjestää merkkijonoja sisältävän listan.
+- `public static void jarjestaMerkkijonot(ArrayList<String> merkkijonot)` järjestää merkkijonoja sisältävän listan.
 
 Hyödynnä metodien toteutuksessa Javan valmiita kirjastoja.
 
