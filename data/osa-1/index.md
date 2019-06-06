@@ -23,6 +23,10 @@ overview: true
   <deadline>13.5.2019</deadline>
 </only-for-course-variant>
 
+<only-for-course-variant variant="kesa-ohja-dl">
+  <deadline>Tämä osa ei ole osa profiilista valitsemaasi kurssia</deadline>
+</only-for-course-variant>
+
 <only-for-not-logged-in>
   <deadline>Kirjaudu sisään nähdäksesi deadlinen tälle osalle</deadline>
 </only-for-not-logged-in>

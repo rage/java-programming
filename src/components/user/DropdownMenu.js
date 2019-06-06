@@ -49,7 +49,11 @@ const DropdownMenu = ({ selectedVariant, setSelectedVariant }) => {
           Aloitan kurssin aikatauluttomana osasta 8 (Ohjelmoinnin jatkokurssi)
         </MenuItem>
         <MenuItem value={"kesa-dl"}>
-          Kesän aikataulutettu Ohjelmoinnin MOOC
+          Kesä: Aikataulutettu Ohjelmoinnin MOOC
+        </MenuItem>
+        <MenuItem value={"kesa-ohja-dl"}>
+          Kesä: Aloitan kurssin aikataulutettuna osasta 8 (Ohjelmoinnin
+          jatkokurssi)
         </MenuItem>
       </Select>
     </StyledFormControl>

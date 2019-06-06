@@ -99,6 +99,10 @@ Ohjelmoinnin aloittamiseen tarvitset seuraavat asiat.
   Ohjeistus oleellisten työvälineiden asentamiseen sekä kurssilla tarvittavan käyttäjätunnuksen luomiseen löytyy osoitteesta [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Valitse organisaatioksi "MOOC" ja kurssiksi "Ohjelmoinnin MOOC 2019, Kesä".
 </only-for-course-variant>
 
+<only-for-course-variant variant="kesa-ohja-dl">
+  Ohjeistus oleellisten työvälineiden asentamiseen sekä kurssilla tarvittavan käyttäjätunnuksen luomiseen löytyy osoitteesta [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Valitse organisaatioksi "MOOC" ja kurssiksi "Ohjelmoinnin MOOC 2019 -- Aloitan osasta 8, Kesä".
+</only-for-course-variant>
+
 <only-for-not-logged-in>
   Kirjaudu sisään nähdäksesi, mikä organisaatio ja kurssi sinun tulee valita TMC:stä
 </only-for-not-logged-in>

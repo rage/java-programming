@@ -79,7 +79,15 @@ const IndexPage = () => (
           Mikäli olet tekemässä Kesän aikataulutettua versiota kurssista
           (Ohjelmoinnin perusteet), valitse kurssin profiilista kohdasta "Minkä
           kurssin version pisteet, deadlinet ja kolikot haluat nähdä."
-          vaihtoehto "Kesän aikataulutettu Ohjelmoinnin MOOC"
+          vaihtoehto "Kesä: Aikataulutettu Ohjelmoinnin MOOC"
+        </p>
+
+        <p>
+          Mikäli olet tekemässä Kesän aikataulutettua versiota kurssista
+          (Ohjelmoinnin jatkokurssi), valitse kurssin profiilista kohdasta
+          "Minkä kurssin version pisteet, deadlinet ja kolikot haluat nähdä."
+          vaihtoehto "Kesä: Aloitan kurssin aikataulutettuna osasta 8
+          (Ohjelmoinnin jatkokurssi)"
         </p>
 
         <p>
