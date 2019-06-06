@@ -509,7 +509,7 @@ try (Scanner tiedostonLukija = new Scanner(new File("henkilot.csv"))) {
         String nimi = osat[0];
         int vuosi = Integer.valueOf(osat[1]);
 
-        System.out.println(nimi + " on syntynyt vuonna " + vuosi)
+        System.out.println(nimi + " on syntynyt vuonna " + vuosi);
 
     }
 } catch (Exception e) {
