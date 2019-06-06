@@ -99,12 +99,12 @@ while (true) {
         break;
     }
 
-    luettu.add(rivi);
+    luetut.add(rivi);
 }
 
 System.out.println("Kiitos!");
 
-if (luetut.sisaltaa("kuusi")) {
+if (luetut.contains("kuusi")) {
     System.out.println("Joukkoon lisättiin arvo, jota sinne ei olisi pitänyt lisätä.");
 }
 ```
