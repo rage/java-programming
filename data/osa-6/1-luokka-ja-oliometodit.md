@@ -311,7 +311,7 @@ public class Main {
 }
 ```
 
-Metodi `ilmoitaTaysiIkaisyys` on määritelty staattiseksi, eli se ei liity mihinkään olioon, **mutta** metodi saa parametrikseen henkilöolion. Metodia ei ole kuitenkaan määritelty Henkilö-luokan sisälle sillä vaikka se käsittelee parametrinaan saamaan henkilöolioa, se on juuri kirjoitetun pääohjelman apumetodi, jonka avulla pääohjelma on saatu kirjoitettua selkeämmin.
+Metodi `ilmoitaTaysiIkaisyys` on määritelty staattiseksi, eli se ei liity mihinkään olioon, **mutta** metodi saa parametrikseen henkilöolion. Metodia ei ole kuitenkaan määritelty Henkilö-luokan sisälle sillä vaikka se käsittelee parametrinaan saamaansa henkilöolioa, se on juuri kirjoitetun pääohjelman apumetodi, jonka avulla pääohjelma on saatu kirjoitettua selkeämmin.
 
 <programming-exercise name='Matemaattiset apuneuvot' tmcname='osa06-Osa06_01.MatemaattisetApuvalineet'>
 
