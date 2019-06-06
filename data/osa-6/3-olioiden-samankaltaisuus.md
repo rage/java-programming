@@ -382,7 +382,7 @@ public class Rekisterinumero {
     private final String rekNro;
     private final String maa;
 
-    public Rekisterinumero(String rekNro, String maa) {
+    public Rekisterinumero(String maa, String rekNro) {
        this.rekNro = rekNro;
        this.maa = maa;
     }
