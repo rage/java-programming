@@ -151,7 +151,7 @@ Totesimme että kello sisältää kolme viisaria, eli koostuu kolmesta käsittee
 
 
 ```java
-public class Kello() {
+public class Kello {
     private Viisari tunnit;
     private Viisari minuutit;
     private Viisari sekunnit;
