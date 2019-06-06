@@ -247,8 +247,8 @@ lainaajat.put(oliokirja, "Pekka");
 lainaajat.put(new Kirja("Test Driven Development", 1999, "..."), "Arto");
 
 System.out.println(lainaajat.get(oliokirja));
-System.out.println(lainaajat.get(new Kirja("Oliokirja", 2000, "..."));
-System.out.println(lainaajat.get(new Kirja("Test Driven Development", 1999, "..."));
+System.out.println(lainaajat.get(new Kirja("Oliokirja", 2000, "...")));
+System.out.println(lainaajat.get(new Kirja("Test Driven Development", 1999, "...")));
 ```
 
 <sample-output>
@@ -305,8 +305,8 @@ lainaajat.put(oliokirja, "Pekka");
 lainaajat.put(new Kirja("Test Driven Development",1999, "..."), "Arto");
 
 System.out.println(lainaajat.get(oliokirja));
-System.out.println(lainaajat.get(new Kirja("Oliokirja", 2000, "..."));
-System.out.println(lainaajat.get(new Kirja("Test Driven Development", 1999));
+System.out.println(lainaajat.get(new Kirja("Oliokirja", 2000, "...")));
+System.out.println(lainaajat.get(new Kirja("Test Driven Development", 1999)));
 ```
 
 Tulostuu:
