@@ -298,11 +298,9 @@ public void poista(T arvo) {
         if (arvo == this.arvot[i] || this.arvot[i].equals(arvo)) {
             this.arvot[i] = null;
             this.arvoja--;
-            return true;
+            return;
         }
     }
-
-    return false;
 }
 ```
 
