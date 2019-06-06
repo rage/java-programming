@@ -245,7 +245,7 @@ Kerrataan seuraavaksi aihealueen termistöä.
 ## Olio
 
 
-**Olio** on itsenäinen kokonaisuus, johon liittyy tietoa (oliomuuttujat) sekä käyttäytymistä (metodit). Oliot voivat olla hyvin erilaisia rakenteeltaan ja toiminnaltaan: jotkut voivat kuvata ongelma-alueen käsitteitä, ja jotkut voivat koordinoida olioiden välistä toimintaa. Olioiden kommunikointi tapahtuu metodikutsujen avulla -- metodikutsuilla sekä kysytään tietoa olioita että annetaan olioille käskyjä.
+**Olio** on itsenäinen kokonaisuus, johon liittyy tietoa (oliomuuttujat) sekä käyttäytymistä (metodit). Oliot voivat olla hyvin erilaisia rakenteeltaan ja toiminnaltaan: jotkut voivat kuvata ongelma-alueen käsitteitä, ja jotkut voivat koordinoida olioiden välistä toimintaa. Olioiden kommunikointi tapahtuu metodikutsujen avulla -- metodikutsuilla sekä kysytään tietoa olioilta että annetaan olioille käskyjä.
 
 
 Yleisesti ottaen jokaisella oliolla on selkeästi määritellyt rajat ja toiminnallisuudet, jonka lisäksi jokainen olio tietää vain niistä muista olioista, joita se tarvitsee tehtävänsä tekemiseen. Toisin sanoen, olio piilottaa oman sisäisen toimintansa ja tarjoaa pääsyn toiminnallisuuksiin selkeästi määriteltyjen metodien kautta. Tämän lisäksi olio on riippumaton niistä olioista, joita se ei tehtäväänsä tarvitse.
