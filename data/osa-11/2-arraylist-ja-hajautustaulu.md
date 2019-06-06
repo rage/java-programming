@@ -734,7 +734,7 @@ private void kasvata() {
 
     for (int i = 0; i < this.arvot.length; i++) {
         // kopioidaan vanhan taulukon arvot uuteen
-        kopioi(uusi, indeksista);
+        kopioi(uusi, i);
     }
 
     // korvataan vanha taulukko uudella
