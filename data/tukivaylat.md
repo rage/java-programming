@@ -38,7 +38,7 @@ Kesän 2019 pajaohjausajat (luokka BK107):
 - Pe 7.6. 16-18
 - Ma 10.6. 16-18
 - Ti 11.6. 16-18
-- Pe 14.6. 16-18
+- To 13.6. 16-18 (MUUTETTU PERJANTAILTA)
 - Ma 17.6. 16-18
 - Ti 18.6. 16-18
 
