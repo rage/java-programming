@@ -578,12 +578,7 @@ System.out.println(sanakirja.sanojenLukumaara());
 </sample-output>
 
 
-Tässä osassa kannattaa tutkiskella HashMapin valmiiksi tarjoamia metodeja... Vaihtoehtoisesti `long`-tyyppisen muuttujan saa muunnettua `int`-tyyppiseksi seuraavalla tavalla.
-
-```java
-long lukuLongina = 1L;
-int lukuInttina = (int) lukuLongina;
-```
+Tässä osassa kannattaa tutkiskella HashMapin valmiiksi tarjoamia metodeja.
 
 <h2>Kaikkien sanojen listaaminen</h2>
 
