@@ -30,8 +30,6 @@ Ohjelmarunkomme sisältää Java-ohjelmointikielelle oleellisia osia. Ohjelman s
 
 Tulemme myöhemmin tutustumaan tarkemmin sanojen `public class` ja `public static void` merkitykseen.
 
-Jatkossa materiaalin esimerkeissä ei aina erikseen näytetä ohjelmarunkoa, mutta voit olettaa, että se tarvitaan.
-
 Materiaalin esimerkeissä ei käytetä aina ohjelmarunkoa, mutta voit olettaa, että se tarvitaan aina. Esimerkit voivat siis olla esimerkiksi yhden rivin mittaisia kuten alla oleva tulostusesimerkki.
 
 ```java
