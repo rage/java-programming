@@ -17,6 +17,7 @@ import LoginStateContext, {
 import Container from "../components/Container"
 
 import { loggedIn } from "../services/moocfi"
+import { NoSsr } from "@material-ui/core"
 
 const ContentWrapper = styled.div`
   margin-top: 1rem;
@@ -28,6 +29,21 @@ const ContentWrapper = styled.div`
 `
 
 const Title = styled.h1``
+
+const Titled = ({ level, children }) => {
+  if (level === 1) {
+    return <h1>{children}</h1>
+  }
+  if (level === 2) {
+    return <h4>{children}</h4>
+  }
+  if (level === 3) {
+    return <h5>{children}</h5>
+  }
+  if (level === 4) {
+    return <h6>{children}</h6>
+  }
+}
 
 export default class CoursePartOverviewTemplate extends React.Component {
   static contextType = LoginStateContext
@@ -72,6 +88,37 @@ export default class CoursePartOverviewTemplate extends React.Component {
                 <ContentWrapper>
                   <Title>{frontmatter.title}</Title>
                   {renderAst(htmlAst)}
+                  <NoSsr>
+                    <h1>Otsikot</h1>
+                    <div>
+                      {data.allPages.edges
+                        .filter(page =>
+                          page.node.frontmatter.path.startsWith(
+                            document.location.pathname + "/",
+                          ),
+                        )
+                        .sort((a, b) => {
+                          a = a.node.frontmatter.path.toLowerCase()
+                          b = b.node.frontmatter.path.toLowerCase()
+
+                          return a > b ? 1 : b > a ? -1 : 0
+                        })
+                        .map((page, i) => (
+                          <div>
+                            <h2>
+                              {i}: {page.node.frontmatter.title}
+                            </h2>
+                            {page.node.headings.map(heading => {
+                              return (
+                                <Titled level={heading.depth}>
+                                  {heading.value} ({heading.depth})
+                                </Titled>
+                              )
+                            })}
+                          </div>
+                        ))}
+                    </div>
+                  </NoSsr>
                 </ContentWrapper>
               </Container>
             </Fragment>
@@ -104,6 +151,10 @@ export const pageQuery = graphql`
             id
             type
             parentPagePath
+          }
+          headings {
+            value
+            depth
           }
         }
       }
