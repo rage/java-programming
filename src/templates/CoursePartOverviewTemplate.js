@@ -4,6 +4,7 @@ import styled from "styled-components"
 import rehypeReact from "rehype-react"
 import { navigate } from "gatsby"
 import { Helmet } from "react-helmet"
+import { get } from "lodash"
 
 import Layout from "./Layout"
 
@@ -94,7 +95,8 @@ export default class CoursePartOverviewTemplate extends React.Component {
                       {data.allPages.edges
                         .filter(page =>
                           page.node.frontmatter.path.startsWith(
-                            document.location.pathname + "/",
+                            (get(global, "document.location.pathname") || "") +
+                              "/",
                           ),
                         )
                         .sort((a, b) => {
