@@ -114,6 +114,11 @@ Ein
 
 </sample-output>
 
+<programming-exercise name='Korkeintaan yksi arvo'>
+
+Tehtävä tähän.
+
+</programming-exercise>
 
 ## Viittaustyyppinen muuttuja hajautustaulun arvona
 
