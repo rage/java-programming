@@ -6,7 +6,7 @@ hidden: false
 ---
 
 <only-for-course-variant variant="dl">
-  <deadline>6.5.2019</deadline>
+  <deadline>6.5.2020</deadline>
 </only-for-course-variant>
 
 <only-for-course-variant variant="nodl">
@@ -14,19 +14,19 @@ hidden: false
 </only-for-course-variant>
 
 <only-for-course-variant variant="ohja-dl">
-  <deadline>6.5.2019</deadline>
+  <deadline>6.5.2020</deadline>
 </only-for-course-variant>
 
 <only-for-course-variant variant="ohja-nodl">
-  <deadline>20.1.2019</deadline>
+  <deadline>20.1.2020</deadline>
 </only-for-course-variant>
 
 <only-for-course-variant variant="kesa-dl">
-  <deadline>19.8.2019</deadline>
+  <deadline>19.8.2020</deadline>
 </only-for-course-variant>
 
 <only-for-course-variant variant="kesa-ohja-dl">
-  <deadline>19.8.2019</deadline>
+  <deadline>19.8.2020</deadline>
 </only-for-course-variant>
 
 <only-for-not-logged-in>

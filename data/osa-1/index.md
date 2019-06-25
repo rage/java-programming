@@ -4,7 +4,7 @@ title: 'Osa 1'
 overview: true
 ---
 <only-for-course-variant variant="dl">
-  <deadline>21.1.2019</deadline>
+  <deadline>21.1.2020</deadline>
 </only-for-course-variant>
 
 <only-for-course-variant variant="nodl">
@@ -20,7 +20,7 @@ overview: true
 </only-for-course-variant>
 
 <only-for-course-variant variant="kesa-dl">
-  <deadline>13.5.2019</deadline>
+  <deadline>13.5.2020</deadline>
 </only-for-course-variant>
 
 <only-for-course-variant variant="kesa-ohja-dl">

@@ -6,7 +6,7 @@ hidden: false
 ---
 
 <only-for-course-variant variant="dl">
-  <deadline>18.3.2019</deadline>
+  <deadline>18.3.2020</deadline>
 </only-for-course-variant>
 
 <only-for-course-variant variant="nodl">
@@ -14,19 +14,19 @@ hidden: false
 </only-for-course-variant>
 
 <only-for-course-variant variant="ohja-dl">
-  <deadline>18.3.2019</deadline>
+  <deadline>18.3.2020</deadline>
 </only-for-course-variant>
 
 <only-for-course-variant variant="ohja-nodl">
-  <deadline>20.1.2019</deadline>
+  <deadline>20.1.2020</deadline>
 </only-for-course-variant>
 
 <only-for-course-variant variant="kesa-dl">
-  <deadline>8.7.2019</deadline>
+  <deadline>8.7.2020</deadline>
 </only-for-course-variant>
 
 <only-for-course-variant variant="kesa-ohja-dl">
-  <deadline>8.7.2019</deadline>
+  <deadline>8.7.2020</deadline>
 </only-for-course-variant>
 
 <only-for-not-logged-in>
@@ -41,7 +41,7 @@ Tässä osassa tutustut olio-ohjelmoinnin kahteen keskeiseen käsitteeseen eli p
 
 Kurssin ohjelmointitehtäviä tehdään Test My Code (TMC) -järjestelmässä. Ohjeita TMC-järjestelmän käyttöönottoon löytyy täältä: https://materiaalit.github.io/tmc-asennus/netbeans/.
 
-Mikäli et ole osallistunut kurssiin ensimmäisestä osasta lähtien, vaan tulet mukaan vain Ohjelmoinnin jatkokurssia vastaavalle osalle, valitse TMC:n Settings-valikosta kurssi "Ohjelmoinnin MOOC 2019 - Aloitan osasta 8" tai "Ohjelmoinnin MOOC 2019 - Aloitan osasta 8 (aikatauluton)", riippuen siitä haluatko tehdä kurssin aikatauluttomana. Lisäksi valitse tämän materiaalin asetuksien kohdan "Minkä kurssin version pisteet ja kolikot haluat nähdä?" vaihtoehto "Aloitan kurssin osasta 8". Muista myös kerrata materiaalin osat 1-7.
+Mikäli et ole osallistunut kurssiin ensimmäisestä osasta lähtien, vaan tulet mukaan vain Ohjelmoinnin jatkokurssia vastaavalle osalle, valitse TMC:n Settings-valikosta kurssi "Ohjelmoinnin MOOC 2020 - Aloitan osasta 8" tai "Ohjelmoinnin MOOC 2020 - Aloitan osasta 8 (aikatauluton)", riippuen siitä haluatko tehdä kurssin aikatauluttomana. Lisäksi valitse tämän materiaalin asetuksien kohdan "Minkä kurssin version pisteet ja kolikot haluat nähdä?" vaihtoehto "Aloitan kurssin osasta 8". Muista myös kerrata materiaalin osat 1-7.
 
 </text-box>
 

@@ -122,7 +122,7 @@ var content2 = [
   { separator: true, title: "Ohjelmoinnin perusteet" },
 ]
 
-var futurePages = [] // { title: "Osa 14", tba: "19.4.2019" }
+var futurePages = [] // { title: "Osa 14", tba: "19.4.2020" }
 
 const MobileWrapper = styled.div`
   @media only screen and (max-width: ${SMALL_MEDIUM_BREAKPOINT}) {
@@ -188,7 +188,7 @@ class Sidebar extends React.Component {
           </Button>
         </MenuExpanderWrapper>
         <SidebarContainer mobileMenuOpen={this.props.mobileMenuOpen}>
-          <Brand>Ohjelmoinnin MOOC 2019</Brand>
+          <Brand>Ohjelmoinnin MOOC 2020</Brand>
           <TreeViewContainer>
             <TreeView data={content} />
           </TreeViewContainer>

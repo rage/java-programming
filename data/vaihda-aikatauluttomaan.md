@@ -49,19 +49,19 @@ Mikäli haluat siirtyä aikatauluttomalle kurssille, lue seuraavat ohjeet huolel
 
 5) Kenttään "... from where. .." tulee laittaa sen kurssin tunnus, jolta siirrettävät pisteet tulevat.
 
-    Jos aloitit kurssin osasta 1, tähän kenttään tulee laittaa ```mooc-2019-ohjelmointi```
+    Jos aloitit kurssin osasta 1, tähän kenttään tulee laittaa ```mooc-2020-ohjelmointi```
 
-    Jos aloitit kurssin osasta 8, tähän kenttään tulee laittaa ```mooc-2019-mooc-vain-jatkokurssi```
+    Jos aloitit kurssin osasta 8, tähän kenttään tulee laittaa ```mooc-2020-mooc-vain-jatkokurssi```
 
-    Jos aloitit kesän kurssin osasta 1, tähän kenttään tulee laittaa ```mooc-2019-ohjelmointi-kesa```
+    Jos aloitit kesän kurssin osasta 1, tähän kenttään tulee laittaa ```mooc-2020-ohjelmointi-kesa```
 
-    Jos aloitit kesän kurssin osasta 8, tähän kenttään tulee laittaa ```mooc-2019-mooc-vain-jatkokurssi-kesa```
+    Jos aloitit kesän kurssin osasta 8, tähän kenttään tulee laittaa ```mooc-2020-mooc-vain-jatkokurssi-kesa```
 
 6) Kenttään "... where to ..." tulee laittaa sen kurssin tunnus, jolle pisteet siirretään.
 
-    Jos aloitit kurssin osasta 1 (koskee myös kesän kurssia), tähän kenttään tulee laittaa ```mooc-2019-ohjelmointi-nodl```
+    Jos aloitit kurssin osasta 1 (koskee myös kesän kurssia), tähän kenttään tulee laittaa ```mooc-2020-ohjelmointi-nodl```
 
-    Jos aloitit kurssin osasta 8 (koskee myös kesän kurssia), tähän kenttään tulee laittaa ```mooc-2019-mooc-vain-jatkokurssi-nodl```
+    Jos aloitit kurssin osasta 8 (koskee myös kesän kurssia), tähän kenttään tulee laittaa ```mooc-2020-mooc-vain-jatkokurssi-nodl```
 
 7) Luettuasi vielä kerran sivun yläreunan tekstit, valitse ruutu "I've read..."
 
@@ -75,9 +75,9 @@ Mikäli haluat siirtyä aikatauluttomalle kurssille, lue seuraavat ohjeet huolel
 
 12) Vaihda Netbeansin TMC-asetuksista kurssiksi aikatauluton versio. TMC-asetuksiin pääsee käsiksi painamalla NetBeansin ylävalikosta "TMC", ja avautuvasta listasta "Settings".
 
-    Jos aloitit kurssin osasta 1 (koskee myös kesän kurssia), vaihda kurssiksi "Ohjelmoinnin MOOC 2019 (aikatauluton)"
+    Jos aloitit kurssin osasta 1 (koskee myös kesän kurssia), vaihda kurssiksi "Ohjelmoinnin MOOC 2020 (aikatauluton)"
 
-    Jos aloitit kurssin osasta 8 (koskee myös kesän kurssia), vaihda kurssiksi "Ohjelmoinnin MOOC 2019 -- Aloitan osasta 8 (aikatauluton)"
+    Jos aloitit kurssin osasta 8 (koskee myös kesän kurssia), vaihda kurssiksi "Ohjelmoinnin MOOC 2020 -- Aloitan osasta 8 (aikatauluton)"
 
 13) Lataa NetBeansin tarjoamat uudet tehtäväpohjat. Netbeans saattaa tässä yhteydessä ladata tyhjiä tehtäväpohjia myös jo aiemmin tekemillesi aikatauluttoman kurssin tehtäville. Tarkista TMC-profiilistasi (http://tmc.mooc.fi/participants/me), mitkä tehtävät voit jättää huomiotta. Jos NetBeans ei tarjoa uusia tehtäväpohjia, paina NetBeansin yläpalkin TMC-valikosta "Download/update exercises".
 

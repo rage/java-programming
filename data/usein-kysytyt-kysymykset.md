@@ -96,7 +96,7 @@ Lue tämä ohje: [vaihtaminen aikatauluttomaan versioon](/vaihda-aikatauluttomaa
 
 ### Testien ajamis- ja lähettämispainikkeet ovat Netbeanssissa harmaita
 
-Jos olet aikataulutetussa kurssissa niin ota huomioon että ensimmäsen osan deadline oli 21.1.2019. Katso myös ohje: [vaihtaminen aikatauluttomaan versioon](/vaihda-aikatauluttomaan).
+Jos olet aikataulutetussa kurssissa niin ota huomioon että ensimmäsen osan deadline oli 21.1.2020. Katso myös ohje: [vaihtaminen aikatauluttomaan versioon](/vaihda-aikatauluttomaan).
 
 ### Tarvitsenko Helsingin yliopiston tunnukset?
 

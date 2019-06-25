@@ -42,7 +42,7 @@ export function createAccount(data) {
   data.username = uuidv4()
   const body = {
     user: data,
-    origin: "Ohjelmoinnin MOOC 2019",
+    origin: "Ohjelmoinnin MOOC 2020",
     language: "fi",
   }
   return new Promise((resolve, reject) => {
@@ -102,7 +102,7 @@ export function onLoginStateChanged(callback) {
 
 export async function userDetails() {
   const res = await axios.get(
-    `${BASE_URL}/users/current?show_user_fields=true&extra_fields=ohjelmoinnin-mooc-2019`,
+    `${BASE_URL}/users/current?show_user_fields=true&extra_fields=ohjelmoinnin-mooc-2020`,
     {
       headers: {
         "Content-Type": "application/json",
@@ -143,7 +143,7 @@ export async function updateUserDetails({ extraFields, userField }) {
     {
       user: {
         extra_fields: {
-          namespace: "ohjelmoinnin-mooc-2019",
+          namespace: "ohjelmoinnin-mooc-2020",
           data: extraFields,
         },
       },
@@ -239,19 +239,19 @@ export async function getCourseVariant() {
 async function getCourse() {
   const variant = await getCourseVariant()
   if (variant === "nodl") {
-    return "2019-ohjelmointi-nodl"
+    return "2020-ohjelmointi-nodl"
   }
   if (variant === "ohja-dl") {
-    return "2019-mooc-vain-jatkokurssi"
+    return "2020-mooc-vain-jatkokurssi"
   }
   if (variant === "ohja-nodl") {
-    return "2019-mooc-vain-jatkokurssi-nodl"
+    return "2020-mooc-vain-jatkokurssi-nodl"
   }
   if (variant === "kesa-dl") {
-    return "2019-ohjelmointi-kesa"
+    return "2020-ohjelmointi-kesa"
   }
   if (variant === "kesa-ohja-dl") {
-    return "2019-mooc-vain-jatkokurssi-kesa"
+    return "2020-mooc-vain-jatkokurssi-kesa"
   }
-  return "2019-ohjelmointi"
+  return "2020-ohjelmointi"
 }
