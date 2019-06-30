@@ -1,7 +1,16 @@
 ---
-path: "/osa-1/3-muuttujat"
+path: "/osa-1/5-muuttujat"
 title: "Muuttujat ja ohjelmien kielellistäminen"
 ---
+
+<text-box variant='learningObjectives' name='Oppimistavoitteet'>
+
+* Tunnet käsitteen muuttuja. Tiedät mitä ovat muuttujan tyyppi, muuttujan nimi, ja muuttujan arvo.
+* Osaat luoda ja käsitellä merkkijono-, kokonaisluku-, liukuluku-, ja totuusarvomuuttujia.
+
+</text-box>
+
+
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
 * Tunnet käsitteen muuttuja. Tiedät mitä ovat muuttujan tyyppi, muuttujan nimi, ja muuttujan arvo.

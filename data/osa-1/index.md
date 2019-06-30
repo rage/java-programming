@@ -31,6 +31,7 @@ overview: true
   <deadline>Kirjaudu sisään nähdäksesi deadlinen tälle osalle</deadline>
 </only-for-not-logged-in>
 
+TODO: uusiksi
 Tässä osassa opit kirjoittamaan ohjelmia, jotka lukevat käyttäjältä syötettä ja tekevät laskentaa syötteen perusteella. Opit käsitteet muuttuja, ehtolause ja toistolause, ja opit käyttämään näitä ohjelmissasi.
 
 <please-login></please-login>
