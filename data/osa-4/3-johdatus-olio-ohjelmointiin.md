@@ -1,6 +1,6 @@
 ---
-path: '/osa-4/3-luokka-ja-olio'
-title: 'Luokka ja olio'
+path: '/osa-4/3-johdatus-olio-ohjelmointiin'
+title: 'Johdatus olio-ohjelmointiin'
 hidden: false
 ---
 
@@ -13,8 +13,11 @@ hidden: false
 
 </text-box>
 
+TODO: jotenkin frametaan että nyt alkaa iso juttu
 
-Tutustuimme hetki sitten ensimmäistä kertaa termeihin olio ja luokka. Aloitamme nyt matkan olio-ohjelmoinnin pariin. Aluksi keskiössä on käsitteiden ja tiedon kuvaaminen luokkien ja olioiden avulla, jonka jälkeen tutustumme toiminnallisuuden eli metodien lisäämiseen.
+TODO: kirjoita se, että edellisessä osassa tarkasteltiin tiedostoja ja niistä luettavaa määrämuotoista tietoa -- näissä kyse jonkinlaisista käsitteistä
+
+TODO: pois.. Tutustuimme hetki sitten ensimmäistä kertaa termeihin olio ja luokka. Aloitamme nyt matkan olio-ohjelmoinnin pariin. Aluksi keskiössä on käsitteiden ja tiedon kuvaaminen luokkien ja olioiden avulla, jonka jälkeen tutustumme toiminnallisuuden eli metodien lisäämiseen.
 
 Olio-ohjelmoinnissa on kyse ratkaistavassa ongelmassa esiintyvien käsitteiden eristämisestä omiksi kokonaisuuksikseen sekä näiden kokonaisuuksien käyttämistä ongelman ratkaisemisessa. Kun ongelmaan liittyvät käsitteet on tunnistettu, niistä voidaan myös keskustella. Toisin ajatellen, ratkaistavasta ongelmasta muodostetaan abstraktioita, joiden avulla ongelmaa on helpompi käsitellä.
 
@@ -1794,4 +1797,18 @@ Parittomien summa: 5
 </sample-output>
 
 </programming-exercise>
+
+## Yhteenveto
+
+TODO: heivataanko slideshow pois?
+
+...
+
+<pdf-slideshow>
+
+[a](../slideshows/johdatus-olio-ohjelmointiin.pdf)
+
+</pdf-slideshow>
+
+<quiznator id="5c4aa67b3972a9147410161a"></quiznator>
 

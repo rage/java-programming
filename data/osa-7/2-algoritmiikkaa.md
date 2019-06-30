@@ -4,7 +4,6 @@ title: 'Algoritmiikkaa'
 hidden: false
 ---
 
-
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
 - Tiedät mitä käsite algoritmi tarkoittaa ja tunnet muutamia algoritmeja.
@@ -13,13 +12,15 @@ hidden: false
 
 </text-box>
 
+TODO: kerro mikä algoritmi on
+
 
 Ohjelman tehokas toiminta eli esimerkiksi tiedon nopea hakeminen ja näyttäminen on oleellinen osa ohjelmistojen käytettävyyttä. Mikäli ohjelman käyttäjä joutuu odottamaan kymmeniä sekunteja kun ohjelma etsii käyttäjän haluamaa tietoa, saattaa ohjelman käyttäjä lopettaa ohjelman käyttämisen kokonaan. Vastaavasti televisio-ohjelmistoja selaava käyttäjä ei hyödy televisio-ohjelman tiedoista mitään jos tiedot latautuvat vasta ohjelman katsomisen jälkeen.
 
 Laajemmin voidaan ajatella, että nopeasti tapahtuva tiedon hakeminen ja näyttäminen on oleellista oikeastaan lähes missä tahansa sovelluksessa. Tutustutaan seuraavaksi tiedon hakemiseen ja järjestämiseen liittyviin algoritmeihin. Vaikka esimerkit käyttävät taulukoita, algoritmit toimivat myös muilla tiedon tallentamiseen tarkoitetuilla tietorakenteilla kuten listoilla.
 
 
-<text-box variant='hint' name='Mikä ihmeen algoritmi?'>
+<text-box variant='hint' name='Sanan algoritmi historiaa'>
 
 Sana algoritmi juontaa juurensa Muhammad ibn Musa al-Khwarizmi -nimiseen henkilöön.
 
@@ -339,3 +340,5 @@ Koska haettavien alkioiden määrä puolittuu binäärihaussa jokaisen tarkastel
 
 </text-box>
 
+
+TODO: tehtävä binäärihausta (käytetään Javan valmista koneistoa?) -- katsotaan haun nopeus

@@ -34,6 +34,9 @@ hidden: false
 </only-for-not-logged-in>
 
 
+TODO: kirjoita uudestaan, kulmana moniosaiset ohjelmat ja niiden testaaminen
+
+
 Tässä osassa opit miksi joissakin metodeissa on määre static ja miksi joissain sitä ei ole. Tutustut hajautustauluun ja opit käyttämään sitä ohjelmissasi. Opit ryhmittelemään tietoa hajautustaulun avulla. Harjoittelet ohjelman jakamista käyttöliittymästä vastaavaan osaan ja sovelluslogiikasta vastaavaan osaan.
 
 <please-login></please-login>

@@ -1,5 +1,5 @@
 ---
-path: '/osa-6/5-kayttoliittyman-ja-sovelluslogiikan-eriyttaminen'
+path: '/osa-6/3-kayttoliittyman-ja-sovelluslogiikan-eriyttaminen'
 title: 'Käyttöliittymän ja sovelluslogiikan eriyttäminen'
 hidden: false
 ---
@@ -11,6 +11,8 @@ hidden: false
 - Osaat luoda tekstikäyttöliittymiä, jotka saavat parametrinaan sovelluskohtaisen sovelluslogiikan sekä syötteen lukemiseen käytettävän Scanner-olion.
 
 </text-box>
+
+TODO: lead-in halutaan erillinen sovelluslogikka
 
 Suurin syy käyttöliittymän ja sovelluslogiikan eriyttämiseen on ohjelman ylläpidettävyyden ja ymmärrettävyyden lisääminen. Sovelluslogiikan eri osa-alueet ovat ideaalitilanteessa käyttöliittymäriippumattomia, jolloin niitä voidaan parannella ilman käyttöliittymään koskemista. Vastaavasti osia voidaan siirtää sovelluksesta toiseen, jolloin käyttöliittymä on esimerkiksi vaihdettavissa tekstikäyttöliittymästä graafiseen käyttöliittymään.
 
@@ -50,6 +52,8 @@ Syötä koepisteet:
 
 
 Kuten kaikki ohjelmat, myös tämän ohjelman voisi kirjoittaa yhtenä kokonaisuutena mainiin. Eräs mahdollinen toteutus on seuraavanlainen.
+
+TODO: poista hashmap
 
 ```java
 import java.util.HashMap;
@@ -116,6 +120,8 @@ Pilkotaan ohjelma pienempiin osiin. Ohjelman pilkkominen tapahtuu tunnistamalla 
 
 
 ## Sovelluslogiikka
+
+TODO: poista hashmap
 
 Sovelluslogiikka sisältää ohjelman toiminnan kannalta oleelliset osat kuten tiedon säilöntätoiminnallisuuden. Edellisestä esimerkistä voidaan tunnistaa arvosanojen säilömiseen tarvittava toiminnallisuus. Eriytetään esimerkin ohjelmasta luokka `Arvosanarekisteri`, jonka vastuulle tulee kirjanpito arvosanojen lukumääristä. Arvosanarekisteriin voidaan lisätä arvosana pisteiden perusteella, jonka lisäksi arvosanarekisteristä voi kysyä kuinka moni on saanut tietyn arvosanan.
 

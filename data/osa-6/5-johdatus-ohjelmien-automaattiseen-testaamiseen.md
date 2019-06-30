@@ -1,9 +1,8 @@
 ---
-path: '/osa-7/3-automaattinen-testaaminen'
-title: 'Ohjelmien automaattinen testaaminen'
+path: '/osa-6/5-johdatus-ohjelmien-automaattiseen-testaamiseen'
+title: 'Johdatus ohjelmien automaattiseen testaamiseen'
 hidden: false
 ---
-
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
@@ -14,6 +13,8 @@ hidden: false
 
 </text-box>
 
+
+TODO: framea niin, että helpompaa kun ohjelma pienissä osissa -- viittaa takaisin sovelluslogiikan ja käyttöliittymän eriyttämiseen
 
 Otetaan seuraavaksi ensiaskeleet ohjelmien testaamiseen.
 
@@ -342,3 +343,4 @@ Yksikkötestaus on vain osa ohjelmiston testaamista. Yksikkötestaamisen lisäks
 Näitä testaamiseen liittyviä menetelmiä tarkastellaan tarkemmin muunmuassa kursseilla ohjelmistotekniikka sekä ohjelmistotuotanto.
 
 </text-box>
+

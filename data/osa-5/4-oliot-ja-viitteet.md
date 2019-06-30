@@ -4,7 +4,6 @@ title: 'Oliot ja viitteet'
 hidden: false
 ---
 
-
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
 - Kertaat luokkien ja olioiden toimintaa.
@@ -409,6 +408,7 @@ Käytämme edellä omaa luokkaa `Paivays` päivämäärän esittämiseen, sillä
 
 </text-box>
 
+TODO: tämä seuraava tehtävä ei liity päivämääriin
 
 <programming-exercise name='Henkilö ja lemmikki' tmcname='osa05-Osa05_08.HenkiloJaLemmikki'>
 
@@ -432,11 +432,15 @@ Leevi, kaverina Hulda, joka on sekarotuinen koira
 </programming-exercise>
 
 
+
 ##  Olio metodin parametrina
+
+TODO: kirjoita esimerkki uudestaan, heivataan painonvartijat -teema pois. -- kiipeilyseura?
 
 Olemme nähneet että metodien parametrina voi olla alkeis- ja viittaustyyppisiä muuttujia. Koska oliot ovat viittaustyyppisiä muuttujia, voi metodin parametriksi määritellä minkä tahansa tyyppisen olion. Demonstroidaan tätä esimerkillä.
 
 Painonvartijoihin hyväksytään jäseniksi henkilöitä, joiden painoindeksi ylittää annetun rajan. Kaikissa painonvartijayhdistyksissä raja ei ole sama. Tehdään painonvartijayhdistystä vastaava luokka. Olioa luotaessa konstruktorille annetaan parametriksi pienin painoindeksi, jolla yhdistyksen jäseneksi pääsee.
+
 
 
 ```java
@@ -1218,7 +1222,7 @@ System.out.println(jakomakiKolmio.kalliimpi(kallioKaksio));   // true
 </programming-exercise>
 
 
-## Olioiden samankaltaisuuden vertailu
+## Olioiden samankaltaisuuden vertailu (equals)
 
 Opimme merkkijonojen käsittelyn yhteydessä, että merkkijonojen vertailu tulee toteuttaa `equals`-metodin avullla. Tämä tapahtuu seuraavasti.
 
@@ -1839,3 +1843,4 @@ System.out.println(c);  // 0.00e
 ```
 
 </programming-exercise>
+

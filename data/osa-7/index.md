@@ -33,6 +33,8 @@ hidden: false
   <deadline>Kirjaudu sisään nähdäksesi deadlinen tälle osalle</deadline>
 </only-for-not-logged-in>
 
+TODO: kirjoita uudestaan, kulmana
+
 Tässä osassa opit erilaisista ohjelmointiparadigmoista. Osan läpikäytyäsi tiedät proseduraalisen ohjelmoinnin ja olio-ohjelmoinnin eroista ja osaat toteuttaa ohjelmia kumpaakin ohjelmointiparadigmaa noudattaen. Opit käsitteen algoritmi sekä sanan algoritmi alkuperän, ja opit käyttämään muutamia järjestämis- ja hakualgoritmeja. Opit myös kirjoittamaan yksikkötestejä ja harjoittelet testivetoisen ohjelmistokehityksen perusaskeleita. Teet myös muutaman tehtävän tuleville kurssilaisille ja osallistut ohjelmointiosaamistasi arvioiviin kyselyihin.
 
 <text-box variant="hint" name="Kurssin kokeesta">

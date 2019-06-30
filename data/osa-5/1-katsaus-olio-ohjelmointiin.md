@@ -13,6 +13,8 @@ hidden: false
 
 </text-box>
 
+TODO: mainitaan että kyse sekä tiedosta että toiminnasta
+
 
 Mistä olio-ohjelmoinnissa olikaan kyse? Tehdään pieni katsaus taaksepäin.
 
@@ -502,3 +504,4 @@ Tavoite 99.99999999999999% maksimista: 184.97000000000003
 </sample-output>
 
 </programming-exercise>
+

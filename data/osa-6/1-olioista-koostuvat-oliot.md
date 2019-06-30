@@ -1,9 +1,8 @@
 ---
-path: '/osa-5/5-listat-ja-viitteet'
-title: 'Listat ja viitteet'
+path: '/osa-6/1-olioista-koostuvat-oliot'
+title: 'Olioista koostuvat oliot'
 hidden: false
 ---
-
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
@@ -12,6 +11,8 @@ hidden: false
 - Osaat käyttää listaa oliomuuttujana.
 
 </text-box>
+
+TODO: uusi lead in, pari perusoliotehtävää
 
 
 Tarkastellaan vielä olioiden -- tai viittaustyyppisten muuttujien -- käyttöä listalla. Kun olio lisätään listalle, listalle kopioidaan viite. Kuten aiemmin, olion sisäisestä tilasta ei luoda kopiota, vaan listalle lisätään viite olemassa olevaan olioon.
@@ -412,3 +413,5 @@ Ohjelman tulostuksen tulisi olla seuraava:
 </sample-output>
 
 </programming-exercise>
+
+

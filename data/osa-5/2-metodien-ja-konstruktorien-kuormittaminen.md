@@ -1,6 +1,6 @@
 ---
-path: '/osa-5/3-metodien-ja-konstruktorien-kuormittaminen'
-title: 'Metodien ja konstruktorien kuormittaminen'
+path: '/osa-5/2-metodien-ja-konstruktorien-kuormittaminen'
+title: 'Toistuvan koodin vähentäminen (metodien ja konstruktorien kuormittaminen)'
 hidden: false
 ---
 
@@ -193,9 +193,50 @@ Esko, ikä 0 vuotta
 
 <quiznator id='5c534d44017ffc13eddc9f9f'></quiznator>
 
+TODO: tänne tehtävä
+
+
+<programming-exercise name='Monta konstruktoria' tmcname='osa05-Osa05_05.MontaKonstruktoria'>
+
+Tehtäväpohjassa on luokka `Esine`, joka kuvaa kaupassa olevaa esinettä. Jokaisella esineellä on nimi, sijainti sekä paino.
+
+
+Lisää luokkaan `Esine` seuraavat kolme konstruktoria:
+
+- `public Esine(String nimi)` luo esineen annetulla nimellä. Esineen sijainniksi tulee "pientavarahylly" ja painoksi 1.
+
+- `public Esine(String nimi, String sijainti)` luo esineen annetulla nimellä ja sijainnilla. Esineen painoksi tulee 1.
+
+- `public Esine(String nimi, int paino)` luo esineen annetulla nimellä ja painolla. Esineen sijainniksi tulee "varasto".
+
+
+Voit kokeilla ohjelmasi toimintaa seuraavalla koodilla:
+
+
+```java
+Esine mitta = new Esine("Mitta");
+Esine laasti = new Esine("Laasti", "remonttitavarat");
+Esine rengas = new Esine("Rengas", 5);
+
+System.out.println(mitta);
+System.out.println(laasti);
+System.out.println(rengas);
+```
+
+
+<sample-output>
+
+Mitta (1 kg) löytyy sijainnista pientavarahylly
+Laasti (1 kg) löytyy sijainnista remonttitavarat
+Rengas (5 kg) löytyy sijainnista varasto
+
+</sample-output>
+
+</programming-exercise>
+
+
 
 ## Metodin kuormittaminen
-
 
 Konstruktorien tapaan myös metodeja voi kuormittaa, eli samannimisestä metodista voi olla useita versioita. Jälleen eri versioiden parametrien tyyppien on oltava erilaiset. Tehdään `vanhene`-metodista toinen versio, joka mahdollistaa henkilön vanhentamisen parametrina olevalla vuosimäärällä:
 
@@ -254,50 +295,12 @@ public void vanhene(int vuodet) {
 }
 ```
 
-
 <quiznator id='5c534d03fd9fd71425c62a6e'></quiznator>
+
+TODO: tarkasta että video oikealla kohdalla
 
 <youtube id='b6YmqoQopvs'></youtube>
 
-
-
-<programming-exercise name='Monta konstruktoria' tmcname='osa05-Osa05_05.MontaKonstruktoria'>
-
-Tehtäväpohjassa on luokka `Esine`, joka kuvaa kaupassa olevaa esinettä. Jokaisella esineellä on nimi, sijainti sekä paino.
-
-
-Lisää luokkaan `Esine` seuraavat kolme konstruktoria:
-
-- `public Esine(String nimi)` luo esineen annetulla nimellä. Esineen sijainniksi tulee "pientavarahylly" ja painoksi 1.
-
-- `public Esine(String nimi, String sijainti)` luo esineen annetulla nimellä ja sijainnilla. Esineen painoksi tulee 1.
-
-- `public Esine(String nimi, int paino)` luo esineen annetulla nimellä ja painolla. Esineen sijainniksi tulee "varasto".
-
-
-Voit kokeilla ohjelmasi toimintaa seuraavalla koodilla:
-
-
-```java
-Esine mitta = new Esine("Mitta");
-Esine laasti = new Esine("Laasti", "remonttitavarat");
-Esine rengas = new Esine("Rengas", 5);
-
-System.out.println(mitta);
-System.out.println(laasti);
-System.out.println(rengas);
-```
-
-
-<sample-output>
-
-Mitta (1 kg) löytyy sijainnista pientavarahylly
-Laasti (1 kg) löytyy sijainnista remonttitavarat
-Rengas (5 kg) löytyy sijainnista varasto
-
-</sample-output>
-
-</programming-exercise>
 
 
 

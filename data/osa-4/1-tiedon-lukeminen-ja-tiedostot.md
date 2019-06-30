@@ -4,7 +4,6 @@ title: 'Tiedon lukeminen ja tiedostot'
 hidden: false
 ---
 
-
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
 - Kertaat tiedon lukemista näppäimistöltä.
@@ -150,6 +149,7 @@ Luo tehtäväpohjan juurikansioon (samassa kansiossa kansio `src` ja tiedosto `p
 
 ## Lukeminen tiedostosta
 
+TODO: paths.get - testaa
 
 **Tiedoston lukeminen** tapahtuu Scanner-luokan avulla. Kun Scanner-luokan avulla halutaan lukea tiedosto, annetaan luokan konstruktorille parametrina luettavaa tiedostoa kuvaava File-muuttuja (`new File("tiedostonnimi.paate")`). Tämän jälkeen tiedostoa voi lukea kuten näppäimistöltä luettavaa syötettä. Lukeminen tapahtuu while-toistolauseella, jota jatketaan kunnes kaikki tiedoston rivit on luettu, eli kunnes tiedostossa ei ole enää luettavia rivejä. Tiedostoja lukiessa voidaan kohdata virhetilanne, joten tiedoston lukeminen vaatii erillisen "yrittämisen" (`try`) sekä mahdollisen virheen kiinnioton (`catch`). Palaamme virhetilanteiden käsittelyyn ohjelmoinnin jatkokurssilla eli Ohjelmoinnin MOOCin osan 7 jälkeen.
 
@@ -572,3 +572,4 @@ Vanhin oli: anton
 </sample-output>
 
 </programming-exercise>
+

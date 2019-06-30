@@ -45,6 +45,11 @@ while (indeksi < nimet.size()) {
     indeksi = indeksi + 1;
 }
 
+// 2. for-toistolause indeksillä
+for (int i = 0; i < nimet.size(); i++) {
+    System.out.println(nimet.get(i));
+}
+
 System.out.println();
 // 2. for-each toistolause (ei indeksiä)
 for (String nimi: nimet) {
@@ -68,7 +73,16 @@ Kay McNulty
 Marlyn Wescoff
 Ruth Lichterman
 
+Betty Jennings
+Betty Snyder
+Frances Spence
+Kay McNulty
+Marlyn Wescoff
+Ruth Lichterman
+
 </sample-output>
+
+TODO: onko relevantti kysely? Ehkä jotain muuta? Kysytään mitä toistolausetta suosii ja miksi?
 
 <quiznator id="5c4aaa92244fe21455cb56ac"></quiznator>
 
@@ -292,3 +306,10 @@ KonMari
 </sample-output>
 
 </programming-exercise>
+
+TODO: tänne muutama tehtävä, missä luetaan tiedosto, luodaan tiedoston riveistä olioita, ja sitten tehdään jotain olioille
+
+
+TODO: tänne tehtävä "musiikkia" (luodaan luokka ääni, lisätään niitä listalle, annetaan äänet soittimelle)
+
+TODO: mahdollisuus soittaa muiden tekemiä ääniä ja äänestää niitä osaksi verkkosivua?

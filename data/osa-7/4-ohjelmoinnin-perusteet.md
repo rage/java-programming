@@ -1,9 +1,10 @@
 ---
-path: '/osa-7/6-yhteenveto-ja-koeasiaa'
+path: '/osa-7/4-ohjelmoinnin-perusteet'
 title: 'Yhteenveto ja koeasiaa'
 hidden: false
 ---
 
+TODO: kirjoita uudestaan, kulmana "ohjelmoinnin perusteet"
 
 Seitsemännessa osassa tutustuttiin käsitteeseen ohjelmointiparadigma ja vertailtiin proseduraalista ohjelmointia ja olio-ohjelmointia.  Tutustuimme tiedon järjestämiseen sekä tiedon hakemiseen liittyviin algoritmeihin (valintajärjestäminen, binäärihaku) sekä harjoittelimme ohjelmien automaattista testaamista.
 
