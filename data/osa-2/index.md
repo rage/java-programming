@@ -33,6 +33,8 @@ hidden: false
   <deadline>Kirjaudu sisään nähdäksesi deadlinen tälle osalle</deadline>
 </only-for-not-logged-in>
 
+TODO: pääteema: kasvavien ohjelmien hallinta -- saman koodin toistaminen uudelleen ja ohjelmien pilkkominen pienempiin osiin eli metodeihin
+
 TODO: rewrite Tässä osassa opit ohjelmointiongelmiin liittyviä osaongelmia sekä niiden ratkaisumalleja. Opit loogiset operaatiot ja, tai ja ei ja opit käyttämään niitä ehto- ja toistolauseissa. Opit käsitteet metodi, metodin parametri, metodin palautusarvo ja ohjelman kutsupino. Opit luomaan metodeja ja tulet ymmärtämään miten ohjelman suoritus etenee kun metodia kutsutaan ja toisaalta kun metodikutsusta palataan.
 
 
