@@ -36,6 +36,7 @@ hidden: false
 
 TODO: kirjoita uudelleen. Kulma: tiedon määrä kasvaa, miten hoidetaan?
 
+TODO: jos/kun teemana on tiedon kasvava määrä, miten motivoidaan ohjelmien ymmärrettävyyden käsittely ja toisaalta virheiden etsiminen ohjelmista?
 
 Tässä osassa opit lähdekoodin kommentointitapoja ja huomaat miten muuttujien ja metodien nimentä vaikuttaa ohjelman ymmärrettävyyteen. Opit käyttämään lista- ja taulukkorakenteita osana ohjelmia. Harjoittelet listan ja taulukon läpikäyntiä kahdella erilaisella toistolauseella (while ja for-each). Harjoittelet lisäksi merkkijonojen käsittelyä ja opit merkkijonoihin liittyviä metodeja. Otat myös ensiaskeleet ohjelmien testaamiseen.
 
