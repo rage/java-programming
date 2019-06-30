@@ -1,9 +1,8 @@
 ---
-path: '/osa-3/4-merkkijonot'
+path: '/osa-3/5-merkkijonot'
 title: 'Merkkijonojen käsittely'
 hidden: false
 ---
-
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
@@ -883,3 +882,8 @@ Syntymävuosien keskiarvo: 1930.0
 
 
 </programming-exercise>
+
+
+TODO: tehtävä, missä saadaan lista arvoja netistä (tai tiedostosta) -- api tähän valmiina -- luetaan tiedot ja tulostetaan yhteenvetoja
+
+

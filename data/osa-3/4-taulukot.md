@@ -1,5 +1,5 @@
 ---
-path: '/osa-3/3-taulukot'
+path: '/osa-3/4-taulukot'
 title: 'Taulukot ja niissä olevan tiedon käsittely'
 hidden: false
 ---
@@ -476,3 +476,5 @@ System.out.println(luvut[0]);
 // tulostaa luvun taulukon indeksistä 2, eli luvun 42
 System.out.println(luvut[2]);
 ```
+
+TODO: musiikin soittaminen taulukosta?

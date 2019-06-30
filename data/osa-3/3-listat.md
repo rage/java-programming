@@ -1,9 +1,8 @@
 ---
 path: '/osa-3/2-listat'
-title: 'Listamuuttujan käyttö useamman arvon tallentamiseen'
+title: 'Listat ja useamman arvon säilöminen'
 hidden: false
 ---
-
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
@@ -126,6 +125,7 @@ liukuluvut.add(liukuluku);
 
 Palaamme teemaan jatkossakin, sillä tämä jako alkeis- ja viittaustyyppisiin muuttujiin vaikuttaa ohjelmiimme myös muilla tavoin.
 
+TODO: sanotaan jotain autoboxingista?
 
 
 ## Listalle lisääminen ja tietystä kohdasta hakeminen
@@ -478,7 +478,6 @@ Huom! Käytä tässä listan valmiiksi tarjoamaa metodia `size`.
 ### Listan läpikäynti while-toistolauseella
 
 Tehdään aiemmasta kunkin indeksin manuaalisesti tulostavasta ohjelmasta uusi versio. Tässä välivaiheen versiossa pidetään tulostettavasta paikasta kirjaa muuttujan `indeksi` avulla:
-
 
 
 ```java
@@ -928,8 +927,8 @@ Pienin luku löytyy indeksistä 3
 </programming-exercise>
 
 
-### Listan läpikäynti for-each -toistolauseella
 
+### Listan läpikäynti for-toistolauseella
 
 Listan läpikäynti `while`-toistolauseen avulla vaatii indeksimuuttujan käyttöä, jolla pidetään kirjaa kullakin ajanhetkellä tarkasteltavasta indeksistä.
 
@@ -944,6 +943,18 @@ while (indeksi < lista.size()) {
     indeksi = indeksi + 1;
 }
 ```
+
+TODO: kirjoita setti, missä todetaan, että hahmo on toistuva -- tämän takia ohjelmointikielessä for...
+
+TODO: kirjoita tehtävä, missä toistolause muunnetaan for-tyyppiseksi
+
+TODO: kirjoita tehtävä, missä käydään lista läpi for-toistolauseella (tulostetaan sekä indeksi että arvo)
+
+
+
+### Listan läpikäynti for-each -toistolauseella
+
+
 
 Mikäli listan arvojen läpikäynnissä ei tarvita tietoa indeksistä, voi listan läpikäyntiin käyttää **for-each** -lausetta.
 
@@ -1009,7 +1020,6 @@ Keskiarvo: 23.25
 </sample-output>
 
 </programming-exercise>
-
 
 
 ## Listalta poistaminen ja arvon olemassaolon tarkistaminen
@@ -1442,3 +1452,7 @@ lista.remove(3);
 ArrayList<String> lista = new ArrayList<>();
 boolean oliko = lista.contains("hei maailma!");
 ```
+
+
+TODO: joku kiva yhteenvetotehtävä?
+
