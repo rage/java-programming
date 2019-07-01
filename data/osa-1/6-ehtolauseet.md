@@ -1,5 +1,5 @@
 ---
-path: "/osa-1/8-ehtolauseet"
+path: "/osa-1/6-ehtolauseet"
 title: "Ehtolauseet ja vaihtoehtoinen toiminta"
 ---
 
@@ -11,6 +11,16 @@ title: "Ehtolauseet ja vaihtoehtoinen toiminta"
 * Osaat vertailla merkkijonoja merkkijonoihin liittyvän equals-komennon avulla.
 
 </text-box>
+
+
+<text-box variant='learningObjectives' name='Oppimistavoitteet'>
+
+- Tunnet loogiset operaatiot ja, tai, sekä ei, ja osaat käyttää niitä osana ehtolauseen lauseketta.
+- Tunnet ehtolauseen suoritusjärjestyksen ja tiedät, että ehtolauseiden läpikäynti lopetetaan ensimmäiseen ehtoon, jonka lauseke evaluoituu todeksi.
+- Osaat käyttää toistolauseen ehtona totuusarvon palauttavaa lauseketta, jolla päätetään jatketaanko toistoa vaiko ei.
+
+</text-box>
+
 
 
 Ohjelmamme ovat tähän mennessä olleet lineaarisia eli ohjelmien suoritus on tapahtunut ylhäältä alaspäin ilman suuria yllätyksiä tai vaihtoehtoja. Ohjelmiin halutaan kuitenkin usein vaihtoehtoista toiminnallisuutta, eli toiminnallisuutta joka riippuu tavalla tai toisella ohjelmassa olevien muuttujien tilasta.
@@ -48,30 +58,6 @@ Jos ehtolauseen lauseke evaluoidaan todeksi, yllä "jos muuttujassa luku oleva a
 
 Huomaa, että `if` -lauseen perään ei tule puolipistettä, sillä lause ei lopu ehto-osan jälkeen.
 
-
-<text-box variant='hint' name='Ohjelmakoodin sisennys'>
-
-Lohkojen sisällä oleva koodi sisennetään. Esimerkiksi ehtolauseeseen liittyvän lohkon sisältämä lähdekoodi sisennetään neljä välilyöntiä sisemmälle kuin ehtolauseen aloittava `if`-komento. Neljä merkkiä saa myös tabulaattorimerkillä (q:n vasemmalla puolella oleva näppäin). Kun lohko sulkeutuu, eli tulee }-merkki, sisennys loppuu. }-merkki on samalla tasolla kuin ehtolauseen aloittanut `if`-komento.
-
-Alla oleva esimerkki on sisennetty väärin.
-
-```java
-if (luku > 10) {
-luku = 9;
-}
-```
-
-Alla oleva esimerkki on sisennetty oikein.
-
-```java
-if (luku > 10) {
-    luku = 9;
-}
-```
-
-</text-box>
-
-
 <programming-exercise name="Ylinopeussakko" tmcname='osa01-Osa01_25.Ylinopeussakko'>
 
 Tee ohjelma, joka kysyy käyttäjältä kokonaisluvun ja tulostaa merkkijonon "Ylinopeussakko!" jos luku on suurempi kuin 120.
@@ -92,6 +78,58 @@ Ylinopeussakko!
 </sample-output>
 
 </programming-exercise>
+
+
+## Lohkot ja ohjelmakoodin sisennys
+
+Lohkolla tarkoitetaan aaltosulkujen rajaamaa aluetta. Ohjelman sisältävä lähdekooditiedosto sisältää merkkijonon `public class _Ohjelma_`, jota seuraa lohkon avaava aaltosulku. Lohko päättyy sulkevaan aaltosulkuun. Alla olevassa kuvassa on näytettynä Ohjelma-nimisen luokan rajaama lohko. Lohko alkaa merkkijonon `public class Ohjelma` jälkeen alkavasta aaltosulusta ja päättyy viimeiseen aaltosulkuun.
+
+![Esimerkki lohkoista](../img/lohkoesimerkki-1.png)
+
+Ohjelman käynnistämiskohdan määrittelevä merkkijono `public static void main(String[] args)` määrittelee oman lohkon, jonka sisällä oleva lähdekoodi suoritetaan kun ohjelma käynnistetään. Edellä esitetyssä esimerkissä on todellisuudessa kaksi lohkoa -- toinen lohko alkaa kohtaa `public static void main(String[] args)` seuraavasta aaltosulkeesta.
+
+![](../img/lohkoesimerkki-2.png)
+
+Lohkot määrittelevät ohjelman rakennetta ja rajaavat ohjelmaa. Aaltosuluille tulee aina löytyä pari: koodi, josta josta puuttuu lohkon päättävä (tai aloittava) aaltosulku, on virheellinen.
+
+```java
+public class Ohjelma {
+    public static void main(String[] args) {
+        // Tänne voit kirjoittaa ohjelmakoodia. Ohjelmasi voit ajaa
+        // valitsemalla menusta Run->Run File tai painamalla Shift+F6
+
+}
+```
+
+Lohkojen sisällä oleva koodi sisennetään. Esimerkiksi ehtolauseeseen liittyvän lohkon sisältämä lähdekoodi sisennetään neljä välilyöntiä sisemmälle kuin ehtolauseen aloittava `if`-komento. Neljä merkkiä saa myös tabulaattorimerkillä (q:n vasemmalla puolella oleva näppäin). Kun lohko sulkeutuu, eli tulee }-merkki, sisennys loppuu. }-merkki on samalla tasolla kuin ehtolauseen aloittanut `if`-komento.
+
+Alla oleva esimerkki on sisennetty väärin.
+
+```java
+if (luku > 10) {
+luku = 9;
+}
+```
+
+Alla oleva esimerkki on sisennetty oikein.
+
+```java
+if (luku > 10) {
+    luku = 9;
+}
+```
+
+<text-box variant="hint" name="Automaattinen ohjelmakoodin sisentäminen">
+
+Javassa koodia sisennetään neljän välilyönnin tai yhden tabulaattorin verran jokaisen lohkon kohdalla. Käytä sisentämiseen joko välilyöntejä tai tabulaattoreita. Joissakin tapauksissa sisennys saattaa hajota mikäli käytät molempia. NetBeans auttaa tässä kun painat kirjainyhdistelmää "alt + shift + f" (macOS "control + shift + f").
+
+Jatkossa ohjelmakoodi tulee sisentää oikein myös tehtävissä. Jos sisennys on väärin, ei ohjelmointiympäristö hyväksy tehtävää.
+
+</text-box>
+
+TODO: tehtävä, missä ohjelmakoodi aluksi väärin sisennetty ja se tulee sisentää oikein (tästä tehtävästä lähtien tyylitarkastus päällä)
+
+
 
 
 ## Vertailuoperaattorit
@@ -698,15 +736,7 @@ Ei sitten
 </programming-exercise>
 
 
-# Loogiset operaatiot
-
-<text-box variant='learningObjectives' name='Oppimistavoitteet'>
-
-- Tunnet loogiset operaatiot ja, tai, sekä ei, ja osaat käyttää niitä osana ehtolauseen lauseketta.
-- Tunnet ehtolauseen suoritusjärjestyksen ja tiedät, että ehtolauseiden läpikäynti lopetetaan ensimmäiseen ehtoon, jonka lauseke evaluoituu todeksi.
-- Osaat käyttää toistolauseen ehtona totuusarvon palauttavaa lauseketta, jolla päätetään jatketaanko toistoa vaiko ei.
-
-</text-box>
+## Loogiset operaatiot
 
 Materiaalin esimerkeissä ja tehtävissä käytetyt ehtolauseet ovat tähän mennessä käyttäneet yksinkertaisia lausekkeita, joilla on tarkasteltu ehtolauseeseen ja toistolauseeseen liittyvän lähdekoodin suorittamista. Esim.
 

@@ -1,5 +1,5 @@
 ---
-path: '/osa-1/10-ohjelmointi-yhteiskunnassa'
+path: '/osa-1/7-ohjelmointi-yhteiskunnassa'
 title: 'Ohjelmointi yhteiskunnassa'
 hidden: false
 ---

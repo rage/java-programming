@@ -1,5 +1,5 @@
 ---
-path: "/osa-1/5-muuttujat"
+path: "/osa-1/4-muuttujat"
 title: "Muuttujat ja ohjelmien kielellistäminen"
 ---
 
@@ -10,13 +10,6 @@ title: "Muuttujat ja ohjelmien kielellistäminen"
 
 </text-box>
 
-
-<text-box variant='learningObjectives' name='Oppimistavoitteet'>
-
-* Tunnet käsitteen muuttuja. Tiedät mitä ovat muuttujan tyyppi, muuttujan nimi, ja muuttujan arvo.
-* Osaat luoda ja käsitellä merkkijono-, kokonaisluku-, liukuluku-, ja totuusarvomuuttujia.
-
-</text-box>
 
 Keskeinen käsite ohjelmoinnissa on muuttuja. Muuttujaa kannattaa ajatella lokerona, johon voi tallettaa annetun tyyppistä tietoa. Tiedolla on aina tyyppi. Tyyppejä ovat esimerkiksi teksti eli merkkijono (`String`), kokonaisluku (`int`), liukuluku (`double`) eli desimaaliluku, ja totuusarvo (`boolean`). Muuttujaan asetetaan arvo yhtäsuuruusmerkillä (`=`).
 

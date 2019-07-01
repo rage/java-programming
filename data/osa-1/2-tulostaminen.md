@@ -146,6 +146,16 @@ Hei maailma!
 </sample-output>
 
 
+<text-box variant='hint' name='Tarkka tarkastaja'>
+
+Ohjelmointitehtävät tarkastaa TMC-Henrik, joka on hyvin tarkka. Tehtävänannoissa olevat toiveet tulostusmuodosta ovat tarkkoja. Jos tehtävänannossa toivotaan esimerkiksi että ohjelma tulostaa sulun, ei sulkua saa jättää tulostamatta.
+
+Tämä tulostukseen liittyvä tarkkuus on oleellista laajemmin ohjelmoinnissa. Yhdenkin merkin puuttuminen voi johtaa virhetilanteeseen. Aloittelevat ohjelmoijat usein esimerkiksi syöttävät pilkun pisteen sijaan, kirjoittavat vaikkapa `printin` sanan `println` sijaan, jättävät tulostettavasta merkkijonosta hipsut pois, tai unohtavat komentoa seuraavan puolipisteen. Jokainen edelläolevista esimerkeistä johtaa virhetilanteeseen, missä ohjelman suoritus ei onnistu.
+
+Ohjelmoinnin opettelu onkin oikeastaan tie täynnä virheitä -- jokainen virheviesti on myös oppimistilanne.
+
+</text-box>
+
 <programming-exercise name='Olipa kerran' tmcname='osa01-Osa01_03.OlipaKerran'>
 
 TODO: muokkaa tehtäväpohjaa
@@ -212,60 +222,56 @@ maa
 </programming-exercise>
 
 
-## Rivinvaihto
+## Terminologiaa ja koodin kommentointi
 
-Tulostuskomento `System.out.println("merkkijono");` tulostaa tekstin "merkkijono" sekä rivinvaihdon. Rivinvaihdon voi halutessaan tulostaa myös erikoismerkillä `\n`, joka kirjoitetaan osaksi tulostettavaa merkkijonoa. Esimerkiksi seuraavat kaksi ohjelmaa tuottavat samanlaisen tulostuksen.
+### Komennon parametrit
+
+Tulostuslauseen tulostama tieto eli komennon _parametrit_ annetaan tulostuskomennolle lisäämällä ne lauseen perässä olevien sulkujen `()` sisään. Esimerkiksi `System.out.println` -komennon parametriksi annetaan merkkijono "hei" hipsujen sisällä seuraavasti: `System.out.println("hei")`.
+
+### Puolipiste erottaa lauseet toisistaan
+
+Puolipisteellä `;` erotetaan lauseet toisistaan. Voisimme oikeastaan kirjoittaa lähes kaiken yhdelle riville. Tämä ei ole kuitenkaan kovin ymmärrettävää.
 
 ```java
-System.out.println("Hei maailma!\n... ja maailmankaikkeus!");
-```
-
-```java
-System.out.println("Hei maailma!");
-System.out.println("... ja maailmankaikkeus!");
+System.out.println("Hei "); System.out.println("maailma"); System.out.println("!\n");
 ```
 
 <sample-output>
 
-Hei maailma!
-... ja maailmankaikkeus!
+Hei
+maailma
+!
 
 </sample-output>
 
+Vaikka yllä oleva esimerkki toimii, on rivinvaihtojen käyttö tärkeää muita ohjelmoijia ajatellen. Tällöin ohjelman lukija tietää, että kullakin rivillä tehdään vain yksi konkreettinen asia.
 
-<programming-exercise name='Olipa kerran maa' tmcname='osa01-Osa01_05.Oneliner'>
+TODO: quiz, jossa kysytään että mistä tietssä termissä on kyse
 
-TODO: uusi tehtävä
+### Kommentit
 
-Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
+Lähdekoodia voi kommentoida selkeyttääkseen sitä tai lisätäkseen muistiinpanoja kahdella eri tavalla.
+
+- Yhden rivin kommentit aloitetaan kahdella vinoviivalla, `//`. Kaikki kahta vinoviivaa seuraava samalla rivillä oleva teksti tulkitaan kommentiksi.
+- Useamman rivin kommentit aloitetaan yhdellä vinoviivalla ja tähdellä `/*` ja lopetetaan tähdellä ja vinoviivalla `*/`. Kaikki useamman rivin kommentin aloittavan ja lopettavan alueen välillä tulkitaan kommentiksi.
+
+Alla on esimerkki ohjelmasta, jossa kumpikin kommenttityyppi on käytössä.
 
 ```java
-public class OlipaKerranMaa {
+public class Kommentteja {
     public static void main(String[] args) {
-
+        // Tulostetaan
+        System.out.println("Tulostettava teksti");
+        System.out.println("Lisää tulostettavaa!");
+        /* Seuraavaksi:
+        - lisää tulostamisesta
+        - lisää harjoittelua
+        - muuttujat
+        - ...
+        */
+        System.out.println("Muuta tulostettavaa");
     }
 }
 ```
 
-Muokkaa ohjelmaa siten, että ohjelman suoritus tulostaa seuraavanlaisen tekstin. Käytä tekstin tulostamiseen yhtä `System.out.println` komentoa.
-
-<sample-output>
-
-Olipa kerran maa valmistui vuonna 2008. Sarja käsittelee
-luontoympäristön suojelemista ja varoittaa maailmanlaajuisesta
-ilmastonlämpenemisestä, kasvihuoneilmiöstä, saasteista ja
-niin edelleen.
-
-</sample-output>
-
-</programming-exercise>
-
-
-TODO: johonkin:
-
-
-Yhdenkin merkin puuttuminen voi johtaa ohjelmoidessa virhetilanteeseen. Ohjelmoija saattaa vahingossa esimerkiksi syöttää pilkun pisteen sijaan, kirjoittaa vaikkapa `printin` sanan `println` sijaan, jättää tulostettavasta merkkijonosta hipsut pois, tai unohtaa komentoa seuraavan puolipisteen. Jokainen edelläolevista esimerkeistä johtaa virhetilanteeseen, missä ohjelman suoritus ei onnistu.
-
-
-Tehtävänannoissa olevat toiveet tulostusmuodosta ovat tarkkoja. Jos tehtävänannossa toivotaan esimerkiksi että ohjelma tulostaa sulun toisen rivin ensimmäiseksi merkiksi, ei sulkua saa jättää tulostamatta.
-
+Esimerkin alin rivi esittelee erityisen kätevän käyttökohteen kommenteille. Kirjoitettua lähdekoodia ei tarvitse poistaa jos haluaa tilapäisesti kokeilla jotain.
