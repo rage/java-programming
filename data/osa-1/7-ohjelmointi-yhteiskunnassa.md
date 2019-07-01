@@ -16,6 +16,8 @@ TODO: kevennä?
 
 TODO: siirrä aloituskysely johdantoon
 
+TODO: kirjoita palveluista, mm. veroprosenttilaskuri jne, kaikissa ohjelmointia taustalla
+
 
 <quiznator id="5c12b7f263de8e5db0cf8b8e"></quiznator>
 

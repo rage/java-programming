@@ -156,9 +156,7 @@ Ohjelmoinnin opettelu onkin oikeastaan tie täynnä virheitä -- jokainen virhev
 
 </text-box>
 
-<programming-exercise name='Olipa kerran' tmcname='osa01-Osa01_03.OlipaKerran'>
-
-TODO: muokkaa tehtäväpohjaa
+<programming-exercise name='Olipa kerran ohjelma' tmcname='osa01-Osa01_03.OlipaKerranOhjelma'>
 
 Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
 
@@ -197,8 +195,6 @@ Alla oleva animaatio kuvaa sout-komennon käyttöä. Kun käyttäjä on kirjoitt
 
 <programming-exercise name='Olipa kerran maa' tmcname='osa01-Osa01_04.OlipaKerranMaa'>
 
-TODO: muokkaa tehtäväpohjaa
-
 Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
 
 ```java
@@ -209,7 +205,7 @@ public class OlipaKerranMaa {
 }
 ```
 
-Muokkaa ohjelmaa siten, että ohjelman suoritus tulostaa seuraavanlaisen tekstin.
+Muokkaa ohjelmaa siten, että ohjelman suoritus tulostaa seuraavanlaisen tekstin. Käytä tässä yllä nähtyä "sout"-lyhennettä tulostuskomentojen kirjoittamiseen.
 
 <sample-output>
 

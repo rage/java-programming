@@ -48,11 +48,29 @@ laskuSuluitta = laskuSuluitta + 5;
 System.out.println(laskuSuluitta); // tulostaa 13
 ```
 
-<programming-exercise name="Sekunnit vuorokaudessa" tmcname='osa01-Osa01_17.SekunnitVuorokaudessa'>
+<programming-exercise name="Sekunnit vuorokaudessa" tmcname='osa01-Osa01_16.SekunnitVuorokaudessa'>
 
 Toteuta tehtäväpohjaan ohjelma, joka kysyy käyttäjältä vuorokausien lukumäärää. Tämän jälkeen ohjelma tulostaa sekuntien määrän annetuissa vuorokausissa.
 
+Opimme aiemmin, että luvun lukeminen onnistuu seuraavasti:
+
+```java
+Scanner lukija = new Scanner(System.in);
+
+System.out.println("Kirjoita luku ");
+int luku = Integer.valueOf(lukija.nextLine());
+System.out.println("Kirjoitit " + luku);
+```
+
 Esimerkkitulostuksia:
+
+<sample-output>
+
+Kuinka monen vuorokauden sekunnit tulostetaan?
+**1**
+86400
+
+</sample-output>
 
 <sample-output>
 
@@ -159,18 +177,21 @@ Mutta! kaksikymmentäkaksi: 22
 
 <code-states-visualizer input='{"code":"public class Esimerkki {\n    public static void main(String[] args) {\n        System.out.println(\"Neljä: \" + (2 + 2));\n        System.out.println(\"Mutta! kaksikymmentäkaksi: \" + 2 + 2);\n    }\n}","stdin":"","trace":[{"stdout":"","event":"call","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"1","frame_id":1}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"2","frame_id":2}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"Neljä: 4\n","event":"step_line","line":4,"stack_to_render":[{"func_name":"main:4","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"5","frame_id":5}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"Neljä: 4\nMutta! kaksikymmentäkaksi: 22\n","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"8","frame_id":8}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"Neljä: 4\nMutta! kaksikymmentäkaksi: 22\n","event":"return","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{"__return__":["VOID"]},"ordered_varnames":["__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"9","frame_id":9}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}}],"userlog":"Debugger VM maxMemory: 455M\n"}'></code-states-visualizer>
 
-<programming-exercise name="Kahden luvun summa" tmcname='osa01-Osa01_18.KahdenLuvunSumma'>
+<programming-exercise name="Kahden luvun summa" tmcname='osa01-Osa01_17.KahdenLuvunSumma'>
 
 Kirjoita ohjelma, joka kysyy käyttäjältä kahta lukua. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämien lukujen summan.
 
-Muistathan, että luvun lukeminen onnistuu Scanner-apuvälineen avulla seuraavasti:
+Kun kysyt useampaa lukua, tee kullekin luvulle oma muuttuja:
 
 ```java
 Scanner lukija = new Scanner(System.in);
 
-System.out.println("Kirjoita luku ");
-int luku = Integer.valueOf(lukija.nextLine());
-System.out.println("Kirjoitit " + luku);
+System.out.println("Syötä ensimmäinen luku!");
+int eka = Integer.valueOf(lukija.nextLine());
+System.out.println("Syötä toinen luku!");
+int toka = Integer.valueOf(lukija.nextLine());
+
+// tee jotain luvuilla
 ```
 
 Alla on annettuna ohjelman toivottuja esimerkkitulostuksia:
@@ -198,7 +219,7 @@ Lukujen summa on 2
 </programming-exercise>
 
 
-<programming-exercise name="Kolmen luvun summa" tmcname='osa01-Osa01_19.KolmenLuvunSumma'>
+<programming-exercise name="Kolmen luvun summa" tmcname='osa01-Osa01_18.KolmenLuvunSumma'>
 
 Kirjoita ohjelma, joka kysyy käyttäjältä kolmea lukua. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämien lukujen summan.
 
@@ -254,8 +275,9 @@ y on 5 ja z on 6
 </sample-output>
 
 
-<programming-exercise name="Yhteenlasku" tmcname='osa01-Osa01_20.Yhteenlasku'>
+<programming-exercise name="Yhteenlasku ja kaava" tmcname='osa01-Osa01_19.YhteenlaskuJaKaava'>
 
+TODO: tarkenna tehtävänantoa (myös kaava)
 Tee ohjelma, jonka avulla voidaan laskea kahden kokonaisluvun summa. Ohjelman alussa kysytään kahta kokonaislukua, jotka sisältävät summattavat luvut. Tämän jälkeen ohjelma tulostaa lukujen summausta kuvaavan kaavan.
 
 Tulostusesimerkkejä:
@@ -283,9 +305,9 @@ Syötä toinen luku!
 </programming-exercise>
 
 
-<programming-exercise name="Kertolasku" tmcname='osa01-Osa01_21.Kertolasku'>
+<programming-exercise name="Kertolasku ja kaava" tmcname='osa01-Osa01_20.KertolaskuJaKaava'>
 
-Tee edellistä ohjelmaa vastaava ohjelma, joka laskee kahden kokonaislukumuuttujaan sijoitetun arvon kertolaskun.
+Tee edellistä ohjelmaa mukaillen ohjelma, joka laskee kahden kokonaislukumuuttujaan sijoitetun arvon kertolaskun.
 
 Esimerkiksi jos syötetyt luvut ovat 2 ja 8, ohjelman suoritus on seuraava:
 
@@ -313,6 +335,7 @@ Syötä toinen luku!
 
 </programming-exercise>
 
+TODO: miksi alla oleva teksti näkyy pienellä?
 
 Kun olet saanut edellisen tehtävän toteutettua, kokeile mikä on suurin mahdollinen kertolasku minkä saat laskettua. Huomaamasi ilmiön taustalla on se, että kokonaislukumuuttujan arvo voi olla korkeintaan 2<sup>31</sup>-1 eli 2147483647. Tämä johtuu siitä, että kokonaislukumuuttujat esitetään tietokoneen muistissa 32 bitin avulla. Tähän tutustutaan tarkemmin muunmuassa kurssilla Tietokoneen toiminta.
 
@@ -435,7 +458,7 @@ Ohjelmoinnissa tähän liittyy muutamia asioita, jotka tulee muistaa. Ensiksi, n
 </text-box>
 
 
-<programming-exercise name="Kahden luvun keskiarvo" tmcname='osa01-Osa01_22.KahdenLuvunKeskiarvo'>
+<programming-exercise name="Kahden luvun keskiarvo" tmcname='osa01-Osa01_21.KahdenLuvunKeskiarvo'>
 
 Kirjoita ohjelma, joka kysyy käyttäjältä kahta kokonaislukua ja tulostaa lukujen keskiarvon.
 
@@ -452,7 +475,7 @@ Syötettyjen lukujen keskiarvo on 5.0
 </programming-exercise>
 
 
-<programming-exercise name="Kolmen luvun keskiarvo"  tmcname='osa01-Osa01_23.KolmenLuvunKeskiarvo'>
+<programming-exercise name="Kolmen luvun keskiarvo"  tmcname='osa01-Osa01_22.KolmenLuvunKeskiarvo'>
 
 Kirjoita ohjelma, joka kysyy käyttäjältä kolme kokonaislukua ja tulostaa lukujen keskiarvon.
 
@@ -486,7 +509,7 @@ Syötettyjen lukujen keskiarvo on 4.333333333333333
 <quiznator id="5c12b7f263de8e5db0cf8b91"></quiznator>
 
 
-<programming-exercise name="Nelilaskin" tmcname='osa01-Osa01_24.Nelilaskin'>
+<programming-exercise name="Nelilaskin" tmcname='osa01-Osa01_23.Nelilaskin'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä kaksi lukua ja tulostaa lukujen summan, lukujen erotuksen, lukujen kertolaskun, ja lukujen jakolaskun. Alla on kaksi esimerkkiä ohjelman toiminnasta.
 

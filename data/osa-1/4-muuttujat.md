@@ -1,6 +1,6 @@
 ---
 path: "/osa-1/4-muuttujat"
-title: "Muuttujat ja ohjelmien kielellistäminen"
+title: "Muuttujat"
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
@@ -10,6 +10,7 @@ title: "Muuttujat ja ohjelmien kielellistäminen"
 
 </text-box>
 
+TODO: lead-in, tutustuimme aiemmin pikaisesti merkkijonoon...
 
 Keskeinen käsite ohjelmoinnissa on muuttuja. Muuttujaa kannattaa ajatella lokerona, johon voi tallettaa annetun tyyppistä tietoa. Tiedolla on aina tyyppi. Tyyppejä ovat esimerkiksi teksti eli merkkijono (`String`), kokonaisluku (`int`), liukuluku (`double`) eli desimaaliluku, ja totuusarvo (`boolean`). Muuttujaan asetetaan arvo yhtäsuuruusmerkillä (`=`).
 
@@ -44,7 +45,7 @@ Totuusarvo: true
 
 </sample-output>
 
-<programming-exercise name="Muuttuvat muuttujat" tmcname='osa01-Osa01_12.MuuttuvatMuuttujat'>
+<programming-exercise name="Muuttuvat muuttujat" tmcname='osa01-Osa01_11.MuuttuvatMuuttujat'>
 
 Tehtäväpohja sisältää ohjelman, joka tulostaa seuraavaa.
 
@@ -359,7 +360,7 @@ Kirjoitit 42
 </sample-output>
 
 
-<programming-exercise name="Kokonaisluku" tmcname='osa01-Osa01_13.Kokonaisluku'>
+<programming-exercise name="Kokonaisluvun lukeminen" tmcname='osa01-Osa01_12.KokonaisluvunLukeminen'>
 
 Kirjoita ohjelma, joka kysyy käyttäjältä lukua. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämän luvun.
 
@@ -434,7 +435,7 @@ Kirjoitit 18.0
 
 </sample-output>
 
-<programming-exercise name="Liukuluku" tmcname='osa01-Osa01_14.Liukuluku'>
+<programming-exercise name="Liukuluvun lukeminen" tmcname='osa01-Osa01_13.LiukuluvunLukeminen'>
 
 Kirjoita ohjelma, joka kysyy käyttäjältä liukulukua. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämän luvun.
 
@@ -503,7 +504,7 @@ Kirjoitit true
 </sample-output>
 
 
-<programming-exercise name="Totuusarvo" tmcname='osa01-Osa01_15.Totuusarvo'>
+<programming-exercise name="Totuusarvon lukeminen" tmcname='osa01-Osa01_14.TotuusarvonLukeminen'>
 
 Kirjoita ohjelma, joka kysyy käyttäjältä totuusarvoa. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämän totuusarvon.
 
@@ -548,7 +549,7 @@ public class Ohjelma {
 }
 ```
 
-<programming-exercise name="Muuttujat yhdessä"  tmcname='osa01-Osa01_16.MuuttujatYhdessa'>
+<programming-exercise name="Muuttujien lukeminen yhdessä"  tmcname='osa01-Osa01_15.MuuttujienLukeminenYhdessa'>
 
 Kirjoita ohjelma, joka kysyy käyttäjältä merkkijonoa, kokonaislukua, liukulukua ja totuusarvoa. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämät arvot.
 

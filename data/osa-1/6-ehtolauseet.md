@@ -58,7 +58,7 @@ Jos ehtolauseen lauseke evaluoidaan todeksi, yllä "jos muuttujassa luku oleva a
 
 Huomaa, että `if` -lauseen perään ei tule puolipistettä, sillä lause ei lopu ehto-osan jälkeen.
 
-<programming-exercise name="Ylinopeussakko" tmcname='osa01-Osa01_25.Ylinopeussakko'>
+<programming-exercise name="Ylinopeussakko" tmcname='osa01-Osa01_24.Ylinopeussakko'>
 
 Tee ohjelma, joka kysyy käyttäjältä kokonaisluvun ja tulostaa merkkijonon "Ylinopeussakko!" jos luku on suurempi kuin 120.
 
@@ -80,28 +80,21 @@ Ylinopeussakko!
 </programming-exercise>
 
 
-## Lohkot ja ohjelmakoodin sisennys
+## Ohjelmakoodin sisennyksestä ja lohkoista
 
-Lohkolla tarkoitetaan aaltosulkujen rajaamaa aluetta. Ohjelman sisältävä lähdekooditiedosto sisältää merkkijonon `public class _Ohjelma_`, jota seuraa lohkon avaava aaltosulku. Lohko päättyy sulkevaan aaltosulkuun. Alla olevassa kuvassa on näytettynä Ohjelma-nimisen luokan rajaama lohko. Lohko alkaa merkkijonon `public class Ohjelma` jälkeen alkavasta aaltosulusta ja päättyy viimeiseen aaltosulkuun.
+Lohkolla tarkoitetaan aaltosulkujen rajaamaa aluetta. Ohjelman sisältävä lähdekooditiedosto sisältää merkkijonon `public class`, jota seuraa ohjelman nimi ja lohkon avaava aaltosulku. Lohko päättyy sulkevaan aaltosulkuun. Alla olevassa kuvassa on näytettynä värjättynä ohjelman lohko.
 
 ![Esimerkki lohkoista](../img/lohkoesimerkki-1.png)
 
-Ohjelman käynnistämiskohdan määrittelevä merkkijono `public static void main(String[] args)` määrittelee oman lohkon, jonka sisällä oleva lähdekoodi suoritetaan kun ohjelma käynnistetään. Edellä esitetyssä esimerkissä on todellisuudessa kaksi lohkoa -- toinen lohko alkaa kohtaa `public static void main(String[] args)` seuraavasta aaltosulkeesta.
+Ohjelmissa toistuva rimpsu `public static void main(String[] args)` aloittaa oman lohkon, jonka sisällä oleva lähdekoodi suoritetaan kun ohjelma käynnistetään -- rimpsu on oikeastaan jokaisen ohjelman aloituskohta. Yllä olevassa esimerkissä on todellisuudessa kaksi lohkoa, kuten alla olevasta kuvasta huomaamme.
 
 ![](../img/lohkoesimerkki-2.png)
 
 Lohkot määrittelevät ohjelman rakennetta ja rajaavat ohjelmaa. Aaltosuluille tulee aina löytyä pari: koodi, josta josta puuttuu lohkon päättävä (tai aloittava) aaltosulku, on virheellinen.
 
-```java
-public class Ohjelma {
-    public static void main(String[] args) {
-        // Tänne voit kirjoittaa ohjelmakoodia. Ohjelmasi voit ajaa
-        // valitsemalla menusta Run->Run File tai painamalla Shift+F6
+Myös ehtolause aloittaa lohkon.
 
-}
-```
-
-Lohkojen sisällä oleva koodi sisennetään. Esimerkiksi ehtolauseeseen liittyvän lohkon sisältämä lähdekoodi sisennetään neljä välilyöntiä sisemmälle kuin ehtolauseen aloittava `if`-komento. Neljä merkkiä saa myös tabulaattorimerkillä (q:n vasemmalla puolella oleva näppäin). Kun lohko sulkeutuu, eli tulee }-merkki, sisennys loppuu. }-merkki on samalla tasolla kuin ehtolauseen aloittanut `if`-komento.
+Lohkoihin liittyy ohjelman rakenteen ja toiminnan määrittelyn lisäksi luettavuuteen liittyvä seikka. Lohkojen sisällä oleva koodi sisennetään. Esimerkiksi ehtolauseeseen liittyvän lohkon sisältämä lähdekoodi sisennetään neljä välilyöntiä sisemmälle kuin ehtolauseen aloittava `if`-komento. Neljä merkkiä saa myös tabulaattorimerkillä (q:n vasemmalla puolella oleva näppäin). Kun lohko sulkeutuu, eli tulee `}`-merkki, sisennys loppuu. `}`-merkki on samalla tasolla kuin ehtolauseen aloittanut `if`-komento.
 
 Alla oleva esimerkki on sisennetty väärin.
 
@@ -127,9 +120,16 @@ Jatkossa ohjelmakoodi tulee sisentää oikein myös tehtävissä. Jos sisennys o
 
 </text-box>
 
-TODO: tehtävä, missä ohjelmakoodi aluksi väärin sisennetty ja se tulee sisentää oikein (tästä tehtävästä lähtien tyylitarkastus päällä)
+<programming-exercise name="Sisennys kuntoon" tmcname='osa01-Osa01_25.SisennysKuntoon'>
+
+Tehtäväpohjassa on ehtolauseen käyttöä demonstroiva ohjelma. Ohjelma on kuitenkin sisennetty väärin.
+
+Kokeile ajaa testit ennen kuin teet mitään. TMC näyttää sisennysvirheet eri lailla kuin ohjelmalogiikassa olevat virheet.
+
+Kun huomaat, miten sisennysvirheet merkitään, korjaa virheet. Opettele käyttämään automaattista ohjelmakoodin sisentämistä jo nyt.
 
 
+</programming-exercise>
 
 
 ## Vertailuoperaattorit
@@ -842,7 +842,7 @@ Alla on kuvattuna lausekkeiden toimintaa kun lausekkeissa on loogisia operaatioi
 
 
 
-<programming-exercise name='Iän tarkistus' tmcname='osa02-Osa02_11.IanTarkistus'>
+<programming-exercise name='Iän tarkistus' tmcname='osa01-Osa01_35.IanTarkistus'>
 
 Tee ohjelma, joka kysyy käyttäjän iän ja tarkistaa, että se on mahdollinen (ainakin 0 ja korkeintaan 120). Käytä ohjelmassa vain yhtä `if`-komentoa.
 
@@ -879,12 +879,7 @@ Mahdotonta!
 
 ## Ehtolauseiden suoritusjärjestys
 
-TODO: kirjoita tähän eksplisiittisesti ehtolauseiden suoritusjärjestyksestä -- myös tehtävä tai pari
-
-
-## FizzBuzz
-
-Tutustutaan klassiseen ohjelmointiongelmaan:
+Tutustutaan ehtolauseiden suoritusjärjestykseen klassisen ohjelmointiongelman kautta.
 
 _'Kirjoita ohjelma, joka kysyy käyttäjältä lukua yhden ja sadan väliltä ja tulostaa luvun. Jos luku on kolmella jaollinen, luvun sijaan tulostetaan "Fizz". Jos luku on viidellä jaollinen, luvun sijaan tulostetaan "Buzz". Jos luku on sekä kolmella että viidellä jaollinen, luvun sijaan tulostetaan "FizzBuzz"'._
 
@@ -993,7 +988,7 @@ FizzBuzz
 </sample-output>
 
 
-<programming-exercise name='Karkausvuosi' tmcname='osa02-Osa02_12.Karkausvuosi'>
+<programming-exercise name='Karkausvuosi' tmcname='osa01-Osa01_36.Karkausvuosi'>
 
 Vuosi on karkausvuosi, jos se on jaollinen 4:llä. Kuitenkin jos vuosi on jaollinen 100:lla, se on karkausvuosi vain silloin, kun se on jaollinen myös 400:lla.
 
@@ -1065,4 +1060,49 @@ if (luku % 4 != 0) {
 </programming-exercise>
 
 
-TODO: tehtävä: veroprosenttilaskuri (katso vero.fi:stä veroportaikko ja tuo tehtävänantoon, laske veroprosentti annetulle tulotasolle)
+<programming-exercise name='Lahjaverolaskuri' tmcname='osa01-Osa01_37.Lahjaverolaskuri'>
+
+[https://www.vero.fi/henkiloasiakkaat/omaisuus/lahja/](https://www.vero.fi/henkiloasiakkaat/omaisuus/lahja/): *Lahja tarkoittaa sitä, että omaisuus siirtyy toiselle henkilölle ilman korvausta. Lahjasta pitää maksaa lahjaveroa, jos samalta lahjanantajalta saatujen lahjojen arvo on kolmen vuoden aikana 5 000 euroa tai enemmän.*
+
+Kun lahja tulee lähimmiltä sukulaisilta, lahjaveron määrä määräytyy seuraavan taulukon mukaan (lähde [vero.fi](https://www.vero.fi/henkiloasiakkaat/omaisuus/lahja/lahjaverolaskuri/#lahjaverotaulukot)):
+
+| Lahja  | Vero alarajalla  | Veroprosentti ylimenevästä  |
+|---|---|---|
+| 5 000 -- 25 000 | 100  | 8  |
+| 25 000 -- 55 000 | 1 700 | 10  |
+| 55 000 -- 200 000 | 4 700 | 12 |
+| 200 000 -- 1 000 000 | 22 100 | 15 |
+| 1 000 000 --  | 142 100  | 17 |
+
+Esimerkiksi 6000 euron lahjasta tulee maksaa veroa 180 euroa (100 + (6000-5000) * 0.08), ja 75000 euron lahjasta tulee maksaa veroa 7100 euroa (4700 + (75000-55000) * 0.12).
+
+Tee ohjelma, joka laskee lahjaveron lähimmiltä sukulaisilta annetulle lahjalle. Alla on muutama esimerkki ohjelman toiminnasta.
+
+<sample-output>
+
+Lahjan suuruus?
+**3500**
+Ei veroa!
+
+</sample-output>
+
+
+<sample-output>
+
+Lahjan suuruus?
+**5000**
+Vero: 100.0
+
+</sample-output>
+
+<sample-output>
+
+Lahjan suuruus?
+**27500**
+Vero: 1950.0
+
+</sample-output>
+
+
+</programming-exercise>
+
