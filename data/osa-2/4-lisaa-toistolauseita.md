@@ -1,9 +1,28 @@
 ---
-path: '/osa-2/4-toistolauseen-ehto'
-title: 'Toistolauseen ehto'
+path: '/osa-2/4-lisaa-toistolauseita'
+title: 'Lisää toistolauseita'
 ---
 
-Olemme tähän mennessä käyttäneet toistolausetta, jonka suluissa on totuusarvo `true`, jolloin toistoa on jatkettu ikuisesti (tai kunnes toistolauseessa päädytään komentoon `break`). Toistolauseen sulut, joihin olemme tähän mennessä asettaneet aina arvon `true` sisältävät oikeastaan ehtolausekkeen, aivan samalla tavalla kuin `if`-komentoa seuraavat sulut. Arvon true voi korvata lausekkeella, joka evaluoidaan ohjelman suorituksen yhteydessä. Lauseke määritellään täsmälleen samalla tavalla kuin ehtolauseen (if) lauseke.
+
+<text-box variant='learningObjectives' name='Oppimistavoitteet'>
+
+- Tutustut while-toistolauseen ehtoon.
+- Opit käyttämään for-toistolausetta.
+- Tiedät tilanteita, joihin while-toistolause sopii, ja tilanteita, joihin for-toistolause sopii.
+
+</text-box>
+
+
+Tähän mennessä käyttämämme "while-true" -toistolause on erittäin näppärä silloin, kun ohjelmassa tulee toistaa toiminnallisuutta kunnes käyttäjä syöttää tietynlaisen syötteen.
+
+Tutustutaan seuraavaksi muutamaan muuhun toiston toteutustapaan.
+
+
+## While-toistolause ehdolla
+
+Olemme tähän mennessä käyttäneet toistolausetta, jonka suluissa on totuusarvo `true`, jolloin toistoa on jatkettu ikuisesti (tai kunnes toistolauseessa päädytään komentoon `break`).
+
+Toistolauseen sulut sisältävät oikeastaan ehtolausekkeen, aivan samalla tavalla kuin `if`-komentoa seuraavat sulut. Arvon `true` voi korvata lausekkeella, joka evaluoidaan ohjelman suorituksen yhteydessä. Lauseke määritellään täsmälleen samalla tavalla kuin ehtolauseen lauseke.
 
 Seuraavassa esimerkissä tulostetaan luvut 1, 2, ..., 5.  Kun `luku`-muuttujan arvo on yli 5, `while`-ehto ei ole enää voimassa ja toistaminen lopetetaan.
 
@@ -30,7 +49,59 @@ Alla on video toistolauseen käytöstä.
 <youtube id='us9GXUZ60ws'></youtube>
 
 
-<programming-exercise name='Nollasta lukuun' tmcname='osa02-Osa02_13.NollastaLukuun'>
+## For-toistolause
+
+Edellä näimme miten `while`-toistolauseen ehdon avulla voidaan käydä läpi lukuja tietystä luvusta tiettyyn lukuun.
+
+Tällaisen toistolauseen rakenne on seuraava.
+
+```java
+int i = 0;
+while (i < 10) {
+    System.out.println(i);
+    i++;
+}
+```
+
+Ylläolevan toistolauseen voi pilkkoa kolmeen osaan. Ensin esittelemme toistolauseessa toistokertojen laskemiseen käytettävän muuttujan `i` ja asetamme sen arvon nollaksi: `int i = 0;`. Tätä seuraa toistolauseen määrittely -- toistolauseen ehto on `i < 10` eli toistolausetta suoritetaan niin pitkään kuin muuttujan `i` arvo on pienempi kuin 10. Toistolauseessa on toistettava toiminnallisuus `System.out.println(i);`, jota seuraa toistolauseessa käytettävän muuttujan kasvatus `i++`.
+
+Saman toteuttaminen tapahtuu `for`-toistolauseella seuraavasti.
+
+```java
+for (int i = 0; i < 10; i++) {
+    System.out.println(i);
+}
+```
+
+For-toistolause koostuu neljästä osasta: (1) toistokertojen laskemiseen käytettävän muuttujan esittelystä; (2) toistolauseen ehdosta; (3) laskemiseen käytetyn muuttujan kasvattamisesta (tai pienentämisestä tai muuttamisesta); ja (4) toistettavasta toiminnallisuudesta.
+
+
+```java
+for (*muuttujan esittely*; *ehto*; *kasvatus*) {
+    // toistettava toiminnallisuus
+}
+```
+
+Alla on kuvattuna toistolauseen suoritus askeleittain.
+
+<code-states-visualizer input='{"code":"public class Esimerkki {\n    public static void main(String[] args) {\n        for (int i = 0; i < 5; i++) {\n           System.out.println(i);\n        }   \n    }\n}","stdin":"","trace":[{"stdout":"","event":"call","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"1","frame_id":1}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"2","frame_id":2}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{"i":0},"ordered_varnames":["i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"4","frame_id":4}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":4,"stack_to_render":[{"func_name":"main:4","encoded_locals":{"i":0},"ordered_varnames":["i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"7","frame_id":7}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"0\n","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{"i":0},"ordered_varnames":["i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"11","frame_id":11}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"0\n","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{"i":1},"ordered_varnames":["i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"12","frame_id":12}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"0\n","event":"step_line","line":4,"stack_to_render":[{"func_name":"main:4","encoded_locals":{"i":1},"ordered_varnames":["i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"16","frame_id":16}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"0\n1\n","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{"i":1},"ordered_varnames":["i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"20","frame_id":20}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"0\n1\n","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{"i":2},"ordered_varnames":["i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"21","frame_id":21}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"0\n1\n","event":"step_line","line":4,"stack_to_render":[{"func_name":"main:4","encoded_locals":{"i":2},"ordered_varnames":["i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"25","frame_id":25}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"0\n1\n2\n","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{"i":2},"ordered_varnames":["i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"29","frame_id":29}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"0\n1\n2\n","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{"i":3},"ordered_varnames":["i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"30","frame_id":30}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"0\n1\n2\n","event":"step_line","line":4,"stack_to_render":[{"func_name":"main:4","encoded_locals":{"i":3},"ordered_varnames":["i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"34","frame_id":34}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"0\n1\n2\n3\n","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{"i":3},"ordered_varnames":["i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"38","frame_id":38}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"0\n1\n2\n3\n","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{"i":4},"ordered_varnames":["i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"39","frame_id":39}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"0\n1\n2\n3\n","event":"step_line","line":4,"stack_to_render":[{"func_name":"main:4","encoded_locals":{"i":4},"ordered_varnames":["i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"43","frame_id":43}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"0\n1\n2\n3\n4\n","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{"i":4},"ordered_varnames":["i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"47","frame_id":47}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"0\n1\n2\n3\n4\n","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{"i":5},"ordered_varnames":["i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"48","frame_id":48}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"0\n1\n2\n3\n4\n","event":"step_line","line":6,"stack_to_render":[{"func_name":"main:6","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"52","frame_id":52}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"0\n1\n2\n3\n4\n","event":"return","line":6,"stack_to_render":[{"func_name":"main:6","encoded_locals":{"__return__":["VOID"]},"ordered_varnames":["__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"54","frame_id":54}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}}],"userlog":"Debugger VM maxMemory: 455M\n"}'></code-states-visualizer>
+
+Yllä olevassa esimerkissä ohjelma tulostaa luvut nollasta neljään. Arvoalueen voi määrittää myös muuttujien avulla -- alla olevassa  esimerkissä määritellään muuttujat `alku` ja `loppu`, joiden avulla määritellään toistolauseen käsittelemä lukualue.
+
+```java
+int alku = 3;
+int loppu = 7;
+for (int i = alku; i < loppu; i++) {
+    System.out.println(i);
+}
+```
+
+
+<code-states-visualizer input='{"code":"public class Esimerkki {\n    public static void main(String[] args) {\n        int alku = 3;\n        int loppu = 7;\n        for (int i = alku; i < loppu; i++) {\n            System.out.println(i);\n        }  \n    }\n}","stdin":"","trace":[{"stdout":"","event":"call","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"1","frame_id":1}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"2","frame_id":2}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":4,"stack_to_render":[{"func_name":"main:4","encoded_locals":{"alku":3},"ordered_varnames":["alku"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"4","frame_id":4}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{"alku":3,"loppu":7},"ordered_varnames":["alku","loppu"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"7","frame_id":7}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{"i":3,"alku":3,"loppu":7},"ordered_varnames":["alku","loppu","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"10","frame_id":10}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":6,"stack_to_render":[{"func_name":"main:6","encoded_locals":{"i":3,"alku":3,"loppu":7},"ordered_varnames":["alku","loppu","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"13","frame_id":13}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"3\n","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{"i":3,"alku":3,"loppu":7},"ordered_varnames":["alku","loppu","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"17","frame_id":17}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"3\n","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{"i":4,"alku":3,"loppu":7},"ordered_varnames":["alku","loppu","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"18","frame_id":18}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"3\n","event":"step_line","line":6,"stack_to_render":[{"func_name":"main:6","encoded_locals":{"i":4,"alku":3,"loppu":7},"ordered_varnames":["alku","loppu","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"22","frame_id":22}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"3\n4\n","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{"i":4,"alku":3,"loppu":7},"ordered_varnames":["alku","loppu","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"26","frame_id":26}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"3\n4\n","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{"i":5,"alku":3,"loppu":7},"ordered_varnames":["alku","loppu","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"27","frame_id":27}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"3\n4\n","event":"step_line","line":6,"stack_to_render":[{"func_name":"main:6","encoded_locals":{"i":5,"alku":3,"loppu":7},"ordered_varnames":["alku","loppu","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"31","frame_id":31}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"3\n4\n5\n","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{"i":5,"alku":3,"loppu":7},"ordered_varnames":["alku","loppu","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"35","frame_id":35}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"3\n4\n5\n","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{"i":6,"alku":3,"loppu":7},"ordered_varnames":["alku","loppu","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"36","frame_id":36}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"3\n4\n5\n","event":"step_line","line":6,"stack_to_render":[{"func_name":"main:6","encoded_locals":{"i":6,"alku":3,"loppu":7},"ordered_varnames":["alku","loppu","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"40","frame_id":40}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"3\n4\n5\n6\n","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{"i":6,"alku":3,"loppu":7},"ordered_varnames":["alku","loppu","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"44","frame_id":44}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"3\n4\n5\n6\n","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{"i":7,"alku":3,"loppu":7},"ordered_varnames":["alku","loppu","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"45","frame_id":45}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"3\n4\n5\n6\n","event":"step_line","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"alku":3,"loppu":7},"ordered_varnames":["alku","loppu"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"49","frame_id":49}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"3\n4\n5\n6\n","event":"return","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"alku":3,"loppu":7,"__return__":["VOID"]},"ordered_varnames":["alku","loppu","__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"51","frame_id":51}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}}],"userlog":"Debugger VM maxMemory: 455M\n"}'></code-states-visualizer>
+
+Seuraavissa tehtävissä jatketaan toistolauseiden harjoittelua. Voit käyttää tehtävissä joko ehdollista while-toistolausetta, tai for-toistolausetta.
+
+<programming-exercise name='Nollasta lukuun' tmcname='osa02-Osa02_17.NollastaLukuun'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä kokonaisluvun. Tämän jälkeen ohjelma tulostaa luvut nollasta käyttäjän syöttämään lukuun. Voit olettaa, että käyttäjä syöttää aina positiivisen luvun. Alla on muutamia esimerkkejä ohjelman toivotusta toiminnasta.
 
@@ -56,7 +127,7 @@ Kirjoita ohjelma, joka lukee käyttäjältä kokonaisluvun. Tämän jälkeen ohj
 </programming-exercise>
 
 
-<programming-exercise name='Luvusta sataan' tmcname='osa02-Osa02_14.LuvustaSataan'>
+<programming-exercise name='Luvusta sataan' tmcname='osa02-Osa02_18.LuvustaSataan'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä kokonaisluvun. Tämän jälkeen ohjelma tulostaa luvusta lähtien luvut sataan asti. Voit olettaa, että käyttäjä syöttää aina luvun, joka on pienempi kuin 100. Alla on muutamia esimerkkejä ohjelman toivotusta toiminnasta.
 
@@ -97,7 +168,7 @@ Huomaa, että tästä lähtien tehtävissä saattaa olla useampia osia. Jokainen
 </text-box>
 
 
-<programming-exercise name='Mihin ja mistä? (2 osaa)' tmcname='osa02-Osa02_15.MihinJaMista'>
+<programming-exercise name='Mihin ja mistä? (2 osaa)' tmcname='osa02-Osa02_19.MihinJaMista'>
 
 
 Tämä tehtävä on ensimmäinen kaksiosainen tehtävä. Kun teet molemmat osat, saat tehtävästä kaksi tehtäväpistettä. Voit palauttaa tehtävän myös siten, että vain ensimmäinen osa on tehtynä.
@@ -127,7 +198,7 @@ Mihin asti? **5**
 
 </sample-output>
 
-**Vihje:** käyttäjältä lukemasi luku toimii nyt whilen lopetusehdon ylärajana. Muista että Javassa `a <= b` tarkoittaa _a pienempi tai yhtä suuri kuin b_.
+**Vihje:** käyttäjältä lukemasi luku toimii nyt lopetusehdon ylärajana. Muista että Javassa `a <= b` tarkoittaa _a pienempi tai yhtä suuri kuin b_.
 
 
 <h2>Mistä lähtien?</h2>
@@ -158,6 +229,9 @@ Mistä lähtien? **16**
 
 </programming-exercise>
 
+
+## Toistolauseen suorituksen loppumisesta
+
 Toistolauseen suoritus ei lopu heti kun toistolauseen ehtolauseke voisi evaluoitua todeksi. Toistolauseen ehtolauseke evaluoidaan aina kun saavutaan toistolauseen alkuun, eli (1) kun ohjelman seuraava suoritettava lause on toistolause, ja (2) kun toistolauseeseen liittyvän lohkon sisältämän ohjelmakoodin suoritus on saatu loppuun.
 
 Tarkastellaan seuraavaa toistolausetta.
@@ -187,9 +261,26 @@ Ohjelman tulostus seuraavanlainen:
 
 Vaikka muuttujan `luku` arvo on välillä 2, toistolauseen suoritus ei lopu koskaan.
 
+TODO: miksi alla oleva ei ole boldattu?
+
 **Toistolauseen ehto tarkistetaan silloin kun toistolauseen toistaminen aloitetaan sekä silloin kun koodin suoritus on päässyt toistolauseen lopettavaan aaltosulkuun asti.** Mikäli toistolauseen ehdon lauseke on evaluoituu todeksi eli muotoon `true`, suoritus jatkuu toistolauseen alusta. Mikäli lauseke evaluoituu epätodeksi eli muotoon `false`, suoritus siirtyy toistolausetta seuraavaan lauseeseen.
 
-Vaikka muuttujan `luku` arvo on ylläolevassa toistolauseessa välillä 2, ei se ole koskaan 2 toistolauseen lopussa. Lopussa ehto `luku != 2` on aina totta, ja suoritus jatkuu..
+
+Vastaava sääntö pätee myös for-toistolauseelle. Alla olevassa esimerkissä toistolauseen suoritus -- väärin ymmärrettynä -- pitäisi lopettaa heti, kun muuttujan `i` arvo on 100. Näin ei kuitenkaan käy.
+
+```java
+for (int i = 0; i != 100; i++) {
+    System.out.println(i);
+    i = 100;
+    System.out.println(i);
+    i = 0;
+}
+```
+
+Yllä olevan ohjelman suoritus ei pääty koskaan.
+
+
+## Toistetaan toiminnallisuutta
 
 Eräs yleinen ongelmatyyppi on "tee jotain tietty määrä kertoja". Näissä ohjelmissa esiintyy toisto, jonka jokaisella toistokerralla tehdään haluttu toiminnallisuus sekä muutetaan kertojen lukumäärää laskevaa laskurimuuttujaa.
 
@@ -200,12 +291,12 @@ int tulos = 0;
 
 int i = 0;
 while (true) {
-  tulos += 3; // tarkoittaa samaa kuin tulos = tulos + 3;
-  i++;  // tarkoittaa samaa kuin i = i + 1;
+    tulos += 3; // tarkoittaa samaa kuin tulos = tulos + 3;
+    i++;  // tarkoittaa samaa kuin i = i + 1;
 
-  if (i == 4) {
-    break;
-  }
+    if (i == 4) {
+        break;
+    }
 }
 
 System.out.println(tulos);
@@ -218,13 +309,24 @@ int tulos = 0;
 
 int i = 0;
 while (i < 4) {
-  tulos += 3; // tarkoittaa samaa kuin tulos = tulos + 3;
-  i++;  // tarkoittaa samaa kuin i = i + 1;
+    tulos += 3; // tarkoittaa samaa kuin tulos = tulos + 3;
+    i++;  // tarkoittaa samaa kuin i = i + 1;
 }
 
 System.out.println(tulos);
 ```
 
+Tai for-lauseen avulla seuraavasti.
+
+```java
+int tulos = 0;
+
+for (int i = 0; i < 4; i++) {
+    tulos += 3;
+}
+
+System.out.println(tulos);
+```
 
 Mitä enemmän ohjelmassa on muuttujia, sitä haastavampaa ohjelman askeleittaisen suorituksen seuraaminen on. Ohjelman ymmärtämisen kannalta suorituksen seuraaminen on kuitenkin tärkeää.
 
@@ -264,13 +366,13 @@ Yksi näppärä tapa muuttujien arvojen tarkasteluun toistolauseessa on taulukko
   </tr>
 </table>
 
-Toistolauseen suoritus loppuu kun muuttujan `tulos` arvo on 12 ja muuttujan `i` arvo on 4 (ehto `i < 4` on tällöin epätotta).
+Toistolauseen suoritus loppuu kun muuttujan `tulos` arvo on 12 ja muuttujan `i` arvo on 4 (ehto `i < 4` on tällöin epätotta). Alla ohjelman suoritus on kuvattuna while-toistolausetta käyttäen.
 
 
 <code-states-visualizer input='{"code":"public class Esimerkki {\n    public static void main(String[] args) {\n        int tulos = 0;\n\n        int i = 0;\n        while (i < 4) {\n            tulos += 3;\n            i++;\n        }\n\n        System.out.println(tulos);\n    }\n}","stdin":"","trace":[{"stdout":"","event":"call","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"1","frame_id":1}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"2","frame_id":2}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{"tulos":0},"ordered_varnames":["tulos"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"4","frame_id":4}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":6,"stack_to_render":[{"func_name":"main:6","encoded_locals":{"tulos":0,"i":0},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"7","frame_id":7}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":7,"stack_to_render":[{"func_name":"main:7","encoded_locals":{"tulos":0,"i":0},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"11","frame_id":11}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"tulos":3,"i":0},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"13","frame_id":13}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"tulos":3,"i":1},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"15","frame_id":15}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":6,"stack_to_render":[{"func_name":"main:6","encoded_locals":{"tulos":3,"i":1},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"16","frame_id":16}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":7,"stack_to_render":[{"func_name":"main:7","encoded_locals":{"tulos":3,"i":1},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"20","frame_id":20}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"tulos":6,"i":1},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"22","frame_id":22}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"tulos":6,"i":2},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"24","frame_id":24}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":6,"stack_to_render":[{"func_name":"main:6","encoded_locals":{"tulos":6,"i":2},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"25","frame_id":25}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":7,"stack_to_render":[{"func_name":"main:7","encoded_locals":{"tulos":6,"i":2},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"29","frame_id":29}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"tulos":9,"i":2},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"31","frame_id":31}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"tulos":9,"i":3},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"33","frame_id":33}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":6,"stack_to_render":[{"func_name":"main:6","encoded_locals":{"tulos":9,"i":3},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"34","frame_id":34}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":7,"stack_to_render":[{"func_name":"main:7","encoded_locals":{"tulos":9,"i":3},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"38","frame_id":38}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"tulos":12,"i":3},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"40","frame_id":40}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"tulos":12,"i":4},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"42","frame_id":42}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":6,"stack_to_render":[{"func_name":"main:6","encoded_locals":{"tulos":12,"i":4},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"43","frame_id":43}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":11,"stack_to_render":[{"func_name":"main:11","encoded_locals":{"tulos":12,"i":4},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"47","frame_id":47}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"12\n","event":"step_line","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"tulos":12,"i":4},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"51","frame_id":51}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"12\n","event":"return","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"tulos":12,"i":4,"__return__":["VOID"]},"ordered_varnames":["tulos","i","__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"52","frame_id":52}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}}],"userlog":"Debugger VM maxMemory: 455M\n"}'></code-states-visualizer>
 
 
-<programming-exercise name='Lukusarjan summa' tmcname='osa02-Osa02_16.LukusarjanSumma'>
+<programming-exercise name='Lukusarjan summa' tmcname='osa02-Osa02_20.LukusarjanSumma'>
 
 Tee ohjelma, joka laskee summan 1+2+3+...+n, missä n on käyttäjän syöttämä luku.
 
@@ -294,14 +396,14 @@ Summa on 28
 
 Ja nyt laskettiin 1 + 2 + 3 + 4 + 5 + 6 + 7 = 28
 
-**Vihje:** Tee ohjelma `while`-komennon avulla. Käytä ohjelmassasi apumuuttujaa toistokertojen muistamiseen. Lisää jokaisella toistokerralla toistokerrat muistavan muuttujan arvo apumuuttujaan johon lasket summan arvon.
-
 </programming-exercise>
 
 
-<programming-exercise name='Rajatun lukusarjan summa' tmcname='osa02-Osa02_17.RajatunLukusarjanSumma'>
+<programming-exercise name='Rajatun lukusarjan summa' tmcname='osa02-Osa02_21.RajatunLukusarjanSumma'>
 
-Muuta edellistä tehtävää siten, että käyttäjä määrää summan laskemisen aloituskohdan. Voit olettaa, että käyttäjä antaa ensin pienemmän luvun ja sitten suuremman luvun.
+Kirjoita ohjelma, joka laskee rajatun välin lukujen summan ja tulostaa sen. Oleta, että käyttäjä antaa ensin pienemmän luvun ja sitten suuremman luvun.
+
+Voit hyödyntää edelliseen tehtävään tekemääsi vastausta tämän tehtävän vastauksen lähtökohtana -- edellisessä toteutetun toiminnallisuuden lisäksi käyttäjä määrää myös aloituskohdan.
 
 Esimerkkitulostuksia:
 
@@ -328,7 +430,7 @@ Ja nyt laskettiin 2 + 3 + 4 + 5 + 6 + 7 + 8 = 35
 </programming-exercise>
 
 
-<programming-exercise name='Kertoma' tmcname='osa02-Osa02_18.Kertoma'>
+<programming-exercise name='Kertoma' tmcname='osa02-Osa02_22.Kertoma'>
 
 Tee ohjelma, joka laskee käyttäjän syöttämän luvun kertoman.
 
@@ -359,18 +461,99 @@ _Lisätietoa_: Kertomaa käytetään erityisesti todennäköisyyslaskennassa til
 </programming-exercise>
 
 
-<text-box variant='hint' name='Ohjelmien tekeminen pienissä paloissa'>
+## Toistolausetta käyttävien ohjelmien rakenteesta
 
-Kun teet ohjelmaa, oli se sitten harjoitustehtävä tai oma projektisi, mieti minkälaisia osia ohjelma tarvitsee toimiakseen, ja etene näitä pieniä osia yksitellen toteuttaen. Jokaisen osan toteuttamisen jälkeen kokeile tähänastisen ohjelmasi toimintaa.
+Edellisissä esimerkeissä olemme keskittyneet ohjelmiin, joissa toistolauseessa olevaa koodia toistetaan tietty määrä. Tämä määrä on voinut rajoittua käyttäjän syötteen perusteella -- tällaisissa ohjelmissa for-toistolause on varsin näppärä.
 
-Älä koskaan yritä ratkaista koko ongelmaa kerralla, sillä tällöin ohjelman suorittaminen ja testaaminen kesken ongelmanratkaisuprosessin on vaikeaa. Aloita jollain helpolla asialla jonka tiedät varmasti osaavasi. Kun yksi ohjelman osa on saatu toimimaan, voit siirtyä ratkaisemaan seuraavaa ongelmaa.
+Ohjelmissa, joissa toistolauseessa olevaa koodia tulee suorittaa kunnes käyttäjä syöttää tietyn syötteen, for-toistolause ei toimi kovin hyvin. Tällöin aiemmin harjoittelemamme while-true -toistolause toimii hyvin.
 
-Osa kurssin tehtävistä on valmiiksi osiin pilkottuja. Usein osat pitää vielä pilkkoa ohjelmoinnin kannalta vieläkin pienempiin paloihin. Kannattaa tehdä siten, että suoritat ohjelman lähes jokaisen uuden koodirivin jälkeen. Tällöin varmistat, että ratkaisu on etenemässä haluttuun suuntaan.
+Tarkastellaan lyhyesti hieman laajempaa ohjelmaa, joka lukee käyttäjältä kokonaislukuja. Ohjelma käsittelee negatiiviset luvut epäkelpoina lukuina, positiiviset luvut hyväksyttävinä lukuina, sekä nollan lukemisen lopettamista ilmaisevana lukuna. Kun käyttäjä syöttää nollan, ohjelma tulostaa hyväksyttyjen lukujen summan, hyväksyttyjen lukujen lukumäärän sekä epäkelpojen lukujen lukumäärän.
 
-</text-box>
+Alla on kuvattuna eräs mahdollinen ratkaisu, joka ei kuitenkaan ole tyylin kannalta ideaali.
+
+```java
+Scanner lukija = new Scanner(System.in);
+
+System.out.print("Anna lukuja, negatiiviset luvut eivät kelpaa: ");
+int summa = 0;
+int hyvaksytytLuvut = 0;
+int epakelvotLuvut = 0;
+
+while (true) {
+    int luettu = Integer.valueOf(lukija.nextLine());
+
+    if (luettu == 0) {
+        System.out.println("Hyväksyttävien lukujen summa: " + summa);
+        System.out.println("Hyväksyttyjä lukuja: " + hyvaksytytLuvut);
+        System.out.println("Epäkelvot luvut: " + epakelvotLuvut);
+        break;
+    }
+
+    if (luettu < 0) {
+        epakelvotLuvut++;
+        continue;
+    }
+
+    summa += luettu;
+    hyvaksytytLuvut++;
+}
+```
+
+Yllä kuvatussa lähestymistavassa toistolauseen päättymisen jälkeen tapahtuva laskenta on toteutettu toistolauseen sisälle. Lähestymistapa ei ole suositeltava, sillä se johtaa helposti hyvin monimutkaiseen ohjelman rakenteeseen. Jos toistolauseen lopettamisen yhteydessä pitäisi tehdä muutakin -- esimerkiksi lukea lisää syötteitä -- asetettaisiin kyseinenkin toiminnallisuus helposti ehtolauseen sisälle. Lisätoiminnallisuuden kertyessä, ohjelma muuttuisi yhä vaikeammin ja vaikeammin luettavaksi.
+
+Pitäydytään seuraavassa toistolauseen muodossa:
+
+```java
+Scanner lukija = new Scanner(System.in);
+
+// toistolauseessa tarvittavien muuttujien luominen
+
+while (true) {
+    // syötteen lukeminen
+
+    // toistolauseesta poistuminen -- break
+
+    // epäkelpojen syötteiden rajaaminen pois -- continue
+
+    // hyväksyttävien syötteiden käsittely
+}
+
+// toistolauseesta poistumisen jälkeen suoritettava toiminnallisuus
+```
+
+Toisin sanoen, oleva ohjelma on selkeämpi jos toistolauseesta poistumisen jälkeen tehtävät asiat ovat toistolauseen ulkopuolella.
+
+```java
+Scanner lukija = new Scanner(System.in);
+
+System.out.print("Anna lukuja, negatiiviset luvut eivät kelpaa: ");
+int summa = 0;
+int hyvaksytytLuvut = 0;
+int epakelvotLuvut = 0;
+
+while (true) {
+    int luettu = Integer.valueOf(lukija.nextLine());
+
+    if (luettu == 0) {
+        break;
+    }
+
+    if (luettu < 0) {
+        epakelvotLuvut++;
+        continue;
+    }
+
+    summa += luettu;
+    hyvaksytytLuvut++;
+}
+
+System.out.println("Hyväksyttävien lukujen summa: " + summa);
+System.out.println("Hyväksyttyjä lukuja: " + hyvaksytytLuvut);
+System.out.println("Epäkelvot luvut: " + epakelvotLuvut);
+```
 
 
-<programming-exercise name='Silmukat, lopetus ja muistaminen (5 osaa)' tmcname='osa02-Osa02_19.SilmukatLopetusJaMuistaminen'>
+<programming-exercise name='Silmukat, lopetus ja muistaminen (5 osaa)' tmcname='osa02-Osa02_23.SilmukatLopetusJaMuistaminen'>
 
 Seuraavassa tehtävässä tehdään yksi ohjelma, mutta ohjelman rakentaminen tapahtuu hyvin pienissä paloissa. Tämä on ehdottoman suositeltava tapa aina kun ohjelmoit.
 
@@ -472,90 +655,14 @@ Parittomia: 1
 </programming-exercise>
 
 
-Tarkastellaan seuraavaksi ohjelmaa, joka lukee käyttäjältä kokonaislukuja. Ohjelma käsittelee negatiiviset luvut epäkelpoina lukuina, positiiviset luvut hyväksyttävinä lukuina, sekä nollan lukemisen lopettamista ilmaisevana lukuna. Kun käyttäjä syöttää nollan, ohjelma tulostaa hyväksyttyjen lukujen summan, hyväksyttyjen lukujen lukumäärän sekä epäkelpojen lukujen lukumäärän.
+<text-box variant='hint' name='Ohjelmien tekeminen pienissä paloissa'>
 
-Alla on kuvattuna eräs mahdollinen ratkaisu, joka ei kuitenkaan ole tyylin kannalta ideaali.
+Edellisessä tehtävässä harjoiteltiin tehtävän osien kautta ohjelman tekemistä pienissä paloissa.
 
-```java
-Scanner lukija = new Scanner(System.in);
+Kun teet ohjelmaa, oli se sitten harjoitustehtävä tai oma projektisi, mieti minkälaisia osia ohjelma tarvitsee toimiakseen, ja etene näitä pieniä osia yksitellen toteuttaen. Jokaisen osan toteuttamisen jälkeen kokeile tähänastisen ohjelmasi toimintaa.
 
-System.out.print("Anna lukuja, negatiiviset luvut eivät kelpaa: ");
-int summa = 0;
-int hyvaksytytLuvut = 0;
-int epakelvotLuvut = 0;
+Älä koskaan yritä ratkaista koko ongelmaa kerralla, sillä tällöin ohjelman suorittaminen ja testaaminen kesken ongelmanratkaisuprosessin on vaikeaa. Aloita jollain helpolla asialla jonka tiedät varmasti osaavasi. Kun yksi ohjelman osa on saatu toimimaan, voit siirtyä ratkaisemaan seuraavaa ongelmaa.
 
-while (true) {
-    int luettu = Integer.valueOf(lukija.nextLine());
+Osa kurssin tehtävistä on valmiiksi osiin pilkottuja. Usein osat pitää vielä pilkkoa ohjelmoinnin kannalta vieläkin pienempiin paloihin. Kannattaa tehdä siten, että suoritat ohjelman lähes jokaisen uuden koodirivin jälkeen. Tällöin varmistat, että ratkaisu on etenemässä haluttuun suuntaan.
 
-    if (luettu == 0) {
-        System.out.println("Hyväksyttävien lukujen summa: " + summa);
-        System.out.println("Hyväksyttyjä lukuja: " + hyvaksytytLuvut);
-        System.out.println("Epäkelvot luvut: " + epakelvotLuvut);
-        break;
-    }
-
-    if (luettu < 0) {
-        epakelvotLuvut++;
-        continue;
-    }
-
-    summa += luettu;
-    hyvaksytytLuvut++;
-}
-```
-
-Yllä kuvatussa lähestymistavassa toistolauseen päättymisen jälkeen tapahtuva laskenta on toteutettu toistolauseen sisälle. Lähestymistapa ei ole suositeltava, sillä se johtaa helposti hyvin monimutkaiseen ohjelman rakenteeseen. Jos toistolauseen lopettamisen yhteydessä pitäisi tehdä muutakin -- esimerkiksi lukea lisää syötteitä -- asetettaisiin kyseinenkin toiminnallisuus helposti ehtolauseen sisälle. Lisätoiminnallisuuden kertyessä, ohjelma muuttuisi yhä vaikeammin ja vaikeammin luettavaksi.
-
-Pitäydytään seuraavassa toistolauseen muodossa:
-
-```java
-Scanner lukija = new Scanner(System.in);
-
-// toistolauseessa tarvittavien muuttujien luominen
-
-while (true) {
-    // syötteen lukeminen
-
-    // toistolauseesta poistuminen -- break
-
-    // epäkelpojen syötteiden rajaaminen pois -- continue
-
-    // hyväksyttävien syötteiden käsittely
-}
-
-// toistolauseesta poistumisen jälkeen suoritettava toiminnallisuus
-```
-
-Toisin sanoen, oleva ohjelma on selkeämpi jos toistolauseesta poistumisen jälkeen tehtävät asiat ovat toistolauseen ulkopuolella.
-
-```java
-Scanner lukija = new Scanner(System.in);
-
-System.out.print("Anna lukuja, negatiiviset luvut eivät kelpaa: ");
-int summa = 0;
-int hyvaksytytLuvut = 0;
-int epakelvotLuvut = 0;
-
-while (true) {
-    int luettu = Integer.valueOf(lukija.nextLine());
-
-    if (luettu == 0) {
-        break;
-    }
-
-    if (luettu < 0) {
-        epakelvotLuvut++;
-        continue;
-    }
-
-    summa += luettu;
-    hyvaksytytLuvut++;
-}
-
-System.out.println("Hyväksyttävien lukujen summa: " + summa);
-System.out.println("Hyväksyttyjä lukuja: " + hyvaksytytLuvut);
-System.out.println("Epäkelvot luvut: " + epakelvotLuvut);
-```
-
-
-TODO: tehtävä
+</text-box>

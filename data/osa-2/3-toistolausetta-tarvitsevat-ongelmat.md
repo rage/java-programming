@@ -4,6 +4,17 @@ title: 'Toistolausetta tarvitsevat ongelmat ja niiden ratkaisumallit'
 ---
 
 
+<text-box variant='hint' name='Osaongelmien tunnistaminen ja ratkaiseminen'>
+
+* Tutki ongelman kuvausta tai tehtävänantoa ja tunnista ongelmaan liittyvät avainsanat kuten "lue kunnes" tai "lue kokonaislukuja".
+* Kullekin avainsanalle, tunnista niihin liittyvät ratkaisumallit, ja ota ratkaisumallit käyttöön.
+* Mikäli ongelmaan liittyy aiemmin tuntemattomia osaongelmia, eriytä osaongelma ensin erilleen kaikesta muusta ja harjoittele sen ratkaisemista -- yrittäminen (ja erehtyminen) on tärkeää!.
+* Yhdistä osat yksi kerrallaan ja muodosta niistä ratkaisu.
+
+</text-box>
+
+TODO: oppimistavoitteet
+
 TODO: lead in
 
 
@@ -43,7 +54,7 @@ public class Ohjelma {
 }
 ```
 
-<programming-exercise name='Hip hip hurraa!' tmcname='osa02-Osa02_05.HipHipHurraa'>
+<programming-exercise name='Hip hip hurraa!' tmcname='osa02-Osa02_13.HipHipHurraa'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä syötettä kunnes käyttäjä syöttää merkkijonon "lopeta". Kun käyttäjä syöttää merkkijonon "lopeta", ohjelma tulostaa merkkijonon "hurraa!", jonka jälkeen ohjelman suoritus päättyy. Muulloin, eli kun käyttäjä syöttää jotain muuta kuin merkkijonon "lopeta", ohjelma tulostaa merkkijonon "hip!".
 
@@ -115,7 +126,7 @@ public class Ohjelma {
 ```
 
 
-**Keskiarvon laskeminen**: lukujen keskiarvon laskemiseen tarvitaan lukujen lukumäärä sekä lukujen summa. Kun nämä ovat tiedossa, saadaan keskiarvo laskettua jakamalla summa lukumäärällä. Huomaa, että nollalla jakaminen ei ole matemaattisessa mielessä sallittua, kts. <a href="https://fi.wikipedia.org/wiki/Nollalla_jakaminen" target="_blank">https://fi.wikipedia.org/wiki/Nollalla_jakaminen</a>. Joissakin ohjelmointikielissä tämä on kuitenkin mahdollista. Mikäli ohjelmassa jakaa luvun nollalla, on lopputulos erittäin harvoin toivottu.
+**Keskiarvon laskeminen**: lukujen keskiarvon laskemiseen tarvitaan lukujen lukumäärä sekä lukujen summa. Kun nämä ovat tiedossa, saadaan keskiarvo laskettua jakamalla summa lukumäärällä. Huomaa, että nollalla jakaminen ei ole matemaattisessa mielessä sallittua, kts. [https://fi.wikipedia.org/wiki/Nollalla_jakaminen](https://fi.wikipedia.org/wiki/Nollalla_jakaminen). Joissakin ohjelmointikielissä tämä on kuitenkin mahdollista. Mikäli ohjelmassa jakaa luvun nollalla, on lopputulos erittäin harvoin toivottu.
 
 
 ```java
@@ -267,80 +278,7 @@ if (lukuja == 0) {
 ```
 
 
-<programming-exercise name='Merkkijonojen lukumäärä' tmcname='osa02-Osa02_06.MerkkijonojenLukumaara'>
-
-Kirjoita ohjelma, joka lukee käyttäjältä syötettä kunnes käyttäjä syöttää merkkijonon "loppu". Tämän jälkeen ohjelma tulostaa käyttäjältä luettujen merkkijonojen määrän. Merkkijonojen määrään ei tule ottaa mukaan syötteen loppumista ilmoittavaa merkkijonoa "loppu".
-
-Alla on muutamia esimerkkejä ohjelman toiminnasta.
-
-<sample-output>
-
-**hei**
-**vaan**
-**kaikki**
-**loppu**
-3
-
-</sample-output>
-
-<sample-output>
-
-**never**
-**gonna**
-**give**
-**you**
-**up**
-**never**
-**gonna**
-**let**
-**you**
-**down**
-**loppu**
-10
-
-</sample-output>
-
-<sample-output>
-
-**loppu**
-0
-
-</sample-output>
-
-</programming-exercise>
-
-
-<programming-exercise name='Lukujen summa' tmcname='osa02-Osa02_07.LukujenSumma'>
-
-Kirjoita ohjelma, joka lukee käyttäjältä kokonaislukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelma tulostaa lukujen summan.
-
-Alla on muutamia esimerkkejä ohjelman toiminnasta.
-
-<sample-output>
-
-**2**
-**5**
-**1**
-**0**
-8
-
-</sample-output>
-
-
-<sample-output>
-
-**-3**
-**4**
-**1**
-**0**
-2
-
-</sample-output>
-
-</programming-exercise>
-
-
-<programming-exercise name='Ykkösten lukumäärä' tmcname='osa02-Osa02_08.YkkostenLukumaara'>
+<programming-exercise name='Ykkösten lukumäärä' tmcname='osa02-Osa02_14.YkkostenLukumaara'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä kokonaislukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelma tulostaa syötteessä esiintyneiden ykkösten (eli luvun yksi) lukumäärän.
 
@@ -389,7 +327,7 @@ Alla on muutamia esimerkkejä ohjelman toiminnasta.
 </programming-exercise>
 
 
-<programming-exercise name='Ykkösten osuus' tmcname='osa02-Osa02_09.YkkostenOsuus'>
+<programming-exercise name='Ykkösten osuus' tmcname='osa02-Osa02_15.YkkostenOsuus'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä kokonaislukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelma tulostaa syötteessä esiintyneiden ykkösten (eli luvun yksi) osuuden, eli ykkösten lukumäärän jaettuna syötettyjen lukujen lukumäärällä. Syötteen lopettavaa lukua 0 ei tule ottaa huomioon ykkösten osuutta laskettaessa.
 
@@ -553,7 +491,7 @@ Alla muutamia ohjelman esimerkkitulosteita.
 <quiznator id="5c1f6c8b64cf001162cb9790"></quiznator>
 
 
-<programming-exercise name='Positiivisten lukujen keskiarvo' tmcname='osa02-Osa02_10.PositiivistenLukujenKeskiarvo'>
+<programming-exercise name='Positiivisten lukujen keskiarvo' tmcname='osa02-Osa02_16.PositiivistenLukujenKeskiarvo'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä kokonaislukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelma tulostaa syötteessä esiintyneiden positiivisten (eli nollaa suurempien lukujen) keskiarvon.
 
@@ -598,19 +536,4 @@ keskiarvon laskeminen ei ole mahdollista
 </sample-output>
 
 </programming-exercise>
-
-
-
-<text-box variant='hint' name='Osaongelmien tunnistaminen ja ratkaiseminen'>
-
-* Tutki ongelman kuvausta tai tehtävänantoa ja tunnista ongelmaan liittyvät avainsanat kuten "lue kunnes" tai "lue kokonaislukuja".
-* Kullekin avainsanalle, tunnista niihin liittyvät ratkaisumallit, ja ota ratkaisumallit käyttöön.
-* Mikäli ongelmaan liittyy aiemmin tuntemattomia osaongelmia, eriytä osaongelma ensin erilleen kaikesta muusta ja harjoittele sen ratkaisemista -- yrittäminen (ja erehtyminen) on tärkeää!.
-* Yhdistä osat yksi kerrallaan ja muodosta niistä ratkaisu.
-
-</text-box>
-
-
-TODO: tehtävä, tässä taas verolaskuri, mutta tällä kertaa veroja lasketaan kunnes käyttäjä syöttää luvun 0
-
 

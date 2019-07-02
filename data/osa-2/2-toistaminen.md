@@ -6,35 +6,20 @@ title: 'Toiminnallisuuden toistaminen'
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
-* Tunnet käsitteen toistolause ja osaat luoda ohjelman, joka sisältää toistolauseen.
-* Osaat käyttää `break`-komentoa toistolauseen suorituksen lopettamiseen ja toistolausetta seuraavaan käskyyn siirtymiseen.
-* Osaat käyttää `continue`-komentoa toistolauseen alkuun palaamiseen.
-* Osaat luoda ohjelman, joka lukee käyttäjältä syötettä kunnes käyttäjä syöttää tietynlaisen syötteen -- esim luku 0 tai merkkijono "loppu", jonka jälkeen ohjelma kertoo ennen lopettamista syötetyistä syötteistä (esim. syötteiden lukumäärä, lukujen tapauksessa summa ja keskiarvo).
+- Tunnet käsitteen toistolause ja osaat luoda ohjelman, joka sisältää toistolauseen.
+- Osaat käyttää `break`-komentoa toistolauseen suorituksen lopettamiseen ja toistolausetta seuraavaan käskyyn siirtymiseen.
+- Osaat käyttää `continue`-komentoa toistolauseen alkuun palaamiseen.
+- Osaat luoda ohjelman, joka lukee käyttäjältä syötettä kunnes käyttäjä syöttää tietynlaisen syötteen -- esim luku 0 tai merkkijono "loppu", jonka jälkeen ohjelma kertoo ennen lopettamista syötetyistä syötteistä (esim. syötteiden lukumäärä, lukujen tapauksessa summa ja keskiarvo).
 
 </text-box>
 
-Tietokoneen sisältämä käskyjen suorittamiseen erikoistunut prosessori pystyy -- moderneissa tietokoneissa -- suorittamaan yli miljardi konekielistä käskyä sekunnissa. Tässä osassa tutustumme toistolauseiden toteuttamiseen. Toistolauseita käytetään toistettavan ohjelmakoodin määrittelyyn.
+Tietokoneen sisältämä käskyjen suorittamiseen erikoistunut prosessori pystyy -- moderneissa tietokoneissa -- suorittamaan yli miljardi (konekielistä) käskyä sekunnissa. Tässä osassa tutustumme toistettavan ohjelmakoodin määrittelyyn toistolauseiden avulla.
 
-Motivoidaan toistolauseiden käyttöä hieman. Alla on esimerkki ohjelmasta, missä kysytään käyttäjältä kymmenen lukua ja lasketaan niiden summa.
+Motivoidaan toistolauseiden käyttöä hieman. Alla on esimerkki ohjelmasta, missä kysytään käyttäjältä viisi lukua ja lasketaan niiden summa.
 
 ```java
 Scanner lukija = new Scanner(System.in);
 int summa = 0;
-
-System.out.println("Syötä luku");
-summa = summa + Integer.valueOf(lukija.nextLine());
-
-System.out.println("Syötä luku");
-summa = summa + Integer.valueOf(lukija.nextLine());
-
-System.out.println("Syötä luku");
-summa = summa + Integer.valueOf(lukija.nextLine());
-
-System.out.println("Syötä luku");
-summa = summa + Integer.valueOf(lukija.nextLine());
-
-System.out.println("Syötä luku");
-summa = summa + Integer.valueOf(lukija.nextLine());
 
 System.out.println("Syötä luku");
 summa = summa + Integer.valueOf(lukija.nextLine());
@@ -54,9 +39,9 @@ summa = summa + Integer.valueOf(lukija.nextLine());
 System.out.println("Lukujen summa on " + summa);
 ```
 
-Hoitaa asian, mutta ei kovin tyylikkäästi. Entä jos ohjelman pitäisi lukea sata tai vaikkapa tuhat lukua ja tulostaa niiden summa? Entä jos ohjelman pitäisi lukea seitsemän lukua? Yllä olevasta ohjelmasta voisi ottaa mallia, mutta se olisi järjetöntä.
+Hoitaa asian, mutta ei kovin tyylikkäästi. Entä jos ohjelman pitäisi lukea sata tai vaikkapa tuhat lukua ja tulostaa niiden summa? Entä jos ohjelman pitäisi lukea kolme lukua?
 
-Saman ongelman voi ratkaista toistolauseella, joka pitää kirjaa sekä summasta että lukemiskerroista. Kymmenen luvun summan tulostava toistolauseella toteutettava ohjelma näyttää seuraavalta.
+Tämän ongelman voi ratkaista toistolauseella, joka pitää kirjaa sekä summasta että lukemiskerroista. Viiden luvun summan tulostava toistolauseella toteutettava ohjelma näyttää seuraavalta.
 
 ```java
 Scanner lukija = new Scanner(System.in);
@@ -65,7 +50,7 @@ int luettujaLukuja = 0;
 int summa = 0;
 
 while (true) {
-    if (luettujaLukuja == 10) {
+    if (luettujaLukuja == 5) {
         break;
     }
 
@@ -106,9 +91,7 @@ Ikuisen toiston sisältävä ohjelma ei sammu itsestään. Ohjelman sammutus tap
 
 ## Toistolauseen päättäminen
 
-Toistolauseen saa päätettyä komennolla `break`. Kun tietokone suorittaa komennon `break`, siirtyy se toistolauseeseen määriteltyä lohkoa seuraavan komennon suorittamiseen.
-
-Toistolause päätetään tyypillisesti mikäli käyttäjä syöttää tietynlaisen syötteen tai mikäli toistolauseessa tehtävä laskenta päätyy haluttuun lopputulokseen. Tällaiset ohjelmat sisältävät sekä toistolauseen, jota käytetään toistettavan ohjelman määrittelyyn, että toistolauseen sisällä olevan ehtolauseen, jota käytetään toistolauseesta poistumiseen käytettävän ehdon tarkasteluun.
+Toistolauseen saa päätettyä komennolla `break`. Kun tietokone suorittaa komennon `break`, siirtyy ohjelman suoritus toistolauseen lohkoa seuraavaan komentoon.
 
 Alla olevassa esimerkissä on ohjelma, joka tulostaa luvut yhdestä viiteen. Ohjelmassa määritellään toistolauseen sisällä käsiteltävä luku ennen toistolauseen lohkoa. Tällöin muuttujan kasvatus onnistuu.
 
@@ -138,41 +121,19 @@ Valmista!
 
 </sample-output>
 
-Mikäli toiston ehtona oleva luku määritellään toistolauseen sisällä, kuten alla, ei toistolauseen suoritus pääty koskaan. Luku määritellään aina toistolauseen lohkon alussa ja se saa arvoksi luvun yksi. Luku ei ole koskaan suurempi tai yhtäsuuri kuin viisi.
+Toistolauseesta poistutaan esimerkiksi kun käyttäjä syöttää tietynlaisen syötteen tai mikäli toistolauseessa tehtävä laskenta päätyy haluttuun lopputulokseen. Tällaiset ohjelmat sisältävät sekä toistolauseen, jota käytetään toistettavan ohjelman määrittelyyn, että toistolauseen sisällä olevan ehtolauseen, jota käytetään toistolauseesta poistumiseen käytettävän ehdon täyttymisen tarkasteluun.
 
-```java
-while (true) {
-    int luku = 1;
-    System.out.println(luku);
-    if (luku >= 5) {
-        break;
-    }
+Toistolauseessa voidaan myös kysyä käyttäjältä syötettä. Toistolauseessa useasti käytettävät muuttujat (kuten Scanner-lukija) määritellään ennen toistolausetta, toistokohtaiset muuttujat (kuten luettu arvo) määritellään toistolauseessa.
 
-    luku = luku + 1;
-}
-
-System.out.println("Valmista!");
-```
-
-<sample-output>
-
-1
-1
-1
-...
-(ohjelma ei pääty koskaan)
-
-</sample-output>
-
-Toistolauseessa voidaan myös kysyä käyttäjältä syötettä. Kuten edellä, toistolauseessa käytettävät muuttujat kuten Scanner-lukija määritellään ennen toistolausetta. Alla olevassa esimerkissä ohjelma kysyy käyttäjältä mikäli ohjelman suoritusta pitäisi jatkaa. Mikäli käyttäjä syöttää merkkijonon "ei", ohjelman suoritus lopetetaan.
+Alla olevassa esimerkissä ohjelma kysyy käyttäjältä pitäisikö toistolauseesta poistua. Mikäli käyttäjä syöttää merkkijonon "k", ohjelman suoritus siirtyy toistolausetta seuraavaan komentoon, jonka suorittamisen jälkeen ohjelman suoritus päättyy.
 
 ```java
 Scanner lukija = new Scanner(System.in);
 
 while (true) {
-    System.out.println("Jatketaanko suoritusta? (ei lopettaa)");
+    System.out.println("Poistutaanko? (k lopettaa)");
     String syote = lukija.nextLine();
-    if (syote.equals("ei")) {
+    if (syote.equals("k")) {
         break;
     }
 
@@ -186,51 +147,34 @@ Ohjelma toimii esimerkiksi seuraavasti. Alla käyttäjän syötteet ovat merkitt
 
 <sample-output>
 
-Jatketaanko suoritusta? (ei lopettaa)
-**kyllä**
-Ok! Jatketaan!
-Jatketaanko suoritusta? (ei lopettaa)
-**joo**
-Ok! Jatketaan!
-Jatketaanko suoritusta? (ei lopettaa)
+Poistutaanko? (k lopettaa)
 **ei**
+Ok! Jatketaan!
+Poistutaanko? (k lopettaa)
+**nej**
+Ok! Jatketaan!
+Poistutaanko? (k lopettaa)
+**k**
 Valmista!
 
 </sample-output>
 
-<programming-exercise name="Poistutaanko" tmcname='osa01-Osa01_35.Poistutaanko'>
+<programming-exercise name="Jatketaanko" tmcname='osa02-Osa02_05.Jatketaanko'>
 
-Kirjoita edellä olevaa toistolause-esimerkkiä mukaillen ohjelma, joka kysyy käyttäjältä "Poistutaanko?" kunnes käyttäjä syöttää merkkijonon "kyllä".
+Kirjoita edellä olevaa toistolause-esimerkkiä mukaillen ohjelma, joka kysyy käyttäjältä "Jatketaanko?" kunnes käyttäjä syöttää merkkijonon "ei".
 
 <sample-output>
 
-Poistutaanko?
-**ei**
-Poistutaanko?
-**eeei**
-Poistutaanko?
-**nej**
-Poistutaanko?
+Jatketaanko?
 **kyllä**
-
-</sample-output>
-
-<sample-output>
-
-Poistutaanko?
-**joo**
-Poistutaanko?
+Jatketaanko?
 **kyl**
-Poistutaanko?
-**kylä**
-Poistutaanko?
-**yes**
-Poistutaanko?
-**kyllä**
+Jatketaanko?
+**k**
+Jatketaanko?
+**ei**
 
 </sample-output>
-
-Huom! Joissakin Mac-käyttöjärjestelmissä tekstin **kyllä** syöttäminen ei onnistu merkistövirheen takia. Tutkimme ongelmaa. Tehtävän voi palauttaa TMC:lle vaikkei sen testaaminen manuaalisesti onnistuisi. Palauttaminen suoraan palvelimelle onnistuu painamalla ylös osoittavaa nuolta Netbeanssista.
 
 </programming-exercise>
 
@@ -241,7 +185,7 @@ Edellisessä esimerkissä ohjelma lukee käyttäjältä merkkijonomuotoisia syö
 Scanner lukija = new Scanner(System.in);
 
 while (true) {
-    System.out.println("Syötä numeromuotoinen komento, 0 lopettaa");
+    System.out.println("Syötä luku, 0 lopettaa");
     int komento = Integer.valueOf(lukija.nextLine());
     if (komento == 0) {
         break;
@@ -257,19 +201,19 @@ Ohjelman suoritus on esimerkiksi seuraavanlainen.
 
 <sample-output>
 
-Syötä numeromuotoinen komento, 0 lopettaa
+Syötä luku, 0 lopettaa
 **5**
 Syötit 5
-Syötä numeromuotoinen komento, 0 lopettaa
+Syötä luku, 0 lopettaa
 **-2**
 Syötit -2
-Syötä numeromuotoinen komento, 0 lopettaa
+Syötä luku, 0 lopettaa
 **0**
 Valmista, kiitos!
 
 </sample-output>
 
-<programming-exercise name="Uudestaan" tmcname='osa01-Osa01_36.Uudestaan'>
+<programming-exercise name="Uudestaan" tmcname='osa02-Osa02_06.Uudestaan'>
 
 Kirjoita edellä olevaa esimerkkiä mukaillen ohjelma, joka kysyy käyttäjältä lukuja kunnes käyttäjä syöttää luvun 4.
 
@@ -337,7 +281,9 @@ while (true) {
 }
 ```
 
-<programming-exercise name="Syötteiden rajaus" tmcname='osa01-Osa01_37.SyotteidenRajaus'>
+TODO: tänne tarttee visualisoinnin
+
+<programming-exercise name="Syötteiden rajaus" tmcname='osa02-Osa02_07.SyotteidenRajaus'>
 
 Kirjoita ohjelma, joka kysyy käyttäjältä lukuja. Mikäli luku on negatiivinen (eli pienempi kuin nolla), käyttäjälle tulostetaan viesti "Epäkelpo luku" ja käyttäjältä kysytään uutta lukua. Jos taas luku on nolla, lukujen lukeminen lopetetaan ja ohjelma poistuu toistolauseesta. Mikäli luku on positiivinen, ohjelma tulostaa luvun toisen potenssin.
 
@@ -506,6 +452,8 @@ while (true) {
 
 Huomaamme, että `if-else if-else`-rakenteelle on vaikea määritellä yksi selkeä tehtävä. Ohjelmia suunniteltaessa ja toteuttaessa kannattaakin pyrkiä tilanteeseen, missä jokaisella ohjelman osalla on yksi selkeä tehtävä. Tämä teema tulee toistumaan kurssilla.
 
+TODO: quiz
+
 
 ## Laskentaa toistolauseiden avulla
 
@@ -655,7 +603,7 @@ Ykkösiä yhteensä: 2
 </sample-output>
 
 
-<programming-exercise name="Lukujen lukumäärä" tmcname='osa01-Osa01_38.LukujenLukumaara'>
+<programming-exercise name="Lukujen lukumäärä" tmcname='osa02-Osa02_08.LukujenLukumaara'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötettyjen lukujen lukumäärän. Syötteen loppumisesta kertovaa nollaa ei tule laskea osaksi lukujen lukumäärää.
 
@@ -680,7 +628,7 @@ Lukuja yhteensä 4
 </programming-exercise>
 
 
-<programming-exercise name="Negatiivisten lukujen lukumäärä" tmcname='osa01-Osa01_39.NegatiivistenLukujenMaara'>
+<programming-exercise name="Negatiivisten lukujen lukumäärä" tmcname='osa02-Osa02_09.NegatiivistenLukujenMaara'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötteessä olleiden negatiivisten lukujen lukumäärän. Syötteen loppumisesta kertovaa nollaa ei tule laskea osaksi lukujen lukumäärää.
 
@@ -704,8 +652,9 @@ Negatiivisia lukuja yhteensä 1
 
 </programming-exercise>
 
+Edellä olevissa tehtävissä tehdyt ohjelmat ovat lukeneet käyttäjältä syötettä ja pitäneet kirjaa tietynlaisten lukujen lukumäärästä. Seuraavassa tehtävässä kaivattu lukujen summa ei oikeastaan juurikaan poikkea edellisistä tehtävistä -- nyt sen sijaan, että pidät kirjaa lukujen lukumäärästä eli lisäät lukumäärään luvun aina 1, lisäätkin "lukumäärään" eli summaan käyttäjän syöttämän luvun.
 
-<programming-exercise name="Lukujen summa" tmcname='osa01-Osa01_40.LukujenSumma'>
+<programming-exercise name="Lukujen summa" tmcname='osa02-Osa02_10.LukujenSumma'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötettyjen lukujen summan. Syötteen loppumisesta kertovaa nollaa ei tarvitse osaksi lukujen summaa, vaikkei siitä tässä tapauksessa oikeastaan haittaakaan ole.
 
@@ -730,7 +679,11 @@ Lukujen summa 34
 </programming-exercise>
 
 
-<programming-exercise name="Lukujen lukumäärä ja summa" tmcname='osa01-Osa01_41.LukumaaraJaSumma'>
+TODO: lead in, avaa...
+TODO: esimerkki toistolauseesta, missä kaksi muuttujaa
+
+
+<programming-exercise name="Lukujen lukumäärä ja summa" tmcname='osa02-Osa02_11.LukumaaraJaSumma'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötettyjen lukujen lukumäärä ja summan. Syötteen loppumisesta kertovaa nollaa ei tule ottaa huomioon lukumäärässä tai summassa.
 
@@ -758,9 +711,11 @@ Lukujen summa 34
 </programming-exercise>
 
 
-<programming-exercise name="Lukujen keskiarvo" tmcname='osa01-Osa01_42.LukujenKeskiarvo'>
+<programming-exercise name="Lukujen keskiarvo" tmcname='osa01-Osa02_12.LukujenKeskiarvo'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötettyjen lukujen keskiarvo. Syötteen loppumisesta kertovaa nollaa ei tule ottaa huomioon keskiarvon laskemisessa. Voit olettaa, että käyttäjä syöttää aina vähintään yhden luvun.
+
+_Lukujen keskiarvo saadaan jakamalla lukujen summa lukujen lukumäärällä_.
 
 Ohjelman tulostusesimerkki:
 
@@ -781,10 +736,4 @@ Lukujen keskiarvo 8.5
 </sample-output>
 
 </programming-exercise>
-
-
-## Muita toistolauseita
-
-TODO: kirjoita for int i bla
-TODO: kirjoita do while
 

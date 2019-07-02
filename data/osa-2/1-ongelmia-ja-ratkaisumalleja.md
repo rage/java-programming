@@ -5,8 +5,6 @@ title: 'Toistuvia ongelmia ja niiden ratkaisumalleja'
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
-- TODO
-
 - Huomaat, että ohjelmissa toistuu samankaltaiset osaongelmat kuten syötteen lukeminen tai laskun laskeminen.
 - Tiedät valmiin ratkaisumallin muutamaan osaongelmaan.
 - Harjoittelet osaongelmiin littyvien ratkaisumallien yhdistämistä laajempien ongelmien ratkaisemisessa.
@@ -44,7 +42,8 @@ public class Ohjelma {
 }
 ```
 
-TODO: tehtävä -- lue jotain ja tulosta jotain
+
+TODO: quiz -- ohjelma, jossa käyttäjältä kysytään luku ja merkkijono, tulostus käyttää niitä -- kysytään mitä käyttäjän tulee syöttää, jotta tulostus tietty
 
 
 ## Laskemista
@@ -157,7 +156,17 @@ Kirjoita ohjelma, joka lukee käyttäjältä kokonaisluvun ja tulostaa luvun kor
 
 <programming-exercise name='Summan neliöjuuri' tmcname='osa02-Osa02_02.SummanNeliojuuri'>
 
-Kirjoita ohjelma, joka lukee käyttäjältä kaksi kokonaislukua ja tulostaa lukujen summan neliöjuuren. Ohjelman ei tarvitse käsitellä negatiivisia lukuja. Alla muutamia esimerkkejä.
+Kirjoita ohjelma, joka lukee käyttäjältä kaksi kokonaislukua ja tulostaa lukujen summan neliöjuuren. Ohjelman ei tarvitse käsitellä negatiivisia lukuja.
+
+Saat annetun luvun neliöjuuren laskettua komennolla `Math.sqrt` seuraavasti:
+
+```java
+int luku = 42;
+double neliojuuri = Math.sqrt(luku);
+System.out.println(neliojuuri);
+```
+
+Alla muutamia esimerkkejä.
 
 <sample-output>
 
@@ -183,13 +192,6 @@ Kirjoita ohjelma, joka lukee käyttäjältä kaksi kokonaislukua ja tulostaa luk
 
 </sample-output>
 
-Vinkki! Saat neliöjuuren laskettua komennolla `Math.sqrt` seuraavasti:
-
-```java
-int luku = 42;
-double neliojuuri = Math.sqrt(42);
-System.out.println(neliojuuri);
-```
 
 </programming-exercise>
 
@@ -233,6 +235,11 @@ if (luku > 5) {
 }
 ```
 
+<text-box variant="hint" name="System.out.print">
+
+Alla olevassa kyselyssä käytetään tulostuskomentoa `System.out.print`. Komento toimii muuten täysin samoin kuin komento `System.out.println`, mutta se ei lisää rivinvaihtoa parametrina saadun merkkijonon perään.
+
+</text-box>
 
 <quiznator id="5c1f6a263516ce119a7f45df"></quiznator>
 
