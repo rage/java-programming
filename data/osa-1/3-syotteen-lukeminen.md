@@ -6,7 +6,10 @@ hidden: false
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
-* TODO
+
+- Opit kirjoittamaan ohjelman, joka lukee käyttäjän kirjoittamaa tekstiä.
+- Tiedät mitä merkkijonot ovat ohjelmoinnissa.
+- Tiedät miten merkkijonoja voidaan yhdistää toisiinsa ("katenointi").
 
 </text-box>
 
@@ -114,11 +117,9 @@ Otetaan seuraavaksi askel taaksepäin ja tarkastellaan mitä ihmettä edellä k�
 
 ## Merkkijonojen alkeet
 
-TODO: parempi lead-in, jotain "edellä käytettiin merkkijonomuuttujaa.."
+Olemme käyttäneet merkkijonoja kahdella tapaa. Tulostuskomentoa harjoiteltaessa annoimme tulostettavan merkkijonon hipsuissa tulostuskomennolle, kun taas syötteen lukemista harjoiteltaessa luettu merkkijono tallennettiin muuttujaan.
 
-Tulostuskomentoa harjoiteltaessa olemme antaneet tulostettavan merkkijonon hipsuissa tulostuskomennolle. Ohjelmointikielen kyseinen hipsuissa oleva merkkijono on ns. merkkijonoliteraali, eli määrätyn muotoinen merkkijono.
-
-Merkkijonoliteraalin voi asettaa myös merkkijonomuotoisen muuttujan arvoksi. Muuttujat ovat käytännössä nimettyjä lokeroita, jotka sisältävät tietyn tyyppistä tietoa, ja joilla on nimi. Merkkijonomuuttuja esitellään ohjelmassa kertomalla muuttujan tyyppi (`String`) ja muuttujan nimi (esimerkiksi `mjono`). Muuttujan esittelyn yhteydessä muuttujaan asetetaan tyypillisesti myös arvo. Arvon asettaminen tapahtuu muuttujan esittelyä seuraavalla yhtäsuuruusmerkillä, jonka jälkeen tulee arvo sekä puolipiste.
+Muuttujat ovat käytännössä nimettyjä lokeroita, jotka sisältävät tietyn tyyppistä tietoa ja joilla on nimi. Merkkijonomuuttuja esitellään ohjelmassa kertomalla muuttujan tyyppi (`String`) ja muuttujan nimi (esimerkiksi `mjono`). Muuttujan esittelyn yhteydessä muuttujaan asetetaan tyypillisesti myös arvo. Arvon asettaminen tapahtuu muuttujan esittelyä seuraavalla yhtäsuuruusmerkillä, jonka jälkeen tulee arvo sekä puolipiste.
 
 Merkkijonomuotoinen muuttuja nimeltä `viesti`, jonka arvona on merkkijono "Hei maailma!", luodaan seuraavasti.
 
@@ -139,7 +140,7 @@ Hei maailma!
 
 </sample-output>
 
-Mikäli ohjelmassa olisi hipsut merkkijonomuuttujan `viesti` nimen ympärillä, tulostaisi ohjelma tekstin "viesti" muuttujan `viesti` arvon eli tekstin "Hei maailma!" sijaan.
+Ohjelmointikielen hipsuissa oleva merkkijono on ns. merkkijonoliteraali, eli määrätyn muotoinen merkkijono. Tyypillinen virhe ohjelmoidessa on yrittää asettaa muuttujaan hipsut: mikäli ohjelmassa olisi hipsut merkkijonomuuttujan `viesti` nimen ympärillä, tulostaisi ohjelma tekstin "viesti" muuttujan `viesti` arvon eli tekstin "Hei maailma!" sijaan.
 
 ```java
 String viesti = "Hei maailma!";
@@ -153,6 +154,7 @@ viesti
 </sample-output>
 
 TODO: quiz
+
 
 ### Katenointi eli merkkijonojen yhdistäminen
 

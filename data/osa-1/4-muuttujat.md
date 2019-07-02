@@ -10,9 +10,9 @@ title: "Muuttujat"
 
 </text-box>
 
-TODO: lead-in, tutustuimme aiemmin pikaisesti merkkijonoon...
+Tutustuimme syötteen lukemisen yhteydessä jo pikaisesti merkkijonomuuttujiin. Tutustutaan seuraavaksi muihin usein käytettyihin Javan muuttujatyyppeihin.
 
-Keskeinen käsite ohjelmoinnissa on muuttuja. Muuttujaa kannattaa ajatella lokerona, johon voi tallettaa annetun tyyppistä tietoa. Tiedolla on aina tyyppi. Tyyppejä ovat esimerkiksi teksti eli merkkijono (`String`), kokonaisluku (`int`), liukuluku (`double`) eli desimaaliluku, ja totuusarvo (`boolean`). Muuttujaan asetetaan arvo yhtäsuuruusmerkillä (`=`).
+Muuttujaa kannattaa ajatella lokerona, johon voi tallettaa annetun tyyppistä tietoa. Tyyppejä ovat esimerkiksi teksti eli merkkijono (`String`), kokonaisluku (`int`), liukuluku (`double`) eli desimaaliluku, ja totuusarvo (`boolean`). Muuttujaan asetetaan arvo yhtäsuuruusmerkillä (`=`).
 
 ```java
 int kuukausia = 12;
@@ -277,6 +277,8 @@ Muuttujan tyyppi kerrotaan muuttujan esittelyn yhteydessä. Esimerkiksi merkkijo
 Muuttujan tyyppi määrää arvot, joita muuttuja voi saada. `String`-tyyppiset muuttujat saavat arvokseen merkkijonoja, `int`-tyyppiset muuttujat saavat arvokseen kokonaislukuja, `double`-tyyppiset muuttujat saavat arvokseen liukulukuja, ja `boolean`-tyyppiset muuttujat saavat arvokseen totuusarvoja.
 
 Kunkin tyypin mahdolliset arvot ovat siis rajattuja. Esimerkiksi merkkijonomuuttuja ei voi sisältää kokonaislukuarvoa, eikä liukuluku voi sisältää totuusarvoa. Alla on listattu käyttämillemme muuttujille niiden mahdolliset arvoalueet.
+
+TODO: korjaa taulukko? koodinpätkät oikein rivittyvinä!
 
 
 | Tyyppi | Esimerkki | Sallitut arvot |

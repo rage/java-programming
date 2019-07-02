@@ -6,7 +6,9 @@ hidden: false
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
-- TODO
+- Opit kirjoittamaan ohjelman, joka tulostaa tekstiä.
+- Tutustut ohjelmien suorittamiseen.
+- Tiedät mitä termillä parametri tarkoitetaan.
 
 </text-box>
 
@@ -23,7 +25,7 @@ Hei maailma!
 
 </sample-output>
 
-Yllä olevan tekstialueen näköiset tekstialueet kuvaavat ohjelman tuottamaan tulostuksen. Yllä ohjelma tuottaisi siis tulostuksen "Hei maailma!". Voit kokeilla kaikkia materiaalin esimerkkejä ohjelmointiympäristössä olevassa "Hiekkalaatikko"-nimisessä tehtäväpohjassa.
+Yllä olevan tekstialueen näköiset kohdat materiaalissa kuvaavat koodiesimerkin tuottamaan tulostuksen. Yllä ohjelma tuottaisi siis tulostuksen "Hei maailma!". Voit kokeilla kaikkia materiaalin esimerkkejä ohjelmointiympäristössä olevassa "Hiekkalaatikko"-nimisessä tehtäväpohjassa.
 
 Tulostuskomennon avulla tulostettavaa tekstiä voi vaihtaa mielivaltaisesti, kunhan komento `System.out.println("mielivaltainen teksti");` -- eli `System` piste `out` piste `println` sulut auki `(` "teksti" sulut kiinni `)` ja puolipiste `;` pysyy muuttumattomana. Alla oleva komento tulostaa tekstin "Hei vaan!".
 
@@ -113,7 +115,9 @@ Kun olet tehnyt tehtävän ja huomaat, että ohjelma tulostaa halutun merkkijono
 
 <text-box variant='hint' name='Ohjelman suorittaminen'>
 
-Ohjelman suorittaminen tapahtuu TMC:ssä vihreää play-nappia painamalla tai valitsemalla TMC-valikosta vaihtoehdon "Run project". TODO: tähän kuva.
+Ohjelman suorittaminen tapahtuu TMC:ssä vihreää play-nappia painamalla tai valitsemalla TMC-valikosta vaihtoehdon "Run project".
+
+TODO: tähän kuva.
 
 Ohjelman suorittaminen on helppoa, mutta pinnan alla tapahtuu paljon. Kun ohjelma halutaan suorittaa, lähdekoodi käännetään ensin Java-ohjelmointikielen tavukoodiksi. Tämä kääntäminen tapahtuu Javan omalla kääntäjällä, joka on myös ohjelma. Tämän jälkeen ohjelma käynnistetään, eli siinä olevat käskyt suoritetaan yksi kerrallaan Java-kielistä tavukoodia ymmärtävän Java-tulkin toimesta.
 
@@ -242,7 +246,7 @@ maailma
 
 Vaikka yllä oleva esimerkki toimii, on rivinvaihtojen käyttö tärkeää muita ohjelmoijia ajatellen. Tällöin ohjelman lukija tietää, että kullakin rivillä tehdään vain yksi konkreettinen asia.
 
-TODO: quiz, jossa kysytään että mistä tietssä termissä on kyse
+TODO: quiz, jossa kysytään että mistä tietyssä termissä on kyse
 
 ### Kommentit
 

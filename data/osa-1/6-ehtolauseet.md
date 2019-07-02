@@ -5,22 +5,12 @@ title: "Ehtolauseet ja vaihtoehtoinen toiminta"
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
-* Tunnet käsitteen ehtolause ja osaat luoda ohjelmaan vaihtoehtoista toimintaa ehtolauseen avulla.
-* Tunnet yleisimmät vertailuoperaatiot (yhtäsuuruus ==, suurempi kuin >, suurempi tai yhtäsuuri kuin >=, pienempi kuin <, pienempi tai yhtäsuuri kuin <=) ja osaat käyttää niitä kokonaislukujen ja liukulukujen vertailuun osana ehtolausetta.
-* Osaat käyttää totuusarvomuuttujia osana ehtolausetta.
-* Osaat vertailla merkkijonoja merkkijonoihin liittyvän equals-komennon avulla.
-
-</text-box>
-
-
-<text-box variant='learningObjectives' name='Oppimistavoitteet'>
-
-- Tunnet loogiset operaatiot ja, tai, sekä ei, ja osaat käyttää niitä osana ehtolauseen lauseketta.
+- Tunnet käsitteen ehtolause ja osaat luoda ohjelmaan vaihtoehtoista toimintaa ehtolauseen avulla.
+- Tunnet ehtolauseissa tyypillisesti käytettävät vertailuoperaattorit ja loogiset operaatiot.
+- Osaat vertailla sekä lukuja että merkkijonoja, muistaen merkkijonoihin liittyvän equals-komennon.
 - Tunnet ehtolauseen suoritusjärjestyksen ja tiedät, että ehtolauseiden läpikäynti lopetetaan ensimmäiseen ehtoon, jonka lauseke evaluoituu todeksi.
-- Osaat käyttää toistolauseen ehtona totuusarvon palauttavaa lauseketta, jolla päätetään jatketaanko toistoa vaiko ei.
 
 </text-box>
-
 
 
 Ohjelmamme ovat tähän mennessä olleet lineaarisia eli ohjelmien suoritus on tapahtunut ylhäältä alaspäin ilman suuria yllätyksiä tai vaihtoehtoja. Ohjelmiin halutaan kuitenkin usein vaihtoehtoista toiminnallisuutta, eli toiminnallisuutta joka riippuu tavalla tai toisella ohjelmassa olevien muuttujien tilasta.
@@ -421,9 +411,6 @@ Arvosana: mahdotonta!
 </sample-output>
 
 </programming-exercise>
-
-
-TODO: verolaskuri
 
 
 
