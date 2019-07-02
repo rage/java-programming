@@ -41,6 +41,7 @@ const Credits = () => (
         <li>Mikael Nousiainen</li>
         <li>Nea Pirttinen</li>
         <li>Pekka Mikkola</li>
+        <li>Reetta Puska</li>
         <li>Vilma Kangas</li>
       </ul>
 
