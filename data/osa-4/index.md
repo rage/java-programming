@@ -33,10 +33,8 @@ hidden: false
   <deadline>Kirjaudu sisään nähdäksesi deadlinen tälle osalle</deadline>
 </only-for-not-logged-in>
 
-TODO: kirjoita uudestaan: teemana tiedon lukeminen ja tiedon esittäminen, ohjelman sanoittaminen tietoa kuvaavien käsitteiden avulla
 
-Tässä osassa tutustut käsitteisiin tiedosto ja tiedostojärjestelmä sekä opit lukemaan merkkijonomuotoista tietoa tiedostosta. Otat ensiaskeleet olio-ohjelmointiin ja opit olio-ohjelmoinnin keskeiset käsitteet kuten luokka ja olio. Opit luomaan luokkia ja olioita sekä käyttämään niitä osana toteuttamiasi ohjelmia.
-
+Kurssimateriaalin neljännen osan pääteema on olio-ohjelmointi. Opit lukemaan tietoa tiedostoista ja esittämään sekä käsittelemään tietoa olioiden avulla.
 
 <please-login></please-login>
 

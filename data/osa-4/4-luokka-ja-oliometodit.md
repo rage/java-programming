@@ -1,5 +1,5 @@
 ---
-path: '/osa-4/5-luokka-ja-oliometodit'
+path: '/osa-4/4-luokka-ja-oliometodit'
 title: 'Luokka- ja oliometodit (static ja ei-static)'
 hidden: false
 ---

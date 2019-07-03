@@ -1,5 +1,5 @@
 ---
-path: '/osa-4/3-johdatus-olio-ohjelmointiin'
+path: '/osa-4/2-johdatus-olio-ohjelmointiin'
 title: 'Johdatus olio-ohjelmointiin'
 hidden: false
 ---
