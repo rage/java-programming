@@ -283,6 +283,9 @@ while (true) {
 
 TODO: tänne tarttee visualisoinnin
 
+
+<quiznator id="5c1f6c8b64cf001162cb9790"></quiznator>
+
 <programming-exercise name="Syötteiden rajaus" tmcname='osa02-Osa02_07.SyotteidenRajaus'>
 
 Kirjoita ohjelma, joka kysyy käyttäjältä lukuja. Mikäli luku on negatiivinen (eli pienempi kuin nolla), käyttäjälle tulostetaan viesti "Epäkelpo luku" ja käyttäjältä kysytään uutta lukua. Jos taas luku on nolla, lukujen lukeminen lopetetaan ja ohjelma poistuu toistolauseesta. Mikäli luku on positiivinen, ohjelma tulostaa luvun toisen potenssin.
@@ -683,6 +686,7 @@ TODO: lead in, avaa...
 TODO: esimerkki toistolauseesta, missä kaksi muuttujaa
 
 
+
 <programming-exercise name="Lukujen lukumäärä ja summa" tmcname='osa02-Osa02_11.LukumaaraJaSumma'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötettyjen lukujen lukumäärä ja summan. Syötteen loppumisesta kertovaa nollaa ei tule ottaa huomioon lukumäärässä tai summassa.
@@ -732,6 +736,53 @@ Syötä luku
 Syötä luku
 **0**
 Lukujen keskiarvo 8.5
+
+</sample-output>
+
+</programming-exercise>
+
+
+<programming-exercise name='Positiivisten lukujen keskiarvo' tmcname='osa02-Osa02_13.PositiivistenLukujenKeskiarvo'>
+
+Kirjoita ohjelma, joka lukee käyttäjältä kokonaislukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelma tulostaa syötteessä esiintyneiden positiivisten (eli nollaa suurempien lukujen) keskiarvon.
+
+Mikäli ohjelmassa ei syötetä yhtäkään positiivista lukua, ohjelman tulee tulostaa "keskiarvon laskeminen ei ole mahdollista".
+
+Alla on muutamia esimerkkejä ohjelman toiminnasta.
+
+<sample-output>
+
+**3**
+**5**
+**1**
+**-3**
+**0**
+3.0
+
+</sample-output>
+
+<sample-output>
+
+**0**
+keskiarvon laskeminen ei ole mahdollista
+
+</sample-output>
+
+<sample-output>
+
+**-3**
+**1**
+**0**
+1.0
+
+</sample-output>
+
+<sample-output>
+
+**1**
+**1**
+**0**
+1.0
 
 </sample-output>
 
