@@ -1,6 +1,6 @@
 ---
 path: '/osa-3/4-taulukot'
-title: 'Taulukot ja niissä olevan tiedon käsittely'
+title: 'Taulukot'
 hidden: false
 ---
 
@@ -12,21 +12,13 @@ hidden: false
 
 </text-box>
 
-
 ArrayList tarjoaa ohjelmoijan elämää helpottavia toiminnallisuuksia. Näistä ehkäpä tärkein liittyy arvon lisäämiseen: ohjelmoijan näkökulmasta listan koko ei ole rajoitettu. Todellisuudessa listoissa ei ole taikatemppuja -- ne ovat ohjelmoitu siinä missä kaikki muutkin ohjelmointikielen tarjoamat välineet ja ohjelmat. Kun lista luodaan, sille varataan rajattu tila koneen muistista. Listan metodit ovat toteutettu siten, että varatun tilan loppuessa metodi varaa suuremman tilan listan käyttöön ja kopioi vanhassa tilassa olevat tiedot uuteen paikkaan.
-
-
 
 ArrayListin helppokäyttöisyydesta huolimatta ohjelmissa on joskus tarvetta ArrayListin esi-isälle eli **taulukolle**.
 
-
-
 Taulukko sisältää rajatun määrän numeroituja paikkoja arvoille. Taulukon pituus (tai koko) on siinä olevien paikkojen lukumäärä, eli kuinka monta arvoa taulukkoon voi laittaa. Taulukon arvoja kutsutaan taulukon **alkioiksi**.
 
-
-
 Taulukon voi luoda kahdella eri tavalla. Tutustutaan ensin tapaan, jossa taulukon koko määritellään eksplisiittisesti taulukon luonnin yhteydessä. Kolme kokonaislukupaikkaa sisältävä taulukko luodaan seuraavasti:
-
 
 ```java
 int[] luvut = new int[3];
@@ -34,9 +26,7 @@ int[] luvut = new int[3];
 
 Taulukko määritellään hakasuluilla, jotka tulevat taulukon sisältämien alkioiden tyypin jälkeen (alkioidentyyppi[]). Uuden taulukon luominen tapahtuu `new`-kutsulla, jota seuraa taulukon alkioiden tyyppi, hakasulut, sekä hakasulkujen sisään taulukon alkioiden lukumäärä.
 
-
 Taulukon, johon voi asettaa viisi merkkijonoa, voi luoda seuraavasti:
-
 
 ```java
 String[] merkkijonot = new String[5];
@@ -44,9 +34,7 @@ String[] merkkijonot = new String[5];
 
 ## Taulukon alkioon viittaus ja arvon asetus
 
-
 Taulukon alkioihin viitataan taulukon indeksien perusteella. Alla olevassa esimerkissä luodaan kolmepaikkainen kokonaislukutaulukko, jonka jälkeen taulukon indekseihin 0 ja 2 asetetaan arvot. Tämän jälkeen arvot tulostetaan.
-
 
 ```java
 int[] luvut = new int[3];
@@ -66,13 +54,9 @@ System.out.println(luvut[2]);
 
 <code-states-visualizer input='{"code":"public class Esimerkki {\n    public static void main(String[] args) {\n        int[] luvut = new int[3];\n        luvut[0] = 2;\n        luvut[2] = 5;\n\n        System.out.println(luvut[0]);\n        System.out.println(luvut[2]);\n    }\n}","stdin":"","trace":[{"stdout":"","event":"call","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"1","frame_id":1}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"2","frame_id":2}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":4,"stack_to_render":[{"func_name":"main:4","encoded_locals":{"luvut":["REF",143]},"ordered_varnames":["luvut"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"5","frame_id":5}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",0,0,0]}},{"stdout":"","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{"luvut":["REF",143]},"ordered_varnames":["luvut"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"10","frame_id":10}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",2,0,0]}},{"stdout":"","event":"step_line","line":7,"stack_to_render":[{"func_name":"main:7","encoded_locals":{"luvut":["REF",143]},"ordered_varnames":["luvut"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"15","frame_id":15}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",2,0,5]}},{"stdout":"2\n","event":"step_line","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"luvut":["REF",143]},"ordered_varnames":["luvut"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"21","frame_id":21}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",2,0,5]}},{"stdout":"2\n5\n","event":"step_line","line":9,"stack_to_render":[{"func_name":"main:9","encoded_locals":{"luvut":["REF",143]},"ordered_varnames":["luvut"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"26","frame_id":26}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",2,0,5]}},{"stdout":"2\n5\n","event":"return","line":9,"stack_to_render":[{"func_name":"main:9","encoded_locals":{"luvut":["REF",143],"__return__":["VOID"]},"ordered_varnames":["luvut","__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"27","frame_id":27}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",2,0,5]}}],"userlog":"Debugger VM maxMemory: 455M\n"}'></code-states-visualizer>
 
-
 Yksittäisen arvon asettaminen taulukon tiettyyn paikkaan tapahtuu aivan kuten arvon asetus tavalliseen muuttujaan, mutta taulukkoon asetettaessa kerrotaan indeksi, eli taulukon kohta mihin arvo tullaan asettamaan. Indeksi kerrotaan hakasulkeiden sisällä. ArrayListin metodi `get` käyttäytyy hyvin samalla tavalla kuin taulukon tietystä indeksistä haku. Taulukon kohdalla vain syntaksi, eli merkintätapa, on erilainen.
 
-
-
 Indeksi on kokonaisluku, jonka arvo on välillä [0, taulukon pituus - 1]. Esimerkiksi viiden alkion pituisessa taulukossa on indeksit 0, 1, 2, 3, ja 4.
-
 
 ```java
 Scanner lukija = new Scanner(System.in);
@@ -92,7 +76,6 @@ System.out.println(luvut[indeksi]);
 
 Taulukossa olevan muuttujan voi tulostuksen sijaan hyvin esimerkiksi asettaa uuden muuttujan arvoksi.
 
-
 ```java
 Scanner lukija = new Scanner(System.in);
 
@@ -110,12 +93,9 @@ int luku = luvut[indeksi];
 System.out.println(luku);
 ```
 
-
 <quiznator id="5c385a3b244fe21455cb2764"></quiznator>
 
-
 <programming-exercise name='Alkioiden arvojen vaihtaminen' tmcname='osa03-Osa03_18.AlkioidenArvojenVaihtaminen'>
-
 
 Tehtäväpohjaan on toteutettu valmiiksi ohjelma, missä luodaan taulukko sekä tulostetaan taulukon arvot kahteen kertaan. Muokkaa ohjelmaa siten, että sen jälkeen kun taulukon arvot on tulostettu ensimmäiseen kertaan, käyttäjältä kysytään kahta indeksiä, joiden osoittamat arvot vaihdetaan taulukossa päittäin. Tämän jälkeen alkiot tulee vaihtaa päittäin ja taulukon arvot tulostaa toiseen kertaan.
 
@@ -438,12 +418,9 @@ tulostaTaulukkoTahtina(taulukko);
 **
 </sample-output>
 
-
 Eli koska taulukon nollannessa paikassa on luku 5, tulee ensimmäiselle riville 5 tähteä. Seuraavalla 1 tähti jne.
 
-
 </programming-exercise>
-
 
 
 ##  Lyhyempi merkintätapa taulukon luomiseen

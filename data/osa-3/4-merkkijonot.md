@@ -880,10 +880,5 @@ Syntymävuosien keskiarvo: 1930.0
 
 </sample-output>
 
-
 </programming-exercise>
-
-
-TODO: tehtävä, missä saadaan lista arvoja netistä (tai tiedostosta) -- api tähän valmiina -- luetaan tiedot ja tulostetaan yhteenvetoja
-
 
