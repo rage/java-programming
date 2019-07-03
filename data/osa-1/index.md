@@ -32,8 +32,7 @@ overview: true
 </only-for-not-logged-in>
 
 
-Tervetuloa ohjelmoinnin pariin! Kurssin ensimmäisen osan pääteemana on kurssin työvälineiden käyttöönotto sekä ohjelmointiin tutustuminen niiden avulla. Ensimmäisessä osassa opit kirjoittamaan ohjelmia, jotka tulostavat tekstiä, lukevat tekstiä, tekevät laskentaa, ja toimivat vaihtoehtoisilla tavoilla käyttäjän syöttämästä tekstistä riippuen.
-
+Tervetuloa ohjelmoinnin pariin! Kurssimateriaalin ensimmäisen osan pääteemana on kurssin työvälineiden käyttöönotto sekä ohjelmointiin tutustuminen.
 
 <please-login></please-login>
 
