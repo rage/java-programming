@@ -34,10 +34,7 @@ hidden: false
 </only-for-not-logged-in>
 
 
-TODO: kirjoita uudestaan, teemana olio-ohjelmointi ja tiedon väliset yhteydet (viittaaminen tiedosta toiseen sekä viitteen välittäminen)
-
-Tässä osassa jatkat matkaasi olio-ohjelmoinnin saloihin. Opit Javan alkeis- ja viittaustyyppisistä muuttujista sekä niiden eroista. Opit kuormittamaan konstruktoreja ja metodeja eli luomaan useita konstruktoreja ja useita samannimisiä metodeja. Tutustut olioiden samankaltaisuuden vertailuun ja opit luomaan olioiden vertailussa käytettävän equals-metodin omiin luokkiisi. Harjoittelet olioiden käyttöä oliomuuttujina ja metodien paluuarvona. Opettelet lisäksi listojen käyttöä oliomuuttujina sekä harjoittelet yksikkötestien kirjoittamista.
-
+Kurssimateriaalin viides osa jatkaa neljännestä osasta alkaneen olio-ohjelmoinnin parissa.
 
 <please-login></please-login>
 

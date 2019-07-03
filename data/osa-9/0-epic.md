@@ -1392,6 +1392,8 @@ Tutustutaan seuraavaksi muutamaan ohjelmoinnissa varsin näppärään tekniikaan
 
 ## For-toistolause
 
+TODO: tämä nyt kakkososassa
+
 Olemme käyttäneet tähän mennessä ohjelmissamme while-toistolausetta, foreach-toistolausetta sekä virtoja. Tutustutaan nyt vielä yhteen toistolauseeseen eli perinteiseen for-toistolauseeseen.
 
 Olemme käyttäneet indeksistä kirjaa pitävänä toistolauseena toistaiseksi while-toistolausetta. Sen toiminta on seuraavanlainen.

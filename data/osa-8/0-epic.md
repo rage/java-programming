@@ -4,6 +4,1739 @@ title: 'Epic'
 hidden: false
 ---
 
+# jotain
+
+
+## Nimennän tärkeydestä ohjelman ymmärrettävyydessä
+
+Ohjelmoija tekee johtopäätöksiä ja oletuksia muuttujien ja metodien nimistä ohjelmaa lukiessaan. Mikäli nimentä on kuvaavaa, ohjelman toiminnasta saa selvää ilman jokaiseen yksityiskohtaan paneutumista.
+
+Tutustutaan tähän seuraavan esimerkin kautta. Alla on hieman kryptisempi ohjelma, joka sisältää toistaiseksi meille tuntemattoman ArrayList-listarakenteen. Ohjelmassa käytettyjä muuttujia ei ole nimetty kovin ymmärrettävästi.
+
+
+```java
+ArrayList<Integer> l = new ArrayList<>();
+l.add(12);
+l.add(14);
+l.add(18);
+l.add(40);
+l.add(41);
+l.add(42);
+l.add(47);
+l.add(52);
+l.add(59);
+int x = 42;
+
+int a = 0;
+int b = l.size() - 1;
+while (a <= b) {
+    int c = a + (b - a) / 2;
+
+    if (l.get(c) == x) {
+        System.out.println(x + " löytyi indeksistä " + c);
+        break;
+    }
+
+    if (x < l.get(c)) {
+        b = c - 1;
+    } else if (x > l.get(c)) {
+        a = c + 1;
+    }
+}
+```
+
+
+Alla olevassa ohjelmassa muuttujien nimiä on muutettu siten, että ne kuvaavat niiden tarkoitusta paremmin.
+
+
+```java
+ArrayList<Integer> lukulista = new ArrayList<>();
+lukulista.add(12);
+lukulista.add(14);
+lukulista.add(18);
+lukulista.add(40);
+lukulista.add(41);
+lukulista.add(42);
+lukulista.add(47);
+lukulista.add(52);
+lukulista.add(59);
+
+int haettava = 42;
+
+int alaraja = 0;
+int ylaraja = lukulista.size() - 1;
+while (alaraja <= ylaraja) {
+    int keskikohta = alaraja + (ylaraja - alaraja) / 2;
+
+    if (lukulista.get(keskikohta) == haettava) {
+        System.out.println(haettava + " löytyi indeksistä " + keskikohta);
+        break;
+    }
+
+    if (haettava < lukulista.get(keskikohta)) {
+        ylaraja = keskikohta - 1;
+    } else if (haettava > lukulista.get(keskikohta)) {
+        alaraja = keskikohta + 1;
+    }
+}
+```
+
+
+Lähdekoodi, missä muuttujien nimet on selkeitä, on helpommin ymmärrettävää kuin lähdekoodi, missä muuttujien nimet eivät kuvaa niiden tarkoitusta. Ymmärrettävyyteen vaikuttaa toki ohjelmassa käytettävien rakenteiden tuntemus.
+
+
+
+Tarkasteltava ohjelma sisältää hakualgoritmin nimeltä "puolitushaku". Palaamme puolitushaun toimintaan myöhemmin kurssilla. Paras tapa ymmärrettävyyden lisäämiselle tässä vaiheessa olisi hakualgoritmin toiminnallisuuden "piilottavan" metodin luominen. Luodaan hakualgoritmista metodi ja nimetään se sopivasti.
+
+
+```java
+public static int puolitushaku(ArrayList<Integer> luvut, int haettava) {
+
+    int alaraja = 0;
+    int ylaraja = luvut.size() - 1;
+    while (alaraja <= ylaraja) {
+        int keskikohta = alaraja + (ylaraja - alaraja) / 2;
+
+        if (haettava == luvut.get(keskikohta)) {
+            return keskikohta;
+        }
+
+        if (haettava < luvut.get(keskikohta)) {
+            ylaraja = keskikohta - 1;
+        } else if (haettava > luvut.get(keskikohta)) {
+            alaraja = keskikohta + 1;
+        }
+    }
+
+    return -1;
+}
+```
+
+
+Mikäli ohjelmoija kutakuinkin tietää mistä puolitushaussa on kyse, ei ohjelmoijan käytännössä tarvitsisi lukea metodin sisäistä koodia. Metodin tehtävä ja toiminnallisuus on periaatteessa ymmärrettävissä suoraan metodin määrittelystä: `public void puolitushaku(ArrayList<Integer> luvut, int haettava)`. Metodimäärittely ei kuitenkaan kerro puolitushakuun liittyvistä oletuksista tai sen palautusarvoista.
+
+
+Korjataan tilanne kommentilla. Yllä esitetyn algoritmin toiminnan ehtona on se, että lista on järjestyksessä pienimmästä suurimpaan. Jos etsittävä luku löytyy, algoritmi palauttaa luvun indeksin. Jos lukua taas ei löydy, algoritmi palauttaa luvun -1.
+
+
+Käytämme alla ohjelman dokumentointiin liittyvää kommentointitapaa, missä kommentti alkaa vinoviivalla ja kahdella tähdellä sekä päättyy yhteen tähteen ja vinoviivaan `/** kommentti */`. Mikäli usean rivin kommentit merkitään kahdella tähdellä, voi ohjelmointiympäristö näyttää metodin kommentit metodia kirjoittaessa.
+
+
+```java
+/**
+Puolitushaku etsii parametrina annetusta listasta parametrina annettua lukua.
+Jos etsittävä luku löytyy, metodi palauttaa luvun indeksin listassa. Jos
+etsittävää lukua ei löydy, metodi palauttaa arvon -1. Metodi olettaa, että
+lista on järjestetty pienimmästä arvosta suurimpaan.
+*/
+
+public static int puolitushaku(ArrayList<Integer> luvut, int haettava) {
+
+    int alaraja = 0;
+    int ylaraja = luvut.size() - 1;
+    while (alaraja <= ylaraja) {
+        int keskikohta = alaraja + (ylaraja - alaraja) / 2;
+
+        if (haettava == luvut.get(keskikohta)) {
+            return keskikohta;
+        }
+
+        if (haettava < luvut.get(keskikohta)) {
+            ylaraja = keskikohta - 1;
+        } else if (haettava > luvut.get(keskikohta)) {
+            alaraja = keskikohta + 1;
+        }
+    }
+
+    return -1;
+}
+```
+
+
+Alla on kuvakaappaus ohjelmointiympäristöstä. Kuvassa näkyvässä esimerkissä ohjelmaan on toteutettu metodi `public static int puolitushaku(ArrayList<Integer> luvut, int haettava)`, joka on kommentoitu yllä näytetyn esimerkin mukaisesti. Kun ohjelmoija kirjoittaa metodin nimeä, ohjelmointiympäristö näyttää ohjelmoijalle metodiin liittyvän dokumentaation -- Linux-koneilla lähdekoodin täydennykseen käytettävä ctrl+space näyttää NetBeansissa kuvassa näkyvän valikon.
+
+
+<div><img class="naytto" src="../img/material/puolitushaku-ide-kommentit.png"/></div>
+
+
+<text-box variant='hint' name='Yleiset vs. yksityiskohtaiset kommentit'>
+
+Kommentteja käytetään ensisijaisesti luokkien (`public class LuokanNimi`) sekä metodien yleisen toiminnallisuuden kuvaamiseen sen sijaan, että kerrottaisiin rivi riviltä mitä ohjelma tekee. Yksityiskohtainen ohjelman toiminnan avaaminen rivi riviltä on kuitenkin hyvä tapa selittää ohjelmakoodia itselleen, mikä edesauttaa oppimista.
+
+
+Yleisesti ottaen voidaan ajatella niin, että vaikeasti ymmärrettävät ohjelmat kannattaa pilkkoa osakokonaisuuksiin, joiden nimillä kuvataan näiden osakokonaisuuksien toimintaa. Dokumentointi ja kommentointi on tärkeää mikäli muuttujien ja metodien nimillä ohjelmaa ei saada tarpeeksi ymmärrettäväksi. Tämän lisäksi metodien paluuarvot sekä metodien toimintaan liittyvät oletukset on hyvä dokumentoida.
+
+</text-box>
+
+
+<quiznator id="5c385fa799236814c5bb4371"></quiznator>
+
+
+
+
+# Hajautustaulu
+
+<text-box variant='learningObjectives' name='Oppimistavoitteet'>
+
+- Tunnet käsitteen hajautustaulu ja tiedät pääpiirteittäin miten hajautustaulu toimii.
+- Osaat käyttää Javan hajautustaulua: osaat luoda hajautustaulun, osaat lisätä hajautustauluun tietoa, ja osaat hakea hajautustaulusta tietoa.
+- Osaat kertoa tilanteita, joissa hajautustaulun käytöstä voi olla hyötyä.
+- Osaat käyttää hajautustaulua oliomuuttujana.
+- Osaat käydä hajautustaulun avaimet ja arvot läpi for-each -toistolausetta käyttäen.
+
+</text-box>
+
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html">Hajautustaulu</a> eli HashMap on ArrayListin lisäksi eniten käytettyjä Javan valmiiksi tarjoamia tietorakenteita. Hajautustaulua käytetään kun tietoa käsitellään avain-arvo -pareina, missä avaimen perusteella voidaan lisätä, hakea ja poistaa arvo.
+
+<br/>
+
+Hajautustaulun käyttöönotto vaatii luokan alkuun rivin `import java.util.HashMap;`. Hajautustaulua luodessa tarvitaan kaksi tyyppiparametria, avainmuuttujan tyyppi ja lisättävän arvon tyyppi. Mikäli hajautustaulussa on avaimena merkkijono (String) ja arvona luku (Integer) luodaan hajautustaulu komennolla `HashMap<String, Integer> taulu = new HashMap<>();`
+
+Hajautustauluun lisääminen tapahtuu kaksiparametrisella metodilla `put(*avain*, *arvo*)`, joka saa parametrinaan avaimen ja arvon. Hajautustaulusta hakeminen onnistuu metodilla `get(*avain*)`, joka saa parametrinaan avaimen ja palauttaa arvon.
+
+Alla olevassa esimerkissä on luotu HashMap-olio kaupunkien hakemiseen postinumeron perusteella, jonka jälkeen HashMap-olioon on lisätty neljä postinumero-kaupunki -paria. Lopulta hajautustaulusta haetaan postinumeroa "00710". Sekä postinumero että kaupunki on esitetty merkkijonona.
+
+```java
+HashMap<String, String> postinumerot = new HashMap<>();
+postinumerot.put("00710", "Helsinki");
+postinumerot.put("90014", "Oulu");
+postinumerot.put("33720", "Tampere");
+postinumerot.put("33014", "Tampere");
+
+System.out.println(postinumerot.get("00710"));
+```
+
+<sample-output>
+
+Helsinki
+
+</sample-output>
+
+
+Sisäisesti yllä luotavan hajautustaulun sisäinen tila näyttää seuraavalta. Kukin avain viittaa arvoon.
+
+<img src="../img/drawings/hashmap.png" alt="Hashmapissa avaimen perusteella saadaan selville arvo."/>
+
+Mikäli hajautustaulussa ei ole haettavaa avainta, palauttaa hajautustaulun metodi `get` `null`-viitteen.
+
+```java
+HashMap<String, String> numerot = new HashMap<>();
+numerot.put("Yksi", "Uno");
+numerot.put("Kaksi", "Dos");
+
+String kaannos = numerot.get("Yksi");
+System.out.println(kaannos);
+
+System.out.println(numerot.get("Kaksi"));
+System.out.println(numerot.get("Kolme"));
+System.out.println(numerot.get("Uno"));
+```
+
+<sample-output>
+
+Uno
+Dos
+null
+null
+
+</sample-output>
+
+<quiznator id='5c571399ddb6b814af3225a9'></quiznator>
+
+
+<programming-exercise name='Lempinimet' tmcname='osa06-Osa06_03.Lempinimet'>
+
+Luo `main`-metodissa uusi `HashMap<String,String>`-olio. Tallenna luomaasi olioon seuraavien henkilöiden nimet ja lempinimet niin, että nimi on avain ja lempinimi on arvo. Käytä pelkkiä pieniä kirjaimia.
+
+- matin lempinimi on mage
+- mikaelin lempinimi on mixu
+- arton lempinimi on arppa
+
+Tämän jälkeen hae HashMapistä mikaelin lempinimi ja tulosta se.
+
+Tehtävässä ei ole automaattisia testejä. Palauta tehtävä kun se toimii mielestäsi oikein.
+
+</programming-exercise>
+
+
+## Hajautustaulun avaimeen liittyy korkeintaan yksi arvo
+
+Hajautustaulussa on jokaista avainta kohden korkeintaan yksi arvo. Mikäli hajautustauluun lisätään uusi avain-arvo -pari, missä avain on jo aiemmin liittynyt toiseen hajautustauluun tallennettuun arvoon, vanha arvo katoaa hajautustaulusta.
+
+```java
+HashMap<String, String> numerot = new HashMap<>();
+numerot.put("Uno", "Yksi");
+numerot.put("Dos", "Zwei");
+numerot.put("Uno", "Ein");
+
+String kaannos = numerot.get("Uno");
+System.out.println(kaannos);
+
+System.out.println(numerot.get("Dos"));
+System.out.println(numerot.get("Tres"));
+System.out.println(numerot.get("Uno"));
+```
+
+<sample-output>
+
+Ein
+Zwei
+null
+Ein
+
+</sample-output>
+
+<programming-exercise name='Korkeintaan yksi arvo'>
+
+Tehtävä tähän.
+
+</programming-exercise>
+
+
+## Viittaustyyppinen muuttuja hajautustaulun arvona
+
+Tutkitaan hajautustaulun toimintaa kirjastoesimerkin avulla. Kirjastosta voi hakea kirjoja kirjan nimen perusteella. Jos haetulla nimellä löytyy kirja, palauttaa kirjasto kirjan viitteen. Luodaan ensin esimerkkiluokka `Kirja`, jolla on oliomuuttujina nimi, kirjaan liittyvä sisältö sekä kirjan julkaisuvuosi.
+
+
+```java
+public class Kirja {
+    private String nimi;
+    private String sisalto;
+    private int julkaisuvuosi;
+
+    public Kirja(String nimi, int julkaisuvuosi, String sisalto) {
+        this.nimi = nimi;
+        this.julkaisuvuosi = julkaisuvuosi;
+        this.sisalto = sisalto;
+    }
+
+    public String getNimi() {
+        return this.nimi;
+    }
+
+    public void setNimi(String nimi) {
+        this.nimi = nimi;
+    }
+
+    public int getJulkaisuvuosi() {
+        return this.julkaisuvuosi;
+    }
+
+    public void setJulkaisuvuosi(int julkaisuvuosi) {
+        this.julkaisuvuosi = julkaisuvuosi;
+    }
+
+    public String getSisalto() {
+        return this.sisalto;
+    }
+
+    public void setSisalto(String sisalto) {
+        this.sisalto = sisalto;
+    }
+
+    public String toString() {
+        return "Nimi: " + this.nimi + " (" + this.julkaisuvuosi + ")\n"
+            + "Sisältö: " + this.sisalto;
+    }
+}
+```
+
+Luodaan seuraavaksi hajautustaulu, joka käyttää avaimena kirjan nimeä eli String-tyyppistä oliota, ja arvona edellä luomaamme kirjaa.
+
+```java
+HashMap<String, Kirja> hakemisto = new HashMap<>();
+```
+
+Yllä oleva hajautustaulu käyttää avaimena `String`-oliota. Laajennetaan esimerkkiä siten, että hakemistoon lisätään kaksi kirjaa, `"Järki ja tunteet"` ja `"Ylpeys ja ennakkoluulo"`.
+
+```java
+Kirja jarkiJaTunteet = new Kirja("Järki ja tunteet", 1811, "...");
+Kirja ylpeysJaEnnakkoluulo = new Kirja("Ylpeys ja ennakkoluulo", 1813, "....");
+
+HashMap<String, Kirja> hakemisto = new HashMap<>();
+hakemisto.put(jarkiJaTunteet.getNimi(), jarkiJaTunteet);
+hakemisto.put(ylpeysJaEnnakkoluulo.getNimi(), ylpeysJaEnnakkoluulo);
+```
+
+Hakemistosta voi hakea kirjoja kirjan nimellä. Haku kirjalla `"Viisasteleva sydän"` ei tuota osumaa, jolloin hajautustaulu palauttaa `null`-viitteen. Kirja "Ylpeys ja ennakkoluulo" kuitenkin löytyy.
+
+```java
+Kirja kirja = hakemisto.get("Viisasteleva sydän");
+System.out.println(kirja);
+System.out.println();
+kirja = hakemisto.get("Ylpeys ja ennakkoluulo");
+System.out.println(kirja);
+```
+
+<sample-output>
+
+null
+
+Nimi: Ylpeys ja ennakkoluulo (1813)
+Sisältö: ...
+
+</sample-output>
+
+Hajautustauluun lisättäessä avain-arvo -parin arvo voi olla käytännössä mitä tahansa. Arvo voi olla kokonaisluku, lista, tai vaikkapa toinen hajautustaulu.
+
+
+<quiznator id='5c5713c9017ffc13eddca708'></quiznator>
+
+
+## Milloin hajautustaulua oikein tulisi käyttää?
+
+Hajautustaulu on toteutettu sisäisesti siten, että haku avaimen perusteella on hyvin nopeaa. Käytännössä hajautustaulu luo avaimen perusteella "hajautusarvon" eli koodin, jonka perusteella arvo tallennetaan tiettyyn paikkaan. Kun hajautustaulusta haetaan tietoa avaimen perusteella, tämä sama koodi tunnistaa paikan, missä avaimeen liittyvä arvo sijaitsee. Käytännössä avainta etsittäessä hajautustaulusta ei tarvitse käydä läpi kaikkia avain-arvo -pareja, vaan tarkasteltava joukko on merkittävästi pienempi. Hajautustaulun sisäiseen toteutukseen syvennytään tarkemmin kursseilla Ohjelmoinnin jatkokurssi ja Tietorakenteet ja algoritmit.
+
+
+Tarkastellaan edellä esitettyä kirjastoesimerkkiä. Koko ohjelman olisi aivan yhtä hyvin voinut toteuttaa listan avulla. Tällöin kirjat olisivat hakemiston sijaan listalla, ja kirjan etsiminen tapahtuisi listaa läpikäyden.
+
+Alla olevassa esimerkissä kirjat on tallennettu listalla ja ne niiden etsiminen tapahtuu listaa läpikäyden.
+
+
+```java
+ArrayList<Kirja> kirjat = new ArrayList<>();
+Kirja jarkiJaTunteet = new Kirja("Järki ja tunteet", 1811, "...");
+Kirja ylpeysJaEnnakkoluulo = new Kirja("Ylpeys ja ennakkoluulo", 1813, "....");
+kirjat.add(jarkiJaTunteet);
+kirjat.add(ylpeysJaEnnakkoluulo);
+
+// etsitään kirja nimeltä Järki ja tunteet
+Kirja haettava = null;
+for (Kirja kirja: kirjat) {
+    if (kirja.getNimi().equals("Järki ja tunteet")) {
+        haettava = kirja;
+        break;
+    }
+}
+
+System.out.println(haettava);
+System.out.println();
+
+// etsitään kirja nimeltä Viisasteleva sydän
+haettava = null;
+for (Kirja kirja: kirjat) {
+    if (kirja.getNimi().equals("Viisasteleva sydän")) {
+        haettava = kirja;
+        break;
+    }
+}
+
+System.out.println(haettava);
+```
+
+<sample-output>
+
+Nimi: Järki ja tunteet (1811)
+Sisältö: ...
+
+null
+
+</sample-output>
+
+Yllä olevaa ohjelmaa varten voisi luoda erillisen luokkametodin `hae`, jolle annetaan parametrina lista sekä haettavan kirjan nimi. Metodi palauttaa nimen perusteella löytyvän kirjan mikäli sellainen on olemassa, muulloin metodi palauttaa `null`-viitteen.
+
+```java
+public static Kirja hae(ArrayList<Kirja> kirjat, String nimi) {
+
+    for (Kirja kirja: kirjat) {
+        if (kirja.getNimi().equals(nimi)) {
+            return kirja;
+        }
+    }
+
+    return null;
+}
+```
+
+Nyt ohjelma on hieman selkeämpi.
+
+```java
+ArrayList<Kirja> kirjat = new ArrayList<>();
+Kirja jarkiJaTunteet = new Kirja("Järki ja tunteet", 1811, "...");
+Kirja ylpeysJaEnnakkoluulo = new Kirja("Ylpeys ja ennakkoluulo", 1813, "....");
+kirjat.add(jarkiJaTunteet);
+kirjat.add(ylpeysJaEnnakkoluulo);
+
+System.out.println(hae(kirjat, "Järki ja tunteet"));
+
+System.out.println();
+
+System.out.println(hae(kirjat, "Viisasteleva sydän"));
+```
+
+<sample-output>
+
+Nimi: Järki ja tunteet (1811)
+Sisältö: ...
+
+null
+
+</sample-output>
+
+Ohjelma toimisi nyt täysin samoin kuin hajautustaululla toteutettu ohjelma, eikö niin?
+
+Toiminnallisuuden näkökulmasta kyllä. Tarkastellaan ohjelma vielä tehokkuuden kannalta. Javan valmis metodi `System.nanoTime()` palauttaa tietokoneen ajan nanosekunteina. Lisätään edellä tarkasteltuun ohjelmaan toiminnallisuus, jonka perusteella voidaan laskea kuinka paljon aikaa kirjojen hakemiseen meni.
+
+```java
+ArrayList<Kirja> kirjat = new ArrayList<>();
+
+// lisätään kirjalistalle kymmenen miljoonaa kirjaa
+
+long alku = System.nanoTime();
+System.out.println(hae(kirjat, "Järki ja tunteet"));
+
+System.out.println();
+
+System.out.println(hae(kirjat, "Viisasteleva sydän"));
+long loppu = System.nanoTime();
+double kestoMillisekunteina = 1.0 * (loppu - alku) / 1000000;
+
+System.out.println("Kirjojen etsimiseen meni " + kestoMillisekunteina + " millisekuntia.");
+```
+
+<sample-output>
+
+Nimi: Järki ja tunteet (1811)
+Sisältö: ...
+
+null
+Kirjojen etsimiseen meni 881.3447 millisekuntia.
+
+</sample-output>
+
+Kun kirjoja on kymmenen miljoonaa, kestää kokeilumme mukaan kahden kirjan etsiminen lähes sekunnin. Tässä vaikuttaa toki se, minkälaisessa järjestyksessä lista on. Mikäli haettava kirja olisi listan ensimmäisenä, olisi ohjelma nopeampi. Toisaalta mikäli kirjaa ei listalla ole, tulee ohjelman käydä kaikki listan kirjat läpi ennen kuin se voi todeta, ettei kirjaa ole.
+
+Tarkastellaan samaa ohjelmaa hajautustaulua käyttäen.
+
+```java
+HashMap<String, Kirja> hakemisto = new HashMap<>();
+
+// lisätään hajautustauluun kymmenen miljoonaa kirjaa
+
+long alku = System.nanoTime();
+System.out.println(hakemisto.get("Järki ja tunteet"));
+
+System.out.println();
+
+System.out.println(hakemisto.get("Viisasteleva sydän"));
+long loppu = System.nanoTime();
+double kestoMillisekunteina = 1.0 * (loppu - alku) / 1000000;
+
+System.out.println("Kirjojen etsimiseen meni " + kestoMillisekunteina + " millisekuntia.");
+```
+
+<sample-output>
+
+Nimi: Järki ja tunteet (1811)
+Sisältö: ...
+
+null
+Kirjojen etsimiseen meni 0.411458 millisekuntia.
+
+</sample-output>
+
+Hajautustaululla kahden kirjan etsimiseen kymmenestä miljoonasta kirjasta meni noin 0.4 millisekuntia. Tehokkusero esimerkissämme on lähes kaksituhatkertainen.
+
+Tämä tehokkuusero liittyy siihen, että kun listalta etsitään kirjaa, tulee huonoimmassa tapauksessa käydä kaikki listan kirjat läpi. Hajautustaulussa kaikkia kirjoja ei tarvitse tarkastella, sillä avain määrää kirjan paikan hajautustaulussa. Tehokkuuserot riippuvat kirjojen määrästä -- esimerkiksi kymmenellä kirjalla tehokkuuserot ovat mitättömiä, mutta miljoonilla kirjoilla tehokkuuserot näkyvät selkeästi.
+
+Tarkoittaako tämä sitä, että jatkossa käytämme vain hajautustauluja? Ei tietenkään. Hajautustaulut toimivat silloin, kun tiedämme täsmälleen mitä olemme etsimässä. Mikäli haluamme tunnistaa ne kirjat, joiden sanassa esiintyy tietty merkkijono, ei hajautustaulusta ole juurikaan hyötyä.
+
+Hajautustauluilla ei ole myöskään sisäistä järjestystä, eikä hajautustaulun läpikäynti indeksien perusteella ole mahdollista. Listalla alkiot alkiot ovat siinä järjestyksessä missä ne on listalle lisättynä.
+
+Tyypillisesti hajautustauluja ja listoja käytetäänkin yhdessä. Hajautustaulun avulla tarjotaan nopea mahdollisuus hakuun tietyn tai tiettyjen avainten perusteella, kun taas listaa käytetään esimerkiksi järjestyksen ylläpitämiseen.
+
+
+## Hajautustaulu oliomuuttujana
+
+Edellä käsitellyn kirjojen tallentamiseen liittyvän esimerkin ongelma on se, että kirjan kirjoitusmuoto tulee muistaa täsmälleen oikein. Joku saattaa etsiä kirjaa pienellä alkukirjaimella ja joku toinen saattaa vaikkapa painaa välilyöntiä nimen kirjoituksen aluksi. Tarkastellaan seuraavaksi erästä tapaa hieman sallivampaan kirjan nimen perusteella tapahtuvaan hakemiseen.
+
+Hyödynnämme hakemisessa String-luokan tarjoamia välineitä merkkijonojen käsittelyyn. Metodi `toLowerCase()` luo merkkijonosta uuden merkkijonon, jonka kaikki kirjaimet on muunnettu pieniksi. Metodi `trim()` taas luo merkkijonosta uuden merkkijonon, jonka alusta ja lopusta on poistettu tyhjät merkit kuten välilyönnit.
+
+```java
+String teksti = "Ylpeys ja ennakkoluulo ";
+teksti = teksti.toLowerCase(); // teksti nyt "ylpeys ja ennakkoluulo "
+teksti = teksti.trim(); // teksti nyt "ylpeys ja ennakkoluulo"
+```
+
+Edellä kuvatun merkkijonon muunnoksen johdosta kirja löytyy, vaikka käyttäjä kirjoittaisi kirjan nimen pienillä kirjaimilla.
+
+Luodaan luokka `Kirjasto`, joka kapseloi kirjat sisältävän hajautustaulun ja mahdollistaa kirjoitusasusta riippumattoman kirjojen haun. Lisätään luokalle `Kirjasto` metodit lisäämiseen, hakemiseen ja poistamiseen. Jokainen näistä tapahtuu siistityn nimen perusteella -- siistiminen sisältää nimen muuntamisen pienellä kirjoitetuksi sekä ylimääräisten alussa ja lopussa olevien välilyöntien poistamisen.
+
+Hahmotellaan ensin lisäämismetodia. Kirja lisätään hajautustauluun siten, että kirjan nimi on avaimena ja kirja arvona. Koska haluamme, että pienet kirjoitusvirheet kuten isot tai pienet merkkijonot tai alussa ja lopussa olevat välilyönnit sallitaan, avain -- eli kirjan nimi -- muunnetaan pienellä kirjoitetuksi ja sen alusta ja lopusta poistetaan välilyönnit.
+
+```java
+public class Kirjasto {
+    private HashMap<String, Kirja> hakemisto;
+
+    public Kirjasto() {
+        this.hakemisto = new HashMap<>();
+    }
+
+    public void lisaaKirja(Kirja kirja) {
+        String nimi = kirja.getNimi();
+        if (nimi == null) {
+            nimi = "";
+        }
+
+        nimi = nimi.toLowerCase();
+        nimi = nimi.trim();
+
+        if (this.hakemisto.containsKey(nimi)) {
+            System.out.println("Kirja on jo kirjastossa!");
+        } else {
+            hakemisto.put(nimi, kirja);
+        }
+    }
+}
+```
+
+Yllä käytetään hajautustaulun tarjoamaa metodia `containsKey` avaimen olemassaolon tarkastamiseen. Metodi palauttaa arvon `true`, jos hajautustauluun on lisätty haetulla avaimella mikä tahansa arvo, muulloin metodi palauttaa arvon `false`.
+
+Huomaamme jo nyt että merkkijonon siistimiseen liittyvää koodia tarvitsisi jokaisessa kirjaa käsittelevässä metodissa, joten siitä on hyvä tehdä erillinen apumetodi -- metodi toteutettaan luokkametodina, sillä se ei käsittele oliomuuttujia.
+
+```java
+public static String siistiMerkkijono(String merkkijono) {
+    if (merkkijono == null) {
+        return "";
+    }
+
+    merkkijono = merkkijono.toLowerCase();
+    return merkkijono.trim();
+}
+```
+
+Toteutus on apumetodia käyttäen paljon siistimpi kuin ilman apumetodia.
+
+```java
+public class Kirjasto {
+    private HashMap<String, Kirja> hakemisto;
+
+    public Kirjasto() {
+        this.hakemisto = new HashMap<>();
+    }
+
+    public void lisaaKirja(Kirja kirja) {
+        String nimi = siistiMerkkijono(kirja.getNimi());
+
+        if (this.hakemisto.containsKey(nimi)) {
+            System.out.println("Kirja on jo kirjastossa!");
+        } else {
+            hakemisto.put(nimi, kirja);
+        }
+    }
+
+    public Kirja haeKirja(String kirjanNimi) {
+        kirjanNimi = siistiMerkkijono(kirjanNimi);
+        return this.hakemisto.get(kirjanNimi);
+    }
+
+    public void poistaKirja(String kirjanNimi) {
+        kirjanNimi = siistiMerkkijono(kirjanNimi);
+
+        if (this.hakemisto.containsKey(kirjanNimi)) {
+            this.hakemisto.remove(kirjanNimi);
+        } else {
+            System.out.println("Kirjaa ei löydy, ei voida poistaa!");
+        }
+    }
+
+    public static String siistiMerkkijono(String merkkijono) {
+        if (merkkijono == null) {
+            return "";
+        }
+
+        merkkijono = merkkijono.toLowerCase();
+        return merkkijono.trim();
+    }
+}
+```
+
+Tarkastellaan vielä luokan käyttöä.
+
+```java
+Kirja jarkiJaTunteet = new Kirja("Järki ja tunteet", 1811, "...");
+Kirja ylpeysJaEnnakkoluulo = new Kirja("Ylpeys ja ennakkoluulo", 1813, "....");
+
+Kirjasto kirjasto = new Kirjasto();
+kirjasto.lisaaKirja(jarkiJaTunteet);
+kirjasto.lisaaKirja(ylpeysJaEnnakkoluulo);
+
+System.out.println(kirjasto.haeKirja("ylpeys ja ennakkoluulo");
+System.out.println();
+
+System.out.println(kirjasto.haeKirja("YLPEYS JA ENNAKKOLUULO");
+System.out.println();
+
+System.out.println(kirjasto.haeKirja("JÄRKI"));
+```
+
+<sample-output>
+
+Nimi: Ylpeys ja ennakkoluulo (1813)
+Sisältö: ...
+
+Nimi: Ylpeys ja ennakkoluulo (1813)
+Sisältö: ...
+
+null
+
+</sample-output>
+
+Edeltävässä esimerkissä noudatimme ns. DRY-periaatetta (Don't Repeat Yourself), jonka tarkoituksena on saman koodin toistumisen välttäminen. Merkkijonon siistiminen eli pienellä kirjoitetuksi muuttaminen sekä *trimmaus*, eli tyhjien merkkien poisto alusta ja lopusta, olisi toistunut useasti kirjastoluokassamme ilman metodia `siistiMerkkijono`. Toistuvaa koodia ei usein huomaa ennen kuin sitä on jo kirjoittanut, jolloin sitä päätyy koodiin lähes pakosti. Tässä ei ole mitään pahaa -- tärkeintä on että koodia siistitään sitä mukaa siistimistä vaativia tilanteita huomataan.
+
+
+<programming-exercise name='Lyhenteet' tmcname='osa06-Osa06_04.Lyhenteet'>
+
+Luo lyhenteiden ylläpitoon käytettävä luokka `Lyhenteet`. Luokalla tulee olla parametriton konstruktori, ja sen tulee tarjota seuraavat metodit:
+
+- `public void lisaaLyhenne(String lyhenne, String selite)` lisää lyhenteen sekä siihen liittyvän selitteen.
+- `public boolean onkoLyhennetta(String lyhenne)` tarkastaa onko lyhennettä lisätty; palauttaa `true` mikäli kyllä, `false` mikäli ei.
+- `public String haeLyhenne(String lyhenne)` hakee lyhenteeseen liittyvän selitteen; palauttaa `null` mikäli lyhennettä ei ole lisätty.
+
+Käyttöesimerkki:
+
+```java
+Lyhenteet lyhenteet = new Lyhenteet();
+lyhenteet.lisaaLyhenne("esim.", "esimerkiksi");
+lyhenteet.lisaaLyhenne("jne.", "ja niin edelleen");
+lyhenteet.lisaaLyhenne("yms.", "ynnä muuta sellaista");
+
+String teksti = "esim. jne. yms. lol.";
+
+for (String osa: teksti.split(" ")) {
+    if(lyhenteet.onkoLyhennetta(osa)) {
+        osa = lyhenteet.haeLyhenne(osa);
+    }
+
+    System.out.print(osa);
+    System.out.print(" ");
+}
+
+System.out.println();
+```
+
+<sample-output>
+
+esimerkiksi ja niin edelleen ynnä muuta sellaista lol.
+
+</sample-output>
+
+</programming-exercise>
+
+
+## Hajautustaulun avainten läpikäynti
+
+Haluamme joskus etsiä kirjaa nimen osan perusteella. Hajautustaulun metodi `get` ei tähän sovellu, sillä sitä käytetään tietyllä avaimella etsimiseen. Kirjan nimen osan perusteella etsiminen ei sillä onnistu.
+
+Hajautustaulun arvojen läpikäynti onnistuu hajautustaulun metodin `keySet()` palauttaman joukon sekä for-each -lauseen avulla.
+
+Alla haetaan kaikki ne kirjat, joiden nimessä esiintyy annettu merkkijono.
+
+
+```java
+public ArrayList<Kirja> haeKirjaNimenOsalla(String nimenOsa) {
+    nimenOsa = siistiMerkkijono(nimenOsa);
+
+    ArrayList<Kirja> kirjat = new ArrayList<>();
+
+    for(String kirjanNimi : this.hakemisto.keySet()) {
+        if(!kirjanNimi.contains(nimenOsa)) {
+            continue;
+        }
+
+        // mikäli avain sisältää haetun merkkijonon, haetaan avaimeen
+        // liittyvä arvo ja lisätään se palautettavien kirjojen joukkoon
+        kirjat.add(this.hakemisto.get(kirjanNimi));
+    }
+
+    return kirjat;
+}
+```
+
+Tällä tavalla etsiessä menetämme kuitenkin hajautustauluun liittyvän nopeusedun. Hajautustaulu on toteutettu siten, että yksittäisen avaimen perusteella hakeminen on erittäin nopeaa. Yllä olevassa esimerkissä käydään kaikkien kirjojen nimet läpi, kun tietyllä avaimella etsittäessä tarkasteltaisiin tasan yhden kirjan olemassaoloa.
+
+
+<programming-exercise name='Hajautustaulun tulostelua' tmcname='osa06-Osa06_05.HajautustaulunTulostelua'>
+
+Tehtäväpohjassa tulee luokka `Ohjelma`. Luo luokkaan seuraavat kolme luokkametodia:
+
+- `public static void tulostaAvaimet(HashMap<String, String> hajautustaulu)`, joka tulostaa parametrina annetun hajautustaulun avaimet.
+
+- `public static void tulostaAvaimetJoissa(HashMap<String, String> hajautustaulu, String merkkijono)`, joka tulostaa parametrina annetun hajautustaulun avaimista ne, jotka sisältävät parametrina annetun merkkijonon.
+
+- `public static void tulostaArvotJosAvaimessa(HashMap<String, String> hajautustaulu, String merkkijono)`, joka tulostaa parametrina annetun hajautustaulun ne arvot, joihin liittyvät avaimet sisältävät parametrina annetun merkkijonon.
+
+Esimerkki luokkametodien käytöstä:
+
+```java
+HashMap<String, String> taulu = new HashMap<>();
+taulu.put("esim.", "esimerkiksi");
+taulu.put("jne.", "ja niin edelleen");
+taulu.put("yms.", "ynnä muuta sellaista");
+
+tulostaAvaimet(taulu);
+System.out.println("---");
+tulostaAvaimetJoissa(taulu, "m");
+System.out.println("---");
+tulostaArvotJosAvaimessa(taulu, "ne");
+```
+
+<sample-output>
+esim.
+jne.
+yms.
+---
+esim.
+yms.
+---
+ja niin edelleen
+</sample-output>
+
+Huom! Tulostusjärjestys voi poiketa yllä esitetystä, sillä hajautustaulun sisäinen toteutus ei takaa olioiden järjestystä.
+
+</programming-exercise>
+
+
+## Hajautustaulun arvojen läpikäynti
+
+Edellä kuvatun toiminnallisuuden voisi toteuttaa myös hajautustaulun arvojen läpikäynnillä. Hajautustaulu arvojoukon saa hajautustaulun metodilla `values()`. Myös tämän arvojoukon voi käydä läpi for-each -lauseella.
+
+```java
+public ArrayList<Kirja> haeKirjaNimenOsalla(String nimenOsa) {
+    nimenOsa = siistiMerkkijono(nimenOsa);
+
+    ArrayList<Kirja> kirjat = new ArrayList<>();
+
+    for(Kirja kirja : this.hakemisto.values()) {
+        if(!kirja.getNimi().contains(nimenOsa)) {
+            continue;
+        }
+
+        kirjat.add(kirja);
+    }
+
+    return kirjat;
+}
+```
+
+Kuten edellisessä esimerkissä, myös tällä tavalla etsiessä menetetään hajautustauluun liittyvä nopeusedun.
+
+
+<programming-exercise name='Hajautustaulun tulostelua 2' tmcname='osa06-Osa06_06.HajautustaulunTulostelua2'>
+
+Tehtäväpohjassa tulee materiaalista tuttu luokka `Kirja` sekä luokka `Ohjelma`. Luo luokkaan `Ohjelma` seuraavat kaksi luokkametodia:
+
+- `public static void tulostaArvot(HashMap<String, Kirja> hajautustaulu)`, joka tulostaa parametrina annetun hajautustaulun arvot niiden toString-metodia käyttäen.
+
+- `public static void tulostaArvoJosNimessa(HashMap<String, Kirja> hajautustaulu, String merkkijono)`, joka tulostaa parametrina annetun hajautustaulun arvoista ne, joiden nimessä on parametrina annettu merkkijono. Nimen saa selville kirjan metodilla `getNimi`.
+
+Esimerkki luokkametodien käytöstä:
+
+```java
+HashMap<String, Kirja> taulu = new HashMap<>();
+taulu.put("tunteet", new Kirja("Järki ja tunteet", 1811, "..."));
+taulu.put("luulot", new Kirja("Ylpeys ja ennakkoluulo", 1813, "...."));
+
+tulostaArvot(taulu);
+System.out.println("---");
+tulostaArvoJosNimessa(taulu, "ennakko");
+```
+
+<sample-output>
+Nimi: Ylpeys ja ennakkoluulo (1813)
+Sisältö: ...
+Nimi: Järki ja tunteet (1811)
+Sisältö: ...
+---
+Nimi: Ylpeys ja ennakkoluulo (1813)
+Sisältö: ...
+</sample-output>
+
+Huom! Tulostusjärjestys voi poiketa yllä esitetystä, sillä hajautustaulun sisäinen toteutus ei takaa olioiden järjestystä.
+
+</programming-exercise>
+
+
+## Alkeistyyppiset muuttujat hajautustaulussa
+
+Hajautustaulu olettaa, että siihen lisätään viittaustyyppisiä muuttujia (samoin kuin `ArrayList`). Java muuntaa alkeistyyppiset muuttujat viittaustyyppisiksi käytännössä kaikkia Javan valmiita tietorakenteita (kuten ArrayList ja HashMap) käytettäessä. Vaikka luku `1` voidaan esittää alkeistyyppisen muuttujan `int` arvona, tulee sen tyypiksi määritellä `Integer` ArrayListissä ja HashMapissa.
+
+```java
+HashMap<Integer, String> taulu = new HashMap<>(); // toimii
+taulu.put(1, "Ole!");
+HashMap<int, String> taulu2 = new HashMap<>(); // ei toimi
+```
+
+Hajautustaulun avain ja tallennettava olio ovat aina viittaustyyppisiä muuttujia. Jos haluat käyttää alkeistyyppisiä muuttujia avaimena tai tallennettavana arvona, on niille olemassa viittaustyyppiset vastineet. Alla on esitelty muutama.
+
+<table class="table">
+
+  <tr>
+    <th>Alkeistyyppi</th>
+    <th>Viittaustyyppinen vastine</th>
+  </tr>
+
+  <tr>
+    <td>int</td>
+    <td><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" target="_blank" rel="noopener">Integer</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>double</td>
+    <td><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" target="_blank" rel="noopener">Double</a></td>
+  </tr>
+
+  <tr>
+    <td>char</td>
+    <td><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Character.html" target="_blank" rel="noopener">Character</a></td>
+  </tr>
+</table>
+
+
+Java muuntaa alkeistyyppiset muuttujat automaattisesti viittaustyyppisiksi kun niitä lisätään HashMapiin tai ArrayListiin. Tätä automaattista muunnosta viittaustyyppisiksi kutsutaan Javassa *auto-boxingiksi*, eli automaattiseksi "laatikkoon" asettamiseksi. Automaattinen muunnos onnistuu myös toiseen suuntaan.
+
+```java
+int avain = 2;
+HashMap<Integer, Integer> taulu = new HashMap<>();
+taulu.put(avain, 10);
+int arvo = taulu.get(avain);
+System.out.println(arvo);
+```
+
+<sample-output>
+  10
+</sample-output>
+
+Seuraava esimerkki kuvaa rekisterinumeroiden bongausten laskemiseen käytettävää luokkaa. Metodeissa metodeissa `lisaaBongaus` ja `montakoKertaaBongattu` tapahtuu automaattinen tyyppimuunnos.
+
+
+```java
+public class Rekisteribongauslaskuri {
+    private HashMap<String, Integer> bongatut;
+
+    public Rekisteribongauslaskuri() {
+        this.bongatut = new HashMap<>();
+    }
+
+    public void lisaaBongaus(String bongattu) {
+        if (!this.bongatut.containsKey(bongattu)) {
+            this.bongatut.put(bongattu, 0);
+        }
+
+        int montakobongausta = this.bongatut.get(bongattu);
+        montakobongausta++;
+        this.bongatut.put(bongattu, montakobongausta);
+    }
+
+    public int montakoKertaaBongattu(String bongattu) {
+        this.bongatut.get(bongattu);
+    }
+}
+```
+
+Tyyppimuunnoksissa piilee kuitenkin vaara. Jos yritämme muuntaa `null`-viitettä -- eli esimerkiksi bongausta, jota ei ole HashMapissa -- kokonaisluvuksi, näemme virheen *java.lang.reflect.InvocationTargetException*. Tällainen virhemahdollisuus on yllä olevan esimerkin metodissa `montakoKertaaBongattu` -- jos `bongatut`-hajautustaulussa ei ole haettavaa arvoa, hajautustaulu palauttaa `null`-viitteen, eikä muunnos kokonaisluvuksi onnistu.
+
+Kun teemme automaattista muunnosta, tulee varmistaa että muunnettava arvo ei ole null. Yllä olevassa ohjelmassa oleva `montakoKertaaBongattu`-metodi tulee korjata esimerkiksi seuraavasti.
+
+
+```java
+public int montakoKertaaBongattu(String bongattu) {
+    return this.bongatut.getOrDefault(bongattu, 0);
+}
+```
+
+HashMapin metodi `getOrDefault` hakee sille ensimmäisenä parametrina annettua avainta HashMapista. Jos avainta ei löydy, palauttaa se toisena parametrina annetun arvon. Yllä kuvatun yhdellä rivillä esitetyn metodin toiminta vastaa seuraavaa metodia.
+
+```java
+public int montakoKertaaBongattu(String bongattu) {
+    if (this.bongatut.containsKey(bongattu) {
+        return this.bongatut.get(bongattu);
+    }
+
+    return 0;
+}
+```
+
+Siistitään vielä lisaaBongaus-metodia hieman. Alkuperäisessä versiossa metodin alussa lisätään hajautustauluun bongausten lukumääräksi arvo 0, jos bongattua ei löydy. Tämän jälkeen bongausten määrä haetaan, sitä kasvatetaan yhdellä, ja vanha bongausten lukumäärä korvataan lisäämällä arvo uudestaan hajautustauluun. Osan tästäkin toiminnallisuudesta voi korvata metodilla `getOrDefault`.
+
+```java
+public class Rekisteribongauslaskuri {
+    private HashMap<String, Integer> bongatut;
+
+    public Rekisteribongauslaskuri() {
+        this.bongatut = new HashMap<>();
+    }
+
+    public void lisaaBongaus(String bongattu) {
+        int montakobongausta = this.bongatut.getOrDefault(bongattu, 0);
+        montakobongausta++;
+        this.bongatut.put(bongattu, montakobongausta);
+    }
+
+    public int montakoKertaaBongattu(String bongattu) {
+        return this.bongatut.getOrDefault(bongattu, 0);
+    }
+}
+```
+
+
+<programming-exercise name='Velkakirja' tmcname='osa06-Osa06_07.Velkakirja'>
+
+Luo luokka `Velkakirja`, jolla on seuraavat toiminnot:
+
+
+- konstruktori `public Velkakirja()` luo uuden velkakirjan
+
+- metodi `public void asetaLaina(String kenelle, double maara)` tallettaa velkakirjaan merkinnän lainasta tietylle henkilölle.
+
+- metodi `public double paljonkoVelkaa(String kuka)` palauttaa velan määrän annetun henkilön nimen perusteella. Jos henkilöä ei löydy, palautetaan 0.
+
+
+Luokkaa käytetään seuraavalla tavalla:
+
+```java
+Velkakirja matinVelkakirja = new Velkakirja();
+matinVelkakirja.asetaLaina("Arto", 51.5);
+matinVelkakirja.asetaLaina("Mikael", 30);
+
+System.out.println(matinVelkakirja.paljonkoVelkaa("Arto"));
+System.out.println(matinVelkakirja.paljonkoVelkaa("Joel"));
+```
+
+Yllä oleva esimerkki tulostaisi:
+
+<sample-output>
+
+51.5
+0.0
+
+</sample-output>
+
+Ole tarkkana tilanteessa, jossa kysytään velattoman ihmisen velkaa.
+
+Huom! Velkakirjan ei tarvitse huomioida vanhoja lainoja. Kun asetat uuden velan henkilölle jolla on vanha velka, vanha velka unohtuu.
+
+```java
+Velkakirja matinVelkakirja = new Velkakirja();
+matinVelkakirja.asetaLaina("Arto", 51.5);
+matinVelkakirja.asetaLaina("Arto", 10.5);
+
+System.out.println(matinVelkakirja.paljonkoVelkaa("Arto"));
+```
+
+<sample-output>
+
+10.5
+
+</sample-output>
+
+</programming-exercise>
+
+
+# Olioiden samankaltaisuus
+
+<text-box variant='learningObjectives' name='Oppimistavoitteet'>
+
+- Kertaat olioiden yhtäsuuruuden vertailua equals-metodilla.
+- Tiedät mitä metodi hashCode tekee.
+- Tiedät miten olioiden suurpiirteistä yhtäsuuruutta voidaan verrata.
+- Osaat käyttää ohjelmointiympäristön valmiita välineitä equals- ja hashCode-metodien luomiseen.
+
+</text-box>
+
+
+## Samuudesta kertova metodi "equals"
+
+Metodia <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object" target="_blank">equals</a> käytetään kahden olion yhtäsuuruusvertailuun. Metodia on jo käytetty muun muassa `String`-olioiden yhteydessä, jonka lisäksi olemme harjoitelleet equals-metodin luomista omiin luokkiimme.
+
+
+```java
+Scanner lukija = new Scanner(System.in);
+
+System.out.print("Kirjoita salasana: ");
+String salasana = lukija.nextLine();
+
+if (salasana.equals("salasana")) {
+    System.out.println("Oikein meni!");
+} else {
+    System.out.println("Pieleen meni!");
+}
+```
+
+<sample-output>
+
+Kirjoita salasana: **mahtiporkkana**
+Pieleen meni!
+
+</sample-output>
+
+Metodi `equals` tarkastaa oletuksena onko parametrina annetulla oliolla sama viite kuin oliolla johon verrataan, eli toisinsanoen oletusarvoisesti vertaillaan onko kyse kahdesta samasta oliosta. Jos viite on sama, palauttaa metodi arvon `true`, muuten `false`. Tämä selvenee seuraavalla esimerkillä. Luokassa `Kirja` ei ole omaa `equals`-metodin toteutusta, joten se käyttää Javan tarjoamaa oletustoteutusta.
+
+
+```java
+Kirja olioKirja = new Kirja("Oliokirja", 2000, "...");
+Kirja toinenOlioKirja = olioKirja;
+
+if (olioKirja.equals(toinenOlioKirja)) {
+    System.out.println("Kirjat olivat samat");
+} else {
+    System.out.println("Kirjat eivät olleet samat");
+}
+
+// nyt luodaan saman sisältöinen olio joka kuitenkin on oma erillinen olionsa
+toinenOlioKirja = new Kirja("Oliokirja", 2000, "...");
+
+if (olioKirja.equals(toinenOlioKirja)) {
+    System.out.println("Kirjat olivat samat");
+} else {
+    System.out.println("Kirjat eivät olleet samat");
+}
+```
+
+<sample-output>
+
+Kirjat olivat samat
+Kirjat eivät olleet samat
+
+</sample-output>
+
+Vaikka edellisessä esimerkissä olevien kirjaolioiden sisäinen rakenne (eli oliomuuttujien arvot) on täsmälleen sama, vain ensimmäinen vertailu tulostaa merkkijonon "`Kirjat olivat samat`". Tämä johtuu siitä että vain ensimmäisessä tapauksessa viitteet ovat samat, eli olioa vertaillaan itseensä. Toisessa vertailussa kyse on kahdesta eri oliosta, vaikka muuttujilla onkin samat arvot.
+
+Merkkijonojen eli Stringien yhteydessä `equals` toimii odotetulla tavalla, eli se ilmoittaa kaksi *samansisältöistä* merkkijonoa "equalseiksi" vaikka kyseessä olisikin kaksi erillistä olioa. String-luokassa onkin korvattu oletusarvoinen `equals` omalla toteutuksella.
+
+Haluamme että kirjojen vertailu onnistuu myös nimen, vuoden ja sisällön perusteella. Korvataan metodin `equals` oletustoteutus määrittelemällä sille toteutus luokkaan `Kirja`. Metodin `equals` tehtävänä on selvittää onko olio sama kuin metodin parametrina saatu olio. Metodi saa parametrina `Object`-tyyppisen viitteen, joka voi olla mikä tahansa olio. Määritellään ensin metodi, jonka mielestä kaikki oliot ovat samoja.
+
+
+```java
+public boolean equals(Object verrattava) {
+    return true;
+}
+```
+
+Metodimme on varsin optimistinen, joten muutetaan sen toimintaa hieman. Käytämme edellisessä osassa nähtyä tapaa vertailun toteuttamiseen.
+
+```java
+public boolean equals(Object verrattava) {
+    // jos muuttujat sijaitsevat samassa paikassa, ovat ne samat
+    if (this == verrattava) {
+        return true;
+    }
+
+    // jos verrattava olio ei ole Kirja-tyyppinen, oliot eivät ole samat
+    if (!(verrattava instanceof Kirja)) {
+        return false;
+    }
+
+    // muunnetaan olio Kirja-olioksi
+    Kirja verrattavaKirja = (Kirja) verrattava;
+
+    // jos olioiden oliomuuttujien arvot ovat samat, ovat oliot samat
+    if (this.nimi.equals(verrattavaKirja.nimi) &&
+        this.julkaisuvuosi == verrattavaKirja.julkaisuvuosi &&
+        this.sisalto.equals(verrattavaKirja.sisalto)) {
+        return true;
+    }
+
+    // muulloin oliot eivät ole samat
+    return false;
+}
+```
+
+Alla `Kirja`-luokka kokonaisuudessaan.
+
+```java
+public class Kirja {
+    private String nimi;
+    private String sisalto;
+    private int julkaisuvuosi;
+
+    public Kirja(String nimi, int julkaisuvuosi, String sisalto) {
+        this.nimi = nimi;
+        this.julkaisuvuosi = julkaisuvuosi;
+        this.sisalto = sisalto;
+    }
+
+    public String getNimi() {
+        return this.nimi;
+    }
+
+    public void setNimi(String nimi) {
+        this.nimi = nimi;
+    }
+
+    public int getJulkaisuvuosi() {
+        return this.julkaisuvuosi;
+    }
+
+    public void setJulkaisuvuosi(int julkaisuvuosi) {
+        this.julkaisuvuosi = julkaisuvuosi;
+    }
+
+    public String getSisalto() {
+        return this.sisalto;
+    }
+
+    public void setSisalto(String sisalto) {
+        this.sisalto = sisalto;
+    }
+
+    public String toString() {
+        return "Nimi: " + this.nimi + " (" + this.julkaisuvuosi +   ")\n"
+            + "Sisältö: " + this.sisalto;
+    }
+
+    @Override
+    public boolean equals(Object verrattava) {
+        // jos muuttujat sijaitsevat samassa paikassa, ovat ne  samat
+        if (this == verrattava) {
+            return true;
+        }
+
+        // jos verrattava olio ei ole Kirja-tyyppinen, oliot eivät  ole samat
+        if (!(verrattava instanceof Kirja)) {
+            return false;
+        }
+
+        // muunnetaan olio Kirja-olioksi
+        Kirja verrattavaKirja = (Kirja) verrattava;
+
+        // jos olioiden oliomuuttujien arvot ovat samat, ovat   oliot samat
+        if (this.nimi.equals(verrattavaKirja.nimi) &&
+            this.julkaisuvuosi == verrattavaKirja.julkaisuvuosi &&
+            this.sisalto.equals(verrattavaKirja.sisalto)) {
+            return true;
+        }
+
+        // muulloin oliot eivät ole samat
+        return false;
+    }
+}
+```
+
+Nyt kirjojen vertailu palauttaa `true` mikäli kirjojen oliomuuttujien arvot ovat samat.
+
+```java
+Kirja olioKirja = new Kirja("Oliokirja", 2000, "...");
+Kirja toinenOlioKirja = new Kirja("Oliokirja", 2000, "...");
+
+if (olioKirja.equals(toinenOlioKirja)) {
+    System.out.println("Kirjat olivat samat");
+} else {
+    System.out.println("Kirjat eivät olleet samat");
+}
+```
+
+<sample-output>
+
+Kirjat olivat samat
+
+</sample-output>
+
+
+<quiznator id='5c571401fd9fd71425c631b1'></quiznator>
+
+
+## Equals ja ArrayList
+
+Jatketaan aiemmin määrittelemämme `Kirja`-luokan käyttöä listaa käsittelevässä esimerkissä. Jos emme toteuta omissa olioissamme `equals`-metodia, ei listan tarjoama `contains`-metodi toimi oikein, sillä se käyttää omassa toteutuksessaan olioiden equals-metodia vertailuun. Kokeile alla olevaa koodia kahdella erilaisella `Kirja`-luokalla. Toisessa on `equals`-metodi, ja toisessa sitä ei ole.
+
+```java
+ArrayList<Kirja> kirjat = new ArrayList<>();
+Kirja olioKirja = new Kirja("Oliokirja", 2000, "...");
+kirjat.add(olioKirja);
+
+if (kirjat.contains(olioKirja)) {
+    System.out.println("Oliokirja löytyi.");
+}
+
+olioKirja = new Kirja("Oliokirja", 2000, "...");
+
+if (!kirjat.contains(olioKirja)) {
+    System.out.println("Oliokirjaa ei löytynyt.");
+}
+```
+
+Tämä oletusmetodeihin kuten `equals`iin tukeutuminen on oikeastaan syy sille, miksi Java haluaa, että ArrayListiin ja HashMapiin lisättävät muuttujat ovat viittaustyyppisiä. Jokaisella viittaustyyppisellä muuttujalla on oletusmetodeja kuten equals, joten luokan ArrayList sisäistä toteutusta ei tarvitse muuttaa lainkaan erilaisia muuttujia lisättäessä. Alkeistyyppisillä muuttujilla tällaisia oletusmetodeja ei ole.
+
+
+<quiznator id='5c57145b244fe21455cb7687'></quiznator>
+
+## Suurpiirteinen vertailu hajautusarvon avulla
+
+Metodin `equals` lisäksi olioiden vertailussa voidaan käyttää metodia `hashCode`, jota käytetään olioiden suurpiirteiseen vertailuun. Metodi luo oliosta "hajautusarvon" eli luvun, joka kertoo hieman olion sisällöstä. Mikäli kahdella oliolla on sama hajautusarvo, ne saattavat olla samanarvoiset. Jos taas kahdella oliolla on eri hajautusarvot, ne ovat varmasti eriarvoiset.
+
+Hajautusarvoa tarvitaan muunmuassa HashMapissa. HashMapin sisäinen toiminta perustuu siihen, että avain-arvo -parit on tallennettu avaimen hajautusarvon perusteella listoja sisältävään taulukkoon. Jokainen taulukon indeksi viittaa listaan. Hajautusarvon perusteella tunnistetaan taulukon indeksi, jonka jälkeen taulukon indeksistä löytyvä lista käydään läpi. Avaimeen liittyvä arvo palautetaan jos ja vain jos listasta löytyy täsmälleen sama arvo (samansuuruisuuden vertailu tapahtuu equals-metodilla). Näin etsinnässä tarvitsee tarkastella vain murto-osaa hajautustauluun tallennetuista avaimista.
+
+Olemme tähän mennessä käyttäneet HashMapin avaimina ainoastaan String- ja Integer-tyyppisiä olioita, joilla on ollut valmiina sopivasti toteutetut `hashCode`-metodit. Luodaan esimerkki jossa näin ei ole: jatketaan kirjojen parissa ja pidetään kirjaa lainassa olevista kirjoista. Päätetään ratkaista kirjanpito HashMapin avulla. Avaimena toimii kirja ja kirjaan liitetty arvo on merkkijono, joka keroo lainaajan nimen:
+
+
+```java
+HashMap<Kirja, String> lainaajat = new HashMap<>();
+
+Kirja oliokirja = new Kirja("Oliokirja", 2000, "...");
+lainaajat.put(oliokirja, "Pekka");
+lainaajat.put(new Kirja("Test Driven Development", 1999, "..."), "Arto");
+
+System.out.println(lainaajat.get(oliokirja));
+System.out.println(lainaajat.get(new Kirja("Oliokirja", 2000, "...")));
+System.out.println(lainaajat.get(new Kirja("Test Driven Development", 1999, "...")));
+```
+
+<sample-output>
+
+Pekka
+null
+null
+
+</sample-output>
+
+Löydämme lainaajan hakiessamme samalla oliolla, joka annettiin hajautustaulun `put`-metodille avaimeksi. Täsmälleen samanlaisella kirjalla mutta eri oliolla haettaessa lainaajaa ei kuitenkaan löydy ja saamme *null*-viitteen. Syynä on `Object`-luokassa oleva `hashCode`-metodin oletustoteutus. Oletustoteutus luo `hashCode`-arvon olion viitteen perusteella, eli samansisältöiset mutta eri oliot saavat eri tuloksen hashCode-metodista. Tämän takia olioa ei osata etsiä oikeasta paikasta.
+
+Jotta HashMap toimisi haluamallamme tavalla, eli palauttaisi lainaajan kun avaimeksi annetaan oikean *sisältöinen* olio (ei välttämässä siis sama olio kuin alkuperäinen avain), on avaimena toimivan luokan ylikirjoitettava metodin `equals` lisäksi metodi `hashCode`. Metodi on ylikirjoitettava siten, että se antaa saman numeerisen tuloksen kaikille samansisältöisille olioille. Myös jotkut erisisältöiset oliot saavat saada saman tuloksen hashCode-metodista. On kuitenkin HashMapin tehokkuuden kannalta oleellista, että erisisältöiset oliot saavat mahdollisimman harvoin saman hajautusarvon.
+
+Olemme aiemmin käyttäneet `String`-olioita menestyksekkäästi HashMapin avaimena, joten voimme päätellä että `String`-luokassa on oma järkevästi toimiva `hashCode`-toteutus. *Delegoidaan*, eli siirretään laskemisvastuu `String`-oliolle.
+
+```java
+public int hashCode() {
+    return this.nimi.hashCode();
+}
+```
+
+Yllä oleva ratkaisu on melko hyvä, mutta jos `nimi` on *null*, näemme `NullPointerException`-virheen. Korjataan tämä vielä määrittelemällä ehto: jos `nimi`-muuttujan arvo on *null*, palautetaan hajautusarvoksi julkaisuvuosi.
+
+```java
+public int hashCode() {
+    if (this.nimi == null) {
+        return this.julkaisuvuosi;
+    }
+
+    return this.nimi.hashCode();
+}
+```
+
+Nyt ylläolevassa ratkaisussa kaikki saman nimiset kirjat niputetaan samaan joukkoon. Parannetaan toteutusta vielä siten, että kirjan julkaisuvuosi huomioidaan myös nimeen perustuvassa hajautusarvon laskennassa.
+
+```java
+public int hashCode() {
+    if (this.nimi == null) {
+        return this.julkaisuvuosi;
+    }
+
+    return this.julkaisuvuosi + this.nimi.hashCode();
+}
+```
+
+Nyt kirjan käyttö hajautustaulun avaimena on mahdollista. Samalla aiemmin kohtaamamme ongelma ratkeaa ja kirjojen lainaajat löytyvät:
+
+```java
+HashMap<Kirja, String> lainaajat = new HashMap<>();
+
+Kirja oliokirja = new Kirja("Oliokirja", 2000, "...");
+lainaajat.put(oliokirja, "Pekka");
+lainaajat.put(new Kirja("Test Driven Development",1999, "..."), "Arto");
+
+System.out.println(lainaajat.get(oliokirja));
+System.out.println(lainaajat.get(new Kirja("Oliokirja", 2000, "...")));
+System.out.println(lainaajat.get(new Kirja("Test Driven Development", 1999)));
+```
+
+Tulostuu:
+
+<sample-output>
+
+Pekka
+Pekka
+Arto
+
+</sample-output>
+
+
+**Kerrataan vielä:** jotta luokkaa voidaan käyttää HashMap:in avaimena, tulee sille määritellä
+
+- metodi `equals` siten, että kaikki samansuuruisena (tai saman sisältöisinä) ajatellut oliot tuottavat vertailussa tuloksen true ja muut false
+- metodi `hashCode` siten, että mahdollisimman harvalla erisuuruisella oliolla on sama hajautusarvo
+
+
+<text-box variant='hint' name='Metodien equals ja hashCode avustettu luominen'>
+
+NetBeans tarjoaa tuen metodien `equals` ja `hashCode` avustettuun luomisen. Voit valita valikosta Source -> Insert Code, ja valita aukeavasta listasta *equals() and hashCode()*. Tämän jälkeen NetBeans kysyy oliomuuttujat joita metodeissa käytetään. NetBeansin luomat metodit ovat tyypillisesti erittäin hyviä omiin tarpeisiimme.
+
+Käytä NetBeansin avustettua equals- ja hashCode-metodien luomista kunnes tiedät, että omat metodisi ovat varmasti paremmat kuin NetBeansin automaattisesti luomat metodit.
+
+</text-box>
+
+
+<programming-exercise name='Sama päiväys' tmcname='osa06-Osa06_08.SamaPaivays'>
+
+Tehtäväpohjan mukana tulee luokka `Paivays`, joka määrittelee päivästä, kuukaudesta ja vuodesta koostuvan olion. Tässä tehtävässä täydennät Paivays-luokkaa siten, että sen equals-metodi osaa kertoa ovatko päivämäärät täsmälleen samat.
+
+Lisää `Paivays`-luokkaan metodi `public boolean equals(Object object)`, joka kertoo onko metodille parametrina annetun olion päiväys sama kuin käytetyn olion päiväys.
+
+Metodin tulee toimia seuraavasti:
+
+```java
+Paivays p = new Paivays(1, 2, 2000);
+System.out.println(p.equals("heh"));
+System.out.println(p.equals(new Paivays(5, 2, 2012)));
+System.out.println(p.equals(new Paivays(1, 2, 2000)));
+```
+
+<sample-output>
+
+false
+false
+true
+
+</sample-output>
+
+</programming-exercise>
+
+
+<programming-exercise name='Hajautusarvo päiväykselle' tmcname='osa06-Osa06_09.HajautusarvoPaivaykselle'>
+
+Laajennetaan edellisessä tehtävässä nähtyä `Paivays`-luokkaa siten, että sillä on myös oma `hashCode`-metodi.
+
+Lisää `Paivays`-luokkaan metodi `public int hashCode()`, joka laskee päiväys-oliolle hajautusarvon. Toteuta hajautusarvon laskeminen siten, että vuosien 1900 ja 2100 välillä löytyy mahdollisimman vähän samankaltaisia hajautusarvoja.
+
+</programming-exercise>
+
+
+<programming-exercise name='Autorekisterikeskus (3 osaa)' tmcname='osa06-Osa06_10.Autorekisterikeskus'>
+
+<h2>Rekisterinumeron equals ja hashCode</h2>
+
+Eurooppalaiset rekisteritunnukset koostuvat kahdesta osasta: yksi tai kaksikirjaimisesta maatunnuksesta ja maakohtaisesti määrittyvästä rekisterinumerosta, joka taas koostuu numeroista ja merkeistä. Rekisterinumeroita esitetään seuraavanlaisen luokan avulla:
+
+```java
+public class Rekisterinumero {
+    // tässä määre final tarkoittaa sitä, että arvoa ei voi muuttaa asetuksen jälkeen
+    private final String rekNro;
+    private final String maa;
+
+    public Rekisterinumero(String maa, String rekNro) {
+       this.rekNro = rekNro;
+       this.maa = maa;
+    }
+
+    public String toString(){
+        return maa+ " "+rekNro;
+    }
+}
+```
+
+Rekisterinumeroja halutaan tallettaa esim. ArrayList:eille ja käyttää HashMap:in avaimina, eli kuten yllä mainittu, tulee niille toteuttaa metodit `equals` ja `hashCode`, muuten ne eivät toimi halutulla tavalla. Toteuta luokalle rekisterinumero metodit `equals` ja `hashCode`.
+
+Esimerkkiohjelma:
+
+```java
+public static void main(String[] args) {
+    Rekisterinumero rek1 = new Rekisterinumero("FI", "ABC-123");
+    Rekisterinumero rek2 = new Rekisterinumero("FI", "UXE-465");
+    Rekisterinumero rek3 = new Rekisterinumero("D", "B WQ-431");
+
+    ArrayList<Rekisterinumero> suomalaiset = new ArrayList<>();
+    suomalaiset.add(rek1);
+    suomalaiset.add(rek2);
+
+    Rekisterinumero uusi = new Rekisterinumero("FI", "ABC-123");
+    if (!suomalaiset.contains(uusi)) {
+        suomalaiset.add(uusi);
+    }
+    System.out.println("suomalaiset: " + suomalaiset);
+    // jos equals-metodia ei ole ylikirjoitettu, menee sama rekisterinumero toistamiseen listalle
+
+    HashMap<Rekisterinumero, String> omistajat = new HashMap<>();
+    omistajat.put(rek1, "Arto");
+    omistajat.put(rek3, "Jürgen");
+
+    System.out.println("omistajat:");
+    System.out.println(omistajat.get(new Rekisterinumero("FI", "ABC-123")));
+    System.out.println(omistajat.get(new Rekisterinumero("D", "B WQ-431")));
+    // jos hashCode ei ole ylikirjoitettu, eivät omistajat löydy
+}
+```
+
+Toteuta metodit equals ja hashCode. Kun metodit equals ja hashCode on toteutettu oikein, ylläolevan esimerkin tulostus on seuraavanlainen.
+
+
+<sample-output>
+
+suomalaiset: [FI ABC-123, FI UXE-465]
+omistajat:
+Arto
+Jürgen
+
+</sample-output>
+
+
+<h2>Omistaja rekisterinumeron perusteella</h2>
+
+Toteuta luokka `Ajoneuvorekisteri` jolla on seuraavat metodit:
+
+- `public boolean lisaa(Rekisterinumero rekkari, String omistaja)` lisää parametrina olevaa rekisterinumeroa vastaavalle autolle parametrina olevan omistajan, metodi palauttaa true jos omistajaa ei ollut ennestään, jos rekisterinumeroa vastaavalla autolla oli jo omistaja, metodi palauttaa false ja ei tee mitään
+
+- `public String hae(Rekisterinumero rekkari)` palauttaa parametrina olevaa rekisterinumeroa vastaavan auton omistajan. Jos auto ei ole rekisterissä, palautetaan `null`
+
+- `public boolean poista(Rekisterinumero rekkari)` poistaa parametrina olevaa rekisterinumeroa vastaavat tiedot, metodi palauttaa true jos tiedot poistetiin, ja false jos parametria vastaavia tietoja ei ollut rekisterissä
+
+
+**Huom:** Ajoneuvorekisterin täytyy tallettaa omistajatiedot `HashMap<Rekisterinumero, String> omistajat` -tyyppiseen oliomuuttujaan!
+
+<h2>Ajoneuvorekisteri laajenee</h2>
+
+Lisää Ajoneuvorekisteriin vielä seuraavat metodit:
+
+- `public void tulostaRekisterinumerot()` tulostaa rekisterissä olevat rekisterinumerot.
+
+- `public void tulostaOmistajat()` tulostaa rekisterissä olevien autojen omistajat. Kukin nimi tulee tulostaa vain kertaalleen vaikka omistajalla olisikin useampi auto.
+
+Vinkki! Voit luoda metodiin `tulostaOmistajat` listan, jota käytät jo tulostettujen omistajien muistamiseen. Mikäli omistaja ei ole listalla, hänet voi tulostaa ja lisätä listalle-- mikäli omistajaa taas on listalla, häntä ei tule tulostaa.
+
+
+</programming-exercise>
+
+
+# Tiedon ryhmittely hajautustaulun avulla
+
+<text-box variant='learningObjectives' name='Oppimistavoitteet'>
+
+- Osaat käyttää listaa hajautustaulun arvona.
+
+</text-box>
+
+Hajautustaulu sisältää korkeintaan yhden arvon yhtä avainta kohti. Seuraavassa esimerkissä tallennamme henkilöiden puhelinnumeroita hajautustauluun.
+
+```java
+HashMap<String, String> puhelinnumerot = new HashMap<>();
+puhelinnumerot.put("Pekka", "040-12348765");
+
+System.out.println("Pekan numero: " + puhelinnumerot.get("Pekka"));
+
+puhelinnumerot.put("Pekka", "09-111333");
+
+System.out.println("Pekan numero: " + puhelinnumerot.get("Pekka"));
+```
+
+<sample-output>
+
+Pekan numero: 040-12348765
+Pekan numero: 09-111333
+
+</sample-output>
+
+Entä jos haluaisimme liittää yhteen avaimeen useita arvoja, eli esimerkiksi useampia puhelinnumeroita yhdelle henkilölle?
+
+Koska hajautustaulun avaimet ja arvot voivat olla mitä tahansa muuttujia, myös listojen käyttäminen hajautustaulun arvona on mahdollista. Useamman arvon lisääminen yhdelle avaimelle onnistuu liittämällä avaimeen lista. Muutetaan puhelinnumeroiden tallennustapaa seuraavasti:
+
+```java
+HashMap<String, ArrayList<String>> puhelinnumerot = new HashMap<>();
+```
+
+Nyt hajautustaulussa on jokaiseen avaimeen liitettynä lista. Vaikka new-komento luo hajautustaulun, ei hajautustaulu sisällä alussa yhtäkään listaa. Ne on luotava tarvittaessa erikseen.
+
+```java
+HashMap<String, ArrayList<String>> puhelinnumerot = new HashMap<>();
+
+// liitetään Pekka-nimeen ensin tyhjä ArrayList
+puhelinnumerot.put("Pekka", new ArrayList<>());
+
+// ja lisätään Pekkaa vastaavalle listalle puhelinnumero
+puhelinnumerot.get("Pekka").add("040-12348765");
+// ja lisätään toinenkin puhelinnumero
+puhelinnumerot.get("Pekka").add("09-111333");
+
+System.out.println("Pekan numerot: " + puhelinnumerot.get("Pekka"));
+```
+
+<sample-output>
+
+Pekan numero: [040-12348765, 09-111333]
+
+</sample-output>
+
+Määrittelimme muuttujan puhelinnumero tyypiksi `HashMap<String, ArrayList<String>>`. Tämä tarkoittaa hajautustaulua, joka käyttää avaimena merkkijonoa ja arvona merkkijonoja sisältävää listaa. Hajautustauluun lisättävät arvot ovat siis konkreettisia listoja.
+
+```java
+// liitetään Pekka-nimeen ensin tyhjä ArrayList
+puhelinnumerot.put("Pekka", new  ArrayList<>());
+
+// ...
+```
+
+Vastaavalla tyylillä voi toteuttaa esimerkiksi tehtävien pistekirjanpidon. Alla olevassa esimerkissä on hahmoteltu luokkaa `Tehtavakirjanpito`, mikä sisältää käyttäjäkohtaisen pistekirjanpidon. Käyttäjä esitetään merkkijonona ja pisteet kokonaislukuina.
+
+```java
+public class Tehtavakirjanpito {
+    private HashMap<String, ArrayList<Integer>> tehdytTehtavat;
+
+    public Tehtavakirjanpito() {
+        this.tehdytTehtavat = new HashMap<>();
+    }
+
+    public void lisaa(String kayttaja, int tehtava) {
+        // uudelle käyttäjälle on lisättävä HashMapiin tyhjä lista jos sitä
+        // ei ole jo lisätty
+        this.tehdytTehtavat.putIfAbsent(kayttaja, new ArrayList<>());
+
+        // haetaan ensin käyttäjän tehtävät sisältävä lista ja tehdään siihen lisäys
+        ArrayList<Integer> tehdyt = this.tehdytTehtavat.get(kayttaja);
+        tehdyt.add(tehtava);
+
+        // edellinen olisi onnitunut myös ilman apumuuttujaa seuraavasti
+        // this.tehdytTehtavat.get(kayttaja).add(tehtava);
+    }
+
+    public void tulosta() {
+        for (String nimi: tehdytTehtavat.keySet()) {
+            System.out.println(nimi + ": " + tehdytTehtavat.get(nimi));
+        }
+    }
+}
+```
+
+```java
+Tehtavakirjanpito kirjanpito = new Tehtavakirjanpito();
+kirjanpito.lisaa("Ada", 3);
+kirjanpito.lisaa("Ada", 4);
+kirjanpito.lisaa("Ada", 3);
+kirjanpito.lisaa("Ada", 3);
+
+kirjanpito.lisaa("Pekka", 4);
+kirjanpito.lisaa("Pekka", 4);
+
+kirjanpito.lisaa("Matti", 1);
+kirjanpito.lisaa("Matti", 2);
+
+kirjanpito.tulosta();
+```
+
+<sample-output>
+
+Matti: [1, 2]
+Pekka: [4, 4]
+Ada: [3, 4, 3, 3]
+
+</sample-output>
+
+<programming-exercise name='Usean käännöksen sanakirja' tmcname='osa06-Osa06_11.UseanKaannoksenSanakirja'>
+
+Tehtävänäsi on toteuttaa luokka `UseanKaannoksenSanakirja`, johon voidaan lisätä yksi tai useampi käännös jokaiselle sanalle. Luokan tulee toteuttaa seuraavat metodit:
+
+- `public void lisaa(String sana, String kaannos)` lisää käännöksen sanalle säilyttäen vanhat käännökset
+
+- `public ArrayList<String> kaanna(String sana)` palauttaa listan, joka sisältää sanojen käännökset. Jos sanalle ei ole yhtäkään käännöstä, metodin tulee palauttaa tyhjä lista.
+
+- `public void poista(String sana)` poistaa sanan ja sen kaikki käännökset sanakirjasta.
+
+
+Käännökset kannattanee lisätä `HashMap<String, ArrayList<String>>`-tyyppiseen oliomuuttujaan.
+
+Esimerkki:
+
+```java
+UseanKaannoksenSanakirja sanakirja = new UseanKaannoksenSanakirja();
+sanakirja.lisaa("kuusi", "six");
+sanakirja.lisaa("kuusi", "spruce");
+
+sanakirja.lisaa("pii", "silicon");
+sanakirja.lisaa("pii", "pi");
+
+System.out.println(sanakirja.kaanna("kuusi"));
+sanakirja.poista("pii");
+System.out.println(sanakirja.kaanna("pii"));
+```
+
+<sample-output>
+
+[six, spruce]
+[]
+
+</sample-output>
+
+</programming-exercise>
+
+
+<programming-exercise name='Kellari (2 osaa)' tmcname='osa06-Osa06_12.Kellari'>
+
+
+<h2>Lisääminen ja sisällön tarkastelu</h2>
+
+Tehtävänäsi on toteuttaa luokka `Kellari`, jonka avulla pidetään kirjaa kellarikomeroista sekä niiden sisällöistä. Luokan tulee toteuttaa seuraavat metodit:
+
+- `public void lisaa(String komero, String tavara)` lisää parametrina annettuun komeroon parametrina annetun tavaran.
+
+- `public ArrayList<String> sisalto(String komero)` palauttaa listan, joka sisältää parametrina annetun komeron sisältämät tavarat. Mikäli komeroa ei ole tai komerossa ei ole yhtäkään tavaraa, metodin tulee palauttaa tyhjä lista.
+
+Esimerkki:
+
+```java
+Kellari kellari = new Kellari();
+kellari.lisaa("a14", "luistimet");
+kellari.lisaa("a14", "maila");
+kellari.lisaa("a14", "luistimet");
+
+kellari.lisaa("f156", "rullaluistimet");
+kellari.lisaa("f156", "rullaluistimet");
+
+kellari.lisaa("g63", "six");
+kellari.lisaa("g63", "pi");
+
+System.out.println(kellari.sisalto("a14"));
+System.out.println(kellari.sisalto("f156"));
+```
+
+<sample-output>
+
+[luistimet, maila, luistimet]
+[rullaluistimet, rullaluistimet]
+
+</sample-output>
+
+
+<h2>Komeroiden listaus ja komerosta poistaminen</h2>
+
+Kun luokassa `Kellari` on toiminnallisuus tavaran komeroon lisäämiseen sekä komeron sisällöin listaamiseen, lisää sinne toiminnallisuus tavaran poistamiseen komerosta sekä komeroiden listaamiseen.
+
+- `public void poista(String komero, String tavara)` poistaa parametrina annetusta komerosta parametrina annetun tavaran. Huom! Poistaa vain yhden kappaleen -- mikäli samannimisiä tavaroita on useita, loput jäävät vielä jäljelle. Mikäli komero jäisi poiston jälkeen tyhjäksi, metodi poistaa myös komeron.
+
+- `public ArrayList<String> komerot()` palauttaa listana kellarikomeroiden nimet. Huom! Listassa vain ne komerot, joissa on tavaraa.
+
+Esimerkki:
+
+```java
+Kellari kellari = new Kellari();
+kellari.lisaa("a14", "luistimet");
+kellari.lisaa("a14", "maila");
+kellari.lisaa("a14", "luistimet");
+
+kellari.lisaa("f156", "rullaluistimet");
+kellari.lisaa("f156", "rullaluistimet");
+
+kellari.lisaa("g63", "six");
+kellari.lisaa("g63", "pi");
+
+kellari.poista("f156", "rullaluistimet");
+
+System.out.println(kellari.sisalto("f156"));
+
+kellari.poista("f156", "rullaluistimet");
+
+System.out.println(kellari.komerot());
+```
+
+<sample-output>
+
+[rullaluistimet]
+[a14, g63]
+
+</sample-output>
+
+Tulostuksessa näkyvä komeroiden järjestys voi poiketa esimerkistä.
+
+</programming-exercise>
+
+
 
 # Object
 
