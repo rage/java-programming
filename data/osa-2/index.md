@@ -34,8 +34,7 @@ hidden: false
 </only-for-not-logged-in>
 
 
-Toisen osan pääteemoina ovat ohjelmointiongelmissa toistuvien osien tunnistaminen sekä ohjelmien pilkkominen pienempiin osiin ohjelmien kasvaessa. Kertaat edellisen osan asioita ja opit käyttämään toistolausetta ja metodeja.
-
+Kurssimateriaalin toisen osan pääteemoina ovat ohjelman toistaminen sekä toiminnallisuuden pilkkominen erillisiksi kokonaisuuksiksi.
 
 <please-login></please-login>
 
