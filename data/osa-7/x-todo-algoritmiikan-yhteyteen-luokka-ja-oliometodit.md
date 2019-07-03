@@ -1,6 +1,6 @@
 ---
-path: '/osa-4/4-luokka-ja-oliometodit'
-title: 'Luokka- ja oliometodit (static ja ei-static)'
+path: '/osa-7/x-luokka-ja-oliometodit'
+title: 'TODO: algoritmiikan yhteyteen: Luokka- ja oliometodit (static ja ei-static)'
 hidden: false
 ---
 
@@ -322,4 +322,3 @@ Tehtäväpohjassa on kaksi luokkaa: `Ohjelma` ja `MaPu`. Toteuta luokkaan `MaPu`
 Kokeile tämän jälkeen metodin käyttöä luokassa `Ohjelma`. Luokassa `MaPu` olevan luokkametodin käyttö onnistuu kutsumalla metodia luokan nimeä etuliitteenä käyttäen `MaPu.keskiarvo(*parametri*)`.
 
 </programming-exercise>
-

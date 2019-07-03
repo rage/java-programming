@@ -7,6 +7,8 @@ TODO: tänne vähän kuin yhteenveto, mutta kirjoitetaan siitä, miten ohjelmat 
 
 TODO: muutama esimerkki hyvin isosta ohjelmasta ja niiden koodirivien määrästä
 
+TODO: yhteenveto osan relevanteista opeista
+
 TODO: loppukysely?
 
 <quiznator id="5c24a8cd054d71123e35d3b8"></quiznator>
