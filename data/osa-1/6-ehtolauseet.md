@@ -725,29 +725,6 @@ Ei sitten
 
 ## Loogiset operaatiot
 
-Materiaalin esimerkeissä ja tehtävissä käytetyt ehtolauseet ovat tähän mennessä käyttäneet yksinkertaisia lausekkeita, joilla on tarkasteltu ehtolauseeseen ja toistolauseeseen liittyvän lähdekoodin suorittamista. Esim.
-
-```java
-int luku = 10;
-
-if (luku == 0) { // lauseke
-    System.out.println("Suoritetaan jos luku == 0 on totta");
-}
-```
-
-```java
-int luku = 2;
-
-if (luku % 2 == 0) {
-    System.out.println("Luku on parillinen");
-}
-```
-
-<sample-output>
-
-Luku on parillinen
-
-</sample-output>
 
 Ehtolauseen lauseke voi koostua useammasta osasta, joissa käytetään loogisia operaatioita **ja** `&&`, **tai** `||`, sekä **ei** `!`.
 
@@ -762,7 +739,7 @@ Seuraavassa yhdistetään `&&`:lla eli ja-operaatiolla kaksi yksittäistä ehtoa
 System.out.println("Onkohan luku väliltä 5-10: ");
 int luku = 7;
 
-if (luku > 4 && luku < 11) {
+if (luku >= 4 && luku <= 10) {
     System.out.println("On! :)");
 } else {
     System.out.println("Ei ollut :(")
@@ -818,7 +795,6 @@ Luku on suurempi tai yhtäsuuri kuin 4.
 Alla on kuvattuna lausekkeiden toimintaa kun lausekkeissa on loogisia operaatioita.
 
 
-
 | luku  | luku > 0  | luku < 10  | luku > 0 && luku < 10  | !(luku > 0 && luku < 10)  | luku > 0 \|\| luku < 10  |
 | ----- | --------- | ---------- | ---------------------- | ------------------------- | ---------------------- |
 | -1    | false     | true       | false                  | true                      | true                   |
@@ -826,7 +802,6 @@ Alla on kuvattuna lausekkeiden toimintaa kun lausekkeissa on loogisia operaatioi
 | 1     | true      | true       | true                   | false                     | true                   |
 | 9     | true      | true       | true                   | false                     | true                   |
 | 10    | true      | false      | false                  | true                      | true                   |
-
 
 
 <programming-exercise name='Iän tarkistus' tmcname='osa01-Osa01_35.IanTarkistus'>
@@ -863,6 +838,7 @@ Mahdotonta!
 
 </programming-exercise>
 
+TODO: quiz -- mitä tulostaa? (useampi osa)
 
 ## Ehtolauseiden suoritusjärjestys
 
@@ -1053,13 +1029,13 @@ if (luku % 4 != 0) {
 
 Kun lahja tulee lähimmiltä sukulaisilta, lahjaveron määrä määräytyy seuraavan taulukon mukaan (lähde [vero.fi](https://www.vero.fi/henkiloasiakkaat/omaisuus/lahja/lahjaverolaskuri/#lahjaverotaulukot)):
 
-| Lahja  | Vero alarajalla  | Veroprosentti ylimenevästä  |
-|---|---|---|
-| 5 000 -- 25 000 | 100  | 8  |
-| 25 000 -- 55 000 | 1 700 | 10  |
-| 55 000 -- 200 000 | 4 700 | 12 |
-| 200 000 -- 1 000 000 | 22 100 | 15 |
-| 1 000 000 --  | 142 100  | 17 |
+| Lahja                 | Vero alarajalla  | Veroprosentti ylimenevästä  |
+|-----------------------|------------------|-----------------------------|
+| 5 000 -- 25 000       | 100              | 8                           |
+| 25 000 -- 55 000      | 1 700            | 10                          |
+| 55 000 -- 200 000     | 4 700            | 12                          |
+| 200 000 -- 1 000 000  | 22 100           | 15                          |
+| 1 000 000 --          | 142 100          | 17                          |
 
 Esimerkiksi 6000 euron lahjasta tulee maksaa veroa 180 euroa (100 + (6000-5000) * 0.08), ja 75000 euron lahjasta tulee maksaa veroa 7100 euroa (4700 + (75000-55000) * 0.12).
 

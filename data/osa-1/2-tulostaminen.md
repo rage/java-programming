@@ -14,7 +14,6 @@ hidden: false
 
 Tulostuskomento `System.out.println("Hei maailma");` tulostaa tekstin "Hei maailma".
 
-
 ```java
 System.out.println("Hei maailma!");
 ```

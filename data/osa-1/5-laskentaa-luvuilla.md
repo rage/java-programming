@@ -5,8 +5,8 @@ title: "Laskentaa luvuilla"
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
-* Osaat tehdä laskutoimintoja muuttujien avulla.
-* Osaat muodostaa tulostuslauseita, jossa on mukana sekä laskuoperaatioita (lausekkeita) että merkkijonoja.
+- Osaat tehdä laskutoimintoja muuttujien avulla.
+- Osaat muodostaa tulostuslauseita, jossa on mukana sekä laskuoperaatioita (lausekkeita) että merkkijonoja.
 
 </text-box>
 
