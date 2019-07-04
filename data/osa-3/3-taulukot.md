@@ -479,5 +479,3 @@ for (int i = 0; i < liukulukutaulukko.length; i++) {
     System.out.println(merkkijonotaulukko[i] + " " +  liukulukutaulukko[i]);
 }
 ```
-
-TODO: musiikin soittaminen taulukosta?

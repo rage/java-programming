@@ -1432,7 +1432,3 @@ lista.remove(3);
 ArrayList<String> lista = new ArrayList<>();
 boolean oliko = lista.contains("hei maailma!");
 ```
-
-
-TODO: joku kiva yhteenvetotehtävä?
-
