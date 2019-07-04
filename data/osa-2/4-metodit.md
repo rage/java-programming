@@ -1,5 +1,5 @@
 ---
-path: '/osa-2/5-metodit'
+path: '/osa-2/4-metodit'
 title: 'Metodit ja ohjelman jakaminen pienempiin osiin'
 ---
 
@@ -11,42 +11,20 @@ title: 'Metodit ja ohjelman jakaminen pienempiin osiin'
 
 </text-box>
 
-TODO: jonnekin "huomaat, että metodin toiminnallisuuden koodaus on aika pitkälti samaa kuin 'pääohjelmaan koodaus'"
+Olemme käyttäneet useita erilaisia komentoja: arvon asettamista, laskutoimituksia, ehtolauseita, ja toistolauseita.
 
-Olemme käyttäneet useita erilaisia komentoja: arvon asettamista, laskutoimituksia, ehtolauseita, ja toistolauseita. Ruudulle tulostaminen on tehty `System.out.println()`-lauseella ja lukeminen `Integer.valueOf(lukija.nextLine())` lauseella.
+Ruudulle tulostaminen on tehty `System.out.println()`-lauseella ja lukeminen `Integer.valueOf(lukija.nextLine())` lauseella. Ehtolauseessa on käytetty `if`:iä, toistolauseessa `while`:ä ja `for`:ia. Huomaamme, että tulostaminen ja lukeminen poikkeaa `if`:istä, `while`:stä, `for`:ista siinä, että tulostus- ja lukemiskomennon perässä on sulut ja joskus sulkujen sisällä komennolle annettava parametrit. Nämä "sulkuihin päättyvät" eivät oikeastaan olekaan komentoja vaan metodeja.
 
-Huomaamme, että tulostaminen ja lukeminen poikkeaa `if`:istä, `while`:stä, `for`:ista ym. siinä, että komennon perässä on sulut ja joskus sulkujen sisällä komennolle annettava parametrit. "Sulkuihin päättyvät" eivät oikeastaan olekaan komentoja vaan metodeja.
-
-Teknisesti ottaen **metodi** tarkoittaa nimettyä lauseista koostuvaa joukkoa, eli ohjelman palaa, jota voi kutsua muualta ohjelmakoodista metodille annetun nimen perusteella. Koodirivi `System.out.println("olen metodille annettava parametri!")` siis tarkoittaa, että kutsutaan metodia, joka suorittaa ruudulle tulostamisen. Metodin sisäinen toteutus -- eli joukko suoritettavia lauseita -- on tässä tapauksessa java-ohjelmointikielen piilottama.
-
-Metodin suorituksen jälkeen palataan takaisin kohtaan, missä ennen metodikutsua oltiin menossa, ja ohjelman suoritus jatkuu tästä. Metodille suluissa annettua syötettä kutsutaan **metodin parametriksi** -- metodin parametreilla annetaan metodeille tarkempaa tietoa odotetusta suorituksesta; esimerkiksi tulostuslauseelle kerrotaan parametrin avulla mitä pitäisi tulostaa.
-
-Parametrin lisäksi **metodilla voi olla paluuarvo**.
-
-```java
-String merkkijono = lukija.nextLine();
-```
-
-Yllä oleva lause sisältää metodikutsun `lukija.nextLine()`. Usein metodin nimeen näyttää liittyvän piste, kuten yllä olevassa lauseessa. Oikeastaan tässäkin metodin nimi on pisteen oikeanpuoleinen osa, eli `nextLine()`. Pisteen vasemmanpuoleinen osa, eli tässä `lukija`, kertoo **kenen metodista on kyse**. Kyseessä on `lukija`-muuttujan tarjoama metodi `nextLine`. Opimme hiukan myöhemmin tarkemmin mistä tässä pisteen vasemmanpuoleisessa osassa on kyse. Tarkka lukija tietysti huomaa, että `System.out.println()`:ssa on "kaksi pistettä". Metodin nimi tässä on println, ja `System.out` on se kenen metodista on kyse. Karkeasti ottaen `System.out` tarkoittaa koneen näyttöä.
-
-Vastaavasti lauseessa:
-
-```java
-int luku = Integer.valueOf(lukija.nextLine());
-```
-
-on kaksi metodikutsua. Ensin kutsutaan sisempänä olevaa metodia `lukija.nextLine()`, joka palauttaa merkkijonon. Seuraavaksi kutsutaan metodia `Integer.valueOf(...)`. Metodikutsun `Integer.valueOf(...)` parametriksi asetetaan se merkkijono, jonka metodin `lukija.nextLine()` kutsu palautti. Metodin `Integer.valueOf(...)` paluuarvona on merkkijonoa vastaava kokonaisluku.
+Teknisesti ottaen **metodi** tarkoittaa nimettyä lauseista koostuvaa joukkoa, eli ohjelman palaa, jota voi kutsua muualta ohjelmakoodista metodille annetun nimen perusteella. Esimerkiksi koodirivillä `System.out.println("olen metodille annettava parametri!")` kutsutaan metodia, joka suorittaa ruudulle tulostamisen. Metodin sisäinen toteutus -- eli joukko suoritettavia lauseita -- on piilossa, eikä ohjelmoijan tarvitse välittää siitä metodia käytettäessä.
 
 Tähän mennessä käyttämämme metodit ovat kaikki olleet Javan valmiita metodeita. Opetellaan seuraavaksi tekemään omia metodeita.
 
 
 ##  Omat metodit
 
-Edellä mainittiin että **metodi** tarkoittaa nimettyä lauseista koostuvaa joukkoa, jota voi kutsua muualta ohjelmakoodista nimen perusteella. Javan valmiita metodeja on käytetty oikeastaan ensimmäisestä ohjelmasta lähtien.
+**Metodi** tarkoittaa nimettyä lauseista koostuvaa joukkoa, jota voi kutsua muualta ohjelmakoodista nimen perusteella. Ohjelmointikielet tarjoavat valmiita metodeja, mutta ohjelmoija voi myös kirjoittaa omia metodeja. On oikeastaan on melko poikkeuksellista mikäli ohjelmassa ei ole yhtään itse kirjoitettua metodia, sillä metodit auttavat ohjelman jäsentämisessä. Tästä lähtien lähes jokainen kurssilla tehty ohjelma sisältääkin itsekirjoitettuja metodeja.
 
-Javan valmiiden metodien käytön lisäksi ohjelmoija voi kirjoittaa itse metodeja joita sovellus kutsuu. Oikeastaan on hyvin poikkeuksellista jos ohjelmassa ei ole yhtään itse kirjoitettua metodia. Tästä lähtien lähes jokainen kurssilla tehty ohjelma sisältääkin itsekirjoitettuja metodeja.
-
-Ohjelmarunkoon metodit kirjoitetaan main:in aaltosulkeiden ulkopuolelle mutta kuitenkin "uloimmaisten" aaltosulkeiden sisäpuolelle, joko mainin ylä- tai alapuolelle.
+Metodit kirjoitetaan ohjelmarunkoon `main`:in aaltosulkeiden ulkopuolelle mutta kuitenkin "uloimmaisten" aaltosulkeiden sisäpuolelle, joko mainin ylä- tai alapuolelle.
 
 ```java
 import java.util.Scanner;
@@ -128,10 +106,11 @@ Terveiset metodimaailmasta!
 
 </sample-output>
 
-Huomionarvoista tässä on ohjelman suoritusjärjestys. Ohjelman suoritus etenee siten, että pääohjelman --  eli main:in -- rivit suoritetaan ylhäältä alas yksi kerrallaan. Kun lause on metodikutsu, ohjelman suoritus siirtyy metodiin. Metodin lauseet suoritetaan yksi kerrallaan ylhäältä alas. Tämän jälkeen palataan kohtaan, josta metodin kutsu tapahtui. Tarkemmin ottaen metodikutsun jälkeiselle riville.
+Huomionarvoista tässä on ohjelman suoritusjärjestys. Ohjelman suoritus etenee siten, että pääohjelman --  eli main:in -- rivit suoritetaan ylhäältä alas yksi kerrallaan. Kun lause on metodikutsu, ohjelman suoritus siirtyy metodiin. Metodin lauseet suoritetaan yksi kerrallaan ylhäältä alas. Tämän jälkeen palataan kohtaan, josta metodin kutsu tapahtui ja jatketaan ohjelman suoritusta seuraavasta lauseesta.
+
+<code-states-visualizer input='{"code":"import java.util.Scanner;\n\npublic class OhjelmaRunko {\n    public static void main(String[] args) {\n        Scanner lukija = new Scanner(System.in);\n\n        // ohjelmakoodi\n        System.out.println(\"Kokeillaan pääsemmekö metodimaailmaan:\");\n        tervehdi();\n\n        System.out.println(\"Näyttää siltä, kokeillaan vielä:\");\n        tervehdi();\n        tervehdi();\n        tervehdi();\n    }\n\n    // omat metodit\n    public static void tervehdi() {\n        System.out.println(\"Terveiset metodimaailmasta!\");\n    }\n}\n","stdin":"","trace":[{"stdout":"","event":"call","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"1","frame_id":1}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"2","frame_id":2}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"lukija":["REF",601]},"ordered_varnames":["lukija"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"3","frame_id":3}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"601":["INSTANCE","java.util.Scanner"]}},{"stdout":"Kokeillaan pääsemmekö metodimaailmaan:\n","event":"step_line","line":9,"stack_to_render":[{"func_name":"main:9","encoded_locals":{"lukija":["REF",601]},"ordered_varnames":["lukija"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"6","frame_id":6}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"601":["INSTANCE","java.util.Scanner"]}},{"stdout":"Kokeillaan pääsemmekö metodimaailmaan:\n","event":"call","line":19,"stack_to_render":[{"func_name":"tervehdi:19","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"7","frame_id":7},{"func_name":"main:9","encoded_locals":{"lukija":["REF",601]},"ordered_varnames":["lukija"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"8","frame_id":8}],"globals":{},"ordered_globals":[],"func_name":"tervehdi","heap":{"601":["INSTANCE","java.util.Scanner"]}},{"stdout":"Kokeillaan pääsemmekö metodimaailmaan:\n","event":"step_line","line":19,"stack_to_render":[{"func_name":"tervehdi:19","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"9","frame_id":9},{"func_name":"main:9","encoded_locals":{"lukija":["REF",601]},"ordered_varnames":["lukija"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"10","frame_id":10}],"globals":{},"ordered_globals":[],"func_name":"tervehdi","heap":{"601":["INSTANCE","java.util.Scanner"]}},{"stdout":"Kokeillaan pääsemmekö metodimaailmaan:\nTerveiset metodimaailmasta!\n","event":"step_line","line":20,"stack_to_render":[{"func_name":"tervehdi:20","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"17","frame_id":17},{"func_name":"main:9","encoded_locals":{"lukija":["REF",601]},"ordered_varnames":["lukija"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"18","frame_id":18}],"globals":{},"ordered_globals":[],"func_name":"tervehdi","heap":{"601":["INSTANCE","java.util.Scanner"]}},{"stdout":"Kokeillaan pääsemmekö metodimaailmaan:\nTerveiset metodimaailmasta!\n","event":"return","line":20,"stack_to_render":[{"func_name":"tervehdi:20","encoded_locals":{"__return__":["VOID"]},"ordered_varnames":["__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"19","frame_id":19},{"func_name":"main:9","encoded_locals":{"lukija":["REF",601]},"ordered_varnames":["lukija"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"20","frame_id":20}],"globals":{},"ordered_globals":[],"func_name":"tervehdi","heap":{"601":["INSTANCE","java.util.Scanner"]}},{"stdout":"Kokeillaan pääsemmekö metodimaailmaan:\nTerveiset metodimaailmasta!\n","event":"step_line","line":11,"stack_to_render":[{"func_name":"main:11","encoded_locals":{"lukija":["REF",601]},"ordered_varnames":["lukija"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"21","frame_id":21}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"601":["INSTANCE","java.util.Scanner"]}},{"stdout":"Kokeillaan pääsemmekö metodimaailmaan:\nTerveiset metodimaailmasta!\nNäyttää siltä, kokeillaan vielä:\n","event":"step_line","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"lukija":["REF",601]},"ordered_varnames":["lukija"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"25","frame_id":25}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"601":["INSTANCE","java.util.Scanner"]}},{"stdout":"Kokeillaan pääsemmekö metodimaailmaan:\nTerveiset metodimaailmasta!\nNäyttää siltä, kokeillaan vielä:\n","event":"call","line":19,"stack_to_render":[{"func_name":"tervehdi:19","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"26","frame_id":26},{"func_name":"main:12","encoded_locals":{"lukija":["REF",601]},"ordered_varnames":["lukija"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"27","frame_id":27}],"globals":{},"ordered_globals":[],"func_name":"tervehdi","heap":{"601":["INSTANCE","java.util.Scanner"]}},{"stdout":"Kokeillaan pääsemmekö metodimaailmaan:\nTerveiset metodimaailmasta!\nNäyttää siltä, kokeillaan vielä:\n","event":"step_line","line":19,"stack_to_render":[{"func_name":"tervehdi:19","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"28","frame_id":28},{"func_name":"main:12","encoded_locals":{"lukija":["REF",601]},"ordered_varnames":["lukija"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"29","frame_id":29}],"globals":{},"ordered_globals":[],"func_name":"tervehdi","heap":{"601":["INSTANCE","java.util.Scanner"]}},{"stdout":"Kokeillaan pääsemmekö metodimaailmaan:\nTerveiset metodimaailmasta!\nNäyttää siltä, kokeillaan vielä:\nTerveiset metodimaailmasta!\n","event":"step_line","line":20,"stack_to_render":[{"func_name":"tervehdi:20","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"36","frame_id":36},{"func_name":"main:12","encoded_locals":{"lukija":["REF",601]},"ordered_varnames":["lukija"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"37","frame_id":37}],"globals":{},"ordered_globals":[],"func_name":"tervehdi","heap":{"601":["INSTANCE","java.util.Scanner"]}},{"stdout":"Kokeillaan pääsemmekö metodimaailmaan:\nTerveiset metodimaailmasta!\nNäyttää siltä, kokeillaan vielä:\nTerveiset metodimaailmasta!\n","event":"return","line":20,"stack_to_render":[{"func_name":"tervehdi:20","encoded_locals":{"__return__":["VOID"]},"ordered_varnames":["__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"38","frame_id":38},{"func_name":"main:12","encoded_locals":{"lukija":["REF",601]},"ordered_varnames":["lukija"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"39","frame_id":39}],"globals":{},"ordered_globals":[],"func_name":"tervehdi","heap":{"601":["INSTANCE","java.util.Scanner"]}},{"stdout":"Kokeillaan pääsemmekö metodimaailmaan:\nTerveiset metodimaailmasta!\nNäyttää siltä, kokeillaan vielä:\nTerveiset metodimaailmasta!\n","event":"step_line","line":13,"stack_to_render":[{"func_name":"main:13","encoded_locals":{"lukija":["REF",601]},"ordered_varnames":["lukija"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"40","frame_id":40}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"601":["INSTANCE","java.util.Scanner"]}},{"stdout":"Kokeillaan pääsemmekö metodimaailmaan:\nTerveiset metodimaailmasta!\nNäyttää siltä, kokeillaan vielä:\nTerveiset metodimaailmasta!\n","event":"call","line":19,"stack_to_render":[{"func_name":"tervehdi:19","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"42","frame_id":42},{"func_name":"main:13","encoded_locals":{"lukija":["REF",601]},"ordered_varnames":["lukija"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"43","frame_id":43}],"globals":{},"ordered_globals":[],"func_name":"tervehdi","heap":{"601":["INSTANCE","java.util.Scanner"]}},{"stdout":"Kokeillaan pääsemmekö metodimaailmaan:\nTerveiset metodimaailmasta!\nNäyttää siltä, kokeillaan vielä:\nTerveiset metodimaailmasta!\n","event":"step_line","line":19,"stack_to_render":[{"func_name":"tervehdi:19","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"44","frame_id":44},{"func_name":"main:13","encoded_locals":{"lukija":["REF",601]},"ordered_varnames":["lukija"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"45","frame_id":45}],"globals":{},"ordered_globals":[],"func_name":"tervehdi","heap":{"601":["INSTANCE","java.util.Scanner"]}},{"stdout":"Kokeillaan pääsemmekö metodimaailmaan:\nTerveiset metodimaailmasta!\nNäyttää siltä, kokeillaan vielä:\nTerveiset metodimaailmasta!\nTerveiset metodimaailmasta!\n","event":"step_line","line":20,"stack_to_render":[{"func_name":"tervehdi:20","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"52","frame_id":52},{"func_name":"main:13","encoded_locals":{"lukija":["REF",601]},"ordered_varnames":["lukija"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"53","frame_id":53}],"globals":{},"ordered_globals":[],"func_name":"tervehdi","heap":{"601":["INSTANCE","java.util.Scanner"]}},{"stdout":"Kokeillaan pääsemmekö metodimaailmaan:\nTerveiset metodimaailmasta!\nNäyttää siltä, kokeillaan vielä:\nTerveiset metodimaailmasta!\nTerveiset metodimaailmasta!\n","event":"return","line":20,"stack_to_render":[{"func_name":"tervehdi:20","encoded_locals":{"__return__":["VOID"]},"ordered_varnames":["__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"54","frame_id":54},{"func_name":"main:13","encoded_locals":{"lukija":["REF",601]},"ordered_varnames":["lukija"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"55","frame_id":55}],"globals":{},"ordered_globals":[],"func_name":"tervehdi","heap":{"601":["INSTANCE","java.util.Scanner"]}},{"stdout":"Kokeillaan pääsemmekö metodimaailmaan:\nTerveiset metodimaailmasta!\nNäyttää siltä, kokeillaan vielä:\nTerveiset metodimaailmasta!\nTerveiset metodimaailmasta!\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"lukija":["REF",601]},"ordered_varnames":["lukija"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"56","frame_id":56}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"601":["INSTANCE","java.util.Scanner"]}},{"stdout":"Kokeillaan pääsemmekö metodimaailmaan:\nTerveiset metodimaailmasta!\nNäyttää siltä, kokeillaan vielä:\nTerveiset metodimaailmasta!\nTerveiset metodimaailmasta!\n","event":"call","line":19,"stack_to_render":[{"func_name":"tervehdi:19","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"58","frame_id":58},{"func_name":"main:14","encoded_locals":{"lukija":["REF",601]},"ordered_varnames":["lukija"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"59","frame_id":59}],"globals":{},"ordered_globals":[],"func_name":"tervehdi","heap":{"601":["INSTANCE","java.util.Scanner"]}},{"stdout":"Kokeillaan pääsemmekö metodimaailmaan:\nTerveiset metodimaailmasta!\nNäyttää siltä, kokeillaan vielä:\nTerveiset metodimaailmasta!\nTerveiset metodimaailmasta!\n","event":"step_line","line":19,"stack_to_render":[{"func_name":"tervehdi:19","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"60","frame_id":60},{"func_name":"main:14","encoded_locals":{"lukija":["REF",601]},"ordered_varnames":["lukija"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"61","frame_id":61}],"globals":{},"ordered_globals":[],"func_name":"tervehdi","heap":{"601":["INSTANCE","java.util.Scanner"]}},{"stdout":"Kokeillaan pääsemmekö metodimaailmaan:\nTerveiset metodimaailmasta!\nNäyttää siltä, kokeillaan vielä:\nTerveiset metodimaailmasta!\nTerveiset metodimaailmasta!\nTerveiset metodimaailmasta!\n","event":"step_line","line":20,"stack_to_render":[{"func_name":"tervehdi:20","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"68","frame_id":68},{"func_name":"main:14","encoded_locals":{"lukija":["REF",601]},"ordered_varnames":["lukija"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"69","frame_id":69}],"globals":{},"ordered_globals":[],"func_name":"tervehdi","heap":{"601":["INSTANCE","java.util.Scanner"]}},{"stdout":"Kokeillaan pääsemmekö metodimaailmaan:\nTerveiset metodimaailmasta!\nNäyttää siltä, kokeillaan vielä:\nTerveiset metodimaailmasta!\nTerveiset metodimaailmasta!\nTerveiset metodimaailmasta!\n","event":"return","line":20,"stack_to_render":[{"func_name":"tervehdi:20","encoded_locals":{"__return__":["VOID"]},"ordered_varnames":["__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"70","frame_id":70},{"func_name":"main:14","encoded_locals":{"lukija":["REF",601]},"ordered_varnames":["lukija"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"71","frame_id":71}],"globals":{},"ordered_globals":[],"func_name":"tervehdi","heap":{"601":["INSTANCE","java.util.Scanner"]}},{"stdout":"Kokeillaan pääsemmekö metodimaailmaan:\nTerveiset metodimaailmasta!\nNäyttää siltä, kokeillaan vielä:\nTerveiset metodimaailmasta!\nTerveiset metodimaailmasta!\nTerveiset metodimaailmasta!\n","event":"step_line","line":15,"stack_to_render":[{"func_name":"main:15","encoded_locals":{"lukija":["REF",601]},"ordered_varnames":["lukija"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"72","frame_id":72}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"601":["INSTANCE","java.util.Scanner"]}},{"stdout":"Kokeillaan pääsemmekö metodimaailmaan:\nTerveiset metodimaailmasta!\nNäyttää siltä, kokeillaan vielä:\nTerveiset metodimaailmasta!\nTerveiset metodimaailmasta!\nTerveiset metodimaailmasta!\n","event":"return","line":15,"stack_to_render":[{"func_name":"main:15","encoded_locals":{"lukija":["REF",601],"__return__":["VOID"]},"ordered_varnames":["lukija","__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"74","frame_id":74}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"601":["INSTANCE","java.util.Scanner"]}}],"userlog":"Debugger VM maxMemory: 455M\n"}'></code-states-visualizer>
 
 Jos ollaan tarkkoja niin pääohjelma eli main on itsekin metodi. Kun ohjelma käynnistyy, kutsuu käyttöjärjestelmä main:ia. Metodi main on siis ohjelman käynnistyspiste, jonka ylimmältä riviltä ohjelman suoritus lähtee liikkeelle. Ohjelman suoritus loppuu kun päädytään mainin loppuun.
-
 
 <programming-exercise name='Tekstin tulostus' tmcname='osa02-Osa02_21.TekstinTulostus'>
 
@@ -218,117 +197,11 @@ public static void tamaMetodiSanooMur() {
 }
 ```
 
-
-
-## Metodin muuttujat
-
-Muuttujien määrittely metodissa tapahtuu tutulla tavalla. Seuraava metodi laskee parametrina saamiensa lukujen keskiarvon. Keskiarvon laskemisessa käytetään apumuuttujia `summa` ja `ka`.
-
-```java
-public static double keskiarvo(int luku1, int luku2, int luku3) {
-    int summa = luku1 + luku2 + luku3;
-    double ka = summa / 3.0;
-
-    return ka;
-}
-```
-
-Metodin kutsu voi tapahtua esim seuraavasti
-
-```java
-public static void main(String[] args) {
-    Scanner lukija = new Scanner(System.in);
-
-    System.out.print("Anna ensimmäinen luku: ");
-    int eka = Integer.valueOf(lukija.nextLine());
-
-    System.out.print("Anna toinen luku: ");
-    int toka = Integer.valueOf(lukija.nextLine());
-
-    System.out.print("Anna kolmas luku: ");
-    int kolmas = Integer.valueOf(lukija.nextLine());
-
-    double keskiarvonTulos = keskiarvo(eka, toka, kolmas);
-
-    System.out.print("Lukujen keskiarvo: " + keskiarvonTulos);
-}
-```
-
-Huomaa että metodin sisäiset muuttujat `summa` ja `ka` eivät näy pääohjelmaan. Tyypillinen ohjelmoinnin harjoittelussa eteen tuleva virhe on yrittää käyttää metodia seuraavasti.
-
-
-```java
-public static void main(String[] args) {
-    int eka = 3;
-    int toka = 8;
-    int kolmas = 4;
-
-    keskiarvo(eka, toka, kolmas);
-
-    // yritetään käyttää metodin sisäistä muuttujaa, EI TOIMI!
-    System.out.print("Lukujen keskiarvo: " + ka);
-}
-```
-
-Yllä yritetään käyttää metodin `keskiarvo` sisällä määriteltyä muuttujaa `ka` ja tulostaa sen arvo. Muuttuja `ka` on kuitenkin olemassa vain metodin `keskiarvo` sisällä, eikä siihen pääse käsiksi ulkopuolelta.
-
-Myös seuraavanlaista virhettä näkee usein.
-
-```java
-public static void main(String[] args) {
-    int eka = 3;
-    int toka = 8;
-    int kolmas = 4;
-
-    // yritetään käyttää pelkkää metodin nimeä, EI TOIMI!
-    System.out.print("Lukujen keskiarvo: " + keskiarvo);
-}
-```
-
-Yllä yritetään käyttää metodin `keskiarvo` nimeä muuttujamaisesti. Metodia tulee kuitenkin kutsua.
-
-Toimiva tapa metodin tuloksen sijoittamisen apumuuttujaan lisäksi on suorittaa metodikutsu suoraan tulostuslauseen sisällä:
-
-```java
-public static void main(String[] args) {
-    int eka = 3;
-    int toka = 8;
-    int kolmas = 4;
-
-    // kutsutaan metodia tulostuslauseessa, TOIMII!
-    System.out.print("Lukujen keskiarvo: " + keskiarvo(eka, toka, kolmas));
-}
-```
-
-Tässä siis ensin tapahtuu metodikutsu joka palauttaa arvon 5.0 joka sitten tulostetaan tulostuskomennon avulla.
-
-
-<quiznator id="5c1f68f33516ce119a7f45db"></quiznator>
-
-
-**Muuttuja ei ole olemassa ennen sen esittelyä, ja muuttuja on olemassa vain niiden aaltosulkujen sisällä kuin missä se on esitelty**. Metodien yhteydessä tämä tarkoittaa sitä, että metodeilla on pääsy vain niihin muuttujiin, jotka ovat määritelty metodien sisällä, tai jotka metodi saa parametrina. Alla oleva esimerkki konkretisoi tilanteen, missä `kasvataKolme`-metodin sisällä yritetään muuttaa `main`-metodissa määritellyn `luku`-muuttujan arvoa.
-
-```java
-// pääohjelma
-public static void main(String[] args) {
-    int luku = 1;
-    kasvataKolmella();
-}
-
-// metodi
-public static void kasvataKolmella() {
-    luku = luku + 3;
-}
-```
-
-Yllä oleva ohjelma ei toimi, sillä metodi `kasvataKolmella` ei näe pääohjelman muuttujaa `luku`. Tarkemmin ottaen, metodi `kasvataKolmella` ei edes tiedä mistä muuttujasta `luku` on kyse, sillä muuttujaa ei ole määritelty metodissa `kasvataKolmella` tai sen parametreissa.
-
-Yleisemmin voi todeta, että pääohjelman muuttujat eivät näy metodien sisälle, ja metodin muuttujat eivät näy muille metodeille tai pääohjelmalle. Ainoa keino viedä metodille tietoa metodin ulkopuolelta on parametrin avulla.
-
+TODO: quiz, kirjoita metodin nimi oikein (esim. tulosta_koodaus_on_kivaa() -> tulostaKoodausOnKivaa())
 
 ##  Metodin parametrit
 
-**Parametrit** ovat metodille annettavia arvoja, joita käytetään metodin suorituksessa. Metodin parametrit määritellään metodin ylimmällä rivillä metodin nimen jälkeen olevien sulkujen sisällä.  Kun metodia kutsutaan, sen parametreille annetaan arvot kutsuvaiheessa.
+**Parametrit** ovat metodille annettavia arvoja, joita käytetään metodin suorituksessa. Metodin parametrit määritellään metodin ylimmällä rivillä metodin nimen jälkeen olevien sulkujen sisällä. Metodissa käytettävät parametrien arvot kopioituvat metodikutsun yhteydessä metodille annettavista parametreista.
 
 Seuraavassa esimerkissä määritellään parametrillinen metodi `tervehdi`, jolla on int-tyyppinen parametri `montakoKertaa`.
 
@@ -347,6 +220,7 @@ Kutsutaan metodia `tervehdi` siten, että parametrin `montakoKertaa` arvoksi ase
 ```java
 public static void main(String[] args) {
     tervehdi(1);
+    System.out.println("");
     tervehdi(3);
 }
 ```
@@ -354,6 +228,7 @@ public static void main(String[] args) {
 <sample-output>
 
 Tervehdys!
+
 Tervehdys!
 Tervehdys!
 Tervehdys!
@@ -377,7 +252,7 @@ Tervehdys!
 
 </sample-output>
 
-Jos metodia kutsuttaessa parametriksi määritellään lauseke, evaluoidaan lauseke ennen metodikutsua. Yllä metodikutsun parametri evaluoituu arvoksi `3` ja lopullinen metodikutsu on muotoa `tervehdi(3);`.
+Jos metodia kutsuttaessa parametriksi määritellään lauseke, evaluoidaan lauseke ennen metodikutsua. Yllä lauseke evaluoituu arvoksi `3` ja lopullinen metodikutsu on muotoa `tervehdi(3);`.
 
 
 <programming-exercise name='Yhdestä parametriin' tmcname='osa02-Osa02_23.YhdestaParametriin'>
@@ -454,6 +329,7 @@ public static void main(String[] args) {
 
 </programming-exercise>
 
+### Useampi parametri
 
 Metodille voidaan määritellä useita parametreja. Tällöin metodin kutsussa parametrit annetaan samassa järjestyksessä.
 
@@ -527,6 +403,8 @@ public static void main(String[] args) {
 </programming-exercise>
 
 
+### Parametrien arvot kopioituvat metodikutsussa
+
 Metodikutsun yhteydessä **parametrien arvot kopioituvat**. Tämä tarkoittaa käytännössä sitä, että sekä main-metodissa että kutsuttavassa metodissa voi olla saman nimiset muuttujat, mutta muuttujien arvon muuttaminen kutsuttavan metodin sisällä ei muuta main-metodissa olevan muuttujan arvoa. Tarkastellaan tätä seuraavan ohjelman avulla.
 
 ```java
@@ -536,6 +414,7 @@ public class Esimerkki {
         int mihin = 10;
 
         tulostaLuvut(mista, mihin);
+        System.out.println();
 
         mista = 8;
 
@@ -560,12 +439,13 @@ Ohjelman tulostus on seuraava:
 7
 8
 9
+
 8
 9
 
 </sample-output>
 
-Alla sama askeleittaisena visualisaationa. Huomaat että main-metodissa olevat arvot jäävät kutsupinoon odottamaan metodin tulostaLuvut suorittamista. Metodissa tulostaLuvut olevien muuttujien arvojen muuttaminen ei muuta metodin main muuttujien arvoja, vaikka ne ovatkin saman nimisiä.
+Alla sama askeleittaisena visualisaationa. Metodissa tulostaLuvut olevien muuttujien arvojen muuttaminen ei muuta metodin main muuttujien arvoja, vaikka ne ovatkin saman nimisiä.
 
 
 <code-states-visualizer input='{"code":"public class Esimerkki {\n    public static void main(String[] args) {\n        int mista = 5;\n        int mihin = 10;\n\n        tulostaLuvut(mista, mihin);\n \n        mista = 8;\n\n        tulostaLuvut(mista, mihin);\n    }\n\n    public static void tulostaLuvut(int mista, int mihin) {\n        while (mista < mihin) {\n            System.out.println(mista);\n            mista++;\n        }\n    }\n}","stdin":"","trace":[{"stdout":"","event":"call","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"1","frame_id":1}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"2","frame_id":2}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":4,"stack_to_render":[{"func_name":"main:4","encoded_locals":{"mista":5},"ordered_varnames":["mista"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"4","frame_id":4}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":6,"stack_to_render":[{"func_name":"main:6","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"7","frame_id":7}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"call","line":14,"stack_to_render":[{"func_name":"tulostaLuvut:14","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"11","frame_id":11},{"func_name":"main:6","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"12","frame_id":12}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"","event":"step_line","line":14,"stack_to_render":[{"func_name":"tulostaLuvut:14","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"13","frame_id":13},{"func_name":"main:6","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"14","frame_id":14}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"","event":"step_line","line":15,"stack_to_render":[{"func_name":"tulostaLuvut:15","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"21","frame_id":21},{"func_name":"main:6","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"22","frame_id":22}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n","event":"step_line","line":16,"stack_to_render":[{"func_name":"tulostaLuvut:16","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"29","frame_id":29},{"func_name":"main:6","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"30","frame_id":30}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n","event":"step_line","line":16,"stack_to_render":[{"func_name":"tulostaLuvut:16","encoded_locals":{"mista":6,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"31","frame_id":31},{"func_name":"main:6","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"32","frame_id":32}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"tulostaLuvut:14","encoded_locals":{"mista":6,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"33","frame_id":33},{"func_name":"main:6","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"34","frame_id":34}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n","event":"step_line","line":15,"stack_to_render":[{"func_name":"tulostaLuvut:15","encoded_locals":{"mista":6,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"41","frame_id":41},{"func_name":"main:6","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"42","frame_id":42}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n","event":"step_line","line":16,"stack_to_render":[{"func_name":"tulostaLuvut:16","encoded_locals":{"mista":6,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"49","frame_id":49},{"func_name":"main:6","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"50","frame_id":50}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n","event":"step_line","line":16,"stack_to_render":[{"func_name":"tulostaLuvut:16","encoded_locals":{"mista":7,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"51","frame_id":51},{"func_name":"main:6","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"52","frame_id":52}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"tulostaLuvut:14","encoded_locals":{"mista":7,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"53","frame_id":53},{"func_name":"main:6","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"54","frame_id":54}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n","event":"step_line","line":15,"stack_to_render":[{"func_name":"tulostaLuvut:15","encoded_locals":{"mista":7,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"61","frame_id":61},{"func_name":"main:6","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"62","frame_id":62}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n7\n","event":"step_line","line":16,"stack_to_render":[{"func_name":"tulostaLuvut:16","encoded_locals":{"mista":7,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"69","frame_id":69},{"func_name":"main:6","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"70","frame_id":70}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n7\n","event":"step_line","line":16,"stack_to_render":[{"func_name":"tulostaLuvut:16","encoded_locals":{"mista":8,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"71","frame_id":71},{"func_name":"main:6","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"72","frame_id":72}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n7\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"tulostaLuvut:14","encoded_locals":{"mista":8,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"73","frame_id":73},{"func_name":"main:6","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"74","frame_id":74}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n7\n","event":"step_line","line":15,"stack_to_render":[{"func_name":"tulostaLuvut:15","encoded_locals":{"mista":8,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"81","frame_id":81},{"func_name":"main:6","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"82","frame_id":82}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n7\n8\n","event":"step_line","line":16,"stack_to_render":[{"func_name":"tulostaLuvut:16","encoded_locals":{"mista":8,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"89","frame_id":89},{"func_name":"main:6","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"90","frame_id":90}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n7\n8\n","event":"step_line","line":16,"stack_to_render":[{"func_name":"tulostaLuvut:16","encoded_locals":{"mista":9,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"91","frame_id":91},{"func_name":"main:6","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"92","frame_id":92}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n7\n8\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"tulostaLuvut:14","encoded_locals":{"mista":9,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"93","frame_id":93},{"func_name":"main:6","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"94","frame_id":94}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n7\n8\n","event":"step_line","line":15,"stack_to_render":[{"func_name":"tulostaLuvut:15","encoded_locals":{"mista":9,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"101","frame_id":101},{"func_name":"main:6","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"102","frame_id":102}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n7\n8\n9\n","event":"step_line","line":16,"stack_to_render":[{"func_name":"tulostaLuvut:16","encoded_locals":{"mista":9,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"109","frame_id":109},{"func_name":"main:6","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"110","frame_id":110}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n7\n8\n9\n","event":"step_line","line":16,"stack_to_render":[{"func_name":"tulostaLuvut:16","encoded_locals":{"mista":10,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"111","frame_id":111},{"func_name":"main:6","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"112","frame_id":112}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n7\n8\n9\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"tulostaLuvut:14","encoded_locals":{"mista":10,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"113","frame_id":113},{"func_name":"main:6","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"114","frame_id":114}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n7\n8\n9\n","event":"step_line","line":18,"stack_to_render":[{"func_name":"tulostaLuvut:18","encoded_locals":{"mista":10,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"121","frame_id":121},{"func_name":"main:6","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"122","frame_id":122}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n7\n8\n9\n","event":"return","line":18,"stack_to_render":[{"func_name":"tulostaLuvut:18","encoded_locals":{"mista":10,"mihin":10,"__return__":["VOID"]},"ordered_varnames":["mista","mihin","__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"125","frame_id":125},{"func_name":"main:6","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"126","frame_id":126}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n7\n8\n9\n","event":"step_line","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"mista":5,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"127","frame_id":127}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"5\n6\n7\n8\n9\n","event":"step_line","line":10,"stack_to_render":[{"func_name":"main:10","encoded_locals":{"mista":8,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"130","frame_id":130}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"5\n6\n7\n8\n9\n","event":"call","line":14,"stack_to_render":[{"func_name":"tulostaLuvut:14","encoded_locals":{"mista":8,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"134","frame_id":134},{"func_name":"main:10","encoded_locals":{"mista":8,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"135","frame_id":135}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n7\n8\n9\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"tulostaLuvut:14","encoded_locals":{"mista":8,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"136","frame_id":136},{"func_name":"main:10","encoded_locals":{"mista":8,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"137","frame_id":137}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n7\n8\n9\n","event":"step_line","line":15,"stack_to_render":[{"func_name":"tulostaLuvut:15","encoded_locals":{"mista":8,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"144","frame_id":144},{"func_name":"main:10","encoded_locals":{"mista":8,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"145","frame_id":145}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n7\n8\n9\n8\n","event":"step_line","line":16,"stack_to_render":[{"func_name":"tulostaLuvut:16","encoded_locals":{"mista":8,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"152","frame_id":152},{"func_name":"main:10","encoded_locals":{"mista":8,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"153","frame_id":153}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n7\n8\n9\n8\n","event":"step_line","line":16,"stack_to_render":[{"func_name":"tulostaLuvut:16","encoded_locals":{"mista":9,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"154","frame_id":154},{"func_name":"main:10","encoded_locals":{"mista":8,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"155","frame_id":155}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n7\n8\n9\n8\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"tulostaLuvut:14","encoded_locals":{"mista":9,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"156","frame_id":156},{"func_name":"main:10","encoded_locals":{"mista":8,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"157","frame_id":157}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n7\n8\n9\n8\n","event":"step_line","line":15,"stack_to_render":[{"func_name":"tulostaLuvut:15","encoded_locals":{"mista":9,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"164","frame_id":164},{"func_name":"main:10","encoded_locals":{"mista":8,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"165","frame_id":165}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n7\n8\n9\n8\n9\n","event":"step_line","line":16,"stack_to_render":[{"func_name":"tulostaLuvut:16","encoded_locals":{"mista":9,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"172","frame_id":172},{"func_name":"main:10","encoded_locals":{"mista":8,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"173","frame_id":173}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n7\n8\n9\n8\n9\n","event":"step_line","line":16,"stack_to_render":[{"func_name":"tulostaLuvut:16","encoded_locals":{"mista":10,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"174","frame_id":174},{"func_name":"main:10","encoded_locals":{"mista":8,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"175","frame_id":175}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n7\n8\n9\n8\n9\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"tulostaLuvut:14","encoded_locals":{"mista":10,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"176","frame_id":176},{"func_name":"main:10","encoded_locals":{"mista":8,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"177","frame_id":177}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n7\n8\n9\n8\n9\n","event":"step_line","line":18,"stack_to_render":[{"func_name":"tulostaLuvut:18","encoded_locals":{"mista":10,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"184","frame_id":184},{"func_name":"main:10","encoded_locals":{"mista":8,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"185","frame_id":185}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n7\n8\n9\n8\n9\n","event":"return","line":18,"stack_to_render":[{"func_name":"tulostaLuvut:18","encoded_locals":{"mista":10,"mihin":10,"__return__":["VOID"]},"ordered_varnames":["mista","mihin","__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"188","frame_id":188},{"func_name":"main:10","encoded_locals":{"mista":8,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"189","frame_id":189}],"globals":{},"ordered_globals":[],"func_name":"tulostaLuvut","heap":{}},{"stdout":"5\n6\n7\n8\n9\n8\n9\n","event":"step_line","line":11,"stack_to_render":[{"func_name":"main:11","encoded_locals":{"mista":8,"mihin":10},"ordered_varnames":["mista","mihin"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"190","frame_id":190}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"5\n6\n7\n8\n9\n8\n9\n","event":"return","line":11,"stack_to_render":[{"func_name":"main:11","encoded_locals":{"mista":8,"mihin":10,"__return__":["VOID"]},"ordered_varnames":["mista","mihin","__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"192","frame_id":192}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}}],"userlog":"Debugger VM maxMemory: 455M\n"}'></code-states-visualizer>
@@ -626,6 +506,7 @@ public static **void** kasvataKolmella() {
 ```
 
 Avainsana `void` tarkoittaa että metodi ei palauta mitään. Jos haluamme, että metodi palauttaa arvon, tulee avainsanan `void` paikalle asettaa palautettavan muuttujan tyyppi. Seuraavassa esimerkissä on määritelty metodi `palautetaanAinaKymppi`, joka palauttaa kokonaislukutyyppisen (`int`) muuttujan (tässä arvon 10).
+
 Konkreettinen arvon palautus tapahtuu komennolla `return`, jota seuraa palautettava arvo (tai muuttujan nimi, jonka arvo palautetaan).
 
 ```java
@@ -694,15 +575,6 @@ public static double metodiJokaPalauttaaLiukuluvun() {
   </tr>
 </table>
 
-Jos metodille määritellään paluuarvon tyyppi, on sen pakko palauttaa arvo. Esimerkiksi seuraava metodi on virheellinen.
-
-```java
-public static int virheellinenMetodi() {
-    System.out.println("Väitän palauttavani kokonaisluvun, mutten palauta sitä.");
-}
-```
-
-Ylläolevassa metodissa tulee olla komento `return`, jota seuraa palautettavan arvon tyyppi.
 
 <programming-exercise name='Numero uno' tmcname='osa02-Osa02_27.NumeroUno'>
 
@@ -717,12 +589,9 @@ Kirjoita metodi `public static String merkkijono()`. Metodin tulee palauttaa its
 
 </programming-exercise>
 
-
-## Komento return lopettaa metodin suorituksen
-
 Kun metodin suorituksessa päädytään komentoon `return`, metodin suoritus päättyy ja metodista palautetaan arvo sitä kutsuneelle metodille.
 
-Ohjelmointikielen kääntäjä sekä käyttämämme ohjelmointiympäristö tietää, että return-komentoa seuraavia lähdekoodirivejä ei koskaan suoriteta. Jos ohjelmoija lisää lähdekoodia return-komennon jälkeen paikkaan, mitä ei metodin suorituksessa voida koskaan saavuttaa, ohjelmointiympäristö antaa virheviesti.
+Komentoa `return` seuraavia lähdekoodirivejä ei koskaan suoriteta. Jos ohjelmoija lisää lähdekoodia return-komennon jälkeen paikkaan, jota ei metodin suorituksessa voida koskaan saavuttaa, ohjelmointiympäristö antaa virheviestin.
 
 Seuraavanlainen metodi on virheellinen ohjelmointiympäristön näkökulmasta.
 
@@ -756,10 +625,97 @@ public static void jakolasku(int osoittaja, int nimittaja) {
         return;
     }
 
-    double tulos = 1.0 * osoittaja / nimittaja;
-    System.out.println("" + osoittaja + " / " + nimittaja + " = " + tulos);
+    System.out.println("" + osoittaja + " / " + nimittaja + " = " + (1.0 * osoittaja / nimittaja));
 }
 ```
+
+
+## Muuttujien määrittely metodien sisällä
+
+Muuttujien määrittely tapahtuu metodeissa samalla tavalla kuin "pääohjelmassa". Seuraava metodi laskee parametrina saamiensa lukujen keskiarvon. Keskiarvon laskemisessa käytetään apumuuttujia `summa` ja `ka`.
+
+```java
+public static double keskiarvo(int luku1, int luku2, int luku3) {
+    int summa = luku1 + luku2 + luku3;
+    double ka = summa / 3.0;
+
+    return ka;
+}
+```
+
+Metodin kutsu voi tapahtua esim seuraavasti
+
+```java
+public static void main(String[] args) {
+    Scanner lukija = new Scanner(System.in);
+
+    System.out.print("Anna ensimmäinen luku: ");
+    int eka = Integer.valueOf(lukija.nextLine());
+
+    System.out.print("Anna toinen luku: ");
+    int toka = Integer.valueOf(lukija.nextLine());
+
+    System.out.print("Anna kolmas luku: ");
+    int kolmas = Integer.valueOf(lukija.nextLine());
+
+    double keskiarvonTulos = keskiarvo(eka, toka, kolmas);
+
+    System.out.print("Lukujen keskiarvo: " + keskiarvonTulos);
+}
+```
+
+Metodissa määritellyt muuttujat näkyvät vain metodissa. Tämä tarkoittaa sitä, että yllä metodin `keskiarvo` sisäiset muuttujat `summa` ja `ka` eivät näy pääohjelmaan. Tyypillinen ohjelmoinnin harjoittelussa eteen tuleva virhe on yrittää käyttää metodia seuraavasti.
+
+
+```java
+public static void main(String[] args) {
+    int eka = 3;
+    int toka = 8;
+    int kolmas = 4;
+
+    keskiarvo(eka, toka, kolmas);
+
+    // yritetään käyttää metodin sisäistä muuttujaa, EI TOIMI!
+    System.out.print("Lukujen keskiarvo: " + ka);
+}
+```
+
+Yllä yritetään käyttää metodin `keskiarvo` sisällä määriteltyä muuttujaa `ka` ja tulostaa sen arvo. Muuttuja `ka` on kuitenkin olemassa vain metodin `keskiarvo` sisällä, eikä siihen pääse käsiksi ulkopuolelta.
+
+Myös seuraavanlaista virhettä näkee usein.
+
+```java
+public static void main(String[] args) {
+    int eka = 3;
+    int toka = 8;
+    int kolmas = 4;
+
+    // yritetään käyttää pelkkää metodin nimeä, EI TOIMI!
+    System.out.print("Lukujen keskiarvo: " + keskiarvo);
+}
+```
+
+Yllä yritetään käyttää metodin `keskiarvo` nimeä muuttujamaisesti. Metodia tulee kuitenkin kutsua.
+
+Toimiva tapa metodin tuloksen sijoittamisen apumuuttujaan lisäksi on suorittaa metodikutsu suoraan tulostuslauseen sisällä:
+
+```java
+public static void main(String[] args) {
+    int eka = 3;
+    int toka = 8;
+    int kolmas = 4;
+
+    // kutsutaan metodia tulostuslauseessa, TOIMII!
+    System.out.print("Lukujen keskiarvo: " + keskiarvo(eka, toka, kolmas));
+}
+```
+
+Tässä siis ensin tapahtuu metodikutsu joka palauttaa arvon 5.0 joka sitten tulostetaan tulostuskomennon avulla.
+
+
+<quiznator id="5c1f68f33516ce119a7f45db"></quiznator>
+
+
 
 ## Palautettavan arvon laskeminen metodissa
 

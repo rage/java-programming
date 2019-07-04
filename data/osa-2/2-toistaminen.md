@@ -1,5 +1,5 @@
 ---
-path: '/osa-2/2-toistolause'
+path: '/osa-2/2-toistaminen'
 title: 'Toiminnallisuuden toistaminen'
 ---
 
