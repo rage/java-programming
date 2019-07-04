@@ -12,11 +12,13 @@ hidden: false
 
 </text-box>
 
-ArrayList tarjoaa ohjelmoijan elämää helpottavia toiminnallisuuksia. Näistä ehkäpä tärkein liittyy arvon lisäämiseen: ohjelmoijan näkökulmasta listan koko ei ole rajoitettu. Todellisuudessa listoissa ei ole taikatemppuja -- ne ovat ohjelmoitu siinä missä kaikki muutkin ohjelmointikielen tarjoamat välineet ja ohjelmat. Kun lista luodaan, sille varataan rajattu tila koneen muistista. Listan metodit ovat toteutettu siten, että varatun tilan loppuessa metodi varaa suuremman tilan listan käyttöön ja kopioi vanhassa tilassa olevat tiedot uuteen paikkaan.
+Edellä käsitelty lista -- ArrayList -- tarjoaa ohjelmoijan elämää helpottavia toiminnallisuuksia. Näistä ehkäpä tärkein liittyy arvon lisäämiseen: ohjelmoijan näkökulmasta listan koko ei ole rajoitettu. Todellisuudessa listoissa ei ole taikatemppuja -- ne ovat ohjelmoitu siinä missä kaikki muutkin ohjelmointikielen tarjoamat välineet ja ohjelmat. Kun lista luodaan, sille varataan rajattu tila koneen muistista. Listan metodit ovat toteutettu siten, että varatun tilan loppuessa metodi varaa suuremman tilan listan käyttöön ja kopioi vanhassa tilassa olevat tiedot uuteen paikkaan.
 
 ArrayListin helppokäyttöisyydesta huolimatta ohjelmissa on joskus tarvetta ArrayListin esi-isälle eli **taulukolle**.
 
 Taulukko sisältää rajatun määrän numeroituja paikkoja arvoille. Taulukon pituus (tai koko) on siinä olevien paikkojen lukumäärä, eli kuinka monta arvoa taulukkoon voi laittaa. Taulukon arvoja kutsutaan taulukon **alkioiksi**.
+
+## Taulukon luominen
 
 Taulukon voi luoda kahdella eri tavalla. Tutustutaan ensin tapaan, jossa taulukon koko määritellään eksplisiittisesti taulukon luonnin yhteydessä. Kolme kokonaislukupaikkaa sisältävä taulukko luodaan seuraavasti:
 
@@ -32,7 +34,7 @@ Taulukon, johon voi asettaa viisi merkkijonoa, voi luoda seuraavasti:
 String[] merkkijonot = new String[5];
 ```
 
-## Taulukon alkioon viittaus ja arvon asetus
+## Arvon asettamien ja arvon hakeminen
 
 Taulukon alkioihin viitataan taulukon indeksien perusteella. Alla olevassa esimerkissä luodaan kolmepaikkainen kokonaislukutaulukko, jonka jälkeen taulukon indekseihin 0 ja 2 asetetaan arvot. Tämän jälkeen arvot tulostetaan.
 
@@ -433,13 +435,25 @@ Merkkijono-olioiden lisäksi taulukko-olioiden luomiseen löytyy lyhyempi merkin
 int[] luvut = {100, 1, 42};
 ```
 
-Taulukko-olio voidaan siis aiemmin näkemämme new-kutsun lisäksi alustaa myös lohkolla, jossa taulukkoon asetettavat arvot esitellään pilkulla eriteltyinä. Tämä toimii kaikille muuttujatyypeille: alla on esitelty ensin merkkijonoja sisältävä taulukko, jonka jälkeen esitellään liukulukuja sisältävä taulukko.
+Taulukko-olio voidaan siis aiemmin näkemämme new-kutsun lisäksi alustaa myös lohkolla, jossa taulukkoon asetettavat arvot esitellään pilkulla eriteltyinä. Tämä toimii kaikille muuttujatyypeille: alla on esitelty ensin merkkijonoja sisältävä taulukko, jonka jälkeen esitellään liukulukuja sisältävä taulukko. Tämän jälkeen luvut tulostetaan.
 
 
 ```java
 String[] merkkijonotaulukko = {"Matti L.", "Matti P.", "Matti V."};
 double[] liukulukutaulukko = {1.20, 3.14, 100.0, 0.6666666667};
+
+for (int i = 0; i < merkkijonotaulukko.length; i++) {
+    System.out.println(merkkijonotaulukko[i] + " " +  liukulukutaulukko[i]);
+}
 ```
+
+<sample-output>
+
+Matti L. 1.20
+Matti P. 3.14
+Matti V. 100.0
+
+</sample-output>
 
 Lohkoalustusta käytettäessä taulukon koko on aina täsmälleen lohkossa määriteltyjen arvojen määrä. Lohkossa määritellyt arvot asetetaan taulukkoon järjestestyksessä siten, että ensimmäinen arvo asetetaan nollanteen indeksiin, toinen arvo ensimmäiseen indeksiin jne.
 
@@ -452,6 +466,18 @@ int[] luvut = {100,  1,  42,  23,  1,  1, 3200, 3201};
 System.out.println(luvut[0]);
 // tulostaa luvun taulukon indeksistä 2, eli luvun 42
 System.out.println(luvut[2]);
+```
+
+Viittaus taulukon ulkopuolelle aivan kuten listan ulkopuolellekaan ei voi viitata. Kokeile alla olevaa esimerkkiä omalla koneella esimerkiksi hiekkalaatikossa.
+
+
+```java
+String[] merkkijonotaulukko = {"Matti L.", "Matti P.", "Matti V."};
+double[] liukulukutaulukko = {1.20, 3.14, 100.0, 0.6666666667};
+
+for (int i = 0; i < liukulukutaulukko.length; i++) {
+    System.out.println(merkkijonotaulukko[i] + " " +  liukulukutaulukko[i]);
+}
 ```
 
 TODO: musiikin soittaminen taulukosta?
