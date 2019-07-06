@@ -1,5 +1,5 @@
 ---
-path: '/osa-4/2-johdatus-olio-ohjelmointiin'
+path: '/osa-4/1-johdatus-olio-ohjelmointiin'
 title: 'Johdatus olio-ohjelmointiin'
 hidden: false
 ---
@@ -13,11 +13,7 @@ hidden: false
 
 </text-box>
 
-TODO: jotenkin frametaan että nyt alkaa iso juttu
-
-TODO: kirjoita se, että edellisessä osassa tarkasteltiin tiedostoja ja niistä luettavaa määrämuotoista tietoa -- näissä kyse jonkinlaisista käsitteistä
-
-TODO: pois.. Tutustuimme hetki sitten ensimmäistä kertaa termeihin olio ja luokka. Aloitamme nyt matkan olio-ohjelmoinnin pariin. Aluksi keskiössä on käsitteiden ja tiedon kuvaaminen luokkien ja olioiden avulla, jonka jälkeen tutustumme toiminnallisuuden eli metodien lisäämiseen.
+Aloitamme nyt matkan olio-ohjelmoinnin pariin. Aluksi keskiössä on käsitteiden ja tiedon kuvaaminen luokkien ja olioiden avulla, jonka jälkeen tutustumme toiminnallisuuden eli metodien lisäämiseen.
 
 Olio-ohjelmoinnissa on kyse ratkaistavassa ongelmassa esiintyvien käsitteiden eristämisestä omiksi kokonaisuuksikseen sekä näiden kokonaisuuksien käyttämistä ongelman ratkaisemisessa. Kun ongelmaan liittyvät käsitteet on tunnistettu, niistä voidaan myös keskustella. Toisin ajatellen, ratkaistavasta ongelmasta muodostetaan abstraktioita, joiden avulla ongelmaa on helpompi käsitellä.
 
@@ -30,26 +26,24 @@ Olemme käyttäneet jo joitakin Javan tarjoamia luokkia ja olioita. **Luokka** m
 
 **Metodi** on luokkaan kirjoitettu lähdekoodista koostuva kokonaisuus, jolle on annettu nimi, ja jota voidaan kutsua. Metodi liittyy aina tiettyyn luokkaan, ja sitä käytetään usein luokasta tehdyn olion sisäisen tilan muokkaamiseen.
 
-Esimerkiksi `Scanner` on Javan tarjoama luokka, josta luotuja olioita olemme hyödyntäneet ohjelmissamme. Alla ohjelmassa luodaan Scanner-olio nimeltä `lukija`, jota käytetään kokonaislukumuuttujien lukemiseen.
+Esimerkiksi `ArrayList` on Javan tarjoama luokka, josta luotuja olioita olemme hyödyntäneet ohjelmissamme. Alla ohjelmassa luodaan `ArrayList`-olio nimeltä `luvut`, johon lisätään kokonaislukuja.
 
 
 ```java
-// luodaan Scanner-luokasta olio, jonka nimeksi tulee lukija
-Scanner lukija = new Scanner(System.in);
+// luodaan ArrayList-luokasta olio, jonka nimeksi tulee luvut
+ArrayList<Integer> luvut = new ArrayList<>();
 
-while (true) {
-    int luku = Integer.valueOf(lukija.nextLine());
+// lisätään luvut-olioon arvot 15, 34, 65, 111
+luvut.add(15);
+luvut.add(34);
+luvut.add(65);
+luvut.add(111);
 
-    if (luku == 0) {
-        break;
-    }
-
-    System.out.println("Luettu " + luku);
-}
+// tulostetaan luvut-olion koko
+System.out.println(luvut.size());
 ```
 
-
-Luokasta luodaan olio aina kutsumalla olion luovaa metodia eli **konstruktoria** komennon `new` avulla. Esimerkiksi `Scanner`-luokasta luodaan uusi ilmentymä eli olio kun kutsutaan `new Scanner(..)`. Konstruktorit saavat parametreja kuten muutkin metodit.
+Luokasta luodaan olio aina kutsumalla olion luovaa metodia eli **konstruktoria** komennon `new` avulla. Esimerkiksi yllä `ArrayList`-luokasta luodaan uusi kokonaislukuja hyväksyvä ilmentymä eli olio kun kutsutaan `new ArrayList<Integer>()`. Konstruktorit voivat saada parametreja kuten muutkin metodit.
 
 
 <text-box variant='hint' name='Luokan ja olion suhde'>
@@ -65,7 +59,7 @@ Yksittäiset oliot eli rintamamiestalot on tehty samojen piirustusten perusteell
 </text-box>
 
 
-<programming-exercise name='Ensimmäinen tilisi' tmcname='osa04-Osa04_11.EnsimmainenTilisi'>
+<programming-exercise name='Ensimmäinen tilisi' tmcname='osa04-Osa04_01.EnsimmainenTilisi'>
 
 Tehtäväpohjan mukana tulee valmis luokka `Tili`. Luokan `Tili` olio esittää pankkitiliä, jolla on saldo (eli jossa on jokin määrä rahaa). Tilejä käytetään näin:
 
@@ -92,7 +86,7 @@ Tee ohjelma, joka luo tilin jonka saldo on 100.0, panee tilille 20.0 ja tulostaa
 </programming-exercise>
 
 
-<programming-exercise name='Ensimmäinen tilisiirtosi' tmcname='osa04-Osa04_12.EnsimmainenTilisiirtosi'>
+<programming-exercise name='Ensimmäinen tilisiirtosi' tmcname='osa04-Osa04_02.EnsimmainenTilisiirtosi'>
 
 Tässäkin tehtävässä on käytössä edellisessä tehtävässä mukana ollut luokka `Tili`.
 
@@ -105,6 +99,9 @@ Tee ohjelma joka:
 5. Tulostaa molemmat tilit
 
 </programming-exercise>
+
+
+<quiznator id='5c409ea9fd9fd71425c5f871'></quiznator>
 
 
 ## Luokan luominen
@@ -177,11 +174,15 @@ Luokkaakaaviossa luokkaan liittyvät muuttujat määritellään muodossa "muuttu
 Olemme nyt määritelleet rakennuspiirustukset -- luokan -- henkilöoliolle. Jokaisella uudella henkilöolioilla on muuttujat `nimi` ja `ika`, joissa voi olla oliokohtainen arvo. Henkilöiden "tila" koostuu niiden nimeen ja ikään asetetuista arvoista.
 
 
-<programming-exercise name='Koiran ominaisuudet' tmcname='osa04-Osa04_13.KoiranOminaisuudet'>
+<programming-exercise name='Koiran ominaisuudet' tmcname='osa04-Osa04_03.KoiranOminaisuudet'>
 
-Uuden luokan saa lisättyä NetBeansissa seuraavasti: Ruudun vasemmalla reunalla on projektilistaus (Projects). Paina projektin nimen kohdalla hiiren oikeaa nappia. Valitse avautuvasta valikosta *New* ja *Java Class*. Anna luokan nimeksi (Class Name) `Koira`.
+Tässä tehtävässä harjoittelet luokan luomista.
 
-Tässä tehtävässä harjoittelet luokan luomista. Luo tehtäväpohjaan luokka nimeltä `Koira` ja lisää sille oliomuuttujat `private String nimi`, `private String rotu` ja `private int ika`. Luokkakaaviona luokka näyttää seuraavalta:
+Uuden luokan saa lisättyä NetBeansissa seuraavasti: Ruudun vasemmalla reunalla on projektilistaus (Projects). Paina projektin nimen kohdalla hiiren oikeaa nappia. Projektin nimi on tämän tehtävän tapauksessa `Osa04_03.KoiranOminaisuudet`. Valitse avautuvasta valikosta *New* ja *Java Class*. Tämän jälkeen NetBeans kysyy luokan nimeä.
+
+Anna tässä tehtävässä luokan nimeksi (Class Name) `Koira` ja paina Finish-nappia.
+
+Olet nyt luonut luokan nimeltä `Koira`. Lisää luokalle oliomuuttujat `private String nimi`, `private String rotu` ja `private int ika`. Luokkakaaviona luokka näyttää seuraavalta:
 
 <img src="../img/diagrams/luokkakaavio-teht-koira.png" alt="[Koira|-nimi:String;-rotu:String;-ika:int]">
 
@@ -230,11 +231,9 @@ Nyt luokkakaavioon on merkitty luokan nimen ja muuttujien lisäksi myös konstru
 <img src="../img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori.png">
 
 
-<programming-exercise name='Huone' tmcname='osa04-Osa04_14.Huone'>
+<programming-exercise name='Huone' tmcname='osa04-Osa04_04.Huone'>
 
-Uuden luokan saa lisättyä seuraavasti: Ruudun vasemmalla reunalla on projektilistaus. Paina projektin nimen kohdalla hiiren oikeaa nappia. Valitse avautuvasta valikosta *New* ja *Java Class*. Jos haluat että luokan nimi on Huone, aseta luokan nimeksi (Class Name) `Huone`.
-
-Luo luokka nimeltä `Huone`. Huoneella on oliomuuttujina `private String koodi`, esimerkiksi "B221", ja `private int istumapaikat`, esimerkiksi 30. Luo tämän jälkeen konstruktori `public Huone(String luokanKoodi, int istumapaikkojenMaara)`, minkä avulla oliomuuttujiin asetetaan arvot.
+Luo luokka nimeltä `Huone`. Lisää luokalle oliomuuttujat `private String koodi` ja `private int istumapaikat`. Luo tämän jälkeen konstruktori `public Huone(String luokanKoodi, int istumapaikkojenMaara)`, jonka avulla oliomuuttujiin asetetaan arvot.
 
 <img src="../img/diagrams/luokkakaavio-teht-huone.png" alt="[Huone|-koodi:String;-istumapaikat:int|+Huone(String‚ int)]">
 
@@ -273,9 +272,9 @@ public class Henkilo {
 </text-box>
 
 
-## Metodien määrittely
+## Metodien määrittely olioille
 
-Alkaa olla korkea aika päästä käyttämään Henkilo-luokasta luotuja olioita. Osaamme luoda olion ja alustaa olion muuttujat. Toimintaan pystyäkseen olioilla on oltava myös metodeja. **Metodi** on luokkaan kirjoitettu lähdekoodista koostuva kokonaisuus, jolle on annettu nimi, ja jota voidaan kutsua. Metodi liittyy aina tiettyyn luokkaan, ja sitä käytetään usein luokasta tehdyn olion sisäisen tilan muokkaamiseen.
+Osaamme luoda olion ja alustaa olion muuttujat. Toimintaan pystyäkseen olioilla on oltava myös metodeja. Kuten olemme jo oppineet, **metodi** on luokkaan kirjoitettu lähdekoodista koostuva kokonaisuus, jolle on annettu nimi, ja jota voidaan kutsua.
 
 Tehdään luokalle Henkilo metodi, jota käytetään olion tietojen tulostamiseen.
 
@@ -349,9 +348,9 @@ Sama screencastina:
 &nbsp;
 
 
-<programming-exercise name='Pilli' tmcname='osa04-Osa04_15.Pilli'>
+<programming-exercise name='Pilli' tmcname='osa04-Osa04_05.Pilli'>
 
-Luo luokka nimeltä `Pilli`. Pillillä on oliomuuttujina `private String aani`. Luo tämän jälkeen konstruktori `public Pilli(String pillinAani)`, minkä avulla luodaan uusi pilli, jolle annetaan ääni.
+Luo luokka nimeltä `Pilli`. Lisää luokalle oliomuuttuja `private String aani`. Luo tämän jälkeen konstruktori `public Pilli(String pillinAani)`, jonka avulla luodaan uusi pilli, jolle annetaan ääni.
 
 Lisää pillille vielä metodi `public void soi()`, joka tulostaa pillin äänen.
 
@@ -378,7 +377,7 @@ Kvaak
 </programming-exercise>
 
 
-<programming-exercise name='Ovi' tmcname='osa04-Osa04_16.Ovi'>
+<programming-exercise name='Ovi' tmcname='osa04-Osa04_06.Ovi'>
 
 Luo luokka nimeltä `Ovi`. Ovella ei ole oliomuuttujia. Luo sille parametriton konstruktori (tai käytä oletuskonstruktoria).  Luo tämän jälkeen ovelle metodi `public void koputa()`, jota kutsuttaessa tulostuu viesti "Who's there?".
 
@@ -402,11 +401,9 @@ Who's there?
 </programming-exercise>
 
 
-<programming-exercise name='Tuote' tmcname='osa04-Osa04_17.Tuote'>
+<programming-exercise name='Tuote' tmcname='osa04-Osa04_07.Tuote'>
 
-Luo luokka `Tuote` joka esittää kaupan tuotetta jolla on hinta, lukumäärä ja nimi.
-
-Uuden luokan saa lisättyä seuraavasti: Ruudun vasemmalla reunalla on projektilistaus. Paina projektin nimen kohdalla hiiren oikeaa nappia. Valitse avautuvasta valikosta *New* ja *Java Class*. Anna luokan nimeksi (Class Name) `Tuote`.
+Luo luokka `Tuote`, joka esittää kaupan tuotetta. Tuotteella tulee olla hinta (double), lukumäärä (int) ja nimi (String).
 
 Luokalla tulee olla:
 
@@ -431,8 +428,19 @@ Lisätään aiemmin rakentamallemme Henkilo-luokalle metodi, joka kasvattaa henk
 
 ```java
 public class Henkilo {
-    // ...
+    private String nimi;
+    private int ika;
 
+    public Henkilo(String nimiAlussa) {
+        this.ika = 0;
+        this.nimi = nimiAlussa;
+    }
+
+    public void tulostaHenkilo() {
+        System.out.println(this.nimi + ", ikä " + this.ika + " vuotta");
+    }
+
+    // lisätty metodi vanhene
     public void vanhene() {
         this.ika = this.ika + 1;
     }
@@ -486,8 +494,19 @@ Metodin sisään voi lisätä myös ehto- ja toistolauseita. Alla olevaa vanhene
 
 ```java
 public class Henkilo {
-    // ...
+    private String nimi;
+    private int ika;
 
+    public Henkilo(String nimiAlussa) {
+        this.ika = 0;
+        this.nimi = nimiAlussa;
+    }
+
+    public void tulostaHenkilo() {
+        System.out.println(this.nimi + ", ikä " + this.ika + " vuotta");
+    }
+
+    // kukaan ei tule olemaan yli 30-vuotias
     public void vanhene() {
         if (this.ika < 30) {
             this.ika = this.ika + 1;
@@ -496,7 +515,8 @@ public class Henkilo {
 }
 ```
 
-<programming-exercise name='Vähenevä laskuri (4 osaa)' tmcname='osa04-Osa04_18.VahenevaLaskuri'>
+
+<programming-exercise name='Vähenevä laskuri (3 osaa)' tmcname='osa04-Osa04_08.VahenevaLaskuri'>
 
 Tässä tehtävässä on useampi osa. Jokainen osa vastaa yhtä tehtäväpistettä.
 
@@ -625,51 +645,10 @@ arvo: 0
 </sample-output>
 
 
-<h2>Laskurin arvon palautus</h2>
-
-Tee laskurille metodi `public void palautaAlkuarvo()`, joka palauttaa laskurille arvon joka sillä oli alussa:
-
-```java
-public class Paaohjelma {
-    public static void main(String[] args) {
-        VahenevaLaskuri laskuri = new VahenevaLaskuri(100);
-
-        laskuri.tulostaArvo();
-
-        laskuri.vahene();
-        laskuri.tulostaArvo();
-
-        laskuri.vahene();
-        laskuri.tulostaArvo();
-
-        laskuri.nollaa();
-        laskuri.tulostaArvo();
-
-        laskuri.palautaAlkuarvo();
-        laskuri.tulostaArvo();
-    }
-}
-```
-
-Tulostuu:
-
-
-<sample-output>
-
-arvo: 100
-arvo: 99
-arvo: 98
-arvo: 0
-arvo: 100
-
-</sample-output>
-
-**Vihje** jotta alkuarvon voi palauttaa, se täytyy "muistaa" toisen oliomuuttujan avulla! Joudut siis lisäämään ohjelmaan toisen oliomuuttujan johon talletetaan laskurin alussa saama arvo.
-
 </programming-exercise>
 
 
-<programming-exercise name='Velka' tmcname='osa04-Osa04_19.Velka'>
+<programming-exercise name='Velka' tmcname='osa04-Osa04_09.Velka'>
 
 Luo luokka `Velka`, jolla on double-tyyppiset oliomuuttujat `saldo` ja `korkokerroin`. Saldo ja korkokerroin annetaan konstruktorin parametrina `public Velka(double saldoAlussa, double korkokerroinAlussa)`.
 
@@ -787,7 +766,7 @@ Kaikki tähän mennessä näkemämme muuttujatyypit voidaan myös palauttaa meto
 - Metodilla, joka ei palauta mitään, on `void`-määre palautettavan muuttujan tyyppinä.
 ```java
 public void metodiJokaEiPalautaMitaan() {
-    // metodin runko
+    // metodin runko - TODO: miksi tämä (ja seuraavat) ei ole sisennetty oikein?
 }
 ```
 
@@ -812,13 +791,30 @@ public double metodiJokaPalauttaaLiukuluvun() {
 }
 ```
 
-Jatketaan nyt henkilön parissa ja lisätään henkilölle iän palauttava metodi.
-
+Jatketaan nyt henkilön parissa ja lisätään henkilölle iän palauttava metodi `palautaIka`.
 
 ```java
-public class Henkilo {
-    // ...
 
+public class Henkilo {
+    private String nimi;
+    private int ika;
+
+    public Henkilo(String nimiAlussa) {
+        this.ika = 0;
+        this.nimi = nimiAlussa;
+    }
+
+    public void tulostaHenkilo() {
+        System.out.println(this.nimi + ", ikä " + this.ika + " vuotta");
+    }
+
+    public void vanhene() {
+        if (this.ika < 30) {
+            this.ika = this.ika + 1;
+        }
+    }
+
+    // juuri lisätty metodi
     public int palautaIka() {
         return this.ika;
     }
@@ -853,7 +849,7 @@ public class Main {
 }
 ```
 
-</sample-output>
+<sample-output>
 
 Pekan ikä 2
 Antin ikä 1
@@ -862,58 +858,11 @@ Pekka ja Antti yhteensä 3 vuotta
 
 </sample-output>
 
-
-<quiznator id='5c409ea9fd9fd71425c5f871'></quiznator>
 
 <quiznator id='5c409ecd017ffc13eddc6d37'></quiznator>
 
 
-<programming-exercise name='Henkilo' tmcname='osa04-Osa04_20.Henkilo'>
-
-Luo luokka Henkilo (ei öötä!). Luokan Henkilo tulee sisältää seuraavan luokkakaavion määrittelemät ominaisuudet.
-
-<img src="../img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta-ja-vanhene-ja-palautaika.png">
-
-Luokkakaaviossa ei kuitenkaan kerrota *miten* esimerkiksi metodien tulee toimia. Tässä vielä tarkennus luokkakaavion lisäksi.
-
-- Konstruktori `public Henkilo(String nimi)` luo uuden henkilön, jonka nimeksi asetetaan parametrina annettu arvo. Uuden henkilön iäksi tulee 0.
-- Metodi `public void tulostaHenkilo()` tulostaa henkilön tiedot muodossa "*nimi*, ikä *ika* vuotta" -- kursivoidut tekstit riippuvat henkilöolion oliomuuttujista.
-- Metodi `public void vanhene()` kasvattaa henkilön ikää yhdellä vuodella.
-- Metodi `public int palautaIka()` palauttaa henkilön iän kokonaislukuna.
-
-```java
-Henkilo pekka = new Henkilo("Pekka");
-Henkilo antti = new Henkilo("Antti");
-
-antti.tulostaHenkilo();
-
-pekka.vanhene();
-pekka.vanhene();
-
-antti.vanhene();
-
-System.out.println("Pekan ikä: " + pekka.palautaIka());
-System.out.println("Antin ikä: " + antti.palautaIka());
-
-int yht = pekka.palautaIka() + antti.palautaIka();
-
-System.out.println("Pekka ja Antti yhteensä " + yht + " vuotta");
-```
-
-<sample-output>
-
-Antti, ikä 0 vuotta
-Pekan ikä 2
-Antin ikä 1
-
-Pekka ja Antti yhteensä 3 vuotta
-
-</sample-output>
-
-</programming-exercise>
-
-
-<programming-exercise name='Musiikkikappale' tmcname='osa04-Osa04_21.Musiikkikappale'>
+<programming-exercise name='Musiikkikappale' tmcname='osa04-Osa04_10.Musiikkikappale'>
 
 Luo luokka nimeltä `Musiikkikappale`. Musiikkikappaleella on oliomuuttujat `nimi` (merkkijono) ja `pituus` sekunteina (kokonaisluku). Molemmat asetetaan konstruktorissa `public Musiikkikappale(String kappaleenNimi, int kappaleenPituus)`. Lisää oliolle myös metodit `public String nimi()`, joka palauttaa kappaleen nimen, ja `public int pituus()`, joka palauttaa kappaleen pituuden.
 
@@ -933,9 +882,41 @@ Kappaleen In The Garden pituus on 10910 sekuntia.
 </programming-exercise>
 
 
-## Metodien sisäinen toiminnallisuus
+<programming-exercise name='Elokuva' tmcname='osa04-Osa04_11.Elokuva'>
 
-Kuten aiemmin huomasimme, metodit sisältävät lähdekoodia aivan samalla tavalla kuin muutkin ohjelmamme osat. Metodeissa voi olla ehtolauseita tai toistolauseita, ja metodeista voi kutsua myös muita metodeja.
+Luo luokka Elokuva, jolla on oliomuuttujat `nimi` (String) ja `ikaraja` (int). Tee luokalle konstruktori `public Elokuva(String elokuvanNimi, int elokuvanIkaraja)` sekä metodit `public String nimi()` ja `public int ikaraja()`. Ensimmäinen palauttaa elokuvan nimen ja toinen elokuvan ikärajan.
+
+Esimerkki luokan käytöstä.
+
+```java
+Elokuva chipmunks = new Elokuva("Alvin and the Chipmunks: The Squeakquel", 0);
+
+Scanner lukija = new Scanner(System.in);
+
+System.out.println("Minkä ikäinen olet?");
+int ika = Integer.valueOf(lukija.nextLine());
+
+System.out.println();
+if (ika >= chipmunks.ikaraja()) {
+    System.out.println("Saat katsoa elokuvan " + chipmunks.nimi());
+} else {
+    System.out.println("Et saa katsoa elokuvaa " + chipmunks.nimi());
+}
+```
+
+<sample-output>
+
+Minkä ikäinen olet?
+**7**
+
+Saat katsoa elokuvan Alvin and the Chipmunks: The Squeakquel
+
+</sample-output>
+
+</programming-exercise>
+
+
+Kuten aiemmin huomasimme, metodit voivat sisältää lähdekoodia aivan samalla tavalla kuin muutkin ohjelmamme osat. Metodeissa voi olla ehtolauseita tai toistolauseita, ja metodeista voi kutsua myös muita metodeja.
 
 Tehdään seuraavaksi henkilölle metodi, jonka avulla voidaan selvittää onko henkilö täysi-ikäinen. Metodi palauttaa totuusarvon -- joko `true` tai `false`:
 
@@ -1063,38 +1044,45 @@ Pekka on täysi-ikäinen
 </sample-output>
 
 
-<programming-exercise name='Elokuva' tmcname='osa04-Osa04_22.Elokuva'>
+<programming-exercise name='Mittari' tmcname='osa04-Osa04_12.Mittari'>
 
-Luo luokka Elokuva, jolla on oliomuuttujat `nimi` (String) ja `ikaraja` (int). Tee luokalle konstruktori `public Elokuva(String elokuvanNimi, int elokuvanIkaraja)` sekä metodit `public String nimi()` ja `public int ikaraja()`. Ensimmäinen palauttaa elokuvan nimen ja toinen elokuvan ikärajan.
+Luo luokka `Mittari`. Mittarilla on oliomuuttuja `private int mitta`, parametriton konstruktori (asettaa muuttujan mitta alkuarvoksi 0), sekä seuraavat neljä metodia:
+
+- Metodi `public void lisaa()` kasvattaa oliomuuttujan `mitta` arvoa yhdellä. Ei kasvata arvoa yli viiden.
+- Metodi `public void vahenna()` vähentää oliomuuttujan `mitta` arvoa yhdellä. Ei vähennä arvoa negatiiviseksi.
+- Metodi `public int mitta()` palauttaa oliomuuttujan `mitta` arvon.
+- Metodi `public boolean taynna()` palauttaa `true` mikäli oliomuuttujan `mitta` on viisi, palauttaa muulloin false.
 
 Esimerkki luokan käytöstä.
 
 ```java
-Elokuva chipmunks = new Elokuva("Alvin and the Chipmunks: The Squeakquel", 0);
+Mittari m = new Mittari();
 
-Scanner lukija = new Scanner(System.in);
-
-System.out.println("Minkä ikäinen olet?");
-int ika = Integer.valueOf(lukija.nextLine());
-
-System.out.println();
-if (ika >= chipmunks.ikaraja()) {
-    System.out.println("Saat katsoa elokuvan " + chipmunks.nimi());
-} else {
-    System.out.println("Et saa katsoa elokuvaa " + chipmunks.nimi());
+while(!m.taynna()) {
+    System.out.println("Ei täynnä! Mitta: " + m.mitta());
+    m.lisaa();
 }
+
+System.out.println("Täynnä! Mitta: " + m.mitta());
+m.vahenna();
+System.out.println("Ei täynnä! Mitta: " + m.mitta());
+
 ```
 
 <sample-output>
 
-Minkä ikäinen olet?
-**7**
-
-Saat katsoa elokuvan Alvin and the Chipmunks: The Squeakquel
+Ei täynnä! Mitta: 0
+Ei täynnä! Mitta: 1
+Ei täynnä! Mitta: 2
+Ei täynnä! Mitta: 3
+Ei täynnä! Mitta: 4
+Täynnä! Mitta: 5
+Ei täynnä! Mitta: 4
 
 </sample-output>
 
 </programming-exercise>
+
 
 
 ## Olion merkkijonoesitys ja toString-metodi
@@ -1158,7 +1146,7 @@ Olioscreencastin toinen osa:
 &nbsp;
 
 
-<programming-exercise name='Agentti' tmcname='osa04-Osa04_23.Agentti'>
+<programming-exercise name='Agentti' tmcname='osa04-Osa04_13.Agentti'>
 
 Tehtäväpohjassa on määriteltynä luokka Agentti, jolla on etunimi ja sukunimi. Luokalle on määritelty metodi `tulosta`, joka luo seuraavanlaisen merkkijonoesityksen.
 
@@ -1197,7 +1185,343 @@ My name is Bond, Ionic Bond
 </programming-exercise>
 
 
-<programming-exercise name='Maksukortti (6 osaa)' tmcname='osa04-Osa04_24.Maksukortti'>
+
+## Metodin parametrit
+
+
+Jatketaan taas `Henkilo`-luokan parissa. Päätetään että haluamme laskea henkilöiden painoindeksejä. Tätä varten teemme henkilölle metodit pituuden ja painon asettamista varten, sekä metodin joka laskee painoindeksin. Henkilön uudet ja muuttuneet osat seuraavassa:
+
+
+```java
+public class Henkilo {
+    private String nimi;
+    private int ika;
+    private int paino;
+    private int pituus;
+
+    public Henkilo(String nimiAlussa) {
+        this.ika = 0;
+        this.paino = 0;
+        this.pituus = 0;
+        this.nimi = nimiAlussa;
+    }
+
+    public void setPituus(int uusiPituus) {
+        this.pituus = uusiPituus;
+    }
+
+    public void setPaino(int uusiPaino) {
+        this.paino = uusiPaino;
+    }
+
+    public double painoindeksi() {
+        double pituusPerSata = this.pituus / 100.0;
+        return this.paino / (pituusPerSata * pituusPerSata);
+    }
+
+    // ...
+}
+```
+
+
+Eli henkilölle lisättiin oliomuuttujat `pituus` ja `paino`. Näille voi asettaa arvon metodeilla `setPituus` ja `setPaino`. Jälleen käytössä Javaan vakiintunut nimeämiskäytäntö, eli jos metodin tehtävänä on ainoastaan asettaa arvo oliomuuttujaan, on metodi tapana nimetä `setMuuttujanNimi`:ksi. Arvon asettavia metodeja kutsutaan usein "settereiksi". Seuraavassa käytämme uusia metodeja:
+
+
+```java
+public static void main(String[] args) {
+    Henkilo matti = new Henkilo("Matti");
+    Henkilo juhana = new Henkilo("Juhana");
+
+    matti.setPituus(180);
+    matti.setPaino(86);
+
+    juhana.setPituus(175);
+    juhana.setPaino(64);
+
+    System.out.println(matti.getNimi() + ", painoindeksisi on " + matti.painoindeksi());
+    System.out.println(juhana.getNimi() + ", painoindeksisi on " + juhana.painoindeksi());
+}
+```
+
+Tulostus:
+
+<sample-output>
+
+Matti, painoindeksisi on 26.54320987654321
+Juhana, painoindeksisi on 20.897959183673468
+
+</sample-output>
+
+
+## Parametrilla ja oliomuuttujalla sama nimi!
+
+Edellä metodissa `setPituus` asetetaan oliomuuttujaan `pituus` parametrin `uusiPituus` arvo:
+
+```java
+public void setPituus(int uusiPituus) {
+    this.pituus = uusiPituus;
+}
+```
+
+Parametrin nimi voisi olla myös sama kuin oliomuuttujan nimi, eli seuraava toimisi myös:
+
+```java
+public void setPituus(int pituus) {
+    this.pituus = pituus;
+}
+```
+
+Nyt metodissa `pituus` tarkottaa nimenomaan *pituus*-nimistä parametria ja `this.pituus` saman nimistä oliomuuttujaa. Esim. seuraava ei toimisi sillä koodi ei viittaa ollenkaan oliomuuttujaan *pituus* -- koodi käytännössä asettaa parametrina saadulle `pituus`-muuttujalle siinä jo olevan arvon:
+
+```java
+public void setPituus(int pituus) {
+    // ÄLÄ TEE NÄIN!!!
+    pituus = pituus;
+}
+```
+
+```java
+public void setPituus(int pituus) {
+    // VAAN NÄIN!!!
+    this.pituus = pituus;
+}
+```
+
+
+<programming-exercise name='Kertoja' tmcname='osa04-Osa04_14.Kertoja'>
+
+Luo luokka `Kertoja` jolla on:
+
+- Konstruktori `public Kertoja(int luku)`.
+- Metodi `public int kerro(int luku)` joka palauttaa sille annetun luvun `luku` kerrottuna konstruktorille annetulla luvulla `luku`.
+
+Tarvinnet tässä myös oliomuuttujan...
+
+Esimerkki luokan käytöstä:
+
+```java
+Kertoja kolmellaKertoja = new Kertoja(3);
+
+System.out.println("kolmellaKertoja.kerro(2): " + kolmellaKertoja.kerro(2));
+
+Kertoja neljallaKertoja = new Kertoja(4);
+
+System.out.println("neljallaKertoja.kerro(2): " + neljallaKertoja.kerro(2));
+System.out.println("kolmellaKertoja.kerro(1): " + kolmellaKertoja.kerro(1));
+System.out.println("neljallaKertoja.kerro(1): " + neljallaKertoja.kerro(1));
+```
+
+Tulostus
+
+<sample-output>
+
+kolmellaKertoja.kerro(2): 6
+neljallaKertoja.kerro(2): 8
+kolmellaKertoja.kerro(1): 3
+neljallaKertoja.kerro(1): 4
+
+</sample-output>
+
+</programming-exercise>
+
+
+## Oman metodin kutsu
+
+Olio voi kutsua myös omia metodeitaan. Jos esim. halutaan, että toString-metodin palauttama merkkijonoesitys kertoisi myös henkilön painoindeksin, kannattaa `toString`:istä kutsua olion omaa metodia `painoIndeksi`:
+
+```java
+public String toString() {
+    return this.nimi + ", ikä " + this.ika + " vuotta, painoindeksini on " + this.painoindeksi();
+}
+```
+
+Eli kun olio kutsuu omaa metodiaan, riittää etuliite this ja pelkkä metodin nimi. Vaihtoehtoinen tapa on tehdä oman metodin kutsu muodossa `painoindeksi()` jolloin ei korosteta, että kutsutaan "olion itsensä" metodia painoindeksi:
+
+```java
+public String toString() {
+    return this.nimi + ", ikä " + this.ika + " vuotta, painoindeksini on " + painoindeksi();
+}
+```
+
+Olioscreencastin kolmas osa:
+
+<youtube id='YKwzIGuCLn8'></youtube>
+
+&nbsp;
+
+
+<programming-exercise name='Lukutilasto (4 osaa)' tmcname='osa04-Osa04_15.Lukutilasto'>
+
+<h2>Lukujen määrä</h2>
+
+Tee luokka `Lukutilasto` (tiedosto luomaasi luokkaa varten on tehtäväpohjassa valmiina), joka tuntee seuraavat toiminnot:
+
+- metodi `lisaaLuku` lisää uuden luvun tilastoon
+- metodi `haeLukujenMaara` kertoo lisättyjen lukujen määrän
+
+Luokan ei tarvitse tallentaa mihinkään lisättyjä lukuja, vaan riittää muistaa niiden määrä. Metodin `lisaaLuku` ei tässä vaiheessa tarvitse edes ottaa huomioon, mikä luku lisätään tilastoon, koska ainoa tallennettava asia on lukujen määrä.
+
+Luokan runko on seuraava:
+
+```java
+public class Lukutilasto {
+    private int lukujenMaara;
+
+    public Lukutilasto() {
+        // alusta tässä muuttuja lukujenMaara
+    }
+
+    public void lisaaLuku(int luku) {
+        // kirjoita koodia tähän
+    }
+
+    public int haeLukujenMaara() {
+        // kirjoita koodia tähän
+    }
+}
+```
+
+Seuraava ohjelma esittelee luokan käyttöä:
+
+```java
+public class Paaohjelma {
+    public static void main(String[] args) {
+        Lukutilasto tilasto = new Lukutilasto();
+        tilasto.lisaaLuku(3);
+        tilasto.lisaaLuku(5);
+        tilasto.lisaaLuku(1);
+        tilasto.lisaaLuku(2);
+        System.out.println("Määrä: " + tilasto.haeLukujenMaara());
+    }
+}
+```
+
+Ohjelman tulostus on seuraava:
+
+<sample-output>
+
+Määrä: 4
+
+</sample-output>
+
+
+<h2>Summa ja keskiarvo</h2>
+
+Laajenna luokkaa seuraavilla toiminnoilla:
+
+- metodi `summa` kertoo lisättyjen lukujen summan (tyhjän lukutilaston summa on 0)
+- metodi `keskiarvo` kertoo lisättyjen lukujen keskiarvon (tyhjän lukutilaston keskiarvo on 0)
+
+Luokan runko on seuraava:
+
+```java
+public class Lukutilasto {
+    private int lukujenMaara;
+    private int summa;
+
+    public Lukutilasto() {
+        // alusta tässä muuttujat maara ja summa
+    }
+
+    public void lisaaLuku(int luku) {
+        // kirjoita koodia tähän
+    }
+
+    public int haeLukujenMaara() {
+        // kirjoita koodia tähän
+    }
+
+    public int summa() {
+        // kirjoita koodia tähän
+    }
+
+    public double keskiarvo() {
+        // kirjoita koodia tähän
+    }
+}
+```
+
+Seuraava ohjelma esittelee luokan käyttöä:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Lukutilasto tilasto = new Lukutilasto();
+        tilasto.lisaaLuku(3);
+        tilasto.lisaaLuku(5);
+        tilasto.lisaaLuku(1);
+        tilasto.lisaaLuku(2);
+        System.out.println("Määrä: " + tilasto.haeLukujenMaara());
+        System.out.println("Summa: " + tilasto.summa());
+        System.out.println("Keskiarvo: " + tilasto.keskiarvo());
+    }
+}
+```
+
+Ohjelman tulostus on seuraava:
+
+<sample-output>
+
+Määrä: 4
+Summa: 11
+Keskiarvo: 2.75
+
+</sample-output>
+
+
+<h2>Summa käyttäjältä</h2>
+
+
+Tee ohjelma, joka kysyy lukuja käyttäjältä, kunnes käyttäjä antaa luvun -1. Sitten ohjelma ilmoittaa lukujen summan.
+
+Ohjelmassa tulee käyttää `Lukutilasto`-olioa summan laskemiseen.
+
+**HUOM:** Älä muuta tässä osassa luokka Lukutilasto, vaan toteuta sitä hyödyntäen summan laskemiseen käytetty ohjelma.
+
+<sample-output>
+
+Anna lukuja:
+**4**
+**2**
+**5**
+**4**
+**-1**
+Summa: 15
+
+</sample-output>
+
+
+<h2>Monta summaa</h2>
+
+Muuta edellistä ohjelmaa niin, että ohjelma laskee myös parillisten ja parittomien lukujen summaa.
+
+**HUOM**: Määrittele ohjelmassa *kolme* Lukutilasto-olioa ja laske ensimmäisen avulla kaikkien lukujen summa, toisen avulla parillisten lukujen summa ja kolmannen avulla parittomien lukujen summa.
+
+**Jotta testi toimisi, on oliot luotava pääohjelmassa edellä mainitussa järjestyksessä (eli ensin kaikkien summan laskeva olio, toisena parillisten summan laskeva ja viimeisenä parittomien summan laskeva olio)!**
+
+**HUOM:** älä muuta Lukutilasto-luokaa millään tavalla!
+
+Ohjelman tulee toimia seuraavasti:
+
+<sample-output>
+
+Anna lukuja:
+**4**
+**2**
+**5**
+**2**
+**-1**
+Summa: 13
+Parillisten summa: 8
+Parittomien summa: 5
+
+</sample-output>
+
+</programming-exercise>
+
+
+
+<programming-exercise name='Maksukortti (6 osaa)' tmcname='osa04-Osa04_16.Maksukortti'>
 
 Helsingin Yliopiston opiskelijaruokaloissa eli Unicafeissa opiskelijat maksavat lounaansa käyttäen maksukorttia. Lopullinen Maksukortti tulee näyttämään luokkakaaviona seuraavalta:
 
@@ -1463,352 +1787,4 @@ Normaalisti esimerkiksi tilien saldot tallennetaan kokonaislukuina siten, että 
 
 </text-box>
 
-
-## Metodin parametrit
-
-
-Jatketaan taas `Henkilo`-luokan parissa. Päätetään että haluamme laskea henkilöiden painoindeksejä. Tätä varten teemme henkilölle metodit pituuden ja painon asettamista varten, sekä metodin joka laskee painoindeksin. Henkilön uudet ja muuttuneet osat seuraavassa:
-
-
-```java
-public class Henkilo {
-    private String nimi;
-    private int ika;
-    private int paino;
-    private int pituus;
-
-    public Henkilo(String nimiAlussa) {
-        this.ika = 0;
-        this.paino = 0;
-        this.pituus = 0;
-        this.nimi = nimiAlussa;
-    }
-
-    public void setPituus(int uusiPituus) {
-        this.pituus = uusiPituus;
-    }
-
-    public void setPaino(int uusiPaino) {
-        this.paino = uusiPaino;
-    }
-
-    public double painoindeksi() {
-        double pituusPerSata = this.pituus / 100.0;
-        return this.paino / (pituusPerSata * pituusPerSata);
-    }
-
-    // ...
-}
-```
-
-
-Eli henkilölle lisättiin oliomuuttujat `pituus` ja `paino`. Näille voi asettaa arvon metodeilla `setPituus` ja `setPaino`. Jälleen käytössä Javaan vakiintunut nimeämiskäytäntö, eli jos metodin tehtävänä on ainoastaan asettaa arvo oliomuuttujaan, on metodi tapana nimetä `setMuuttujanNimi`:ksi. Arvon asettavia metodeja kutsutaan usein "settereiksi". Seuraavassa käytämme uusia metodeja:
-
-
-```java
-public static void main(String[] args) {
-    Henkilo matti = new Henkilo("Matti");
-    Henkilo juhana = new Henkilo("Juhana");
-
-    matti.setPituus(180);
-    matti.setPaino(86);
-
-    juhana.setPituus(175);
-    juhana.setPaino(64);
-
-    System.out.println(matti.getNimi() + ", painoindeksisi on " + matti.painoindeksi());
-    System.out.println(juhana.getNimi() + ", painoindeksisi on " + juhana.painoindeksi());
-}
-```
-
-Tulostus:
-
-<sample-output>
-
-Matti, painoindeksisi on 26.54320987654321
-Juhana, painoindeksisi on 20.897959183673468
-
-</sample-output>
-
-
-## Parametrilla ja oliomuuttujalla sama nimi!
-
-
-Edellä metodissa `setPituus` asetetaan oliomuuttujaan `pituus` parametrin `uusiPituus` arvo:
-
-```java
-public void setPituus(int uusiPituus) {
-    this.pituus = uusiPituus;
-}
-```
-
-Parametrin nimi voisi olla myös sama kuin oliomuuttujan nimi, eli seuraava toimisi myös:
-
-```java
-public void setPituus(int pituus) {
-    this.pituus = pituus;
-}
-```
-
-Nyt metodissa `pituus` tarkottaa nimenomaan *pituus*-nimistä parametria ja `this.pituus` saman nimistä oliomuuttujaa. Esim. seuraava ei toimisi sillä koodi ei viittaa ollenkaan oliomuuttujaan *pituus* -- koodi käytännössä asettaa parametrina saadulle `pituus`-muuttujalle siinä jo olevan arvon:
-
-```java
-public void setPituus(int pituus) {
-    // ÄLÄ TEE NÄIN!!!
-    pituus = pituus;
-}
-```
-
-```java
-public void setPituus(int pituus) {
-    // VAAN NÄIN!!!
-    this.pituus = pituus;
-}
-```
-
-
-<programming-exercise name='Kertoja' tmcname='osa04-Osa04_25.Kertoja'>
-
-Luo luokka `Kertoja` jolla on:
-
--Konstruktori `public Kertoja(int luku)`.
--Metodi `public int kerro(int luku)` joka palauttaa sille annetun luvun `luku` kerrottuna konstruktorille annetulla luvulla `luku`.
-
-Tarvinnet tässä myös oliomuuttujan...
-
-Esimerkki luokan käytöstä:
-
-```java
-Kertoja kolmellaKertoja = new Kertoja(3);
-
-System.out.println("kolmellaKertoja.kerro(2): " + kolmellaKertoja.kerro(2));
-
-Kertoja neljallaKertoja = new Kertoja(4);
-
-System.out.println("neljallaKertoja.kerro(2): " + neljallaKertoja.kerro(2));
-System.out.println("kolmellaKertoja.kerro(1): " + kolmellaKertoja.kerro(1));
-System.out.println("neljallaKertoja.kerro(1): " + neljallaKertoja.kerro(1));
-```
-
-Tulostus
-
-<sample-output>
-
-kolmellaKertoja.kerro(2): 6
-neljallaKertoja.kerro(2): 8
-kolmellaKertoja.kerro(1): 3
-neljallaKertoja.kerro(1): 4
-
-</sample-output>
-
-</programming-exercise>
-
-
-## Oman metodin kutsu
-
-Olio voi kutsua myös omia metodeitaan. Jos esim. halutaan, että toString-metodin palauttama merkkijonoesitys kertoisi myös henkilön painoindeksin, kannattaa `toString`:istä kutsua olion omaa metodia `painoIndeksi`:
-
-```java
-public String toString() {
-    return this.nimi + ", ikä " + this.ika + " vuotta, painoindeksini on " + this.painoindeksi();
-}
-```
-
-Eli kun olio kutsuu omaa metodiaan, riittää etuliite this ja pelkkä metodin nimi. Vaihtoehtoinen tapa on tehdä oman metodin kutsu muodossa `painoindeksi()` jolloin ei korosteta, että kutsutaan "olion itsensä" metodia painoindeksi:
-
-```java
-public String toString() {
-    return this.nimi + ", ikä " + this.ika + " vuotta, painoindeksini on " + painoindeksi();
-}
-```
-
-Olioscreencastin kolmas osa:
-
-<youtube id='YKwzIGuCLn8'></youtube>
-
-&nbsp;
-
-
-<programming-exercise name='Lukutilasto (4 osaa)' tmcname='osa04-Osa04_26.Lukutilasto'>
-
-<h2>Lukujen määrä</h2>
-
-Tee luokka `Lukutilasto` (tiedosto luomaasi luokkaa varten on tehtäväpohjassa valmiina), joka tuntee seuraavat toiminnot:
-
-- metodi `lisaaLuku` lisää uuden luvun tilastoon
-- metodi `haeLukujenMaara` kertoo lisättyjen lukujen määrän
-
-Luokan ei tarvitse tallentaa mihinkään lisättyjä lukuja, vaan riittää muistaa niiden määrä. Metodin `lisaaLuku` ei tässä vaiheessa tarvitse edes ottaa huomioon, mikä luku lisätään tilastoon, koska ainoa tallennettava asia on lukujen määrä.
-
-Luokan runko on seuraava:
-
-```java
-public class Lukutilasto {
-    private int lukujenMaara;
-
-    public Lukutilasto() {
-        // alusta tässä muuttuja lukujenMaara
-    }
-
-    public void lisaaLuku(int luku) {
-        // kirjoita koodia tähän
-    }
-
-    public int haeLukujenMaara() {
-        // kirjoita koodia tähän
-    }
-}
-```
-
-Seuraava ohjelma esittelee luokan käyttöä:
-
-```java
-public class Paaohjelma {
-    public static void main(String[] args) {
-        Lukutilasto tilasto = new Lukutilasto();
-        tilasto.lisaaLuku(3);
-        tilasto.lisaaLuku(5);
-        tilasto.lisaaLuku(1);
-        tilasto.lisaaLuku(2);
-        System.out.println("Määrä: " + tilasto.haeLukujenMaara());
-    }
-}
-```
-
-Ohjelman tulostus on seuraava:
-
-<sample-output>
-
-Määrä: 4
-
-</sample-output>
-
-
-<h2>Summa ja keskiarvo</h2>
-
-Laajenna luokkaa seuraavilla toiminnoilla:
-
-- metodi `summa` kertoo lisättyjen lukujen summan (tyhjän lukutilaston summa on 0)
-- metodi `keskiarvo` kertoo lisättyjen lukujen keskiarvon (tyhjän lukutilaston keskiarvo on 0)
-
-Luokan runko on seuraava:
-
-```java
-public class Lukutilasto {
-    private int lukujenMaara;
-    private int summa;
-
-    public Lukutilasto() {
-        // alusta tässä muuttujat maara ja summa
-    }
-
-    public void lisaaLuku(int luku) {
-        // kirjoita koodia tähän
-    }
-
-    public int haeLukujenMaara() {
-        // kirjoita koodia tähän
-    }
-
-    public int summa() {
-        // kirjoita koodia tähän
-    }
-
-    public double keskiarvo() {
-        // kirjoita koodia tähän
-    }
-}
-```
-
-Seuraava ohjelma esittelee luokan käyttöä:
-
-```java
-public class Main {
-    public static void main(String[] args) {
-        Lukutilasto tilasto = new Lukutilasto();
-        tilasto.lisaaLuku(3);
-        tilasto.lisaaLuku(5);
-        tilasto.lisaaLuku(1);
-        tilasto.lisaaLuku(2);
-        System.out.println("Määrä: " + tilasto.haeLukujenMaara());
-        System.out.println("Summa: " + tilasto.summa());
-        System.out.println("Keskiarvo: " + tilasto.keskiarvo());
-    }
-}
-```
-
-Ohjelman tulostus on seuraava:
-
-<sample-output>
-
-Määrä: 4
-Summa: 11
-Keskiarvo: 2.75
-
-</sample-output>
-
-
-<h2>Summa käyttäjältä</h2>
-
-
-Tee ohjelma, joka kysyy lukuja käyttäjältä, kunnes käyttäjä antaa luvun -1. Sitten ohjelma ilmoittaa lukujen summan.
-
-Ohjelmassa tulee käyttää `Lukutilasto`-olioa summan laskemiseen.
-
-**HUOM:** älä muuta Lukutilasto-luokkaa millään tavalla!
-
-<sample-output>
-
-Anna lukuja:
-**4**
-**2**
-**5**
-**4**
-**-1**
-Summa: 15
-
-</sample-output>
-
-
-<h2>Monta summaa</h2>
-
-Muuta edellistä ohjelmaa niin, että ohjelma laskee myös parillisten ja parittomien lukujen summaa.
-
-**HUOM**: Määrittele ohjelmassa *kolme* Lukutilasto-olioa ja laske ensimmäisen avulla kaikkien lukujen summa, toisen avulla parillisten lukujen summa ja kolmannen avulla parittomien lukujen summa.
-
-**Jotta testi toimisi, on oliot luotava pääohjelmassa edellä mainitussa järjestyksessä (eli ensin kaikkien summan laskeva olio, toisena parillisten summan laskeva ja viimeisenä parittomien summan laskeva olio)!**
-
-**HUOM:** älä muuta Lukutilasto-luokaa millään tavalla!
-
-Ohjelman tulee toimia seuraavasti:
-
-<sample-output>
-
-Anna lukuja:
-**4**
-**2**
-**5**
-**2**
-**-1**
-Summa: 13
-Parillisten summa: 8
-Parittomien summa: 5
-
-</sample-output>
-
-</programming-exercise>
-
-## Yhteenveto
-
-TODO: heivataanko slideshow pois?
-
-...
-
-<pdf-slideshow>
-
-[a](../slideshows/johdatus-olio-ohjelmointiin.pdf)
-
-</pdf-slideshow>
-
-<quiznator id="5c4aa67b3972a9147410161a"></quiznator>
 

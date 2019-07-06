@@ -1,6 +1,6 @@
 ---
-path: '/osa-4/3-listat-ja-oliot'
-title: 'Listat ja oliot'
+path: '/osa-4/2-oliot-listalla'
+title: 'Oliot listalla'
 hidden: false
 ---
 
@@ -12,8 +12,6 @@ hidden: false
 
 </text-box>
 
-
-Edellisessä osassa tutuksi tulleet listat ovat olioita, joihin pystyy lisäämään arvoja. Listalle lisättyjä arvoja voidaan tarkastella indeksin perusteella, ja listalla olevia arvoja voidaan etsiä ja poistaa. Kaikkia listan tarjoamia toimintoja käytetään listan tarjoamien metodien kautta.
 
 Listalle lisättävien muuttujien tyyppi määrätään listan luomisen yhteydessä annettavan tyyppiparametrin avulla. Esimerkiksi `ArrayList<String>` sisältää merkkijonoja, `ArrayList<Integer>` sisältää kokonaislukuja, ja `ArrayList<Double>` sisältää liukulukuja.
 
@@ -51,7 +49,7 @@ for (int i = 0; i < nimet.size(); i++) {
 }
 
 System.out.println();
-// 2. for-each toistolause (ei indeksiä)
+// 3. for-each toistolause (ei indeksiä)
 for (String nimi: nimet) {
     System.out.println(nimi);
 }
@@ -82,14 +80,10 @@ Ruth Lichterman
 
 </sample-output>
 
-TODO: onko relevantti kysely? Ehkä jotain muuta? Kysytään mitä toistolausetta suosii ja miksi?
 
-<quiznator id="5c4aaa92244fe21455cb56ac"></quiznator>
+## Olioiden lisääminen listalle
 
-
-## Olioita listalla
-
-Edellä lisäsimme listalle merkkijonoja. Merkkijonot ovat olioita, ja ei liene yllätys että listalla voi olla muunkinlaisia olioita. Tarkastellaan seuraavaksi listan ja olioiden yhteistoimintaa tarkemmin.
+Merkkijonot ovat olioita, joten ei liene yllätys että listalla voi olla muunkinlaisia olioita. Tarkastellaan seuraavaksi listan ja olioiden yhteistoimintaa tarkemmin.
 
 Oletetaan, että käytössämme on alla oleva henkilöä kuvaava luokka.
 
@@ -107,8 +101,6 @@ public class Henkilo {
         this.paino = 0;
         this.pituus = 0;
     }
-
-    // muita konstruktoreja ja metodeja
 
     public String getNimi() {
         return this.nimi;
@@ -171,12 +163,17 @@ Martin, ikä 0 vuotta
 
 </sample-output>
 
+
+
+## Käyttäjän syöttämät oliot listalle
+
 Aiemmin käyttämämme rakenne syötteiden lukemiseen on yhä varsin käytännöllinen.
 
 ```java
 Scanner lukija = new Scanner(System.in);
 ArrayList<Henkilo> henkilot = new ArrayList<>();
 
+// Luetaan henkilöiden nimet käyttäjältä
 while (true) {
     System.out.print("Kirjoita nimi, tyhjä lopettaa: ");
     String nimi = lukija.nextLine();
@@ -184,9 +181,12 @@ while (true) {
         break;
     }
 
+    // Lisätään listalle uusi henkilo-olio, jonka
+    // nimi on käyttäjän syöttämä
     henkilot.add(new Henkilo(nimi));
 }
 
+// Tulostetaan syötettyjen henkilöiden määrä sekä henkilöt
 System.out.println();
 System.out.println("Henkilöitä yhteensä: " + henkilot.size());
 System.out.println("Henkilöt: ");
@@ -196,22 +196,207 @@ for (Henkilo henkilo: henkilot) {
 }
 ```
 
-Listalla olevia olioita voidaan myös tarkastella listan läpikäynnin yhteydessä. Alla olevassa esimerkissä tulostetaan vain täysi-ikäiset henkilöt.
+<sample-output>
+
+Kirjoita nimi, tyhjä lopettaa: **Alan Kay**
+Kirjoita nimi, tyhjä lopettaa: **Ivan Sutherland**
+Kirjoita nimi, tyhjä lopettaa: **Kristen Nygaard**
+
+Henkilöitä yhteensä: 3
+Henkilöt:
+Alan Kay, ikä 0 vuotta
+Ivan Sutherland, ikä 0 vuotta
+Kristen Nygaard, ikä 0 vuotta
+
+</sample-output>
+
+<programming-exercise name='Esineet' tmcname='osa04-Osa04_17.Esineet'>
+
+
+Toteuta tässä kuvattu ohjelma luokkaan `Esineet`. **Huom!** Älä muuta luokkaa `Esine`.
+
+Kirjoita ohjelma, joka lukee käyttäjältä esineiden nimiä. Mikäli nimi on tyhjä, lopeta lukeminen. Mikäli nimi ei ole tyhjä, lue nimen perusteella uusi esine, jonka lisäät `esineet`-listalle.
+
+Tulosta tämän jälkeen esineet `Esine`-luokan `toString`-metodia hyödyntäen. Luokan `Esine` toteutus pitää syöttämäsi nimen lisäksi kirjaa esineen luomishetkestä.
+
+Ohjelman esimerkkitulostus:
+
+<sample-output>
+
+Nimi: **Suo**
+Nimi: **Kuokka**
+Nimi:
+
+Suo (luotu: 06.07.2018 12:34:56)
+Kuokka (luotu: 06.07.2018 12:34:57)
+
+</sample-output
+
+</programming-exercise>
+
+## Monta konstruktorin parametria
+
+Mikäli konstruktori vaatii useampia parametreja, voi käyttäjältä kysyä enemmän tietoa. Oletetaan, että luokan `Henkilo` konstruktori on seuraavanlainen.
 
 ```java
-// ..
+public class Henkilo {
 
-for (Henkilo henkilo: henkilot) {
-    if (henkilo.getIka() >= 18) {
-        System.out.println(henkilo);
+    private String nimi;
+    private int ika;
+    private int paino;
+    private int pituus;
+
+    public Henkilo(String nimi, int ika) {
+        this.nimi = nimi;
+        this.ika = ika;
+        this.paino = 0;
+        this.pituus = 0;
     }
+
+    // metodit
 }
 ```
 
-Ikärajan voi kysyä myös käyttäjältä.
+Olion luominen vaatii siis kaksiparametrisen konstruktorin kutsumista.
+
+Mikäli haluamme lukea tällaisia olioita käyttäjältä, tulee lukemisessa kysyä jokainen parametri erikseen. Alla olevassa esimerkissä käyttäjältä luetaan erikseen nimi ja ikä. Mikäli nimi on tyhjä, lukeminen lopetetaan.
+
+Henkilöt tulostetaan lukemisen jälkeen.
+
 
 ```java
-// ..
+Scanner lukija = new Scanner(System.in);
+ArrayList<Henkilo> henkilot = new ArrayList<>();
+
+// Luetaan henkilöiden tiedot käyttäjältä
+while (true) {
+    System.out.print("Kirjoita nimi, tyhjä lopettaa: ");
+    String nimi = lukija.nextLine();
+    if (nimi.isEmpty()) {
+        break;
+    }
+
+    System.out.print("Kirjoita henkilön " + nimi + " ikä: ");
+
+    int ika = Integer.valueOf(lukija.nextLine());
+
+    // Lisätään listalle uusi henkilo-olio, jonka
+    // nimen ja iän käyttäjä syötti
+    henkilot.add(new Henkilo(nimi, ika));
+}
+
+// Tulostetaan syötettyjen henkilöiden määrä sekä henkilöt
+System.out.println();
+System.out.println("Henkilöitä yhteensä: " + henkilot.size());
+System.out.println("Henkilöt: ");
+
+for (Henkilo henkilo: henkilot) {
+    System.out.println(henkilo);
+}
+```
+
+<sample-output>
+
+Kirjoita nimi, tyhjä lopettaa: **Grace Hopper**
+Kirjoita henkilön Grace Hopper ikä: **85**
+Kirjoita nimi, tyhjä lopettaa:
+
+Henkilöitä yhteensä: 1
+Henkilöt:
+Grace Hopper, ikä 85 vuotta
+
+</sample-output>
+
+<programming-exercise name='Henkilotiedot' tmcname='osa04-Osa04_18.Henkilotiedot'>
+
+Toteuta tässä kuvattu ohjelma luokkaan `Henkilotiedot`. **Huom!** Älä muuta luokkaa `Henkilotieto`.
+
+Kirjoita ohjelma, joka lukee käyttäjältä henkilötietoja. Käyttäjä syöttää etunimen, sukunimen, ja henkilötunnuksen. Mikäli etunimi on tyhjä, lopeta lukeminen. Mikäli etunimi ei ole tyhjä, lue loput tiedot ja luo käyttäjän syöttämistä tiedoista olio, jonka lisäät `henkilotiedot`-listalle.
+
+Kun käyttäjä on lopettanut tietojen syöttämisen (käyttäjä syöttää tyhjän etunimen), poistu toistolauseesta.
+
+Tulosta tämän jälkeen henkilötiedot siten, että jokaisesta syötetystä oliosta tulostetaan etunimi ja sukunimi välilyönnillä erotettuna (henkilötunnusta ei tulosteta!). Alla esimerkki ohjelman suorituksesta.
+
+<sample-output>
+
+Etunimi: **Jean**
+Sukunimi: **Bartik**
+Henkilötunnus: **271224**
+Etunimi: **Betty**
+Sukunimi: **Holberton**
+Henkilötunnus: **070317**
+Etunimi:
+
+Jean Bartik
+Betty Holberton
+
+</sample-output>
+
+</programming-exercise>
+
+<text-box type="info" name="Määrämuotoisen tiedon lukeminen">
+
+Yllä olevassa esimerkissä ja tehtävässä tiedot syötettiin rivi riviltä. Ohjelmassa voisi toki pyytää tietoja määrämuotoisessa muodossa, esimerkiksi pilkulla eroteltuna.
+
+Ohjelma, jossa nimi ja ikä tulisi syöttää pilkulla eroteltuna voisi toimia seuraavalla tavalla.
+
+```java
+Scanner lukija = new Scanner(System.in);
+ArrayList<Henkilo> henkilot = new ArrayList<>();
+
+// Luetaan henkilöiden tiedot käyttäjältä
+System.out.println("Kirjoita tiedot pilkulla eroteltuna, esim: Leevi,2")
+while (true) {
+    System.out.print("Kirjoita tiedot, tyhjä lopettaa: ");
+    String tiedot = lukija.nextLine();
+    if (tiedot.isEmpty()) {
+        break;
+    }
+
+    String[] palat = tiedot.split(",");
+    String nimi = palat[0];
+    int ika = Integer.valueOf(palat[1]);
+    henkilot.add(new Henkilo(nimi, ika));
+}
+
+// Tulostetaan syötettyjen henkilöiden määrä sekä henkilöt
+System.out.println();
+System.out.println("Henkilöitä yhteensä: " + henkilot.size());
+System.out.println("Henkilöt: ");
+
+for (Henkilo henkilo: henkilot) {
+    System.out.println(henkilo);
+}
+```
+
+<sample-output>
+
+Kirjoita tiedot pilkulla eroteltuna, esim: Leevi,2
+
+Kirjoita tiedot, tyhjä lopettaa: **Leevi,2**
+Kirjoita tiedot, tyhjä lopettaa: **Anton,2**
+Kirjoita tiedot, tyhjä lopettaa: **Sylvi,0**
+Kirjoita tiedot, tyhjä lopettaa:
+
+Henkilöitä yhteensä: 3
+Henkilöt:
+Leevi, ikä 2 vuotta
+Anton, ikä 2 vuotta
+Sylvi, ikä 0 vuotta
+
+</sample-output>
+
+</text-box>
+
+
+## Rajattu tulostus listalta
+
+Listalla olevia olioita voidaan myös tarkastella listan läpikäynnin yhteydessä. Alla olevassa esimerkissä käyttäjältä kysytään ensin ikäraja, jonka jälkeen tulostetaan ne oliot, joiden ikä on vähintään käyttäjän syöttämä ikäraja.
+
+```java
+// Oletetaan, että käytössämme on henkilot-lista,
+// joka sisältää henkilöolioita
+
 System.out.print("Mikä ikäraja? ");
 int ikaraja = Integer.valueOf(lukija.nextLine());
 
@@ -222,7 +407,8 @@ for (Henkilo henkilo: henkilot) {
 }
 ```
 
-<programming-exercise name='Televisio-ohjelmat' tmcname='osa04-Osa04_27.TelevisioOhjelmat'>
+
+<programming-exercise name='Televisio-ohjelmat' tmcname='osa04-Osa04_19.TelevisioOhjelmat'>
 
 Tehtäväpohjassa on valmiina televisio-ohjelmaa kuvaava luokka TelevisioOhjelma. Luokalla on oliomuuttujat nimi ja pituus, konstruktori, ja muutamia metodeja.
 
@@ -250,7 +436,7 @@ Miehen puolikkaat, 30 minuuttia
 </programming-exercise>
 
 
-<programming-exercise name='Kirjat (2 osaa)' tmcname='osa04-Osa04_28.Kirjat'>
+<programming-exercise name='Kirjat (2 osaa)' tmcname='osa04-Osa04_20.Kirjat'>
 
 Toteuta ohjelma, joka ensin lukee kirjojen tietoja käyttäjältä. Jokaisesta kirjasta tulee lukea kirjan nimi, sivujen lukumäärä sekä kirjoitusvuosi. Kirjojen lukeminen lopetetaan kun käyttäjä syöttää tyhjän kirjan nimen.
 
@@ -306,10 +492,3 @@ KonMari
 </sample-output>
 
 </programming-exercise>
-
-TODO: tänne muutama tehtävä, missä luetaan tiedosto, luodaan tiedoston riveistä olioita, ja sitten tehdään jotain olioille
-
-
-TODO: tänne tehtävä "musiikkia" (luodaan luokka ääni, lisätään niitä listalle, annetaan äänet soittimelle)
-
-TODO: mahdollisuus soittaa muiden tekemiä ääniä ja äänestää niitä osaksi verkkosivua?
