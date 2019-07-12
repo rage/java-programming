@@ -4,13 +4,21 @@ title: 'Tulostaminen'
 hidden: false
 ---
 
-<text-box variant='learningObjectives' name='Oppimistavoitteet'>
+<!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
 - Opit kirjoittamaan ohjelman, joka tulostaa tekstiä.
 - Tutustut ohjelmien suorittamiseen.
 - Tiedät mitä termillä parametri tarkoitetaan.
 
-</text-box>
+</text-box> -->
+
+<text-box variant='learningObjectives' name='Learning Objectives'>
+
+- You will learn to write a program that prints text.
+- You will get acquainted with executing programs
+- You will know what the term parameter means
+
+<!-- </text-box>
 
 Tulostuskomento `System.out.println("Hei maailma");` tulostaa tekstin "Hei maailma".
 
@@ -22,19 +30,48 @@ System.out.println("Hei maailma!");
 
 Hei maailma!
 
-</sample-output>
+</sample-output> -->
 
-Yllä olevan tekstialueen näköiset kohdat materiaalissa kuvaavat koodiesimerkin tuottamaan tulostuksen. Yllä ohjelma tuottaisi siis tulostuksen "Hei maailma!". Voit kokeilla kaikkia materiaalin esimerkkejä ohjelmointiympäristössä olevassa "Hiekkalaatikko"-nimisessä tehtäväpohjassa.
+</text-box>
 
-Tulostuskomennon avulla tulostettavaa tekstiä voi vaihtaa mielivaltaisesti, kunhan komento `System.out.println("mielivaltainen teksti");` -- eli `System` piste `out` piste `println` sulut auki `(` "teksti" sulut kiinni `)` ja puolipiste `;` pysyy muuttumattomana. Alla oleva komento tulostaa tekstin "Hei vaan!".
+Print command `System.out.println("Hello world");` prints text "Hello world".
 
 ```java
+System.out.println("Hello world!");
+```
+
+<sample-output>
+
+Hello world!
+
+</sample-output>
+
+
+<!-- Yllä olevan tekstialueen näköiset kohdat materiaalissa kuvaavat koodiesimerkin tuottamaan tulostuksen. Yllä ohjelma tuottaisi siis tulostuksen "Hei maailma!". Voit kokeilla kaikkia materiaalin esimerkkejä ohjelmointiympäristössä olevassa "Hiekkalaatikko"-nimisessä tehtäväpohjassa.
+
+Tulostuskomennon avulla tulostettavaa tekstiä voi vaihtaa mielivaltaisesti, kunhan komento `System.out.println("mielivaltainen teksti");` -- eli `System` piste `out` piste `println` sulut auki `(` "teksti" sulut kiinni `)` ja puolipiste `;` pysyy muuttumattomana. Alla oleva komento tulostaa tekstin "Hei vaan!". -->
+
+In the material, text areas like above show the output of the code examples. Program above would then produce output "Hello world!". You can try out any code examples TODO: viimeistele tää lause...
+
+Text printed with the print command can be changed arbitrarily as long as the command `System.out.println("arbitary text");` -- or `System` point `out` point `println` parenthehes open `(` "text" parentheses close `)` and semicolon `;` stays constant. Below command will print text "Oh, hello!".
+
+<!-- ```java
 System.out.println("Hei vaan!");
 ```
 
 <sample-output>
 
 Hei vaan!
+
+</sample-output> -->
+
+```java
+System.out.println("Oh, hello!");
+```
+
+<sample-output>
+
+Oh, hello!
 
 </sample-output>
 
