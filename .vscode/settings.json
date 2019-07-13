@@ -1,5 +1,10 @@
 {
   "files.eol": "\n",
   "files.trimTrailingWhitespace": true,
-  "files.insertFinalNewline": true
+  "files.insertFinalNewline": true,
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#213128",
+    "titleBar.activeBackground": "#2E4537",
+    "titleBar.activeForeground": "#FAFCFB"
+  }
 }

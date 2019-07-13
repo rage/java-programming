@@ -1,28 +1,45 @@
 ---
-path: "/osa-1/4-muuttujat"
-title: "Muuttujat"
+# path: "/osa-1/4-muuttujat"
+# title: "Muuttujat"
+path: "/osa-1/4-muuttujat" # NOTE: not translated
+title: "Variables"
 ---
 
-<text-box variant='learningObjectives' name='Oppimistavoitteet'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
-- Tunnet käsitteen muuttuja. Tiedät mitä ovat muuttujan tyyppi, muuttujan nimi, ja muuttujan arvo.
-- Osaat luoda ja käsitellä merkkijono-, kokonaisluku-, liukuluku-, ja totuusarvomuuttujia.
+<!-- - Tunnet käsitteen muuttuja. Tiedät mitä ovat muuttujan tyyppi, muuttujan nimi, ja muuttujan arvo.
+- Osaat luoda ja käsitellä merkkijono-, kokonaisluku-, liukuluku-, ja totuusarvomuuttujia. -->
+
+- You understand the concept of a variable. You know what variable types, names and values are.
+- You know how to create and use string, integer, float, and boolean type variables.
 
 </text-box>
 
-Tutustuimme syötteen lukemisen yhteydessä jo pikaisesti merkkijonomuuttujiin. Tutustutaan seuraavaksi muihin usein käytettyihin Javan muuttujatyyppeihin.
+<!-- Tutustuimme syötteen lukemisen yhteydessä jo pikaisesti merkkijonomuuttujiin. Tutustutaan seuraavaksi muihin usein käytettyihin Javan muuttujatyyppeihin. -->
 
-Muuttujaa kannattaa ajatella lokerona, johon voi tallettaa annetun tyyppistä tietoa. Tyyppejä ovat esimerkiksi teksti eli merkkijono (`String`), kokonaisluku (`int`), liukuluku (`double`) eli desimaaliluku, ja totuusarvo (`boolean`). Muuttujaan asetetaan arvo yhtäsuuruusmerkillä (`=`).
+We already familiarized ourselves with strings while reading inputs. Let's now move on to learn about other widely-used variable types in Java.
+
+<!-- Muuttujaa kannattaa ajatella lokerona, johon voi tallettaa annetun tyyppistä tietoa. Tyyppejä ovat esimerkiksi teksti eli merkkijono (`String`), kokonaisluku (`int`), liukuluku (`double`) eli desimaaliluku, ja totuusarvo (`boolean`). Muuttujaan asetetaan arvo yhtäsuuruusmerkillä (`=`). -->
+
+A variable can be thought of as a container in which  information of a particular type can be stored. Examples of these different types are text (`String`), whole numbers (`int`), decimal numbers(`double`), and true or false values (`boolean`). A value is placed in a variable using an equals sign (`=`). -->
+
+<!-- ```java
+int kuukausia = 12;
+``` -->
 
 ```java
-int kuukausia = 12;
+int months = 12;
 ```
 
-Yllä olevassa lauseessa asetetaan kokonaisluku-tyyppiä (int) olevaan muuttujaan nimeltä kuukausia arvo 12. Lause luetaan "muuttuja kuukausia saa arvon 12".
+<!-- Yllä olevassa lauseessa asetetaan kokonaisluku-tyyppiä (int) olevaan muuttujaan nimeltä kuukausia arvo 12. Lause luetaan "muuttuja kuukausia saa arvon 12".
 
-Muuttujan arvo voidaan yhdistää merkkijonoon +-merkillä seuraavan esimerkin mukaisesti.
+Muuttujan arvo voidaan yhdistää merkkijonoon +-merkillä seuraavan esimerkin mukaisesti. -->
 
-```java
+In the statement above, a value of 12 is assigned to the integer variable named months. The statement reads: "the variable months gets the value 12".
+
+A variable's value can be joined to a string using the + sign as seen in the following example.
+
+<!-- ```java
 String teksti = "sisältää tekstiä";
 int kokonaisluku = 123;
 double liukuluku = 3.141592653;
@@ -31,27 +48,49 @@ boolean totuusarvo = true;
 System.out.println("Tekstimuuttuja: " + teksti);
 System.out.println("Kokonaislukumuuttuja: " + kokonaisluku);
 System.out.println("Liukulukumuuttuja: " + liukuluku);
-System.out.println("Totuusarvo: " + totuusarvo);
+System.out.println("Totuusarvo: " + totuusarvo); -->
+
+```java
+String text = "contains text";
+int wholeNumber = 123;
+double decimalNumber = 3.141592653;
+boolean trueOrFalse = true;
+
+System.out.println("Text variable: " + text);
+System.out.println("Integer variable: " + wholeNumber);
+System.out.println("Decimal variable: " + decimalNumber);
+System.out.println("Boolean: " + trueOrFalse);
 ```
 
-Tulostus:
+<!-- Tulostus: -->
+Output:
 
 <sample-output>
-
+<!--
 Tekstimuuttuja: sisältää tekstiä
 Kokonaislukumuuttuja: 123
 Liukulukumuuttuja: 3.141592653
-Totuusarvo: true
+Totuusarvo: true -->
+
+Text variable: contains text
+Integer variable: 123
+Decimal variable: 3.141592653
+Booolean: true
 
 </sample-output>
 
-<programming-exercise name="Muuttuvat muuttujat" tmcname='osa01-Osa01_11.MuuttuvatMuuttujat'>
+<!-- <programming-exercise name="Muuttuvat muuttujat" tmcname='osa01-Osa01_11.MuuttuvatMuuttujat'> -->
 
-Tehtäväpohja sisältää ohjelman, joka tulostaa seuraavaa.
+<programming-exercise name="Varying variables" tmcname='osa01-Osa01_11.MuuttuvatMuuttujat'>
+<!-- NOTE: tmcname not translated -->
+
+<!-- Tehtäväpohja sisältää ohjelman, joka tulostaa seuraavaa. -->
+
+The exercise base contains a program that prints the following:
 
 <sample-output>
 
-Kanoja:
+<!-- Kanoja:
 3
 Pekonia (kg):
 5.5
@@ -61,15 +100,30 @@ Ei ole!
 Tässä vielä tiivistelmä:
 3
 5.5
-Ei ole!
+Ei ole! -->
+
+Chicken:
+3
+Bacon (kg):
+5.5
+Tractor:
+No!
+
+And a summary:
+3
+5.5
+No!
+
 
 </sample-output>
 
-Muuta ohjelmaa annetuista kohdista niin että tuloste on:
+<!-- Muuta ohjelmaa annetuista kohdista niin että tuloste on: -->
+
+Change the program in the given places so that it outputs the following:
 
 <sample-output>
 
-Kanoja:
+<!-- Kanoja:
 9000
 Pekonia (kg):
 0.1
@@ -77,6 +131,18 @@ Traktori:
 Zetor
 
 Tässä vielä tiivistelmä:
+9000
+0.1
+Zetor -->
+
+Chucken:
+9000
+Bacon (kg):
+0.1
+Tractor:
+Zetor
+
+And a summary:
 9000
 0.1
 Zetor
@@ -85,9 +151,11 @@ Zetor
 
 </programming-exercise>
 
-Muuttujien nimet ovat uniikkeja, eikä kahdella muuttujalla saa olla ohjelmassa samaa nimeä. Seuraavassa esimerkissä oleva ohjelma on virheellinen, koska ohjelmassa yritetään luoda kahteen kertaan muuttujaa nimeltä `pii`. Muuttujan luominen tapahtuu kun muuttuja esitellään ensimmäistä kertaa.
+<!-- Muuttujien nimet ovat uniikkeja, eikä kahdella muuttujalla saa olla ohjelmassa samaa nimeä. Seuraavassa esimerkissä oleva ohjelma on virheellinen, koska ohjelmassa yritetään luoda kahteen kertaan muuttujaa nimeltä `pii`. Muuttujan luominen tapahtuu kun muuttuja esitellään ensimmäistä kertaa. -->
 
-```java
+Variable names are unique - no two variables can have the same name. The program in the following example is erroneous since it attempts to create the variable `pii` twice. The variable is created the first time its introduced.
+
+<!-- ```java
 public class Esimerkki {
     public static void main(String[] args) {
         double pii = 3.14;
@@ -96,9 +164,23 @@ public class Esimerkki {
         System.out.println("Piin arvo on: " + pii);
     }
 }
+``` -->
+
+```java
+public class Example {
+    public static void main(String[] args) {
+        double pii = 3.14;
+        double pii = 3.141592653;
+
+        System.out.println("The value of pi is: " + pii);
+    }
+}
 ```
 
-Muuttujan tyyppi kerrotaan kun muuttuja esitellään ensimmäistä kertaa. Kun muuttujaan asetetaan uusi arvo, ei muuttujan tyyppiä enää kerrota.
+
+<!-- Muuttujan tyyppi kerrotaan kun muuttuja esitellään ensimmäistä kertaa. Kun muuttujaan asetetaan uusi arvo, ei muuttujan tyyppiä enää kerrota. -->
+
+The variable type is mentioned when the variable is first declared. When a new value is assigned to the variable, its type is no longer mentioned.
 
 ```java
 int luku = 10;
@@ -115,10 +197,13 @@ System.out.println(luku);
 </sample-output>
 
 
-## Muuttujaan asetetun arvon muuttaminen
+<!-- ## Muuttujaan asetetun arvon muuttaminen -->
 
-Muuttuja on olemassa sen esittelyhetkestä lähtien, ja sen arvo säilyy kunnes muuttujaan asetetaan toinen arvo. Muuttujan arvon muuttaminen onnistuu lauseella, jossa on muuttujan nimi, yhtäsuuruusmerkki, ja muuttujan uusi arvo. Huomaa että muuttujan tyyppi kirjoitetaan vain kun muuttuja esitellään ohjelmassa ensimmäistä kertaa.
+## Altering a value assigned to a variable
 
+<!-- Muuttuja on olemassa sen esittelyhetkestä lähtien, ja sen arvo säilyy kunnes muuttujaan asetetaan toinen arvo. Muuttujan arvon muuttaminen onnistuu lauseella, jossa on muuttujan nimi, yhtäsuuruusmerkki, ja muuttujan uusi arvo. Huomaa että muuttujan tyyppi kirjoitetaan vain kun muuttuja esitellään ohjelmassa ensimmäistä kertaa. -->
+
+A variable exist from the moment it first appears, and its initial value is preserved until another value is assigned to it. A variable's value is changed using an statement that comprises the variable name, an equals sign, and the new value to be assigned. Remember to keep in mind that the variable type is only written during the initial variable declaration.
 
 
 ```java
@@ -129,7 +214,8 @@ luku = 42;
 System.out.println("Muuttujan arvo on " + luku);
 ```
 
-Tulostus:
+<!-- Tulostus: -->
+Output:
 
 <sample-output>
 
@@ -138,23 +224,33 @@ Muuttujan arvo on 42
 
 </sample-output>
 
-Tarkastellaan edellisen ohjelmakoodin suoritusta askel askeleelta. Kun muuttuja esitellään ohjelmakoodissa ensimmäistä kertaa, eli sekä muuttujan tyyppi (tässä `int`) että sen nimi (tässä `luku`) kerrotaan tietokoneelle, tietokone luo muuttujaa varten "nimetyn lokeron". Tämän jälkeen yhtäsuuruusmerkin oikealla puolella oleva arvo kopioidaan tähän nimettyyn lokeroon.
+<!-- Tarkastellaan edellisen ohjelmakoodin suoritusta askel askeleelta. Kun muuttuja esitellään ohjelmakoodissa ensimmäistä kertaa, eli sekä muuttujan tyyppi (tässä `int`) että sen nimi (tässä `luku`) kerrotaan tietokoneelle, tietokone luo muuttujaa varten "nimetyn lokeron". Tämän jälkeen yhtäsuuruusmerkin oikealla puolella oleva arvo kopioidaan tähän nimettyyn lokeroon. -->
+
+Let's look at the preceding program's execution step-by-step. When the variable appears in the program for the first time, the computer is informed of both its type (`int` in this case) and its name (`luku` in this case), and the computer creates a 'named container' for the variable. Then, the value on the right side of the equals sign is copied to this named container.
 
 ![](../img/drawings/muuttujan-arvon-vaihto-1.png)
 
-Kun ohjelmakoodissa viitataan muuttujaan sen nimellä -- tässä halutaan tulostaa merkkijono "Muuttujan arvo on " sekä muuttujan `luku` arvo, muuttujan `luku` arvo haetaan sen nimellä löytyvästä lokerosta.
+<!-- Kun ohjelmakoodissa viitataan muuttujaan sen nimellä -- tässä halutaan tulostaa merkkijono "Muuttujan arvo on " sekä muuttujan `luku` arvo, muuttujan `luku` arvo haetaan sen nimellä löytyvästä lokerosta. -->
+
+Whenever a variable is referred to by its name in a program - here the goal is to print the string "The value of the variable is " and the value of `luku` variable, the variable is retrieved from a container that's found by its name.
 
 ![](../img/drawings/muuttujan-arvon-vaihto-2.png)
 
-Kun muuttujaan asetetaan arvo (tässä `luku = 42`), tarkistetaan ensin löytyykö muuttujan nimistä lokeroa. Jos lokero löytyy, uusi arvo kopioidaan lokeroon vanhan arvon tilalle ja vanha arvo katoaa. Jos muuttujan nimellä ei löydy lokeroa, ohjelman suoritus päättyy virheilmoitukseen tai ohjelmaa ei voida käynnistää.
+<!-- Kun muuttujaan asetetaan arvo (tässä `luku = 42`), tarkistetaan ensin löytyykö muuttujan nimistä lokeroa. Jos lokero löytyy, uusi arvo kopioidaan lokeroon vanhan arvon tilalle ja vanha arvo katoaa. Jos muuttujan nimellä ei löydy lokeroa, ohjelman suoritus päättyy virheilmoitukseen tai ohjelmaa ei voida käynnistää. -->
+
+Whenever a value is assigned to a variable (here `luku = 42`), a check is run to see whether or not a container of the given name already exists. If a container exists, a new value is copied in the place of the old value, and the old value disappears. If a container of the given name is not found, the program execution ends in an error message or it fails to run.
 
 ![](../img/drawings/muuttujan-arvon-vaihto-3.png)
 
-Seuraavaksi ohjelmakoodissa viitataan taas muuttujaan sen nimellä -- tässäkin halutaan tulostaa merkkijono "Muuttujan arvo on " sekä muuttujan `luku` arvo. Toimitaan kuten normaalisti, eli haetaan muuttujan `luku` arvo sen nimellä löytyvästä lokerosta.
+<!-- Seuraavaksi ohjelmakoodissa viitataan taas muuttujaan sen nimellä -- tässäkin halutaan tulostaa merkkijono "Muuttujan arvo on " sekä muuttujan `luku` arvo. Toimitaan kuten normaalisti, eli haetaan muuttujan `luku` arvo sen nimellä löytyvästä lokerosta. -->
+
+The variable is then referred to again by its name -- the aim is once again to print the string "The value of the variable is " and the value of `luku`. We proceed as normal by retrieving the value of `luku` from a container having its name.
 
 ![](../img/drawings/muuttujan-arvon-vaihto-4.png)
 
-Kuten huomaat, ohjelman lopputilanteessa muuttujan alkuperäinen arvo on kadonnut. Muuttuja voi sisältää kerrallaan aina vain yhden arvon.
+<!-- Kuten huomaat, ohjelman lopputilanteessa muuttujan alkuperäinen arvo on kadonnut. Muuttuja voi sisältää kerrallaan aina vain yhden arvon. -->
+
+ At the end of the program, you'll notice that the original value of the variable has disappeared. A given variable can hold only one value at a time.
 
 ## Muuttujan tyyppi pysyy
 
@@ -281,12 +377,12 @@ Kunkin tyypin mahdolliset arvot ovat siis rajattuja. Esimerkiksi merkkijonomuutt
 TODO: korjaa taulukko? koodinpätkät oikein rivittyvinä!
 
 
-| Tyyppi | Esimerkki | Sallitut arvot |
-|--------|-----------|----------------|
-| Kokonaisuluku, eli `int` | `int luku = 4;` | Kokonaislukumuuttuja voi sisältää kokonaislukuja, joiden arvot ovat välillä -2147483648 ja 2147483647. |
-| Liukuluku, eli `double` | `double luku = 4.2;` | Liukulukumuuttuja sisältää desimaalilukuja, joiden suurin mahdollinen arvo on noin 2<sup>1023</sup>  Kun desimaaliluku esitetään liukuluvun avulla, voi luku olla epätarkka;  liukuluvulla ei pysty esittämään mitä tahansa desimaalilukua.  Taustasyihin palataan kurssilla Tietokoneen toiminta. |
-| Merkkijono, eli `String` | `String teksti = "Hei!";` | Merkkijonomuuttuja voi sisältää merkkijonoja. Merkkijonot rajataan hipsuilla. |
-| Totuusarvo, eli `boolean` | `boolean tosi = true;` | Totuusarvomuuttuja sisältää joko arvon `true` eli totta tai arvon `false` eli epätotta. |
+| Tyyppi                    | Esimerkki                 | Sallitut arvot                                                                                                                                                                                                                                                                                     |
+| ------------------------- | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Kokonaisuluku, eli `int`  | `int luku = 4;`           | Kokonaislukumuuttuja voi sisältää kokonaislukuja, joiden arvot ovat välillä -2147483648 ja 2147483647.                                                                                                                                                                                             |
+| Liukuluku, eli `double`   | `double luku = 4.2;`      | Liukulukumuuttuja sisältää desimaalilukuja, joiden suurin mahdollinen arvo on noin 2<sup>1023</sup>  Kun desimaaliluku esitetään liukuluvun avulla, voi luku olla epätarkka;  liukuluvulla ei pysty esittämään mitä tahansa desimaalilukua.  Taustasyihin palataan kurssilla Tietokoneen toiminta. |
+| Merkkijono, eli `String`  | `String teksti = "Hei!";` | Merkkijonomuuttuja voi sisältää merkkijonoja. Merkkijonot rajataan hipsuilla.                                                                                                                                                                                                                      |
+| Totuusarvo, eli `boolean` | `boolean tosi = true;`    | Totuusarvomuuttuja sisältää joko arvon `true` eli totta tai arvon `false` eli epätotta.                                                                                                                                                                                                            |
 
 
 ## Erityyppisten muuttujien lukeminen käyttäjältä
