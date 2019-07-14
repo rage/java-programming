@@ -21,7 +21,7 @@ We already familiarized ourselves with strings while reading inputs. Let's now m
 
 <!-- Muuttujaa kannattaa ajatella lokerona, johon voi tallettaa annetun tyyppistä tietoa. Tyyppejä ovat esimerkiksi teksti eli merkkijono (`String`), kokonaisluku (`int`), liukuluku (`double`) eli desimaaliluku, ja totuusarvo (`boolean`). Muuttujaan asetetaan arvo yhtäsuuruusmerkillä (`=`). -->
 
-A variable can be thought of as a container in which  information of a particular type can be stored. Examples of these different types are text (`String`), whole numbers (`int`), decimal numbers(`double`), and true or false values (`boolean`). A value is placed in a variable using an equals sign (`=`). -->
+A variable can be thought of as a container in which  information of a particular type can be stored. Examples of these different types include text (`String`), whole numbers (`int`), floating-point numbers (`double`), and true or false values (`boolean`). A value is assigned  to a variable using the equals sign (`=`). -->
 
 <!-- ```java
 int kuukausia = 12;
@@ -35,7 +35,7 @@ int months = 12;
 
 Muuttujan arvo voidaan yhdistää merkkijonoon +-merkillä seuraavan esimerkin mukaisesti. -->
 
-In the statement above, a value of 12 is assigned to the integer variable named months. The statement reads: "the variable months gets the value 12".
+In the statement above, the value of 12 is assigned to an integer variable named months. The statement reads: "the variable months gets the value 12".
 
 A variable's value can be joined to a string using the + sign as seen in the following example.
 
@@ -53,12 +53,12 @@ System.out.println("Totuusarvo: " + totuusarvo); -->
 ```java
 String text = "contains text";
 int wholeNumber = 123;
-double decimalNumber = 3.141592653;
+double floatingPoint = 3.141592653;
 boolean trueOrFalse = true;
 
 System.out.println("Text variable: " + text);
 System.out.println("Integer variable: " + wholeNumber);
-System.out.println("Decimal variable: " + decimalNumber);
+System.out.println("Floating-point variable: " + floatingPoint);
 System.out.println("Boolean: " + trueOrFalse);
 ```
 
@@ -74,7 +74,7 @@ Totuusarvo: true -->
 
 Text variable: contains text
 Integer variable: 123
-Decimal variable: 3.141592653
+floating-point variable: 3.141592653
 Booolean: true
 
 </sample-output>
@@ -153,7 +153,7 @@ Zetor
 
 <!-- Muuttujien nimet ovat uniikkeja, eikä kahdella muuttujalla saa olla ohjelmassa samaa nimeä. Seuraavassa esimerkissä oleva ohjelma on virheellinen, koska ohjelmassa yritetään luoda kahteen kertaan muuttujaa nimeltä `pii`. Muuttujan luominen tapahtuu kun muuttuja esitellään ensimmäistä kertaa. -->
 
-Variable names are unique - no two variables can have the same name. The program in the following example is erroneous since it attempts to create the variable `pii` twice. The variable is created the first time its introduced.
+Variable names are unique - no two variables can have the same name. The program in the following example is erroneous as it attempts to create the variable `pi` twice. The variable is created the first time its introduced.
 
 <!-- ```java
 public class Esimerkki {
@@ -169,10 +169,10 @@ public class Esimerkki {
 ```java
 public class Example {
     public static void main(String[] args) {
-        double pii = 3.14;
-        double pii = 3.141592653;
+        double pi = 3.14;
+        double pi = 3.141592653;
 
-        System.out.println("The value of pi is: " + pii);
+        System.out.println("The value of pi is: " + pi);
     }
 }
 ```
@@ -182,13 +182,18 @@ public class Example {
 
 The variable type is mentioned when the variable is first declared. When a new value is assigned to the variable, its type is no longer mentioned.
 
-```java
+<!-- ```java
 int luku = 10;
 System.out.println(luku);
 luku = 4;
 System.out.println(luku);
+``` -->
+```java
+int value = 10;
+System.out.println(value);
+value = 4;
+System.out.println(value);
 ```
-
 <sample-output>
 
 10
@@ -206,12 +211,19 @@ System.out.println(luku);
 A variable exist from the moment it first appears, and its initial value is preserved until another value is assigned to it. A variable's value is changed using an statement that comprises the variable name, an equals sign, and the new value to be assigned. Remember to keep in mind that the variable type is only written during the initial variable declaration.
 
 
-```java
+<!-- ```java
 int luku = 123;
 System.out.println("Muuttujan arvo on " + luku);
 
 luku = 42;
 System.out.println("Muuttujan arvo on " + luku);
+``` -->
+```java
+int value = 123;
+System.out.println("The value of the variable is " + value);
+
+value = 42;
+System.out.println("The value of the variable is " + value);
 ```
 
 <!-- Tulostus: -->
@@ -219,8 +231,10 @@ Output:
 
 <sample-output>
 
-Muuttujan arvo on 123
-Muuttujan arvo on 42
+<!-- Muuttujan arvo on 123
+Muuttujan arvo on 42 -->
+The value of the variable is 123
+The value of the variable is 42
 
 </sample-output>
 
@@ -252,43 +266,81 @@ The variable is then referred to again by its name -- the aim is once again to p
 
  At the end of the program, you'll notice that the original value of the variable has disappeared. A given variable can hold only one value at a time.
 
-## Muuttujan tyyppi pysyy
+<!-- ## Muuttujan tyyppi pysyy -->
 
-Kun muuttujan tyyppi on kertaalleen määritelty, ei sitä voi enää muuttaa. Totuusarvoa ei siis voi esimerkiksi asettaa kokonaislukutyyppiseen muuttujaan, eikä totuusarvomuuttujaan voi asettaa kokonaislukua.
+## Variable type persists
 
-```java
+<!-- Kun muuttujan tyyppi on kertaalleen määritelty, ei sitä voi enää muuttaa. Totuusarvoa ei siis voi esimerkiksi asettaa kokonaislukutyyppiseen muuttujaan, eikä totuusarvomuuttujaan voi asettaa kokonaislukua. -->
+
+Once a variable's type has been declared, it can no longer be changed. For example, a boolean value cannot be assigned to a variable of type integer, nor can an integer be assigned to a variable of type boolean.
+
+<!-- ```java
 boolean onnistuukoKokonaisLuvunAsetus = false;
 onnistuukoKokonaisLuvunAsetus = 42; // Ei onnistu
 
 int luku = 10;
 onnistuukoKokonaisLuvunAsetus = luku; // Ei myöskään onnistu
-```
-
-Poikkeus kuitenkin löytyy: liukulukutyyppiseen muuttujaan voi asettaa kokonaisluvun, sillä Java osaa muuttaa kokonaisluvun liukuluvuksi asetuksen yhteydessä.
+``` -->
 
 ```java
+boolean integerAssignmentWillWork = false;
+integerAssignmentWillWork = 42; // Does not work
+
+int value = 10;
+integerAssignmentWillWork = value; // Neither does this
+```
+<!-- Poikkeus kuitenkin löytyy: liukulukutyyppiseen muuttujaan voi asettaa kokonaisluvun, sillä Java osaa muuttaa kokonaisluvun liukuluvuksi asetuksen yhteydessä. -->
+
+However, there is an exception: an integer can be assigned to a variable of type double, since Java can convert an integer to a double upon assignment.
+
+<!-- ```java
 double liukuluku = 0.42;
 liukuluku = 1; // Onnistuu
 
 int luku = 10;
 liukuluku = luku; // Onnistuu myös
 
-```
-
-
-Liukulukua ei kuitenkaan voi asettaa kokonaislukuun. Tämä johtuu siitä, että ohjelmointikielen suunnittelijat yrittävät suojella ohjelmoijaa tietoa kadottavilta ohjelmointivirheiltä.
+``` -->
 
 ```java
+double floatingPoint = 0.42;
+floatingPoint = 1; // Works
+
+int value = 10;
+floatingPoint = value; // Also works
+
+```
+
+<!-- Liukulukua ei kuitenkaan voi asettaa kokonaislukuun. Tämä johtuu siitä, että ohjelmointikielen suunnittelijat yrittävät suojella ohjelmoijaa tietoa kadottavilta ohjelmointivirheiltä. -->
+A floting-point value cannot, however, be assigned to an integer variable. That is because the creators of the language try to prevent developrs from making errors that lead to information being lost.
+
+<!-- ```java
 int luku = 4.2; // Ei onnistu
 
 double liukuluku = 0.42;
 luku = liukuluku; // Ei myöskään onnistu
+``` -->
+
+```java
+int value = 4.2; // Does not work
+
+double floatingPoint = 0.42;
+value = floatingPoint; // Neither does this
 ```
 
-## Muuttujan nimentä
+<!-- ## Muuttujan nimentä -->
+## Naming variables
 
-Muuttujien nimentä on oleellinen osa ohjelman kuvausta. Tarkastellaan kahta esimerkkiä.
+<!-- Muuttujien nimentä on oleellinen osa ohjelman kuvausta. Tarkastellaan kahta esimerkkiä. -->
+Naming variables is a fundamental aspect of describing a program. Let's look at two examples.
 
+<!-- ```java
+double a = 3.14;
+double b = 22.0;
+double c = a * b * b;
+
+System.out.println(c);
+``` -->
 ```java
 double a = 3.14;
 double b = 22.0;
@@ -296,21 +348,26 @@ double c = a * b * b;
 
 System.out.println(c);
 ```
-
 <sample-output>
 
 1519.76
 
 </sample-output>
 
-```java
+<!-- ```java
 double pii = 3.14;
 double sade = 22.0;
 double pintaAla = pii * sade * sade;
 
 System.out.println(pintaAla);
-```
+``` -->
+```java
+double pi = 3.14;
+double radius = 22.0;
+double surfaceArea = pi * radius * radius;
 
+System.out.println(surfaceArea);
+```
 <sample-output>
 
 1519.76
@@ -318,57 +375,117 @@ System.out.println(pintaAla);
 </sample-output>
 
 
-Edellä olevat kaksi esimerkkiä sisältävät täsmälleen saman toiminnallisuuden ja tuottavat saman tulostuksen. Toinen esimerkeistä on kuitenkin paljon ymmärrettävämpi. Kyseessä on ympyrän pinta-alan laskevan ohjelman koodi. Ensimmäisellä rivillä määritellään piin arvo, toisella rivillä ympyrän säde, ja kolmannella rivillä lasketaan pinta-ala. Tämän jälkeen pinta-ala tulostetaan.
+<!-- Edellä olevat kaksi esimerkkiä sisältävät täsmälleen saman toiminnallisuuden ja tuottavat saman tulostuksen. Toinen esimerkeistä on kuitenkin paljon ymmärrettävämpi. Kyseessä on ympyrän pinta-alan laskevan ohjelman koodi. Ensimmäisellä rivillä määritellään piin arvo, toisella rivillä ympyrän säde, ja kolmannella rivillä lasketaan pinta-ala. Tämän jälkeen pinta-ala tulostetaan. -->
 
-<text-box variant='hint' name="Muuttujat sanoittavat ohjelmaa ja ratkaistavaa ongelmaa">
+Both of the preceeding examples have exactly the same functionality, and print the same result. However, one of them is clearly more understandable. The idea is to compute the surface area of a circle. The value of pi is defined on the first row, the circle's radius on the second, and the surface area calculated on the third.
 
-Ohjelmointi on ongelmanratkaisuväline. Ohjelmoidessa luodaan ratkaisua jonkinlaiseen ongelmaan kuten autojen automaattiseen ohjaamiseen. Kun ongelmaa ratkaistaan, ohjelmoija päättää termeistä, joilla ongelmaa kuvataan. Tämä termistö, esimerkiksi ohjelmassa käytettävien muuttujien nimet, tulevat kuvaamaan ongelmaa ohjelman parissa tulevaisuudessa työskenteleville.
+<!-- <text-box variant='hint' name="Muuttujat sanoittavat ohjelmaa ja ratkaistavaa ongelmaa"> -->
+<text-box variant='hint' name="Variables express the program and the problem to be solved">
+<!--
+Ohjelmointi on ongelmanratkaisuväline. Ohjelmoidessa luodaan ratkaisua jonkinlaiseen ongelmaan kuten autojen automaattiseen ohjaamiseen. Kun ongelmaa ratkaistaan, ohjelmoija päättää termeistä, joilla ongelmaa kuvataan. Tämä termistö, esimerkiksi ohjelmassa käytettävien muuttujien nimet, tulevat kuvaamaan ongelmaa ohjelman parissa tulevaisuudessa työskenteleville. -->
 
-Kun sanoitat ratkaistavaa ongelmaa, mieti ongelmaan liittyviä käsitteitä ja niitä kuvaavia sanoja. Jos et keksi sopivia termejä, pohdi ensin mitkä sanat eivät ainakaan kuvaa ongelmaa. Valitse tämän jälkeen jonkinlainen termistö -- voit tyypillisesti onneksi parantaa käyttämääsi termistöä myös jälkikäteen.
+Programming is a problem-solving tool. Programming involves creating a solution to a given problem, such as automating the control of cars. Whenever a problem is being solved, the developer decides on the terms used to describe the problem. The terminology used in a program, such as the varibale names chosen, describes the problem for anyone working with the program in the future.
+
+<!-- Kun sanoitat ratkaistavaa ongelmaa, mieti ongelmaan liittyviä käsitteitä ja niitä kuvaavia sanoja. Jos et keksi sopivia termejä, pohdi ensin mitkä sanat eivät ainakaan kuvaa ongelmaa. Valitse tämän jälkeen jonkinlainen termistö -- voit tyypillisesti onneksi parantaa käyttämääsi termistöä myös jälkikäteen. -->
+
+As you're wording a problem to be solved, think about concepts related to that problem and words that describe them. If you struggle to come up with relevant terms, start off with thinking about the ones that definitely don't describe the porblem. When you're done, pick specific terminology that you're going to use -- fortunately, you can improve your terminology later on in most cases.
 
 </text-box>
 
-Muuttujan nimeämistä rajoittavat tietyt ehdot.
+<!-- Muuttujan nimeämistä rajoittavat tietyt ehdot.
 
-Muuttujan nimessä ei saa olla tiettyjä erikoismerkkejä, kuten huutomerkkejä (!). Välilyönti ei ole sallittu, sillä se erottaa komentojen osat toisistaan. Välilyönti kannattaa korvata [camelCase](http://fi.wikipedia.org/wiki/CamelCase "CamelCase – Wikipedia")<-tyylillä, jolloin nimi `muistuttaneeKamelia`. **Huom!** Muuttujien nimien ensimmäinen kirjain kirjoitetaan aina pienellä:
+Muuttujan nimessä ei saa olla tiettyjä erikoismerkkejä, kuten huutomerkkejä (!). Välilyönti ei ole sallittu, sillä se erottaa komentojen osat toisistaan. Välilyönti kannattaa korvata [camelCase](http://fi.wikipedia.org/wiki/CamelCase "CamelCase – Wikipedia")<-tyylillä, jolloin nimi `muistuttaneeKamelia`. **Huom!** Muuttujien nimien ensimmäinen kirjain kirjoitetaan aina pienellä: -->
 
+Variable naming is bound by certain conditions.
+
+Variable names cannot contain certain special symbols, such as exclamation marks (!). Spaces are also not allowed, as they're used to seperate parts of commands. A space should be compensated with [camelCase](http://fi.wikipedia.org/wiki/CamelCase "CamelCase – Wikipedia") <-style, where the name's shape resembles that of a camel's. **Note!** The first letter of a variable's name is always lower-cased: -->
+
+<!--
 ```java
 int camelCaseMuuttuja = 7;
-```
-
-Numeroita voidaan käyttää muuttujan nimessä, kunhan nimi ei ala numerolla. Nimi ei myöskään voi koostua pelkistä numeroista.
+``` -->
 
 ```java
+int camelCaseVariable = 7;
+```
+
+
+
+<!-- Numeroita voidaan käyttää muuttujan nimessä, kunhan nimi ei ala numerolla. Nimi ei myöskään voi koostua pelkistä numeroista. -->
+
+Numbers can be used within a variable name as long as the name does not begin with a number. Additionally, a name cannot consists of numbers only.
+
+
+<!--
+```java
+int 7muuttuja = 4; // Ei sallittu!
+int muuttuja7 = 4; // Sallittu, mutta ei kuvaava muuttujan nimi
+``` -->
+
+```java
+int 7variable = 4; // Not allowed!
+int variable7 = 4; // Allowed, but not a descriptive variable name
+```
+
+<!-- Muuttujan nimi ei saa olla jo entuudestaan käytössä. Tällaisia nimiä ovat mm. aikaisemmin määritellyt muuttujat ja Javan valmiit komennot, kuten `System.out.print` ja `System.out.println`. -->
+
+A variable's name must not already be in use. These include, for instance, variables previously defined in the program and commands that come with Java, such as `System.out.print` ja `System.out.println`. -->
+
+<!-- ```java
 int 7muuttuja = 4; // Ei sallittu!
 int muuttuja7 = 4; // Sallittu, mutta ei kuvaava muuttujan nimi
 ```
 
-
-Muuttujan nimi ei saa olla jo entuudestaan käytössä. Tällaisia nimiä ovat mm. aikaisemmin määritellyt muuttujat ja Javan valmiit komennot, kuten `System.out.print` ja `System.out.println`.
-
 ```java
 int camelCase = 2;
 int camelCase = 5; // Ei sallittu -- muuttuja camelCase on jo käytössä!
+``` -->
+
+```java
+int 7variable = 4; // Not Allowed!
+int variable7 = 4; // Allowed, but not a descriptive variable name
 ```
 
-Muuttujien nimissä ei tule myöskään käyttää ääkkösiä. Voit korvata ääkköset aakkosilla, eli muuta ä -> a ja ö -> o.
+```java
+int camelCase = 2;
+int camelCase = 5; // Not allowed -- camelCase variable already in use!
+```
 
-### Sallittuja muuttujien nimiä
+<!-- Muuttujien nimissä ei tule myöskään käyttää ääkkösiä. Voit korvata ääkköset aakkosilla, eli muuta ä -> a ja ö -> o. -->
 
-* kuukaudenViimeinenPaiva = 20
+Letters containing diacritics should also not be used in variable names. You can replace these letters with their non-diacrtic equivalents, i.e. convert ä -> a and ö -> o. -->
+
+
+<!-- ### Sallittuja muuttujien nimiä -->
+<!-- * kuukaudenViimeinenPaiva = 20
 * ensimmainenVuosi = 1952
-* nimi = "Essi"
+* nimi = "Essi" -->
+### Permissible variable names
+* lastDayOfMonth = 20
+* firstYear = 1952
+* name = "Essi"
 
-### Virheellisiä muuttujien nimiä
+<!-- ### Virheellisiä muuttujien nimiä
 
 * kuukauden viimeinen päivä = 20
 * 1paiva = 1952
 * varo! = 1910
+* 1920 = 1 -->
+
+### Erroneous variable names
+
+* last day of month = 20
+* 1day = 1952
+* beware! = 1910
 * 1920 = 1
 
-## Muuttujan tyyppi kertoo muuttujan mahdollisista arvoista
 
-Muuttujan tyyppi kerrotaan muuttujan esittelyn yhteydessä. Esimerkiksi merkkijonon "teksti" sisältävä merkkijonomuuttuja luodaan lauseella `String merkkijono = "teksti";` ja kokonaisluvun 42 sisältävä kokonaislukumuuttuja luodaan lauseella `int luku = 42;`.
+<!-- ## Muuttujan tyyppi kertoo muuttujan mahdollisista arvoista -->
+## Variable type informs of variable's possible values
+
+<!-- Muuttujan tyyppi kerrotaan muuttujan esittelyn yhteydessä. Esimerkiksi merkkijonon "teksti" sisältävä merkkijonomuuttuja luodaan lauseella `String merkkijono = "teksti";` ja kokonaisluvun 42 sisältävä kokonaislukumuuttuja luodaan lauseella `int luku = 42;`. -->
+
+A variable's type is stated when its declared. For example, a variable containing the string "text" is created with the statement `String string = "text";`, and an integer having the value 42 is created with the statement `int value = 42;`. -->
 
 Muuttujan tyyppi määrää arvot, joita muuttuja voi saada. `String`-tyyppiset muuttujat saavat arvokseen merkkijonoja, `int`-tyyppiset muuttujat saavat arvokseen kokonaislukuja, `double`-tyyppiset muuttujat saavat arvokseen liukulukuja, ja `boolean`-tyyppiset muuttujat saavat arvokseen totuusarvoja.
 
