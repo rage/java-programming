@@ -1,18 +1,25 @@
 ---
 path: "/osa-1/5-laskentaa"
-title: "Laskentaa luvuilla"
+# title: "Laskentaa luvuilla"
+title: "Calculating with numbers"
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
-- Osaat tehdä laskutoimintoja muuttujien avulla.
-- Osaat muodostaa tulostuslauseita, jossa on mukana sekä laskuoperaatioita (lausekkeita) että merkkijonoja.
+<!-- - Osaat tehdä laskutoimintoja muuttujien avulla. -->
+
+- You know how to perform calculations with the help of variables.
+
+<!-- - Osaat muodostaa tulostuslauseita, jossa on mukana sekä laskuoperaatioita (lausekkeita) että merkkijonoja. -->
+- You can form printable statements including both calculations (expressions) and strings.
 
 </text-box>
 
-Laskuoperaatiot ovat tuttuja ja suoraviivaisia: yhteenlasku `+`, erotus `-`, kertolasku `*` ja jakolasku `/`. Laskentajärjestys on myös tuttu: laskenta tehdään vasemmalta oikealle sulut huomioon ottaen. Kuitenkin `*` ja `/` lasketaan ennen `+` ja `-` operaatioita, samoin kuin perus- tai kansakoulumatematiikassa on tullut tutuksi.
+<!-- Laskuoperaatiot ovat tuttuja ja suoraviivaisia: yhteenlasku `+`, erotus `-`, kertolasku `*` ja jakolasku `/`. Laskentajärjestys on myös tuttu: laskenta tehdään vasemmalta oikealle sulut huomioon ottaen. Kuitenkin `*` ja `/` lasketaan ennen `+` ja `-` operaatioita, samoin kuin perus- tai kansakoulumatematiikassa on tullut tutuksi. -->
 
-```java
+The basic mathematical operations are both familiar and straightforward: addition `+`, subtraction `-`, multiplication `*`, and division`/`. Their order follows familiar rules, too: the operations are performed from left to right, taking brackets into account. Yet `*` and `/` precede `+` and `-`, as is familiar from elementary school mathematics.
+
+<!-- ```java
 int eka = 2;
 System.out.println(eka); // tulostaa 2
 int toka = 4;
@@ -20,23 +27,47 @@ System.out.println(toka); // tulostaa 4
 
 int summa = eka + toka; // muuttujaan summa asetetaan muuttujien eka ja toka arvojen summa
 System.out.println(summa); // tulostaa 6
-```
-
-## Laskujärjestys ja sulut
-
-Laskujärjestykseen voi vaikuttaa sulkujen avulla. Sulkujen sisällä olevat laskuoperaatiot suoritetaan ennen niiden ulkopuolella olevia laskuoperaatioita.
+``` -->
 
 ```java
+int first = 2;
+System.out.println(first); // prints 2
+int second = 4;
+System.out.println(second); // prints 4
+
+int sum = first + second; // The sum of the values of the variables first and second is assigned to the variable sum
+System.out.println(sum); // prints 6
+```
+
+<!-- ## Laskujärjestys ja sulut -->
+## Order of operations and brackets
+
+<!-- Laskujärjestykseen voi vaikuttaa sulkujen avulla. Sulkujen sisällä olevat laskuoperaatiot suoritetaan ennen niiden ulkopuolella olevia laskuoperaatioita. -->
+
+It is possible to affect the order of operations with brackets. The operations contained within brackets are performed before the ones outside.
+
+<!-- ```java
 int laskuSuluilla = (1 + 1) + 3 * (2 + 5);
 System.out.println(laskuSuluilla); // tulostaa 23
 
 int laskuSuluitta = 1 + 1 + 3 * 2 + 5;
 System.out.println(laskuSuluitta); // tulostaa 13
-```
-
-Yllä olevan esimerkin voi jakaa myös osiin.
+``` -->
 
 ```java
+int calculationWithBrackets = (1 + 1) = 3 * (2 + 5);
+System.out.println(calculationWithBrackets); // prints 23
+
+int calculationWithoutBrackets = 1 + 1 + 3 * 2 + 5;
+System.out.println(calculationWithoutBrackets); // prints 13
+
+```
+
+<!-- Yllä olevan esimerkin voi jakaa myös osiin. -->
+
+The example above can also be divided into steps.
+
+<!-- ```java
 int laskuSuluilla = (1 + 1);
 System.out.println(laskuSuluilla); // tulostaa 2
 laskuSuluilla = laskuSuluilla + 3 * (2 + 5);
@@ -46,43 +77,96 @@ int laskuSuluitta = 1 + 1;
 laskuSuluitta = laskuSuluitta + 3 * 2;
 laskuSuluitta = laskuSuluitta + 5;
 System.out.println(laskuSuluitta); // tulostaa 13
-```
-
-<programming-exercise name="Sekunnit vuorokaudessa" tmcname='osa01-Osa01_16.SekunnitVuorokaudessa'>
-
-Toteuta tehtäväpohjaan ohjelma, joka kysyy käyttäjältä vuorokausien lukumäärää. Tämän jälkeen ohjelma tulostaa sekuntien määrän annetuissa vuorokausissa.
-
-Opimme aiemmin, että luvun lukeminen onnistuu seuraavasti:
+``` -->
 
 ```java
+int calculationWithBrackets = (1 + 1);
+System.out.println(calculationWithBrackets); // prints 2
+calculationWithBrackets = calculationWithBrackets + 3 * (2 + 5);
+System.out.println(calculationWithBrackets); // prints 23
+
+int calculationWithoutBrackets = 1 + 1;
+calculationWithoutBrackets = calculationWithoutBrackets + 3 * 2;
+calculationWithoutBrackets = calculationWithoutBrackets + 5;
+System.out.println(calculationWithoutBrackets); // prints 13
+```
+
+<!-- <programming-exercise name="Sekunnit vuorokaudessa" tmcname='osa01-Osa01_16.SekunnitVuorokaudessa'> -->
+
+<programming-exercise name="Seconds in a day"
+tmcname='osa01-Osa01_16.SekunnitVuorokaudessa'>
+
+<!-- Toteuta tehtäväpohjaan ohjelma, joka kysyy käyttäjältä vuorokausien lukumäärää. Tämän jälkeen ohjelma tulostaa sekuntien määrän annetuissa vuorokausissa. -->
+
+In the exercise template, implement a program that asks the user for the number of days. After this, the program prints the number of seconds in the given number of days.
+
+<!-- Opimme aiemmin, että luvun lukeminen onnistuu seuraavasti: -->
+
+Earlier we learned to read an integer in the following manner:
+
+<!-- ```java
 Scanner lukija = new Scanner(System.in);
 
 System.out.println("Kirjoita luku ");
 int luku = Integer.valueOf(lukija.nextLine());
 System.out.println("Kirjoitit " + luku);
+``` -->
+
+```java
+Scanner scanner = new Scanner(System.in);
+
+System.out.println("Write an integer ");
+int number = Integer.valueOf(scanner.nextLine());
+System.out.println("You wrote " + number);
 ```
 
-Esimerkkitulostuksia:
+<!-- Esimerkkitulostuksia: -->
 
-<sample-output>
+Print examples:
+
+<!-- <sample-output>
 
 Kuinka monen vuorokauden sekunnit tulostetaan?
 **1**
 86400
 
-</sample-output>
+</sample-output> -->
 
 <sample-output>
+
+For how many days will the number of seconds be printed?
+**1**
+86400
+
+</sample-output>
+
+<!-- <sample-output>
 
 Kuinka monen vuorokauden sekunnit tulostetaan?
 **3**
 259200
 
-</sample-output>
+</sample-output> -->
 
 <sample-output>
 
+For how many days will the number of seconds be printed?
+**3**
+259200
+
+</sample-output>
+
+<!-- <sample-output>
+
 Kuinka monen vuorokauden sekunnit tulostetaan?
+**7**
+604800
+
+</sample-output> -->
+
+<sample-output>
+
+For how many days will the number of seconds be printed?
 **7**
 604800
 
@@ -94,32 +178,51 @@ Kuinka monen vuorokauden sekunnit tulostetaan?
 <quiznator id="5c12b7f263de8e5db0cf8b8f"></quiznator>
 
 
-<text-box variant='hint' name='Lauseke ja lause'>
+<text-box variant='hint' name='Expression and statement'>
 
-Lauseke (expression) on arvojen yhdistelmä, joka muuntuu arvoksi laskuoperaation tai evaluaation yhteydessä. Alla oleva lause sisältää lausekkeen `1 + 1 + 3 * 2 + 5`, joka evaluoidaan ennen arvon asetusta muuttujaan.
+<!-- Lauseke (expression) on arvojen yhdistelmä, joka muuntuu arvoksi laskuoperaation tai evaluaation yhteydessä. Alla oleva lause sisältää lausekkeen `1 + 1 + 3 * 2 + 5`, joka evaluoidaan ennen arvon asetusta muuttujaan. -->
+An expression is a combination of values which turns into a value when it is part of an operation or evaluated. The statement below includes the expression `1 + 1 + 3 * 2 + 5` which is evaluated before the value is assigned to the variable.
+
+<!-- ```java
+int laskuSuluitta = 1 + 1 + 3 * 2 + 5;
+``` -->
 
 ```java
-int laskuSuluitta = 1 + 1 + 3 * 2 + 5;
+int calculationWithoutBrackets = 1 + 1 + 3 * 2 + 5;
 ```
 
-Lausekkeen evaluaatio tapahtuu aina ennen muuttujan arvon asetusta, eli yllä lasku "1 + 1 + 3 * 2 + 5" suoritetaan ennen tuloksen asetusta muuttujaan.
+<!-- Lausekkeen evaluaatio tapahtuu aina ennen muuttujan arvon asetusta, eli yllä lasku "1 + 1 + 3 * 2 + 5" suoritetaan ennen tuloksen asetusta muuttujaan. -->
+
+The evaluation of an expression always precedes the placement of its value, so in the example above the calculation "1 + 1 + 3 * 2 + 5" is performed before placing the result in the variable.
 
 </text-box>
 
 
-Lausekkeen evaluointi tapahtuu ohjelmakoodissa siinä kohtaa, missä lauseke on. Evaluointi onnistuu siis esimerkiksi myös tulostuslauseen yhteydessä, jos lauseketta käytetään tulostuslauseen parametrin arvon laskemisessa.
+<!-- Lausekkeen evaluointi tapahtuu ohjelmakoodissa siinä kohtaa, missä lauseke on. Evaluointi onnistuu siis esimerkiksi myös tulostuslauseen yhteydessä, jos lauseketta käytetään tulostuslauseen parametrin arvon laskemisessa. -->
 
-```java
+The evaluation of an expression in the code occurs at the place it is written. Therefore evaluation is possible in the case of a print statement if the value of the parameter for the print statement is calculated from an expression.
+
+<!-- ```java
 int eka = 2;
 int toka = 4;
 
 System.out.println(eka + toka); // tulostaa 6
 System.out.println(2 + toka - eka - toka); // tulostaa 0
-```
-
-Lauseke ei muuta muuttujassa olevaa arvoa, ellei lausekkeen lopputulosta aseteta muuttujan arvoksi tai anneta parametrina esimerkiksi tulostukselle.
+``` -->
 
 ```java
+int first = 2;
+int second = 4;
+
+System.out.println(first + second); // prints 6
+System.out.println(2 + second - first - second); // prints 0
+```
+
+<!-- Lauseke ei muuta muuttujassa olevaa arvoa, ellei lausekkeen lopputulosta aseteta muuttujan arvoksi tai anneta parametrina esimerkiksi tulostukselle. -->
+
+An expression does not change the value stored in a variable unless the end result is assigned to a variable or used as a parameter to printing, for instance.
+
+<!-- ```java
 int eka = 2;
 int toka = 4;
 
@@ -127,45 +230,91 @@ int toka = 4;
 // ei aseteta minkään muuttujan arvoksi tai anneta parametrina
 // tulostuslauseelle
 eka + toka;
+``` -->
+
+```java
+int first = 2;
+int second = 4;
+
+// the expression below does not even work, since
+// the result is not assigned to any variable
+// or given as a parameter to a print statement
+first + second;
 ```
 
 <quiznator id="5c12b7f263de8e5db0cf8b90"></quiznator>
 
 
-## Laskentaa ja tulostamista
+<!-- ## Laskentaa ja tulostamista -->
+## Calculating and printing
 
-Muuttujan arvon voi tulostaa komennolla `System.out.println`. Tulostettavaan hipsuilla merkittyyn merkkijonoon, esim. "Pituus ", voidaan lisätä muuta tulostettavaa operaation `+` avulla.
+<!-- Muuttujan arvon voi tulostaa komennolla `System.out.println`. Tulostettavaan hipsuilla merkittyyn merkkijonoon, esim. "Pituus ", voidaan lisätä muuta tulostettavaa operaation `+` avulla. -->
+The command `System.out.println` prints the value of a variable. The string to be printed, which is marked by quotation marks, can be appended with the operation `+`.
 
-```java
+<!-- ```java
 int pituus = 42;
 System.out.println("Pituus " + pituus);
+``` -->
+
+```java
+int length = 42;
+System.out.println("Length " + length);
 ```
 
-<sample-output>
+<!-- <sample-output>
 
 Pituus 42
 
-</sample-output>
-
-```java
-System.out.println("tuossa on kokonaisluku --> " + 2);
-System.out.println(2 + " <-- tuossa on kokonaisluku");
-```
+</sample-output> -->
 
 <sample-output>
 
-tuossa on kokonaisluku --> 2
-2 <-- tuossa on kokonaisluku
+Length 42
 
 </sample-output>
 
-Jos toinen operaation `+` kohteista on merkkijono, muutetaan myös toinen operaation kohteista merkkijonoksi ohjelman suorituksen yhteydessä. Alla olevassa esimerkissä kokonaisluku `2` on muutettu merkkijonoksi "2", ja siihen on yhdistetty merkkijono.
-
-Aiemmin esitellyt laskusäännöt pätevät täälläkin:
+<!-- ```java
+System.out.println("tuossa on kokonaisluku -- > " + 2);
+System.out.println(2 + " < -- tuossa on kokonaisluku");
+```
+-->
 
 ```java
+System.out.println("that is an integer --> " + 2);
+System.out.println(2 + " <-- that is an integer");
+```
+
+
+<!-- <sample-output>
+
+tuossa on kokonaisluku -- > 2
+2 <-- tuossa on kokonaisluku
+
+</sample-output> -->
+
+<sample-output>
+
+that is an integer --> 2
+2 <-- that is an integer
+
+</sample-output>
+
+<!-- Jos toinen operaation `+` kohteista on merkkijono, muutetaan myös toinen operaation kohteista merkkijonoksi ohjelman suorituksen yhteydessä. Alla olevassa esimerkissä kokonaisluku `2` on muutettu merkkijonoksi "2", ja siihen on yhdistetty merkkijono. -->
+
+If one of the operands of the operation `+` is a string, the other operand will be changed into a string as well when the program executes. In the example below, the integer `2` is turned into the string "2", after which a string is appended to it.
+
+<!-- Aiemmin esitellyt laskusäännöt pätevät täälläkin: -->
+
+The rules of operation precedence apply in this context, too:
+
+<!-- ```java
 System.out.println("Neljä: " + (2 + 2));
 System.out.println("Mutta! kaksikymmentäkaksi: " + 2 + 2);
+``` -->
+
+```java
+System.out.println("Four: " + (2 + 2));
+System.out.println("But! twenty-two" + 2 + 2);
 ```
 
 <sample-output>
