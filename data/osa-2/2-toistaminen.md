@@ -6,87 +6,108 @@ title: 'Toiminnallisuuden toistaminen'
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
-- Tunnet käsitteen toistolause ja osaat luoda ohjelman, joka sisältää toistolauseen.
-- Osaat käyttää `break`-komentoa toistolauseen suorituksen lopettamiseen ja toistolausetta seuraavaan käskyyn siirtymiseen.
-- Osaat käyttää `continue`-komentoa toistolauseen alkuun palaamiseen.
-- Osaat luoda ohjelman, joka lukee käyttäjältä syötettä kunnes käyttäjä syöttää tietynlaisen syötteen -- esim luku 0 tai merkkijono "loppu", jonka jälkeen ohjelma kertoo ennen lopettamista syötetyistä syötteistä (esim. syötteiden lukumäärä, lukujen tapauksessa summa ja keskiarvo).
+<!-- - Tunnet käsitteen toistolause ja osaat luoda ohjelman, joka sisältää toistolauseen. -->
+- You are familiar with while-loops and know how to utilize them in your program.
+
+<!-- - Osaat käyttää `break`-komentoa toistolauseen suorituksen lopettamiseen ja toistolausetta seuraavaan käskyyn siirtymiseen. -->
+- You know how to use the `break`-command in order to break out of the while-loop and onto the next statement.
+
+<!-- - Osaat käyttää `continue`-komentoa toistolauseen alkuun palaamiseen. -->
+- You know how to use `continue`-command to go to the beginning of the while-loop.
+
+<!-- - Osaat luoda ohjelman, joka lukee käyttäjältä syötettä kunnes käyttäjä syöttää tietynlaisen syötteen -- esim luku 0 tai merkkijono "loppu", jonka jälkeen ohjelma kertoo ennen lopettamista syötetyistä syötteistä (esim. syötteiden lukumäärä, lukujen tapauksessa summa ja keskiarvo). -->
+- You are able to create a program that reads user inputs until a specific input is given, for example number 0 or a string "end", after which the program prints something about the given inputs (if the inputs were numbers, then the sum and the average of the numbers)
 
 </text-box>
 
-Tietokoneen sisältämä käskyjen suorittamiseen erikoistunut prosessori pystyy -- moderneissa tietokoneissa -- suorittamaan yli miljardi (konekielistä) käskyä sekunnissa. Tässä osassa tutustumme toistettavan ohjelmakoodin määrittelyyn toistolauseiden avulla.
+<!-- Tietokoneen sisältämä käskyjen suorittamiseen erikoistunut prosessori pystyy -- moderneissa tietokoneissa -- suorittamaan yli miljardi (konekielistä) käskyä sekunnissa. Tässä osassa tutustumme toistettavan ohjelmakoodin määrittelyyn toistolauseiden avulla. -->
+<!-- TODO Missä muodossa tulisi ilmaista? -->
+Computer contains a processor that can, in modern computers, process over billions of (machinecode) commands per second. In this section we will get familiar with writing program code that's going to be repeated with while-loops.
 
-Motivoidaan toistolauseiden käyttöä hieman. Alla on esimerkki ohjelmasta, missä kysytään käyttäjältä viisi lukua ja lasketaan niiden summa.
+<!-- Motivoidaan toistolauseiden käyttöä hieman. Alla on esimerkki ohjelmasta, missä kysytään käyttäjältä viisi lukua ja lasketaan niiden summa. -->
+As a motivation to using while-loops, there's an example code bellow which asks five numbers from the user and calculates their sum.
 
 ```java
-Scanner lukija = new Scanner(System.in);
-int summa = 0;
+Scanner scanner = new Scanner(System.in);
+int sum = 0;
 
-System.out.println("Syötä luku");
-summa = summa + Integer.valueOf(lukija.nextLine());
+System.out.println("Input a number: ");
+sum = sum + Integer.valueOf(scanner.nextLine());
 
-System.out.println("Syötä luku");
-summa = summa + Integer.valueOf(lukija.nextLine());
+System.out.println("Input a number: ");
+sum = sum + Integer.valueOf(scanner.nextLine());
 
-System.out.println("Syötä luku");
-summa = summa + Integer.valueOf(lukija.nextLine());
+System.out.println("Input a number: ");
+sum = sum + Integer.valueOf(scanner.nextLine());
 
-System.out.println("Syötä luku");
-summa = summa + Integer.valueOf(lukija.nextLine());
+System.out.println("Input a number: ");
+sum = sum + Integer.valueOf(scanner.nextLine());
 
-System.out.println("Syötä luku");
-summa = summa + Integer.valueOf(lukija.nextLine());
+System.out.println("Input a number: ");
+sum = sum + Integer.valueOf(scanner.nextLine());
 
-System.out.println("Lukujen summa on " + summa);
+System.out.println("The sum of the numbers is " + sum);
 ```
 
-Hoitaa asian, mutta ei kovin tyylikkäästi. Entä jos ohjelman pitäisi lukea sata tai vaikkapa tuhat lukua ja tulostaa niiden summa? Entä jos ohjelman pitäisi lukea kolme lukua?
+<!-- Hoitaa asian, mutta ei kovin tyylikkäästi. Entä jos ohjelman pitäisi lukea sata tai vaikkapa tuhat lukua ja tulostaa niiden summa? Entä jos ohjelman pitäisi lukea kolme lukua? -->
+It does the trick, but not quite elegantly. What if the program had to read one hundred or perhaphs one thousand numbers and print their sum? What if the program had to read only three numbers?
 
-Tämän ongelman voi ratkaista toistolauseella, joka pitää kirjaa sekä summasta että lukemiskerroista. Viiden luvun summan tulostava toistolauseella toteutettava ohjelma näyttää seuraavalta.
+<!-- Tämän ongelman voi ratkaista toistolauseella, joka pitää kirjaa sekä summasta että lukemiskerroista. Viiden luvun summan tulostava toistolauseella toteutettava ohjelma näyttää seuraavalta. -->
+This problem can be solved with a while-loop, which keeps track of both the sum and the amount of read numbers. The program that prints the sum of five numbers looks now as follows
 
 ```java
-Scanner lukija = new Scanner(System.in);
+Scanner scanner = new Scanner(System.in);
 
-int luettujaLukuja = 0;
-int summa = 0;
+int numbersRead = 0;
+int sum = 0;
 
 while (true) {
-    if (luettujaLukuja == 5) {
+    if (numbersRead == 5) {
         break;
     }
 
-    System.out.println("Syötä luku");
-    summa = summa + Integer.valueOf(lukija.nextLine());
-    luettujaLukuja = luettujaLukuja + 1;
+    System.out.println("Input number");
+    sum = sum + Integer.valueOf(scanner.nextLine());
+    numbersRead = numbersRead + 1;
 }
 
-System.out.println("Lukujen summa on " + summa);
+System.out.println("The sum of the numbers is " + sum);
 ```
 
-Tutustutaan seuraavaksi toistolauseisiin.
+<!-- Tutustutaan seuraavaksi toistolauseisiin. -->
+Next, we will get familiar with while-loops.
 
-## Toistolause ja ikuinen toisto
-
-Toistolause sisältää lausekkeen, jonka perusteella päätellään jatketaanko toistoa, sekä lohkon, joka sisältää toistettavan lähdekoodin. Toistolauseen muoto on seuraava.
+<!-- ## Toistolause ja ikuinen toisto -->
+## While-loop and infinite loop
+<!-- Toistolause sisältää lausekkeen, jonka perusteella päätellään jatketaanko toistoa, sekä lohkon, joka sisältää toistettavan lähdekoodin. Toistolauseen muoto on seuraava. -->
+The while-loop contains a statement which determines if the code within the loop should be repeated. The form of a while-loop is as follows
 
 ```java
-while (_lauseke_) {
-    // aaltosuluilla rajatun lohkon sisältö
-    // lohkossa voi olla käytännössä
-    // rajaton määrä sisältöä
+while (_statement_) {
+    // TODO häh?
+    //* aaltosuluilla rajatun lohkon sisältö
+    //* lohkossa voi olla käytännössä
+    //* rajaton määrä sisältöä
+
+    // The content of the block surrounded by curly brackets
+    // the block can have practically endless amount of content
 }
 ```
 
-Käytämme toistaiseksi lausekkeena `true`-arvoa, eli boolean-tyyppista arvoa "totta". Tämä tarkoittaa sitä, että toistolauseen toistamista jatketaan aina kun ohjelma on tilantessa, missä selvitetään tuleeko toistolauseen suoritusta jatkaa. Tämä tapahtuu sekä silloin kun ohjelman suoritus päätyy toistolauseeseen ensimmäistä kertaa että silloin kun ohjelman suoritus päätyy toistolauseen lohkon loppuun.
+<!-- Käytämme toistaiseksi lausekkeena `true`-arvoa, eli boolean-tyyppista arvoa "totta". Tämä tarkoittaa sitä, että toistolauseen toistamista jatketaan aina kun ohjelma on tilantessa, missä selvitetään tuleeko toistolauseen suoritusta jatkaa. Tämä tapahtuu sekä silloin kun ohjelman suoritus päätyy toistolauseeseen ensimmäistä kertaa että silloin kun ohjelman suoritus päätyy toistolauseen lohkon loppuun. -->
+<!-- TODO Muokkaa "execution of the program first ..." parempaan muotoon -->
+We will use the value `true` as the while-loop's statement. This means that the while-loop always decides to repeat when it enters the statement. This happens when the execution of the program first arrives to the while-loop statement and also when it's at the end of the while-loop block.
 
-Toistolauseen suoritus etenee askeleittain lause kerrallaan. Seuraava ohjelma tulostaa merkkijonoa _osaan ohjelmoida!_ ikuisesti eli "äärettömän monta kertaa":
-
+<!-- Toistolauseen suoritus etenee askeleittain lause kerrallaan. Seuraava ohjelma tulostaa merkkijonoa _osaan ohjelmoida!_ ikuisesti eli "äärettömän monta kertaa": -->
+The execution of while-loop proceeds line by line. The following outputs _I can program_ infite amount of time.
 ```java
 while (true) {
-    System.out.println("osaan ohjelmoida!");
+    System.out.println("I can program!");
 }
 ```
 
-Ikuisen toiston sisältävä ohjelma ei sammu itsestään. Ohjelman sammutus tapahtuu NetBeansissa tulostusikkunan vasemmalla puolella olevaa punaista nappia painamalla.
+<!-- Ikuisen toiston sisältävä ohjelma ei sammu itsestään. Ohjelman sammutus tapahtuu NetBeansissa tulostusikkunan vasemmalla puolella olevaa punaista nappia painamalla. -->
+The program that runs infinitely does not close on its own. The program can be closed from the red square button located in the Netbean's output window.
 
 
 ## Toistolauseen päättäminen
