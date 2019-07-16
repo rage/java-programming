@@ -75,7 +75,7 @@ Oh, hello!
 
 </sample-output>
 
-## Ohjelmarunko
+<!-- ## Ohjelmarunko
 
 Ohjelmamme vaativat toimiakseen ohjelmarungon, joka näyttää seuraavalta. Rungon nimi, tässä `Esimerkki` vastaa lähdekoodin sisältävän tiedoston nimeä (esim. `Esimerkki.java`).
 
@@ -87,7 +87,11 @@ public class Esimerkki {
 
     }
 }
-```
+``` -->
+
+## Program frame
+
+To work, our programs need a program frame as below.
 
 Ohjelman suoritus alkaa riviä `public static void main(String[] args) {` seuraavalta riviltä ja päättyy sulkevaan aaltosulkuun `}`. Komennot suoritetaan yksi kerrallaan. Tulemme myöhemmin tutustumaan tarkemmin sanojen `public class` ja `public static void` merkitykseen. Yllä olevassa esimerkissä ainoa suoritettava komento on `System.out.println("Tulostettava teksti");`, jonka tulostus on seuraava.
 
