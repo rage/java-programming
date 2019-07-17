@@ -92,7 +92,7 @@ Below is the first programming exercise of this course. In this exercise you fam
 <programming-exercise name='Hiekkalaatikko' tmcname='osa01-Osa01_01.Hiekkalaatikko'>
 
 <!-- Tehtäväpohjassa on seuraavanlainen ohjelmarunko: -->
-The exercise base has the following skeleton code:
+The exercise base has the following boilerplate code:
 
 ```java
 public class SandBox {
@@ -107,7 +107,7 @@ public class SandBox {
 The line "// Write your program here" is a _line comment_, which the computer skips over when executing the program.
 
 <!-- Palauta tehtäväpohja palvelimen tarkastettavaksi ensin ilman minkäänlaisia muutoksia. Tällä tavoin harjoittelet tehtävän palauttamista. Tehtävän palauttaminen onnistuu valitsemalla TMC:ssä valikon TMC sekä sieltä kohdan "Submit". -->
-First submit the skeleton code to be checked on the server without changing anything. This way you practice submitting an exercise. You can submit an exercise by selecting the item "Submit" in the TMC menu in TMC.
+First submit the boilerplate  to be checked on the server without changing anything. This way you practice submitting an exercise. You can submit an exercise by selecting the item "Submit" in the TMC menu in TMC.
 
 <!-- Kun olet saanut tehtävän palautettua, kokeile yllä olevaa videota noudattaen tulostuskomennon lisäämistä ohjelmaan ja ohjelman suorittamista (play-napin painaminen). Kun saat ohjelman tulostamaan tekstiä (teksti voi olla mitä tahansa), palauta tehtävä vielä kertaalleen palvelimelle. -->
 When you have submitted the exercise, try following the video above to add a print command to the program and to execute the program (by pressing the play - button). When you have made your program to print some text (the text can be anything), submit the exercise to the server once more.
@@ -141,7 +141,7 @@ System.out.println("Hello World");
 The above statement is readily available in Java, and it is used for printing a string. In practice the command is given a string in quotation marks (or "quotes") inside of its brackets, and it instructs a computer to print it. The statement ends with a semicolon `;`.
 
 <!-- Java-ohjelmat vaativat toimiakseen ohjelmarungon, joka tulee kurssin aikana tutuksi. Vaikket ohjelmarunkoa vielä tunne, voit jo yllä kuvatun tulostuslauseen perusteella arvata seuraavan ohjelman mahdollisen toiminnan. -->
-In order to work Java-programs require a skeleton code, which will become familiar during the couse. Even though you don't know the skeleton code yet, you can propably quess the function of the following program based on the print statement.
+In order to work Java-programs require a code boilerplate, which will become familiar during the couse. Even though you don't know the boilerplate yet, you can propably quess the function of the following program based on the print statement.
 
 <!-- Alla on kurssin ensimmäinen kyselytehtävä. Kyselytehtäviin vastataan suoraan kurssimateriaalissa. -->
 Below is the first quizz of the course. Quizzes can be answered straight in the course material.
