@@ -1,8 +1,13 @@
 ---
+path: '/osa-1/2-printing'
+title: 'Printing'
+hidden: false
+---
+<!-- ---
 path: '/osa-1/2-tulostaminen'
 title: 'Tulostaminen'
 hidden: false
----
+--- -->
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
@@ -53,7 +58,7 @@ Tulostuskomennon avulla tulostettavaa tekstiä voi vaihtaa mielivaltaisesti, kun
 
 In the material, text areas like above show the output of the code examples. Program above would then produce output "Hello world!". You can try out any code examples TODO: viimeistele tää lause...
 
-Text printed with the print command can be changed arbitrarily as long as the command `System.out.println("arbitary text");` -- or `System` point `out` point `println` parenthehes open `(` "text" parentheses close `)` and semicolon `;` stays constant. Below command will print text "Oh, hello!".
+Text printed with the print command can be changed arbitrarily as long as the command `System.out.println("arbitary text");` -- or `System` point `out` point `println` parenthehes open `(` "text" parentheses close `)` and semicolon `;` stays constant. Below command will print text "Hello there!".
 
 <!-- ```java
 System.out.println("Hei vaan!");
@@ -66,12 +71,12 @@ Hei vaan!
 </sample-output> -->
 
 ```java
-System.out.println("Oh, hello!");
+System.out.println("Hello there!");
 ```
 
 <sample-output>
 
-Oh, hello!
+Hello there!
 
 </sample-output>
 
@@ -89,11 +94,21 @@ public class Esimerkki {
 }
 ``` -->
 
-## Program frame
+## Code boilerplate
 
-To work, our programs need a program frame as below.
+To work, our programs need a code boilerplate as below. The name of the boilerplate, here `Example`, corresponds to the file name in source (e.g. `Example.java`).
 
-Ohjelman suoritus alkaa riviä `public static void main(String[] args) {` seuraavalta riviltä ja päättyy sulkevaan aaltosulkuun `}`. Komennot suoritetaan yksi kerrallaan. Tulemme myöhemmin tutustumaan tarkemmin sanojen `public class` ja `public static void` merkitykseen. Yllä olevassa esimerkissä ainoa suoritettava komento on `System.out.println("Tulostettava teksti");`, jonka tulostus on seuraava.
+```java
+public class Example {
+    public static void main(String[] args) {
+
+        System.out.println("Text to be printed");
+
+    }
+}
+```
+
+<!-- Ohjelman suoritus alkaa riviä `public static void main(String[] args) {` seuraavalta riviltä ja päättyy sulkevaan aaltosulkuun `}`. Komennot suoritetaan yksi kerrallaan. Tulemme myöhemmin tutustumaan tarkemmin sanojen `public class` ja `public static void` merkitykseen. Yllä olevassa esimerkissä ainoa suoritettava komento on `System.out.println("Tulostettava teksti");`, jonka tulostus on seuraava.
 
 <sample-output>
 
@@ -101,7 +116,17 @@ Tulostettava teksti
 
 </sample-output>
 
-<text-box variant="hint" name="Materiaalin esimerkit ja ohjelmarunko">
+ -->
+
+Execution of the program starts after the line `public static void main(string[] args) {` and ends at the closing curly bracket `}`. Commands are executed one line at a time. We will get know the meaning of the words `public class` and `public static void` later. In the above example, `System.out.println("Text to be printed")` is the only command to be executed and its output is:
+
+<sample-output>
+
+Text to be printed
+
+</sample-output>
+
+<!-- <text-box variant="hint" name="Materiaalin esimerkit ja ohjelmarunko">
 
 Materiaalin esimerkeissä ei käytetä aina ohjelmarunkoa, mutta voit olettaa, että se tarvitaan aina. Esimerkit voivat siis olla esimerkiksi yhden rivin mittaisia kuten alla oleva tulostusesimerkki.
 
@@ -120,10 +145,31 @@ public class Esimerkki {
 }
 ```
 
+</text-box> -->
+
+<text-box variant="hint" name="Examples in material and code boilerplate">
+
+Not every example in material have the boilerplate, but you can assume that it is always needed. The examples can have only one line like printing example below.
+
+```java
+System.out.println("Hello world");
+```
+
+In a real java program the example above looks like the following.
+
+```java
+public class Example {
+    public static void main(String[] args) {
+        // Here you write the senteces the program uses
+        System.out.println("Hello world!");
+    }
+}
+```
+
 </text-box>
 
 
-Alla on kurssin toinen ohjelmointitehtävä. Mikäli haluat, voit katsoa jo nyt alta olevalta videolta miten tehtävä ratkaistaan.
+<!-- Alla on kurssin toinen ohjelmointitehtävä. Mikäli haluat, voit katsoa jo nyt alta olevalta videolta miten tehtävä ratkaistaan.
 
 <youtube id="-DzOKI6iH5w"></youtube>
 
@@ -139,7 +185,6 @@ public class Nimi {
     }
 }
 ```
-
 Rivi "// Kirjoita ohjelmasi tähän alle" on _kommenttirivi_, jota tietokone ei ota huomioon ohjelmaa suoritettaessa. Lisää kommenttirivin alle lause, joka tulostaa merkkijonon "Ada Lovelace" ja suorita ohjelma. Ohjelman tulostuksen tulee olla seuraavanlainen:
 
 <sample-output>
@@ -151,9 +196,39 @@ Ada Lovelace
 Kun olet tehnyt tehtävän ja huomaat, että ohjelma tulostaa halutun merkkijonon, palauta tehtävä TMC:lle. Tutustu tämän jälkeen halutessasi lisää [Ada Lovelaceen](https://en.wikipedia.org/wiki/Ada_Lovelace), joka oli yksi ensimmäisistä ohjelmoijista.
 
 </programming-exercise>
+-->
+
+Below is the courses second programming exercise. If you want, you can now watch how to solve the exercise at video below. (Unfortunately the video is in finnish.)
+
+<youtube id="-DzOKI6iH5w"></youtube>
+
+<programming-exercise name='Ada Lovelace' tmcname='osa01-Osa01_02.AdaLovelace'>
+
+In the exercise template there is the following code boilerplate:
+
+```java
+public class Name {
+    public static void main(String[] args) {
+        // Write your program below here
+
+    }
+}
+```
+Line "// Write your program below here" is a _comment line_, which the computer doesn't take into account when executing the program. Add a new line below the comment line that prints a string "Ada Lovelace" and run the program. The output of the program should be as following:
+
+<sample-output>
+
+Ada Lovelace
+
+</sample-output>
+
+When you have finished the exercise and and prints the correct string, return the exercise to TMC. After this you can read more about [Ada Lovelace](https://en.wikipedia.org/wiki/Ada_Lovelace), who was one of the first programmers.
+
+</programming-exercise>
 
 
-<text-box variant='hint' name='Ohjelman suorittaminen'>
+
+<!-- <text-box variant='hint' name='Ohjelman suorittaminen'>
 
 Ohjelman suorittaminen tapahtuu TMC:ssä vihreää play-nappia painamalla tai valitsemalla TMC-valikosta vaihtoehdon "Run project".
 
@@ -164,6 +239,19 @@ Ohjelman suorittaminen on helppoa, mutta pinnan alla tapahtuu paljon. Kun ohjelm
 Tämä käännösprosessi vaikuttaa siihen, miten ja milloin ohjelmien virheet ilmenevät. Kun ohjelma käännetään ennen suoritusta, kääntämiseen käytettävä ohjelma voi etsiä ohjelmasta virheitä. Tämä vaikuttaa myös ohjelmoinnissa käytetyn ohjelmointiympäristön tarjoamiin vinkkeihin, jolloin ohjelmoija voi saada palautetta ohjelmassa olevista virheistä heti.
 
 Käytössämme oleva ohjelmointiympäristö kääntää ja suorittaa ohjelman yhdellä napinpainalluksella. Ohjelmointiympäristö kääntää ohjelmaa kuitenkin jatkuvasti, jolloin se pystyy ilmoittamaan virheistä. Kokeile vaikkapa vaihtaa yllä olevan Ada Lovelace -tehtävän tulostuslause muotoon `Systemoutprintln("hei!")` -- huomaat, että rivi alleviivataan ja sen vasemmalle puolelle tulee ilmoitus virheestä.
+
+</text-box> -->
+
+<text-box variant='hint' name='Running the program'>
+
+You can run the program in TMC by pressing the green play button or by selecting "Run project" from TMC-menu.
+
+TODO: tähän kuva TMC:stä (highlightattuna run-nappi).
+
+Running the program is easy, but there happens much under the surface. When you want to run the program, the source code is first compiled into Java bytecode. This is done with Javas own compiler, which also is a program. After this the program will be executed meaning the commands will be executed one by one by a Java-compiler which understands java bytecode.
+
+
+
 
 </text-box>
 
