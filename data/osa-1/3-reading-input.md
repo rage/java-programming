@@ -7,140 +7,159 @@ hidden: false
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
 
-- Opit kirjoittamaan ohjelman, joka lukee käyttäjän kirjoittamaa tekstiä.
-- Tiedät mitä merkkijonot ovat ohjelmoinnissa.
-- Tiedät miten merkkijonoja voidaan yhdistää toisiinsa ("katenointi").
+<!-- - Opit kirjoittamaan ohjelman, joka lukee käyttäjän kirjoittamaa tekstiä. -->
+<!-- - Tiedät mitä merkkijonot ovat ohjelmoinnissa. -->
+<!-- - Tiedät miten merkkijonoja voidaan yhdistää toisiinsa ("katenointi"). -->
+ - Learn to write a program that reads text written by the user.
+ - Know what strings are in programming
+ - Know how strings can be joined together (concatenation).
 
 </text-box>
 
-Syöte on ohjelman käyttäjän kirjoittamaa tekstiä, jota ohjelma lukee. Syöte luetaan aina merkkijonona. Syötteen lukemiseen käytetään Javan valmista `Scanner`-apuvälinettä. Apuväline tuodaan ohjelman käyttöön lisäämällä komento `import java.util.Scanner;` ennen pääohjelmarungon aloitusta (`public class` ...), ja itse apuväline luodaan komennolla `Scanner lukija = new Scanner(System.in);`.
+<!-- Syöte on ohjelman käyttäjän kirjoittamaa tekstiä, jota ohjelma lukee. Syöte luetaan aina merkkijonona. Syötteen lukemiseen käytetään Javan valmista `Scanner`-apuvälinettä. Apuväline tuodaan ohjelman käyttöön lisäämällä komento `import java.util.Scanner;` ennen pääohjelmarungon aloitusta (`public class` ...), ja itse apuväline luodaan komennolla `Scanner lukija = new Scanner(System.in);`. -->
+Input is text written by the user, which the program reads. Input is always read as a string. To read input, we use the `scanner` tool available in Java.
+A tool can be used by first introducing the tool by adding the command  `import java.util.Scanner;` before the main boilerplate code (`public class` ...), and then creating the tool with `Scanner reader = new Scanner(System.in);`.
 
 ```java
 import java.util.Scanner;
 
-public class Ohjelma {
+public class Program {
 
     public static void main(String[] args) {
-        Scanner lukija = new Scanner(System.in);
+        Scanner reader = new Scanner(System.in);
 
-        // Nyt käytössämme on "lukija"-niminen apuväline.
-        // Lukijaa käytetään syötteen lukemiseen.
+        // We can now use the "reader" scanner tool.
+        // The tool is used to read input.
     }
 }
 ```
 
-Alla on esitelty ohjelma, joka kysyy käyttäjältä syötettä, lukee käyttäjän syöttämän merkkijonon, ja lopulta tulostaa käyttäjän syöttämän merkkijonon.
+<!-- Alla on esitelty ohjelma, joka kysyy käyttäjältä syötettä, lukee käyttäjän syöttämän merkkijonon, ja lopulta tulostaa käyttäjän syöttämän merkkijonon. -->
+Below is an example of a program, which asks for user input, reads the string written by the user, and then prints it.
 
 ```java
-// Tuodaan lukemiseen käytettävä Scanner-apuväline käyttöön
+// Introduce the scanner tool used for reading user input
 import java.util.Scanner;
 
-public class Ohjelma {
+public class Program {
 
     public static void main(String[] args) {
-        // Luodaan lukemiseen käytettävä apuväline, jonka nimeksi tulee lukija
-        Scanner lukija = new Scanner(System.in);
+        // Create a tool for reading user input and name it reader
+        Scanner reader = new Scanner(System.in);
 
-        // Tulostetaan käyttäjälle viesti "Syötä viesti: "
-        System.out.println("Syötä viesti: ");
+        // Print "Write a message: "
+        System.out.println("Write a message: ");
 
-        // Luetaan käyttäjän syöttämä merkkijono ja asetetaan se
-        // ohjelman muistiin "String viesti = (luettu sisältö)"
-        String viesti = lukija.nextLine();
+        // Read the string written by the user, and assign it
+        // to program memory "String message = (read string)"
+        String message = reader.nextLine();
 
-        // Tulostetaan käyttäjän syöttämä viesti
-        System.out.println(viesti);
+        // Print the message written by the user
+        System.out.println(message);
     }
 }
 ```
 
-Tarkemmin ottaen lukeminen tapahtuu `lukija`-apuvälineeseen liittyvällä komennolla `nextLine()`. Kutsu `lukija.nextLine()` jää odottamaan käyttäjän kirjoittamaa merkkijonoa. Kun käyttäjä syöttää merkkijonon ja painaa enteriä, käyttäjän syöttämä merkkijono asetetaan _merkkijonotyyppiseen muuttujaan_ (tässä muuttujan nimi on `viesti`). Muuttujaan `viesti` voi viitata ohjelmasta myöhemmin -- yllä olevassa esimerkissä muuttujaan `viesti` viitataan tulostuskomennossa.
+<!-- Tarkemmin ottaen lukeminen tapahtuu `lukija`-apuvälineeseen liittyvällä komennolla `nextLine()`. Kutsu `lukija.nextLine()` jää odottamaan käyttäjän kirjoittamaa merkkijonoa. Kun käyttäjä syöttää merkkijonon ja painaa enteriä, käyttäjän syöttämä merkkijono asetetaan _merkkijonotyyppiseen muuttujaan_ (tässä muuttujan nimi on `viesti`). Muuttujaan `viesti` voi viitata ohjelmasta myöhemmin -- yllä olevassa esimerkissä muuttujaan `viesti` viitataan tulostuskomennossa. -->
+More precisely input is read with `reader` tools command `nextLine()`. `Reader.nextLine()` call waits for user to write something. When user writes something and presses enter, the written string is assigned to a __string variable__ (here called `message`). The program can then reference the variable `message` later -- in the example above the variable `message` is referenced in the print command.
 
-Kun ohjelma käynnistetään, tulostus on esimerkiksi seuraavanlainen. Alla olevassa esimerkissä käyttäjä on syöttänyt tekstin "Hei maailma" -- esimerkeissä käyttäjän syöttämät tekstit merkitään punaisella.
+<!-- Kun ohjelma käynnistetään, tulostus on esimerkiksi seuraavanlainen. Alla olevassa esimerkissä käyttäjä on syöttänyt tekstin "Hei maailma" -- esimerkeissä käyttäjän syöttämät tekstit merkitään punaisella. -->
+When the program is started, it prints for example the following. In the example below the user has written "Hello world" -- in the examples user input is marked with red.
 
 <sample-output>
 
-Syötä viesti:
-**Hei maailma**
-Hei maailma
+Write a message:
+**Hello world**
+Hello world
 
 </sample-output>
 
-Alla olevassa videossa näytetään käyttäjältä syötettä lukevan ohjelman tekoprosessi. Katso video ennen seuraavan ohjelmointitehtävän tekemistä. Kiinnitä erityisesti huomiota siihen, miten syöte annetaan ohjelman käynnissä ollessa TMC:n alalaidassa olevaan Output-ikkunaan.
+<!-- Alla olevassa videossa näytetään käyttäjältä syötettä lukevan ohjelman tekoprosessi. Katso video ennen seuraavan ohjelmointitehtävän tekemistä. Kiinnitä erityisesti huomiota siihen, miten syöte annetaan ohjelman käynnissä ollessa TMC:n alalaidassa olevaan Output-ikkunaan. -->
+The video below shows the process of making a program which reads user input. Watch the video before doing the following programming exercise. Especially take not of how when the program is running, input is written to the Output-window located at the bottom of TMC.
 
 <youtube id='7lswbb_R7uM'></youtube>
 
 <programming-exercise name='Viesti' tmcname='osa01-Osa01_05.Viesti'>
 
-Kirjoita ohjelma, joka pyytää käyttäjää kirjoittamaan merkkijonon. Kun käyttäjä on syöttänyt merkkijonon (eli kirjoittanut tekstin sekä painanut enter-näppäintä), ohjelman tulee tulostaa käyttäjän syöttämä merkkijono.
+<!-- Kirjoita ohjelma, joka pyytää käyttäjää kirjoittamaan merkkijonon. Kun käyttäjä on syöttänyt merkkijonon (eli kirjoittanut tekstin sekä painanut enter-näppäintä), ohjelman tulee tulostaa käyttäjän syöttämä merkkijono. -->
+Write a program, which asks user to write a string. When the user has given an input (so written some text and pressed the enter-key), the program has to print the string the user wrote.
 
-Tehtäväpohjan mukana tulee runko, joka sisältää Scanner-apuvälineen luomisen.
+<!-- Tehtäväpohjan mukana tulee runko, joka sisältää Scanner-apuvälineen luomisen. -->
+The exercise template comes with the boilerplate code, including introducing and creating the Scanner -tool.
 
 ```java
 import java.util.Scanner;
 
-public class Viesti {
+public class Message {
 
     public static void main(String[] args) {
-        Scanner lukija = new Scanner(System.in);
+        Scanner reader = new Scanner(System.in);
 
-        System.out.println("Kirjoita merkkijono!");
-        // toteuta ohjelma tänne
+        System.out.println("Write something!");
+        // write the program here
     }
 }
 ```
 
-Tulostusesimerkki kun käyttäjä syöttää merkkijonon "Heippa".
+<!-- Tulostusesimerkki kun käyttäjä syöttää merkkijonon "Heippa". -->
+Example output when the user writes "Bye".
 
 <sample-output>
 
-Kirjoita merkkijono!
-**Heippa**
-Heippa
+Write something!
+**Bye**
+Bye
 
 </sample-output>
 
-Tulostusesimerkki kun käyttäjä syöttää merkkijonon "Olipa kerran...".
+<!-- Tulostusesimerkki kun käyttäjä syöttää merkkijonon "Olipa kerran...". -->
+Example output when the user writes "Once upon a time...".
 
 <sample-output>
 
-Kirjoita merkkijono!
-**Olipa kerran...**
-Olipa kerran...
+Write something!
+**Once upon a time...**
+Once upon a time...
 
 </sample-output>
 
 </programming-exercise>
 
-Otetaan seuraavaksi askel taaksepäin ja tarkastellaan mitä ihmettä edellä käytetty `String viesti = ...` oikein tarkoittaa.
+<!-- Otetaan seuraavaksi askel taaksepäin ja tarkastellaan mitä ihmettä edellä käytetty `String viesti = ...` oikein tarkoittaa. -->
+Let's next take a step back, and examine what on earth `String message = ...` even means.
 
 
-## Merkkijonojen alkeet
+## Fundamentals of strings
 
-Olemme käyttäneet merkkijonoja kahdella tapaa. Tulostuskomentoa harjoiteltaessa annoimme tulostettavan merkkijonon hipsuissa tulostuskomennolle, kun taas syötteen lukemista harjoiteltaessa luettu merkkijono tallennettiin muuttujaan.
+<!-- Olemme käyttäneet merkkijonoja kahdella tapaa. Tulostuskomentoa harjoiteltaessa annoimme tulostettavan merkkijonon hipsuissa tulostuskomennolle, kun taas syötteen lukemista harjoiteltaessa luettu merkkijono tallennettiin muuttujaan. -->
+So far we have used strings two ways. When practicing printing, we gave the string to be printed to the print command in quotation marks, and when practicing reading input we saved the string we read to a variable.
 
-Muuttujat ovat käytännössä nimettyjä lokeroita, jotka sisältävät tietyn tyyppistä tietoa ja joilla on nimi. Merkkijonomuuttuja esitellään ohjelmassa kertomalla muuttujan tyyppi (`String`) ja muuttujan nimi (esimerkiksi `mjono`). Muuttujan esittelyn yhteydessä muuttujaan asetetaan tyypillisesti myös arvo. Arvon asettaminen tapahtuu muuttujan esittelyä seuraavalla yhtäsuuruusmerkillä, jonka jälkeen tulee arvo sekä puolipiste.
+<!-- Muuttujat ovat käytännössä nimettyjä lokeroita, jotka sisältävät tietyn tyyppistä tietoa ja joilla on nimi. Merkkijonomuuttuja esitellään ohjelmassa kertomalla muuttujan tyyppi (`String`) ja muuttujan nimi (esimerkiksi `mjono`). Muuttujan esittelyn yhteydessä muuttujaan asetetaan tyypillisesti myös arvo. Arvon asettaminen tapahtuu muuttujan esittelyä seuraavalla yhtäsuuruusmerkillä, jonka jälkeen tulee arvo sekä puolipiste. -->
+In practice variables are named containers, which contain certain type of information and which have a name.  In a program a string variable is introduced  by stating the type of the variable (`String`) and the name of the variable (for example `myString`). Often a variable is also assigned a value when it's introduced. A value is assigned by following the introduction with the equals sign followed by the value and a semicolon.
 
-Merkkijonomuotoinen muuttuja nimeltä `viesti`, jonka arvona on merkkijono "Hei maailma!", luodaan seuraavasti.
+<!-- Merkkijonomuotoinen muuttuja nimeltä `viesti`, jonka arvona on merkkijono "Hei maailma!", luodaan seuraavasti. -->
+A string variable called `message` which is assigned the value "Hello world!" is created like so:
 
 ```java
-String viesti = "Hei maailma!";
+String message = "Hello world!";
 ```
 
-Muuttujan luominen luo ohjelman käyttöön paikan, jonka sisältöön voi myöhemmin viitata. Viittaaminen tapahtuu muuttujan nimen avulla. Esimerkiksi merkkijonomuuttujan luominen ja tulostaminen tapahtuu seuraavalla tavalla.
+<!-- Muuttujan luominen luo ohjelman käyttöön paikan, jonka sisältöön voi myöhemmin viitata. Viittaaminen tapahtuu muuttujan nimen avulla. Esimerkiksi merkkijonomuuttujan luominen ja tulostaminen tapahtuu seuraavalla tavalla. -->
+Creating a variable creates a box, contents of which the program can later reference. A variable can be referenced by its name. For example, creating a string variable and referencing its value when printing can be done like shown below.
 
 ```java
-String viesti = "Hei maailma!";
-System.out.println(viesti);
+String message = "Hello world!";
+System.out.println(message);
 ```
 
 <sample-output>
 
-Hei maailma!
+Hello world!
 
 </sample-output>
 
-Ohjelmointikielen hipsuissa oleva merkkijono on ns. merkkijonoliteraali, eli määrätyn muotoinen merkkijono. Tyypillinen virhe ohjelmoidessa on yrittää asettaa muuttujaan hipsut: mikäli ohjelmassa olisi hipsut merkkijonomuuttujan `viesti` nimen ympärillä, tulostaisi ohjelma tekstin "viesti" muuttujan `viesti` arvon eli tekstin "Hei maailma!" sijaan.
+<!-- Ohjelmointikielen hipsuissa oleva merkkijono on ns. merkkijonoliteraali, eli määrätyn muotoinen merkkijono. Tyypillinen virhe ohjelmoidessa on yrittää asettaa muuttujaan hipsut: mikäli ohjelmassa olisi hipsut merkkijonomuuttujan `viesti` nimen ympärillä, tulostaisi ohjelma tekstin "viesti" muuttujan `viesti` arvon eli tekstin "Hei maailma!" sijaan. -->
+In programming languages, a string in quotation marks is a so called string literal, or a string with predetermined shape. Typical programming mistake is to try to put quotation marks around variable names
 
 ```java
 String viesti = "Hei maailma!";
@@ -158,7 +177,8 @@ TODO: quiz
 
 ### Katenointi eli merkkijonojen yhdistäminen
 
-Tulostettavan merkkijonon voi koostaa useammista merkkijonoista `+`-merkin avulla. Esimerkiksi alla oleva ohjelma tulostaa viestin "Hei maailma!" yhdelle riville.
+<!-- Tulostettavan merkkijonon voi koostaa useammista merkkijonoista `+`-merkin avulla. Esimerkiksi alla oleva ohjelma tulostaa viestin "Hei maailma!" yhdelle riville. -->
+
 
 ```java
 public class Ohjelma {
