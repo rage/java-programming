@@ -314,25 +314,41 @@ System.out.println("Mutta! kaksikymmentäkaksi: " + 2 + 2);
 
 ```java
 System.out.println("Four: " + (2 + 2));
-System.out.println("But! twenty-two" + 2 + 2);
+System.out.println("But! Twenty-two" + 2 + 2);
 ```
 
-<sample-output>
+<!-- <sample-output>
 
 Neljä: 4
 Mutta! kaksikymmentäkaksi: 22
 
+</sample-output> -->
+
+<sample-output>
+
+Four: 4
+But! Twenty-two: 22
+
 </sample-output>
 
-<code-states-visualizer input='{"code":"public class Esimerkki {\n    public static void main(String[] args) {\n        System.out.println(\"Neljä: \" + (2 + 2));\n        System.out.println(\"Mutta! kaksikymmentäkaksi: \" + 2 + 2);\n    }\n}","stdin":"","trace":[{"stdout":"","event":"call","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"1","frame_id":1}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"2","frame_id":2}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"Neljä: 4\n","event":"step_line","line":4,"stack_to_render":[{"func_name":"main:4","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"5","frame_id":5}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"Neljä: 4\nMutta! kaksikymmentäkaksi: 22\n","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"8","frame_id":8}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"Neljä: 4\nMutta! kaksikymmentäkaksi: 22\n","event":"return","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{"__return__":["VOID"]},"ordered_varnames":["__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"9","frame_id":9}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}}],"userlog":"Debugger VM maxMemory: 455M\n"}'></code-states-visualizer>
+<!-- <code-states-visualizer input='{"code":"public class Esimerkki {\n    public static void main(String[] args) {\n        System.out.println(\"Neljä: \" + (2 + 2));\n        System.out.println(\"Mutta! kaksikymmentäkaksi: \" + 2 + 2);\n    }\n}","stdin":"","trace":[{"stdout":"","event":"call","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"1","frame_id":1}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"2","frame_id":2}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"Neljä: 4\n","event":"step_line","line":4,"stack_to_render":[{"func_name":"main:4","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"5","frame_id":5}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"Neljä: 4\nMutta! kaksikymmentäkaksi: 22\n","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"8","frame_id":8}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"Neljä: 4\nMutta! kaksikymmentäkaksi: 22\n","event":"return","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{"__return__":["VOID"]},"ordered_varnames":["__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"9","frame_id":9}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}}],"userlog":"Debugger VM maxMemory: 455M\n"}'></code-states-visualizer> -->
 
-<programming-exercise name="Kahden luvun summa" tmcname='osa01-Osa01_17.KahdenLuvunSumma'>
+<code-states-visualizer input='{"code":"public class Example {\n    public static void main(String[] args) {\n        System.out.println(\"Four: \" + (2 + 2));\n        System.out.println(\"But! Twenty-two: \" + 2 + 2);\n    }\n}","stdin":"","trace":[{"stdout":"","event":"call","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"1","frame_id":1}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"2","frame_id":2}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"Four: 4\n","event":"step_line","line":4,"stack_to_render":[{"func_name":"main:4","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"5","frame_id":5}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"Four: 4\nBut! Twenty-two: 22\n","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"8","frame_id":8}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"Four: 4\nBut! Twenty-two: 22\n","event":"return","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{"__return__":["VOID"]},"ordered_varnames":["__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"9","frame_id":9}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}}],"userlog":"Debugger VM maxMemory: 455M\n"}'></code-states-visualizer>
 
-Kirjoita ohjelma, joka kysyy käyttäjältä kahta lukua. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämien lukujen summan.
 
-Kun kysyt useampaa lukua, tee kullekin luvulle oma muuttuja:
+<!-- <programming-exercise name="Kahden luvun summa" tmcname='osa01-Osa01_17.KahdenLuvunSumma'> -->
 
-```java
+<programming-exercise name="Sum of two numbers" tmcname='osa01-Osa01_17.KahdenLuvunSumma'>
+
+<!-- Kirjoita ohjelma, joka kysyy käyttäjältä kahta lukua. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämien lukujen summan. -->
+
+Write a program that asks the user for two numbers. After this the program prints the sum of the numbers given by the user.
+
+<!-- Kun kysyt useampaa lukua, tee kullekin luvulle oma muuttuja: -->
+
+When asking for multiple numbers, create a separate variable for each:
+
+<!-- ```java
 Scanner lukija = new Scanner(System.in);
 
 System.out.println("Syötä ensimmäinen luku!");
@@ -341,11 +357,24 @@ System.out.println("Syötä toinen luku!");
 int toka = Integer.valueOf(lukija.nextLine());
 
 // tee jotain luvuilla
+``` -->
+
+```java
+Scanner scanner = new Scanner(System.in);
+
+System.out.println("Enter the first number!");
+int first = Integer.valueOf(scanner.nextLine());
+System.out.println("Enter the second number!");
+int second = Integer.valueOf(scanner.nextLine());
+
+// do something with the queried numbers
 ```
 
-Alla on annettuna ohjelman toivottuja esimerkkitulostuksia:
+<!-- Alla on annettuna ohjelman toivottuja esimerkkitulostuksia: -->
 
-<sample-output>
+A number of expected prints from the program are given below:
+
+<!-- <sample-output>
 
 Syötä ensimmäinen luku!
 **8**
@@ -353,9 +382,20 @@ Syötä toinen luku!
 **3**
 Lukujen summa on 11
 
-</sample-output>
+</sample-output> -->
 
 <sample-output>
+̈́
+Enter the first number!
+**8**
+Enter the second number!
+**3**
+The sum of the numbers is 11
+
+</sample-output>
+
+
+<!-- <sample-output>
 
 Syötä ensimmäinen luku!
 **3**
@@ -363,18 +403,34 @@ Syötä toinen luku!
 **-1**
 Lukujen summa on 2
 
+</sample-output> -->
+
+<sample-output>
+
+Enter the first number!
+**3**
+Enter the second number!
+**-1**
+The sum of the numbers is 2
+
 </sample-output>
 
 </programming-exercise>
 
 
-<programming-exercise name="Kolmen luvun summa" tmcname='osa01-Osa01_18.KolmenLuvunSumma'>
+<!-- <programming-exercise name="Kolmen luvun summa" tmcname='osa01-Osa01_18.KolmenLuvunSumma'> -->
 
-Kirjoita ohjelma, joka kysyy käyttäjältä kolmea lukua. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämien lukujen summan.
+<programming-exercise name="Sum of three numbers" tmcname='osa01-Osa01_18.KolmenLuvunSumma'>
 
-Alla on annettuna ohjelman esimerkkitulostuksia:
+<!-- Kirjoita ohjelma, joka kysyy käyttäjältä kolmea lukua. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämien lukujen summan. -->
 
-<sample-output>
+Write a program that asks the user for three numbers. After this the program prints the sum of the numbers given by the user.
+
+<!-- Alla on annettuna ohjelman esimerkkitulostuksia: -->
+
+A number of example print from the program are given below:
+
+<!-- <sample-output>
 
 Syötä ensimmäinen luku!
 **8**
@@ -384,9 +440,21 @@ Syötä kolmas luku!
 **3**
 Lukujen summa on 14
 
-</sample-output>
+</sample-output> -->
 
 <sample-output>
+
+Enter the first number!
+**8**
+Enter the second number!
+**3**
+Enter the third number!
+**3**
+The sum of the numbers is 14
+
+</sample-output>
+
+<!-- <sample-output>
 
 Syötä ensimmäinen luku!
 **3**
@@ -396,14 +464,29 @@ Syötä kolmas luku!
 **2**
 Lukujen summa on 4
 
+</sample-output> -->
+
+<sample-output>
+
+Enter the first number!
+**3**
+Enter the second number!
+**-1**
+Enter the third number!
+**2**
+The sum of the numbers is 4
+
 </sample-output>
+
 
 </programming-exercise>
 
 
-Edellistä tietoa soveltamalla voimme luoda lausekkeen, joka sisältää tekstiä ja muuttujan, ja joka evaluoidaan tulostuksen yhteydessä:
+<!-- Edellistä tietoa soveltamalla voimme luoda lausekkeen, joka sisältää tekstiä ja muuttujan, ja joka evaluoidaan tulostuksen yhteydessä: -->
 
-```java
+Let's apply the previous information, and create an expression consisting some text and a variable that is evaluated at the time of printing:
+
+<!-- ```java
 int x = 10;
 
 System.out.println("muuttujan x arvo on: " + x);
@@ -412,22 +495,50 @@ int y = 5;
 int z = 6;
 
 System.out.println("y on " + y + " ja z on " + z);
+``` -->
+
+```java
+int x = 10;
+
+System.out.println("The value of the variable x is: " + x);
+
+int y = 5;
+int z = 6;
+
+System.out.println("y is " + y + " and z is " + z);
 ```
 
-Tulostus:
+<!-- Tulostus: -->
 
-<sample-output>
+The print:
+
+<!-- <sample-output>
 
 muuttujan x arvo on: 10
 y on 5 ja z on 6
 
+</sample-output> -->
+
+
+<sample-output>
+
+The value of the variable x is: 10
+y is 5 and z is 6
+
 </sample-output>
 
 
-<programming-exercise name="Yhteenlasku ja kaava" tmcname='osa01-Osa01_19.YhteenlaskuJaKaava'>
+<!-- <programming-exercise name="Yhteenlasku ja kaava" tmcname='osa01-Osa01_19.YhteenlaskuJaKaava'> -->
 
-TODO: tarkenna tehtävänantoa (myös kaava)
-Tee ohjelma, jonka avulla voidaan laskea kahden kokonaisluvun summa. Ohjelman alussa kysytään kahta kokonaislukua, jotka sisältävät summattavat luvut. Tämän jälkeen ohjelma tulostaa lukujen summausta kuvaavan kaavan.
+<programming-exercise name="Addition and a formula" tmcname='osa01-Osa01_19.YhteenlaskuJaKaava'>
+
+
+<!-- TODO: tarkenna tehtävänantoa (myös kaava)
+Tee ohjelma, jonka avulla voidaan laskea kahden kokonaisluvun summa. Ohjelman alussa kysytään kahta kokonaislukua, jotka sisältävät summattavat luvut. Tämän jälkeen ohjelma tulostaa lukujen summausta kuvaavan kaavan. -->
+
+TODO: specify the assignment (the formula, too)
+
+
 
 Tulostusesimerkkejä:
 
