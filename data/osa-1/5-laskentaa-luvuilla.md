@@ -537,12 +537,14 @@ y is 5 and z is 6
 Tee ohjelma, jonka avulla voidaan laskea kahden kokonaisluvun summa. Ohjelman alussa kysytään kahta kokonaislukua, jotka sisältävät summattavat luvut. Tämän jälkeen ohjelma tulostaa lukujen summausta kuvaavan kaavan. -->
 
 TODO: specify the assignment (the formula, too)
+Create a program that can be used the add together two integers. At the beginning two integers (to be summed) are asked from the user. After this the program prints the formula that describes the addition of the numbers.
 
 
+<!-- Tulostusesimerkkejä: -->
 
-Tulostusesimerkkejä:
+Print examples:
 
-<sample-output>
+<!-- <sample-output>
 
 Syötä ensimmäinen luku!
 **5**
@@ -550,13 +552,33 @@ Syötä toinen luku!
 **4**
 5 + 4 = 9
 
-</sample-output>
+</sample-output> -->
 
 <sample-output>
+
+Enter the first numebr!
+**5**
+Enter the second number!
+**4**
+5 + 4 = 9
+
+</sample-output>
+
+<!-- <sample-output>
 
 Syötä ensimmäinen luku!
 **73457**
 Syötä toinen luku!
+**12888**
+73457 + 12888 = 86345
+
+</sample-output> -->
+
+<sample-output>
+
+Enter the first number!
+**73457**
+Enter the second number!
 **12888**
 73457 + 12888 = 86345
 
@@ -565,13 +587,20 @@ Syötä toinen luku!
 </programming-exercise>
 
 
-<programming-exercise name="Kertolasku ja kaava" tmcname='osa01-Osa01_20.KertolaskuJaKaava'>
+<!-- <programming-exercise name="Kertolasku ja kaava" tmcname='osa01-Osa01_20.KertolaskuJaKaava'> -->
 
-Tee edellistä ohjelmaa mukaillen ohjelma, joka laskee kahden kokonaislukumuuttujaan sijoitetun arvon kertolaskun.
+<programming-exercise name="Multiplication and the formula" tmcname='osa01-Osa01_20.KertolaskuJaKaava'>
 
-Esimerkiksi jos syötetyt luvut ovat 2 ja 8, ohjelman suoritus on seuraava:
 
-<sample-output>
+<!-- Tee edellistä ohjelmaa mukaillen ohjelma, joka laskee kahden kokonaislukumuuttujaan sijoitetun arvon kertolaskun. -->
+
+Similar to the previous exercise, create a program that multiplies the values stored in two integer variables.
+
+<!-- Esimerkiksi jos syötetyt luvut ovat 2 ja 8, ohjelman suoritus on seuraava: -->
+
+For instance, if the entered numbers are 2 and 8, the program should print the following:
+
+<!-- <sample-output>
 
 Syötä ensimmäinen luku!
 **2**
@@ -579,15 +608,37 @@ Syötä toinen luku!
 **8**
 2 * 8 = 16
 
-</sample-output>
-
-Jos taas syötetyt luvut ovat 277 ja 111, ohjelman suoritus on seuraava:
+</sample-output> -->
 
 <sample-output>
+
+Enter the first number!
+**2**
+Enter the second number!
+**8**
+2 * 8 = 16
+
+</sample-output>
+
+<!-- Jos taas syötetyt luvut ovat 277 ja 111, ohjelman suoritus on seuraava: -->
+
+On the other hand, if the entered numbers are 277 and 111, the print should be the following:
+
+<!-- <sample-output>
 
 Syötä ensimmäinen luku!
 **277**
 Syötä toinen luku!
+**111**
+277 * 111 = 30747
+
+</sample-output> -->
+
+<sample-output>
+
+Enter the first number!
+**277**
+Enter the second number!
 **111**
 277 * 111 = 30747
 
@@ -597,16 +648,27 @@ Syötä toinen luku!
 
 TODO: miksi alla oleva teksti näkyy pienellä?
 
-Kun olet saanut edellisen tehtävän toteutettua, kokeile mikä on suurin mahdollinen kertolasku minkä saat laskettua. Huomaamasi ilmiön taustalla on se, että kokonaislukumuuttujan arvo voi olla korkeintaan 2<sup>31</sup>-1 eli 2147483647. Tämä johtuu siitä, että kokonaislukumuuttujat esitetään tietokoneen muistissa 32 bitin avulla. Tähän tutustutaan tarkemmin muunmuassa kurssilla Tietokoneen toiminta.
+<!-- Kun olet saanut edellisen tehtävän toteutettua, kokeile mikä on suurin mahdollinen kertolasku minkä saat laskettua. Huomaamasi ilmiön taustalla on se, että kokonaislukumuuttujan arvo voi olla korkeintaan 2<sup>31</sup>-1 eli 2147483647. Tämä johtuu siitä, että kokonaislukumuuttujat esitetään tietokoneen muistissa 32 bitin avulla. Tähän tutustutaan tarkemmin muunmuassa kurssilla Tietokoneen toiminta. -->
+
+Once you have completed the previous exercise, try out which is the greatest possible multiplication you can calculate. The background for the phenomenon you noticed is that the value of an integer value is capped at the maximum of 2<sup>31</sup>-1 (i.e. 2147483647). This owes to the fact that integer variables are represented with 32 bits in the memory of the computer. The representation of variables is explained in more detail on the course Computer Organization, among others.
 
 
-## Jakolasku
+<!-- ## Jakolasku -->
 
-Kokonaislukujen jakolasku on hieman hankalampi operaatio. Jakolausekkeessa käytettyjen muuttujien tyyppi määrää evaluaation tuloksena saatavan arvon tyypin. Jos kaikki jakolausekkeessa olevat muuttujat ovat kokonaislukuja, on tulos myös kokonaisluku.
+## Division
 
-```java
+<!-- Kokonaislukujen jakolasku on hieman hankalampi operaatio. Jakolausekkeessa käytettyjen muuttujien tyyppi määrää evaluaation tuloksena saatavan arvon tyypin. Jos kaikki jakolausekkeessa olevat muuttujat ovat kokonaislukuja, on tulos myös kokonaisluku. -->
+
+Division is a slightly trickier operation. The types of the variables that take part in the division decide the type of the result gained by executing the command. If all the variables in the division are integers, the result of that calculation is an integer, too.
+
+<!-- ```java
 int tulos = 3 / 2;
 System.out.println(tulos);
+``` -->
+
+```java
+int result = 3 / 2;
+System.out.println(result);
 ```
 
 <sample-output>
@@ -615,13 +677,22 @@ System.out.println(tulos);
 
 </sample-output>
 
-Edellinen esimerkki tulostaa luvun 1, sillä 3 ja 2 ovat kokonaislukuja ja kahden kokonaisluvun jakolaskun tulos on kokonaisluku.
+<!-- Edellinen esimerkki tulostaa luvun 1, sillä 3 ja 2 ovat kokonaislukuja ja kahden kokonaisluvun jakolaskun tulos on kokonaisluku. -->
 
-```java
+The previous example prints 1: both 3 and 2 are integers, and the division of two integers always produces an integer.
+
+<!-- ```java
 int eka = 3;
 int toka = 2;
 double tulos = eka / toka;
 System.out.println(tulos);
+``` -->
+
+```java
+int first = 3;
+int second = 2;
+double result = first / second;
+System.out.println(result);
 ```
 
 <sample-output>
@@ -630,16 +701,28 @@ System.out.println(tulos);
 
 </sample-output>
 
-Nytkin tulostus on 1, sillä eka ja toka ovat (yhä) kokonaislukuja.
+<!-- Nytkin tulostus on 1, sillä eka ja toka ovat (yhä) kokonaislukuja. -->
 
-Jos jakolaskun jakaja tai jaettava (tai molemmat!) ovat liukulukuja, tulee tulokseksi myös liukuluku.
+The print is 1 also in this case, since first and second are integers.
 
-```java
+<!-- Jos jakolaskun jakaja tai jaettava (tai molemmat!) ovat liukulukuja, tulee tulokseksi myös liukuluku. -->
+
+If the dividend or divisor (or both!) of the division is a floating point number, the result is a floating point number as well.
+
+<!-- ```java
 double kunJaettavaOnLiukuluku = 3.0 / 2;
 System.out.println(kunJaettavaOnLiukuluku); // tulostaa 1.5
 
 double kunJakajaOnLiukuluku = 3 / 2.0;
 System.out.println(kunJakajaOnLiukuluku); // tulostaa 1.5
+``` -->
+
+```java
+double whenDividendIsFloat = 3.0 / 2;
+System.out.println(whenDividendIsFloat); // prints 1.5
+
+double whenDivisorIsFloat = 3 / 2.0;
+System.out.println(whenDivisorIsFloat); // prints 1.5
 ```
 
 
@@ -650,9 +733,11 @@ System.out.println(kunJakajaOnLiukuluku); // tulostaa 1.5
 
 </sample-output>
 
-Kokonaisluku voidaan tarvittaessa muuttaa liukuluvuksi lisäämällä sen eteen tyyppimuunnosoperaatio `(double)`:
+<!-- Kokonaisluku voidaan tarvittaessa muuttaa liukuluvuksi lisäämällä sen eteen tyyppimuunnosoperaatio `(double)`: -->
 
-```java
+An integers can be converted into a floating point number by preceding it by the type casting operation `(double)`:
+
+<!-- ```java
 int eka = 3;
 int toka = 2;
 
@@ -664,6 +749,20 @@ System.out.println(tulos2); // tulostaa 1.5
 
 double tulos3 = (double) (eka / toka);
 System.out.println(tulos3); // tulostaa 1.0
+``` -->
+
+```java
+int first = 3;
+int second = 2;
+
+double result1 = (double) first / second;
+System.out.println(result1); // prints 1.5
+
+double result2 = first / (double) second;
+System.out.println(result2); // prints 1.5
+
+double result3 = (double) (first / second);
+System.out.println(result3); // prints 1.0
 ```
 
 <sample-output>
@@ -675,13 +774,22 @@ System.out.println(tulos3); // tulostaa 1.0
 </sample-output>
 
 
-Jälkimmäisessä esimerkissä tulos pyöristyy väärin sillä laskuoperaatio kokonaisluvuilla suoritetaan ennen tyyppimuunnosta.
+<!-- Jälkimmäisessä esimerkissä tulos pyöristyy väärin sillä laskuoperaatio kokonaisluvuilla suoritetaan ennen tyyppimuunnosta. -->
 
-Jos jakolausekkeen tulos asetetaan kokonaislukutyyppiseen muuttujaan, on tulos automaattisesti kokonaisluku.
+The last example produces an incorrectly rounded result, because the division with integers is executed before the type casting.
 
-```java
+<!-- Jos jakolausekkeen tulos asetetaan kokonaislukutyyppiseen muuttujaan, on tulos automaattisesti kokonaisluku. -->
+
+If the result of a division is placed into an integer-type variable, the result is automatically an integer.
+
+<!-- ```java
 int kokonaisluku = 3.0 / 2;
 System.out.println(kokonaisluku);
+``` -->
+
+```java
+int integer = 3.0 / 2;
+System.out.println(integer);
 ```
 
 <sample-output>
@@ -690,14 +798,24 @@ System.out.println(kokonaisluku);
 
 </sample-output>
 
-Seuraava esimerkki tulostaa "1.5", sillä jaettavasta tehdään liukuluku kertomalla se liukuluvulla (1.0 * 3 = 3.0) ennen jakolaskua.
+<!-- Seuraava esimerkki tulostaa "1.5", sillä jaettavasta tehdään liukuluku kertomalla se liukuluvulla (1.0 * 3 = 3.0) ennen jakolaskua. -->
 
-```java
+The next example prints "1.5"; the dividend is converted into a floating-point number by multiplying it with a floating point number prior to executing the division.
+
+<!-- ```java
 int jaettava = 3;
 int jakaja = 2;
 
 double tulos = 1.0 * jaettava / jakaja;
 System.out.println(tulos);
+``` -->
+
+```java
+int dividend = 3;
+int divisor = 2;
+
+double result = 1.0 * dividend / divisor;
+System.out.println(result);
 ```
 
 <sample-output>
@@ -707,22 +825,36 @@ System.out.println(tulos);
 </sample-output>
 
 
-<text-box variant='hint' name='Keskiarvon laskeminen'>
+<!-- <text-box variant='hint' name='Keskiarvon laskeminen'> -->
 
-Seuraavissa tehtävissä pyydetään laskemaan syötettyjen lukujen keskiarvo. Kerrataan peruskoulu- tai kansakoulumatematiikasta tutun keskiarvon käsite pikaisesti.
+<text-box variant='hint' name='Calculating the average'>
 
-Keskiarvolla tarkoitetaan lukujen summaa jaettuna niiden lukumäärällä. Esimerkiksi, jos haluaisimme lukujen 5 ja 3 keskiarvon, laskettaisiin keskiarvo kaavalla (5+3)/2. Vastaavasti, mikäli haluaisimme laskea lukujen 1, 2 ja 4 keskiarvon, laskettaisiin keskiarvo kaavalla (1+2+4)/3.
 
-Ohjelmoinnissa tähän liittyy muutamia asioita, jotka tulee muistaa. Ensiksi, nollalla jakaminen ei tyypillisesti ole sallittua. Tämä tarkoittaa sitä, että nollan luvun keskiarvon laskeminen ei onnistu. Toiseksi, mikäli ohjelma käsittelee lukujen lukumäärän ja summan kokonaislukumuuttujina, tulee muuttujista jompikumpi (tai kummatkin) muuntaa liukulukumuuttujaksi kertomalla luku arvolla 1.0 ennen jakolaskua.
+<!-- Seuraavissa tehtävissä pyydetään laskemaan syötettyjen lukujen keskiarvo. Kerrataan peruskoulu- tai kansakoulumatematiikasta tutun keskiarvon käsite pikaisesti. -->
+
+The next exercises task you with calculating the average of the entered numbers. Let's briefly review the notion of average, which is familiar from elementary school mathematics.
+
+<!-- Keskiarvolla tarkoitetaan lukujen summaa jaettuna niiden lukumäärällä. Esimerkiksi, jos haluaisimme lukujen 5 ja 3 keskiarvon, laskettaisiin keskiarvo kaavalla (5+3)/2. Vastaavasti, mikäli haluaisimme laskea lukujen 1, 2 ja 4 keskiarvon, laskettaisiin keskiarvo kaavalla (1+2+4)/3. -->
+
+An average refers to the sum of numbers divided by their count. For instance, the average of the numbers 5 and 3 can be calculated with the formula (5+3)/2. Similarly, the average of the numbers 1, 2, and 4 is produced by the formula (1+2+4)/3.
+
+<!-- Ohjelmoinnissa tähän liittyy muutamia asioita, jotka tulee muistaa. Ensiksi, nollalla jakaminen ei tyypillisesti ole sallittua. Tämä tarkoittaa sitä, että nollan luvun keskiarvon laskeminen ei onnistu. Toiseksi, mikäli ohjelma käsittelee lukujen lukumäärän ja summan kokonaislukumuuttujina, tulee muuttujista jompikumpi (tai kummatkin) muuntaa liukulukumuuttujaksi kertomalla luku arvolla 1.0 ennen jakolaskua. -->
+
+In the context of programming there are a few things to remember. Firstly, dividing by zero is typically not permitted. This implies that calculating the average of zero numbers is impossible. Secondly, the program might handle both the sum of the numbers and their total count as integers; in such a case one of them (or both) should be converted into a floating point number by dividing it by 1.0 before executing the division.
 
 </text-box>
 
 
-<programming-exercise name="Kahden luvun keskiarvo" tmcname='osa01-Osa01_21.KahdenLuvunKeskiarvo'>
+<!-- <programming-exercise name="Kahden luvun keskiarvo" tmcname='osa01-Osa01_21.KahdenLuvunKeskiarvo'> -->
 
-Kirjoita ohjelma, joka kysyy käyttäjältä kahta kokonaislukua ja tulostaa lukujen keskiarvon.
+<programming-exercise name="The average of two numbers" tmcname='osa01-Osa01_21.KahdenLuvunKeskiarvo'>
 
-<sample-output>
+
+<!-- Kirjoita ohjelma, joka kysyy käyttäjältä kahta kokonaislukua ja tulostaa lukujen keskiarvon. -->
+
+Write a program that asks the user for two integers and prints their average.
+
+<!-- <sample-output>
 
 Syötä ensimmäinen luku!
 **8**
@@ -730,16 +862,32 @@ Syötä toinen luku!
 **2**
 Syötettyjen lukujen keskiarvo on 5.0
 
+</sample-output> -->
+
+<sample-output>
+
+Enter the first number!
+**8**
+Enter the second number!
+**2**
+The average of the inputs is 5.0
+
 </sample-output>
 
 </programming-exercise>
 
 
-<programming-exercise name="Kolmen luvun keskiarvo"  tmcname='osa01-Osa01_22.KolmenLuvunKeskiarvo'>
+<!-- <programming-exercise name="Kolmen luvun keskiarvo"  tmcname='osa01-Osa01_22.KolmenLuvunKeskiarvo'> -->
 
-Kirjoita ohjelma, joka kysyy käyttäjältä kolme kokonaislukua ja tulostaa lukujen keskiarvon.
+<programming-exercise name="The average of three numbers"  tmcname='osa01-Osa01_22.KolmenLuvunKeskiarvo'>
 
-<sample-output>
+
+<!-- Kirjoita ohjelma, joka kysyy käyttäjältä kolme kokonaislukua ja tulostaa lukujen keskiarvon. -->
+
+Write a program that asks the user for three integers and prints their average.
+
+
+<!-- <sample-output>
 
 Syötä ensimmäinen luku!
 **8**
@@ -749,9 +897,21 @@ Syötä kolmas luku!
 **3**
 Syötettyjen lukujen keskiarvo on 4.333333333333333
 
-</sample-output>
+</sample-output> -->
 
 <sample-output>
+
+Enter the first number!
+**8**
+Enter the second number!
+**2**
+Enter the third number!
+**3**
+The average of the inputs is 4.333333333333333
+
+</sample-output>
+
+<!-- <sample-output>
 
 Syötä ensimmäinen luku!
 **9**
@@ -761,6 +921,18 @@ Syötä kolmas luku!
 **-1**
 Syötettyjen lukujen keskiarvo on 4.333333333333333
 
+</sample-output> -->
+
+<sample-output>
+
+Enter the first number!
+**9**
+Enter the second number!
+**5**
+Enter the third number!
+**-1**
+The average of the inputs is 4.333333333333333
+
 </sample-output>
 
 </programming-exercise>
@@ -769,11 +941,16 @@ Syötettyjen lukujen keskiarvo on 4.333333333333333
 <quiznator id="5c12b7f263de8e5db0cf8b91"></quiznator>
 
 
-<programming-exercise name="Nelilaskin" tmcname='osa01-Osa01_23.Nelilaskin'>
+<!-- <programming-exercise name="Nelilaskin" tmcname='osa01-Osa01_23.Nelilaskin'> -->
 
-Kirjoita ohjelma, joka lukee käyttäjältä kaksi lukua ja tulostaa lukujen summan, lukujen erotuksen, lukujen kertolaskun, ja lukujen jakolaskun. Alla on kaksi esimerkkiä ohjelman toiminnasta.
+<programming-exercise name="Simple calculator" tmcname='osa01-Osa01_23.Nelilaskin'> -->
 
-<sample-output>
+
+<!-- Kirjoita ohjelma, joka lukee käyttäjältä kaksi lukua ja tulostaa lukujen summan, lukujen erotuksen, lukujen kertolaskun, ja lukujen jakolaskun. Alla on kaksi esimerkkiä ohjelman toiminnasta. -->
+
+Write a program that reads two numbers from the user and prints their sum, difference, product, and quotient. Two examples of the execution of the program are supplied below.
+
+<!-- <sample-output>
 
 Syötä ensimmäinen luku!
 **8**
@@ -784,7 +961,21 @@ Syötä toinen luku!
 8 * 2 = 16
 8 / 2 = 4.0
 
+</sample-output> -->
+
+<sample-output>
+
+Enter the first number!
+**8**
+Enter the second number!
+**2**
+8 + 2 = 10
+8 - 2 = 6
+8 * 2 = 16
+8 / 2 = 4.0
+
 </sample-output>
+
 
 <sample-output>
 
@@ -799,10 +990,25 @@ Syötä toinen luku!
 
 </sample-output>
 
+<sample-output>
+
+Enter the first number!
+**9**
+Enter the second number!
+**2**
+9 + 2 = 11
+9 - 2 = 7
+9 * 2 = 18
+9 / 2 = 4.5
+
+</sample-output>
+
 </programming-exercise>
 
 
-## Muuttujan arvoon liittyviä väärinkäsityksiä
+<!-- ## Muuttujan arvoon liittyviä väärinkäsityksiä -->
+
+## Misunderstandings about the value of a variable
 
 Kun tietokone suorittaa ohjelmakoodia, suorittaa se sitä käsky kerrallaan, edeten aina täsmälleen siten, kuin ohjelmakoodissa sanotaan. Kun muuttujaan asetetaan arvo, tapahtuu aina sama asia, eli yhtäsuuruusmerkin oikealla puolella oleva arvo kopioidaan yhtäsuuruusmerkin vasemmalla puolella olevan muuttujan arvoksi, eli muuttujan nimeämään paikkaan.
 
