@@ -1,32 +1,51 @@
 ---
 path: '/osa-2/4-metodit'
-title: 'Metodit ja ohjelman jakaminen pienempiin osiin'
+# title: 'Metodit ja ohjelman jakaminen pienempiin osiin'
+title: 'Methods and dividing the program into smaller parts'
 ---
 
-<text-box variant='learningObjectives' name='Oppimistavoitteet'>
+<!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
+<text-box variant='learningObjectives' name='Learning objectives'>
 
-- Tunnet käsitteet metodi, metodin parametri, metodin palautusarvo ja ohjelman kutsupino.
-- Osaat luoda metodeja ja osaat kutsua metodeja sekä pääohjelmasta (`main`-metodi) että muiden metodien sisältä.
-- Osaat luoda parametrillisia ja parametrittomia metodeja, ja osaat luoda metodeja, jotka palauttavat arvon.
+<!-- - Tunnet käsitteet metodi, metodin parametri, metodin palautusarvo ja ohjelman kutsupino. -->
+- You are familiar with the following concepts: method, method parameter, method's return value, and a program's call stack
+<!-- - Osaat luoda metodeja ja osaat kutsua metodeja sekä pääohjelmasta (`main`-metodi) että muiden metodien sisältä. -->
+- You can create methods and know how to call methods both from the main program (the `main` method) and from inside other methods
+<!-- - Osaat luoda parametrillisia ja parametrittomia metodeja, ja osaat luoda metodeja, jotka palauttavat arvon. -->
+- You can create parameterized and non-parameterized methods, and you can create methods that return a value
 
 </text-box>
 
-Olemme käyttäneet useita erilaisia komentoja: arvon asettamista, laskutoimituksia, ehtolauseita, ja toistolauseita.
+<!-- Olemme käyttäneet useita erilaisia komentoja: arvon asettamista, laskutoimituksia, ehtolauseita, ja toistolauseita. -->
 
-Ruudulle tulostaminen on tehty `System.out.println()`-lauseella ja lukeminen `Integer.valueOf(lukija.nextLine())` lauseella. Ehtolauseessa on käytetty `if`:iä, toistolauseessa `while`:ä ja `for`:ia. Huomaamme, että tulostaminen ja lukeminen poikkeaa `if`:istä, `while`:stä, `for`:ista siinä, että tulostus- ja lukemiskomennon perässä on sulut ja joskus sulkujen sisällä komennolle annettava parametrit. Nämä "sulkuihin päättyvät" eivät oikeastaan olekaan komentoja vaan metodeja.
+We have used several different commands: assigning values, calculations, conditional statements, and repeat statements.
 
-Teknisesti ottaen **metodi** tarkoittaa nimettyä lauseista koostuvaa joukkoa, eli ohjelman palaa, jota voi kutsua muualta ohjelmakoodista metodille annetun nimen perusteella. Esimerkiksi koodirivillä `System.out.println("olen metodille annettava parametri!")` kutsutaan metodia, joka suorittaa ruudulle tulostamisen. Metodin sisäinen toteutus -- eli joukko suoritettavia lauseita -- on piilossa, eikä ohjelmoijan tarvitse välittää siitä metodia käytettäessä.
+<!-- Ruudulle tulostaminen on tehty `System.out.println()`-lauseella ja lukeminen `Integer.valueOf(lukija.nextLine())` lauseella. Ehtolauseessa on käytetty `if`:iä, toistolauseessa `while`:ä ja `for`:ia. Huomaamme, että tulostaminen ja lukeminen poikkeaa `if`:istä, `while`:stä, `for`:ista siinä, että tulostus- ja lukemiskomennon perässä on sulut ja joskus sulkujen sisällä komennolle annettava parametrit. Nämä "sulkuihin päättyvät" eivät oikeastaan olekaan komentoja vaan metodeja. -->
 
-Tähän mennessä käyttämämme metodit ovat kaikki olleet Javan valmiita metodeita. Opetellaan seuraavaksi tekemään omia metodeita.
+Printing to the screen has been done with the statement `System.out.println()`, and reading numbers with the statement `Integer.valueOf(scanner.nextLine())`. Conditional statements have used `if`, repeat statements `while` and `for`. We notice that printing and reading somewhat differ from `if`, `while`, and `and`; the printing and reading commands are followed by parentheses, and sometimes there also are parameters given to the command between the parentheses. These statements "ending with parentheses" are strictly speaking not commands, but rather methods.
+
+<!-- Teknisesti ottaen **metodi** tarkoittaa nimettyä lauseista koostuvaa joukkoa, eli ohjelman palaa, jota voi kutsua muualta ohjelmakoodista metodille annetun nimen perusteella. Esimerkiksi koodirivillä `System.out.println("olen metodille annettava parametri!")` kutsutaan metodia, joka suorittaa ruudulle tulostamisen. Metodin sisäinen toteutus -- eli joukko suoritettavia lauseita -- on piilossa, eikä ohjelmoijan tarvitse välittää siitä metodia käytettäessä. -->
+
+Technically speaking, **a method** is a named set of statements - a part of the program that can be called from elsewhere in the program code by using the method's name. For instance the line of code `System.out.println("I am a parameter given to a method!")` calls a methods that handles printing to the screen. The internal implementation of the method -- i.e. the set of statements to be executed -- is hidden, and the programmer need not concern themselves with it when using the method.
+
+<!-- Tähän mennessä käyttämämme metodit ovat kaikki olleet Javan valmiita metodeita. Opetellaan seuraavaksi tekemään omia metodeita. -->
+
+Thus far all the methods we have used have been pre-made Java methods. Next we will learn to create our own methods.
 
 
-##  Omat metodit
+<!-- ##  Omat metodit -->
 
-**Metodi** tarkoittaa nimettyä lauseista koostuvaa joukkoa, jota voi kutsua muualta ohjelmakoodista nimen perusteella. Ohjelmointikielet tarjoavat valmiita metodeja, mutta ohjelmoija voi myös kirjoittaa omia metodeja. On oikeastaan on melko poikkeuksellista mikäli ohjelmassa ei ole yhtään itse kirjoitettua metodia, sillä metodit auttavat ohjelman jäsentämisessä. Tästä lähtien lähes jokainen kurssilla tehty ohjelma sisältääkin itsekirjoitettuja metodeja.
+## Own methods
 
-Metodit kirjoitetaan ohjelmarunkoon `main`:in aaltosulkeiden ulkopuolelle mutta kuitenkin "uloimmaisten" aaltosulkeiden sisäpuolelle, joko mainin ylä- tai alapuolelle.
+<!-- **Metodi** tarkoittaa nimettyä lauseista koostuvaa joukkoa, jota voi kutsua muualta ohjelmakoodista nimen perusteella. Ohjelmointikielet tarjoavat valmiita metodeja, mutta ohjelmoija voi myös kirjoittaa omia metodeja. On oikeastaan on melko poikkeuksellista mikäli ohjelmassa ei ole yhtään itse kirjoitettua metodia, sillä metodit auttavat ohjelman jäsentämisessä. Tästä lähtien lähes jokainen kurssilla tehty ohjelma sisältääkin itsekirjoitettuja metodeja. -->
 
-```java
+**A method** means a named set consisting of statements that can be called from elsewhere in the program code by its name. Programming languages offer pre-made methods, but programmers can also write their own ones. It would in fact be quite exceptional if a program used no methods written by the programmer, because methods help in structuring the program. From this point onward nearly every program on the course will therefore contain custom-created methods.
+
+<!-- Metodit kirjoitetaan ohjelmarunkoon `main`:in aaltosulkeiden ulkopuolelle mutta kuitenkin "uloimmaisten" aaltosulkeiden sisäpuolelle, joko mainin ylä- tai alapuolelle. -->
+
+In the code boilerplate, methods are written outside of the curly braces of the `main`, yet inside out the `outermost` curly braces. They can be located above or below the main.
+
+<!-- ```java
 import java.util.Scanner;
 
 public class Esimerkki {
@@ -37,19 +56,42 @@ public class Esimerkki {
 
     // omia metodeja tänne
 }
-```
-
-Tarkastellaan uuden metodin luomista. Luodaan metodi `tervehdi`.
+``` -->
 
 ```java
-public static void tervehdi() {
-    System.out.println("Terveiset metodimaailmasta!");
+import java.util.Scanner;
+
+public class Example {
+    public static void main(String[] args) {
+        Scanner scanned = new Scanner(System.in);
+        // program code
+    }
+
+    // your own methods here
 }
 ```
 
-Ja asetetaan se metodeille kuuluvalle paikalle.
+<!-- Tarkastellaan uuden metodin luomista. Luodaan metodi `tervehdi`. -->
+
+Let's observe how to create a new method. We'll create the method `greet`.
+
+<!-- ```java
+public static void tervehdi() {
+    System.out.println("Terveiset metodimaailmasta!");
+}
+``` -->
 
 ```java
+public static void greet() {
+    System.out.println("Greetings from the method world!");
+}
+```
+
+<!-- Ja asetetaan se metodeille kuuluvalle paikalle. -->
+
+And then we'll insert it into a suitable place for a method.
+
+<!-- ```java
 import java.util.Scanner;
 
 public class Esimerkki {
@@ -61,6 +103,22 @@ public class Esimerkki {
     // omia metodeja tänne
     public static void tervehdi() {
         System.out.println("Terveiset metodimaailmasta!");
+    }
+}
+``` -->
+
+```java
+import java.util.Scanner;
+
+public class Example {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // program code
+    }
+
+    // your own methods here
+    public static void greet() {
+        System.out.println("Greetings from the method world!");
     }
 }
 ```
