@@ -17,7 +17,7 @@ title: "Calculating with numbers"
 
 <!-- Laskuoperaatiot ovat tuttuja ja suoraviivaisia: yhteenlasku `+`, erotus `-`, kertolasku `*` ja jakolasku `/`. Laskentajärjestys on myös tuttu: laskenta tehdään vasemmalta oikealle sulut huomioon ottaen. Kuitenkin `*` ja `/` lasketaan ennen `+` ja `-` operaatioita, samoin kuin perus- tai kansakoulumatematiikassa on tullut tutuksi. -->
 
-The basic mathematical operations are both familiar and straightforward: addition `+`, subtraction `-`, multiplication `*`, and division`/`. Their order follows familiar rules, too: the operations are performed from left to right, taking brackets into account. Yet `*` and `/` precede `+` and `-`, as is familiar from elementary school mathematics.
+The basic mathematical operations are both familiar and straightforward: addition `+`, subtraction `-`, multiplication `*`, and division`/`. Their order follows familiar rules, too: the operations are performed from left to right, taking parentheses into account. Yet `*` and `/` precede `+` and `-`, as is familiar from elementary school mathematics.
 
 <!-- ```java
 int eka = 2;
@@ -40,11 +40,11 @@ System.out.println(sum); // prints 6
 ```
 
 <!-- ## Laskujärjestys ja sulut -->
-## Order of operations and brackets
+## Order of operations and parentheses
 
 <!-- Laskujärjestykseen voi vaikuttaa sulkujen avulla. Sulkujen sisällä olevat laskuoperaatiot suoritetaan ennen niiden ulkopuolella olevia laskuoperaatioita. -->
 
-It is possible to affect the order of operations with brackets. The operations contained within brackets are performed before the ones outside.
+It is possible to affect the order of operations with parentheses. The operations contained within parentheses are performed before the ones outside.
 
 <!-- ```java
 int laskuSuluilla = (1 + 1) + 3 * (2 + 5);
@@ -55,11 +55,11 @@ System.out.println(laskuSuluitta); // tulostaa 13
 ``` -->
 
 ```java
-int calculationWithBrackets = (1 + 1) = 3 * (2 + 5);
-System.out.println(calculationWithBrackets); // prints 23
+int calculationWithParentheses = (1 + 1) = 3 * (2 + 5);
+System.out.println(calculationWithParentheses); // prints 23
 
-int calculationWithoutBrackets = 1 + 1 + 3 * 2 + 5;
-System.out.println(calculationWithoutBrackets); // prints 13
+int calculationWithoutParentheses = 1 + 1 + 3 * 2 + 5;
+System.out.println(calculationWithoutParentheses); // prints 13
 
 ```
 
@@ -80,15 +80,15 @@ System.out.println(laskuSuluitta); // tulostaa 13
 ``` -->
 
 ```java
-int calculationWithBrackets = (1 + 1);
-System.out.println(calculationWithBrackets); // prints 2
-calculationWithBrackets = calculationWithBrackets + 3 * (2 + 5);
-System.out.println(calculationWithBrackets); // prints 23
+int calculationWithParentheses = (1 + 1);
+System.out.println(calculationWithParentheses); // prints 2
+calculationWithParentheses = calculationWithParentheses + 3 * (2 + 5);
+System.out.println(calculationWithParentheses); // prints 23
 
-int calculationWithoutBrackets = 1 + 1;
-calculationWithoutBrackets = calculationWithoutBrackets + 3 * 2;
-calculationWithoutBrackets = calculationWithoutBrackets + 5;
-System.out.println(calculationWithoutBrackets); // prints 13
+int calculationWithoutParentheses = 1 + 1;
+calculationWithoutParentheses = calculationWithoutParentheses + 3 * 2;
+calculationWithoutParentheses = calculationWithoutParentheses + 5;
+System.out.println(calculationWithoutParentheses); // prints 13
 ```
 
 <!-- <programming-exercise name="Sekunnit vuorokaudessa" tmcname='osa01-Osa01_16.SekunnitVuorokaudessa'> -->
@@ -188,7 +188,7 @@ int laskuSuluitta = 1 + 1 + 3 * 2 + 5;
 ``` -->
 
 ```java
-int calculationWithoutBrackets = 1 + 1 + 3 * 2 + 5;
+int calculationWithoutParentheses = 1 + 1 + 3 * 2 + 5;
 ```
 
 <!-- Lausekkeen evaluaatio tapahtuu aina ennen muuttujan arvon asetusta, eli yllä lasku "1 + 1 + 3 * 2 + 5" suoritetaan ennen tuloksen asetusta muuttujaan. -->
