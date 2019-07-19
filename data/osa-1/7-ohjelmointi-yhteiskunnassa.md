@@ -25,7 +25,7 @@ Software professionals are the architects of these kinds of digital services. It
 The end-users of a given system are seldom aware of its producer(s). Few have heard of, for example, [Margaret Hamilton](<https://en.wikipedia.org/wiki/Margaret_Hamilton_(scientist)>) who, with her team, wrote the program that sent our species to the moon.
 
 <!-- ![Margaret Hamilton työn parissa](./margeret-action.jpg) -->
-![Margaret Hamilton at work](./margeret-action.jpg)
+![Margaret Hamilton in action](./margeret-action.jpg)
 
 <!-- Ohjelmointia voidaan ajatella nykyajan käsityöläistaitona. Ohjelmistojen ja digitaalisten järjestelmien ymmärryksen tarve näkyy nykyään kaikkialla -- ohjelmoinnin alkeita opetetaan jo peruskoulussa, ja samalla esimerkiksi moderni tiede hyödyntää tiedon analysoinnissa käytettäviä ohjelmistoja sekä ohjelmistoalan innovaatioita. Esimerkiksi meteorologit, fyysikot ja kemistit käyttävät ohjelmistoja ja ohjelmoivat työssään. Myös kasvatustiede ja opetusala hyödyntää digitalisaation tuomia mahdollisuuksia yhä enemmän. Nykyään on oikeastaan vaikeampaa keksiä ammatteja, joihin ohjelmistot ja digitalisaatio ei vaikuta, kuin ammatteja, joihin ohjelmistot ja digitalisaatio vaikuttaa. -->
 
