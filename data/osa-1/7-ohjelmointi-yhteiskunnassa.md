@@ -35,7 +35,7 @@ Programming can be considered the artisanship of our time, and the demand for un
 
 <!-- Kurssin jälkeen yksinkertainenkin ohjeistus kuten  "_Osta kaksi maitoa. Mikäli kaupassa on appelsiineja, osta neljä._" saa uusia sävyjä. Vaikka ihmiselle viesti on selvä, tietokone saattaisi päätyä ostamaan neljä maitoa. -->
 
-After the course, the most simple instructions, such as "_Buy two milks. If the shop has oranges, buy four._" are viewed in a new light. Although the message may be clear to a human, a computer might end up buying four milks.
+After the course, the most simple instructions, such as "_Buy two cartons of milk. If the shop has oranges, buy four of them._" are viewed in a new light. Although the message may be clear to a human, a computer might end up buying four cartons of milk.
 
 <!-- Mukavaa, että olet lähtenyt mukaan tälle matkalle! -->
 
