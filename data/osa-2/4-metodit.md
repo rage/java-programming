@@ -227,7 +227,7 @@ Strictly speaking the main program (`main`) itself is a method. When the program
 
 <!-- Tee metodi `tulostaTeksti`, joka tulostaa tekstin "Alussa olivat suo, kuokka ja Java." sekä rivinvaihdon. -->
 
-Create a method called `printPhrase` which prints the phrase "In a hole in the ground there lived a hobbit" and a newline.
+Create a method called `printPhrase` which prints the phrase "In a hole in the ground there lived a method" and a newline.
 
 <!-- ```java
 public static void main(String[] args) {
@@ -261,7 +261,7 @@ Alussa olivat suo, kuokka ja Java.
 
 <sample-output>
 
-In a hole in the ground there lived a hobbit
+In a hole in the ground there lived a method
 
 </sample-output>
 
@@ -320,13 +320,13 @@ Alussa olivat suo, kuokka ja Java.
 
 How many?
 **7**
-In a hole in the ground there lived a hobbit.
-In a hole in the ground there lived a hobbit.
-In a hole in the ground there lived a hobbit.
-In a hole in the ground there lived a hobbit.
-In a hole in the ground there lived a hobbit.
-In a hole in the ground there lived a hobbit.
-In a hole in the ground there lived a hobbit.
+In a hole in the ground there lived a method.
+In a hole in the ground there lived a method.
+In a hole in the ground there lived a method.
+In a hole in the ground there lived a method.
+In a hole in the ground there lived a method.
+In a hole in the ground there lived a method.
+In a hole in the ground there lived a method.
 
 </sample-output>
 
