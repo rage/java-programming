@@ -7,13 +7,13 @@ title: 'Toiminnallisuuden toistaminen'
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
 <!-- - Tunnet käsitteen toistolause ja osaat luoda ohjelman, joka sisältää toistolauseen. -->
-- You are familiar with while-loops and know how to utilize them in your program.
+- You are familiar with loops and know how to utilize them in your program.
 
 <!-- - Osaat käyttää `break`-komentoa toistolauseen suorituksen lopettamiseen ja toistolausetta seuraavaan käskyyn siirtymiseen. -->
-- You know how to use the `break`-command in order to break out of the while-loop and onto the next statement.
+- You know how to use the `break`-command in order to break out of the loop and onto the next statement.
 
 <!-- - Osaat käyttää `continue`-komentoa toistolauseen alkuun palaamiseen. -->
-- You know how to use `continue`-command to go to the beginning of the while-loop.
+- You know how to use `continue`-command to go to the beginning of the loop.
 
 <!-- - Osaat luoda ohjelman, joka lukee käyttäjältä syötettä kunnes käyttäjä syöttää tietynlaisen syötteen -- esim luku 0 tai merkkijono "loppu", jonka jälkeen ohjelma kertoo ennen lopettamista syötetyistä syötteistä (esim. syötteiden lukumäärä, lukujen tapauksessa summa ja keskiarvo). -->
 - You are able to create a program that reads user inputs until a specific input is given, for example number 0 or a string "end", after which the program prints something about the given inputs (if the inputs were numbers, then the sum and the average of the numbers)
@@ -22,10 +22,10 @@ title: 'Toiminnallisuuden toistaminen'
 
 <!-- Tietokoneen sisältämä käskyjen suorittamiseen erikoistunut prosessori pystyy -- moderneissa tietokoneissa -- suorittamaan yli miljardi (konekielistä) käskyä sekunnissa. Tässä osassa tutustumme toistettavan ohjelmakoodin määrittelyyn toistolauseiden avulla. -->
 <!-- TODO Missä muodossa tulisi ilmaista? -->
-Computer contains a processor that can, in modern computers, process over billions of (machinecode) commands per second. In this section we will get familiar with writing program code that's going to be repeated with while-loops.
+Computer contains a processor that can, in modern computers, process over billions of (machinecode) commands per second. In this section we will get familiar with writing program code that's going to be repeated with loops.
 
 <!-- Motivoidaan toistolauseiden käyttöä hieman. Alla on esimerkki ohjelmasta, missä kysytään käyttäjältä viisi lukua ja lasketaan niiden summa. -->
-As a motivation to using while-loops, there's an example code bellow which asks five numbers from the user and calculates their sum.
+As a motivation to using loops, there's an example code bellow which asks five numbers from the user and calculates their sum.
 
 ```java
 Scanner scanner = new Scanner(System.in);
@@ -53,7 +53,7 @@ System.out.println("The sum of the numbers is " + sum);
 It does the trick, but not quite elegantly. What if the program had to read one hundred or perhaphs one thousand numbers and print their sum? What if the program had to read only three numbers?
 
 <!-- Tämän ongelman voi ratkaista toistolauseella, joka pitää kirjaa sekä summasta että lukemiskerroista. Viiden luvun summan tulostava toistolauseella toteutettava ohjelma näyttää seuraavalta. -->
-This problem can be solved with a while-loop, which keeps track of both the sum and the amount of read numbers. The program that prints the sum of five numbers looks now as follows
+This problem can be solved with a loop, which keeps track of both the sum and the amount of read numbers. The program that prints the sum of five numbers looks now as follows
 
 ```java
 Scanner scanner = new Scanner(System.in);
@@ -75,12 +75,12 @@ System.out.println("The sum of the numbers is " + sum);
 ```
 
 <!-- Tutustutaan seuraavaksi toistolauseisiin. -->
-Next, we will get familiar with while-loops.
+Next, we will get familiar with loops.
 
 <!-- ## Toistolause ja ikuinen toisto -->
-## While-loop and infinite loop
+## loop and infinite loop
 <!-- Toistolause sisältää lausekkeen, jonka perusteella päätellään jatketaanko toistoa, sekä lohkon, joka sisältää toistettavan lähdekoodin. Toistolauseen muoto on seuraava. -->
-The while-loop contains a statement which determines if the code within the loop should be repeated. The form of a while-loop is as follows
+The loop contains a statement which determines if the code within the loop should be repeated. The form of a loop is as follows
 
 ```java
 while (_statement_) {
@@ -96,10 +96,10 @@ while (_statement_) {
 
 <!-- Käytämme toistaiseksi lausekkeena `true`-arvoa, eli boolean-tyyppista arvoa "totta". Tämä tarkoittaa sitä, että toistolauseen toistamista jatketaan aina kun ohjelma on tilantessa, missä selvitetään tuleeko toistolauseen suoritusta jatkaa. Tämä tapahtuu sekä silloin kun ohjelman suoritus päätyy toistolauseeseen ensimmäistä kertaa että silloin kun ohjelman suoritus päätyy toistolauseen lohkon loppuun. -->
 <!-- TODO Muokkaa "execution of the program first ..." parempaan muotoon -->
-We will use the value `true` as the while-loop's statement. This means that the while-loop always decides to repeat when it enters the statement. This happens when the execution of the program first arrives to the while-loop statement and also when it's at the end of the while-loop block.
+We will use the value `true` as the loop's statement. This means that the loop always decides to repeat when it enters the statement. This happens when the execution of the program first arrives to the loop statement and also when it's at the end of the loop block.
 
 <!-- Toistolauseen suoritus etenee askeleittain lause kerrallaan. Seuraava ohjelma tulostaa merkkijonoa _osaan ohjelmoida!_ ikuisesti eli "äärettömän monta kertaa": -->
-The execution of while-loop proceeds line by line. The following outputs _I can program_ infite amount of time.
+The execution of loop proceeds line by line. The following program outputs _I can program_ infite amount of time.
 ```java
 while (true) {
     System.out.println("I can program!");
@@ -110,25 +110,28 @@ while (true) {
 The program that runs infinitely does not close on its own. The program can be closed from the red square button located in the Netbean's output window.
 
 
-## Toistolauseen päättäminen
+<!-- ## Toistolauseen päättäminen -->
+# Ending a loop
 
-Toistolauseen saa päätettyä komennolla `break`. Kun tietokone suorittaa komennon `break`, siirtyy ohjelman suoritus toistolauseen lohkoa seuraavaan komentoon.
+<!-- Toistolauseen saa päätettyä komennolla `break`. Kun tietokone suorittaa komennon `break`, siirtyy ohjelman suoritus toistolauseen lohkoa seuraavaan komentoon. -->
+The loop statement can be broken out of with command 'break'. When a computer executes command 'break', the program moves from the loop section onto the next command.
 
-Alla olevassa esimerkissä on ohjelma, joka tulostaa luvut yhdestä viiteen. Ohjelmassa määritellään toistolauseen sisällä käsiteltävä luku ennen toistolauseen lohkoa. Tällöin muuttujan kasvatus onnistuu.
+<!-- Alla olevassa esimerkissä on ohjelma, joka tulostaa luvut yhdestä viiteen. Ohjelmassa määritellään toistolauseen sisällä käsiteltävä luku ennen toistolauseen lohkoa. Tällöin muuttujan kasvatus onnistuu. -->
+In the example below is a program that prints numbers from one to five. In the program, a variable used within the loop is defined before the loop. This allows incrementation of the variable.
 
 ```java
-int luku = 1;
+int number = 1;
 
 while (true) {
-    System.out.println(luku);
-    if (luku >= 5) {
+    System.out.println(number);
+    if (number >= 5) {
         break;
     }
 
-    luku = luku + 1;
+    number = number + 1;
 }
 
-System.out.println("Valmista!");
+System.out.println("Ready!");
 ```
 
 <sample-output>
@@ -138,84 +141,89 @@ System.out.println("Valmista!");
 3
 4
 5
-Valmista!
+Ready!
 
 </sample-output>
 
-Toistolauseesta poistutaan esimerkiksi kun käyttäjä syöttää tietynlaisen syötteen tai mikäli toistolauseessa tehtävä laskenta päätyy haluttuun lopputulokseen. Tällaiset ohjelmat sisältävät sekä toistolauseen, jota käytetään toistettavan ohjelman määrittelyyn, että toistolauseen sisällä olevan ehtolauseen, jota käytetään toistolauseesta poistumiseen käytettävän ehdon täyttymisen tarkasteluun.
+<!-- Toistolauseesta poistutaan esimerkiksi kun käyttäjä syöttää tietynlaisen syötteen tai mikäli toistolauseessa tehtävä laskenta päätyy haluttuun lopputulokseen. Tällaiset ohjelmat sisältävät sekä toistolauseen, jota käytetään toistettavan ohjelman määrittelyyn, että toistolauseen sisällä olevan ehtolauseen, jota käytetään toistolauseesta poistumiseen käytettävän ehdon täyttymisen tarkasteluun. -->
+Breaking out of the loop occurs when a user enters a specific input or whether the loop's calculations ends in wanted result. These kinds of programs contains a loop, which is used in
+defining a code which is going to be repeated, and the condition for the loop that is used to check whether or not to exit the loop.
 
-Toistolauseessa voidaan myös kysyä käyttäjältä syötettä. Toistolauseessa useasti käytettävät muuttujat (kuten Scanner-lukija) määritellään ennen toistolausetta, toistokohtaiset muuttujat (kuten luettu arvo) määritellään toistolauseessa.
+<!-- Toistolauseessa voidaan myös kysyä käyttäjältä syötettä. Toistolauseessa useasti käytettävät muuttujat (kuten Scanner-lukija) määritellään ennen toistolausetta, toistokohtaiset muuttujat (kuten luettu arvo) määritellään toistolauseessa. -->
+In the loop, user can be asked for an input. The variables that are used many times (such as Scanner) are defined before the loop, and the loop specific variables (such as read value) is defined in the loop.
 
-Alla olevassa esimerkissä ohjelma kysyy käyttäjältä pitäisikö toistolauseesta poistua. Mikäli käyttäjä syöttää merkkijonon "k", ohjelman suoritus siirtyy toistolausetta seuraavaan komentoon, jonka suorittamisen jälkeen ohjelman suoritus päättyy.
+<!-- Alla olevassa esimerkissä ohjelma kysyy käyttäjältä pitäisikö toistolauseesta poistua. Mikäli käyttäjä syöttää merkkijonon "k", ohjelman suoritus siirtyy toistolausetta seuraavaan komentoon, jonka suorittamisen jälkeen ohjelman suoritus päättyy. -->
+In the example below, program asks the user whether or not to exit from the loop. If the user inputs a string "k", the executuion of program moves to command after the loop, after which the execution of the program ceases.
 
 ```java
-Scanner lukija = new Scanner(System.in);
+Scanner scanner = new Scanner(System.in);
 
 while (true) {
-    System.out.println("Poistutaanko? (k lopettaa)");
-    String syote = lukija.nextLine();
-    if (syote.equals("k")) {
+    System.out.println("Exit? (y exits)");
+    String input = scanner.nextLine();
+    if (input.equals("y")) {
         break;
     }
 
-    System.out.println("Ok! Jatketaan!");
+    System.out.println("Ok! Let's carry on!");
 }
 
-System.out.println("Valmista!");
+System.out.println("Ready!");
 ```
 
-Ohjelma toimii esimerkiksi seuraavasti. Alla käyttäjän syötteet ovat merkitty punaisella.
-
+<!-- Ohjelma toimii esimerkiksi seuraavasti. Alla käyttäjän syötteet ovat merkitty punaisella. -->
+The program in the example works as follows. The users inputs are in red color.
 <sample-output>
 
-Poistutaanko? (k lopettaa)
-**ei**
-Ok! Jatketaan!
-Poistutaanko? (k lopettaa)
-**nej**
-Ok! Jatketaan!
-Poistutaanko? (k lopettaa)
-**k**
-Valmista!
+Shall we carry on? (y exits)
+**no**
+Ok! Let's carry on!
+Shall we carry on? (y exits)
+**non**
+Ok! Let's carry on!
+Shall we carry on? (y exits)
+**y**
+Ready!
 
 </sample-output>
 
 <programming-exercise name="Jatketaanko" tmcname='osa02-Osa02_05.Jatketaanko'>
 
-Kirjoita edellä olevaa toistolause-esimerkkiä mukaillen ohjelma, joka kysyy käyttäjältä "Jatketaanko?" kunnes käyttäjä syöttää merkkijonon "ei".
-
+<!-- Kirjoita edellä olevaa toistolause-esimerkkiä mukaillen ohjelma, joka kysyy käyttäjältä "Jatketaanko?" kunnes käyttäjä syöttää merkkijonon "ei". -->
+Write a program by using the loop-example that asks "Shall we carry on?" until the user inputs a string "no".
 <sample-output>
 
-Jatketaanko?
-**kyllä**
-Jatketaanko?
-**kyl**
-Jatketaanko?
-**k**
-Jatketaanko?
-**ei**
+Shall we carry on?
+**yes**
+Shall we carry on?
+**ye**
+Shall we carry on?
+**y**
+Shall we carry on?
+**no**
 
 </sample-output>
 
 </programming-exercise>
 
 
-Edellisessä esimerkissä ohjelma lukee käyttäjältä merkkijonomuotoisia syötteitä. Vastaavanlaisen ohjelman toteutus onnistuu myös muilla muuttujatyypeillä. Alla olevassa esimerkissä käyttäjältä pyydetään lukuja kunnes käyttäjä syöttää luvun nolla.
+<!-- Edellisessä esimerkissä ohjelma lukee käyttäjältä merkkijonomuotoisia syötteitä. Vastaavanlaisen ohjelman toteutus onnistuu myös muilla muuttujatyypeillä. Alla olevassa esimerkissä käyttäjältä pyydetään lukuja kunnes käyttäjä syöttää luvun nolla. -->
+In the previous example, the program reads string type inputs. Similarly, the program can be done with other types of variables. The program below asks numbers from the user until the user inputs a zero.
 
 ```java
-Scanner lukija = new Scanner(System.in);
+Scanner scanner = new Scanner(System.in);
 
 while (true) {
-    System.out.println("Syötä luku, 0 lopettaa");
-    int komento = Integer.valueOf(lukija.nextLine());
-    if (komento == 0) {
+    System.out.println("Input a number, 0 to quit");
+    int command = Integer.valueOf(scanner.nextLine());
+    if (command == 0) {
         break;
     }
 
-    System.out.println("Syötit " + komento);
+    System.out.println("You input " + command);
 }
 
-System.out.println("Valmista, kiitos!");
+System.out.println("Done, thank you!");
 ```
 
 Ohjelman suoritus on esimerkiksi seuraavanlainen.
