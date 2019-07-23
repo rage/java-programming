@@ -445,26 +445,26 @@ Let's examine the previous programs with comments. Before every command there's 
 // The task is to read an input from the user //Tehtävänä syötteen lukeminen käyttäjältä
 Scanner scanner = new Scanner(System.in);
 
-// The task is to repeat the block until the block is exited//Tehtävänä lohkon toistaminen kunnes lohkosta poistutaan
+// The task is to repeat the block until the block is exited
 while (true) {
-    // The task is to ask user for an input //Tehtävänä luvun syöttämisen kehottaminen
+    // The task is to ask user for an input
     System.out.println("Input a number ");
-    // The task is to read a number from the user //Tehtävänä luvun lukeminen käyttäjältä
+    // The task is to read a number from the user
     int number = Integer.valueOf(scanner.nextLine());
 
-    // The task is to guard and prevent unfit numbers// Tehtävänä vartiointi, estetään epäkelpojen lukujen
-    // for further processing //jatkokäsittely
+    // The task is to guard and prevent unfit numbers
+    // for further processing
     if (number < 0) {
         System.out.println("Unfit number");
         continue;
     }
 
-    // The task is to check if the loop should be exited //Tehtävänä toistolauseesta poistumisen tarkastaminen
+    // The task is to check if the loop should be exited
     if (number == 0) {
         break;
     }
 
-    // The task is to print the square of the number //Tehtävänä syötetyn luvun neliön tulostaminen
+    // The task is to print the square of the number
     System.out.println(number * number);
 }
 ```
@@ -481,13 +481,13 @@ Scanner scanner = new Scanner(System.in);
 
 // The task is to repeat the block until the block is exited// Tehtävänä lohkon toistaminen kunnes lohkosta poistutaan
 while (true) {
-    // The task is to ask user for an input // Tehtävänä luvun syöttämisen kehottaminen
+    // The task is to ask user for an input
     System.out.println("Input a number ");
-    // The task is to read a number from the user //Tehtävänä luvun lukeminen käyttäjältä
+    // The task is to read a number from the user
     int number = Integer.valueOf(scanner.nextLine());
 
-    // The purpose of the if-else if-else block?//if-else if-else -kokonaisuuden tehtävä?
-    // The task is the processing of the number?//Tehtävänä luvun käsittely?
+    // The purpose of the if-else if-else block?
+    // The task is the processing of the number?
     if (number < 0) {
         System.out.println("Unfit number");
     } else if (number == 0) {
@@ -503,173 +503,184 @@ We realise, that for the `if-else if-else`-block it's hard to give on clear task
 TODO: quiz
 
 
-## Laskentaa toistolauseiden avulla
+<!-- ## Laskentaa toistolauseiden avulla -->
+## Calculation with loops
 
-Toistolauseita hyödynnetään usein asioiden laskemisessa. Esimerkiksi ohjelmat, joissa käsitellään määrittelemätöntä määrää käyttäjän syöttämiä lukuja perustuvat toistolauseseen. Tällaisissa ohjelmissa tulostetaan tyypillisesti jonkinlaisia tilastoja luetuista luvuista tai muista syötteistä toistolauseen jälkeen.
+<!-- Toistolauseita hyödynnetään usein asioiden laskemisessa. Esimerkiksi ohjelmat, joissa käsitellään määrittelemätöntä määrää käyttäjän syöttämiä lukuja perustuvat toistolauseseen. Tällaisissa ohjelmissa tulostetaan tyypillisesti jonkinlaisia tilastoja luetuista luvuista tai muista syötteistä toistolauseen jälkeen. -->
+Loops are used in computing several things. For example, programs that process unknown amount of users inputted numbers use loops. These kinds of programs typically print out some sort of a statistics of read numbers or other inputs after the loop.
 
-Jotta ohjelma voi tulostaa toistolauseen jälkeen tietoja toistolauseen suorituksesta, tulee tietoa säilöä ja muokata toistolauseen aikana.
+<!-- Jotta ohjelma voi tulostaa toistolauseen jälkeen tietoja toistolauseen suorituksesta, tulee tietoa säilöä ja muokata toistolauseen aikana. -->
+In order for program to print out information after the loop, the information has to be saved and modified during the loop.
 
-Mikäli tiedon tallentamiseen käytettävä muuttuja esitellään toistolauseen lohkon sisällä, on muuttuja käytössä vain toistolauseen lohkon sisällä sekä sen alla määritellyissä lohkoissa, mutta ei toistolauseen lohkon ulkopuolella.
 
-Luodaan ohjelma, jonka tarkoituksena on laskea ja tulostaa käyttäjän syöttämien ykkösten lukumäärä. Tehdään ensin toimimaton versio ja tarkastellaan lohkojen toimintaa.
+<!-- Mikäli tiedon tallentamiseen käytettävä muuttuja esitellään toistolauseen lohkon sisällä, on muuttuja käytössä vain toistolauseen lohkon sisällä sekä sen alla määritellyissä lohkoissa, mutta ei toistolauseen lohkon ulkopuolella. -->
+Whether the variable used to store the data is introduced within the loop, the variable is then only available within the lop and nowhere else.
+
+<!-- Luodaan ohjelma, jonka tarkoituksena on laskea ja tulostaa käyttäjän syöttämien ykkösten lukumäärä. Tehdään ensin toimimaton versio ja tarkastellaan lohkojen toimintaa. -->
+Let's create a program with a purpose of computing and printing out the amount of user inputted number ones. Let's first create a inoperative version and examine the action of the blocks.
 
 ```java
-Scanner lukija = new Scanner(System.in);
+Scanner scanner = new Scanner(System.in);
 
-// Tehtävänä lukujen lukemisen toistaminen
+// The task is to read an input from the user
 while (true) {
 
-    // Tehtävänä ykkösten lukumäärän säilöminen
-    int ykkosia = 0;
+    // The task is to keep count of number ones
+    int ones = 0;
 
-    System.out.println("Syötä luku (0 lopettaa): ");
-    // Tehtävänä yksittäisen luvun lukeminen
-    int luku = Integer.valueOf(lukija.nextLine());
+    System.out.println("Input a number (0 exits): ");
+    // The task is to read a user inputted number
+    int number = Integer.valueOf(scanner.nextLine());
 
-    // Tehtävänä toistolauseesta poistuminen kun
-    // käyttäjä syöttää luvun nolla
-    if (luku == 0) {
+    // The task is to exit the loop if the user
+    // has inputted zero
+    if (number == 0) {
         break;
     }
 
-    // Tehtävänä ykkösten lukumäärän kasvattaminen
-    // yhdellä kun käyttäjä syöttää luvun yksi
-    if (luku == 1) {
-        ykkosia = ykkosia + 1;
+    // The task is to increase the amount of ones
+    // if the user inputs a number one
+    if (number == 1) {
+        ones = ones + 1;
     }
 }
 
-// Tehtävänä havainnoitujen ykkösten lukumäärän tulostaminen
-// Tämä ei toimi, sillä muuttuja ykkosia on esitelty
-// edellä olevan toistolauseen sisälläö
-System.out.println("Ykkösiä yhteensä: " + ykkosia);
+// The task is to print out the total of ones
+// This doesn't work because the variable ones has been
+// introduced within the loop
+System.out.println("The total of ones: " + ones);
 ```
 
-Edellinen ohjelma ei toimi, sillä muuttuja `ykkosia` esitellään toistolauseen lohkon sisällä ja sitä yritetään käyttää ohjelman lopussa toistolauseen lohkon ulkopuolelta. Muuttuja on olemassa vain sen lohkon sisällä missä se on määritelty. Mikäli tulostus `System.out.println("Ykkösiä yhteensä: " + ykkosia);` olisi toistolauseen sisällä, ohjelma toimisi mutta ei toivotusti. Tarkastellaan tätä vielä seuraavaksi.
+<!-- Edellinen ohjelma ei toimi, sillä muuttuja `ykkosia` esitellään toistolauseen lohkon sisällä ja sitä yritetään käyttää ohjelman lopussa toistolauseen lohkon ulkopuolelta. Muuttuja on olemassa vain sen lohkon sisällä missä se on määritelty. Mikäli tulostus `System.out.println("Ykkösiä yhteensä: " + ykkosia);` olisi toistolauseen sisällä, ohjelma toimisi mutta ei toivotusti. Tarkastellaan tätä vielä seuraavaksi. -->
+The previous program does not work, because the variable `ones` has been introduced within the loop and tried to access it after the loop in the end of the program. The variable only exists in the loop. If the printing `System.out.println("The total of ones: " + ones);` would be inside the loop the program would work, but not in the way it was supposed to. Let's examine this once more.
 
 
 ```java
-Scanner lukija = new Scanner(System.in);
+Scanner scanner = new Scanner(System.in);
 
-// Tehtävänä lukujen lukemisen toistaminen
+// The task is to read an input from the user
 while (true) {
 
-    // Tehtävänä ykkösten lukumäärän säilöminen
-    int ykkosia = 0;
+    // The task is to keep count of number ones
+    int ones = 0;
 
-    System.out.println("Syötä luku (0 lopettaa): ");
-    // Tehtävänä yksittäisen luvun lukeminen
-    int luku = Integer.valueOf(lukija.nextLine());
+    System.out.println("Insert a number (0 lopettaa): ");
+    // The task is to read a user inputted number
+    int number = Integer.valueOf(scanner.nextLine());
 
-    // Tehtävänä toistolauseesta poistuminen kun
-    // käyttäjä syöttää luvun nolla
-    if (luku == 0) {
+    // The task is to exit the loop if the user
+    // has inputted zero
+    if (number == 0) {
         break;
     }
 
-    // Tehtävänä ykkösten lukumäärän kasvattaminen
-    // yhdellä kun käyttäjä syöttää luvun yksi
-    if (luku == 1) {
-        ykkosia = ykkosia + 1;
+    // The task is to increase the amount of ones
+    // if the user inputs a number one
+    if (number == 1) {
+        ones = ones + 1;
     }
 
-    // Tehtävänä havainnoitujen ykkösten lukumäärän tulostaminen
-    System.out.println("Ykkösiä yhteensä: " + ykkosia);
+    // The task is to print out the total of ones
+    System.out.println("The total of ones: " + ones);
 }
 ```
 
-Yllä oleva esimerkki toimii, mutta ei kuten toivomme. Alla ohjelman toimintaesimerkki.
+<!-- Yllä oleva esimerkki toimii, mutta ei kuten toivomme. Alla ohjelman toimintaesimerkki. -->
+The example above works, but not in a way we hoped it would. Below the example output of the program
 
 <sample-output>
 
-Syötä luku (0 lopettaa)
+Insert a number (0 exits)
 **5**
-Ykkösiä yhteensä: 0
-Syötä luku (0 lopettaa)
+The total of ones: 0
+Insert a number (0 exits)
 **1**
-Ykkösiä yhteensä: 1
-Syötä luku (0 lopettaa)
+The total of ones: 1
+Insert a number (0 exits)
 **1**
-Ykkösiä yhteensä: 1
-Syötä luku (0 lopettaa)
+The total of ones: 1
+Insert a number (0 exits)
 **2**
-Ykkösiä yhteensä: 0
-Syötä luku (0 lopettaa)
+The total of ones: 0
+Insert a number (0 exits)
 **0**
 
 </sample-output>
 
-Mikäli haluat käyttää muuttujaa toistolauseen jälkeen (ja halutessasi toistolauseessa), tulee muuttuja esitellä ennen toistolausetta.
+<!-- Mikäli haluat käyttää muuttujaa toistolauseen jälkeen (ja halutessasi toistolauseessa), tulee muuttuja esitellä ennen toistolausetta. -->
+If you wish to use the variable after a loop, you have to introduced it before the loop.
 
-Alla olevassa esimerkissä ohjelma laskee syötettyjen ykkösten lukumäärän. Syötteitä luetaan kunnes käyttäjä syöttää luvun 0, jonka jälkeen tulostetaan luettujen ykkösten lukumäärä. Ohjelmassa käytetään muuttujaa `ykkosia` ykkösten lukumäärän ylläpitoon.
-
+<!-- Alla olevassa esimerkissä ohjelma laskee syötettyjen ykkösten lukumäärän. Syötteitä luetaan kunnes käyttäjä syöttää luvun 0, jonka jälkeen tulostetaan luettujen ykkösten lukumäärä. Ohjelmassa käytetään muuttujaa `ykkosia` ykkösten lukumäärän ylläpitoon. -->
+The example bellow the program computes the total of number ones inputted. The inputs are read until the user inputs a number zero after which the program prints the total of inputted number ones. The program uses variable `ones` to keep track of the number ones.
 ```java
-Scanner lukija = new Scanner(System.in);
+Scanner scanner = new Scanner(System.in);
 
-// Tehtävänä ykkösten lukumäärän säilöminen
-int ykkosia = 0;
+// The task is to keep track of number ones
+int ones = 0;
 
-// Tehtävänä lukujen lukemisen toistaminen
+// The task is to read an input from the user
 while (true) {
     System.out.println("Syötä luku (0 lopettaa): ");
-    // Tehtävänä yksittäisen luvun lukeminen
-    int luku = Integer.valueOf(lukija.nextLine());
+    // The task is to read a user inputted number
+    int number = Integer.valueOf(scanner.nextLine());
 
-    // Tehtävänä toistolauseesta poistuminen kun
-    // käyttäjä syöttää luvun nolla
-    if (luku == 0) {
+    // The task is to exit the loop if the user
+    // has inputted zero
+    if (number == 0) {
         break;
     }
 
-    // Tehtävänä ykkösten lukumäärän kasvattaminen
-    // yhdellä kun käyttäjä syöttää luvun yksi
-    if (luku == 1) {
-        ykkosia = ykkosia + 1;
+    // The task is to increase the amount of ones
+    // if the user inputs a number one
+    if (number == 1) {
+        ones = ones + 1;
     }
 }
 
-// Tehtävänä havainnoitujen ykkösten lukumäärän tulostaminen
-System.out.println("Ykkösiä yhteensä: " + ykkosia);
+// The task is to print out the total of ones
+System.out.println("The total of ones: " + ones);
 ```
 
-Alla on esimerkki ohjelman toiminnasta.
+<!-- Alla on esimerkki ohjelman toiminnasta. -->
+Bellow is the example output of the program.
 
 <sample-output>
 
-Syötä luku
+Input a number
 **1**
-Syötä luku
+Input a number
 **2**
-Syötä luku
+Input a number
 **1**
-Syötä luku
+Input a number
 **-1**
-Syötä luku
+Input a number
 **0**
-Ykkösiä yhteensä: 2
+Total of ones: 2
 
 </sample-output>
 
 
 <programming-exercise name="Lukujen lukumäärä" tmcname='osa02-Osa02_08.LukujenLukumaara'>
 
-Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötettyjen lukujen lukumäärän. Syötteen loppumisesta kertovaa nollaa ei tule laskea osaksi lukujen lukumäärää.
+<!-- Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötettyjen lukujen lukumäärän. Syötteen loppumisesta kertovaa nollaa ei tule laskea osaksi lukujen lukumäärää. -->
+Write a program that reads user inputs until user inputs a number 0. After this the program prints the amount of inputted numbers. The inputted zero, which is used to exit the loop, does not count as an inputted number.
 
-Ohjelman tulostusesimerkki:
-
+<!-- Ohjelman tulostusesimerkki: -->
+Example output of the program:
 <sample-output>
 
-Syötä luku
+Insert a number
 **5**
-Syötä luku
+Insert a number
 **22**
-Syötä luku
+Insert a number
 **9**
-Syötä luku
+Insert a number
 **-2**
-Syötä luku
+Insert a number
 **0**
-Lukuja yhteensä 4
+Numbers in total 4
 
 </sample-output>
 
@@ -678,49 +689,52 @@ Lukuja yhteensä 4
 
 <programming-exercise name="Negatiivisten lukujen lukumäärä" tmcname='osa02-Osa02_09.NegatiivistenLukujenMaara'>
 
-Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötteessä olleiden negatiivisten lukujen lukumäärän. Syötteen loppumisesta kertovaa nollaa ei tule laskea osaksi lukujen lukumäärää.
+<!-- Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötteessä olleiden negatiivisten lukujen lukumäärän. Syötteen loppumisesta kertovaa nollaa ei tule laskea osaksi lukujen lukumäärää. -->
+Write a program that reads numbers until the user inputs a number 0. After this the program prints the amount of negative numbers inputted.  The inputted zero, which is used to exit the loop, does not count as an inputted number.
 
-Ohjelman tulostusesimerkki:
-
+<!-- Ohjelman tulostusesimerkki: -->
+Example output of the program:
 <sample-output>
 
-Syötä luku
+Insert a number
 **5**
-Syötä luku
+Insert a number
 **22**
-Syötä luku
+Insert a number
 **9**
-Syötä luku
+Insert a number
 **-2**
-Syötä luku
+Insert a number
 **0**
-Negatiivisia lukuja yhteensä 1
+The total of negative numbers 1
 
 </sample-output>
 
 </programming-exercise>
 
-Edellä olevissa tehtävissä tehdyt ohjelmat ovat lukeneet käyttäjältä syötettä ja pitäneet kirjaa tietynlaisten lukujen lukumäärästä. Seuraavassa tehtävässä kaivattu lukujen summa ei oikeastaan juurikaan poikkea edellisistä tehtävistä -- nyt sen sijaan, että pidät kirjaa lukujen lukumäärästä eli lisäät lukumäärään luvun aina 1, lisäätkin "lukumäärään" eli summaan käyttäjän syöttämän luvun.
+<!-- Edellä olevissa tehtävissä tehdyt ohjelmat ovat lukeneet käyttäjältä syötettä ja pitäneet kirjaa tietynlaisten lukujen lukumäärästä. Seuraavassa tehtävässä kaivattu lukujen summa ei oikeastaan juurikaan poikkea edellisistä tehtävistä -- nyt sen sijaan, että pidät kirjaa lukujen lukumäärästä eli lisäät lukumäärään luvun aina 1, lisäätkin "lukumäärään" eli summaan käyttäjän syöttämän luvun. -->
+The previously programs done in previous exercises have read user inputs and kept track about certain types of numbers. In the next exercise the sum of numbers is no different --- this time you will keep track of numbers, which means that instead of adding one the amount of numbers, you add the number to the sum.
 
 <programming-exercise name="Lukujen summa" tmcname='osa02-Osa02_10.LukujenSumma'>
 
-Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötettyjen lukujen summan. Syötteen loppumisesta kertovaa nollaa ei tarvitse osaksi lukujen summaa, vaikkei siitä tässä tapauksessa oikeastaan haittaakaan ole.
+<!-- Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötettyjen lukujen summan. Syötteen loppumisesta kertovaa nollaa ei tarvitse osaksi lukujen summaa, vaikkei siitä tässä tapauksessa oikeastaan haittaakaan ole. -->
+Write a program that reads numbers from the user until the user inputs a number 0. After this the program outputs the sum of the numbers. The number zero does not need to be added to the sum albeit it does not change the results.
 
-Ohjelman tulostusesimerkki:
-
+<!-- Ohjelman tulostusesimerkki: -->
+Example output of the program:
 <sample-output>
 
-Syötä luku
+Input a number
 **5**
-Syötä luku
+Input a number
 **22**
-Syötä luku
+Input a number
 **9**
-Syötä luku
+Input a number
 **-2**
-Syötä luku
+Input a number
 **0**
-Lukujen summa 34
+The sum of the numbers 34
 
 </sample-output>
 
@@ -734,26 +748,29 @@ TODO: esimerkki toistolauseesta, missä kaksi muuttujaa
 
 <programming-exercise name="Lukujen lukumäärä ja summa" tmcname='osa02-Osa02_11.LukumaaraJaSumma'>
 
-Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötettyjen lukujen lukumäärä ja summan. Syötteen loppumisesta kertovaa nollaa ei tule ottaa huomioon lukumäärässä tai summassa.
+<!-- Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötettyjen lukujen lukumäärä ja summan. Syötteen loppumisesta kertovaa nollaa ei tule ottaa huomioon lukumäärässä tai summassa. -->
+Write a number that asks user for input until the user inputs 0. After this the program prints the amount of numbers inputted and the sum of the numbers. The number zero does not need to be added to the sum albeit it does not change the results.
 
-_Tarvitset tässä kaksi muuttujaa tiedon säilömiseen. Käytä toista muuttujaa lukujen lukumäärän säilömiseen ja toista muuttujaa lukujen summan laskemiseen._
+<!-- _Tarvitset tässä kaksi muuttujaa tiedon säilömiseen. Käytä toista muuttujaa lukujen lukumäärän säilömiseen ja toista muuttujaa lukujen summan laskemiseen._ -->
+_You need two variables to keep track of the information. Use one for keeping track of the numbers inputted and other for keeping track of the sum_
 
-Ohjelman tulostusesimerkki:
+<!-- Ohjelman tulostusesimerkki: -->
+Example output of the program:
 
 <sample-output>
 
-Syötä luku
+Input a number
 **5**
-Syötä luku
+Input a number
 **22**
-Syötä luku
+Input a number
 **9**
-Syötä luku
+Input a number
 **-2**
-Syötä luku
+Input a number
 **0**
-Lukuja yhteensä 4
-Lukujen summa 34
+Numbers in total 4
+The sum of numbers 34
 
 </sample-output>
 
@@ -762,25 +779,28 @@ Lukujen summa 34
 
 <programming-exercise name="Lukujen keskiarvo" tmcname='osa01-Osa02_12.LukujenKeskiarvo'>
 
-Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötettyjen lukujen keskiarvo. Syötteen loppumisesta kertovaa nollaa ei tule ottaa huomioon keskiarvon laskemisessa. Voit olettaa, että käyttäjä syöttää aina vähintään yhden luvun.
+<!-- Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötettyjen lukujen keskiarvo. Syötteen loppumisesta kertovaa nollaa ei tule ottaa huomioon keskiarvon laskemisessa. Voit olettaa, että käyttäjä syöttää aina vähintään yhden luvun. -->
+Write a number that asks user for input until the user inputs 0. After this, the program prints the average of the numbers. The number zero does not need to be counted to the average. You may assume that the user inputs atleast one number.
 
-_Lukujen keskiarvo saadaan jakamalla lukujen summa lukujen lukumäärällä_.
+<!-- _Lukujen keskiarvo saadaan jakamalla lukujen summa lukujen lukumäärällä_. -->
+_The average of the numbrs can be computer by dividing the sum of numbers with the amount of the numbers_
 
-Ohjelman tulostusesimerkki:
+<!-- Ohjelman tulostusesimerkki: -->
+Example output of the program:
 
 <sample-output>
 
-Syötä luku
+Insert a number
 **5**
-Syötä luku
+Insert a number
 **22**
-Syötä luku
+Insert a number
 **9**
-Syötä luku
+Insert a number
 **-2**
-Syötä luku
+Insert a number
 **0**
-Lukujen keskiarvo 8.5
+The average of numbers 8.5
 
 </sample-output>
 
@@ -789,11 +809,15 @@ Lukujen keskiarvo 8.5
 
 <programming-exercise name='Positiivisten lukujen keskiarvo' tmcname='osa02-Osa02_13.PositiivistenLukujenKeskiarvo'>
 
-Kirjoita ohjelma, joka lukee käyttäjältä kokonaislukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelma tulostaa syötteessä esiintyneiden positiivisten (eli nollaa suurempien lukujen) keskiarvon.
+<!-- Kirjoita ohjelma, joka lukee käyttäjältä kokonaislukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelma tulostaa syötteessä esiintyneiden positiivisten (eli nollaa suurempien lukujen) keskiarvon. -->
+Write a number that asks user for input until the user inputs 0.
+After this, the program prints the average of the positive numbers (numbers that are greater than zero).
 
-Mikäli ohjelmassa ei syötetä yhtäkään positiivista lukua, ohjelman tulee tulostaa "keskiarvon laskeminen ei ole mahdollista".
+<!-- Mikäli ohjelmassa ei syötetä yhtäkään positiivista lukua, ohjelman tulee tulostaa "keskiarvon laskeminen ei ole mahdollista". -->
+If no positive number is inputted, the program prints "The computation of average is impossible"
 
-Alla on muutamia esimerkkejä ohjelman toiminnasta.
+<!-- Alla on muutamia esimerkkejä ohjelman toiminnasta. -->
+Below a few examples of the programs output
 
 <sample-output>
 
@@ -809,7 +833,7 @@ Alla on muutamia esimerkkejä ohjelman toiminnasta.
 <sample-output>
 
 **0**
-keskiarvon laskeminen ei ole mahdollista
+The computation of average is impossible
 
 </sample-output>
 
