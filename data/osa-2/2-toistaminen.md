@@ -226,37 +226,39 @@ while (true) {
 System.out.println("Done, thank you!");
 ```
 
-Ohjelman suoritus on esimerkiksi seuraavanlainen.
+<!-- Ohjelman suoritus on esimerkiksi seuraavanlainen. -->
+The output of the program is for example:
 
 <sample-output>
 
-Syötä luku, 0 lopettaa
+Input a number, 0 to quit
 **5**
-Syötit 5
-Syötä luku, 0 lopettaa
+You input 5
+Input a number, 0 to quit
 **-2**
-Syötit -2
-Syötä luku, 0 lopettaa
+You input -2
+Input a number, 0 to quit
 **0**
-Valmista, kiitos!
+Done, thank you!
 
 </sample-output>
 
 <programming-exercise name="Uudestaan" tmcname='osa02-Osa02_06.Uudestaan'>
 
-Kirjoita edellä olevaa esimerkkiä mukaillen ohjelma, joka kysyy käyttäjältä lukuja kunnes käyttäjä syöttää luvun 4.
+<!-- Kirjoita edellä olevaa esimerkkiä mukaillen ohjelma, joka kysyy käyttäjältä lukuja kunnes käyttäjä syöttää luvun 4. -->
+Write a program by following an example that asks a user for numbers until user inputs number 4.
 
 <sample-output>
 
-Syötä luku
+Input a number
 **5**
-Syötä luku
+Input a number
 **744**
-Syötä luku
+Input a number
 **22**
-Syötä luku
+Input a number
 **-1**
-Syötä luku
+Input a number
 **4**
 
 </sample-output>
@@ -264,226 +266,240 @@ Syötä luku
 </programming-exercise>
 
 
-## Toistolauseen alkuun palaaminen
+<!-- ## Toistolauseen alkuun palaaminen -->
+## Returning to the start of the loop
 
-Toistolauseen alkuun palataan silloin kun suoritus päätyy toistolauseen lohkon loppuun eli kaikki toistolauseen lohkossa olevat komennot on suoritettu. Toistolauseen alkuun voi palata myös muualta kuin toistolauseen lopusta erillisellä `continue`-komennolla. Kun tietokone suorittaa komennon `continue`, siirtyy ohjelman suoritus toistolauseen alkuun.
+<!-- Toistolauseen alkuun palataan silloin kun suoritus päätyy toistolauseen lohkon loppuun eli kaikki toistolauseen lohkossa olevat komennot on suoritettu. Toistolauseen alkuun voi palata myös muualta kuin toistolauseen lopusta erillisellä `continue`-komennolla. Kun tietokone suorittaa komennon `continue`, siirtyy ohjelman suoritus toistolauseen alkuun. -->
+The beginning of the loop is returned to when the execution ends up in the end of the loop. This means that all the commands in the loop has been executed. You can also return to the beginning of the loop from other locations besides the end of the loop with command `continue`. When the computer executes command `continue`, the execution of the program moves to the beginning of the loop.
 
-Alla olevassa esimerkissä esitellään `continue`-komennon käyttöä. Ohjelma pyytää käyttäjää syöttämään positiivisia lukuja. Mikäli käyttäjä syöttää negativiisen luvun tai nollan, ohjelma tulostaa viestin "Epäkelpo luku! Yritä uudelleen.", jonka jälkeen suoritus palaa toistolauseen alkuun. Edellisessä esimerkissä ohjelma lukee käyttäjältä merkkijonomuotoisia syötteitä. Vastaavanlaisen ohjelman toteutus onnistuu myös muilla muuttujatyypeillä. Alla olevassa esimerkissä käyttäjältä pyydetään lukuja kunnes käyttäjä syöttää luvun nolla.
+<!-- Alla olevassa esimerkissä esitellään `continue`-komennon käyttöä. Ohjelma pyytää käyttäjää syöttämään positiivisia lukuja. Mikäli käyttäjä syöttää negativiisen luvun tai nollan, ohjelma tulostaa viestin "Epäkelpo luku! Yritä uudelleen.", jonka jälkeen suoritus palaa toistolauseen alkuun. Edellisessä esimerkissä ohjelma lukee käyttäjältä merkkijonomuotoisia syötteitä. Vastaavanlaisen ohjelman toteutus onnistuu myös muilla muuttujatyypeillä. Alla olevassa esimerkissä käyttäjältä pyydetään lukuja kunnes käyttäjä syöttää luvun nolla. -->
+<!-- TODO epäkelpo = unfit? -->
+The example below showcases the usage of the command `continue`. The program asks a user to input a positive numbers. If the user inputs a negative number or a zero, the program prints a message "Unfit number, try again", after which the execution returns to the beginning of the loop. In the previous example, the program reads a string inputs from a user. Similar program with different input types is possible. In the example below the user is asked for numbers until the user inputs a zero.
 
 ```java
-Scanner lukija = new Scanner(System.in);
+Scanner scanner = new Scanner(System.in);
 
 while (true) {
-    System.out.println("Syötä positiivisia lukuja.");
-    int luku = Integer.valueOf(lukija.nextLine());
+    System.out.println("Insert positive integers");
+    int number = Integer.valueOf(scanner.nextLine());
 
-    if (luku <= 0) {
-        System.out.println("Epäkelpo luku! Yritä uudelleen.");
+    if (number <= 0) {
+        System.out.println("Unfit number! Try again.");
         continue;
     }
 
-    System.out.println("Syötit " + luku);
+    System.out.println("Your input was " + number);
 }
 ```
 
-Ohjelman suoritus toistuu yllä olevassa esimerkissä ikuisesti, sillä toistolauseesta poistumiseen käytettävää `break`-komentoa ei ohjelmassa ole. Mikäli haluamme, että toistolauseesta voi poistua, tulee ohjelmaan lisätä `break`-komento.
+<!-- Ohjelman suoritus toistuu yllä olevassa esimerkissä ikuisesti, sillä toistolauseesta poistumiseen käytettävää `break`-komentoa ei ohjelmassa ole. Mikäli haluamme, että toistolauseesta voi poistua, tulee ohjelmaan lisätä `break`-komento. -->
+The execution of the program is repeated for ever in the example above because the `break` command,
+which exits the loop, is not used within the loop. In order to exit the loop, the `break` command must be added to the program.
 
-Alla olevassa esimerkissä ohjelmaa on muokattu siten, että käyttäjältä pyydetään positiivisia lukuja. Mikäli käyttäjä syöttää negatiivisen luvun, kerrotaan että luku oli epäkelpo ja palataan toistolauseen alkuun. Mikäli käyttäjä syöttää nollan, toistolauseesta poistutaan.
+<!-- Alla olevassa esimerkissä ohjelmaa on muokattu siten, että käyttäjältä pyydetään positiivisia lukuja. Mikäli käyttäjä syöttää negatiivisen luvun, kerrotaan että luku oli epäkelpo ja palataan toistolauseen alkuun. Mikäli käyttäjä syöttää nollan, toistolauseesta poistutaan. -->
+In the example below, the program is modified in such a way that the user is asked to input positive numbers. If the user inputs a negative number, the program tells that the number was unfit and return to the beginning of the loop. If the number was a zero, the program exits the loop.
 
 ```java
-Scanner lukija = new Scanner(System.in);
+Scanner scanner = new Scanner(System.in);
 
 while (true) {
-    System.out.println("Syötä positiivisia lukuja.");
-    int luku = Integer.valueOf(lukija.nextLine());
+    System.out.println("Input positive numbers.");
+    int number = Integer.valueOf(scanner.nextLine());
 
-    if (luku == 0) {
+    if (number == 0) {
         break;
     }
 
-    if (luku < 0) {
-        System.out.println("Epäkelpo luku! Yritä uudelleen.");
+    if (number < 0) {
+        System.out.println("Unfit number! Try again.");
         continue;
     }
 
-    System.out.println("Syötit " + luku);
+    System.out.println("Your input was " + number);
 }
 ```
 
 TODO: tänne tarttee visualisoinnin
-
+<!-- TODO: this requires a visualization -->
 
 <quiznator id="5c1f6c8b64cf001162cb9790"></quiznator>
 
 <programming-exercise name="Syötteiden rajaus" tmcname='osa02-Osa02_07.SyotteidenRajaus'>
 
-Kirjoita ohjelma, joka kysyy käyttäjältä lukuja. Mikäli luku on negatiivinen (eli pienempi kuin nolla), käyttäjälle tulostetaan viesti "Epäkelpo luku" ja käyttäjältä kysytään uutta lukua. Jos taas luku on nolla, lukujen lukeminen lopetetaan ja ohjelma poistuu toistolauseesta. Mikäli luku on positiivinen, ohjelma tulostaa luvun toisen potenssin.
-
+<!-- Kirjoita ohjelma, joka kysyy käyttäjältä lukuja. Mikäli luku on negatiivinen (eli pienempi kuin nolla), käyttäjälle tulostetaan viesti "Epäkelpo luku" ja käyttäjältä kysytään uutta lukua. Jos taas luku on nolla, lukujen lukeminen lopetetaan ja ohjelma poistuu toistolauseesta. Mikäli luku on positiivinen, ohjelma tulostaa luvun toisen potenssin. -->
+Write a program that asks a user for numbers. If the number is negaitve (smaller than zero) the program prints for user "unfit number" and asks user for a new number. If the number is zero, the program exits the loop. If the number is positive, the program prints the number power of two.
 <sample-output>
 
-Syötä luku
+Input a number
 **5**
 25
-Syötä luku
+Input a number
 **4**
 16
-Syötä luku
+Input a number
 **-3**
-Epäkelpo luku
-Syötä luku
+Unfit number
+Input a number
 **1**
 1
-Syötä luku
+Input a number
 **0**
 
 </sample-output>
 
 </programming-exercise>
 
-Edellisessä tehtävässä toteutettiin ohjelma, joka lukee käyttäjältä lukuja. Mikäli käyttäjä syöttää negatiivisen luvun, ohjelma ilmoittaa että luku oli epäkelpo, ja mikäli käyttäjä syöttää nollan, ohjelmasta poistutaan. Eräs ratkaisu tehtävään on seuraavanlainen.
+<!-- Edellisessä tehtävässä toteutettiin ohjelma, joka lukee käyttäjältä lukuja. Mikäli käyttäjä syöttää negatiivisen luvun, ohjelma ilmoittaa että luku oli epäkelpo, ja mikäli käyttäjä syöttää nollan, ohjelmasta poistutaan. Eräs ratkaisu tehtävään on seuraavanlainen. -->
+In the previous exercise a program was made that asks user for numbers. If the user did input a negative number, the program would infor that the number was unfit and if the user did input a zero, the program would have exited. A possible solution of the exercise is as follows
 
 ```java
-Scanner lukija = new Scanner(System.in);
+Scanner scanner = new Scanner(System.in);
 
 while (true) {
-    System.out.println("Syötä luku");
-    int luku = Integer.valueOf(lukija.nextLine());
+    System.out.println("Input a number");
+    int number = Integer.valueOf(scanner.nextLine());
 
-    if (luku == 0) {
+    if (number == 0) {
         break;
     }
 
-    if (luku < 0) {
-        System.out.println("Epäkelpo luku");
+    if (number < 0) {
+        System.out.println("Unfit number");
         continue;
     }
 
-    System.out.println(luku * luku);
+    System.out.println(number * number);
 }
 ```
 
-Ohjelman voisi toteuttaa myös muotoilemalla ehtolauseet toisella tavalla. Alla olevassa esimerkissä erillisten ehtolauseiden sijaan ehtolauseet on yhdistetty.
-
+<!-- Ohjelman voisi toteuttaa myös muotoilemalla ehtolauseet toisella tavalla. Alla olevassa esimerkissä erillisten ehtolauseiden sijaan ehtolauseet on yhdistetty. -->
+Program could be made by modifying the if-statement to another form. In the example below; instead of the seperate if-statements, there's one if-statement.
 ```java
-Scanner lukija = new Scanner(System.in);
+Scanner scanner = new Scanner(System.in);
 
 while (true) {
-    System.out.println("Syötä luku");
-    int luku = Integer.valueOf(lukija.nextLine());
+    System.out.println("Input a number");
+    int number = Integer.valueOf(scanner.nextLine());
 
-    if (luku == 0) {
+    if (number == 0) {
         break;
-    } else if (luku < 0) {
-        System.out.println("Epäkelpo luku");
+    } else if (number < 0) {
+        System.out.println("Unfit number");
         continue;
     }
 
-    System.out.println(luku * luku);
+    System.out.println(number * number);
 }
 ```
 
-Kumpi edellä olevista vaihtoehdoista on selkeämpi?
+<!-- Kumpi edellä olevista vaihtoehdoista on selkeämpi? -->
+Which of the previous examples was more clear?
 
-Tarkastellaan edellisten ohjelmien selkeyttä toisen esimerkin kautta. Alla oleva ohjelma kysyy käyttäjältä lukua. Mikäli luku on negatiivinen, käyttäjälle kerrotaan että luku on epäkelpo ja siirrytään toistolauseen alkuun. Mikäli luku on nolla, toistolauseesta poistutaan. Muissa tilanteissa käyttäjälle tulostetaan syötetyn luvun neliö, eli syötetty luku kerrottuna itsellään.
+<!-- Tarkastellaan edellisten ohjelmien selkeyttä toisen esimerkin kautta. Alla oleva ohjelma kysyy käyttäjältä lukua. Mikäli luku on negatiivinen, käyttäjälle kerrotaan että luku on epäkelpo ja siirrytään toistolauseen alkuun. Mikäli luku on nolla, toistolauseesta poistutaan. Muissa tilanteissa käyttäjälle tulostetaan syötetyn luvun neliö, eli syötetty luku kerrottuna itsellään. -->
+Let's examine the clarity of the previous programs through an example. Below, the program asks user for a number. If the number is negative, the user is informed that the number is unfit and the execution of the program goes to the beginning of the loop. If the number is zero, the program exits the loop. In other cases the program prints the square of the number, that is the number times itself.
 
 ```java
-Scanner lukija = new Scanner(System.in);
+Scanner scanner = new Scanner(System.in);
 
 while (true) {
-    System.out.println("Syötä luku ");
-    int luku = Integer.valueOf(lukija.nextLine());
+    System.out.println("Input a number ");
+    int number = Integer.valueOf(scanner.nextLine());
 
-    if (luku < 0) {
-        System.out.println("Epäkelpo luku");
+    if (number < 0) {
+        System.out.println("Unfit number");
         continue;
     }
 
-    if (luku == 0) {
+    if (number == 0) {
         break;
     }
 
-    System.out.println(luku * luku);
+    System.out.println(number * number);
 }
 ```
 
-Myös tämän ohjelman voi toteuttaa yhdistämällä ehtolauseet. Tällöin toteutus olisi seuraavanlainen.
+<!-- Myös tämän ohjelman voi toteuttaa yhdistämällä ehtolauseet. Tällöin toteutus olisi seuraavanlainen. -->
+This program can also be done by combining the if-statements. Here the implementations woud be the following.
 
 ```java
-Scanner lukija = new Scanner(System.in);
+Scanner scanner = new Scanner(System.in);
 
 while (true) {
-    System.out.println("Syötä luku ");
-    int luku = Integer.valueOf(lukija.nextLine());
+    System.out.println("Input a number ");
+    int number = Integer.valueOf(scanner.nextLine());
 
-    if (luku < 0) {
-        System.out.println("Epäkelpo luku");
-    } else if (luku == 0) {
+    if (number < 0) {
+        System.out.println("Unfit number");
+    } else if (number == 0) {
         break;
     } else {
-        System.out.println(luku * luku);
+        System.out.println(number * number);
     }
 }
 ```
 
-Tarkastellaan edellisiä ohjelmia kommentoituna. Jokaista palaa edeltää kommentit, jotka pyrkivät selittämään mitä ohjelmassa tapahtuu. Alla erillisillä ehtolauseilla toteutettu ohjelma.
+<!-- Tarkastellaan edellisiä ohjelmia kommentoituna. Jokaista palaa edeltää kommentit, jotka pyrkivät selittämään mitä ohjelmassa tapahtuu. Alla erillisillä ehtolauseilla toteutettu ohjelma. -->
+Let's examine the previous programs with comments. Before every command there's a comment that aims to explain what's happening in hte program. Below, a program done with seperate if-statements.
 
 ```java
-// Tehtävänä syötteen lukeminen käyttäjältä
-Scanner lukija = new Scanner(System.in);
+// The task is to read an input from the user //Tehtävänä syötteen lukeminen käyttäjältä
+Scanner scanner = new Scanner(System.in);
 
-// Tehtävänä lohkon toistaminen kunnes lohkosta poistutaan
+// The task is to repeat the block until the block is exited//Tehtävänä lohkon toistaminen kunnes lohkosta poistutaan
 while (true) {
-    // Tehtävänä luvun syöttämisen kehottaminen
-    System.out.println("Syötä luku ");
-    // Tehtävänä luvun lukeminen käyttäjältä
-    int luku = Integer.valueOf(lukija.nextLine());
+    // The task is to ask user for an input //Tehtävänä luvun syöttämisen kehottaminen
+    System.out.println("Input a number ");
+    // The task is to read a number from the user //Tehtävänä luvun lukeminen käyttäjältä
+    int number = Integer.valueOf(scanner.nextLine());
 
-    // Tehtävänä vartiointi, estetään epäkelpojen lukujen
-    // jatkokäsittely
-    if (luku < 0) {
-        System.out.println("Epäkelpo luku");
+    // The task is to guard and prevent unfit numbers// Tehtävänä vartiointi, estetään epäkelpojen lukujen
+    // for further processing //jatkokäsittely
+    if (number < 0) {
+        System.out.println("Unfit number");
         continue;
     }
 
-    // Tehtävänä toistolauseesta poistumisen tarkastaminen
-    if (luku == 0) {
+    // The task is to check if the loop should be exited //Tehtävänä toistolauseesta poistumisen tarkastaminen
+    if (number == 0) {
         break;
     }
 
-    // Tehtävänä syötetyn luvun neliön tulostaminen
-    System.out.println(luku * luku);
+    // The task is to print the square of the number //Tehtävänä syötetyn luvun neliön tulostaminen
+    System.out.println(number * number);
 }
 ```
 
-Huomaat, että yllä jokaisella ehtolauseella on ohjelmassa yksi selkeä tehtävä.
+<!-- Huomaat, että yllä jokaisella ehtolauseella on ohjelmassa yksi selkeä tehtävä. -->
+Note that every if-statement has a one clear task.
 
-Kun kommentoimme ohjelman, joka sisältää ehtolauseet yhdistettynä, kommentit ovat seuraavat.
+<!-- Kun kommentoimme ohjelman, joka sisältää ehtolauseet yhdistettynä, kommentit ovat seuraavat. -->
+When we comment the program that contains a combined if-statment, the comments are the following.
 
 ```java
-// Tehtävänä syötteen lukeminen käyttäjältä
-Scanner lukija = new Scanner(System.in);
+// The task is to read an input from the user // Tehtävänä syötteen lukeminen käyttäjältä
+Scanner scanner = new Scanner(System.in);
 
-// Tehtävänä lohkon toistaminen kunnes lohkosta poistutaan
+// The task is to repeat the block until the block is exited// Tehtävänä lohkon toistaminen kunnes lohkosta poistutaan
 while (true) {
-    // Tehtävänä luvun syöttämisen kehottaminen
-    System.out.println("Syötä luku ");
-    // Tehtävänä luvun lukeminen käyttäjältä
-    int luku = Integer.valueOf(lukija.nextLine());
+    // The task is to ask user for an input // Tehtävänä luvun syöttämisen kehottaminen
+    System.out.println("Input a number ");
+    // The task is to read a number from the user //Tehtävänä luvun lukeminen käyttäjältä
+    int number = Integer.valueOf(scanner.nextLine());
 
-    // if-else if-else -kokonaisuuden tehtävä?
-    // Tehtävänä luvun käsittely?
-    if (luku < 0) {
-        System.out.println("Epäkelpo luku");
-    } else if (luku == 0) {
+    // The purpose of the if-else if-else block?//if-else if-else -kokonaisuuden tehtävä?
+    // The task is the processing of the number?//Tehtävänä luvun käsittely?
+    if (number < 0) {
+        System.out.println("Unfit number");
+    } else if (number == 0) {
         break;
     } else {
-        System.out.println(luku * luku);
+        System.out.println(number * number);
     }
 }
 ```
 
-Huomaamme, että `if-else if-else`-rakenteelle on vaikea määritellä yksi selkeä tehtävä. Ohjelmia suunniteltaessa ja toteuttaessa kannattaakin pyrkiä tilanteeseen, missä jokaisella ohjelman osalla on yksi selkeä tehtävä. Tämä teema tulee toistumaan kurssilla.
-
+<!-- Huomaamme, että `if-else if-else`-rakenteelle on vaikea määritellä yksi selkeä tehtävä. Ohjelmia suunniteltaessa ja toteuttaessa kannattaakin pyrkiä tilanteeseen, missä jokaisella ohjelman osalla on yksi selkeä tehtävä. Tämä teema tulee toistumaan kurssilla. -->
+We realise, that for the `if-else if-else`-block it's hard to give on clear task. While designing a program, it is convenient to aim for a situation in which every part of the program has a clear task. This theme will be repeated throughout the course.
 TODO: quiz
 
 
