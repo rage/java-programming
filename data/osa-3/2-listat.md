@@ -601,7 +601,7 @@ The same is generally true for all Java classes. Indeed, we have already used th
 
 Taking advantage of multiple tools is straighforward. The tools to be imported are listed at the top of the program.
 
-```java
+<!-- ```java
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -615,17 +615,36 @@ public class ListaOhjelma {
         sanalista.add(lukija.nextLine());
     }
 }
+``` -->
+
+```java
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ListProgram {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<String> wordList = new ArrayList<>();
+
+        sanalista.add("First");
+        sanalista.add(scanner.nextLine());
+    }
+}
 ```
 
 </text-box>
 
-## Listan läpikäynti
+<!-- ## Listan läpikäynti -->
+
+## Going through a list
+
+<!-- Tarkastellaan seuraavaksi menetelmiä listan läpikäyntiin. Aloitetaan suoraviivaisella esimerkillä neljä arvoa sisältävän listan tulostamiseen. Alla listalle lisätään neljä nimeä, jonka jälkeen listan sisältö tulostetaan. -->
+
+Next we will examine methods that can be used to go through the values of a list. Let's start with a simple example where we print a list containing four values.
 
 
-Tarkastellaan seuraavaksi menetelmiä listan läpikäyntiin. Aloitetaan suoraviivaisella esimerkillä neljä arvoa sisältävän listan tulostamiseen. Alla listalle lisätään neljä nimeä, jonka jälkeen listan sisältö tulostetaan.
-
-
-```java
+<!-- ```java
 ArrayList<String> opettajat = new ArrayList<>();
 
 opettajat.add("Sami");
@@ -637,26 +656,52 @@ System.out.println(opettajat.get(0));
 System.out.println(opettajat.get(1));
 System.out.println(opettajat.get(2));
 System.out.println(opettajat.get(3));
+``` -->
+
+```java
+ArrayList<String> teachers = new ArrayList<>();
+
+teachers.add("Simon");
+teachers.add("Samuel");
+teachers.add("Ann");
+teachers.add("Anna");
+
+System.out.println(teachers.get(0));
+System.out.println(teachers.get(1));
+System.out.println(teachers.get(2));
+System.out.println(teachers.get(3));
 ```
 
-<sample-output>
+<!-- <sample-output>
 
 Sami
 Samu
 Anne
 Anna
 
+</sample-output> -->
+
+<sample-output>
+
+Simon
+Samuel
+Ann
+Anna
+
 </sample-output>
 
 
-Esimerkki on kömpelö. Entä jos listalla olisi enemmän arvoja? Tai vähemmän? Entäs jos emme tietäisi listalla olevien arvojen määrää?
+<!-- Esimerkki on kömpelö. Entä jos listalla olisi enemmän arvoja? Tai vähemmän? Entäs jos emme tietäisi listalla olevien arvojen määrää? -->
+
+The example is obviously cumbersome. What if there were more values on the list? Or fewer? How about if we didn't know the number of values on the list?
 
 
+<!-- Listalla olevien arvojen lukumäärän saa selville listan tarjoamalla metodilla **size**, joka palauttaa listalla olevien arvojen lukumäärän. Lukumäärä on kokonaisluku (`int`) ja sitä voidaan käyttää osana lauseketta tai se voidaan asettaa kokonaislukumuuttujaan myöhempää käyttöä varten. -->
 
-Listalla olevien arvojen lukumäärän saa selville listan tarjoamalla metodilla **size**, joka palauttaa listalla olevien arvojen lukumäärän. Lukumäärä on kokonaisluku (`int`) ja sitä voidaan käyttää osana lauseketta tai se voidaan asettaa kokonaislukumuuttujaan myöhempää käyttöä varten.
+The number of values on a list is provided by the list method **size** that returns the number in question. The number is an integer (`int`), and it can be used as a part of an expression or stored in an integer variable for later use.
 
 
-```java
+<!-- ```java
 ArrayList<String> lista = new ArrayList<>();
 System.out.println("Listalla arvoja: " + lista.size());
 
@@ -667,23 +712,49 @@ int arvoja = lista.size();
 
 lista.add("Toka");
 System.out.println("Listalla arvoja: " + arvoja);
+``` -->
+
+```java
+ArrayList<String> list = new ArrayList<>();
+System.out.println("Number of values on the list: " + list.size());
+
+lista.add("First");
+System.out.println("Number of values on the list: " + list.size());
+
+int values = list.size();
+
+lista.add("Second");
+System.out.println("Number of values on the list: " + values);
 ```
 
-<sample-output>
+<!-- <sample-output>
 
 Listalla arvoja: 0
 Listalla arvoja: 1
 Listalla arvoja: 1
 
-</sample-output>
-
-
-<programming-exercise name='Listan koko' tmcname='osa03-Osa03_04.ListanKoko'>
-
-Tehtäväpohjassa on ohjelma, joka lukee käyttäjältä syötteitä. Muokkaa ohjelman toimintaa siten, että kun syötteiden lukeminen lopetetaan, ohjelma tulostaa listalla olevien arvojen lukumäärän.
+</sample-output> -->
 
 
 <sample-output>
+
+Number of values on the list: 0
+Number of values on the list: 1
+Number of values on the list: 1
+
+</sample-output>
+
+<!-- <programming-exercise name='Listan koko' tmcname='osa03-Osa03_04.ListanKoko'> -->
+
+<programming-exercise name='Size of list' tmcname='osa03-Osa03_04.ListanKoko'>
+
+
+<!-- Tehtäväpohjassa on ohjelma, joka lukee käyttäjältä syötteitä. Muokkaa ohjelman toimintaa siten, että kun syötteiden lukeminen lopetetaan, ohjelma tulostaa listalla olevien arvojen lukumäärän. -->
+
+In the exercise template there is a program that reads input from the user. Modify its operating so that when the program quits reading, the program prints the number of the values on the list.
+
+
+<!-- <sample-output>
 
 **Terho**
 **Elina**
@@ -692,10 +763,21 @@ Tehtäväpohjassa on ohjelma, joka lukee käyttäjältä syötteitä. Muokkaa oh
 
 Yhteensä: 4
 
+</sample-output> -->
+
+<sample-output>
+
+**Tom**
+**Emma**
+**Alex**
+**Mary**
+
+In total: 4
+
 </sample-output>
 
 
-<sample-output>
+<!-- <sample-output>
 
 **Juno**
 **Elizabeth**
@@ -711,20 +793,43 @@ Yhteensä: 4
 
 Yhteensä: 11
 
+</sample-output> -->
+
+<sample-output>
+
+**Juno**
+**Elizabeth**
+**Mason**
+**Irene**
+**Olivia**
+**Liam**
+**Ida**
+**Christopher**
+**Mark**
+**Sylvester**
+**Oscar**
+
+In total: 11
+
 </sample-output>
 
-Huom! Käytä tässä listan valmiiksi tarjoamaa metodia `size`.
+<!-- Huom! Käytä tässä listan valmiiksi tarjoamaa metodia `size`. -->
+
+N.B.! Be sure to make the `size` method of the list.
 
 </programming-exercise>
 
 
 
-### Listan läpikäynti
+<!-- ### Listan läpikäynti -->
 
-Tehdään aiemmasta kunkin indeksin manuaalisesti tulostavasta ohjelmasta uusi versio. Tässä välivaiheen versiossa pidetään tulostettavasta paikasta kirjaa muuttujan `indeksi` avulla:
+## Going through a list, vol 2
 
+<!-- Tehdään aiemmasta kunkin indeksin manuaalisesti tulostavasta ohjelmasta uusi versio. Tässä välivaiheen versiossa pidetään tulostettavasta paikasta kirjaa muuttujan `indeksi` avulla: -->
 
-```java
+Let's make a new version of the program that prints each index manually. In this example under construction we use the variable `index` to keep track of the place we use for printing.
+
+<!-- ```java
 ArrayList<String> opettajat = new ArrayList<>();
 
 opettajat.add("Sami");
@@ -759,14 +864,55 @@ if (indeksi < opettajat.size()) {
     System.out.println(opettajat.get(indeksi));
     indeksi = indeksi + 1;
 }
-```
+``` -->
 
-
-Huomaamme, että ylläolevassa ohjelmassa on toistoa.
-
-Voimme muuttaa `if`-lauseet `while`:ksi, jota toistetaan kunnes ehto `indeksi < opettajat.size()` ei enää päde (eli muuttujan `indeksi` arvo kasvaa liian suureksi).
 
 ```java
+ArrayList<String> teachers = new ArrayList<>();
+
+opettajat.add("Simon");
+opettajat.add("Samuel");
+opettajat.add("Ann");
+opettajat.add("Anna");
+
+int index = 0;
+
+if (index < teachers.size()) {
+    System.out.println(teachers.get(index)); // index = 0
+    index = index + 1; // index = 1
+}
+
+if (index < teachers.size()) {
+    System.out.println(teachers.get(index)); // index = 1
+    index = index + 1; // index = 2
+}
+
+if (index < teachers.size()) {
+    System.out.println(teachers.get(index)); // index = 2
+    index = index + 1; // index = 3
+}
+
+if (index < teachers.size()) {
+    System.out.println(teachers.get(index)); // index = 3
+    index = index + 1; // index = 4
+}
+
+if (index < index.size()) {
+    // this will not be executed since index = 4 and teachers.size() = 4
+    System.out.println(teachers.get(index));
+    index = index + 1;
+}
+```
+
+<!-- Huomaamme, että ylläolevassa ohjelmassa on toistoa. -->
+
+We notice slight repetition in the program above.
+
+<!-- Voimme muuttaa `if`-lauseet `while`:ksi, jota toistetaan kunnes ehto `indeksi < opettajat.size()` ei enää päde (eli muuttujan `indeksi` arvo kasvaa liian suureksi). -->
+
+We can turn the `if` statements into a `while` that is repeated until the condition `index < teachers.size()` no longer holds (i.e. the value of the variable `index` grows too great).
+
+<!-- ```java
 ArrayList<String> opettajat = new ArrayList<>();
 
 opettajat.add("Sami");
@@ -781,13 +927,35 @@ while (indeksi < opettajat.size()) {
     System.out.println(opettajat.get(indeksi));
     indeksi = indeksi + 1;
 }
-```
-
-Nyt tulostus toimii riippumatta listalla olevien alkioiden määrästä.
-
-Aiemmin tarkastelemamme for-toistolause, jota käytetään kun läpikäytäviä arvoja on tietty määrä, on tähän erittäin näppärä. Voimme muuttaa ylläolevan toistolauseen `for`-toistolauseeksi, jolloin ohjelma näyttää seuraavalta.
+``` -->
 
 ```java
+ArrayList<String> teachers = new ArrayList<>();
+
+teachers.add("Simon");
+teachers.add("Samuel");
+teachers.add("Ann");
+teachers.add("Anna");
+
+int index = 0;
+// Repeat for as long as the value of the variable `index`
+// is smaller than the size of the teachers list
+while (index < teachers.size()) {
+    System.out.println(teachers.get(index));
+    index = index + 1;
+}
+```
+
+
+<!-- Nyt tulostus toimii riippumatta listalla olevien alkioiden määrästä. -->
+
+With this method the printing works regardless of the number of elements.
+
+<!-- Aiemmin tarkastelemamme for-toistolause, jota käytetään kun läpikäytäviä arvoja on tietty määrä, on tähän erittäin näppärä. Voimme muuttaa ylläolevan toistolauseen `for`-toistolauseeksi, jolloin ohjelma näyttää seuraavalta. -->
+
+For repeat statement is used for going through a specific number of values, as we previousy learned. It comes in very handy with lists. We ca nturn the repeat statement above to use `for`, after which the program looks like this.
+
+<!-- ```java
 ArrayList<String> opettajat = new ArrayList<>();
 
 opettajat.add("Sami");
@@ -798,18 +966,42 @@ opettajat.add("Anna");
 for (int indeksi = 0; indeksi < opettajat.size(); indeksi++) {
     System.out.println(opettajat.get(indeksi));
 }
+``` -->
+
+```java
+ArrayList<String> opettajat = new ArrayList<>();
+
+teachers.add("Simon");
+teachers.add("Samuel");
+teachers.add("Ann");
+teachers.add("Anna");
+
+for (int index = 0; index < teachers.size(); index++) {
+    System.out.println(teachers.get(index));
+}
 ```
 
-<sample-output>
+<!-- <sample-output>
 
 Sami
 Samu
 Anne
 Anna
 
+</sample-output> -->
+
+<sample-output>
+
+Simon
+Samuel
+Ann
+Anna
+
 </sample-output>
 
-Tyypillisesti for-toistolauseilla indeksimuuttujan nimi on `i`:
+<!-- Tyypillisesti for-toistolauseilla indeksimuuttujan nimi on `i`: -->
+
+Typically, the index variable of the for loop is called `i`:
 
 ```java
 for (int i = 0; i < opettajat.size(); i++) {
