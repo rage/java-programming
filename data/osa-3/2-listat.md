@@ -1,44 +1,72 @@
 ---
 path: '/osa-3/2-listat'
-title: 'Listat'
+# title: 'Listat'
+title: 'Lists'
 hidden: false
 ---
 
-<text-box variant='learningObjectives' name='Oppimistavoitteet'>
+<!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
 
-- Tunnet listarakenteen ja osaat käyttää listaa osana ohjelmia.
-- Tunnet käsitteen indeksi, osaat lisätä arvoja listalle ja osaat hakea tietoa listan indeksistä.
-- Osaat käydä listan läpi useammalla erilaisella toistolauseella.
-- Osaat tarkistaa onko arvo listalla ja osaat toisaalta poistaa arvoja listalta.
-- Tiedät, että lista on viittaustyyppinen muuttuja ja tutustut listan käyttöön metodin parametrina.
+<text-box variant='learningObjectives' name='Learning objectives'>
+
+
+<!-- - Tunnet listarakenteen ja osaat käyttää listaa osana ohjelmia. -->
+- You are familiar with the list structure and can use it in your programs
+<!-- - Tunnet käsitteen indeksi, osaat lisätä arvoja listalle ja osaat hakea tietoa listan indeksistä. -->
+- You are familiar with the concept of index, you can add values to a list, and you know how to retrieve information from a list's indices
+<!-- - Osaat käydä listan läpi useammalla erilaisella toistolauseella. -->
+- You can use several kinds of looping statements to iterate over a list
+<!-- - Osaat tarkistaa onko arvo listalla ja osaat toisaalta poistaa arvoja listalta. -->
+- You know how to check if a value exists in a list, and you can remove values from a list
+<!-- - Tiedät, että lista on viittaustyyppinen muuttuja ja tutustut listan käyttöön metodin parametrina. -->
+- You are aware that a list is a reference-type variable, and you will familiarize yourself with using lists as method parameters
 
 </text-box>
 
 
-Ohjelmoidessa tulee vastaan tilanteita, joissa haluamme käsitellä useita arvoja. Epäkäytännöllinen mutta tähän mennessä käytännössä ainoa tapa on ollut määritellä jokaiselle arvolle oma muuttuja.
+<!-- Ohjelmoidessa tulee vastaan tilanteita, joissa haluamme käsitellä useita arvoja. Epäkäytännöllinen mutta tähän mennessä käytännössä ainoa tapa on ollut määritellä jokaiselle arvolle oma muuttuja. -->
+
+We often encounter situations that call for handling of multiple values when programming. Before this,  the practically only means available to us has been to define a separate variable for storing each value. This method can easily become impractical.
 
 
-```java
+<!-- ```java
 String sana1;
 String sana2;
 String sana3;
 // ...
 String sana10;
-```
-
-Yllä esitetty ratkaisu on oikeastaan kelvoton -- ajattele ylläoleva esimerkki vaikkapa tuhannella sanalla.
-
-Ohjelmointikielet tarjoavat apuvälineitä, joiden avulla on helppo säilyttää useita arvoja. Tutustumme seuraavaksi Java-ohjelmointikielen ehkäpä eniten käytettyyn apuvälineeseen [ArrayListiin](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html), joka on useamman samankaltaisen arvon säilömiseen tarkoitettu lista.
-
-ArrayList on Javan valmiiksi tarjoama työväline listojen käsittelyyn. Se tarjoaa metodit muunmuassa arvojen lisäämiseen listalle, arvojen poistamiseen listalta sekä arvojen hakemiseen tietystä listan kohdasta. Listan konkreettinen toiminta -- eli miten lista on oikeasti ohjelmoitu -- on abstrahoitu metodien taakse, jolloin listaa käyttävän ohjelmoijan ei tarvitse välittää listan sisäisestä toiminnallisuudesta.
-
-
-## Listan käyttöönotto ja luominen
-
-Jotta ArrayListiä voi käyttää, tulee se tuoda ohjelman käyttöön. Tämä onnistuu kirjoittamalla ohjelman ylälaitaan komento `import java.util.ArrayList;`. Alla on esimerkkiohjelma, missä ArrayList tuodaan ohjelman käyttöön.
-
+``` -->
 
 ```java
+String word1;
+String word2;
+String word3;
+// ...
+String word10;
+```
+
+<!-- Yllä esitetty ratkaisu on oikeastaan kelvoton -- ajattele ylläoleva esimerkki vaikkapa tuhannella sanalla. -->
+
+The solution presented above is frankly useless -- consider the situation when there are thousands of words to store.
+
+<!-- Ohjelmointikielet tarjoavat apuvälineitä, joiden avulla on helppo säilyttää useita arvoja. Tutustumme seuraavaksi Java-ohjelmointikielen ehkäpä eniten käytettyyn apuvälineeseen [ArrayListiin](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html), joka on useamman samankaltaisen arvon säilömiseen tarkoitettu lista. -->
+
+Programming languages offer tools to assist in storing a number of values. We will next take a peek at perhaps the most used single tool the Java language, the [ArrayList](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html), which is used for storing many values of the same type.
+
+<!-- ArrayList on Javan valmiiksi tarjoama työväline listojen käsittelyyn. Se tarjoaa metodit muunmuassa arvojen lisäämiseen listalle, arvojen poistamiseen listalta sekä arvojen hakemiseen tietystä listan kohdasta. Listan konkreettinen toiminta -- eli miten lista on oikeasti ohjelmoitu -- on abstrahoitu metodien taakse, jolloin listaa käyttävän ohjelmoijan ei tarvitse välittää listan sisäisestä toiminnallisuudesta. -->
+
+ArrayList is a premade tool to help in handling lists. It offers methods for, among others, adding values to the list, removing values from the list, and getting a value from a specific place in the list. The concrete operation -- how the list is concretely programmed -- has beed abstracted behind these methods, so a programmer who uses a list need not concern themselves with its inner workings.
+
+
+<!-- ## Listan käyttöönotto ja luominen -->
+
+## Beginning to use lists and creating them
+
+<!-- Jotta ArrayListiä voi käyttää, tulee se tuoda ohjelman käyttöön. Tämä onnistuu kirjoittamalla ohjelman ylälaitaan komento `import java.util.ArrayList;`. Alla on esimerkkiohjelma, missä ArrayList tuodaan ohjelman käyttöön. -->
+
+In order to use ArrayList it must be imported in the program. This happens by writing the command `import java.util.ArrayList;` to the top of the program. In the example below ArrayList is imported into the program.
+
+<!-- ```java
 // tuodaan lista ohjelman käyttöön
 import java.util.ArrayList;
 
@@ -48,13 +76,27 @@ public class Ohjelma {
         // ei vielä mitään toiminnallisuutta
     }
 }
+``` -->
+
+```java
+// import the list so the program can use it
+import java.util.ArrayList;
+
+public class Program {
+
+    public static void main(String[] args) {
+        // the list isn't used yet
+    }
+}
 ```
 
 
-Listan luominen tapahtuu sanomalla "`ArrayList<Tyyppi> lista = new ArrayList<>()`", missä _Tyyppi_ on listalle säilöttävien arvojen tyyppi, eli esimerkiksi `String`. Alla olevassa esimerkissä luodaan merkkijonojen säilömiseen tarkoitettu lista.
+<!-- Listan luominen tapahtuu sanomalla "`ArrayList<Tyyppi> lista = new ArrayList<>()`", missä _Tyyppi_ on listalle säilöttävien arvojen tyyppi, eli esimerkiksi `String`. Alla olevassa esimerkissä luodaan merkkijonojen säilömiseen tarkoitettu lista. -->
+
+Creating a new list is done with the command `ArrayList<Type> list = new ArrayList<>()`, where _Type_ is the type of the values to be stored in the list (e.g. `String`). We create a list for storing integers in the example below.
 
 
-```java
+<!-- ```java
 // tuodaan lista ohjelman käyttöön
 import java.util.ArrayList;
 
@@ -67,47 +109,97 @@ public class Ohjelma {
         // listalla ei vielä tehdä mitään
     }
 }
+``` -->
+
+```java
+// import the list so the program can use it
+import java.util.ArrayList;
+
+public class Program {
+
+    public static void main(String[] args) {
+        // create a list
+        ArrayList<String> list = new ArrayList<>();
+
+        // the list isn't used yet
+    }
+}
 ```
 
 
-ArrayList-muuttujan tyyppi on `ArrayList`. Listamuuttujaa esiteltäessä muuttujan tyypin lisäksi listalle määritellään siihen säilöttävien arvojen tyyppi -- **kaikki samalle listalle lisättävät arvot ovat saman tyyppisiä**. Esimerkiksi merkkijonoja sisältävän ArrayListin tyyppi on `ArrayList<String>` ja kokonaislukuja sisältävän ArrayListin tyyppi on `ArrayList<Integer>`. Listan luominen tapahtuu  komennolla `new ArrayList<>();`.
+<!-- ArrayList-muuttujan tyyppi on `ArrayList`. Listamuuttujaa esiteltäessä muuttujan tyypin lisäksi listalle määritellään siihen säilöttävien arvojen tyyppi -- **kaikki samalle listalle lisättävät arvot ovat saman tyyppisiä**. Esimerkiksi merkkijonoja sisältävän ArrayListin tyyppi on `ArrayList<String>` ja kokonaislukuja sisältävän ArrayListin tyyppi on `ArrayList<Integer>`. Listan luominen tapahtuu  komennolla `new ArrayList<>();`. -->
+
+The type of the `list` variable is `ArrayList`. When introducing a list variable, it is important to define also the type of the values to be stored, and not only the type of the list variable itself. **All the variables stored in one list have the same type**. The type of an ArrayList that stores strings is therefore `ArrayList<String>`. A new list is created with the command `new ArrayList<>();`.
 
 
-##  Listan sisältämien arvojen tyypin määrittely
+<!-- ##  Listan sisältämien arvojen tyypin määrittely -->
 
-Listan sisältämien arvojen tyyppien määrittelyssä muuttujista tulee käyttää niiden "isolla kirjaimella kirjoitettuja" versioita. Esimerkiksi int-tyyppisiä muuttujia sisältävä lista tulee määritellä muodossa `ArrayList<Integer>` ja double-tyyppisiä muuttujia sisältävä lista tulee määritellä muodossa `ArrayList<Double>`.
+## Defining the type of values that a list can store
 
-Tämä liittyy siihen, miten ArrayList on toteutettu. Javan muuttujat voidaan jakaa kahteen kategoriaan: alkeistyyppisiin muuttujiin ja viittaustyyppisiin muuttujiin. **Alkeistyyppiset** muuttujat kuten `int` ja `double` sisältävät niihin liittyvät arvot. **Viittaustyyppiset** muuttujat taas, kuten esimerkiksi `ArrayList` sisältävät viitteen paikkaan, joka sisältää muuttujaan liittyvät arvot.
+<!-- Listan sisältämien arvojen tyyppien määrittelyssä muuttujista tulee käyttää niiden "isolla kirjaimella kirjoitettuja" versioita. Esimerkiksi int-tyyppisiä muuttujia sisältävä lista tulee määritellä muodossa `ArrayList<Integer>` ja double-tyyppisiä muuttujia sisältävä lista tulee määritellä muodossa `ArrayList<Double>`. -->
 
-Alkeistyyppiset muuttujat pystyvät sisältämään vain rajatun määrän tietoa, kun taas viitteen taakse tietoa voi säilöä lähes rajattomasti.
+When defining the type of values that a list include, the "capitalized first letter" versions of types must be used. A list that includes int-type variables has to be defined in the form `ArrayList<Integer>`; a list that includes double-type variables similarly in the form `ArrayList<Double>`.
 
-Alla on kuvattuna eri tyyppisiä arvoja sisältävien listojen luominen.
+<!-- Tämä liittyy siihen, miten ArrayList on toteutettu. Javan muuttujat voidaan jakaa kahteen kategoriaan: alkeistyyppisiin muuttujiin ja viittaustyyppisiin muuttujiin. **Alkeistyyppiset** muuttujat kuten `int` ja `double` sisältävät niihin liittyvät arvot. **Viittaustyyppiset** muuttujat taas, kuten esimerkiksi `ArrayList` sisältävät viitteen paikkaan, joka sisältää muuttujaan liittyvät arvot. -->
 
-```java
+The reason for this practice relates to the implementation of ArrayList. The variables in Java can be divided into two categories: value type (primitive) and reference type (reference type) variables. **Value type** variables such as `int` or `double` contain their values directly. **Reference type** variables such as `ArrayList`, in contrast, contain a reference to the location that contains the value(s) relating to that variable.
+
+<!-- Alkeistyyppiset muuttujat pystyvät sisältämään vain rajatun määrän tietoa, kun taas viitteen taakse tietoa voi säilöä lähes rajattomasti. -->
+
+Value type variables can hold a very limited amount of information, whereas references can be used to store a near limitless amount.
+
+<!-- Alla on kuvattuna eri tyyppisiä arvoja sisältävien listojen luominen. -->
+
+Below are examples of creating lists that contain different types of values.
+
+<!-- ```java
 ArrayList<Integer> lista = new ArrayList<>();
 lista.add(1);
-```
+``` -->
 
 ```java
+ArrayList<Integer> list = new ArrayList<>();
+list.add(1);
+```
+
+<!-- ```java
 ArrayList<Double> lista = new ArrayList<>();
 lista.add(4.2);
+``` -->
+
+```java
+ArrayList<Double> list = new ArrayList<>();
+list.add(4.2);
 ```
 
 
-```java
+<!-- ```java
 ArrayList<Boolean> lista = new ArrayList<>();
 lista.add(true);
-```
+``` -->
 
 ```java
+ArrayList<Boolean> list = new ArrayList<>();
+list.add(true);
+```
+
+<!-- ```java
 ArrayList<String> lista = new ArrayList<>();
 lista.add("String on viittaustyyppinen muuttuja");
-```
-
-Kun lista on luotu, ArrayList olettaa, että sen sisältämät muuttujat ovat viittaustyyppisiä. Java muuntaa automaattisesti `int`-tyyppisen muuttujan `Integer`-tyyppiseksi kun se lisätään listalle, sama tapahtuu myös kun muuttuja haetaan listalta. Vastaava muunnos tapahtuu myös `double`-tyyppiselle muuttujalle, josta tulee `Double`-tyyppinen muuttuja. Tämä tarkoittaa sitä, että vaikka lista määritellään `Integer`-tyyppisiä arvoja sisältäväksi, voi siihen lisätä `int`-tyyppisiä arvoja.
-
+``` -->
 
 ```java
+ArrayList<String> list = new ArrayList<>();
+lista.add("String is a reference type variable");
+```
+
+
+<!-- Kun lista on luotu, ArrayList olettaa, että sen sisältämät muuttujat ovat viittaustyyppisiä. Java muuntaa automaattisesti `int`-tyyppisen muuttujan `Integer`-tyyppiseksi kun se lisätään listalle, sama tapahtuu myös kun muuttuja haetaan listalta. Vastaava muunnos tapahtuu myös `double`-tyyppiselle muuttujalle, josta tulee `Double`-tyyppinen muuttuja. Tämä tarkoittaa sitä, että vaikka lista määritellään `Integer`-tyyppisiä arvoja sisältäväksi, voi siihen lisätä `int`-tyyppisiä arvoja. -->
+
+Once a list is created, ArrayList assumes that all the variables in it are reference type. Java automatically converts an `int` type variable into `Integer` type when it is being added to a list, and the same occurs when a variable is retrieved from a list. The same conversion occurs to `double` type variables, which are converted to `Double`. In practice the result is that even though a list is defined to contain variables of type `Integer`, `int` type variables can also be added to it.
+
+
+<!-- ```java
 ArrayList<Integer> kokonaisluvut = new ArrayList<>();
 int kokonaisluku = 1;
 kokonaisluvut.add(kokonaisluku);
@@ -115,20 +207,38 @@ kokonaisluvut.add(kokonaisluku);
 ArrayList<Double> liukuluvut = new ArrayList<>();
 double liukuluku = 4.2;
 liukuluvut.add(liukuluku);
-```
-
-Palaamme teemaan jatkossakin, sillä tämä jako alkeis- ja viittaustyyppisiin muuttujiin vaikuttaa ohjelmiimme myös muilla tavoin.
-
-
-## Listalle lisääminen ja tietystä kohdasta hakeminen
-
-
-Seuraavassa esimerkissä esitellään merkkijonoja säilövä ArrayList, johon lisätään muutama merkkijono. Lisääminen tapahtuu listan metodilla `add`, jolle annetaan parametrina listalle lisättävä arvo. Tämän jälkeen tulostetaan listan nollannessa kohdassa oleva arvo. Listan tietystä kohdasta haetaan arvo listan metodilla `get`, jolle annetaan parametrina kokonaislukutyyppinen arvo, joka kertoo kohdan mistä arvo haetaan.
-
-Listan metodeja kutsutaan kirjoittamalla ensin listaa kuvaavaan muuttujan nimi, sitten piste, ja sitten metodin nimi.
-
+``` -->
 
 ```java
+ArrayList<Integer> integers = new ArrayList<>();
+int integer = 1;
+integers.add(integer);
+
+ArrayList<Double> doubles = new ArrayList<>();
+double d = 4.2;
+doubles.add(d);
+```
+
+<!-- Palaamme teemaan jatkossakin, sillä tämä jako alkeis- ja viittaustyyppisiin muuttujiin vaikuttaa ohjelmiimme myös muilla tavoin. -->
+
+We will return to discuss this matter of value and reference type variables, since the division has other effects on our programs, too.
+
+
+<!-- ## Listalle lisääminen ja tietystä kohdasta hakeminen -->
+
+## Adding to a list and retrieving a value from a specific place
+
+
+<!-- Seuraavassa esimerkissä esitellään merkkijonoja säilövä ArrayList, johon lisätään muutama merkkijono. Lisääminen tapahtuu listan metodilla `add`, jolle annetaan parametrina listalle lisättävä arvo. Tämän jälkeen tulostetaan listan nollannessa kohdassa oleva arvo. Listan tietystä kohdasta haetaan arvo listan metodilla `get`, jolle annetaan parametrina kokonaislukutyyppinen arvo, joka kertoo kohdan mistä arvo haetaan. -->
+
+The next example shows adding a few string into an ArrayList that contains string. Adding is done with the list method `add`, which takes the value to be added as a parameter. Then we print the value at position zero. To retrieve a value from a certain position, you use the list method `get`, which is given the place of retrieval as a parameter.
+
+<!-- Listan metodeja kutsutaan kirjoittamalla ensin listaa kuvaavaan muuttujan nimi, sitten piste, ja sitten metodin nimi. -->
+
+To call a list method you first write the name of the variable that describes the list, followed by a dot and the name of the method.
+
+
+<!-- ```java
 // tuodaan lista ohjelman käyttöön
 import java.util.ArrayList;
 
@@ -146,19 +256,47 @@ public class SanalistaEsimerkki {
         System.out.println(sanalista.get(0));
     }
 }
+``` -->
+
+```java
+// import list so that the program can use it
+import java.util.ArrayList;
+
+public class WordListExample {
+
+    public static void main(String[] args) {
+        // create the word list for storing strings
+        ArrayList<String> wordList = new ArrayList<>();
+
+        // add two values to the word list
+        wordList.add("First");
+        wordList.add("Second");
+
+        // retrieve the value from position 0 of the word list, and print it
+        System.out.println(wordList.get(0));
+    }
+}
 ```
+
+<!-- <sample-output>
+
+Ensimmäinen
+
+</sample-output> -->
 
 <sample-output>
 
-Ensimmäinen
+First
 
 </sample-output>
 
 
-Kuten huomaat, metodilla `get` saa listan ensimmäisen arvon kun metodille antaa parametrina arvon `0`. Tämä johtuu siitä, että **listan kohtien laskeminen alkaa nollasta**. Listan ensimmäinena arvo löytyy kutsulla `sanalista.get(0)`, listan toinen arvo kohdasta `sanalista.get(1)` jne.
+<!-- Kuten huomaat, metodilla `get` saa listan ensimmäisen arvon kun metodille antaa parametrina arvon `0`. Tämä johtuu siitä, että **listan kohtien laskeminen alkaa nollasta**. Listan ensimmäinena arvo löytyy kutsulla `sanalista.get(0)`, listan toinen arvo kohdasta `sanalista.get(1)` jne. -->
+
+As you can see, the `get` method retrieves the first value from the list when it is given the parameter `0`. This is explained by that **counting positions in a list starts from zero**. The first value is found by `wordList.get(0)`, the second by `wordList.get(1)`, etc.
 
 
-```java
+<!-- ```java
 import java.util.ArrayList;
 
 public class SanalistaEsimerkki {
@@ -172,26 +310,53 @@ public class SanalistaEsimerkki {
         System.out.println(sanalista.get(1));
     }
 }
+``` -->
+
+```java
+import java.util.ArrayList;
+
+public class WordListExample {
+
+    public static void main(String[] args) {
+        ArrayList<String> wordList = new ArrayList<>();
+
+        wordList.add("First");
+        wordList.add("Second");
+
+        System.out.println(wordList.get(1));
+    }
+}
 ```
+
+<!-- <sample-output>
+
+Toinen
+
+</sample-output> -->
 
 <sample-output>
 
-Toinen
+Second
 
 </sample-output>
 
 
-<programming-exercise name='Kolmannen arvon tulostaminen' tmcname='osa03-Osa03_01.KolmannenArvonTulostaminen'>
+<!-- <programming-exercise name='Kolmannen arvon tulostaminen' tmcname='osa03-Osa03_01.KolmannenArvonTulostaminen'> -->
+
+<programming-exercise name='Printing the third value' tmcname='osa03-Osa03_01.KolmannenArvonTulostaminen'>
 
 
-Ohjelmaan on toteutettu valmiina pohja, joka lukee käyttäjältä merkkijonoja ja lisää niitä listalle. Syötteiden lukeminen päätetään kun käyttäjä syöttää tyhjän merkkijonon. Ohjelma tulostaa tämän jälkeen listan ensimmäisen arvon.
+<!-- Ohjelmaan on toteutettu valmiina pohja, joka lukee käyttäjältä merkkijonoja ja lisää niitä listalle. Syötteiden lukeminen päätetään kun käyttäjä syöttää tyhjän merkkijonon. Ohjelma tulostaa tämän jälkeen listan ensimmäisen arvon. -->
+
+The exercise contains a base that asks the user for strings and adds them to a list. The program stops reading when the user enters an empty string. The program then prints the first value on the list.
 
 
+<!-- Muokkaa ohjelmaa siten, että ensimmäisen arvon sijaan tulostetaan kolmas arvo. Huomaa, että ohjelmoijat aloittavat laskemisen nollasta! Ohjelma saa rikkoutua mikäli listalla ei ole vähintään kolmea arvoa, eli tällaiseen tilanteeseen ei tarvitse varautua millään tavalla. -->
 
-Muokkaa ohjelmaa siten, että ensimmäisen arvon sijaan tulostetaan kolmas arvo. Huomaa, että ohjelmoijat aloittavat laskemisen nollasta! Ohjelma saa rikkoutua mikäli listalla ei ole vähintään kolmea arvoa, eli tällaiseen tilanteeseen ei tarvitse varautua millään tavalla.
+Your assignment is to modify the program so that instead of the first value, the third value on the list is printed. Remember that programmers start counting from zero! The program is allowed to malfunction if there are fewer than three entries on the list, so you don't need to prepare for such an event at all.
 
 
-<sample-output>
+<!-- <sample-output>
 
 **Terho**
 **Elina**
@@ -200,9 +365,20 @@ Muokkaa ohjelmaa siten, että ensimmäisen arvon sijaan tulostetaan kolmas arvo.
 
 Aleksi
 
-</sample-output>
+</sample-output> -->
 
 <sample-output>
+
+**Tom**
+**Emma**
+**Alex**
+**Mary**
+
+Alex
+
+</sample-output>
+
+<!-- <sample-output>
 
 **Elina**
 **Aleksi**
@@ -210,20 +386,35 @@ Aleksi
 
 Mari
 
+</sample-output> -->
+
+<sample-output>
+
+**Emma**
+**Alex**
+**Mary**
+
+Mary
+
 </sample-output>
 
 </programming-exercise>
 
 
-<programming-exercise name='Toisen ja kolmannen summa' tmcname='osa03-Osa03_02.ToisenJaKolmannenSumma'>
+<!-- <programming-exercise name='Toisen ja kolmannen summa' tmcname='osa03-Osa03_02.ToisenJaKolmannenSumma'> -->
+
+<programming-exercise name='Sum of second and third' tmcname='osa03-Osa03_02.ToisenJaKolmannenSumma'>
 
 
-Ohjelmaan on toteutettu valmiina pohja, joka lukee käyttäjältä kokonaistyyppisiä lukuja ja lisää niitä listalle. Lukeminen lopetetaan kun käyttäjä syöttää luvun 0. Ohjelma tulostaa tämän jälkeen listan ensimmäisen arvon.
+
+<!-- Ohjelmaan on toteutettu valmiina pohja, joka lukee käyttäjältä kokonaistyyppisiä lukuja ja lisää niitä listalle. Lukeminen lopetetaan kun käyttäjä syöttää luvun 0. Ohjelma tulostaa tämän jälkeen listan ensimmäisen arvon. -->
+
+In the exercise template there is a program that reads integers from the user and adds them to a list. The user entering the number 0 ends this. The program then prints the first value on the list.
 
 
+<!-- Muokkaa ohjelmaa siten, että listan ensimmäisen arvon sijaan ohjelma tulostaa listan toisen ja kolmannen arvon summan. Ohjelma saa rikkoutua mikäli listalla ei ole vähintään kolmea arvoa, eli tällaiseen tilanteeseen ei tarvitse varautua millään tavalla. -->
 
-Muokkaa ohjelmaa siten, että listan ensimmäisen arvon sijaan ohjelma tulostaa listan toisen ja kolmannen arvon summan. Ohjelma saa rikkoutua mikäli listalla ei ole vähintään kolmea arvoa, eli tällaiseen tilanteeseen ei tarvitse varautua millään tavalla.
-
+Modify the program so that instead of the first value the program prints the sum of the second and third numbers. The program is allowed to malfunction if there are fewer than three entries on the list, so you don't need to prepare for such an event at all.
 
 <sample-output>
 
@@ -249,12 +440,16 @@ Muokkaa ohjelmaa siten, että listan ensimmäisen arvon sijaan ohjelma tulostaa 
 </programming-exercise>
 
 
-### Tiedon hakeminen "olemattomasta" kohdasta
+<!-- ### Tiedon hakeminen "olemattomasta" kohdasta -->
 
-Jos ArrayListiltä haetaan arvoa kohdasta, jota listalla ei ole, tulostaa ohjelma virheen `IndexOutOfBoundsException`. Alla olevassa esimerkissä on ohjelma, missä listalle lisätään kaksi arvoa, jonka jälkeen yritetään tulostaa arvoa listan kohdasta kaksi.
+## Retrieving information from a "nonexistent" place
+
+<!-- Jos ArrayListiltä haetaan arvoa kohdasta, jota listalla ei ole, tulostaa ohjelma virheen `IndexOutOfBoundsException`. Alla olevassa esimerkissä on ohjelma, missä listalle lisätään kaksi arvoa, jonka jälkeen yritetään tulostaa arvoa listan kohdasta kaksi. -->
+
+If you try to retrieve information from a place that the list doesn't have, the program prints the error `IndexOutOfBoundsException`. In the example below two values are added to a list, after which there is an attempt to print the value at place two on the list.
 
 
-```java
+<!-- ```java
 import java.util.ArrayList;
 
 public class Esimerkki {
@@ -268,9 +463,27 @@ public class Esimerkki {
         System.out.println(sanalista.get(2));
     }
 }
+``` -->
+
+```java
+import java.util.ArrayList;
+
+public class Example {
+
+    public static void main(String[] args) {
+        ArrayList<String> wordList = new ArrayList<>();
+
+        wordList.add("First");
+        wordList.add("Second");
+
+        System.out.println(wordList.get(2));
+    }
+}
 ```
 
-Koska listalla olevien arvojen numerointi eli **indeksöinti** alkaa nollasta, ei ohjelma löydä arvoa kohdasta kaksi ja ohjelman suoritus päättyy virhetilanteeseen. Alla on kuvattuna yllä olevan ohjelman suorituksen aiheuttama virheviesti.
+<!-- Koska listalla olevien arvojen numerointi eli **indeksöinti** alkaa nollasta, ei ohjelma löydä arvoa kohdasta kaksi ja ohjelman suoritus päättyy virhetilanteeseen. Alla on kuvattuna yllä olevan ohjelman suorituksen aiheuttama virheviesti. -->
+
+Since zero is the first value used in numbering the places (i.e. **indexing**), the program doesn't find anything at place two and its execution ends with an error. Below is captioned the error message caused by the program.
 
 <sample-output>
 
@@ -283,39 +496,55 @@ Koska listalla olevien arvojen numerointi eli **indeksöinti** alkaa nollasta, e
 </sample-output>
 
 
-Virheviesti antaa myös pientä vinkkiä ArrayList-olion kapseloimasta toteutuksesta. Se kertoo metodit, joita kutsuttaessa virhe tapahtui. Ensin ohjelmassa on kutsuttu ?`main`-metodia. Tämän jälkeen main-metodissa on kutsuttu ArrayListin `get`-metodia. Tämän jälkeen ArrayListin `get`-metodissa on kutsuttu ArrayListin `rangeCheck`-metodia, jossa virhe tapahtuu. Tässä on myös hyvä esimerkki metodien nimennästä. Vaikka emme olekaan ennen kuulleet metodista `rangeCheck`, voimme arvata, että se tarkastaa onko haettu kohta jollain halutulla alueella. Virhe johtunee siitä, että näin ei ollut.
+<!-- Virheviesti antaa myös pientä vinkkiä ArrayList-olion kapseloimasta toteutuksesta. Se kertoo metodit, joita kutsuttaessa virhe tapahtui. Ensin ohjelmassa on kutsuttu ?`main`-metodia. Tämän jälkeen main-metodissa on kutsuttu ArrayListin `get`-metodia. Tämän jälkeen ArrayListin `get`-metodissa on kutsuttu ArrayListin `rangeCheck`-metodia, jossa virhe tapahtuu. Tässä on myös hyvä esimerkki metodien nimennästä. Vaikka emme olekaan ennen kuulleet metodista `rangeCheck`, voimme arvata, että se tarkastaa onko haettu kohta jollain halutulla alueella. Virhe johtunee siitä, että näin ei ollut. -->
+
+The error message also hints at the capsulated implementation of an ArrayList object. It lists the methods that were called when the error occured. First the program called the `main` method. Then the main method called the `get` method of ArrayList. After this the `get` method in ArrayList called the `rangeCheck` method, in which the error occurred. This is also an instance of good naming of methods. Despite never hearing of the method `rangeCheck`, we can with good reason guess that it checks if a place is contained in the wanted range. The error likely occurred because this was not the case.
 
 
 <programming-exercise name='IndexOutOfBoundsException' tmcname='osa03-Osa03_03.IndexOutOfBoundsException'>
 
 
-Lista on erittäin hyödyllinen kun halutaan säilöä muuttujien arvoja myöhempää käsittelyä varten. Sillä on myös helpohko tehdä virheitä.
+<!-- Lista on erittäin hyödyllinen kun halutaan säilöä muuttujien arvoja myöhempää käsittelyä varten. Sillä on myös helpohko tehdä virheitä. -->
 
-Tehtäväpohjassa on listaa käyttävä ohjelma. Muokkaa ohjelmaa siten, että sen suorittaminen tuottaa aina virheen `IndexOutOfBoundsException`. Ohjelman tulee olla sellainen, että käyttäjän ei tarvitse antaa koneelle syötettä (esim. näppäimistöltä).
+A list is very useful for storing variables for later use. Making mistakes is also easy with lists.
+
+<!-- Tehtäväpohjassa on listaa käyttävä ohjelma. Muokkaa ohjelmaa siten, että sen suorittaminen tuottaa aina virheen `IndexOutOfBoundsException`. Ohjelman tulee olla sellainen, että käyttäjän ei tarvitse antaa koneelle syötettä (esim. näppäimistöltä). -->
+
+There is a program that uses a list in the exercise template. Modify it so that its execution always produces the error `IndexOutOfBounds`. The user should not have to give any inputs to the program (e.g. write something on the keyboard).
 
 
-Ohjelmassa näkyy myös tapa listan läpikäyntiin -- palaamme tähän tapaan myöhemmin.
+<!-- Ohjelmassa näkyy myös tapa listan läpikäyntiin -- palaamme tähän tapaan myöhemmin. -->
+
+You can also see a means for going through the values of a list -- we will return to this topic a bit later.
 
 </programming-exercise>
 
 
+<!-- <text-box variant='hint' name='Listan kohtaa kutsutaan indeksiksi'> -->
 
-<text-box variant='hint' name='Listan kohtaa kutsutaan indeksiksi'>
+<text-box variant='hint' name='A place in list is called an index'>
 
 
-Listan paikkojen numerointi eli indeksöinti alkaa aina nollasta. Listan ensimmäinen arvo on indeksissä 0, toinen arvo indeksissä 1, kolmas arvo indeksissä 2 ja niin edelleen. Ohjelmissa indeksiä merkitään usein yksinkertaisesti muuttujalla nimeltä `i`.
+
+<!-- Listan paikkojen numerointi eli indeksöinti alkaa aina nollasta. Listan ensimmäinen arvo on indeksissä 0, toinen arvo indeksissä 1, kolmas arvo indeksissä 2 ja niin edelleen. Ohjelmissa indeksiä merkitään usein yksinkertaisesti muuttujalla nimeltä `i`. -->
+
+Numbering places i.e. indexing always begins with zero. The list's first value is located at index 0, the second value at index 1, the third value at index 2, and so on. In programs an index is denoted with a variable called `i`.
 
 
 <div><img class="naytto" src="../img/drawings/arraylist.png"/></div>
 
 
-Ylläolevassa listassa ensimmäisenä on arvo 6 ja toisena arvo 1. Jos ylläolevaan listaan lisättäisiin uusi arvo kutsumalla `luvut`-listan metodia `add` parametrilla 8, menisi luku 8 listan indeksiin 6 eli seitsemänneksi luvuksi.
+<!-- Ylläolevassa listassa ensimmäisenä on arvo 6 ja toisena arvo 1. Jos ylläolevaan listaan lisättäisiin uusi arvo kutsumalla `luvut`-listan metodia `add` parametrilla 8, menisi luku 8 listan indeksiin 6 eli seitsemänneksi luvuksi. -->
+
+In the list above the first value is 6 and the second value 1. If a new value were added to the list by calling the `add` method of `numbers` with 8 as parameter, the number 8 would be placed at index 6. It would be the seventh number in the list.
 
 
 <div><img class="naytto" src="../img/drawings/arraylist-add.png"/></div>
 
 
-Vastaavasti kutsumalla metodia `get` parametrilla 4, listalta haettaisiin viidettä lukua.
+<!-- Vastaavasti kutsumalla metodia `get` parametrilla 4, listalta haettaisiin viidettä lukua. -->
+
+Similarly, by calling the method `get` with the parameter 4, the fifth number in the list would be retrieved.
 
 </text-box>
 
@@ -323,13 +552,18 @@ Vastaavasti kutsumalla metodia `get` parametrilla 4, listalta haettaisiin viidet
 <quiznator id="5c31fe3b017ffc13eddc4ebc"></quiznator>
 
 
-<text-box variant='hint' name='Useamman Javan valmiin työvälineen tuominen ohjelmaan'>
+<!-- <text-box variant='hint' name='Useamman Javan valmiin työvälineen tuominen ohjelmaan'> -->
+
+<text-box variant='hint' name='Importing multiple premade Java tools into the program'>
 
 
-Jokaisella Javan tarjoamalla työvälineellä on nimi ja sijainti. Valmiin työvälineen tuominen ohjelman käyttöön tapahtuu `import`-käskyllä. Käskylle kerrotaan luokan sijainti ja luokan nimi. Esimerkiksi ArrayListin käyttöönotto vaatii komennon `import java.util.ArrayList;` ohjelman ylälaitaan.
+
+<!-- Jokaisella Javan tarjoamalla työvälineellä on nimi ja sijainti. Valmiin työvälineen tuominen ohjelman käyttöön tapahtuu `import`-käskyllä. Käskylle kerrotaan luokan sijainti ja luokan nimi. Esimerkiksi ArrayListin käyttöönotto vaatii komennon `import java.util.ArrayList;` ohjelman ylälaitaan. -->
+
+Each tool offered by Java has a name and location. The program can use a tool after it has been imported with the `import` command. The command is given the location and the name of the wanted class. For example,using ArrayList necessitates placing the command `import java.util.ArrayList;` to the top of the program.
 
 
-```java
+<!-- ```java
 import java.util.ArrayList;
 
 public class ListaOhjelma {
@@ -341,13 +575,31 @@ public class ListaOhjelma {
         sanalista.add("Toinen");
     }
 }
+``` -->
+
+```java
+import java.util.ArrayList;
+
+public class ListProgram {
+
+    public static void main(String[] args) {
+        ArrayList<String> wordList = new ArrayList<>();
+
+        wordList.add("First");
+        wordList.add("Second");
+    }
+}
 ```
 
-Sama pätee myös muillekin Javan luokille. Olemmekin jo aiemmin käyttäneet lukemiseen tarkoitettua Scanner-luokkaa, jonka on saanut käyttöön komennolla `import java.util.Scanner;`
+
+<!-- Sama pätee myös muillekin Javan luokille. Olemmekin jo aiemmin käyttäneet lukemiseen tarkoitettua Scanner-luokkaa, jonka on saanut käyttöön komennolla `import java.util.Scanner;` -->
+
+The same is generally true for all Java classes. Indeed, we have already used the Scanner class used to read input earlier. To use it we have included the command `import java.util.Scanner;`.
 
 
-Useamman apuvälineen käyttöönotto on helppoa. Käyttöön tuotavat apuvälineet listataan allekkain ohjelman ylälaitaan.
+<!-- Useamman apuvälineen käyttöönotto on helppoa. Käyttöön tuotavat apuvälineet listataan allekkain ohjelman ylälaitaan. -->
 
+Taking advantage of multiple tools is straighforward. The tools to be imported are listed at the top of the program.
 
 ```java
 import java.util.ArrayList;
