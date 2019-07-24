@@ -250,12 +250,13 @@ TODO: tähän kuva TMC:stä (highlightattuna run-nappi).
 
 Running the program is easy, but there happens much under the surface. When you want to run the program, the source code is first compiled into Java bytecode. This is done with Javas own compiler, which also is a program. After this the program will be executed meaning the commands will be executed one by one by a Java-compiler which understands java bytecode.
 
+This compile process affects how and when errors occur. When program is compiled before execution, the program used for compiling can search errors from your program. This affects also what tips the programming environment can offer so that a programmer can get feedback about possible errors instantly.
 
-
+Our programming environment compiles and executes the program at the touch of a button. However, the programming environment compiles the program continually in which case it can report errors. You can for example try to change above Ada Lovelace exercise print command to `Systemoutprintln("hi!")` -- you will notice, that the row will be underlined and there will be notification about a error on the left side.
 
 </text-box>
 
-## Useamman rivin tulostaminen
+<!-- ## Useamman rivin tulostaminen
 
 Ohjelmia rakennetaan komento komennolta, missä jokainen komento tulee uudelle riville. Alla olevassa esimerkissä komento `System.out.println` esiintyy kahdesti, joka tarkoittaa sitä että ohjelmassa suoritetaan kaksi tulostuskomentoa.
 
@@ -275,9 +276,30 @@ Yllä olevan ohjelman tulostus on seuraava.
 Hei maailma!
 ... ja maailmankaikkeus!
 
-</sample-output>
+</sample-output> -->
 
+## Printing multiple lines
 
+Programs are constructed command by command where each command comes on a new line. In the example below, command `System.out.println` appears twice, which means that two print commands are being executed in the program.
+
+```java
+public class Ohjelma {
+    public static void main(String[] args) {
+        System.out.println("Hello world!");
+        System.out.println("... and the universe!");
+    }
+}
+```
+Above program will print:
+
+<sample-output>
+
+Hello world!
+... and the universe!
+
+</sample-output> -->
+
+<!--
 <text-box variant='hint' name='Tarkka tarkastaja'>
 
 Ohjelmointitehtävät tarkastaa TMC-Henrik, joka on hyvin tarkka. Tehtävänannoissa olevat toiveet tulostusmuodosta ovat tarkkoja. Jos tehtävänannossa toivotaan esimerkiksi että ohjelma tulostaa sulun, ei sulkua saa jättää tulostamatta.
@@ -286,8 +308,20 @@ Tämä tulostukseen liittyvä tarkkuus on oleellista laajemmin ohjelmoinnissa. Y
 
 Ohjelmoinnin opettelu onkin oikeastaan tie täynnä virheitä -- jokainen virheviesti on myös oppimistilanne.
 
-</text-box>
 
+
+</text-box> -->
+
+<text-box variant='hint' name='Exact inspector'>
+
+Programming exercises will be checked by TMC-Henrik, who is very exact. Expectations about print format in assignmenst are very exact. If, for example, the assignment expects you to print a parenthese, you must print a parenthese.
+
+This exactness in printing is widelt relevant in programming. Missing a sinlge character can cause an error. Beginner programmers often input a comma instead of a point, write for example `printin` instad of `println`, leave apostrophes out, or forget the following semicolon after a command. Every example of the above would cause and error where executing of a program fails.
+
+Learning programming really is a road full of errors -- every error is a learning situation.
+
+</text-box>
+<!--
 <programming-exercise name='Olipa kerran ohjelma' tmcname='osa01-Osa01_03.OlipaKerranOhjelma'>
 
 Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
@@ -311,10 +345,36 @@ ohjelma
 
 </sample-output>
 
+</programming-exercise> -->
+
+
+<programming-exercise name='Once upon a time, there was a program' tmcname='osa01-Osa01_03.OlipaKerranOhjelma'>
+
+In the exercise template there is the following code boilerplate:
+
+```java
+public class OnceUponATime {
+    public static void main(String[] args) {
+        // Implement your program here
+
+    }
+}
+```
+
+Edit the program so that it will print the following text. Use three `System.out.println` commands for printing.
+
+<sample-output>
+
+Once upon a time
+there was
+a program
+
+</sample-output>
+
 </programming-exercise>
 
 
-<text-box variant='hint' name='Lyhenne "sout"'>
+<!-- <text-box variant='hint' name='Lyhenne "sout"'>
 
 Komennon `System.out.println("...")` kirjoittaminen voi olla melko työlästä. Kokeile kirjoittaa NetBeans:iin (main:in sisään) tyhjälle riville _sout_ ja paina tabulaattoria (näppäin q:n vasemmalla puolella). Mitä tapahtuu? Tämä pieni apuväline säästänee jatkossa runsaasti aikaasi.
 
@@ -322,10 +382,20 @@ Alla oleva animaatio kuvaa sout-komennon käyttöä. Kun käyttäjä on kirjoitt
 
 ![](../img/sout.gif)
 
+</text-box> -->
+
+<text-box>
+
+Writing the command `System.out.println("...") can be pretty cumbersome. In NetBeans try to write on a blank line (in main) __sout__ and press tabulator (key left to q). What happens? This small tool will propably save much of your time.
+
+Animation below illustrates the use of sout-command. First user writes sout and then pressed tabulator. A Magic Trick!
+
+![](../img/sout.gif)
+
 </text-box>
 
 
-<programming-exercise name='Olipa kerran maa' tmcname='osa01-Osa01_04.OlipaKerranMaa'>
+<!-- <programming-exercise name='Olipa kerran maa' tmcname='osa01-Osa01_04.OlipaKerranMaa'>
 
 Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
 
@@ -344,6 +414,30 @@ Muokkaa ohjelmaa siten, että ohjelman suoritus tulostaa seuraavanlaisen tekstin
 Olipa
 kerran
 maa
+
+</sample-output>
+
+</programming-exercise> -->
+
+<programming-exercise name='Once upon a time there was an earth' tmcname='osa01-Osa01_04.OlipaKerranMaa'>
+
+In the exercise template there is the following code boilerplate:
+
+```java
+public class OnceUponATimeThereWasAnEarth {
+    public static void main(String[] args) {
+
+    }
+}
+```
+
+Edit the program so that it will print the following text. Use the "sout"-shorthand for writing the print commands.
+
+<sample-output>
+
+Once upon a time
+there was
+an earth
 
 </sample-output>
 
