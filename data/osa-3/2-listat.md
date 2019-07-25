@@ -1386,13 +1386,20 @@ To where? **2**
 </programming-exercise>
 
 
-<programming-exercise name='Listan suurin luku' tmcname='osa03-Osa03_09.ListanSuurinLuku'>
+<!-- <programming-exercise name='Listan suurin luku' tmcname='osa03-Osa03_09.ListanSuurinLuku'> -->
 
-Ohjelmaan on toteutettu valmiina pohja, joka lukee käyttäjältä lukuja listalle. Syötteiden lukeminen päätetään kun käyttäjä syöttää luvun -1.
+<programming-exercise name='Greatest number in the list' tmcname='osa03-Osa03_09.ListanSuurinLuku'>
 
-Lisää ohjelmaan toiminnallisuus, joka lukujen lukemisen jälkeen etsii listalta listan suurimman luvun ja tulostaa sen arvon. Ohjelman pitäisi toimia seuraavasti.
 
-<sample-output>
+<!-- Ohjelmaan on toteutettu valmiina pohja, joka lukee käyttäjältä lukuja listalle. Syötteiden lukeminen päätetään kun käyttäjä syöttää luvun -1. -->
+
+The exercise template contains a base that reads numbers from the user and adds them to a list. Reading is stopped once the user enters the number -1.
+
+<!-- Lisää ohjelmaan toiminnallisuus, joka lukujen lukemisen jälkeen etsii listalta listan suurimman luvun ja tulostaa sen arvon. Ohjelman pitäisi toimia seuraavasti. -->
+
+Continue developing the program so that it ends the greatest number in the list and prints its value after reading all the numbers. The programming should work in the following manner.
+
+<!-- <sample-output>
 
 **72**
 **2**
@@ -1403,11 +1410,27 @@ Lisää ohjelmaan toiminnallisuus, joka lukujen lukemisen jälkeen etsii listalt
 
 Listan suurin luku: 93
 
+</sample-output> -->
+
+<sample-output>
+
+**72**
+**2**
+**8**
+**93**
+**11**
+**-1**
+
+The greatest number in the list: 93
+
 </sample-output>
 
-Ota mallia allaolevasta pienintä lukua etsivästä lähdekoodista.
 
-```java
+<!-- Ota mallia allaolevasta pienintä lukua etsivästä lähdekoodista. -->
+
+You can use the source code below as an inspitation. It is used to find the smallest number.
+
+<!-- ```java
 // oletetaan, että käytössämme on lista, jossa on kokonaislukuja
 
 int pienin = lista.get(0);
@@ -1420,18 +1443,40 @@ for(int i = 0; i < lista.size(); i++) {
 }
 
 System.out.println("Listan pienin luku: " + pienin);
+``` -->
+
+```java
+// assume we have a list that contains integers
+
+int smallest = list.get(0);
+
+for(int i = 0; i < list.size(); i++) {
+    int number = list.get(i);
+    if (smallest > number) {
+        smallest = number;
+    }
+}
+
+System.out.println("The smallest number: " + smallest);
 ```
 
 </programming-exercise>
 
 
-<programming-exercise name='Kysytyn luvun indeksi' tmcname='osa03-Osa03_10.KysytynLuvunIndeksi'>
+<!-- <programming-exercise name='Kysytyn luvun indeksi' tmcname='osa03-Osa03_10.KysytynLuvunIndeksi'> -->
 
-Ohjelmaan on toteutettu valmiina pohja, joka lukee käyttäjältä lukuja listalle. Syötteiden lukeminen päätetään kun käyttäjä syöttää luvun -1.
+<programming-exercise name='Index of the requested number' tmcname='osa03-Osa03_10.KysytynLuvunIndeksi'>
 
-Lisää ohjelmaan toiminnallisuus, joka kysyy käyttäjältä lukua ja kertoo luvun indeksin. Mikäli lukua ei löydy, ohjelman ei tule kertoa siitä.
 
-<sample-output>
+<!-- Ohjelmaan on toteutettu valmiina pohja, joka lukee käyttäjältä lukuja listalle. Syötteiden lukeminen päätetään kun käyttäjä syöttää luvun -1. -->
+
+The exercise template contains a base that reads numbers from the user and adds them to a list. Reading is stopped once the user enters the number -1.
+
+<!-- Lisää ohjelmaan toiminnallisuus, joka kysyy käyttäjältä lukua ja kertoo luvun indeksin. Mikäli lukua ei löydy, ohjelman ei tule kertoa siitä. -->
+
+Expand the program that then asks the user for a number, and reporst that number's index in the list. If the number is not found, the program should not print anything.
+
+<!-- <sample-output>
 
 **72**
 **2**
@@ -1443,9 +1488,23 @@ Lisää ohjelmaan toiminnallisuus, joka kysyy käyttäjältä lukua ja kertoo lu
 Mitä etsitään? **2**
 Luku 2 on indeksissä 1
 
-</sample-output>
+</sample-output> -->
 
 <sample-output>
+
+**72**
+**2**
+**8**
+**8**
+**11**
+**-1**
+
+What number is searched for? **2**
+Number 2 is at index 1
+
+</sample-output>
+
+<!-- <sample-output>
 
 **72**
 **2**
@@ -1458,17 +1517,36 @@ Mitä etsitään? **8**
 Luku 8 on indeksissä 2
 Luku 8 on indeksissä 3
 
+</sample-output> -->
+
+<sample-output>
+
+**72**
+**2**
+**8**
+**8**
+**11**
+**-1**
+
+What number is searched for? **8**
+Number 8 is at index 2
+Number 8 is at index 3
+
 </sample-output>
 
 </programming-exercise>
 
 
-<programming-exercise name='Pienimmän luvun indeksi' tmcname='osa03-Osa03_11.PienimmanLuvunIndeksi'>
+<!-- <programming-exercise name='Pienimmän luvun indeksi' tmcname='osa03-Osa03_11.PienimmanLuvunIndeksi'> -->
 
-Toteuta ohjelma, joka lukee käyttäjältä lukuja. Kun käyttäjä syöttää luvun 9999, lukujen lukeminen lopetetaan. Ohjelma tulostaa tämän jälkeen pienimmän listalla olevan luvun sekä indeksit, joista pienin luku löytyy. Pienin luku voi siis esiintyä useamman kerran.
+<programming-exercise name='Index of the smallest number' tmcname='osa03-Osa03_11.PienimmanLuvunIndeksi'>
+
+<!-- Toteuta ohjelma, joka lukee käyttäjältä lukuja. Kun käyttäjä syöttää luvun 9999, lukujen lukeminen lopetetaan. Ohjelma tulostaa tämän jälkeen pienimmän listalla olevan luvun sekä indeksit, joista pienin luku löytyy. Pienin luku voi siis esiintyä useamman kerran. -->
+
+Write a program that reads numbers from the user. When number 9999 is entered, the reading process stops. After this the program will print the smallest number in the list, and also the indices where that number is found. Notice: the smallest number can appear multiple times in the list.
 
 
-<sample-output>
+<!-- <sample-output>
 
 **72**
 **2**
@@ -1480,9 +1558,23 @@ Toteuta ohjelma, joka lukee käyttäjältä lukuja. Kun käyttäjä syöttää l
 Pienin luku on 2
 Pienin luku löytyy indeksistä 1
 
-</sample-output>
+</sample-output> -->
 
 <sample-output>
+
+**72**
+**2**
+**8**
+**8**
+**11**
+**9999**
+
+The smallest number is 2
+The smallest number is found at index 1
+
+</sample-output>
+
+<!-- <sample-output>
 
 **72**
 **44**
@@ -1496,19 +1588,41 @@ Pienin luku on 8
 Pienin luku löytyy indeksistä 2
 Pienin luku löytyy indeksistä 3
 
+</sample-output> -->
+
+<sample-output>
+
+**72**
+**44**
+**8**
+**8**
+**11**
+**9999**
+
+
+The smallest number is 8
+The smallest number is found at index 2
+The smallest number is found at index 3
+
 </sample-output>
 
-Vihje: yhdistele tässä tehtävissä "Listan suurin luku" ja "Kysytyn luvun indeksi" harjoittelemiasi ohjelmia. Etsi ensin pienin luku, ja etsi tämän jälkeen pienimmän luvun indeksi.
+<!-- Vihje: yhdistele tässä tehtävissä "Listan suurin luku" ja "Kysytyn luvun indeksi" harjoittelemiasi ohjelmia. Etsi ensin pienin luku, ja etsi tämän jälkeen pienimmän luvun indeksi. -->
+
+Hint: combine the programs you wrote for the exercises "Greatest number in the list" and "Index of the requested number". First find the smalleest number, and then find the index of that number.
 
 </programming-exercise>
 
 
-### Listan läpikäynti for-each -toistolauseella
+<!-- ### Listan läpikäynti for-each -toistolauseella -->
 
-Mikäli listan arvojen läpikäynnissä ei tarvita tietoa indeksistä, voi listan läpikäyntiin käyttää **for-each** -toistolausetta. Se poikkeaa aiemmin käyttämistämme toistolauseista, sillä siinä ei ole erillistä toisto- tai kasvatusehtoa.
+## Going through a list with a for each repeat statement
+
+<!-- Mikäli listan arvojen läpikäynnissä ei tarvita tietoa indeksistä, voi listan läpikäyntiin käyttää **for-each** -toistolausetta. Se poikkeaa aiemmin käyttämistämme toistolauseista, sillä siinä ei ole erillistä toisto- tai kasvatusehtoa. -->
+
+If you don't need information about the index when going through the values of a list, you can use the **for each**  loop for the purpose. It differs from the previous repeat statements in that id has no separate condition for repeating or incrementing.
 
 
-```java
+<!-- ```java
 ArrayList<String> opettajat = new ArrayList<>();
 
 opettajat.add("Sami");
@@ -1519,11 +1633,28 @@ opettajat.add("Anna");
 for (String opettaja: opettajat) {
     System.out.println(opettaja);
 }
-```
-
-Yllä kuvattu for-each toistolause käytännössä piilottaa osan aiemmin harjoittelemastamme for-toistolauseesta. Edellä kuvattu for-each toistolause näyttäisi for-toistolauseella toteutettuna seuraavalta:
+``` -->
 
 ```java
+ArrayList<String> teachers = new ArrayList<>();
+
+
+teachers.add("Simon");
+teachers.add("Samuel");
+teachers.add("Ann");
+teachers.add("Anna");
+
+for (String teacher: teachers) {
+    System.out.println(teacher);
+}
+```
+
+
+<!-- Yllä kuvattu for-each toistolause käytännössä piilottaa osan aiemmin harjoittelemastamme for-toistolauseesta. Edellä kuvattu for-each toistolause näyttäisi for-toistolauseella toteutettuna seuraavalta: -->
+
+In practical terms, the for each loop described above hides some parts of the for loop we practised before. If implemented with a for loop, the for each repeat statement would look like this:
+
+<!-- ```java
 ArrayList<String> opettajat = new ArrayList<>();
 
 opettajat.add("Sami");
@@ -1536,9 +1667,26 @@ for (int i = 0; i < opettajat.size(); i++) {
     // for-each -toistolauseen sisältö:
     System.out.println(opettaja);
 }
+``` -->
+
+```java
+ArrayList<String> teachers = new ArrayList<>();
+
+teachers.add("Simon");
+teachers.add("Samuel");
+teachers.add("Ann");
+teachers.add("Anna");
+for (int i = 0; i < teachers.size(); i++) {
+    String teacher = teacher.get(i);
+    // contents of the for each loop:
+    System.out.println(teacher);
+}
 ```
 
-Käytännössä for-each käy listan läpi yksi arvo kerrallaan. Lause määritellään muodossa `for (MuuttujanTyyppi muuttujanArvo: listanNimi)`, missä `MuuttujanTyyppi` on listalla olevien arvojen tyyppi ja `muuttujanArvo` on muuttuja, johon listan arvo asetetaan kunkin läpikäynnin yhteydessä.
+
+<!-- Käytännössä for-each käy listan läpi yksi arvo kerrallaan. Lause määritellään muodossa `for (MuuttujanTyyppi muuttujanArvo: listanNimi)`, missä `MuuttujanTyyppi` on listalla olevien arvojen tyyppi ja `muuttujanArvo` on muuttuja, johon listan arvo asetetaan kunkin läpikäynnin yhteydessä. -->
+
+In practice the for each loop examines the values of the list in order one at a time. The expression is defined in the following format: `for (TypeOfVariable valueOfVariable: )
 
 <code-states-visualizer input='{"code":"import java.util.ArrayList;\n\npublic class Toistolause {\n    public static void main(String[] args) {\n        ArrayList<String> opettajat = new ArrayList<>();\n\n        opettajat.add(\"Sami\");\n        opettajat.add(\"Samu\");\n        opettajat.add(\"Anne\");\n        opettajat.add(\"Anna\");\n\n        for (String opettaja: opettajat) {\n            System.out.println(opettaja);\n        }\n    }\n}","stdin":"","trace":[{"stdout":"","event":"call","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"1","frame_id":1}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"2","frame_id":2}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":7,"stack_to_render":[{"func_name":"main:7","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"3","frame_id":3}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"","event":"step_line","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"6","frame_id":6}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"","event":"step_line","line":9,"stack_to_render":[{"func_name":"main:9","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"9","frame_id":9}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"","event":"step_line","line":10,"stack_to_render":[{"func_name":"main:10","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"12","frame_id":12}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"","event":"step_line","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"15","frame_id":15}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"","event":"step_line","line":13,"stack_to_render":[{"func_name":"main:13","encoded_locals":{"opettaja":"Sami","opettajat":["REF",427]},"ordered_varnames":["opettajat","opettaja"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"17","frame_id":17}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Sami\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"20","frame_id":20}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Sami\n","event":"step_line","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"21","frame_id":21}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Sami\n","event":"step_line","line":13,"stack_to_render":[{"func_name":"main:13","encoded_locals":{"opettaja":"Samu","opettajat":["REF",427]},"ordered_varnames":["opettajat","opettaja"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"23","frame_id":23}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Sami\nSamu\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"26","frame_id":26}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Sami\nSamu\n","event":"step_line","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"27","frame_id":27}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Sami\nSamu\n","event":"step_line","line":13,"stack_to_render":[{"func_name":"main:13","encoded_locals":{"opettaja":"Anne","opettajat":["REF",427]},"ordered_varnames":["opettajat","opettaja"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"29","frame_id":29}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Sami\nSamu\nAnne\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"32","frame_id":32}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Sami\nSamu\nAnne\n","event":"step_line","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"33","frame_id":33}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Sami\nSamu\nAnne\n","event":"step_line","line":13,"stack_to_render":[{"func_name":"main:13","encoded_locals":{"opettaja":"Anna","opettajat":["REF",427]},"ordered_varnames":["opettajat","opettaja"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"35","frame_id":35}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Sami\nSamu\nAnne\nAnna\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"38","frame_id":38}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Sami\nSamu\nAnne\nAnna\n","event":"step_line","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"39","frame_id":39}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Sami\nSamu\nAnne\nAnna\n","event":"step_line","line":15,"stack_to_render":[{"func_name":"main:15","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"41","frame_id":41}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Sami\nSamu\nAnne\nAnna\n","event":"return","line":15,"stack_to_render":[{"func_name":"main:15","encoded_locals":{"opettajat":["REF",427],"__return__":["VOID"]},"ordered_varnames":["opettajat","__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"42","frame_id":42}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}}],"userlog":"Debugger VM maxMemory: 455M\n"}'></code-states-visualizer>
 
