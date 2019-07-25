@@ -1102,7 +1102,7 @@ Toka löytyi yhä
 <programming-exercise name='Löytyykö listalta' tmcname='osa03-Osa03_14.LoytyykoListalta'>
 
 
-Tehtäväpohjassa on ohjelma, joka lukee käyttäjältä syötteitä. Lisää ohjelmaan toiminnallisuus, missä syötteiden lukemisen jälkeen kysytään vielä yhtä merkkijonoa. Ohjelma kertoo tämän jälkeen löytyikö käyttäjän syöttämä merkkijono listalta vai ei.
+Tehtäväpohjassa on ohjelma, joka lukee käyttäjältä syötteitä kunnes tämä syöttää tyhjän merkkijonon. Lisää ohjelmaan toiminnallisuus, missä syötteiden lukemisen jälkeen kysytään vielä yhtä merkkijonoa. Ohjelma kertoo tämän jälkeen löytyikö käyttäjän syöttämä merkkijono listalta vai ei.
 
 <sample-output>
 
