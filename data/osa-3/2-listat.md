@@ -1876,8 +1876,6 @@ Third
 
 If the list contains integers, you cannot remove a number value by giving an `int` type parameter to the remove method. This would remove the number from the index that the parameter indicates, instead of an element on the list that has the same value as the parameter. To remove an integer type value you can convert the parameter to Integer type; this is achieved by the `valueOf` method of the Integer class.
 
-// jesper: should be ArrayList<Integer>
-
 
 <!-- ```java
 ArrayList<String> lista = new ArrayList<>();
@@ -1895,7 +1893,7 @@ System.out.println("Paikka 1 eli toinen: " + lista.get(1));
 ``` -->
 
 ```java
-ArrayList<String> list = new ArrayList<>();
+ArrayList<Integer> list = new ArrayList<>();
 
 list.add(15);
 list.add(18);
@@ -1922,8 +1920,6 @@ System.out.println("Index 1 so the second value: " + list.get(1));
 
 <quiznator id="5c31fe883972a914740fdc81"></quiznator>
 
-
-// jesper: "arvon hakeminen listalta" - tuntuu vihjaavan enemmän gettiin (haetaan -> saadaan). arvon sisältymisen tarkastaminen? arvon olemassaolo listalla voidaan tarkastaa?
 
 <!-- Arvon hakeminen listalta onnistuu listan metodilla **contains**. Metodi saa haettavan arvon parametrina ja palauttaa boolean-tyyppisen arvon (`true` tai `false`), joka kertoo löytyykö haettua arvoa listalta. -->
 
@@ -1992,11 +1988,10 @@ Second can still be found
 <programming-exercise name='Can the value be found in the list' tmcname='osa03-Osa03_14.LoytyykoListalta'>
 
 
-// jesper: siis kysytäänkö aina neljä? vai lopettaako tyhjä merkkijono lukemisen?
 
 <!-- Tehtäväpohjassa on ohjelma, joka lukee käyttäjältä syötteitä. Lisää ohjelmaan toiminnallisuus, missä syötteiden lukemisen jälkeen kysytään vielä yhtä merkkijonoa. Ohjelma kertoo tämän jälkeen löytyikö käyttäjän syöttämä merkkijono listalta vai ei. -->
 
-In the exercise template there is a program that reads inputs from the user. Add the following functionality to it: after reading the inputs one more string is requested from the user. The program then tell whether that string was found in the list or not.
+In the exercise template there is a program that reads inputs from the user until an empty string is entered. Add the following functionality to it: after reading the inputs one more string is requested from the user. The program then tell whether that string was found in the list or not.
 
 <!-- <sample-output>
 
@@ -2511,7 +2506,8 @@ System.out.println("Ensimmäisen listan eka arvo " + tehtavat1.get(0));
 System.out.println("Toisen listan vika arvo " + tehtavat2.get(tehtavat2.size() - 1));
 ``` -->
 
-<h2> Tehtävien nimet käännettävä </h2>
+
+<!-- TODO: linkitä oikeat käännösnimet tehtäviin! -->
 
 ```java
 ArrayList<String> exercises1 = new ArrayList<>();
