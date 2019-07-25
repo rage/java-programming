@@ -1,24 +1,33 @@
 ---
 path: '/osa-4/2-oliot-listalla'
-title: 'Oliot listalla'
+# title: 'Oliot listalla'
+title: 'Objects in a list'
 hidden: false
 ---
 
 
-<text-box variant='learningObjectives' name='Oppimistavoitteet'>
+<!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
 
-- Osaat lisätä olioita listalle.
-- Osaat käydä listalla olevia olioita läpi.
+<text-box variant='learningObjectives' name='Learning objectives'>
 
+
+<!-- - Osaat lisätä olioita listalle. -->
+- You can add objects to a list
+<!-- - Osaat käydä listalla olevia olioita läpi. -->
+- You can go through object in a list
 </text-box>
 
 
-Listalle lisättävien muuttujien tyyppi määrätään listan luomisen yhteydessä annettavan tyyppiparametrin avulla. Esimerkiksi `ArrayList<String>` sisältää merkkijonoja, `ArrayList<Integer>` sisältää kokonaislukuja, ja `ArrayList<Double>` sisältää liukulukuja.
+<!-- Listalle lisättävien muuttujien tyyppi määrätään listan luomisen yhteydessä annettavan tyyppiparametrin avulla. Esimerkiksi `ArrayList<String>` sisältää merkkijonoja, `ArrayList<Integer>` sisältää kokonaislukuja, ja `ArrayList<Double>` sisältää liukulukuja. -->
 
-Alla olevassa esimerkissä lisätään ensin merkkijonoja listalle, jonka jälkeen listalla olevat merkkijonot tulostetaan yksitellen.
+The type parameter used in creating a list defines the type of the variables that are added to the list. For instance, `ArrayList<String>` includes strings, `ArrayList<Integer>` integers, and `ArrayList<Double>` floating point numbers
+
+<!-- Alla olevassa esimerkissä lisätään ensin merkkijonoja listalle, jonka jälkeen listalla olevat merkkijonot tulostetaan yksitellen. -->
+
+In the example below we first add strings to a list, after which the strings in the list are printed one by one.
 
 
-```java
+<!-- ```java
 ArrayList<String> nimet = new ArrayList<>();
 
 // merkkijono voidaan lisätä ensin muuttujaan
@@ -53,6 +62,43 @@ System.out.println();
 for (String nimi: nimet) {
     System.out.println(nimi);
 }
+``` -->
+
+```java
+ArrayList<String> names = new ArrayList<>();
+
+// string can first be stored in a variable
+String nimi = "Betty Jennings";
+// then add it to the list
+names.add(nimi);
+
+// strings can also be directly added to the list:
+names.add("Betty Snyder");
+names.add("Frances Spence");
+names.add("Kay McNulty");
+names.add("Marlyn Wescoff");
+names.add("Ruth Lichterman");
+
+// several different repeat statements can be
+// used to go through the list elements
+
+// 1. while loop
+int index = 0;
+while (index < names.size()) {
+    System.out.println(names.get(index));
+    index = index + 1;
+}
+
+// 2. for loop with index
+for (int i = 0; i < names.size(); i++) {
+    System.out.println(names.get(i));
+}
+
+System.out.println();
+// 3. for each loop (no index)
+for (String name: names) {
+    System.out.println(name);
+}
 ```
 
 <sample-output>
@@ -81,13 +127,19 @@ Ruth Lichterman
 </sample-output>
 
 
-## Olioiden lisääminen listalle
+<!-- ## Olioiden lisääminen listalle -->
 
-Merkkijonot ovat olioita, joten ei liene yllätys että listalla voi olla muunkinlaisia olioita. Tarkastellaan seuraavaksi listan ja olioiden yhteistoimintaa tarkemmin.
+## Adding object to a list
 
-Oletetaan, että käytössämme on alla oleva henkilöä kuvaava luokka.
+<!-- Merkkijonot ovat olioita, joten ei liene yllätys että listalla voi olla muunkinlaisia olioita. Tarkastellaan seuraavaksi listan ja olioiden yhteistoimintaa tarkemmin. -->
 
-```java
+Strings are objects, so it should come as no surprise that other kinds of objects can also be found in lists. Next, let's examine the cooperation of lists and objects in more detail.
+
+<!-- Oletetaan, että käytössämme on alla oleva henkilöä kuvaava luokka. -->
+
+Let's assume we have access to the class defined below, describing a person.
+
+<!-- ```java
 public class Henkilo {
 
     private String nimi;
@@ -132,13 +184,63 @@ public class Henkilo {
         return this.nimi + ", ikä " + this.ika + " vuotta";
     }
 }
+``` -->
+```java
+public class Person {
+
+    private String name;
+    private int age;
+    private int weight;
+    private int height;
+
+    public Person(String name) {
+        this.name = name;
+        this.age = 0;
+        this.weight = 0;
+        this.height = 0;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public int getAge() {
+        return this.age;
+    }
+
+    public void growOlder() {
+        this.age = this.age + 1;
+    }
+
+    public void setHeight(int newHeight) {
+        this.height = newHeight;
+    }
+
+    public void setWeight(int newWeight) {
+        this.weight = newWeight;
+    }
+
+    public double bodyMassIndex() {
+        double heightDivByHundred = this.height / 100.0;
+        return this.weight / (heightDivByHundred * heightDivByHundred);
+    }
+
+    @Override
+    public String toString() {
+        return this.name + ", age " + this.age + " years";
+    }
+}
 ```
 
-Olioiden käsittely listalla ei oikeastaan poikkea aiemmin näkemästämme listan käytöstä millään tavalla. Oleellista on vain listalle lisättävien olioiden tyypin määrittely listan luomisen yhteydessä.
+<!-- Olioiden käsittely listalla ei oikeastaan poikkea aiemmin näkemästämme listan käytöstä millään tavalla. Oleellista on vain listalle lisättävien olioiden tyypin määrittely listan luomisen yhteydessä. -->
 
-Alla olevassa esimerkissä luodaan ensin Henkilo-tyyppisille olioille tarkoitettu lista, jonka jälkeen listalle lisätään henkilöolioita. Lopulta henkilöoliot tulostetaan yksitellen.
+Handling objects in a list is not really different in any way from the previous experience we have with lists. The essential difference is only to define the type for the stored elements when you create the list.
 
-```java
+<!-- Alla olevassa esimerkissä luodaan ensin Henkilo-tyyppisille olioille tarkoitettu lista, jonka jälkeen listalle lisätään henkilöolioita. Lopulta henkilöoliot tulostetaan yksitellen. -->
+
+In the example below we first create a list meant for storing Person type object, after which we add persons to it. Finally the person objects are printed one by one.
+
+<!-- ```java
 ArrayList<Henkilo> henkilot = new ArrayList<>();
 
 // henkilöolio voidaan ensin luoda
@@ -153,6 +255,22 @@ henkilot.add(new Henkilo("Martin"));
 for (Henkilo henkilo: henkilot) {
     System.out.println(henkilo);
 }
+``` -->
+```java
+ArrayList<Person> persons = new ArrayList<>();
+
+// a person object can be created first
+Person john = new Henkilo("John");
+// and then added to the list
+persons.add(john);
+
+// person objects can also be created "in the same sentence" that they are added to the list
+persons.add(new Person("Matthew"));
+persons.add(new Person("Martin"));
+
+for (Person person: persons) {
+    System.out.println(person);
+}
 ```
 
 <sample-output>
@@ -164,12 +282,25 @@ Martin, ikä 0 vuotta
 </sample-output>
 
 
+<sample-output>
 
-## Käyttäjän syöttämät oliot listalle
+John, age 0 years
+Matthew, age 0 years
+Martin, age 0 years
 
-Aiemmin käyttämämme rakenne syötteiden lukemiseen on yhä varsin käytännöllinen.
+</sample-output>
 
-```java
+
+
+<!-- ## Käyttäjän syöttämät oliot listalle -->
+
+## Adding user-inputted objects to a list
+
+<!-- Aiemmin käyttämämme rakenne syötteiden lukemiseen on yhä varsin käytännöllinen. -->
+
+The structure we used earlier for reading inputs is still very useful.
+
+<!-- ```java
 Scanner lukija = new Scanner(System.in);
 ArrayList<Henkilo> henkilot = new ArrayList<>();
 
@@ -194,9 +325,37 @@ System.out.println("Henkilöt: ");
 for (Henkilo henkilo: henkilot) {
     System.out.println(henkilo);
 }
+``` -->
+
+```java
+Scanner scanner = new Scanner(System.in);
+ArrayList<Person> persons = new ArrayList<>();
+
+// Read the names of persons from the user
+while (true) {
+    System.out.print("Enter a name, empty will stop: ");
+    String name = scanner.nextLine();
+    if (name.isEmpty()) {
+        break;
+    }
+
+
+    // Add to the list a new person
+    // whose name is the previous user input
+    persons.add(new Person(name));
+}
+
+// Print the number of the entered persons, and their individual information
+System.out.println();
+System.out.println("Persons in total: " + persons.size());
+System.out.println("Persons: ");
+
+for (Person person: persons) {
+    System.out.println(person);
+}
 ```
 
-<sample-output>
+<!-- <sample-output>
 
 Kirjoita nimi, tyhjä lopettaa: **Alan Kay**
 Kirjoita nimi, tyhjä lopettaa: **Ivan Sutherland**
@@ -207,6 +366,20 @@ Henkilöt:
 Alan Kay, ikä 0 vuotta
 Ivan Sutherland, ikä 0 vuotta
 Kristen Nygaard, ikä 0 vuotta
+
+</sample-output> -->
+
+<sample-output>
+
+Enter a name, empty will stop: **Alan Kay**
+Enter a name, empty will stop: **Ivan Sutherland**
+Enter a name, empty will stop: **Kristen Nygaard**
+
+Persons in total: 3
+Perons:
+Alan Kay, age 0 years
+Ivan Sutherland, age 0 years
+Kristen Nygaard, age 0 years
 
 </sample-output>
 
