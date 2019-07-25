@@ -1686,19 +1686,28 @@ for (int i = 0; i < teachers.size(); i++) {
 
 <!-- Käytännössä for-each käy listan läpi yksi arvo kerrallaan. Lause määritellään muodossa `for (MuuttujanTyyppi muuttujanArvo: listanNimi)`, missä `MuuttujanTyyppi` on listalla olevien arvojen tyyppi ja `muuttujanArvo` on muuttuja, johon listan arvo asetetaan kunkin läpikäynnin yhteydessä. -->
 
-In practice the for each loop examines the values of the list in order one at a time. The expression is defined in the following format: `for (TypeOfVariable valueOfVariable: )
+In practice the for each loop examines the values of the list in order one at a time. The expression is defined in the following format: `for (TypeOfVariable nameOfVariable: nameOfList)`, where `TypeOfVariable` is the type of the values in the list, and `nameOfVariable` is the variable that is used to store each value in the list as we go through it.
 
-<code-states-visualizer input='{"code":"import java.util.ArrayList;\n\npublic class Toistolause {\n    public static void main(String[] args) {\n        ArrayList<String> opettajat = new ArrayList<>();\n\n        opettajat.add(\"Sami\");\n        opettajat.add(\"Samu\");\n        opettajat.add(\"Anne\");\n        opettajat.add(\"Anna\");\n\n        for (String opettaja: opettajat) {\n            System.out.println(opettaja);\n        }\n    }\n}","stdin":"","trace":[{"stdout":"","event":"call","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"1","frame_id":1}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"2","frame_id":2}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":7,"stack_to_render":[{"func_name":"main:7","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"3","frame_id":3}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"","event":"step_line","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"6","frame_id":6}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"","event":"step_line","line":9,"stack_to_render":[{"func_name":"main:9","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"9","frame_id":9}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"","event":"step_line","line":10,"stack_to_render":[{"func_name":"main:10","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"12","frame_id":12}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"","event":"step_line","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"15","frame_id":15}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"","event":"step_line","line":13,"stack_to_render":[{"func_name":"main:13","encoded_locals":{"opettaja":"Sami","opettajat":["REF",427]},"ordered_varnames":["opettajat","opettaja"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"17","frame_id":17}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Sami\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"20","frame_id":20}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Sami\n","event":"step_line","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"21","frame_id":21}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Sami\n","event":"step_line","line":13,"stack_to_render":[{"func_name":"main:13","encoded_locals":{"opettaja":"Samu","opettajat":["REF",427]},"ordered_varnames":["opettajat","opettaja"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"23","frame_id":23}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Sami\nSamu\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"26","frame_id":26}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Sami\nSamu\n","event":"step_line","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"27","frame_id":27}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Sami\nSamu\n","event":"step_line","line":13,"stack_to_render":[{"func_name":"main:13","encoded_locals":{"opettaja":"Anne","opettajat":["REF",427]},"ordered_varnames":["opettajat","opettaja"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"29","frame_id":29}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Sami\nSamu\nAnne\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"32","frame_id":32}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Sami\nSamu\nAnne\n","event":"step_line","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"33","frame_id":33}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Sami\nSamu\nAnne\n","event":"step_line","line":13,"stack_to_render":[{"func_name":"main:13","encoded_locals":{"opettaja":"Anna","opettajat":["REF",427]},"ordered_varnames":["opettajat","opettaja"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"35","frame_id":35}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Sami\nSamu\nAnne\nAnna\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"38","frame_id":38}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Sami\nSamu\nAnne\nAnna\n","event":"step_line","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"39","frame_id":39}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Sami\nSamu\nAnne\nAnna\n","event":"step_line","line":15,"stack_to_render":[{"func_name":"main:15","encoded_locals":{"opettajat":["REF",427]},"ordered_varnames":["opettajat"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"41","frame_id":41}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Sami\nSamu\nAnne\nAnna\n","event":"return","line":15,"stack_to_render":[{"func_name":"main:15","encoded_locals":{"opettajat":["REF",427],"__return__":["VOID"]},"ordered_varnames":["opettajat","__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"42","frame_id":42}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}}],"userlog":"Debugger VM maxMemory: 455M\n"}'></code-states-visualizer>
+xxx
+
+<code-states-visualizer input='{"code":"import java.util.ArrayList;\n\npublic class RepeatStatement {\n    public static void main(String[] args) {\n        ArrayList<String> teachers = new ArrayList<>();\n\n        teachers.add(\"Simon\");\n        teachers.add(\"Samuel\");\n        teachers.add(\"Ann\");\n        teachers.add(\"Anna\");\n\n        for (String teacher: teachers) {\n            System.out.println(teacher);\n        }\n    }\n}","stdin":"","trace":[{"stdout":"","event":"call","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"1","frame_id":1}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"2","frame_id":2}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":7,"stack_to_render":[{"func_name":"main:7","encoded_locals":{"teachers":["REF",427]},"ordered_varnames":["teachers"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"3","frame_id":3}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"","event":"step_line","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"teachers":["REF",427]},"ordered_varnames":["teachers"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"6","frame_id":6}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"","event":"step_line","line":9,"stack_to_render":[{"func_name":"main:9","encoded_locals":{"teachers":["REF",427]},"ordered_varnames":["teachers"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"9","frame_id":9}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"","event":"step_line","line":10,"stack_to_render":[{"func_name":"main:10","encoded_locals":{"teachers":["REF",427]},"ordered_varnames":["teachers"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"12","frame_id":12}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"","event":"step_line","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"teachers":["REF",427]},"ordered_varnames":["teachers"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"15","frame_id":15}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"","event":"step_line","line":13,"stack_to_render":[{"func_name":"main:13","encoded_locals":{"teacher":"Simon","teachers":["REF",427]},"ordered_varnames":["teachers","teacher"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"17","frame_id":17}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Simon\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"teachers":["REF",427]},"ordered_varnames":["teachers"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"20","frame_id":20}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Simon\n","event":"step_line","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"teachers":["REF",427]},"ordered_varnames":["teachers"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"21","frame_id":21}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Simon\n","event":"step_line","line":13,"stack_to_render":[{"func_name":"main:13","encoded_locals":{"teacher":"Samuel","teachers":["REF",427]},"ordered_varnames":["teachers","teacher"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"23","frame_id":23}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Simon\nSamuel\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"teachers":["REF",427]},"ordered_varnames":["teachers"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"26","frame_id":26}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Simon\nSamuel\n","event":"step_line","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"teachers":["REF",427]},"ordered_varnames":["teachers"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"27","frame_id":27}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Simon\nSamuel\n","event":"step_line","line":13,"stack_to_render":[{"func_name":"main:13","encoded_locals":{"teacher":"Ann","teachers":["REF",427]},"ordered_varnames":["teachers","teacher"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"29","frame_id":29}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Simon\nSamuel\nAnn\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"teachers":["REF",427]},"ordered_varnames":["teachers"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"32","frame_id":32}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Simon\nSamuel\nAnn\n","event":"step_line","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"teachers":["REF",427]},"ordered_varnames":["teachers"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"33","frame_id":33}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Simon\nSamuel\nAnn\n","event":"step_line","line":13,"stack_to_render":[{"func_name":"main:13","encoded_locals":{"teacher":"Anna","teachers":["REF",427]},"ordered_varnames":["teachers","teacher"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"35","frame_id":35}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Simon\nSamuel\nAnn\nAnna\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"teachers":["REF",427]},"ordered_varnames":["teachers"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"38","frame_id":38}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Simon\nSamuel\nAnn\nAnna\n","event":"step_line","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"teachers":["REF",427]},"ordered_varnames":["teachers"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"39","frame_id":39}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Simon\nSamuel\nAnn\nAnna\n","event":"step_line","line":15,"stack_to_render":[{"func_name":"main:15","encoded_locals":{"teachers":["REF",427]},"ordered_varnames":["teachers"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"41","frame_id":41}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}},{"stdout":"Simon\nSamuel\nAnn\nAnna\n","event":"return","line":15,"stack_to_render":[{"func_name":"main:15","encoded_locals":{"teachers":["REF",427],"__return__":["VOID"]},"ordered_varnames":["teachers","__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"42","frame_id":42}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"427":["INSTANCE","java.util.ArrayList"]}}],"userlog":"Debugger VM maxMemory: 455M\n"}'></code-states-visualizer>
 
 
 
-<programming-exercise name='Listan lukujen summa' tmcname='osa03-Osa03_12.ListanLukujenSumma'>
+<!-- <programming-exercise name='Listan lukujen summa' tmcname='osa03-Osa03_12.ListanLukujenSumma'> -->
 
-Ohjelmaan on toteutettu valmiina pohja, joka lukee käyttäjältä lukuja listalle. Syötteiden lukeminen päätetään kun käyttäjä syöttää luvun -1.
+<programming-exercise name='Sum of numbers in the list' tmcname='osa03-Osa03_12.ListanLukujenSumma'>
 
-Lisää ohjelmaan toiminnallisuus, joka lukujen lukemisen jälkeen laskee ja tulostaa listalla olevien lukujen summan.
 
-<sample-output>
+<!-- Ohjelmaan on toteutettu valmiina pohja, joka lukee käyttäjältä lukuja listalle. Syötteiden lukeminen päätetään kun käyttäjä syöttää luvun -1. -->
+
+The exercise template contains a base that reads numbers from the user and adds them to a list. Reading is stopped once the user enters the number -1.
+
+<!-- Lisää ohjelmaan toiminnallisuus, joka lukujen lukemisen jälkeen laskee ja tulostaa listalla olevien lukujen summan. -->
+
+Modify the program so that after reading the numbers it calculates and prints the sum of the numbers in the list.
+
+<!-- <sample-output>
 
 **72**
 **2**
@@ -1708,16 +1717,7 @@ Lisää ohjelmaan toiminnallisuus, joka lukujen lukemisen jälkeen laskee ja tul
 
 Summa: 93
 
-</sample-output>
-
-</programming-exercise>
-
-
-<programming-exercise name='Listan lukujen keskiarvo' tmcname='osa03-Osa03_13.ListanLukujenKeskiarvo'>
-
-Toteuta ohjelma, joka lukee käyttäjältä lukuja listalle. Syötteiden lukeminen päätetään kun käyttäjä syöttää luvun -1.
-
-Kun lukujen lukeminen lopetetaan, laske listalla olevien lukujen keskiarvo ja tulosta se.
+</sample-output> -->
 
 <sample-output>
 
@@ -1727,20 +1727,64 @@ Kun lukujen lukeminen lopetetaan, laske listalla olevien lukujen keskiarvo ja tu
 **11**
 **-1**
 
-Keskiarvo: 23.25
+Sum: 93
 
 </sample-output>
 
 </programming-exercise>
 
 
-## Listalta poistaminen ja arvon olemassaolon tarkistaminen
+<!-- <programming-exercise name='Listan lukujen keskiarvo' tmcname='osa03-Osa03_13.ListanLukujenKeskiarvo'> -->
+
+<programming-exercise name='Average of the numbers in the list' tmcname='osa03-Osa03_13.ListanLukujenKeskiarvo'>
 
 
-Listan metodi **remove** poistaa listalta parametrina annettuun indeksiin liittyvän arvon. Parametri annetaan kokonaislukuna.
+<!-- Toteuta ohjelma, joka lukee käyttäjältä lukuja listalle. Syötteiden lukeminen päätetään kun käyttäjä syöttää luvun -1. -->
+
+The exercise template contains a base that reads numbers from the user and adds them to a list. Reading is stopped once the user enters the number -1.
+
+<!-- Kun lukujen lukeminen lopetetaan, laske listalla olevien lukujen keskiarvo ja tulosta se. -->
+
+When reading ends, calculate the average of the numbers in it, and then print that value.
+
+<!-- <sample-output>
+
+**72**
+**2**
+**8**
+**11**
+**-1**
+
+Keskiarvo: 23.25
+
+</sample-output> -->
+
+<sample-output>
+
+**72**
+**2**
+**8**
+**11**
+**-1**
+
+Average: 23.25
+
+</sample-output>
+
+</programming-exercise>
 
 
-```java
+<!-- ## Listalta poistaminen ja arvon olemassaolon tarkistaminen -->
+
+## Removing from list and checking the existence of a value
+
+
+<!-- Listan metodi **remove** poistaa listalta parametrina annettuun indeksiin liittyvän arvon. Parametri annetaan kokonaislukuna. -->
+
+The list method **remove** removes the value that is placed in the index that is given as the parameter. The parameter (index) in an integer.
+
+
+<!-- ```java
 ArrayList<String> lista = new ArrayList<>();
 
 lista.add("Eka");
@@ -1751,21 +1795,43 @@ lista.remove(1);
 
 System.out.println("Paikka 0 eli ensimmäinen: " + lista.get(0));
 System.out.println("Paikka 1 eli toinen: " + lista.get(1));
+``` -->
+
+```java
+ArrayList<String> list = new ArrayList<>();
+
+list.add("First");
+list.add("Second");
+list.add("Third");
+
+list.remove(1);
+
+System.out.println("Index 0 so the first value: " + list.get(0));
+System.out.println("Index 1 so the second value: " + list.get(1));
 ```
 
 
-<sample-output>
+<!-- <sample-output>
 
 Eka
 Kolmas
 
+</sample-output> -->
+
+<sample-output>
+
+First
+Third
+
 </sample-output>
 
 
-Jos parametri on listan sisältämien arvojen tyyppinen, mutta ei kokonaisluku (kokonaislukua käytetään paikasta poistamiseen), voidaan sitä käyttää arvon poistamiseen listalta suoraan.
+<!-- Jos parametri on listan sisältämien arvojen tyyppinen, mutta ei kokonaisluku (kokonaislukua käytetään paikasta poistamiseen), voidaan sitä käyttää arvon poistamiseen listalta suoraan. -->
+
+If the parameter given to `remove` is the same type as the values in the list, excluding integers (which are used to remove based on placement), it can be used to remove the parameter value directly from the list.
 
 
-```java
+<!-- ```java
 ArrayList<String> lista = new ArrayList<>();
 
 lista.add("Eka");
@@ -1776,20 +1842,44 @@ lista.remove("Eka");
 
 System.out.println("Paikka 0 eli ensimmäinen: " + lista.get(0));
 System.out.println("Paikka 1 eli toinen: " + lista.get(1));
+``` -->
+
+```java
+ArrayList<String> list = new ArrayList<>();
+
+list.add("First");
+list.add("Second");
+list.add("Third");
+
+list.remove("First");
+
+System.out.println("Index 0 so the first value: " + lista.get(0));
+System.out.println("Index 1 so the second value: " + lista.get(1));
 ```
 
-<sample-output>
+<!-- <sample-output>
 
 Toka
 Kolmas
 
+</sample-output> -->
+
+<sample-output>
+
+Second
+Third
+
 </sample-output>
 
 
-Jos lista sisältää kokonaislukuja, ei listalta voi poistaa lukua antamalla remove-metodille luvun `int`-tyyppisenä parametrina. Tämä poistaisi luvun annetusta indeksistä. Kokonaislukutyyppisten arvojen poistaminen tapahtuu muuttamalla arvot Integer-tyyppisiksi, eli kapseloimalla ne Integer-tyyppisiksi (viittaustyyppisiksi), Integer-luokan metodilla `valueOf`.
+<!-- Jos lista sisältää kokonaislukuja, ei listalta voi poistaa lukua antamalla remove-metodille luvun `int`-tyyppisenä parametrina. Tämä poistaisi luvun annetusta indeksistä. Kokonaislukutyyppisten arvojen poistaminen tapahtuu muuttamalla arvot Integer-tyyppisiksi, eli kapseloimalla ne Integer-tyyppisiksi (viittaustyyppisiksi), Integer-luokan metodilla `valueOf`. -->
+
+If the list contains integers, you cannot remove a number value by giving an `int` type parameter to the remove method. This would remove the number from the index that the parameter indicates, instead of an element on the list that has the same value as the parameter. To remove an integer type value you can convert the parameter to Integer type; this is achieved by the `valueOf` method of the Integer class.
+
+// jesper: should be ArrayList<Integer>
 
 
-```java
+<!-- ```java
 ArrayList<String> lista = new ArrayList<>();
 
 lista.add(15);
@@ -1802,6 +1892,21 @@ lista.remove(Integer.valueOf(15));
 
 System.out.println("Paikka 0 eli ensimmäinen: " + lista.get(0));
 System.out.println("Paikka 1 eli toinen: " + lista.get(1));
+``` -->
+
+```java
+ArrayList<String> list = new ArrayList<>();
+
+list.add(15);
+list.add(18);
+list.add(21);
+list.add(24);
+
+list.remove(2);
+list.remove(Integer.valueOf(15));
+
+System.out.println("Index 0 so the first value: " + list.get(0));
+System.out.println("Index 1 so the second value: " + list.get(1));
 ```
 
 <sample-output>
@@ -1818,10 +1923,14 @@ System.out.println("Paikka 1 eli toinen: " + lista.get(1));
 <quiznator id="5c31fe883972a914740fdc81"></quiznator>
 
 
-Arvon hakeminen listalta onnistuu listan metodilla **contains**. Metodi saa haettavan arvon parametrina ja palauttaa boolean-tyyppisen arvon (`true` tai `false`), joka kertoo löytyykö haettua arvoa listalta.
+// jesper: "arvon hakeminen listalta" - tuntuu vihjaavan enemmän gettiin (haetaan -> saadaan). arvon sisältymisen tarkastaminen? arvon olemassaolo listalla voidaan tarkastaa?
+
+<!-- Arvon hakeminen listalta onnistuu listan metodilla **contains**. Metodi saa haettavan arvon parametrina ja palauttaa boolean-tyyppisen arvon (`true` tai `false`), joka kertoo löytyykö haettua arvoa listalta. -->
+
+The list method **contains** can be used to check the existence of a value in the list. The method receives the value to be searched as its parameter, and it returns a boolean type value (`true` or `false`) that indicates whether that value is stored in the list.
 
 
-```java
+<!-- ```java
 ArrayList<String> lista = new ArrayList<>();
 
 lista.add("Eka");
@@ -1839,23 +1948,57 @@ if (loytyiko) {
 if (lista.contains("Toka")) {
     System.out.println("Toka löytyi yhä");
 }
+``` -->
+
+```java
+ArrayList<String> list = new ArrayList<>();
+
+list.add("First");
+list.add("Second");
+list.add("Third");
+
+System.out.println("Can we find first? " + lista.contains("First"));
+
+boolean found = list.contains("Second");
+if (found) {
+    System.out.println("Second was found");
+}
+
+// or more simply
+if (list.contains("Second")) {
+    System.out.println("Second can still be found");
+}
 ```
 
-<sample-output>
+<!-- <sample-output>
 
 Löytyykö eka? true
 Toka löytyi
 Toka löytyi yhä
 
+</sample-output> -->
+
+<sample-output>
+
+Can we find first? true
+Second was found
+Second can still be found
+
 </sample-output>
 
 
-<programming-exercise name='Löytyykö listalta' tmcname='osa03-Osa03_14.LoytyykoListalta'>
+<!-- <programming-exercise name='Löytyykö listalta' tmcname='osa03-Osa03_14.LoytyykoListalta'> -->
+
+<programming-exercise name='Can the value be found in the list' tmcname='osa03-Osa03_14.LoytyykoListalta'>
 
 
-Tehtäväpohjassa on ohjelma, joka lukee käyttäjältä syötteitä. Lisää ohjelmaan toiminnallisuus, missä syötteiden lukemisen jälkeen kysytään vielä yhtä merkkijonoa. Ohjelma kertoo tämän jälkeen löytyikö käyttäjän syöttämä merkkijono listalta vai ei.
+// jesper: siis kysytäänkö aina neljä? vai lopettaako tyhjä merkkijono lukemisen?
 
-<sample-output>
+<!-- Tehtäväpohjassa on ohjelma, joka lukee käyttäjältä syötteitä. Lisää ohjelmaan toiminnallisuus, missä syötteiden lukemisen jälkeen kysytään vielä yhtä merkkijonoa. Ohjelma kertoo tämän jälkeen löytyikö käyttäjän syöttämä merkkijono listalta vai ei. -->
+
+In the exercise template there is a program that reads inputs from the user. Add the following functionality to it: after reading the inputs one more string is requested from the user. The program then tell whether that string was found in the list or not.
+
+<!-- <sample-output>
 
 **Terho**
 **Elina**
@@ -1865,9 +2008,21 @@ Tehtäväpohjassa on ohjelma, joka lukee käyttäjältä syötteitä. Lisää oh
 Ketä etsitään? **Mari**
 Mari löytyi!
 
-</sample-output>
+</sample-output> -->
 
 <sample-output>
+
+**Tom**
+**Emma**
+**Alex**
+**Mary**
+
+Who is searched for? **Mary**
+Mary was found!
+
+</sample-output>
+
+<!-- <sample-output>
 
 **Terho**
 **Elina**
@@ -1877,26 +2032,52 @@ Mari löytyi!
 Ketä etsitään? **Leevi**
 Leevi ei löytynyt!
 
+</sample-output> -->
+
+<sample-output>
+
+**Tom**
+**Emma**
+**Alex**
+**Mary**
+
+Who is searched for? **Logan**
+Logan was not found!
+
 </sample-output>
 
 </programming-exercise>
 
 
-## Lista metodin parametrina
+<!-- ## Lista metodin parametrina -->
 
-Kuten muutkin muuttujat, myös listan voi asettaa metodin parametriksi. Kun lista määritellään metodin parametriksi, määritellään parametrin tyypiksi listan tyyppi sekä listan sisältämien arvojen tyyppi. Alla oleva metodi `tulosta` tulostaa listan arvot yksitellen.
+## List as a method parameter
 
-```java
+<!-- Kuten muutkin muuttujat, myös listan voi asettaa metodin parametriksi. Kun lista määritellään metodin parametriksi, määritellään parametrin tyypiksi listan tyyppi sekä listan sisältämien arvojen tyyppi. Alla oleva metodi `tulosta` tulostaa listan arvot yksitellen. -->
+
+Like other variables, a list, too, can be used as a parameter to a method. When the method is defined to take a list as a parameter, the type of the parameter is defined as the type of the list and the type of the values contained by that list. Below, the method `print` prints the values in the list one by one.
+
+<!-- ```java
 public static void tulosta(ArrayList<String> lista) {
     for (String arvo: lista) {
         System.out.println(arvo);
     }
 }
-```
-
-Metodin kutsuminen on tuttua ja toimii samalla tavalla kuin edellisessä osassa toteuttamiemme metodien kohdalla. Alla olevassa esimerkissä käytetään edellä toteutettua metodia `tulosta`.
+``` -->
 
 ```java
+public static void print(ArrayList<String> list) {
+    for (String value: list) {
+        System.out.println(value);
+    }
+}
+```
+
+<!-- Metodin kutsuminen on tuttua ja toimii samalla tavalla kuin edellisessä osassa toteuttamiemme metodien kohdalla. Alla olevassa esimerkissä käytetään edellä toteutettua metodia `tulosta`. -->
+
+We are very familiar with methods, and it works indentically in this case. In the example below we use the `print` method that was implemented above.
+
+<!-- ```java
 ArrayList<String> merkkijonot = new ArrayList<>();
 
 merkkijonot.add("Eka");
@@ -1904,23 +2085,44 @@ merkkijonot.add("Toka");
 merkkijonot.add("Kolmas");
 
 tulosta(merkkijonot);
+``` -->
+
+```java
+ArrayList<String> strings = new ArrayList<>();
+
+strings.add("First");
+strings.add("Second");
+strings.add("Third");
+
+print(strings);
 ```
 
-<sample-output>
+<!-- <sample-output>
 
 Eka
 Toka
 Kolmas
 
+</sample-output> -->
+
+<sample-output>
+
+First
+Second
+Third
+
 </sample-output>
 
+<!-- Metodin määrittelyssä annettu parametrin nimi ei riipu metodikutsun yhteydessä metodille parametrina annettavasta listasta. Metodia `tulosta` kutsuvassa ohjelmassa listamuuttujan nimi on `merkkijonot`, mutta metodissa `tulosta` muuttujan nimi on `lista` -- tulostettavia arvoja sisältävää listaa kuvaavan muuttujan nimi voisi olla myös vaikkapa `tulostettavat`. -->
 
-Metodin määrittelyssä annettu parametrin nimi ei riipu metodikutsun yhteydessä metodille parametrina annettavasta listasta. Metodia `tulosta` kutsuvassa ohjelmassa listamuuttujan nimi on `merkkijonot`, mutta metodissa `tulosta` muuttujan nimi on `lista` -- tulostettavia arvoja sisältävää listaa kuvaavan muuttujan nimi voisi olla myös vaikkapa `tulostettavat`.
+The chosen parameter in the method definition is not dependent on the list that is passed as parameter in the method call. In the program that calls `print` the name of the list variable is `string`, but inside the method `print` the variable is called `list` -- the name of the variable that stores the list could also be `printables`, for example.
 
-Metodille voidaan määritellä myös useampia muuttujia. Alla olevassa esimerkissä tulostetaan kaikki ne parametrina annetussa listassa olevat luvut, jotka ovat pienempiä kuin toisena parametrina annettu luku.
+<!-- Metodille voidaan määritellä myös useampia muuttujia. Alla olevassa esimerkissä tulostetaan kaikki ne parametrina annetussa listassa olevat luvut, jotka ovat pienempiä kuin toisena parametrina annettu luku. -->
+
+It's also possible to define multiple variables for a method. In the example the method receives two parameters: a list of numbers and a threshold value. It then prints all the numbers in the list that are smaller than the second parameter.
 
 
-```java
+<!-- ```java
 public static void tulostaPienemmat(ArrayList<Integer> luvut, int raja) {
     for (int luku: luvut) {
         if (luku < raja) {
@@ -1928,9 +2130,19 @@ public static void tulostaPienemmat(ArrayList<Integer> luvut, int raja) {
         }
     }
 }
-```
+``` -->
 
 ```java
+public static void printSmallerThan(ArrayList<Integer> numbers, int threshold) {
+    for (int number: numbers) {
+        if (number < threshold) {
+            System.out.println(number);
+        }
+    }
+}
+```
+
+<!-- ```java
 ArrayList<Integer> lista = new ArrayList<>();
 
 lista.add(1);
@@ -1940,6 +2152,18 @@ lista.add(2);
 lista.add(1);
 
 tulostaPienemmat(lista, 3);
+``` -->
+
+```java
+ArrayList<Integer> list = new ArrayList<>();
+
+list.add(1);
+list.add(2);
+list.add(3);
+list.add(2);
+list.add(1);
+
+printSmallerThan(list, 3);
 ```
 
 <sample-output>
@@ -1952,11 +2176,17 @@ tulostaPienemmat(lista, 3);
 </sample-output>
 
 
-<programming-exercise name='Tulosta rajatut' tmcname='osa03-Osa03_15.TulostaRajatut'>
+<!-- <programming-exercise name='Tulosta rajatut' tmcname='osa03-Osa03_15.TulostaRajatut'> -->
 
-Luo tehtäväpohjaan metodi `public static void tulostaRajatutLuvut(ArrayList<Integer> luvut, int alaraja, int ylaraja)`. Metodin tulee tulostaa parametrina annetulta listalta ne luvut, joiden arvot ovat välillä [alaraja, ylaraja]. Alla on muutama esimerkki metodin toiminnasta.
+<programming-exercise name='Print in range' tmcname='osa03-Osa03_15.TulostaRajatut'>
 
-```java
+
+
+<!-- Luo tehtäväpohjaan metodi `public static void tulostaRajatutLuvut(ArrayList<Integer> luvut, int alaraja, int ylaraja)`. Metodin tulee tulostaa parametrina annetulta listalta ne luvut, joiden arvot ovat välillä [alaraja, ylaraja]. Alla on muutama esimerkki metodin toiminnasta. -->
+
+Create the method `public static void printNumbersInRange(ArrayList<Integer> numbers, int lowerLimit, int upperLimit)` in the exercise template. The method prints the numbers in the given list whose values are in the range [lowerLimit, upperLimit]. A few examples of using the method are supplied below.
+
+<!-- ```java
 ArrayList<Integer> luvut = new ArrayList<>();
 luvut.add(3);
 luvut.add(2);
@@ -1970,9 +2200,25 @@ tulostaRajatutLuvut(luvut, 0, 5);
 
 System.out.println("Luvut välillä [3, 10]");
 tulostaRajatutLuvut(luvut, 3, 10);
+``` -->
+
+```java
+ArrayList<Integer> numbers = new ArrayList<>();
+numbers.add(3);
+numbers.add(2);
+numbers.add(6);
+numbers.add(-1);
+numbers.add(5);
+numnbers.add(1);
+
+System.out.println("The numbers in the range [0, 5]");
+printNumbersInRange(numbers, 0, 5);
+
+System.out.println("The numbers in the range [3, 10]");
+printNumbersInRange(numbers, 3, 10);
 ```
 
-<sample-output>
+<!-- <sample-output>
 
 Luvut välillä [0, 5]
 3
@@ -1984,23 +2230,47 @@ Luvut välillä [3, 10]
 6
 5
 
+</sample-output> -->
+
+<sample-output>
+
+The numbers in the range [0, 5]
+3
+2
+5
+1
+The numbers in the range [3, 10]
+3
+6
+5
+
 </sample-output>
 
 </programming-exercise>
 
 
-Kuten aiemmin, metodi voi myös palauttaa arvon. Arvon palauttavilla metodeilla on `void`-määreen sijaan palautettavan arvon tyyppi, jonka lisäksi arvon palauttaminen tapahtuu `return`-komennolla. Alla oleva metodi palauttaa listan koon.
+<!-- Kuten aiemmin, metodi voi myös palauttaa arvon. Arvon palauttavilla metodeilla on `void`-määreen sijaan palautettavan arvon tyyppi, jonka lisäksi arvon palauttaminen tapahtuu `return`-komennolla. Alla oleva metodi palauttaa listan koon. -->
+
+As was the case before, a method can also return a value. The methods that return values have the type of the return value in place of the `void` keyword, and the actual returning of the value is done by the `return` command. The method below returns the size of the list.
 
 
-```java
+<!-- ```java
 public static int koko(ArrayList<String> lista) {
     return lista.size();
 }
-```
-
-Metodeihin voi myös määritellä omia muuttujia. Alla oleva metodi laskee listalla olevien lukujen keskiarvon. Mikäli lista on tyhjä, metodi palauttaa luvun -1.
+``` -->
 
 ```java
+public static int size(ArrayList<String> list) {
+    return list.size();
+}
+```
+
+<!-- Metodeihin voi myös määritellä omia muuttujia. Alla oleva metodi laskee listalla olevien lukujen keskiarvon. Mikäli lista on tyhjä, metodi palauttaa luvun -1. -->
+
+You can also define own variables for methods. The method below calculates the average of the numbers in the list. If the list is empty, it returns the number -1.
+
+<!-- ```java
 public static double keskiarvo(ArrayList<Integer> luvut) {
     if (luvut.size() == 0) {
         return -1.0;
@@ -2013,14 +2283,33 @@ public static double keskiarvo(ArrayList<Integer> luvut) {
 
     return 1.0 * summa / luvut.size();
 }
-```
-
-
-<programming-exercise name='Summa' tmcname='osa03-Osa03_16.Summa'>
-
-Luo tehtäväpohjaan metodi `public static int summa(ArrayList<Integer> luvut)`. Metodin tulee palauttaa parametrina annetun listan lukujen summa.
+``` -->
 
 ```java
+public static double average(ArrayList<Integer> numbers) {
+    if (numbers.size() == 0) {
+        return -1.0;
+    }
+
+    int sum = 0;
+    for (int number: numbers) {
+        sum = sum + number;
+    }
+
+    return 1.0 * sum / numbers.size();
+}
+```
+
+<!-- <programming-exercise name='Summa' tmcname='osa03-Osa03_16.Summa'> -->
+
+<programming-exercise name='Sum' tmcname='osa03-Osa03_16.Summa'>
+
+
+<!-- Luo tehtäväpohjaan metodi `public static int summa(ArrayList<Integer> luvut)`. Metodin tulee palauttaa parametrina annetun listan lukujen summa. -->
+
+Create the method `public static int sum(ArrayList<Integer> numers)` in the exercise template. The method is to return the sum of the numbers in the parameter list.
+
+<!-- ```java
 ArrayList<Integer> luvut = new ArrayList<>();
 luvut.add(3);
 luvut.add(2);
@@ -2031,6 +2320,19 @@ System.out.println(summa(luvut));
 luvut.add(5);
 luvut.add(1);
 System.out.println(summa(luvut));
+``` -->
+
+```java
+ArrayList<Integer> numbers = new ArrayList<>();
+numbers.add(3);
+numbers.add(2);
+numbers.add(6);
+numbers.add(-1);
+System.out.println(sum(numbers));
+
+numbers.add(5);
+numbers.add(1);
+System.out.println(sum(numbers));
 ```
 
 <sample-output>
@@ -2043,17 +2345,28 @@ System.out.println(summa(luvut));
 </programming-exercise>
 
 
-## Listan kopioitumisesta metodin parametriksi
+<!-- ## Listan kopioitumisesta metodin parametriksi -->
 
-Olemme aiemmin käyttäneet kokonaislukuja, liukulukuja ym. metodin parametrina. Kun muuttujia kuten `int` käytetään metodin parametrina, kopioituu muuttujan arvo metodin käyttöön. Täsmälleen sama asia tapahtuu myös listan tapauksessa.
+## On copying the list to a method parameter
 
-Listat ja oikeastaan lähes kaikki muuttujat, joihin voi lisätä paljon tietoa, ovat _viittaustyyppisiä muuttujia_. Tämä tarkoittaa sitä, että muuttujan arvo on viite, joka osoittaa tiedon sisältämään paikkaan.
 
-Kun lista tai oikeastaan mikä viittaustyyppinen muuttuja kopioidaan metodin käyttöön, kopioituu metodin käyttöön muuttujan arvo eli _viite_. Tällöin **metodin käyttöön tulee viite viittaustyyppisen muuttujan todelliseen arvoon**, ja metodissa voi muokata alkuperäistä viittaustyyppistä arvoa kuten listaa. Käytännössä siis metodin parametrina saatu lista on sama kuin mitä metodia kutsuvassa ohjelmassa käytetään.
+<!-- Olemme aiemmin käyttäneet kokonaislukuja, liukulukuja ym. metodin parametrina. Kun muuttujia kuten `int` käytetään metodin parametrina, kopioituu muuttujan arvo metodin käyttöön. Täsmälleen sama asia tapahtuu myös listan tapauksessa. -->
 
-Tarkastellaan tätä lyhyesti seuraavan metodin kautta.
+Earlier we have used integers, floating point numbers, etc. parameters for method. When variables such as `int` are used as method parameters, the value of the variable is copied for the method's use. Exactly the same occurs in the case that the parameter is a list.
 
-```java
+<!-- Listat ja oikeastaan lähes kaikki muuttujat, joihin voi lisätä paljon tietoa, ovat _viittaustyyppisiä muuttujia_. Tämä tarkoittaa sitä, että muuttujan arvo on viite, joka osoittaa tiedon sisältämään paikkaan. -->
+
+Lists, among practically all the variables that can store large amounts of information, are _reference type variables_. This means that the value of the variable is a reference that points to the location that contains the information.
+
+<!-- Kun lista tai oikeastaan mikä viittaustyyppinen muuttuja kopioidaan metodin käyttöön, kopioituu metodin käyttöön muuttujan arvo eli _viite_. Tällöin **metodin käyttöön tulee viite viittaustyyppisen muuttujan todelliseen arvoon**, ja metodissa voi muokata alkuperäistä viittaustyyppistä arvoa kuten listaa. Käytännössä siis metodin parametrina saatu lista on sama kuin mitä metodia kutsuvassa ohjelmassa käytetään. -->
+
+When a list (or any reference type variable) is copied for the method to use, the method receives the value of the list variable, i.e. a _reference_. In such a case the **method receives a reference to the real value of a reference type variable**, and the method is able to modify the value of the original reference type variable, such as a list. In practice: the list that the method receives as a parameter is the same list that is used in the program that calls the mehtod.
+
+<!-- Tarkastellaan tätä lyhyesti seuraavan metodin kautta. -->
+
+Let's briefly examine this phenomenon with the following method.
+
+<!-- ```java
 public static void poistaEka(ArrayList<Integer> luvut) {
     if (luvut.size() == 0) {
         return;
@@ -2061,10 +2374,19 @@ public static void poistaEka(ArrayList<Integer> luvut) {
 
     luvut.remove(0);
 }
-```
-
+``` -->
 
 ```java
+public static void removeFirst(ArrayList<Integer> numbers) {
+    if (numbers.size() == 0) {
+        return;
+    }
+
+    numbers.remove(0);
+}
+```
+
+<!-- ```java
 ArrayList<Integer> luvut = new ArrayList<>();
 luvut.add(3);
 luvut.add(2);
@@ -2082,6 +2404,26 @@ poistaEka(luvut);
 poistaEka(luvut);
 
 System.out.println(luvut);
+``` -->
+
+```java
+ArrayList<Integer> numbers = new ArrayList<>();
+numbers.add(3);
+numbers.add(2);
+numbers.add(6);
+numbers.add(-1);
+
+System.out.println(numbers);
+
+removeFirst(numbers);
+
+System.out.println(numbers);
+
+removeFirst(numbers);
+removeFirst(numbers);
+removeFirst(numbers);
+
+System.out.println(numbers);
 ```
 
 <sample-output>
@@ -2091,11 +2433,16 @@ System.out.println(luvut);
 </sample-output>
 
 
-<programming-exercise name='Poista viimeinen' tmcname='osa03-Osa03_17.PoistaViimeinen'>
+<!-- <programming-exercise name='Poista viimeinen' tmcname='osa03-Osa03_17.PoistaViimeinen'> -->
 
-Luo tehtäväpohjaan metodi `public static void poistaViimeinen(ArrayList<String> mjonot)`. Metodin tulee poistaa parametrina saadusta listasta viimeisin arvo. Mikäli lista on tyhjä, metodin ei tule tehdä mitään.
+<programming-exercise name='Remove last' tmcname='osa03-Osa03_17.PoistaViimeinen'>
 
-```java
+
+<!-- Luo tehtäväpohjaan metodi `public static void poistaViimeinen(ArrayList<String> mjonot)`. Metodin tulee poistaa parametrina saadusta listasta viimeisin arvo. Mikäli lista on tyhjä, metodin ei tule tehdä mitään. -->
+
+Create the method `public static void removeLast(ArrayList<String> strings)` in the exercise template. The method should remove the last value in the list it receives as a parameter. If the list is empty, the method does nothing.
+
+<!-- ```java
 ArrayList<String> merkkijonot = new ArrayList<>();
 
 merkkijonot.add("Eka");
@@ -2108,21 +2455,45 @@ poistaViimeinen(merkkijonot);
 poistaViimeinen(merkkijonot);
 
 System.out.println(merkkijonot);
+``` -->
+
+```java
+ArrayList<String> strings = new ArrayList<>();
+
+strings.add("First");
+strings.add("Second");
+strings.add("Third");
+
+System.out.println(strings);
+
+removeLast(strings);
+removeLast(strings);
+
+System.out.println(strings);
 ```
 
-<sample-output>
+<!-- <sample-output>
 [Eka, Toka, Kolmas]
 [Eka]
+</sample-output> -->
+
+<sample-output>
+[First, Second, Third]
+[First]
 </sample-output>
 
 </programming-exercise>
 
 
-## Yhteenveto listan metodeista
+<!-- ## Yhteenveto listan metodeista -->
 
-ArrayListillä on useita hyödyllisiä metodeja. Metodin toiminnallisuus suoritetaan aina sille listaoliolle, mihin liittyen metodia kutsutaan -- yhteys määritellään pisteellä. Alla oleva esimerkki näyttää, että listoja -- kuten muitakin muuttujia -- voi olla ohjelmassa useampia. Alla luodaan kaksi erillistä listaa, joita käsitellään.
+## Summarizing the list methods
 
-```java
+<!-- ArrayListillä on useita hyödyllisiä metodeja. Metodin toiminnallisuus suoritetaan aina sille listaoliolle, mihin liittyen metodia kutsutaan -- yhteys määritellään pisteellä. Alla oleva esimerkki näyttää, että listoja -- kuten muitakin muuttujia -- voi olla ohjelmassa useampia. Alla luodaan kaksi erillistä listaa, joita käsitellään. -->
+
+ArrayList contains a great many useful methods. The method always operates on the list object that is connected to the method call -- the connection is established with a dot. The example below showcases that a program can contain multiple lists -- which holds true for other variables as well. Two separate lists are created below.
+
+<!-- ```java
 ArrayList<String> tehtavat1 = new ArrayList<>();
 ArrayList<String> tehtavat2 = new ArrayList<>();
 
@@ -2138,48 +2509,110 @@ System.out.println("Listan 2 koko " + tehtavat2.size());
 
 System.out.println("Ensimmäisen listan eka arvo " + tehtavat1.get(0));
 System.out.println("Toisen listan vika arvo " + tehtavat2.get(tehtavat2.size() - 1));
+``` -->
+
+<h2> Tehtävien nimet käännettävä </h2>
+
+```java
+ArrayList<String> exercises1 = new ArrayList<>();
+ArrayList<String> exercises2 = new ArrayList<>();
+
+exercises1.add("Ada Lovelace");
+exercises1.add("Hello World! (Ja Mualima!)");
+exercises1.add("Kuusi");
+
+tehtavat2.add("Adding a positive number");
+tehtavat2.add("Työntekijän eläkevakuutus");
+
+System.out.println("The size of list 1: " + exercises1.size());
+System.out.println("The size of list 2: " + exercises2.size());
+
+System.out.println("The first value of the first list " + exercises1.get(0));
+System.out.println("The last value of the second list " + exercises2.get(exercises2.size() - 1));
 ```
 
-<sample-output>
+<!-- <sample-output>
 
 Listan 1 koko 3
 Listan 2 koko 2
 Ensimmäisen listan eka arvo Ada Lovelace
 Toisen listan vika arvo Työntekijän eläkevakuutus
 
+</sample-output> -->
+
+<sample-output>
+
+The size of list 1: 3
+The size of list 2: 2
+The first value of the first list Ada Lovelace
+The last value of the second list Työntekijän eläkevakuutus
+
 </sample-output>
 
 
-Jokainen lista on oma erillinen kokonaisuutensa ja listan metodit käsittelevät aina sitä listaa, mille metodia kutsutaan. Alla on yhteenveto listan metodeista. Yhteenvedossa oletetaan, että luotava lista sisältää merkkijonotyyppisiä muuttujia.
+<!-- Jokainen lista on oma erillinen kokonaisuutensa ja listan metodit käsittelevät aina sitä listaa, mille metodia kutsutaan. Alla on yhteenveto listan metodeista. Yhteenvedossa oletetaan, että luotava lista sisältää merkkijonotyyppisiä muuttujia. -->
 
-* Listalle lisääminen tapahtuu metodilla `add`, jolle annetaan parametrina lisättävä arvo.
-```java
+Each list is its own separate entity, and the listmethods always target the list that is used to call the method. Below is a summary of some list methods. It is assumed that created lists contains string type variables.
+
+<!-- * Listalle lisääminen tapahtuu metodilla `add`, jolle annetaan parametrina lisättävä arvo. -->
+* Adding to a list is done with the method `add` that receives the value to be added as a parameter.
+<!-- ```java
 ArrayList<String> lista = new ArrayList<>();
 lista.add("hei maailma!");
-```
-* Listalla olevien alkioiden lukumäärän saa selville parametrittomalla metodilla `size`, joka palauttaa kokonaisuvun.
+``` -->
 ```java
+ArrayList<String> list = new ArrayList<>();
+list.add("hello world!");
+```
+<!-- * Listalla olevien alkioiden lukumäärän saa selville parametrittomalla metodilla `size`, joka palauttaa kokonaisuvun. -->
+* The number of elements in a list can be discovered with the non-parameterized method `size`; it returns an integer.
+<!-- ```java
 ArrayList<String> lista = new ArrayList<>();
 int koko = lista.size();
 System.out.println(koko);
-```
-* Listan tietyssä indeksissä oleva arvo haetaan metodilla `get`, jolle annetaan parametrina indeksi mistä haetaan.
+``` -->
 ```java
+ArrayList<String> list = new ArrayList<>();
+int size = list.size();
+System.out.println(size);
+```
+<!-- * Listan tietyssä indeksissä oleva arvo haetaan metodilla `get`, jolle annetaan parametrina indeksi mistä haetaan. -->
+* You can retrieve a value from a certain index with the method `get` that is given the wanted index as a parameter.
+<!-- ```java
 ArrayList<String> lista = new ArrayList<>();
 lista.add("hei maailma!");
 String mjono = lista.get(0);
 System.out.println(mjono);
-```
-* Listalta poistaminen tapahtuu metodilla `remove`, jolle annetaan joko poistettava arvo tai  poistettavan arvon indeksi.
+``` -->
 ```java
+ArrayList<String> list = new ArrayList<>();
+list.add("hello world!");
+String string = list.get(0);
+System.out.println(string);
+```
+<!-- * Listalta poistaminen tapahtuu metodilla `remove`, jolle annetaan joko poistettava arvo tai  poistettavan arvon indeksi. -->
+* Removing from a list is done with the help of `remove`. It receives as a parameter one of the following two: the value that is to be removed, or the index of the value to be removed.
+<!-- ```java
 ArrayList<String> lista = new ArrayList<>();
 // poistetaan merkkijono "hei maailma!"
 lista.remove("hei maailma!");
  // poistetaan indeksissä 3 oleva arvo
 lista.remove(3);
-```
-* Arvon olemassaolon tarkastaminen tapahtuu totuusarvon palauttavalla metodilla `contains`, joka saa parametrinaan haettavan arvon.
+``` -->
 ```java
+ArrayList<String> list = new ArrayList<>();
+// remove the string "hello world!"
+list.remove("hello world!");
+ // remove the value at index 3
+list.remove(3);
+```
+<!-- * Arvon olemassaolon tarkastaminen tapahtuu totuusarvon palauttavalla metodilla `contains`, joka saa parametrinaan haettavan arvon. -->
+* Testing the existence of a value is done with the method `contains`. It is given the value to be searched for as a parameter, and it returns a boolean.
+<!-- ```java
 ArrayList<String> lista = new ArrayList<>();
 boolean oliko = lista.contains("hei maailma!");
+``` -->
+```java
+ArrayList<String> list = new ArrayList<>();
+boolean found = list.contains("hello world!");
 ```
