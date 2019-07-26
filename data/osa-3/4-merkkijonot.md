@@ -326,7 +326,7 @@ Incorrect username or password!
 ## Splitting a string
 
 <!-- Merkkijonon jakaminen useampaan osaan tapahtuu merkkijonoihin liittyvällä metodilla `split`, jolle annetaan parametrina merkkijono, jonka kohdalta käsiteltävä merkkijono jaetaan osiin. Metodi `split` palauttaa merkkijonoista koostuvan taulukon. Allaolevassa esimerkissä merkkijono jaetaan osiin välilyönnin kohdalta. -->
-TODO Splitin esittelyn käännös
+You can split a string to multiple pieces with the `split`-method of a string. As a parameter it takes a string to split it by. `split` returns an array of the parts. In the example below we split a string by the spaces:
 
 
 <!-- ```java
