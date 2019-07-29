@@ -383,18 +383,27 @@ Kristen Nygaard, age 0 years
 
 </sample-output>
 
-<programming-exercise name='Esineet' tmcname='osa04-Osa04_17.Esineet'>
+<!-- <programming-exercise name='Esineet' tmcname='osa04-Osa04_17.Esineet'> -->
+
+<programming-exercise name='Items' tmcname='osa04-Osa04_17.Esineet'>
 
 
-Toteuta tässä kuvattu ohjelma luokkaan `Esineet`. **Huom!** Älä muuta luokkaa `Esine`.
 
-Kirjoita ohjelma, joka lukee käyttäjältä esineiden nimiä. Mikäli nimi on tyhjä, lopeta lukeminen. Mikäli nimi ei ole tyhjä, lue nimen perusteella uusi esine, jonka lisäät `esineet`-listalle.
+<!-- Toteuta tässä kuvattu ohjelma luokkaan `Esineet`. **Huom!** Älä muuta luokkaa `Esine`. -->
 
-Tulosta tämän jälkeen esineet `Esine`-luokan `toString`-metodia hyödyntäen. Luokan `Esine` toteutus pitää syöttämäsi nimen lisäksi kirjaa esineen luomishetkestä.
+Implement the class `Items` described here. **N.B.!** Don't modify the class `Item`.
+
+<!-- Kirjoita ohjelma, joka lukee käyttäjältä esineiden nimiä. Mikäli nimi on tyhjä, lopeta lukeminen. Mikäli nimi ei ole tyhjä, lue nimen perusteella uusi esine, jonka lisäät `esineet`-listalle. -->
+
+Write a program that reads names of items from the user. If the name is empty, the program stops reading. Otherwise, the given name is used to create a new item, which you will then add to the `items` list.
+
+<!-- Tulosta tämän jälkeen esineet `Esine`-luokan `toString`-metodia hyödyntäen. Luokan `Esine` toteutus pitää syöttämäsi nimen lisäksi kirjaa esineen luomishetkestä. -->
+
+Having read all the names, print all the items by using the `toString` method of the  `Item` calss. The implementation of the `Item` class keeps track of the time of creation, in addition to the name of the item.
 
 Ohjelman esimerkkitulostus:
 
-<sample-output>
+<!-- <sample-output>
 
 Nimi: **Suo**
 Nimi: **Kuokka**
@@ -403,15 +412,30 @@ Nimi:
 Suo (luotu: 06.07.2018 12:34:56)
 Kuokka (luotu: 06.07.2018 12:34:57)
 
-</sample-output
+</sample-output> -->
+
+<sample-output>
+
+Nimi: **Hammer**
+Nimi: **Collar**
+Nimi:
+
+Hammer (created at: 06.07.2018 12:34:56)
+Collar (created at: 06.07.2018 12:34:57)
+
+</sample-output>
 
 </programming-exercise>
 
-## Monta konstruktorin parametria
+<!-- ## Monta konstruktorin parametria -->
 
-Mikäli konstruktori vaatii useampia parametreja, voi käyttäjältä kysyä enemmän tietoa. Oletetaan, että luokan `Henkilo` konstruktori on seuraavanlainen.
+## Multiple constructor parameters
 
-```java
+<!-- Mikäli konstruktori vaatii useampia parametreja, voi käyttäjältä kysyä enemmän tietoa. Oletetaan, että luokan `Henkilo` konstruktori on seuraavanlainen. -->
+
+If the constructor demands more than one parameters, you can query the user for more information. Let's assume we have the following constructor for the class `Person`.
+
+<!-- ```java
 public class Henkilo {
 
     private String nimi;
@@ -428,16 +452,41 @@ public class Henkilo {
 
     // metodit
 }
-```
-
-Olion luominen vaatii siis kaksiparametrisen konstruktorin kutsumista.
-
-Mikäli haluamme lukea tällaisia olioita käyttäjältä, tulee lukemisessa kysyä jokainen parametri erikseen. Alla olevassa esimerkissä käyttäjältä luetaan erikseen nimi ja ikä. Mikäli nimi on tyhjä, lukeminen lopetetaan.
-
-Henkilöt tulostetaan lukemisen jälkeen.
-
+``` -->
 
 ```java
+public class Person {
+
+    private String name;
+    private int age;
+    private int weight;
+    private int height;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+        this.weight = 0;
+        this.height = 0;
+    }
+
+    // methods
+}
+```
+
+<!-- Olion luominen vaatii siis kaksiparametrisen konstruktorin kutsumista. -->
+
+In this case, an object is created by calling the two-parameter constructor.
+
+<!-- Mikäli haluamme lukea tällaisia olioita käyttäjältä, tulee lukemisessa kysyä jokainen parametri erikseen. Alla olevassa esimerkissä käyttäjältä luetaan erikseen nimi ja ikä. Mikäli nimi on tyhjä, lukeminen lopetetaan. -->
+
+If we want to query the user for this kind of objects, they must be asked for each parameter separately. In the example below, name and age parameters are asked separately from the user. Entering an empty name will end the reading part.
+
+<!-- Henkilöt tulostetaan lukemisen jälkeen. -->
+
+The persons are printed after they have been read.
+
+
+<!-- ```java
 Scanner lukija = new Scanner(System.in);
 ArrayList<Henkilo> henkilot = new ArrayList<>();
 
@@ -466,9 +515,40 @@ System.out.println("Henkilöt: ");
 for (Henkilo henkilo: henkilot) {
     System.out.println(henkilo);
 }
+``` -->
+
+```java
+Scanner scanner = new Scanner(System.in);
+ArrayList<Person> persons = new ArrayList<>();
+
+// Read person information from the user
+while (true) {
+    System.out.print("Enter name, empty will end: ");
+    String name = scanner.nextLine();
+    if (name.isEmpty()) {
+        break;
+    }
+
+    System.out.print("Enter the age of the person " + nimi + ": ");
+
+    int age = Integer.valueOf(scanner.nextLine());
+
+    // We add a new person to the list.
+    // The person's name and age were decided by the user
+    persons.add(new Person(name, age));
+}
+
+// We'll print the number of the inputted persons, and the persons themselves
+System.out.println();
+System.out.println("Total number of persons: " + persons.size());
+System.out.println("Persons: ");
+
+for (Person persons: persons) {
+    System.out.println(person);
+}
 ```
 
-<sample-output>
+<!-- <sample-output>
 
 Kirjoita nimi, tyhjä lopettaa: **Grace Hopper**
 Kirjoita henkilön Grace Hopper ikä: **85**
@@ -478,19 +558,40 @@ Henkilöitä yhteensä: 1
 Henkilöt:
 Grace Hopper, ikä 85 vuotta
 
-</sample-output>
-
-<programming-exercise name='Henkilotiedot' tmcname='osa04-Osa04_18.Henkilotiedot'>
-
-Toteuta tässä kuvattu ohjelma luokkaan `Henkilotiedot`. **Huom!** Älä muuta luokkaa `Henkilotieto`.
-
-Kirjoita ohjelma, joka lukee käyttäjältä henkilötietoja. Käyttäjä syöttää etunimen, sukunimen, ja henkilötunnuksen. Mikäli etunimi on tyhjä, lopeta lukeminen. Mikäli etunimi ei ole tyhjä, lue loput tiedot ja luo käyttäjän syöttämistä tiedoista olio, jonka lisäät `henkilotiedot`-listalle.
-
-Kun käyttäjä on lopettanut tietojen syöttämisen (käyttäjä syöttää tyhjän etunimen), poistu toistolauseesta.
-
-Tulosta tämän jälkeen henkilötiedot siten, että jokaisesta syötetystä oliosta tulostetaan etunimi ja sukunimi välilyönnillä erotettuna (henkilötunnusta ei tulosteta!). Alla esimerkki ohjelman suorituksesta.
+</sample-output> -->
 
 <sample-output>
+
+Enter name, empty will end: **Grace Hopper**
+Enter the age of the person Grace Hopper: **85**
+Enter name, empty will end:
+
+Total number of persons: 1
+Persons:
+Grace Hopper, age 85 years
+
+</sample-output>
+
+<!-- <programming-exercise name='Henkilotiedot' tmcname='osa04-Osa04_18.Henkilotiedot'> -->
+
+<programming-exercise name='Personal information' tmcname='osa04-Osa04_18.Henkilotiedot'>
+
+
+<!-- Toteuta tässä kuvattu ohjelma luokkaan `Henkilotiedot`. **Huom!** Älä muuta luokkaa `Henkilotieto`. -->
+
+The program described here should be implemented in the class `PersonalInformationCollection`. **N.B.!** Do not modify the class `PersonalInformation`.
+
+<!-- Kirjoita ohjelma, joka lukee käyttäjältä henkilötietoja. Käyttäjä syöttää etunimen, sukunimen, ja henkilötunnuksen. Mikäli etunimi on tyhjä, lopeta lukeminen. Mikäli etunimi ei ole tyhjä, lue loput tiedot ja luo käyttäjän syöttämistä tiedoista olio, jonka lisäät `henkilotiedot`-listalle. -->
+
+<!-- Kun käyttäjä on lopettanut tietojen syöttämisen (käyttäjä syöttää tyhjän etunimen), poistu toistolauseesta. -->
+
+After the user has entered the last set of details (they enter an empty first name), exit the repeat statement.
+
+<!-- Tulosta tämän jälkeen henkilötiedot siten, että jokaisesta syötetystä oliosta tulostetaan etunimi ja sukunimi välilyönnillä erotettuna (henkilötunnusta ei tulosteta!). Alla esimerkki ohjelman suorituksesta. -->
+
+Then print the collected personal information so that each entered object is printed in the following format: first and last names separated by a space (you don't print the identification number). An example of the working program is given below:
+
+<!-- <sample-output>
 
 Etunimi: **Jean**
 Sukunimi: **Bartik**
@@ -503,17 +604,39 @@ Etunimi:
 Jean Bartik
 Betty Holberton
 
+</sample-output> -->
+
+<sample-output>
+
+First name: **Jean**
+Last name: **Bartik**
+Identification number: **271224**
+First name: **Betty**
+Last name: **Holberton**
+Identification number: **070317**
+First name:
+
+Jean Bartik
+Betty Holberton
+
 </sample-output>
 
 </programming-exercise>
 
-<text-box type="info" name="Määrämuotoisen tiedon lukeminen">
+<!-- <text-box type="info" name="Määrämuotoisen tiedon lukeminen"> -->
 
-Yllä olevassa esimerkissä ja tehtävässä tiedot syötettiin rivi riviltä. Ohjelmassa voisi toki pyytää tietoja määrämuotoisessa muodossa, esimerkiksi pilkulla eroteltuna.
+<text-box type="info" name="Reading input in a specific format">
 
-Ohjelma, jossa nimi ja ikä tulisi syöttää pilkulla eroteltuna voisi toimia seuraavalla tavalla.
 
-```java
+<!-- Yllä olevassa esimerkissä ja tehtävässä tiedot syötettiin rivi riviltä. Ohjelmassa voisi toki pyytää tietoja määrämuotoisessa muodossa, esimerkiksi pilkulla eroteltuna. -->
+
+In the example and exercise below, the required information was entered line by line. By no means is it impossible to ask for input in a specific format, e.g. separated by a comma.
+
+<!-- Ohjelma, jossa nimi ja ikä tulisi syöttää pilkulla eroteltuna voisi toimia seuraavalla tavalla. -->
+
+If the name and age were separated by a comma, the program could work in the following manner.
+
+<!-- ```java
 Scanner lukija = new Scanner(System.in);
 ArrayList<Henkilo> henkilot = new ArrayList<>();
 
@@ -540,9 +663,39 @@ System.out.println("Henkilöt: ");
 for (Henkilo henkilo: henkilot) {
     System.out.println(henkilo);
 }
+``` -->
+
+```java
+Scanner scanner = new Scanner(System.in);
+ArrayList<Person> persons = new ArrayList<>();
+
+// Read person information from the user
+System.out.println("Enter the person details separated by a comma, e.g.: Randall, 2")
+while (true) {
+    System.out.print("Enter the details, empty will stop: ");
+    String details = scanner.nextLine();
+    if (details.isEmpty()) {
+        break;
+    }
+
+    String[] parts = details.split(",");
+    String name = parts[0];
+    int age = Integer.valueOf(parts[1]);
+    persons.add(new Person(name, age));
+}
+
+// Tulostetaan syötettyjen henkilöiden määrä sekä henkilöt
+// Print the number of the entered persons, and the persons themselves
+System.out.println();
+System.out.println("Total number of persons: " + persons.size());
+System.out.println("Persons: ");
+
+for (Person person: persons) {
+    System.out.println(person);
+}
 ```
 
-<sample-output>
+<!-- <sample-output>
 
 Kirjoita tiedot pilkulla eroteltuna, esim: Leevi,2
 
@@ -557,16 +710,21 @@ Leevi, ikä 2 vuotta
 Anton, ikä 2 vuotta
 Sylvi, ikä 0 vuotta
 
-</sample-output>
+</sample-output> -->
+
 
 </text-box>
 
 
-## Rajattu tulostus listalta
+<!-- ## Rajattu tulostus listalta -->
 
-Listalla olevia olioita voidaan myös tarkastella listan läpikäynnin yhteydessä. Alla olevassa esimerkissä käyttäjältä kysytään ensin ikäraja, jonka jälkeen tulostetaan ne oliot, joiden ikä on vähintään käyttäjän syöttämä ikäraja.
+## Filtered printing from the list
 
-```java
+<!-- Listalla olevia olioita voidaan myös tarkastella listan läpikäynnin yhteydessä. Alla olevassa esimerkissä käyttäjältä kysytään ensin ikäraja, jonka jälkeen tulostetaan ne oliot, joiden ikä on vähintään käyttäjän syöttämä ikäraja. -->
+
+You can also examine the objects on the list as you go through it. In the example below, we first ask the user for an age restriction, after which we print all the objects whose age is at least the number given by the user.
+
+<!-- ```java
 // Oletetaan, että käytössämme on henkilot-lista,
 // joka sisältää henkilöolioita
 
@@ -578,18 +736,41 @@ for (Henkilo henkilo: henkilot) {
         System.out.println(henkilo);
     }
 }
+``` -->
+
+```java
+// Assume we have a 'persons' list
+// that consists of person objects
+
+System.out.print("What is the age limit? ");
+int ageLimit = Integer.valueOf(scanner.nextLine());
+
+for (Person person: persons) {
+    if (person.getAge() >= ageLimit) {
+        System.out.println(person);
+    }
+}
 ```
 
 
-<programming-exercise name='Televisio-ohjelmat' tmcname='osa04-Osa04_19.TelevisioOhjelmat'>
+<!-- <programming-exercise name='Televisio-ohjelmat' tmcname='osa04-Osa04_19.TelevisioOhjelmat'> -->
 
-Tehtäväpohjassa on valmiina televisio-ohjelmaa kuvaava luokka TelevisioOhjelma. Luokalla on oliomuuttujat nimi ja pituus, konstruktori, ja muutamia metodeja.
+<programming-exercise name='Television programs' tmcname='osa04-Osa04_19.TelevisioOhjelmat'>
 
-Toteuta ohjelma, joka ensin lukee käyttäjältä televisio-ohjelmia. Kun käyttäjä syöttää tyhjän ohjelman nimen, televisio-ohjelmien lukeminen lopetetaan.
 
-Tämän jälkeen käyttäjältä kysytään ohjelman maksimipituutta. Kun käyttäjä on syöttänyt ohjelman maksimipituuden, tulostetaan kaikki ne ohjelmat, joiden pituus on pienempi tai yhtäsuuri kuin haluttu maksimipituus.
+<!-- Tehtäväpohjassa on valmiina televisio-ohjelmaa kuvaava luokka TelevisioOhjelma. Luokalla on oliomuuttujat nimi ja pituus, konstruktori, ja muutamia metodeja. -->
 
-<sample-output>
+In the exercise template there is a ready-made class TelevisionProgram, representing a television program. The class has object variables name and length, a constructor, and a few methods.
+
+<!-- Toteuta ohjelma, joka ensin lukee käyttäjältä televisio-ohjelmia. Kun käyttäjä syöttää tyhjän ohjelman nimen, televisio-ohjelmien lukeminen lopetetaan. -->
+
+Implement a program that begins by reading television programs from the user. When the user inputs an empty string as the name of the program, the program stops reading programs.
+
+<!-- Tämän jälkeen käyttäjältä kysytään ohjelman maksimipituutta. Kun käyttäjä on syöttänyt ohjelman maksimipituuden, tulostetaan kaikki ne ohjelmat, joiden pituus on pienempi tai yhtäsuuri kuin haluttu maksimipituus. -->
+
+After this the user is queried for a maximum length. Once the maximum length is given, the program proceeds to list all the programs whose length is smaller or equal to the specified maximum length.
+
+<!-- <sample-output>
 
 Nimi: **Salatut elämät**
 Pituus: **30**
@@ -604,20 +785,46 @@ Ohjelman maksimipituus? **30**
 Salatut elämät, 30 minuuttia
 Miehen puolikkaat, 30 minuuttia
 
+</sample-output> -->
+
+<sample-output>
+
+Nimi: **Rick and Morty**
+Pituus: **25**
+Nimi: **Two and a Half Men**
+Pituus: **30**
+Nimi: **Love it or list it**
+Pituus: **60**
+Nimi: **House**
+Pituus: **60**
+
+Program's maximum length? **30**
+Rick and Morty, 25 minutes
+Two and a Half Men, 30 minutes
+
 </sample-output>
 
 </programming-exercise>
 
 
-<programming-exercise name='Kirjat (2 osaa)' tmcname='osa04-Osa04_20.Kirjat'>
+<!-- <programming-exercise name='Kirjat (2 osaa)' tmcname='osa04-Osa04_20.Kirjat'> -->
 
-Toteuta ohjelma, joka ensin lukee kirjojen tietoja käyttäjältä. Jokaisesta kirjasta tulee lukea kirjan nimi, sivujen lukumäärä sekä kirjoitusvuosi. Kirjojen lukeminen lopetetaan kun käyttäjä syöttää tyhjän kirjan nimen.
+<programming-exercise name='Books (2 parts)' tmcname='osa04-Osa04_20.Kirjat'>
 
-Tämän jälkeen käyttäjältä kysytään mitä tulostetaan. Jos käyttäjä syöttää merkkijonon "kaikki", tulostetaan kirjojen nimet, sivujen lukumäärät sekä kirjoitusvuodet. Jos taas käyttäjä syöttää merkkijonon "nimi", tulostetaan vain kirjojen nimet.
 
-Ohjelmaa varten kannattanee toteuttaa Kirjaa kuvaava luokka. Tehtävä on kokonaisuudessaan kahden tehtäväpisteen arvoinen.
+<!-- Toteuta ohjelma, joka ensin lukee kirjojen tietoja käyttäjältä. Jokaisesta kirjasta tulee lukea kirjan nimi, sivujen lukumäärä sekä kirjoitusvuosi. Kirjojen lukeminen lopetetaan kun käyttäjä syöttää tyhjän kirjan nimen. -->
 
-<sample-output>
+Write a program that first reads book information from the user. The details to be asked for each book include the title, page number and the publication year. Entering an emtpy string as the name of the book ends the reading process.
+
+<!-- Tämän jälkeen käyttäjältä kysytään mitä tulostetaan. Jos käyttäjä syöttää merkkijonon "kaikki", tulostetaan kirjojen nimet, sivujen lukumäärät sekä kirjoitusvuodet. Jos taas käyttäjä syöttää merkkijonon "nimi", tulostetaan vain kirjojen nimet. -->
+
+After this the user is asked for what is to be printed. If the user inputs "everything", all the details are printed: the book titles, the numbers of pages, and the publication years. However, if the user enters the string "title", only the book titles are printed.
+
+<!-- Ohjelmaa varten kannattanee toteuttaa Kirjaa kuvaava luokka. Tehtävä on kokonaisuudessaan kahden tehtäväpisteen arvoinen. -->
+
+It is probably worthwhile to implement a class called `Book` to represent a book. There are two points in total available for this exercise.
+
+<!-- <sample-output>
 
 Nimi: **Minä en sitten muutu**
 Sivuja: **201**
@@ -638,10 +845,34 @@ Nalle Puh ja elämisen taito, 100 sivua, 2005
 Beautiful Code, 593 sivua, 2007
 KonMari, 222 sivua, 2011
 
+</sample-output> -->
+
+<sample-output>
+
+Title: **To Kill a Mockingbird**
+Pages: **281**
+Publication year: **1960**
+Title: **A Brief History of Time**
+Pages: **256**
+Publication year: **1988**
+Title: **Beautiful Code**
+Pages: **593**
+Publication year: **2007**
+Title: **The Name of the Wind**
+Pages: **662**
+Publication year: **2007**
+Title:
+
+What information will be printed? **everything**
+To Kill a Mockingbird, 281 pages, 1960
+A Brief History of Time, 256 pages, 1988
+Beautiful Code, 593 pages, 2007
+The Name of the Wind, 662 pages, 2007
+
 </sample-output>
 
 
-<sample-output>
+<!-- <sample-output>
 
 Nimi: **Minä en sitten muutu**
 Sivuja: **201**
@@ -661,6 +892,30 @@ Minä en sitten muutu
 Nalle Puh ja elämisen taito
 Beautiful Code
 KonMari
+
+</sample-output> -->
+
+<sample-output>
+
+Title: **To Kill a Mockingbird**
+Pages: **281**
+Publication year: **1960**
+Title: **A Brief History of Time**
+Pages: **256**
+Publication year: **1988**
+Title: **Beautiful Code**
+Pages: **593**
+Publication year: **2007**
+Title: **The Name of the Wind**
+Pages: **662**
+Publication year: **2007**
+Title:
+
+What information will be printed? **name**
+To Kill a Mockingbird
+A Brief History of Time
+Beautiful Code
+The Name of the Wind
 
 </sample-output>
 
