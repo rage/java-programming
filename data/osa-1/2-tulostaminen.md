@@ -444,7 +444,7 @@ an earth
 </programming-exercise>
 
 
-## Terminologiaa ja koodin kommentointi
+<!-- ## Terminologiaa ja koodin kommentointi
 
 ### Komennon parametrit
 
@@ -468,10 +468,38 @@ maailma
 
 Vaikka yllä oleva esimerkki toimii, on rivinvaihtojen käyttö tärkeää muita ohjelmoijia ajatellen. Tällöin ohjelman lukija tietää, että kullakin rivillä tehdään vain yksi konkreettinen asia.
 
+
+TODO: quiz, jossa kysytään että mistä tietyssä termissä on kyse
+ -->
+
+## Terminology and commenting code
+
+### Commands parameters
+
+Information you print with print command is given as a __parameter__ bt adding it inside the parenteheses `()` after the command. For example, givin `Hi` as a parameter for `System.out.println` command is done like this: `System.out.println("Hi)`.
+
+### Semicolon separates commands
+
+Commands are separated with a semicolon `;`. we could actually write almost everyting on a single line. However, that would not be very understandable.
+
+```java
+System.out.println("Hello "); System.out.println("world"); System.out.println("!\n");
+```
+
+<sample-output>
+
+Hello
+world
+!
+
+</sample-output>
+
+Even tho above example does work, it is important to use line breaks for other programmers. Then the one reading the program knows that only one concretic thing is done on each line.
+
 TODO: quiz, jossa kysytään että mistä tietyssä termissä on kyse
 
 
-### Kommentit
+<!-- ### Kommentit
 
 Lähdekoodia voi kommentoida selkeyttääkseen sitä tai lisätäkseen muistiinpanoja kahdella eri tavalla.
 
@@ -497,4 +525,34 @@ public class Kommentteja {
 }
 ```
 
-Esimerkin alin rivi esittelee erityisen kätevän käyttökohteen kommenteille. Kirjoitettua lähdekoodia ei tarvitse poistaa jos haluaa tilapäisesti kokeilla jotain.
+Esimerkin alin rivi esittelee erityisen kätevän käyttökohteen kommenteille. Kirjoitettua lähdekoodia ei tarvitse poistaa jos haluaa tilapäisesti kokeilla jotain. -->
+
+### Comments
+
+You can comment source code to clarify it or to add notes. There are two ways to do this.
+
+- One line comments are started with two slashes `//`. Everything following on the same line is interpreted as a comment.
+- Multiline comments are started with one slash and an asterisk `/*` and ended with an asterisk and a slash `*/`. Everything between them is interpreted as a comment.
+
+Below is an example of a program where both are used.
+
+```java
+public class Comments {
+    public static void main(String[] args) {
+        // print
+        System.out.println("Text to print");
+        System.out.println("More text to print!");
+        /* Next:
+        - more about printing
+        - more practice
+        - variables
+        - ...
+        */
+        System.out.println("Other text to print");
+    }
+}
+```
+
+The last line of the example presents a particularly handy use for comments. You don't need to remove any source code you have written if you want to try something.
+
+TODO: Tää ei nyt oikei käy järkeen?
