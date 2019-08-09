@@ -93,9 +93,9 @@ import java.util.Scanner;
 public class Message {
 
     public static void main(String[] args) {
-        Scanner reader = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Write something!");
+        System.out.println("Write a message: ");
         // Write your program here
     }
 }
@@ -106,7 +106,7 @@ Example output when the user writes "Bye".
 
 <sample-output>
 
-Write something!
+Write a message:
 **Bye**
 Bye
 
@@ -117,7 +117,7 @@ Example output when the user writes "Once upon a time...".
 
 <sample-output>
 
-Write something!
+Write a message:
 **Once upon a time...**
 Once upon a time...
 
@@ -316,9 +316,9 @@ import java.util.Scanner;
 public class MessageThreeTimes {
 
     public static void main(String[] args) {
-        Scanner reader = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Write something!");
+        System.out.println("Write a message: ");
         // write the program here
     }
 }
@@ -329,7 +329,7 @@ Example output when the user writes "Hi".
 
 <sample-output>
 
-Write something!
+Write a message:
 **Hi**
 Hi
 Hi
@@ -342,7 +342,7 @@ Example output when user writes "Once upon a time...".
 
 <sample-output>
 
-Write something!
+Write a message:
 **Once upon a time...**
 Once upon a time...
 Once upon a time...
@@ -397,7 +397,7 @@ import java.util.Scanner;
 public class Greeting {
 
     public static void main(String[] args) {
-        Scanner reader = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         // write your program here
     }
@@ -510,7 +510,7 @@ import java.util.Scanner;
 public class Conversation {
 
     public static void main(String[] args) {
-        Scanner reader = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         //Write your program here
     }
@@ -611,7 +611,7 @@ What is their job?
 **builder**
 Here is the story:
 Once upon a time there was Bob, who was a builder.
-On their way to work, Bob thought about their life.
+On their way to work, Bob reflected on their life.
 Perhaps Bob will not be a builder forever.
 
 </sample-output>
@@ -625,7 +625,7 @@ import java.util.Scanner;
 public class Story {
 
     public static void main(String[] args) {
-        Scanner reader = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         // Write your program here
     }
@@ -643,7 +643,7 @@ What is their job?
 **Data scientist**
 Here is the story:
 Once upon a time there was Ada, who was a Data scientist.
-On their way to work, Ada thought about their life.
+On their way to work, Ada reflected on their life.
 Perhaps Ada will not be a Data scientist forever.
 
 </sample-output>

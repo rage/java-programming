@@ -420,12 +420,12 @@ maa
 
 </programming-exercise> -->
 
-<programming-exercise name='Once upon a time there was an earth' tmcname='part01-Part01_04.OnceUponATimeThereWasAnEarth'>
+<programming-exercise name='Dinosaur' tmcname='part01-Part01_04.Dinosaur'>
 
 In the exercise template there is the following code boilerplate:
 
 ```java
-public class OnceUponATimeThereWasAnEarth {
+public class Dinosaur {
     public static void main(String[] args) {
         // Write your program here
     }
@@ -438,7 +438,7 @@ Edit the program so that it will print the following text. Use the "sout"-shorth
 
 Once upon a time
 there was
-an earth
+a dinosaur
 
 </sample-output>
 

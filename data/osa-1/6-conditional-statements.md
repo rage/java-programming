@@ -87,7 +87,7 @@ If the expression in the conditional statement evaluates to true, above "if the 
 
 <!-- <programming-exercise name="Ylinopeussakko" tmcname='osa01-Osa01_24.Ylinopeussakko'> -->
 
-<programming-exercise name="Speeding ticket" tmcname='osa01-Osa01_24.Ylinopeussakko'>
+<programming-exercise name="Speeding ticket" tmcname='part01-Part01_24.SpeedingTicket'>
 
 <!-- Tee ohjelma, joka kysyy käyttäjältä kokonaisluvun ja tulostaa merkkijonon "Ylinopeussakko!" jos luku on suurempi kuin 120. -->
 
@@ -95,14 +95,14 @@ Write a program that asks the user for an integer and prints the string "Speedin
 
 <sample-output>
 
-Input speed:
+Give speed:
 **15**
 
 </sample-output>
 
 <sample-output>
 
-Input speed:
+Give speed:
 **135**
 Speeding ticket!
 
@@ -182,7 +182,7 @@ In the future the code of the program needs to be indented correctly when submit
 </text-box>
 
 <!-- <programming-exercise name="Sisennys kuntoon" tmcname='osa01-Osa01_25.SisennysKuntoon'> -->
-<programming-exercise name="Check your indentation" tmcname='osa01-Osa01_25.SisennysKuntoon'>
+<programming-exercise name="Check your indentation" tmcname='part01-Part01_25.Check your indentation'>
 
 <!-- Tehtäväpohjassa on ehtolauseen käyttöä demonstroiva ohjelma. Ohjelma on kuitenkin sisennetty väärin. -->
 The exercise template contains a program demonstrating the use of conditional statements. However, the indentation is wrong.
@@ -240,7 +240,7 @@ The number was not equal to 0
 
 </sample-output>
 
-<programming-exercise name="Orwell" tmcname='osa01-Osa01_26.Orwell'>
+<programming-exercise name="Orwell" tmcname='part01-Part01_26.Orwell'>
 
 <!-- Tee ohjelma, joka kysyy käyttäjältä kokonaisluvun ja tulostaa merkkijonon "Orwell" jos luku on täsmälleen 1984. -->
 Write a program, that prompts the user for an integer and prints the string "Orwell" if the number is exactly 1984.
@@ -264,7 +264,7 @@ Orwell
 
 
 <!-- <programming-exercise name="Wanha" tmcname='osa01-Osa01_27.Wanha'> -->
-<programming-exercise name="Old" tmcname='osa01-Osa01_27.Wanha'>
+<programming-exercise name="Ancient" tmcname='part01-Part01_27.Ancient'>
 
 <!-- Tee ohjelma, joka kysyy käyttäjältä vuosilukua. Jos käyttäjä syöttää luvun, joka on pienempi kuin 2015, ohjelma tulostaa merkkijonon "Wanha!". -->
 Write a program, that prompts the user for a year. If the user inputs a number that is smaller than 2015, then the program prints the string "Old!".
@@ -280,7 +280,7 @@ Give a year:
 
 Give a year:
 **2013**
-Old!
+Ancient history!
 
 </sample-output>
 
@@ -329,7 +329,7 @@ Your number is five or less!
 If we have defined an `else`-branch for the conditional statement, then the block defined by the else-branch is run if the condition of the conditional statement is not true. The `else`-command is placed on the same line as the closing bracket of the block defined by the `if`-command.
 
 <!-- <programming-exercise name="Positiivinen luku" tmcname='osa01-Osa01_28.PositiivinenLuku'> -->
-<programming-exercise name="Positive number" tmcname='osa01-Osa01_28.PositiivinenLuku'>
+<programming-exercise name="Positivity" tmcname='part01-Part01_28.Positivity'>
 
 <!-- Tee ohjelma, joka kysyy käyttäjältä kokonaisluvun ja kertoo, onko se positiivinen (eli suurempi kuin nolla) vai ei. -->
 Write a program, that prompts the user for an integer and informs the user whether or not it is positive (greater than zero).
@@ -354,16 +354,16 @@ The number is not positive.
 
 
 <!-- <programming-exercise name="Täysi-ikäisyys" tmcname='osa01-Osa01_29.TaysiIkaisyys'> -->
-<programming-exercise name="Legal age" tmcname='osa01-Osa01_29.TaysiIkaisyys'>
+<programming-exercise name="Adulthood" tmcname='part01-Part01_29.Adulthood'>
 
 <!-- Tee ohjelma, joka kysyy käyttäjän ikää ja kertoo, onko tämä täysi-ikäinen (eli 18-vuotias tai vanhempi). -->
-Write a program, which prompts the user for their age and tells them whether or not they are of legal age (18 years old or older).
+Write a program, which prompts the user for their age and tells them whether or not they are an adult (18 years old or older).
 
 <sample-output>
 
 How old are you?
 **12**
-You are not of legal age!
+You are not an adult
 
 </sample-output>
 
@@ -371,7 +371,7 @@ You are not of legal age!
 
 How old are you?
 **32**
-You are of legal age!
+You are an adult
 
 </sample-output>
 
@@ -430,11 +430,11 @@ The visualization of the code above:
 
 
 <!-- <programming-exercise name="Suurempi tai yhtäsuuri" tmcname='osa01-Osa01_30.SuurempiTaiYhtasuuri'> -->
-<programming-exercise name="Greater than or equal to" tmcname='osa01-Osa01_30.SuurempiTaiYhtasuuri'>
+<programming-exercise name="Larger than or equal to" tmcname='part01-Part01_30.LargerThanOrEqualTo'>
 
 <!-- Tee ohjelma, joka kysyy käyttäjältä kaksi kokonaislukua ja tulostaa niistä suuremman. Jos luvut ovat yhtä suuret, ohjelma huomaa myös tämän. -->
 
-Write a program, that prompts the user for two integers and prints the greater of the two. If the numbers are the same, then the program informs us about this as well.
+Write a program, that prompts the user for two integers and prints the larger of the two. If the numbers are the same, then the program informs us about this as well.
 
 <!-- Esimerkkitulostuksia: -->
 Sample outputs:
@@ -445,7 +445,7 @@ Give the first number:
 **5**
 Give the second number:
 **3**
-The greater number: 5
+Larger number is: 5
 
 </sample-output>
 
@@ -455,7 +455,7 @@ Give the first number:
 **5**
 Give the second number:
 **8**
-The greater number: 8
+Larger number is: 8
 
 </sample-output>
 
@@ -575,7 +575,7 @@ Grade: 5
 
 Give points [0-100]:
 **-3**
-Grade: incredible!
+Grade: impossible!
 
 </sample-output>
 
@@ -766,7 +766,7 @@ if (number % 400 == 0) {
 
 
 <!-- <programming-exercise name="Pariton vai parillinen" tmcname='osa01-Osa01_32.ParitonVaiParillinen'> -->
-<programming-exercise name="Odd or even" tmcname='osa01-Osa01_32.ParitonVaiParillinen'>
+<programming-exercise name="Odd or even" tmcname='part01-Part01_32.OddOrEven'>
 
 <!-- Tee ohjelma, joka kysyy käyttäjältä luvun ja ilmoittaa, onko syötetty luku parillinen vai pariton. -->
 Write a program, that prompts the user for a number and informs us whether it is even or odd.
@@ -775,7 +775,7 @@ Write a program, that prompts the user for a number and informs us whether it is
 
 Give a number:
 **2**
-The number 2 is even.
+Number 2 is even.
 
 </sample-output>
 
@@ -783,7 +783,7 @@ The number 2 is even.
 
 Give a number:
 **7**
-The number 7 is odd.
+Number 7 is odd.
 
 </sample-output>
 
@@ -987,7 +987,7 @@ The strings were the same!
 
 
 <!-- <programming-exercise name="Tunnussana" tmcname='osa01-Osa01_33.Tunnussana'> -->
-<programming-exercise name="Password" tmcname='osa01-Osa01_33.Tunnussana'>
+<programming-exercise name="Password" tmcname='part01-Part01_33.Password'>
 
 <!-- Tee ohjelma, joka kysyy käyttäjältä tunnussanaa. Mikäli tunnussana on "Caput Draconis", ohjelma tulostaa "Tervetuloa!". Muulloin ohjelman tulostus on "Hus siitä!". -->
 
@@ -1013,11 +1013,11 @@ Welcome!
 
 
 <!-- <programming-exercise name="Samat sanat" tmcname='osa01-Osa01_34.SamatSanat'> -->
-<programming-exercise name="Same words" tmcname='osa01-Osa01_34.SamatSanat'>
+<programming-exercise name="Same" tmcname='part01-Part01_34.Same'>
 
 <!-- Tee ohjelma, joka kysyy käyttäjältä kahta merkkijonoa. Mikäli merkkijonot ovat samat, ohjelma tulostaa "Samat sanat", muulloin ohjelma tulostaa "Ei sitten". -->
 
-Write a program, that prompts the user for two strings. If the strings are the same, then the program prints "Same", otherwise it prints "Never mind".
+Write a program, that prompts the user for two strings. If the strings are the same, then the program prints "Same", otherwise it prints "Different".
 
 <!-- TODO: Better exercise for English...? -->
 
@@ -1037,7 +1037,7 @@ Enter the first string:
 **hello**
 Enter the second string:
 **world**
-Never mind
+Different
 
 </sample-output>
 
@@ -1166,7 +1166,7 @@ Below is a table showing the operation of expressions containing logical operato
 
 
 <!-- <programming-exercise name='Iän tarkistus' tmcname='osa01-Osa01_35.IanTarkistus'> -->
-<programming-exercise name='Checking the age' tmcname='osa01-Osa01_35.IanTarkistus'>
+<programming-exercise name='Checking the age' tmcname='part01-Part01_35.CheckingTheAge'>
 
 <!-- Tee ohjelma, joka kysyy käyttäjän iän ja tarkistaa, että se on mahdollinen (ainakin 0 ja korkeintaan 120). Käytä ohjelmassa vain yhtä `if`-komentoa. -->
 
@@ -1370,7 +1370,7 @@ FizzBuzz
 
 
 <!-- <programming-exercise name='Karkausvuosi' tmcname='osa01-Osa01_36.Karkausvuosi'> -->
-<programming-exercise name='Leap year' tmcname='osa01-Osa01_36.Karkausvuosi'>
+<programming-exercise name='Leap year' tmcname='part01-Part01_36.LeapYear'>
 
 <!-- Vuosi on karkausvuosi, jos se on jaollinen 4:llä. Kuitenkin jos vuosi on jaollinen 100:lla, se on karkausvuosi vain silloin, kun se on jaollinen myös 400:lla. -->
 
@@ -1381,28 +1381,28 @@ Write a program that reads a year from the user, and checks whether or not it is
 
 <sample-output>
 
-Input a year: **2011**
+Give a year: **2011**
 The year is not a leap year.
 
 </sample-output>
 
 <sample-output>
 
-Input a year: **2012**
+Give a year: **2012**
 The year is a leap year.
 
 </sample-output>
 
 <sample-output>
 
-Input a year: **1800**
+Give a year: **1800**
 The year is not a leap year.
 
 </sample-output>
 
 <sample-output>
 
-Input a year: **2000**
+Give a year: **2000**
 The year is a leap year.
 
 </sample-output>
@@ -1472,7 +1472,7 @@ if (number % 4 != 0) {
 
 
 <!-- <programming-exercise name='Lahjaverolaskuri' tmcname='osa01-Osa01_37.Lahjaverolaskuri'> -->
-<programming-exercise name='Lahjaverolaskuri' tmcname='osa01-Osa01_37.Lahjaverolaskuri'>
+<programming-exercise name='Gift tax' tmcname='part01-Part01_37.GiftTax'>
 
 [https://www.vero.fi/henkiloasiakkaat/omaisuus/lahja/](https://www.vero.fi/henkiloasiakkaat/omaisuus/lahja/): *Lahja tarkoittaa sitä, että omaisuus siirtyy toiselle henkilölle ilman korvausta. Lahjasta pitää maksaa lahjaveroa, jos samalta lahjanantajalta saatujen lahjojen arvo on kolmen vuoden aikana 5 000 euroa tai enemmän.*
 
@@ -1492,26 +1492,26 @@ Tee ohjelma, joka laskee lahjaveron lähimmiltä sukulaisilta annetulle lahjalle
 
 <sample-output>
 
-Lahjan suuruus?
+Value of the gift?
 **3500**
-Ei veroa!
+No tax!
 
 </sample-output>
 
 
 <sample-output>
 
-Lahjan suuruus?
+Value of the gift?
 **5000**
-Vero: 100.0
+Tax: 100.0
 
 </sample-output>
 
 <sample-output>
 
-Lahjan suuruus?
+Value of the gift?
 **27500**
-Vero: 1950.0
+Tax: 1950.0
 
 </sample-output>
 
