@@ -153,4 +153,3 @@ In order to work Java-programs require a code boilerplate, which will become fam
 Below is the first quizz of the course. Quizzes can be answered straight in the course material.
 
 <quiznator id="5c136a4ea50dbe1223d1981d"></quiznator>
-
