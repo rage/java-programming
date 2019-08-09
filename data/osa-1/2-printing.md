@@ -208,7 +208,7 @@ TODO video englanniksi?
 In the exercise template there is the following code boilerplate:
 
 ```java
-public class Name {
+public class AdaLovelace {
     public static void main(String[] args) {
         // Write your program here
 
