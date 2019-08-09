@@ -8,17 +8,20 @@ hidden: false
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
 <!-- - Tutustut kurssilla käytettyyn NetBeans with TMC -ohjelmointiympäristöön. -->
- -  Become familiar with the NetBeans with TMC - development environment used in this course
+ - Become familiar with the NetBeans with TMC - development environment used in this course
 <!-- - Opit lataamaan ja palauttamaan kurssin ohjelmointitehtäviä. -->
- -  Learn to download and submit programming exercises
+ - Learn to download and submit programming exercises
+
 </text-box>
 
 
 <quiznator id="5c12b7f263de8e5db0cf8b8e"></quiznator>
 
+TODO aloituskysely englanniksi
+
 
 <!-- Nykyaikainen ohjelmointi tapahtuu lähes poikkeuksetta ohjelmointiympäristössä. Ohjelmointiympäristö sisältää joukon ohjelmoijaa auttavia aputoimintoja. Se ei rakenna ohjelmaa ohjelmoijan puolesta, mutta se muunmuassa vinkkaa helpoista virheistä ohjelmakoodissa ja auttaa ohjelmoijaa hahmottamaan ohjelman rakennetta. -->
-Moder programming is almost always done in an IDE, or integrated development environment. An IDE contains a set of tools helpful for the programmer. It does not create the program for them, but can for example give hints about common mistakes in the code, and help the programmer understand the structure of the program.
+Modern programming is almost always done in an IDE (integrated development environment). An IDE contains a set of tools helpful for the programmer. It does not create the program for them, but can for example give hints about common mistakes in the code, and help the programmer understand the structure of the program.
 
 <!-- Käytämme tällä kurssilla [NetBeans](https://netbeans.apache.org)-nimistä ohjelmointiympäristöä sekä siihen liitettävää Test My Code -liitännäistä. -->
 In this course we use the [NetBeans](https://netbeans.apache.org) -development environment with Test My Code plugin.
@@ -80,22 +83,25 @@ TODO: Ohjeissa kurssien nimi oikein (nyt ohjelmoinnin mooc 2019 eri versioineen)
 </only-for-not-logged-in>
 
 <!-- [Ohjeisiin!](https://materiaalit.github.io/tmc-asennus/netbeans/) -->
+TODO ohjelinkki ja sen sisältö englanniksi
+TODO video ohjelmoinnin aloituksesta englanniksi ? tai kunnollinen selostus ? tai tekstitys videoon
 
 <!-- Kun olet luonut käyttäjätunnuksen ja asentanut Javan ja TMC:n, katso alla oleva video. Video näyttää mitä tapahtuu kun NetBeans with TMC -ohjelmointiympäristö käynnistetään ensimmäistä kertaa. Videolla valitaan organisaatio ja kurssi, sekä tehdään ensimmäinen ohjelmointitehtävä. -->
+Once you have created the user account and installed Java and TMC, watch the video below. The video demonstrates what happens, when "Netbeans with TMC" is opened for the first time. We select the organization and the course, and do the first programming exercise.
 
 <youtube id="zvE8XA8D0gE"></youtube>
 
 
 <!-- Alla on kurssin ensimmäinen ohjelmointitehtävä. Tutustut tehtävässä käytettyyn ohjelmointiympäristöön. -->
-Below is the first programming exercise of this course. In this exercise you familiarize yourself with the development environment.
+This is the first programming exercise of this course. In this exercise you familiarize yourself with the development environment.
 
-<programming-exercise name='Hiekkalaatikko' tmcname='osa01-Osa01_01.Hiekkalaatikko'>
+<programming-exercise name='Sandbox' tmcname='part01-Part01_01.Sandbox'>
 
 <!-- Tehtäväpohjassa on seuraavanlainen ohjelmarunko: -->
-The exercise base has the following boilerplate code:
+The exercise template already contains the following boilerplate code:
 
 ```java
-public class SandBox {
+public class Sandbox {
     public static void main(String[] args) {
         // Write your program here
 
@@ -104,16 +110,16 @@ public class SandBox {
 ```
 
 <!-- Rivi "// Kirjoita ohjelmasi tähän alle" on _kommenttirivi_, jota tietokone ei ota huomioon ohjelmaa suoritettaessa. -->
-The line "// Write your program here" is a _line comment_, which the computer skips over when executing the program.
+The line "// Write your program here" is a _line comment_, and the computer will ignore it when executing the program.
 
 <!-- Palauta tehtäväpohja palvelimen tarkastettavaksi ensin ilman minkäänlaisia muutoksia. Tällä tavoin harjoittelet tehtävän palauttamista. Tehtävän palauttaminen onnistuu valitsemalla TMC:ssä valikon TMC sekä sieltä kohdan "Submit". -->
-First submit the boilerplate  to be checked on the server without changing anything. This way you practice submitting an exercise. You can submit an exercise by selecting the item "Submit" in the TMC menu in TMC.
+First submit the boilerplate to be checked on the server without changing anything. This way you practice submitting an exercise. You can submit an exercise by selecting the item "Submit" in the TMC menu in TMC.
 
 <!-- Kun olet saanut tehtävän palautettua, kokeile yllä olevaa videota noudattaen tulostuskomennon lisäämistä ohjelmaan ja ohjelman suorittamista (play-napin painaminen). Kun saat ohjelman tulostamaan tekstiä (teksti voi olla mitä tahansa), palauta tehtävä vielä kertaalleen palvelimelle. -->
-When you have submitted the exercise, try following the video above to add a print command to the program and to execute the program (by pressing the play - button). When you have made your program to print some text (the text can be anything), submit the exercise to the server once more.
+Once you have submitted the exercise, try following the video above to add a print command to the program and to execute the program (by pressing the play - button). When you have made your program to print some text (the text can be anything), submit the exercise to the server once more.
 
 <!-- Käytä tätä hiekkalaatikkotehtävää jatkossa erilaisten kokeilujen tekemiseen. Kun kohtaat materiaalissa uuden asian, kokeile sitä ensin hiekkalaatikossa, ja lähde sitten ratkaisemaan asiaan liittyviä tehtäviä. -->
-In the future, use this sandBox exercise to try out different things. When you encounter something new in the material, try it out first in the sandBox, and then begin solving the exercises on the topic.
+In the future, use this sandbox exercise to try out different things. When you encounter something new in the material, try it out first in the sandbox, and then begin solving the exercises on the topic.
 
 </programming-exercise>
 
