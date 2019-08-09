@@ -81,12 +81,12 @@ Booolean: true
 
 <!-- <programming-exercise name="Muuttuvat muuttujat" tmcname='osa01-Osa01_11.MuuttuvatMuuttujat'> -->
 
-<programming-exercise name="Varying variables" tmcname='osa01-Osa01_11.MuuttuvatMuuttujat'>
+<programming-exercise name="Varying variables" tmcname='osa01-Osa01_11.VaryingVariables'>
 <!-- NOTE: tmcname not translated -->
 
 <!-- Tehtäväpohja sisältää ohjelman, joka tulostaa seuraavaa. -->
 
-The exercise base contains a program that prints the following:
+The exercise template contains a program that prints the following:
 
 <sample-output>
 
@@ -107,12 +107,12 @@ Chicken:
 Bacon (kg):
 5.5
 Tractor:
-No!
+None!
 
-And a summary:
+And finally, a summary:
 3
 5.5
-No!
+None!
 
 
 </sample-output>
@@ -510,9 +510,9 @@ Hence, the possible values of a given variable type are limited. For example, a 
 
 | Type                                 | Example                   | Accepted values                                                                                                                                                                                                                                                                                                                                                      |
 | ------------------------------------ | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Whole number, eli `int`              | `int value = 4;`          | An integer can contain whole numbers whose values lie between -2147483648 and 2147483647.                                                                                                                                                                                                                                                                            |
+| Whole number, i.e. `int`              | `int value = 4;`          | An integer can contain whole numbers whose values lie between -2147483648 and 2147483647.                                                                                                                                                                                                                                                                            |
 | Floating-point number, i.e. `double` | `double value = 4.2;`     | Floating-point numbers contain decimal numbers, with the greatest possible value being approximately 2<sup>1023</sup>. When a decimal number is represented with a floating-point number, the value can be inaccurate as floating-points are incapable of representing all decimal numbers. The reasons behind this are explored in the Tietokoneen toiminta course. |
-| Merkkijono, eli `String`             | `String teksti = "Hei!";` | A string can contain text. Strings are enclosed in quotation marks.                                                                                                                                                                                                                                                                                                  |
+|  `String`             | `String text = "Hi!";` | A string can contain text. Strings are enclosed in quotation marks.                                                                                                                                                                                                                                                                                                  |
 | True or false value, i.e. `boolean`  | `boolean right = true;`   | A boolean contains either the value `true` or `false`.                                                                                                                                                                                                                                                                                                               |
 
 
@@ -639,7 +639,7 @@ You wrote 42
 
 
 <!-- <programming-exercise name="Kokonaisluvun lukeminen" tmcname='osa01-Osa01_12.KokonaisluvunLukeminen'> -->
-<programming-exercise name="Reading an integer" tmcname='osa01-Osa01_12.KokonaisluvunLukeminen'>
+<programming-exercise name="Reading an integer" tmcname='part01-Part01_12.ReadingAnInteger'>
 
 <!-- Kirjoita ohjelma, joka kysyy käyttäjältä lukua. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämän luvun.
 
@@ -647,7 +647,7 @@ Alla on annettuna ohjelman esimerkkitulostuksia: -->
 
 Write a program that asks the user for a value. The program should then print the value provided by the user.
 
-Example prints for the program are provided below.
+Here's a couple of examples:
 
 <sample-output>
 
@@ -758,7 +758,7 @@ You wrote 18.0
 </sample-output>
 
 <!-- <programming-exercise name="Liukuluvun lukeminen" tmcname='osa01-Osa01_13.LiukuluvunLukeminen'> -->
-<programming-exercise name="Reading a double" tmcname='osa01-Osa01_13.LiukuluvunLukeminen'>
+<programming-exercise name="Reading a double" tmcname='part01-Part01_13.ReadingADouble'>
 <!-- Kirjoita ohjelma, joka kysyy käyttäjältä liukulukua. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämän luvun.
 
 Alla on annettuna ohjelman esimerkkitulostuksia: -->
@@ -866,13 +866,13 @@ You wrote true
 <!--
 <programming-exercise name="Totuusarvon lukeminen" tmcname='osa01-Osa01_14.TotuusarvonLukeminen'> -->
 
-<programming-exercise name="Reading a boolean" tmcname='osa01-Osa01_14.TotuusarvonLukeminen'>
+<programming-exercise name="Reading a boolean" tmcname='part01-Part01_14.ReadingABoolean'>
 
 <!-- Kirjoita ohjelma, joka kysyy käyttäjältä totuusarvoa. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämän totuusarvon.
 
 Alla on annettuna ohjelman esimerkkitulostuksia: -->
 
-Write a program that asks the user for a boolean value. The program should then print the value inputted by the user.
+Write a program that asks the user for a boolean value. The program should then print the value provided by the user.
 
 Example prints for the program are provided below.
 
@@ -941,7 +941,7 @@ public class Program {
 ```
 <!-- <programming-exercise name="Muuttujien lukeminen yhdessä"  tmcname='osa01-Osa01_15.MuuttujienLukeminenYhdessa'> -->
 
-<programming-exercise name="Reading variables together"  tmcname='osa01-Osa01_15.MuuttujienLukeminenYhdessa'>
+<programming-exercise name="Reading variables together"  tmcname='part01-Part01_15.ReadingVariablesTogether'>
 
 <!-- Kirjoita ohjelma, joka kysyy käyttäjältä merkkijonoa, kokonaislukua, liukulukua ja totuusarvoa. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämät arvot.
 

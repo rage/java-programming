@@ -181,7 +181,7 @@ Tehtäväpohjassa on seuraavanlainen ohjelmarunko:
 public class Nimi {
     public static void main(String[] args) {
         // Kirjoita ohjelmasi tähän alle
-
+x
     }
 }
 ```
@@ -198,23 +198,24 @@ Kun olet tehnyt tehtävän ja huomaat, että ohjelma tulostaa halutun merkkijono
 </programming-exercise>
 -->
 
-Below is the courses second programming exercise. If you want, you can now watch how to solve the exercise at video below. (Unfortunately the video is in finnish.)
+Below is the second programming exercise of the course. If you want, you can now watch how to solve the exercise at video below.
 
+TODO video englanniksi?
 <youtube id="-DzOKI6iH5w"></youtube>
 
-<programming-exercise name='Ada Lovelace' tmcname='osa01-Osa01_02.AdaLovelace'>
+<programming-exercise name='Ada Lovelace' tmcname='part01-Part01_02.AdaLovelace'>
 
 In the exercise template there is the following code boilerplate:
 
 ```java
 public class Name {
     public static void main(String[] args) {
-        // Write your program below here
+        // Write your program here
 
     }
 }
 ```
-Line "// Write your program below here" is a _comment line_, which the computer doesn't take into account when executing the program. Add a new line below the comment line that prints a string "Ada Lovelace" and run the program. The output of the program should be as following:
+Line "// Write your program here" is a _line comment_, which the computer doesn't take into account when executing the program. Add a new line below the line comment that prints a string "Ada Lovelace" and run the program. The output of the program should be as following:
 
 <sample-output>
 
@@ -348,14 +349,14 @@ ohjelma
 </programming-exercise> -->
 
 
-<programming-exercise name='Once upon a time, there was a program' tmcname='osa01-Osa01_03.OlipaKerranOhjelma'>
+<programming-exercise name='Once upon a time' tmcname='part01-Part01_03.OnceUponATime'>
 
 In the exercise template there is the following code boilerplate:
 
 ```java
 public class OnceUponATime {
     public static void main(String[] args) {
-        // Implement your program here
+        // Write your program here
 
     }
 }
@@ -419,14 +420,14 @@ maa
 
 </programming-exercise> -->
 
-<programming-exercise name='Once upon a time there was an earth' tmcname='osa01-Osa01_04.OlipaKerranMaa'>
+<programming-exercise name='Once upon a time there was an earth' tmcname='part01-Part01_04.OnceUponATimeThereWasAnEarth'>
 
 In the exercise template there is the following code boilerplate:
 
 ```java
 public class OnceUponATimeThereWasAnEarth {
     public static void main(String[] args) {
-
+        // Write your program here
     }
 }
 ```

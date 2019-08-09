@@ -113,7 +113,7 @@ public class Sandbox {
 The line "// Write your program here" is a _line comment_, and the computer will ignore it when executing the program.
 
 <!-- Palauta tehtäväpohja palvelimen tarkastettavaksi ensin ilman minkäänlaisia muutoksia. Tällä tavoin harjoittelet tehtävän palauttamista. Tehtävän palauttaminen onnistuu valitsemalla TMC:ssä valikon TMC sekä sieltä kohdan "Submit". -->
-First submit the boilerplate to be checked on the server without changing anything. This way you practice submitting an exercise. You can submit an exercise by selecting the item "Submit" in the TMC menu in TMC.
+First submit the exercise template to be checked on the server without changing anything. This way you practice submitting an exercise. You can submit an exercise by selecting the item "Submit" in the TMC menu in TMC.
 
 <!-- Kun olet saanut tehtävän palautettua, kokeile yllä olevaa videota noudattaen tulostuskomennon lisäämistä ohjelmaan ja ohjelman suorittamista (play-napin painaminen). Kun saat ohjelman tulostamaan tekstiä (teksti voi olla mitä tahansa), palauta tehtävä vielä kertaalleen palvelimelle. -->
 Once you have submitted the exercise, try following the video above to add a print command to the program and to execute the program (by pressing the play - button). When you have made your program to print some text (the text can be anything), submit the exercise to the server once more.

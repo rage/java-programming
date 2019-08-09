@@ -79,13 +79,13 @@ The video below shows the process of making a program which reads user input. Wa
 
 <youtube id='7lswbb_R7uM'></youtube>
 
-<programming-exercise name='Viesti' tmcname='osa01-Osa01_05.Viesti'>
+<programming-exercise name='Message' tmcname='part01-Part01_05.Message'>
 
 <!-- Kirjoita ohjelma, joka pyytää käyttäjää kirjoittamaan merkkijonon. Kun käyttäjä on syöttänyt merkkijonon (eli kirjoittanut tekstin sekä painanut enter-näppäintä), ohjelman tulee tulostaa käyttäjän syöttämä merkkijono. -->
-Write a program, which asks user to write a string. When the user has given an input (so written some text and pressed the enter-key), the program has to print the string the user wrote.
+Write a program, which asks user to write a string. When the user has given an input (i.e. written some text and pressed the enter-key), the program has to print the string the user wrote.
 
 <!-- Tehtäväpohjan mukana tulee runko, joka sisältää Scanner-apuvälineen luomisen. -->
-The exercise template comes with the boilerplate code, including introducing and creating the Scanner -tool.
+The exercise template comes with the boilerplate code, including introducing and creating the Scanner.
 
 ```java
 import java.util.Scanner;
@@ -96,7 +96,7 @@ public class Message {
         Scanner reader = new Scanner(System.in);
 
         System.out.println("Write something!");
-        // write the program here
+        // Write your program here
     }
 }
 ```
@@ -232,7 +232,7 @@ My name is Bond, James Bond
 </sample-output>
 
 
-<programming-exercise name='Hei Ada Lovelace!' tmcname='osa01-Osa01_06.HeiAdaLovelace'>
+<programming-exercise name='Hi Ada Lovelace!' tmcname='part01-Part01_06.HiAdaLovelace'>
 
 <!-- Tehtäväpohjassa on seuraavanlainen ohjelma. -->
 The exercise template contains the following program.
@@ -302,7 +302,7 @@ This will be printed twice...
 </sample-output>
 
 
-<programming-exercise name='Viesti kolmesti' tmcname='osa01-Osa01_07.ViestiKolmesti'>
+<programming-exercise name='Message three times' tmcname='part01-Part01_07.MessageThreeTimes'>
 
 <!-- Kirjoita ohjelma, joka pyytää käyttäjää kirjoittamaan merkkijonon. Kun käyttäjä on syöttänyt merkkijonon (eli kirjoittanut tekstin sekä painanut enter-näppäintä), ohjelman tulee tulostaa käyttäjän syöttämä merkkijono kolme kertaa (voit käyttää System.out.println-komentoa useampaan kertaan). -->
 Write a program, which asks user to write a string. When the user has input a string (so written some text and pressed enter), the program must print the string the user has given three times (you can use the System.out.println - command multiple times).
@@ -383,7 +383,7 @@ You wrote this
 
 </sample-output>
 
-<programming-exercise name='Tervehdys' tmcname='osa01-Osa01_08.Tervehdys'>
+<programming-exercise name='Greeting' tmcname='osa01-Osa01_08.Greeting'>
 
 <!-- Kirjoita ohjelma, joka kysyy käyttäjältä nimeä käyttäen tekstiä "Mikä on nimesi?". Kun käyttäjä syöttää nimen, ohjelman tulee tulostaa käyttäjälle merkkijonon "Hei ", jota seuraa käyttäjän nimi. -->
 Write a program, which asks users name with the message "What's your name?". When user writes their name, the program must print "Hi " followed by the users name.
@@ -394,7 +394,7 @@ The exercise template contains boilerplate code, including creating a Scanner -t
 ```java
 import java.util.Scanner;
 
-public class Name {
+public class Greeting {
 
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
@@ -476,10 +476,10 @@ third
 </sample-output>
 
 
-<programming-exercise name='Keskustelu' tmcname='osa01-Osa01_10.Keskustelu'>
+<programming-exercise name='Conversation' tmcname='part01-Part01_10.Conversation'>
 
 <!-- Kirjoita ohjelma, joka toimii seuraavalla tavalla. -->
-Write a program which works like this.
+Write a program which works like this:
 
 <sample-output>
 
@@ -591,7 +591,7 @@ All together: onetwothree
 
 
 
-<programming-exercise name='Tarina' tmcname='osa01-Osa01_10.Tarina'>
+<programming-exercise name='Story' tmcname='part01-Part01_10.Story'>
 
 <!-- **Huom!** Esimerkkitulosteet saattavat rivittyä väärin kapeilla ruuduilla. Mikäli käytät selainikkunan koosta vain rajattua osaa, tai käytössäsi on muuten kapea ruutu, kokeile venyttää ruutua leveyssuunnassa ja tarkasta muuttuuko tekstin rivitys. Tehtävässä oletetaan "leveällä ruudulla" havaittava rivitys. -->
 **NB!** The example outputs can line up wrong in narrow screens. If you are using only a narrow portion of the size of your screen, or your screen is otherwise very narrow, try to stretch the screen horizontally and see if the text lines up differently. The exercise expects the text to line up like it does on wide screens.
@@ -600,7 +600,7 @@ All together: onetwothree
 Write a program, which asks user for the name of a character and the job of the character. Then the program prints a little story.
 
 <!-- Ohjelman tulostuksen tulee olla kuten esimerkissä -- huomaa, että nimi ja ammatti muuttuu syötteen perusteella. -->
-The output must be as shown below -- note, that the name and the job change debending on user input.
+The output must be as shown below -- note, that the name and the job depend on the user input.
 
 <sample-output>
 
@@ -612,7 +612,7 @@ What is their job?
 Here is the story:
 Once upon a time there was Bob, who was a builder.
 On their way to work, Bob thought about their life.
-Maybe Bob will not be a builder forever.
+Perhaps Bob will not be a builder forever.
 
 </sample-output>
 
@@ -644,7 +644,7 @@ What is their job?
 Here is the story:
 Once upon a time there was Ada, who was a Data scientist.
 On their way to work, Ada thought about their life.
-Maybe Ada will not be a Data scientist forever.
+Perhaps Ada will not be a Data scientist forever.
 
 </sample-output>
 
