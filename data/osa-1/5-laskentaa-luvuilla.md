@@ -93,8 +93,7 @@ System.out.println(calculationWithoutParentheses); // prints 13
 
 <!-- <programming-exercise name="Sekunnit vuorokaudessa" tmcname='osa01-Osa01_16.SekunnitVuorokaudessa'> -->
 
-<programming-exercise name="Seconds in a day"
-tmcname='osa01-Osa01_16.SekunnitVuorokaudessa'>
+<programming-exercise name="Seconds in a day" tmcname='osa01-Osa01_16.SekunnitVuorokaudessa'>
 
 <!-- Toteuta tehtäväpohjaan ohjelma, joka kysyy käyttäjältä vuorokausien lukumäärää. Tämän jälkeen ohjelma tulostaa sekuntien määrän annetuissa vuorokausissa. -->
 
@@ -393,7 +392,6 @@ Enter the second number!
 The sum of the numbers is 11
 
 </sample-output>
-
 
 <!-- <sample-output>
 
