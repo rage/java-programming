@@ -81,7 +81,7 @@ Booolean: true
 
 <!-- <programming-exercise name="Muuttuvat muuttujat" tmcname='osa01-Osa01_11.MuuttuvatMuuttujat'> -->
 
-<programming-exercise name="Varying variables" tmcname='osa01-Osa01_11.VaryingVariables'>
+<programming-exercise name="Various variables" tmcname='part01-Part01_11.VariousVariables'>
 <!-- NOTE: tmcname not translated -->
 
 <!-- Tehtäväpohja sisältää ohjelman, joka tulostaa seuraavaa. -->
@@ -639,7 +639,7 @@ You wrote 42
 
 
 <!-- <programming-exercise name="Kokonaisluvun lukeminen" tmcname='osa01-Osa01_12.KokonaisluvunLukeminen'> -->
-<programming-exercise name="Reading an integer" tmcname='part01-Part01_12.ReadingAnInteger'>
+<programming-exercise name="Integer input" tmcname='part01-Part01_12.IntegerInput'>
 
 <!-- Kirjoita ohjelma, joka kysyy käyttäjältä lukua. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämän luvun.
 
@@ -655,9 +655,9 @@ Here's a couple of examples:
 **3**
 Syötit luvun 3 -->
 
-Provide a value!
+Give a number:
 **3**
-You provided the value 3
+You gave the number 3
 
 </sample-output>
 
@@ -667,9 +667,9 @@ You provided the value 3
 **42**
 Syötit luvun 42 -->
 
-Provide a value!
+Give a number:
 **42**
-You provided the value 42
+You gave the number 42
 </sample-output>
 
 </programming-exercise>
@@ -758,7 +758,7 @@ You wrote 18.0
 </sample-output>
 
 <!-- <programming-exercise name="Liukuluvun lukeminen" tmcname='osa01-Osa01_13.LiukuluvunLukeminen'> -->
-<programming-exercise name="Reading a double" tmcname='part01-Part01_13.ReadingADouble'>
+<programming-exercise name="Double input" tmcname='part01-Part01_13.DoubleInput'>
 <!-- Kirjoita ohjelma, joka kysyy käyttäjältä liukulukua. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämän luvun.
 
 Alla on annettuna ohjelman esimerkkitulostuksia: -->
@@ -772,9 +772,9 @@ Example prints for the program are provided below:
 <!-- Syötä luku!
 **3.14**
 Syötit luvun 3.14 -->
-Provide a value!
+Give a number:
 **3.14**
-You provided 3.14
+You gave the number 3.14
 
 </sample-output>
 
@@ -783,9 +783,9 @@ You provided 3.14
 <!-- Syötä luku!
 **2.718**
 Syötit luvun 2.718 -->
-Provide a value!
+Give a number:
 **2.718**
-You provided 2.718
+You gave the number 2.718
 
 </sample-output>
 
@@ -866,7 +866,7 @@ You wrote true
 <!--
 <programming-exercise name="Totuusarvon lukeminen" tmcname='osa01-Osa01_14.TotuusarvonLukeminen'> -->
 
-<programming-exercise name="Reading a boolean" tmcname='part01-Part01_14.ReadingABoolean'>
+<programming-exercise name="Boolean input" tmcname='part01-Part01_14.BooleanInput'>
 
 <!-- Kirjoita ohjelma, joka kysyy käyttäjältä totuusarvoa. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämän totuusarvon.
 
@@ -882,9 +882,9 @@ Example prints for the program are provided below.
 **joulupukkia ei ole olemassa**
 Totta vaiko ei? false -->
 
-Input something!
+Write something:
 **santa does not exist**
-Tue or false? false
+True or false? false
 
 </sample-output>
 
@@ -893,9 +893,9 @@ Tue or false? false
 <!-- Syötä jotain!
 **TRUE**
 Totta vaiko ei? true -->
-Input something!
+Write something:
 **TRUE**
-Tue or false? true
+True or false? true
 
 </sample-output>
 
@@ -941,7 +941,7 @@ public class Program {
 ```
 <!-- <programming-exercise name="Muuttujien lukeminen yhdessä"  tmcname='osa01-Osa01_15.MuuttujienLukeminenYhdessa'> -->
 
-<programming-exercise name="Reading variables together"  tmcname='part01-Part01_15.ReadingVariablesTogether'>
+<programming-exercise name="Different types of input"  tmcname='part01-Part01_15.DifferentTypesOfInput'>
 
 <!-- Kirjoita ohjelma, joka kysyy käyttäjältä merkkijonoa, kokonaislukua, liukulukua ja totuusarvoa. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämät arvot.
 
@@ -966,18 +966,18 @@ Syötit kokonaisluvun 11
 Syötit liukuluvun 4.2
 Syötit totuusarvon true -->
 
-Provide a string!
+Give a string:
 **bye-bye**
-Provide an integer!
+Give an integer:
 **11**
-Provide a floating-point!
+Give a double:
 **4.2**
-Provide a boolean!
+Give a boolean:
 **true**
-You provided the string bye-bye
-You provided the integer 11
-You provided the floating-point 4.2
-You provided the boolean true
+You gave the string bye-bye
+You gave the integer 11
+You gave the double 4.2
+You gave the boolean true
 
 </sample-output>
 
@@ -996,18 +996,18 @@ Syötit kokonaisluvun -4
 Syötit liukuluvun 3200.1
 Syötit totuusarvon false -->
 
-Provide a string!
-**oops!**
-Provide an integer!
+Give a string:
+**Oops!**
+Give an integer:
 **-4**
-Provide a floating-point!
+Give a double:
 **3200.1**
-Provide a boolean!
+Give a boolean:
 **false**
-You provided the string oops!
-You provided the integer -4
-You provided the floating-point 3200.1
-You provided the boolean false
+You gave the string Oops!
+You gave the integer -4
+You gave the double 3200.1
+You gave the boolean false
 
 </sample-output>
 

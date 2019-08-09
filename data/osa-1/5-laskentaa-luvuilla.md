@@ -93,7 +93,9 @@ System.out.println(calculationWithoutParentheses); // prints 13
 
 <!-- <programming-exercise name="Sekunnit vuorokaudessa" tmcname='osa01-Osa01_16.SekunnitVuorokaudessa'> -->
 
-<programming-exercise name="Seconds in a day" tmcname='osa01-Osa01_16.SekunnitVuorokaudessa'>
+
+<programming-exercise name="Seconds in a day" tmcname='part01-Part01_16.SecondsInADay'>
+
 
 <!-- Toteuta tehtäväpohjaan ohjelma, joka kysyy käyttäjältä vuorokausien lukumäärää. Tämän jälkeen ohjelma tulostaa sekuntien määrän annetuissa vuorokausissa. -->
 
@@ -114,9 +116,9 @@ System.out.println("Kirjoitit " + luku);
 ```java
 Scanner scanner = new Scanner(System.in);
 
-System.out.println("Write an integer ");
+System.out.println("Give a number:");
 int number = Integer.valueOf(scanner.nextLine());
-System.out.println("You wrote " + number);
+System.out.println("You gave " + number);
 ```
 
 <!-- Esimerkkitulostuksia: -->
@@ -133,7 +135,7 @@ Kuinka monen vuorokauden sekunnit tulostetaan?
 
 <sample-output>
 
-For how many days will the number of seconds be printed?
+How many days would you like to convert to seconds?
 **1**
 86400
 
@@ -149,7 +151,7 @@ Kuinka monen vuorokauden sekunnit tulostetaan?
 
 <sample-output>
 
-For how many days will the number of seconds be printed?
+How many days would you like to convert to seconds?
 **3**
 259200
 
@@ -165,7 +167,7 @@ Kuinka monen vuorokauden sekunnit tulostetaan?
 
 <sample-output>
 
-For how many days will the number of seconds be printed?
+How many days would you like to convert to seconds?
 **7**
 604800
 
@@ -337,7 +339,7 @@ But! Twenty-two: 22
 
 <!-- <programming-exercise name="Kahden luvun summa" tmcname='osa01-Osa01_17.KahdenLuvunSumma'> -->
 
-<programming-exercise name="Sum of two numbers" tmcname='osa01-Osa01_17.KahdenLuvunSumma'>
+<programming-exercise name="Sum of two numbers" tmcname='part01-Part01_17.SumOfTwoNumbers'>
 
 <!-- Kirjoita ohjelma, joka kysyy käyttäjältä kahta lukua. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämien lukujen summan. -->
 
@@ -361,12 +363,12 @@ int toka = Integer.valueOf(lukija.nextLine());
 ```java
 Scanner scanner = new Scanner(System.in);
 
-System.out.println("Enter the first number!");
+System.out.println("Give the first number:");
 int first = Integer.valueOf(scanner.nextLine());
-System.out.println("Enter the second number!");
+System.out.println("Give the second number:");
 int second = Integer.valueOf(scanner.nextLine());
 
-// do something with the queried numbers
+// do something with the numbers
 ```
 
 <!-- Alla on annettuna ohjelman toivottuja esimerkkitulostuksia: -->
@@ -384,13 +386,11 @@ Lukujen summa on 11
 </sample-output> -->
 
 <sample-output>
-̈́
-Enter the first number!
+̈́Give the first number:
 **8**
-Enter the second number!
+Give the second number:
 **3**
 The sum of the numbers is 11
-
 </sample-output>
 
 <!-- <sample-output>
@@ -405,9 +405,9 @@ Lukujen summa on 2
 
 <sample-output>
 
-Enter the first number!
+Give the first number:
 **3**
-Enter the second number!
+Give the second number:
 **-1**
 The sum of the numbers is 2
 
@@ -442,11 +442,11 @@ Lukujen summa on 14
 
 <sample-output>
 
-Enter the first number!
+Give the first number:
 **8**
-Enter the second number!
+Give the second number:
 **3**
-Enter the third number!
+Give the third number:
 **3**
 The sum of the numbers is 14
 
@@ -466,11 +466,12 @@ Lukujen summa on 4
 
 <sample-output>
 
-Enter the first number!
+
+Give the first number:
 **3**
-Enter the second number!
+Give the second number:
 **-1**
-Enter the third number!
+Give the third number:
 **2**
 The sum of the numbers is 4
 
@@ -528,7 +529,7 @@ y is 5 and z is 6
 
 <!-- <programming-exercise name="Yhteenlasku ja kaava" tmcname='osa01-Osa01_19.YhteenlaskuJaKaava'> -->
 
-<programming-exercise name="Addition and a formula" tmcname='osa01-Osa01_19.YhteenlaskuJaKaava'>
+<programming-exercise name="Addition formula" tmcname='part01-Part01_19.AdditionFormula'>
 
 
 <!-- TODO: tarkenna tehtävänantoa (myös kaava)
@@ -554,9 +555,9 @@ Syötä toinen luku!
 
 <sample-output>
 
-Enter the first numebr!
+Give the first number:
 **5**
-Enter the second number!
+Give the second number:
 **4**
 5 + 4 = 9
 
@@ -574,10 +575,10 @@ Syötä toinen luku!
 
 <sample-output>
 
-Enter the first number!
+Give the first number:
 **73457**
-Enter the second number!
-**12888**
+Give the second number:
+**128888**
 73457 + 12888 = 86345
 
 </sample-output>
@@ -587,7 +588,7 @@ Enter the second number!
 
 <!-- <programming-exercise name="Kertolasku ja kaava" tmcname='osa01-Osa01_20.KertolaskuJaKaava'> -->
 
-<programming-exercise name="Multiplication and the formula" tmcname='osa01-Osa01_20.KertolaskuJaKaava'>
+<programming-exercise name="Multiplication formula" tmcname='part01-Part01_20.MultiplicationFormula'>
 
 
 <!-- Tee edellistä ohjelmaa mukaillen ohjelma, joka laskee kahden kokonaislukumuuttujaan sijoitetun arvon kertolaskun. -->
@@ -610,9 +611,9 @@ Syötä toinen luku!
 
 <sample-output>
 
-Enter the first number!
+Give the first number:
 **2**
-Enter the second number!
+Give the second number:
 **8**
 2 * 8 = 16
 
@@ -634,9 +635,9 @@ Syötä toinen luku!
 
 <sample-output>
 
-Enter the first number!
+Give the first number:
 **277**
-Enter the second number!
+Give the second number:
 **111**
 277 * 111 = 30747
 
@@ -845,7 +846,7 @@ In the context of programming there are a few things to remember. Firstly, divid
 
 <!-- <programming-exercise name="Kahden luvun keskiarvo" tmcname='osa01-Osa01_21.KahdenLuvunKeskiarvo'> -->
 
-<programming-exercise name="The average of two numbers" tmcname='osa01-Osa01_21.KahdenLuvunKeskiarvo'>
+<programming-exercise name="Average of two numbers" tmcname='part01-Part01_21.AverageOfTwoNumbers'>
 
 
 <!-- Kirjoita ohjelma, joka kysyy käyttäjältä kahta kokonaislukua ja tulostaa lukujen keskiarvon. -->
@@ -864,11 +865,11 @@ Syötettyjen lukujen keskiarvo on 5.0
 
 <sample-output>
 
-Enter the first number!
+Give the first number:
 **8**
-Enter the second number!
+Give the second number:
 **2**
-The average of the inputs is 5.0
+The average is 5.0
 
 </sample-output>
 
@@ -877,7 +878,7 @@ The average of the inputs is 5.0
 
 <!-- <programming-exercise name="Kolmen luvun keskiarvo"  tmcname='osa01-Osa01_22.KolmenLuvunKeskiarvo'> -->
 
-<programming-exercise name="The average of three numbers"  tmcname='osa01-Osa01_22.KolmenLuvunKeskiarvo'>
+<programming-exercise name="Average of three numbers"  tmcname='part01-Part01_22.AverageOfThreeNumbers'>
 
 
 <!-- Kirjoita ohjelma, joka kysyy käyttäjältä kolme kokonaislukua ja tulostaa lukujen keskiarvon. -->
@@ -899,13 +900,13 @@ Syötettyjen lukujen keskiarvo on 4.333333333333333
 
 <sample-output>
 
-Enter the first number!
+Give the first number:
 **8**
-Enter the second number!
+Give the second number:
 **2**
-Enter the third number!
+Give the third number:
 **3**
-The average of the inputs is 4.333333333333333
+The average is 4.333333333333333
 
 </sample-output>
 
@@ -923,13 +924,13 @@ Syötettyjen lukujen keskiarvo on 4.333333333333333
 
 <sample-output>
 
-Enter the first number!
+Give the first number:
 **9**
-Enter the second number!
+Give the second number:
 **5**
-Enter the third number!
+Give the third number:
 **-1**
-The average of the inputs is 4.333333333333333
+The average is 4.333333333333333
 
 </sample-output>
 
@@ -941,7 +942,7 @@ The average of the inputs is 4.333333333333333
 
 <!-- <programming-exercise name="Nelilaskin" tmcname='osa01-Osa01_23.Nelilaskin'> -->
 
-<programming-exercise name="Simple calculator" tmcname='osa01-Osa01_23.Nelilaskin'> -->
+<programming-exercise name="Simple calculator" tmcname='part01-Part01_23.Simple calculator'>
 
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä kaksi lukua ja tulostaa lukujen summan, lukujen erotuksen, lukujen kertolaskun, ja lukujen jakolaskun. Alla on kaksi esimerkkiä ohjelman toiminnasta. -->
@@ -963,9 +964,9 @@ Syötä toinen luku!
 
 <sample-output>
 
-Enter the first number!
+Give the first number:
 **8**
-Enter the second number!
+Give the second number:
 **2**
 8 + 2 = 10
 8 - 2 = 6
@@ -977,9 +978,9 @@ Enter the second number!
 
 <sample-output>
 
-Syötä ensimmäinen luku!
+Give the first number:
 **9**
-Syötä toinen luku!
+Give the second number:
 **2**
 9 + 2 = 11
 9 - 2 = 7
@@ -988,18 +989,7 @@ Syötä toinen luku!
 
 </sample-output>
 
-<sample-output>
 
-Enter the first number!
-**9**
-Enter the second number!
-**2**
-9 + 2 = 11
-9 - 2 = 7
-9 * 2 = 18
-9 / 2 = 4.5
-
-</sample-output>
 
 </programming-exercise>
 
