@@ -518,6 +518,7 @@ A method is written inside of the class beneath the constructor. The method name
 
 <!-- <text-box variant='hint' name='Oliot ja määre static'> -->
 <text-box variant='hint' name='Objects and the static modifier'>
+
 <!--
 Aiemmin toteuttamissamme metodeissa on ollut käytössä määre `static`. Määre `static` viittaa siihen, että metodi ei liity olioon ja sen avulla ei voi käsitellä oliolle määriteltyjä muuttujia.
 
@@ -3056,7 +3057,7 @@ Pekka: The card has a balance of 10.0 euros
 
 
 <!-- <h2>Monta korttia</h -->
-<h2>Multiple cards</h
+<h2>Multiple cards</h2>
 
 
 <!-- Tee luokan `Paaohjelma` `main`-metodiin koodi, joka sisältää seuraavan tapahtumasarjan:
@@ -3150,6 +3151,7 @@ You probably noticed that some of the figures have rounding errors. In the previ
 As the number of floating-point numbers is infinite -- (in case you're wondering "how infinite?", think how many floating-point or decimal values fit between the numbers 5 and 6 for instance). All of the floating-point numbers simply cannot be represented by a finite number of zeros and ones. Thus, the computer must place a limit on the accuracy of stored numbers.
 
 Normally, account balances, for instance, are saved as integers such that, say, the value 1 represents one cent.
+
 </text-box>
 
 
