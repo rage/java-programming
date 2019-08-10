@@ -1207,11 +1207,11 @@ public class MainProgram {
 
         System.out.println("money " + petesCard.balance());
         boolean wasSuccessful = petesCard.takeMoney(8);
-        System.out.println("successfully took money: " + wasSuccessful);
+        System.out.println("successfully withdrew: " + wasSuccessful);
         System.out.println("money " + petesCard.balance());
 
         wasSuccessful = petesCard.takeMoney(4);
-        System.out.println("successfully took money: " + wasSuccessful);
+        System.out.println("successfully withdrew: " + wasSuccessful);
         System.out.println("money " + petesCard.balance());
     }
 }
@@ -1355,23 +1355,35 @@ public class MainProgram {
 }
 ```
 
-<sample-output>
+<!-- <sample-output>
 
 vaihtorahaa jäi 7.5
 vaihtorahaa jäi 2.5
 vaihtorahaa jäi 0.0
 kassassa rahaa 1009.3 edullisia lounaita myyty 2 maukkaita lounaita myyty 1
 
+</sample-output> -->
+
+<sample-output>
+
+remaining change: 7.5
+remaining change: 2.5
+remaining change: 0.0
+money in the register: 1009.3, number of sold afforable meals: 2, number of sold hearty meals: 1
+
 </sample-output>
 
 
-<h2>Kortilla maksaminen</h2>
+<!-- <h2>Kortilla maksaminen</h2> -->
+
+<h2>Paying with card</h2>
 
 
-Laajennetaan kassapäätettä siten että myös kortilla voi maksaa. Teemme kassapäätteelle siis metodit joiden parametrina kassapääte saa maksukortin jolta se vähentää valitun lounaan hinnan. Seuraavassa uusien metodien rungot ja ohje niiden toteuttamiseksi:
+<!-- Laajennetaan kassapäätettä siten että myös kortilla voi maksaa. Teemme kassapäätteelle siis metodit joiden parametrina kassapääte saa maksukortin jolta se vähentää valitun lounaan hinnan. Seuraavassa uusien metodien rungot ja ohje niiden toteuttamiseksi: -->
 
+Let's extend our POS register to also support card payments. We are going to create new methods for the register. It receives a payment card as a parameter, and decreases its balance by the price of the meal that was purchased. Here are the outlines for the methods, and instructions for completing them.
 
-```java
+<!-- ```java
 public class Kassapaate {
     // ...
 
@@ -1389,16 +1401,40 @@ public class Kassapaate {
 
     // ...
 }
+``` -->
+
+```java
+public class POSRegister {
+    // ...
+
+    public boolean eatAffordably(PaymentCard card) {
+        // an affordable meal costs 2.50 euros
+        // if the payment card has enough money, the balance of the card is decreased by the price, and the method returns true
+        // otherwise false is returned
+    }
+
+    public boolean eatHeartily(PaymentCard card) {
+        // a hearty meal costs 4.30 euros
+        // if the payment card has enough money, the balance of the card is decreased by the price, and the method returns true
+        // otherwise false is returned
+    }
+
+    // ...
+}
 ```
 
 
-**Huom:** kortilla maksaminen ei lisää kassapäätteessä olevan käteisen määrää.
+<!-- **Huom:** kortilla maksaminen ei lisää kassapäätteessä olevan käteisen määrää. -->
+
+**N.B.:** card payments don't increase the amount of cash in the register
 
 
-Seuraavassa testipääohjelma ja haluttu tulostus:
+<!-- Seuraavassa testipääohjelma ja haluttu tulostus: -->
+
+Below is a main program to test the classes, and the output that is desired:
 
 
-```java
+<!-- ```java
 public class Paaohjelma {
     public static void main(String[] args) {
         Kassapaate unicafeExactum = new Kassapaate();
@@ -1418,9 +1454,31 @@ public class Paaohjelma {
         System.out.println(unicafeExactum);
     }
 }
+``` -->
+
+```java
+public class MainProgram {
+    public static void main(String[] args) {
+        POSRegister unicafeExactum = new POSRegister();
+
+        double change = unicafeExactum.eatAffordably(10);
+        System.out.println("remaining change: " + change);
+
+        Maksukortti annesCard = new PaymentCard(7);
+
+        boolean wasSuccessful = unicafeExactum.eatHeartily(annesCard);
+        System.out.println("there was enough money: " + wasSuccessful);
+        wasSuccessful = unicafeExactum.eatHeartily(annesCard);
+        System.out.println("there was enough money: " + wasSuccessful);
+        wasSuccessful = unicafeExactum.eatAffordably(annesCard);
+        System.out.println("there was enough money: " + wasSuccessful);
+
+        System.out.println(unicafeExactum);
+    }
+}
 ```
 
-<sample-output>
+<!-- <sample-output>
 
 vaihtorahaa jäi 7.5
 riittikö raha: true
@@ -1428,26 +1486,48 @@ riittikö raha: false
 riittikö raha: true
 kassassa rahaa 1002.5 edullisia lounaita myyty 2 maukkaita lounaita myyty 1
 
+</sample-output> -->
+
+<sample-output>
+
+remaining change: 7.5
+there was enough money: true
+there was enough money: false
+there was enough money: true
+money in the register: 1002.5, number of sold afforable meals: 2, number of sold hearty meals: 1
+
 </sample-output>
 
 
-<h2>Rahan lataaminen</h2>
+<!-- <h2>Rahan lataaminen</h2> -->
+
+<h2>Adding money</h2>
 
 
-Lisätään vielä kassapäätteelle metodi jonka avulla kortille voidaan ladata lisää rahaa. Muista, että rahan lataamisen yhteydessä ladattava summa viedään kassapäätteeseen. Metodin runko:
+<!-- Lisätään vielä kassapäätteelle metodi jonka avulla kortille voidaan ladata lisää rahaa. Muista, että rahan lataamisen yhteydessä ladattava summa viedään kassapäätteeseen. Metodin runko: -->
 
+Let's create a method for the register that can be used to add money to a payment card. Recall that the payment that is received when adding money to the card is stored in the register. The basis for the method:
+
+
+<!-- ```java
+public void lataaRahaaKortille(Maksukortti kortti, double summa) {
+    // ...
+}
+``` -->
 
 ```java
-public void lataaRahaaKortille(Maksukortti kortti, double summa) {
+public void addMoneyToCard(PaymentCard card, double sum) {
     // ...
 }
 ```
 
 
-Testipääohjelma ja esimerkkisyöte:
+<!-- Testipääohjelma ja esimerkkisyöte: -->
+
+A main program to illustrate:
 
 
-```java
+<!-- ```java
 public class Paaohjelma {
     public static void main(String[] args) {
         Kassapaate unicafeExactum = new Kassapaate();
@@ -1470,9 +1550,34 @@ public class Paaohjelma {
         System.out.println(unicafeExactum);
     }
 }
+``` -->
+
+```java
+public class MainProgram {
+    public static void main(String[] args) {
+        POSRegister unicafeExactum = new POSRegister();
+        System.out.println(unicafeExactum);
+
+        PaymentCard annesCard = new PaymentCard(2);
+
+        System.out.println("amount of money on the card is " + antinKortti.saldo() + " euros");
+
+        boolean onnistuiko = unicafeExactum.syoMaukkaasti(antinKortti);
+        System.out.println("there was enough money: " + onnistuiko);
+
+        unicafeExactum.lataaRahaaKortille(antinKortti, 100);
+
+        onnistuiko = unicafeExactum.syoMaukkaasti(antinKortti);
+        System.out.println("there was enough money: " + onnistuiko);
+
+        System.out.println("amount of money on the card is " + antinKortti.saldo() + " euros");
+
+        System.out.println(unicafeExactum);
+    }
+}
 ```
 
-<sample-output>
+<!-- <sample-output>
 
 kassassa rahaa 1000.0 edullisia lounaita myyty 0 maukkaita lounaita myyty 0
 kortilla rahaa 2.0 euroa
@@ -1481,20 +1586,37 @@ riittikö raha: true
 kortilla rahaa 97.7 euroa
 kassassa rahaa 1100.0 edullisia lounaita myyty 0 maukkaita lounaita myyty 1
 
+</sample-output> -->
+
+<sample-output>
+
+money in the register: 1000.0, number of sold afforable meals: 0, number of sold hearty meals: 0
+amount of money on the card is 2.0 euros
+there was enough money: false
+there was enough money: true
+amount of money on the card is 97.7 euros
+money in the register: 1100.0, number of sold afforable meals: 0, number of sold hearty meals: 1
+
 </sample-output>
+
 
 </programming-exercise>
 
 
-## Olio oliomuuttujana
+<!-- ## Olio oliomuuttujana -->
+
+## Object as object variable
 
 
-Oliot voivat sisältää viitteitä olioihin.
+<!-- Oliot voivat sisältää viitteitä olioihin. -->
 
-Jatketaan henkilöiden parissa ja lisätään henkilölle syntymäpäivä. Syntymäpäivä on luonnollista esittää `Paivays`-luokan avulla:
+Objects may contain references to objects.
 
+<!-- Jatketaan henkilöiden parissa ja lisätään henkilölle syntymäpäivä. Syntymäpäivä on luonnollista esittää `Paivays`-luokan avulla: -->
 
-```java
+Let's keep working with people, and add a birthday to the person class. A natural way of representing a birthday is to use a `Date` class. We could use the classname `Date`, but for the sake of avoiding confusion with the [similarly named existing Java class](https://docs.oracle.com/javase/8/docs/api/java/util/Date.html), we will use `OwnDate` here.
+
+<!-- ```java
 public class Paivays {
     private int paiva;
     private int kuukausi;
@@ -1523,12 +1645,44 @@ public class Paivays {
         return this.paiva + "." + this.kuukausi + "." + this.vuosi;
     }
 }
-```
-
-Koska tiedämme syntymäpäivän, henkilön ikää ei tarvitse säilöä erillisenä oliomuuttujana. Henkilön ikä on pääteltävissä syntymäpäivästä. Oletetaan, luokassa `Henkilo` on nyt seuraavat muuttujat.
-
+``` -->
 
 ```java
+public class OwnDate {
+    private int day;
+    private int month;
+    private int year;
+
+    public OwnDate(int day, int month, int year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+    }
+
+    public int getDay() {
+        return this.day;
+    }
+
+    public int getMonth() {
+        return this.month;
+    }
+
+    public int getYear() {
+        return this.year;
+    }
+
+    @Override
+    public String toString() {
+        return this.day + "." + this.month + "." + this.year;
+    }
+}
+```
+
+<!-- Koska tiedämme syntymäpäivän, henkilön ikää ei tarvitse säilöä erillisenä oliomuuttujana. Henkilön ikä on pääteltävissä syntymäpäivästä. Oletetaan, luokassa `Henkilo` on nyt seuraavat muuttujat. -->
+
+Since we know the birthday, there is no need to store that age of a person as a separate object variable. The age of the person can be inferred from their birthday. Let's assume that the class `Person` now has the following variables.
+
+<!-- ```java
 public class Henkilo {
     private String nimi;
     private Paivays syntymapaiva;
@@ -1536,80 +1690,149 @@ public class Henkilo {
     private int pituus = 0;
 
 // ...
-```
-
-Tehdään henkilölle uusi konstruktori, joka mahdollistaa syntymäpäivän asettamisen:
-
+``` -->
 
 ```java
+public class Person {
+    private String name;
+    private OwnDate birthday;
+    private int weight = 0;
+    private int length = 0;
+
+// ...
+```
+
+<!-- Tehdään henkilölle uusi konstruktori, joka mahdollistaa syntymäpäivän asettamisen: -->
+
+Let's create a new Person constructor that allows for setting the birthday:
+
+<!-- ```java
 public Henkilo(String nimi, Paivays paivays) {
     this.nimi = nimi;
     this.syntymapaiva = paivays;
 }
-```
-
-Edellisen konstruktorin lisäksi henkilölle voisi luoda myös konstruktorin, missä syntymäpäivä annettaisiin parametrina.
+``` -->
 
 ```java
+public Person(String name, OwnDate date) {
+    this.name = name;
+    this.birthday = date;
+}
+```
+
+<!-- Edellisen konstruktorin lisäksi henkilölle voisi luoda myös konstruktorin, missä syntymäpäivä annettaisiin parametrina. -->
+
+Along with the constructor above, we could give Person another constructor where the birthday was given as integers.
+
+<!-- ```java
 public Henkilo(String nimi, int paiva, int kuukausi, int vuosi) {
     this.nimi = nimi;
     this.syntymapaiva = new Paivays(paiva, kuukausi, vuosi);
 }
-```
-
-Konstruktorin parametrina annetaan erikseen päiväyksen osat (päivä, kuukausi, vuosi), niistä luodaan päiväysolio, ja lopulta päiväysolion viite kopioidaan oliomuuttujan `syntymapaiva` arvoksi.
-
-
-Muokataan Henkilo-luokassa olevaa `toString`-metodia siten, että metodi palauttaa iän sijaan syntymäpäivän:
-
+``` -->
 
 ```java
-public String toString() {
-    return this.nimi + ", syntynyt " + this.syntymapaiva;
+public Person(String name, int day, int month, int year) {
+    this.name = name;
+    this.birthday = new OwnDate(day, month, year);
 }
 ```
 
-Kokeillaan miten uusittu Henkilöluokka toimii.
+<!-- Konstruktorin parametrina annetaan erikseen päiväyksen osat (päivä, kuukausi, vuosi), niistä luodaan päiväysolio, ja lopulta päiväysolion viite kopioidaan oliomuuttujan `syntymapaiva` arvoksi. -->
+
+The constructor receives as parameters the different parts of the date (day, month, year). They are used to create a date object, and finally the reference to that date is copied as the value of the object variable `birthday`.
+
+
+<!-- Muokataan Henkilo-luokassa olevaa `toString`-metodia siten, että metodi palauttaa iän sijaan syntymäpäivän: -->
+
+Let's modify the `toString` method of the Person class so that instead of age, the method returns the birthday:
+
+
+<!-- ```java
+public String toString() {
+    return this.nimi + ", syntynyt " + this.syntymapaiva;
+}
+``` -->
 
 ```java
+public String toString() {
+    return this.name + ", born on " + this.syntymapaiva;
+}
+```
+
+<!-- Kokeillaan miten uusittu Henkilöluokka toimii. -->
+
+Let's see how the updated Person class works.
+
+<!-- ```java
 Paivays paivays = new Paivays(1, 1, 780);
 Henkilo muhammad = new Henkilo("Muhammad ibn Musa al-Khwarizmi", paivays);
 Henkilo pascal = new Henkilo("Blaise Pascal", 19, 6, 1623);
 
 System.out.println(muhammad);
 System.out.println(pascal);
+``` -->
+
+```java
+OwnDate date = new OwnDate(1, 1, 780);
+Henkilo muhammad = new Person("Muhammad ibn Musa al-Khwarizmi", date);
+Henkilo pascal = new Person("Blaise Pascal", 19, 6, 1623);
+
+System.out.println(muhammad);
+System.out.println(pascal);
 ```
 
-<sample-output>
+<!-- <sample-output>
 
 Muhammad ibn Musa al-Khwarizmi, syntynyt 1.1.780
 Blaise Pascal, syntynyt 19.6.1623
 
+</sample-output> -->
+
+<sample-output>
+
+Muhammad ibn Musa al-Khwarizmi, born on 1.1.780
+Blaise Pascal, born on 19.6.1623
+
 </sample-output>
 
 
-Henkilöoliolla on nyt oliomuuttujat `nimi` ja `syntymapaiva`. Muuttuja `nimi` on merkkijono, joka sekin on siis olio, ja muuttuja `syntymapaiva` on Päiväysolio.
+<!-- Henkilöoliolla on nyt oliomuuttujat `nimi` ja `syntymapaiva`. Muuttuja `nimi` on merkkijono, joka sekin on siis olio, ja muuttuja `syntymapaiva` on Päiväysolio. -->
+
+Now a person object has object variables `name` and `birthday`. The variable `name` is a string, which itself is an object; the variable `birthday is an OwnDate object.
 
 
-Molemmat muuttujat sisältävät arvon olioon. Henkilöolio sisältää siis kaksi viitettä. Alla olevassa kuvassa paino ja pituus on jätetty huomiotta.
+<!-- Molemmat muuttujat sisältävät arvon olioon. Henkilöolio sisältää siis kaksi viitettä. Alla olevassa kuvassa paino ja pituus on jätetty huomiotta. -->
 
+Both variables contain a reference to an object. Therefore a person object contains two references. In the image below, weight and height are not considered at all.
 
 <img src="../img/drawings/muhammad-ja-pascal.png"/>
 
 
-Pääohjelmalla on nyt siis langan päässä kaksi Henkilö-olioa. Henkilöllä on nimi ja syntymäpäivä. Koska molemmat ovat olioita, ovat ne henkilöllä langan päässä.
+<!-- Pääohjelmalla on nyt siis langan päässä kaksi Henkilö-olioa. Henkilöllä on nimi ja syntymäpäivä. Koska molemmat ovat olioita, ovat ne henkilöllä langan päässä. -->
+
+So the main program has is connected to two Person objects by strands. A person has a name and a birthday. Since both variables are objects, these attributes exist at the other ends of the strands.
 
 
-Syntymäpäivä vaikuttaa hyvältä laajennukselta Henkilö-luokkaan. Totesimme aiemmin, että oliomuuttuja `ika` voidaan laskea syntymäpäivästä, joten siitä hankkiuduttiin eroon.
+<!-- Syntymäpäivä vaikuttaa hyvältä laajennukselta Henkilö-luokkaan. Totesimme aiemmin, että oliomuuttuja `ika` voidaan laskea syntymäpäivästä, joten siitä hankkiuduttiin eroon. -->
 
 
-<text-box variant='hint' name='Päivämäärän käyttö Java-ohjelmissa'>
+Birthday appears to be a good extension to the Person class. Earlier we noted that the object variable `age` can be calculated with birthday, so it was removed.
 
-Käytämme edellä omaa luokkaa `Paivays` päivämäärän esittämiseen, sillä sen avulla voi havainnollistaa ja harjoitella olioiden toimintaa. Mikäli omissa ohjelmissaan haluaa käsitellä päivämääriä, kannattaa tutustua Javan valmiiseen luokkaan [LocalDate](https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html), joka sisältää merkittävän määrän päivämäärien käsittelyyn liittyvää toiminnallisuutta.
+<!-- <text-box variant='hint' name='Päivämäärän käyttö Java-ohjelmissa'> -->
 
-Esimerkiksi nykyinen päivä selviää Javan valmiin `LocalDate`-luokan avulla seuraavasti:
+<text-box variant='hint' name='Date in Java programs'>
 
-```java
+
+<!-- Käytämme edellä omaa luokkaa `Paivays` päivämäärän esittämiseen, sillä sen avulla voi havainnollistaa ja harjoitella olioiden toimintaa. Mikäli omissa ohjelmissaan haluaa käsitellä päivämääriä, kannattaa tutustua Javan valmiiseen luokkaan [LocalDate](https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html), joka sisältää merkittävän määrän päivämäärien käsittelyyn liittyvää toiminnallisuutta. -->
+
+In the section above, we use our own class `OwnDate` to represent date, because it is suitable for illustrating and practising the operation of objects. If you want to handle dates in your own programs, it's worth reading about the premade Java class [LocalDate](https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html). It contains a significant amount of functionality that can be used to handle dates.
+
+<!-- Esimerkiksi nykyinen päivä selviää Javan valmiin `LocalDate`-luokan avulla seuraavasti: -->
+
+For example, the current date can be used with the existing `LocalDate` class in the following manner:
+
+<!-- ```java
 import java.time.LocalDate;
 
 public class Esimerkki {
@@ -1625,39 +1848,78 @@ public class Esimerkki {
 
     }
 }
+``` -->
+
+```java
+import java.time.LocalDate;
+
+public class Example {
+
+    public static void main(String[] args) {
+
+        LocalDate now = LocalDate.now();
+        int year = now.getYear();
+        int month = now.getMonthValue();
+        int day = now.getDayOfMonth();
+
+        System.out.println("today is  " + day + "." + month + "." + year);
+
+    }
+}
 ```
 
 </text-box>
 
 
-<programming-exercise name='Henkilö ja lemmikki' tmcname='osa05-Osa05_08.HenkiloJaLemmikki'>
+<!-- <programming-exercise name='Henkilö ja lemmikki' tmcname='osa05-Osa05_08.HenkiloJaLemmikki'> -->
+
+<programming-exercise name='Person and pet' tmcname='osa05-Osa05_08.HenkiloJaLemmikki'>
 
 
-Tehtäväpohjassa tulee kaksi luokkaa, `Henkilo` ja `Lemmikki`. Jokaisella henkilöllä on yksi lemmikki. Täydennä luokan `Henkilo` metodia `public String toString` siten, että metodi palauttaa merkkijonon, joka kertoo henkilön nimen lisäksi lemmikin nimen ja rodun.
+
+<!-- Tehtäväpohjassa tulee kaksi luokkaa, `Henkilo` ja `Lemmikki`. Jokaisella henkilöllä on yksi lemmikki. Täydennä luokan `Henkilo` metodia `public String toString` siten, että metodi palauttaa merkkijonon, joka kertoo henkilön nimen lisäksi lemmikin nimen ja rodun. -->
+
+Two classes, `Person` and `Pet`, are included in the exercise template. Each person has one pet. Modify the `public String toString` method of the `Person` class so that the string it returns tells the pet's name and race in addition to the person's own name.
 
 
-```java
+<!-- ```java
 Lemmikki hulda = new Lemmikki("Hulda", "sekarotuinen koira");
 Henkilo leevi = new Henkilo("Leevi", hulda);
 
 System.out.println(leevi);
+``` -->
+
+```java
+Pet lucy = new Pet("Lucy", "mongrel dog");
+Person leo = new Person("Leo", lucy);
+
+System.out.println(leo);
 ```
+
+<!-- <sample-output>
+
+Leevi, kaverina Hulda, joka on sekarotuinen koira
+
+</sample-output> -->
 
 <sample-output>
 
-Leevi, kaverina Hulda, joka on sekarotuinen koira
+Leo, has a friend called Lucy (mongrel dog)
 
 </sample-output>
 
 </programming-exercise>
 
 
-## Samantyyppinen olio metodin parametrina
+<!-- ## Samantyyppinen olio metodin parametrina -->
 
-Jatkamme luokan `Henkilo` parissa. Kuten muistamme, henkilöt tietävät syntymäpäivänsä:
+## Object of same type as method parameter
 
+<!-- Jatkamme luokan `Henkilo` parissa. Kuten muistamme, henkilöt tietävät syntymäpäivänsä: -->
 
-```java
+We will continue working with the `Person` class. We recall that persons know their birthdays:
+
+<!-- ```java
 public class Henkilo {
 
     private String nimi;
@@ -1667,28 +1929,56 @@ public class Henkilo {
 
     // ...
 }
-```
-
-Haluamme vertailla kahden henkilön ikää. Vertailu voidaan hoitaa usealla tavalla. Voisimme esimerkiksi toteuttaa Henkilo-luokkaan metodin `public int ikaVuosina()`, jolloin kahden henkilön iän vertailu tapahtuisi tällöin seuraavasti:
-
+``` -->
 
 ```java
+public class Person {
+
+    private String name;
+    private Paivays birthday;
+    private int height;
+    private int weight;
+
+    // ...
+}
+```
+
+<!-- Haluamme vertailla kahden henkilön ikää. Vertailu voidaan hoitaa usealla tavalla. Voisimme esimerkiksi toteuttaa Henkilo-luokkaan metodin `public int ikaVuosina()`, jolloin kahden henkilön iän vertailu tapahtuisi tällöin seuraavasti: -->
+
+We would like to compare the ages of two people. The comparison can be done in multiple ways. We could, for instance, implement a method called `public int ageAsYears()` for the Person class; in that case, the comparison would happen in the following manner:
+
+<!-- ```java
 Henkilo muhammad = new Henkilo("Muhammad ibn Musa al-Khwarizmi", 1, 1, 780);
 Henkilo pascal = new Henkilo("Blaise Pascal", 19, 6, 1623);
 
 if (muhammad.ikaVuosina() > pascal.ikaVuosina()) {
     System.out.println(muhammad.getNimi() + " on vanhempi kuin " + pascal.getNimi());
 }
-```
-
-Opettelemme tässä hieman "oliohenkisemmän" tavan kahden henkilön ikävertailun tekemiseen.
-
-Teemme luokalle Henkilo metodin `boolean vanhempiKuin(Henkilo verrattava)`, jonka avulla tiettyä henkilö-olioa voi verrata parametrina annettuun henkilöön iän perusteella.
-
-Metodia on tarkoitus käyttää seuraavaan tyyliin:
-
+``` -->
 
 ```java
+Person muhammad = new Person("Muhammad ibn Musa al-Khwarizmi", 1, 1, 780);
+Person pascal = new Person("Blaise Pascal", 19, 6, 1623);
+
+if (muhammad.ageAsYears() > pascal.ageAsYears()) {
+    System.out.println(muhammad.getName() + " is older than " + pascal.getName());
+}
+```
+
+<!-- Opettelemme tässä hieman "oliohenkisemmän" tavan kahden henkilön ikävertailun tekemiseen. -->
+
+We are now going to learn a more "object-oriented" way to compare the ages of people.
+
+<!-- Teemme luokalle Henkilo metodin `boolean vanhempiKuin(Henkilo verrattava)`, jonka avulla tiettyä henkilö-olioa voi verrata parametrina annettuun henkilöön iän perusteella. -->
+
+We are going to create a new method `boolean olderThan(Person compared)` for the Person class. It can be used to compare a certain person object to the person supplied as the parameter based on their ages.
+
+<!-- Metodia on tarkoitus käyttää seuraavaan tyyliin: -->
+
+The method is meant to be used like this:
+
+
+<!-- ```java
 Henkilo muhammad = new Henkilo("Muhammad ibn Musa al-Khwarizmi", 1, 1, 780);
 Henkilo pascal = new Henkilo("Blaise Pascal", 19, 6, 1623);
 
@@ -1697,26 +1987,53 @@ if (muhammad.vanhempiKuin(pascal)) {  //  sama kun muhammad.vanhempiKuin(pascal)
 } else {
     System.out.println(muhammad.getNimi() + " ei ole vanhempi kuin " + pascal.getNimi());
 }
+``` -->
+
+```java
+Person muhammad = new Person("Muhammad ibn Musa al-Khwarizmi", 1, 1, 780);
+Person pascal = new Person("Blaise Pascal", 19, 6, 1623);
+
+if (muhammad.olderThan(pascal)) {  //  same as muhammad.olderThan(pascal)==true
+    System.out.println(muhammad.getName() + " is older than " + pascal.getName());
+} else {
+    System.out.println(muhammad.getName() + " is not older than " + pascal.getName());
+}
 ```
 
-Yllä oleva ohjelma kysyy onko al-Khwarizmi vanhempi kuin Pascal. Metodi `vanhempiKuin` palauttaa arvon `true` jos olio jonka kohdalla metodia kutsutaan (`olio.vanhempiKuin(parametrinaAnnettavaOlio)`) on vanhempi kuin parametrina annettava olio, ja `false` muuten.
+<!-- Yllä oleva ohjelma kysyy onko al-Khwarizmi vanhempi kuin Pascal. Metodi `vanhempiKuin` palauttaa arvon `true` jos olio jonka kohdalla metodia kutsutaan (`olio.vanhempiKuin(parametrinaAnnettavaOlio)`) on vanhempi kuin parametrina annettava olio, ja `false` muuten. -->
 
-Käytännössä yllä kutsutaan "Muhammad ibn Musa al-Khwarizmia" vastaavan olion, johon muuttuja `muhammad` viittaa, metodia `vanhempiKuin`. Metodille annetaan parametriksi "Blaise Pascal" vastaavan olion viite `pascal`.
+The program above tells if al-Khwarizmi older than Pascal. The method `olderThan` returns `true` if the object that is used to call the method (`object.olderThan(objectGivenAsParameter)`) is older thatn the object given as the parameter, and `false` otherwise.
 
-Ohjelma tulostaa:
+<!-- Käytännössä yllä kutsutaan "Muhammad ibn Musa al-Khwarizmia" vastaavan olion, johon muuttuja `muhammad` viittaa, metodia `vanhempiKuin`. Metodille annetaan parametriksi "Blaise Pascal" vastaavan olion viite `pascal`. -->
 
-<sample-output>
+In practice, we call the `olderThan` method of the object that matches "Muhammad ibn Musa al-Khwarizmi", which is referred to by the variable `muhammad`. The reference `pascal`, matching the object "Blaise Pascal", is given as the parameter to that method.
+
+<!-- Ohjelma tulostaa: -->
+
+The program prints:
+
+<!-- <sample-output>
 
 Muhammad ibn Musa al-Khwarizmi on vanhempi kuin Blaise Pascal
 
+</sample-output> -->
+
+<sample-output>
+
+Muhammad ibn Musa al-Khwarizmi is older than Blaise Pascal
+
 </sample-output>
 
-Metodille `vanhempiKuin` annetaan parametrina henkilöolio. Tarkemmin sanottuna metodin parametriksi määriteltyyn muuttujaan kopioituu parametrina annettavan muuttujan sisältämä arvo, eli viite olioon.
+<!-- Metodille `vanhempiKuin` annetaan parametrina henkilöolio. Tarkemmin sanottuna metodin parametriksi määriteltyyn muuttujaan kopioituu parametrina annettavan muuttujan sisältämä arvo, eli viite olioon. -->
 
-Metodin toteutus näyttää seuraavalta. Huomaa, että **metodi voi palauttaa arvon useammasta kohtaa** -- alla vertailu on pilkottu useampaan osaan vuoden, kuukauden ja päivän kohdalta:
+The method `olderThan` receives a person object as its parameter. More precisely, the variable that is defined as the method parameter receives a copy of the value contained by the given variable. That value is a reference to an object, in this case.
+
+<!-- Metodin toteutus näyttää seuraavalta. Huomaa, että **metodi voi palauttaa arvon useammasta kohtaa** -- alla vertailu on pilkottu useampaan osaan vuoden, kuukauden ja päivän kohdalta: -->
+
+The implementation of the method is illustrated below. Note that the **method may return a value in more than one place** -- here the comparison has been divided into multiple parts based on the years, the months, and the days:
 
 
-```java
+<!-- ```java
 public class Henkilo {
     // ...
 
@@ -1756,16 +2073,60 @@ public class Henkilo {
         return false;
     }
 }
+``` -->
+
+```java
+public class Person {
+    // ...
+
+    public boolean olderThan(Person compared) {
+        // 1. First compare years
+        int ownYear = this.getBirthday().getYear();
+        int comparedYear = compared.getBirthday().getYear();
+
+        if (ownYear < comparedYear) {
+            return true;
+        }
+
+        if (ownYear > comparedYear) {
+            return false;
+        }
+
+        // 2. Same birthyear, compare months
+        int ownMonth = this.getBirthday().getMonth();
+        int comparedMonth = compared.getBirthday().getMonth();
+
+        if (ownMonth < comparedMonth) {
+            return true;
+        }
+
+        if (ownMonth > comparedMonth) {
+            return false;
+        }
+
+        // 3. Same birth year and month, compare days
+        int ownDay = this.getBirthday().getDay();
+        int comparedDay = compared.getBirthday().getDay();
+
+        if (ownDay < comparedDay) {
+            return true;
+        }
+
+        return false;
+    }
+}
 ```
 
 
-Mietitään hieman olio-ohjelmoinnin periatteiden abstrahointia. Abstrahoinnin ajatuksena on käsitteellistää ohjelmakoodia siten, että kullakin käsitteellä on omat selkeät vastuunsa. Kun pohdimme yllä esitettyä ratkaisua, huomaamme, että päivämäärien vertailutoiminnallisuus kuuluisi mielummin luokkaan `Paivays` luokan `Henkilo`-sijaan.
+<!-- Mietitään hieman olio-ohjelmoinnin periatteiden abstrahointia. Abstrahoinnin ajatuksena on käsitteellistää ohjelmakoodia siten, että kullakin käsitteellä on omat selkeät vastuunsa. Kun pohdimme yllä esitettyä ratkaisua, huomaamme, että päivämäärien vertailutoiminnallisuus kuuluisi mielummin luokkaan `Paivays` luokan `Henkilo`-sijaan. -->
 
+Let's pause for a moment to consider abstraction, one of the principles of object-oriented programming. The idea behind abstraction is to conceptualize the programming code so that each concept has its own clear responsibilities. When viewing the solution above, however, we notice that the comparison functionality would be better placed inside the `OwnDate` class instead of the `Person` class.
 
-Luodaan luokalle `Paivays` metodi `public boolean aiemmin(Paivays verrattava)`. Metodi palauttaa arvon `true`, jos metodille parametrina annettu päiväys on kyseisen olion päiväyksen jälkeen.
+<!-- Luodaan luokalle `Paivays` metodi `public boolean aiemmin(Paivays verrattava)`. Metodi palauttaa arvon `true`, jos metodille parametrina annettu päiväys on kyseisen olion päiväyksen jälkeen. -->
 
+We'll create a method called `public boolean before(OwnDate compared)` for the class `OwnDate`. The method returns the value `true` if the date given as the parameter is after (or on the same day as) the date of the object whose method is called.
 
-```java
+<!-- ```java
 public class Paivays {
     private int paiva;
     private int kuukausi;
@@ -1810,13 +2171,64 @@ public class Paivays {
         return false;
     }
 }
-```
-
-Vaikka oliomuuttujat `vuosi`, `kuukausi` ja `paiva` ovat olion kapseloimia (`private`) oliomuuttujia, pystymme lukemaan niiden arvon kirjoittamalla `verrattava.*muuttujanNimi*`. Tämä johtuu siitä, että `private`-muuttujat ovat luettavissa kaikissa metodeissa, jotka kyseinen luokka sisältää. Huomaa, että syntaksi (kirjoitusasu) vastaa tässä jonkin olion metodin kutsumista. Toisin kuin metodia kutsuttaessa, viittaamme olion kenttään, jolloin metodikutsun osoittavia sulkeita ei kirjoiteta.
-
-Metodin käyttöesimerkki:
+``` -->
 
 ```java
+public class OwnDate {
+    private int day;
+    private int month;
+    private int year;
+
+    public OwnDate(int day, int month, int year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+    }
+
+    public String toString() {
+        return this.day + "." + this.month + "." + this.year;
+    }
+
+    // used to check if this date object (`this`) is before
+    // the date object given as the parameter (`compared`)
+    public boolean before(OwnDate compared) {
+        // first compare years
+        if (this.year < compared.year) {
+            return true;
+        }
+
+        if (this.year > compared.year) {
+            return false;
+        }
+
+        // years are same, compare months
+        if (this.month < compared.month) {
+            return true;
+        }
+
+        if (this.month > compared.month) {
+            return false;
+        }
+
+        // years and months are same, compare days
+        if (this.day < compared.day) {
+            return true;
+        }
+
+        return false;
+    }
+}
+```
+
+<!-- Vaikka oliomuuttujat `vuosi`, `kuukausi` ja `paiva` ovat olion kapseloimia (`private`) oliomuuttujia, pystymme lukemaan niiden arvon kirjoittamalla `verrattava.*muuttujanNimi*`. Tämä johtuu siitä, että `private`-muuttujat ovat luettavissa kaikissa metodeissa, jotka kyseinen luokka sisältää. Huomaa, että syntaksi (kirjoitusasu) vastaa tässä jonkin olion metodin kutsumista. Toisin kuin metodia kutsuttaessa, viittaamme olion kenttään, jolloin metodikutsun osoittavia sulkeita ei kirjoiteta. -->
+
+Even though the object variables `year`, `month`, and `day` are encapsulated (`private`) object variables, we can read their values by writing `compared.*variableName*`. This is because `private` variable can be accessed from all the methods contained by that class. Notice that the syntax here matches calling some object method. Unlike when calling a method, we refer to a field of an object, so the parentheses that indicate a method call are not written.
+
+<!-- Metodin käyttöesimerkki: -->
+
+An example of how to use the method:
+
+<!-- ```java
 public static void main(String[] args) {
     Paivays p1 = new Paivays(14, 2, 2011);
     Paivays p2 = new Paivays(21, 2, 2011);
@@ -1832,9 +2244,27 @@ public static void main(String[] args) {
     System.out.println(p4 + " aiemmin kuin " + p1 + ": " + p4.aiemmin(p1));
     System.out.println(p1 + " aiemmin kuin " + p4 + ": " + p1.aiemmin(p4));
 }
+``` -->
+
+```java
+public static void main(String[] args) {
+    OwnDate d1 = new OwnDate(14, 2, 2011);
+    OwnDate d2 = new OwnDate(21, 2, 2011);
+    OwnDate d3 = new OwnDate(1, 3, 2011);
+    OwnDate d4 = new OwnDate(31, 12, 2010);
+
+    System.out.println(p1 + " is earlier than " + p2 + ": " + p1.before(p2));
+    System.out.println(p2 + " is earlier than " + p1 + ": " + p2.before(p1));
+
+    System.out.println(p2 + " is earlier than " + p3 + ": " + p2.before(p3));
+    System.out.println(p3 + " is earlier than " + p2 + ": " + p3.before(p2));
+
+    System.out.println(p4 + " is earlier than " + p1 + ": " + p4.before(p1));
+    System.out.println(p1 + " is earlier than " + p4 + ": " + p1.before(p4));
+}
 ```
 
-<sample-output>
+<!-- <sample-output>
 
 14.2.2011 aiemmin kuin 21.2.2011: true
 21.2.2011 aiemmin kuin 14.2.2011: false
@@ -1843,13 +2273,24 @@ public static void main(String[] args) {
 31.12.2010 aiemmin kuin 14.2.2011: true
 14.2.2011 aiemmin kuin 31.12.2010: false
 
+</sample-output> -->
+
+<sample-output>
+
+14.2.2011 is earlier than 21.2.2011: true
+21.2.2011 is earlier than 14.2.2011: false
+21.2.2011 is earlier than 1.3.2011: true
+1.3.2011 is earlier than 21.2.2011: false
+31.12.2010 is earlier than 14.2.2011: true
+14.2.2011 is earlier than 31.12.2010: false
+
 </sample-output>
 
+<!-- Muunnetaan vielä henkilön metodia vanhempiKuin siten, että hyödynnämme jatkossa päivämäärän tarjoamaa vertailutoiminnallisuutta. -->
 
-Muunnetaan vielä henkilön metodia vanhempiKuin siten, että hyödynnämme jatkossa päivämäärän tarjoamaa vertailutoiminnallisuutta.
+Let's tweak the method olderThan of the Person class so that from here on out, we take use of the comparison functionality that date objects provide.
 
-
-```java
+<!-- ```java
 public class Henkilo {
     // ...
 
@@ -1864,12 +2305,34 @@ public class Henkilo {
         // return this.syntymapaiva.aiemmin(verrattava.getSyntymapaiva());
     }
 }
+``` -->
+
+```java
+public class Person {
+    // ...
+
+    public boolean olderThan(Person compared) {
+        if (this.birthday.before(compared.getBirthday())) {
+            return true;
+        }
+
+        return false;
+
+        // or return more directly:
+        // return this.birthday.before(compared.getBirthday());
+    }
+}
 ```
 
-Nyt päivämäärän konkreettinen vertailu on toteutettu luokassa, johon se loogisesti (luokkien nimien perusteella) kuuluukin.
+<!-- Nyt päivämäärän konkreettinen vertailu on toteutettu luokassa, johon se loogisesti (luokkien nimien perusteella) kuuluukin. -->
+
+Now the concrete comparison of dates is implemented in the class that it logically (based on the class names) belongs to.
 
 
-<programming-exercise name='Asuntovertailu (3 osaa)' tmcname='osa05-Osa05_11.Asuntovertailu'>
+<!-- <programming-exercise name='Asuntovertailu (3 osaa)' tmcname='osa05-Osa05_11.Asuntovertailu'> -->
+
+<programming-exercise name='Apartment comparison (3 sections)' tmcname='osa05-Osa05_11.Asuntovertailu'>
+
 
 Asuntovälitystoimiston tietojärjestelmässä kuvataan myynnissä olevaa asuntoa seuraavasta luokasta tehdyillä olioilla:
 
