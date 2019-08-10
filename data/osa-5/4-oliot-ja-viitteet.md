@@ -2334,10 +2334,11 @@ Now the concrete comparison of dates is implemented in the class that it logical
 <programming-exercise name='Apartment comparison (3 sections)' tmcname='osa05-Osa05_11.Asuntovertailu'>
 
 
-Asuntovälitystoimiston tietojärjestelmässä kuvataan myynnissä olevaa asuntoa seuraavasta luokasta tehdyillä olioilla:
+<!-- Asuntovälitystoimiston tietojärjestelmässä kuvataan myynnissä olevaa asuntoa seuraavasta luokasta tehdyillä olioilla: -->
 
+In the estate agent's information system, an aparment that is on sale is represented by an object that is instantiated from the following class:
 
-```java
+<!-- ```java
 public class Asunto {
     private int huoneita;
     private int nelioita;
@@ -2349,69 +2350,130 @@ public class Asunto {
         this.neliohinta = neliohinta;
     }
 }
-```
-
-Tehtävänä on toteuttaa muutama metodi, joiden avulla myynnissä olevia asuntoja voidaan vertailla.
-
-
-<h2>Onko asunto suurempi</h2>
-
-Tee metodi `public boolean suurempi(Asunto verrattava)` joka palauttaa true jos asunto-olio, jolle metodia kutsutaan, on pinta-alaltaan suurempi kuin verrattavana oleva asunto-olio.
-
-Esimerkki metodin toiminnasta:
-
+``` -->
 
 ```java
+public class Apartment {
+    private int rooms;
+    private int squares;
+    private int pricePerSquare;
+
+    public Apartment(int rooms, int squares, int pricePerSquare) {
+        this.rooms = rooms;
+        this.square = squares;
+        this.pricePerSquare = pricePerSquare;
+    }
+}
+```
+
+<!-- Tehtävänä on toteuttaa muutama metodi, joiden avulla myynnissä olevia asuntoja voidaan vertailla. -->
+
+Your task is to create a few methods that can be used to compare apartments that are being sold.
+
+
+<!-- <h2>Onko asunto suurempi</h2> -->
+
+<h2>Is apartment larger</h2>
+
+<!-- Tee metodi `public boolean suurempi(Asunto verrattava)` joka palauttaa true jos asunto-olio, jolle metodia kutsutaan, on pinta-alaltaan suurempi kuin verrattavana oleva asunto-olio. -->
+
+Create a method `public boolean largerThan(Apartment compared)` that returns true if the apartment object whose method is called has a larger total area than the apartment object that is being compared.
+
+<!-- Esimerkki metodin toiminnasta: -->
+
+An example of how the method should work:
+
+
+<!-- ```java
 Asunto eiraYksio = new Asunto(1, 16, 5500);
 Asunto kallioKaksio = new Asunto(2, 38, 4200);
 Asunto jakomakiKolmio = new Asunto(3, 78, 2500);
 
 System.out.println(eiraYksio.suurempi(kallioKaksio));       // false
 System.out.println(jakomakiKolmio.suurempi(kallioKaksio));  // true
-```
-
-<h2>Asuntojen hintaero</h2>
-
-
-Tee metodi `public int hintaero(Asunto verrattava)` joka palauttaa asunto-olion jolle metodia kutsuttiin ja parametrina olevan asunto-olion hintaeron. Hintaero on asuntojen hintojen erotuksen (hinta lasketaan kertomalla neliöhinta neliöillä) itseisarvo.
-
-Esimerkki metodin toiminnasta:
+``` -->
 
 ```java
+Apartment manhattanSingleRoomApt = new Apartment(1, 16, 5500);
+Apartment atlantaTwoRoomApt = new Apartment(2, 38, 4200);
+Apartment bangorThreeRoomApt = new Apartment(3, 78, 2500);
+```
+
+<!-- <h2>Asuntojen hintaero</h2> -->
+
+<h2>Apartment price difference</h2>
+
+
+<!-- Tee metodi `public int hintaero(Asunto verrattava)` joka palauttaa asunto-olion jolle metodia kutsuttiin ja parametrina olevan asunto-olion hintaeron. Hintaero on asuntojen hintojen erotuksen (hinta lasketaan kertomalla neliöhinta neliöillä) itseisarvo. -->
+
+Create a method `public int priceDifference(Apartment compared)` that returns the price difference of the apartment object whose method was called and the apartment object received as the parameter. The price difference is the absolute value of the difference of the prices (price can be calculated by multiplying the price per square by the number of squares).
+
+<!-- Esimerkki metodin toiminnasta: -->
+
+An example of how the method should work:
+
+<!-- ```java
 Asunto eiraYksio = new Asunto(1, 16, 5500);
 Asunto kallioKaksio = new Asunto(2, 38, 4200);
 Asunto jakomakiKolmio = new Asunto(3, 78, 2500);
 
 System.out.println(eiraYksio.hintaero(kallioKaksio));        // 71600
 System.out.println(jakomakiKolmio.hintaero(kallioKaksio));   // 35400
+``` -->
+
+```java
+Apartment manhattanSingleRoomApt = new Apartment(1, 16, 5500);
+Apartment atlantaTwoRoomApt = new Apartment(2, 38, 4200);
+Apartment bangorThreeRoomApt = new Apartment(3, 78, 2500);
+
+System.out.println(manhattanSingleRoomApt.priceDifference(atlantaTwoRoomApt));  //71600
+System.out.println(bangorThreeRoomApt.priceDifference(atlantaTwoRoomApt));   //35400
 ```
 
 
-<h2>Onko asunto kalliimpi</h2>
+<!-- <h2>Onko asunto kalliimpi</h2> -->
+
+<h2>Is apartment more expensive?</h2>
 
 
-Tee metodi `public boolean kalliimpi(Asunto verrattava)` joka palauttaa true jos asunto-olio, jolle metodia kutsutaan on kalliimpi kuin verrattavana oleva asunto-olio.
+<!-- Tee metodi `public boolean kalliimpi(Asunto verrattava)` joka palauttaa true jos asunto-olio, jolle metodia kutsutaan on kalliimpi kuin verrattavana oleva asunto-olio. -->
 
-Esimerkki metodin toiminnasta:
+Write a method `public boolean moreExpensiveThan(Apartment compared)` that returns true if the apartment object whose method is called is more expensive than the apartment object being compared.
 
-```java
+<!-- Esimerkki metodin toiminnasta: -->
+
+An example of how the method should work:
+
+<!-- ```java
 Asunto eiraYksio = new Asunto(1, 16, 5500);
 Asunto kallioKaksio = new Asunto(2, 38, 4200);
 Asunto jakomakiKolmio = new Asunto(3, 78, 2500);
 
 System.out.println(eiraYksio.kalliimpi(kallioKaksio));       // false
 System.out.println(jakomakiKolmio.kalliimpi(kallioKaksio));   // true
+``` -->
+
+```java
+Apartment manhattanSingleRoomApt = new Apartment(1, 16, 5500);
+Apartment atlantaTwoRoomApt = new Apartment(2, 38, 4200);
+Apartment bangorThreeRoomApt = new Apartment(3, 78, 2500);
+
+System.out.println(manhattanSingleRoomApt.moreExpensiveThan(atlantaTwoRoomApt));  // true
+System.out.println(bangorThreeRoomApt.moreExpensiveThan(atlantaTwoRoomApt));   // false
 ```
 
 </programming-exercise>
 
 
-## Olioiden samankaltaisuuden vertailu (equals)
+<!-- ## Olioiden samankaltaisuuden vertailu (equals) -->
 
-Opimme merkkijonojen käsittelyn yhteydessä, että merkkijonojen vertailu tulee toteuttaa `equals`-metodin avullla. Tämä tapahtuu seuraavasti.
+## Comparing the equality of objects (equals)
 
+<!-- Opimme merkkijonojen käsittelyn yhteydessä, että merkkijonojen vertailu tulee toteuttaa `equals`-metodin avullla. Tämä tapahtuu seuraavasti. -->
 
-```java
+Working with strings, we learned that comparison between strings must be done with the `equals` method. This is how it's done.
+
+<!-- ```java
 Scanner lukija = new Scanner(System.in);
 
 System.out.println("Syötä kaksi sanaa, kumpikin omalle rivilleen.")
@@ -2423,13 +2485,31 @@ if (eka.equals(toka)) {
 } else {
     System.out.println("Sanat eivät olleet samat.");
 }
-```
-
-Alkeistyyppisten muuttujien kuten `int` kanssa muuttujien vertailu on mahdollista kahden yhtäsuuruusmerkin avulla. Tämä johtuu siitä, että alkeistyyppisten muuttujien arvo sijaitsee "muuttujan lokerossa". Viittaustyyppisten muuttujien arvo on taas osoite viitattavaan olioon, eli viittaustyyppisten muuttujien "lokerossa" on viite muistipaikkaan. Kahden yhtäsuuruusmerkin avulla verrataan "muuttujan lokeron" sisällön yhtäsuuruutta -- viittaustyyppisillä muuttujilla vertailu tarkastelisi siis muuttujien viitteiden yhtäsuuruutta.
-
-Metodi `equals` on samankaltainen metodi kuin `toString` siinä, että se on käytettävissä vaikkei metodia olisi luokkaan määritelty. Metodin oletustoteutus vertaa viitteiden yhtäsuuruutta. Tarkastellaan tätä aiemmin toteuttamamme `Paivays`-luokan avulla.
+``` -->
 
 ```java
+Scanner scanner = new Scanner(System.in);
+
+System.out.println("Enter two words, each on its own line.")
+String first = scanner.nextLine();
+String second = scanner.nextLine();
+
+if (first.equals(second)) {
+    System.out.println("The words were the same.");
+} else {
+    System.out.println("The words were not the same.");
+}
+```
+
+<!-- Alkeistyyppisten muuttujien kuten `int` kanssa muuttujien vertailu on mahdollista kahden yhtäsuuruusmerkin avulla. Tämä johtuu siitä, että alkeistyyppisten muuttujien arvo sijaitsee "muuttujan lokerossa". Viittaustyyppisten muuttujien arvo on taas osoite viitattavaan olioon, eli viittaustyyppisten muuttujien "lokerossa" on viite muistipaikkaan. Kahden yhtäsuuruusmerkin avulla verrataan "muuttujan lokeron" sisällön yhtäsuuruutta -- viittaustyyppisillä muuttujilla vertailu tarkastelisi siis muuttujien viitteiden yhtäsuuruutta. -->
+
+With primitive variables such as `int`, comparing two variables can be done with two equality signs. This is becuase the value of a primitive variable is stored directly in the "variable's box". The value of reference variables, in contrast, is an address of the object that is referenced; so the "box" contains a reference to the memory location. Using two equality signs compares the equality of the values stored in the "boxes of the variables" -- with reference variables, such comparisons would examine the equality of the memory references.
+
+<!-- Metodi `equals` on samankaltainen metodi kuin `toString` siinä, että se on käytettävissä vaikkei metodia olisi luokkaan määritelty. Metodin oletustoteutus vertaa viitteiden yhtäsuuruutta. Tarkastellaan tätä aiemmin toteuttamamme `Paivays`-luokan avulla. -->
+
+The method `equals` is similar to the method `toString` in the respect that it is available for use even if it has not been defined in the class. The default implementation of this method compares the equality of the references. Let's observe this with the help of the previously written `OwnDate` class.
+
+<!-- ```java
 Paivays eka = new Paivays(1, 1, 2000);
 Paivays toka = new Paivays(1, 1, 2000);
 Paivays kolmas = new Paivays(12, 12, 2012);
@@ -2458,28 +2538,74 @@ if (eka.equals(neljas)) {
 } else {
     System.out.println("Muuttujat eka ja neljas eivät ole samat");
 }
+``` -->
+
+```java
+OwnDate first = new OwnDate(1, 1, 2000);
+OwnDate second = new OwnDate(1, 1, 2000);
+OwnDate third = new OwnDate(12, 12, 2012);
+OwnDate fourth = first;
+
+if (first.equals(first)) {
+    System.out.println("Variables first and first are equal");
+} else {
+    System.out.println("Variables first and first are not equal");
+}
+
+if (first.equals(second)) {
+    System.out.println("Variables first and second are equal");
+} else {
+    System.out.println("Variables first and second are not equal");
+}
+
+if (first.equals(third)) {
+    System.out.println("Variables first and third are equal");
+} else {
+    System.out.println("Variables first and third are not equal");
+}
+
+if (first.equals(fourth)) {
+    System.out.println("Variables first and fourth are equal");
+} else {
+    System.out.println("Variables first and fourth are not equal");
+}
 ```
 
-<sample-output>
+<!-- <sample-output>
 
 Muuttujat eka ja eka ovat samat
 Muuttujat eka ja toka eivät ole samat
 Muuttujat eka ja kolmas eivät ole samat
 Muuttujat eka ja neljas ovat samat
 
+</sample-output> -->
+
+<sample-output>
+
+Variables first and first are equal
+Variables first and second are not equal
+Variables first and third are not equal
+Variables first and fourth are equal
+
 </sample-output>
 
 
-Esimerkkiohjelma näyttää ongelman. Vaikka kahdella päiväyksellä (eka ja toka) on täsmälleen samat oliomuuttujan arvot, ovat ne metodin `equals` oletustoteutuksen näkökulmasta toisistaan poikkeavat.
+<!-- Esimerkkiohjelma näyttää ongelman. Vaikka kahdella päiväyksellä (eka ja toka) on täsmälleen samat oliomuuttujan arvot, ovat ne metodin `equals` oletustoteutuksen näkökulmasta toisistaan poikkeavat. -->
+
+There is a problem with the program above. Even though two dates (first and second) have exactly the same values for object variables, they are different from each other from the point of view of the default `equals` method.
 
 
-Mikäli haluamme pystyä vertailemaan kahta itse toteuttamaamme oliota equals-metodilla, tulee metodi määritellä luokkaan. Metodi equals määritellään boolean-tyyppisen arvon palauttavana metodina -- palautettu arvo kertoo ovatko oliot samat.
+<!-- Mikäli haluamme pystyä vertailemaan kahta itse toteuttamaamme oliota equals-metodilla, tulee metodi määritellä luokkaan. Metodi equals määritellään boolean-tyyppisen arvon palauttavana metodina -- palautettu arvo kertoo ovatko oliot samat. -->
+
+If we want to be able to compare two objects of our own design with the equals method, that method must be defined in the class. The method equals is defined as a method that returns a boolean type value -- the return value indicates whether the objects are equal.
 
 
-Metodi `equals` toteutetaan siten, että sen avulla voidaan vertailla nykyistä oliota mihin tahansa muuhun olioon. Metodi saa parametrinaan Object-tyyppisen olion -- kaikki oliot ovat oman tyyppinsä lisäksi Object-tyyppisiä. Metodissa ensin vertaillaan ovatko osoitteet samat: jos kyllä, oliot ovat samat. Tämän jälkeen tarkastellaan ovatko olion tyypit samat: jos ei, oliot eivät ole samat. Tämän jälkeen parametrina saatu Object-olio muunnetaan tyyppimuunnoksella tarkasteltavan olion muotoiseksi, ja oliomuuttujien arvoja vertaillaan. Alla vertailu on toteutettu Paivays-oliolle.
+<!-- Metodi `equals` toteutetaan siten, että sen avulla voidaan vertailla nykyistä oliota mihin tahansa muuhun olioon. Metodi saa parametrinaan Object-tyyppisen olion -- kaikki oliot ovat oman tyyppinsä lisäksi Object-tyyppisiä. Metodissa ensin vertaillaan ovatko osoitteet samat: jos kyllä, oliot ovat samat. Tämän jälkeen tarkastellaan ovatko olion tyypit samat: jos ei, oliot eivät ole samat. Tämän jälkeen parametrina saatu Object-olio muunnetaan tyyppimuunnoksella tarkasteltavan olion muotoiseksi, ja oliomuuttujien arvoja vertaillaan. Alla vertailu on toteutettu Paivays-oliolle. -->
+
+The method `equals` is implemented in a way that allows for using it to compare the current object with any other object. The method receives an Object type object as its single parameter -- all objects are Object type, in addition to their own type. The equals method first compares if the addresses are equal: if so, the objects are equal. After this, we examine if the types of the objects are the same: if not, the objects are not equal. Then the Object object passed as the parameter is converted to the type of the object that is being examined by using a type cast. Then the values of the object variables can be compared. Below the equality comparison has been implemented for the OwnDate class.
 
 
-```java
+<!-- ```java
 public class Paivays {
     private int paiva;
     private int kuukausi;
@@ -2534,12 +2660,71 @@ public class Paivays {
         return this.paiva + "." + this.kuukausi + "." + this.vuosi;
     }
 }
-```
-
-Vastaavan vertailutoiminnallisuuden rakentaminen onnistuu myös Henkilö-olioille. Alla vertailu on toteutettu Henkilo-oliolle, jolla ei ole erillista Paivays-oliota. Huomaa, että henkilöiden nimet ovat merkijonoja (eli olioita), joten niiden vertailussa käytetään equals-metodia.
-
+``` -->
 
 ```java
+public class OwnDate {
+    private int day;
+    private int month;
+    private int year;
+
+    public OwnDate(int day, int month, int year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+    }
+
+    public int getDay() {
+        return this.day;
+    }
+
+    public int getMonth() {
+        return this.month;
+    }
+
+    public int getYear() {
+        return this.year;
+    }
+
+    public boolean equals(Object compared) {
+        // if the variables are located in the same position, they are equal
+        if (this == compared) {
+            return true;
+        }
+
+        // if the type of the compared object is not OwnDate, the objects are not equal
+        if (!(compared instanceof OwnDate)) {
+            return false;
+        }
+
+        // convert the Object type compared object
+        // into an OwnDate type object called comparedOwnDate
+        OwnDate comparedOwnDate = (OwnDate) compared;
+
+        // if the values of the object variables are the same, the objects are equal
+        if (this.day == comparedOwnDate.date &&
+            this.month == comparedOwnDate.month &&
+            this.year == comparedOwnDate.year) {
+            return true;
+        }
+
+        // otherwise the objects are not equal
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        return this.day + "." + this.month + "." + this.year;
+    }
+}
+```
+
+<!-- Vastaavan vertailutoiminnallisuuden rakentaminen onnistuu myös Henkilö-olioille. Alla vertailu on toteutettu Henkilo-oliolle, jolla ei ole erillista Paivays-oliota. Huomaa, että henkilöiden nimet ovat merkijonoja (eli olioita), joten niiden vertailussa käytetään equals-metodia. -->
+
+Building a similar comparison functionality is possible for Person objects, too. Below, the comparison has been implemented for Person objects that don't have a separate OwnDate object. Notice that the names of people are strings (i.e. objects), so we use the equals method for comparing them.
+
+
+<!-- ```java
 public class Henkilo {
 
     private String nimi;
@@ -2578,15 +2763,63 @@ public class Henkilo {
 
     // .. metodeja
 }
+``` -->
+
+```java
+public class Person {
+
+    private String name;
+    private int age;
+    private int weight;
+    private int height;
+
+    // constructors and methods
+
+
+    public boolean equals(Object compared) {
+        // if the variables are located in the same position, they are equal
+        if (this == compared) {
+            return true;
+        }
+
+        // if the compared object is not of type Person, the objects are not equal
+        if (!(compared instanceof Person)) {
+            return false;
+        }
+
+        // muunnetaan olio Henkilo-olioksi
+        // convert the object into a Person object
+        Person comparedPerson = (Person) compared;
+
+        // jos olioiden oliomuuttujien arvot ovat samat, ovat oliot samat
+        // if the values of the object variables are equal, the objects are equal
+        if (this.name.equals(comparedPerson.name) &&
+            this.age == comparedPerson.ika &&
+            this.weight == comparedPerson.weight &&
+            this.height == comparedPerson.height) {
+            return true;
+        }
+
+        // otherwise the objects are not equal
+        return false;
+    }
+
+    // .. methods
+}
 ```
 
 
-<programming-exercise name='Kappale' tmcname='osa05-Osa05_12.Kappale'>
+<!-- <programming-exercise name='Kappale' tmcname='osa05-Osa05_12.Kappale'> -->
 
-Tehtäväpohjassa on luokka `Kappale`, jonka perusteella voidaan luoda musiikkikappaleita esittäviä olioita. Lisää luokkaan kappale metodi `equals`, jonka avulla voidaan tarkastella musiikkikappaleiden samankaltaisuutta.
+<programming-exercise name='Song' tmcname='osa05-Osa05_12.Kappale'>
 
 
-```java
+<!-- Tehtäväpohjassa on luokka `Kappale`, jonka perusteella voidaan luoda musiikkikappaleita esittäviä olioita. Lisää luokkaan kappale metodi `equals`, jonka avulla voidaan tarkastella musiikkikappaleiden samankaltaisuutta. -->
+
+In the exercise base there is a class called `Song` that can be used to create new objects that represent songs. Add to that class the `equals` method so that the similarity of songs can be examined.
+
+
+<!-- ```java
 Kappale jackSparrow = new Kappale("The Lonely Island", "Jack Sparrow", 196);
 Kappale toinenSparrow = new Kappale("The Lonely Island", "Jack Sparrow", 196);
 
@@ -2597,27 +2830,55 @@ if (jackSparrow.equals(toinenSparrow)) {
 if (jackSparrow.equals("Toinen olio")) {
     System.out.println("Nyt on jotain hassua.");
 }
+``` -->
+
+```java
+Song jackSparrow = new Song("The Lonely Island", "Jack Sparrow", 196);
+Song anotherSparrow = new Song("The Lonely Island", "Jack Sparrow", 196);
+
+if (jackSparrow.equals(anotherSparrow)) {
+    System.out.println("Songs are equal.");
+}
+
+if (jackSparrow.equals("Another object")) {
+    System.out.println("Strange things are afoot.");
+}
 ```
+
+<!-- <sample-output>
+
+Kappaleet olivat samat.
+
+</sample-output> -->
 
 <sample-output>
 
-Kappaleet olivat samat.
+Songs are equal
 
 </sample-output>
 
 </programming-exercise>
 
 
-<programming-exercise name='Henkilövertailu' tmcname='osa05-Osa05_13.Henkilovertailu'>
+<!-- <programming-exercise name='Henkilövertailu' tmcname='osa05-Osa05_13.Henkilovertailu'> -->
 
-Tehtäväpohjassa on luokka `Henkilo`, johon liittyy `Paivays`-olio. Lisää luokalle Henkilo metodi `public boolean equals(Object verrattava)`, jonka avulla voidaan verrata henkilöiden samuutta. Vertailussa tulee verrata kaikkien henkilön muuttujien yhtäsuuruutta (ml. syntymäpäivä).
-
-**Huom!** Muistathan, että et voi verrata syntymäpäivää-olioita yhtäsuuruusmerkillä!
-
-Tehtäväpohjassa ei ole ohjelman oikeellisutta tarkastavia testejä. Palauta tehtävä vasta kun vertailu toimii oikein. Alla koodia ohjelman testaamiseen.
+<programming-exercise name='Person comparison' tmcname='osa05-Osa05_13.Henkilovertailu'>
 
 
-```java
+<!-- Tehtäväpohjassa on luokka `Henkilo`, johon liittyy `Paivays`-olio. Lisää luokalle Henkilo metodi `public boolean equals(Object verrattava)`, jonka avulla voidaan verrata henkilöiden samuutta. Vertailussa tulee verrata kaikkien henkilön muuttujien yhtäsuuruutta (ml. syntymäpäivä). -->
+
+In the exercise base you can find the `Person` class that is linked with an `OwnDate` object. Add to the class Person the method `public boolean equals (Object compared)`, which can be used to compare the similarity of people. The comparison should take into account the equality of all the variables of a person (birthday included).
+
+<!-- **Huom!** Muistathan, että et voi verrata syntymäpäivää-olioita yhtäsuuruusmerkillä! -->
+
+**N.B!** Recall that you cannot compare two birthday objects with equality signs!
+
+<!-- Tehtäväpohjassa ei ole ohjelman oikeellisutta tarkastavia testejä. Palauta tehtävä vasta kun vertailu toimii oikein. Alla koodia ohjelman testaamiseen. -->
+
+There are no tests in the exercise template to check the correctess of the solution. Only return your answer after the comparison works as it should. Below is some code to help test the program.
+
+
+<!-- ```java
 Paivays pvm = new Paivays(24, 3, 2017);
 Paivays pvm2 = new Paivays(23, 7, 2017);
 
@@ -2633,20 +2894,44 @@ Henkilo leeviEriPainolla = new Henkilo("Leevi", pvm, 62, 10);
 if (leevi.equals(leeviEriPainolla)) {
     System.out.println("Meniköhän nyt ihan oikein?");
 }
+``` -->
+
+```java
+OwnDate date = new OwnDate(24, 3, 2017);
+OwnDate date2 = new OwnDate(23, 7, 2017);
+
+Person leo = new Person("Leo", date, 62, 9);
+Person lily = new Person("Lily", date2, 65, 8);
+
+if (leo.equals(lily)) {
+    System.out.println("Is this quite correct?");
+}
+
+Person leoWithDifferentWeight = new Person("Leo", date, 62, 10);
+
+if (leo.equals(leoWithDifferentWeight)) {
+    System.out.println("Is this quite correct?");
+}
 ```
 
 </programming-exercise>
 
 
 
-<text-box variant='hint' name='Mikä ihmeen Object?'>
+<!-- <text-box variant='hint' name='Mikä ihmeen Object?'> -->
 
-Jokainen luomamme luokka (ja Javan valmis luokka) perii luokan Object, vaikkei sitä erikseen ohjelmakoodissa näy. Tämän takia mistä tahansa luokasta tehty ilmentymä voidaan asettaa parametriksi metodiin, joka saa parametrina Object-tyyppisen muuttujan. Object-luokan periminen näkyy myös muissa asioissa: esimerkiksi metodi `toString` on olemassa vaikkei sitä erikseen toteuteta, aivan samalla tavalla kuin metodi `equals`.
-
-Esimerkiksi seuraava lähdekoodi kääntyy, sillä `equals`-metodi löytyy kaikkien luokkien perimästä Object-luokasta.
+<text-box variant='hint' name='What is Object?'>
 
 
-```java
+<!-- Jokainen luomamme luokka (ja Javan valmis luokka) perii luokan Object, vaikkei sitä erikseen ohjelmakoodissa näy. Tämän takia mistä tahansa luokasta tehty ilmentymä voidaan asettaa parametriksi metodiin, joka saa parametrina Object-tyyppisen muuttujan. Object-luokan periminen näkyy myös muissa asioissa: esimerkiksi metodi `toString` on olemassa vaikkei sitä erikseen toteuteta, aivan samalla tavalla kuin metodi `equals`. -->
+
+Every class we create (and every ready-made Java class) inherits the class Object, even though it is not specially visible in the program code. This is why an instance of any class can be passed as a parameter to a method that receives an Object type variable as its parameter. Inheriting the Object can be seen elsewhere, too: for instance, the `toString` method exists even if you have not implemented it yourself, just as the `equals` method does.
+
+<!-- Esimerkiksi seuraava lähdekoodi kääntyy, sillä `equals`-metodi löytyy kaikkien luokkien perimästä Object-luokasta. -->
+
+To illustrate, the following source code compiles successfully: `equals` method can be found in the Object class inherited by all classes.
+
+<!-- ```java
 public class Lintu {
     private String nimi;
 
@@ -2654,10 +2939,20 @@ public class Lintu {
         this.nimi = nimi;
     }
 }
+``` -->
+
+```java
+public class Bird {
+    private String name;
+
+    public Bird(String name) {
+        this.name = name;
+    }
+}
 ```
 
 
-```java
+<!-- ```java
 Lintu red = new Lintu("Red");
 System.out.println(red);
 
@@ -2667,15 +2962,31 @@ System.out.println(chuck);
 if (red.equals(chuck)) {
     System.out.println(red + " on sama kuin " + chuck);
 }
+``` -->
+
+```java
+Bird red = new Bird("Red");
+System.out.println(red);
+
+Bird chuck = new Bird("Chuck");
+System.out.println(chuck);
+
+if (red.equals(chuck)) {
+    System.out.println(red + " equals " + chuck);
+}
 ```
 
 </text-box>
 
-## Olion samankaltaisuus ja listat
+<!-- ## Olion samankaltaisuus ja listat -->
 
-Tarkastellaan `equals`-metodin käyttöä vielä listojen yhteydessä. Oletetaan, että käytössämme on edellä kuvattu luokka `Lintu`, jolle ei ole määritelty `equals`-metodia.
+## Object equality and lists
 
-```java
+<!-- Tarkastellaan `equals`-metodin käyttöä vielä listojen yhteydessä. Oletetaan, että käytössämme on edellä kuvattu luokka `Lintu`, jolle ei ole määritelty `equals`-metodia. -->
+
+Let's examine how the `equals` method is used with lists. Let's assume we have the previously described class `Bird` without any `equals` method.
+
+<!-- ```java
 public class Lintu {
     private String nimi;
 
@@ -2683,11 +2994,23 @@ public class Lintu {
         this.nimi = nimi;
     }
 }
-```
-
-Luodaan lista, johon lisätään lintu. Tarkastellaan tämän jälkeen linnun olemassaoloa listalla.
+``` -->
 
 ```java
+public class Bird {
+    private String name;
+
+    public Bird(String name) {
+        this.name = name;
+    }
+}
+```
+
+<!-- Luodaan lista, johon lisätään lintu. Tarkastellaan tämän jälkeen linnun olemassaoloa listalla. -->
+
+Let's create a list and add a bird to it. After this we'll check if that bird is contained in it.
+
+<!-- ```java
 ArrayList<Lintu> linnut = new ArrayList<>()
 Lintu red = new Lintu("Red");
 
@@ -2713,25 +3036,68 @@ if (linnut.contains(red)) {
 } else {
     System.out.println("Red ei ole listalla.");
 }
+``` -->
+
+```java
+ArrayList<Bird> birds = new ArrayList<>()
+Bird red = new Bird("Red");
+
+if (birds.contains(red)) {
+    System.out.println("Red is on the list.");
+} else {
+    System.out.println("Red is not on the list.");
+}
+
+birds.add(red);
+if (birds.contains(red)) {
+    System.out.println("Red is on the list.");
+} else {
+    System.out.println("Red is not on the list.");
+}
+
+
+System.out.println("However!");
+
+red = new Bird("Red");
+if (birds.contains(red)) {
+    System.out.println("Red is on the list.");
+} else {
+    System.out.println("Red is not on the list.");
+}
 ```
 
-<sample-output>
+<!-- <sample-output>
 
 Red ei ole listalla.
 Red on listalla.
 Mutta!
 Red ei ole listalla.
 
+</sample-output> -->
+
+<sample-output>
+
+Red is not on the list.
+Red is on the list.
+However!
+Red is not on the list.
+
 </sample-output>
 
-Yllä olevasta esimerkistä huomaamme, että voimme etsiä listalta omia olioitamme. Aluksi kun lintua ei ole lisätty listalle, sitä ei löydy -- lisäämisen jälkeen se löytyy. Kun ohjelmassa `red`-olio vaihdetaan uudeksi täysin samansisältöiseksi olioksi, ei se enää vastaa listalla olevaa oliota, ja sitä ei löydy listalta.
+<!-- Yllä olevasta esimerkistä huomaamme, että voimme etsiä listalta omia olioitamme. Aluksi kun lintua ei ole lisätty listalle, sitä ei löydy -- lisäämisen jälkeen se löytyy. Kun ohjelmassa `red`-olio vaihdetaan uudeksi täysin samansisältöiseksi olioksi, ei se enää vastaa listalla olevaa oliota, ja sitä ei löydy listalta. -->
 
-Listan `contains`-metodi hyödyntää olioiden etsimiseen oliolle määriteltyä `equals`-metodia. Yllä olevassa esimerkissä luokalle `Lintu` ei tätä metodia ole määritelty, joten täysin samansisältöinen lintu, jonka viite on eri, ei listalta löydy.
+We can notice in the example above that we can search a list for our own objects. First, when the bird had not been added to the list, it is not found -- and after adding it is found. When the program switches the `red` object into a new object, with exactly the same contents as before, it is no longer equal to the object on the list, and therefore cannot be found on the list.
 
-Lisätään luokalle `Lintu` metodi `equals`. Metodi tarkastelee onko olioiden nimet samat -- mikäli nimet ovat samat, käsitellään ne samanlaisina.
+<!-- Listan `contains`-metodi hyödyntää olioiden etsimiseen oliolle määriteltyä `equals`-metodia. Yllä olevassa esimerkissä luokalle `Lintu` ei tätä metodia ole määritelty, joten täysin samansisältöinen lintu, jonka viite on eri, ei listalta löydy. -->
+
+The `contains` method of a list uses the `equals` method that is defined for the objects in its search for objects. In the example above, the `Bird` class has no definition for that method, so a bird with exactly the same contents -- but a different reference -- cannot be found on the list.
+
+<!-- Lisätään luokalle `Lintu` metodi `equals`. Metodi tarkastelee onko olioiden nimet samat -- mikäli nimet ovat samat, käsitellään ne samanlaisina. -->
+
+Let's implement the `equals` method for the class `Bird`. The method examines if the names of the objects are equal -- if the names match, the birds are thought to be equal.
 
 
-```java
+<!-- ```java
 public class Lintu {
     private String nimi;
 
@@ -2769,11 +3135,56 @@ public class Lintu {
         */
     }
 }
-```
-
-Nyt listan contains-metodi tunnistaa samansisältöiset linnut.
+``` -->
 
 ```java
+public class Bird {
+    private String name;
+
+    public Bird(String name) {
+        this.name = name;
+    }
+
+    public boolean equals(Object compared) {
+        // if the variables are located in the same position, they are equal
+        if (this == compared) {
+            return true;
+        }
+
+        // jos verrattava olio ei ole Lintu-tyyppinen, oliot eivät ole samat
+        // if the compared object is not of type Bird, the objects are not equal
+        if (!(compared instanceof Bird)) {
+            return false;
+        }
+
+        // muunnetaan olio Lintu-olioksi
+        // convert the object to a Bird object
+        Bird comparedBird = (Bird) compared;
+
+        // jos olioiden oliomuuttujien arvot ovat samat, ovat oliot samat
+        // if the values of the object variables are equal, the objects are, too
+        return this.name.equals(comparedBird.name);
+
+        /*
+        // the comparison of names above is equal to
+        // the following code
+
+        if (this.name.equals(comparedBird.name)) {
+            return true;
+        }
+
+        // otherwise the objects are not equal
+        return false;
+        */
+    }
+}
+```
+
+<!-- Nyt listan contains-metodi tunnistaa samansisältöiset linnut. -->
+
+Now the contains list method recognizes birds with identical contents.
+
+<!-- ```java
 ArrayList<Lintu> linnut = new ArrayList<>()
 Lintu red = new Lintu("Red");
 
@@ -2799,27 +3210,73 @@ if (linnut.contains(red)) {
 } else {
     System.out.println("Red ei ole listalla.");
 }
+``` -->
+
+```java
+ArrayList<Bird> birds = new ArrayList<>()
+Bird red = new Bird("Red");
+
+if (birds.contains(red)) {
+    System.out.println("Red is on the list.");
+} else {
+    System.out.println("Red is not on the list.");
+}
+
+birds.add(red);
+if (birds.contains(red)) {
+    System.out.println("Red is on the list.");
+} else {
+    System.out.println("Red is not on the list.");
+}
+
+
+System.out.println("However!");
+
+red = new Bird("Red");
+if (birds.contains(red)) {
+    System.out.println("Red is on the list.");
+} else {
+    System.out.println("Red is not on the list.");
+}
 ```
 
-<sample-output>
+<!-- <sample-output>
 
 Red ei ole listalla.
 Red on listalla.
 Mutta!
 Red on listalla.
 
+</sample-output> -->
+
+<sample-output>
+
+Red is not on the list.
+Red is on the list.
+However!
+Red is on the list.
+
 </sample-output>
 
 
-<programming-exercise name='Kirjat' tmcname='osa05-Osa05_14.Kirjat'>
+<!-- <programming-exercise name='Kirjat' tmcname='osa05-Osa05_14.Kirjat'> -->
 
-Tehtäväpohjassa on ohjelma, joka lukee käyttäjältä kirjoja ja lisää niitä listalle.
+<programming-exercise name='Books' tmcname='osa05-Osa05_14.Kirjat'>
 
-Muokkaa ohjelmaa siten, että listalle ei lisätä kirjoja, jotka ovat jo listalla. Kaksi kirjaa tulee käsittää samaksi mikäli niiden nimi ja julkaisuvuosi on sama.
 
-Esimerkkitulostus:
+<!-- Tehtäväpohjassa on ohjelma, joka lukee käyttäjältä kirjoja ja lisää niitä listalle. -->
 
-<sample-output>
+There is a program in the exercise base that asks for books from the user and adds them to a list.
+
+<!-- Muokkaa ohjelmaa siten, että listalle ei lisätä kirjoja, jotka ovat jo listalla. Kaksi kirjaa tulee käsittää samaksi mikäli niiden nimi ja julkaisuvuosi on sama. -->
+
+Modify the program so that books that are already on the list are not added to it again. Two books should be considered the same if they have the same name and publication year.
+
+<!-- Esimerkkitulostus: -->
+
+Example print
+
+<!-- <sample-output>
 
 Syötä kirjan nimi, tyhjä lopettaa.
 **Bossypants**
@@ -2838,24 +3295,59 @@ Syötä kirjan nimi, tyhjä lopettaa.
 
 Kiitos! Kirjoja lisätty: 2
 
+</sample-output> -->
+
+<sample-output>
+
+Give the name of the book, empty will stop.
+**Bossypants**
+Give the publication year of the book.
+**2013**
+Give the name of the book, empty will stop.
+**Seriously...I'm Kidding**
+Give the publication year of the book.
+**2012**
+Give the name of the book, empty will stop.
+**Seriously...I'm Kidding**
+Give the publication year of the book.
+**2012**
+The book is already on the list. Let's not add the same book again.
+Give the name of the book, empty will stop.
+
+Thank you! Books added: 2
+
 </sample-output>
 
 </programming-exercise>
 
 
-<programming-exercise name='Keräilijän varasto (2 osaa)' tmcname='osa05-Osa05_15.KerailijanVarasto'>
+<!-- <programming-exercise name='Keräilijän varasto (2 osaa)' tmcname='osa05-Osa05_15.KerailijanVarasto'> -->
 
-Tässä tehtävässä toteutat ohjelman, jota käytetään keräilijän varaston käsittelyyn. Varastoon voi lisätä esineitä. Kun esineiden lisääminen lopetetaan, varastossa olevat esineet tulostetaan.
+<programming-exercise name='Collector`s storage (2 sections)' tmcname='osa05-Osa05_15.KerailijanVarasto'>
 
-<h2>Esineiden lisääminen ja listaaminen</h2>
 
-Ohjelman tulee lukea käyttäjältä esineitä. Kun kaikki käyttäjän esineet on luettu, ohjelma tulostaa esineiden tiedot.
+<!-- Tässä tehtävässä toteutat ohjelman, jota käytetään keräilijän varaston käsittelyyn. Varastoon voi lisätä esineitä. Kun esineiden lisääminen lopetetaan, varastossa olevat esineet tulostetaan. -->
 
-Kustakin esineestä tulee lukea tunnus ja nimi. Mikäli syötetty tunnus tai nimi on tyhjä, ohjelma lopettaa syötteen pyytämisen ja tulostaa esineiden tiedot.
+In this exercise you get to implement a program that can be used to handle a collector's storage. Several items can be added to the storage. When no more items are added, all the items in the storage are printed.
 
-Esimerkkitulostus:
+<!-- <h2>Esineiden lisääminen ja listaaminen</h2> -->
 
-<sample-output>
+<h2>Adding and listing items</h2>
+
+
+<!-- Ohjelman tulee lukea käyttäjältä esineitä. Kun kaikki käyttäjän esineet on luettu, ohjelma tulostaa esineiden tiedot. -->
+
+The program should read items from the user. When all the items from the user have been read, the program prints the information of each item.
+
+<!-- Kustakin esineestä tulee lukea tunnus ja nimi. Mikäli syötetty tunnus tai nimi on tyhjä, ohjelma lopettaa syötteen pyytämisen ja tulostaa esineiden tiedot. -->
+
+For each item, its identifier and name should be read. If the identifier or name is empty, the program stops asking for input, and prints all the item information.
+
+<!-- Esimerkkitulostus: -->
+
+Example print:
+
+<!-- <sample-output>
 
 Syötä esineen tunnus, tyhjä lopettaa.
 **B07H8ND8HH**
@@ -2881,20 +3373,59 @@ B07H8ND8HH: He-Man
 B07NQFMZYG: He-Man hahmo
 B07NQFMZYG: He-Man hahmo
 
-</sample-output>
-
-Esineiden tulostusmuodon tulee olla `tunnus: nimi`.
-
-Huom! Älä käytä kaksoispistettä ohjelman muussa tulostuksessa.
-
-
-<h2>Kukin esine tulostetaan vain kerran</h2>
-
-Muokkaa ohjelmaa siten, että esineiden syöttämisen jälkeen kukin esine tulostetaan korkeintaan kerran. Kaksi esinettä tulee käsittää samoina mikäli niiden tunnukset ovat samat (nimet voivat vaihdella esimerkiksi maittain).
-
-Mikäli käyttäjä syöttää saman esineen useaan otteeseen, tulostuksessa käytetään ensimmäisenä syötettyä esinettä.
+</sample-output> -->
 
 <sample-output>
+
+Enter the item identifier, empty will stop.
+**B07H8ND8HH**
+Enter the item name, empty will stop.
+**He-Man figure**
+Enter the item identifier, empty will stop.
+**B07H8ND8HH**
+Enter the item name, empty will stop.
+**He-Man**
+Enter the item identifier, empty will stop.
+**B07NQFMZYG**
+Enter the item name, empty will stop.
+**He-Man figure**
+Enter the item identifier, empty will stop.
+**B07NQFMZYG**
+Enter the item name, empty will stop.
+**He-Man figure**
+Enter the item identifier, empty will stop.
+
+==Items==
+B07H8ND8HH: He-Man figure
+B07H8ND8HH: He-Man
+B07NQFMZYG: He-Man figure
+B07NQFMZYG: He-Man figure
+
+</sample-output>
+
+<!-- Esineiden tulostusmuodon tulee olla `tunnus: nimi`. -->
+
+The printing format of the items should be `identifier: name`.
+
+<!-- Huom! Älä käytä kaksoispistettä ohjelman muussa tulostuksessa. -->
+
+N.B.! Don't print the colon (:) anywhere else in the output of the program.
+
+
+<!-- <h2>Kukin esine tulostetaan vain kerran</h2> -->
+
+<h2>Each item is only printed once</h2>
+
+
+<!-- Muokkaa ohjelmaa siten, että esineiden syöttämisen jälkeen kukin esine tulostetaan korkeintaan kerran. Kaksi esinettä tulee käsittää samoina mikäli niiden tunnukset ovat samat (nimet voivat vaihdella esimerkiksi maittain). -->
+
+Modify the program so that after entering the items, each item is printed at most once. Two items should be considered the same if their identifiers are the same (there can be variation in their names in different countries, for instance).
+
+<!-- Mikäli käyttäjä syöttää saman esineen useaan otteeseen, tulostuksessa käytetään ensimmäisenä syötettyä esinettä. -->
+
+If the user enters the same item multiple times, the print uses the item that was added first.
+
+<!-- <sample-output>
 
 Syötä esineen tunnus, tyhjä lopettaa.
 **B07H8ND8HH**
@@ -2918,22 +3449,56 @@ Syötä esineen tunnus, tyhjä lopettaa.
 B07H8ND8HH: He-Man hahmo
 B07NQFMZYG: He-Man hahmo
 
+</sample-output> -->
+
+<sample-output>
+
+Enter the item identifier, empty will stop.
+**B07H8ND8HH**
+Enter the item name, empty will stop.
+**He-Man figure**
+Enter the item identifier, empty will stop.
+**B07H8ND8HH**
+Enter the item name, empty will stop.
+**He-Man**
+Enter the item identifier, empty will stop.
+**B07NQFMZYG**
+Enter the item name, empty will stop.
+**He-Man figure**
+Enter the item identifier, empty will stop.
+**B07NQFMZYG**
+Enter the item name, empty will stop.
+**He-Man figure**
+Enter the item identifier, empty will stop.
+
+==Items==
+B07H8ND8HH: He-Man figure
+B07NQFMZYG: He-Man figure
+
 </sample-output>
 
 
-Vinkki! Tämä kannattaa toteuttaa siten, että kukin esine lisätään listalle korkeintaan kerran -- vertaile esineiden samuutta niiden tunnuksien perusteella.
+<!-- Vinkki! Tämä kannattaa toteuttaa siten, että kukin esine lisätään listalle korkeintaan kerran -- vertaile esineiden samuutta niiden tunnuksien perusteella. -->
+
+Hint! It is probably smart to add each item to the list at least most -- compare the equality of the objects based on their identifiers.
 
 </programming-exercise>
 
 
-## Olio metodin paluuarvona
+<!-- ## Olio metodin paluuarvona -->
 
-Olemme nähneet metodeja jotka palauttavat totuusarvoja, lukuja ja merkkijonoja. On helppoa arvata, että metodi voi palauttaa minkä tahansa tyyppisen olion.
+## Object as a method's return value
 
-Seuraavassa esimerkissä on yksinkertainen laskuri, jolla on metodi `kloonaa`. Metodin avulla laskurista voidaan tehdä klooni, eli uusi laskurio-olio, jolla on luomishetkellä sama arvo kuin kloonattavalla laskurilla:
+<!-- Olemme nähneet metodeja jotka palauttavat totuusarvoja, lukuja ja merkkijonoja. On helppoa arvata, että metodi voi palauttaa minkä tahansa tyyppisen olion. -->
+
+We have seen methods return boolean values, numbers, and strings. Easy to guess, a method can return an object of any type.
+
+<!-- Seuraavassa esimerkissä on yksinkertainen laskuri, jolla on metodi `kloonaa`. Metodin avulla laskurista voidaan tehdä klooni, eli uusi laskurio-olio, jolla on luomishetkellä sama arvo kuin kloonattavalla laskurilla: -->
 
 
-```java
+In the next example we present a simple counter that has the method `clone`. The method can be used to crete a clone of the counter; i.e. a new counter object that has the same value at the time of its creation as the counter that is being cloned.
+
+<!-- ```java
 public Laskuri {
     private int arvo;
 
@@ -2964,13 +3529,48 @@ public Laskuri {
         return klooni;
     }
 }
-```
-
-
-Seuraavassa käyttöesimerkki:
-
+``` -->
 
 ```java
+public Counter {
+    private int value;
+
+    // example of using multiple constructors:
+    // you can call another constructor from a constructor by calling this
+    // notice that the this call must be on the first line of the constructor
+    public Counter() {
+        this(0);
+    }
+
+    public Counter(int initialValue) {
+        this.value = initialValue;
+    }
+
+    public void increase() {
+        this.value = this.value + 1;
+    }
+
+    public String toString() {
+        return "value: " + value;
+    }
+
+    public Counter clone() {
+        // luodaan uusi laskuriolio, joka saa alkuarvokseen kloonattavan laskurin arvon
+        // create a new counter object that receives the value of the cloned counter as its initial value
+        Counter clone = new Counter(this.value);
+
+        // return the clone to the caller
+        return clone;
+    }
+}
+```
+
+<!-- Seuraavassa käyttöesimerkki: -->
+
+An example of using counters follows:
+
+
+<!-- ```java
 Laskuri laskuri = new Laskuri();
 laskuri.kasvata();
 laskuri.kasvata();
@@ -2994,15 +3594,44 @@ klooni.kasvata();
 
 System.out.println(laskuri);         // tulostuu 6
 System.out.println(klooni);          // tulostuu 3
-```
-
-
-Kloonattavan ja kloonin sisältämä arvo on kloonauksen tapahduttua sama. Kyseessä on kuitenkin kaksi erillistä olioa, eli kun toista laskureista kasvatetaan, ei kasvatus vaikuta toisen arvoon millään tavalla.
-
-Vastaavasti myös `Tehdas`-olio voisi luoda ja palauttaa uusia `Auto`-olioita. Alla on hahmoteltu tehtaan runkoa -- tehdas tietää myös luotavien autojen merkin.
-
+``` -->
 
 ```java
+Counter counter = new Counter();
+counter.increase();
+counter.increase();
+
+System.out.println(counter);         // prints 2
+
+Counter clone = counter.clone();
+
+System.out.println(counter);         // prints 2
+System.out.println(clone);          // prints 2
+
+counter.increase();
+counter.increase();
+counter.increase();
+counter.increase();
+
+System.out.println(counter);         // prints 6
+System.out.println(clone);          // prints 2
+
+clone.increase();
+
+System.out.println(counter);         // prints 6
+System.out.println(clone);          // prints 3
+```
+
+<!-- Kloonattavan ja kloonin sisältämä arvo on kloonauksen tapahduttua sama. Kyseessä on kuitenkin kaksi erillistä olioa, eli kun toista laskureista kasvatetaan, ei kasvatus vaikuta toisen arvoon millään tavalla. -->
+
+Immediately after the cloning operation, the values contained by the clone and the cloned object are the same. However, they are two different objects, so increasing the value of one counter does not affect the value of the other in any way.
+
+<!-- Vastaavasti myös `Tehdas`-olio voisi luoda ja palauttaa uusia `Auto`-olioita. Alla on hahmoteltu tehtaan runkoa -- tehdas tietää myös luotavien autojen merkin. -->
+
+Similarly, a `Factory` object could also be used to create and return new `Car` objects. Below is a sketch of the outline of the factory -- the factory also knows the makes of the cars that are created.
+
+
+<!-- ```java
 public class Tehdas {
     private String merkki;
 
@@ -3014,15 +3643,34 @@ public class Tehdas {
         return new Auto(this.merkki);
     }
 }
+``` -->
+
+```java
+public class Factory {
+    private String make;
+
+    public Factory(String make) {
+        this.make = make;
+    }
+
+    public Car procuceCar() {
+        return new Car(this.make);
+    }
+}
 ```
 
 
-<programming-exercise name='Päiväys (3 osaa)' tmcname='osa05-Osa05_16.Paivays'>
+<!-- <programming-exercise name='Päiväys (3 osaa)' tmcname='osa05-Osa05_16.Paivays'> -->
 
-Tehtäväpohjan mukana tulee luokka `Paivays`, jossa päivämäärä talletetaan oliomuuttujien `vuosi`, `kuukausi`, ja `paiva` avulla:
+<programming-exercise name='Date (3 sections)' tmcname='osa05-Osa05_16.Paivays'>
 
 
-```java
+<!-- Tehtäväpohjan mukana tulee luokka `Paivays`, jossa päivämäärä talletetaan oliomuuttujien `vuosi`, `kuukausi`, ja `paiva` avulla: -->
+
+With the exercise base the class `OwnDate` is supplied. The date is stored with the help of the object variables `year`, `month`, and `day`:
+
+
+<!-- ```java
 public class Paivays {
     private int paiva;
     private int kuukausi;
@@ -3058,30 +3706,83 @@ public class Paivays {
         return false;
     }
 }
-```
-
-Tässä tehtäväsarjassa laajennetaan luokkaa.
-
-
-<h2>Seuraava päivä</h2>
-
-Toteuta metodi `public void etene()`, joka siirtää päiväystä yhdellä päivällä. Tässä tehtävässä oletetaan, että jokaisessa kuukaudessa on 30 päivää. Huom! Sinun tulee *tietyissä* tilanteissa muuttaa kuukauden ja vuoden arvoa.
-
-
-<h2>Tietty määrä päiviä eteenpäin</h2>
-
-Toteuta metodi `public void etene(int montakoPaivaa)`, joka siirtää päiväystä annetun päivien määrän verran. Käytä apuna edellisessä tehtävässä toteutettua metodia `etene()`.
-
-
-<h2>Ajan kuluminen</h2>
-
-Lisätään `Paivays`-olioon mahdollisuus edistää aikaa. Tee oliolle metodi `Paivays paivienPaasta(int paivia)`, joka luo **uuden** `Paivays`-olion, jonka päiväys on annetun päivien lukumäärän verran suurempi kuin oliolla, jolle sitä kutsuttiin. Voit edelleen olettaa, että jokaisessa kuukaudessa on 30 päivää. Huomaa, että vanhan päiväysolion on pysyttävä muuttumattomana!
-
-
-Koska metodissa on luotava **uusi olio**, tulee rungon olla suunnilleen seuraavanlainen:
-
+``` -->
 
 ```java
+public class OwnDate {
+    private int day;
+    private int month;
+    private int year;
+
+    public OwnDate(int day, int month, int year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+    }
+
+    public String toString() {
+        return this.day + "." + this.month + "." + this.year;
+    }
+
+    public boolean before(Paivays compared) {
+        // first compare years
+        if (this.year < compared.year) {
+            return true;
+        }
+
+        // if the years are equal, compare months
+        if (this.year == compared.year && this.month < compared.month) {
+            return true;
+        }
+
+        // the years and the months are the same, compare days
+        if (this.year == compared.year && this.month == compared.month &&
+            this.day < compared.day) {
+            return true;
+        }
+
+        return false;
+    }
+}
+```
+
+<!-- Tässä tehtäväsarjassa laajennetaan luokkaa. -->
+
+In this exercise set we will expand this class.
+
+
+<!-- <h2>Seuraava päivä</h2> -->
+
+<h2>Next day</h2>
+
+<!-- Toteuta metodi `public void etene()`, joka siirtää päiväystä yhdellä päivällä. Tässä tehtävässä oletetaan, että jokaisessa kuukaudessa on 30 päivää. Huom! Sinun tulee *tietyissä* tilanteissa muuttaa kuukauden ja vuoden arvoa. -->
+
+Implement the method `public void advance()` that moves the date by one day. In this exercise we assume that each month has 30 day. N.B.! In *certain* situations you need to change the values of month and year.
+
+
+<!-- <h2>Tietty määrä päiviä eteenpäin</h2> -->
+
+<h2>Advance by a specific number of days</h2>
+
+<!-- Toteuta metodi `public void etene(int montakoPaivaa)`, joka siirtää päiväystä annetun päivien määrän verran. Käytä apuna edellisessä tehtävässä toteutettua metodia `etene()`. -->
+
+Implement the method `public void advance(int howManyDays)` that moves the date by the number of days that is given. Use the method `advance()` that you implemented in the previous section to help you in this.
+
+
+<!-- <h2>Ajan kuluminen</h2> -->
+
+<h2>Passing of time</h2>
+
+<!-- Lisätään `Paivays`-olioon mahdollisuus edistää aikaa. Tee oliolle metodi `Paivays paivienPaasta(int paivia)`, joka luo **uuden** `Paivays`-olion, jonka päiväys on annetun päivien lukumäärän verran suurempi kuin oliolla, jolle sitä kutsuttiin. Voit edelleen olettaa, että jokaisessa kuukaudessa on 30 päivää. Huomaa, että vanhan päiväysolion on pysyttävä muuttumattomana! -->
+
+Let's add the possibility to advance time to the `OwnDate` class. Create the method `OwnDate afterNumberOfDays(int days)` for the class. It creates a **new** `OwnDate` object whose date is the specified number of days greater than the object that the method was called on. You may still assume that each month has 30 days. Notice that the old date object must remain unchanged!
+
+<!-- Koska metodissa on luotava **uusi olio**, tulee rungon olla suunnilleen seuraavanlainen: -->
+
+Since the method must create **a new object**, the structure of the code should be somewhat similar to this:
+
+
+<!-- ```java
 public Paivays paivienPaasta(int paivia) {
     Paivays uusiPaivays = new Paivays( ... );
 
@@ -3089,11 +3790,23 @@ public Paivays paivienPaasta(int paivia) {
 
     return uusiPaivays;
 }
-```
-
-Ohessa on esimerkki metodin toiminnasta.
+``` -->
 
 ```java
+public OwnDate afterNumberOfDays(int days) {
+    OwnDate newDate = new OwnDate( ... );
+
+    // do something..
+
+    return newDate;
+}
+```
+
+<!-- Ohessa on esimerkki metodin toiminnasta. -->
+
+Here is an example of how the method works.
+
+<!-- ```java
 public static void main(String[] args) {
     Paivays pvm = new Paivays(13, 2, 2015);
     System.out.println("Tarkistellun viikon perjantai on " + pvm);
@@ -3111,11 +3824,33 @@ public static void main(String[] args) {
     System.out.println("Päivämäärä 790:n päivän päästä tarkistellusta perjantaista on ... kokeile itse!");
     //    System.out.println("Kokeile " + pvm.paivienPaasta(790));
 }
+``` -->
+
+```java
+public static void main(String[] args) {
+    OwnDate date = new OwnDate(13, 2, 2015);
+    System.out.println("Friday of the examined week is " + pvm);
+
+    OwnDate newDate = date.afterNumberOfDays(7);
+    int week = 1;
+    while (week <= 7) {
+        System.out.println("Friday after " + week + " weeks is " + newDate);
+        newDate = newDate.afterNumberOfDays(7);
+
+        week = week + 1;
+    }
+
+
+    System.out.println("The date after 790 days from the examined Friday is ... try it out yourself!");
+    //    System.out.println("Try " + date.afterNumberOfDays(790));
+}
 ```
 
-Ohjelma tulostaa:
+<!-- Ohjelma tulostaa: -->
 
-<sample-output>
+The program prints:
+
+<!-- <sample-output>
 
 Tarkistellun viikon perjantai on 13.2.2015
 Perjantai 1 viikon kuluttua on 20.2.2015
@@ -3127,42 +3862,82 @@ Perjantai 6 viikon kuluttua on 25.3.2015
 Perjantai 7 viikon kuluttua on 2.4.2015
 Päivämäärä 790:n päivän päästä tarkistellusta perjantaista on ... kokeile itse!
 
+</sample-output> -->
+
+<sample-output>
+
+Friday of the examined week is 13.2.2015
+Friday after 1 weeks is 20.2.2015
+Friday after 2 weeks is 27.2.2015
+Friday after 3 weeks is 4.3.2015
+Friday after 4 weeks is 11.3.2015
+Friday after 5 weeks is 18.3.2015
+Friday after 6 weeks is 25.3.2015
+Friday after 7 weeks is 2.4.2015
+The date after 790 days from the examined Friday is ... try it out yourself!
+
 </sample-output>
 
 
-**Huom!** Sen sijaan, että muuttaisimme vanhan olion tilaa palautamme uuden olion. Kuvitellaan, että `Paivays`-luokalle on olemassa metodi `edista`, joka toimii vastaavasti kuin ohjelmoimamme metodi, mutta se muuttaa vanhan olion tilaa. Tällöin seuraava koodin pätkä tuottaisi ongelmia.
+<!-- **Huom!** Sen sijaan, että muuttaisimme vanhan olion tilaa palautamme uuden olion. Kuvitellaan, että `Paivays`-luokalle on olemassa metodi `edista`, joka toimii vastaavasti kuin ohjelmoimamme metodi, mutta se muuttaa vanhan olion tilaa. Tällöin seuraava koodin pätkä tuottaisi ongelmia. -->
+
+**N.B.!** Instead of modifying the state of the old object we return a new one. Imagine that the `OwnDate` class has a method `advance` that works similarly to the method we programmed, but it modifies the state of the old object. In that case the next block of code would cause problems.
 
 
-```java
+<!-- ```java
 Paivays nyt = new Paivays(13, 2, 2015);
 Paivays viikonPaasta = nyt;
 viikonPaasta.edista(7);
 
 System.out.println("Nyt: " + nyt);
 System.out.println("Viikon päästä: " + viikonPaasta);
+``` -->
+
+```java
+OwnDate now = new OwnDate(13, 2, 2015);
+OwnDate afterOneWeek = now;
+afterOneWeek.advance(7);
+
+System.out.println("Now: " + now);
+System.out.println("After one week: " + afterOneWeek);
 ```
 
-Ohjelman tulostus olisi seuraavanlainen:
+<!-- Ohjelman tulostus olisi seuraavanlainen: -->
 
-<sample-output>
+The output of the program should be like this:
+
+<!-- <sample-output>
 
 Nyt 20.2.2015
 Viikon päästä 20.2.2015
 
+</sample-output> -->
+
+<sample-output>
+
+Now 20.2.2015
+After one week 20.2.2015
+
 </sample-output>
 
-Tämä johtuu siitä, että tavallinen sijoitus kopioi ainoastaan viitteen olioon. Siis itse asiassa ohjelman oliot `nyt` ja `viikonPaasta` viittavaat **yhteen ja samaan** `Paivays`-olioon.
+<!-- Tämä johtuu siitä, että tavallinen sijoitus kopioi ainoastaan viitteen olioon. Siis itse asiassa ohjelman oliot `nyt` ja `viikonPaasta` viittavaat **yhteen ja samaan** `Paivays`-olioon. -->
+
+This is because a normal assignment only copies the reference to the object. So the objects `now` and `afterOneWeek` in the program now refer to the **one and same** `OwnDate` object.
 
 </programming-exercise>
 
 
-<programming-exercise name='Raha (3 osaa)' tmcname='osa05-Osa05_17.Raha'>
+<!-- <programming-exercise name='Raha (3 osaa)' tmcname='osa05-Osa05_17.Raha'> -->
+
+<programming-exercise name='Money (3 sections)' tmcname='osa05-Osa05_17.Raha'>
 
 
-Maksukortti-tehtävässä käytimme rahamäärän tallettamiseen double-tyyppistä oliomuuttujaa. Todellisissa sovelluksissa näin ei kannata tehdä, sillä kuten jo olemme nähneet, doubleilla laskenta ei ole tarkkaa. Onkin järkevämpää toteuttaa rahamäärän käsittely oman luokkansa avulla. Seuraavassa on luokan runko:
+<!-- Maksukortti-tehtävässä käytimme rahamäärän tallettamiseen double-tyyppistä oliomuuttujaa. Todellisissa sovelluksissa näin ei kannata tehdä, sillä kuten jo olemme nähneet, doubleilla laskenta ei ole tarkkaa. Onkin järkevämpää toteuttaa rahamäärän käsittely oman luokkansa avulla. Seuraavassa on luokan runko: -->
+
+In the Payment card exercise we used a double type object variable to store the amount of money. In real applications this is not the approach you want to take, since as we have seen, calculating with doubles is not exact. A more reasonable way to handle amounts of money is create an own class for that purpose. Here is a layout for the class:
 
 
-```java
+<!-- ```java
 public class Raha {
 
     private final int euroa;
@@ -3190,36 +3965,84 @@ public class Raha {
         return euroa + "." + nolla + senttia + "e";
     }
 }
+``` -->
+
+```java
+public class Money {
+
+    private final int euros;
+    private final int cents;
+
+    public Money(int euros, int cents) {
+        this.euros = euros;
+        this.cents = cents;
+    }
+
+    public int euros() {
+        return euros;
+    }
+
+    public int cents() {
+        return cents;
+    }
+
+    public String toString() {
+        String zero = "";
+        if (cents <= 10) {
+            zero = "0";
+        }
+
+        return euros + "." + zero + cents + "e";
+    }
+}
 ```
 
+<!-- Määrittelyssä pistää silmään oliomuuttujien määrittelyn yhteydessä käytetty sana `final`, tällä saadaan aikaan se, että oliomuuttujien arvoa ei pystytä muuttamaan sen jälkeen kun ne on konstruktorissa asetettu. Raha-luokan oliot ovatkin muuttumattomia eli *immutaabeleita*, eli jos halutaan esim. kasvattaa rahamäärää, on luotava uusi olio, joka kuvaa kasvatettua rahasummaa. -->
 
-Määrittelyssä pistää silmään oliomuuttujien määrittelyn yhteydessä käytetty sana `final`, tällä saadaan aikaan se, että oliomuuttujien arvoa ei pystytä muuttamaan sen jälkeen kun ne on konstruktorissa asetettu. Raha-luokan oliot ovatkin muuttumattomia eli *immutaabeleita*, eli jos halutaan esim. kasvattaa rahamäärää, on luotava uusi olio, joka kuvaa kasvatettua rahasummaa.
+The word `final` used in the definition of object variables catches attention. The result of this word is that the values of these object variables cannot be modified after they have been set in the constructor. The objects of Money class are unchangeable so **immutable** -- if we want to e.g. increase the amount of money, we must create a new object to represent that new amount of money.
 
 
-Luomme seuraavassa muutaman operaation rahojen käsittelyyn.
+<!-- Luomme seuraavassa muutaman operaation rahojen käsittelyyn. -->
+
+Next we'll create a few operations for processing money.
+
+<!-- <h2>Plus</h2> -->
 
 <h2>Plus</h2>
 
+<!-- Tee ensin metodi `public Raha plus(Raha lisattava)`, joka palauttaa uuden raha-olion, joka on arvoltaan yhtä suuri kuin se olio jolle metodia kutsuttiin ja parametrina oleva olio yhteensä. -->
 
-Tee ensin metodi `public Raha plus(Raha lisattava)`, joka palauttaa uuden raha-olion, joka on arvoltaan yhtä suuri kuin se olio jolle metodia kutsuttiin ja parametrina oleva olio yhteensä.
+First create the method `public Money plus(Money addition)` that returns a new money object that is worth the total amount of the object whose mehtod was called and the object that is received as the parameter.
+
+<!-- Metodin runko on seuraavanlainen: -->
+
+The basis for the method is the following:
 
 
-Metodin runko on seuraavanlainen:
-
-
-```java
+<!-- ```java
 public Raha plus(Raha lisattava) {
     Raha uusi = new Raha(...); // luodaan uusi Raha-olio jolla on oikea arvo
 
     // palautetaan uusi Raha-olio
     return uusi;
 }
-```
-
-Seuraavassa esimerkkejä metodin toiminnasta
-
+``` -->
 
 ```java
+public Money plus(Money addition) {
+    Money newMoney = new Money(...); // create a new Money object that has the correct worth
+
+    // return the new Money object
+    return newMoney;
+}
+```
+
+<!-- Seuraavassa esimerkkejä metodin toiminnasta -->
+
+Here are some examples of how the method works.
+
+
+<!-- ```java
 Raha a = new Raha(10,0);
 Raha b = new Raha(5,0);
 
@@ -3235,33 +4058,69 @@ a = a.plus(c);          // HUOM: tässä syntyy uusi Raha-olio, joka laitataan "
 System.out.println(a);  // 25.00e
 System.out.println(b);  // 5.00e
 System.out.println(c);  // 15.00e
+``` -->
+
+```java
+Money a = new Money(10,0);
+Money b = new Money(5,0);
+
+Money c = a.plus(b);
+
+System.out.println(a);  // 10.00e
+System.out.println(b);  // 5.00e
+System.out.println(c);  // 15.00e
+
+a = a.plus(c);          // N.B.: a new Money object is created, and is placed "at the end of the strand connected to a"
+//  the old 10 euros at the end of the strand disappears and the Java garbage collector takes care of it
+
+System.out.println(a);  // 25.00e
+System.out.println(b);  // 5.00e
+System.out.println(c);  // 15.00e
 ```
 
 
-<h2>Vähemmän</h2>
+<!-- <h2>Vähemmän</h2> -->
 
-Tee metodi `public boolean vahemman(Raha verrattava)`, joka palauttaa true jos raha-olio jolle metodia kutsutaan on arvoltaan pienempi kuin raha-olio, joka on metodin parametrina.
+<h2>Less</h2>
+
+<!-- Tee metodi `public boolean vahemman(Raha verrattava)`, joka palauttaa true jos raha-olio jolle metodia kutsutaan on arvoltaan pienempi kuin raha-olio, joka on metodin parametrina. -->
+
+Create the method `public boolean lessThan(Money compared)` that returns true if the money object whose method is called has a greater worth thatn the money object that is received as the method parameter.
 
 
-```java
+<!-- ```java
 Raha a = new Raha(10, 0);
 Raha b = new Raha(3, 0);
 Raha c = new Raha(5, 0);
 
 System.out.println(a.vahemman(b));  // false
 System.out.println(b.vahemman(c));  // true
+``` -->
+
+```java
+Money a = new Money(10, 0);
+Money b = new Money(3, 0);
+Money c = new Money(5, 0);
+
+System.out.println(a.lessThan(b));  // false
+System.out.println(b.lessThan(c));  // true
 ```
 
 
-<h2>Miinus</h2>
+<!-- <h2>Miinus</h2> -->
 
-Tee metodi `public Raha miinus(Raha vahentaja)`, joka palauttaa uuden raha-olion, jonka arvoksi tulee sen olion jolle metodia kutsuttiin ja parametrina olevan olion arvojen erotus. Jos erotus olisi negatiivinen, tulee luotavan raha-olion arvoksi 0.
+<h2>Minus</h2>
+
+<!-- Tee metodi `public Raha miinus(Raha vahentaja)`, joka palauttaa uuden raha-olion, jonka arvoksi tulee sen olion jolle metodia kutsuttiin ja parametrina olevan olion arvojen erotus. Jos erotus olisi negatiivinen, tulee luotavan raha-olion arvoksi 0. -->
+
+Write the method `public Money minus(Money decreaser)` that returns a new money object worth the difference of the object whose method was called and the object received as the parameter. If the difference would be negative, the worth of the created money object is set to 0.
+
+<!-- Seuraavassa esimerkkejä metodin toiminnasta -->
+
+Here are examples of how the method works.
 
 
-Seuraavassa esimerkkejä metodin toiminnasta
-
-
-```java
+<!-- ```java
 Raha a = new Raha(10, 0);
 Raha b = new Raha(3, 50);
 
@@ -3273,6 +4132,25 @@ System.out.println(c);  // 6.50e
 
 c = c.miinus(a);        // HUOM: tässä syntyy uusi Raha-olio, joka laitataan "c:n langan päähän"
 //       vanha c:n langan päässä ollut 6.5 euroa häviää ja Javan roskien kerääjä korjaa sen pois
+
+System.out.println(a);  // 10.00e
+System.out.println(b);  // 3.50e
+System.out.println(c);  // 0.00e
+``` -->
+
+```java
+Money a = new Money(10, 0);
+Money b = new Money(3, 50);
+
+Money c = a.minus(b);
+
+System.out.println(a);  // 10.00e
+System.out.println(b);  // 3.50e
+System.out.println(c);  // 6.50e
+
+c = c.minus(a);       // N.B.: a new Money object is created, and is placed "at the end of the strand connected to c"
+//  the old 6.5 euros at the end of the strand disappears and the Java garbage collector takes care of it
+
 
 System.out.println(a);  // 10.00e
 System.out.println(b);  // 3.50e
