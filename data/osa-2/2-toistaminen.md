@@ -187,10 +187,11 @@ Ready!
 
 </sample-output>
 
-<programming-exercise name="Jatketaanko" tmcname='osa02-Osa02_05.Jatketaanko'>
+<programming-exercise name="Carry on?" tmcname='part02-Part02_05.CarryOn'>
 
 <!-- Kirjoita edellä olevaa toistolause-esimerkkiä mukaillen ohjelma, joka kysyy käyttäjältä "Jatketaanko?" kunnes käyttäjä syöttää merkkijonon "ei". -->
 Write a program by using the loop-example that asks "Shall we carry on?" until the user inputs a string "no".
+
 <sample-output>
 
 Shall we carry on?
@@ -243,22 +244,22 @@ Done, thank you!
 
 </sample-output>
 
-<programming-exercise name="Uudestaan" tmcname='osa02-Osa02_06.Uudestaan'>
+<programming-exercise name="Are we there yet" tmcname='part02-Part02_06.AreWeThereYet'>
 
 <!-- Kirjoita edellä olevaa esimerkkiä mukaillen ohjelma, joka kysyy käyttäjältä lukuja kunnes käyttäjä syöttää luvun 4. -->
-Write a program by following an example that asks a user for numbers until user inputs number 4.
+Follow the example above and write a program that asks the user to give numbers until the user gives number 4.
 
 <sample-output>
 
-Input a number
+Give a number:
 **5**
-Input a number
+Give a number:
 **744**
-Input a number
+Give a number:
 **22**
-Input a number
+Give a number:
 **-1**
-Input a number
+Give a number:
 **4**
 
 </sample-output>
@@ -324,25 +325,25 @@ TODO: tänne tarttee visualisoinnin
 
 <quiznator id="5c1f6c8b64cf001162cb9790"></quiznator>
 
-<programming-exercise name="Syötteiden rajaus" tmcname='osa02-Osa02_07.SyotteidenRajaus'>
+<programming-exercise name="Only positives" tmcname='part02-Osa02_07.OnlyPositives'>
 
 <!-- Kirjoita ohjelma, joka kysyy käyttäjältä lukuja. Mikäli luku on negatiivinen (eli pienempi kuin nolla), käyttäjälle tulostetaan viesti "Epäkelpo luku" ja käyttäjältä kysytään uutta lukua. Jos taas luku on nolla, lukujen lukeminen lopetetaan ja ohjelma poistuu toistolauseesta. Mikäli luku on positiivinen, ohjelma tulostaa luvun toisen potenssin. -->
-Write a program that asks a user for numbers. If the number is negaitve (smaller than zero) the program prints for user "unfit number" and asks user for a new number. If the number is zero, the program exits the loop. If the number is positive, the program prints the number power of two.
+Write a program that asks a user for numbers. If the number is negative (less than zero) the program prints for user "Unsuitable number" and asks user for a new number. If the number is zero, the program exits the loop. If the number is positive, the program prints the number power of two.
 <sample-output>
 
-Input a number
+Give a number:
 **5**
 25
-Input a number
+Give a number:
 **4**
 16
-Input a number
+Give a number:
 **-3**
-Unfit number
-Input a number
+Unsuitable number
+Give a number:
 **1**
 1
-Input a number
+Give a number:
 **0**
 
 </sample-output>
