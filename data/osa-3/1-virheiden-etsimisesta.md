@@ -1,7 +1,7 @@
 ---
-path: '/osa-3/1-virheiden-etsimisesta'
+path: "/osa-3/1-virheiden-etsimisesta"
 # title: 'Virheiden etsimisestä'
-title: 'On searching errors'
+title: "On searching errors"
 hidden: false
 ---
 
@@ -12,12 +12,12 @@ hidden: false
 
 </text-box>
 
-
 <!-- Olemme tähän mennessä harjoitelleet ohjelmointikielen perusrakenteiden kuten muuttujien, ehtolauseiden, toistolauseiden ja metodien käyttöä. Tutustutaan seuraavaksi lyhyesti ohjelmien ymmärrettävyyteen vaikuttaviin tekijöihin sekä virheiden etsimiseen. -->
 
 We've so far been practicing the fundamentals of the language, such as variables, conditionals, loops, and methods. Let's now move on to look at some of the factors affecting the understandability of programs, and how errors are found.
 
 <!-- ## Ohjelmoija sokeutuu koodilleen -->
+
 ## A programmer becomes blind to their own code
 
 <!-- Ohjelmoija sokeutuu omalle koodilleen. Tutustutaan tähän efektiin alla olevan lyhyen videon avulla. Laske alla olevalta videolta kuinka monta kertaa valkopaitaiset pelaajat syöttävät palloa toisilleen. Videossa on mukana englanninkieliset ohjeistukset. -->
@@ -36,12 +36,10 @@ Fortunately, however, applying oneself to a given task lessens the occurrence of
 
 <!-- Ohjelmoinnin harjoittelun kannalta tahaton sokeus näkyy muunmuassa siinä, että tiettyyn ohjelman osaan keskittyminen vie huomiota muista osista, jotka saattavat mielessä tällöin näyttää oikeellisilta vaikka niissä olisi virhe. Esimerkiksi ohjelman tulostuksen oikeellisuutta tarkasteltaessa ohjelmoija saattaa keskittyä tulostuslauseisiin ja vahingossa jättää osan logiikasta huomioimatta. -->
 
-
 One way in which perceptual blindness manifests itself in programming practice is when concentrating on a specific part of a program draws attention away from seemingly correct, yet erroneous parts. For instance, while inspecting the correctness of a program's output, a programmer may fixate on print statements, and mistakenly neglect aspects of the program's logic.
 
 <!--
 Vastaavasti toistolauseen sisältävässä ohjelmassa olevaa virhettä etsiessä ohjelmoija saattaa keskittyä monimutkaisimpaan asiaan ensin, vaikka virhe on täysin muualla. Esimerkkinä alla oleva käyttäjän syötteiden keskiarvon laskemiseen tarkoitettu ohjelma, jossa on virhe -- virheen etsinnässä tyypillisesti keskitytään ensin toistolauseeseen. -->
-
 
 Likewise, a programmer may focus on the most complicated aspect of a program featuring a loop, although the error lies somewhere else completely. An example of this is the program below used to calculate the average of user-inputted values. It contains an error, and focus is typically first placed on the loop when searching for it.
 
@@ -91,17 +89,15 @@ if (sum == 0) {
 }
 ```
 
-
 <quiznator id="5c3740e43972a914740fe479"></quiznator>
 
 <!-- Tahaton sokeus on asia, jota ei voi varsinaisesti kytkeä pois päältä. Ohjelmoija voi kuitenkin muutamien kikkojen avulla vähentää sen esiintymistä -- näistä ensimmäinen on taukojen pitäminen, joka luonnollisesti vaatii työn ajoissa aloittamisen. Lisäksi esimerkiksi koodin kommentointi, nimentä ja "debug"-tulosteet auttavat myös. -->
 
-Perceptual blindness is something that cannot be switched off completely. However, there are ways by which a programmer can lessen its effect -  the first one being taking breaks. This, of course, requires that work is begun early. Additionally, commenting code, the naming of things, and "debugging" prints are examples of things that help too.
-
+Perceptual blindness is something that cannot be switched off completely. However, there are ways by which a programmer can lessen its effect - the first one being taking breaks. This, of course, requires that work is begun early. Additionally, commenting code, the naming of things, and "debugging" prints are examples of things that help too.
 
 <!-- ## Lähdekoodin kommentointi -->
-## Commenting the source code
 
+## Commenting the source code
 
 <!-- Kommenteilla on useita käyttötarkoituksia, joista yksi on ohjelman toiminnallisuuden itselleen selittämiseen esimerkiksi virhettä etsittäessä. Alla melko yksinkertaisen ohjelman suoritus on kuvattu auki kommentein. -->
 
@@ -130,7 +126,6 @@ while (luku > 0) {
     luku = luku - 1;
 }
 ``` -->
-
 
 ```java
 
@@ -161,7 +156,6 @@ while (value > 0) {
 
 Comments have no impact on the execution of the program, i.e., the program works in the same way with the comments as it does without them.
 
-
 <!-- Edellä käytetty ohjelmoinnin opetteluun tarkoitettu kommentointityyli on toistaalta ohjelmistokehityksene kelpaamaton hyvin raskas. Ohjelmistoja rakennettaessa pyritään siihen, että **lähdekoodi kommentoi itse itsensä**. Tämä tarkoittaa sitä, että ohjelman toiminnallisuus tulee ilmi luokkien, metodien ja muuttujien nimistä. -->
 
 The commenting style used above for learning programming is, however, quite burdensome in real development, where the goal instead is for the source code to be **self documenting**. This means that the functionality of the program should be evident from the way classes, methods, and variables are named.
@@ -189,6 +183,7 @@ public static void tulostaLuvutIsoimmastaPienimpaan(int mista, int mihin) {
     }
 }
 ``` -->
+
 ```java
 public static void printValuesFromTenToOne() {
     int value = 10;
@@ -209,9 +204,8 @@ public static void printValuesFromLargestToSmallest(int start, int end) {
 ```
 
 <!-- ## Virheiden etsintä print-debuggauksella -->
+
 ## Searching for errors with print debugging
-
-
 
 <!-- Eräs ohjelmoinnissa tarvittava taito on testaus- ja debuggaustaito, jota käytetään virheiden etsimisessä. Yksinkertaisin tapa ohjelmissa olevien virheiden etsimiseen on ns. print-debuggaus, joka käytännössä tarkoittaa rivikohtaista viestien lisäämistä. Viestejä käytetään ohjelman suorituksen seuraamiseen, ja viestit voivat sisältää myös ohjelmassa olevien muuttujien arvot. -->
 
@@ -243,6 +237,7 @@ if (summa == 0) {
     System.out.println("Lukujen keskiarvo: " + (1.0 * summa / lukuja));
 }
 ``` -->
+
 ```java
 Scanner scanner = new Scanner(System.in);
 int values = 0;
@@ -333,4 +328,5 @@ if (sum == 0) {
 <!-- Kun ohjelman suorittaa useampaan otteeseen sopivilla syötteillä, ohjelmasta löytynee siinä piilevä virhe. Sopivien syötteiden keksiminen on myös oma taitonsa -- tärkeää on pyrkiä tarkastelemaan ns. corner caseja, eli tilanteita, joissa ohjelman suoritus voisi olla poikkeava. Tällaisia tilanteita ovat esimerkiksi tilanne, missä käyttäjä ei syötä yhtään hyväksyttävää lukua, käyttäjä syöttää pelkkiä nollia, tai käyttäjä syöttää hyvin isoja lukuja. -->
 
 When a program is executed multiple times with the appropriate inputs, the hidden error is most likely found. Coming up with suitable inputs is a skill in its own right. It's essential to test the so-called corner cases, i.e., circumstances where the program execution could be exceptional. An example scenario is one where the user only inputs unacceptable numbers, or zeros, or very large numbers.
+
 <quiznator id="5c385de6ddb6b814af31d7d0"></quiznator>
