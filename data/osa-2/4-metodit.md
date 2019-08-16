@@ -1019,22 +1019,22 @@ public static double methodThatReturnsFloatingPointNumber() {
 </table>
 
 
-<programming-exercise name='Numero uno' tmcname='osa02-Osa02_27.NumeroUno'>
+<programming-exercise name='Number uno' tmcname='part02-Part02_27.NumberUno'>
 
 <!-- Kirjoita metodi `public static int numeroUno()`, joka palauttaa arvon 1. -->
 
-Write a method `public static int numeroUno()` that returns the value 1.
+Write a method `public static int numberUno()` that returns the value 1.
 
 </programming-exercise>
 
 
 <!-- <programming-exercise name='Merkkijono' tmcname='osa02-Osa02_28.Merkkijono'> -->
-<programming-exercise name='String' tmcname='osa02-Osa02_28.Merkkijono'>
+<programming-exercise name='Word' tmcname='part02-Part02_28.Word'>
 
 
 <!-- Kirjoita metodi `public static String merkkijono()`. Metodin tulee palauttaa itse päättämäsi merkkijono. -->
 
-Write a method `public static String string()`. The method must return a string of your choice.
+Write a method `public static String word()`. The method must return a string of your choice.
 
 </programming-exercise>
 
@@ -1415,7 +1415,7 @@ Now the value of the variable `number1` is copied as the value of the method par
 
 <!-- <programming-exercise name='Lukujen summa' tmcname='osa02-Osa02_29.LukujenSumma'> -->
 
-<programming-exercise name='Sum of numbers' tmcname='osa02-Osa02_29.LukujenSumma'>
+<programming-exercise name='Summation' tmcname='part02-Part02_29.Summation'>
 
 
 <!-- Täydennä tehtäväpohjassa olevaa metodia `summa` siten, että se laskee ja palauttaa parametrina olevien lukujen summan. -->
@@ -1475,7 +1475,7 @@ Sum: 14
 
 <!-- <programming-exercise name='Pienin' tmcname='osa02-Osa02_30.Pienin'> -->
 
-<programming-exercise name='Smallest' tmcname='osa02-Osa02_30.Pienin'>
+<programming-exercise name='Smallest' tmcname='part02-Part02_30.Smallest'>
 
 
 <!-- Tee kaksiparametrinen metodi `pienin`, joka palauttaa parametrina saamistaan luvuista pienemmän arvon. Jos lukujen arvo on sama, voidaan palauttaa kumpi tahansa luvuista. -->
@@ -1532,7 +1532,7 @@ Smallest: 2
 
 <!-- <programming-exercise name='Suurin' tmcname='osa02-Osa02_31.Suurin'> -->
 
-<programming-exercise name='Greatest' tmcname='osa02-Osa02_31.Suurin'>
+<programming-exercise name='Greatest' tmcname='part02-Part02_31.Greatest'>
 
 
 <!-- Tee metodi `suurin`, joka saa kolme lukua ja palauttaa niistä suurimman. Jos suurimpia arvoja on useita, riittää niistä jonkun palauttaminen. Tulostus tapahtuu pääohjelmassa. -->
@@ -1573,7 +1573,7 @@ Suurin: 7
 
 <sample-output>
 
-Suurin: 7
+Greatest: 7
 
 </sample-output>
 
@@ -1582,7 +1582,7 @@ Suurin: 7
 
 <!-- <programming-exercise name='Lukujen keskiarvo' tmcname='osa02-Osa02_32.LukujenKeskiarvo'> -->
 
-<programming-exercise name='Average of numbers' tmcname='osa02-Osa02_32.LukujenKeskiarvo'>
+<programming-exercise name='Averaging' tmcname='part02-Part02_32.Averaging'>
 
 
 <!-- Tee metodi `keskiarvo`, joka laskee parametrina olevien lukujen keskiarvon. Metodin sisällä tulee käyttää apuna edellä tehtyä metodia `summa`! -->
@@ -2074,7 +2074,7 @@ Below is a visualization of the method call `multiplicationTable(3)`. Notice how
 
 <!-- <programming-exercise name='Tulostelua (4 osaa)' tmcname='osa02-Osa02_33.Tulostelua'> -->
 
-<programming-exercise name='Doing some printing (4 parts)' tmcname='osa02-Osa02_33.Tulostelua'>
+<programming-exercise name='Star sign (4 parts)' tmcname='part02-Part02_33.Star sign'>
 
 
 
@@ -2144,10 +2144,12 @@ The output of the program:
 Define a method called `printSquare(int lengthOfSide)` that prints a suitable square with the help of the `printStars` method. So the method call `printSquare(4)` results in the following output:
 
 <sample-output>
+
 ****
 ****
 ****
 ****
+
 </sample-output>
 
 <!-- **Huom:** tehtävässä ei riitä että tulostus näyttää oikealta, tulostaNelio-metodin sisällä neliön "rivien" tulostus tulee tehdä tulostaTahtia-metodia käyttäen. -->
@@ -2168,25 +2170,29 @@ When creating the program, you might benefit from the test code in the main to e
 Write a method called `printRectangle(int width, int height`) that prints the correct rectangle by using the `printStars` method. So the method call `printRectangle(17, 3)` should produce the following output:
 
 <sample-output>
+
 *****************
 *****************
 *****************
+
 </sample-output>
 
 
 <!-- <h2>Vasemmalle nojaavan kolmion tulostus</h2> -->
 
-<h2>Printing a left-leaning triangle</h2>
+<h2>Printing a triangle</h2>
 
 <!-- Tee metodi `tulostaKolmio(int koko)` joka tulostaa kolmion käyttäen `tulostaTahtia`-metodia. Siis esimerkiksi kutsu `tulostaKolmio(4)` tulostaa seuraavaa: -->
 
 Create a method called `printTriangle(int size)` that prints a triangle by using the `printStars` method. So the call `printTriangle(4)` should print the following:
 
 <sample-output>
+
 *
 **
 ***
 ****
+
 </sample-output>
 
 </programming-exercise>
@@ -2195,16 +2201,16 @@ Create a method called `printTriangle(int size)` that prints a triangle by using
 <!-- <programming-exercise name='Tulostelua Like A Boss (3 osaa)' tmcname='osa02-Osa02_34.TulosteluaLikeABoss'> -->
 
 
-<programming-exercise name='Printing Like A Boss (3 parts)' tmcname='osa02-Osa02_34.TulosteluaLikeABoss'>
+<programming-exercise name='Advanced astrology (3 parts)' tmcname='part02-Part02_34.Advanced astrology'>
 
 
 <!-- <h2>Tähtirivin ja tyhjien tulostus</h2> -->
 
-<h2>Printing a row of stars and empty spaces</h2>
+<h2>Printing stars and spaces</h2>
 
 <!-- Tee metodi `tulostaTyhjaa(int maara)` joka tulostaa `maara` kappaletta välilyöntejä. Metodi ei tulosta rivinvaihtoa. -->
 
-Define a method called `printEmpty(int number)` that produces the number of spaces specified by `number`. The method does not print the line break.
+Define a method called `printSpaces(int number)` that produces the number of spaces specified by `number`. The method does not print the line break.
 
 <!-- Joudut myös joko kopioimaan edellisen tehtävän vastauksestasi metodin `tulostaTahtia` tai toteuttamaan sen uudelleen tämän tehtävän tehtäväpohjaan. -->
 
@@ -2216,7 +2222,7 @@ You will also have to either copy the `printStars` method your previous answer o
 
 <!-- Tee metodi `tulostaKolmio(int koko)` joka tulostaa kolmion käyttäen `tulostaTyhjaa`- ja `tulostaTahtia`-metodeja. Siis esimerkiksi kutsu `tulostaKolmio(4)` tulostaa seuraavaa: -->
 
-Create a method called `printTriangle(int size)` that uses `printEmpty` and `printStars` to print the correct triangle. So the method call `printTriangle(4)` should print the following:
+Create a method called `printTriangle(int size)` that uses `printSpaces` and `printStars` to print the correct triangle. So the method call `printTriangle(4)` should print the following:
 
 <sample-output>
    *
@@ -2232,7 +2238,7 @@ Create a method called `printTriangle(int size)` that uses `printEmpty` and `pri
 
 <!-- Tee metodi `jouluKuusi(int korkeus)` joka tulostaa joulukuusen. Joulukuusi koostuu annetun korkuisesta kolmiosta ja jalasta. Jalka on kaksi tähteä korkea ja kolme tähteä leveä ja se on keskellä kolmion pohjaa. Kuusi tulee rakentaa käyttämällä tulostukseen metodeja `tulostaTyhjaa` ja `tulostaTahtia` -->
 
-Define a method called `christmasTree(int height)` that prints the correct Christmas tree. The Christmas tree consists of a triangle with the specified height and the base. The base is two stars high and three stars wide, and is placed at the center of the triangle's bottom. The tree is to be constructed by using the methods `printEmpty` and `printStars`.
+Define a method called `christmasTree(int height)` that prints the correct Christmas tree. The Christmas tree consists of a triangle with the specified height and the base. The base is two stars high and three stars wide, and is placed at the center of the triangle's bottom. The tree is to be constructed by using the methods `printSpaces` and `printStars`.
 
 <!-- Esimerkiksi kutsu `jouluKuusi(4)` tulostaa seuraavaa: -->
 
@@ -2270,7 +2276,7 @@ The call `christmasTree(10)` should print:
 
 <!-- **Huom:** korkeuksien jotka ovat alle 3 ei tarvitse toimia! -->
 
-**N.B.:** lengths shorter that 3 don't have work correctly!
+**N.B.:** heights shorter that 3 don't have work correctly!
 
 
 </programming-exercise>
