@@ -221,7 +221,7 @@ Strictly speaking the main program (`main`) itself is a method. When the program
 
 <!-- <programming-exercise name='Tekstin tulostus' tmcname='osa02-Osa02_21.TekstinTulostus'> -->
 
-<programming-exercise name='Printing a phrase' tmcname='osa02-Osa02_21.TekstinTulostus'>
+<programming-exercise name='In a hole in the ground' tmcname='part02-Part02_21.InAHoleInTheGround'>
 
 
 
@@ -245,7 +245,7 @@ public static void main(String[] args) {
 }
 
 public static void printPhrase() {
-    // write your code here
+    // Write some code in here
 }
 ```
 
@@ -270,7 +270,7 @@ In a hole in the ground there lived a method
 
 <!-- <programming-exercise name='Monta tulostusta' tmcname='osa02-Osa02_22.MontaTulostusta'> -->
 
-<programming-exercise name='Multiple prints' tmcname='osa02-Osa02_22.MontaTulostusta'>
+<programming-exercise name='Reprint' tmcname='print02-Part02_22.Reprint'>
 
 
 <!-- Laajenna edellistä ohjelmaa siten, että pääohjelma kysyy käyttäjältä, montako kertaa teksti tulostetaan eli montako kertaa metodia kutsutaan. -->
@@ -295,7 +295,7 @@ public static void main(String[] args) {
 }
 
 public static void printPhrase() {
-    // write code here
+    // write some code in here
 }
 ```
 
@@ -318,7 +318,7 @@ Alussa olivat suo, kuokka ja Java.
 
 <sample-output>
 
-How many?
+How many times?
 **7**
 In a hole in the ground there lived a method.
 In a hole in the ground there lived a method.
@@ -332,7 +332,7 @@ In a hole in the ground there lived a method.
 
 <!-- **Huom:** tulosta kehote `Kuinka monta?` omalle rivilleen! -->
 
-**N.B.:** print the prompt `How many?` its own separate line!
+**N.B.:** print the prompt `How many times?` its own separate line!
 
 
 </programming-exercise>
@@ -488,7 +488,7 @@ If an expression is used as a parameter for a method, that expression is evaluat
 
 <!-- <programming-exercise name='Yhdestä parametriin' tmcname='osa02-Osa02_23.YhdestaParametriin'> -->
 
-<programming-exercise name='From one to parameter' tmcname='osa02-Osa02_23.YhdestaParametriin'>
+<programming-exercise name='From one to parameter' tmcname='part02-Part02_23.FromOneToParameter'>
 
 
 <!-- Luo tehtäväpohjaan metodi `public static void tulostaLukuunAsti(int luku)`, joka tulostaa luvut yhdestä parametrina annettuun lukuun asti. Alla on kaksi esimerkkiä metodin käytöstä. -->
@@ -542,17 +542,17 @@ public static void main(String[] args) {
 <!-- <programming-exercise name='Parametrista yhteen' tmcname='osa02-Osa02_24.ParametristaYhteen'> -->
 
 
-<programming-exercise name='From parameter to one' tmcname='osa02-Osa02_24.ParametristaYhteen'>
+<programming-exercise name='From parameter to one' tmcname='part02-Part02_24.FromParameterToOne'>
 
 
 <!-- Luo tehtäväpohjaan metodi `public static void tulostaLuvustaYhteen(int luku)`, joka tulostaa luvut parametrina annetusta luvusta yhteen asti. Alla on kaksi esimerkkiä metodin käytöstä. -->
 
-Create the following method in the exercise template: `public static void printFromNumToOne(int number)`. It should print the numbers from the number passed as a parameter down to one. Two examples of the method's usage are given below.
+Create the following method in the exercise template: `public static void printFromParameterToOne(int number)`. It should print the numbers from the number passed as a parameter down to one. Two examples of the method's usage are given below.
 
 
 ```java
 public static void main(String[] args) {
-    printFromNumToOne(5);
+    printFromParameterToOne(5);
 }
 ```
 
@@ -577,7 +577,7 @@ public static void main(String[] args) {
 ```java
 
 public static void main(String[] args) {
-    printFromNumToOne(2);
+    printFromParameterToOne(2);
 }
 
 ```
@@ -649,7 +649,7 @@ The sum of numbers 2 and 4 is 6
 
 <!-- <programming-exercise name='Jakolasku' tmcname='osa02-Osa02_25.Jakolasku'> -->
 
-<programming-exercise name='Division' tmcname='osa02-Osa02_25.Jakolasku'>
+<programming-exercise name='Division' tmcname='part02-Part02_25.Division'>
 
 
 <!-- Kirjoita metodi `public static void jakolasku(int osoittaja, int nimittaja)`, joka tulostaa osoittajan ja nimittäjän jakolaskun tuloksen. Muistathan, että kahden kokonaisluvun jakolaskun tulos on kokonaisluku -- tässä halutaan tuloksena liukuluku. -->
@@ -661,7 +661,7 @@ Write a method `public static void division(int numerator, int denominator)` tha
 
 <!-- <programming-exercise name='Kolmella jaolliset' tmcname='osa02-Osa02_26.KolmellaJaolliset'> -->
 
-<programming-exercise name='Divisible by three' tmcname='osa02-Osa02_26.KolmellaJaolliset'>
+<programming-exercise name='Divisible by three' tmcname='part02-Part02_26.DivisibleByThree'>
 
 
 <!-- Kirjoita metodi `public static void kolmellaJaollisetValilta(int alku, int loppu)`, joka tulostaa kaikki kolmella jaolliset luvut annetulta väliltä. Luvut tulee tulostaa järjestyksessä pienimmästä suurimpaan. -->
