@@ -231,11 +231,11 @@ public class Program {
 }
 ```
 
-<programming-exercise name='Toiseen potenssiin' tmcname='osa02-Osa02_01.ToiseenPotenssiin'>
+<programming-exercise name='Squared' tmcname='part02-Part02_01.Squared'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä kokonaisluvun ja tulostaa luvun korotettuna toiseen potenssin eli luvun kerrottuna itsellään. -->
 
-Write a program, that reads an integer from the user input, and then prints the second power of the given integer, i.e. the integer multiplied by itself.
+Write a program that reads an integer from the user input, and then prints the second power of the given integer, i.e. the integer multiplied by itself.
 
 <sample-output>
 
@@ -261,7 +261,7 @@ Write a program, that reads an integer from the user input, and then prints the 
 </programming-exercise>
 
 
-<programming-exercise name='Summan neliöjuuri' tmcname='osa02-Osa02_02.SummanNeliojuuri'>
+<programming-exercise name='Square root of sum' tmcname='part02-Part02_02_SquareRootOfSum'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä kaksi kokonaislukua ja tulostaa lukujen summan neliöjuuren. Ohjelman ei tarvitse käsitellä negatiivisia lukuja. -->
 Write a program that reads two integers from the user input, and then prints the square root of the sum of the given integers. The program doesn't need to work with negative values.
@@ -276,8 +276,8 @@ System.out.println(neliojuuri);
 ``` -->
 
 ```java
-int value = 42;
-double squareRoot = Math.sqrt(value);
+int number = 42;
+double squareRoot = Math.sqrt(number);
 System.out.println(squareRoot);
 ```
 
@@ -461,7 +461,7 @@ public class Program {
 ```
 
 
-<programming-exercise name='Itseisarvo' tmcname='osa02-Osa02_03.Itseisarvo'>
+<programming-exercise name='Absolute value' tmcname='part02-Part02_03.AbsoluteValue'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä kokonaisluvun. Mikäli luku on pienempi kuin 0, ohjelma tulostaa luvun kerrottuna luvulla -1. Muulloin ohjelma tulostaa käyttäjän syöttämän luvun. Alla on muutamia esimerkkejä ohjelman odotetusta toiminnasta. -->
 

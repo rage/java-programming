@@ -516,7 +516,7 @@ The number is greater than zero.
 The example above prints the string "The number is greater than zero." even if the condition `number > 2` is true. The comparing stops at the first condition that evaluates to true.
 
 <!-- <programming-exercise name="Arvosanat ja pisteet" tmcname='osa01-Osa01_31.ArvosanatJaPisteet'> -->
-<programming-exercise name="Grades and points" tmcname='osa01-Osa01_31.ArvosanatJaPisteet'>
+<programming-exercise name="Grades and points" tmcname='Part01-Part01_31.GradesAndPoints'>
 
 <!-- Alla oleva taulukko kuvaa erään kurssin arvosanan muodostumista. Tee ohjelma, joka ilmoittaa kurssiarvosanan annetun taulukon mukaisesti. -->
 
