@@ -1,6 +1,6 @@
 ---
-path: "/osa-1/2-printing"
-title: "Printing"
+path: '/osa-1/2-printing'
+title: 'Printing'
 hidden: false
 ---
 
@@ -40,7 +40,7 @@ Hei maailma!
 
 </text-box>
 
-The print command `System.out.println("Hello world");` outputs the text "Hello world".
+The print command `System.out.println("Hello world");` prints the text "Hello world".
 
 ```java
 System.out.println("Hello world!");

@@ -1,7 +1,7 @@
 ---
-path: "/osa-3/1-virheiden-etsimisesta"
+path: '/osa-3/1-virheiden-etsimisesta'
 # title: 'Virheiden etsimisestä'
-title: "On searching errors"
+title: 'On searching errors'
 hidden: false
 ---
 
