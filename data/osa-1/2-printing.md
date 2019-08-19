@@ -1,8 +1,9 @@
 ---
-path: '/osa-1/2-printing'
-title: 'Printing'
+path: "/osa-1/2-printing"
+title: "Printing"
 hidden: false
 ---
+
 <!-- ---
 path: '/osa-1/2-tulostaminen'
 title: 'Tulostaminen'
@@ -20,8 +21,8 @@ hidden: false
 <text-box variant='learningObjectives' name='Learning Objectives'>
 
 - You will learn to write a program that prints text.
-- You will get acquainted with executing programs
-- You will know what the term parameter means
+- You will become familiar with executing programs.
+- You will know what the term parameter means.
 
 <!-- </text-box>
 
@@ -39,7 +40,7 @@ Hei maailma!
 
 </text-box>
 
-Print command `System.out.println("Hello world");` prints text "Hello world".
+The print command `System.out.println("Hello world");` outputs the text "Hello world".
 
 ```java
 System.out.println("Hello world!");
@@ -51,14 +52,13 @@ Hello world!
 
 </sample-output>
 
-
 <!-- Yllä olevan tekstialueen näköiset kohdat materiaalissa kuvaavat koodiesimerkin tuottamaan tulostuksen. Yllä ohjelma tuottaisi siis tulostuksen "Hei maailma!". Voit kokeilla kaikkia materiaalin esimerkkejä ohjelmointiympäristössä olevassa "Hiekkalaatikko"-nimisessä tehtäväpohjassa.
 
 Tulostuskomennon avulla tulostettavaa tekstiä voi vaihtaa mielivaltaisesti, kunhan komento `System.out.println("mielivaltainen teksti");` -- eli `System` piste `out` piste `println` sulut auki `(` "teksti" sulut kiinni `)` ja puolipiste `;` pysyy muuttumattomana. Alla oleva komento tulostaa tekstin "Hei vaan!". -->
 
-In the material, text areas like above show the output of the code examples. Program above would then produce output "Hello world!". You can try out any code examples TODO: viimeistele tää lause...
+Sections in the material similar to the text area above demonstrate an output produced by some example code. Accordingly, the above program would produce the print output "Hello World!". You can try all of the material's examples in the exercise template named "Sandbox", which is found in the programming environment.
 
-Text printed with the print command can be changed arbitrarily as long as the command `System.out.println("arbitary text");` -- or `System` point `out` point `println` parenthehes open `(` "text" parentheses close `)` and semicolon `;` stays constant. Below command will print text "Hello there!".
+Text printed with the print command can be changed arbitrarily as long as the command `System.out.println("arbitary text");` -- i.e. `System` dot `out` dot `println` open parentheses `(` "the text" close parentheses `)` and semicolon `;` remains unchanged. The command below command will print the text "Hello there!".
 
 <!-- ```java
 System.out.println("Hei vaan!");
@@ -94,9 +94,9 @@ public class Esimerkki {
 }
 ``` -->
 
-## Code boilerplate
+## Program Frame
 
-To work, our programs need a code boilerplate as below. The name of the boilerplate, here `Example`, corresponds to the file name in source (e.g. `Example.java`).
+Our programs have to be written within a program frame, such as the one below, for them to work. The name of the frame, `Example` in this case, corresponds to the file name that contains the source code (e.g. `Example.java`).
 
 ```java
 public class Example {
@@ -118,7 +118,7 @@ Tulostettava teksti
 
  -->
 
-Execution of the program starts after the line `public static void main(string[] args) {` and ends at the closing curly bracket `}`. Commands are executed one line at a time. We will get know the meaning of the words `public class` and `public static void` later. In the above example, `System.out.println("Text to be printed")` is the only command to be executed and its output is:
+Execution of the program starts from the line that follows `public static void main(string[] args) {`, and ends at the closing curly bracket `}`. Commands are executed one line at a time. We will get know the meaning of the words `public class` and `public static void` later on. In the above example, `System.out.println("Text to be printed")` is the only command to be executed and its output is:
 
 <sample-output>
 
@@ -149,25 +149,24 @@ public class Esimerkki {
 
 <text-box variant="hint" name="Examples in material and code boilerplate">
 
-Not every example in material have the boilerplate, but you can assume that it is always needed. The examples can have only one line like printing example below.
+Not all of the material examples use a template, but you should assume that one is always needed. The examples can consist of only a single line, such as the printing example below.
 
 ```java
 System.out.println("Hello world");
 ```
 
-In a real java program the example above looks like the following.
+In reality however, the example above looks like the following when written in Java.
 
 ```java
 public class Example {
     public static void main(String[] args) {
-        // Here you write the senteces the program uses
+        // Here goes the statements used by the program
         System.out.println("Hello world!");
     }
 }
 ```
 
 </text-box>
-
 
 <!-- Alla on kurssin toinen ohjelmointitehtävä. Mikäli haluat, voit katsoa jo nyt alta olevalta videolta miten tehtävä ratkaistaan.
 
@@ -198,14 +197,15 @@ Kun olet tehnyt tehtävän ja huomaat, että ohjelma tulostaa halutun merkkijono
 </programming-exercise>
 -->
 
-Below is the second programming exercise of the course. If you want, you can now watch how to solve the exercise at video below.
+You'll find the second programming exercise of the course below. If you want, you can watch the video linked below in advance to see how the exercise is solved (NB: currently only available in Finnish).
 
-TODO video englanniksi?
+<!-- TODO video englanniksi? -->
+
 <youtube id="-DzOKI6iH5w"></youtube>
 
 <programming-exercise name='Ada Lovelace' tmcname='part01-Part01_02.AdaLovelace'>
 
-In the exercise template there is the following code boilerplate:
+The exercise template has the following frame:
 
 ```java
 public class AdaLovelace {
@@ -215,7 +215,8 @@ public class AdaLovelace {
     }
 }
 ```
-Line "// Write your program here" is a _line comment_, which the computer doesn't take into account when executing the program. Add a new line below the line comment that prints a string "Ada Lovelace" and run the program. The output of the program should be as following:
+
+The line "// Write your program here" is a _line comment_, which the computer ignores when executing the program. Add a new line below the line comment that prints the string "Ada Lovelace" and run the program. The output of the program should be:
 
 <sample-output>
 
@@ -223,11 +224,9 @@ Ada Lovelace
 
 </sample-output>
 
-When you have finished the exercise and and prints the correct string, return the exercise to TMC. After this you can read more about [Ada Lovelace](https://en.wikipedia.org/wiki/Ada_Lovelace), who was one of the first programmers.
+Once you've finished the exercise and see that it prints the correct string, return the exercise to TMC. Following that, you can read more about [Ada Lovelace](https://en.wikipedia.org/wiki/Ada_Lovelace), who was one of the first programmers.
 
 </programming-exercise>
-
-
 
 <!-- <text-box variant='hint' name='Ohjelman suorittaminen'>
 
@@ -245,11 +244,11 @@ Käytössämme oleva ohjelmointiympäristö kääntää ja suorittaa ohjelman yh
 
 <text-box variant='hint' name='Running the program'>
 
-You can run the program in TMC by pressing the green play button or by selecting "Run project" from TMC-menu.
+You can run a program in TMC by pressing the green play-button, or by selecting "Run project" from the TMC-menu.
 
 TODO: tähän kuva TMC:stä (highlightattuna run-nappi).
 
-Running the program is easy, but there happens much under the surface. When you want to run the program, the source code is first compiled into Java bytecode. This is done with Javas own compiler, which also is a program. After this the program will be executed meaning the commands will be executed one by one by a Java-compiler which understands java bytecode.
+Although running the program is straightforward, a lot happens behind the scenes. When a program is run, the source code is first compiled into Java bytecode. This compilation process is done by Java's own compiler, which itself is a program. Following that, the program gets executed, meaning the commands are executed one-by-one by a Java-interpreter that is able to read Java bytecode.
 
 This compile process affects how and when errors occur. When program is compiled before execution, the program used for compiling can search errors from your program. This affects also what tips the programming environment can offer so that a programmer can get feedback about possible errors instantly.
 
@@ -279,7 +278,7 @@ Hei maailma!
 
 </sample-output> -->
 
-## Printing multiple lines
+## Printing Multiple Lines
 
 Programs are constructed command by command where each command comes on a new line. In the example below, command `System.out.println` appears twice, which means that two print commands are being executed in the program.
 
@@ -291,6 +290,7 @@ public class Ohjelma {
     }
 }
 ```
+
 Above program will print:
 
 <sample-output>
@@ -348,10 +348,9 @@ ohjelma
 
 </programming-exercise> -->
 
-
 <programming-exercise name='Once upon a time' tmcname='part01-Part01_03.OnceUponATime'>
 
-In the exercise template there is the following code boilerplate:
+The exercise template comes with the following code frame:
 
 ```java
 public class OnceUponATime {
@@ -374,7 +373,6 @@ a program
 
 </programming-exercise>
 
-
 <!-- <text-box variant='hint' name='Lyhenne "sout"'>
 
 Komennon `System.out.println("...")` kirjoittaminen voi olla melko työlästä. Kokeile kirjoittaa NetBeans:iin (main:in sisään) tyhjälle riville _sout_ ja paina tabulaattoria (näppäin q:n vasemmalla puolella). Mitä tapahtuu? Tämä pieni apuväline säästänee jatkossa runsaasti aikaasi.
@@ -387,14 +385,13 @@ Alla oleva animaatio kuvaa sout-komennon käyttöä. Kun käyttäjä on kirjoitt
 
 <text-box>
 
-Writing the command `System.out.println("...") can be pretty cumbersome. In NetBeans try to write on a blank line (in main) __sout__ and press tabulator (key left to q). What happens? This small tool will propably save much of your time.
+Writing the command `System.out.println("...") can be pretty cumbersome. In NetBeans try to write on a blank line (in main) **sout** and press tabulator (key left to q). What happens? This small tool will propably save much of your time.
 
 Animation below illustrates the use of sout-command. First user writes sout and then pressed tabulator. A Magic Trick!
 
 ![](../img/sout.gif)
 
 </text-box>
-
 
 <!-- <programming-exercise name='Olipa kerran maa' tmcname='osa01-Osa01_04.OlipaKerranMaa'>
 
@@ -422,7 +419,7 @@ maa
 
 <programming-exercise name='Dinosaur' tmcname='part01-Part01_04.Dinosaur'>
 
-In the exercise template there is the following code boilerplate:
+The exercise comes ready with the following template:
 
 ```java
 public class Dinosaur {
@@ -443,7 +440,6 @@ a dinosaur
 </sample-output>
 
 </programming-exercise>
-
 
 <!-- ## Terminologiaa ja koodin kommentointi
 
@@ -473,15 +469,15 @@ Vaikka yllä oleva esimerkki toimii, on rivinvaihtojen käyttö tärkeää muita
 TODO: quiz, jossa kysytään että mistä tietyssä termissä on kyse
  -->
 
-## Terminology and commenting code
+## Terminology and Commenting Code
 
-### Commands parameters
+### Command parameters
 
-Information you print with print command is given as a __parameter__ bt adding it inside the parenteheses `()` after the command. For example, givin `Hi` as a parameter for `System.out.println` command is done like this: `System.out.println("Hi)`.
+The information to be printed by the print command, i.e. its **parameters**, are passed to it by placing them inside the parentheses `()` that follow the command. For example, passing `Hi` as a parameter to the `System.out.println` command is done like this: `System.out.println("Hi")`.
 
 ### Semicolon separates commands
 
-Commands are separated with a semicolon `;`. we could actually write almost everyting on a single line. However, that would not be very understandable.
+Commands are separated with a semicolon `;`. We could, if we wanted to, write almost everything on a single line. However, that would be difficult to understand.
 
 ```java
 System.out.println("Hello "); System.out.println("world"); System.out.println("!\n");
@@ -495,10 +491,9 @@ world
 
 </sample-output>
 
-Even tho above example does work, it is important to use line breaks for other programmers. Then the one reading the program knows that only one concretic thing is done on each line.
+Although the above example works, it's important to be considerate of other programmers and to use line breaks. That way, anyone reading the program knows that each line does only a single concrete thing.
 
-TODO: quiz, jossa kysytään että mistä tietyssä termissä on kyse
-
+<!-- TODO: quiz, jossa kysytään että mistä tietyssä termissä on kyse -->
 
 <!-- ### Kommentit
 
@@ -530,30 +525,30 @@ Esimerkin alin rivi esittelee erityisen kätevän käyttökohteen kommenteille. 
 
 ### Comments
 
-You can comment source code to clarify it or to add notes. There are two ways to do this.
+Source code can be commented to clarify it or to add notes. There are two ways to do this.
 
-- One line comments are started with two slashes `//`. Everything following on the same line is interpreted as a comment.
-- Multiline comments are started with one slash and an asterisk `/*` and ended with an asterisk and a slash `*/`. Everything between them is interpreted as a comment.
+- Single-line comments are marked with two slashes `//`. Everything following them on the same line is interpreted as a comment.
+- Multi-line comments are marked with a slash and an asterisk `/*`, and closed with an asterisk followed by a slash `*/`. Everything between them is interpreted as a comment.
 
 Below is an example of a program where both are used.
 
 ```java
 public class Comments {
     public static void main(String[] args) {
-        // print
+        // Printing
         System.out.println("Text to print");
         System.out.println("More text to print!");
         /* Next:
-        - more about printing
+        - more on printing
         - more practice
         - variables
         - ...
         */
-        System.out.println("Other text to print");
+        System.out.println("Some other text to print");
     }
 }
 ```
 
-The last line of the example presents a particularly handy use for comments. You don't need to remove any source code you have written if you want to try something.
+The last line of the example shows a particularly handy use-case for comments. The source code does not need to be removed to temporarily try out something.
 
-TODO: Tää ei nyt oikei käy järkeen?
+<!-- TODO: Tää ei nyt oikei käy järkeen? -->
