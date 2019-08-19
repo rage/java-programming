@@ -122,10 +122,10 @@ for (int i = start; i < end; i++) {
 We will continue practicing loops in the following exercises. You can use either a while-loop with a condition, or a for-loop.
 
 
-<programming-exercise name='Nollasta lukuun' tmcname='osa02-Osa02_14.NollastaLukuun'>
+<programming-exercise name='From zero to something' tmcname='part02-Part02_14.FromZeroToSomething'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä kokonaisluvun. Tämän jälkeen ohjelma tulostaa luvut nollasta käyttäjän syöttämään lukuun. Voit olettaa, että käyttäjä syöttää aina positiivisen luvun. Alla on muutamia esimerkkejä ohjelman toivotusta toiminnasta. -->
-Write a program, which reads an integer from the user. Then the program prints numbers from 0 to the number given by the user. You can assume that the user always gives a positive number. Below is some examples of the wanted functionality.
+Write a program that reads an integer from the user. Then the program prints numbers from 0 to the number given by the user. You can assume that the user always gives a positive number. Below is some examples of the wanted functionality.
 
 <sample-output>
 
@@ -149,7 +149,7 @@ Write a program, which reads an integer from the user. Then the program prints n
 </programming-exercise>
 
 
-<programming-exercise name='Luvusta sataan' tmcname='osa02-Osa02_15.LuvustaSataan'>
+<programming-exercise name='Counting to hundred' tmcname='part02-Part02_15.CountingToHundred'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä kokonaisluvun. Tämän jälkeen ohjelma tulostaa luvusta lähtien luvut sataan asti. Voit olettaa, että käyttäjä syöttää aina luvun, joka on pienempi kuin 100. Alla on muutamia esimerkkejä ohjelman toivotusta toiminnasta. -->
 Write a program, which reads an integer from the user. Then the program prints numbers from that number to 100. You can assume that the user always gives a number less than 100. Below are some examples of the wanted functionality.
@@ -192,21 +192,21 @@ Note, that from now on exercises can have multiple parts. All of the parts are c
 </text-box>
 
 
-<programming-exercise name='Mihin ja mistä? (2 osaa)' tmcname='osa02-Osa02_16.MihinJaMista'>
+<programming-exercise name='From where to where? (2 parts)' tmcname='part02-Part02_16.FromWhereToWhere'>
 
 
 <!-- Tämä tehtävä on ensimmäinen kaksiosainen tehtävä. Kun teet molemmat osat, saat tehtävästä kaksi tehtäväpistettä. Voit palauttaa tehtävän myös siten, että vain ensimmäinen osa on tehtynä. -->
 This exercise is the first two part exercise. When you complete both parts, you will get two exercise points. You can also submit the exercise only after completing the first part.
 
 
-<h2>Until what</h2>
+<h2>Where to</h2>
 
 <!-- Kirjoita ohjelma, joka tulostaa kokonaisluvut 1:stä käyttäjän antamaan lukuun asti. -->
 Write a program, which prints integers from 1 to a number given by the user.
 
 <sample-output>
 
-Until what? **3**
+Where to? **3**
 1
 2
 3
@@ -215,7 +215,7 @@ Until what? **3**
 
 <sample-output>
 
-Until what? **5**
+Where to? **5**
 1
 2
 3
@@ -228,15 +228,15 @@ Until what? **5**
 **hint** the number read from the user is now the upper limit of the condition. Remember that in Java `a <= b` means _a is smaller or equal to b_.
 
 
-<h2>From where?</h2>
+<h2>Where from</h2>
 
 <!-- Lisää ohjelmaan käyttäjältä kysyttävä alaraja. -->
 Ask the user for the starting point as well.
 
 <sample-output>
 
-Until what? **8**
-From where? **5**
+Where to? **8**
+Where from? **5**
 5
 6
 7
@@ -249,8 +249,8 @@ If the upper limit is larger than the starting point, nothing is printed:
 
 <sample-output>
 
-Until what? **12**
-From where? **16**
+Where to? **12**
+Where from? **16**
 
 </sample-output>
 
@@ -424,7 +424,7 @@ The values of variables `result` and `i` from the previous example have been wri
 
 </text-box>
 
-<programming-exercise name='Lukusarjan summa' tmcname='osa02-Osa02_17.LukusarjanSumma'>
+<programming-exercise name='Sum of a sequence' tmcname='part02-Part02_17.SumOfASequence'>
 
 <!-- Tee ohjelma, joka laskee summan 1+2+3+...+n, missä n on käyttäjän syöttämä luku. -->
 Implement a program, which calculates the sum 1+2+3+...+n where n is given as user input.
@@ -436,7 +436,7 @@ Sample output:
 
 <!-- Mihin asti? **3** -->
 <!-- Summa on 6 -->
-Up to? **3**
+Last number? **3**
 The sum is 6
 
 </sample-output>
@@ -448,7 +448,7 @@ The previous example calculated 1 + 2 + 3  = 6
 
 <!-- Mihin asti? **7** -->
 <!-- Summa on 28 -->
-Up to? **7**
+Last number? **7**
 The sum is 28
 
 </sample-output>
@@ -459,7 +459,7 @@ And this one calculated 1 + 2 + 3 + 4 + 5 + 6 + 7 = 28
 </programming-exercise>
 
 
-<programming-exercise name='Rajatun lukusarjan summa' tmcname='osa02-Osa02_18.RajatunLukusarjanSumma'>
+<programming-exercise name='Sum of a sequence - the sequel' tmcname='part02-Part02_18.SumOfASequenceTheSequel'>
 
 <!-- Kirjoita ohjelma, joka laskee rajatun välin lukujen summan ja tulostaa sen. Oleta, että käyttäjä antaa ensin pienemmän luvun ja sitten suuremman luvun. -->
 Implement a program, which calculated the sum of a closed interval, and prints it. Expect the user to write the smaller number first and then the larger number.
@@ -475,8 +475,8 @@ Sample output:
 <!-- Ensimmäinen: **3** -->
 <!-- Viimeinen: **5** -->
 <!-- Summa on 12 -->
-First: **3**
-Last: **5**
+First number? **3**
+Last number? **5**
 The sum is: 12
 
 </sample-output>
@@ -489,8 +489,8 @@ calculates  3 + 4 + 5 = 12
 <!-- Ensimmäinen: **2** -->
 <!-- Viimeinen: **8** -->
 <!-- Summa on 35 -->
-First: **2**
-Last: **8**
+First number? **2**
+Last number? **8**
 The sum is: 35
 
 </sample-output>
@@ -501,7 +501,7 @@ calculates 2 + 3 + 4 + 5 + 6 + 7 + 8 = 35
 </programming-exercise>
 
 
-<programming-exercise name='Kertoma' tmcname='osa02-Osa02_19.Kertoma'>
+<programming-exercise name='Factorial' tmcname='part02-Part02_19.Factorial'>
 
 <!-- Tee ohjelma, joka laskee käyttäjän syöttämän luvun kertoman. -->
 Implement a program, which calculates the factorial of a number given by the user.
@@ -516,20 +516,21 @@ Sample output:
 
 <!-- Anna luku: **3** -->
 <!-- Kertoma on 6 -->
-Write a number: **3**
-Factorial is 6
+Give a number: **3**
+Factorial: 6
 
 </sample-output>
 
 <!-- Nyt laskettiin 1 * 2 * 3 = 6 -->
+<!-- TODO: not quite a good way to say this -->
 calculated 1 * 2 * 3 = 6
 
 <sample-output>
 
 <!-- Anna luku: **10** -->
 <!-- Kertoma on 3628800 -->
-Write a number: **10**
-Factorial is 3628800
+Give a number: **10**
+Factorial: 3628800
 
 </sample-output>
 
@@ -641,7 +642,7 @@ System.out.println("Invalid numbers: " + invalidNumbers);
 ```
 
 
-<programming-exercise name='Silmukat, lopetus ja muistaminen (5 osaa)' tmcname='osa02-Osa02_20.SilmukatLopetusJaMuistaminen'>
+<programming-exercise name='Repeating, breaking and remembering (5 parts)' tmcname='part02-Part02_20.RepeatingBreakingAndRemembering'>
 
 <!-- Seuraavassa tehtävässä tehdään yksi ohjelma, mutta ohjelman rakentaminen tapahtuu hyvin pienissä paloissa. Tämä on ehdottoman suositeltava tapa aina kun ohjelmoit. -->
 Next we will implement one larger program small piece at a time. This is a strongly recommended approach always when coding.
@@ -652,19 +653,19 @@ In this series of exercises a program is implemented functionality by functional
 <!-- Huom: muistathan, että jokaisen isomman tehtävän "alitehtävä" on saman arvoinen tehtävä kuin yksi alikohdaton tehtävä. Tämä tehtävä vastaa siis viittä normaalia tehtävää. -->
 NB: Remember, that each part of the series is worth the same as one individual exercise. This series is then worth the same as five individual exercises.
 
-<h2>Reading input</h2>
+<h2>Reading</h2>
 
 <!-- Tee ohjelma, joka kysyy käyttäjältä lukuja (ohjelma tulostaa käyttäjälle aluksi "Syötä luvut:"), kunnes käyttäjä antaa luvun -1. Kun käyttäjä syöttää luvun -1, ohjelma tulostaa "Kiitos ja näkemiin!" ja päättyy. -->
 Implement a program, which asks user for number (the program first prints "Write numbers: ") until the user gives the number -1, When the user writes -1, the program prints "Thank you! Goodbye!" and ends.
 
 <sample-output>
 
-Write numbers:
+Give numbers:
 **5**
 **2**
 **4**
 **-1**
-Thank you! Goodbye!
+Thx! Bye!
 
 </sample-output>
 
@@ -676,12 +677,12 @@ Extend the program so, that it prints the sum of the numbers (not including the 
 
 <sample-output>
 
-Write numbers:
+Give numbers:
 **5**
 **2**
 **4**
 **-1**
-Thank you! Goodbye!
+Thx! Bye!
 Sum: 11
 
 </sample-output>
@@ -694,33 +695,33 @@ Extend the program so, that it also prints the number of numbers (not including 
 
 <sample-output>
 
-Write numbers:
+Give numbers:
 **5**
 **2**
 **4**
 **-1**
-Thank you! Goodbye!
+Thx! Bye!
 Sum: 11
 Numbers: 3
 
 </sample-output>
 
 
-<h2>Mean of numbers</h2>
+<h2>Average of numbers</h2>
 
 <!-- Muuta edellistä ohjelmaa siten, ohjelma ilmoittaa lukujen keskiarvon. (Lukua -1 ei lasketa mukaan.) -->
 Extend the program so, that it prints the mean of the numbers (not including the -1) the user has written.
 
 <sample-output>
-Write numbers:
+Give numbers:
 **5**
 **2**
 **4**
 **-1**
-Thank you! Goodbye!
+Thx! Bye!
 Sum: 11
 Numbers: 3
-Mean: 3.666666666666
+Average: 3.666666666666
 
 </sample-output>
 
@@ -732,15 +733,15 @@ Extend the program so, that it prints the number of even and odd numbers (not in
 
 <sample-output>
 
-Write numbers:
+Give numbers:
 **5**
 **2**
 **4**
 **-1**
-Thank you! Goodbye!
+Thx! Bye!
 Sum: 11
 Numbers: 3
-Mean: 3.666666666666
+Average: 3.666666666666
 Even: 2
 Odd: 1
 

@@ -662,52 +662,54 @@ Total of ones: 2
 </sample-output>
 
 
-<programming-exercise name="Lukujen lukumäärä" tmcname='osa02-Osa02_08.LukujenLukumaara'>
+<programming-exercise name="Number of numbers" tmcname="Part02-Part02_08.NumberOfNumbers">
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötettyjen lukujen lukumäärän. Syötteen loppumisesta kertovaa nollaa ei tule laskea osaksi lukujen lukumäärää. -->
 Write a program that reads user inputs until user inputs a number 0. After this the program prints the amount of inputted numbers. The inputted zero, which is used to exit the loop, does not count as an inputted number.
 
 <!-- Ohjelman tulostusesimerkki: -->
 Example output of the program:
+
 <sample-output>
 
-Insert a number
+Give a number:
 **5**
-Insert a number
+Give a number:
 **22**
-Insert a number
+Give a number:
 **9**
-Insert a number
+Give a number:
 **-2**
-Insert a number
+Give a number:
 **0**
-Numbers in total 4
+Number of numbers: 4
 
 </sample-output>
 
 </programming-exercise>
 
 
-<programming-exercise name="Negatiivisten lukujen lukumäärä" tmcname='osa02-Osa02_09.NegatiivistenLukujenMaara'>
+<programming-exercise name="Number of negative numbers" tmcname='Part02-Part02_09.NumberOfNegativeNumbers'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötteessä olleiden negatiivisten lukujen lukumäärän. Syötteen loppumisesta kertovaa nollaa ei tule laskea osaksi lukujen lukumäärää. -->
 Write a program that reads numbers until the user inputs a number 0. After this the program prints the amount of negative numbers inputted.  The inputted zero, which is used to exit the loop, does not count as an inputted number.
 
 <!-- Ohjelman tulostusesimerkki: -->
 Example output of the program:
+
 <sample-output>
 
-Insert a number
+Give a number:
 **5**
-Insert a number
+Give a number:
 **22**
-Insert a number
+Give a number:
 **9**
-Insert a number
+Give a number:
 **-2**
-Insert a number
+Give a number:
 **0**
-The total of negative numbers 1
+Number of negative numbers: 1
 
 </sample-output>
 
@@ -716,26 +718,27 @@ The total of negative numbers 1
 <!-- Edellä olevissa tehtävissä tehdyt ohjelmat ovat lukeneet käyttäjältä syötettä ja pitäneet kirjaa tietynlaisten lukujen lukumäärästä. Seuraavassa tehtävässä kaivattu lukujen summa ei oikeastaan juurikaan poikkea edellisistä tehtävistä -- nyt sen sijaan, että pidät kirjaa lukujen lukumäärästä eli lisäät lukumäärään luvun aina 1, lisäätkin "lukumäärään" eli summaan käyttäjän syöttämän luvun. -->
 The previously programs done in previous exercises have read user inputs and kept track about certain types of numbers. In the next exercise the sum of numbers is no different --- this time you will keep track of numbers, which means that instead of adding one the amount of numbers, you add the number to the sum.
 
-<programming-exercise name="Lukujen summa" tmcname='osa02-Osa02_10.LukujenSumma'>
+<programming-exercise name="Sum of numbers" tmcname='part02-Part02_10.SumOfNumbers'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötettyjen lukujen summan. Syötteen loppumisesta kertovaa nollaa ei tarvitse osaksi lukujen summaa, vaikkei siitä tässä tapauksessa oikeastaan haittaakaan ole. -->
 Write a program that reads numbers from the user until the user inputs a number 0. After this the program outputs the sum of the numbers. The number zero does not need to be added to the sum albeit it does not change the results.
 
 <!-- Ohjelman tulostusesimerkki: -->
 Example output of the program:
+
 <sample-output>
 
-Input a number
+Give a number:
 **5**
-Input a number
+Give a number:
 **22**
-Input a number
+Give a number:
 **9**
-Input a number
+Give a number:
 **-2**
-Input a number
+Give a number:
 **0**
-The sum of the numbers 34
+Sum of the numbers: 34
 
 </sample-output>
 
@@ -747,10 +750,10 @@ TODO: esimerkki toistolauseesta, missä kaksi muuttujaa
 
 
 
-<programming-exercise name="Lukujen lukumäärä ja summa" tmcname='osa02-Osa02_11.LukumaaraJaSumma'>
+<programming-exercise name="Number and sum of numbers" tmcname='part02-Part02_11.NumberAndSumOfNumbers'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötettyjen lukujen lukumäärä ja summan. Syötteen loppumisesta kertovaa nollaa ei tule ottaa huomioon lukumäärässä tai summassa. -->
-Write a number that asks user for input until the user inputs 0. After this the program prints the amount of numbers inputted and the sum of the numbers. The number zero does not need to be added to the sum albeit it does not change the results.
+Write a program that asks user for input until the user inputs 0. After this the program prints the amount of numbers inputted and the sum of the numbers. The number zero does not need to be added to the sum albeit it does not change the results.
 
 <!-- _Tarvitset tässä kaksi muuttujaa tiedon säilömiseen. Käytä toista muuttujaa lukujen lukumäärän säilömiseen ja toista muuttujaa lukujen summan laskemiseen._ -->
 _You need two variables to keep track of the information. Use one for keeping track of the numbers inputted and other for keeping track of the sum_
@@ -760,28 +763,28 @@ Example output of the program:
 
 <sample-output>
 
-Input a number
+Give a number:
 **5**
-Input a number
+Give a number:
 **22**
-Input a number
+Give a number:
 **9**
-Input a number
+Give a number:
 **-2**
-Input a number
+Give a number:
 **0**
-Numbers in total 4
-The sum of numbers 34
+Number of numbers: 4
+Sum of the numbers: 34
 
 </sample-output>
 
 </programming-exercise>
 
 
-<programming-exercise name="Lukujen keskiarvo" tmcname='osa01-Osa02_12.LukujenKeskiarvo'>
+<programming-exercise name="Average of numbers" tmcname='part02-Part02_12.AverageOfNumbers'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötettyjen lukujen keskiarvo. Syötteen loppumisesta kertovaa nollaa ei tule ottaa huomioon keskiarvon laskemisessa. Voit olettaa, että käyttäjä syöttää aina vähintään yhden luvun. -->
-Write a number that asks user for input until the user inputs 0. After this, the program prints the average of the numbers. The number zero does not need to be counted to the average. You may assume that the user inputs atleast one number.
+Write a program that asks user for input until the user inputs 0. After this, the program prints the average of the numbers. The number zero does not need to be counted to the average. You may assume that the user inputs atleast one number.
 
 <!-- _Lukujen keskiarvo saadaan jakamalla lukujen summa lukujen lukumäärällä_. -->
 _The average of the numbrs can be computer by dividing the sum of numbers with the amount of the numbers_
@@ -791,24 +794,24 @@ Example output of the program:
 
 <sample-output>
 
-Insert a number
+Give a number:
 **5**
-Insert a number
+Give a number:
 **22**
-Insert a number
+Give a number:
 **9**
-Insert a number
+Give a number:
 **-2**
-Insert a number
+Give a number:
 **0**
-The average of numbers 8.5
+Average of the numbers: 8.5
 
 </sample-output>
 
 </programming-exercise>
 
 
-<programming-exercise name='Positiivisten lukujen keskiarvo' tmcname='osa02-Osa02_13.PositiivistenLukujenKeskiarvo'>
+<programming-exercise name='Average of positive numbers' tmcname='part02-Part02_13.AverageOfPositiveNumbers'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä kokonaislukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelma tulostaa syötteessä esiintyneiden positiivisten (eli nollaa suurempien lukujen) keskiarvon. -->
 Write a number that asks user for input until the user inputs 0.
@@ -834,7 +837,7 @@ Below a few examples of the programs output
 <sample-output>
 
 **0**
-The computation of average is impossible
+Cannot calculate the average
 
 </sample-output>
 

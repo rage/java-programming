@@ -516,7 +516,7 @@ The number is greater than zero.
 The example above prints the string "The number is greater than zero." even if the condition `number > 2` is true. The comparing stops at the first condition that evaluates to true.
 
 <!-- <programming-exercise name="Arvosanat ja pisteet" tmcname='osa01-Osa01_31.ArvosanatJaPisteet'> -->
-<programming-exercise name="Grades and points" tmcname='osa01-Osa01_31.ArvosanatJaPisteet'>
+<programming-exercise name="Grades and points" tmcname='Part01-Part01_31.GradesAndPoints'>
 
 <!-- Alla oleva taulukko kuvaa erään kurssin arvosanan muodostumista. Tee ohjelma, joka ilmoittaa kurssiarvosanan annetun taulukon mukaisesti. -->
 
@@ -1474,21 +1474,26 @@ if (number % 4 != 0) {
 <!-- <programming-exercise name='Lahjaverolaskuri' tmcname='osa01-Osa01_37.Lahjaverolaskuri'> -->
 <programming-exercise name='Gift tax' tmcname='part01-Part01_37.GiftTax'>
 
-[https://www.vero.fi/henkiloasiakkaat/omaisuus/lahja/](https://www.vero.fi/henkiloasiakkaat/omaisuus/lahja/): *Lahja tarkoittaa sitä, että omaisuus siirtyy toiselle henkilölle ilman korvausta. Lahjasta pitää maksaa lahjaveroa, jos samalta lahjanantajalta saatujen lahjojen arvo on kolmen vuoden aikana 5 000 euroa tai enemmän.*
+<!-- [https://www.vero.fi/henkiloasiakkaat/omaisuus/lahja/](https://www.vero.fi/henkiloasiakkaat/omaisuus/lahja/): *Lahja tarkoittaa sitä, että omaisuus siirtyy toiselle henkilölle ilman korvausta. Lahjasta pitää maksaa lahjaveroa, jos samalta lahjanantajalta saatujen lahjojen arvo on kolmen vuoden aikana 5 000 euroa tai enemmän.* -->
+[https://www.vero.fi/en/individuals/property/gifts/](https://www.vero.fi/en/individuals/property/gifts/): *A gift is a transfer of property to another person against no compensation or payment. If the total value of the gifts you receive from the same donor in the course of 3 years is €5,000 or more, you must pay gift tax.*
 
-Kun lahja tulee lähimmiltä sukulaisilta, lahjaveron määrä määräytyy seuraavan taulukon mukaan (lähde [vero.fi](https://www.vero.fi/henkiloasiakkaat/omaisuus/lahja/lahjaverolaskuri/#lahjaverotaulukot)):
+<!-- Kun lahja tulee lähimmiltä sukulaisilta, lahjaveron määrä määräytyy seuraavan taulukon mukaan (lähde [vero.fi](https://www.vero.fi/henkiloasiakkaat/omaisuus/lahja/lahjaverolaskuri/#lahjaverotaulukot)): -->
+When a gift is given by a close relative or a family member, the amount of gift tax is determined by the following table (source [vero.fi](https://www.vero.fi/en/individuals/property/gifts/gift-tax-calculator/#gifttaxtables)):
 
-| Lahja                 | Vero alarajalla  | Veroprosentti ylimenevästä  |
-|-----------------------|------------------|-----------------------------|
-| 5 000 -- 25 000       | 100              | 8                           |
-| 25 000 -- 55 000      | 1 700            | 10                          |
-| 55 000 -- 200 000     | 4 700            | 12                          |
-| 200 000 -- 1 000 000  | 22 100           | 15                          |
-| 1 000 000 --          | 142 100          | 17                          |
+| Value of gift         | Tax at the lower limit  | Tax rate(%) for exceeding part  |
+|-----------------------|-------------------------|---------------------------------|
+| 5 000 -- 25 000       | 100                     | 8                               |
+| 25 000 -- 55 000      | 1 700                   | 10                              |
+| 55 000 -- 200 000     | 4 700                   | 12                              |
+| 200 000 -- 1 000 000  | 22 100                  | 15                              |
+| 1 000 000 --          | 142 100                 | 17                              |
 
-Esimerkiksi 6000 euron lahjasta tulee maksaa veroa 180 euroa (100 + (6000-5000) * 0.08), ja 75000 euron lahjasta tulee maksaa veroa 7100 euroa (4700 + (75000-55000) * 0.12).
+<!-- Esimerkiksi 6000 euron lahjasta tulee maksaa veroa 180 euroa (100 + (6000-5000) * 0.08), ja 75000 euron lahjasta tulee maksaa veroa 7100 euroa (4700 + (75000-55000) * 0.12). -->
+For example 6000€ gift implies 180€ of gift tax (100 + (6000-5000)*0.08), and 75000€ gift implies 7100€ of gift tax (4700 + (75000-55000) * 0.12).
 
-Tee ohjelma, joka laskee lahjaveron lähimmiltä sukulaisilta annetulle lahjalle. Alla on muutama esimerkki ohjelman toiminnasta.
+<!-- Tee ohjelma, joka laskee lahjaveron lähimmiltä sukulaisilta annetulle lahjalle. Alla on muutama esimerkki ohjelman toiminnasta. -->
+Write a program that calculates the gift tax for a gift from a close relative or a family member.
+This is how the program should work:
 
 <sample-output>
 
