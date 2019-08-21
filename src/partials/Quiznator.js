@@ -3,39 +3,39 @@ import styled from "styled-components"
 import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 import { normalizeExerciseId } from "../util/strings"
 
-const <quiz id=natorWrapper = styled.div`
+const quizWrapper = styled.div`
   code {
     color: black !important;
   }
 `
 
-class <quiz id=nator extends React.Component {
+class Quiznator extends React.Component {
   componentDidMount() {
     const { id } = this.props
     if (!id || typeof window === "undefined") {
       return
     }
-    if (!window.load<quiz id=) {
+    if (!window.loadQuiz) {
       return
     }
-    window.load<quiz id=(document.getElementById(`unloaded-<quiz id=nator-${id}`))
+    window.loadQuiz(document.getElementById(`unloaded-quiz-${id}`))
   }
 
   render() {
     const { id } = this.props
     if (!id) {
-      return <div>There should be <quiz id= here but no <quiz id= id is specified.</div>
+      return <div>There should be quiz here but no quiz id is specified.</div>
     }
     return (
-      <<quiz id=natorWrapper id={normalizeExerciseId(`<quiz id=nator-${id}`)}>
+      <quizWrapper id={normalizeExerciseId(`quiz-${id}`)}>
         <div
-          id={`unloaded-<quiz id=nator-${id}`}
-          className="<quiz id=nator-plugin"
-          data-<quiz id=-id={id}
+          id={`unloaded-quiz-${id}`}
+          className="quiz-plugin"
+          data-quiz-id={id}
         />
-      </<quiz id=natorWrapper>
+      </quizWrapper>
     )
   }
 }
 
-export default withSimpleErrorBoundary(<quiz id=nator)
+export default withSimpleErrorBoundary(Quiznator)

@@ -10,10 +10,10 @@ const ExerciseSummaryWrapper = styled(Link)`
   display: block;
 `
 
-const ExerciseSummary = ({ exercise, index, <quiz id=IdToTitle }) => {
+const ExerciseSummary = ({ exercise, index, quizIdToTitle }) => {
   let description = "Tuntematon tehtävätyyppi"
-  if (exercise.type === "<quiz id=nator") {
-    const name = <quiz id=IdToTitle[exercise.id]
+  if (exercise.type === "quiz") {
+    const name = quizIdToTitle[exercise.id]
     if (name) {
       description = `Kysely: ${name}`
     } else {

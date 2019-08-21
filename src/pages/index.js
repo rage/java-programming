@@ -65,10 +65,10 @@ const IndexPage = () => (
       </section>
 
       <section id="sisältö-ja-aikataulu">
-        <h3>Aikataulu - kesä 2020</h3>
+        <h3>Aikataulu - kesä 2019</h3>
 
         <p>
-          Kesän 2020 aikataulutetussa Ohjelmoinnin MOOCissa kurssimateriaali on
+          Kesän 2019 aikataulutetussa Ohjelmoinnin MOOCissa kurssimateriaali on
           kokonaisuudessaan saatavilla kurssin alusta lähtien. Tämä mahdollistaa
           kurssin tekemisen nopeammalla tahdilla, mikäli niin haluaa tehdä.
           Normaalissa kesän aikataulussa kunkin osan tekemiseen on noin viikko.
@@ -109,59 +109,59 @@ const IndexPage = () => (
           <TableBody>
             <TableRow>
               <TableCell>Osa 1</TableCell>
-              <TableCell>20.5.2020</TableCell>
+              <TableCell>20.5.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 2</TableCell>
-              <TableCell>24.5.2020</TableCell>
+              <TableCell>24.5.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 3</TableCell>
-              <TableCell>27.5.2020</TableCell>
+              <TableCell>27.5.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 4</TableCell>
-              <TableCell>3.6.2020</TableCell>
+              <TableCell>3.6.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 5</TableCell>
-              <TableCell>10.6.2020</TableCell>
+              <TableCell>10.6.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 6</TableCell>
-              <TableCell>17.6.2020</TableCell>
+              <TableCell>17.6.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 7</TableCell>
-              <TableCell>24.6.2020</TableCell>
+              <TableCell>24.6.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 8</TableCell>
-              <TableCell>8.7.2020</TableCell>
+              <TableCell>8.7.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 9</TableCell>
-              <TableCell>15.7.2020</TableCell>
+              <TableCell>15.7.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 10</TableCell>
-              <TableCell>22.7.2020</TableCell>
+              <TableCell>22.7.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 11</TableCell>
-              <TableCell>29.7.2020</TableCell>
+              <TableCell>29.7.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 12</TableCell>
-              <TableCell>5.8.2020</TableCell>
+              <TableCell>5.8.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 13</TableCell>
-              <TableCell>12.8.2020</TableCell>
+              <TableCell>12.8.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 14</TableCell>
-              <TableCell>19.8.2020</TableCell>
+              <TableCell>19.8.2019</TableCell>
             </TableRow>
           </TableBody>
         </Table>
@@ -170,7 +170,7 @@ const IndexPage = () => (
           <b>
             Määräajat ovat aina maanantaisin. Määräaikojen kellonajat ovat aina
             23:59:00 – osan 1 tehtävät tulee palauttaa siis viimeistään
-            <s>13.5.2020</s> 20.5.2020 klo 23:59:00. Virallisena määräaikana
+            <s>13.5.2019</s> 20.5.2019 klo 23:59:00. Virallisena määräaikana
             käytetään tehtäväpalvelimen kelloa, joka on Suomen ajassa. Huomaa,
             että oman koneesi kello voi olla jäljessä tai edellä, joten älä jätä
             tehtävien tekemistä ja palauttamista viime hetkeen.
@@ -185,8 +185,8 @@ const IndexPage = () => (
         </p>
       </section>
 
-      <section id="sisältö-ja-aikataulu-kevat-2020">
-        <h3>Aikataulu - kevät 2020</h3>
+      <section id="sisältö-ja-aikataulu-kevat-2019">
+        <h3>Aikataulu - kevät 2019</h3>
         <p>
           Keväisin tarjottava Ohjelmoinnin MOOC tarjoaa mahdollisuuden
           opinto-oikeuteen tietojenkäsittelytieteen opintoihin Helsingin
@@ -209,72 +209,72 @@ const IndexPage = () => (
             <TableRow>
               <TableCell>Osa 1</TableCell>
               <TableCell>14.12.2018</TableCell>
-              <TableCell>21.1.2020</TableCell>
+              <TableCell>21.1.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 2</TableCell>
               <TableCell>28.12.2018</TableCell>
-              <TableCell>28.1.2020</TableCell>
+              <TableCell>28.1.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 3</TableCell>
-              <TableCell>11.1.2020</TableCell>
-              <TableCell>4.2.2020</TableCell>
+              <TableCell>11.1.2019</TableCell>
+              <TableCell>4.2.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 4</TableCell>
-              <TableCell>25.1.2020</TableCell>
-              <TableCell>11.2.2020</TableCell>
+              <TableCell>25.1.2019</TableCell>
+              <TableCell>11.2.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 5</TableCell>
-              <TableCell>1.2.2020</TableCell>
-              <TableCell>18.2.2020</TableCell>
+              <TableCell>1.2.2019</TableCell>
+              <TableCell>18.2.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 6</TableCell>
-              <TableCell>8.2.2020</TableCell>
-              <TableCell>25.2.2020</TableCell>
+              <TableCell>8.2.2019</TableCell>
+              <TableCell>25.2.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 7</TableCell>
-              <TableCell>15.2.2020</TableCell>
-              <TableCell>4.3.2020</TableCell>
+              <TableCell>15.2.2019</TableCell>
+              <TableCell>4.3.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 8</TableCell>
-              <TableCell>1.3.2020</TableCell>
-              <TableCell>18.3.2020</TableCell>
+              <TableCell>1.3.2019</TableCell>
+              <TableCell>18.3.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 9</TableCell>
-              <TableCell>8.3.2020</TableCell>
-              <TableCell>25.3.2020</TableCell>
+              <TableCell>8.3.2019</TableCell>
+              <TableCell>25.3.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 10</TableCell>
-              <TableCell>15.3.2020</TableCell>
-              <TableCell>1.4.2020</TableCell>
+              <TableCell>15.3.2019</TableCell>
+              <TableCell>1.4.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 11</TableCell>
-              <TableCell>22.3.2020</TableCell>
-              <TableCell>8.4.2020</TableCell>
+              <TableCell>22.3.2019</TableCell>
+              <TableCell>8.4.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 12</TableCell>
-              <TableCell>29.3.2020</TableCell>
-              <TableCell>15.4.2020</TableCell>
+              <TableCell>29.3.2019</TableCell>
+              <TableCell>15.4.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 13</TableCell>
-              <TableCell>12.4.2020</TableCell>
-              <TableCell>29.4.2020</TableCell>
+              <TableCell>12.4.2019</TableCell>
+              <TableCell>29.4.2019</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Osa 14</TableCell>
-              <TableCell>19.4.2020</TableCell>
-              <TableCell>6.5.2020</TableCell>
+              <TableCell>19.4.2019</TableCell>
+              <TableCell>6.5.2019</TableCell>
             </TableRow>
           </TableBody>
         </Table>
@@ -283,7 +283,7 @@ const IndexPage = () => (
           <b>
             Määräajat ovat aina maanantaisin. Määräaikojen kellonajat ovat aina
             23:59:00 – osan 1 tehtävät tulee palauttaa siis viimeistään
-            21.1.2020 klo 23:59:00. Virallisena määräaikana käytetään
+            21.1.2019 klo 23:59:00. Virallisena määräaikana käytetään
             tehtäväpalvelimen kelloa, joka on Suomen ajassa. Huomaa, että oman
             koneesi kello voi olla jäljessä tai edellä, joten älä jätä tehtävien
             tekemistä ja palauttamista viime hetkeen.

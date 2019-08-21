@@ -22,8 +22,6 @@ export default class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
-          <script>window._<quiz id=NATOR_ENABLED = true;</script>
-          <script src="https://<quiz id=nator.mooc.fi/javascripts/plugin-loader.min.js" />
         </body>
       </html>
     )

@@ -2,90 +2,90 @@ import axios from "axios"
 import { accessToken } from "./moocfi"
 import { flatten, getCommonElements } from "../util/arrays"
 
-const BASE_URL = "https://<quiz id=nator.mooc.fi"
+const BASE_URL = "https://quiznator.mooc.fi"
 
-export async function fetchMany<quiz id=Details(<quiz id=Ids) {
+export async function fetchManyQuizDetails(quizIds) {
   const res = await axios.post(
-    `${BASE_URL}/api/v1/<quiz id=zes/stripped`,
-    { <quiz id=Ids },
+    `${BASE_URL}/api/v1/quizzes/stripped`,
+    { quizIds },
     { headers: { Authorization: `Bearer ${accessToken()}` } },
   )
   return res.data
 }
 
-export async function fetch<quiz id=natorProgress() {
+export async function fetchQuizProgress() {
   let res = []
   const partToTag = [
     {
       part: "osa01",
-      tag: "ohjelmoinnin-mooc-2020-1",
+      tag: "ohjelmoinnin-mooc-2019-1",
     },
     {
       part: "osa02",
-      tag: "ohjelmoinnin-mooc-2020-2",
+      tag: "ohjelmoinnin-mooc-2019-2",
     },
     {
       part: "osa03",
-      tag: "ohjelmoinnin-mooc-2020-3",
+      tag: "ohjelmoinnin-mooc-2019-3",
     },
     {
       part: "osa04",
-      tag: "ohjelmoinnin-mooc-2020-4",
+      tag: "ohjelmoinnin-mooc-2019-4",
     },
     {
       part: "osa05",
-      tag: "ohjelmoinnin-mooc-2020-5",
+      tag: "ohjelmoinnin-mooc-2019-5",
     },
     {
       part: "osa06",
-      tag: "ohjelmoinnin-mooc-2020-6",
+      tag: "ohjelmoinnin-mooc-2019-6",
     },
     {
       part: "osa07",
-      tag: "ohjelmoinnin-mooc-2020-7",
+      tag: "ohjelmoinnin-mooc-2019-7",
     },
     {
       part: "osa08",
-      tag: "ohjelmoinnin-mooc-2020-8",
+      tag: "ohjelmoinnin-mooc-2019-8",
     },
     {
       part: "osa09",
-      tag: "ohjelmoinnin-mooc-2020-9",
+      tag: "ohjelmoinnin-mooc-2019-9",
     },
     {
       part: "osa10",
-      tag: "ohjelmoinnin-mooc-2020-10",
+      tag: "ohjelmoinnin-mooc-2019-10",
     },
     {
       part: "osa11",
-      tag: "ohjelmoinnin-mooc-2020-11",
+      tag: "ohjelmoinnin-mooc-2019-11",
     },
     {
       part: "osa12",
-      tag: "ohjelmoinnin-mooc-2020-12",
+      tag: "ohjelmoinnin-mooc-2019-12",
     },
     {
       part: "osa13",
-      tag: "ohjelmoinnin-mooc-2020-13",
+      tag: "ohjelmoinnin-mooc-2019-13",
     },
     {
       part: "osa14",
-      tag: "ohjelmoinnin-mooc-2020-14",
+      tag: "ohjelmoinnin-mooc-2019-14",
     },
   ]
-  const <quiz id=IdInformation = await fetch<quiz id=Ids()
-  const all<quiz id=Ids = flatten(<quiz id=IdInformation.map(o => o.<quiz id=Ids))
-  const progress = await fetchProgressBy<quiz id=Ids(all<quiz id=Ids)
+  const quizIdInformation = await fetchQuizIds()
+  const allQuizIds = flatten(quizIdInformation.map(o => o.quizIds))
+  const progress = await fetchProgressByQuizIds(allQuizIds)
   const allAnswered = (progress.answered || []).map(o => o._id)
   partToTag.forEach(({ part, tag }) => {
-    const relevant = <quiz id=IdInformation
+    const relevant = quizIdInformation
       .filter(o => {
         return o.tags.indexOf(tag) !== -1
       })
-      .map(o => o.<quiz id=Ids)
-    const <quiz id=Ids = flatten(relevant)
-    const answered = getCommonElements(<quiz id=Ids, allAnswered)
-    const maxPoints = <quiz id=Ids.length
+      .map(o => o.quizIds)
+    const quizIds = flatten(relevant)
+    const answered = getCommonElements(quizIds, allAnswered)
+    const maxPoints = quizIds.length
     const nPoints = answered.length
     const progress = Math.floor((nPoints / maxPoints) * 100) / 100
     res = res.concat({
@@ -99,19 +99,19 @@ export async function fetch<quiz id=natorProgress() {
   return res
 }
 
-export async function fetch<quiz id=Ids() {
+export async function fetchQuizIds() {
   const res = await axios.post(
-    `${BASE_URL}/api/v1/tags/<quiz id=ids`,
-    { tags: ["ohjelmoinnin-mooc-2020"] },
+    `${BASE_URL}/api/v1/tags/quizids`,
+    { tags: ["ohjelmoinnin-mooc-2019"] },
     { headers: { Authorization: `Bearer ${accessToken()}` } },
   )
   return res.data
 }
 
-async function fetchProgressBy<quiz id=Ids(<quiz id=Ids) {
+async function fetchProgressByQuizIds(quizIds) {
   const res = await axios.post(
     `${BASE_URL}/api/v1/answerers/progress`,
-    { <quiz id=Ids },
+    { quizIds },
     { headers: { Authorization: `Bearer ${accessToken()}` } },
   )
   const data = res.data

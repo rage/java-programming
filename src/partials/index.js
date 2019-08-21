@@ -29,7 +29,8 @@ import TextBox from "./TextBox"
 import SampleData from "./SampleData"
 import SampleOutput from "./SampleOutput"
 import Youtube from "./Youtube"
-import <quiz id=nator from "./<quiz id=nator"
+import Quiz from "./Quiz"
+import Quiznator from "./Quiznator"
 import PleaseLogin from "./PleaseLogin"
 import FloatImageRight from "./FloatImageRight"
 import CodeStatesVisualizer from "./CodeStatesVisualizer"
@@ -84,7 +85,8 @@ const mapping = {
   notice: Notice,
   crowdsorcerer: CrowdSorcerer,
   youtube: Youtube,
-  <quiz id=nator: <quiz id=nator,
+  quiz: Quiz,
+  quiznator: Quiznator,
   table: Table,
   tbody: TableBody,
   thead: TableHead,
