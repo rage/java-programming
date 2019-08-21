@@ -15,7 +15,7 @@ hidden: false
 
 </text-box>
 
-<quiznator id="5c822807ddb6b814af3281a9"></quiznator>
+<quiz id="0d314996-d23a-5fea-a150-f82ad637a3d7"></quiz>
 
 
 Tutustutaan kokoelmien kuten listojen läpikäyntiin arvojen virtana (stream). Virta on menetelmä tietoa sisältävän kokoelman läpikäyntiin siten, että ohjelmoija määrittelee kullekin arvolle suoritettavan toiminnallisuuden. Indeksistä tai kullakin hetkellä käsiteltävästä muuttujasta ei pidetä kirjaa.
@@ -422,7 +422,7 @@ positiiviset.stream()
 </sample-output>
 
 
-<quiznator id='5c816449c41ed4148d97162b'></quiznator>
+<quiz id='8e1fb8c3-cfcd-5d29-9b69-95f44985c425'></quiz>
 
 
 <programming-exercise name='Jaolliset' tmcname='osa09-Osa09_04.Jaolliset'>
@@ -973,7 +973,7 @@ matti (187)
 </sample-output>
 
 
-<quiznator id='5c81648cc41ed4148d97162d'></quiznator>
+<quiz id='740810d6-0158-5f8a-9119-9afb80d52dc6'></quiz>
 
 
 <programming-exercise name='Palkkajärjestys' tmcname='osa09-Osa09_11.Palkkajarjestys'>
@@ -1526,9 +1526,9 @@ System.out.println(luvut.toString());
 
 StringBuilderin käyttö on suurien merkkijonojen luomisessa tehokkaampaa kuin merkkijonojen luominen `+`-operaatiolla.
 
-<quiznator id='5c81657dddb6b814af328109'></quiznator>
+<quiz id='67155c46-c03e-55f9-85ea-c19a85bade1e'></quiz>
 
-<quiznator id='5c8165c814524713f95a7607'></quiznator>
+<quiz id='a3a98299-45b3-5824-af6d-d468165a73d3'></quiz>
 
 
 ## Säännölliset lausekkeet
@@ -1757,7 +1757,7 @@ Samassa säännöllisessä lausekkeessa voi käyttää myös useampia toistomerk
 Merkkiryhmän avulla voi määritellä lyhyesti joukon merkkejä. Merkit kirjoitetaan hakasulkujen sisään, ja merkkivälin voi määrittää viivan avulla. Esimerkiksi merkintä `[145]` tarkoittaa samaa kuin `(1|4|5)` ja merkintä `[2-36-9]` tarkoittaa samaa kuin `(2|3|6|7|8|9)`. Vastaavasti merkintä `[a-c]*` määrittelee säännöllisen lausekkeen, joka vaatii että merkkijono sisältää vain merkkejä `a`, `b` ja `c`.
 
 
-<quiznator id='5c8166fcfd9fd71425c68dbd'></quiznator>
+<quiz id='7cb98d11-5b78-5cda-8b45-c84abd747a9d'></quiz>
 
 
 <programming-exercise name='Säännölliset lausekkeet (3 osaa)' tmcname='osa09-Osa09_15.SaannollisetLausekkeet'>
@@ -2429,5 +2429,4 @@ Yhdeksännessä osassa eli Ohjelmoinnin jatkokurssin toisessa osassa tutustuimme
 Vastaa vielä alla olevaan kyselyyn.
 
 
-<quiznator id='5c816762ddb6b814af32810c'></quiznator>
-
+<quiz id='0073d0ed-e43e-5ca0-9253-c7e3e69569c4'></quiz>

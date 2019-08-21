@@ -16,7 +16,7 @@ hidden: false
 
 </text-box>
 
-<quiznator id="5c498c7c017ffc13eddc84f1"></quiznator>
+<quiz id="716bb458-0ca9-5e79-af45-dc1002959d63"></quiz>
 
 
 <!-- Merkittävä osa ohjelmistoista perustuu tavalla tai toisella tiedon käsittelyyn. Musiikin toistoon tarkoitetut ohjelmistot käsittelevät musiikkitiedostoja, kuvankäsittelyohjelmat käsittelevät kuvatiedostoja. Verkossa ja mobiililaitteissa toimivat sovellukset kuten Facebook, WhatsApp ja Telegram taas käsittelevät tiedostoihin perustuviin tietokantoihin tallennettuja henkilötietoja. Kaikissa näistä sovelluksista on yhteistä tiedon lukeminen, tiedon käsitteleminen tavalla tai toisella sekä se, että käsiteltävä tieto on loppujenlopulta tallennettu jonkinlaisessa muodossa yhteen tai useampaan tiedostoon. -->
@@ -989,6 +989,3 @@ Losses: 3
 
 
 </programming-exercise>
-
-
-

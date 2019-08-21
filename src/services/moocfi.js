@@ -21,9 +21,9 @@ export function authenticate(credentials) {
       res => {
         if (
           typeof window !== "undefined" &&
-          typeof window.Quiznator !== "undefined"
+          typeof window.<quiz id=nator !== "undefined"
         ) {
-          window.Quiznator.setUser({
+          window.<quiz id=nator.setUser({
             id: res.username,
             accessToken: res.accessToken,
           })
@@ -87,9 +87,9 @@ export function loggedIn() {
 export function signOut() {
   if (
     typeof window !== "undefined" &&
-    typeof window.Quiznator !== "undefined"
+    typeof window.<quiz id=nator !== "undefined"
   ) {
-    window.Quiznator.removeUser()
+    window.<quiz id=nator.removeUser()
   }
   store.remove("tmc.user")
   store.remove("tmc.user.details")

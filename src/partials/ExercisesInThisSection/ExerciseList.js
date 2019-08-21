@@ -4,7 +4,7 @@ import { nthIndex } from "../../util/strings"
 import styled from "styled-components"
 import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
 import ExerciseSummary from "./ExerciseSummary"
-import { fetchManyQuizDetails } from "../../services/quiznator"
+import { fetchMany<quiz id=Details } from "../../services/<quiz id=nator"
 import { flatten } from "../../util/arrays"
 
 const Title = styled.div`
@@ -22,7 +22,7 @@ class ExerciseList extends React.Component {
   state = {
     render: false,
     sectionPages: null,
-    quizIdToTitle: null,
+    <quiz id=IdToTitle: null,
   }
 
   async componentDidMount() {
@@ -44,15 +44,15 @@ class ExerciseList extends React.Component {
       })
 
     const allExercises = flatten(sectionPages.map(page => page.exercises))
-    const quizIds = allExercises
-      .filter(o => o.type === "quiznator")
+    const <quiz id=Ids = allExercises
+      .filter(o => o.type === "<quiz id=nator")
       .map(o => o.id)
-    const quizDetails = await fetchManyQuizDetails(quizIds)
-    const quizIdToTitle = {}
-    quizDetails.forEach(o => {
-      quizIdToTitle[o._id] = o.title
+    const <quiz id=Details = await fetchMany<quiz id=Details(<quiz id=Ids)
+    const <quiz id=IdToTitle = {}
+    <quiz id=Details.forEach(o => {
+      <quiz id=IdToTitle[o._id] = o.title
     })
-    this.setState({ sectionPages, quizIdToTitle, render: true })
+    this.setState({ sectionPages, <quiz id=IdToTitle, render: true })
   }
   render() {
     if (!this.state.render) {
@@ -73,7 +73,7 @@ class ExerciseList extends React.Component {
                       index={i2}
                       exercise={exercise}
                       key={exercise.id}
-                      quizIdToTitle={this.state.quizIdToTitle}
+                      <quiz id=IdToTitle={this.state.<quiz id=IdToTitle}
                     />
                   )
                 })}

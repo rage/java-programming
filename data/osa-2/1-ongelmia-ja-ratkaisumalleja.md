@@ -15,7 +15,7 @@ title: 'Recurring problems and patterns to solve them'
 
 </text-box>
 
-<quiznator id="5c24a9123cc3ec11bcd78bb3"></quiznator>
+<quiz id="570e362e-6eb3-5c73-850e-fb0e8c640041"></quiz>
 
 
 <!-- Samat pienet ongelmat (tai "osaongelmat") toistuvat ohjelmissa yhä uudestaan ja uudestaan: "Lue käyttäjältä syötettä", "Laske lukujen summa", jne. -->
@@ -392,7 +392,7 @@ The quiz below uses `System.out.print` for printing. It works exactly like `Syst
 
 </text-box>
 
-<quiznator id="5c1f6a263516ce119a7f45df"></quiznator>
+<quiz id="ba233660-b119-5c9a-9b75-7b34b0ceb8ef"></quiz>
 
 
 <!-- Ehtotoiminnallisuutta voi yhdistää myös muiden ratkaisumallien kanssa. Tarkastellaan ongelmaa "Lue käyttäjältä kaksi lukua. Mikäli lukujen summa on yli 100, tulosta käyttäjälle merkkijono `liikaa`. Mikäli lukujen summa on alle 0, tulosta käyttäjälle merkkijono `liian vähän`. Muulloin, tulosta käyttäjälle merkkijono `ok`.". Ohjelma, joka yhdistää lukemisen, laskemisen ja ehtolauseen on annettu alla. -->
@@ -525,5 +525,3 @@ A few examples of the expected behaviour:
 </sample-output>
 
 </programming-exercise>
-
-

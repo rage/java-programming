@@ -72,12 +72,12 @@ class Layout extends React.Component {
   componentDidMount() {
     const user = store.get("tmc.user")
     if (typeof window !== "undefined" && user) {
-      if (typeof window.Quiznator === "undefined") {
-        document.addEventListener("quiznatorLoaded", () => {
-          this.setQuiznatorUser(user)
+      if (typeof window.<quiz id=nator === "undefined") {
+        document.addEventListener("<quiz id=natorLoaded", () => {
+          this.set<quiz id=natorUser(user)
         })
       } else {
-        this.setQuiznatorUser(user)
+        this.set<quiz id=natorUser(user)
       }
       if (canDoResearch()) {
         setTimeout(() => {
@@ -110,8 +110,8 @@ class Layout extends React.Component {
     })
   }
 
-  setQuiznatorUser = user => {
-    window.Quiznator.setUser({
+  set<quiz id=natorUser = user => {
+    window.<quiz id=nator.setUser({
       id: user.username,
       accessToken: user.accessToken,
     })
