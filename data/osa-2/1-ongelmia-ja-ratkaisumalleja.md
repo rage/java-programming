@@ -314,7 +314,7 @@ Here are a few examples:
 
 <!-- ## Vaihtoehtoista toiminnallisuutta -->
 
-## Some alternative funcionality
+## Some alternative functionality
 
 <!-- Ongelmat sisältävät usein vaihtoehtoista toiminnallisuutta. Tällaisen toteuttamiseen käytetään ehtolauseita. Ehtolause alkaa `if`-komennosta, jota seuraa suluissa oleva lauseke. Lauseke evaluoituu joko todeksi tai epätodeksi. Mikäli lauseke evaluoituu todeksi, suoritetaan ehtolauseen lohko, joka on rajattuna aaltosuluilla. -->
 
@@ -461,7 +461,8 @@ public class Program {
 ```
 
 
-<programming-exercise name='Itseisarvo' tmcname='osa02-Osa02_03.Itseisarvo'>
+<!-- <programming-exercise name='Itseisarvo' tmcname='osa02-Osa02_03.Itseisarvo'> -->
+<programming-exercise name='Absolute Value' tmcname='osa02-Osa02_03.AbsoluteValue'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä kokonaisluvun. Mikäli luku on pienempi kuin 0, ohjelma tulostaa luvun kerrottuna luvulla -1. Muulloin ohjelma tulostaa käyttäjän syöttämän luvun. Alla on muutamia esimerkkejä ohjelman odotetusta toiminnasta. -->
 
@@ -490,7 +491,8 @@ Write a program, that reads an integer from the user. If the number is less than
 
 </programming-exercise>
 
-<programming-exercise name='Tietoa luvuista' tmcname='osa02-Osa02_04.TietoaLuvuista'>
+<!-- <programming-exercise name='Tietoa luvuista' tmcname='osa02-Osa02_04.TietoaLuvuista'> -->
+<programming-exercise name='Comparing numbers' tmcname='osa02-Osa02_04.ComparingNumbers'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä kaksi kokonaislukua. Mikäli ensimmäinen luku on suurempi kuin toinen luku, ohjelma tulostaa "Luku (ensimmäinen) on suurempi kuin luku (toinen).". Mikäli ensimmäinen luku on pienempi kuin toinen luku, ohjelma tulostaa "Luku (ensimmäinen) on pienempi kuin luku (toinen).". Muulloin ohjelma tulostaa "Luku (ensimmäinen) on yhtä suuri kuin luku (toinen).". Edeltävissä esimerkeissä kohdat (ensimmäinen) ja (toinen) tulee aina korvata syötetyillä luvuilla. -->
 

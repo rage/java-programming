@@ -1,4 +1,4 @@
----
+****---
 path: '/osa-2/6-kasvavat-ohjelmat'
 title: 'Kasvavat ohjelmat'
 ---
