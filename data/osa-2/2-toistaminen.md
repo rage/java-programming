@@ -694,23 +694,23 @@ Total number count 4
 <programming-exercise name="Negative Number Count" tmcname='osa02-Osa02_09.NegativeNumberCount'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötteessä olleiden negatiivisten lukujen lukumäärän. Syötteen loppumisesta kertovaa nollaa ei tule laskea osaksi lukujen lukumäärää. -->
-Write a program that reads numbers until the user inputs a number 0. After this the program prints the amount of negative numbers inputted.  The inputted zero, which is used to exit the loop, does not count as an inputted number.
+Write a program that reads values from the user until they input a 0. After this, the program prints the total number of inputted values that are negative. The zero, that's given as input to exit the loop, should not be included in the total number count.
 
 <!-- Ohjelman tulostusesimerkki: -->
 Example output of the program:
 <sample-output>
 
-Insert a number
+Input a number
 **5**
-Insert a number
+Input a number
 **22**
-Insert a number
+Input a number
 **9**
-Insert a number
+Input a number
 **-2**
-Insert a number
+Input a number
 **0**
-The total of negative numbers 1
+Total negative number count 1
 
 </sample-output>
 
@@ -739,7 +739,7 @@ Input a number
 **-2**
 Input a number
 **0**
-The sum of the numbers 34
+The sum of the numbers is 34
 
 </sample-output>
 
