@@ -10,9 +10,9 @@ hidden: false
 <!-- - Opit kirjoittamaan ohjelman, joka lukee käyttäjän kirjoittamaa tekstiä. -->
 <!-- - Tiedät mitä merkkijonot ovat ohjelmoinnissa. -->
 <!-- - Tiedät miten merkkijonoja voidaan yhdistää toisiinsa ("katenointi"). -->
- - You will learn to write a program that reads text written by a user.
- - You will now what is meant by strings in programming.
- - You will know how to join strings together ("concatenation").
+ - You learn to write a program that reads text written by a user.
+ - You know what is meant by strings in programming.
+ - You know how to join strings together ("concatenation").
 
 </text-box>
 

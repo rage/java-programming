@@ -20,9 +20,9 @@ hidden: false
 
 <text-box variant='learningObjectives' name='Learning Objectives'>
 
-- You will learn to write a program that prints text.
-- You will become familiar with executing programs.
-- You will know what the term parameter means.
+- You learn to write a program that prints text.
+- You become familiar with executing programs.
+- You know what the term parameter means.
 
 <!-- </text-box>
 
