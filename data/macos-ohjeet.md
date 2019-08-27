@@ -31,7 +31,7 @@ The permission can be added as follows:
 
 <!-- 4. Paina vasemmasta alakulmasta "Click the lock to make changes." Username-kentässä pitäisi lukea automaattisesti tietokoneesi käyttäjätunnus. Syötä se, jos se puuttuu. Syötä salasanasi Password-kenttään ja paina Unlock.
 ![salasanansyöttämisnäkymä](./img/macos-guide/open-lock.png) -->
-4. Press from the lower left corner "Click the lock to make changes.". In the username field there should be the name of your computer. Input that if it's not there. Input your password to password field and press Unlock.
+4. Press from the lower left corner "Click the lock to make changes.". In the username field there should be the name of your computer. Write if it's not there. Give your password in the password field and click Unlock.
 
 <!-- 7. Paina nyt plus-kuvaketta. Navigoi avautuvassa näkymässä siihen kansioon, mihin tmcbeans on asennettuna koneellasi. Valitse tmcbeans.app ja paina Open. -->
 7. Click the plus-icon. Navigate to the folder where your tmcbeans is installed. Select tmcbeans.app and click Open.
