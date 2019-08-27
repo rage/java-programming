@@ -818,7 +818,7 @@ Write a number that asks user for input until the user inputs 0.
 After this, the program prints the average of the positive numbers (numbers that are greater than zero).
 
 <!-- Mikäli ohjelmassa ei syötetä yhtäkään positiivista lukua, ohjelman tulee tulostaa "keskiarvon laskeminen ei ole mahdollista". -->
-If no positive number is inputted, the program prints "The computation of average is impossible"
+If no positive number is inputted, the program prints "Cannot calculate the average"
 
 <!-- Alla on muutamia esimerkkejä ohjelman toiminnasta. -->
 Below a few examples of the programs output

@@ -320,13 +320,13 @@ Alussa olivat suo, kuokka ja Java.
 
 How many times?
 **7**
-In a hole in the ground there lived a method.
-In a hole in the ground there lived a method.
-In a hole in the ground there lived a method.
-In a hole in the ground there lived a method.
-In a hole in the ground there lived a method.
-In a hole in the ground there lived a method.
-In a hole in the ground there lived a method.
+In a hole in the ground there lived a method
+In a hole in the ground there lived a method
+In a hole in the ground there lived a method
+In a hole in the ground there lived a method
+In a hole in the ground there lived a method
+In a hole in the ground there lived a method
+In a hole in the ground there lived a method
 
 </sample-output>
 
@@ -547,12 +547,12 @@ public static void main(String[] args) {
 
 <!-- Luo tehtäväpohjaan metodi `public static void tulostaLuvustaYhteen(int luku)`, joka tulostaa luvut parametrina annetusta luvusta yhteen asti. Alla on kaksi esimerkkiä metodin käytöstä. -->
 
-Create the following method in the exercise template: `public static void printFromParameterToOne(int number)`. It should print the numbers from the number passed as a parameter down to one. Two examples of the method's usage are given below.
+Create the following method in the exercise template: `public static void printFromNumberToOne(int number)`. It should print the numbers from the number passed as a parameter down to one. Two examples of the method's usage are given below.
 
 
 ```java
 public static void main(String[] args) {
-    printFromParameterToOne(5);
+    printFromNumberToOne(5);
 }
 ```
 
@@ -577,7 +577,7 @@ public static void main(String[] args) {
 ```java
 
 public static void main(String[] args) {
-    printFromParameterToOne(2);
+    printFromNumberToOne(2);
 }
 
 ```
@@ -1552,7 +1552,7 @@ public static void main(String[] args) {
 
 ```java
 public static int greatest(int number1, int number2, int number3) {
-  // write your code here
+  // write some code here
 }
 
 public static void main(String[] args) {
@@ -1620,8 +1620,8 @@ public static double average(int number1, int number2, int number3, int number4)
 }
 
 public static void main(String[] args) {
-    double answer = average(4, 3, 6, 1);
-    System.out.println("Average: " + answer);
+    double result = average(4, 3, 6, 1);
+    System.out.println("Average: " + result);
 }
 ```
 
@@ -2074,7 +2074,7 @@ Below is a visualization of the method call `multiplicationTable(3)`. Notice how
 
 <!-- <programming-exercise name='Tulostelua (4 osaa)' tmcname='osa02-Osa02_33.Tulostelua'> -->
 
-<programming-exercise name='Star sign (4 parts)' tmcname='part02-Part02_33.Star sign'>
+<programming-exercise name='Star sign (4 parts)' tmcname='part02-Part02_33.StarSign'>
 
 
 
@@ -2107,7 +2107,7 @@ public static void main(String[] args) {
 
 ```java
 public static void printStars(int number) {
-    // one start can be printed with the command
+    // you can print one star with the command
     // System.out.print("*");
     // call the print command n times
     // in the end print a line break with the comand
@@ -2141,15 +2141,13 @@ The output of the program:
 
 <!-- Tee metodi `tulostaNelio(int sivunpituus)` joka tulostaa neliön käyttäen `tulostaTahtia`-metodia. Siis esimerkiksi kutsu `tulostaNelio(4)` tulostaa seuraavaa: -->
 
-Define a method called `printSquare(int lengthOfSide)` that prints a suitable square with the help of the `printStars` method. So the method call `printSquare(4)` results in the following output:
+Define a method called `printSquare(int size)` that prints a suitable square with the help of the `printStars` method. So the method call `printSquare(4)` results in the following output:
 
 <sample-output>
-
 ****
 ****
 ****
 ****
-
 </sample-output>
 
 <!-- **Huom:** tehtävässä ei riitä että tulostus näyttää oikealta, tulostaNelio-metodin sisällä neliön "rivien" tulostus tulee tehdä tulostaTahtia-metodia käyttäen. -->
@@ -2167,14 +2165,12 @@ When creating the program, you might benefit from the test code in the main to e
 
 <!-- Tee metodi `tulostaSuorakulmio(int leveys, int korkeus)` joka tulostaa suorakulmion käyttäen `tulostaTahtia`-metodia. Siis esimerkiksi kutsu `tulostaSuorakulmio(17,3)` tulostaa seuraavaa: -->
 
-Write a method called `printRectangle(int width, int height`) that prints the correct rectangle by using the `printStars` method. So the method call `printRectangle(17, 3)` should produce the following output:
+Write a method called `printRectangle(int width, int height)` that prints the correct rectangle by using the `printStars` method. So the method call `printRectangle(17, 3)` should produce the following output:
 
 <sample-output>
-
 *****************
 *****************
 *****************
-
 </sample-output>
 
 
@@ -2187,12 +2183,10 @@ Write a method called `printRectangle(int width, int height`) that prints the co
 Create a method called `printTriangle(int size)` that prints a triangle by using the `printStars` method. So the call `printTriangle(4)` should print the following:
 
 <sample-output>
-
 *
 **
 ***
 ****
-
 </sample-output>
 
 </programming-exercise>
