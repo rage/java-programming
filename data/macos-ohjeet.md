@@ -39,7 +39,7 @@ The permission can be added as follows:
 ![accessibility-view with tmcbeans added](./img/macos-guide/tmcbeans_added.png)
 
 <!-- 9. Paina vasemmasta alakulmasta "Click the lock to prevent further changes." -->
-9. Press from the lower left corner "Click the lock to prevent further changes."
+9. In the lower left corner, click "Click the lock to prevent further changes."
 ![accessibility-näkymä, johon ei voi tehdä enää muutoksia](./img/macos-guide/done.png)
 
 <!-- Nyt tmcbeans pitäisi pystyä siirtämään hiirtä testien ajossa. Huomaathan, että et saa samanaikaisesti siirtää itse hiirtä tai availla ikkunoita, kun testit pyörivät. Testien pitää saada rauhassa navigoida yksin näytöllä, jotta ne testaavat oikein ohjelmasi toimintaa. -->
