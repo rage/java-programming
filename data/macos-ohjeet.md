@@ -9,7 +9,7 @@ information_page: true
 ## User interface tests
 
 <!-- Osa käyttöliittymätesteistä odottaa, että NetBeans/tmcbeans saa siirtää hiiren kursoria näytöllä, esimerkiksi testatakseen tehtävässä tehdyn käyttöliittymän nappuloita. macOS ei oletuksena salli turvasyistä ohjelmia siirtämään hiirtä, joten tmcbeans:lle pitää käydä lisäämässä oikeus tätä varten. -->
-Some of the user interface testing expects that Netebans/tmcbeans is allowed to move the mouse cursor on the screen. For example to test the buttons in the UI that is created in the exercise. MacOS does not allow this because of the security issues. This is why tmcbeans has to be given the permission manually.
+Some of the user interface tests expect that Netbeans/tmcbeans is allowed to move the mouse cursor on the screen. For example to test the buttons in the UI that are created in the exercise. MacOS does not allow this because of the security concerns. This is why tmcbeans has to be given the permission manually.
 
 
 
