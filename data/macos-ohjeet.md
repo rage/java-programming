@@ -36,7 +36,7 @@ The permission can be added as follows:
 <!-- 7. Paina nyt plus-kuvaketta. Navigoi avautuvassa näkymässä siihen kansioon, mihin tmcbeans on asennettuna koneellasi. Valitse tmcbeans.app ja paina Open. -->
 7. Click the plus-icon. Navigate to the folder where your tmcbeans is installed. Select tmcbeans.app and click Open.
 ![Finder-hakemisto, jossa navigoitu tmcbeansiin](./img/macos-guide/add_tmcbeans.png)
-![accessibility-näkymä, johon on lisätty tmcbeans](./img/macos-guide/tmcbeans_added.png)
+![accessibility-view with tmcbeans added](./img/macos-guide/tmcbeans_added.png)
 
 <!-- 9. Paina vasemmasta alakulmasta "Click the lock to prevent further changes." -->
 9. Press from the lower left corner "Click the lock to prevent further changes."
