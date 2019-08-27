@@ -323,7 +323,7 @@ while (true) {
 TODO: tänne tarttee visualisoinnin
 <!-- TODO: this requires a visualization -->
 
-<quiznator id="5c1f6c8b64cf001162cb9790"></quiznator>
+<quiz id="36891f81-9e52-5546-97c3-4c2f0f180135"></quiz>
 
 <programming-exercise name="Only positives" tmcname='part02-Osa02_07.OnlyPositives'>
 
@@ -860,4 +860,3 @@ Cannot calculate the average
 </sample-output>
 
 </programming-exercise>
-

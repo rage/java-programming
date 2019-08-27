@@ -169,7 +169,7 @@ Yleisesti ottaen voidaan ajatella niin, että vaikeasti ymmärrettävät ohjelma
 </text-box>
 
 
-<quiznator id="5c385fa799236814c5bb4371"></quiznator>
+<quiz id="57efce12-4bfe-55d0-98ae-3f10f06449bf"></quiz>
 
 
 
@@ -241,7 +241,7 @@ null
 
 </sample-output>
 
-<quiznator id='5c571399ddb6b814af3225a9'></quiznator>
+<quiz id='03ca76f2-5968-56e3-a7bb-cf0a4e5c5763'></quiz>
 
 
 <programming-exercise name='Lempinimet' tmcname='osa06-Osa06_03.Lempinimet'>
@@ -380,7 +380,7 @@ Sisältö: ...
 Hajautustauluun lisättäessä avain-arvo -parin arvo voi olla käytännössä mitä tahansa. Arvo voi olla kokonaisluku, lista, tai vaikkapa toinen hajautustaulu.
 
 
-<quiznator id='5c5713c9017ffc13eddca708'></quiznator>
+<quiz id='a8bf2213-515e-5eac-bf3f-eef5bf7a6db0'></quiz>
 
 
 ## Milloin hajautustaulua oikein tulisi käyttää?
@@ -1234,7 +1234,7 @@ Kirjat olivat samat
 </sample-output>
 
 
-<quiznator id='5c571401fd9fd71425c631b1'></quiznator>
+<quiz id='17fb16ff-6c35-5b1c-a819-f2e12f7f64ae'></quiz>
 
 
 ## Equals ja ArrayList
@@ -1260,7 +1260,7 @@ if (!kirjat.contains(olioKirja)) {
 Tämä oletusmetodeihin kuten `equals`iin tukeutuminen on oikeastaan syy sille, miksi Java haluaa, että ArrayListiin ja HashMapiin lisättävät muuttujat ovat viittaustyyppisiä. Jokaisella viittaustyyppisellä muuttujalla on oletusmetodeja kuten equals, joten luokan ArrayList sisäistä toteutusta ei tarvitse muuttaa lainkaan erilaisia muuttujia lisättäessä. Alkeistyyppisillä muuttujilla tällaisia oletusmetodeja ei ole.
 
 
-<quiznator id='5c57145b244fe21455cb7687'></quiznator>
+<quiz id='1bcdeb92-4a1d-5fe2-a2ab-55f467310a82'></quiz>
 
 ## Suurpiirteinen vertailu hajautusarvon avulla
 
@@ -1938,13 +1938,13 @@ Kirjat olivat samat
 
 </sample-output>
 
-<quiznator id="5c78294899236814c5bbddb0"></quiznator>
+<quiz id="cd437002-cf84-598d-97c9-f8e6930eddb5"></quiz>
 
 
 Monet Javan valmiit tietorakenteet tukeutuvat `equals`-metodiin osana sisäistä toimintaansa. Esimerkiksi luokan `ArrayList` `contains` ja `remove`-metodit hyödyntävät olioiden yhtäsuuruutta olion etsimisessä. Vastaavasti luokan `HashMap` toiminnallisuus perustuu equalsiin -- equalsin lisäksi metodi hashCode on oleellinen.
 
 
-<quiznator id="5c78298b3972a914741081a8"></quiznator>
+<quiz id="7a55edae-9ea6-526d-abd2-ab150c6ebc98"></quiz>
 
 
 ## Hajautusarvo "hashCode"
@@ -2661,12 +2661,12 @@ Mitä tarkalleenottaen tapahtuu kuin kolmiulotteiselle pisteelle kutsutaan toStr
 Metodikutsun aikaansaama toimintoketju siis on monivaiheinen. Periaate on kuitenkin selkeä: suoritettavan metodin määrittelyä etsitään ensin olion todellisen tyypin määrittelystä ja jos sitä ei löydy edetään yliluokkaan. Ja jos yliluokastakaan ei löydy metodin toteutusta siirrytään etsimään yliluokan yliluokasta jne...
 
 
-<quiznator id="5c7829f1c41ed4148d970579"></quiznator>
+<quiz id="c600b15c-f3e9-5aed-983f-d5d8b2514b41"></quiz>
 
-<quiznator id="5c782a0c244fe21455cbc288"></quiznator>
+<quiz id="f195e057-f856-597a-bf2e-0760de128f72"></quiz>
 
 
-<quiznator id="5c78fe41244fe21455cbc384"></quiznator>
+<quiz id="ce34eaf0-9300-59af-92e8-1c18aaf4ba15"></quiz>
 
 ## Milloin perintää kannattaa käyttää?
 
@@ -3908,7 +3908,7 @@ public class Tehdas {
 ```
 
 
-<quiznator id="5c78ff60c41ed4148d97065d"></quiznator>
+<quiz id="65debdd0-a540-55bc-ae07-dd7bcaf4cc01"></quiz>
 
 <text-box variant='hint' name='Luokkien välisten riippuvuuksien vähentäminen'>
 
@@ -4897,5 +4897,4 @@ Kahdeksannessa osassa tutustuimme perintään ja rajapintoihin. Perintä tuo per
 
 Vastaa vielä alla olevaan kyselyyn.
 
-<quiznator id="5c782a44017ffc13eddcf319"></quiznator>
-
+<quiz id="8e9bed3f-391b-5d34-855e-ce767b535f20"></quiz>

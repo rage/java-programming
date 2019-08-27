@@ -14,4 +14,4 @@ TODO: yhteenveto osan relevanteista opeista
 
 Vastaa vielä alla olevaan kyselyyn.
 
-<quiznator id='5c571494017ffc13eddca70b'></quiznator>
+<quiz id='2f7fdd45-d8c7-5ecf-a9a9-0cee4a3f4d63'></quiz>

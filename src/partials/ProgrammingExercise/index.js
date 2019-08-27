@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-
+import ContentLoader from "react-content-loader"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faPencilAlt as icon } from "@fortawesome/free-solid-svg-icons"
+import { faPencilAlt as icon, faRedo } from "@fortawesome/free-solid-svg-icons"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 import { get } from "lodash"
-import { Card, CardContent } from "@material-ui/core"
+import { Card, CardContent, Button } from "@material-ui/core"
 
 import {
   fetchProgrammingExerciseDetails,
@@ -38,6 +38,10 @@ const StyledIcon = styled(FontAwesomeIcon)`
   bottom: -13px;
 `
 
+const StyledRefreshIcon = styled(FontAwesomeIcon)`
+  color: white;
+`
+
 const Header = styled.div`
   font-size: 1.3rem;
   font-weight: normal;
@@ -67,6 +71,16 @@ const HeaderMuted = styled.span`
   bottom: -3px;
 `
 
+const PointsLabel = styled.span`
+  font-size: 18px;
+  font-weight: 400;
+`
+
+const PointContentWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`
+
 const Body = styled.div`
   padding-bottom: 0.5rem;
   min-height: 300px;
@@ -83,7 +97,11 @@ const LoginNagWrapper = styled.div`
   justify-content: center;
 `
 
-const PointsWrapper = styled.span`
+const PointsWrapper = styled.div`
+  margin-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
   color: white;
 `
 
@@ -92,6 +110,14 @@ const Small = styled.div`
     font-size: 0.9rem;
     color: #333;
   }
+`
+
+const StyledQuizPointsContentLoader = styled(ContentLoader)`
+  width: 100%;
+  max-width: 30px;
+  height: 31.2px;
+  position: relative;
+  top: -4px;
 `
 
 class ProgrammingExercise extends React.Component {
@@ -124,9 +150,6 @@ class ProgrammingExercise extends React.Component {
 
   async componentDidMount() {
     this.setState({ render: true })
-    if (!this.context.loggedIn) {
-      return
-    }
     await this.fetch()
   }
 
@@ -183,6 +206,10 @@ class ProgrammingExercise extends React.Component {
     }
 
     const points = get(this.state, "exerciseDetails.available_points.length")
+    const awardedPoints = get(
+      this.state,
+      "exerciseDetails.awarded_points.length",
+    )
 
     return (
       <ProgrammingExerciseWrapper
@@ -194,9 +221,51 @@ class ProgrammingExercise extends React.Component {
             <HeaderMuted>Ohjelmointitehtävä: </HeaderMuted>
             <h3>{name}</h3>
           </HeaderTitleContainer>
-          {points && points > 1 && (
-            <PointsWrapper>{points} pisteen tehtävä</PointsWrapper>
+
+          {this.context.loggedIn && (
+            <Button onClick={this.onUpdate}>
+              <StyledRefreshIcon icon={faRedo} />
+            </Button>
           )}
+          <PointsWrapper>
+            <PointsLabel>Pisteitä:</PointsLabel>
+
+            <PointContentWrapper>
+              {awardedPoints !== undefined ? (
+                <span>{awardedPoints}</span>
+              ) : (
+                <StyledQuizPointsContentLoader
+                  animate={!points}
+                  height={40}
+                  width={30}
+                  speed={2}
+                  primaryColor="#ffffff"
+                  primaryOpacity={0.6}
+                  secondaryColor="#dddddd"
+                  secondaryOpacity={0.6}
+                >
+                  <rect x="0" y="10" rx="12" ry="12" width="30" height="30" />
+                </StyledQuizPointsContentLoader>
+              )}
+              <span>/</span>
+              {points ? (
+                <span>{points}</span>
+              ) : (
+                <StyledQuizPointsContentLoader
+                  animate
+                  height={40}
+                  width={30}
+                  speed={2}
+                  primaryColor="#ffffff"
+                  primaryOpacity={0.6}
+                  secondaryColor="#dddddd"
+                  secondaryOpacity={0.6}
+                >
+                  <rect x="0" y="10" rx="12" ry="12" width="30" height="30" />
+                </StyledQuizPointsContentLoader>
+              )}
+            </PointContentWrapper>
+          </PointsWrapper>
         </Header>
         <CardContent>
           <Body>

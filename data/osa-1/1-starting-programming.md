@@ -15,7 +15,7 @@ hidden: false
 </text-box>
 
 
-<quiznator id="5c12b7f263de8e5db0cf8b8e"></quiznator>
+<quiz id="3799f901-ef2a-53da-b4c6-669fbbf0038a"></quiz>
 
 TODO aloituskysely englanniksi
 
@@ -152,4 +152,4 @@ In order to work Java-programs require a code boilerplate, which will become fam
 <!-- Alla on kurssin ensimmäinen kyselytehtävä. Kyselytehtäviin vastataan suoraan kurssimateriaalissa. -->
 Below is the first quizz of the course. Quizzes can be answered straight in the course material.
 
-<quiznator id="5c136a4ea50dbe1223d1981d"></quiznator>
+<quiz id="118e6b38-0d42-5667-a674-84ae174ad798"></quiz>

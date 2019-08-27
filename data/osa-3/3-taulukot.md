@@ -173,7 +173,7 @@ int number = numbers[index];
 System.out.println(numbers);
 ```
 
-<quiznator id="5c385a3b244fe21455cb2764"></quiznator>
+<quiz id="9acde5da-37ca-5065-83f6-f90010f366c4"></quiz>
 
 <programming-exercise name='Alkioiden arvojen vaihtaminen' tmcname='osa03-Osa03_18.AlkioidenArvojenVaihtaminen'>
 

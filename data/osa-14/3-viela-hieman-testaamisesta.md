@@ -133,4 +133,4 @@ Huom! Ohjelman toiminnallisuuden lisäksi tehtävässä tulee kirjoittaa ohjelma
 </programming-exercise>
 
 
-<quiznator id="5cb968ecc99c4e46a4398e3a"></quiznator>
+<quiz id="2128a8cf-a93f-53ff-bbeb-cdefed403d5e"></quiz>

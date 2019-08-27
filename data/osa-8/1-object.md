@@ -202,13 +202,13 @@ Kirjat olivat samat
 
 </sample-output>
 
-<quiznator id="5c78294899236814c5bbddb0"></quiznator>
+<quiz id="cd437002-cf84-598d-97c9-f8e6930eddb5"></quiz>
 
 
 Monet Javan valmiit tietorakenteet tukeutuvat `equals`-metodiin osana sisäistä toimintaansa. Esimerkiksi luokan `ArrayList` `contains` ja `remove`-metodit hyödyntävät olioiden yhtäsuuruutta olion etsimisessä. Vastaavasti luokan `HashMap` toiminnallisuus perustuu equalsiin -- equalsin lisäksi metodi hashCode on oleellinen.
 
 
-<quiznator id="5c78298b3972a914741081a8"></quiznator>
+<quiz id="7a55edae-9ea6-526d-abd2-ab150c6ebc98"></quiz>
 
 
 ## Hajautusarvo "hashCode"
@@ -233,4 +233,3 @@ Object-luokassa määritelty oletustoteutus luo `hashCode`-arvon olion viitteen 
 NetBeans tarjoaa tuen metodien `equals` ja `hashCode` lähes automaattiseen luomiseen. Voit valita valikosta Source -> Insert Code, ja valita aukeavasta listasta *equals() and hashCode()*. Tämän jälkeen NetBeans kysyy oliomuuttujat joita metodeissa käytetään. Nämä NetBeansin generoimat metodit ovat tyypillisesti "tarpeeksi hyviä" omiin tarpeisiimme.
 
 </text-box>
-

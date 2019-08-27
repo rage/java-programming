@@ -549,7 +549,7 @@ Similarly, by calling the method `get` with the parameter 4, the fifth number in
 </text-box>
 
 
-<quiznator id="5c31fe3b017ffc13eddc4ebc"></quiznator>
+<quiz id="f90c14f3-f138-5f12-8541-e6cd5776b4c9"></quiz>
 
 
 <!-- <text-box variant='hint' name='Useamman Javan valmiin työvälineen tuominen ohjelmaan'> -->
@@ -1916,9 +1916,9 @@ System.out.println("Index 1 so the second value: " + list.get(1));
 
 
 
-<quiznator id="5c31fe69ddb6b814af31cd57"></quiznator>
+<quiz id="dd54e3d8-51fb-51c6-9175-065e1a9d98be"></quiz>
 
-<quiznator id="5c31fe883972a914740fdc81"></quiznator>
+<quiz id="436e3c74-4b71-5a49-9c04-bc4e21bce6a5"></quiz>
 
 
 <!-- Arvon hakeminen listalta onnistuu listan metodilla **contains**. Metodi saa haettavan arvon parametrina ja palauttaa boolean-tyyppisen arvon (`true` tai `false`), joka kertoo löytyykö haettua arvoa listalta. -->
