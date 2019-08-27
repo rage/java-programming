@@ -114,8 +114,7 @@ class Footer extends React.Component {
                 </OutboundLink>
               </GithubContainer>
               <ContentContainer>
-                Kurssin on tehnyt Teemu Kerola
-                .
+                Kurssin on tehnyt Teemu Kerola .
               </ContentContainer>
 
               <ContentContainer>
