@@ -118,13 +118,13 @@ Speeding ticket!
 
 Blocks is a term used to describe a section enclosed by a pair of curly brackets. The source file containing the program includes the string `public class`, which is followed by the name of the program and the opening curly bracket of the block. The block ends in a closing curly bracket. In the picture below the program block is highlighted.
 
-![An example of a block](../img/lohkoesimerkki-1.png) <!-- TODO: 'update picture -->
+![An example of a block](../img/part1.6-block-example-1.png)
 
 <!-- Ohjelmissa toistuva rimpsu `public static void main(String[] args)` aloittaa oman lohkon, jonka sisällä oleva lähdekoodi suoritetaan kun ohjelma käynnistetään -- rimpsu on oikeastaan jokaisen ohjelman aloituskohta. Yllä olevassa esimerkissä on todellisuudessa kaksi lohkoa, kuten alla olevasta kuvasta huomaamme. -->
 
 The recurring snippet `public static void main(String[] args)` in the programs starts its own block, and the source code within this block is executed when the program is run -- technically the snippet is the starting point of all programs. In the code above we actually have two blocks, as we can see from the picture below.
 
-![](../img/lohkoesimerkki-2.png)
+![](../img/part1.6-block-example-2.png)
 
 <!-- Lohkot määrittelevät ohjelman rakennetta ja rajaavat ohjelmaa. Aaltosuluille tulee aina löytyä pari: koodi, josta josta puuttuu lohkon päättävä (tai aloittava) aaltosulku, on virheellinen. -->
 
@@ -666,7 +666,7 @@ if (isItLessThan) {
 }
 ```
 
-![](../img/drawings/boolean-muuttuja.png) <!-- TODO: update image -->
+![](../img/drawings/part1.6-boolean-variable.png)
 
 <!-- Yllä olevassa kuvassa ohjelmakoodia on suoritettu niin pitkään, että ohjelman muuttujat on luotu ja niihin on asetettu arvot. Muuttujassa `onkoPienempi` on arvona `true`. Seuraavana suoritetaan vertailu `if (onkoPienempi)` -- muuttujaan `onkoPienempi` liittyvä arvo löytyy sen lokerosta, ja lopulta ohjelma tulostaa: -->
 

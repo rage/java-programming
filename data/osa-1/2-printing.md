@@ -389,7 +389,7 @@ Writing the command `System.out.println("...") can be pretty cumbersome. In NetB
 
 Animation below illustrates the use of sout-command. First user writes sout and then pressed tabulator. A Magic Trick!
 
-![](../img/sout.gif)
+![](../img/part1.2-sout.gif)
 
 </text-box>
 
