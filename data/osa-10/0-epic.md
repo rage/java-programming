@@ -379,7 +379,7 @@ Alla on kuvattuna isompi luokkakaavio, jossa on luokat A, B, C, D ja E, sekä ra
 </programming-exercise>
 
 
-<quiznator id="5c8b61cb244fe21455cbe44c"></quiznator>
+<quiz id="8d94bdb1-6c84-5b35-9416-5808adaa2105"></quiz>
 
 # Pakkaukset
 
@@ -883,7 +883,7 @@ public class Lentohallinta {
 }
 ```
 
-<quiznator id="5c895b0c99236814c5bbfc8f"></quiznator>
+<quiz id="ad9d86d2-ee96-5f5d-b734-962c2f4f1832"></quiz>
 
 
 ### Tekstikäyttöliittymä
@@ -1534,7 +1534,7 @@ Exception in thread "main" java.lang.NullPointerException
 Stack tracen lukeminen tapahtuu alhaalta ylöspäin. Alimpana on ensimmäinen kutsu, eli ohjelman suoritus on alkanut luokan `Luokka` metodista `main()`. Luokan `Luokka` main-metodin rivillä 29 on kutsuttu metodia `tulosta()`. Metodin `tulosta` rivillä 43 on tapahtunut poikkeus `NullPointerException`. Poikkeuksen tiedot ovatkin hyvin hyödyllisiä virhekohdan selvittämisessä.
 
 
-<quiznator id="5c8b64ba3972a9147410a33f"></quiznator>
+<quiz id="7fa97df0-9e2d-5442-91e9-dfb2379f254c"></quiz>
 
 
 <programming-exercise name='Sensorit ja lämpötila (4 osaa)' tmcname='osa10-Osa10_12.SensoritJaLampotila'>
@@ -1740,7 +1740,7 @@ Mikäli tiedostoja haluaa käsitellä siten, että kirjoitus tapahtuu olemassaol
 
 <br/>
 
-<quiznator id="5c8b66b7017ffc13eddd143e"></quiznator>
+<quiz id="05822c24-34ad-5a60-a3f0-b09ac094c7c7"></quiz>
 
 
 <programming-exercise name='Muistava sanakirja (4 osaa)' nocoins='true' tmcname='osa10-Osa10_13.MuistavaSanakirja'>
@@ -2377,4 +2377,4 @@ Kymmenennessä osassa osassa tutustuimme luokkakaavioihin ja pakkauksiin. Otimme
 
 Vastaa vielä alla olevaan kyselyyn.
 
-<quiznator id='5c895ab2017ffc13eddd1169'></quiznator>
+<quiz id='d2021600-bbcd-580f-976e-1a3ce26139da'></quiz>

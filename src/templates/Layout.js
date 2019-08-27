@@ -72,13 +72,6 @@ class Layout extends React.Component {
   componentDidMount() {
     const user = store.get("tmc.user")
     if (typeof window !== "undefined" && user) {
-      if (typeof window.Quiznator === "undefined") {
-        document.addEventListener("quiznatorLoaded", () => {
-          this.setQuiznatorUser(user)
-        })
-      } else {
-        this.setQuiznatorUser(user)
-      }
       if (canDoResearch()) {
         setTimeout(() => {
           this.removePheromones = Pheromones.init({
@@ -110,13 +103,6 @@ class Layout extends React.Component {
     })
   }
 
-  setQuiznatorUser = user => {
-    window.Quiznator.setUser({
-      id: user.username,
-      accessToken: user.accessToken,
-    })
-  }
-
   render() {
     const { children } = this.props
 
@@ -140,7 +126,7 @@ class Layout extends React.Component {
                     {
                       name: "keywords",
                       content:
-                        "ohjelmointi, java, programming, CS1, MOOC, 2020, ohjelmointikurssi, avoin, ilmainen, helsingin yliopisto",
+                        "ohjelmointi, java, programming, CS1, MOOC, 2019, ohjelmointikurssi, avoin, ilmainen, helsingin yliopisto",
                     },
                   ]}
                 />

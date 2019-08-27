@@ -122,7 +122,7 @@ for (int i = start; i < end; i++) {
 We will continue practicing loops in the following exercises. You can use either a while-loop with a condition, or a for-loop.
 
 
-<programming-exercise name='From zero to something' tmcname='part02-Part02_14.FromZeroToSomething'>
+<programming-exercise name='Counting' tmcname='part02-Part02_14.Counting'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä kokonaisluvun. Tämän jälkeen ohjelma tulostaa luvut nollasta käyttäjän syöttämään lukuun. Voit olettaa, että käyttäjä syöttää aina positiivisen luvun. Alla on muutamia esimerkkejä ohjelman toivotusta toiminnasta. -->
 Write a program that reads an integer from the user. Then the program prints numbers from 0 to the number given by the user. You can assume that the user always gives a positive number. Below is some examples of the wanted functionality.
@@ -477,7 +477,7 @@ Sample output:
 <!-- Summa on 12 -->
 First number? **3**
 Last number? **5**
-The sum is: 12
+The sum is 12
 
 </sample-output>
 

@@ -643,7 +643,7 @@ public class Tehdas {
 ```
 
 
-<quiznator id="5c78ff60c41ed4148d97065d"></quiznator>
+<quiz id="65debdd0-a540-55bc-ae07-dd7bcaf4cc01"></quiz>
 
 <text-box variant='hint' name='Luokkien välisten riippuvuuksien vähentäminen'>
 
@@ -1241,4 +1241,3 @@ Kauppa on melkein valmiina. Yhden asiakkaan asioinnin hoitavan metodin `public v
 *Todellisuudessa verkkokauppa toteutettaisiin hieman eri tavalla. Verkkosovelluksia tehtäessä käyttöliittymä toteutetaan HTML-sivuna, ja sivuilla tapahtuvat klikkaukset ohjataan palvelinohjelmistolle. Teemaan liittyen löytyy useampia kursseja Helsingin yliopistolta.*
 
 </programming-exercise>
-

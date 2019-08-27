@@ -16,7 +16,7 @@ hidden: false
 
 </text-box>
 
-<quiznator id="5cb5c0ef06d26046c3ea28c8"></quiznator>
+<quiz id="dad38bef-0989-5dc6-af5f-c14e6bccf7dc"></quiz>
 
 
 Tietokonesimulaatioita käytetään tosielämän ilmiöiden mallintamiseen tietokoneella. Simulaation toteutus sisältää ilmiötä kuvaavan mallin luomisen (esimerkiksi säämalli) sekä mallin ajamisen eli simuloinnin. Tutustumme tässä muutamaan klassiseen tietokonesimulaatioon, jotka käyttävät kaksiulotteista taulukkoa.
@@ -758,7 +758,7 @@ Huom! Ohjelman toiminnallisuuden lisäksi tehtävässä tulee kirjoittaa ohjelma
 </programming-exercise>
 
 
-<quiznator id="5cb968ecc99c4e46a4398e3a"></quiznator>
+<quiz id="2128a8cf-a93f-53ff-bbeb-cdefed403d5e"></quiz>
 
 # Yhteenveto
 
@@ -772,5 +772,4 @@ Tämän kurssin jälkeen on hyvä aloittaa kurssit Tietokantojen perusteet sekä
 
 Vastaa vielä seuraavaan kyselyyn.
 
-<quiznator id="5cb5c003a4fb9e4613a5a85b"></quiznator>
-
+<quiz id="166aba53-83be-5a9d-bb2f-e7c436d37d57"></quiz>

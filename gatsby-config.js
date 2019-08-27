@@ -3,7 +3,7 @@ const blue = require("@material-ui/core/colors/red").default
 
 module.exports = {
   siteMetadata: {
-    title: "Ohjelmoinnin MOOC 2020",
+    title: "Ohjelmoinnin MOOC 2019",
     siteUrl: `https://ohjelmointi-19.mooc.fi`,
   },
   plugins: [

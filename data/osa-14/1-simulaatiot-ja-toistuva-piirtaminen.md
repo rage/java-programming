@@ -14,7 +14,7 @@ hidden: false
 
 </text-box>
 
-<quiznator id="5cb5c0ef06d26046c3ea28c8"></quiznator>
+<quiz id="dad38bef-0989-5dc6-af5f-c14e6bccf7dc"></quiz>
 
 
 Tietokonesimulaatioita käytetään tosielämän ilmiöiden mallintamiseen tietokoneella. Simulaation toteutus sisältää ilmiötä kuvaavan mallin luomisen (esimerkiksi säämalli) sekä mallin ajamisen eli simuloinnin. Tutustumme tässä muutamaan klassiseen tietokonesimulaatioon, jotka käyttävät kaksiulotteista taulukkoa.
@@ -400,4 +400,3 @@ Muokkaa loputa sovellusta siten, että hiekka syrjäyttää veden. Kun lisäät 
 Kun olet saanut kaikki neljännentoista osan tehtävät valmiiksi, voit palauta tähän tehtävään ja lähteä toteuttamaan uusia toiminnallisuuksia. Miten toteuttaisit esimerkiksi laavan?
 
 </programming-exercise>
-

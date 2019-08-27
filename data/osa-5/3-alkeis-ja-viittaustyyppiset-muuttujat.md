@@ -519,9 +519,9 @@ After this the program calls the method makeYounger, which is given the variable
 
 Finally the method execution ends and the program returns to the main method. In the main method the value of the variable first is printed one more time. The final result of the print is"First(1972)".
 
-<quiznator id='5c534c84244fe21455cb6ef4'></quiznator>
+<quiz id='aedb9a67-73e0-5b34-b13c-bb84a6c59a0b'></quiz>
 
-<quiznator id='5c534ccfc41ed4148d96b340'></quiznator>
+<quiz id='1aa0ccc3-2de4-59ba-99af-186c26e5eece'></quiz>
 
 
 
@@ -547,4 +547,3 @@ In addition to the above, the variable `number` is not a straightforward memory 
 We will return to discuss the issue briefly on the advanced programming course. A more in-depth study is reserved for the course Computer Organization.
 
 </text-box>
-

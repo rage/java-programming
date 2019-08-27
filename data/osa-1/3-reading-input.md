@@ -608,7 +608,7 @@ I will tell you a story, but I need some information first.
 What is the main character called?
 **Bob**
 What is their job?
-**builder**
+**a builder**
 Here is the story:
 Once upon a time there was Bob, who was a builder.
 On their way to work, Bob reflected on their life.
@@ -640,7 +640,7 @@ I will tell you a story, but I need some information first.
 What is the main character called?
 **Ada**
 What is their job?
-**Data scientist**
+**a Data scientist**
 Here is the story:
 Once upon a time there was Ada, who was a Data scientist.
 On their way to work, Ada reflected on their life.

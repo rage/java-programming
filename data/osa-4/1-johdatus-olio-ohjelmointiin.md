@@ -176,7 +176,7 @@ Write a program that:
 </programming-exercise>
 
 
-<quiznator id='5c409ea9fd9fd71425c5f871'></quiznator>
+<quiz id='777bb8c9-f46f-5a2d-ae99-768f3c2d3671'></quiz>
 
 
 <!-- ## Luokan luominen -->
@@ -1529,7 +1529,7 @@ Pekka's and Antti's combined age 3 years
 </sample-output>
 
 
-<quiznator id='5c409ecd017ffc13eddc6d37'></quiznator>
+<quiz id='518e4a90-d954-50dd-a8a0-bd14da4331e6'></quiz>
 
 
 <!-- <programming-exercise name='Musiikkikappale' tmcname='osa04-Osa04_10.Musiikkikappale'> -->
@@ -3153,5 +3153,3 @@ As the number of floating-point numbers is infinite -- (in case you're wondering
 Normally, account balances, for instance, are saved as integers such that, say, the value 1 represents one cent.
 
 </text-box>
-
-
