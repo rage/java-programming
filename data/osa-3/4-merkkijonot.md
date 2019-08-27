@@ -115,7 +115,7 @@ Hi Lily and bye!
 </sample-output>
 
 
-<programming-exercise name='Tulostus kolmesti' tmcname='osa03-Osa03_23.TulostusKolmesti'>
+<programming-exercise name='Print thrice' tmcname='part03-Part03_23.printThrice'>
 
 
 <!-- Tee ohjelma joka lukee käyttäjältä merkkijonon ja tulostaa merkkijonon kolmesti peräkkäin. -->
@@ -127,7 +127,7 @@ Write a program, that reads a string from the user and then prints it three time
 
 kukkakukkakukka -->
 
-What to print? **cake**
+Give a word: **cake**
 
 cakecakecake
 
@@ -228,7 +228,7 @@ it wasn't!
 </sample-output>
 
 
-<programming-exercise name='Onko totta' tmcname='osa03-Osa03_24.OnkoTotta'>
+<programming-exercise name='Is it true' tmcname='part03-Part03_24.IsItTrue'>
 
 <!-- Tee ohjelma, joka pyytää käyttäjää kirjoittamaan merkkijonon. Jos käyttäjä kirjoittaa merkkijonon "totta", tulostetaan merkkijono "Oikein meni!", muulloin tulostetaan merkkijono "Koitappa uudelleen!". -->
 Write a program that asks the user for a string. If the user writes the string "true", the program prints "You got it right!", otherwise it prints "Try again!".
@@ -238,7 +238,7 @@ Write a program that asks the user for a string. If the user writes the string "
 <!-- Kirjoita merkkijono: **totta**
 Oikein meni! -->
 
-Enter a string: **true**
+Give a string: **true**
 You got it right!
 
 </sample-output>
@@ -247,14 +247,14 @@ You got it right!
 
 <!-- Kirjoita merkkijono: **tottapa**
 Koitappa uudelleen! -->
-Enter a string: **trueish**
+Give a string: **trueish**
 Try again!
 
 </sample-output>
 
 </programming-exercise>
 
-<programming-exercise name='Käyttäjätunnukset' tmcname='osa03-Osa03_25.Kayttajatunnukset'>
+<programming-exercise name='Users' tmcname='part03-Part03_25.Users'>
 
 
 <!-- Tee ohjelma, joka tunnistaa seuraavat käyttäjät:
@@ -384,7 +384,7 @@ fourth
 </sample-output>
 
 
-<programming-exercise name='Sanat riveittäin' tmcname='osa03-Osa03_26.SanatRiveittain'>
+<programming-exercise name='Line by line' tmcname='part03-Part03_26.LineByLine'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä merkkijonoja. Mikäli syötetty merkkijono on tyhjä, ohjelma lopettaa käyttäjältä lukemisen ja ohjelman suoritus päättyy. Mikäli merkkijono ei ole tyhjä, ohjelma pilkkoo syötetyn merkkijonon osiksi välilyöntien ` ` kohdalta ja tulostaa pilkotun merkkijonon osat omille riveilleen. -->
 Write a program that reads strings from the user. If the input is empty, the program stops reading input and halts. For each non-empty input it splits the string input by whitespaces ` ` and prints each part of the string on a new line.
@@ -418,7 +418,7 @@ halted
 
 </programming-exercise>
 
-<programming-exercise name='Tietyt sanat riveittäin' tmcname='osa03-Osa03_27.TietytSanatRiveittain'>
+<programming-exercise name='AV-club' tmcname='part03-Part03_27.AVClub'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä merkkijonoja. Mikäli syötetty merkkijono on tyhjä, ohjelma lopettaa käyttäjältä lukemisen ja ohjelman suoritus päättyy. Mikäli merkkijono ei ole tyhjä, ohjelma pilkkoo syötetyn merkkijonon osiksi välilyöntien ` ` kohdalta ja tulostaa omille riveilleen pilkotusta merkkijonosta ne merkkijonot (merkkijonon osat), joissa esiintyy merkkijono `av`. -->
 Write a program, that reads user input until an empty line. For each non-empty string, the program splits the string by spaces ` ` and then prints the pieces that contain `av`, each on a new line.
@@ -566,7 +566,7 @@ Name: lily, age: 1
 </sample-output>
 
 
-<programming-exercise name='Ensimmäiset sanat' tmcname='osa03-Osa03_28.EnsimmaisetSanat'>
+<programming-exercise name='First words' tmcname='part03-Part03_28.FirstWords'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä merkkijonoja. Mikäli syötetty merkkijono on tyhjä, ohjelma ei jatka lukemista ja ohjelman suoritus päättyy. Mikäli merkkijono ei ole tyhjä, ohjelma pilkkoo syötetyn merkkijonon osiksi välilyöntien ` ` kohdalta ja tulostaa kunkin pilkotun merkkijonon ensimmäisen osan. -->
 Write a program, that reads user input until an empty line. For each non-empty line the program splits the string by spaces ` ` and prints the first part of the string.
@@ -587,7 +587,7 @@ this
 </programming-exercise>
 
 
-<programming-exercise name='Viimeiset sanat' tmcname='osa03-Osa03_29.ViimeisetSanat'>
+<programming-exercise name='LastWords' tmcname='part03-Part03_29.LastWords'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä merkkijonoja. Mikäli syötetty merkkijono on tyhjä, ohjelma ei jatka lukemista ja ohjelman suoritus päättyy. Mikäli merkkijono ei ole tyhjä, ohjelma pilkkoo syötetyn merkkijonon osiksi välilyöntien ` ` kohdalta ja tulostaa kunkin pilkotun merkkijonon viimeisen osan. -->
 Write a program, that reads user input until an empty line. For each non-empty line the program splits the string by spaces ` ` and prints the last part of the string.
@@ -816,13 +816,13 @@ Average of the ages: 1.666
 </sample-output>
 
 
-<programming-exercise name='Vanhimman ikä' tmcname='osa03-Osa03_30.VanhimmanIka'>
+<programming-exercise name='Age of the oldest' tmcname='part03-Part03_30.AgeOfTheOldest'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä henkilötietoja. Henkilötiedot sisältävät etunimen ja syntymävuoden pilkulla eroteltuna. Tietojen lukemista jatketaan kunnes käyttäjä syöttää tyhjän merkkijonon. -->
-Write a program that reads personal data from the user input until an empty line is entered. The personal data contains name and age separed by a comma.
+Write a program that reads names and ages from the user until an empty line is entered. The  name and age are separed by a comma.
 
 <!-- Kun lukeminen lopetetaan, ohjelma tulostaa vanhimman henkilön iän. Voit olettaa, käyttäjä syöttää aina vähintään yhden henkilön ja että vanhimman henkilön ikä on yksikäsitteinen. -->
-After the reading the program prints the age of the oldest person. You can assume, that the user enters at least one person, and the that one of the users is older than the others.
+After reading the program prints the age of the oldest person. You can assume, that the user enters at least one person, and the that one of the users is older than the others.
 
 <sample-output>
 
@@ -847,13 +847,13 @@ Age of the oldest: 10
 </programming-exercise>
 
 
-<programming-exercise name='Vanhimman nimi' tmcname='osa03-Osa03_31.VanhimmanNimi'>
+<programming-exercise name='Name of the oldest' tmcname='part03-Part03_31.NameOfTheOldest'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä henkilötietoja. Henkilötiedot sisältävät etunimen ja syntymävuoden pilkulla eroteltuna. Tietojen lukemista jatketaan kunnes käyttäjä syöttää tyhjän merkkijonon. -->
-Write a program that reads personal data from the user input until an empty line is entered. The personal data contains name and age separed by a comma.
+Write a program that reads names and ages from the user until an empty line is entered. The  name and age are separed by a comma.
 
 <!-- Kun lukeminen lopetetaan, ohjelma tulostaa vanhimman henkilön nimen. Voit olettaa, että vanhimman henkilön ikä on yksikäsitteinen. -->
-After the reading the program prints the name of the oldest person. You can assume, that the user enters at least one person, and the that one of the users is older than the others.
+After reading the program prints the name of the oldest person. You can assume, that the user enters at least one person, and the that one of the users is older than the others.
 
 
 <sample-output>
@@ -906,10 +906,10 @@ The length of the word equisterian is 11
 </text-box>
 
 
-<programming-exercise name='Henkilötietojen tarkastelu' tmcname='osa03-Osa03_32.HenkilotietojenTarkastelu'>
+<programming-exercise name='Personal details' tmcname='part03-Part03_32.PersonalDetails'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä henkilötietoja. Henkilötiedot sisältävät etunimen ja syntymävuoden pilkulla eroteltuna. TIetojen lukemista jatketaan kunnes käyttäjä syöttää tyhjän merkkijonon. -->
-Write a program that reads personal data from the user input until an empty line is entered. The personal data contains name and year of birth separed by a comma.
+Write a program that reads names and birth years from the user until an empty line is entered. The  name and birth year are separed by a comma.
 
 <!-- Kun lukeminen lopetetaan, ohjelman tulee tulostaa pisin luettu etunimi sekä luettujen henkilöiden syntymävuosien keskiarvo. Mikäli pisimpiä etunimiä on useita, voit tulostaa niistä minkä tahansa. Voit olettaa, että käyttäjä syöttää aina vähintään yhden henkilötiedon. -->
 After that the program prints the longest name and the average of the birth years. If multiple names are equally longest, you can print any of them. You can assume the user to enter at least one person.

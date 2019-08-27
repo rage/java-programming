@@ -44,9 +44,7 @@ const ExtraDetails = ({ exerciseDetails, onUpdate, noCoins }) => {
               Voit myöhemmin katsoa palautuksiasi Test My Code
               palautusympäristössä{" "}
               <OutboundLink
-                href={`https://tmc.mooc.fi/exercises/${
-                  exerciseDetails.id
-                }?use_clients=1`}
+                href={`https://tmc.mooc.fi/exercises/${exerciseDetails.id}?use_clients=1`}
                 rel="noopener noreferrer"
                 target="_blank"
               >
