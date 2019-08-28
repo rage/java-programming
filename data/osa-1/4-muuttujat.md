@@ -17,7 +17,7 @@ title: "Variables"
 
 <!-- Tutustuimme syötteen lukemisen yhteydessä jo pikaisesti merkkijonomuuttujiin. Tutustutaan seuraavaksi muihin usein käytettyihin Javan muuttujatyyppeihin. -->
 
-We already familiarized ourselves to some level with strings while reading user inputs. Let's now move on to learn about other widely-used variable types in Java.
+We already familiarized ourselves to some degree with strings while reading user inputs. Let's now move on to learn about other widely-used variable types in Java.
 
 <!-- Muuttujaa kannattaa ajatella lokerona, johon voi tallettaa annetun tyyppistä tietoa. Tyyppejä ovat esimerkiksi teksti eli merkkijono (`String`), kokonaisluku (`int`), liukuluku (`double`) eli desimaaliluku, ja totuusarvo (`boolean`). Muuttujaan asetetaan arvo yhtäsuuruusmerkillä (`=`). -->
 
@@ -81,7 +81,7 @@ Booolean: true
 
 <!-- <programming-exercise name="Muuttuvat muuttujat" tmcname='osa01-Osa01_11.MuuttuvatMuuttujat'> -->
 
-<programming-exercise name="Various variables" tmcname='part01-Part01_11.VariousVariables'>
+<programming-exercise name="Varying Variables" tmcname='part01-Part01_11.VaryingVariables'>
 <!-- NOTE: tmcname not translated -->
 
 <!-- Tehtäväpohja sisältää ohjelman, joka tulostaa seuraavaa. -->
@@ -153,7 +153,7 @@ Zetor
 
 <!-- Muuttujien nimet ovat uniikkeja, eikä kahdella muuttujalla saa olla ohjelmassa samaa nimeä. Seuraavassa esimerkissä oleva ohjelma on virheellinen, koska ohjelmassa yritetään luoda kahteen kertaan muuttujaa nimeltä `pii`. Muuttujan luominen tapahtuu kun muuttuja esitellään ensimmäistä kertaa. -->
 
-Variable names are unique - no two variables can have the same name. The program in the following example is erroneous as it attempts to create the variable `pi` twice. The variable is created the first time it's introduced.
+Variable names are unique - no two variables can have the same name. The program in the following example is faulty as it attempts to create the variable `pi` twice. The variable is created the first time it's declared.
 
 <!-- ```java
 public class Esimerkki {
@@ -180,7 +180,7 @@ public class Example {
 
 <!-- Muuttujan tyyppi kerrotaan kun muuttuja esitellään ensimmäistä kertaa. Kun muuttujaan asetetaan uusi arvo, ei muuttujan tyyppiä enää kerrota. -->
 
-The variable type is stated when the variable is first declared. When a new value is assigned to the variable, its type is no longer stated.
+The variable type is stated when the variable is first declared. When a new value is assigned to the variable, its type is no longer mentioned.
 
 <!-- ```java
 int luku = 10;
@@ -204,11 +204,11 @@ System.out.println(value);
 
 <!-- ## Muuttujaan asetetun arvon muuttaminen -->
 
-## Changing a value assigned to a variable
+## Changing a Value Assigned to a Variable
 
 <!-- Muuttuja on olemassa sen esittelyhetkestä lähtien, ja sen arvo säilyy kunnes muuttujaan asetetaan toinen arvo. Muuttujan arvon muuttaminen onnistuu lauseella, jossa on muuttujan nimi, yhtäsuuruusmerkki, ja muuttujan uusi arvo. Huomaa että muuttujan tyyppi kirjoitetaan vain kun muuttuja esitellään ohjelmassa ensimmäistä kertaa. -->
 
-A variable exists from the moment it's first introduced, and its initial value is preserved until another value is assigned to it. A variable's value is changed using a statement that comprises the variable name, an equals sign, and the new value to be assigned. Remember to keep in mind that the variable type is only stated during the initial variable declaration.
+A variable exists from the moment of it's declaration, and its initial value is preserved until another value is assigned to it. A variable's value is changed using a statement that comprises the variable name, an equals sign, and the new value to be assigned. Remember to keep in mind that the variable type is only stated during the initial variable declaration.
 
 
 <!-- ```java
@@ -240,35 +240,35 @@ The value of the variable is 42
 
 <!-- Tarkastellaan edellisen ohjelmakoodin suoritusta askel askeleelta. Kun muuttuja esitellään ohjelmakoodissa ensimmäistä kertaa, eli sekä muuttujan tyyppi (tässä `int`) että sen nimi (tässä `luku`) kerrotaan tietokoneelle, tietokone luo muuttujaa varten "nimetyn lokeron". Tämän jälkeen yhtäsuuruusmerkin oikealla puolella oleva arvo kopioidaan tähän nimettyyn lokeroon. -->
 
-Let's look at the preceding program's execution step-by-step. When the variable appears in the program for the first time, the computer is informed of both its type (here `int`) and its name (here `value`), and the computer creates a 'named container' for the variable. Then, the value on the right side of the equals sign is copied into this named container.
+Let's look at the preceding program's execution step-by-step. When a variable appears in the program for the first time, i.e., the computer is told both its type (here `int`) and its name (here `value`), the computer creates a 'named container' for the variable. Then, the value on the right side of the equals sign is copied into this named container.
 
 ![](../img/drawings/muuttujan-arvon-vaihto-1.png)
 
 <!-- Kun ohjelmakoodissa viitataan muuttujaan sen nimellä -- tässä halutaan tulostaa merkkijono "Muuttujan arvo on " sekä muuttujan `luku` arvo, muuttujan `luku` arvo haetaan sen nimellä löytyvästä lokerosta. -->
 
-Whenever the variable is referenced by its name in a program -- with the aim here being to print the string "The value of the variable is " followed by the value of the `value` variable -- its value is retrieved from a container having its name.
+Whenever a variable is referenced by its name in a program -- here, we want to print the string "The value of the variable is " followed by the value of the `value` variable -- its value is retrieved from a container that has its name.
 
 ![](../img/drawings/muuttujan-arvon-vaihto-2.png)
 
 <!-- Kun muuttujaan asetetaan arvo (tässä `luku = 42`), tarkistetaan ensin löytyykö muuttujan nimistä lokeroa. Jos lokero löytyy, uusi arvo kopioidaan lokeroon vanhan arvon tilalle ja vanha arvo katoaa. Jos muuttujan nimellä ei löydy lokeroa, ohjelman suoritus päättyy virheilmoitukseen tai ohjelmaa ei voida käynnistää. -->
 
-Whenever a value is assigned to the variable (here `value = 42`), a check is run to see whether a container of the given name already exists. If one does, a new value is copied in the place of the old value, and the old value disappears. If a container of the given name is not found, the program execution ends in an error message or it fails to run.
+Whenever a value is assigned to a variable (here `value = 42`), a check is run to see whether a container with the given name already exists. If one does, a new value is copied in the place of the old value, and the old value disappears. If a container of the variable name is not found, the program execution ends in an error message, or it fails to run.
 
 ![](../img/drawings/muuttujan-arvon-vaihto-3.png)
 
 <!-- Seuraavaksi ohjelmakoodissa viitataan taas muuttujaan sen nimellä -- tässäkin halutaan tulostaa merkkijono "Muuttujan arvo on " sekä muuttujan `luku` arvo. Toimitaan kuten normaalisti, eli haetaan muuttujan `luku` arvo sen nimellä löytyvästä lokerosta. -->
 
-Then, the variable is once again referenced by its name in the program -- the aim being again to print the string "The value of the variable is " followed by the value of the `value` variable. We proceed as normal, retrieving the value of `value` from a container having its name.
+The variable is then referenced again by its name in the program -- we again want to print the string "The value of the variable is " followed by the value of the `value` variable. We proceed as normal, retrieving the value of `value` from a container having its name.
 
 ![](../img/drawings/muuttujan-arvon-vaihto-4.png)
 
 <!-- Kuten huomaat, ohjelman lopputilanteessa muuttujan alkuperäinen arvo on kadonnut. Muuttuja voi sisältää kerrallaan aina vain yhden arvon. -->
 
- At the end of the program, you'll notice that the original value of the variable has disappeared. A given variable can hold only one value at a time.
+ At the end of the program, you'll notice that the original value of the variable has vanished. A variable can hold only one value at a time.
 
 <!-- ## Muuttujan tyyppi pysyy -->
 
-## Variable type persists
+## Variable's Type Persists
 
 <!-- Kun muuttujan tyyppi on kertaalleen määritelty, ei sitä voi enää muuttaa. Totuusarvoa ei siis voi esimerkiksi asettaa kokonaislukutyyppiseen muuttujaan, eikä totuusarvomuuttujaan voi asettaa kokonaislukua. -->
 
@@ -291,7 +291,7 @@ integerAssignmentWillWork = value; // Neither does this
 ```
 <!-- Poikkeus kuitenkin löytyy: liukulukutyyppiseen muuttujaan voi asettaa kokonaisluvun, sillä Java osaa muuttaa kokonaisluvun liukuluvuksi asetuksen yhteydessä. -->
 
-Exceptions do exist, however: an integer can be assigned to a variable of type double, since Java can convert an integer to a double upon assignment.
+However, exceptions do exist: an integer can be assigned to a variable of type double, since Java can convert an integer to a double during assignment.
 
 <!-- ```java
 double liukuluku = 0.42;
@@ -312,7 +312,7 @@ floatingPoint = value; // Also works
 ```
 
 <!-- Liukulukua ei kuitenkaan voi asettaa kokonaislukuun. Tämä johtuu siitä, että ohjelmointikielen suunnittelijat yrittävät suojella ohjelmoijaa tietoa kadottavilta ohjelmointivirheiltä. -->
-A floating-point value cannot, however, be assigned to an integer variable. That is because the developers of the language seek to prevent developers from errors that lead to information loss.
+A floating-point value cannot, however, be assigned to an integer variable. The reason for this is that those who develop the language aim to prevent developers from making errors that lead to a loss of information.
 
 <!-- ```java
 int luku = 4.2; // Ei onnistu
@@ -329,7 +329,7 @@ value = floatingPoint; // Neither does this
 ```
 
 <!-- ## Muuttujan nimentä -->
-## Naming variables
+## Naming Variables
 
 <!-- Muuttujien nimentä on oleellinen osa ohjelman kuvausta. Tarkastellaan kahta esimerkkiä. -->
 Naming variables is a fundamental aspect of describing a program. Let's look at two examples.
@@ -377,18 +377,17 @@ System.out.println(surfaceArea);
 
 <!-- Edellä olevat kaksi esimerkkiä sisältävät täsmälleen saman toiminnallisuuden ja tuottavat saman tulostuksen. Toinen esimerkeistä on kuitenkin paljon ymmärrettävämpi. Kyseessä on ympyrän pinta-alan laskevan ohjelman koodi. Ensimmäisellä rivillä määritellään piin arvo, toisella rivillä ympyrän säde, ja kolmannella rivillä lasketaan pinta-ala. Tämän jälkeen pinta-ala tulostetaan. -->
 
-Both of the preceding examples function in the exact same way and print the same result. However, one of them is clearly more understandable. The idea here is to compute the surface area of a circle. The value of pi is defined on the first row, the circle's radius on the second, and the surface area calculated on the third.
+Both of the preceding examples function the same way and print the same result. However, one of them is much more understandable. The idea here is to compute the surface area of a circle. The value of pi is defined in the first row, the circle's radius in the second, and the surface area calculated in the third.
 
 <!-- <text-box variant='hint' name="Muuttujat sanoittavat ohjelmaa ja ratkaistavaa ongelmaa"> -->
-<text-box variant='hint' name="Variables express the program and the problem to be solved">
+<text-box variant='hint' name="Variables Express the Program and the Problem to Be Solved">
 <!--
 Ohjelmointi on ongelmanratkaisuväline. Ohjelmoidessa luodaan ratkaisua jonkinlaiseen ongelmaan kuten autojen automaattiseen ohjaamiseen. Kun ongelmaa ratkaistaan, ohjelmoija päättää termeistä, joilla ongelmaa kuvataan. Tämä termistö, esimerkiksi ohjelmassa käytettävien muuttujien nimet, tulevat kuvaamaan ongelmaa ohjelman parissa tulevaisuudessa työskenteleville. -->
 
-Programming is a problem-solving tool. Programming involves creating a solution to a given problem, such as automating the control of cars. Whenever a problem is being solved, the developer decides on the terms used to describe the problem. The terminology used in a program, such as the variable names chosen, describes the problem for anyone working with it in the future.
-
+Programming is a problem-solving tool. During programming, solutions are created for a given problem, such as automating the control of cars. While a problem is being solved, the developer decides on terms used to describe the problem domain. The terminology used, such as the chosen variable names, describes the problem for anyone working with it in the future.
 <!-- Kun sanoitat ratkaistavaa ongelmaa, mieti ongelmaan liittyviä käsitteitä ja niitä kuvaavia sanoja. Jos et keksi sopivia termejä, pohdi ensin mitkä sanat eivät ainakaan kuvaa ongelmaa. Valitse tämän jälkeen jonkinlainen termistö -- voit tyypillisesti onneksi parantaa käyttämääsi termistöä myös jälkikäteen. -->
 
-As you're wording a problem to be solved, think about concepts related to that problem and words that can be used to describe them. If you find it hard to come up with relevant terms, start off thinking about the ones that don't describe the problem. When you're done, pick a specific terminology that you're going to use -- the good thing is that you can improve it later on in most cases.
+As you're wording a problem to be solved, think about concepts related to that problem and words that can be used to describe them. If you find it hard to come up with relevant terms, start with the ones that don't describe the problem. After that, pick some terminology that you're going to use -- fortunately, you can improve it later on in most cases.
 
 </text-box>
 
@@ -398,7 +397,7 @@ Muuttujan nimessä ei saa olla tiettyjä erikoismerkkejä, kuten huutomerkkejä 
 
 Variable naming is bound by certain conditions.
 
-Variable names cannot contain certain special symbols, such as exclamation marks (!). Spaces are also not allowed, as they're used to separate parts of commands. Spaces should be compensated with [camelCase](http://fi.wikipedia.org/wiki/CamelCase "CamelCase – Wikipedia") <-style, where the name's shape resembles that of a camel's. **Note!** The first letter of a variable's name is always lower-cased: -->
+Variable names cannot contain certain special symbols, such as exclamation marks (!). Spaces are also not allowed, since they're used to separate parts of commands. Spaces should be compensated with [camelCase](http://fi.wikipedia.org/wiki/CamelCase "CamelCase – Wikipedia") <-style, where the name `resemblesACamel`. **Note!** The first letter of a variable name is always lower-cased: -->
 
 <!--
 ```java
@@ -424,12 +423,12 @@ int muuttuja7 = 4; // Sallittu, mutta ei kuvaava muuttujan nimi
 
 ```java
 int 7variable = 4; // Not allowed!
-int variable7 = 4; // Allowed, but not a descriptive variable name
+int variable7 = 4; // Allowed, but is not a descriptive variable name
 ```
 
 <!-- Muuttujan nimi ei saa olla jo entuudestaan käytössä. Tällaisia nimiä ovat mm. aikaisemmin määritellyt muuttujat ja Javan valmiit komennot, kuten `System.out.print` ja `System.out.println`. -->
 
-A variable's name must not already be in use. These names include, for instance, variables previously defined in the program and commands provided by Java, such as `System.out.print` and `System.out.println`. -->
+A variable's name cannot already be in use. These names include, for instance, variables previously defined in the program and commands provided by Java, such as `System.out.print` and `System.out.println`. -->
 
 <!-- ```java
 int 7muuttuja = 4; // Ei sallittu!
@@ -453,14 +452,14 @@ int camelCase = 5; // Not allowed -- camelCase variable is already in use!
 
 <!-- Muuttujien nimissä ei tule myöskään käyttää ääkkösiä. Voit korvata ääkköset aakkosilla, eli muuta ä -> a ja ö -> o. -->
 
-Letters containing diacritics should also not be used in variable names. You can replace these letters with their non-diacrtic equivalents, i.e. convert ä -> a and ö -> o. -->
+Letters containing diacritics (e.g. ä and ö) should also not be used in variable names. You can replace these letters with their non-diacrtic equivalents, i.e., convert ä -> a and ö -> o. -->
 
 
 <!-- ### Sallittuja muuttujien nimiä -->
 <!-- * kuukaudenViimeinenPaiva = 20
 * ensimmainenVuosi = 1952
 * nimi = "Essi" -->
-### Permissible variable names
+### Premissible Variable Names
 * lastDayOfMonth = 20
 * firstYear = 1952
 * name = "Essi"
@@ -472,7 +471,7 @@ Letters containing diacritics should also not be used in variable names. You can
 * varo! = 1910
 * 1920 = 1 -->
 
-### Erroneous variable names
+### Impremissible Variable Names
 
 * last day of month = 20
 * 1day = 1952
@@ -481,7 +480,7 @@ Letters containing diacritics should also not be used in variable names. You can
 
 
 <!-- ## Muuttujan tyyppi kertoo muuttujan mahdollisista arvoista -->
-## Variable type informs of variable's possible values
+## Variable's Type Informs of Possible Values
 
 <!-- Muuttujan tyyppi kerrotaan muuttujan esittelyn yhteydessä. Esimerkiksi merkkijonon "teksti" sisältävä merkkijonomuuttuja luodaan lauseella `String merkkijono = "teksti";` ja kokonaisluvun 42 sisältävä kokonaislukumuuttuja luodaan lauseella `int luku = 42;`. -->
 
@@ -493,7 +492,7 @@ A variable's type determines the values that can be assigned to it. `String` typ
 <!--
 Kunkin tyypin mahdolliset arvot ovat siis rajattuja. Esimerkiksi merkkijonomuuttuja ei voi sisältää kokonaislukuarvoa, **eikä** liukuluku voi sisältää totuusarvoa. Alla on listattu käyttämillemme muuttujille niiden mahdolliset arvoalueet. -->
 
-Hence, the possible values of a given variable type are limited. For example, a string cannot contain an integer, **nor** can a double contain a boolean value.
+As such, the possible values of a given variable type are limited. For example, a string cannot contain an integer, **nor** can a double contain a boolean value.
 
 <!-- TODO: korjaa taulukko? koodinpätkät oikein rivittyvinä!
 
@@ -508,20 +507,20 @@ Hence, the possible values of a given variable type are limited. For example, a 
 
 
 
-| Type                                 | Example                   | Accepted values                                                                                                                                                                                                                                                                                                                                                      |
-| ------------------------------------ | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Whole number, i.e. `int`              | `int value = 4;`          | An integer can contain whole numbers whose values lie between -2147483648 and 2147483647.                                                                                                                                                                                                                                                                            |
-| Floating-point number, i.e. `double` | `double value = 4.2;`     | Floating-point numbers contain decimal numbers, with the greatest possible value being approximately 2<sup>1023</sup>. When a decimal number is represented with a floating-point number, the value can be inaccurate as floating-points are incapable of representing all decimal numbers. The reasons behind this are explored in the Tietokoneen toiminta course. |
-|  `String`             | `String text = "Hi!";` | A string can contain text. Strings are enclosed in quotation marks.                                                                                                                                                                                                                                                                                                  |
-| True or false value, i.e. `boolean`  | `boolean right = true;`   | A boolean contains either the value `true` or `false`.                                                                                                                                                                                                                                                                                                               |
+| Type                                  | Example                 | Accepted values                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------------------- | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Whole number, i.e., `int`             | `int value = 4;`        | An integer can contain whole numbers whose values lie between -2147483648 and 2147483647.                                                                                                                                                                                                                                                                            |
+| Floating-point number, i.e., `double` | `double value = 4.2;`   | Floating-point numbers contain decimal numbers, with the greatest possible value being approximately 2<sup>1023</sup>. When a decimal number is represented with a floating-point number, the value can be inaccurate as floating-points are incapable of representing all decimal numbers. The reasons behind this are explored in the Tietokoneen toiminta course. |
+| `String`                              | `String text = "Hi!";`  | A string can contain text. Strings are enclosed in quotation marks.                                                                                                                                                                                                                                                                                                  |
+| True or false value, i.e., `boolean`  | `boolean right = true;` | A boolean contains either the value `true` or `false`.                                                                                                                                                                                                                                                                                                               |
 
 
 <!-- ## Erityyppisten muuttujien lukeminen käyttäjältä -->
-## Reading different types of variables from user
+## Reading Different Variable Types from User
 
 <!-- Ohjelmiemme käyttämissä tekstipohjaisissa käyttöliittymissä syötteen lukeminen käyttäjältä tapahtuu aina merkkijonona, sillä käyttäjä kirjoittaa syötteen tekstinä. Merkkijonon lukeminen käyttäjältä on jo tuttua -- siihen käytetään Scanner-apuvälineen tarjoamaa `nextLine`-komentoa. -->
 
-In the text-based user interfaces used in our programs, user input is always read as a string, since the user writes the input as text. Reading strings from the user has become routine by this point - we do it using the `nextLine`-command of the Scanner helper method.
+In the text-based user interfaces that we've used in our programs, the user's input is always read as a string, since the user writes their input as text. Reading strings from the user has become familiar by this point - we do it using the `nextLine`-command of the Scanner helper method.
 
 
 <!-- ```java
@@ -571,7 +570,7 @@ You wrote text
 Other input types, such as integers, doubles, and booleans are also read as text. However, they need to be converted to the target variable's type with the help of some tools provided by Java.
 
 <!-- ## Kokonaisluvun lukeminen -->
-## Reading integers
+## Reading Integers
 
 <!-- Merkkijonon muuntaminen kokonaisluvuksi tapahtuu komennolla `Integer.valueOf`, jolle annetaan parametrina muunnettavan luvun sisältämä merkkijono. -->
 The `Integer.valueOf` command converts an integer to a string. It takes the string containing the value to be converted as a parameter.
@@ -596,7 +595,7 @@ System.out.println(value);
 
 <!-- Scanneria käytettäessä lukeminen ja muuntaminen asetetaan yleensä sisäkkäin. Tämä tapahtuu seuraavasti. -->
 
-The reading of the value is usually nested directly into the conversion when using a Scanner object. This happens in the following way:
+ When using a Scanner object, the reading of the value is usually nested directly into the conversion. This happens in the following way:
 
 <!-- ```java
 import java.util.Scanner;
@@ -639,7 +638,7 @@ You wrote 42
 
 
 <!-- <programming-exercise name="Kokonaisluvun lukeminen" tmcname='osa01-Osa01_12.KokonaisluvunLukeminen'> -->
-<programming-exercise name="Integer input" tmcname='part01-Part01_12.IntegerInput'>
+<programming-exercise name="Integer Input" tmcname='part01-Part01_12.IntegerInput'>
 
 <!-- Kirjoita ohjelma, joka kysyy käyttäjältä lukua. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämän luvun.
 
@@ -676,10 +675,10 @@ You gave the number 42
 
 <!-- Kokeile toteuttamasi ohjelman toimintaa myös syötteillä, jotka eivät ole lukuja. Ohjelman pitäisi hajota, sillä se ei tiedä miten sellaiset syötteet, jotka eivät ole lukuja, pitäisi muuttaa luvuiksi. Opimme Ohjelmoinnin jatkokurssilla menetelmiä muunmuassa tällaisten poikkeustilanteiden käsittelyyn. -->
 
-Test the functionality of your program with non-numerical inputs. The program should break, as it doesn't know to convert these inputs into numbers. We'll learn how to deal with exceptional cases like these in the Ohjelmoinnin jatkokurssi course.
+Test the functionality of your program with non-numerical inputs. The program should break as it doesn't know to convert these inputs into numbers. We'll learn how to deal with exceptional cases like these in the follow-up course.
 
 <!-- ### Liukuluvun lukeminen -->
-### Reading doubles
+### Reading Doubles
 
 <!-- Merkkijonon muuntaminen liukuluvuksi tapahtuu komennolla `Double.valueOf`, jolle annetaan parametrina muunnettavan luvun sisältämä merkkijono. -->
 The `Double.valueOf` command converts a string to a double. It takes the string containing the value to be converted as a parameter.
@@ -744,7 +743,7 @@ You wrote 1234.2
 <!--
 Liukulukutyyppiseen muuttujaan voi lukea myös kokonaisluvun. Tällöin luku muunnetaan liukulukutyyppiseksi automaattisesti. Alla oleva esimerkki näyttää edellisen ohjelman toiminnan kun käyttäjä syöttää kokonaisluvun. -->
 
-It's possible to also read an integer into a double, in which case the value is converted automatically to a double. The example below demonstrates how the previous program functions when the user inputs an integer.
+It's possible to also read an integer variable into a double, in which case the value is converted automatically to type double. The example below demonstrates how the previous program functions when the user inputs an integer.
 
 <sample-output>
 
@@ -758,7 +757,7 @@ You wrote 18.0
 </sample-output>
 
 <!-- <programming-exercise name="Liukuluvun lukeminen" tmcname='osa01-Osa01_13.LiukuluvunLukeminen'> -->
-<programming-exercise name="Double input" tmcname='part01-Part01_13.DoubleInput'>
+<programming-exercise name="Double Input" tmcname='part01-Part01_13.DoubleInput'>
 <!-- Kirjoita ohjelma, joka kysyy käyttäjältä liukulukua. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämän luvun.
 
 Alla on annettuna ohjelman esimerkkitulostuksia: -->
@@ -793,16 +792,16 @@ You gave the number 2.718
 
 
 <!-- ### Totuusarvon lukeminen -->
-### Reading a boolean
+### Reading Booleans
 
 <!-- Merkkijonon muuntaminen kokonaisluvuksi tapahtui komennolla `Integer.valueOf` ja merkkijonon muuntaminen liukuluvuksi tapahtui komennolla `Double.valueOf`. Komento `valueOf` esiintyy myös merkkijonon muuntamisessa totuusarvoksi -- tämä tehdään komennolla `Boolean.valueOf`. -->
 
-he `Integer.valueOf` command converts a string to an integer and the `Double.valueOf` converts it to a floating-point. The `valueOf` command also appears when converting a string to a boolean -- which is achieved with the command `Boolean.valueOf`.
+The `Integer.valueOf` command converts a string to an integer and the `Double.valueOf` converts it to a floating-point. The `valueOf` command also appears when converting a string to a boolean -- this is done with the command `Boolean.valueOf`.
 
 
 <!-- Totuusarvotyyppiset muuttujat voivat saada arvokseen vain `true` eli totta tai `false` eli epätotta. Kun merkkijonoa muunnetaan totuusarvotyyppiseksi, merkkijonon tulee olla "true" mikäli totuusarvon arvoksi halutaan `true`. Kirjoitusasulla ei ole väliä, eli myös "TRue" muuttuu totuusarvoksi `true`. Muut merkkijonot muuntuvat totuusarvoksi `false`. -->
 
-Boolean variables can either have the value `true` or `false`. When converting a string to a boolean, the string text must be "true" if the boolean value is intended to be `true`. And case is insensitive here - "TRue" also coerces to the boolean value of `true`. All other strings coerce to `false`.
+Boolean variables can either have the value `true` or `false`. When converting a string to a boolean, the string text must be "true" if we want the boolean value to be `true`. The case is insensitive here - i.e., "TRue" also coerces to the boolean value of `true`. All other strings coerce to `false`.
 <!--
 ```java
 import java.util.Scanner;
@@ -866,7 +865,7 @@ You wrote true
 <!--
 <programming-exercise name="Totuusarvon lukeminen" tmcname='osa01-Osa01_14.TotuusarvonLukeminen'> -->
 
-<programming-exercise name="Boolean input" tmcname='part01-Part01_14.BooleanInput'>
+<programming-exercise name="Boolean Input" tmcname='part01-Part01_14.BooleanInput'>
 
 <!-- Kirjoita ohjelma, joka kysyy käyttäjältä totuusarvoa. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämän totuusarvon.
 
@@ -941,7 +940,7 @@ public class Program {
 ```
 <!-- <programming-exercise name="Muuttujien lukeminen yhdessä"  tmcname='osa01-Osa01_15.MuuttujienLukeminenYhdessa'> -->
 
-<programming-exercise name="Different types of input"  tmcname='part01-Part01_15.DifferentTypesOfInput'>
+<programming-exercise name="Different Types of Input"  tmcname='part01-Part01_15.DifferentTypesOfInput'>
 
 <!-- Kirjoita ohjelma, joka kysyy käyttäjältä merkkijonoa, kokonaislukua, liukulukua ja totuusarvoa. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämät arvot.
 
