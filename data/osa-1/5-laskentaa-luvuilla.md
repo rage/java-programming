@@ -11,13 +11,13 @@ title: "Calculating with numbers"
 - You know how to perform calculations with the help of variables.
 
 <!-- - Osaat muodostaa tulostuslauseita, jossa on mukana sekä laskuoperaatioita (lausekkeita) että merkkijonoja. -->
-- You can form printable statements including both calculations (expressions) and strings.
+- You can form printable statements, including both calculations (expressions) and strings.
 
 </text-box>
 
 <!-- Laskuoperaatiot ovat tuttuja ja suoraviivaisia: yhteenlasku `+`, erotus `-`, kertolasku `*` ja jakolasku `/`. Laskentajärjestys on myös tuttu: laskenta tehdään vasemmalta oikealle sulut huomioon ottaen. Kuitenkin `*` ja `/` lasketaan ennen `+` ja `-` operaatioita, samoin kuin perus- tai kansakoulumatematiikassa on tullut tutuksi. -->
 
-The basic mathematical operations are both familiar and straightforward: addition `+`, subtraction `-`, multiplication `*`, and division`/`. Their order follows familiar rules, too: the operations are performed from left to right, taking parentheses into account. Yet `*` and `/` precede `+` and `-`, as is familiar from elementary school mathematics.
+The basic mathematical operations are both familiar and straightforward: addition `+`, subtraction `-`, multiplication `*`, and division`/`. The order of operations is also familiar: operations are performed from left to right with the parentheses taken into account. Expressions involving `*` and `/` are calculated before those involving `+` and `-`, as is customary in elementary school mathematics.
 
 <!-- ```java
 int eka = 2;
@@ -40,11 +40,11 @@ System.out.println(sum); // prints 6
 ```
 
 <!-- ## Laskujärjestys ja sulut -->
-## Order of operations and parentheses
+## Order of Operations and Parentheses
 
 <!-- Laskujärjestykseen voi vaikuttaa sulkujen avulla. Sulkujen sisällä olevat laskuoperaatiot suoritetaan ennen niiden ulkopuolella olevia laskuoperaatioita. -->
 
-It is possible to affect the order of operations with parentheses. The operations contained within parentheses are performed before the ones outside.
+It's possible to affect the order of operations through the use of parentheses. Operations within parentheses are performed before those outside it.
 
 <!-- ```java
 int laskuSuluilla = (1 + 1) + 3 * (2 + 5);
@@ -99,7 +99,7 @@ System.out.println(calculationWithoutParentheses); // prints 13
 
 <!-- Toteuta tehtäväpohjaan ohjelma, joka kysyy käyttäjältä vuorokausien lukumäärää. Tämän jälkeen ohjelma tulostaa sekuntien määrän annetuissa vuorokausissa. -->
 
-In the exercise template, implement a program that asks the user for the number of days. After this, the program prints the number of seconds in the given number of days.
+In the exercise template, implement a program that asks the user for the number of days. After that, the program prints the number of seconds in the given number of days.
 
 <!-- Opimme aiemmin, että luvun lukeminen onnistuu seuraavasti: -->
 
@@ -179,10 +179,11 @@ How many days would you like to convert to seconds?
 <quiznator id="5c12b7f263de8e5db0cf8b8f"></quiznator>
 
 
-<text-box variant='hint' name='Expression and statement'>
+<text-box variant='hint' name='Expression and Statement'>
 
 <!-- Lauseke (expression) on arvojen yhdistelmä, joka muuntuu arvoksi laskuoperaation tai evaluaation yhteydessä. Alla oleva lause sisältää lausekkeen `1 + 1 + 3 * 2 + 5`, joka evaluoidaan ennen arvon asetusta muuttujaan. -->
-An expression is a combination of values which turns into a value when it is part of an operation or evaluated. The statement below includes the expression `1 + 1 + 3 * 2 + 5` which is evaluated before the value is assigned to the variable.
+
+An expression is a combination of values that is turned into another value through a calculation or evaluation. The statement below includes the expression `1 + 1 + 3 * 2 + 5`, which is evaluated prior to its assignment to the variable.
 
 <!-- ```java
 int laskuSuluitta = 1 + 1 + 3 * 2 + 5;
@@ -194,14 +195,15 @@ int calculationWithoutParentheses = 1 + 1 + 3 * 2 + 5;
 
 <!-- Lausekkeen evaluaatio tapahtuu aina ennen muuttujan arvon asetusta, eli yllä lasku "1 + 1 + 3 * 2 + 5" suoritetaan ennen tuloksen asetusta muuttujaan. -->
 
-The evaluation of an expression always precedes the placement of its value, so in the example above the calculation "1 + 1 + 3 * 2 + 5" is performed before placing the result in the variable.
+The evaluation of an expression is always performed before its value is assigned to a variable. As such, the calculation "1 + 1 + 3 * 2 + 5" in the example above is performed before the result is placed in the variable.
 
 </text-box>
 
 
 <!-- Lausekkeen evaluointi tapahtuu ohjelmakoodissa siinä kohtaa, missä lauseke on. Evaluointi onnistuu siis esimerkiksi myös tulostuslauseen yhteydessä, jos lauseketta käytetään tulostuslauseen parametrin arvon laskemisessa. -->
 
-The evaluation of an expression in the code occurs at the place it is written. Therefore evaluation is possible in the case of a print statement if the value of the parameter for the print statement is calculated from an expression.
+An expression is evaluated where it occurs in the program's source code. As such, the evaluation can occur within a print statement if the expression is used in calculating the value of the print statement's parameter.
+
 
 <!-- ```java
 int eka = 2;
@@ -221,7 +223,7 @@ System.out.println(2 + second - first - second); // prints 0
 
 <!-- Lauseke ei muuta muuttujassa olevaa arvoa, ellei lausekkeen lopputulosta aseteta muuttujan arvoksi tai anneta parametrina esimerkiksi tulostukselle. -->
 
-An expression does not change the value stored in a variable unless the end result is assigned to a variable or used as a parameter to printing, for instance.
+An expression does not change the value stored in a variable unless the expression's result is assigned to a variable or used as a parameter, for instance, in printing.
 
 <!-- ```java
 int eka = 2;
@@ -247,7 +249,7 @@ first + second;
 
 
 <!-- ## Laskentaa ja tulostamista -->
-## Calculating and printing
+## Calculating and Printing
 
 <!-- Muuttujan arvon voi tulostaa komennolla `System.out.println`. Tulostettavaan hipsuilla merkittyyn merkkijonoon, esim. "Pituus ", voidaan lisätä muuta tulostettavaa operaation `+` avulla. -->
 The command `System.out.println` prints the value of a variable. The string to be printed, which is marked by quotation marks, can be appended with the operation `+`.
@@ -302,11 +304,11 @@ that is an integer --> 2
 
 <!-- Jos toinen operaation `+` kohteista on merkkijono, muutetaan myös toinen operaation kohteista merkkijonoksi ohjelman suorituksen yhteydessä. Alla olevassa esimerkissä kokonaisluku `2` on muutettu merkkijonoksi "2", ja siihen on yhdistetty merkkijono. -->
 
-If one of the operands of the operation `+` is a string, the other operand will be changed into a string as well when the program executes. In the example below, the integer `2` is turned into the string "2", after which a string is appended to it.
+If one of the operands of the operation `+` is a string, the other operand will be changed into a string too during program execution. In the example below, the integer `2` is turned into the string "2", and a string has been appended to it.
 
 <!-- Aiemmin esitellyt laskusäännöt pätevät täälläkin: -->
 
-The rules of operation precedence apply in this context, too:
+The operation rules introduced earlier also apply here:
 
 <!-- ```java
 System.out.println("Neljä: " + (2 + 2));
@@ -343,11 +345,11 @@ But! Twenty-two: 22
 
 <!-- Kirjoita ohjelma, joka kysyy käyttäjältä kahta lukua. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämien lukujen summan. -->
 
-Write a program that asks the user for two numbers. After this the program prints the sum of the numbers given by the user.
+Write a program that asks the user for two numbers. After this, the program prints the sum of the numbers given by the user.
 
 <!-- Kun kysyt useampaa lukua, tee kullekin luvulle oma muuttuja: -->
 
-When asking for multiple numbers, create a separate variable for each:
+When you ask for multiple numbers, create a separate variable for each:
 
 <!-- ```java
 Scanner lukija = new Scanner(System.in);
@@ -418,7 +420,7 @@ The sum of the numbers is 2
 
 <!-- <programming-exercise name="Kolmen luvun summa" tmcname='osa01-Osa01_18.KolmenLuvunSumma'> -->
 
-<programming-exercise name="Sum of three numbers" tmcname='osa01-Osa01_18.KolmenLuvunSumma'>
+<programming-exercise name="Sum of three numbers" tmcname='osa01-Osa01_18.SumOfThreeNumbers'>
 
 <!-- Kirjoita ohjelma, joka kysyy käyttäjältä kolmea lukua. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämien lukujen summan. -->
 
@@ -483,7 +485,7 @@ The sum of the numbers is 4
 
 <!-- Edellistä tietoa soveltamalla voimme luoda lausekkeen, joka sisältää tekstiä ja muuttujan, ja joka evaluoidaan tulostuksen yhteydessä: -->
 
-Let's apply the previous information, and create an expression consisting some text and a variable that is evaluated at the time of printing:
+Putting the previous information into use, we can create an expression consisting of some text and a variable, which is evaluated in connection with the printing:
 
 <!-- ```java
 int x = 10;
@@ -535,8 +537,8 @@ y is 5 and z is 6
 <!-- TODO: tarkenna tehtävänantoa (myös kaava)
 Tee ohjelma, jonka avulla voidaan laskea kahden kokonaisluvun summa. Ohjelman alussa kysytään kahta kokonaislukua, jotka sisältävät summattavat luvut. Tämän jälkeen ohjelma tulostaa lukujen summausta kuvaavan kaavan. -->
 
-TODO: specify the assignment (the formula, too)
-Create a program that can be used the add together two integers. At the beginning two integers (to be summed) are asked from the user. After this the program prints the formula that describes the addition of the numbers.
+<!-- TODO: specify the assignment (the formula, too) -->
+Create a program that can be used to add  two integers together. At the beginning, the user is asked to enter two integers that are to be summed. The program then prints the formula that describes the addition of the numbers.
 
 
 <!-- Tulostusesimerkkejä: -->
@@ -621,7 +623,7 @@ Give the second number:
 
 <!-- Jos taas syötetyt luvut ovat 277 ja 111, ohjelman suoritus on seuraava: -->
 
-On the other hand, if the entered numbers are 277 and 111, the print should be the following:
+Likewise, if the entered numbers are 277 and 111, the print should be the following:
 
 <!-- <sample-output>
 
@@ -645,11 +647,11 @@ Give the second number:
 
 </programming-exercise>
 
-TODO: miksi alla oleva teksti näkyy pienellä?
+<!-- TODO: miksi alla oleva teksti näkyy pienellä? (Onglema: sub tag - täytyy korjata) -->
 
 <!-- Kun olet saanut edellisen tehtävän toteutettua, kokeile mikä on suurin mahdollinen kertolasku minkä saat laskettua. Huomaamasi ilmiön taustalla on se, että kokonaislukumuuttujan arvo voi olla korkeintaan 2<sup>31</sup>-1 eli 2147483647. Tämä johtuu siitä, että kokonaislukumuuttujat esitetään tietokoneen muistissa 32 bitin avulla. Tähän tutustutaan tarkemmin muunmuassa kurssilla Tietokoneen toiminta. -->
 
-Once you have completed the previous exercise, try out which is the greatest possible multiplication you can calculate. The background for the phenomenon you noticed is that the value of an integer value is capped at the maximum of 2<sup>31</sup>-1 (i.e. 2147483647). This owes to the fact that integer variables are represented with 32 bits in the memory of the computer. The representation of variables is explained in more detail on the course Computer Organization, among others.
+Once you have completed the previous exercise, try finding out the greatest possible multiplication that you can calculate. The reason behind the phenomenon you've observed is that the value of an integer value is capped at the maximum of 2<sup>31</sup>-1(i.e. 2147483647). This is because integer variables are represented with 32 bits in the computer's memory. Variable representation is covered in more detail on the Computer Organization course, as well as others.
 
 
 <!-- ## Jakolasku -->
@@ -658,7 +660,7 @@ Once you have completed the previous exercise, try out which is the greatest pos
 
 <!-- Kokonaislukujen jakolasku on hieman hankalampi operaatio. Jakolausekkeessa käytettyjen muuttujien tyyppi määrää evaluaation tuloksena saatavan arvon tyypin. Jos kaikki jakolausekkeessa olevat muuttujat ovat kokonaislukuja, on tulos myös kokonaisluku. -->
 
-Division is a slightly trickier operation. The types of the variables that take part in the division decide the type of the result gained by executing the command. If all the variables in the division are integers, the result of that calculation is an integer, too.
+Dividing integers is a slightly trickier operation. The types of the variables that are part of the division determine the type of result achieved by executing the command. If all of the variables in the division are integers, the resulting value is an integer as well.
 
 <!-- ```java
 int tulos = 3 / 2;
@@ -734,7 +736,7 @@ System.out.println(whenDivisorIsFloat); // prints 1.5
 
 <!-- Kokonaisluku voidaan tarvittaessa muuttaa liukuluvuksi lisäämällä sen eteen tyyppimuunnosoperaatio `(double)`: -->
 
-An integers can be converted into a floating point number by preceding it by the type casting operation `(double)`:
+An integers can be converted into a floating point number by placing a type-casting operation `(double)` before it:
 
 <!-- ```java
 int eka = 3;
@@ -775,11 +777,11 @@ System.out.println(result3); // prints 1.0
 
 <!-- Jälkimmäisessä esimerkissä tulos pyöristyy väärin sillä laskuoperaatio kokonaisluvuilla suoritetaan ennen tyyppimuunnosta. -->
 
-The last example produces an incorrectly rounded result, because the division with integers is executed before the type casting.
+The last example produces an incorrectly rounded result, because the integer division is executed before the type casting.
 
 <!-- Jos jakolausekkeen tulos asetetaan kokonaislukutyyppiseen muuttujaan, on tulos automaattisesti kokonaisluku. -->
 
-If the result of a division is placed into an integer-type variable, the result is automatically an integer.
+If the result of a division is assigned to an integer-type variable, the result is automatically an integer.
 
 <!-- ```java
 int kokonaisluku = 3.0 / 2;
@@ -799,7 +801,7 @@ System.out.println(integer);
 
 <!-- Seuraava esimerkki tulostaa "1.5", sillä jaettavasta tehdään liukuluku kertomalla se liukuluvulla (1.0 * 3 = 3.0) ennen jakolaskua. -->
 
-The next example prints "1.5"; the dividend is converted into a floating-point number by multiplying it with a floating point number prior to executing the division.
+The next example prints "1.5"; the dividend is converted into a floating-point number by multiplying it with a floating-point number prior to executing the division.
 
 <!-- ```java
 int jaettava = 3;
@@ -831,7 +833,7 @@ System.out.println(result);
 
 <!-- Seuraavissa tehtävissä pyydetään laskemaan syötettyjen lukujen keskiarvo. Kerrataan peruskoulu- tai kansakoulumatematiikasta tutun keskiarvon käsite pikaisesti. -->
 
-The next exercises task you with calculating the average of the entered numbers. Let's briefly review the notion of average, which is familiar from elementary school mathematics.
+The next exercises task you with calculating the average of the entered numbers. Let's briefly review the notion of an average, which is familiar from elementary- school mathematics.
 
 <!-- Keskiarvolla tarkoitetaan lukujen summaa jaettuna niiden lukumäärällä. Esimerkiksi, jos haluaisimme lukujen 5 ja 3 keskiarvon, laskettaisiin keskiarvo kaavalla (5+3)/2. Vastaavasti, mikäli haluaisimme laskea lukujen 1, 2 ja 4 keskiarvon, laskettaisiin keskiarvo kaavalla (1+2+4)/3. -->
 
@@ -839,7 +841,7 @@ An average refers to the sum of numbers divided by their count. For instance, th
 
 <!-- Ohjelmoinnissa tähän liittyy muutamia asioita, jotka tulee muistaa. Ensiksi, nollalla jakaminen ei tyypillisesti ole sallittua. Tämä tarkoittaa sitä, että nollan luvun keskiarvon laskeminen ei onnistu. Toiseksi, mikäli ohjelma käsittelee lukujen lukumäärän ja summan kokonaislukumuuttujina, tulee muuttujista jompikumpi (tai kummatkin) muuntaa liukulukumuuttujaksi kertomalla luku arvolla 1.0 ennen jakolaskua. -->
 
-In the context of programming there are a few things to remember. Firstly, dividing by zero is typically not permitted. This implies that calculating the average of zero numbers is impossible. Secondly, the program might handle both the sum of the numbers and their total count as integers; in such a case one of them (or both) should be converted into a floating point number by dividing it by 1.0 before executing the division.
+In the context of programming, there are a few things to keep in mind. Firstly, dividing by zero is typically not permitted. This implies that calculating the average of the number zero is impossible. Secondly, if the program handles both the sum of the numbers and their total count as integers, one (or both) of the variables should be cast to a floating-point number by dividing it by 1.0 before the division.
 
 </text-box>
 
@@ -884,7 +886,6 @@ The average is 5.0
 <!-- Kirjoita ohjelma, joka kysyy käyttäjältä kolme kokonaislukua ja tulostaa lukujen keskiarvon. -->
 
 Write a program that asks the user for three integers and prints their average.
-
 
 <!-- <sample-output>
 
@@ -996,35 +997,35 @@ Give the second number:
 
 <!-- ## Muuttujan arvoon liittyviä väärinkäsityksiä -->
 
-## Misunderstandings about the value of a variable
+## Misunderstandings Related to the Value of a Variable
 
 <!-- Kun tietokone suorittaa ohjelmakoodia, suorittaa se sitä käsky kerrallaan, edeten aina täsmälleen siten, kuin ohjelmakoodissa sanotaan. Kun muuttujaan asetetaan arvo, tapahtuu aina sama asia, eli yhtäsuuruusmerkin oikealla puolella oleva arvo kopioidaan yhtäsuuruusmerkin vasemmalla puolella olevan muuttujan arvoksi, eli muuttujan nimeämään paikkaan. -->
 
-When executing the program code, the computer executes it one command at a time, always advancing exactly in the manner specified by the code. When a value is place into a variable, the same chain of events always occurs: the value on the right side of the equality sign is copied to serve as the value of the variable on the left side (i.e. copied to the location specified by that variable).
+When a computer executes program code, it does it one command at a time, always advancing exactly as specified by the code. When a value is assigned to a variable, the same chain of events always occurs: the value on the right-hand side of the equality sign is copied and assigned to the variable on the left-hand side (i.e., copied to the location specified by that variable).
 
 <!-- On tärkeää, että ohjelmoija ymmärtää, että arvon asettaminen muuttujaan tekee aina saman asian. -->
 
-It is crucial for programmers to understand that assigning a value to a varibale always occurs in the same way.
+It's crucial for a programmer to understand that assigning a value to a variable always does the same thing.
 
 <!-- Kolme yleistä väärinkäsitystä, jotka liittyvät muuttujan arvon asettamiseen ovat seuraavat: -->
 
-What follows is three common misunderstanding about assigning a value to a variable:
+Three common misunderstanding related to assigning a value to a variable are as follows:
 
 <!-- * Muuttujan asettamisen näkeminen siirtona kopioimisen sijaan: ohjelmakoodin `eka = toka` suorituksen jälkeen ajatellaan, että muuttujan `toka` arvo on siirtynyt muuttujan `eka` arvoksi, jonka jälkeen muuttujalla `toka` ei ole enää arvoa, tai sen arvo on esimerkiksi nolla. Tämä ei pidä paikkansa, sillä ohjelmakoodin `eka = toka` suorituksessa muuttujan `toka` nimeämässä paikassa oleva arvo kopioidaan muuttujan `eka` nimeämään paikkaan. Muuttujan `toka` arvo ei siis muutu. -->
 
-* Assigning a value is viewed as a transfer instead of a copy operation: after executing `first = second` it is thought that the value of the variable `second` has been moved to the value of the variable `first`. Afterwards the variable `second` no longer has a value, or its value is e.g. 0. This is incorrect; in executing `first = second`,  the value in the position specified by `second` is copied to the place specified by the variable `first`. The value of the variable `second` is therefore not modified.
+* Viewing value assignment as a transfer instead of a copy operation: once `first = second` has been executed, it's often assumed that the value of the variable `second` has been moved to the value of the variable `first`, and that the variable `second` no longer holds a value, or that its value is 0, for instance. This is incorrect,  as executing `first = second` means that the value in the position specified by `second` is merely copied to the place specified by the variable `first`. Hence, the variable `second` is not modified.
 
 <!-- * Muuttujan asettamisen näkeminen riippuvuutena kopioimisen sijaan: ohjelmakoodin `eka = toka` suorituksen jälkeen ajatellaan, että mikä tahansa muutos muuttujaan `toka` vaikuttaa automaattisesti myös muuttujaan `eka`. Tämä ei pidä paikkansa, sillä asetus -- kopiointi -- on yksittäinen tapahtuma. Se tapahtuu vain silloin, kun ohjelmakoodi `eka = toka` suoritetaan. -->
 
-* Assigning a value is viewed as creating a dependency instead of a copy operation: after executing `first = second` it is thought that any change in the value of the variable `second` is also automatically reflected in the value of the variable `first`. This is incorrect; assignment -- i.e. copying -- is a one-time event. It only occurs when the program code `first = second` is executed.
+* Viewing value assignment as creating a dependency instead of being a copy operation: once `first = second` has been executed, it's often assumed that any change in the value of the variable `second` is automatically also reflected in the value of the variable `first`. This is incorrect; assignment -- i.e., copying -- is a one-off event. It only occurs when the program code `first = second` is executed.
 
 <!-- * Kolmas väärinkäsitys liittyy kopioimisen suuntaan: ohjelmakoodin `eka = toka` suorituksessa ajatellaan, että muuttujan `toka` arvoksi kopioidaan muuttujan `eka` arvo. Tämä näkyy myös tilanteina, missä ohjelmoija voi vahingossa kirjoittaa esimerkiksi `42 = arvo` -- onneksi ohjelmointiympäristöt tukevat myös tässä. -->
 
-* The third misunderstanding concerns the direction of the copying: it is thought that in the execution of the code `first = second` the value of the variable `first` is set as the value of the variable `second`. The misunderstanding may cause situations where the programmer accidentally writes e.g. `42 = value -- fortunately the IDEs support the programmer in this issue, too.
+* The third misunderstanding concerns the direction of copying: it's often thought that in executing `first = second` the value of the variable `first` is set as the value of the variable `second`. The confusion also manifests itself in situations where the programmer accidentally writes e.g. `42 = value -- fortunately, IDEs provide support on this issue too.
 
 <!-- Ehkäpä paras tapa tietokoneen ohjelmakoodin suorittamisen ymmärtämiseen on paperin ja kynän käyttäminen. Kun luet ohjelmakoodia, kirjoita paperille uusien muuttujien nimet, sekä kirjoita ylös rivi riviltä, miten ohjelmakoodissa olevien muuttujien arvot muuttuvat. Havainnollistetaan suoritusta seuraavalla ohjelmakoodilla: -->
 
-Perhaps the best method to understand the execution of program code is to use pen and paper. When reading program code, write down on paper the names of the new variables. Track also how the values of the variables in the code change, row by row. Let's demonstate the execution with the following program code:
+Perhaps the best way to understand a program's execution flow is through the use of pen and paper. As you're reading the program, write down the names of any new variables, while making a note of how the values of the variables in the code change line by line. Let's demonstrate the execution with the following program code:
 
 <!-- ```java
 rivi 1: int eka = (1 + 1);
@@ -1052,7 +1053,7 @@ rivi 9: System.out.println(third);
 
 <!-- Alla on kirjoitettu yllä olevan ohjelmakoodin suoritus auki. -->
 
-Below the execution of the code above has been explained with writing.
+The execution flow of the program above has been broken down below.
 
 <!-- <sample-output>
 
@@ -1093,14 +1094,14 @@ rivi 9: tulostetaan arvo 28
 
 <sample-output>
 
-row 1: create variable first
-row 1: copy the result of the calculation 1 + 1 and place as the value of the variable
+row 1: initially create a variable first
+row 1: copy the result of the calculation 1 + 1 as the value of the variable first
 row 1: the value of the variable first is 2
-row 2: create variable second
+row 2: create the variable second
 row 2: calculate 2 + 5, 2 + 5 -> 7
 row 2: calculate 3 * 7, 3 * 7 -> 21
 row 2: calculate first + 21
-row 2: copy the value of the variable first into the calculation, that value is 2
+row 2: copy the value of the variable first into the calculation, its value is 2
 row 2: calculate 2 + 21, 2 + 21 -> 23
 row 2: copy 23 to the value of the variable second
 row 2: the value of the variable second is 23
@@ -1110,27 +1111,27 @@ row 4: the value of the variable first is 5
 row 5: (empty, do nothing)
 row 6: create variable third
 row 6: calculate first + second
-row 6: copy the value of the variable first into the calculation, that value is 5
+row 6: copy the value of the variable first into the calculation, its value is 5
 row 6: calculate 5 + second
-row 6: copy the value of the variable second into the calculation, that value is 23
+row 6: copy the value of the variable second into the calculation, its value is 23
 row 6: calculate 5 + 23 -> 28
 row 6: copy 28 to the value of the variable third
 row 6: the value of the variable third is 28
-row 7: print variable first
-row 7: copy the value of the variable first for print operation, that value is 5
-row 7: print value 5
-row 8: print variable second
-row 8: copy the value of the variable second for print operation, that value is 23
-row 8: print value 23
-row 9: print variable third
-row 9: copy the value of the variable third for print operation, that value is 28
-row 9: print value 28
+row 7: print the variable first
+row 7: copy the value of the variable first for the print operation, its value is 5
+row 7: print the value 5
+row 8: print the variable second
+row 8: copy the value of the variable second for the print operation, its value is 23
+row 8: print the value 23
+row 9: print the variable third
+row 9: copy the value of the variable third for the print operation, its value is 28
+row 9: we print the value 28
 
 </sample-output>
 
 <!-- Alla edellinen ohjelma askeleittain visualisoituna. Käytössä oleva askeleittainen visualisointi käsittelee ohjelmakoodia riveittäin -- pohdi askeleiden kohdalla miten ohjelma päätyy sen tulostamaan lopputulokseen. -->
 
-Below is the previous program visualized in steps. The staged visualization in use processes the program code in rows -- on every step reflect on how the program ends up with the result that it prints.
+You'll find a step-by-step visualization of the previous program below, which goes through the program line by line -- on each step, reflect on how the program ends up with the result that it prints.
 
 <code-states-visualizer input='{"code":"public class CalculationInSteps {\n  public static void main(String[] args) {\n    int first = (1 + 1);\n    int second = first + 3 * (2 + 5);\n\n    first = 5;\n\n    int third = first + second;\n    System.out.println(first);\n    System.out.println(second);\n    System.out.println(third);\n  }\n}","stdin":"","trace":[{"stdout":"","event":"call","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"1","frame_id":1}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"2","frame_id":2}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":4,"stack_to_render":[{"func_name":"main:4","encoded_locals":{"first":2},"ordered_varnames":["first"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"4","frame_id":4}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":6,"stack_to_render":[{"func_name":"main:6","encoded_locals":{"first":2,"second":23},"ordered_varnames":["first","second"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"9","frame_id":9}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"first":5,"second":23},"ordered_varnames":["first","second"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"12","frame_id":12}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":9,"stack_to_render":[{"func_name":"main:9","encoded_locals":{"first":5,"second":23,"third":28},"ordered_varnames":["first","second","third"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"17","frame_id":17}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"5\n","event":"step_line","line":10,"stack_to_render":[{"func_name":"main:10","encoded_locals":{"first":5,"second":23,"third":28},"ordered_varnames":["first","second","third"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"21","frame_id":21}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"5\n23\n","event":"step_line","line":11,"stack_to_render":[{"func_name":"main:11","encoded_locals":{"first":5,"second":23,"third":28},"ordered_varnames":["first","second","third"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"24","frame_id":24}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"5\n23\n28\n","event":"step_line","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"first":5,"second":23,"third":28},"ordered_varnames":["first","second","third"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"27","frame_id":27}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"5\n23\n28\n","event":"return","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"first":5,"second":23,"third":28,"__return__":["VOID"]},"ordered_varnames":["first","second","third","__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"28","frame_id":28}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}}],"userlog":"Debugger VM maxMemory: 455M\n"}'></code-states-visualizer>
 
