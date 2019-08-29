@@ -20,9 +20,9 @@ hidden: false
 
 <text-box variant='learningObjectives' name='Learning Objectives'>
 
-- You will learn to write a program that prints text.
-- You will become familiar with executing programs.
-- You will know what the term parameter means.
+- You learn to write a program that prints text.
+- You become familiar with executing programs.
+- You know what the term parameter means.
 
 <!-- </text-box>
 
@@ -58,7 +58,7 @@ Tulostuskomennon avulla tulostettavaa tekstiä voi vaihtaa mielivaltaisesti, kun
 
 Sections in the material similar to the text area above demonstrate an output produced by some example code. Accordingly, the above program would produce the print output "Hello World!". You can try all of the material's examples in the exercise template named "Sandbox", which is found in the programming environment.
 
-Text printed with the print command can be changed arbitrarily as long as the command `System.out.println("arbitary text");` -- i.e. `System` dot `out` dot `println` open parentheses `(` "the text" close parentheses `)` and semicolon `;` remains unchanged. The command below command will print the text "Hello there!".
+Text printed with the print command can be changed arbitrarily as long as the command `System.out.println("arbitary text");` -- i.e., `System` dot `out` dot `println` open parentheses `(` "the text" close parentheses `)` and semicolon `;` remains unchanged. The command below command will print the text "Hello there!".
 
 <!-- ```java
 System.out.println("Hei vaan!");
@@ -197,7 +197,7 @@ Kun olet tehnyt tehtävän ja huomaat, että ohjelma tulostaa halutun merkkijono
 </programming-exercise>
 -->
 
-You'll find the second programming exercise of the course below. If you want, you can watch the video linked below in advance to see how the exercise is solved (NB: currently only available in Finnish).
+You'll find the second programming exercise of the course below. If you want, you can watch the video linked below in advance to see how the exercise is solved.
 
 <!-- TODO video englanniksi? -->
 
@@ -545,6 +545,7 @@ public class Comments {
         - ...
         */
         System.out.println("Some other text to print");
+        // System.out.println("Trying stuff out")
     }
 }
 ```
