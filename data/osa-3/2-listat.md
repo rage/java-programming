@@ -348,7 +348,7 @@ Second
 
 <!-- Ohjelmaan on toteutettu valmiina pohja, joka lukee käyttäjältä merkkijonoja ja lisää niitä listalle. Syötteiden lukeminen päätetään kun käyttäjä syöttää tyhjän merkkijonon. Ohjelma tulostaa tämän jälkeen listan ensimmäisen arvon. -->
 
-The exercise contains a base that asks the user for strings and adds them to a list. The program stops reading when the user enters an empty string. The program then prints the first value on the list.
+The exercise contains a base that asks the user for strings and adds them to a list. The program stops reading when the user enters an empty string. The program then prints the first element of the list.
 
 
 <!-- Muokkaa ohjelmaa siten, että ensimmäisen arvon sijaan tulostetaan kolmas arvo. Huomaa, että ohjelmoijat aloittavat laskemisen nollasta! Ohjelma saa rikkoutua mikäli listalla ei ole vähintään kolmea arvoa, eli tällaiseen tilanteeseen ei tarvitse varautua millään tavalla. -->
@@ -746,7 +746,7 @@ Number of values on the list: 1
 
 <!-- <programming-exercise name='Listan koko' tmcname='osa03-Osa03_04.ListanKoko'> -->
 
-<programming-exercise name='Size matters' tmcname='part03-Part03_04.SizeMatters'>
+<programming-exercise name='List size' tmcname='part03-Part03_04.ListSize'>
 
 
 <!-- Tehtäväpohjassa on ohjelma, joka lukee käyttäjältä syötteitä. Muokkaa ohjelman toimintaa siten, että kun syötteiden lukeminen lopetetaan, ohjelma tulostaa listalla olevien arvojen lukumäärän. -->
@@ -1421,7 +1421,7 @@ Listan suurin luku: 93
 **11**
 **-1**
 
-The greatest number in the list: 93
+The greatest number: 93
 
 </sample-output>
 
@@ -1465,7 +1465,7 @@ System.out.println("The smallest number: " + smallest);
 
 <!-- <programming-exercise name='Kysytyn luvun indeksi' tmcname='osa03-Osa03_10.KysytynLuvunIndeksi'> -->
 
-<programming-exercise name='Index of' tmcname='part03-Part03_10.Indexof'>
+<programming-exercise name='Index of' tmcname='part03-Part03_10.IndexOf'>
 
 
 <!-- Ohjelmaan on toteutettu valmiina pohja, joka lukee käyttäjältä lukuja listalle. Syötteiden lukeminen päätetään kun käyttäjä syöttää luvun -1. -->
@@ -1986,7 +1986,7 @@ Second can still be found
 
 <!-- <programming-exercise name='Löytyykö listalta' tmcname='osa03-Osa03_14.LoytyykoListalta'> -->
 
-<programming-exercise name='On the list?' tmcname='part03-Part03_14.On the list?'>
+<programming-exercise name='On the list?' tmcname='part03-Part03_14.OnTheList'>
 
 
 

@@ -254,7 +254,7 @@ Try again!
 
 </programming-exercise>
 
-<programming-exercise name='Users' tmcname='part03-Part03_25.Users'>
+<programming-exercise name='Login' tmcname='part03-Part03_25.Login'>
 
 
 <!-- Tee ohjelma, joka tunnistaa seuraavat käyttäjät:
@@ -930,7 +930,7 @@ After that the program prints the longest name and the average of the birth year
 
 <!-- Pisin nimi: gabriel
 Syntymävuosien keskiarvo: 2014.8 -->
-Longest name: gabriel
+Longest name: sebastian
 Average of the birth years: 2014.8
 
 </sample-output>

@@ -490,7 +490,7 @@ Write a program, that reads an integer from the user. If the number is less than
 
 </programming-exercise>
 
-<programming-exercise name='Comparing numbers' tmcname='part02-Part02_04.CpomparingNumbers'>
+<programming-exercise name='Comparing numbers' tmcname='part02-Part02_04.ComparingNumbers'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä kaksi kokonaislukua. Mikäli ensimmäinen luku on suurempi kuin toinen luku, ohjelma tulostaa "Luku (ensimmäinen) on suurempi kuin luku (toinen).". Mikäli ensimmäinen luku on pienempi kuin toinen luku, ohjelma tulostaa "Luku (ensimmäinen) on pienempi kuin luku (toinen).". Muulloin ohjelma tulostaa "Luku (ensimmäinen) on yhtä suuri kuin luku (toinen).". Edeltävissä esimerkeissä kohdat (ensimmäinen) ja (toinen) tulee aina korvata syötetyillä luvuilla. -->
 

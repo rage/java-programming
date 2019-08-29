@@ -329,7 +329,7 @@ Search for? **7**
 Lukua 22 ei löydy. -->
 
 Search for? **22**
-22 was not found
+22 was not found.
 
 </sample-output>
 
@@ -606,7 +606,7 @@ printNeatly(array);
 
 <!-- Täydennä tiedostossa Tulostin olevaa metodia `public static void tulostaTaulukkoTahtina(int[] taulukko)`, siten, että se tulostaa jokaista taulukossa olevaa lukua vastaavan pituisen rivin tähtiä. -->
 
-Complete the method `public static void printInStars(int[] array)` in Printer class to make it print a row of stars for each number in the array. The amount of stars on each row is defined by the corresponding number in the array.
+Complete the method `public static void printArrayInStars(int[] array)` in Printer class to make it print a row of stars for each number in the array. The amount of stars on each row is defined by the corresponding number in the array.
 
 <!-- Voit kokeilla tulostusta esimerkiksi seuraavalla esimerkkikoodilla. -->
 You can try out the printing with this example:
@@ -618,7 +618,7 @@ tulostaTaulukkoTahtina(taulukko);
 
 ```java
 int[] array = {5, 1, 3, 4, 2};
-printInStars(array);
+printArrayInStars(array);
 ```
 
 <sample-output>

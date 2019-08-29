@@ -175,13 +175,13 @@ System.out.println("Ready!");
 The program in the example works as follows. The users inputs are in red color.
 <sample-output>
 
-Shall we carry on? (y exits)
+Exit? (y exits)
 **no**
 Ok! Let's carry on!
-Shall we carry on? (y exits)
+Exit? (y exits)
 **non**
 Ok! Let's carry on!
-Shall we carry on? (y exits)
+Exit? (y exits)
 **y**
 Ready!
 
