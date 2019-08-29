@@ -12,21 +12,21 @@ title: "Conditional statements and alternative operation"
 <!-- - Osaat vertailla sekä lukuja että merkkijonoja, muistaen merkkijonoihin liittyvän equals-komennon. -->
 <!-- - Tunnet ehtolauseen suoritusjärjestyksen ja tiedät, että ehtolauseiden läpikäynti lopetetaan ensimmäiseen ehtoon, jonka lauseke evaluoituu todeksi. -->
 
-- You are familiar with the concept of a conditional statement and know how to create alternative operation in a program using conditional statements.
-- You are familiar with common comparison operators and logical operations used in conditional statements.
-- You know how to compare numbers as well as strings taking into account the equals-command for strings.
-- You are familiar with the order of execution for a conditional statement, and you know that the parsing of a conditional statement stops at the first condition for which its statement evaluates to true.
+- You are familiar with the idea of a conditional statement and know how to create a program containing optional operations through the use of conditional statements.
+- You are familiar with comparison and logical operators commonly used in conditional statements.
+- You know how to compare numbers as well as strings while remembering the equals-command for strings.
+- You are familiar with the order of execution for a conditional statement, and know that the parsing of a conditional statement stops at the first condition whose statement evaluates to true.
 
 </text-box>
 
 
 <!-- Ohjelmamme ovat tähän mennessä olleet lineaarisia eli ohjelmien suoritus on tapahtunut ylhäältä alaspäin ilman suuria yllätyksiä tai vaihtoehtoja. Ohjelmiin halutaan kuitenkin usein vaihtoehtoista toiminnallisuutta, eli toiminnallisuutta joka riippuu tavalla tai toisella ohjelmassa olevien muuttujien tilasta. -->
 
-Up until now, our programs have been linear, meaning the execution of the program has happened from top to bottom without any significant surprises or options. However, we usually want alternative functionality in our programs. In other words, functionality that is in one way or another, dependent on the state of the variables in the program.
+Until now, our programs have been linear, i.e., the execution of the program occurred from top to bottom without any significant surprises or options. However, we usually want alternative functionality in our programs. In other words, functionality that is in one way or another dependent on the state of the program's variables.
 
 <!-- Jotta ohjelman suoritus voisi _haarautua_ esimerkiksi käyttäjän antaman syötteen perusteella, tarvitsemme käyttöömme **ehtolauseen**. Yksinkertaisin ehtolause on seuraavanlainen. -->
 
-For the execution of a program to be able to branch based on e.g. input by a user, we need to use a conditional **statement**. The simplest conditional statement looks something like this.
+To branch the execution of a program based on e.g., user input, we need to use something known as a **conditional statement**. The simplest conditional statement looks something like this.
 
 <!-- ```java
 System.out.println("Hei maailma!");
@@ -51,13 +51,13 @@ This code is unavoidable!
 
 <!-- Ehtolause alkaa avainsanalla `if`, jota seuraa sulut. Sulkujen sisälle asetetaan lauseke, joka evaluoidaan kun ehtolause saavutetaan. Evaluoinnin tulos on totuusarvo, yllä evaluointia ei tehty, vaan ehtolauseessa käytettiin suoraan totuusarvoa. -->
 
-A conditional statement begins with the keyword `if`, followed by parentheses. Inside the parentheses we place an expression, which is evaluated when the conditional statement is reached. The result of the evaluation is a boolean value. Above, no evaluation was done. Instead a boolean value was explicitly used in the conditional statement.
+A conditional statement begins with the keyword `if` followed by parentheses. An expression is placed inside the parentheses, which is evaluated when the conditional statement is reached. The result of the evaluation is a boolean value. No evaluation occurred above. Instead, a boolean value was explicitly used in the conditional statement.
 
 <!-- TODO: Lohkon sisällä oleva lähdekoodi !!! suoritetaan !!! mikäli sulkujen sisälle asetettu lauseke evaluoidaan todeksi (true). -->
 
 <!-- Sulkuja seuraa lohko, joka määritellään avaavan aaltosulun `{` ja sulkevan aaltosulun `}` sisään. Lohkon sisällä oleva lähdekoodi mikäli sulkujen sisälle asetettu lauseke evaluoidaan todeksi (true). -->
 
-The parentheses are followed by a block, which is defined inside an opening- `{` and closing `}` curly bracket. The source code inside the block is executed in the case that the expression placed inside the parentheses evaluates to *true*.
+The parentheses are followed by a block, which is defined inside opening- `{` and closing `}` curly brackets. The source code inside the block is executed if the expression inside the parentheses evaluates to *true*.
 
 <!-- Tarkastellaan esimerkkiä, missä ehtolauseen lausekkeessa vertaillaan lukuja. -->
 
@@ -79,7 +79,7 @@ if (number > 10) {
 
 <!-- Jos ehtolauseen lauseke evaluoidaan todeksi, yllä "jos muuttujassa luku oleva arvo on suurempi kuin 10", ohjelman suoritus siirtyy ehtolauseen määrittelemään lohkoon. Jos taas lauseke on epätotta, ohjelman suoritus siirtyy ehtolauseeseen liittyvän lohkon päättävän aaltosulun jälkeiseen lauseeseen. -->
 
-If the expression in the conditional statement evaluates to true, above "if the number contained in the variable is greater than 10", then the execution of the program progresses to the block defined by the conditional statement. On the other hand, if the expression evaluates to false, then the execution progresses to the statement after the closing curly bracket of the current conditional statement.
+If the expression in the conditional statement evaluates to true, in the case above "if the number contained in the variable is greater than 10", then the execution of the program progresses to the block defined by the conditional statement. On the other hand, if the expression evaluates to false, then the execution progresses to the statement after the closing curly bracket of the current conditional statement.
 
 <!-- Huomaa, että `if` -lauseen perään ei tule puolipistettä, sillä lause ei lopu ehto-osan jälkeen. -->
 
@@ -112,23 +112,23 @@ Speeding ticket!
 
 
 <!-- ## Ohjelmakoodin sisennyksestä ja lohkoista -->
-## Code indentation and block statements
+## Code Indentation and Block Statements
 
 <!-- Lohkolla tarkoitetaan aaltosulkujen rajaamaa aluetta. Ohjelman sisältävä lähdekooditiedosto sisältää merkkijonon `public class`, jota seuraa ohjelman nimi ja lohkon avaava aaltosulku. Lohko päättyy sulkevaan aaltosulkuun. Alla olevassa kuvassa on näytettynä värjättynä ohjelman lohko. -->
 
-Blocks is a term used to describe a section enclosed by a pair of curly brackets. The source file containing the program includes the string `public class`, which is followed by the name of the program and the opening curly bracket of the block. The block ends in a closing curly bracket. In the picture below the program block is highlighted.
+A code block refers to a section enclosed by a pair of curly brackets. The source file containing the program includes the string `public class`, which is followed by the name of the program and the opening curly bracket of the block. The block ends in a closing curly bracket. In the picture below, the program block is highlighted.
 
 ![An example of a block](../img/lohkoesimerkki-1.png) <!-- TODO: 'update picture -->
 
 <!-- Ohjelmissa toistuva rimpsu `public static void main(String[] args)` aloittaa oman lohkon, jonka sisällä oleva lähdekoodi suoritetaan kun ohjelma käynnistetään -- rimpsu on oikeastaan jokaisen ohjelman aloituskohta. Yllä olevassa esimerkissä on todellisuudessa kaksi lohkoa, kuten alla olevasta kuvasta huomaamme. -->
 
-The recurring snippet `public static void main(String[] args)` in the programs starts its own block, and the source code within this block is executed when the program is run -- technically the snippet is the starting point of all programs. In the code above we actually have two blocks, as we can see from the picture below.
+The recurring snippet `public static void main(String[] args)` in the programs begins a block, and the source code within it is executed when the program is run -- this snippet is, in fact, the starting point of all programs. We actually have two blocks in the example above, as can be seen from the image below.
 
 ![](../img/lohkoesimerkki-2.png)
 
 <!-- Lohkot määrittelevät ohjelman rakennetta ja rajaavat ohjelmaa. Aaltosuluille tulee aina löytyä pari: koodi, josta josta puuttuu lohkon päättävä (tai aloittava) aaltosulku, on virheellinen. -->
 
-Blocks define structure in the program and constrain the program. There needs to always be a matching pair for a curly bracket: code missing a closing (or opening) curly bracket is invalid.
+Blocks define a program's structure and its bounds. A curly bracket must always have a matching pair: any code that's missing a closing (or opening) curly bracket is erroneous.
 
 <!-- Myös ehtolause aloittaa lohkon. -->
 
@@ -136,7 +136,7 @@ A conditional statement also starts a new block.
 
 <!-- Lohkoihin liittyy ohjelman rakenteen ja toiminnan määrittelyn lisäksi luettavuuteen liittyvä seikka. Lohkojen sisällä oleva koodi sisennetään. Esimerkiksi ehtolauseeseen liittyvän lohkon sisältämä lähdekoodi sisennetään neljä välilyöntiä sisemmälle kuin ehtolauseen aloittava `if`-komento. Neljä merkkiä saa myös tabulaattorimerkillä (q:n vasemmalla puolella oleva näppäin). Kun lohko sulkeutuu, eli tulee `}`-merkki, sisennys loppuu. `}`-merkki on samalla tasolla kuin ehtolauseen aloittanut `if`-komento. -->
 
-In addition to the definition of program structure and functionality blocks statements also factor into the readability of the program. The code inside a block is indented. For example, source code inside the block of a conditional statement is indented four spaces deeper than the `if`-command that started the conditional statement. Four spaces can also be achieved by using a tab character (the key to the left of 'q'). When the block is closed, aka we encounter a `}`-character, the indentation stops. The `}`-character is at the same level of indentation as the `if`-command that started the conditional statement.
+In addition to the defining program structure and functionality, block statements also affect the readability of a program. Code living inside a block is indented. For example, source code inside the block of a conditional statement is indented four spaces deeper than the `if`-command that started the conditional statement. Four spaces can also be achieved by using a tab character (the key to the left of 'q'). When the block ends, i.e., we encounter a `}`-character, the indentation also ends. The `}`-character is at the same level of indentation as the `if`-command that started the conditional statement.
 
 <!-- Alla oleva esimerkki on sisennetty väärin. -->
 
@@ -155,7 +155,7 @@ number = 9;
 
 <!-- Alla oleva esimerkki on sisennetty oikein. -->
 
-The example below has the correct indentation.
+The example below is correctly indented.
 
 <!-- ```java
 if (luku > 10) {
@@ -173,11 +173,11 @@ if (number > 10) {
 
 <!-- Javassa koodia sisennetään neljän välilyönnin tai yhden tabulaattorin verran jokaisen lohkon kohdalla. Käytä sisentämiseen joko välilyöntejä tai tabulaattoreita. Joissakin tapauksissa sisennys saattaa hajota mikäli käytät molempia. NetBeans auttaa tässä kun painat kirjainyhdistelmää "alt + shift + f" (macOS "control + shift + f"). -->
 
-In the Java language code is indented by four spaces or a single tab at each block. Use either spaces or tabs for indentation, not both. In some cases the indentation might break if you use both at the same time. NetBeans can assist you in this matter by pressing the key combination "alt + shift + f" (macOS "control + shift + f").
+In Java, code is indented by four spaces or a single tab in each block. Use either spaces or tabs for indentation, not both. The indentation might break in some cases if you use both at the same time. NetBeans assists you in this if you use the key combination "alt + shift + f" (macOS "control + shift + f").
 
 <!-- Jatkossa ohjelmakoodi tulee sisentää oikein myös tehtävissä. Jos sisennys on väärin, ei ohjelmointiympäristö hyväksy tehtävää. -->
 
-In the future the code of the program needs to be indented correctly when submitting exercises. If the indentation is wrong, then the development environment does not accept the exercise solution.
+Going forward, program code needs to be indented correctly in exercises too. If the indentation is incorrect, the development environment will not accept the solution.
 
 </text-box>
 
@@ -185,26 +185,26 @@ In the future the code of the program needs to be indented correctly when submit
 <programming-exercise name="Check your indentation" tmcname='part01-Part01_25.Check your indentation'>
 
 <!-- Tehtäväpohjassa on ehtolauseen käyttöä demonstroiva ohjelma. Ohjelma on kuitenkin sisennetty väärin. -->
-The exercise template contains a program demonstrating the use of conditional statements. However, the indentation is wrong.
+The exercise template contains a program demonstrating the use of conditional statements. However, it's indented wrong.
 
 <!-- Kokeile ajaa testit ennen kuin teet mitään. TMC näyttää sisennysvirheet eri lailla kuin ohjelmalogiikassa olevat virheet. -->
 Try to run the tests before doing anything. TMC shows the indentation errors differently compared to errors in program logic.
 
 <!-- Kun huomaat, miten sisennysvirheet merkitään, korjaa virheet. Opettele käyttämään automaattista ohjelmakoodin sisentämistä jo nyt. -->
-When you notice how indentation errors are shown, correct them. Now would be a good time to try out the automatic code indentation.
+When you notice how indentation errors are shown, correct them. Now would be a good time to give the automatic code formatting a try.
 
 </programming-exercise>
 
 
 <!-- ## Vertailuoperaattorit -->
-## Comparison operators
+## Comparison Operators
 
 <!-- Vertailuoperaattoreita ovat seuraavat: -->
 
 
-* `>`greater than
-* `>=`greater than or equal to
-* `<`less than
+* `>` greater than
+* `>=` greater than or equal to
+* `<` less than
 * `<=` less than or equal to
 * `==` equal to
 * `!=` not equal to
@@ -243,7 +243,7 @@ The number was not equal to 0
 <programming-exercise name="Orwell" tmcname='part01-Part01_26.Orwell'>
 
 <!-- Tee ohjelma, joka kysyy käyttäjältä kokonaisluvun ja tulostaa merkkijonon "Orwell" jos luku on täsmälleen 1984. -->
-Write a program, that prompts the user for an integer and prints the string "Orwell" if the number is exactly 1984.
+Write a program that prompts the user for an integer and prints the string "Orwell" if the number is exactly 1984.
 
 <sample-output>
 
@@ -267,7 +267,7 @@ Orwell
 <programming-exercise name="Ancient" tmcname='part01-Part01_27.Ancient'>
 
 <!-- Tee ohjelma, joka kysyy käyttäjältä vuosilukua. Jos käyttäjä syöttää luvun, joka on pienempi kuin 2015, ohjelma tulostaa merkkijonon "Wanha!". -->
-Write a program, that prompts the user for a year. If the user inputs a number that is smaller than 2015, then the program prints the string "Old!".
+Write a program that prompts the user for a year. If the user inputs a number that is smaller than 2015, then the program prints the string "Old!".
 
 <sample-output>
 
@@ -292,7 +292,7 @@ Ancient history!
 
 <!-- Jos ehtolauseen sulkujen sisällä oleva lauseke evaluoituu epätodeksi, ohjelmakoodin suoritus siirtyy ehtolauseen lohkon lopettavan aaltosulun seuraavaan lauseeseen. Tämä ei aina ole toivottua, vaan usein halutaan luoda vaihtoehtoinen toiminta tilanteeseen, missä ehtolauseen lauseke on epätotta. -->
 
-If the expression inside the parentheses of the conditional statement evaluates to false, then the execution of the code moves to the statement following the closing curly bracket of the current conditional statement. This is not always desired, and usually we want to create an alternative action for the case when the expression is false.
+If the expression inside the parentheses of the conditional statement evaluates to false, then the execution of the code moves to the statement following the closing curly bracket of the current conditional statement. This is not always desired, and usually we want to create an alternative option for when the conditionals's expression is false.
 
 <!-- Tämä onnistuu `if`-komennon yhteydessä käytettävän `else`-komennon avulla. -->
 
@@ -326,13 +326,13 @@ Your number is five or less!
 
 <!-- Jos ehtolauseeseen on määritelty `else`-haara, suoritetaan else-haaran määrittelemä lohko jos ehtolauseen ehto ei ole totta. Komento `else` tulee samalle riville `if`-komennon määrittelemän lohkon lopettavan aaltosulun kanssa. -->
 
-If we have defined an `else`-branch for the conditional statement, then the block defined by the else-branch is run if the condition of the conditional statement is not true. The `else`-command is placed on the same line as the closing bracket of the block defined by the `if`-command.
+If an `else`-branch has been defined for the conditional statement, then the block defined by the else-branch is run if the condition of the conditional statement is not true. The `else`-command is placed on the same line as the closing bracket of the block defined by the `if`-command.
 
 <!-- <programming-exercise name="Positiivinen luku" tmcname='osa01-Osa01_28.PositiivinenLuku'> -->
 <programming-exercise name="Positivity" tmcname='part01-Part01_28.Positivity'>
 
 <!-- Tee ohjelma, joka kysyy käyttäjältä kokonaisluvun ja kertoo, onko se positiivinen (eli suurempi kuin nolla) vai ei. -->
-Write a program, that prompts the user for an integer and informs the user whether or not it is positive (greater than zero).
+Write a program that prompts the user for an integer and informs the user whether or not it is positive (greater than zero).
 
 <sample-output>
 
@@ -357,7 +357,7 @@ The number is not positive.
 <programming-exercise name="Adulthood" tmcname='part01-Part01_29.Adulthood'>
 
 <!-- Tee ohjelma, joka kysyy käyttäjän ikää ja kertoo, onko tämä täysi-ikäinen (eli 18-vuotias tai vanhempi). -->
-Write a program, which prompts the user for their age and tells them whether or not they are an adult (18 years old or older).
+Write a program that prompts the user for their age and tells them whether or not they are an adult (18 years old or older).
 
 <sample-output>
 
@@ -379,11 +379,11 @@ You are an adult
 
 
 <!-- ## Lisää vaihtoehtoja: else if -->
-## More alternatives: else if
+## More Alternatives: else if
 
 <!-- Jos vaihtoehtoja on useampia käytetään `else if`-komentoa. Komento `else if` on kuin `else`, mutta lisäehdolla. `else if` tulee `if`-ehdon jälkeen, ja niitä voi olla useita. -->
 
-If there are multiple alternatives we use the `else if`-command. The command `else if` is like `else`, but with an additional condition. `else if` comes after the `if`-condition, and there can be multiple.
+If there are multiple alternatives, we use the `else if`-command. The command `else if` is like `else`, but with an additional condition. `else if` follows the `if`-condition, and there can be many of them.
 <!--
 ```java
 int luku = 3;
@@ -434,7 +434,7 @@ The visualization of the code above:
 
 <!-- Tee ohjelma, joka kysyy käyttäjältä kaksi kokonaislukua ja tulostaa niistä suuremman. Jos luvut ovat yhtä suuret, ohjelma huomaa myös tämän. -->
 
-Write a program, that prompts the user for two integers and prints the larger of the two. If the numbers are the same, then the program informs us about this as well.
+Write a program that prompts the user for two integers and prints the larger of the two. If the numbers are the same, then the program informs us about this as well.
 
 <!-- Esimerkkitulostuksia: -->
 Sample outputs:
@@ -471,11 +471,11 @@ The numbers are equal!
 
 
 <!-- ## Vertailujen suoritusjärjestys -->
-## Order of execution for comparisons
+## Order of Execution for Comparisons
 
 <!-- Vertailut suoritetaan järjestyksessä ylhäältä alaspäin. Kun suorituksessa päästään ehtolauseeseen, jonka ehto on totta, suoritetaan lohko ja lopetetaan vertailu. -->
 
-The comparisons are executed top down. When execution reaches a conditional statement, for which its condition is true, its block is executed and the comparing stops.
+The comparisons are executed top down. When execution reaches a conditional statement whose condition is true, its block is executed and the comparison stops.
 
 <!-- ```java
 int luku = 5;
@@ -520,7 +520,7 @@ The example above prints the string "The number is greater than zero." even if t
 
 <!-- Alla oleva taulukko kuvaa erään kurssin arvosanan muodostumista. Tee ohjelma, joka ilmoittaa kurssiarvosanan annetun taulukon mukaisesti. -->
 
-The table seen below describes how the grade for a particular course is determined. Write a program, that gives a course grade according to the provided table.
+The table below describes how the grade for a particular course is determined. Write a program that gives a course grade according to the provided table.
 
 <!-- | pistemäärä   | arvosana     | -->
 <!-- | ------------ | --------     | -->
@@ -533,16 +533,16 @@ The table seen below describes how the grade for a particular course is determin
 <!-- | 90-100       | 5            | -->
 <!-- | > 100        | uskomatonta! | -->
 
-| points       | grade        |
-| ------------ | --------     |
-| < 0          | impossible!  |
-| 0-49         | failed       |
-| 50-59        | 1            |
-| 60-69        | 2            |
-| 70-79        | 3            |
-| 80-89        | 4            |
-| 90-100       | 5            |
-| > 100        | incredible! |
+| points | grade       |
+| ------ | ----------- |
+| < 0    | impossible! |
+| 0-49   | failed      |
+| 50-59  | 1           |
+| 60-69  | 2           |
+| 70-79  | 3           |
+| 80-89  | 4           |
+| 90-100 | 5           |
+| > 100  | incredible! |
 
 <!-- Esimerkkitulostuksia: -->
 Sample outputs:
@@ -584,11 +584,11 @@ Grade: impossible!
 
 
 <!-- ## Ehtolauseen lauseke ja totuusarvomuuttuja -->
-## The expression of a conditional statement and the boolean variable
+## Conditional Statement Expression and the Boolean Variable
 
 <!-- Ehtolauseen sulkuihin asetettavan arvon tulee olla lausekkeen evaluoinnin jälkeen totuusarvotyyppinen. Totuusarvomuuttujan tyyppi on `boolean` ja arvo _true_ tai _false_. -->
 
-After evaluation, the value of the expression placed inside the parentheses of the conditional statement should be of the boolean type. Variables of the `boolean` type get the value _true_ or _false_.
+The value that goes between the parentheses of the conditional statement should be of type boolean after the evaluation. `boolean` type variables are either _true_ or _false_.
 
 <!-- ```java
 boolean onkoTotta = true;
@@ -628,7 +628,7 @@ Pretty wild!
 </sample-output>
 
 <!-- Vertailuoperaattoreita voi käyttää myös ehtojen ulkopuolella. Tällöin vertailun tuloksena saatu totuusarvo asetetaan talteen totuusarvomuuttujaan myöhempää käyttöä varten. -->
-Comparison operators can also be used outside of conditions. In that case the resulting boolean value of the comparison is stored in a boolean variable for later use.
+Comparison operators can also be used outside of conditionals. In those cases, the boolean value resulting from the comparison is stored in a boolean variable for later use.
 
 <!-- ```java
 int eka = 1;
@@ -639,12 +639,12 @@ boolean onkoSuurempi = eka > toka;
 ```java
 int first = 1;
 int second = 3;
-boolean isItGreater = first > second;
+boolean isGreater = first > second;
 ```
 
 <!-- Yllä olevassa esimerkissä totuusarvomuuttuja `onkoSuurempi` sisältää nyt totuusarvon _false_. Yllä olevaa esimerkkiä voi myös jatkaa ja ottaa siihen mukaan ehtolauseen. -->
 
-In the example above the boolean variable `isItGreater` now contains the boolean value _false_. We can extend the previous example by adding a conditional statement to it.
+In the example above, the boolean variable `isGreater` now contains the boolean value _false_. We can extend the previous example by adding a conditional statement to it.
 
 <!-- ```java
 int eka = 1;
@@ -659,9 +659,9 @@ if (onkoPienempi) {
 ```java
 int first = 1;
 int second = 3;
-boolean isItLessThan = first < second;
+boolean isLessThan = first < second;
 
-if (isItLessThan) {
+if (isLessThan) {
     System.out.println("1 is less than 3!");
 }
 ```
@@ -670,7 +670,7 @@ if (isItLessThan) {
 
 <!-- Yllä olevassa kuvassa ohjelmakoodia on suoritettu niin pitkään, että ohjelman muuttujat on luotu ja niihin on asetettu arvot. Muuttujassa `onkoPienempi` on arvona `true`. Seuraavana suoritetaan vertailu `if (onkoPienempi)` -- muuttujaan `onkoPienempi` liittyvä arvo löytyy sen lokerosta, ja lopulta ohjelma tulostaa: -->
 
-The code in the image above has been executing for an amount of time, where the variables of the program have been initialized and given values. The variable `isItLessThan` has `true` as its value. Next in the execution is the comparison `if (isItLessThan)` -- the value for the variable `isItLessThan` is found in its container, and finally the program prints:
+The code in the image above has been executed to the point where the program's variables have been created and assigned values. The variable `isLessThan` has `true` as its value. Next in the execution is the comparison `if (isLessThan)` -- the value for the variable `isLessThan` is found in its container, and the program finally prints:
 
 <sample-output>
 
@@ -684,7 +684,7 @@ The code in the image above has been executing for an amount of time, where the 
 
 <!-- Jakojäännös on hieman harvemmin käytetty operaatio, joka on kuitenkin varsin näppärä kun halutaan tarkistaa esimerkiksi luvun jaollisuutta. Jakojäännösoperaation merkki on `%`. -->
 
-The modulo operator is a less commonly used operator. However, it is very handy when we want to check the divisibility of a number. The symbol for the modulo operator is `%`.
+The modulo operator is a slightly less-used operator, which is, however, very handy when we want to check the divisibility of a number, for example. The symbol for the modulo operator is `%`.
 
 <!-- ```java
 int jakojaannos = 7 % 2;
@@ -706,7 +706,7 @@ System.out.println(1 % 2); // prints 1
 
 <!-- Jos haluamme tietää onko käyttäjän syöttämä luku jaollinen neljälläsadalla, tarkastamme onko syötetyn luvun jakojäännös neljänsadan suhteen nolla. -->
 
-If we want to know if the number given by the user is divisible by four hundred, then we check if the remainder is zero after taking the modulo of the number and four hundred.
+If we want to know whether the number given by the user is divisible by four hundred, we check if the remainder is zero after taking the modulo of the number and four hundred.
 
 <!-- ```java
 Scanner lukija = new Scanner(System.in);
@@ -736,7 +736,7 @@ if (remainder == 0) {
 
 <!-- Koska jakojäännös on samanlainen operaatio kuin muutkin laskut, voi sen asettaa osaksi valintakäskyä. -->
 
-Because taking the remainder is an operation just like other computations, it can be placed as part of the expression in a conditional statement.
+Since the modulo is an operation just like other calculations, it can be a part of an expression in a conditional statement.
 
 <!-- ```java
 Scanner lukija = new Scanner(System.in);
@@ -769,7 +769,7 @@ if (number % 400 == 0) {
 <programming-exercise name="Odd or even" tmcname='part01-Part01_32.OddOrEven'>
 
 <!-- Tee ohjelma, joka kysyy käyttäjältä luvun ja ilmoittaa, onko syötetty luku parillinen vai pariton. -->
-Write a program, that prompts the user for a number and informs us whether it is even or odd.
+Write a program that prompts the user for a number and informs us whether it is even or odd.
 
 <sample-output>
 
@@ -794,7 +794,7 @@ Hint: The remainder when dividing by 2 tells us whether the number is even or no
 </programming-exercise>
 
 <!-- ## Ehtolauseet ja merkkijonojen vertailu -->
-## Conditional statements and comparing strings
+## Conditional Statements and Comparing Strings
 
 <!-- Siinä missä kokonaislukujen, liukulukujen, ja totuusarvojen samuutta voi verrata kahdella yhtäsuuruusmerkillä (`muuttuja1 == muuttuja2`), ei merkkijonojen samuuden vertailu kahdella yhtäsuuruusmerkillä onnistu. -->
 
@@ -855,10 +855,10 @@ The strings were different!
 
 <!-- Tämä liittyy merkkijonojen sisäiseen toimintaan sekä siihen, miten muuttujien vertailu on Javassa toteutettu. Käytännössä vertailun toimintaan vaikuttaa se, kuinka paljon tietoa muuttuja voi sisältää -- merkkijonot voivat sisältää äärettömän määrän merkkejä, kun taas kokonaisluvut, liukuluvut ja totuusarvot sisältävät aina yhden luvun tai arvon. Muuttujia, jotka sisältävät aina vain yhden luvun tai arvon voi verrata yhtäsuuruusmerkillä, kun taas enemmän tietoa sisältävillä muuttujille tällainen vertailu ei toimi. Palaamme tähän tarkemmin myöhemmin tällä kurssilla. -->
 
-This is related to the internal workings of strings as well as how the comparison of variables is implemented in Java. In practice, the operation of the comparison is affected by how much data a variable can contain -- strings can contain a limitless amount of characters, whereas integers, floating point numbers, and boolean values only contain a single number or value. Variables that always contain only one number or value can be compared using an equals sign, while it does not work for variables containing more data. We will get back to this topic later in this course.
+This has to do with the internal workings of strings as well as how variable comparison is implemented in Java. In practice, the comparison is affected by how much information a variable can hold -- strings can hold a limitless amount of characters, whereas integers, floating-point numbers, and boolean values always contain a single number or value only. Variables that always contain only one number or value can be compared using an equals sign, whereas this doesn't work for variables containing more information. We will return to this topic later in this course.
 
 <!-- Merkkijonojen vertailussa käytetään merkkijonomuuttujiin liittyvää `equals`-komentoa. Komento toimii seuraavalla tavalla: -->
-When comparing strings we use the `equals`-command, which is part of the functionality related to string variables. The command works in the following way:
+When comparing strings we use the `equals`-command, which is related to string variables. The command works in the following way:
 
 <!-- ```java
 Scanner lukija = new Scanner(System.in);
@@ -881,7 +881,7 @@ Scanner reader = new Scanner(System.in);
 System.out.println("Enter a string");
 String input = reader.nextLine();
 
-if (input.equals("a string")) {
+if (input.equals("string")) {
     System.out.println("Great! You read the instructions correctly.");
 } else {
     System.out.println("Missed the mark!");
@@ -907,11 +907,11 @@ Great! You read the instructions correctly.
 <!-- Komento equals kirjoitetaan merkkijonomuuttujan jälkeen siten, että se kiinnitetään pisteellä vertailtavaan muuttujaan. Komennolle annetaan parametrina merkkijono, johon muuttujaa vertaillaan. Mikäli merkkijonomuuttujaa vertaillaan suoraan merkkijonoon, voi merkkijonon asettaa hipsuilla merkittynä equals-komennon sulkujen sisään. Muulloin sulkujen sisään asetetaan sen merkkijonomuuttujan nimi, johon merkkijonomuuttujan sisältämää merkkijonoa verrataan. -->
 
 <!-- TODO: Find a better way to translate -->
-The equals-command is placed after the string variable by attaching it with a dot to the variable we want to compare. The command is given a parameter, which is the string that the variable will be compared against. If the string variable is being directly compared with a string, then the string can be placed inside the parentheses of the equals-command surrounded by quotation marks. Otherwise, the name of the string variable, which is to be compared with the string contained in the string variable, is placed inside the parentheses.
+The equals command is written after a string by attaching it to the string to be compared with a dot. The command is given a parameter, which is the string that the variable will be compared against. If the string variable is being directly compared with a string, then the string can be placed inside the parentheses of the equals-command within quotation marks. Otherwise, the name of the string variable that holds the string to be compared is placed inside the parentheses.
 
 <!-- Alla olevassa esimerkissä luetaan käyttäjältä kaksi merkkijonoa. Ensin tarkastetaan ovatko syötetyt merkkijonot samat, jonka jälkeen tarkastetaan onko syötettyjen merkkijonojen arvo "kaksi merkkijonoa". -->
 
-In the example below the user is prompted for two strings. First, we check if the given strings are the same, after which we will check if the value for either of the given strings is "two strings".
+In the example below the user is prompted for two strings. We first check to see if the provided strings are the same, after which we'll check if the value of either one of the two strings is "two strings".
 
 <!-- ```java
 Scanner lukija = new Scanner(System.in);
@@ -991,7 +991,7 @@ The strings were the same!
 
 <!-- Tee ohjelma, joka kysyy käyttäjältä tunnussanaa. Mikäli tunnussana on "Caput Draconis", ohjelma tulostaa "Tervetuloa!". Muulloin ohjelman tulostus on "Hus siitä!". -->
 
-Write a program, that prompts the user for a password. If the password is "Caput Draconis", then the program prints "Welcome!". Otherwise the program prints "Off with you!"
+Write a program that prompts the user for a password. If the password is "Caput Draconis" the program prints "Welcome!". Otherwise, the program prints "Off with you!"
 
 <sample-output>
 
@@ -1017,7 +1017,7 @@ Welcome!
 
 <!-- Tee ohjelma, joka kysyy käyttäjältä kahta merkkijonoa. Mikäli merkkijonot ovat samat, ohjelma tulostaa "Samat sanat", muulloin ohjelma tulostaa "Ei sitten". -->
 
-Write a program, that prompts the user for two strings. If the strings are the same, then the program prints "Same", otherwise it prints "Different".
+Write a program that prompts the user for two strings. If the strings are the same, then the program prints "Same". Otherwise, it prints "Different".
 
 <!-- TODO: Better exercise for English...? -->
 
@@ -1045,7 +1045,7 @@ Different
 
 
 <!-- ## Loogiset operaatiot -->
-## Logical operators
+## Logical Operators
 
 <!-- Ehtolauseen lauseke voi koostua useammasta osasta, joissa käytetään loogisia operaatioita **ja** `&&`, **tai** `||`, sekä **ei** `!`. -->
 The expression of a conditional statement may consist of multiple parts, in which the logical operators **and** `&&`, **or** `||`, and **not** `!` are used.
@@ -1058,7 +1058,7 @@ The expression of a conditional statement may consist of multiple parts, in whic
 
 <!-- Seuraavassa yhdistetään `&&`:lla eli ja-operaatiolla kaksi yksittäistä ehtoa. Koodilla tarkistetaan, onko muuttujassa oleva luku suurempi kuin 4 ja pienempi kuin 11, eli siis välillä 5-10: -->
 
-In the next example we combine two individual conditions using `&&`, aka the and-operator. The code is used to check if the number in the variable is greater than 4 and less than 11. In other words, within the range 5-10:
+In the next example we combine two individual conditions using `&&`, i.e., the and-operator. The code is used to check if the number in the variable is greater than 4 and less than 11. In other words, whether it's within the range of 5-10:
 
 <!-- ```java
 System.out.println("Onkohan luku väliltä 5-10: ");
@@ -1091,7 +1091,7 @@ It is! :)
 
 <!-- Seuraavassa annetaan `||`:n eli tai-operaation avulla kaksi vaihtoehtoa, onko luku pienempi kuin 0 tai suurempi kuin 100. Ehto toteutuu jos luku täyttää jommankumman ehdon: -->
 
-In the next one we provide two conditions using `||`, aka the or-operator: is the number less than zero or greater than 100. The condition is fulfilled if the number fulfills either of the two conditions:
+In the next one we provide two conditions using `||`, i.e., the or-operator: is the number less than zero or greater than 100. The condition is fulfilled if the number fulfills either one of the two conditions:
 
 <!-- ```java
 System.out.println("Onkohan luku pienempi kuin 0 tai suurempi kuin 100");
@@ -1125,7 +1125,7 @@ It is! :)
 
 <!-- Seuraavassa käännetään `!` ei-operaatiolla lausekkeen `luku > 4` tulos. Ei-operaatio merkitään lauseketta ennen niin, että käännettävä lauseke rajataan suluilla, ja ei-operaatio lisätään sulkuja ennen. -->
 
-In this example we flip the result of the expression `number > 4` using `!`, aka the not-operator. The not-operator is notated such that the expression to be flipped is surrounded by parentheses, and the not-operator is placed before the parentheses.
+In this example we flip the result of the expression `number > 4` using `!`, i.e., the not-operator. The not-operator is notated in such a way that the expression to be flipped is wrapped in parentheses, and the not-operator is placed before the parentheses.
 
 <!-- ```java
 int luku = 7;
@@ -1156,13 +1156,13 @@ The number is greater than or equal to 4.
 <!-- Alla on kuvattuna lausekkeiden toimintaa kun lausekkeissa on loogisia operaatioita. -->
 Below is a table showing the operation of expressions containing logical operators.
 
-| number  | number > 0  | number < 10  | number > 0 && number < 10  | !(number > 0 && number < 10)  | number > 0 \|\| number < 10  |
-| -----   | ----------- | ------------ | -------------------------- | ----------------------------- | ---------------------------- |
-| -1      | false       | true         | false                      | true                          | true                         |
-| 0       | false       | true         | false                      | true                          | true                         |
-| 1       | true        | true         | true                       | false                         | true                         |
-| 9       | true        | true         | true                       | false                         | true                         |
-| 10      | true        | false        | false                      | true                          | true                         |
+| number | number > 0 | number < 10 | number > 0 && number < 10 | !(number > 0 && number < 10) | number > 0 \|\| number < 10 |
+| ------ | ---------- | ----------- | ------------------------- | ---------------------------- | --------------------------- |
+| -1     | false      | true        | false                     | true                         | true                        |
+| 0      | false      | true        | false                     | true                         | true                        |
+| 1      | true       | true        | true                      | false                        | true                        |
+| 9      | true       | true        | true                      | false                        | true                        |
+| 10     | true       | false       | false                     | true                         | true                        |
 
 
 <!-- <programming-exercise name='Iän tarkistus' tmcname='osa01-Osa01_35.IanTarkistus'> -->
@@ -1205,7 +1205,7 @@ Impossible!
 TODO: quiz -- mitä tulostaa? (useampi osa)
 
 <!-- ## Ehtolauseiden suoritusjärjestys -->
-## Execution order of conditional statements
+## Execution Order of Conditional Statements
 
 <!-- Tutustutaan ehtolauseiden suoritusjärjestykseen klassisen ohjelmointiongelman kautta. -->
 Let's familiarize ourselves with the execution order of conditional statements through a classic programming exercise.
@@ -1216,7 +1216,7 @@ _'Write a program that prompts the user for a number between one and one hundred
 
 <!-- Ohjelmoija lähtee ratkaisemaan tehtävää lukemalla ongelmakuvauksen, ja luomalla ohjelmakoodia ongelmakuvausta seuraten. Koska ohjelman suoritusehdot esitellään ongelmassa annetussa järjestyksessä, muodostuu ohjelman rakenne järjestyksen perusteella. Ohjelman rakenne muodostuu seuraavien askelten perusteella: -->
 
-The programmer begins solving the exercise by reading the exercise description, and by writing code according to the description. The conditions for execution are presented in a given order by the description, and the initial structure for the program is formed based on that order. The structure is formed based on the following steps:
+The programmer begins solving the exercise by reading the exercise description and by writing code according to the description. The conditions for execution are presented in a given order by the description, and the initial structure for the program is formed based on that order. The structure is formed based on the following steps:
 
 <!-- * Tee ohjelma, joka lukee luvun käyttäjältä ja tulostaa sen. -->
 * Write a program that prompts the user for a number and prints that number.
@@ -1294,11 +1294,11 @@ Fizz
 
 <!-- Edellisessä lähestymistavassa ongelmana on se, että **ehtolauseiden läpikäynti lopetetaan ensimmäiseen ehtoon, jonka arvo on totta**. Esimerkiksi luvulla 15 tulostetaan merkkijono "Fizz", sillä luku on kolmella jaollinen (15 % 3 == 0). -->
 
-The problem with the previous approach is that **the parsing of conditional statements stops at the first condition that is true**. E.g. for the number 15 the prints the string "Fizz", because the number is divisible by three (15 % 3 == 0).
+The problem with the previous approach is that **the parsing of conditional statements stops at the first condition that is true**. E.g., with the value 15 the string "Fizz" is printed, since the number is divisible by three (15 % 3 == 0).
 
 <!-- Yksi lähestymistapa yllä olevan ajatusketjun kehittämiseen on ensin etsiä **vaativin ehto** ja toteuttaa se. Tämän jälkeen toteutettaisiin muut ehdot. Yllä olevassa esimerkissä ehto "jos luku on jaollinen kolmella **ja** viidellä" vaatii kahden tapauksen toteutumista. Nyt ajatusketju olisi muotoa. -->
 
-One approach for developing the above train of thought is to first find the **most demanding condition** and implement it. The other conditions would be implemented after it. In the example above, the condition "if the number is divisible by both three **and** five" requires two conditions to be met. Now the train of thought would be:
+One approach for developing this train of thought would be to first find the **most demanding condition**,  and implement it. After that, we would implement the other conditions. In the example above, the condition "if the number is divisible by both three **and** five" requires two things to happen. Now the train of thought would be:
 
 <!-- 1. Tee ohjelma, joka lukee luvun käyttäjältä. -->
 1. Write a program that reads input from the user.
@@ -1313,7 +1313,7 @@ One approach for developing the above train of thought is to first find the **mo
 
 
 <!-- Nyt ongelmakin tuntuu ratkeavan. -->
-Now the problem seems to be solved.
+Now the problem seems to get solved.
 
 <!-- ```java
 Scanner lukija = new Scanner(System.in);
@@ -1444,7 +1444,7 @@ The number is not divisible by six!
 <!-- TODO: Virhe suomenkielisessä tekstissä. "ohjelma ei ole karkausvuosi" -->
 <!-- Vihje 2: mieti ongelmaa if, else if, else if, ... -vertailujen ketjuna ja aloita ohjelman rakentaminen tilanteesta, missä voit olla varma, että ohjelma ei ole karkausvuosi. -->
 
-Hint 2: Think of the problem as a chain of if, else if, else if, ... -comparisons and start building the program from a case where you can be certain that the year is not a leap year.
+Hint 2: Think of the problem as a chain of if, else if, else if, ... -comparisons, and start building the program from a situation in which you can be certain that the year is not a leap year.
 
 <!-- ```java
 Scanner lukija = new Scanner(System.in);
@@ -1478,13 +1478,13 @@ if (number % 4 != 0) {
 
 Kun lahja tulee lähimmiltä sukulaisilta, lahjaveron määrä määräytyy seuraavan taulukon mukaan (lähde [vero.fi](https://www.vero.fi/henkiloasiakkaat/omaisuus/lahja/lahjaverolaskuri/#lahjaverotaulukot)):
 
-| Lahja                 | Vero alarajalla  | Veroprosentti ylimenevästä  |
-|-----------------------|------------------|-----------------------------|
-| 5 000 -- 25 000       | 100              | 8                           |
-| 25 000 -- 55 000      | 1 700            | 10                          |
-| 55 000 -- 200 000     | 4 700            | 12                          |
-| 200 000 -- 1 000 000  | 22 100           | 15                          |
-| 1 000 000 --          | 142 100          | 17                          |
+| Lahja                | Vero alarajalla | Veroprosentti ylimenevästä |
+| -------------------- | --------------- | -------------------------- |
+| 5 000 -- 25 000      | 100             | 8                          |
+| 25 000 -- 55 000     | 1 700           | 10                         |
+| 55 000 -- 200 000    | 4 700           | 12                         |
+| 200 000 -- 1 000 000 | 22 100          | 15                         |
+| 1 000 000 --         | 142 100         | 17                         |
 
 Esimerkiksi 6000 euron lahjasta tulee maksaa veroa 180 euroa (100 + (6000-5000) * 0.08), ja 75000 euron lahjasta tulee maksaa veroa 7100 euroa (4700 + (75000-55000) * 0.12).
 
