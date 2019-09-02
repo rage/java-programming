@@ -3,7 +3,7 @@ import styled from "styled-components"
 import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 import { normalizeExerciseId } from "../util/strings"
 
-const QuiznatorWrapper = styled.div`
+const quizWrapper = styled.div`
   code {
     color: black !important;
   }
@@ -18,7 +18,7 @@ class Quiznator extends React.Component {
     if (!window.loadQuiz) {
       return
     }
-    window.loadQuiz(document.getElementById(`unloaded-quiznator-${id}`))
+    window.loadQuiz(document.getElementById(`unloaded-quiz-${id}`))
   }
 
   render() {
@@ -27,13 +27,13 @@ class Quiznator extends React.Component {
       return <div>There should be quiz here but no quiz id is specified.</div>
     }
     return (
-      <QuiznatorWrapper id={normalizeExerciseId(`quiznator-${id}`)}>
+      <quizWrapper id={normalizeExerciseId(`quiz-${id}`)}>
         <div
-          id={`unloaded-quiznator-${id}`}
-          className="quiznator-plugin"
+          id={`unloaded-quiz-${id}`}
+          className="quiz-plugin"
           data-quiz-id={id}
         />
-      </QuiznatorWrapper>
+      </quizWrapper>
     )
   }
 }

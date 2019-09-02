@@ -15,7 +15,7 @@ title: 'Recurring problems and patterns to solve them'
 
 </text-box>
 
-<quiznator id="5c24a9123cc3ec11bcd78bb3"></quiznator>
+<quiz id="570e362e-6eb3-5c73-850e-fb0e8c640041"></quiz>
 
 
 <!-- Samat pienet ongelmat (tai "osaongelmat") toistuvat ohjelmissa yhä uudestaan ja uudestaan: "Lue käyttäjältä syötettä", "Laske lukujen summa", jne. -->
@@ -231,11 +231,11 @@ public class Program {
 }
 ```
 
-<programming-exercise name='Toiseen potenssiin' tmcname='osa02-Osa02_01.ToiseenPotenssiin'>
+<programming-exercise name='Squared' tmcname='part02-Part02_01.Squared'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä kokonaisluvun ja tulostaa luvun korotettuna toiseen potenssin eli luvun kerrottuna itsellään. -->
 
-Write a program, that reads an integer from the user input, and then prints the second power of the given integer, i.e. the integer multiplied by itself.
+Write a program that reads an integer from the user input, and then prints the second power of the given integer, i.e. the integer multiplied by itself.
 
 <sample-output>
 
@@ -261,7 +261,7 @@ Write a program, that reads an integer from the user input, and then prints the 
 </programming-exercise>
 
 
-<programming-exercise name='Summan neliöjuuri' tmcname='osa02-Osa02_02.SummanNeliojuuri'>
+<programming-exercise name='Square root of sum' tmcname='part02-Part02_02_SquareRootOfSum'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä kaksi kokonaislukua ja tulostaa lukujen summan neliöjuuren. Ohjelman ei tarvitse käsitellä negatiivisia lukuja. -->
 Write a program that reads two integers from the user, and prints the square root of the sum of these integers. The program does not need to work with negative values.
@@ -276,8 +276,8 @@ System.out.println(neliojuuri);
 ``` -->
 
 ```java
-int value = 42;
-double squareRoot = Math.sqrt(value);
+int number = 42;
+double squareRoot = Math.sqrt(number);
 System.out.println(squareRoot);
 ```
 
@@ -392,7 +392,7 @@ The quiz below uses `System.out.print` for printing. It works exactly like `Syst
 
 </text-box>
 
-<quiznator id="5c1f6a263516ce119a7f45df"></quiznator>
+<quiz id="ba233660-b119-5c9a-9b75-7b34b0ceb8ef"></quiz>
 
 
 <!-- Ehtotoiminnallisuutta voi yhdistää myös muiden ratkaisumallien kanssa. Tarkastellaan ongelmaa "Lue käyttäjältä kaksi lukua. Mikäli lukujen summa on yli 100, tulosta käyttäjälle merkkijono `liikaa`. Mikäli lukujen summa on alle 0, tulosta käyttäjälle merkkijono `liian vähän`. Muulloin, tulosta käyttäjälle merkkijono `ok`.". Ohjelma, joka yhdistää lukemisen, laskemisen ja ehtolauseen on annettu alla. -->
@@ -491,8 +491,12 @@ Write a program, that reads an integer from the user. If the number is less than
 
 </programming-exercise>
 
+<<<<<<< HEAD
+<programming-exercise name='Comparing numbers' tmcname='part02-Part02_04.ComparingNumbers'>
+=======
 <!-- <programming-exercise name='Tietoa luvuista' tmcname='osa02-Osa02_04.TietoaLuvuista'> -->
 <programming-exercise name='Comparing numbers' tmcname='osa02-Osa02_04.ComparingNumbers'>
+>>>>>>> 0862e628e064df037e8f9ab4ed0422f01ec40580
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä kaksi kokonaislukua. Mikäli ensimmäinen luku on suurempi kuin toinen luku, ohjelma tulostaa "Luku (ensimmäinen) on suurempi kuin luku (toinen).". Mikäli ensimmäinen luku on pienempi kuin toinen luku, ohjelma tulostaa "Luku (ensimmäinen) on pienempi kuin luku (toinen).". Muulloin ohjelma tulostaa "Luku (ensimmäinen) on yhtä suuri kuin luku (toinen).". Edeltävissä esimerkeissä kohdat (ensimmäinen) ja (toinen) tulee aina korvata syötetyillä luvuilla. -->
 
@@ -500,7 +504,7 @@ Write a program that reads two integers from the user input. If the first number
 
 <!-- Alla on muutamia esimerkkejä ohjelman odotetusta toiminnasta. -->
 
-A few examples of the expected function:
+A few examples of the expected behaviour:
 
 <sample-output>
 
@@ -527,5 +531,3 @@ A few examples of the expected function:
 </sample-output>
 
 </programming-exercise>
-
-

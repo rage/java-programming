@@ -6,6 +6,7 @@ import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
 import ExerciseSummary from "./ExerciseSummary"
 import { fetchManyQuizDetails } from "../../services/quiznator"
 import { flatten } from "../../util/arrays"
+import { fetchQuizNames } from "../../services/quizzes"
 
 const Title = styled.div`
   margin-bottom: 0.5em;
@@ -43,15 +44,7 @@ class ExerciseList extends React.Component {
         return a > b ? 1 : b > a ? -1 : 0
       })
 
-    const allExercises = flatten(sectionPages.map(page => page.exercises))
-    const quizIds = allExercises
-      .filter(o => o.type === "quiznator")
-      .map(o => o.id)
-    const quizDetails = await fetchManyQuizDetails(quizIds)
-    const quizIdToTitle = {}
-    quizDetails.forEach(o => {
-      quizIdToTitle[o._id] = o.title
-    })
+    const quizIdToTitle = await fetchQuizNames()
     this.setState({ sectionPages, quizIdToTitle, render: true })
   }
   render() {

@@ -9,4 +9,4 @@ Yhdennessätoista osassa eli Ohjelmoinnin jatkokurssin neljännessä osassa tutu
 
 Vastaa vielä alla olevaan kyselyyn.
 
-<quiznator id='5c93ae573972a9147410b2fe'></quiznator>
+<quiz id='10c523e9-dd15-5497-91e9-4c167866b792'></quiz>

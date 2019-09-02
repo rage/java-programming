@@ -173,9 +173,9 @@ int number = numbers[index];
 System.out.println(numbers);
 ```
 
-<quiznator id="5c385a3b244fe21455cb2764"></quiznator>
+<quiz id="9acde5da-37ca-5065-83f6-f90010f366c4"></quiz>
 
-<programming-exercise name='Alkioiden arvojen vaihtaminen' tmcname='osa03-Osa03_18.AlkioidenArvojenVaihtaminen'>
+<programming-exercise name='Swap' tmcname='part03-Part03_18.Swap'>
 
 <!-- Tehtäväpohjaan on toteutettu valmiiksi ohjelma, missä luodaan taulukko sekä tulostetaan taulukon arvot kahteen kertaan. Muokkaa ohjelmaa siten, että sen jälkeen kun taulukon arvot on tulostettu ensimmäiseen kertaan, käyttäjältä kysytään kahta indeksiä, joiden osoittamat arvot vaihdetaan taulukossa päittäin. Tämän jälkeen alkiot tulee vaihtaa päittäin ja taulukon arvot tulostaa toiseen kertaan. -->
 
@@ -190,7 +190,7 @@ The exercise template already contains a program, that creates an array and prin
 9
 
 <!-- Mitkä indeksit vaihdetaan? -->
-Which indices should be switched?
+Give two indices to swap:
 **2**
 **4**
 
@@ -212,7 +212,7 @@ Which indices should be switched?
 9
 
 <!-- Mitkä indeksit vaihdetaan? -->
-Which indices should be switched?
+Give two indices to swap:
 **0**
 **1**
 
@@ -295,7 +295,7 @@ The example above iterates over indices 0, 1, 2 and 3, and at each index prints 
 <code-states-visualizer input='{"code":"public class Example {\n    public static void main(String[] args) {\n        int[] numbers = new int[4];\n        numbers[0] = 42;\n        numbers[1] = 13;\n        numbers[2] = 12;\n        numbers[3] = 7;\n\n        System.out.println(\"There are \" + numbers.length + \" elements in the array.\");\n\n        int index = 0;\n        while (index < numbers.length) {\n            System.out.println(numbers[index]);\n            index++;\n        }\n    }\n}","stdin":"","trace":[{"stdout":"","event":"call","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"1","frame_id":1}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"2","frame_id":2}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":4,"stack_to_render":[{"func_name":"main:4","encoded_locals":{"numbers":["REF",143]},"ordered_varnames":["numbers"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"5","frame_id":5}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",0,["ELIDE",2],0]}},{"stdout":"","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{"numbers":["REF",143]},"ordered_varnames":["numbers"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"10","frame_id":10}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",42,0,0,0]}},{"stdout":"","event":"step_line","line":6,"stack_to_render":[{"func_name":"main:6","encoded_locals":{"numbers":["REF",143]},"ordered_varnames":["numbers"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"15","frame_id":15}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",42,13,0,0]}},{"stdout":"","event":"step_line","line":7,"stack_to_render":[{"func_name":"main:7","encoded_locals":{"numbers":["REF",143]},"ordered_varnames":["numbers"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"20","frame_id":20}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",42,13,12,0]}},{"stdout":"","event":"step_line","line":9,"stack_to_render":[{"func_name":"main:9","encoded_locals":{"numbers":["REF",143]},"ordered_varnames":["numbers"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"25","frame_id":25}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",42,13,12,7]}},{"stdout":"There are 4 elements in the array.\n","event":"step_line","line":11,"stack_to_render":[{"func_name":"main:11","encoded_locals":{"numbers":["REF",143]},"ordered_varnames":["numbers"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"28","frame_id":28}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",42,13,12,7]}},{"stdout":"There are 4 elements in the array.\n","event":"step_line","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"numbers":["REF",143],"index":0},"ordered_varnames":["numbers","index"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"30","frame_id":30}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",42,13,12,7]}},{"stdout":"There are 4 elements in the array.\n","event":"step_line","line":13,"stack_to_render":[{"func_name":"main:13","encoded_locals":{"numbers":["REF",143],"index":0},"ordered_varnames":["numbers","index"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"35","frame_id":35}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",42,13,12,7]}},{"stdout":"There are 4 elements in the array.\n42\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"numbers":["REF",143],"index":0},"ordered_varnames":["numbers","index"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"41","frame_id":41}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",42,13,12,7]}},{"stdout":"There are 4 elements in the array.\n42\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"numbers":["REF",143],"index":1},"ordered_varnames":["numbers","index"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"42","frame_id":42}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",42,13,12,7]}},{"stdout":"There are 4 elements in the array.\n42\n","event":"step_line","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"numbers":["REF",143],"index":1},"ordered_varnames":["numbers","index"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"43","frame_id":43}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",42,13,12,7]}},{"stdout":"There are 4 elements in the array.\n42\n","event":"step_line","line":13,"stack_to_render":[{"func_name":"main:13","encoded_locals":{"numbers":["REF",143],"index":1},"ordered_varnames":["numbers","index"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"48","frame_id":48}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",42,13,12,7]}},{"stdout":"There are 4 elements in the array.\n42\n13\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"numbers":["REF",143],"index":1},"ordered_varnames":["numbers","index"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"54","frame_id":54}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",42,13,12,7]}},{"stdout":"There are 4 elements in the array.\n42\n13\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"numbers":["REF",143],"index":2},"ordered_varnames":["numbers","index"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"55","frame_id":55}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",42,13,12,7]}},{"stdout":"There are 4 elements in the array.\n42\n13\n","event":"step_line","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"numbers":["REF",143],"index":2},"ordered_varnames":["numbers","index"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"56","frame_id":56}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",42,13,12,7]}},{"stdout":"There are 4 elements in the array.\n42\n13\n","event":"step_line","line":13,"stack_to_render":[{"func_name":"main:13","encoded_locals":{"numbers":["REF",143],"index":2},"ordered_varnames":["numbers","index"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"61","frame_id":61}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",42,13,12,7]}},{"stdout":"There are 4 elements in the array.\n42\n13\n12\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"numbers":["REF",143],"index":2},"ordered_varnames":["numbers","index"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"67","frame_id":67}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",42,13,12,7]}},{"stdout":"There are 4 elements in the array.\n42\n13\n12\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"numbers":["REF",143],"index":3},"ordered_varnames":["numbers","index"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"68","frame_id":68}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",42,13,12,7]}},{"stdout":"There are 4 elements in the array.\n42\n13\n12\n","event":"step_line","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"numbers":["REF",143],"index":3},"ordered_varnames":["numbers","index"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"69","frame_id":69}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",42,13,12,7]}},{"stdout":"There are 4 elements in the array.\n42\n13\n12\n","event":"step_line","line":13,"stack_to_render":[{"func_name":"main:13","encoded_locals":{"numbers":["REF",143],"index":3},"ordered_varnames":["numbers","index"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"74","frame_id":74}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",42,13,12,7]}},{"stdout":"There are 4 elements in the array.\n42\n13\n12\n7\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"numbers":["REF",143],"index":3},"ordered_varnames":["numbers","index"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"80","frame_id":80}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",42,13,12,7]}},{"stdout":"There are 4 elements in the array.\n42\n13\n12\n7\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"numbers":["REF",143],"index":4},"ordered_varnames":["numbers","index"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"81","frame_id":81}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",42,13,12,7]}},{"stdout":"There are 4 elements in the array.\n42\n13\n12\n7\n","event":"step_line","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"numbers":["REF",143],"index":4},"ordered_varnames":["numbers","index"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"82","frame_id":82}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",42,13,12,7]}},{"stdout":"There are 4 elements in the array.\n42\n13\n12\n7\n","event":"step_line","line":16,"stack_to_render":[{"func_name":"main:16","encoded_locals":{"numbers":["REF",143],"index":4},"ordered_varnames":["numbers","index"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"87","frame_id":87}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",42,13,12,7]}},{"stdout":"There are 4 elements in the array.\n42\n13\n12\n7\n","event":"return","line":16,"stack_to_render":[{"func_name":"main:16","encoded_locals":{"numbers":["REF",143],"index":4,"__return__":["VOID"]},"ordered_varnames":["numbers","index","__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"89","frame_id":89}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{"143":["LIST",42,13,12,7]}}],"userlog":"Debugger VM maxMemory: 455M\n"}'></code-states-visualizer>
 
 
-<programming-exercise name='Etsityn alkion indeksi' tmcname='osa03-Osa03_19.EtsitynAlkionIndeksi'>
+<programming-exercise name='Index was not found' tmcname='part03-Part03_19.IndexWasNotFound'>
 
 <!-- Tehtäväpohjassa on valmiina taulukko, joka sisältää lukuja. Täydennä ohjelmaa siten, että käyttäjältä kysyttyä lukua etsitään taulukosta. Jos luku löytyy taulukosta, ohjelma kertoo luvun indeksin. Jos lukua taas ei löydy taulukosta, ohjelma kertoo ettei lukua löydy. -->
 
@@ -306,8 +306,8 @@ The exercise template has already an array containing numbers. Complete the prog
 <!-- Mitä etsitään? **3**
 Luku 3 löytyy indeksistä 4. -->
 
-Which number are we looking for? **3**
-Number 3 was found in index 4.
+Search for? **3**
+3 is at index 4
 
 </sample-output>
 
@@ -317,8 +317,8 @@ Number 3 was found in index 4.
 <!-- Mitä etsitään? **7**
 Luku 7 löytyy indeksistä 7. -->
 
-Which number are we looking for? **7**
-Number 7 was found in index 7.
+Search for? **7**
+7 is at index 7.
 
 </sample-output>
 
@@ -328,8 +328,8 @@ Number 7 was found in index 7.
 <!-- Mitä etsitään? **22**
 Lukua 22 ei löydy. -->
 
-Which number are we looking for? **22**
-Number 22 wasn't found.
+Search for? **22**
+22 was not found.
 
 </sample-output>
 
@@ -541,7 +541,7 @@ As noticed before, you can freely choose the name of the parameter inside the me
 
 Array is an object, so when you change the array inside the method, the changes persist also after the execution of the method.
 
-<programming-exercise name='Taulukon lukujen summa' tmcname='osa03-Osa03_20.TaulukonLukujenSumma'>
+<programming-exercise name='Sum of array' tmcname='part03-Part03_20.SumOfArray'>
 
 <!-- Täydennä luokassa Summaaja olevaa metodia `public static int laskeTaulukonLukujenSumma(int[] taulukko)` siten, että se laskee ja palauttaa sille parametrina annetussa taulukossa olevien lukujen summan. -->
 
@@ -570,7 +570,7 @@ sumOfNumbersInArray(numbers);
 </programming-exercise>
 
 
-<programming-exercise name='Tyylikäs tulostus' tmcname='osa03-Osa03_21.TyylikasTulostus'>
+<programming-exercise name='Print neatly' tmcname='part03-Part03_21.PrintNeatly'>
 
 
 <!-- Täydennä luokan TaulukonTulostaja metodia `public static void tulostaTyylikkaasti(int[] taulukko)` siten, että metodi tulostaa parametrina saamansa taulukon luvut tyylikkäästi. Lukujen väliin tulee pilkku ja välilyönti. Viimeisen luvun jälkeen ei  pilkkua tule. -->
@@ -601,12 +601,12 @@ printNeatly(array);
 </programming-exercise>
 
 
-<programming-exercise name='Taulukko tähtinä' tmcname='osa03-Osa03_22.TaulukkoTahtina'>
+<programming-exercise name='Print in stars' tmcname='part03-Part03_22.PrintInStars'>
 
 
 <!-- Täydennä tiedostossa Tulostin olevaa metodia `public static void tulostaTaulukkoTahtina(int[] taulukko)`, siten, että se tulostaa jokaista taulukossa olevaa lukua vastaavan pituisen rivin tähtiä. -->
 
-Complete the method `public static void printInStars(int[] array)` in Printer class to make it print a row of stars for each number in the array. The amount of stars on each row is defined by the corresponding number in the array.
+Complete the method `public static void printArrayInStars(int[] array)` in Printer class to make it print a row of stars for each number in the array. The amount of stars on each row is defined by the corresponding number in the array.
 
 <!-- Voit kokeilla tulostusta esimerkiksi seuraavalla esimerkkikoodilla. -->
 You can try out the printing with this example:
@@ -618,7 +618,7 @@ tulostaTaulukkoTahtina(taulukko);
 
 ```java
 int[] array = {5, 1, 3, 4, 2};
-printInStars(array);
+printArrayInStars(array);
 ```
 
 <sample-output>

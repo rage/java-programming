@@ -77,7 +77,7 @@ Taulukossa on 4 alkiota.
 </sample-output>
 
 
-<quiznator id='5c94ab76fd9fd71425c6b085'></quiznator>
+<quiz id='96696460-8111-5be7-9c4f-b0b998630add'></quiz>
 
 
 <programming-exercise name='Rajatut taulukossa' tmcname='osa11-Osa11_03.RajatutTaulukossa'>
@@ -720,7 +720,7 @@ private void kopioi(Lista<Pari<K, V>>[] uusi, int indeksista) {
 }
 ```
 
-<quiznator id='5c94ad8bddb6b814af32a379'></quiznator>
+<quiz id='079d35ee-f543-5a17-ac74-14d65be2d4fb'></quiz>
 
 Nyt kopioi-metodia voidaan kutsua kasvata-metodista.
 
@@ -842,4 +842,3 @@ Hajautustaulu: haku kesti noin 0 millisekuntia (805106 nanosekuntia.)
 
 
 *Edellä kuvatut ja kursseilla käyttämämme listat ja hajautustaulut poikkeavat toki sisäiseltä toteutukselta hieman toisistaan. Ohjelmointikielten tarjoamissa tietorakenteissa on hieman enemmän erilaisia optimointeja -- näihinkin palataan myöhemmillä kursseilla. Tämän kurssin puitteissa riittää em. tietorakenteiden käyttöosaaminen sekä jonkintasoinen ymmärrys niiden tehokkuuseroista sekä käyttötapauksista.*
-

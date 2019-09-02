@@ -1,6 +1,6 @@
 updates = File.read("updates")
 
-paths = ["data/osa-1/1-johdanto.md", "data/osa-1/3-muuttujat-ja-ohjelman-kielleistaminen.md", "data/osa-1/4-laskentaa-luvuilla.md", "data/osa-1/5-ehtolauseet.md", "data/osa-1/6-toistaminen.md", "data/osa-1/index.md", "data/osa-1/2-tulostaminen-ja-lukeminen.md"]
+paths = `find data -name '*.md'`.split("\n")
 
 paths.each do |path|
   input = File.read(path)

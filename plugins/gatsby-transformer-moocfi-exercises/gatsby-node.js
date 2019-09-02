@@ -2,7 +2,7 @@ const GraphQLString = require("gatsby/graphql").GraphQLString
 const GraphQLList = require("gatsby/graphql").GraphQLList
 const GraphQLObjectType = require("gatsby/graphql").GraphQLObjectType
 
-const quiznatorRegex = /<\s*quiznator\s*id\s*=\s*['"]\s*(\w+)\s*['"]\s*>/gm
+const quizRegex = /<\s*quiz\s*id\s*=\s*['"]\s*([\w-]+)\s*['"]\s*>/gm
 const crowdsorcererRegex = /<\s*crowdsorcerer\s*id\s*=\s*['"]\s*(\w+)\s*['"].*>/gm
 const programmingExerciseTagRegex = /<\s*programming-exercise\s+(.*)\s*>/gm
 const programmingExerciseNameRegex = /\bname\s*=\s*(["].*?["]|['].*?['])/gm
@@ -49,11 +49,11 @@ exports.setFieldsOnGraphQLNodeType = ({ type }) => {
         type: GraphQLList(ExerciseType),
         resolve: (node, _fieldArgs) => {
           const source = node.rawMarkdownBody
-          const quizzes = getMatches(source, quiznatorRegex, 1).map(res => {
+          const quizzes = getMatches(source, quizRegex, 1).map(res => {
             return {
               id: res.match,
               location: res.location,
-              type: "quiznator",
+              type: "quiz",
               parentPagePath: node.frontmatter.path,
             }
           })

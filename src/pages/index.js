@@ -19,284 +19,48 @@ const IndexPage = () => (
   <Layout>
     <Banner />
     <Container>
-      <section id="yleistä">
-        <h1>Tietoa kurssista</h1>
+      <section id="general">
+        <h1>Welcome to Programming MOOC!</h1>
         <p>
-          Ohjelmoinnin MOOC on kaikille avoin ja ilmainen ohjelmoinnin perusteet
-          opettava verkkokurssi. Kurssilla perehdytään nykyaikaisen ohjelmoinnin
-          perusideoihin sekä ohjelmoinnissa käytettävien työvälineiden lisäksi
-          algoritmien laatimiseen. Kurssille osallistuminen ei vaadi
-          ennakkotietoja ohjelmoinnista.
+          This MOOC contains the topics covered in the courses Introduction to
+          Programming and Advanced Programming Course (5 + 5 ECTS). The topics
+          are presented with theory, examples and interactive exercises, powered
+          by the TMC (Test My Code) system.
         </p>
         <p>
-          Ohjelmoinnin MOOC vastaa sisällöltään Helsingin yliopiston
-          tietojenkäsittelytieteen laitoksen kursseja Ohjelmoinnin perusteet ja
-          Ohjelmoinnin jatkokurssi. Kurssit vastaavat yhteensä kymmentä
-          opintopistettä (5+5).
+          Sections 1 to 7 belong to the introductory course, and sections 8 to
+          14 to the advanced course. Each section consists of approx. 20 to 40
+          exercises. You should set aside 5 to 20 hours for completing the
+          exercises each week. If you have not started yet, create an account
+          and start from Section 1.
         </p>
+        <h1>Requirements</h1>
         <p>
-          <b>Kurssi on käynnissä!</b> Luo tunnus tai kirjaudu sisään, jonka
-          jälkeen valitse <Link to="/osa-1">Osa 1</Link> navigaatiosta.
-        </p>
-      </section>
-
-      <section id="kurssin-kaksi-versiota">
-        <h2>Sisältö ja kurssin versiot</h2>
-        <p>
-          Kurssi koostuu 14 tehtäväsarjasta. Kunkin tehtäväsarjan tekemiseen
-          kannattaa varata aikaa noin 5-20 tuntia. Varaamme oikeuden aikataulun
-          ja aiheiden muutoksiin, kuitenkin niin, että jokaista tehtäväsarjaa on
-          mahdollista suorittaa vähintään kahden viikon ajan.
-        </p>
-        <p>
-          Kurssista on kaksi versiota: aikataulutettu versio, jossa on
-          viikoittaiset deadlinet ja aikatauluton versio, jossa tehtäviä voi
-          tehdä täysin omaan tahtiin. Aikatauluttoman kurssin tehtävät
-          julkaistaan aina aikataulutetun kurssin jälkeen. Voit siirtyä
-          aikataululliselta kurssilta aikatauluttomaan mikäli niin haluat.
-          Kurssin vaihtaminen toiseen suuntaan ei ole mahdollista. Huomaa
-          kuitenkin että aikatauluttomasta versiosta ei voi hakea
-          opinto-oikeutta.
-        </p>
-        <p>
-          Kurssin osat 1-7 vastaavat kurssia Ohjelmoinnin perusteet. Osat 8-14
-          vastaavat kurssia Ohjelmoinnin jatkokurssi.
+          To pass the course, you need to complete at least 75 % of the
+          exercises in these tutorials. Moreover, you need to complete at least
+          50 % of the exercises in ViLLE. Exercises are released after the
+          lecture on Tuesday, and <b>the deadline is at following Thursday.</b>
         </p>
       </section>
-
-      <section id="sisältö-ja-aikataulu">
-        <h3>Aikataulu - kesä 2020</h3>
-
+      <section id="workshops">
+        <h1>How to get help?</h1>
         <p>
-          Kesän 2020 aikataulutetussa Ohjelmoinnin MOOCissa kurssimateriaali on
-          kokonaisuudessaan saatavilla kurssin alusta lähtien. Tämä mahdollistaa
-          kurssin tekemisen nopeammalla tahdilla, mikäli niin haluaa tehdä.
-          Normaalissa kesän aikataulussa kunkin osan tekemiseen on noin viikko.
-          Ensimmäisen osan tehtävät tulee palauttaa 20.5. klo 23:59:00 mennessä.
+          There are workshops where you can (and <b>should</b>) go to ask for
+          help. The workshop times are listed below. Please note, that the times
+          are subject to change. Refer to this list for the most updated
+          information.
         </p>
-
+        <ul>
+          <li>Monday 12.00 to 18.00</li>
+          <li>Tuesday 12.00 to 18.00</li>
+          <li>Wednesday 12.00 to 16.00</li>
+          <li>Thursday 14.00 to 16.00</li>
+          <li>Friday 12.00 to 14.00</li>
+        </ul>
         <p>
-          Mikäli olet tekemässä Kesän aikataulutettua versiota kurssista
-          (Ohjelmoinnin perusteet), valitse kurssin profiilista kohdasta "Minkä
-          kurssin version pisteet, deadlinet ja kolikot haluat nähdä."
-          vaihtoehto "Kesä: Aikataulutettu Ohjelmoinnin MOOC"
-        </p>
-
-        <p>
-          Mikäli olet tekemässä Kesän aikataulutettua versiota kurssista
-          (Ohjelmoinnin jatkokurssi), valitse kurssin profiilista kohdasta
-          "Minkä kurssin version pisteet, deadlinet ja kolikot haluat nähdä."
-          vaihtoehto "Kesä: Aloitan kurssin aikataulutettuna osasta 8
-          (Ohjelmoinnin jatkokurssi)"
-        </p>
-
-        <p>
-          Huom! Voit tehdä myös kesällä aikataulutonta versiota kurssista.
-          Valitse tällöin kurssin profiilista kohdasta "Minkä kurssin version
-          pisteet, deadlinet ja kolikot haluat nähdä." vaihtoehto "Aikatauluton
-          ohjelmoinnin MOOC". Lisäksi valitse sama kurssi kun aloitat
-          ohjelmoimaan NetBeanssissa. Tälloin voit tehdä kutakin osaa vuoden
-          loppuun asti.
-        </p>
-
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>Aikataulu</TableCell>
-              <TableCell>Deadline</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            <TableRow>
-              <TableCell>Osa 1</TableCell>
-              <TableCell>20.5.2020</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Osa 2</TableCell>
-              <TableCell>24.5.2020</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Osa 3</TableCell>
-              <TableCell>27.5.2020</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Osa 4</TableCell>
-              <TableCell>3.6.2020</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Osa 5</TableCell>
-              <TableCell>10.6.2020</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Osa 6</TableCell>
-              <TableCell>17.6.2020</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Osa 7</TableCell>
-              <TableCell>24.6.2020</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Osa 8</TableCell>
-              <TableCell>8.7.2020</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Osa 9</TableCell>
-              <TableCell>15.7.2020</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Osa 10</TableCell>
-              <TableCell>22.7.2020</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Osa 11</TableCell>
-              <TableCell>29.7.2020</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Osa 12</TableCell>
-              <TableCell>5.8.2020</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Osa 13</TableCell>
-              <TableCell>12.8.2020</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Osa 14</TableCell>
-              <TableCell>19.8.2020</TableCell>
-            </TableRow>
-          </TableBody>
-        </Table>
-
-        <p>
-          <b>
-            Määräajat ovat aina maanantaisin. Määräaikojen kellonajat ovat aina
-            23:59:00 – osan 1 tehtävät tulee palauttaa siis viimeistään
-            <s>13.5.2020</s> 20.5.2020 klo 23:59:00. Virallisena määräaikana
-            käytetään tehtäväpalvelimen kelloa, joka on Suomen ajassa. Huomaa,
-            että oman koneesi kello voi olla jäljessä tai edellä, joten älä jätä
-            tehtävien tekemistä ja palauttamista viime hetkeen.
-          </b>
-        </p>
-
-        <p>
-          <b>
-            (Edit 13.5.) 1. ja 2. osan määräaikoja on pidennetty (13.5. ->
-            20.5.),(20.5. -> 24.5.).
-          </b>
-        </p>
-      </section>
-
-      <section id="sisältö-ja-aikataulu-kevat-2020">
-        <h3>Aikataulu - kevät 2020</h3>
-        <p>
-          Keväisin tarjottava Ohjelmoinnin MOOC tarjoaa mahdollisuuden
-          opinto-oikeuteen tietojenkäsittelytieteen opintoihin Helsingin
-          yliopistolla. Mikäli haet kurssin kautta opinto-oikeutta, lue kaikki
-          opinto-oikeuden hakemiseen liittyvät tiedot huolellisesti. Esimerkiksi
-          tehtävien aikarajoista EI voida joustaa lainkaan. Ehdot
-          opinto-oikeuden saamiseksi päivittyvät lähempänä yhteishakua.
-          Lisätietoa opinto-oikeudesta saat{" "}
-          <GatsbyLink to="/opinto-oikeus">täältä</GatsbyLink>.
-        </p>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>Aikataulu</TableCell>
-              <TableCell>Julkaisu</TableCell>
-              <TableCell>Deadline</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            <TableRow>
-              <TableCell>Osa 1</TableCell>
-              <TableCell>14.12.2018</TableCell>
-              <TableCell>21.1.2020</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Osa 2</TableCell>
-              <TableCell>28.12.2018</TableCell>
-              <TableCell>28.1.2020</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Osa 3</TableCell>
-              <TableCell>11.1.2020</TableCell>
-              <TableCell>4.2.2020</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Osa 4</TableCell>
-              <TableCell>25.1.2020</TableCell>
-              <TableCell>11.2.2020</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Osa 5</TableCell>
-              <TableCell>1.2.2020</TableCell>
-              <TableCell>18.2.2020</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Osa 6</TableCell>
-              <TableCell>8.2.2020</TableCell>
-              <TableCell>25.2.2020</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Osa 7</TableCell>
-              <TableCell>15.2.2020</TableCell>
-              <TableCell>4.3.2020</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Osa 8</TableCell>
-              <TableCell>1.3.2020</TableCell>
-              <TableCell>18.3.2020</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Osa 9</TableCell>
-              <TableCell>8.3.2020</TableCell>
-              <TableCell>25.3.2020</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Osa 10</TableCell>
-              <TableCell>15.3.2020</TableCell>
-              <TableCell>1.4.2020</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Osa 11</TableCell>
-              <TableCell>22.3.2020</TableCell>
-              <TableCell>8.4.2020</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Osa 12</TableCell>
-              <TableCell>29.3.2020</TableCell>
-              <TableCell>15.4.2020</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Osa 13</TableCell>
-              <TableCell>12.4.2020</TableCell>
-              <TableCell>29.4.2020</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Osa 14</TableCell>
-              <TableCell>19.4.2020</TableCell>
-              <TableCell>6.5.2020</TableCell>
-            </TableRow>
-          </TableBody>
-        </Table>
-
-        <p>
-          <b>
-            Määräajat ovat aina maanantaisin. Määräaikojen kellonajat ovat aina
-            23:59:00 – osan 1 tehtävät tulee palauttaa siis viimeistään
-            21.1.2020 klo 23:59:00. Virallisena määräaikana käytetään
-            tehtäväpalvelimen kelloa, joka on Suomen ajassa. Huomaa, että oman
-            koneesi kello voi olla jäljessä tai edellä, joten älä jätä tehtävien
-            tekemistä ja palauttamista viime hetkeen.
-          </b>
-        </p>
-      </section>
-
-      <section id="ilmoittautuminen">
-        <h2>Ilmoittautuminen</h2>
-
-        <p>
-          Kurssille ei tarvitse eikä voi ilmoittautua. Ilmoittautuneiksi
-          katsotaan ne osallistujat, jotka tekevät kurssin ohjelmointitehtäviä.
+          The easiest way to contact course staff is via workshops. You can also
+          mail to erkki.kaila(@)helsinki.fi or reetta.puska@helsinki.fi or use
+          the course discussion forum.
         </p>
       </section>
     </Container>
