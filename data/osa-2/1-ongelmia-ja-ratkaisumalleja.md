@@ -9,9 +9,9 @@ title: 'Recurring problems and patterns to solve them'
 - Tiedät valmiin ratkaisumallin muutamaan osaongelmaan.
 - Harjoittelet osaongelmiin littyvien ratkaisumallien yhdistämistä laajempien ongelmien ratkaisemisessa. -->
 
-- Recognize recurring subproblems such as reading input or calculating.
-- Know a few patterns to solve a subproblem.
-- Practice combining patterns to solve broader problems.
+- You recognize that certain sub-problems, such as reading input or calculations, recur in programs.
+- You're aware of solution models to certain sub-problems.
+- You practice combining solution patterns used on sub-problems to solve broader ones.
 
 </text-box>
 
@@ -20,21 +20,21 @@ title: 'Recurring problems and patterns to solve them'
 
 <!-- Samat pienet ongelmat (tai "osaongelmat") toistuvat ohjelmissa yhä uudestaan ja uudestaan: "Lue käyttäjältä syötettä", "Laske lukujen summa", jne. -->
 
-The same small problems, "subproblems", are recurring in the programs over and over again: "Read user input", "calculate the sum of the given integers", etc.
+The same small problems, or "sub-problems", reappear in programs time after time: "Read input from the user", "Calculate the sum of values", and so forth.
 
 <!-- Tarkastellaan muutamia tällaisia ongelmia sekä niihin liittyviä ratkaisuja. -->
 
-Let's look at a few subproblems and patterns to solve them.
+Let's look at a few sub-problems and patterns for solving them.
 
 <!-- ## Lukemista
  -->
 
 
-## Reading user input
+## Reading User Input
 
 <!-- Ratkaisumalli käyttäjältä lukemista vaativiin ohjelmointiongelmiin on suoraviivainen. Mikäli ohjelmassa halutaan lukea käyttäjältä syötettä, tulee ohjelmaan luoda syötteen lukemiseen käytettävä Scanner-apuväline. Scanner-apuväline luodaan pääohjelman (eli lauseen `public static void main(String[] args) {`) jälkeiselle riville. Scanner-apuvälineen käyttö vaatii, että ohjelman määrittelyä (`public class`) edeltävillä riveillä on lause `import java.util.Scanner;`, joka tuo Scanner-apuvälineen ohjelman tietoon. -->
 
-The pattern for reading user input is quite straightforward. If you want the program to receive input from the user, you need to create a Scanner to read the input. The scanner is created in the main method, after the row `public static void main(String[] args) {`. In order to use Scanner, you've got to make the scanner available in the program by writing `import java.util.Scanner;` before the class definition (`public class ...`).
+The solution pattern for programming tasks involving reading user input is straightforward. If the program needs to read from the user, a Scanner helper tool is created for the task. The Scanner is created in the main method after the row `public static void main(String[] args) {`. To use the Scanner, it needs to be made available in the program through the statement `import java.util.Scanner;`, which comes before the class definition (`public class ...`). Importing the Scanner tool brings it to the program's use.
 
 <!-- ```java
 // Tuodaan Scanner-apuväline ohjelman tietoon
@@ -83,19 +83,19 @@ TODO: quiz -- ohjelma, jossa käyttäjältä kysytään luku ja merkkijono, tulo
 
 <!-- Ohjelmissa tulee usein laskea asioita kuten lukujen keskiarvoa tai lukujen summaa. Ratkaisumalli tällaisissa ohjelmissa on seuraava. -->
 
-Quite often in a program we need to calculate something, e.g. an average or a sum. We can solve such problems with the following pattern.
+We quite often need to calculate something in a program, such as an average or a sum. The solution patter to solve such problems is as follows.
 
 <!-- 1. Määrittele laskemiseen tarvittavat syötteet ja luo niitä varten muuttujat. Ohjelman syötteitä ovat laskemisessa käytettävät arvot. Syötteiden tyypit tunnistaa tyypillisesti ongelma-alueen kuvauksesta.
-2. Selvitä tehtävä laskuoperaatio ja luo laskuoperaation tulokselle muuttuja. Tee ohjelman syötteiden perusteella lasku, jonka arvo asetetaan laskuoperaation tulokselle varattuun muuttujaan. Myös laskuoperaation tuloksen tyypin tunnistaa ongelma-alueen kuvauksesta.
-3. Kun lasku on laskettu, tee jotain laskun tuloksella. Tämä voi olla esimerkiksi laskuoperaation tuloksen tulostaminen, tai vaikkapa keskiarvon laskemisen yhteydessä lukujen summan jakamista lukujen määrällä. -->
+1. Selvitä tehtävä laskuoperaatio ja luo laskuoperaation tulokselle muuttuja. Tee ohjelman syötteiden perusteella lasku, jonka arvo asetetaan laskuoperaation tulokselle varattuun muuttujaan. Myös laskuoperaation tuloksen tyypin tunnistaa ongelma-alueen kuvauksesta.
+2. Kun lasku on laskettu, tee jotain laskun tuloksella. Tämä voi olla esimerkiksi laskuoperaation tuloksen tulostaminen, tai vaikkapa keskiarvon laskemisen yhteydessä lukujen summan jakamista lukujen määrällä. -->
 
-1. Define the required input and declare the variables for them. The input is the values required for the calculation. You can typically identify the types of the variables from the description of the problem.
-2. Identify the operation needed and declare a variable for the result. Perform the operation using the input variables and assign the result to the variable that you declared for the result. The type of the result can also usully be identified from the description of the problem.
-3. Once you have done the calculation, do something with the result. You can print it or use it in further computation, like computing the average by dividing the sum of the integers by their number.
+1. Define the inputs required for the calculation and declare variables for them. Input refers to the values used in the calculation. You can typically identify the type of inputs from the problem description.
+2. Identify the operation needed, and declare a variable for the result of the calculation. Perform the calculation using the inputs, and assign the result to the variable that was reserved for it. The type of the result can also usually be identified from the problem description.
+3. Once the calculation is done, do something with its result. This can mean printing the result of a computation, or, for example, using it in calculating an average by dividing a sum of integers by their count.
 
 <!-- Esimerkiksi ongelman _Tee ohjelma, jonka avulla voidaan laskea kahden kokonaisluvun summa_. ratkaisumalli on seuraava. -->
 
-For example the pattern to solve _Create a program to calculate the sum of two integers_ is following.
+For example, the solution patter for the problem _Create a program to calculate the sum of two integers_ is the following.
 
 <!-- ```java
 // Määritellään syötteet ja luodaan niitä varten muuttujat
@@ -124,7 +124,7 @@ System.out.println("The sum of " + first + " and " + second + " is " + sum);
 
 <!-- Sekä lukemista että laskemista sisältävä ohjelma yhdistää edelliset ratkaisumallit. Kahden käyttäjältä pyydetyn luvun tulon laskeva ohjelma on seuraavanlainen. -->
 
-A program containing both reading and calculating combines both of these patterns. A program to compute the product of two integers given by the use looks like this:
+A program that both reads and calculates combines both of these patterns. One that calculates the product of two integers provided by the use looks like this:
 
 <!-- ```java
 // Tuodaan Scanner-apuväline ohjelman tietoon
@@ -183,7 +183,7 @@ public class Ohjelma {
 
 <!-- Edellä olevassa esimerkissä ohjelma on toteutettu niin, että muuttujat määritellään ensin ja niihin luetaan arvot vasta tämän jälkeen. Muuttujien määrittelyn sekä niiden arvojen lukemisen voi myös yhdistää. -->
 
-The example above first declares the variables and then reads the user input to assign to them. You can also combine the declaration and reading.
+In the example above, the program has been implemented so that the variables are declared first after which values are read into them. Variable declaration and the reading of values into them can also be combined into one.
 
 <!-- ```java
 // Tuodaan Scanner-apuväline ohjelman tietoon
@@ -209,12 +209,12 @@ public class Ohjelma {
 ``` -->
 
 ```java
-// Making the scanner available in the program
+// Making the Scanner available to the program
 import java.util.Scanner;
 
 public class Program {
     public static void main(String[] main) {
-        // Creating the scanner
+        // Creating the Scanner
         Scanner reader = new Scanner(System.in);
 
         // Declaring the variables and assigning user input to them
@@ -264,10 +264,10 @@ Write a program that reads an integer from the user input, and then prints the s
 <programming-exercise name='Square root of sum' tmcname='part02-Part02_02_SquareRootOfSum'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä kaksi kokonaislukua ja tulostaa lukujen summan neliöjuuren. Ohjelman ei tarvitse käsitellä negatiivisia lukuja. -->
-Write a program that reads two integers from the user input, and then prints the square root of the sum of the given integers. The program doesn't need to work with negative values.
+Write a program that reads two integers from the user, and prints the square root of the sum of these integers. The program does not need to work with negative values.
 
 <!-- Saat annetun luvun neliöjuuren laskettua komennolla `Math.sqrt` seuraavasti: -->
-You get the square root of an integer with the command `Math.sqrt` like this:
+You can get the square root of an integer with the command `Math.sqrt` like this:
 
 <!-- ```java
 int luku = 42;
@@ -314,7 +314,7 @@ Here are a few examples:
 
 <!-- ## Vaihtoehtoista toiminnallisuutta -->
 
-## Some alternative functionality
+## Some Alternative Functionality
 
 <!-- Ongelmat sisältävät usein vaihtoehtoista toiminnallisuutta. Tällaisen toteuttamiseen käytetään ehtolauseita. Ehtolause alkaa `if`-komennosta, jota seuraa suluissa oleva lauseke. Lauseke evaluoituu joko todeksi tai epätodeksi. Mikäli lauseke evaluoituu todeksi, suoritetaan ehtolauseen lohko, joka on rajattuna aaltosuluilla. -->
 
@@ -336,7 +336,7 @@ if (value > 5) {
 
 <!-- Ohjelma, joka tulostaa "ok" kun ohjelmassa olevan lukumuuttujan arvo on suurempi kuin `42`, mulloin "ei ok", toteutetaan seuraavasti. -->
 
-A program that prints "ok" if the value of the "value" variable is greater than `42` and else prints "not ok", looks like this:
+A program that prints "ok" if the value of the variable is greater than `42`, and otherwise prints "not ok" looks like this:
 
 <!-- ```java
 int luku = 15;
@@ -358,7 +358,7 @@ if (value > 42) {
 
 <!-- Ehtolauseiden ketjuttaminen on mahdollista. Tällöin ongelmat ovat muotoa "jos a, niin b; muulloin jos c, niin d; muulloin jos e, niin f; muulloin g". Ketjutus toteutetaan `if`-komennon lohkoa seuraavasta `else if` -komennosta, johon liittyy oma lauseke sekä lohko. Lopuksi tulee `else`komento sekä siihen liittyvä lohko. -->
 
-You can also chain together multiple conditions, when the problem is if the form "if a, then b; else if c, then d; else if e, then f; otherwise g". The chain consists of an `if`-statement followed by `else if`-statements each containing its own expression and a block.
+You can also chain together multiple conditions. In such a case, the problem takes the form "if a, then b; else if c, then d; else if e, then f; otherwise g". The chain consists of an `if`-statement followed by `else if`-statements each containing its own expression and a block.
 
 <!-- ```java
 // jos luku on suurempi kuin viisi
@@ -397,7 +397,7 @@ The quiz below uses `System.out.print` for printing. It works exactly like `Syst
 
 <!-- Ehtotoiminnallisuutta voi yhdistää myös muiden ratkaisumallien kanssa. Tarkastellaan ongelmaa "Lue käyttäjältä kaksi lukua. Mikäli lukujen summa on yli 100, tulosta käyttäjälle merkkijono `liikaa`. Mikäli lukujen summa on alle 0, tulosta käyttäjälle merkkijono `liian vähän`. Muulloin, tulosta käyttäjälle merkkijono `ok`.". Ohjelma, joka yhdistää lukemisen, laskemisen ja ehtolauseen on annettu alla. -->
 
-Conditional functionality can be combined with the other solution patterns. Let's look into a problem "Read two integers from the user. If the sum of the integers is over 100, then print `too much`. If the sum is less than 0, print `too little`. Otherwise print `ok`. The program below combines reading, calculating and conditional functionality.
+Conditional functionality can be combined with other solution patterns. Let's look into a problem "Read two integers from the user. If the sum of the integers is over 100, print `too much`. If the sum is less than 0, print `too little`. Otherwise, print `ok`. The program below combines reading, calculating and conditional functionality.
 
 <!-- ```java
 // Tuodaan Scanner-apuväline ohjelman tietoon
@@ -431,7 +431,7 @@ public class Ohjelma {
 ``` -->
 
 ```java
-// Making scanner available in the program
+// Making Scanner available in the program
 import java.util.Scanner;
 
 public class Program {
@@ -439,7 +439,7 @@ public class Program {
         // Creating the scanner
         Scanner reader = new Scanner(System.in);
 
-        // declaring the variables and assigning user input to them
+        // Declaring the variables and assigning user input to them
         int first = Integer.valueOf(reader.nextLine());
         int second = Integer.valueOf(reader.nextLine());
 
@@ -447,7 +447,7 @@ public class Program {
         int sum = first + second;
 
         // Doing something with the result. In this case
-        // usinf the result in the conditional operations.
+        // the result is used in the conditional operations.
 
         if (sum > 100) { // if the sum is over 100
             System.out.println("too much");
