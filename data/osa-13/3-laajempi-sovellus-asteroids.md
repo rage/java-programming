@@ -604,7 +604,7 @@ public class Asteroidi extends Hahmo {
 }
 ```
 
-<quiznator id="5caf841414524713f95abe6a"></quiznator>
+<quiz id="55f5368f-f852-5c25-8448-89d40088b03f"></quiz>
 
 Testataan vielä, että asteroidin voi lisätä sovellukseen.
 
@@ -1232,4 +1232,3 @@ Kun olet saanut nämä ja edelliset osat toimimaan, aseta luokan `AsteroidsSovel
 *Tehtävässä ei ole esimerkkiratkaisua. Tehtävä on tarkoitettu toteutettavaksi materiaalin esimerkkiä askel askeleelta noudattaen.*
 
 </programming-exercise>
-

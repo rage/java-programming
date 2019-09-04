@@ -343,12 +343,12 @@ Second
 
 <!-- <programming-exercise name='Kolmannen arvon tulostaminen' tmcname='osa03-Osa03_01.KolmannenArvonTulostaminen'> -->
 
-<programming-exercise name='Printing the third value' tmcname='osa03-Osa03_01.KolmannenArvonTulostaminen'>
+<programming-exercise name='Third element' tmcname='part03-Part03_01.ThirdElement'>
 
 
 <!-- Ohjelmaan on toteutettu valmiina pohja, joka lukee käyttäjältä merkkijonoja ja lisää niitä listalle. Syötteiden lukeminen päätetään kun käyttäjä syöttää tyhjän merkkijonon. Ohjelma tulostaa tämän jälkeen listan ensimmäisen arvon. -->
 
-The exercise contains a base that asks the user for strings and adds them to a list. The program stops reading when the user enters an empty string. The program then prints the first value on the list.
+The exercise contains a base that asks the user for strings and adds them to a list. The program stops reading when the user enters an empty string. The program then prints the first element of the list.
 
 
 <!-- Muokkaa ohjelmaa siten, että ensimmäisen arvon sijaan tulostetaan kolmas arvo. Huomaa, että ohjelmoijat aloittavat laskemisen nollasta! Ohjelma saa rikkoutua mikäli listalla ei ole vähintään kolmea arvoa, eli tällaiseen tilanteeseen ei tarvitse varautua millään tavalla. -->
@@ -403,7 +403,7 @@ Mary
 
 <!-- <programming-exercise name='Toisen ja kolmannen summa' tmcname='osa03-Osa03_02.ToisenJaKolmannenSumma'> -->
 
-<programming-exercise name='Sum of second and third' tmcname='osa03-Osa03_02.ToisenJaKolmannenSumma'>
+<programming-exercise name='Second plus third' tmcname='part03-Part03_02.SecondPlusThird'>
 
 
 
@@ -501,7 +501,7 @@ Since zero is the first value used in numbering the places (i.e. **indexing**), 
 The error message also hints at the capsulated implementation of an ArrayList object. It lists the methods that were called when the error occured. First the program called the `main` method. Then the main method called the `get` method of ArrayList. After this the `get` method in ArrayList called the `rangeCheck` method, in which the error occurred. This is also an instance of good naming of methods. Despite never hearing of the method `rangeCheck`, we can with good reason guess that it checks if a place is contained in the wanted range. The error likely occurred because this was not the case.
 
 
-<programming-exercise name='IndexOutOfBoundsException' tmcname='osa03-Osa03_03.IndexOutOfBoundsException'>
+<programming-exercise name='IndexOutOfBoundsException' tmcname='part03-Part03_03.IndexOutOfBoundsException'>
 
 
 <!-- Lista on erittäin hyödyllinen kun halutaan säilöä muuttujien arvoja myöhempää käsittelyä varten. Sillä on myös helpohko tehdä virheitä. -->
@@ -549,7 +549,7 @@ Similarly, by calling the method `get` with the parameter 4, the fifth number in
 </text-box>
 
 
-<quiznator id="5c31fe3b017ffc13eddc4ebc"></quiznator>
+<quiz id="f90c14f3-f138-5f12-8541-e6cd5776b4c9"></quiz>
 
 
 <!-- <text-box variant='hint' name='Useamman Javan valmiin työvälineen tuominen ohjelmaan'> -->
@@ -746,7 +746,7 @@ Number of values on the list: 1
 
 <!-- <programming-exercise name='Listan koko' tmcname='osa03-Osa03_04.ListanKoko'> -->
 
-<programming-exercise name='Size of list' tmcname='osa03-Osa03_04.ListanKoko'>
+<programming-exercise name='List size' tmcname='part03-Part03_04.ListSize'>
 
 
 <!-- Tehtäväpohjassa on ohjelma, joka lukee käyttäjältä syötteitä. Muokkaa ohjelman toimintaa siten, että kun syötteiden lukeminen lopetetaan, ohjelma tulostaa listalla olevien arvojen lukumäärän. -->
@@ -815,7 +815,7 @@ In total: 11
 
 <!-- Huom! Käytä tässä listan valmiiksi tarjoamaa metodia `size`. -->
 
-N.B.! Be sure to make the `size` method of the list.
+N.B.! Be sure to use the `size` method of the list.
 
 </programming-exercise>
 
@@ -1135,7 +1135,7 @@ The next exercises are meant for learning to use lists and indices. Even if you 
 
 <!-- <programming-exercise name='Listan viimeinen arvo' tmcname='osa03-Osa03_05.ListanViimeinenArvo'> -->
 
-<programming-exercise name='Last value in a list' tmcname='osa03-Osa03_05.ListanViimeinenArvo'>
+<programming-exercise name='Last in list' tmcname='part03-Part03_05.LastInList'>
 
 <!-- Tehtäväpohjassa on ohjelma, joka lukee käyttäjältä syötteitä ja lisää syötteet listalle. Syötteen lukeminen lopetetaan kun käyttäjä syöttää tyhjän merkkijonon. -->
 
@@ -1209,7 +1209,7 @@ Oscar
 
 <!-- <programming-exercise name='Ensimmäinen ja viimeinen arvo' tmcname='osa03-Osa03_06.EnsimmainenJaViimeinenArvo'> -->
 
-<programming-exercise name='First and last values' tmcname='osa03-Osa03_06.EnsimmainenJaViimeinenArvo'>
+<programming-exercise name='First and last' tmcname='part03-Part03_06.FirstAndLast'>
 
 <!-- Tehtäväpohjassa on ohjelma, joka lukee käyttäjältä syötteitä ja lisää syötteet listalle. Syötteen lukeminen lopetetaan kun käyttäjä syöttää tyhjän merkkijonon. -->
 
@@ -1284,7 +1284,7 @@ Oscar
 
 <!-- <programming-exercise name='Listan luvut' tmcname='osa03-Osa03_07.ListanLuvut'> -->
 
-<programming-exercise name='Numbers in the list' tmcname='osa03-Osa03_07.ListanLuvut'>
+<programming-exercise name='Remember these numbers' tmcname='part03-Part03_07.RememberTheseNumbers'>
 
 <!-- Ohjelmaan on toteutettu valmiina pohja, joka lukee käyttäjältä lukuja listalle. Syötteiden lukeminen päätetään kun käyttäjä syöttää luvun -1. -->
 
@@ -1314,7 +1314,7 @@ Expand the functionality of the program so that after reading the numbers, it pr
 
 <!-- <programming-exercise name='Luvut rajatulla alueella' tmcname='osa03-Osa03_08.LuvutRajatullaAlueella'> -->
 
-<programming-exercise name='Numbers in a given range' tmcname='osa03-Osa03_08.LuvutRajatullaAlueella'>
+<programming-exercise name='Only these numbers' tmcname='part03-Part03_08.OnlyTheseNumbers'>
 
 The exercise template contains a base that reads numbers from the user and adds them to a list. Reading is stopped once the user enters the number -1.
 
@@ -1388,7 +1388,7 @@ To where? **2**
 
 <!-- <programming-exercise name='Listan suurin luku' tmcname='osa03-Osa03_09.ListanSuurinLuku'> -->
 
-<programming-exercise name='Greatest number in the list' tmcname='osa03-Osa03_09.ListanSuurinLuku'>
+<programming-exercise name='Greatest in list' tmcname='part03-Part03_09.GreatestInList'>
 
 
 <!-- Ohjelmaan on toteutettu valmiina pohja, joka lukee käyttäjältä lukuja listalle. Syötteiden lukeminen päätetään kun käyttäjä syöttää luvun -1. -->
@@ -1421,7 +1421,7 @@ Listan suurin luku: 93
 **11**
 **-1**
 
-The greatest number in the list: 93
+The greatest number: 93
 
 </sample-output>
 
@@ -1465,7 +1465,7 @@ System.out.println("The smallest number: " + smallest);
 
 <!-- <programming-exercise name='Kysytyn luvun indeksi' tmcname='osa03-Osa03_10.KysytynLuvunIndeksi'> -->
 
-<programming-exercise name='Index of the requested number' tmcname='osa03-Osa03_10.KysytynLuvunIndeksi'>
+<programming-exercise name='Index of' tmcname='part03-Part03_10.IndexOf'>
 
 
 <!-- Ohjelmaan on toteutettu valmiina pohja, joka lukee käyttäjältä lukuja listalle. Syötteiden lukeminen päätetään kun käyttäjä syöttää luvun -1. -->
@@ -1499,8 +1499,8 @@ Luku 2 on indeksissä 1
 **11**
 **-1**
 
-What number is searched for? **2**
-Number 2 is at index 1
+Search for? **2**
+2 is at index 1
 
 </sample-output>
 
@@ -1528,9 +1528,9 @@ Luku 8 on indeksissä 3
 **11**
 **-1**
 
-What number is searched for? **8**
-Number 8 is at index 2
-Number 8 is at index 3
+Search for? **8**
+8 is at index 2
+8 is at index 3
 
 </sample-output>
 
@@ -1539,7 +1539,7 @@ Number 8 is at index 3
 
 <!-- <programming-exercise name='Pienimmän luvun indeksi' tmcname='osa03-Osa03_11.PienimmanLuvunIndeksi'> -->
 
-<programming-exercise name='Index of the smallest number' tmcname='osa03-Osa03_11.PienimmanLuvunIndeksi'>
+<programming-exercise name='Index of smallest' tmcname='part03-Part03_11.IndexOfSmallest'>
 
 <!-- Toteuta ohjelma, joka lukee käyttäjältä lukuja. Kun käyttäjä syöttää luvun 9999, lukujen lukeminen lopetetaan. Ohjelma tulostaa tämän jälkeen pienimmän listalla olevan luvun sekä indeksit, joista pienin luku löytyy. Pienin luku voi siis esiintyä useamman kerran. -->
 
@@ -1569,8 +1569,9 @@ Pienin luku löytyy indeksistä 1
 **11**
 **9999**
 
-The smallest number is 2
-The smallest number is found at index 1
+Smallest number: 2
+Found at index: 1
+
 
 </sample-output>
 
@@ -1600,9 +1601,9 @@ Pienin luku löytyy indeksistä 3
 **9999**
 
 
-The smallest number is 8
-The smallest number is found at index 2
-The smallest number is found at index 3
+Smallest number: 8
+Found at index: 2
+Found at index: 3
 
 </sample-output>
 
@@ -1696,7 +1697,7 @@ xxx
 
 <!-- <programming-exercise name='Listan lukujen summa' tmcname='osa03-Osa03_12.ListanLukujenSumma'> -->
 
-<programming-exercise name='Sum of numbers in the list' tmcname='osa03-Osa03_12.ListanLukujenSumma'>
+<programming-exercise name='Sum of a list' tmcname='part03-Part03_12.SumOfAList'>
 
 
 <!-- Ohjelmaan on toteutettu valmiina pohja, joka lukee käyttäjältä lukuja listalle. Syötteiden lukeminen päätetään kun käyttäjä syöttää luvun -1. -->
@@ -1736,7 +1737,7 @@ Sum: 93
 
 <!-- <programming-exercise name='Listan lukujen keskiarvo' tmcname='osa03-Osa03_13.ListanLukujenKeskiarvo'> -->
 
-<programming-exercise name='Average of the numbers in the list' tmcname='osa03-Osa03_13.ListanLukujenKeskiarvo'>
+<programming-exercise name='Average of a list' tmcname='part03-Part03_13.AverageOfAList'>
 
 
 <!-- Toteuta ohjelma, joka lukee käyttäjältä lukuja listalle. Syötteiden lukeminen päätetään kun käyttäjä syöttää luvun -1. -->
@@ -1916,9 +1917,9 @@ System.out.println("Index 1 so the second value: " + list.get(1));
 
 
 
-<quiznator id="5c31fe69ddb6b814af31cd57"></quiznator>
+<quiz id="dd54e3d8-51fb-51c6-9175-065e1a9d98be"></quiz>
 
-<quiznator id="5c31fe883972a914740fdc81"></quiznator>
+<quiz id="436e3c74-4b71-5a49-9c04-bc4e21bce6a5"></quiz>
 
 
 <!-- Arvon hakeminen listalta onnistuu listan metodilla **contains**. Metodi saa haettavan arvon parametrina ja palauttaa boolean-tyyppisen arvon (`true` tai `false`), joka kertoo löytyykö haettua arvoa listalta. -->
@@ -1985,7 +1986,7 @@ Second can still be found
 
 <!-- <programming-exercise name='Löytyykö listalta' tmcname='osa03-Osa03_14.LoytyykoListalta'> -->
 
-<programming-exercise name='Can the value be found in the list' tmcname='osa03-Osa03_14.LoytyykoListalta'>
+<programming-exercise name='On the list?' tmcname='part03-Part03_14.OnTheList'>
 
 
 
@@ -2012,7 +2013,7 @@ Mari löytyi!
 **Alex**
 **Mary**
 
-Who is searched for? **Mary**
+Search for? **Mary**
 Mary was found!
 
 </sample-output>
@@ -2036,7 +2037,7 @@ Leevi ei löytynyt!
 **Alex**
 **Mary**
 
-Who is searched for? **Logan**
+Search for? **Logan**
 Logan was not found!
 
 </sample-output>
@@ -2173,7 +2174,7 @@ printSmallerThan(list, 3);
 
 <!-- <programming-exercise name='Tulosta rajatut' tmcname='osa03-Osa03_15.TulostaRajatut'> -->
 
-<programming-exercise name='Print in range' tmcname='osa03-Osa03_15.TulostaRajatut'>
+<programming-exercise name='Print in range' tmcname='part03-Part03_15.PrintInRange'>
 
 
 
@@ -2297,7 +2298,7 @@ public static double average(ArrayList<Integer> numbers) {
 
 <!-- <programming-exercise name='Summa' tmcname='osa03-Osa03_16.Summa'> -->
 
-<programming-exercise name='Sum' tmcname='osa03-Osa03_16.Summa'>
+<programming-exercise name='Sum' tmcname='part03-Part03_16.Sum'>
 
 
 <!-- Luo tehtäväpohjaan metodi `public static int summa(ArrayList<Integer> luvut)`. Metodin tulee palauttaa parametrina annetun listan lukujen summa. -->
@@ -2430,7 +2431,7 @@ System.out.println(numbers);
 
 <!-- <programming-exercise name='Poista viimeinen' tmcname='osa03-Osa03_17.PoistaViimeinen'> -->
 
-<programming-exercise name='Remove last' tmcname='osa03-Osa03_17.PoistaViimeinen'>
+<programming-exercise name='Remove last' tmcname='part03-Part03_17.RemoveLast'>
 
 
 <!-- Luo tehtäväpohjaan metodi `public static void poistaViimeinen(ArrayList<String> mjonot)`. Metodin tulee poistaa parametrina saadusta listasta viimeisin arvo. Mikäli lista on tyhjä, metodin ei tule tehdä mitään. -->

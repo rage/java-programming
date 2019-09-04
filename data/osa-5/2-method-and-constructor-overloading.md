@@ -204,7 +204,7 @@ Eve is 0 years old.
 
 </sample-output>
 
-<quiznator id='5c534d44017ffc13eddc9f9f'></quiznator>
+<quiz id='07d6aee2-5f1c-5d11-b85e-7acc22c07fe2'></quiz>
 
 TODO: tänne tehtävä
 
@@ -318,7 +318,7 @@ public void growOlder(int years) {
 }
 ```
 
-<quiznator id='5c534d03fd9fd71425c62a6e'></quiznator>
+<quiz id='39c1cc72-f204-520e-9ad3-452ea6d841b6'></quiz>
 
 TODO: tarkasta että video oikealla kohdalla
 

@@ -172,20 +172,20 @@ System.out.println("Ready!");
 The program in the example works as follows. The user's inputs are marked in red.
 <sample-output>
 
-Shall we carry on? (y exits)
+Exit? (y exits)
 **no**
 Ok! Let's carry on!
-Shall we carry on? (y exits)
+Exit? (y exits)
 **non**
 Ok! Let's carry on!
-Shall we carry on? (y exits)
+Exit? (y exits)
 **y**
 Ready!
 
 </sample-output>
 
 <!-- <programming-exercise name="Jatketaanko" tmcname='osa02-Osa02_05.Jatketaanko'> -->
-<programming-exercise name="Cpntinue?" tmcname='osa02-Osa02_05.Continue'>
+<programming-exercise name="Continue?" tmcname='osa02-Osa02_05.Continue'>
 
 <!-- Kirjoita edellä olevaa toistolause-esimerkkiä mukaillen ohjelma, joka kysyy käyttäjältä "Jatketaanko?" kunnes käyttäjä syöttää merkkijonon "ei". -->
 Write a program using the loop-example that asks "Continue?" until the user inputs the string "no".
@@ -250,13 +250,13 @@ Write a program according to the preceding example that asks a user to input val
 <sample-output>
 
 **5**
-Input a number
+Give a number:
 **744**
-Input a number
+Give a number:
 **22**
-Input a number
+Give a number:
 **-1**
-Input a number
+Give a number:
 **4**
 
 </sample-output>
@@ -319,7 +319,7 @@ while (true) {
 <!-- TODO: tänne tarttee visualisoinnin -->
 <!-- TODO: this requires a visualization -->
 
-<quiznator id="5c1f6c8b64cf001162cb9790"></quiznator>
+<quiz id="36891f81-9e52-5546-97c3-4c2f0f180135"></quiz>
 
 <!-- <programming-exercise name="Syötteiden rajaus" tmcname='osa02-Osa02_07.SyotteidenRajaus'> -->
 <programming-exercise name="Restricting Input" tmcname='osa02-Osa02_07.RestrictingInput'>
@@ -328,19 +328,19 @@ while (true) {
 Write a program that asks a user for numbers. If the number is negative (smaller than zero), the program prints for user "unfit number" and asks the user for a new number. If the number is zero, the program exits the loop. If the number is positive, the program prints the number power of two.
 <sample-output>
 
-Input a number
+Give a number:
 **5**
 25
-Input a number
+Give a number:
 **4**
 16
-Input a number
+Give a number:
 **-3**
-Unfit number
-Input a number
+Unsuitable number
+Give a number:
 **1**
 1
-Input a number
+Give a number:
 **0**
 
 </sample-output>
@@ -669,6 +669,7 @@ Write a program that reads values from the user until they input a 0. After this
 
 <!-- Ohjelman tulostusesimerkki: -->
 Example output of the program:
+
 <sample-output>
 
 Input a number
@@ -696,6 +697,7 @@ Write a program that reads values from the user until they input a 0. After this
 
 <!-- Ohjelman tulostusesimerkki: -->
 Example output of the program:
+
 <sample-output>
 
 Input a number
@@ -724,17 +726,18 @@ Write a program that reads numbers from the user until the user inputs a number 
 
 <!-- Ohjelman tulostusesimerkki: -->
 Example output of the program:
+
 <sample-output>
 
-Input a number
+Give a number:
 **5**
-Input a number
+Give a number:
 **22**
-Input a number
+Give a number:
 **9**
-Input a number
+Give a number:
 **-2**
-Input a number
+Give a number:
 **0**
 The sum of the numbers is 34
 
@@ -748,10 +751,10 @@ TODO: esimerkki toistolauseesta, missä kaksi muuttujaa
 
 
 
-<programming-exercise name="Lukujen lukumäärä ja summa" tmcname='osa02-Osa02_11.LukumaaraJaSumma'>
+<programming-exercise name="Number and sum of numbers" tmcname='part02-Part02_11.NumberAndSumOfNumbers'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötettyjen lukujen lukumäärä ja summan. Syötteen loppumisesta kertovaa nollaa ei tule ottaa huomioon lukumäärässä tai summassa. -->
-Write a number that asks user for input until the user inputs 0. After this the program prints the amount of numbers inputted and the sum of the numbers. The number zero does not need to be added to the sum albeit it does not change the results.
+Write a program that asks user for input until the user inputs 0. After this the program prints the amount of numbers inputted and the sum of the numbers. The number zero does not need to be added to the sum albeit it does not change the results.
 
 <!-- _Tarvitset tässä kaksi muuttujaa tiedon säilömiseen. Käytä toista muuttujaa lukujen lukumäärän säilömiseen ja toista muuttujaa lukujen summan laskemiseen._ -->
 _You need two variables to keep track of the information. Use one for keeping track of the numbers inputted and other for keeping track of the sum_
@@ -761,28 +764,28 @@ Example output of the program:
 
 <sample-output>
 
-Input a number
+Give a number:
 **5**
-Input a number
+Give a number:
 **22**
-Input a number
+Give a number:
 **9**
-Input a number
+Give a number:
 **-2**
-Input a number
+Give a number:
 **0**
-Numbers in total 4
-The sum of numbers 34
+Number of numbers: 4
+Sum of the numbers: 34
 
 </sample-output>
 
 </programming-exercise>
 
 
-<programming-exercise name="Lukujen keskiarvo" tmcname='osa01-Osa02_12.LukujenKeskiarvo'>
+<programming-exercise name="Average of numbers" tmcname='part02-Part02_12.AverageOfNumbers'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötettyjen lukujen keskiarvo. Syötteen loppumisesta kertovaa nollaa ei tule ottaa huomioon keskiarvon laskemisessa. Voit olettaa, että käyttäjä syöttää aina vähintään yhden luvun. -->
-Write a number that asks user for input until the user inputs 0. After this, the program prints the average of the numbers. The number zero does not need to be counted to the average. You may assume that the user inputs atleast one number.
+Write a program that asks user for input until the user inputs 0. After this, the program prints the average of the numbers. The number zero does not need to be counted to the average. You may assume that the user inputs atleast one number.
 
 <!-- _Lukujen keskiarvo saadaan jakamalla lukujen summa lukujen lukumäärällä_. -->
 _The average of the numbrs can be computer by dividing the sum of numbers with the amount of the numbers_
@@ -792,31 +795,31 @@ Example output of the program:
 
 <sample-output>
 
-Insert a number
+Give a number:
 **5**
-Insert a number
+Give a number:
 **22**
-Insert a number
+Give a number:
 **9**
-Insert a number
+Give a number:
 **-2**
-Insert a number
+Give a number:
 **0**
-The average of numbers 8.5
+Average of the numbers: 8.5
 
 </sample-output>
 
 </programming-exercise>
 
 
-<programming-exercise name='Positiivisten lukujen keskiarvo' tmcname='osa02-Osa02_13.PositiivistenLukujenKeskiarvo'>
+<programming-exercise name='Average of positive numbers' tmcname='part02-Part02_13.AverageOfPositiveNumbers'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä kokonaislukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelma tulostaa syötteessä esiintyneiden positiivisten (eli nollaa suurempien lukujen) keskiarvon. -->
 Write a number that asks user for input until the user inputs 0.
 After this, the program prints the average of the positive numbers (numbers that are greater than zero).
 
 <!-- Mikäli ohjelmassa ei syötetä yhtäkään positiivista lukua, ohjelman tulee tulostaa "keskiarvon laskeminen ei ole mahdollista". -->
-If no positive number is inputted, the program prints "The computation of average is impossible"
+If no positive number is inputted, the program prints "Cannot calculate the average"
 
 <!-- Alla on muutamia esimerkkejä ohjelman toiminnasta. -->
 Below a few examples of the programs output
@@ -835,7 +838,7 @@ Below a few examples of the programs output
 <sample-output>
 
 **0**
-The computation of average is impossible
+Cannot calculate the average
 
 </sample-output>
 
@@ -858,4 +861,3 @@ The computation of average is impossible
 </sample-output>
 
 </programming-exercise>
-

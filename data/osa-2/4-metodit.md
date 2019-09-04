@@ -221,7 +221,7 @@ Strictly speaking the main program (`main`) itself is a method. When the program
 
 <!-- <programming-exercise name='Tekstin tulostus' tmcname='osa02-Osa02_21.TekstinTulostus'> -->
 
-<programming-exercise name='Printing a phrase' tmcname='osa02-Osa02_21.TekstinTulostus'>
+<programming-exercise name='In a hole in the ground' tmcname='part02-Part02_21.InAHoleInTheGround'>
 
 
 
@@ -245,7 +245,7 @@ public static void main(String[] args) {
 }
 
 public static void printPhrase() {
-    // write your code here
+    // Write some code in here
 }
 ```
 
@@ -270,7 +270,7 @@ In a hole in the ground there lived a method
 
 <!-- <programming-exercise name='Monta tulostusta' tmcname='osa02-Osa02_22.MontaTulostusta'> -->
 
-<programming-exercise name='Multiple prints' tmcname='osa02-Osa02_22.MontaTulostusta'>
+<programming-exercise name='Reprint' tmcname='print02-Part02_22.Reprint'>
 
 
 <!-- Laajenna edellistä ohjelmaa siten, että pääohjelma kysyy käyttäjältä, montako kertaa teksti tulostetaan eli montako kertaa metodia kutsutaan. -->
@@ -295,7 +295,7 @@ public static void main(String[] args) {
 }
 
 public static void printPhrase() {
-    // write code here
+    // write some code in here
 }
 ```
 
@@ -318,21 +318,21 @@ Alussa olivat suo, kuokka ja Java.
 
 <sample-output>
 
-How many?
+How many times?
 **7**
-In a hole in the ground there lived a method.
-In a hole in the ground there lived a method.
-In a hole in the ground there lived a method.
-In a hole in the ground there lived a method.
-In a hole in the ground there lived a method.
-In a hole in the ground there lived a method.
-In a hole in the ground there lived a method.
+In a hole in the ground there lived a method
+In a hole in the ground there lived a method
+In a hole in the ground there lived a method
+In a hole in the ground there lived a method
+In a hole in the ground there lived a method
+In a hole in the ground there lived a method
+In a hole in the ground there lived a method
 
 </sample-output>
 
 <!-- **Huom:** tulosta kehote `Kuinka monta?` omalle rivilleen! -->
 
-**N.B.:** print the prompt `How many?` its own separate line!
+**N.B.:** print the prompt `How many times?` its own separate line!
 
 
 </programming-exercise>
@@ -488,7 +488,7 @@ If an expression is used as a parameter for a method, that expression is evaluat
 
 <!-- <programming-exercise name='Yhdestä parametriin' tmcname='osa02-Osa02_23.YhdestaParametriin'> -->
 
-<programming-exercise name='From one to parameter' tmcname='osa02-Osa02_23.YhdestaParametriin'>
+<programming-exercise name='From one to parameter' tmcname='part02-Part02_23.FromOneToParameter'>
 
 
 <!-- Luo tehtäväpohjaan metodi `public static void tulostaLukuunAsti(int luku)`, joka tulostaa luvut yhdestä parametrina annettuun lukuun asti. Alla on kaksi esimerkkiä metodin käytöstä. -->
@@ -542,17 +542,17 @@ public static void main(String[] args) {
 <!-- <programming-exercise name='Parametrista yhteen' tmcname='osa02-Osa02_24.ParametristaYhteen'> -->
 
 
-<programming-exercise name='From parameter to one' tmcname='osa02-Osa02_24.ParametristaYhteen'>
+<programming-exercise name='From parameter to one' tmcname='part02-Part02_24.FromParameterToOne'>
 
 
 <!-- Luo tehtäväpohjaan metodi `public static void tulostaLuvustaYhteen(int luku)`, joka tulostaa luvut parametrina annetusta luvusta yhteen asti. Alla on kaksi esimerkkiä metodin käytöstä. -->
 
-Create the following method in the exercise template: `public static void printFromNumToOne(int number)`. It should print the numbers from the number passed as a parameter down to one. Two examples of the method's usage are given below.
+Create the following method in the exercise template: `public static void printFromNumberToOne(int number)`. It should print the numbers from the number passed as a parameter down to one. Two examples of the method's usage are given below.
 
 
 ```java
 public static void main(String[] args) {
-    printFromNumToOne(5);
+    printFromNumberToOne(5);
 }
 ```
 
@@ -577,7 +577,7 @@ public static void main(String[] args) {
 ```java
 
 public static void main(String[] args) {
-    printFromNumToOne(2);
+    printFromNumberToOne(2);
 }
 
 ```
@@ -649,7 +649,7 @@ The sum of numbers 2 and 4 is 6
 
 <!-- <programming-exercise name='Jakolasku' tmcname='osa02-Osa02_25.Jakolasku'> -->
 
-<programming-exercise name='Division' tmcname='osa02-Osa02_25.Jakolasku'>
+<programming-exercise name='Division' tmcname='part02-Part02_25.Division'>
 
 
 <!-- Kirjoita metodi `public static void jakolasku(int osoittaja, int nimittaja)`, joka tulostaa osoittajan ja nimittäjän jakolaskun tuloksen. Muistathan, että kahden kokonaisluvun jakolaskun tulos on kokonaisluku -- tässä halutaan tuloksena liukuluku. -->
@@ -661,7 +661,7 @@ Write a method `public static void division(int numerator, int denominator)` tha
 
 <!-- <programming-exercise name='Kolmella jaolliset' tmcname='osa02-Osa02_26.KolmellaJaolliset'> -->
 
-<programming-exercise name='Divisible by three' tmcname='osa02-Osa02_26.KolmellaJaolliset'>
+<programming-exercise name='Divisible by three' tmcname='part02-Part02_26.DivisibleByThree'>
 
 
 <!-- Kirjoita metodi `public static void kolmellaJaollisetValilta(int alku, int loppu)`, joka tulostaa kaikki kolmella jaolliset luvut annetulta väliltä. Luvut tulee tulostaa järjestyksessä pienimmästä suurimpaan. -->
@@ -875,7 +875,7 @@ Incrementing the variable `number` inside the method poses no problem. This does
 The parameter `number`is copied for the method to use -- in other words, a new variable called `number` is created for the `incrementByThree` method, and the value of the variable `number` in the main program is copied as its value when the method is called. The variable `number` inside the method `incrementByThree` exists only for the duration of the method execution, and it has no relation to the similarly named variable in the main program.
 
 
-<quiznator id="5c1f6924a50dbe1223d1a9e2"></quiznator>
+<quiz id="2169d451-4364-5aa3-ba85-9dedd6e8abfc"></quiz>
 
 
 <!-- ## Metodi voi palauttaa arvon -->
@@ -1019,22 +1019,22 @@ public static double methodThatReturnsFloatingPointNumber() {
 </table>
 
 
-<programming-exercise name='Numero uno' tmcname='osa02-Osa02_27.NumeroUno'>
+<programming-exercise name='Number uno' tmcname='part02-Part02_27.NumberUno'>
 
 <!-- Kirjoita metodi `public static int numeroUno()`, joka palauttaa arvon 1. -->
 
-Write a method `public static int numeroUno()` that returns the value 1.
+Write a method `public static int numberUno()` that returns the value 1.
 
 </programming-exercise>
 
 
 <!-- <programming-exercise name='Merkkijono' tmcname='osa02-Osa02_28.Merkkijono'> -->
-<programming-exercise name='String' tmcname='osa02-Osa02_28.Merkkijono'>
+<programming-exercise name='Word' tmcname='part02-Part02_28.Word'>
 
 
 <!-- Kirjoita metodi `public static String merkkijono()`. Metodin tulee palauttaa itse päättämäsi merkkijono. -->
 
-Write a method `public static String string()`. The method must return a string of your choice.
+Write a method `public static String word()`. The method must return a string of your choice.
 
 </programming-exercise>
 
@@ -1272,7 +1272,7 @@ public static void main(String[] args) {
 
 Here the method call occurs first and it returns the value 5.0. After this that value is printed with the help of the print statement.
 
-<quiznator id="5c1f68f33516ce119a7f45db"></quiznator>
+<quiz id="270d9aea-6ee9-568d-8775-7dfdea451f90"></quiz>
 
 
 
@@ -1407,7 +1407,7 @@ public static int sum(int first, int second) {
 Now the value of the variable `number1` is copied as the value of the method parameter `first`, and the value of the variable `number1` copied as the value of the parameter `second`.
 
 
-<quiznator id="5c1f6959da457b11ff9f1242"></quiznator>
+<quiz id="664a4f19-6fbc-5a76-83cd-aabd32a94809"></quiz>
 
 
 <youtube id='zEHvycTo81c'></youtube>
@@ -1415,7 +1415,7 @@ Now the value of the variable `number1` is copied as the value of the method par
 
 <!-- <programming-exercise name='Lukujen summa' tmcname='osa02-Osa02_29.LukujenSumma'> -->
 
-<programming-exercise name='Sum of numbers' tmcname='osa02-Osa02_29.LukujenSumma'>
+<programming-exercise name='Summation' tmcname='part02-Part02_29.Summation'>
 
 
 <!-- Täydennä tehtäväpohjassa olevaa metodia `summa` siten, että se laskee ja palauttaa parametrina olevien lukujen summan. -->
@@ -1475,7 +1475,7 @@ Sum: 14
 
 <!-- <programming-exercise name='Pienin' tmcname='osa02-Osa02_30.Pienin'> -->
 
-<programming-exercise name='Smallest' tmcname='osa02-Osa02_30.Pienin'>
+<programming-exercise name='Smallest' tmcname='part02-Part02_30.Smallest'>
 
 
 <!-- Tee kaksiparametrinen metodi `pienin`, joka palauttaa parametrina saamistaan luvuista pienemmän arvon. Jos lukujen arvo on sama, voidaan palauttaa kumpi tahansa luvuista. -->
@@ -1532,7 +1532,7 @@ Smallest: 2
 
 <!-- <programming-exercise name='Suurin' tmcname='osa02-Osa02_31.Suurin'> -->
 
-<programming-exercise name='Greatest' tmcname='osa02-Osa02_31.Suurin'>
+<programming-exercise name='Greatest' tmcname='part02-Part02_31.Greatest'>
 
 
 <!-- Tee metodi `suurin`, joka saa kolme lukua ja palauttaa niistä suurimman. Jos suurimpia arvoja on useita, riittää niistä jonkun palauttaminen. Tulostus tapahtuu pääohjelmassa. -->
@@ -1552,7 +1552,7 @@ public static void main(String[] args) {
 
 ```java
 public static int greatest(int number1, int number2, int number3) {
-  // write your code here
+  // write some code here
 }
 
 public static void main(String[] args) {
@@ -1573,7 +1573,7 @@ Suurin: 7
 
 <sample-output>
 
-Suurin: 7
+Greatest: 7
 
 </sample-output>
 
@@ -1582,7 +1582,7 @@ Suurin: 7
 
 <!-- <programming-exercise name='Lukujen keskiarvo' tmcname='osa02-Osa02_32.LukujenKeskiarvo'> -->
 
-<programming-exercise name='Average of numbers' tmcname='osa02-Osa02_32.LukujenKeskiarvo'>
+<programming-exercise name='Averaging' tmcname='part02-Part02_32.Averaging'>
 
 
 <!-- Tee metodi `keskiarvo`, joka laskee parametrina olevien lukujen keskiarvon. Metodin sisällä tulee käyttää apuna edellä tehtyä metodia `summa`! -->
@@ -1620,8 +1620,8 @@ public static double average(int number1, int number2, int number3, int number4)
 }
 
 public static void main(String[] args) {
-    double answer = average(4, 3, 6, 1);
-    System.out.println("Average: " + answer);
+    double result = average(4, 3, 6, 1);
+    System.out.println("Average: " + result);
 }
 ```
 
@@ -2074,7 +2074,7 @@ Below is a visualization of the method call `multiplicationTable(3)`. Notice how
 
 <!-- <programming-exercise name='Tulostelua (4 osaa)' tmcname='osa02-Osa02_33.Tulostelua'> -->
 
-<programming-exercise name='Doing some printing (4 parts)' tmcname='osa02-Osa02_33.Tulostelua'>
+<programming-exercise name='Star sign (4 parts)' tmcname='part02-Part02_33.StarSign'>
 
 
 
@@ -2107,7 +2107,7 @@ public static void main(String[] args) {
 
 ```java
 public static void printStars(int number) {
-    // one start can be printed with the command
+    // you can print one star with the command
     // System.out.print("*");
     // call the print command n times
     // in the end print a line break with the comand
@@ -2141,7 +2141,7 @@ The output of the program:
 
 <!-- Tee metodi `tulostaNelio(int sivunpituus)` joka tulostaa neliön käyttäen `tulostaTahtia`-metodia. Siis esimerkiksi kutsu `tulostaNelio(4)` tulostaa seuraavaa: -->
 
-Define a method called `printSquare(int lengthOfSide)` that prints a suitable square with the help of the `printStars` method. So the method call `printSquare(4)` results in the following output:
+Define a method called `printSquare(int size)` that prints a suitable square with the help of the `printStars` method. So the method call `printSquare(4)` results in the following output:
 
 <sample-output>
 ****
@@ -2165,7 +2165,7 @@ When creating the program, you might benefit from the test code in the main to e
 
 <!-- Tee metodi `tulostaSuorakulmio(int leveys, int korkeus)` joka tulostaa suorakulmion käyttäen `tulostaTahtia`-metodia. Siis esimerkiksi kutsu `tulostaSuorakulmio(17,3)` tulostaa seuraavaa: -->
 
-Write a method called `printRectangle(int width, int height`) that prints the correct rectangle by using the `printStars` method. So the method call `printRectangle(17, 3)` should produce the following output:
+Write a method called `printRectangle(int width, int height)` that prints the correct rectangle by using the `printStars` method. So the method call `printRectangle(17, 3)` should produce the following output:
 
 <sample-output>
 *****************
@@ -2176,7 +2176,7 @@ Write a method called `printRectangle(int width, int height`) that prints the co
 
 <!-- <h2>Vasemmalle nojaavan kolmion tulostus</h2> -->
 
-<h2>Printing a left-leaning triangle</h2>
+<h2>Printing a triangle</h2>
 
 <!-- Tee metodi `tulostaKolmio(int koko)` joka tulostaa kolmion käyttäen `tulostaTahtia`-metodia. Siis esimerkiksi kutsu `tulostaKolmio(4)` tulostaa seuraavaa: -->
 
@@ -2195,16 +2195,16 @@ Create a method called `printTriangle(int size)` that prints a triangle by using
 <!-- <programming-exercise name='Tulostelua Like A Boss (3 osaa)' tmcname='osa02-Osa02_34.TulosteluaLikeABoss'> -->
 
 
-<programming-exercise name='Printing Like A Boss (3 parts)' tmcname='osa02-Osa02_34.TulosteluaLikeABoss'>
+<programming-exercise name='Advanced astrology (3 parts)' tmcname='part02-Part02_34.Advanced astrology'>
 
 
 <!-- <h2>Tähtirivin ja tyhjien tulostus</h2> -->
 
-<h2>Printing a row of stars and empty spaces</h2>
+<h2>Printing stars and spaces</h2>
 
 <!-- Tee metodi `tulostaTyhjaa(int maara)` joka tulostaa `maara` kappaletta välilyöntejä. Metodi ei tulosta rivinvaihtoa. -->
 
-Define a method called `printEmpty(int number)` that produces the number of spaces specified by `number`. The method does not print the line break.
+Define a method called `printSpaces(int number)` that produces the number of spaces specified by `number`. The method does not print the line break.
 
 <!-- Joudut myös joko kopioimaan edellisen tehtävän vastauksestasi metodin `tulostaTahtia` tai toteuttamaan sen uudelleen tämän tehtävän tehtäväpohjaan. -->
 
@@ -2216,7 +2216,7 @@ You will also have to either copy the `printStars` method your previous answer o
 
 <!-- Tee metodi `tulostaKolmio(int koko)` joka tulostaa kolmion käyttäen `tulostaTyhjaa`- ja `tulostaTahtia`-metodeja. Siis esimerkiksi kutsu `tulostaKolmio(4)` tulostaa seuraavaa: -->
 
-Create a method called `printTriangle(int size)` that uses `printEmpty` and `printStars` to print the correct triangle. So the method call `printTriangle(4)` should print the following:
+Create a method called `printTriangle(int size)` that uses `printSpaces` and `printStars` to print the correct triangle. So the method call `printTriangle(4)` should print the following:
 
 <sample-output>
    *
@@ -2232,7 +2232,7 @@ Create a method called `printTriangle(int size)` that uses `printEmpty` and `pri
 
 <!-- Tee metodi `jouluKuusi(int korkeus)` joka tulostaa joulukuusen. Joulukuusi koostuu annetun korkuisesta kolmiosta ja jalasta. Jalka on kaksi tähteä korkea ja kolme tähteä leveä ja se on keskellä kolmion pohjaa. Kuusi tulee rakentaa käyttämällä tulostukseen metodeja `tulostaTyhjaa` ja `tulostaTahtia` -->
 
-Define a method called `christmasTree(int height)` that prints the correct Christmas tree. The Christmas tree consists of a triangle with the specified height and the base. The base is two stars high and three stars wide, and is placed at the center of the triangle's bottom. The tree is to be constructed by using the methods `printEmpty` and `printStars`.
+Define a method called `christmasTree(int height)` that prints the correct Christmas tree. The Christmas tree consists of a triangle with the specified height and the base. The base is two stars high and three stars wide, and is placed at the center of the triangle's bottom. The tree is to be constructed by using the methods `printSpaces` and `printStars`.
 
 <!-- Esimerkiksi kutsu `jouluKuusi(4)` tulostaa seuraavaa: -->
 
@@ -2270,8 +2270,7 @@ The call `christmasTree(10)` should print:
 
 <!-- **Huom:** korkeuksien jotka ovat alle 3 ei tarvitse toimia! -->
 
-**N.B.:** lengths shorter that 3 don't have work correctly!
+**N.B.:** heights shorter that 3 don't have work correctly!
 
 
 </programming-exercise>
-

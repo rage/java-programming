@@ -1,7 +1,8 @@
 import { fetchProgrammingProgress, getCachedUserDetails } from "./moocfi"
 import { fetchCrowdsorcererProgress } from "./crowdsorcerer"
 import { zip } from "../util/arrays"
-import { fetchQuiznatorProgress } from "./quiznator"
+import { fetchQuizProgress } from "./quiznator"
+import { fetchQuizzesProgress } from "./quizzes"
 
 const introductionCourseGroups = [
   "osa01",
@@ -14,10 +15,11 @@ const introductionCourseGroups = [
 ]
 
 export async function fetchProgress() {
+  // await fetchQuizzesProgress()
   const serviceIdentifiers = ["Ohjelmointitehtävät", "Kyselyt", "Crowdsorcerer"]
   const progressesCollection = await Promise.all([
     fetchProgrammingProgress(),
-    fetchQuiznatorProgress(),
+    fetchQuizzesProgress(),
     fetchCrowdsorcererProgress(),
   ])
   const userDetails = await getCachedUserDetails()
@@ -26,6 +28,7 @@ export async function fetchProgress() {
 
   zip(serviceIdentifiers, progressesCollection).forEach(
     ([identifier, progresses]) => {
+      console.log(JSON.stringify(progresses))
       progresses.forEach(progressEntry => {
         if (!progressByGroup[progressEntry.group]) {
           progressByGroup[progressEntry.group] = {}

@@ -431,7 +431,7 @@ public void start(Stage ikkuna) {
 }
 ```
 
-<quiznator id="5cb02d5dddb6b814af32ca5a"></quiznator>
+<quiz id="c7e0838e-a502-58c0-98cc-70c7929ada71"></quiz>
 
 Edellinen lähdekoodi tuottaa seuraavanlaisen kaavion.
 
@@ -1467,7 +1467,7 @@ public class Asteroidi extends Hahmo {
 }
 ```
 
-<quiznator id="5caf841414524713f95abe6a"></quiznator>
+<quiz id="55f5368f-f852-5c25-8448-89d40088b03f"></quiz>
 
 Testataan vielä, että asteroidin voi lisätä sovellukseen.
 
@@ -2106,7 +2106,7 @@ Kun olet saanut nämä ja edelliset osat toimimaan, aseta luokan `AsteroidsSovel
 </text-box>
 
 
-<quiznator id="5cb02c7f017ffc13eddd4c56"></quiznator>
+<quiz id="937d8cfd-0d52-5d5c-b0dc-e0dc41f29396"></quiz>
 
 Suunnittelimme ja toteutimme kahdennessatoista osassa oman hajautustauluja käsittelevän tehtävän sekä siihen liittyvät testit. Nyt on taas vertaisarvioinnin aika! Anna vertaispalautetta kahdesta jonkun toisen kurssilaisen lähettämästä tehtävästä ja arvioi lopuksi itse tekemääsi tehtävää. Itse tekemäsi tehtävä näkyy vain jos olet tehnyt sen -- jos et tehnyt tehtävää, pääset arvioimaan yhden ylimääräisen tehtävän.
 
@@ -2192,4 +2192,4 @@ Kolmannessatoista osassa eli Ohjelmoinnin jatkokurssin kuudennessa osassa tutust
 
 Vastaa vielä seuraavaan kyselyyn.
 
-<quiznator id="5caf7dcdfd9fd71425c6d7ab"></quiznator>
+<quiz id="7a75b257-cc4f-563b-a117-e2dd2ddc1bc4"></quiz>

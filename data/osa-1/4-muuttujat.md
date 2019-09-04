@@ -242,25 +242,25 @@ The value of the variable is 42
 
 Let's look at the preceding program's execution step-by-step. When a variable appears in the program for the first time, i.e., the computer is told both its type (here `int`) and its name (here `value`), the computer creates a 'named container' for the variable. Then, the value on the right side of the equals sign is copied into this named container.
 
-![](../img/drawings/muuttujan-arvon-vaihto-1.png)
+![](../img/drawings/part1.4-variable-change-1.png)
 
 <!-- Kun ohjelmakoodissa viitataan muuttujaan sen nimellä -- tässä halutaan tulostaa merkkijono "Muuttujan arvo on " sekä muuttujan `luku` arvo, muuttujan `luku` arvo haetaan sen nimellä löytyvästä lokerosta. -->
 
 Whenever a variable is referenced by its name in a program -- here, we want to print the string "The value of the variable is " followed by the value of the `value` variable -- its value is retrieved from a container that has its name.
 
-![](../img/drawings/muuttujan-arvon-vaihto-2.png)
+![](../img/drawings/part1.4-variable-change-2.png)
 
 <!-- Kun muuttujaan asetetaan arvo (tässä `luku = 42`), tarkistetaan ensin löytyykö muuttujan nimistä lokeroa. Jos lokero löytyy, uusi arvo kopioidaan lokeroon vanhan arvon tilalle ja vanha arvo katoaa. Jos muuttujan nimellä ei löydy lokeroa, ohjelman suoritus päättyy virheilmoitukseen tai ohjelmaa ei voida käynnistää. -->
 
 Whenever a value is assigned to a variable (here `value = 42`), a check is run to see whether a container with the given name already exists. If one does, a new value is copied in the place of the old value, and the old value disappears. If a container of the variable name is not found, the program execution ends in an error message, or it fails to run.
 
-![](../img/drawings/muuttujan-arvon-vaihto-3.png)
+![](../img/drawings/part1.4-variable-change-3.png)
 
 <!-- Seuraavaksi ohjelmakoodissa viitataan taas muuttujaan sen nimellä -- tässäkin halutaan tulostaa merkkijono "Muuttujan arvo on " sekä muuttujan `luku` arvo. Toimitaan kuten normaalisti, eli haetaan muuttujan `luku` arvo sen nimellä löytyvästä lokerosta. -->
 
 The variable is then referenced again by its name in the program -- we again want to print the string "The value of the variable is " followed by the value of the `value` variable. We proceed as normal, retrieving the value of `value` from a container having its name.
 
-![](../img/drawings/muuttujan-arvon-vaihto-4.png)
+![](../img/drawings/part1.4-variable-change-4.png)
 
 <!-- Kuten huomaat, ohjelman lopputilanteessa muuttujan alkuperäinen arvo on kadonnut. Muuttuja voi sisältää kerrallaan aina vain yhden arvon. -->
 

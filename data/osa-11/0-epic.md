@@ -14,7 +14,7 @@ hidden: false
 
 </text-box>
 
-<quiznator id='5c93ae0b3972a9147410b2fd'></quiznator>
+<quiz id='2ea12c2a-92aa-553f-90e5-585d25fe8d0c'></quiz>
 
 
 Olemme listoihin tutustumisesta lähtien kertoneet tietorakenteille niiden sisältämän arvon tyypin. Esimerkiksi merkkijono-olioita sisältävä lista on esitelty muodossa `ArrayList<String>` ja merkkijonoja avaimina ja arvoina sisältävä hajautustaulu on esitelty muodossa `HashMap<String, String>`. Miten ihmeessä luokan voi toteuttaa niin, että luokka voi sisältää annetun tyyppisiä olioita?
@@ -124,7 +124,7 @@ public class Pari<T, K> {
 }
 ```
 
-<quiznator id="5c93b1e4fd9fd71425c6af09"></quiznator>
+<quiz id="89bb2f65-24d3-585c-a362-a0327d26c7d0"></quiz>
 
 
 Huomattava osa Javan tietorakenteista käyttää tyyppiparametreja ja mahdollistaa eri tyyppisten muuttujien lisäämisen niihin. Esimerkiksi ArrayList saa yhden tyyppiparametrin, HashMap kaksi.
@@ -348,7 +348,7 @@ null
 </programming-exercise>
 
 
-<quiznator id='5c93b56cfd9fd71425c6af16'></quiznator>
+<quiz id='2d663de4-d0e6-5fbb-b5b9-9eb010e28ead'></quiz>
 
 
 # ArrayList ja Hajautustaulu
@@ -426,7 +426,7 @@ Taulukossa on 4 alkiota.
 </sample-output>
 
 
-<quiznator id='5c94ab76fd9fd71425c6b085'></quiznator>
+<quiz id='96696460-8111-5be7-9c4f-b0b998630add'></quiz>
 
 
 <programming-exercise name='Rajatut taulukossa' tmcname='osa11-Osa11_03.RajatutTaulukossa'>
@@ -1069,7 +1069,7 @@ private void kopioi(Lista<Pari<K, V>>[] uusi, int indeksista) {
 }
 ```
 
-<quiznator id='5c94ad8bddb6b814af32a379'></quiznator>
+<quiz id='079d35ee-f543-5a17-ac74-14d65be2d4fb'></quiz>
 
 Nyt kopioi-metodia voidaan kutsua kasvata-metodista.
 
@@ -1881,4 +1881,4 @@ Yhdennessätoista osassa eli Ohjelmoinnin jatkokurssin neljännessä osassa tutu
 
 Vastaa vielä alla olevaan kyselyyn.
 
-<quiznator id='5c93ae573972a9147410b2fe'></quiznator>
+<quiz id='10c523e9-dd15-5497-91e9-4c167866b792'></quiz>

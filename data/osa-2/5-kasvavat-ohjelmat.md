@@ -11,4 +11,4 @@ TODO: yhteenveto osan relevanteista opeista
 
 TODO: loppukysely?
 
-<quiznator id="5c24a8cd054d71123e35d3b8"></quiznator>
+<quiz id="3a8b996b-3560-50e6-9851-dd27aff33edf"></quiz>
