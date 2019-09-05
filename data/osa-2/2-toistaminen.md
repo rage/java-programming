@@ -7,25 +7,27 @@ title: 'Toiminnallisuuden toistaminen'
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
 <!-- - Tunnet käsitteen toistolause ja osaat luoda ohjelman, joka sisältää toistolauseen. -->
-- You are familiar with loops and know how to utilize them in your program.
+- You are familiar with loops and know how to create a program that contains one.
 
 <!-- - Osaat käyttää `break`-komentoa toistolauseen suorituksen lopettamiseen ja toistolausetta seuraavaan käskyyn siirtymiseen. -->
-- You know how to use the `break`-command in order to break out of the loop and onto the next statement.
+- You know how to use the `break` command to end a loop's execution and move onto its next statement.
 
 <!-- - Osaat käyttää `continue`-komentoa toistolauseen alkuun palaamiseen. -->
-- You know how to use `continue`-command to go to the beginning of the loop.
+- You know how to use `continue` command to return to the beginning of a loop.
 
 <!-- - Osaat luoda ohjelman, joka lukee käyttäjältä syötettä kunnes käyttäjä syöttää tietynlaisen syötteen -- esim luku 0 tai merkkijono "loppu", jonka jälkeen ohjelma kertoo ennen lopettamista syötetyistä syötteistä (esim. syötteiden lukumäärä, lukujen tapauksessa summa ja keskiarvo). -->
-- You are able to create a program that reads user inputs until a specific input is given, for example number 0 or a string "end", after which the program prints something about the given inputs (if the inputs were numbers, then the sum and the average of the numbers)
+- You are able to create a program that reads inputs from a user until a specific input is given. For example, the number 0 or the string "end", after which the program prints something about the provided inputs (e.g., the input count, and in the case of numbers their sum and average).
 
 </text-box>
 
 <!-- Tietokoneen sisältämä käskyjen suorittamiseen erikoistunut prosessori pystyy -- moderneissa tietokoneissa -- suorittamaan yli miljardi (konekielistä) käskyä sekunnissa. Tässä osassa tutustumme toistettavan ohjelmakoodin määrittelyyn toistolauseiden avulla. -->
-<!-- TODO Missä muodossa tulisi ilmaista? -->
-Computer contains a processor that can, in modern computers, process over billions of (machine code) commands per second. In this section we will get familiar with writing program code that's going to be repeated with loops.
+
+A computer's processor, which specializes in executing commands, is capable of executing -- in a modern computer -- over a billion (machine code) commands in a second.
+
+ In this section, we'll get used to writing often-repeated program code with the help of loops.
 
 <!-- Motivoidaan toistolauseiden käyttöä hieman. Alla on esimerkki ohjelmasta, missä kysytään käyttäjältä viisi lukua ja lasketaan niiden summa. -->
-As a motivation to using loops, there's an example code bellow which asks five numbers from the user and calculates their sum.
+Let's motivate ourselves to use loops. Below you'll find an example of a program that asks the user for five numbers and calculates their sum.
 
 ```java
 Scanner scanner = new Scanner(System.in);
@@ -50,10 +52,10 @@ System.out.println("The sum of the numbers is " + sum);
 ```
 
 <!-- Hoitaa asian, mutta ei kovin tyylikkäästi. Entä jos ohjelman pitäisi lukea sata tai vaikkapa tuhat lukua ja tulostaa niiden summa? Entä jos ohjelman pitäisi lukea kolme lukua? -->
-It does the trick, but not quite elegantly. What if the program had to read one hundred or perhaphs one thousand numbers and print their sum? What if the program had to read only three numbers?
+It does the job, but not elegantly. What if the program had to read a hundred, or perhaps a thousand, numbers and print their sum? What if the program had to read three numbers only?
 
 <!-- Tämän ongelman voi ratkaista toistolauseella, joka pitää kirjaa sekä summasta että lukemiskerroista. Viiden luvun summan tulostava toistolauseella toteutettava ohjelma näyttää seuraavalta. -->
-This problem can be solved with a loop, which keeps track of both the sum and the amount of read numbers. The program that prints the sum of five numbers looks now as follows
+The problem can be solved with a loop, which keeps track of both the sum and the number of times input has been read. The program that prints the sum of five numbers now looks as follows
 
 ```java
 Scanner scanner = new Scanner(System.in);
@@ -75,31 +77,27 @@ System.out.println("The sum of the numbers is " + sum);
 ```
 
 <!-- Tutustutaan seuraavaksi toistolauseisiin. -->
-Next, we will get familiar with loops.
+Next off we will get familiar with loops.
 
 <!-- ## Toistolause ja ikuinen toisto -->
-## loop and infinite loop
+## Loops and Infinite Loops
 <!-- Toistolause sisältää lausekkeen, jonka perusteella päätellään jatketaanko toistoa, sekä lohkon, joka sisältää toistettavan lähdekoodin. Toistolauseen muoto on seuraava. -->
-The loop contains a statement which determines if the code within the loop should be repeated. The form of a loop is as follows
+A loop consists of a statement that determines whether or not the code within the loop should be repeated, along with a block containing the source code to be repeated. A loop takes the following form.
 
 ```java
 while (_statement_) {
-    // TODO häh?
-    //* aaltosuluilla rajatun lohkon sisältö
-    //* lohkossa voi olla käytännössä
-    //* rajaton määrä sisältöä
-
-    // The content of the block surrounded by curly brackets
-    // the block can have practically endless amount of content
+    // The content of the block wrapped in curly brackets
+    // The block can practically have an endless amount of content
 }
 ```
 
 <!-- Käytämme toistaiseksi lausekkeena `true`-arvoa, eli boolean-tyyppista arvoa "totta". Tämä tarkoittaa sitä, että toistolauseen toistamista jatketaan aina kun ohjelma on tilantessa, missä selvitetään tuleeko toistolauseen suoritusta jatkaa. Tämä tapahtuu sekä silloin kun ohjelman suoritus päätyy toistolauseeseen ensimmäistä kertaa että silloin kun ohjelman suoritus päätyy toistolauseen lohkon loppuun. -->
 <!-- TODO Muokkaa "execution of the program first ..." parempaan muotoon -->
-We will use the value `true` as the loop's statement. This means that the loop always decides to repeat when it enters the statement. This happens when the execution of the program first arrives to the loop statement and also when it's at the end of the loop block.
+We'll use the value `true` as the loop's statement for now. This way, the loop's execution is always continued when the program arrives at the point that decides whether it should be repeated or not. This happens when the execution of the program first arrives at the loop statement for the first time, and also when it reaches the end of the loop's block.
 
 <!-- Toistolauseen suoritus etenee askeleittain lause kerrallaan. Seuraava ohjelma tulostaa merkkijonoa _osaan ohjelmoida!_ ikuisesti eli "äärettömän monta kertaa": -->
-The execution of loop proceeds line by line. The following program outputs _I can program_ infite amount of time.
+The loop execution proceeds line-by-line. The following program outputs _I can program_ indefintely, i.e., an infinite number of times.
+
 ```java
 while (true) {
     System.out.println("I can program!");
@@ -107,17 +105,17 @@ while (true) {
 ```
 
 <!-- Ikuisen toiston sisältävä ohjelma ei sammu itsestään. Ohjelman sammutus tapahtuu NetBeansissa tulostusikkunan vasemmalla puolella olevaa punaista nappia painamalla. -->
-The program that runs infinitely does not close on its own. The program can be closed from the red square button located in the Netbean's output window.
+The program that runs infinitely does not end on its own. In NetBeans, it can be shut down by clicking the red button located on the left side of the output window.
 
 
 <!-- ## Toistolauseen päättäminen -->
-# Ending a loop
+# Ending a Loop
 
 <!-- Toistolauseen saa päätettyä komennolla `break`. Kun tietokone suorittaa komennon `break`, siirtyy ohjelman suoritus toistolauseen lohkoa seuraavaan komentoon. -->
-The loop statement can be broken out of with command 'break'. When a computer executes command 'break', the program moves from the loop section onto the next command.
+The loop statement can be broken out of with command 'break'. When a computer executes the command 'break', the program execution moves onto the next command following the loop block.
 
 <!-- Alla olevassa esimerkissä on ohjelma, joka tulostaa luvut yhdestä viiteen. Ohjelmassa määritellään toistolauseen sisällä käsiteltävä luku ennen toistolauseen lohkoa. Tällöin muuttujan kasvatus onnistuu. -->
-In the example below is a program that prints numbers from one to five. In the program, a variable used within the loop is defined before the loop. This allows incrementation of the variable.
+The example below is a program that prints numbers from one to five. In it, a variable that's used within the loop is defined before the loop. This way the variable can be incremented.
 
 ```java
 int number = 1;
@@ -146,14 +144,13 @@ Ready!
 </sample-output>
 
 <!-- Toistolauseesta poistutaan esimerkiksi kun käyttäjä syöttää tietynlaisen syötteen tai mikäli toistolauseessa tehtävä laskenta päätyy haluttuun lopputulokseen. Tällaiset ohjelmat sisältävät sekä toistolauseen, jota käytetään toistettavan ohjelman määrittelyyn, että toistolauseen sisällä olevan ehtolauseen, jota käytetään toistolauseesta poistumiseen käytettävän ehdon täyttymisen tarkasteluun. -->
-Breaking out of the loop occurs when a user enters a specific input or whether the loop's calculations ends in wanted result. These kinds of programs contains a loop, which is used in
-defining a code which is going to be repeated, and the condition for the loop that is used to check whether or not to exit the loop.
+Breaking out of the loop occurs when a user enters a specified input or whenever a calculation performed in the loop ends in the desired result. These kinds of programs contain both a loop used to define a section to be repeated and also a conditional statement used to check whether or not the condition to exit the loop has been fulfilled.
 
 <!-- Toistolauseessa voidaan myös kysyä käyttäjältä syötettä. Toistolauseessa useasti käytettävät muuttujat (kuten Scanner-lukija) määritellään ennen toistolausetta, toistokohtaiset muuttujat (kuten luettu arvo) määritellään toistolauseessa. -->
-In the loop, user can be asked for an input. The variables that are used many times (such as Scanner) are defined before the loop, and the loop specific variables (such as read value) is defined in the loop.
+Users can also be asked for input within a loop. The variables that are commonly used in loops (such as Scanner readers) are defined before the loop, whereas variables (such as the value read from the user) that are specific to the loop are defined within it.
 
 <!-- Alla olevassa esimerkissä ohjelma kysyy käyttäjältä pitäisikö toistolauseesta poistua. Mikäli käyttäjä syöttää merkkijonon "k", ohjelman suoritus siirtyy toistolausetta seuraavaan komentoon, jonka suorittamisen jälkeen ohjelman suoritus päättyy. -->
-In the example below, program asks the user whether or not to exit from the loop. If the user inputs a string "k", the executuion of program moves to command after the loop, after which the execution of the program ceases.
+In the example below, the program asks the user whether to exit the loop or not. If the user inputs the string "k", the execution of the program moves to the command following the loop block, after which the execution of the program ends.
 
 ```java
 Scanner scanner = new Scanner(System.in);
@@ -172,7 +169,7 @@ System.out.println("Ready!");
 ```
 
 <!-- Ohjelma toimii esimerkiksi seuraavasti. Alla käyttäjän syötteet ovat merkitty punaisella. -->
-The program in the example works as follows. The users inputs are in red color.
+The program in the example works as follows. The user's inputs are marked in red.
 <sample-output>
 
 Exit? (y exits)
@@ -191,7 +188,7 @@ Ready!
 <programming-exercise name="Continue?" tmcname='osa02-Osa02_05.Continue'>
 
 <!-- Kirjoita edellä olevaa toistolause-esimerkkiä mukaillen ohjelma, joka kysyy käyttäjältä "Jatketaanko?" kunnes käyttäjä syöttää merkkijonon "ei". -->
-Write a program by using the loop-example that asks "Continue?" until the user inputs a string "no".
+Write a program using the loop-example that asks "Continue?" until the user inputs the string "no".
 <sample-output>
 
 Continue?
@@ -209,7 +206,7 @@ Continue?
 
 
 <!-- Edellisessä esimerkissä ohjelma lukee käyttäjältä merkkijonomuotoisia syötteitä. Vastaavanlaisen ohjelman toteutus onnistuu myös muilla muuttujatyypeillä. Alla olevassa esimerkissä käyttäjältä pyydetään lukuja kunnes käyttäjä syöttää luvun nolla. -->
-In the previous example, the program reads string type inputs. Similarly, the program can be done with other types of variables. The program below asks numbers from the user until the user inputs a zero.
+In the previous example, the program read inputs of type string from the user. The program can be implemented with other types of variables similarly. The program below asks numbers from the user until the user inputs a zero.
 
 ```java
 Scanner scanner = new Scanner(System.in);
@@ -228,7 +225,7 @@ System.out.println("Done, thank you!");
 ```
 
 <!-- Ohjelman suoritus on esimerkiksi seuraavanlainen. -->
-The output of the program is for example:
+The output of the program can be as follows:
 
 <sample-output>
 
@@ -268,14 +265,14 @@ Give a number:
 
 
 <!-- ## Toistolauseen alkuun palaaminen -->
-## Returning to the start of the loop
+## Returning to the Start of the Loop
 
 <!-- Toistolauseen alkuun palataan silloin kun suoritus päätyy toistolauseen lohkon loppuun eli kaikki toistolauseen lohkossa olevat komennot on suoritettu. Toistolauseen alkuun voi palata myös muualta kuin toistolauseen lopusta erillisellä `continue`-komennolla. Kun tietokone suorittaa komennon `continue`, siirtyy ohjelman suoritus toistolauseen alkuun. -->
-The beginning of the loop is returned to when the execution ends up in the end of the loop. This means that all the commands in the loop has been executed. You can also return to the beginning of the loop from other locations besides the end of the loop with command `continue`. When the computer executes command `continue`, the execution of the program moves to the beginning of the loop.
+The beginning of the loop is returned to when the execution reaches the end of the loop. This means that all the commands in the loop have been executed. You can also return to the beginning from other places besides the end with the command `continue`. When the computer executes the command `continue`, the execution of the program moves to the beginning of the loop.
 
 <!-- Alla olevassa esimerkissä esitellään `continue`-komennon käyttöä. Ohjelma pyytää käyttäjää syöttämään positiivisia lukuja. Mikäli käyttäjä syöttää negativiisen luvun tai nollan, ohjelma tulostaa viestin "Epäkelpo luku! Yritä uudelleen.", jonka jälkeen suoritus palaa toistolauseen alkuun. Edellisessä esimerkissä ohjelma lukee käyttäjältä merkkijonomuotoisia syötteitä. Vastaavanlaisen ohjelman toteutus onnistuu myös muilla muuttujatyypeillä. Alla olevassa esimerkissä käyttäjältä pyydetään lukuja kunnes käyttäjä syöttää luvun nolla. -->
 <!-- TODO epäkelpo = unfit? -->
-The example below showcases the usage of the command `continue`. The program asks a user to input a positive numbers. If the user inputs a negative number or a zero, the program prints a message "Unfit number, try again", after which the execution returns to the beginning of the loop. In the previous example, the program reads a string inputs from a user. Similar program with different input types is possible. In the example below the user is asked for numbers until the user inputs a zero.
+The example below demonstrates the use of the `continue` command. The program asks the user to input positive numbers. If the user inputs a negative number or a zero, the program prints the message "Unfit number, try again", after which the execution returns to the beginning of the loop. In the previous example, the program read inputs of type string from the user. Similar programs with different input types are also possible. In the example below, the user is asked for numbers until they input a zero.
 
 ```java
 Scanner scanner = new Scanner(System.in);
@@ -294,11 +291,10 @@ while (true) {
 ```
 
 <!-- Ohjelman suoritus toistuu yllä olevassa esimerkissä ikuisesti, sillä toistolauseesta poistumiseen käytettävää `break`-komentoa ei ohjelmassa ole. Mikäli haluamme, että toistolauseesta voi poistua, tulee ohjelmaan lisätä `break`-komento. -->
-The execution of the program is repeated for ever in the example above because the `break` command,
-which exits the loop, is not used within the loop. In order to exit the loop, the `break` command must be added to the program.
+The program in the example above is repeated infinitely since the `break` command used for exiting the loop is not used. To exit the loop, the `break` command must be added to it.
 
 <!-- Alla olevassa esimerkissä ohjelmaa on muokattu siten, että käyttäjältä pyydetään positiivisia lukuja. Mikäli käyttäjä syöttää negatiivisen luvun, kerrotaan että luku oli epäkelpo ja palataan toistolauseen alkuun. Mikäli käyttäjä syöttää nollan, toistolauseesta poistutaan. -->
-In the example below, the program is modified in such a way that the user is asked to input positive numbers. If the user inputs a negative number, the program tells that the number was unfit and return to the beginning of the loop. If the number was a zero, the program exits the loop.
+In the example below, the program is modified in such a way that the user is asked to input positive numbers. If the user inputs a negative number, the program informs them that the number was unfit and returns to the beginning of the loop. If the number was a zero, the program exits the loop.
 
 ```java
 Scanner scanner = new Scanner(System.in);
@@ -320,7 +316,7 @@ while (true) {
 }
 ```
 
-TODO: tänne tarttee visualisoinnin
+<!-- TODO: tänne tarttee visualisoinnin -->
 <!-- TODO: this requires a visualization -->
 
 <quiz id="36891f81-9e52-5546-97c3-4c2f0f180135"></quiz>
@@ -329,7 +325,7 @@ TODO: tänne tarttee visualisoinnin
 <programming-exercise name="Restricting Input" tmcname='osa02-Osa02_07.RestrictingInput'>
 
 <!-- Kirjoita ohjelma, joka kysyy käyttäjältä lukuja. Mikäli luku on negatiivinen (eli pienempi kuin nolla), käyttäjälle tulostetaan viesti "Epäkelpo luku" ja käyttäjältä kysytään uutta lukua. Jos taas luku on nolla, lukujen lukeminen lopetetaan ja ohjelma poistuu toistolauseesta. Mikäli luku on positiivinen, ohjelma tulostaa luvun toisen potenssin. -->
-Write a program that asks a user for numbers. If the number is negative (smaller than zero) the program prints for user "unfit number" and asks user for a new number. If the number is zero, the program exits the loop. If the number is positive, the program prints the number power of two.
+Write a program that asks a user for numbers. If the number is negative (smaller than zero), the program prints for user "unfit number" and asks the user for a new number. If the number is zero, the program exits the loop. If the number is positive, the program prints the number power of two.
 <sample-output>
 
 Give a number:
@@ -352,7 +348,7 @@ Give a number:
 </programming-exercise>
 
 <!-- Edellisessä tehtävässä toteutettiin ohjelma, joka lukee käyttäjältä lukuja. Mikäli käyttäjä syöttää negatiivisen luvun, ohjelma ilmoittaa että luku oli epäkelpo, ja mikäli käyttäjä syöttää nollan, ohjelmasta poistutaan. Eräs ratkaisu tehtävään on seuraavanlainen. -->
-In the previous exercise a program was made that asks user for numbers. If the user did input a negative number, the program would infor that the number was unfit and if the user did input a zero, the program would have exited. A possible solution of the exercise is as follows
+In the previous exercise, a program was made that asks the user for numbers. If the user entered a negative number, the program would inform them that the number was unfit, and if the user entered a zero, the program would exit. A possible solution to the exercise is the following.
 
 ```java
 Scanner scanner = new Scanner(System.in);
@@ -375,7 +371,8 @@ while (true) {
 ```
 
 <!-- Ohjelman voisi toteuttaa myös muotoilemalla ehtolauseet toisella tavalla. Alla olevassa esimerkissä erillisten ehtolauseiden sijaan ehtolauseet on yhdistetty. -->
-Program could be made by modifying the if-statement to another form. In the example below; instead of the seperate if-statements, there's one if-statement.
+The program could be made by modifying the if-statement to another form. In the example below, the conditionals have been combined to replace separate if-statements.
+
 ```java
 Scanner scanner = new Scanner(System.in);
 
@@ -398,7 +395,7 @@ while (true) {
 Which of the previous examples was more clear?
 
 <!-- Tarkastellaan edellisten ohjelmien selkeyttä toisen esimerkin kautta. Alla oleva ohjelma kysyy käyttäjältä lukua. Mikäli luku on negatiivinen, käyttäjälle kerrotaan että luku on epäkelpo ja siirrytään toistolauseen alkuun. Mikäli luku on nolla, toistolauseesta poistutaan. Muissa tilanteissa käyttäjälle tulostetaan syötetyn luvun neliö, eli syötetty luku kerrottuna itsellään. -->
-Let's examine the clarity of the previous programs through an example. Below, the program asks user for a number. If the number is negative, the user is informed that the number is unfit and the execution of the program goes to the beginning of the loop. If the number is zero, the program exits the loop. In other cases the program prints the square of the number, that is the number times itself.
+Let's examine the clarity of the previous programs through an example. Below, the program asks the user for a number. If the number is negative, the user is informed that the number is unfit and the execution of the program goes to the beginning of the loop. If the number is zero, the program exits the loop. In other cases the program prints the square of the number, i.e., the number times itself.
 
 ```java
 Scanner scanner = new Scanner(System.in);
@@ -421,7 +418,7 @@ while (true) {
 ```
 
 <!-- Myös tämän ohjelman voi toteuttaa yhdistämällä ehtolauseet. Tällöin toteutus olisi seuraavanlainen. -->
-This program can also be done by combining the if-statements. Here the implementations woud be the following.
+This program can also be done by combining the if-statements. In that case, the implementations would be the following.
 
 ```java
 Scanner scanner = new Scanner(System.in);
@@ -441,7 +438,7 @@ while (true) {
 ```
 
 <!-- Tarkastellaan edellisiä ohjelmia kommentoituna. Jokaista palaa edeltää kommentit, jotka pyrkivät selittämään mitä ohjelmassa tapahtuu. Alla erillisillä ehtolauseilla toteutettu ohjelma. -->
-Let's examine the previous programs with comments. Before every command there's a comment that aims to explain what's happening in hte program. Below, a program done with seperate if-statements.
+Let's examine the previous programs with comments. Before each command, there's a comment that aims to explain what's happening in the program. Below is a program that's written with separate if-statements.
 
 ```java
 // The task is to read an input from the user //Tehtävänä syötteen lukeminen käyttäjältä
@@ -472,10 +469,10 @@ while (true) {
 ```
 
 <!-- Huomaat, että yllä jokaisella ehtolauseella on ohjelmassa yksi selkeä tehtävä. -->
-Note that every if-statement has a one clear task.
+Note that every if-statement has a single, clear task.
 
 <!-- Kun kommentoimme ohjelman, joka sisältää ehtolauseet yhdistettynä, kommentit ovat seuraavat. -->
-When we comment the program that contains a combined if-statment, the comments are the following.
+When we comment on a program containing combined if-statements, the comments take the following form.
 
 ```java
 // The task is to read an input from the user // Tehtävänä syötteen lukeminen käyttäjältä
@@ -501,25 +498,25 @@ while (true) {
 ```
 
 <!-- Huomaamme, että `if-else if-else`-rakenteelle on vaikea määritellä yksi selkeä tehtävä. Ohjelmia suunniteltaessa ja toteuttaessa kannattaakin pyrkiä tilanteeseen, missä jokaisella ohjelman osalla on yksi selkeä tehtävä. Tämä teema tulee toistumaan kurssilla. -->
-We realise, that for the `if-else if-else`-block it's hard to give on clear task. While designing a program, it is convenient to aim for a situation in which every part of the program has a clear task. This theme will be repeated throughout the course.
-TODO: quiz
+We notice that it's difficult to define a single, clear task for `if-else if-else`-block. During the design and implementation of a program, it's desirable to to aim for a situation in which every part of the program has a a single, clear task. This theme repeats throughout the course.
+<!-- TODO: quiz -->
 
 
 <!-- ## Laskentaa toistolauseiden avulla -->
-## Calculation with loops
+## Calculation with Loops
 
 <!-- Toistolauseita hyödynnetään usein asioiden laskemisessa. Esimerkiksi ohjelmat, joissa käsitellään määrittelemätöntä määrää käyttäjän syöttämiä lukuja perustuvat toistolauseseen. Tällaisissa ohjelmissa tulostetaan tyypillisesti jonkinlaisia tilastoja luetuista luvuista tai muista syötteistä toistolauseen jälkeen. -->
-Loops are used in computing several things. For example, programs that process unknown amount of users inputted numbers use loops. These kinds of programs typically print out some sort of a statistics of read numbers or other inputs after the loop.
+Loops are used in computing many different things. For example, programs that process indefinite numbers of user-inputted values make use of loops. These kinds of programs typically print out some sort of statistics the numbers that were read or other inputs that follow the loop.
 
 <!-- Jotta ohjelma voi tulostaa toistolauseen jälkeen tietoja toistolauseen suorituksesta, tulee tietoa säilöä ja muokata toistolauseen aikana. -->
-In order for program to print out information after the loop, the information has to be saved and modified during the loop.
+For the program to print out information from the loop execution after the loop, the information must be saved and modified during the loop.
 
 
 <!-- Mikäli tiedon tallentamiseen käytettävä muuttuja esitellään toistolauseen lohkon sisällä, on muuttuja käytössä vain toistolauseen lohkon sisällä sekä sen alla määritellyissä lohkoissa, mutta ei toistolauseen lohkon ulkopuolella. -->
-Whether the variable used to store the data is introduced within the loop, the variable is then only available within the lop and nowhere else.
+If the variable used to store the data is introduced within the loop, the variable is only available within that loop and nowhere else.
 
 <!-- Luodaan ohjelma, jonka tarkoituksena on laskea ja tulostaa käyttäjän syöttämien ykkösten lukumäärä. Tehdään ensin toimimaton versio ja tarkastellaan lohkojen toimintaa. -->
-Let's create a program with a purpose of computing and printing out the amount of user inputted number ones. Let's first create a inoperative version and examine the action of the blocks.
+Let's create a program to count and print out the number of ones entered by the user. Let's first create a non-working version and examine the action of the blocks.
 
 ```java
 Scanner scanner = new Scanner(System.in);
@@ -554,7 +551,7 @@ System.out.println("The total of ones: " + ones);
 ```
 
 <!-- Edellinen ohjelma ei toimi, sillä muuttuja `ykkosia` esitellään toistolauseen lohkon sisällä ja sitä yritetään käyttää ohjelman lopussa toistolauseen lohkon ulkopuolelta. Muuttuja on olemassa vain sen lohkon sisällä missä se on määritelty. Mikäli tulostus `System.out.println("Ykkösiä yhteensä: " + ykkosia);` olisi toistolauseen sisällä, ohjelma toimisi mutta ei toivotusti. Tarkastellaan tätä vielä seuraavaksi. -->
-The previous program does not work, because the variable `ones` has been introduced within the loop and tried to access it after the loop in the end of the program. The variable only exists in the loop. If the printing `System.out.println("The total of ones: " + ones);` would be inside the loop the program would work, but not in the way it was supposed to. Let's examine this once more.
+The previous program does not work because the variable `ones` is introduced within the loop, and an attempt is made to use it after the loop at the end of the program. The variable only exists inside the loop. If the print statement `System.out.println("The total of ones: " + ones);` was inside the loop, the program would work, but not in the desired way. Let's examine this next.
 
 
 ```java
@@ -610,10 +607,11 @@ Insert a number (0 exits)
 </sample-output>
 
 <!-- Mikäli haluat käyttää muuttujaa toistolauseen jälkeen (ja halutessasi toistolauseessa), tulee muuttuja esitellä ennen toistolausetta. -->
-If you wish to use the variable after a loop, you have to introduced it before the loop.
+If you wish to use a variable after a loop, it needs to be introduced before the loop.
 
 <!-- Alla olevassa esimerkissä ohjelma laskee syötettyjen ykkösten lukumäärän. Syötteitä luetaan kunnes käyttäjä syöttää luvun 0, jonka jälkeen tulostetaan luettujen ykkösten lukumäärä. Ohjelmassa käytetään muuttujaa `ykkosia` ykkösten lukumäärän ylläpitoon. -->
-The example bellow the program computes the total of number ones inputted. The inputs are read until the user inputs a number zero after which the program prints the total of inputted number ones. The program uses variable `ones` to keep track of the number ones.
+In the example below, the program computes the total of number ones inputted. The inputs are read until the user inputs a zero after which the program prints the total count of number ones entered. The program uses variable `ones` to keep track of the number ones.
+
 ```java
 Scanner scanner = new Scanner(System.in);
 
@@ -644,7 +642,7 @@ System.out.println("The total of ones: " + ones);
 ```
 
 <!-- Alla on esimerkki ohjelman toiminnasta. -->
-Bellow is the example output of the program.
+Below is an example output of the program.
 
 <sample-output>
 
@@ -667,7 +665,7 @@ Total of ones: 2
 <programming-exercise name="Input Count" tmcname='osa02-Osa02_08.InputCount'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötettyjen lukujen lukumäärän. Syötteen loppumisesta kertovaa nollaa ei tule laskea osaksi lukujen lukumäärää. -->
-Write a program that reads values from the user until they input a 0. After this, the program prints the total number of inputted values. The zero, that's given as input to exit the loop, should not be included in the total number count.
+Write a program that reads values from the user until they input a 0. After this, the program prints the total number of inputted values. The zero that's used to exit the loop should is not to be included in the total number count.
 
 <!-- Ohjelman tulostusesimerkki: -->
 Example output of the program:
@@ -695,7 +693,7 @@ Total number count 4
 <programming-exercise name="Negative Number Count" tmcname='osa02-Osa02_09.NegativeNumberCount'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötteessä olleiden negatiivisten lukujen lukumäärän. Syötteen loppumisesta kertovaa nollaa ei tule laskea osaksi lukujen lukumäärää. -->
-Write a program that reads values from the user until they input a 0. After this, the program prints the total number of inputted values that are negative. The zero, that's given as input to exit the loop, should not be included in the total number count.
+Write a program that reads values from the user until they input a 0. After this, the program prints the total number of inputted values that are negative. The zero that's used to exit the loop should is not to be included in the total number count.
 
 <!-- Ohjelman tulostusesimerkki: -->
 Example output of the program:
@@ -719,8 +717,7 @@ Total negative number count 1
 </programming-exercise>
 
 <!-- Edellä olevissa tehtävissä tehdyt ohjelmat ovat lukeneet käyttäjältä syötettä ja pitäneet kirjaa tietynlaisten lukujen lukumäärästä. Seuraavassa tehtävässä kaivattu lukujen summa ei oikeastaan juurikaan poikkea edellisistä tehtävistä -- nyt sen sijaan, että pidät kirjaa lukujen lukumäärästä eli lisäät lukumäärään luvun aina 1, lisäätkin "lukumäärään" eli summaan käyttäjän syöttämän luvun. -->
-The previously programs done in previous exercises have read user inputs and kept track about certain types of numbers. In the next exercise the sum of numbers is no different --- this time you will keep track of numbers, which means that instead of adding one the amount of numbers, you add the number to the sum.
-
+The programs written in the previous exercises have read input from the user and kept track of the count of certain types of numbers. In the next exercise, the requested sum of numbers is not much different --- this time, rather than keeping track of the number of values entered, you add the number entered by the user to the sum.
 <!-- <programming-exercise name="Lukujen summa" tmcname='osa02-Osa02_10.LukujenSumma'> -->
 <programming-exercise name="Sum of Numbers" tmcname='osa02-Osa02_10.SumOfNumbers'>
 
