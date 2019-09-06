@@ -9,21 +9,21 @@ title: 'Lisää toistolauseita'
 <!-- - Tutustut while-toistolauseen ehtoon. -->
 <!-- - Opit käyttämään for-toistolausetta. -->
 <!-- - Tiedät tilanteita, joihin while-toistolause sopii, ja tilanteita, joihin for-toistolause sopii. -->
- - Become familiar with the conditions of while loops.
- - Learn to use the for-loop.
- - Know when to use a while-loop and when to use a for-loop.
+ - You're familiar with the of while loop condition.
+ - You learn to use the for-loop.
+ - You recognize situations where a while-loop should be used and those where a for-loop is more appropriate.
 
 </text-box>
 
 
 <!-- Tähän mennessä käyttämämme "while-true" -toistolause on erittäin näppärä silloin, kun ohjelmassa tulee toistaa toiminnallisuutta kunnes käyttäjä syöttää tietynlaisen syötteen. -->
-The "while-true" loop we have been using is very handy when the program has to repeat a functionality until the user gives  certain input.
+The "while-true" loop we've been using is very handy when the program has to repeat a functionality until the user provides certain input.
 
 <!-- Tutustutaan seuraavaksi muutamaan muuhun toiston toteutustapaan. -->
-Now we will get to know few other ways to do loops.
+Next, we'll come to know a few other ways to implement loops.
 
 
-## While-loop with a condition
+## While-Loop with a Condition
 
 <!-- Olemme tähän mennessä käyttäneet toistolausetta, jonka suluissa on totuusarvo `true`, jolloin toistoa on jatkettu ikuisesti (tai kunnes toistolauseessa päädytään komentoon `break`). -->
 So far we have been using a loop with the boolean 'true' in its paranthesis, so the loop continues forever (or until the loop is ended with the `break` command ).
@@ -260,10 +260,10 @@ Where from? **16**
 </programming-exercise>
 
 
-## About stopping loop execution
+## On Stopping a Loop Execution
 
 <!-- Toistolauseen suoritus ei lopu heti kun toistolauseen ehtolauseke voisi evaluoitua todeksi. Toistolauseen ehtolauseke evaluoidaan aina kun saavutaan toistolauseen alkuun, eli (1) kun ohjelman seuraava suoritettava lause on toistolause, ja (2) kun toistolauseeseen liittyvän lohkon sisältämän ohjelmakoodin suoritus on saatu loppuun. -->
-A loop does not stop executing immediately when its condition evaluates true. Loops condition is evaluated at the start of a loop, so (1) when the next statement to be executed is a loop, and (2) the execution of the loop body has finished.
+A loop does not stop executing immediately when its condition evaluates to true. A loop's condition is evaluated at the start of a loop, i.e., (1) when the next statement to be executed is a loop, and (2) the execution of the loop body has finished.
 
 <!-- Tarkastellaan seuraavaa toistolausetta. -->
 Let's look at the following loop.
@@ -293,15 +293,15 @@ It prints the following:
 </sample-output>
 
 <!-- Vaikka muuttujan `luku` arvo on välillä 2, toistolauseen suoritus ei lopu koskaan. -->
-Even though `number` equals 2 at one point, the loop runs for forever.
+Even though `number` equals 2 at one point, the loop runs forever.
 
 
 <!-- **Toistolauseen ehto tarkistetaan silloin kun toistolauseen toistaminen aloitetaan sekä silloin kun koodin suoritus on päässyt toistolauseen lopettavaan aaltosulkuun asti.** Mikäli toistolauseen ehdon lauseke on evaluoituu todeksi eli muotoon `true`, suoritus jatkuu toistolauseen alusta. Mikäli lauseke evaluoituu epätodeksi eli muotoon `false`, suoritus siirtyy toistolausetta seuraavaan lauseeseen. -->
-**The condition of a loop is evaluated when execution of a loop starts and when the execution of the loop body has reached the closing curly bracket.** If the condition evaluates to `true`, execution continues from the top of the loop body. If the condition evaluates to `false`, execution continues from the first statement after the loop.
+**The condition of a loop is evaluated when the execution of a loop starts and when the execution of the loop body has reached the closing curly bracket.** If the condition evaluates to `true`, execution continues from the top of the loop body. If the condition evaluates to `false`, execution continues from the first statement following the loop.
 
 
 <!-- Vastaava sääntö pätee myös for-toistolauseelle. Alla olevassa esimerkissä toistolauseen suoritus -- väärin ymmärrettynä -- pitäisi lopettaa heti, kun muuttujan `i` arvo on 100. Näin ei kuitenkaan käy. -->
-The same applies to for-loops. In the example below loop execution --when not understood correctly-- should end when `i` equals 100. However it does not.
+This also applies to for-loops. In the example below, loop execution -- when understood incorrectly -- should end when `i` equals 100. However, it doesn't.
 
 ```java
 for (int i = 0; i != 100; i++) {
@@ -316,14 +316,14 @@ for (int i = 0; i != 100; i++) {
 The loop above never stops executing.
 
 
-## Repeating functionality
+## Repeating Functionality
 
 <!-- Eräs yleinen ongelmatyyppi on "tee jotain tietty määrä kertoja". Näissä ohjelmissa esiintyy toisto, jonka jokaisella toistokerralla tehdään haluttu toiminnallisuus sekä muutetaan kertojen lukumäärää laskevaa laskurimuuttujaa. -->
 One common program type is "do something certain amount of times".
-Common for all these programs is repetition. Some functionality is done repeatedly, and a counter variable is used to keep track of the repetitions.
+What's common to all these programs is repetition. Some functionality is done repeatedly, and a counter variable is used to keep track of the repetitions.
 
 <!-- Seuraava ohjelma laskee tulon 4*3 hieman kömpelöllä tavalla eli summana 3 + 3 + 3 + 3: -->
-The following program calculates the product 4*3 clumsily as a sum 3 + 3 + 3 + 3:
+The following program calculates the product 4*3 somewhat clumsily, i.e., as the sum 3 + 3 + 3 + 3:
 
 ```java
 int result = 0;
@@ -358,7 +358,7 @@ System.out.println(result);
 ```
 
 <!-- Tai for-lauseen avulla seuraavasti. -->
-Or by using a for-loop
+Or by using a for-loop as seen in the following.
 
 ```java
 int result = 0;
@@ -371,7 +371,7 @@ System.out.println(result);
 ```
 
 <!-- Alla ohjelman suoritus on kuvattuna while-toistolausetta käyttäen. -->
-Below shows the execution of the program using a while-loop.
+The program execution using a while-loop is visualized below.
 
 
 <code-states-visualizer input='{"code":"public class Esimerkki {\n    public static void main(String[] args) {\n        int tulos = 0;\n\n        int i = 0;\n        while (i < 4) {\n            tulos += 3;\n            i++;\n        }\n\n        System.out.println(tulos);\n    }\n}","stdin":"","trace":[{"stdout":"","event":"call","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"1","frame_id":1}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"2","frame_id":2}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{"tulos":0},"ordered_varnames":["tulos"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"4","frame_id":4}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":6,"stack_to_render":[{"func_name":"main:6","encoded_locals":{"tulos":0,"i":0},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"7","frame_id":7}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":7,"stack_to_render":[{"func_name":"main:7","encoded_locals":{"tulos":0,"i":0},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"11","frame_id":11}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"tulos":3,"i":0},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"13","frame_id":13}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"tulos":3,"i":1},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"15","frame_id":15}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":6,"stack_to_render":[{"func_name":"main:6","encoded_locals":{"tulos":3,"i":1},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"16","frame_id":16}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":7,"stack_to_render":[{"func_name":"main:7","encoded_locals":{"tulos":3,"i":1},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"20","frame_id":20}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"tulos":6,"i":1},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"22","frame_id":22}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"tulos":6,"i":2},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"24","frame_id":24}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":6,"stack_to_render":[{"func_name":"main:6","encoded_locals":{"tulos":6,"i":2},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"25","frame_id":25}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":7,"stack_to_render":[{"func_name":"main:7","encoded_locals":{"tulos":6,"i":2},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"29","frame_id":29}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"tulos":9,"i":2},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"31","frame_id":31}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"tulos":9,"i":3},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"33","frame_id":33}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":6,"stack_to_render":[{"func_name":"main:6","encoded_locals":{"tulos":9,"i":3},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"34","frame_id":34}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":7,"stack_to_render":[{"func_name":"main:7","encoded_locals":{"tulos":9,"i":3},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"38","frame_id":38}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"tulos":12,"i":3},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"40","frame_id":40}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"tulos":12,"i":4},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"42","frame_id":42}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":6,"stack_to_render":[{"func_name":"main:6","encoded_locals":{"tulos":12,"i":4},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"43","frame_id":43}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":11,"stack_to_render":[{"func_name":"main:11","encoded_locals":{"tulos":12,"i":4},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"47","frame_id":47}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"12\n","event":"step_line","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"tulos":12,"i":4},"ordered_varnames":["tulos","i"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"51","frame_id":51}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"12\n","event":"return","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"tulos":12,"i":4,"__return__":["VOID"]},"ordered_varnames":["tulos","i","__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"52","frame_id":52}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}}],"userlog":"Debugger VM maxMemory: 455M\n"}'></code-states-visualizer>
@@ -380,13 +380,13 @@ Below shows the execution of the program using a while-loop.
 <text-box type="hint" name="Ohjelman suorituksen simulointi">
 
 <!-- Kun muuttujien määrä kasvaa, ohjelman ymmärtäminen muuttuu haastavammaksi. Ohjelman suorituksen ymmärtämistä edesauttaa ohjelman suorituksen simulointi. -->
-When the number of variables increases, understanding a program becomes harder. Simulating program execution can help  understanding it.
+When the number of variables increases, understanding a program becomes harder. Simulating program execution can help in understanding it.
 
 <!-- Tämä toimii niin, että luot paperilapulle taulukon, joka sisältää sarakkeet kullekin ohjelman muuttujalle, ehdolle, ym, sekä erillisen kohdan ohjelman tulostuksille. Tämän jälkeen käyt ohjelmaa rivi riviltä läpi ja kirjoitat sarakkeisiin ohjelman tilan (eli muuttujien arvojen) muutokset, sekä tulostusalueelle ohjelman tuottamat tulostukset. -->
-You can simulate program execution by drawing a table containing a column for each variable and condition of a program, and a separate space for program output. Then go through the source code line by line, and write down the changes to the state of the program (the values of each variable or condition), and the program output.
+You can simulate program execution by drawing a table containing a column for each variable and condition of a program, and a separate space for program output. You then go through the source code line by line, and write down the changes to the state of the program (the values of each variable or condition), and the program output.
 
 <!-- Alla olevaan taulukkoon on kirjoitettu auki edellisen esimerkin muuttujien `tulos` ja `i` arvot kullakin toistolauseen ehdon `i < 4` vertailuhetkellä. -->
-The values of variables `result` and `i` from the previous example have been written to the table below at each point the condition `i < 4` is evaluated.
+The values of variables `result` and `i` from the previous example have been written out onto the table below at each point the condition `i < 4` is evaluated.
 
 <table class="table">
   <tr>
@@ -538,24 +538,24 @@ Factorial: 3628800
 calculated 1 * 2 * 3 * ... * 8 * 9 * 10 = 3628800
 
 <!-- _Lisätietoa_: Kertomaa käytetään erityisesti todennäköisyyslaskennassa tilanteissa, missä halutaan esimerkiksi tarkastella jonkin joukon kaikkia erilaisia järjestyksiä. Esimerkiksi viiden hengen ryhmän voi järjestää 5! erilaiseen jonoon, ja 52 kortin korttipakka voi olla 52! erilaisessa järjestyksessä. Kertomaa voi käyttää myös <a href="http://fi.wikipedia.org/wiki/Kombinaatio" target="_blank" rel="noopener">kombinaatioiden</a> laskemiseen; esimerkiksi 52 kortin korttipakasta on mahdollista jakaa 52! / (5! * (52 - 5)!) erilaisella viiden kortin kättä, ja 40 numeron joukosta voi tehdä yhteensä 40! / (7! * (40 - 7)!) erilaista 7 numeron lottoriviä. -->
-_Additional info_: Factorials are used especially in propability calculus when examining different possible orders of a set. For example a group of five people can form 5! different lines, and a pack of 52 cards can be in 52! different orders. Factorial can also be used to calculate <a href="http://fi.wikipedia.org/wiki/Kombinaatio" target="_blank" rel="noopener"> combinations </a>; For example it is possible to deal 52! / (5! * (52-5)!) different hands from a 52 card pack, and you can form 40! / (7! * (40 - 7)!) different 7 number bingo lines from 40 numbers.
+_Additional info_: Factorials are used especially in probability calculus when examining different possible orders of a set. For example a group of five people can form 5! different lines, and a pack of 52 cards can be in 52! different orders. Factorial can also be used to calculate <a href="http://fi.wikipedia.org/wiki/Kombinaatio" target="_blank" rel="noopener"> combinations </a>; For example it is possible to deal 52! / (5! * (52-5)!) different hands from a 52 card pack, and you can form 40! / (7! * (40 - 7)!) different 7 number bingo lines from 40 numbers.
 
 </programming-exercise>
 
 
-## About the structure of programs using loops
+## On the Structure of Programs Using Loops
 
 <!-- Edellisissä esimerkeissä olemme keskittyneet ohjelmiin, joissa toistolauseessa olevaa koodia toistetaan tietty määrä. Tämä määrä on voinut rajoittua käyttäjän syötteen perusteella -- tällaisissa ohjelmissa for-toistolause on varsin näppärä. -->
-In the previous examples we have concentrated on cases, where the loop is executed a predetermined number of times. The number of repetitions can be based on user input -- in these cases the for-loop is quite handy.
+In the previous examples, we have concentrated on cases where the loop is executed a predetermined number of times. The number of repetitions can be based on user input -- in these cases, the for-loop is quite handy.
 
 <!-- Ohjelmissa, joissa toistolauseessa olevaa koodia tulee suorittaa kunnes käyttäjä syöttää tietyn syötteen, for-toistolause ei toimi kovin hyvin. Tällöin aiemmin harjoittelemamme while-true -toistolause toimii hyvin. -->
-In  programs where the loop body has to be executed until the user gives certain input the for-loop is not so great. In these cases the while-true -loop we practiced earlier works well.
+In programs where the loop body has to be executed until the user gives certain input, the for-loop is not too great. In these cases, the while-true loop we practiced earlier works well.
 
 <!-- Tarkastellaan lyhyesti hieman laajempaa ohjelmaa, joka lukee käyttäjältä kokonaislukuja. Ohjelma käsittelee negatiiviset luvut epäkelpoina lukuina, positiiviset luvut hyväksyttävinä lukuina, sekä nollan lukemisen lopettamista ilmaisevana lukuna. Kun käyttäjä syöttää nollan, ohjelma tulostaa hyväksyttyjen lukujen summan, hyväksyttyjen lukujen lukumäärän sekä epäkelpojen lukujen lukumäärän. -->
-Let's have a look at a bit more complex program, which reads integers from the user. The program handles negative numbers as invalid, and zero stops the loop. When user writes zero, the program prints the sum of valid numbers, the number of valid numbers and the number of invalid numbers.
+Let's take a look at a somewhat more complex program that reads integers from the user. The program handles negative numbers as invalid, and zero stops the loop. When the user enters zero, the program prints the sum of valid numbers, the number of valid numbers and the number of invalid numbers.
 
 <!-- Alla on kuvattuna eräs mahdollinen ratkaisu, joka ei kuitenkaan ole tyylin kannalta ideaali. -->
-Below is one possible solution. However the style of the example is not ideal.
+A possible solution is detailed below. However, the style of the example is not ideal.
 
 ```java
 Scanner reader = new Scanner(System.in);
@@ -586,7 +586,7 @@ while (true) {
 ```
 
 <!-- Yllä kuvatussa lähestymistavassa toistolauseen päättymisen jälkeen tapahtuva laskenta on toteutettu toistolauseen sisälle. Lähestymistapa ei ole suositeltava, sillä se johtaa helposti hyvin monimutkaiseen ohjelman rakenteeseen. Jos toistolauseen lopettamisen yhteydessä pitäisi tehdä muutakin -- esimerkiksi lukea lisää syötteitä -- asetettaisiin kyseinenkin toiminnallisuus helposti ehtolauseen sisälle. Lisätoiminnallisuuden kertyessä, ohjelma muuttuisi yhä vaikeammin ja vaikeammin luettavaksi. -->
-In the above code, the computation which is executed after the loop ends has been implemented inside of the loop. This approach is not recommended, as it can easily lead to a very complex program structure. If some other code --e.g reading more input-- should be done when the loop ends as well, it could easily end up being placed inside of the loop too. As more and more functionality is needed, the program would become harder and harder to read.
+In the code above, the computation executed after the loop has ended has been implemented inside of the loop. This approach is not recommended as it can easily lead to very complex program structure. If something else --e.g., reading more input -- is to be done when the loop ends, it could also easily end up being placed inside of the loop. As more and more functionality is needed, the program becomes increasingly harder to read.
 
 <!-- Pitäydytään seuraavassa toistolauseen muodossa: -->
 Let's stick to the following loop structure:
@@ -645,18 +645,19 @@ System.out.println("Invalid numbers: " + invalidNumbers);
 <programming-exercise name='Repeating, breaking and remembering (5 parts)' tmcname='part02-Part02_20.RepeatingBreakingAndRemembering'>
 
 <!-- Seuraavassa tehtävässä tehdään yksi ohjelma, mutta ohjelman rakentaminen tapahtuu hyvin pienissä paloissa. Tämä on ehdottoman suositeltava tapa aina kun ohjelmoit. -->
-Next we will implement one larger program small piece at a time. This is a strongly recommended approach always when coding.
+Next, we'll implement a program one piece at a time. This is always strongly recommended when coding.
 
 <!-- Tehtäväsarja muodostaa yhden isomman ohjelman, jonka toiminnallisuus toteutetaan pienissä paloissa. Jos et tee tehtäväsarjaa loppuun asti, voit lähettää sen tarkastettavaksi vajaatekoisenakin. Tämä onnistuu painamalla testausnapin oikealla puolella olevasta "submit"-napista eli pienestä ylöspäinosoittavasta nuolesta. Vaikka palautusautomaatti valittaakin vielä tekemättä olevien tehtävänosien testeistä, kirjautuvat jo tekemiesi osien pisteet. -->
-In this series of exercises a program is implemented functionality by functionality. If you do not finish the whole series, you can still submit the completed parts. This can be done by clicking the "submit" button (the arrow pointing up) at the right of the "test" button. Even though the submission system complains about the tests of the unfinished parts, you get the points for the parts you have finished.
+The series of exercises form a larger program whose functionality is implemented in small pieces. If you do not finish the whole series, you can still submit the parts you've completed to be checked. This can be done by clicking the "submit" button (the arrow pointing up) to the right of the "test" button. Although the submission system complains about the tests of unfinished parts, you get points for the parts you have finished.
+
 
 <!-- Huom: muistathan, että jokaisen isomman tehtävän "alitehtävä" on saman arvoinen tehtävä kuin yksi alikohdaton tehtävä. Tämä tehtävä vastaa siis viittä normaalia tehtävää. -->
-NB: Remember, that each part of the series is worth the same as one individual exercise. This series is then worth the same as five individual exercises.
+NB: Remember that each sub-part of the series is equivalent to one individual exercise. As such, the series is equivalent to five individual exercises.
 
 <h2>Reading</h2>
 
 <!-- Tee ohjelma, joka kysyy käyttäjältä lukuja (ohjelma tulostaa käyttäjälle aluksi "Syötä luvut:"), kunnes käyttäjä antaa luvun -1. Kun käyttäjä syöttää luvun -1, ohjelma tulostaa "Kiitos ja näkemiin!" ja päättyy. -->
-Implement a program, which asks user for number (the program first prints "Write numbers: ") until the user gives the number -1, When the user writes -1, the program prints "Thank you! Goodbye!" and ends.
+Implement a program that asks the user for numbers(the program first prints "Write numbers: ") until the user gives the number -1, When the user writes -1, the program prints "Thank you! Goodbye!" and ends.
 
 <sample-output>
 
@@ -729,7 +730,7 @@ Average: 3.666666666666
 <h2>Even and odd numbers</h2>
 
 <!-- Laajenna edellistä ohjelmaa siten, että  ohjelma ilmoittaa parillisten ja parittomien lukujen määrän. (Lukua -1 ei lasketa mukaan.) -->
-Extend the program so, that it prints the number of even and odd numbers (not including the -1).
+Extend the program so that it prints the number of even and odd numbers (excluding the -1).
 
 <sample-output>
 
@@ -753,15 +754,15 @@ Odd: 1
 <text-box variant='hint' name='Ohjelmien tekeminen pienissä paloissa'>
 
 <!-- Edellisessä tehtävässä harjoiteltiin tehtävän osien kautta ohjelman tekemistä pienissä paloissa. -->
-In the previous exercise we used a series of exercises to practice implementing a program small piece at a time.
+In the previous exercise, we used a series of exercises to practice implementing a program one piece at a time.
 
 <!-- Kun teet ohjelmaa, oli se sitten harjoitustehtävä tai oma projektisi, mieti minkälaisia osia ohjelma tarvitsee toimiakseen, ja etene näitä pieniä osia yksitellen toteuttaen. Jokaisen osan toteuttamisen jälkeen kokeile tähänastisen ohjelmasi toimintaa. -->
-When you are creating a program, being it an exercise or your own project, think what kinds of parts the program needs to work, and proceed by implementing the parts one part at a time. Test the program after each part.
+When you are writing a program, whether it's an exercise or a personal project, figure out the types of parts the program needs to function and proceed by implementing them one part at a time. Make sure to test the program right after implementing each part.
 
 <!-- Älä koskaan yritä ratkaista koko ongelmaa kerralla, sillä tällöin ohjelman suorittaminen ja testaaminen kesken ongelmanratkaisuprosessin on vaikeaa. Aloita jollain helpolla asialla jonka tiedät varmasti osaavasi. Kun yksi ohjelman osa on saatu toimimaan, voit siirtyä ratkaisemaan seuraavaa ongelmaa. -->
-Never try solving the whole problem at once, because that makes running and testing the program in the middle of the problem solving process difficult. Start with something easy you know you can do. When one part works, you can move on to the next part.
+Never try solving the whole problem at once, because that makes running and testing the program in the middle of the problem-solving process difficult. Start with something easy that you know you can do. When one part works, you can move on to the next.
 
 <!-- Osa kurssin tehtävistä on valmiiksi osiin pilkottuja. Usein osat pitää vielä pilkkoa ohjelmoinnin kannalta vieläkin pienempiin paloihin. Kannattaa tehdä siten, että suoritat ohjelman lähes jokaisen uuden koodirivin jälkeen. Tällöin varmistat, että ratkaisu on etenemässä haluttuun suuntaan. -->
-Some of the exercises are already split into parts. However, often the parts have to be split into smaller parts for programming. You should run the program after almost each new line of code. This way you ensure, that the solution is moving to the right direction.
+Some of the exercises are already split into parts. However, it's often the case in programming that these parts need to be split into even smaller parts. You should almost always run the program after every new line of code. This ensures that the solution is moving in the right direction.
 
 </text-box>
