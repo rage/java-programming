@@ -1,9 +1,9 @@
 ---
-path: '/osa-2/1-ongelmia-ja-ratkaisumalleja'
+path: '/part-2/1-problems-and-patterns'
 title: 'Recurring problems and patterns to solve them'
 ---
 
-<text-box variant='learningObjectives' name='Oppimistavoitteet'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 <!-- - Huomaat, että ohjelmissa toistuu samankaltaiset osaongelmat kuten syötteen lukeminen tai laskun laskeminen.
 - Tiedät valmiin ratkaisumallin muutamaan osaongelmaan.
@@ -14,9 +14,6 @@ title: 'Recurring problems and patterns to solve them'
 - You practice combining solution patterns used on sub-problems to solve broader ones.
 
 </text-box>
-
-<quiz id="570e362e-6eb3-5c73-850e-fb0e8c640041"></quiz>
-
 
 <!-- Samat pienet ongelmat (tai "osaongelmat") toistuvat ohjelmissa yhä uudestaan ja uudestaan: "Lue käyttäjältä syötettä", "Laske lukujen summa", jne. -->
 
@@ -462,7 +459,7 @@ public class Program {
 
 
 <!-- <programming-exercise name='Itseisarvo' tmcname='osa02-Osa02_03.Itseisarvo'> -->
-<programming-exercise name='Absolute Value' tmcname='osa02-Osa02_03.AbsoluteValue'>
+<programming-exercise name='Absolute Value' tmcname='part02-Part02_03.AbsoluteValue'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä kokonaisluvun. Mikäli luku on pienempi kuin 0, ohjelma tulostaa luvun kerrottuna luvulla -1. Muulloin ohjelma tulostaa käyttäjän syöttämän luvun. Alla on muutamia esimerkkejä ohjelman odotetusta toiminnasta. -->
 
@@ -491,12 +488,8 @@ Write a program, that reads an integer from the user. If the number is less than
 
 </programming-exercise>
 
-<<<<<<< HEAD
-<programming-exercise name='Comparing numbers' tmcname='part02-Part02_04.ComparingNumbers'>
-=======
 <!-- <programming-exercise name='Tietoa luvuista' tmcname='osa02-Osa02_04.TietoaLuvuista'> -->
-<programming-exercise name='Comparing numbers' tmcname='osa02-Osa02_04.ComparingNumbers'>
->>>>>>> 0862e628e064df037e8f9ab4ed0422f01ec40580
+<programming-exercise name='Comparing numbers' tmcname='part02-Part02_04.ComparingNumbers'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä kaksi kokonaislukua. Mikäli ensimmäinen luku on suurempi kuin toinen luku, ohjelma tulostaa "Luku (ensimmäinen) on suurempi kuin luku (toinen).". Mikäli ensimmäinen luku on pienempi kuin toinen luku, ohjelma tulostaa "Luku (ensimmäinen) on pienempi kuin luku (toinen).". Muulloin ohjelma tulostaa "Luku (ensimmäinen) on yhtä suuri kuin luku (toinen).". Edeltävissä esimerkeissä kohdat (ensimmäinen) ja (toinen) tulee aina korvata syötetyillä luvuilla. -->
 
