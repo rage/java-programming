@@ -250,13 +250,13 @@ public class Person {
 
 After creating a new file in NetBeans, the current state looks as follows. In the image below, the class `Person` has been added to the SandboxExercise.
 
-<img src="../img/material/luokka-luotuna.png">
+<img src="../img/material/part4.1-class-created.png">
 
 <!-- Luokkaa kuvaamaan voi piirtää myös luokkakaavion, jonka merkintätekniikkaan tutustutaan tässä samalla. Henkilo-niminen luokka, jossa ei ole mitään sisällä näyttää seuraavalta: -->
 
 You can also draw a class diagram to depict the class; we'll become familiar with its notations here as we go along. An empty person-named class looks like this:
 
-<img src="../img/diagrams/luokkakaavio-henkilo.png">
+<img src="../img/diagrams/part4.1-classdiagram-person.png">
 
 <!-- Luokka määrittelee luokasta luotavien olioiden ominaisuudet ja toiminnallisuudet. Päätetään, että jokaisella henkilöoliolla on nimi ja ikä. Nimi on luonnollista esittää merkkijonona, eli Stringinä, ja ikä taas kokonaislukuna. Lisätään nämä rakennuspiirustuksiimme: -->
 
@@ -290,7 +290,7 @@ Object variables are written on the lines following the class definition `public
 In the class diagram, the variables associated with the class are defined as "variableName: variableType". The minus sign before the variable name indicates that the variable is encapsulated (it has the keyword private).
 
 
-<img src="../img/diagrams/luokkakaavio-henkilo-ika-ja-nimi.png">
+<img src="../img/diagrams/part4.1-classdiagram-person-name-age.png">
 
 <!-- Olemme nyt määritelleet rakennuspiirustukset -- luokan -- henkilöoliolle. Jokaisella uudella henkilöolioilla on muuttujat `nimi` ja `ika`, joissa voi olla oliokohtainen arvo. Henkilöiden "tila" koostuu niiden nimeen ja ikään asetetuista arvoista. -->
 
@@ -316,7 +316,7 @@ Name the class `Dog` in this exercise, and press the finish button.
 
 You have now created a class called `Dog`. Add the variables `private String name`,` private String breed` and `private int age` to the class. As a class diagram, the class looks like this:
 
-<img src="../img/diagrams/luokkakaavio-teht-koira.png" alt="[Koira|-nimi:String;-rotu:String;-ika:int]">
+<img src="../img/diagrams/part4.1-classdiagram-ex-dog.png" alt="[Koira|-nimi:String;-rotu:String;-ika:int]">
 
 <!-- Luokalla ei vielä oikeastaan tee mitään, mutta tämän askeleen harjoittelusta on hyötyä myöhempää ajatellen. -->
 
@@ -393,7 +393,7 @@ Objects are always created using a constructor.
 A few things to note: the constructor contains the expression `this.age = 0`. This expression sets the age instance variable of the newly created object (i.e., "this" object's age) to 0. The second expression `this.name = initialName` likewise assigns the string passed as a parameter to the instance variable `name` of the object that is to be created.
 
 
-<img src="../img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori.png">
+<img src="../img/diagrams/part4.1-classdiagram-person-name-age-constructor.png">
 
 
 <!-- <programming-exercise name='Huone' tmcname='osa04-Osa04_04.Huone'> -->
@@ -408,7 +408,7 @@ Tälläkään luokalla ei vielä oikeastaan tee mitään, mutta seuraavassa teht
 Create a class named `Room`. Add the variables `private String code` and `private int seats`  to the class. Then create a constructor `public Room(String classCode, int numberOfSeats)` through which values are assigned to the instance variables.
 
 
-<img src="../img/diagrams/luokkakaavio-teht-huone.png" alt="[Huone|-koodi:String;-istumapaikat:int|+Huone(String‚ int)]">
+<img src="../img/diagrams/part4.1-classdiagram-ex-room.png" alt="[Huone|-koodi:String;-istumapaikat:int|+Huone(String‚ int)]">
 
 This class doesn't do much either. However,in the following exercise the object instantiated from our class is already capable of printing text.
 
@@ -535,7 +535,7 @@ From now on, our methods will not include the `static` keyword if they're used t
 
 In addition to the class name, instance variables, and constructor, the class diagram now also includes the method `printPerson`. Since the method comes with the `public` modifier, the method name is prefixed with a plus sign. No parameters are defined for the method, so nothing is put inside the method's parentheses. The method is also marked with information indicating that it does not return a value, here `void`.
 
-<img src="../img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta.png">
+<img src="../img/diagrams/part4.1-classdiagram-person-name-age-constructor-print.png">
 
 <!-- Metodin `tulostaHenkilo` sisällä on yksi koodirivi joka käyttää hyväkseen oliomuuttujia `nimi` ja `ika` -- luokkakaavio ei kerro sisäisestä toteutuksesta. Olion sisäisiin muuttujiin viitataan etuliitteellä `this`. Kaikki olion muuttujat ovat siis näkyvillä ja käytettävissä metodin sisällä.
 
@@ -785,7 +785,7 @@ The method is written inside the `Person` just as the `printPerson` method was. 
 The class diagram also gets an update.
 
 
-<img src="../img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta-ja-vanhene.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(String);+tulostaHenkilo():void;+vanhene():void]">
+<img src="../img/diagrams/part4.1-classdiagram-person-name-age-constructor-print-grow.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(String);+tulostaHenkilo():void;+vanhene():void]">
 
 <!-- Kutsutaan metodia ja katsotaan mitä tapahtuu:
 
@@ -1467,7 +1467,7 @@ public class Person {
 <!-- Luokka kokonaisuudessaan: -->
 The class in its entirety:
 
-<img src="../img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta-ja-vanhene-ja-palautaika.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(String);+tulostaHenkilo():void;+vanhene():void;+palautaIka():int]">
+<img src="../img/diagrams/part4.1-classdiagram-person-name-age-constructor-print-grow-return.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(String);+tulostaHenkilo():void;+vanhene():void;+palautaIka():int]">
 
 <!-- Havainnollistetaan metodin toimintaa: -->
 
@@ -1507,7 +1507,8 @@ public class Main {
         antti.growOlder();
 
         System.out.println("Pekka's age: " + pekka.returnAge());
-        System.out.println("Antti's age: " + antti.returnA
+        System.out.println("Antti's age: " + antti.returnAge());
+
         int combined = pekka.returnAge() + antti.returnAge();
 
         System.out.println("Pekka's and Antti's combined age " + combined + " years");
@@ -1781,7 +1782,7 @@ The `getName` method returns the instance variable `name` to the caller. The nam
 
 The class as a whole:
 
-<img src="../img/diagrams/luokkakaavio-henkilo-getterit.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(String);+tulostaHenkilo():void;+vanhene():void;+palautaIka():int;+taysiIkainen():boolean;+getNimi():String]">
+<img src="../img/diagrams/part4.1-classdiagram-person-getters.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(String);+tulostaHenkilo():void;+vanhene():void;+palautaIka():int;+taysiIkainen():boolean;+getNimi():String]">
 
 <!-- Muotoillaan pääohjelma käyttämään uutta "getteri"-metodia: -->
 
@@ -2712,7 +2713,7 @@ Sum of odd numbers: 5
 <!-- Helsingin Yliopiston opiskelijaruokaloissa eli Unicafeissa opiskelijat maksavat lounaansa käyttäen maksukorttia. Lopullinen Maksukortti tulee näyttämään luokkakaaviona seuraavalta: -->
 At the University of Helsinki's student canteen, i.e., Unicafe, students pay for their lunches using a payment card. The final PaymentCard will as a class diagram look like the following:
 
-<img src="../img/diagrams/luokkakaavio-teht-maksukortti.png" alt="[Maksukortti|-saldo:double|+Maksukortti(double);+syoEdullisesti():void;+syoMaukkaasti():void;+lataaRahaa(double):void;+toString():String]">
+<img src="../img/diagrams/part4.1-classdiagram-ex-paymentCard.png" alt="[Maksukortti|-saldo:double|+Maksukortti(double);+syoEdullisesti():void;+syoMaukkaasti():void;+lataaRahaa(double):void;+toString():String]">
 
 <!-- Tässä tehtäväsäsarjassa tehdään luokka `Maksukortti`, jonka tarkoituksena on jäljitellä Unicafeissa tapahtuvaa maksutoimintaa. -->
 In this exercise series, a class called `PaymentCard` is created which aims to mimic Unicafe's payment process

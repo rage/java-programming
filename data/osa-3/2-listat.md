@@ -531,7 +531,7 @@ You can also see a means for going through the values of a list -- we will retur
 Numbering places i.e. indexing always begins with zero. The list's first value is located at index 0, the second value at index 1, the third value at index 2, and so on. In programs an index is denoted with a variable called `i`.
 
 
-<div><img class="naytto" src="../img/drawings/arraylist.png"/></div>
+<div><img class="naytto" src="../img/drawings/part3.2-arraylist.png"/></div>
 
 
 <!-- Ylläolevassa listassa ensimmäisenä on arvo 6 ja toisena arvo 1. Jos ylläolevaan listaan lisättäisiin uusi arvo kutsumalla `luvut`-listan metodia `add` parametrilla 8, menisi luku 8 listan indeksiin 6 eli seitsemänneksi luvuksi. -->
@@ -539,7 +539,7 @@ Numbering places i.e. indexing always begins with zero. The list's first value i
 In the list above the first value is 6 and the second value 1. If a new value were added to the list by calling the `add` method of `numbers` with 8 as parameter, the number 8 would be placed at index 6. It would be the seventh number in the list.
 
 
-<div><img class="naytto" src="../img/drawings/arraylist-add.png"/></div>
+<div><img class="naytto" src="../img/drawings/part3.2-arraylist-add.png"/></div>
 
 
 <!-- Vastaavasti kutsumalla metodia `get` parametrilla 4, listalta haettaisiin viidettä lukua. -->
