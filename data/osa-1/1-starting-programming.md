@@ -31,47 +31,47 @@ To start the course you need (1) an account on the TMC - system used in this cou
 All of these can be installed with the following instructions.
 
 TODO: Ohjelinkki englanninkielisiin ohjeisiin
-TODO: Ohjeissa kurssien nimi oikein (nyt ohjelmoinnin mooc 2019 eri versioineen)
+TODO: Ohjeissa kurssien nimi oikein (nyt Object-Oriented Programming with Java 2020 eri versioineen)
 
 <only-for-course-variant variant="dl">
 
-  <!-- Ohjeistus oleellisten työvälineiden asentamiseen sekä kurssilla tarvittavan käyttäjätunnuksen luomiseen löytyy osoitteesta [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Valitse organisaatioksi "MOOC" ja kurssiksi "Ohjelmoinnin MOOC 2019". -->
-  Instructions for installing the necessary tools and creating an TMC account can be found from the address [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Select "MOOC" as your organization and "Ohjelmoinnin MOOC 2019" as your course.
+  <!-- Ohjeistus oleellisten työvälineiden asentamiseen sekä kurssilla tarvittavan käyttäjätunnuksen luomiseen löytyy osoitteesta [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Valitse organisaatioksi "MOOC" ja kurssiksi "Object-Oriented Programming with Java 2020". -->
+  Instructions for installing the necessary tools and creating an TMC account can be found from the address [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Select "MOOC" as your organization and "Object-Oriented Programming with Java 2020" as your course.
 
 </only-for-course-variant>
 
 <only-for-course-variant variant="nodl">
 
-  <!-- Ohjeistus oleellisten työvälineiden asentamiseen sekä kurssilla tarvittavan käyttäjätunnuksen luomiseen löytyy osoitteesta [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Valitse organisaatioksi "MOOC" ja kurssiksi "Ohjelmoinnin MOOC 2019 (aikatauluton)". -->
-  Instructions for installing the necessary tools and creating an TMC account can be found from the address [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Select "MOOC" as your organization and "Ohjelmoinnin MOOC 2019" as your course.
+  <!-- Ohjeistus oleellisten työvälineiden asentamiseen sekä kurssilla tarvittavan käyttäjätunnuksen luomiseen löytyy osoitteesta [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Valitse organisaatioksi "MOOC" ja kurssiksi "Object-Oriented Programming with Java 2020 (aikatauluton)". -->
+  Instructions for installing the necessary tools and creating an TMC account can be found from the address [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Select "MOOC" as your organization and "Object-Oriented Programming with Java 2020" as your course.
 
 </only-for-course-variant>
 
 <only-for-course-variant variant="ohja-dl">
 
-  <!-- Ohjeistus oleellisten työvälineiden asentamiseen sekä kurssilla tarvittavan käyttäjätunnuksen luomiseen löytyy osoitteesta [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Valitse organisaatioksi "MOOC" ja kurssiksi "Ohjelmoinnin MOOC 2019 -- Aloitan osasta 8". -->
-  Instructions for installing the necessary tools and creating an TMC account can be found from the address [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Select "MOOC" as your organization and "Ohjelmoinnin MOOC 2019" as your course.
+  <!-- Ohjeistus oleellisten työvälineiden asentamiseen sekä kurssilla tarvittavan käyttäjätunnuksen luomiseen löytyy osoitteesta [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Valitse organisaatioksi "MOOC" ja kurssiksi "Object-Oriented Programming with Java 2020 -- Aloitan osasta 8". -->
+  Instructions for installing the necessary tools and creating an TMC account can be found from the address [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Select "MOOC" as your organization and "Object-Oriented Programming with Java 2020" as your course.
 
 </only-for-course-variant>
 
 <only-for-course-variant variant="ohja-nodl">
 
-  <!-- Ohjeistus oleellisten työvälineiden asentamiseen sekä kurssilla tarvittavan käyttäjätunnuksen luomiseen löytyy osoitteesta [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Valitse organisaatioksi "MOOC" ja kurssiksi "Ohjelmoinnin MOOC 2019 -- Aloitan osasta 8 (aikatauluton)". -->
-  Instructions for installing the necessary tools and creating an TMC account can be found from the address [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Select "MOOC" as your organization and "Ohjelmoinnin MOOC 2019" as your course.
+  <!-- Ohjeistus oleellisten työvälineiden asentamiseen sekä kurssilla tarvittavan käyttäjätunnuksen luomiseen löytyy osoitteesta [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Valitse organisaatioksi "MOOC" ja kurssiksi "Object-Oriented Programming with Java 2020 -- Aloitan osasta 8 (aikatauluton)". -->
+  Instructions for installing the necessary tools and creating an TMC account can be found from the address [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Select "MOOC" as your organization and "Object-Oriented Programming with Java 2020" as your course.
 
 </only-for-course-variant>
 
 <only-for-course-variant variant="kesa-dl">
 
-  <!-- Ohjeistus oleellisten työvälineiden asentamiseen sekä kurssilla tarvittavan käyttäjätunnuksen luomiseen löytyy osoitteesta [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Valitse organisaatioksi "MOOC" ja kurssiksi "Ohjelmoinnin MOOC 2019, Kesä". -->
-  Instructions for installing the necessary tools and creating an TMC account can be found from the address [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Select "MOOC" as your organization and "Ohjelmoinnin MOOC 2019" as your course.
+  <!-- Ohjeistus oleellisten työvälineiden asentamiseen sekä kurssilla tarvittavan käyttäjätunnuksen luomiseen löytyy osoitteesta [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Valitse organisaatioksi "MOOC" ja kurssiksi "Object-Oriented Programming with Java 2020, Kesä". -->
+  Instructions for installing the necessary tools and creating an TMC account can be found from the address [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Select "MOOC" as your organization and "Object-Oriented Programming with Java 2020" as your course.
 
 </only-for-course-variant>
 
 <only-for-course-variant variant="kesa-ohja-dl">
 
-  <!-- Ohjeistus oleellisten työvälineiden asentamiseen sekä kurssilla tarvittavan käyttäjätunnuksen luomiseen löytyy osoitteesta [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Valitse organisaatioksi "MOOC" ja kurssiksi "Ohjelmoinnin MOOC 2019 -- Aloitan osasta 8, Kesä". -->
-  Instructions for installing the necessary tools and creating an TMC account can be found from the address [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Select "MOOC" as your organization and "Ohjelmoinnin MOOC 2019" as your course.
+  <!-- Ohjeistus oleellisten työvälineiden asentamiseen sekä kurssilla tarvittavan käyttäjätunnuksen luomiseen löytyy osoitteesta [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Valitse organisaatioksi "MOOC" ja kurssiksi "Object-Oriented Programming with Java 2020 -- Aloitan osasta 8, Kesä". -->
+  Instructions for installing the necessary tools and creating an TMC account can be found from the address [https://materiaalit.github.io/tmc-asennus/netbeans/](https://materiaalit.github.io/tmc-asennus/netbeans/). Select "MOOC" as your organization and "Object-Oriented Programming with Java 2020" as your course.
 
 </only-for-course-variant>
 
