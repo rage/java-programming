@@ -1,7 +1,7 @@
 ---
 path: '/osa-6/6-moniosaiset-ohjelmat-ja-niiden-testaaminen'
 title: 'Moniosaiset ohjelmat ja niiden testaaminen'
-hidden: false
+hidden: true
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 path: '/osa-6/1-olioista-koostuvat-oliot'
 title: 'Olioista koostuvat oliot'
-hidden: false
+hidden: true
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
@@ -413,5 +413,3 @@ Ohjelman tulostuksen tulisi olla seuraava:
 </sample-output>
 
 </programming-exercise>
-
-

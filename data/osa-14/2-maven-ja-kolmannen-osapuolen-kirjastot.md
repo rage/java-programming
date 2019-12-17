@@ -1,7 +1,7 @@
 ---
 path: '/osa-14/2-maven-ja-kolmannen-osapuolen-kirjastot'
 title: 'Maven ja kolmannen osapuolen kirjastot'
-hidden: false
+hidden: true
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
@@ -223,4 +223,3 @@ Java on yksi maailman eniten käytetyistä ohjelmointikielistä ja sitä käytet
 
 
 Mobiilisovellusten kehittämisestä enemmän kiinnostuneiden kannattaa tutustua Androidin sovelluskehittäjille luomaan sivustoon, joka löytyy osoitteessa [https://developer.android.com/guide/](https://developer.android.com/guide/). Käymäsi ohjelmoinnin perusteet ja ohjelmoinnin jatkokurssi antaa näihin hyvän lähtökohdan. Vastaavasti, mikäli yksinkertaisten (mobiili)pelien kehittäminen kiinnostaa, tutustu esimerkiksi [FXGL](https://github.com/AlmasB/FXGL/wiki)-kirjastoon.
-

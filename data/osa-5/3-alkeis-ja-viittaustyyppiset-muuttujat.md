@@ -2,7 +2,7 @@
 path: '/osa-5/3-alkeis-ja-viittaustyyppiset-muuttujat'
 ## title: 'TODO: uusi nimi? Muuttujien eroista: Alkeis- ja viittaustyyppiset muuttujat'
 title: 'TODO: new name? On the difference of variables: primitive and reference variables'
-hidden: false
+hidden: true
 ---
 
 

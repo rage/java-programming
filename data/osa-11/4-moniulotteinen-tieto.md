@@ -1,7 +1,7 @@
 ---
 path: '/osa-11/4-moniulotteinen-tieto'
 title: 'Moniulotteinen tieto'
-hidden: false
+hidden: true
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
@@ -244,4 +244,3 @@ Tämä tehokkuushyöty kuitenkin tulee lisääntyneen virhealttiuden sekä työm
 Kun ajattelemme muistin käyttöä, hajautustaululla voi olla -- tapauksesta riippuen -- pieni etu. Kun taulukko luodaan, muistista varataan heti tila koko taulukolle. Mikäli taulukon jokaiseen indeksiin ei tarvitse lisätä tietoa, on osa tästä tiedosta varattuna turhaan. Hajautustaululla taas tällaista muistin varaamista ei ennakkoon tehdä -- hajautustaulun kokoa kasvatetaan tarvittaessa.
 
 </text-box>
-

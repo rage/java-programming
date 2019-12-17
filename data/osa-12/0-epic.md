@@ -1,7 +1,7 @@
 ---
 path: '/osa-12/0-epic'
 title: 'Epic'
-hidden: false
+hidden: true
 ---
 
 # Graafiset käyttöliittymät

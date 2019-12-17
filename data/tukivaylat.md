@@ -1,7 +1,7 @@
 ---
 path: "/tukivaylat"
 title: "Tukiväylät"
-hidden: false
+hidden: true
 information_page: true
 ---
 

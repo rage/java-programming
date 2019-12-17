@@ -1,7 +1,7 @@
 ---
 path: '/osa-12/4-kaynnistysparametreja-sovellukselle'
 title: 'Käynnistysparametreja sovellukselle'
-hidden: false
+hidden: true
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
@@ -102,5 +102,3 @@ Kirjoita ohjelma, joka kysyy tekstikäyttöliittymässä käyttäjältä sovellu
 Huomaa, että tässä tehtävässä ei ole automaattisia testejä. Palauta sovellus kun se toimii tehtävänannossa kuvatulla tavalla.
 
 </programming-exercise>
-
-

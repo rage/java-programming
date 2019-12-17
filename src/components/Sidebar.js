@@ -95,31 +95,9 @@ const MenuExpanderWrapper = styled.div`
 
 var content2 = [
   {
-    title: "Tietoa kurssista",
+    title: "About the course",
     path: "/",
   },
-  {
-    title: "Osaamistavoitteet",
-    path: "/osaamistavoitteet",
-  },
-  {
-    title: "Arvostelu ja kokeet",
-    path: "/arvostelu-ja-kokeet",
-  },
-  {
-    title: "Mahdollisuus opinto-oikeuteen",
-    path: "/opinto-oikeus",
-  },
-  { title: "Tukiväylät", path: "/tukivaylat" },
-  {
-    title: "Opettajille ja opinto-ohjaajille",
-    path: "/opettajille",
-  },
-  {
-    title: "Usein kysytyt kysymykset",
-    path: "/usein-kysytyt-kysymykset",
-  },
-  { separator: true, title: "Ohjelmoinnin perusteet" },
 ]
 
 var futurePages = [] // { title: "Osa 14", tba: "19.4.2019" }
@@ -160,11 +138,6 @@ class Sidebar extends React.Component {
     )
     let content = content2.concat(edges)
     content = content.concat(futurePages)
-    let middlepoint = content.findIndex(o => o.title === "Osa 7")
-    content.splice(middlepoint + 1, 0, {
-      separator: true,
-      title: "Ohjelmoinnin jatkokurssi",
-    })
 
     return (
       <MobileWrapperOrFragment mobileMenuOpen={this.props.mobileMenuOpen}>
@@ -177,18 +150,18 @@ class Sidebar extends React.Component {
             {this.props.mobileMenuOpen ? (
               <span>
                 <StyledIcon icon={faTimes} />
-                Sulje valikko
+                Close menu
               </span>
             ) : (
               <span>
                 <StyledIcon icon={faBars} />
-                Avaa valikko
+                Open menu
               </span>
             )}
           </Button>
         </MenuExpanderWrapper>
         <SidebarContainer mobileMenuOpen={this.props.mobileMenuOpen}>
-          <Brand>Ohjelmoinnin MOOC 2019</Brand>
+          <Brand>Object-Oriented Programming with Java 2020</Brand>
           <TreeViewContainer>
             <TreeView data={content} />
           </TreeViewContainer>

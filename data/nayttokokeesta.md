@@ -1,7 +1,7 @@
 ---
 path: '/nayttokokeesta'
 title: 'Näyttökokeesta'
-hidden: false
+hidden: true
 information_page: true
 ---
 

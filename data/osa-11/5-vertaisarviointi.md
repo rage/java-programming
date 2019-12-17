@@ -1,7 +1,7 @@
 ---
 path: '/osa-11/5-vertaisarviointi'
 title: 'Vertaisarviointi'
-hidden: false
+hidden: true
 ---
 
 

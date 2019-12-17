@@ -1,7 +1,7 @@
 ---
 path: '/osa-14/0-epic'
 title: 'Epic'
-hidden: false
+hidden: true
 ---
 
 # Simulaatiot ja toistuva piirtäminen

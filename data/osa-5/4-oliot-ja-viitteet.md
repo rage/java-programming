@@ -2,7 +2,7 @@
 path: '/osa-5/4-oliot-ja-viitteet'
 ## title: 'Oliot ja viitteet'
 title: 'Objects and references'
-hidden: false
+hidden: true
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->

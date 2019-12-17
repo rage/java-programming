@@ -1,7 +1,7 @@
 ---
 path: '/vaihda-aikatauluttomaan'
 title: 'Kurssin vaihto aikatauluttomaan versioon'
-hidden: false
+hidden: true
 information_page: true
 ---
 

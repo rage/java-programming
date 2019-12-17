@@ -1,7 +1,7 @@
 ---
 path: '/osa-13/4-vertaisarviointi'
 title: 'Vertaisarviointi'
-hidden: false
+hidden: true
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>

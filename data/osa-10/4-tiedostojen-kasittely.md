@@ -1,7 +1,7 @@
 ---
 path: '/osa-10/4-tiedostojen-kasittely'
 title: 'Tiedostojen käsittely'
-hidden: false
+hidden: true
 ---
 
 

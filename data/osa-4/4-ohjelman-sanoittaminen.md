@@ -1,7 +1,7 @@
 ---
 path: '/osa-4/4-ohjelman-sanoittaminen'
 title: 'Ohjelman käsitteiden tunnistaminen ja sanoittaminen'
-hidden: false
+hidden: true
 ---
 
 TODO: onko ok otsikko?

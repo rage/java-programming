@@ -2,7 +2,7 @@
 path: '/osa-8'
 title: 'Osa 8'
 overview: true
-hidden: false
+hidden: true
 ---
 
 <only-for-course-variant variant="dl">

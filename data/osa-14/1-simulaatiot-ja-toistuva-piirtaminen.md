@@ -1,7 +1,7 @@
 ---
 path: '/osa-14/1-simulaatiot-ja-toistuva-piirtaminen'
 title: 'Simulaatiot ja toistuva piirtäminen'
-hidden: false
+hidden: true
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>

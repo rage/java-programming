@@ -2,7 +2,7 @@
 path: '/osa-3/1-virheiden-etsimisesta'
 # title: 'Virheiden etsimisestä'
 title: 'On searching errors'
-hidden: false
+hidden: true
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->

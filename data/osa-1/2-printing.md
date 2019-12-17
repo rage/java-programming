@@ -1,13 +1,13 @@
 ---
 path: '/osa-1/2-printing'
 title: 'Printing'
-hidden: false
+hidden: true
 ---
 
 <!-- ---
 path: '/osa-1/2-tulostaminen'
 title: 'Tulostaminen'
-hidden: false
+hidden: true
 --- -->
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'>

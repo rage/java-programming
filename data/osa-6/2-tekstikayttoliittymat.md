@@ -1,7 +1,7 @@
 ---
 path: '/osa-6/2-tekstikayttoliittymat'
 title: 'Tekstikäyttöliittymät'
-hidden: false
+hidden: true
 ---
 
 

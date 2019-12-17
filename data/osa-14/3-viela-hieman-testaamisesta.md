@@ -1,7 +1,7 @@
 ---
 path: '/osa-14/3-viela-hieman-testaamisesta'
 title: 'Vielä hieman testaamisesta'
-hidden: false
+hidden: true
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>

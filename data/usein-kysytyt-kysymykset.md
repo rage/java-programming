@@ -1,7 +1,7 @@
 ---
 path: "/usein-kysytyt-kysymykset"
 title: "Usein kysytyt kysymykset"
-hidden: false
+hidden: true
 information_page: true
 ---
 

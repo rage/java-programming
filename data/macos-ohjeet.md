@@ -1,7 +1,7 @@
 ---
 path: "/macos-ohjeet"
 title: "macOS ohjeet"
-hidden: false
+hidden: true
 information_page: true
 ---
 

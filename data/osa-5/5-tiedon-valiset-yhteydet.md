@@ -1,7 +1,7 @@
 ---
 path: '/osa-5/5-tiedon-valiset-yhteydet'
 title: 'Tiedon väliset yhteydet'
-hidden: false
+hidden: true
 ---
 
 TODO: kirjoita uudestaan, teemana olio-ohjelmointi ja tiedon väliset yhteydet

@@ -1,7 +1,7 @@
 ---
 path: '/osa-4/1-johdatus-olio-ohjelmointiin'
 title: 'Johdatus olio-ohjelmointiin'
-hidden: false
+hidden: true
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 path: '/osa-7/2-algoritmiikkaa'
 title: 'Algoritmiikkaa'
-hidden: false
+hidden: true
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>

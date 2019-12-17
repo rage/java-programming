@@ -1,7 +1,7 @@
 ---
 path: '/osa-6/4-ongelmasta-kokonaisuuteen-ja-takaisin-osiin'
 title: 'Ongelmasta kokonaisuuteen ja takaisin osiin'
-hidden: false
+hidden: true
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
@@ -892,4 +892,3 @@ Ohjelmoijan näkökulmasta tämä tarkoittaa ensisijaisesti sitä, että ohjelmi
 
 
 Voidaan todeta, että hyvin harva ohjelma kirjoitetaan vain kerran. Tätä ajatusta jatkaen on hyvä pyrkiä tilanteeseen, missä ohjelman käyttäjä pääsee kokeilemaan sitä mahdollisimman nopeasti -- tällöin muutostoiveiden kerääminen myös alkaa nopeasti. Ohjelmistoja tehdessä onkin hyvä usein luoda ensin [Proof of Concept](https://en.wikipedia.org/wiki/Proof_of_concept)-sovellus, jolla voidaan kokeilla idean toimivuutta. Jos idea on hyvä, sitä jatkokehitetään -- samalla myös ohjelma kehittyy.
-

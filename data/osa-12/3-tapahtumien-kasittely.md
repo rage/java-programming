@@ -1,7 +1,7 @@
 ---
 path: '/osa-12/3-tapahtumien-kasittely'
 title: 'Tapahtumien käsittely'
-hidden: false
+hidden: true
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
@@ -174,5 +174,3 @@ Kopioi tehtävässä Tekstitilastointia tekemäsi toteutus tehtäväpohjassa ole
 <img src="../img/material/gui-tilastoja.gif" alt="Esimerkki tekstitilastointiin tarkoitetun ohjelman toiminnasta."/>
 
 </programming-exercise>
-
-

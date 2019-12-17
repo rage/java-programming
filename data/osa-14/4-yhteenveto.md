@@ -1,7 +1,7 @@
 ---
 path: '/osa-14/4-yhteenveto'
 title: 'Yhteenveto'
-hidden: false
+hidden: true
 ---
 
 Materiaalin neljännessätoista osassa eli ohjelmoinnin jatkokurssin viimeisessä osassa tarkasteltiin simulaatioiden luomista kaksiulotteisten taulukoiden avulla. Tämän lisäksi tutustuttiin kolmannen osapuolen kirjastojen käyttöön ja kerrattiin yksikkötestausta.

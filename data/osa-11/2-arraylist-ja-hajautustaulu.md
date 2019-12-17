@@ -1,7 +1,7 @@
 ---
 path: '/osa-11/2-arraylist-ja-hajautustaulu'
 title: 'ArrayList ja Hajautustaulu'
-hidden: false
+hidden: true
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>

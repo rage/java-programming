@@ -1,7 +1,7 @@
 ---
 path: '/osa-10/0-epic'
 title: 'Epic'
-hidden: false
+hidden: true
 ---
 
 # Luokkakaaviot

@@ -1,7 +1,7 @@
 ---
 path: "/arvostelu-ja-kokeet"
 title: "Arvostelu ja kokeet"
-hidden: false
+hidden: true
 information_page: true
 ---
 

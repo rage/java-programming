@@ -1,7 +1,7 @@
 ---
 path: '/osa-12/6-tehtavan-luominen'
 title: 'Tehtävän luominen'
-hidden: false
+hidden: true
 ---
 
 

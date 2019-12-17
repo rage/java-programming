@@ -1,7 +1,7 @@
 ---
 path: '/osa-9/3-yleishyodyllisia-tekniikoita'
 title: 'Muutamia yleishyödyllisiä tekniikoita'
-hidden: false
+hidden: true
 ---
 
 

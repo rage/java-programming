@@ -2,7 +2,7 @@
 path: '/osa-4/2-oliot-listalla'
 # title: 'Oliot listalla'
 title: 'Objects in a list'
-hidden: false
+hidden: true
 ---
 
 

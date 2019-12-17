@@ -1,7 +1,7 @@
 ---
 path: '/osa-7/3-laajempia-tehtavia'
 title: 'Laajempia ohjelmointitehtäviä'
-hidden: false
+hidden: true
 ---
 
 
@@ -427,4 +427,3 @@ Haukka (Dorkus Dorkus): 2 havaintoa
 **Huom!** Ohjelmasi rakenne on täysin vapaa. Testaamme vain että `Paaohjelma` luokan `main`-metodi toimii kuten tässä on kuvailtu. Hyödyt tehtävässä todennäköisesti ongelma-aluetta sopivasti kuvaavista luokista.
 
 </programming-exercise>
-

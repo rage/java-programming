@@ -1,7 +1,7 @@
 ---
 path: '/osa-7/4-ohjelmoinnin-perusteet'
 title: 'Yhteenveto ja koeasiaa'
-hidden: false
+hidden: true
 ---
 
 TODO: kirjoita uudestaan, kulmana "ohjelmoinnin perusteet"

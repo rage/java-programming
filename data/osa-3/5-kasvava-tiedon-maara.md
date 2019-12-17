@@ -1,7 +1,7 @@
 ---
 path: '/osa-3/6-kasvava-tiedon-maara'
 title: 'Kasvava tiedon määrä'
-hidden: false
+hidden: true
 ---
 
 TODO: kirjoita uudelleen. Kulma: tiedon määrä kasvaa, miten hoidetaan?

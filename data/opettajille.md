@@ -1,7 +1,7 @@
 ---
 path: '/opettajille'
 title: 'Opettajille ja opinto-ohjaajille'
-hidden: false
+hidden: true
 information_page: true
 ---
 

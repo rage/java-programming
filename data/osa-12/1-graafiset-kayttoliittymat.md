@@ -1,7 +1,7 @@
 ---
 path: '/osa-12/1-graafiset-kayttoliittymat'
 title: 'Graafiset käyttöliittymät'
-hidden: false
+hidden: true
 ---
 
 

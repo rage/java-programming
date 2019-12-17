@@ -1,7 +1,7 @@
 ---
 path: '/osa-7/1-ohjelmointiparadigmoja'
 title: 'Ohjelmointiparadigmoja'
-hidden: false
+hidden: true
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>

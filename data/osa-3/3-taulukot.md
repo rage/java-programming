@@ -1,7 +1,7 @@
 ---
 path: '/osa-3/4-taulukot'
 title: 'Arrays'
-hidden: false
+hidden: true
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>

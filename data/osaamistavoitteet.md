@@ -1,7 +1,7 @@
 ---
 path: "/osaamistavoitteet"
 title: "Osaamistavoitteet"
-hidden: false
+hidden: true
 information_page: true
 ---
 

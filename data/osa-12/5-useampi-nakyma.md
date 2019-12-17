@@ -1,7 +1,7 @@
 ---
 path: '/osa-12/5-useampi-nakyma'
 title: 'Useampi näkymä'
-hidden: false
+hidden: true
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
@@ -723,4 +723,3 @@ Lisää peliin toiminnallisuus, jossa pelin voi pelata loppuun. Peli loppuu jos 
 Tehtävän testit eivät ole kattavimmat. Pyri tekemään ohjelma ilman suurta testeihin tukeutumista.
 
 </programming-exercise>
-

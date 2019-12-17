@@ -1,7 +1,7 @@
 ---
 path: '/osa-4/3-tiedon-lukeminen-ja-tiedostot'
 title: 'Files and reading data'
-hidden: false
+hidden: true
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->

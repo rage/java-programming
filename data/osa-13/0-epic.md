@@ -1,7 +1,7 @@
 ---
 path: '/osa-13/0-epic'
 title: 'Epic'
-hidden: false
+hidden: true
 ---
 
 # Tiedon visualisointi

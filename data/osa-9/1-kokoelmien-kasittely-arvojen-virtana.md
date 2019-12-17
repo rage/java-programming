@@ -1,7 +1,7 @@
 ---
 path: '/osa-9/1-kokoelmien-kasittely-virtana'
 title: 'Kokoelmien käsittely arvojen virtana'
-hidden: false
+hidden: true
 ---
 
 

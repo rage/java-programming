@@ -1,7 +1,7 @@
 ---
 path: "/koe-ja-moodle-ilmoittautuminen"
 title: "Koe ja Moodle-ilmoittautuminen"
-hidden: false
+hidden: true
 information_page: true
 ---
 

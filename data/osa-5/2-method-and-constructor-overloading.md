@@ -1,7 +1,7 @@
 ---
 path: '/osa-5/2-metodien-ja-konstruktorien-kuormittaminen'
 title: 'Decreasing repetitive code (overloading methods and constructors)'
-hidden: false
+hidden: true
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>

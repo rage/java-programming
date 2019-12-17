@@ -1,7 +1,7 @@
 ---
 path: '/osa-7/x-luokka-ja-oliometodit'
 title: 'TODO: algoritmiikan yhteyteen: Luokka- ja oliometodit (static ja ei-static)'
-hidden: false
+hidden: true
 ---
 
 # Luokka- ja oliometodit: määre static
@@ -702,4 +702,3 @@ tyhja
 
 
 </programming-exercise>
-
