@@ -14,6 +14,10 @@ const courseSettings = {
       path: "/",
     },
     {
+      title: "Support and assistance",
+      path: "/support-and-assistance",
+    },
+    {
       title: "Frequently asked questions",
       path: "/faq",
     },
