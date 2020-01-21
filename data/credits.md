@@ -33,6 +33,7 @@ The course was translated by these individuals (in alphabetical order):
 
 * Ava Heinonen
 * Daniel Koch
+* Elias Eskelinen
 * Jesper Kuutti
 * Jesper Peterson
 * Joel Hassan
