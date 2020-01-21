@@ -5,7 +5,7 @@ const courseSettings = {
   subtitle: "A free online course on learning Java",
   slug: "java-programming-i",
   tmcCourse: "java-programming-i",
-  quizzesId: "TODO",
+  quizzesId: "6a635a2d-4e4b-49cc-8487-8d9cab6a74e7",
   tmcOrganization: "mooc",
   bannerPath: "banner.svg",
   sidebarEntries: [
