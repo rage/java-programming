@@ -91,7 +91,7 @@ if (sum == 0) {
 }
 ```
 
-<quiz id="6087477b-0ffe-517f-a0b2-c30d1013057e"></quiz>
+<quiz id="4f6de7ae-549b-561b-90d4-1dd4ff199c49"></quiz>
 
 <!-- Tahaton sokeus on asia, jota ei voi varsinaisesti kytkeä pois päältä. Ohjelmoija voi kuitenkin muutamien kikkojen avulla vähentää sen esiintymistä -- näistä ensimmäinen on taukojen pitäminen, joka luonnollisesti vaatii työn ajoissa aloittamisen. Lisäksi esimerkiksi koodin kommentointi, nimentä ja "debug"-tulosteet auttavat myös. -->
 
@@ -331,4 +331,4 @@ if (sum == 0) {
 
 When a program is executed multiple times with appropriate inputs the hidden error is often found. Coming up with relevant inputs is a skill in its own right. It's essential to test the so-called corner cases, i.e., circumstances where the program execution could be exceptional. An example scenario would be one where the user does not enter a single acceptable value or enters zeros or very large values.
 
-<quiz id="a09ef709-eabc-5832-91f3-c9d807f7b587"></quiz>
+<quiz id="80626f3b-c1e4-58b6-9e78-49a60baf81e7"></quiz>
