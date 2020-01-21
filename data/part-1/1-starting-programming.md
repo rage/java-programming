@@ -18,7 +18,7 @@ hidden: false
 </text-box>
 
 
-<quiz id="3799f901-ef2a-53da-b4c6-669fbbf0038a"></quiz>
+<quiz id="ae09155d-d056-5662-9611-f322cd50959d"></quiz>
 
 
 <!-- Nykyaikainen ohjelmointi tapahtuu lähes poikkeuksetta ohjelmointiympäristössä. Ohjelmointiympäristö sisältää joukon ohjelmoijaa auttavia aputoimintoja. Se ei rakenna ohjelmaa ohjelmoijan puolesta, mutta se muunmuassa vinkkaa helpoista virheistä ohjelmakoodissa ja auttaa ohjelmoijaa hahmottamaan ohjelman rakennetta. -->
@@ -103,4 +103,4 @@ Java programs require a "code boilerplate", the frame around the code, in order 
 <!-- Alla on kurssin ensimmäinen kyselytehtävä. Kyselytehtäviin vastataan suoraan kurssimateriaalissa. -->
 Below is the first quiz of the course. You can answer the quizzes right here in the course material.
 
-<quiz id="118e6b38-0d42-5667-a674-84ae174ad798"></quiz>
+<quiz id="398ad482-25d6-5817-8d95-375c4d15452c"></quiz>
