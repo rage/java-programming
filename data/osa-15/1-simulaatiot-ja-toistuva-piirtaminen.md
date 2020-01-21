@@ -1,5 +1,5 @@
 ---
-path: '/osa-14/1-simulaatiot-ja-toistuva-piirtaminen'
+path: '/osa-15/1-simulaatiot-ja-toistuva-piirtaminen'
 title: 'Simulaatiot ja toistuva piirtäminen'
 hidden: true
 ---
@@ -14,7 +14,7 @@ hidden: true
 
 </text-box>
 
-<quiz id="bbc541f4-ddae-5b0a-984f-9f0868bb5337"></quiz>
+<quiznator id="5cb5c0ef06d26046c3ea28c8"></quiznator>
 
 
 Tietokonesimulaatioita käytetään tosielämän ilmiöiden mallintamiseen tietokoneella. Simulaation toteutus sisältää ilmiötä kuvaavan mallin luomisen (esimerkiksi säämalli) sekä mallin ajamisen eli simuloinnin. Tutustumme tässä muutamaan klassiseen tietokonesimulaatioon, jotka käyttävät kaksiulotteista taulukkoa.
@@ -125,17 +125,27 @@ Ohjelma toimii käynnistyessään seuraavasti. Huomaathan, että pisteet ovat sa
 
 &nbsp;
 
-<programming-exercise name='Piirto-ohjelma' tmcname='osa14-Osa14_01.PiirtoOhjelma'>
+<!-- <programming-exercise name='Piirto-ohjelma' tmcname='osa14-Osa14_01.PiirtoOhjelma'> -->
 
-Tehtäväpohjaan on toteutettu graafinen sovellus, joka sisältää kaksiulotteisen taulukon. Tehtävänäsi on muuttaa sovelluksen toimintaa siten, että kun käyttäjä painaa hiirtä sovelluksessa tai liikuttaa hiirtä kun nappi on pohjassa, ikkunaan piirretään.
+<programming-exercise name='Drawing application' tmcname='part14-Part14_01.DrawingApplication'>
 
-Tee tätä varten kaksi asiaa: (1) muuta sovelluksessa olevan taulukon "piirrettava" arvoja sopivasti kun käyttäjä käyttää hiirtä, ja (2) piirrä komentoa `piirturi.fillRect(x, y, 2, 2)` käyttäen ne alkiot, joiden arvo on 1. Käytä koordinaatteina x, y taulukon indeksejä.
+<!-- Tehtäväpohjaan on toteutettu graafinen sovellus, joka sisältää kaksiulotteisen taulukon. Tehtävänäsi on muuttaa sovelluksen toimintaa siten, että kun käyttäjä painaa hiirtä sovelluksessa tai liikuttaa hiirtä kun nappi on pohjassa, ikkunaan piirretään. -->
 
-Kun sovellus toimii, voit käyttää sitä vaikkapa seuraavanlaisen taideteoksen tekemiseen.
+In the exercise base there is a graphical application that contains a two-dimensional array. Your task is to modify the program so that when the user clicks on the mouse in the application window, or moves the mouse around when it is being pressed, the cursor draws in the window.
+
+<!-- Tee tätä varten kaksi asiaa: (1) muuta sovelluksessa olevan taulukon "piirrettava" arvoja sopivasti kun käyttäjä käyttää hiirtä, ja (2) piirrä komentoa `piirturi.fillRect(x, y, 2, 2)` käyttäen ne alkiot, joiden arvo on 1. Käytä koordinaatteina x, y taulukon indeksejä. -->
+
+For this, do two things: (1) change the values of the array "drawable" in the application in a suitable manner when the user uses the mouse, and (2) by using the command `drawer.fillRect(x, y, 2, 2)` to draw the elements whose value is 1. Use the indexes of the array as the coordinates.
+
+<!-- Kun sovellus toimii, voit käyttää sitä vaikkapa seuraavanlaisen taideteoksen tekemiseen. -->
+
+Once you have a working application, you can use to draw fine art like the following.
 
 <img src="../img/exercises/06-14-piirturi-ok.png" />
 
-Tehtävässä ei ole testejä eli palauta se vasta kun sovellus toimii toivotulla tavalla.
+<!-- Tehtävässä ei ole testejä eli palauta se vasta kun sovellus toimii toivotulla tavalla. -->
+
+There are no tests in the exercise, so only return your answer once the program works as instructed here.
 
 </programming-exercise>
 
@@ -315,28 +325,44 @@ Kolmas sääntö liittyy mallin jakamisen osiin tarvittaessa. Malleissa, joissa 
 Tarkemmin ottaen, edellä kuvatut säännöt eivät rajaudu simulaatioiden rakentamiseen vaan ne ovat yleisiä ohjelmistojen kehittämiseen liittyviä sääntöjä. Olemme koko kurssin ajan pyrkineet lähtemään liikenteeseen pienestä ratkaisten aina yhden ongelman kerrallaan. Vastaavasti olemme pyrkineet tilanteeseen, jossa sovelluslogiikka ja käyttöliittymä on erillään. Tämä mahdollistaa sekä sovelluslogiikan siirtämisen toiseen käyttöliittymään että käyttöliittymän helpomman muokkaamiseen. Samalla tavalla myös ohjelmistoja jaetaan pienempiin osiin, jolloin vältetään virheiden tekemistä ja helpotetaan sovellusten testaamista.
 
 
-<programming-exercise name='Hiekkaranta (3 osaa)' tmcname='osa14-Osa14_04.Hiekkaranta'>
+<!-- <programming-exercise name='Hiekkaranta (3 osaa)' tmcname='osa14-Osa14_04.Hiekkaranta'> -->
+
+<programming-exercise name='Beach (3 parts)' tmcname='part14-Part14_04.Beach'>
 
 
-Tässä tehtävässä luodaan [falling sand game](https://en.wikipedia.org/wiki/Falling-sand_game)-tyyppinen sovellus, jota käytetään erilaisten aineiden simulointiin. Ohjelmassamme simuloidaan hiekan ja veden käyttäytymistä. Lopullisen sovelluksen toiminta on seuraavanlainen.
+<!-- Tässä tehtävässä luodaan [falling sand game](https://en.wikipedia.org/wiki/Falling-sand_game)-tyyppinen sovellus, jota käytetään erilaisten aineiden simulointiin. Ohjelmassamme simuloidaan hiekan ja veden käyttäytymistä. Lopullisen sovelluksen toiminta on seuraavanlainen. -->
+
+In this exercise we are going to create an application that reminds the [falling sand game](https://en.wikipedia.org/wiki/Falling-sand_game), used to simulate different materials. Our program is going to simulate how sand and water behave. The finished program should work in the following manner.
 
 <img src="../img/material/gui-simulaatio.gif" alt="Esimerkki hiekkaranta-simulaation toiminnasta." />
 
 
-*Tehtävässä käytetään `enum`-tyyppistä luokkaa `Tyyppi`. Javassa ohjelmoija voi määritellä rajatulle määrälle käsitteitä `enum`-tyyppisen luokan, jossa näille käsitteille annetaan nimi. Luokka on seuraavanlainen.*
+<!-- *Tehtävässä käytetään `enum`-tyyppistä luokkaa `Tyyppi`. Javassa ohjelmoija voi määritellä rajatulle määrälle käsitteitä `enum`-tyyppisen luokan, jossa näille käsitteille annetaan nimi. Luokka on seuraavanlainen.* -->
+
+*In the exercise we are going to use the `Material` class that has type `enum`. In Java the programmer may define an `enum` class for a number of different concepts, so that they can be named. The class in this exercise looks like the following.
 
 
-```java
+<!-- ```java
 package hiekkaranta;
 
 public enum Tyyppi {
     TYHJA, METALLI, HIEKKA, VESI;
 }
-```
-
-Enum-muuttujia käytetään esimerkiksi seuraavasti.
+``` -->
 
 ```java
+package beach;
+
+public enum Material {
+    EMPTY, METAL, SAND, WATER;
+}
+```
+
+<!-- Enum-muuttujia käytetään esimerkiksi seuraavasti. -->
+
+Enum variables are used like this.
+
+<!-- ```java
 Tyyppi t = Tyyppi.TYHJA;
 if (t == Tyyppi.TYHJA) {
     System.out.println("Tyhjää täynnä.");
@@ -349,55 +375,99 @@ if (t == Tyyppi.HIEKKA) {
 Tyyppi[] taulukko = new Tyyppi[10];
 taulukko[0] = Tyyppi.VESI;
 System.out.println(taulukko.length);
+``` -->
+
+```java
+Material m = Material.EMPTY;
+if (m == Material.EMPTY) {
+    System.out.println("Hella empty.");
+}
+
+if (m == Material.SAND) {
+    System.out.println("Looks like sand.");
+}
+
+Material[] array = new Material[10];
+array[0] = Material.WATER;
+System.out.println(array.length);
 ```
 
-Tehtäväpohjassa on annettu valmiina käyttöliittymä simulaatiolle. Käyttöliittymä sisältää piirtoalustana käytetyn Canvas-olion sekä simulaatioon lisättävien elementtien valintaan käytetyt napit.
+<!-- Tehtäväpohjassa on annettu valmiina käyttöliittymä simulaatiolle. Käyttöliittymä sisältää piirtoalustana käytetyn Canvas-olion sekä simulaatioon lisättävien elementtien valintaan käytetyt napit. -->
+
+The exercise base already contains a user interface for the simulation. The user interface contains a Canvas object that is used to draw on, and the buttons that are used to choose the element that is added to the simulation.
 
 
-<h2>Simulaation alkupalat</h2>
+<!-- <h2>Simulaation alkupalat</h2> -->
 
-Täydennä pakkauksen hiekkaranta luokkaa Simulaatio seuraavasti. Luokalla Simulaatio tulee olla seuraavat konstruktorit ja metodit. Käytä luokassa hyödyksi valmista enum-luokkaa Tyyppi, ja toteuta simulaation sisäinen tiedon esitys kaksiulotteisena taulukkona `Tyyppi[][]`.
+<h2>Buiding block of simulation</h2>
 
-- Konstruktori `public Simulaatio(int leveys, int korkeus)` luo annetun levyisen ja korkuisen simulaation. Jokaisen kohdan arvon tulee olla aluksi `Tyyppi.TYHJA`.
+<!-- Täydennä pakkauksen hiekkaranta luokkaa Simulaatio seuraavasti. Luokalla Simulaatio tulee olla seuraavat konstruktorit ja metodit. Käytä luokassa hyödyksi valmista enum-luokkaa Tyyppi, ja toteuta simulaation sisäinen tiedon esitys kaksiulotteisena taulukkona `Tyyppi[][]`. -->
 
-- Metodi `public void lisaa(int x, int y, Tyyppi tyyppi` asettaa annettuun kohtaan annetun tyyppisen elementin. Tyyppi on joko `Tyyppi.TYHJA`, `Tyyppi.METALLI`, `Tyyppi.HIEKKA` tai `Tyyppi.VESI`.
+Complete the Simulation class in the beach package in the following matter. The Simulation class should have all the following constructors and methods. Use the existing enum class material in implementing the class, and implement the internal representation of data in the simulation as a two-dimensional array `Material[][]`.
 
-- Metodi `public Tyyppi sisalto(int x, int y)` palauttaa annetussa kohdassa olevan sisällön. Vastaus on joko Tyyppi.TYHJA, Tyyppi.METALLI, Tyyppi.HIEKKA tai Tyyppi.VESI. Jos kohtaan ei ole lisätty mitään arvoa, tyyppi on Tyyppi.TYHJA. Jos käyttäjä kysyy tietoa alueen ulkopuolelta, palauta Tyyppi.METALLI.
+<!-- - Konstruktori `public Simulaatio(int leveys, int korkeus)` luo annetun levyisen ja korkuisen simulaation. Jokaisen kohdan arvon tulee olla aluksi `Tyyppi.TYHJA`. -->
 
-- Metodi `public void paivita()` päivittää simulaatiota yhden askeleen. Päivitystoiminnallisuuden toteutus aloitetaan tehtävän myöhemmissä osassa.
+- Constructor `public Simulation(int width, int height)` creates a simulation with the specified width and height. Each value must be initialized as `Material.EMPTY`.
 
+<!-- - Metodi `public void lisaa(int x, int y, Tyyppi tyyppi` asettaa annettuun kohtaan annetun tyyppisen elementin. Tyyppi on joko `Tyyppi.TYHJA`, `Tyyppi.METALLI`, `Tyyppi.HIEKKA` tai `Tyyppi.VESI`. -->
 
-Kun metodit toimivat, sovelluksen toiminta on seuraava.
+- Method `public void add(int x, int y, Material material)` adds an element of the given material in the specified position. The material is one of the following four: `Material.EMPTY`, `Material.METAL`, `Material.SAND`, or `Material.WATER`.
+
+<!-- - Metodi `public Tyyppi sisalto(int x, int y)` palauttaa annetussa kohdassa olevan sisällön. Vastaus on joko Tyyppi.TYHJA, Tyyppi.METALLI, Tyyppi.HIEKKA tai Tyyppi.VESI. Jos kohtaan ei ole lisätty mitään arvoa, tyyppi on Tyyppi.TYHJA. Jos käyttäjä kysyy tietoa alueen ulkopuolelta, palauta Tyyppi.METALLI. -->
+
+- Method `public Material contents(int x, int y)` returns the contents at the specified position. The answer is one of the following four: `Material.EMPTY`, `Material.METAL`, `Material.SAND`, or `Material.WATER`. If nothing has been added to the position, the method should return Material.EMPTY. If the user asks for contents of a position that lies ouside of the area, return Material.METAL.
+
+<!-- - Metodi `public void paivita()` päivittää simulaatiota yhden askeleen. Päivitystoiminnallisuuden toteutus aloitetaan tehtävän myöhemmissä osassa. -->
+
+- Method `public void update()` updates the simulation by one step. We are going to implement the update functionality in a later section.
+
+<!-- Kun metodit toimivat, sovelluksen toiminta on seuraava. -->
+
+Once all these methods work, the program should work like this.
 
 
 <img src="../img/material/gui-simulaatio-metalli.gif" alt="Esimerkki hiekkaranta-simulaation toiminnasta." />
 
 
 
-<h2>Hiekka</h2>
+<!-- <h2>Hiekka</h2> -->
 
+<h2>Sand</h2>
 
-Muokkaa Simulaatio-luokan metodia paivita. Metodin paivita tulee toimia siten, että se tarkistaa jokaiselle hiekkaa sisältävälle kohdalle kohdan alla olevat kolme vaihtoehtoa (lounas, etelä, kaakko). Jos joku vaihtoehdoista on tyhjä, hiekka siirretään alaspäin tyhjään kohtaan. Mikäli useampi kuin yksi em vaihtoehdoista on tyhjiä, tee valinta satunnaisesti tyhjien vaihtoehtojen välillä.
+<!-- Muokkaa Simulaatio-luokan metodia paivita. Metodin paivita tulee toimia siten, että se tarkistaa jokaiselle hiekkaa sisältävälle kohdalle kohdan alla olevat kolme vaihtoehtoa (lounas, etelä, kaakko). Jos joku vaihtoehdoista on tyhjä, hiekka siirretään alaspäin tyhjään kohtaan. Mikäli useampi kuin yksi em vaihtoehdoista on tyhjiä, tee valinta satunnaisesti tyhjien vaihtoehtojen välillä. -->
 
-Satunnaisuutta ohjelmaan saat `Random`-luokan avulla.
+Modify the update method of the Simulation class. It should, for every position that contains sand, check the three positions below it (South-West, South, South-East). If one of these positions is empty, the sand is moved into the empty spot. If more than one of the three positions are empty, make the decision for the new position randomly.
 
-Huom! Toteuta simulaatio siten, että y-koordinaatti on "käänteinen". Simulaation sisällä y-koordinaatin kasvatus tarkoittaa alaspäin menoa, ja toisaalta y-koordinaatin pienennys ylöspäin menoa. Tämä auttaa piirtämisessä, sillä piirtäessä y-koordinaatti kasvaa alaspäin mennessä.
+<!-- Satunnaisuutta ohjelmaan saat `Random`-luokan avulla. -->
+
+You can add the required randomness into the program with the help of the `Random` class.
+
+<!-- Huom! Toteuta simulaatio siten, että y-koordinaatti on "käänteinen". Simulaation sisällä y-koordinaatin kasvatus tarkoittaa alaspäin menoa, ja toisaalta y-koordinaatin pienennys ylöspäin menoa. Tämä auttaa piirtämisessä, sillä piirtäessä y-koordinaatti kasvaa alaspäin mennessä. -->
+
+NB! Implement the simulation so that the y-coordinate is "inverted". Inside the simulation a growing y-coordinate means moving downwards, and a decreasing y-coordinate means moving upwards. This will help with drawing, since when drawing the y coordinate increases as we move down.
 
 <img src="../img/material/gui-simulaatio-metalli-ja-hiekka.gif" alt="Esimerkki hiekkaranta-simulaation toiminnasta. Kuvassa hiekka toimii metallin kanssa." />
 
 
 
-<h2>Vesi</h2>
+<!-- <h2>Vesi</h2> -->
 
+<h2>Water</h2>
 
-Muokkaa tämän jälkeen Simulaatio-luokan metodia paivita siten, että se siirtää kutsun yhteydessä vettä alaspäin *jos* joku veden alapuolella olevista kohdista (lounas, etelä, kaakko) on tyhjä. Jos yksikään kohdista ei ole tyhjiä, mutta jommalla kummalla laidalla on sijaa, siirretään vettä sivulle.
+<!-- Muokkaa tämän jälkeen Simulaatio-luokan metodia paivita siten, että se siirtää kutsun yhteydessä vettä alaspäin *jos* joku veden alapuolella olevista kohdista (lounas, etelä, kaakko) on tyhjä. Jos yksikään kohdista ei ole tyhjiä, mutta jommalla kummalla laidalla on sijaa, siirretään vettä sivulle. -->
 
-Muokkaa loputa sovellusta siten, että hiekka syrjäyttää veden. Kun lisäät hiekkaa, veden tulee siis väistää hiekkaa. Toteuta väistäminen siten, että hiekka ja vesi vaihtaa paikkaansa.
+After this, move the update method of the Simulation class to handle water. Water should be moved downward *if* one of the positions under it (South-West, South, South-East) is empty. If none of them are empty, but there is an empty position of one side of the water, the water is moved to the side.
+
+<!-- Muokkaa loputa sovellusta siten, että hiekka syrjäyttää veden. Kun lisäät hiekkaa, veden tulee siis väistää hiekkaa. Toteuta väistäminen siten, että hiekka ja vesi vaihtaa paikkaansa. -->
+
+Finally modify the application so that sand can replace water. So when you add sand, water should move out of the way of the sand. To implement this, make it so that sand and water can swap places.
 
 <img src="../img/material/gui-simulaatio.gif" alt="Esimerkki hiekkaranta-simulaation toiminnasta." />
 
 
-Kun olet saanut kaikki neljännentoista osan tehtävät valmiiksi, voit palauta tähän tehtävään ja lähteä toteuttamaan uusia toiminnallisuuksia. Miten toteuttaisit esimerkiksi laavan?
+<!-- Kun olet saanut kaikki neljännentoista osan tehtävät valmiiksi, voit palauta tähän tehtävään ja lähteä toteuttamaan uusia toiminnallisuuksia. Miten toteuttaisit esimerkiksi laavan? -->
+
+Once you have finished all the sections of the exercise, you can return it and try to implement new features. For instance, how would you implement lava?
 
 </programming-exercise>
 

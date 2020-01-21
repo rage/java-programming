@@ -1,11 +1,9 @@
 ---
 path: '/vaihda-aikatauluttomaan'
 title: 'Kurssin vaihto aikatauluttomaan versioon'
-hidden: false
+hidden: true
 information_page: true
 ---
-
-<notice>HUOMAATHAN, että aikatauluton kurssi ei ole vielä alkanut. Aikatauluton kurssi avataan ensimmäisen deadlinen jälkeen.</notice>
 
 <notice>HUOMAATHAN, että aikatauluttomalta kurssilta EI VOI HAKEA yliopiston opinto-oikeutta.</notice>
 

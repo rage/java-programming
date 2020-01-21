@@ -1,6 +1,6 @@
 ---
-path: "/osaamistavoitteet"
-title: "Osaamistavoitteet"
+path: "/learning-objectives"
+title: "Learning Objectives"
 hidden: true
 information_page: true
 ---
