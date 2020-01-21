@@ -22,16 +22,15 @@ hidden: false
 
 <text-box variant="hint" name="Media and technology use questionnaire">
 Now please respond to a questionnaire about your media and technology use. With the questionnaire we collect information about media and technology use and student's attitudes towards them. Your replies will be used for developing the MOOC courses and research about education.
-<google-form-link href="https://docs.google.com/forms/d/e/1FAIpQLSdRWwKpDzcR7PHtSmeL4o8-JOXyR5ajAeuHz2aw4gnMTikwLg/viewform?usp=pp_url" emailfieldname="entry.575150039">Open the questionnaire by following the link</google-form-link>.
+<google-form-link href="https://docs.google.com/forms/d/e/1FAIpQLSd45Hu1-IJ19wf7aQ0ZtK4tfijHgHbTVpF0FSXPck-Fq9BiTQ/viewform?usp=pp_url"  emailfieldname="entry.575150039">Open the questionnaire by following the link</google-form-link>.
 </text-box>
-
 </only-for-ab-group>
 
 <only-for-ab-group group="2">
 
 <text-box variant="hint" name="Media and technology use questionnaire">
 Now please respond to a questionnaire about your media and technology use. With the questionnaire we collect information about media and technology use and student's attitudes towards them. Your replies will be used for developing the MOOC courses and research about education.
-<google-form-link href="https://docs.google.com/forms/d/e/1FAIpQLSfKGPCqp-9H8as73RfwqXkdCFbCL-O85TlqJ5tOZYr-MH-eDA/viewform?usp=pp_url" emailfieldname="entry.575150039">Open the questionnaire by following the link</google-form-link>.
+<google-form-link href="https://docs.google.com/forms/d/e/1FAIpQLSfT97npfOwD0HEVwbWH5SOTTmyYtYY5UIlqJ3HL29b5DPddqw/viewform?usp=pp_url" emailfieldname="entry.575150039">Open the questionnaire by following the link</google-form-link>.
 </text-box>
 
 </only-for-ab-group>
