@@ -17,10 +17,10 @@ const courseSettings = {
       title: "Frequently asked questions",
       path: "/faq",
     },
-    { separator: true, title: "Ohjelmoinnin perusteet" },
+    { separator: true, title: "Introduction to programming" },
   ],
   sidebarFuturePages: [], // { title: "Osa 14", tba: "19.4.2019" },
-  splitCourses: true,
+  splitCourses: false,
   useNewPointsVisualization: false
 }
 
