@@ -6,7 +6,7 @@ hidden: true
 ---
 
 <only-for-course-variant variant="dl">
-  <deadline>29.4.2020</deadline>
+  <deadline>15.4.2020</deadline>
 </only-for-course-variant>
 
 <only-for-course-variant variant="nodl">
@@ -14,7 +14,7 @@ hidden: true
 </only-for-course-variant>
 
 <only-for-course-variant variant="ohja-dl">
-  <deadline>29.4.2020</deadline>
+  <deadline>15.4.2020</deadline>
 </only-for-course-variant>
 
 <only-for-course-variant variant="ohja-nodl">
@@ -22,18 +22,19 @@ hidden: true
 </only-for-course-variant>
 
 <only-for-course-variant variant="kesa-dl">
-  <deadline>12.8.2020</deadline>
+  <deadline>5.8.2020</deadline>
 </only-for-course-variant>
 
 <only-for-course-variant variant="kesa-ohja-dl">
-  <deadline>12.8.2020</deadline>
+  <deadline>5.8.2020</deadline>
 </only-for-course-variant>
 
 <only-for-not-logged-in>
   <deadline>Kirjaudu sisään nähdäksesi deadlinen tälle osalle</deadline>
 </only-for-not-logged-in>
 
-Tämän osan jälkeen tunnet menetelmiä tiedon visualisointiin ja osaat käyttää Javan valmiiksi tarjoamia kaavioita (viivakaavio, pylväskaavio). Osaat luoda yksinkertaisia piirroksia Javan tarjoamilla välineillä ja osaat käsitellä kuvia. Opit soittamaan äänitiedostoja. Tässä osassa luot myös hieman suuremman ohjelman -- Asteroids-pelin -- esimerkkiä noudattaen.
+Kurssimateriaalin kolmannessatoista osassa opit luomaan graafisia käyttöliittymiä ja tutustut graafisissa käyttöliittymissä käytettäviin käyttöliittymäkomponentteihin. Opit käsittelemään graafisissa käyttöliittymissä tapahtuvia tapahtumia ja harjoittelet useamman näkymän sisältävien graafisten käyttöliittymien luomista.
+
 
 <please-login></please-login>
 

@@ -6,7 +6,7 @@ hidden: true
 ---
 
 <only-for-course-variant variant="dl">
-  <deadline>1.4.2020</deadline>
+  <deadline>25.3.2020</deadline>
 </only-for-course-variant>
 
 <only-for-course-variant variant="nodl">
@@ -14,7 +14,7 @@ hidden: true
 </only-for-course-variant>
 
 <only-for-course-variant variant="ohja-dl">
-  <deadline>1.4.2020</deadline>
+  <deadline>25.3.2020</deadline>
 </only-for-course-variant>
 
 <only-for-course-variant variant="ohja-nodl">
@@ -22,20 +22,18 @@ hidden: true
 </only-for-course-variant>
 
 <only-for-course-variant variant="kesa-dl">
-  <deadline>22.7.2020</deadline>
+  <deadline>15.7.2020</deadline>
 </only-for-course-variant>
 
 <only-for-course-variant variant="kesa-ohja-dl">
-  <deadline>22.7.2020</deadline>
+  <deadline>15.7.2020</deadline>
 </only-for-course-variant>
 
 <only-for-not-logged-in>
   <deadline>Kirjaudu sisään nähdäksesi deadlinen tälle osalle</deadline>
 </only-for-not-logged-in>
 
-
-Tämän osan jälkeen osaat tulkita yksinkertaisia luokkakaavioita ja osaat rakentaa ohjelmia luokkaakavioiden perusteella. Tiedät mitä Javan pakkaukset ovat, tiedät mistä `import`-lauseen osat muodostuvat, ja osaat asettaa luokkasi pakkauksiin. Harjoittelet Javan poikkeusten käyttöä ja opit sekä niiden käsittelyn että niiden eteenpäin heittämisen. Opit kirjoittamaan tietoa tiedostoon ohjelmallisesti ja kertaat yksikkötestien kirjoittamista uutta ohjelmointitehtävää luodessasi.
-
+Kurssimateriaalin kymmenennessä osassa tutustutaan tietokokoelmien käsittelyyn virtojen avulla. Opit luomaan virran tietokokoelmasta, rajaamaan virran arvoja, muuntamaan virran arvoja muodosta toiseen, ja keräämään virran arvoja toiseen tietokokoelmaan. Tutustut käsitteeseen lambdalauseke ja opit käyttämään sitä ohjemissasi. Opit myös järjestämään olioita Javan valmista Comparable-rajapintaa hyödyntäen ja tutustut muutamaan yleishyödylliseen työvälineeseen kuten säännöllinen lauseke, lueteltu tyyppi, ja iteraattori.
 
 <please-login></please-login>
 

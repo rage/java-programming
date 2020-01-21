@@ -12,31 +12,11 @@ hidden: true
 
 </text-box>
 
-TODO: kerro mikä algoritmi on
+Tietojenkäsittelytieteen ja tietotekniikan ytimessä ovat algoritmit, eli selkeät ohjeet siitä, miten tietty tehtävä suoritetaan. Ohjelmoinnin yhteydessä algoritmit määritellään tyypillisesti ohjelmakoodin avulla.
 
-
-Ohjelman tehokas toiminta eli esimerkiksi tiedon nopea hakeminen ja näyttäminen on oleellinen osa ohjelmistojen käytettävyyttä. Mikäli ohjelman käyttäjä joutuu odottamaan kymmeniä sekunteja kun ohjelma etsii käyttäjän haluamaa tietoa, saattaa ohjelman käyttäjä lopettaa ohjelman käyttämisen kokonaan. Vastaavasti televisio-ohjelmistoja selaava käyttäjä ei hyödy televisio-ohjelman tiedoista mitään jos tiedot latautuvat vasta ohjelman katsomisen jälkeen.
+Algoritmeihin kytketään usein käsite *tehokkuus*. Ohjelman tehokas toiminta, esimerkiksi halutun tiedon tarpeeksi nopea laskenta, on oleellinen osa ohjelmistojen käytettävyyttä. Mikäli seuraavan päivän sään ennustamiseen käytettävän algormitmin suorittaminen kestäisi kaksi päivää, ei ennustuksesta olisi juurikaan hyötyä. Vastaavasti televisio-ohjelmistoja selaava käyttäjä ei hyödy televisio-ohjelman tiedoista mitään jos tiedot latautuvat vasta ohjelman katsomisen jälkeen.
 
 Laajemmin voidaan ajatella, että nopeasti tapahtuva tiedon hakeminen ja näyttäminen on oleellista oikeastaan lähes missä tahansa sovelluksessa. Tutustutaan seuraavaksi tiedon hakemiseen ja järjestämiseen liittyviin algoritmeihin. Vaikka esimerkit käyttävät taulukoita, algoritmit toimivat myös muilla tiedon tallentamiseen tarkoitetuilla tietorakenteilla kuten listoilla.
-
-
-<text-box variant='hint' name='Sanan algoritmi historiaa'>
-
-Sana algoritmi juontaa juurensa Muhammad ibn Musa al-Khwarizmi -nimiseen henkilöön.
-
-Ensimmäiset korkeakulttuurit syntyivät (laajemman) lähi-idän alueelle, mikä nopeutti siellä myös henkistä kasvua. Lähi-idässä oltiin merkittävästi muuta maailmaa edellä muunmuassa matematiikassa ja tähtitieteessä -- esimerkiksi Euroopassa 1500-luvulla tapahtunut murros tähtitieteessä (maa kiertääkin aurinkoa eikä toisin päin), tapahtui laajemman lähi-idän vaikutuspiirissä olleessa kreikassa jo noin 300 vuotta ennen ajanlaskumme alkua.
-
-Nimi al-Khwarizmi viittaa oikeastaan alueeseen, tai hieman laajemmin, etuosa al- viittaa usein henkilön synty- tai kotipaikkaan. <a href="https://en.wikipedia.org/wiki/Muhammad_ibn_Musa_al-Khwarizmi" target="_blank" rel="noopener">Muhammad ibn Musa al-Khwarizmi</a> -- tai hänen isänsä tai esi-isänsä -- tulivat keskiaasiasta alueelta, joka tunnetaan nykyään suomen kielessä nimellä <a href="https://fi.wikipedia.org/wiki/Harezm" target="_blank" rel="noopener">Harezm</a>. Nykyään käytetty termi **algoritmi** onkin hatunnosto sekä Muhammad ibn Musa al-Khwarizmille että hänen syntyperälleen.
-
-<br/>
-
-Merkittävä osa al-Khwarizmin työstä tapahtui Baghdadissa sijaitsevassa Viisauden talossa, joka paikallisen hallinnon tukemana keräsi tiedemiehiä eri puolilta maailmaa yhteen. Tavoitteena oli "pienimuotoisesti" kerätä kaikki maailman tieto yhteen paikkaan ja kääntää se arabian kielelle, jota sitten jaettiin eteenpäin. Tätä kautta tietoa valui myös eurooppaan: esimerkiksi al-Khwarizmin kirja intialaisilla numeroilla laskemisesta (latinaksi "Algoritmi de numero Indorum") toi arabialaisten numeroiden käytön eurooppaan.
-
-Tämä terminologia näkyy yhä esimerkikiksi espanjan kielessä. Espanjankielinen sana guarismo -- eli suomeksi luku -- tulee ilmeisesti juurikin al-Khwarizmin nimestä.
-
-Vaikka Muhammad ibn Musa al-Khwarizmi kytketään nykyään -- ainakin tietojenkäsittelytieteilijöiden parissa -- ensisijaisesti algoritmeihin, on hän ennen kaikkea vaikuttanut merkittävästi algebran kehitykseen. Hänen työnsä tuolla alueella kontribuoi mm. ensimmäisen ja toisen asteen yhtälöiden ratkaisemiseen. Työn keskiössä olivat konkreettiset esimerkit sekä selkokieliset askeleittaiset ratkaisut -- numeroita työssä ei esiintynyt.
-
-</text-box>
 
 
 ## Tiedon järjestäminen
@@ -49,7 +29,7 @@ Jos tieto ei noudata minkäänlaista järjestystä tai sääntöä, on tiedon ha
 Ohjelmoijan yleissivistykseen kuuluu ainakin yhden järjestämisalgoritmin (eli tavan järjestää taulukko) tuntemus. Tutustutaan erääseen "klassiseen" järjestämisalgoritmiin, valintajärjestämiseen. Tutustuminen tapahtuu harjoitustehtävien avulla.
 
 
-<programming-exercise name='Järjestäminen (5 osaa)' tmcname='osa07-Osa07_04.Jarjestaminen'>
+<programming-exercise name='Järjestäminen (5 osaa)' tmcname='osa07-Osa07_03.Jarjestaminen'>
 
 <h2>Pienimmän arvon etsiminen</h2>
 
@@ -227,6 +207,20 @@ Huomaat, miten taulukko tulee pikkuhiljaa järjestykseen alkaen alusta ja edeten
 </programming-exercise>
 
 
+
+<text-box variant='hint' name='Static vai ei'>
+
+Kurssin alussa kaikissa metodeissa esiintyi määre `static`, mutta aloittaessamme olioiden käytön, tuon määreen käyttö jopa kiellettiin.
+
+Javan metodit voidaan jakaa kahteen ryhmään `static`-määreen olemassaolon perusteella. Metodit joissa ei ole `static`-määrettä ovat **oliometodeja** (tunnetaan myös instanssimetodeina). Metodit joissa on `static`-määre ovat **luokkametodeja**.
+
+Oliometodit ovat metodeja, jotka liittyvät olioihin, ja joiden koodissa voi käsitellä oliomuuttujia ja kutsua olion muita oliometodeja. Oliometodeissa on erityisesti pääsy `this`-määreeseen, joka on viite juuri metodia kutsuvaan olioon muuttujiin. Luokkametodeilla ei ole pääsyä `this`-määreeseen, jolloin niiden käytössä on vain ne muuttujat, jotka niille annetaan parametrina ja ne, jotka ne luovat.
+
+*Todellisuudessa luokkametodit pääsevät myös mm. luokkamuuttujiin -- näitä ei kuitenkaan käsitellä tällä kurssilla.*
+
+</text-box>
+
+
 ### Javan valmiit järjestämisalgoritmit
 
 Java tarjoaa merkittävän määrän valmiita järjestysalgoritmeja. Taulukot voi järjestää (luonnolliseen järjestykseen) luokan `Arrays` tarjoamalla luokkametodilla `sort`, ja listat voi järjestää (luonnolliseen järjestykseen) luokan `Collections` tarjoamalla luokkametodilla `sort`.
@@ -264,7 +258,7 @@ System.out.println(luvut);
 Valmiit järjestämisalgoritmit toimivat sekä alkeistyyppisille muuttujille, että joillekin Javan valmiille viittaustyyppisille muuttujille kuten String. Omien luokkiemme järjestämistä varten joudumme antamaan Javalle hieman lisävinkkejä, sillä luokat eivät sisällä tietoa siitä, miten niistä luodut oliot pitäisi järjestää. Palaamme omista luokista tehtyjen olioiden järjestämiseen ohjelmoinnin jatkokurssilla.
 
 
-<programming-exercise name='Valmiit järjestämisalgoritmit' tmcname='osa07-Osa07_05.ValmiitJarjestamisalgoritmit'>
+<programming-exercise name='Valmiit järjestämisalgoritmit' tmcname='osa07-Osa07_04.ValmiitJarjestamisalgoritmit'>
 
 Lisää luokkaan `Paaohjelma` seuraavat luokkametodit:
 
@@ -322,23 +316,59 @@ Kun tieto on järjestyksessä, hakeminen voidaan toteuttaa paljon peräkkäishak
 
 <br/>
 
-<text-box variant='hint' name='Peräkkäishaku vs. Binäärihaku'>
 
-Peräkkäishaun pahimmassa tapauksessa -- eli kun haettavaa ei löydy -- käydään kaikki taulukon arvot läpi. Miljoona alkiota sisältävässä taulukossa tämä tarkoittaa miljoonan alkion tarkastelua.
+<programming-exercise name='Hakemista' tmcname='osa07-Osa07_05.Hakemista'>
 
-Binäärihaun pahimmassa tapauksessa tutkittava alue jaetaan kahteen osaan kunnes osan koko on yksi. Alkioita tarkastellaan huomattavasti vähemmän kuin peräkkäishaussa. Tarkastellaan tätä hieman tarkemmin.
+Tehtäväpohjassa on valmiina luokka `Kirja`, joka kuvaa numeerisen tunnuksen `id` ja nimen `nimi` sisältäviä olioita.
 
-Taulukko, jossa on 16 alkiota, voidaan jakaa kahteen osaan korkeintaan 4 kertaa, eli 16 -> 8 -> 4 -> 2 -> 1.
+Tässä tehtävässä toteutetaan peräkkäishaku- ja binäärihakualgoritmi kirjojen hakemiseen niiden numeerisen tunnuksen perusteella. Tehtäväpohjassa on valmiina toteutettavien metodien nimet -- tällä hetkellä kumpikin metodeista palauttaa arvon `-1` -- sekä pääohjelma, jota voi käyttää metodien testaamiseen.
 
-Toisaalta, taulukko, jossa on miljoona alkiota voidaan jakaa kahteen osaan korkeintaa 20 kertaa, eli 1000000 -> 500000 -> 250000 -> 125000 -> 62500 -> 31250 -> 15625 -> ~7813 -> ~3907 -> 1954 -> ~977 -> ~489 -> ~245 -> ~123 -> ~62 -> ~31 -> ~16 -> ~8 -> ~4 -> ~2 -> ~1.
+<h2>Peräkkäishaku</h2>
 
-Mitä tämä tarkoittaa? Binäärihakua käyttäen miljoona alkiota sisältävästä taulukosta tulee pahimmassa tapauksessa tarkastella noin kahtakymmentä alkiota, kun peräkkäishaussa tarkasteltavia alkioita on miljoona.
+Peräkkäishakualgoritmi toimii siten, että se tarkastelee kutakin listassa tai taulukossa olevaa arvoa yksi kerrallaan, nollannesta indeksistä lähtien.
 
-Koska haettavien alkioiden määrä puolittuu binäärihaussa jokaisen tarkastelun yhteydessä, voi binäärihaun tehokkuutta tarkastella kaksikantaisen logaritmin avulla. Kaksikantainen logaritmi (log<sub>2</sub>) annetusta luvusta kertoo kuinka monta kertaa luku voidaan puolittaa. Esimerkiksi kaksikantainen logaritmi luvusta 16777216 (log<sub>2</sub> 16777216) on 24, ja luvun 4294967296 kaksikantainen logaritmi, (log<sub>2</sub> 4294967296) on 32. Tämä tarkoittaa että 4294967296 eri arvoa sisältävästä järjestyksessä olevasta taulukosta hakeminen vaatisi binäärihaulta korkeintaan 32 eri alkion tarkastamista.
-
-<br/>
-
-</text-box>
+Toteuta luokkaan `Paaohjelma` metodi `public static int perakkaishaku(ArrayList<Kirja> kirjat, int haettavaId)`, joka hakee parametrina annetusta listasta kirjaa, jonka `id`-muuttujan arvo on sama kuin metodille parametrina annetun `haettavaId`-muuttujan arvo. Mikäli kirja löytyy, tulee metodin palauttaa kyseisen kirjan indeksi parametrina annetussa listassa. Mikäli kirjaa ei löydy, tulee metodin palauttaa arvo `-1`.
 
 
-TODO: tehtävä binäärihausta (käytetään Javan valmista koneistoa?) -- katsotaan haun nopeus
+<h2>Binäärihaku</h2>
+
+Toteuta luokkaan `Paaohjelma` metodi `public static int binaarihaku(ArrayList<Kirja> kirjat, int haettavaId)`, joka hakee parametrina annetusta listasta kirjaa, jonka `id`-muuttujan arvo on sama kuin metodille parametrina annetun `haettavaId`-muuttujan arvo. Mikäli kirja löytyy, tulee metodin palauttaa kyseisen kirjan indeksi parametrina annetussa listassa. Mikäli kirjaa ei löydy, tulee metodin palauttaa arvo `-1`.
+
+Metodi tulee toteuttaa binäärihakuna, jolloin alkuoletuksena on se, että lista on järjestyksessä. Oleta lisäksi, että listan alkupäässä olevat `id`t ovat aina pienempiä kuin listan loppupäässä olevat `id`t.
+
+Saat apuusi myös edellisessä esityksessä käytetyn binäärihaun idean sekä *pseudokoodin*, eli ohjelmointikielen kaltaisella kielellä kuvatun ohjelman kuvauksen.
+
+Edellisessä esityksessä binäärihaun idea kuvattiin seuraavasti:
+
+- Tietoa etsitään järjestyksessä olevasta taulukosta tai listasta.
+- Hakeminen aloitetaan keskikohdasta.
+- Mikäli tarkasteltavan keskikohdan arvo ei ole haettu arvo, rajataan haettavasta alueesta puolet pois ja siirrytään tarkastelemaan jäljelle jäävän alueen keskikohtaa.
+- Mikäli tarkasteltavan keskikohdan arvo on haettu arvo, palautetaan tarkasteltavan keskikohdan indeksi.
+- Mikäli tarkasteltavaa aluetta ei ole enää jäljellä (koko alue rajattu pois), palautetaan arvo -1, joka kuvaa ettei haettavaa arvoa löydy
+
+Binäärihaun pseudokoodi on seuraavanlainen.
+
+```code
+// oletetaan, että käytössä on muuttuja haettava
+// oletetaan, että käytössä on muuttuja lista
+alku = 0 // listan nollas indeksi
+loppu = koko(lista) - 1 // listan viimeinen indeksi
+
+toista kunnes alku on suurempi kuin loppu:
+    keski = (loppu + alku) / 2
+
+    jos arvo kohdassa lista[keski] on haettava
+        palauta muuttujan keski arvo
+
+    jos arvo kohdassa lista[keski] on pienempi kuin haettava
+        alku = keski + 1
+
+    jos arvo kohdassa lista[keski] on suurempi kuin haettava
+        loppu = keski - 1
+
+palauta arvo -1
+```
+
+Huomaa, että kirjojen tapauksessa tarkastelet kirjojen `id`-muuttujien arvoja. Tämä tarkoittaa sitä, että sen sijaan, että käsittelet vain listan tietyssä indeksissä olevaa arvoa, tulee tehtävässä käsitellä tietyssä indeksissä olevan arvon `id`-muuttujaa.
+
+</programming-exercise>

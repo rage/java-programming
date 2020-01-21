@@ -7,7 +7,7 @@ hidden: true
 
 Seitsemännen osan lopuksi teet muutamia laajempia tehtäviä. Tehtävissä ei ole ennalta määriteltyä rakennetta -- mieti tehtävää tehdessäsi minkälaiset luokat ja oliot auttavat tehtävien ratkaisemisessa.
 
-<programming-exercise name='Arvosanatilastot (4 osaa)' tmcname='osa07-Osa07_07.Arvosanatilastot'>
+<programming-exercise name='Arvosanatilastot (4 osaa)' tmcname='osa07-Osa07_06.Arvosanatilastot'>
 
 Tässä tehtävässä toteutetaan ohjelma kurssipistetilastojen tulostamiseen. Ohjelmalle syötetään pisteitä (kokonaislukuja nollasta sataan), ja ohjelma tulostaa niiden perusteella arvosanoihin liittyviä tilastoja. Syötteiden lukeminen lopetetaan kun käyttäjä syöttää luvun -1. Lukuja, jotka eivät ole välillä [0-100] ei tule ottaa huomioon tilastojen laskemisessa.
 
@@ -196,9 +196,9 @@ Arvosanajakauma:
 </programming-exercise>
 
 
-<programming-exercise name='Reseptihaku (4 osaa)' tmcname='osa07-Osa07_08.Reseptihaku'>
+<programming-exercise name='Reseptihaku (4 osaa)' tmcname='osa07-Osa07_07.Reseptihaku'>
 
-Tässä tehtävässä tehdään ohjelma, joka tarjoaa käyttäjälle mahdollisuuden reseptien hakuun reseptin nimen, keittoajan tai raaka-aineen nimen perusteella. Ohjelman tulee lukea reseptit käyttäjän antamasta tiedostosta.
+Tässä tehtävässä tehdään ohjelma, joka tarjoaa käyttäjälle mahdollisuuden reseptien hakuun reseptin nimen, keittoajan tai raaka-aineen nimen perusteella. Ohjelman tulee lukea reseptit käyttäjän antamasta tiedostosta. *Kannattaa kerrata tiedoston lukeminen materiaalin osasta 4 ennen tehtävän aloitusta.*
 
 Jokainen resepti koostuu kolmesta tai useammasta rivistä reseptitiedostossa. Ensimmäisellä rivillä on reseptin nimi, toisella rivillä reseptin keittoaika (kokonaisluku), ja kolmas ja sitä seuraavat rivit kertovat reseptin raaka-aineet. Reseptin raaka-aineiden kuvaus päättyy tyhjään riviin. Tiedostossa voi olla useampia reseptejä. Alla kuvattuna esimerkkitiedosto.
 
@@ -233,7 +233,7 @@ wasabi
 
 Ohjelma toteutetaan osissa. Ensin ohjelmaan luodaan mahdollisuus reseptien lukemiseen sekä listaamiseen. Tämän jälkeen ohjelmaan lisätään mahdollisuus reseptien hakemiseen nimen perusteella, keittoajan perusteella ja lopulta raaka-aineen perusteella.
 
-Tehtäväpohjassa on mukana tiedosto `reseptit.txt`, jota voi käyttää sovelluksen testaamiseen. <em>Huomaa, että ohjelman ei tule listata reseptien raaka-aineita, mutta niitä käytetään hakutoiminnallisuudessa.</em> Tiedoston `reseptit.txt` voi myös ladata <a href="/data/reseptit.txt" target="_blank" norel>tämän linkin takaa</a>.
+Tehtäväpohjassa on mukana tiedosto `reseptit.txt`, jota voi käyttää sovelluksen testaamiseen. <em>Huomaa, että ohjelman ei tule listata reseptien raaka-aineita, mutta niitä käytetään hakutoiminnallisuudessa.</em> Tiedoston `reseptit.txt` voi myös ladata [tämän linkin takaa](/data/reseptit.txt).
 
 <br/>
 
@@ -379,7 +379,7 @@ Syötä komento:  **lopeta**
 </programming-exercise>
 
 
-<programming-exercise name='Lintubongarin tietokanta (3 osaa)' tmcname='osa07-Osa07_09.LintubongarinTietokanta'>
+<programming-exercise name='Lintubongarin tietokanta (3 osaa)' tmcname='osa07-Osa07_08.LintubongarinTietokanta'>
 
 **Tehtävä vastaa kolmea yksiosaista tehtävää.**
 

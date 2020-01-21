@@ -1,10 +1,13 @@
 ---
 path: "/koe-ja-moodle-ilmoittautuminen"
 title: "Koe ja Moodle-ilmoittautuminen"
-hidden: true
+hidden: false
 information_page: true
 ---
 
+Draft
+
+<!--
 Kurssilla käytetään Moodlea sekä keskustelualustana että verkkotenttien alustana. Kun haluat osallistua kurssien verkkotentteihin tai keskusteluihin Moodlessa, tulee sinun ilmoittautua Avoimeen yliopistoon opiskelijaksi (ellet ole jo HY:n opiskelija). Kurssi-ilmoittautuminen on pakollista kaikille niille, jotka haluavat saada opintopisteet ja suoritusotteen kurssista.  Osille 1-7 (**Ohjelmoinnin perusteet**) ja 8-14 (**Ohjelmoinnin jatkokurssi**) tulee tehdä erilliset Avoimen yliopiston kurssi-ilmoittautumiset kokeita varten.
 
 Ohjelmoinnin perusteet vastaa materiaalin osia 1-7 ja Ohjelmoinnin jatkokurssi materiaalin osia 8-14. Molemmat ovat 5 opintopisteen arvoisia kursseja.
@@ -31,7 +34,7 @@ Ilmoittautuminen on pakollinen kaikille niille, jotka haluavat osallistua kurssi
 
 4. Luo Helsingin yliopiston käyttäjätunnukset. Saat tunnukset seuraamalla Helsingin yliopiston ohjetta käyttäjätunnusten aktivointiin: [https://helpdesk.it.helsinki.fi/oheet/kirjautuminen-ja-yhteydet/kayttajatunnus/ohjeet-yliopiston-kayttajatunnuksen-aktivointiin](https://helpdesk.it.helsinki.fi/oheet/kirjautuminen-ja-yhteydet/kayttajatunnus/ohjeet-yliopiston-kayttajatunnuksen-aktivointiin). Huom! Osa oppilaista on raportoinut, että aktivointi ei toimi Safari-selaimella. Suosittelemme että teet aktivoinnin joko Chromella tai Firefoxilla.
 
-5. Pääset Moodleen osoitteessa https://moodle.helsinki.fi/course/view.php?id=29366 - Moodle-alueen salasana on "ohjelmointi-19". Kirjaudu Moodleen Helsingin yliopiston tunnuksilla — yritä välttää sisäänkirjautumista HAKA:n kautta.
+5. Pääset Moodleen osoitteessa https://moodle.helsinki.fi/course/view.php?id=29366 - Moodle-alueen salasana on "ohjelmointi-20". Kirjaudu Moodleen Helsingin yliopiston tunnuksilla — yritä välttää sisäänkirjautumista HAKA:n kautta.
 
 
 ## Katso myös
@@ -42,4 +45,4 @@ Ilmoittautuminen on pakollinen kaikille niille, jotka haluavat osallistua kurssi
 * [Miten kurssin loppuosan kokeeseen ilmoittaudutaan?](/usein-kysytyt-kysymykset#heading-miten-kurssin-loppuosan-kokeeseen-ilmoittaudutaan)
 * [Löysin Avoimen yliopiston sivulta yleiset ohjeet kokeeseen ilmoittautumiseen. Voinko seurata niitä?](/usein-kysytyt-kysymykset#heading-loysin-avoimen-yliopiston-sivulta-yleiset-ohjeet-kokeeseen-ilmoittautumiseen-voinko-seurata-niita)
 * [Löysin koeilmoittautumisen vasta koepäivänä. Voinko silti osallistua kokeeseen?](/usein-kysytyt-kysymykset#heading-loysin-koeilmoittautumisen-vasta-koepaivana-voinko-silti-osallistua-kokeeseen)
-* [Kokeen piti olla ilmainen, mutta koeilmoittautumisessa puhutaan maksuehdoista](/usein-kysytyt-kysymykset/#heading-kokeen-piti-olla-ilmainen-mutta-koeilmoittautumisessa-puhutaan-maksuehdoista)
+* [Kokeen piti olla ilmainen, mutta koeilmoittautumisessa puhutaan maksuehdoista](/usein-kysytyt-kysymykset/#heading-kokeen-piti-olla-ilmainen-mutta-koeilmoittautumisessa-puhutaan-maksuehdoista) -->

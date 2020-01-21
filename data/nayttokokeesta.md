@@ -1,13 +1,15 @@
 ---
 path: '/nayttokokeesta'
 title: 'Näyttökokeesta'
-hidden: true
+hidden: false
 information_page: true
 ---
 
 Tämä sivu koskee niitä opiskelijoita, jotka hakevat opinto-oikeutta aikataulullisen Ohjelmoinnin MOOC -kurssin kautta.
 
-Näyttökoe on vain opinto-oikeutta hakemista varten. Mikäli tavoitteenasi on saada kurssisuoritukset, tulee sinun suorittaa Avoimen yliopiston tarjoamat verkkotentit kursseista Ohjelmoinnin perusteet ja Ohjelmoinnin jatkokurssi. Katso tietoa verkkotenteistä täältä: [Arvostelu ja kokeet](./arvostelu-ja-kokeet)
+Lisätietoa tulossa myöhemmin,
+
+<!-- Näyttökoe on vain opinto-oikeutta hakemista varten. Mikäli tavoitteenasi on saada kurssisuoritukset, tulee sinun suorittaa Avoimen yliopiston tarjoamat verkkotentit kursseista Ohjelmoinnin perusteet ja Ohjelmoinnin jatkokurssi. Katso tietoa verkkotenteistä täältä: [Arvostelu ja kokeet](./arvostelu-ja-kokeet)
 
 **HUOM** Vaikka olisit hakemassa opinto-oikeutta näyttökokeen avulla, osallistu myös Avoimen yliopiston tarjoamiin verkkotentteihin varmistaaksesi kurssisuoritusten saannin.
 
@@ -68,4 +70,4 @@ Näiden näyttökokeiden arvostelussa arvostettiin enemmän pientä määrää h
 
 Moodle-foorumillamme on uusi osio 'Näyttökoe', jossa voi kysyä kysymyksiä näyttökokeeseen liittyen. Ohjeet Moodle-alustalle liittymisestä löytyvät täältä alakohdasta Moodle-foorumi: [Tukiväylät](/tukivaylat)
 
-Katso myös sivu [Mahdollisuus opinto-oikeuteen](/opinto-oikeus).
+Katso myös sivu [Mahdollisuus opinto-oikeuteen](/opinto-oikeus). -->

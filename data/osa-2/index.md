@@ -2,11 +2,11 @@
 path: '/osa-2'
 title: 'Osa 2'
 overview: true
-hidden: true
+hidden: false
 ---
 
 <only-for-course-variant variant="dl">
-  <deadline>28.1.2020</deadline>
+  <deadline>27.1.2020</deadline>
 </only-for-course-variant>
 
 <only-for-course-variant variant="nodl">

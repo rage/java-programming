@@ -6,7 +6,7 @@ hidden: true
 ---
 
 <only-for-course-variant variant="dl">
-  <deadline>8.4.2020</deadline>
+  <deadline>1.4.2020</deadline>
 </only-for-course-variant>
 
 <only-for-course-variant variant="nodl">
@@ -14,7 +14,7 @@ hidden: true
 </only-for-course-variant>
 
 <only-for-course-variant variant="ohja-dl">
-  <deadline>8.4.2020</deadline>
+  <deadline>1.4.2020</deadline>
 </only-for-course-variant>
 
 <only-for-course-variant variant="ohja-nodl">
@@ -22,19 +22,18 @@ hidden: true
 </only-for-course-variant>
 
 <only-for-course-variant variant="kesa-dl">
-  <deadline>29.7.2020</deadline>
+  <deadline>22.7.2020</deadline>
 </only-for-course-variant>
 
 <only-for-course-variant variant="kesa-ohja-dl">
-  <deadline>29.7.2020</deadline>
+  <deadline>22.7.2020</deadline>
 </only-for-course-variant>
 
 <only-for-not-logged-in>
   <deadline>Kirjaudu sisään nähdäksesi deadlinen tälle osalle</deadline>
 </only-for-not-logged-in>
 
-
-Tämän osan jälkeen tiedät mitä geneeriset tyyppiparametrit ovat ja mitä merkintä ArrayList&lt;String&gt; tarkoittaa. Osaat myös luoda luokkia, joissa käytetään geneerisiä tyyppiparametreja. Tutustut ArrayListin ja HashMapin sisäiseen toteutukseen ja luot niistä yksinkertaiset omat versiot. Opit luomaan satunnaislukuja ja harjoittelet Javan valmiiden välineiden käyttöä satunnaislukujen luomiseen. Tutustut  moniulotteisen tiedon esittämiseen ja opit luomaan ja käsittelemään moniulotteisia taulukoita.
+Kurssimateriaalin yhdennessätoista osassa opit tulkitsemaan yksinkertaisia luokkakaavioita. Tutustut Javan pakkauksiin ja opit mistä `import`-lauseen osat muodostuvat. Harjoittelet Javan poikkeusten käyttöä ja opit sekä niiden käsittelyn että niiden eteenpäin heittämisen. Kertaat tiedon lukemista tiedostosta ja opit kirjoittamaan tietoa tiedostoon.
 
 
 <please-login></please-login>

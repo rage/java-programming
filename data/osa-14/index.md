@@ -6,7 +6,7 @@ hidden: true
 ---
 
 <only-for-course-variant variant="dl">
-  <deadline>6.5.2020</deadline>
+  <deadline>29.4.2020</deadline>
 </only-for-course-variant>
 
 <only-for-course-variant variant="nodl">
@@ -14,7 +14,7 @@ hidden: true
 </only-for-course-variant>
 
 <only-for-course-variant variant="ohja-dl">
-  <deadline>6.5.2020</deadline>
+  <deadline>29.4.2020</deadline>
 </only-for-course-variant>
 
 <only-for-course-variant variant="ohja-nodl">
@@ -22,18 +22,18 @@ hidden: true
 </only-for-course-variant>
 
 <only-for-course-variant variant="kesa-dl">
-  <deadline>19.8.2020</deadline>
+  <deadline>12.8.2020</deadline>
 </only-for-course-variant>
 
 <only-for-course-variant variant="kesa-ohja-dl">
-  <deadline>19.8.2020</deadline>
+  <deadline>12.8.2020</deadline>
 </only-for-course-variant>
 
 <only-for-not-logged-in>
   <deadline>Kirjaudu sisään nähdäksesi deadlinen tälle osalle</deadline>
 </only-for-not-logged-in>
 
-Tämän osan jälkeen tunnet menetelmiä simulaatioiden luomiseen ja olet kerrannut kaksiulotteisten taulukoiden käyttöä. Tiedät, että muiden kirjoittamia kirjastoja voi käyttää osana omia ohjemia, ja olet ottanut ensiaskeleet tietokannan käyttöön. Kertaat myös käsitettä yksikkötesti ja opit käsitteen testikattavuus.
+Kurssimateriaalin viimeisessä osassa opit menetelmiä tiedon visualisointiin ja tutustut Javan valmiina tarjoamiin kaavioihin (viivakaavio, pylväskaavio). Opit luomaan yksinkertaisia piirroksia ja tutustut kuvien käsittelyyn. Opit myös soittamaan äänitiedostoja. Luot myös hieman suuremman ohjelman -- Asteroids-pelin -- esimerkkiä noudattaen.
 
 <please-login></please-login>
 

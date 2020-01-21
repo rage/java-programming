@@ -1,14 +1,7 @@
 ---
-path: '/osa-9/4-yhteenveto'
+path: '/osa-9/5-yhteenveto'
 title: 'Yhteenveto'
 hidden: true
 ---
 
-
-Yhdeksännessä osassa eli Ohjelmoinnin jatkokurssin toisessa osassa tutustuimme tietokokoelmien läpikäyntiin virran avulla ja olioiden järjestämiseen Javan valmista Comparable-rajapintaa hyödyntäen. Tämän lisäksi tutustuimme muutamaan yleishyödylliseen tekniikkaan kuten perinteiseen for-toistolauseeseen, säännölliseen lausekkeeseen, lueteltuun tyyppiin sekä iteraattoriin.
-
-
-Vastaa vielä alla olevaan kyselyyn.
-
-
-<quiz id='0073d0ed-e43e-5ca0-9253-c7e3e69569c4'></quiz>
+TODO: kerrotaan käsitteiden monimuotoisuudesta ja siitä, mitä hyötyä ohjelmointikielen kannalta on, että käytössä on object (ohjelmointikielen suunnittelija voi aina olettaa, että käytössä on metodi toString, hashCode, equals -- vaikka näiden toteutus voi olla mitä tahansa). Puhutaan rajapintojen hyödyistä.

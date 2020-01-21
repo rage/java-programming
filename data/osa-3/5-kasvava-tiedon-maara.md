@@ -1,16 +1,11 @@
 ---
-path: '/osa-3/6-kasvava-tiedon-maara'
+path: '/osa-3/5-kasvava-tiedon-maara'
 title: 'Kasvava tiedon määrä'
-hidden: true
+hidden: false
 ---
 
-TODO: kirjoita uudelleen. Kulma: tiedon määrä kasvaa, miten hoidetaan?
+Ohjelmissa käsitellään usein tietoa. Tätä tietoa tulee säilöä ohjelman suorituksen ajaksi -- uuden muuttujan luominen jokaiselle ohjelmassa olevalle tiedonpalalle olisi hyvin työlästä ja tekisi ohjelmasta vaikeasti ymmärrettävän. Otimme tässä osassa ensiaskeleet ohjelmassa olevan tiedon hallintaan: listojen ja taulukoiden avulla voidaan säilöä lähes rajaton määrä tietoa ohjelman suorituksen ajaksi. Harjoittelimme myös merkkijonojen käsittelyä sekä tietoa sisältävien merkkijonojen pilkkomista pienempiin osiin.
 
-Kolmannessa osassa tutustuttiin lähdekoodin kommentoinnin sekä muuttujien nimennän vaikutukseen ohjelman selkeyteen. Tutustuimme listoihin ja taulukoihin, opimme käsitteen indeksi, ja harjoittelimme listojen ja taulukoiden läpikäyntiä ja listoissa ja taulukoissa olevien arvojen käsittelyä. Syvennyimme myös merkkijonojen käsittelyyn ja opimme etsimään merkkijonon sisältä toista merkkijonoa sekä pilkkomaan merkkijonon osiin. Otimme myös ensiaskeleet ohjelmien testaamiseen.
+Vastaa vielä lopuksi seuraavaan kolmannen osan osaamistavoitteita tarkastelevaan itsearviointikyselyyn.
 
-TODO: yhteenveto osan relevanteista opeista
-
-Vastaa vielä alla olevaan kyselyyn.
-
-
-<quiz id="3617756c-2c52-557e-ad4e-891fc50dc73d"></quiz>
+<quiz id="d7919b76-caeb-5e70-9a21-c0caffc02686"></quiz>

@@ -1,14 +1,11 @@
 ---
-path: '/osa-2/6-kasvavat-ohjelmat'
+path: '/osa-2/5-kasvavat-ohjelmat'
 title: 'Kasvavat ohjelmat'
+hidden: false
 ---
 
-TODO: tänne vähän kuin yhteenveto, mutta kirjoitetaan siitä, miten ohjelmat kasvavat kun niihin lisätään toiminnallisuutta -- tätä koon kasvua voi rajata esimerkiksi toistolauseilla ja metodeilla
+Ohjelmat kasvavat kun niihin lisätään toiminnallisuutta. Ohjelmien kasvaessa myös niiden monimutkaisuus kasvaa, mikä johtaa siihen, että ohjelmakoodia on vaikeampi ymmärtää. Otimme tässä osassa ensiaskeleet ohjelmien monimutkaisuuden hallintaan: toistolauseilla ohjelmakoodia voidaan ajaa uudestaan ja uudestaan, ja metodeilla ohjelmia voidaan jakaa pienempiin ymmärrettäviin osakokonaisuuksiin.
 
-TODO: muutama esimerkki hyvin isosta ohjelmasta ja niiden koodirivien määrästä
+Vastaa vielä lopuksi seuraavaan toisen osan osaamistavoitteita tarkastelevaan itsearviointikyselyyn.
 
-TODO: yhteenveto osan relevanteista opeista
-
-TODO: loppukysely?
-
-<quiz id="3a8b996b-3560-50e6-9851-dd27aff33edf"></quiz>
+<quiz id="7d568678-be3a-5ed5-8981-5d24e79e78e7"></quiz>
