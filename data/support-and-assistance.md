@@ -6,7 +6,7 @@ information_page: true
 ---
 
 
-## Workshops
+<!-- ## Workshops
 
 Kurssilla on mahdollisuus saada hyvää ohjelmointiseuraa sekä saada apua tehtäviin, ohjelmointiin ja teknisiin ongelmiin tulemalla kurssin pajaan! Paja sijaitsee Helsingin yliopiston Kumpulan kampuksella olevassa Exactum-rakennuksessa. Kaikki ovat tervetulleita pajaan!
 
@@ -21,7 +21,7 @@ Alla olevaan taulukkoon on ruksattu kevään paja-ajat. Ajat saattavat muuttua k
 | 10-12 | X  |    |    |    | X  |
 | 12-14 | X  | X  | X  | X  | X  |
 | 14-16 | X  | X  | X  | X  | X  |
-| 16-18 | X  |    | X  | X  |    |
+| 16-18 | X  |    | X  | X  |    | -->
 
 ## Chat channel
 
