@@ -8,30 +8,29 @@ information_page: true
 
 ## Workshops
 
-There are workshops where you can (and **should**) go to ask for
-help. The workshop times are listed below. Please note, that the times
-are subject to change. Refer to this list for the most updated
-information.
+Kurssilla on mahdollisuus saada hyvää ohjelmointiseuraa sekä saada apua tehtäviin, ohjelmointiin ja teknisiin ongelmiin tulemalla kurssin pajaan! Paja sijaitsee Helsingin yliopiston Kumpulan kampuksella olevassa Exactum-rakennuksessa. Kaikki ovat tervetulleita pajaan!
 
-**Workshop schedule: (Exactum BK107)**
+Katso Exactum-rakennuksen tarkempi sijainti [täältä](https://www.google.com/maps?hl=en&q=Exactum,+Kumpula+Campus,+Pietari+Kalmin+katu+5,+00560+Helsinki).
 
-* Tue 12-18
-* Wed 12-16
-* Thurs 14-18
-* Fri 12-14
+Pajaa pidetään luokassa **BK107** aivan Exactumin UniCafen vieressä. Exactum-rakennuksen aulassa olevasta infonäytöstä löytää salin tarkemman sijainnin. Voit myös kysyä salin sijaintia aulan vahtimestareilta sekä kampuksen henkilökunnalta ja opiskelijoilta.
 
-Note that these times may change according to demand.
+Alla olevaan taulukkoon on ruksattu kevään paja-ajat. Ajat saattavat muuttua kurssin edetessä joten tarkistathan paja-ajat aina ennen kuin tulet pajaan.
 
-The easiest way to contact course staff is via workshops. You can also
-mail to erkki.kaila(@)helsinki.fi or reetta.puska@helsinki.fi or use
-the course discussion forum.
+|       | MA | TI | KE | TO | PE |
+|:-----:|:--:|:--:|:--:|:--:|:--:|
+| 10-12 | X  |    |    |    | X  |
+| 12-14 | X  | X  | X  | X  | X  |
+| 14-16 | X  | X  | X  | X  | X  |
+| 16-18 | X  |    | X  | X  |    |
 
 ## Chat channel
 
 The course has a support chat channel in Telegram. We suggest that you use the channel either with Telegram's web browser client or with Telegram's desktop application.
 
-You can join the channel through this link: [https://t.me/programming_f19](https://t.me/programming_f19)
+You can join the channel through this link: [https://t.me/java_programming_mooc](https://t.me/java_programming_mooc)
 You can access the web browser client here: [https://web.telegram.org](https://web.telegram.org/)
+
+There's also an off-topic channel for conversation that isn't directly connected to the course: [https://t.me/java_programming_mooc_ot](https://t.me/java_programming_mooc_ot)
 
 The participants in the channel are fellow students and volunteer course assistants. The channel's activity is based on voluntary assistance. Please also help other students on the channel when you can.
 
