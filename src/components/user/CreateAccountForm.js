@@ -5,7 +5,7 @@ import { createAccount, authenticate } from "../../services/moocfi"
 import { capitalizeFirstLetter } from "../../util/strings"
 import { navigate } from "gatsby"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
-
+import { withTranslation } from "react-i18next"
 import styled from "styled-components"
 import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
 
@@ -38,7 +38,6 @@ class CreateAccountForm extends React.Component {
         password: this.state.password,
         password_confirmation: this.state.password_confirmation,
       })
-      console.log("Created an account:", JSON.stringify(res))
       await authenticate({
         username: this.state.email,
         password: this.state.password,
@@ -55,8 +54,7 @@ class CreateAccountForm extends React.Component {
               `${key.replace(/_/g, " ")} ${msg}.`,
             )
             if (newMessage === "Email has already been taken.") {
-              newMessage =
-                "Sähköpostiosoitteesi on jo käytössä. Oletko tehnyt aikaisemmin mooc.fi:n kursseja?"
+              newMessage = this.props.t("emailInUse")
             }
             message = `${message} ${newMessage}`
           })
@@ -64,7 +62,7 @@ class CreateAccountForm extends React.Component {
 
         if (message === "") {
           message =
-            "Ongelma tunnuksen luonnissa. Virhe oli: " + JSON.stringify(error)
+            this.props.t("problemCreatingAccount") + JSON.stringify(error)
         }
         this.setState({ error: message, submitting: false, errorObj: error })
       } catch (_error2) {
@@ -98,22 +96,22 @@ class CreateAccountForm extends React.Component {
     } = this.state
     if (email && validateEmail) {
       if (email.indexOf("@") === -1) {
-        newState.error += "Sähköpostiosoitessa ei ole '@'-merkkiä. "
-        newState.errorObj.email = "Sähköpostiosoitessa ei ole '@'-merkkiä. "
+        newState.error += this.props.t("noAt")
+        newState.errorObj.email = this.props.t("noAt")
       }
       if (email && email.indexOf(".") === -1) {
-        newState.error += "Sähköpostiosoitessa ei ole '.'-merkkiä. "
-        newState.errorObj.email = "Sähköpostiosoitessa ei ole '.'-merkkiä. "
+        newState.error += this.props.t("noAt")
+        newState.errorObj.email = this.props.t("noAt")
       }
     }
 
     if (password && password_confirmation && validatePassword) {
       if (password !== password_confirmation) {
-        newState.error += "Salasana ja salasana uudestaan eivät olleet samoja. "
-        newState.errorObj.password =
-          "Salasana ja salasana uudestaan eivät olleet samoja."
-        newState.errorObj.password_confirmation =
-          "Salasana ja salasana uudestaan eivät olleet samoja."
+        newState.error += this.props.t("passwordsNoMatch")
+        newState.errorObj.password = this.props.t("passwordsNoMatch")
+        newState.errorObj.password_confirmation = this.props.t(
+          "passwordsNoMatch",
+        )
       }
     }
 
@@ -152,10 +150,10 @@ class CreateAccountForm extends React.Component {
     }
     return (
       <FormContainer>
-        <h1>Luo käyttäjätunnus</h1>
+        <h1>{this.props.t("createAccount")}</h1>
         <Form onChange={this.validate}>
           <InfoBox>
-            Tämä kurssi käyttää{" "}
+            {this.props.t("courseUses")}{" "}
             <OutboundLink
               href="https://mooc.fi"
               target="_blank"
@@ -163,10 +161,7 @@ class CreateAccountForm extends React.Component {
             >
               mooc.fi
             </OutboundLink>{" "}
-            käyttäjätunnuksia. Jos olet aikaisemmin tehnyt mooc.fi -kursseja,
-            voit käyttää sisäänkirjautumissivulla olemassaolevia tunnuksiasi.
-            Tällä sivulla voit luoda uuden tunnuksen, joka toimii suurimmassa
-            osassa mooc.fi:n kursseissa ja palveluissa.
+            {this.props.t("courseUses2")}
           </InfoBox>
 
           <Row>
@@ -175,7 +170,7 @@ class CreateAccountForm extends React.Component {
               type="email"
               name="email"
               autoComplete="email"
-              label="Sähköpostiosoite"
+              label={this.props.t("email")}
               error={this.state.errorObj.email}
               fullWidth
               value={this.state.email}
@@ -191,7 +186,7 @@ class CreateAccountForm extends React.Component {
             <TextField
               variant="outlined"
               type={this.state.showPassword ? "text" : "password"}
-              label="Salasana"
+              label={this.props.t("password")}
               name="password"
               error={this.state.errorObj.password}
               fullWidth
@@ -203,7 +198,7 @@ class CreateAccountForm extends React.Component {
             <TextField
               variant="outlined"
               type={this.state.showPassword ? "text" : "password"}
-              label="Salasana uudestaan"
+              label={this.props.t("passwordAgain")}
               name="password_confirmation"
               error={this.state.errorObj.password_confirmation}
               fullWidth
@@ -226,19 +221,19 @@ class CreateAccountForm extends React.Component {
               fullWidth
               type="submit"
             >
-              Luo käyttäjätunnus
+              {this.props.t("create")}
             </Button>
           </Row>
         </Form>
 
         <Row>
-          <Link to="/sign-in">
-            Onko sinulla jo käyttäjätunnus? Kirjaudu sisään
-          </Link>
+          <Link to="/sign-in">{this.props.t("alreadyHaveAccount")}</Link>
         </Row>
         {this.state.error && (
           <InfoBox>
-            <b>Virhe: {this.state.error}</b>
+            <b>
+              {this.props.t("error")} {this.state.error}
+            </b>
           </InfoBox>
         )}
       </FormContainer>
@@ -246,4 +241,6 @@ class CreateAccountForm extends React.Component {
   }
 }
 
-export default withSimpleErrorBoundary(CreateAccountForm)
+export default withTranslation("user")(
+  withSimpleErrorBoundary(CreateAccountForm),
+)

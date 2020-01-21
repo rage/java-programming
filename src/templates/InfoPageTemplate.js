@@ -11,6 +11,7 @@ import getNamedPartials from "../partials"
 import "./remark.css"
 import { LoginStateContextProvider } from "../contexes/LoginStateContext"
 import Container from "../components/Container"
+import Banner from "../components/Banner"
 
 const ContentWrapper = styled.article``
 
@@ -30,6 +31,7 @@ export default class InfoPageTemplate extends React.Component {
         <LoginStateContextProvider>
           <Layout>
             <Fragment>
+              {frontmatter.banner && <Banner />}
               <Container>
                 <ContentWrapper>
                   <h1>{frontmatter.title}</h1>
@@ -52,6 +54,7 @@ export const pageQuery = graphql`
       frontmatter {
         path
         title
+        banner
       }
     }
   }

@@ -4,7 +4,7 @@ import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary"
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleDown as icon } from "@fortawesome/free-solid-svg-icons"
-
+import { withTranslation } from "react-i18next"
 import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
 import ExerciseList from "./ExerciseList"
 
@@ -24,7 +24,7 @@ class ExercisesInThisSection extends React.Component {
     return (
       <ExpansionPanel>
         <ExpansionPanelSummary expandIcon={<FontAwesomeIcon icon={icon} />}>
-          Lista osan tehtävistä
+          {this.props.t("exerciseList")}
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <ExerciseList />
@@ -34,4 +34,6 @@ class ExercisesInThisSection extends React.Component {
   }
 }
 
-export default withSimpleErrorBoundary(ExercisesInThisSection)
+export default withTranslation("common")(
+  withSimpleErrorBoundary(ExercisesInThisSection),
+)

@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-
+import { withTranslation } from "react-i18next"
 import EmailExample from "../../images/email-example.png"
 
 import styled from "styled-components"
@@ -35,23 +35,24 @@ class ConfirmEmail extends React.Component {
   render() {
     return (
       <FormContainer>
-        <h1>Tervetuloa kurssille!</h1>
+        <h1>{this.props.t("welcomeToCourse")}</h1>
         <InfoBox>
-          <p>
-            Olemme lähettäneet sähköpostiisi sähköpostiosoitteen
-            varmistuslinkin. Käy nyt sähköpostissasi ja varmista osoitteesi.{" "}
-          </p>
+          <p>{this.props.t("emailSent")} </p>
 
-          <p>Sähköpostin pitäisi näyttää tälläiseltä:</p>
+          <p>{this.props.t("emailExample")}</p>
 
-          <StyledImage src={EmailExample} alt="Esimerkki sähköpostista" />
+          <StyledImage
+            src={EmailExample}
+            alt={this.props.t("emaiLExampleAria")}
+          />
         </InfoBox>
         <p>
-          Tämän jälkeen voit jatkaa <Link to="/osa-1">materiaaliin</Link>.
+          {this.props.t("nowContinue")}{" "}
+          <Link to="/osa-1">{this.props.t("toMaterial")}</Link>.
         </p>
       </FormContainer>
     )
   }
 }
 
-export default withSimpleErrorBoundary(ConfirmEmail)
+export default withTranslation("user")(withSimpleErrorBoundary(ConfirmEmail))

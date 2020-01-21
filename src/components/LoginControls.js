@@ -4,7 +4,7 @@ import { signOut, getCachedUserDetails } from "../services/moocfi"
 import LoginStateContext, {
   withLoginStateContext,
 } from "../contexes/LoginStateContext"
-
+import { withTranslation } from "react-i18next"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUser as profileIcon } from "@fortawesome/free-solid-svg-icons"
 import styled from "styled-components"
@@ -48,15 +48,17 @@ class LoginControls extends React.Component {
           <StyledIcon icon={profileIcon} />
           {this.state.name}
         </Button>
-        <Button onClick={this.doSignOut}>Kirjaudu ulos</Button>
+        <Button onClick={this.doSignOut}>{this.props.t("logout")}</Button>
       </Fragment>
     ) : (
       <Fragment>
-        <Button to="/sign-up">Luo uusi tunnus</Button>
-        <Button to="/sign-in">Kirjaudu sisään</Button>
+        <Button to="/sign-up">{this.props.t("newAccount")}</Button>
+        <Button to="/sign-in">{this.props.t("login")}</Button>
       </Fragment>
     )
   }
 }
 
-export default withSimpleErrorBoundary(withLoginStateContext(LoginControls))
+export default withTranslation("common")(
+  withSimpleErrorBoundary(withLoginStateContext(LoginControls)),
+)

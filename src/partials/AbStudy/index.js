@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
 import LoginStateContext from "../../contexes/LoginStateContext"
-
+import { withTranslation } from "react-i18next"
 import { Card } from "@material-ui/core"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -58,7 +58,7 @@ class AbStudy extends Component {
     if (!this.state.render) {
       return (
         <Wrapper>
-          Ladataan kurssisisällön osaa...
+          {this.props.t("loading")}
           <Loading heightHint="200px" />
         </Wrapper>
       )
@@ -69,11 +69,7 @@ class AbStudy extends Component {
           <MessageWrapper>
             <StyledIcon icon={icon} />
             <div>
-              <P>
-                Tässä kohtaa materiaalia on sisältöä, joka näkyy vain
-                sisäänkirjautuneille käyttäjille. Kirjaudu sisään nähdäksesi
-                sen.
-              </P>
+              <P>{this.props.t("loginToSee")}</P>
             </div>
           </MessageWrapper>
         </Wrapper>
@@ -86,8 +82,7 @@ class AbStudy extends Component {
             <StyledIcon icon={icon} />
             <div>
               <P>
-                Kurssisisällön osaa ei pystytty lataamaan virheen takia:{" "}
-                <pre>{this.state.error}</pre>
+                {this.props.t("errorInMaterial")} <pre>{this.state.error}</pre>
               </P>
             </div>
           </MessageWrapper>
@@ -95,17 +90,12 @@ class AbStudy extends Component {
       )
     }
     if (!this.props.id) {
-      return (
-        <Wrapper>
-          Tässä kohtaa on sisältöä, joka ei ole oikein määritelty. Syy: id
-          puuttuu.
-        </Wrapper>
-      )
+      return <Wrapper>{this.props.t("incorrectMaterial")}</Wrapper>
     }
     if (!this.state.group) {
       return (
         <Wrapper>
-          Ladataan kurssisisällön osaa...
+          {this.props.t("loading")}
           <Loading heightHint="200px">{this.props.children}</Loading>
         </Wrapper>
       )
@@ -120,4 +110,4 @@ class AbStudy extends Component {
   }
 }
 
-export default withSimpleErrorBoundary(AbStudy)
+export default withTranslation("common")(withSimpleErrorBoundary(AbStudy))

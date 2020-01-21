@@ -3,6 +3,7 @@ import Loading from "../components/Loading"
 import styled from "styled-components"
 import { Paper } from "@material-ui/core"
 import { normalizeExerciseId } from "../util/strings"
+import { withTranslation } from "react-i18next"
 
 const TableOfContentsWrapper = styled(Paper)`
   padding: 1rem;
@@ -26,7 +27,7 @@ class TableOfContents extends Component {
   render() {
     return (
       <TableOfContentsWrapper>
-        <h2>Sisällysluettelo</h2>
+        <h2>{this.props.t("tableOfContents")}</h2>
         <div>
           {this.state.data ? (
             <ol>
@@ -47,4 +48,4 @@ class TableOfContents extends Component {
   }
 }
 
-export default TableOfContents
+export default withTranslation("common")(TableOfContents)

@@ -6,6 +6,7 @@ import { improveGroupName } from "../../util/strings"
 import CustomTooltip from "./CustomTooltip"
 import { SMALL_MEDIUM_BREAKPOINT } from "../../util/constants"
 import { getCourseVariant } from "../../services/moocfi"
+import { withTranslation } from "react-i18next"
 
 const PartProgressContainer = styled.div`
   margin-bottom: 0.5rem;
@@ -42,7 +43,7 @@ const CustomLabel = ({ x, y, stroke, value }) => {
   )
 }
 
-const PartProgress = ({ name, data, appliesForStudyRight }) => {
+const PartProgress = ({ name, data, appliesForStudyRight, t }) => {
   var BAR_CHART_WIDTH = 375
   var BAR_CHART_Y_AXIS_WIDTH = 142
 
@@ -99,20 +100,16 @@ const PartProgress = ({ name, data, appliesForStudyRight }) => {
           </Bar>
         </StyledBarChart>
         <LargeP>
-          Osasta saadut kurssipisteet:{" "}
+          {t("progressTotal")}{" "}
           {Math.floor(Math.min(100, totalProgress * 111.112))}
           /100.
         </LargeP>
         {appliesForStudyRight &&
           (getCourseVariant() === "nodl" ? (
-            <SmallP>
-              Olet aikatauluttomalla kurssilla, josta ei voi hakea
-              opinto-oikeutta.
-            </SmallP>
+            <SmallP>{t("noTimelimit")}</SmallP>
           ) : (
             <SmallP>
-              Opinto-oikeuteen vaaditaan 90% aikataulutetun kurssin
-              ohjelmointitehtävien pisteistä. Edistymisesi tällä hetkellä:{" "}
+              {t("canApplyForStudyRight")}{" "}
               {
                 allChartData.find(o => o.tool === "Ohjelmointitehtävät")
                   ?.progress
@@ -125,4 +122,6 @@ const PartProgress = ({ name, data, appliesForStudyRight }) => {
   )
 }
 
-export default withSimpleErrorBoundary(PartProgress)
+export default withTranslation("points-balloon")(
+  withSimpleErrorBoundary(PartProgress),
+)

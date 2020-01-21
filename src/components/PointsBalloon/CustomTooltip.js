@@ -2,6 +2,7 @@ import React from "react"
 import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
 import styled from "styled-components"
 import { SMALL_MEDIUM_BREAKPOINT } from "../../util/constants"
+import { withTranslation } from "react-i18next"
 
 const StyledTooltip = styled.div`
   background: white;
@@ -22,12 +23,19 @@ const CustomTooltip = props => {
   if (!props.active) {
     return null
   }
+
   return (
     <StyledTooltip>
-      <p>Saadut pisteet: {props.payload[0].payload.n_points}</p>
-      <p>Maksimipisteet: {props.payload[0].payload.max_points}</p>
+      <p>
+        {props.t("gotPoints")}: {props.payload[0].payload.n_points}
+      </p>
+      <p>
+        {props.t("maxPoints")}: {props.payload[0].payload.max_points}
+      </p>
     </StyledTooltip>
   )
 }
 
-export default withSimpleErrorBoundary(CustomTooltip)
+export default withTranslation("points-balloon")(
+  withSimpleErrorBoundary(CustomTooltip),
+)

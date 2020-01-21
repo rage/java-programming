@@ -1,0 +1,33 @@
+{
+    "welcomeToCourse": "Tervetuloa kurssille!",
+    "emailSent":"Olemme lähettäneet sähköpostiisi sähköpostiosoitteen varmistuslinkin. Käy nyt sähköpostissasi ja varmista osoitteesi.",
+    "emailExample":"Sähköpostin pitäisi näyttää tälläiseltä:",
+    "emailExampleAria":"Esimerkki sähköpostista",
+    "nowContinue":"Tämän jälkeen voit jatkaa",
+    "toMaterial":"materiaaliin",
+    "withDeadlines": "Aikataulutettu Ohjelmoinnin MOOC",
+    "noDeadlines": "Aikatauluton Ohjelmoinnin MOOC",
+    "beginPart8withDeadlines":"Aloitan kurssin aikataulutettuna osasta 8 (Ohjelmoinnin jatkokurssi)",
+    "beginPart8withoutDeadlines":"Aloitan kurssin aikatauluttomana osasta 8 (Ohjelmoinnin jatkokurssi)",
+    "summerMooc":"Kesä: Aikataulutettu Ohjelmoinnin MOOC",
+    "summerMoocDL":"Kesä: Aloitan kurssin aikataulutettuna osasta 8 (Ohjelmoinninjatkokurssi)",
+    "whichCourse":"Minkä kurssin version pisteet, deadlinet ja kolikot haluat nähdä?",
+    "emailInUse":"Sähköpostiosoitteesi on jo käytössä. Oletko tehnyt aikaisemmin mooc.fi:n kursseja?",
+    "problemCreatingAccount":"Ongelma tunnuksen luonnissa. Virhe oli:",
+    "noAt":"Sähköpostiosoitessa ei ole '@'-merkkiä.",
+    "passwordsNoMatch":"Salasana ja salasana uudestaan eivät olleet samoja.",
+    "createAccount":"Luo käyttäjätunnus",
+    "courseUses":"Tämä kurssi käyttää",
+    "courseUses2":"käyttäjätunnuksia. Jos olet aikaisemmin tehnyt mooc.fi -kursseja, voit käyttää sisäänkirjautumissivulla olemassaolevia tunnuksiasi. Tällä sivulla voit luoda uuden tunnuksen, joka toimii suurimmassa osassa mooc.fi:n kursseissa ja palveluissa.",
+    "email":"Sähköpostiosoite",
+    "emailUsername":"Sähköpostiosoite tai käyttäjänimi",
+    "password":"Salasana",
+    "passwordAgain":"Salasana uudestaan",
+    "create":"Luo käyttäjätunnus",
+    "alreadyHaveAccount":"Onko sinulla jo käyttäjätunnus? Kirjaudu sisään",
+    "error":"Virhe: ",
+    "forgottenPW":"Unohditko salasanasi?",
+    "wrongDetails":"Virheelliset käyttäjätunnukset. Tarkista kirjoitusasu!"
+
+
+}

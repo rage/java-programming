@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { graphql, StaticQuery } from "gatsby"
 import { Button } from "@material-ui/core"
+import CourseSettings from "../../course-settings"
 
 import Logo from "./Logo"
 import TreeView from "./TreeView"
@@ -93,14 +94,9 @@ const MenuExpanderWrapper = styled.div`
   }
 `
 
-var content2 = [
-  {
-    title: "About the course",
-    path: "/",
-  },
-]
+var content2 = CourseSettings.default.sidebarEntries
 
-var futurePages = [] // { title: "Osa 14", tba: "19.4.2019" }
+var futurePages = CourseSettings.default.sidebarFuturePages
 
 const MobileWrapper = styled.div`
   @media only screen and (max-width: ${SMALL_MEDIUM_BREAKPOINT}) {
@@ -130,6 +126,7 @@ class Sidebar extends React.Component {
     if (process.env.NODE_ENV === "production") {
       edges = edges.filter(o => !o.hidden)
     }
+    edges = edges.filter(o => !o.information_page)
     edges.sort((a, b) =>
       a.title.localeCompare(b.title, undefined, {
         numeric: true,
@@ -138,6 +135,13 @@ class Sidebar extends React.Component {
     )
     let content = content2.concat(edges)
     content = content.concat(futurePages)
+    if (CourseSettings.default.splitCourses) {
+      let middlepoint = content.findIndex(o => o.title === "Osa 7")
+      content.splice(middlepoint + 1, 0, {
+        separator: true,
+        title: "Ohjelmoinnin jatkokurssi",
+      })
+    }
 
     return (
       <MobileWrapperOrFragment mobileMenuOpen={this.props.mobileMenuOpen}>
@@ -150,18 +154,18 @@ class Sidebar extends React.Component {
             {this.props.mobileMenuOpen ? (
               <span>
                 <StyledIcon icon={faTimes} />
-                Close menu
+                Sulje valikko
               </span>
             ) : (
               <span>
                 <StyledIcon icon={faBars} />
-                Open menu
+                Avaa valikko
               </span>
             )}
           </Button>
         </MenuExpanderWrapper>
         <SidebarContainer mobileMenuOpen={this.props.mobileMenuOpen}>
-          <Brand>Object-Oriented Programming with Java 2020</Brand>
+          <Brand>{CourseSettings.default.name}</Brand>
           <TreeViewContainer>
             <TreeView data={content} />
           </TreeViewContainer>
@@ -185,6 +189,7 @@ const query = graphql`
           id
           frontmatter {
             title
+            information_page
             path
             hidden
           }

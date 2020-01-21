@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-
+import { withTranslation } from "react-i18next"
 import { TextField, Button } from "@material-ui/core"
 import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 
@@ -37,7 +37,7 @@ class MailingListForm extends React.Component {
   render() {
     return (
       <Container>
-        <h2>Muistuta minua kun kurssi alkaa</h2>
+        <h2>{props.t("mailingListTitle")}</h2>
         <form
           action="https://mooc.us8.list-manage.com/subscribe/post?u=db82662e446284fd41bd8370e&amp;id=21c004aa9c"
           method="post"
@@ -60,7 +60,7 @@ class MailingListForm extends React.Component {
                 this.form.current.submit()
               }}
             >
-              Tilaa
+              {props.t("subscribe")}
             </Button>
           </FieldContainer>
         </form>
@@ -69,4 +69,6 @@ class MailingListForm extends React.Component {
   }
 }
 
-export default withSimpleErrorBoundary(MailingListForm)
+export default withTranslation("common")(
+  withSimpleErrorBoundary(MailingListForm),
+)

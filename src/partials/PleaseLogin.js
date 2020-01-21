@@ -4,7 +4,7 @@ import styled from "styled-components"
 import LoginControls from "../components/LoginControls"
 import LoginStateContext from "../contexes/LoginStateContext"
 import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
-
+import { withTranslation } from "react-i18next"
 const PleaseLoginWrapper = styled(Card)`
   margin-bottom: 2rem;
 `
@@ -22,10 +22,7 @@ class PleaseLogin extends React.Component {
     return (
       <PleaseLoginWrapper>
         <CardContent>
-          <Wrapper>
-            Et ole kirjautunut sisään. Kaikki materiaalin osat eivät toimi ilman
-            sisäänkirjautumista. Pääset kirjautumaan materiaaliin tästä:
-          </Wrapper>
+          <Wrapper>{this.props.t("pleaseLogin")}</Wrapper>
           <div>
             <LoginControls />
           </div>
@@ -35,4 +32,4 @@ class PleaseLogin extends React.Component {
   }
 }
 
-export default withSimpleErrorBoundary(PleaseLogin)
+export default withTranslation("common")(withSimpleErrorBoundary(PleaseLogin))

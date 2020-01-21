@@ -8,7 +8,7 @@ import {
   Typography,
 } from "@material-ui/core"
 import Coins from "./Coins"
-
+import { withTranslation } from "react-i18next"
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
 import styled from "styled-components"
 
@@ -16,7 +16,7 @@ const StyledTypography = styled(Typography)`
   margin-bottom: 0.5rem !important;
 `
 
-const ExtraDetails = ({ exerciseDetails, onUpdate, noCoins }) => {
+const ExtraDetails = ({ exerciseDetails, onUpdate, nocoins, t }) => {
   if (!exerciseDetails) {
     return <Loading heightHint="305px" />
   }
@@ -24,33 +24,29 @@ const ExtraDetails = ({ exerciseDetails, onUpdate, noCoins }) => {
     <div>
       <ExpansionPanel>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography>Ohjeet tehtävän palauttamiseen</Typography>
+          <Typography>{t("submitHowTo")}</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <div>
             <StyledTypography>
-              Palauta tehtävä palvelimelle tarkistettavaksi NetBeans
-              ohjelmointiympäristössä:{" "}
+              {t("submitNetBeans")}{" "}
               <OutboundLink
                 href="https://materiaalit.github.io/tmc-asennus/netbeans/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                ohjeet tehtävien palauttamiseen
+                {t("submitHowTo")}
               </OutboundLink>
               .
             </StyledTypography>
             <StyledTypography>
-              Voit myöhemmin katsoa palautuksiasi Test My Code
-              palautusympäristössä{" "}
+              {t("seeSubmissions")}{" "}
               <OutboundLink
-                href={`https://tmc.mooc.fi/exercises/${
-                  exerciseDetails.id
-                }?use_clients=1`}
+                href={`https://tmc.mooc.fi/exercises/${exerciseDetails.id}?use_clients=1`}
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                täältä
+                {t("here")}
               </OutboundLink>
               .
             </StyledTypography>
@@ -59,13 +55,13 @@ const ExtraDetails = ({ exerciseDetails, onUpdate, noCoins }) => {
       </ExpansionPanel>
       <ExpansionPanel>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography>Miten katsoa mallivastaus</Typography>
+          <Typography>{t("solutionHowTo")}</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Coins
             exerciseDetails={exerciseDetails}
             onUpdate={onUpdate}
-            noCoins={noCoins}
+            nocoins={nocoins}
           />
         </ExpansionPanelDetails>
       </ExpansionPanel>
@@ -73,4 +69,4 @@ const ExtraDetails = ({ exerciseDetails, onUpdate, noCoins }) => {
   )
 }
 
-export default ExtraDetails
+export default withTranslation("common")(ExtraDetails)

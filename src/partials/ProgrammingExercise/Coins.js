@@ -4,6 +4,7 @@ import { fetchProgrammingExerciseModelSolution } from "../../services/moocfi"
 import { Button, Paper, Card, CardContent } from "@material-ui/core"
 import Modal from "@material-ui/core/Modal"
 import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
+import { withTranslation, Trans } from "react-i18next"
 
 const ModalContent = styled(Paper)`
   padding: 5rem;
@@ -47,13 +48,16 @@ class Coins extends Component {
   }
 
   render() {
-    const { exerciseDetails, noCoins } = this.props
+    const { exerciseDetails, nocoins } = this.props
 
-    if (noCoins) {
+    if (nocoins) {
+      return <TokenContainer>{this.props.t("noCoin")}</TokenContainer>
+    }
+
+    if (!exerciseDetails.email_verified) {
       return (
         <TokenContainer>
-          Tässä tehtävässä ei voi käyttää kolikkoa mallivastauksen katsomiseen
-          ennen tehtävän ratkaisua.
+          {this.props.t("modelSolutionUnavailableBecauseEmailNotVerified")}
         </TokenContainer>
       )
     }
@@ -70,33 +74,24 @@ class Coins extends Component {
         {tokenThreshHold && (
           <Fragment>
             <TokenContainer>
+              <p>{this.props.t("whyCoin")}</p>
               <p>
-                Mallivastauksen voi katsoa joko ennen tehtävän ratkaisemista tai
-                tehtävän ratkaisemisen jälkeen. Jos haluat katsoa vastauksen
-                ennen ratkaisemista, joudut käyttämään mallivastauskolikoita.
-              </p>
-              <p>
-                Saat aina uuden mallivastauskolikon, kun olet saanut{" "}
-                <i>{tokenThreshHold}</i> tehtävää tehtyä. Kolikoilla voi ostaa
-                tehtävien vastauksia ja lunastaa itsesi mahdollisesta jumista.{" "}
+                {this.props.t("getNewCoin")} <i>{tokenThreshHold}</i>
+                {this.props.t("getNewCoin2")}{" "}
                 {availableTokens === 1 ? (
-                  <span> Käytössäsi on tällä hetkellä 1 kolikko.</span>
+                  <span>{this.props.t("oneCoin")} </span>
                 ) : availableTokens > 0 ? (
                   <span>
                     {" "}
-                    Käytössäsi on tällä hetkellä {availableTokens} kolikkoa.
+                    <Trans i18nKey="howManyCoins" count={availableTokens}>
+                      {this.props.t("howManyCoins")}
+                    </Trans>
                   </span>
                 ) : (
-                  <span>Sinulla ei ole vielä yhtään kolikkoa.</span>
+                  <span>{this.props.t("nocoins")}</span>
                 )}
               </p>
-              <p>
-                Kolikkoja kuluu vain silloin kun painat tämän tekstin
-                alapuolella olevaa nappia, jossa lukee "kuluttaa kolikon".
-                Pystyt katsomaan mallivastauksen ilman kolikkoja Test My Code
-                -palvelusta joko Netbeanssin tai TMC:n nettisivun kautta sen
-                jälkeen kun olet saanut tehtävän oikein.
-              </p>
+              <p>{this.props.t("howCoins")}</p>
 
               {(availableTokens > 0 ||
                 modelSolutionTokenUsedOnThisExercise) && (
@@ -106,16 +101,16 @@ class Coins extends Component {
                   color="secondary"
                   style={{ marginRight: "0.5rem" }}
                 >
-                  Katso mallivastaus (
+                  {this.props.t("seeSolution")}s (
                   {modelSolutionTokenUsedOnThisExercise
-                    ? "olet käyttänyt jo kolikon tähän mallivastaukseen"
-                    : "kuluttaa kolikon"}
+                    ? this.props.t("coinUsed")
+                    : this.props.t("usesCoin")}
                   )
                 </Button>
               )}
 
               <Button variant="outlined" onClick={this.props.onUpdate}>
-                Päivitä
+                {this.props.t("update")}
               </Button>
             </TokenContainer>
 
@@ -125,9 +120,8 @@ class Coins extends Component {
             >
               {this.state.modelSolution && (
                 <ModalContent>
-                  <h1>Mallivastaus</h1>
+                  <h1>{this.props.t("solution")}</h1>
                   {this.state.modelSolution.solution.files.map(fileEntry => {
-                    console.log(fileEntry)
                     return (
                       <Card>
                         <CardContent>
@@ -147,4 +141,4 @@ class Coins extends Component {
   }
 }
 
-export default withSimpleErrorBoundary(Coins)
+export default withTranslation("common")(withSimpleErrorBoundary(Coins))

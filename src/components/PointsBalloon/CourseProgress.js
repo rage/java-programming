@@ -1,6 +1,8 @@
 import React from "react"
 import PartProgress from "./PartProgress"
+import CourseSettings from "../../../course-settings"
 
+const splitCourses = CourseSettings.default.splitCourses
 const CourseProgress = ({
   data,
   appliesForStudyRight,
@@ -24,9 +26,9 @@ const CourseProgress = ({
       </div>
     ) : (
       <div>
-        <h4>Ohjelmoinnin perusteet</h4>
+        {splitCourses && <h4>Ohjelmoinnin perusteet</h4>}
         {Object.entries(data).map(([name, data]) => {
-          if (name === "osa08") {
+          if (name === "osa08" && splitCourses) {
             return (
               <div>
                 <h4>Ohjelmoinnin jatkokurssi</h4>

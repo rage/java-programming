@@ -8,6 +8,7 @@ import PagesContext from "../../contexes/PagesContext"
 import { getCachedUserDetails } from "../../services/moocfi"
 import { SMALL_MEDIUM_BREAKPOINT } from "../../util/constants"
 import CourseProgress from "./CourseProgress"
+import { withTranslation } from "react-i18next"
 
 const StyledModal = styled(Modal)`
   z-index: 500 !important;
@@ -88,15 +89,14 @@ class PointsBalloonContent extends React.Component {
       >
         <ModalContent>
           <ModalControls>
-            <Title>Edistyminen (beta)</Title>
-            <Button onClick={this.handleClose}>Sulje</Button>
+            <Title>{this.props.t("progress")}</Title>
+            <Button onClick={this.handleClose}>{this.props.t("close")}</Button>
           </ModalControls>
           <Loading loading={!this.state.data && !this.state.error}>
             <Fragment>
               {this.state.error ? (
                 <div>
-                  Edistymisen hakeminen kaatui seuraavaan virheeseen:{" "}
-                  {this.state.error}
+                  {this.props.t("error")} {this.state.error}
                 </div>
               ) : (
                 <div>
@@ -115,4 +115,6 @@ class PointsBalloonContent extends React.Component {
   }
 }
 
-export default withSimpleErrorBoundary(PointsBalloonContent)
+export default withTranslation("points-balloon")(
+  withSimpleErrorBoundary(PointsBalloonContent),
+)

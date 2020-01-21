@@ -3,28 +3,34 @@ import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
 import styled from "styled-components"
 import { normalizeExerciseId } from "../../util/strings"
 import { Link } from "gatsby"
-
+import { withTranslation } from "react-i18next"
 const ExerciseSummaryWrapper = styled(Link)`
   padding-left: 1rem;
   margin-bottom: 0.5rem;
   display: block;
 `
 
-const ExerciseSummary = ({ exercise, index, quizIdToTitle }) => {
-  let description = "Tuntematon tehtävätyyppi"
+const ExerciseSummary = ({ exercise, index, quizIdToTitle, t }) => {
+  let description = t("unknownType")
   if (exercise.type === "quiz") {
     const name = quizIdToTitle[exercise.id]
     if (name) {
-      description = `Kysely: ${name}`
+      description = `${t("quiz")}: ${name}`
     } else {
-      description = "Kysely"
+      description = t("quiz")
     }
   }
   if (exercise.type === "programming-exercise") {
-    description = `Ohjelmointitehtävä: ${exercise.id}`
+    description = `${t("programmingExercise")} ${exercise.id}`
   }
   if (exercise.type === "crowdsorcerer") {
     description = "Crowdsorcerer"
+  }
+  if (exercise.type === "moodle-exercise") {
+    description = `${t("moodleExercise")} ${exercise.id}`
+  }
+  if (exercise.type === "sqltrainer-exercise") {
+    description = `${t("sqlTrainerExercise")} ${exercise.id}`
   }
   let anchorLinkDigest = normalizeExerciseId(`${exercise.type}-${exercise.id}`)
   return (
@@ -36,4 +42,6 @@ const ExerciseSummary = ({ exercise, index, quizIdToTitle }) => {
   )
 }
 
-export default withSimpleErrorBoundary(ExerciseSummary)
+export default withTranslation("common")(
+  withSimpleErrorBoundary(ExerciseSummary),
+)

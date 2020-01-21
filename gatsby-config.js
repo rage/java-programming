@@ -1,10 +1,12 @@
 const red = require("@material-ui/core/colors/red").default
 const blue = require("@material-ui/core/colors/red").default
 
+const CourseSettings = require('./course-settings').default
+
 module.exports = {
   siteMetadata: {
-    title: "Object-Oriented Programming with Java 2020",
-    siteUrl: `https://ohjelmointi-19.mooc.fi`,
+    title: CourseSettings.name,
+    siteUrl: CourseSettings.siteUrl,
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -13,9 +15,11 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/data`,
-        name: "markdown-pages"
+        name: "markdown-pages",
+
       }
     },
+
     `gatsby-plugin-sharp`,
     `gatsby-plugin-catch-links`,
     {

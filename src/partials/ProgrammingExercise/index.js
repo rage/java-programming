@@ -7,6 +7,7 @@ import { OutboundLink } from "gatsby-plugin-google-analytics"
 import { get } from "lodash"
 import { Card, CardContent, Button } from "@material-ui/core"
 
+import { withTranslation } from "react-i18next"
 import {
   fetchProgrammingExerciseDetails,
   fetchProgrammingExerciseModelSolution,
@@ -218,7 +219,7 @@ class ProgrammingExercise extends React.Component {
         <Header>
           <StyledIcon icon={icon} size="2x" />
           <HeaderTitleContainer>
-            <HeaderMuted>Ohjelmointitehtävä: </HeaderMuted>
+            <HeaderMuted>{this.props.t("programmingExercise")} </HeaderMuted>
             <h3>{name}</h3>
           </HeaderTitleContainer>
 
@@ -228,7 +229,7 @@ class ProgrammingExercise extends React.Component {
             </Button>
           )}
           <PointsWrapper>
-            <PointsLabel>Pisteitä:</PointsLabel>
+            <PointsLabel>{this.props.t("points")}</PointsLabel>
 
             <PointContentWrapper>
               {awardedPoints !== undefined ? (
@@ -275,16 +276,13 @@ class ProgrammingExercise extends React.Component {
                   {points && points > 1 && (
                     <Small>
                       <p>
-                        Huom! Voit saada yksittäisen osan ratkaisusta osan
-                        tehtävän pisteistä käyttämällä NetBeansin
-                        "submit"-nappia. Lisätietoa ohjelmointitehtävien
-                        palautusohjeissa:{" "}
+                        {this.props.t("submitNB")}{" "}
                         <OutboundLink
                           href="https://materiaalit.github.io/tmc-asennus/netbeans/"
                           rel="noopener noreferrer"
                           target="_blank"
                         >
-                          ohjeet tehtävien palauttamiseen
+                          {this.props.t("submitHowTo")}
                         </OutboundLink>
                         .
                       </p>
@@ -298,7 +296,7 @@ class ProgrammingExercise extends React.Component {
                 </div>
               ) : (
                 <div>
-                  <LoginNag>Kirjaudu sisään nähdäksesi tehtävanannon.</LoginNag>
+                  <LoginNag>{this.props.t("loginForExercise")}</LoginNag>
                   <LoginNagWrapper>
                     <LoginControls />
                   </LoginNagWrapper>
@@ -312,7 +310,7 @@ class ProgrammingExercise extends React.Component {
                 <ExtraDetails
                   exerciseDetails={this.state.exerciseDetails}
                   onUpdate={this.onUpdate}
-                  noCoins={this.props.noCoins}
+                  nocoins={this.props.nocoins}
                 />
               </div>
             )}
@@ -323,4 +321,6 @@ class ProgrammingExercise extends React.Component {
   }
 }
 
-export default withSimpleErrorBoundary(ProgrammingExercise)
+export default withTranslation("common")(
+  withSimpleErrorBoundary(ProgrammingExercise),
+)

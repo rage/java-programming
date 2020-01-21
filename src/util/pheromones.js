@@ -64,7 +64,6 @@ const pheromones = {
     if (options.submitAfter) pheromones.SUBMIT_AFTER = options.submitAfter
 
     // Options can also contain user group
-    //        console.log("fetch user data");
     pheromones.user = options.username
 
     pheromones.resetPosition()

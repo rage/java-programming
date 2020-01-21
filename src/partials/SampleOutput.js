@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
+import { withTranslation } from "react-i18next"
 
 const accentColor = "#CCC"
 
@@ -38,10 +39,10 @@ const Note = styled.div`
 const SampleOutput = props => {
   return (
     <Wrapper>
-      <Note>Esimerkkitulostus</Note>
+      <Note>{props.t("sampleOutput")}</Note>
       <Body>{props.children}</Body>
     </Wrapper>
   )
 }
 
-export default withSimpleErrorBoundary(SampleOutput)
+export default withTranslation("common")(withSimpleErrorBoundary(SampleOutput))

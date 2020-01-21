@@ -5,7 +5,7 @@ import { authenticate, loggedIn } from "../services/moocfi"
 import { navigate, Link } from "gatsby"
 import { TextField, Button } from "@material-ui/core"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
-
+import { withTranslation } from "react-i18next"
 import styled from "styled-components"
 import LoginStateContext, {
   withLoginStateContext,
@@ -73,7 +73,6 @@ class SignInPage extends React.Component {
       setTimeout(() => {
         try {
           if (typeof window !== "undefined") {
-            console.log("Navigating back")
             window.history.go(-1)
             return
           }
@@ -103,12 +102,12 @@ class SignInPage extends React.Component {
     return (
       <Layout>
         <Container>
-          <Helmet title="Kirjaudu sisään" />
+          <Helmet title={this.props.t("common:login")} />
           <FormContainer>
-            <h1>Kirjaudu sisään</h1>
+            <h1>{this.props.t("common:login")}</h1>
             <Form>
               <InfoBox>
-                Tämä kurssi käyttää{" "}
+                {this.props.t("user:courseUses")}{" "}
                 <OutboundLink
                   href="https://mooc.fi"
                   target="_blank"
@@ -116,8 +115,7 @@ class SignInPage extends React.Component {
                 >
                   mooc.fi
                 </OutboundLink>{" "}
-                käyttäjätunnuksia. Jos olet aikaisemmin tehnyt mooc.fi -kursseja
-                voit käyttää olemassaolevia tunnuksiasi.
+                {this.props.t("user:courseUses2")}
               </InfoBox>
 
               <Row>
@@ -125,7 +123,7 @@ class SignInPage extends React.Component {
                   id="outlined-adornment-password"
                   variant="outlined"
                   type="text"
-                  label="Sähköpostiosoite tai käyttäjänimi"
+                  label={this.props.t("user:emailUsername")}
                   fullWidth
                   value={this.state.email}
                   onChange={o => this.setState({ email: o.target.value })}
@@ -136,7 +134,7 @@ class SignInPage extends React.Component {
                   id="outlined-adornment-password"
                   variant="outlined"
                   type={this.state.showPassword ? "text" : "password"}
-                  label="Salasana"
+                  label={this.props.t("user:password")}
                   fullWidth
                   value={this.state.password}
                   onChange={o => this.setState({ password: o.target.value })}
@@ -152,17 +150,17 @@ class SignInPage extends React.Component {
                   fullWidth
                   type="submit"
                 >
-                  Kirjaudu sisään
+                  {this.props.t("common:login")}
                 </Button>
               </Row>
             </Form>
             {this.state.error && (
               <InfoBox>
-                <b>Virheelliset tunnukset, tarkista kirjoitusasu!</b>
+                <b>{this.props.t("user:wrongDetails")}</b>
               </InfoBox>
             )}
             <Row>
-              <Link to="/sign-up">Luo uusi tunnus</Link>
+              <Link to="/sign-up">{this.props.t("user:createAccount")}</Link>
             </Row>
             <Row>
               <OutboundLink
@@ -170,7 +168,7 @@ class SignInPage extends React.Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Unohdin salasanani
+                {this.props.t("user:forgottenPW")}
               </OutboundLink>
             </Row>
           </FormContainer>
@@ -180,4 +178,6 @@ class SignInPage extends React.Component {
   }
 }
 
-export default withLoginStateContext(SignInPage)
+export default withTranslation(["common", "user"])(
+  withLoginStateContext(SignInPage),
+)

@@ -3,7 +3,7 @@ import PagesContext from "../contexes/PagesContext"
 import { nthIndex } from "../util/strings"
 import { Link } from "gatsby"
 import styled from "styled-components"
-
+import { withTranslation } from "react-i18next"
 import { Divider, Paper } from "@material-ui/core"
 import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 
@@ -64,7 +64,7 @@ const StyledPaper = styled(Paper)`
   margin-bottom: 2em;
 `
 
-const PagesInThisSection = ({ style }) => (
+const PagesInThisSection = ({ style, t }) => (
   <PagesContext.Consumer>
     {value => {
       const currentPath = value.current.path
@@ -85,7 +85,7 @@ const PagesInThisSection = ({ style }) => (
 
       return (
         <StyledPaper style={style}>
-          <Title>Tässä osassa:</Title>
+          <Title>{t("inThisSection")}</Title>
           <PagesList>
             {sectionPages.map((page, i) => (
               <Fragment>
@@ -104,4 +104,6 @@ const PagesInThisSection = ({ style }) => (
   </PagesContext.Consumer>
 )
 
-export default withSimpleErrorBoundary(PagesInThisSection)
+export default withTranslation("common")(
+  withSimpleErrorBoundary(PagesInThisSection),
+)
