@@ -99,24 +99,6 @@ const PartProgress = ({ name, data, appliesForStudyRight, t }) => {
             />
           </Bar>
         </StyledBarChart>
-        <LargeP>
-          {t("progressTotal")}{" "}
-          {Math.floor(Math.min(100, totalProgress * 111.112))}
-          /100.
-        </LargeP>
-        {appliesForStudyRight &&
-          (getCourseVariant() === "nodl" ? (
-            <SmallP>{t("noTimelimit")}</SmallP>
-          ) : (
-            <SmallP>
-              {t("canApplyForStudyRight")}{" "}
-              {
-                allChartData.find(o => o.tool === "Ohjelmointitehtävät")
-                  ?.progress
-              }
-              %.
-            </SmallP>
-          ))}
       </div>
     </PartProgressContainer>
   )
