@@ -40,6 +40,7 @@ import AbStudy from "./AbStudy"
 import CrowdSorcerer from "./CrowdSorcerer"
 import MoodleExercise from "./MoodleExercise"
 import SqlTrainerExercise from "./SqlTrainerExercise"
+import GoogleFormLink from "./GoogleFormLink"
 
 import {
   Table,
@@ -87,6 +88,7 @@ const mapping = {
   "registration-link-ohja": RegistrationLink2,
   "moodle-exercise": MoodleExercise,
   "sqltrainer-exercise": SqlTrainerExercise,
+  "google-form-link": GoogleFormLink,
   notice: Notice,
   crowdsorcerer: CrowdSorcerer,
   youtube: Youtube,
