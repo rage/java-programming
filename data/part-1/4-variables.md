@@ -22,22 +22,30 @@ hidden: false
 
 <text-box variant="hint" name="Media and technology use questionnaire">
 Now please respond to a questionnaire about your media and technology use. With the questionnaire we collect information about media and technology use and student's attitudes towards them. Your replies will be used for developing the MOOC courses and research about education.
+
 <google-form-link href="https://docs.google.com/forms/d/e/1FAIpQLSd45Hu1-IJ19wf7aQ0ZtK4tfijHgHbTVpF0FSXPck-Fq9BiTQ/viewform?usp=pp_url"  emailfieldname="entry.575150039">Open the questionnaire by following the link</google-form-link>.
+
 </text-box>
+
 </only-for-ab-group>
 
 <only-for-ab-group group="2">
 
 <text-box variant="hint" name="Media and technology use questionnaire">
+
 Now please respond to a questionnaire about your media and technology use. With the questionnaire we collect information about media and technology use and student's attitudes towards them. Your replies will be used for developing the MOOC courses and research about education.
-<google-form-link href="https://docs.google.com/forms/d/e/1FAIpQLSfT97npfOwD0HEVwbWH5SOTTmyYtYY5UIlqJ3HL29b5DPddqw/viewform?usp=pp_url" emailfieldname="entry.575150039">Open the questionnaire by following the link</google-form-link>.
+
+<google-form-link href="https://docs.google.com/forms/d/e/1FAIpQLSfT97npfOwD0HEVwbWH5SOTTmyYtYY5UIlqJ3HL29b5DPddqw/viewform?usp=pp_url" emailfieldname="entry.575150039">
+Open the questionnaire by following the link
+</google-form-link>.
+
 </text-box>
 
 </only-for-ab-group>
 
 </ab-study>
 
-<quiz id="1fce6fab-fcad-5d58-b68b-8faead42d83e"></quiz>
+<quiz id="4cfaebe8-734a-4bd1-8881-488f3f96b923"></quiz>
 
 
 <!-- Tutustuimme syötteen lukemisen yhteydessä jo pikaisesti merkkijonomuuttujiin. Tutustutaan seuraavaksi muihin usein käytettyihin Javan muuttujatyyppeihin. -->
