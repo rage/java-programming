@@ -11,11 +11,11 @@ Here's some of the most frequently asked questions. If you can't find the answer
 
 ### I've got a problem with the TMC plugin
 
-Make sure you've got the newest version of the TMC plugin by clicking `Help` -> `Check for Updates` on the top bar of Netbeans.
+Make sure you've got the newest version of the TMC plugin by clicking `Help` -> `Check for Updates` on the top bar of NetBeans.
 
 If you can't make it work, ask on the [support channels](/support-and-assistance) or come to the workshop.
 
-### Netbeans freezes when the feedback window opens
+### NetBeans freezes when the feedback window opens
 
 This problem shouldn't be present in the newer version of the plugin. You can download it at `Help` &rarr; `Check for updates` and following the instructions.
 
@@ -30,32 +30,44 @@ Please contact course assistants through the [support channels](/support-and-ass
 If you are able to fix the error yourself, for example if it's a typing error, you can open a pull request in the course material's Github repository: https://github.com/rage/java-programming.
 
 
+### How can I download the next part's exercises?
+
+The TMC addon for NetBeans will suggest downloading the next part's exercises once you have gained 25% or more of the last part's programming exercise points.
+
 ### Doing the exercises and returning them is slow on macOS
 
 Follow these instructions to fix the issue: https://materiaalit.github.io/tmc-asennus/macos-verkkoongelma/. The instructions are in Finnish but the images should be of assistance until the instructions are translated.
 
-If it doesn't help, try changing the proxy setting on Netbeans to "no proxy".
+If it doesn't help, try changing the proxy setting on NetBeans to "no proxy".
 
-### The installer of Netbeans is not opening on macOS
+### The installer of NetBeans is not opening on macOS
 
 Try clicking the installer with the right button of the mouse and then choose "Open".
 
-### the tests of part are not working on my mac
+### The tests of part 12 are not working on my Mac
 
 Check these instructions: [macOS instructions](/macos-ohjeet).
 
-### while running the tests, I get an error about JAVA_HOME
+### While running the tests, I get an error about JAVA_HOME
 
-Follow these instructions: [https://materiaalit.github.io/tmc-asennus/java_home_not_found/](https://materiaalit.github.io/tmc-asennus/java_home_not_found/). The instructions are in Finnish but the images should be of assistance until the instructions are translated.
+Follow these instructions: [https://materiaalit.github.io/tmc-asennus/java\_home\_not\_found/](https://materiaalit.github.io/tmc-asennus/java_home_not_found/). The instructions are in Finnish but the images should be of assistance until the instructions are translated.
 
-### Netbeans or its installer doesn't open, or looks odd when opening
+### While running the tests, I get an error about "Permission denied"
+
+Open the Terminal and run the command `chmod +x /path/to/mvn`, where `/path/to/mvn` is the path that ends with `mvn` from the error message. If you require assistance, ask through one of the [support channels](/support-and-assistance).
+
+### NetBeans or its installer doesn't open, or looks odd when opening
 
 Make sure you have Java Development Kit (JDK) version 11 installed. The environment used on this course doesn't work properly with other versions of Java. If you have a problem with this, try removing the other versions of Java on your computer, and then [clear the old settings](/remove-netbeans-settings).
 
-### The buttons to run and to send to the server on Netbeans are gray
+### The buttons to run and to send to the server on NetBeans are gray
 
 This usually indicates either passed deadline or wrong course being selected in `TMC` &rarr; `Settings`.
 
 ### I want to apply for study right through the programming MOOC. Is this the right course?
 
 No, you cannot apply for the study right based on this course.
+
+### The next part should be opened today but I cannot access it
+
+There is no guarantee on the exact time a course part will become available. Usually the material has been released around midday, but the release time may vary greatly. Thank you for your patience!
