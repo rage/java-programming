@@ -8,9 +8,9 @@ information_page: true
 
 ## Workshop
 
-You may visit the course workshop for a good environment to do programming execises with other students as well as receive assistance regarding the course and its exercises! The workshop is located at the Exactum building on University of Helsinki's Kumpula campus. Everyone is welcome in the workshop!
+You can visit the course workshop for a good environment to do programming exercises with other students as well as receive assistance regarding the course and its exercises! The workshop is located at the Exactum building on University of Helsinki's Kumpula campus. Everyone is welcome to the workshop!
 
-The location of the Exactum building and directions can be found [here](https://www.google.com/maps?hl=en&q=Exactum,+Kumpula+Campus,+Pietari+Kalmin+katu+5,+00560+Helsinki).
+The location of Exactum and directions to it can be found [here](https://www.google.com/maps?hl=en&q=Exactum,+Kumpula+Campus,+Pietari+Kalmin+katu+5,+00560+Helsinki).
 
 The workshop is held in classroom **BK107** right next to Exactum's UniCafe. You can consult the info screen at Exactum's lobby to view an exact location. You may also ask the building porter as well as campus staff and students.
 
