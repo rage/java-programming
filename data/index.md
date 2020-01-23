@@ -6,17 +6,25 @@ information_page: true
 banner: true
 ---
 
-Welcome to University of Helsinki’s massive open online course (MOOC) on programming! This is an updated version of our popular course Object-Oriented Programming with Java.
+Welcome to University of Helsinki’s free massive open online course (MOOC) on programming! This is an updated version of our popular course Object-Oriented Programming with Java.
 
 During this course you will learn all the basics of computer programming, algorithms and object-oriented programming using the Java programming language. The course includes comprehensive course materials and plenty of programming exercises, each tested using our automatic testing service Test My Code.
 
 Anyone can join - no previous programming knowledge is required.
 
-Unlike many programming courses found online, ours is completely unabridged: the course’s scope and material are identical to our own CS1 programming courses.
+Unlike many programming courses found online, ours is completely unabridged: the course’s scope and material are identical to our own CS1 programming courses, Introduction to Programming and Advanced Programming.
 
 This is the first course in our computer science learning track and we use industry strength tools from day one. Therefore the course is about programming in a real integrated development environment (IDE) and not in the browser or an educational IDE.
 
+The course does not require a separate registration, so you can just dive in to the first part of the course [here](/part-1).
+
+## Course contents
+
+The course is split up into two individual courses, Java Programming I and Java Programming II. Each course consists of seven parts, and each part has its own exercise set. Completing a single part takes approximately 5-20 hours, and we recommend reserving at least 10 hours per part depending on your previous skills with computers.
+
 ## Release schedule
+
+Below you can find the release schedule for each part of the course.
 
 <table>
   <thead>

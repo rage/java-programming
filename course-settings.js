@@ -21,7 +21,7 @@ const courseSettings = {
       title: "Frequently asked questions",
       path: "/faq",
     },
-    { separator: true, title: "Part I" },
+    { separator: true, title: "Java Programming I" },
   ],
   sidebarFuturePages: [
     { title: "Part 2", tba: "28.1." },
@@ -30,7 +30,7 @@ const courseSettings = {
     { title: "Part 5", tba: "18.2." },
     { title: "Part 6", tba: "25.2." },
     { title: "Part 7", tba: "3.3." },
-    { separator: true, title: "Part II" },
+    { separator: true, title: "Java Programming II" },
     { title: "Part 8", tba: "17.3." },
     { title: "Part 9", tba: "24.3." },
     { title: "Part 10", tba: "31.3." },
