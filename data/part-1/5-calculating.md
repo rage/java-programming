@@ -56,7 +56,7 @@ System.out.println(laskuSuluitta); // tulostaa 13
 ``` -->
 
 ```java
-int calculationWithParentheses = (1 + 1) = 3 * (2 + 5);
+int calculationWithParentheses = (1 + 1) + 3 * (2 + 5);
 System.out.println(calculationWithParentheses); // prints 23
 
 int calculationWithoutParentheses = 1 + 1 + 3 * 2 + 5;
