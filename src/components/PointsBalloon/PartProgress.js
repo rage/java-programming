@@ -69,7 +69,7 @@ const PartProgress = ({ name, data, appliesForStudyRight, t }) => {
   })
   let totalProgress = Math.floor((nPointsSum / maxPointsSum) * 100) / 100
   allChartData.push({
-    tool: "Tehtäväpisteet yhteensä",
+    tool: "Total points",
     progress: Math.floor(totalProgress * 100 + 0.000000001),
     n_points: nPointsSum,
     max_points: maxPointsSum,
