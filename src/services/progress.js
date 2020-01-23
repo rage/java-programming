@@ -28,10 +28,11 @@ export async function fetchProgress() {
     ([identifier, progresses]) => {
       console.log(JSON.stringify(progresses))
       progresses.forEach(progressEntry => {
-        if (!progressByGroup[progressEntry.group]) {
-          progressByGroup[progressEntry.group] = {}
+        const group = progressEntry.group.replace('osa', 'part')
+        if (!progressByGroup[group]) {
+          progressByGroup[group] = {}
         }
-        progressByGroup[progressEntry.group][identifier] = progressEntry
+        progressByGroup[group][identifier] = progressEntry
       })
     },
   )
