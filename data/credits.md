@@ -34,11 +34,14 @@ The course was translated by these individuals (in alphabetical order):
 * Ava Heinonen
 * Daniel Koch
 * Elias Eskelinen
+* Henrik Nygren (Coordinator)
 * Jesper Kuutti
-* Jesper Peterson
+* Jesper Pettersson
 * Joel Hassan
+* Kaius Koivunen
 * Kalle Belmo
 * Reetta Puska
+* Tero Tapio
 
 
 The course material is licensed under a [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi)-license.
