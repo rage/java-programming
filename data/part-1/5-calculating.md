@@ -45,7 +45,7 @@ System.out.println(sum); // prints 6
 
 <!-- Laskujärjestykseen voi vaikuttaa sulkujen avulla. Sulkujen sisällä olevat laskuoperaatiot suoritetaan ennen niiden ulkopuolella olevia laskuoperaatioita. -->
 
-You can affect the order of operations by using of parentheses. Operations within parentheses are performed before those outside them.
+You can affect the order of operations by using parentheses. Operations within parentheses are performed before those outside them.
 
 <!-- ```java
 int laskuSuluilla = (1 + 1) + 3 * (2 + 5);
@@ -651,7 +651,7 @@ Give the second number:
 
 <!-- Kun olet saanut edellisen tehtävän toteutettua, kokeile mikä on suurin mahdollinen kertolasku minkä saat laskettua. Huomaamasi ilmiön taustalla on se, että kokonaislukumuuttujan arvo voi olla korkeintaan 2<sup>31</sup>-1 eli 2147483647. Tämä johtuu siitä, että kokonaislukumuuttujat esitetään tietokoneen muistissa 32 bitin avulla. Tähän tutustutaan tarkemmin muunmuassa kurssilla Tietokoneen toiminta. -->
 
-Once you have completed the previous exercise, try finding out the greatest possible multiplication that you can calculate. The reason behind the phenomenon you've observed is that the value of an integer value is capped at the maximum of 2<sup>31</sup>-1(i.e. 2147483647). This is because integer variables are represented with 32 bits in the computer's memory. Variable representation is covered in more detail on the Computer Organization course.
+Once you have completed the previous exercise, try finding out the greatest possible multiplication that you can calculate. The reason behind the phenomenon you've observed is that the value of an integer value is capped at the maximum of 2<sup>31</sup>-1 (i.e. 2147483647). This is because integer variables are represented with 32 bits in the computer's memory. Variable representation is covered in more detail on the Computer Organization course.
 
 
 <!-- ## Jakolasku -->
@@ -1040,15 +1040,15 @@ rivi 9: System.out.println(kolmas);
 ``` -->
 
 ```java
-rivi 1: int first = (1 + 1);
-rivi 2: int second = first + 3 * (2 + 5);
-rivi 3:
-rivi 4: first = 5;
-rivi 5:
-rivi 6: int third = first + second;
-rivi 7: System.out.println(first);
-rivi 8: System.out.println(second);
-rivi 9: System.out.println(third);
+row 1: int first = (1 + 1);
+row 2: int second = first + 3 * (2 + 5);
+row 3:
+row 4: first = 5;
+row 5:
+row 6: int third = first + second;
+row 7: System.out.println(first);
+row 8: System.out.println(second);
+row 9: System.out.println(third);
 ```
 
 <!-- Alla on kirjoitettu yllä olevan ohjelmakoodin suoritus auki. -->
