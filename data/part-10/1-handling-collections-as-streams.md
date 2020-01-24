@@ -507,7 +507,8 @@ Stream methods can be roughly divided into two categories: (1) intermediate oper
 
 The figure below illustrates how a stream works. The starting point (1) is a list with values. When the `stream()` method is called on a list, (2) a stream of list values ​​is created. The values ​​are then dealt with individually. The stream values ​​can be (3) filtered by the `filter` method, which removes values ​​that fail to meet the condition from the stream. The stream's `map` method (4) can be used to map values ​​in a stream from one form to another. The `collect` method (5) collects the values ​​in a stream into a collection  provided to it, such as a list.
 
-<img src="../img/drawings/stream.png" alt="Yllä tekstuaalisesti kuvattu virran toiminta kuvana." />
+<!-- <img src="../img/drawings/stream.png" alt="Yllä tekstuaalisesti kuvattu virran toiminta kuvana." /> -->
+<img src="../img/drawings/part10.1-stream.png" alt="The written explanation above on how a stream works as an image." />
 
 &nbsp;
 
