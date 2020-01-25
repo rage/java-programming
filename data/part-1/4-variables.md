@@ -627,7 +627,7 @@ Other input types, such as integers, doubles, and booleans are also read as text
 ## Reading Integers
 
 <!-- Merkkijonon muuntaminen kokonaisluvuksi tapahtuu komennolla `Integer.valueOf`, jolle annetaan parametrina muunnettavan luvun sisältämä merkkijono. -->
-The `Integer.valueOf` command converts an string to an integer. It takes the string containing the value to be converted as a parameter.
+The `Integer.valueOf` command converts a string to an integer. It takes the string containing the value to be converted as a parameter.
 
 <!-- ```java
 String lukuMerkkijonona = "42";
