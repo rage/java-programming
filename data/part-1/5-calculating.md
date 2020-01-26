@@ -394,7 +394,7 @@ Lukujen summa on 11
 </sample-output> -->
 
 <sample-output>
-̈́Give the first number:
+Give the first number:
 **8**
 Give the second number:
 **3**
