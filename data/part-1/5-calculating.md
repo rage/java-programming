@@ -545,7 +545,7 @@ Create a program that can be used to add two integers together. In the beginning
 
 
 <!-- Tulostusesimerkkejä: -->
-Exampe output:
+Example output:
 
 <!-- <sample-output>
 
