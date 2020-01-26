@@ -394,11 +394,13 @@ Lukujen summa on 11
 </sample-output> -->
 
 <sample-output>
+
 Give the first number:
 **8**
 Give the second number:
 **3**
 The sum of the numbers is 11
+
 </sample-output>
 
 <!-- <sample-output>
