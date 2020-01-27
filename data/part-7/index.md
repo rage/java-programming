@@ -5,34 +5,6 @@ overview: true
 hidden: true
 ---
 
-<only-for-course-variant variant="dl">
-  <deadline>4.3.2020</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="nodl">
-  <deadline>4.1.2020</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="ohja-dl">
-  <deadline>This is not part of the course you chose in the settings</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="ohja-nodl">
-  <deadline>This is not part of the course you chose in the settings</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="kesa-dl">
-  <deadline>24.6.2020</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="kesa-ohja-dl">
-  <deadline>This is not part of the course you chose in the settings</deadline>
-</only-for-course-variant>
-
-<only-for-not-logged-in>
-  <deadline>Log in to see the deadline for this part</deadline>
-</only-for-not-logged-in>
-
 <!-- Kurssimateriaalin seitsemännessä osassa käsitellään yleisiä ohjelmointiparadigmoja sekä algoritmiikkaa. Kurssi Ohjelmoinnin perusteet (TKT-10002) päättyy seitsemänteen osaan ja kurssi Ohjelmoinnin jatkokurssi (TKT-10003) alkaa kahdeksannesta osasta. -->
 
 In the seventh part of the course we'll focus on general programming paradigms and algorithms. The course Introduction to programming (TKT-10002) ends after the seventh week, and the Advanced course in programming (TKT-10003) begins with the eight part.

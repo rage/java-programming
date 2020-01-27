@@ -5,34 +5,6 @@ overview: true
 hidden: true
 ---
 
-<only-for-course-variant variant="dl">
-  <deadline>29.4.2020</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="nodl">
-  <deadline>4.1.2020</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="ohja-dl">
-  <deadline>29.4.2020</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="ohja-nodl">
-  <deadline>20.1.2020</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="kesa-dl">
-  <deadline>12.8.2020</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="kesa-ohja-dl">
-  <deadline>12.8.2020</deadline>
-</only-for-course-variant>
-
-<only-for-not-logged-in>
-  <deadline>Log in to see the deadline for this part</deadline>
-</only-for-not-logged-in>
-
 <!-- Kurssimateriaalin kahdennessatoista osassa tutustut geneerisiin tyyppiparametreihin ja opit mitä merkintä ArrayList&lt;String&gt; oikeastaan tarkoittaa. Opit luomaan luokkia, joissa käytetään geneerisiä tyyppiparametreja. Tutustut ArrayListin ja HashMapin sisäiseen toteutukseen ja toteutat niistä yksinkertaiset omat versiot. Opit luomaan satunnaislukuja ja harjoittelet Javan valmiiden välineiden käyttöä satunnaislukujen luomiseen. Tutustut  moniulotteisen tiedon esittämiseen ja opit luomaan ja käsittelemään moniulotteisia taulukoita. -->
 
 In the twelfth part of the course we will introduce type parameters and you will learn what `ArrayList<String>;` actually means.

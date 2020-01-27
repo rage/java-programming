@@ -5,34 +5,6 @@ overview: true
 hidden: true
 ---
 
-<only-for-course-variant variant="dl">
-  <deadline>15.4.2020</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="nodl">
-  <deadline>4.1.2020</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="ohja-dl">
-  <deadline>15.4.2020</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="ohja-nodl">
-  <deadline>20.1.2020</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="kesa-dl">
-  <deadline>5.8.2020</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="kesa-ohja-dl">
-  <deadline>5.8.2020</deadline>
-</only-for-course-variant>
-
-<only-for-not-logged-in>
-  <deadline>Log in to view the deadline of this part</deadline>
-</only-for-not-logged-in>
-
 <!-- Kurssimateriaalin kolmannessatoista osassa opit luomaan graafisia käyttöliittymiä ja tutustut graafisissa käyttöliittymissä käytettäviin käyttöliittymäkomponentteihin. Opit käsittelemään graafisissa käyttöliittymissä tapahtuvia tapahtumia ja harjoittelet useamman näkymän sisältävien graafisten käyttöliittymien luomista. -->
 
 The thirteenth part of the course material introduces the topics of creating graphical user interfaces and the kinds of components that are used in them. You will learn to handle different events that occur in graphical user interfaces, and practise creating applications that contain multiple views.
