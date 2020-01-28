@@ -64,7 +64,7 @@ public class Program {
 
         // Examples of reading different types of user input
         String text = reader.nextLine();
-        int neumber = Integer.valueOf(reader.nextLine());
+        int number = Integer.valueOf(reader.nextLine());
         double numberWithDecimals = Double.valueOf(reader.nextLine());
         boolean trueOrFalse = Boolean.valueOf(reader.nextLine());
 
@@ -166,8 +166,8 @@ public class Ohjelma {
         int second = 2;
 
         // Assigning the user input to the variables
-        first = Integer.valueOf(lukija.nextLine());
-        second = Integer.valueOf(lukija.nextLine());
+        first = Integer.valueOf(reader.nextLine());
+        second = Integer.valueOf(reader.nextLine());
 
         // Identifying the operation and declaring a variable for the result
         int product = first * second;
