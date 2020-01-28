@@ -1,7 +1,7 @@
 ---
 path: '/part-2/2-repeating'
 title: 'Repeating functionality'
-hidden: true
+hidden: false
 ---
 
 
@@ -670,7 +670,7 @@ Total of ones: 2
 <programming-exercise name="Number of Numbers" tmcname='part02-Part02_08.NumberOfNumbers'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötettyjen lukujen lukumäärän. Syötteen loppumisesta kertovaa nollaa ei tule laskea osaksi lukujen lukumäärää. -->
-Write a program that reads values from the user until they input a 0. After this, the program prints the total number of inputted values. The zero that's used to exit the loop is not to be included in the total number count.
+Write a program that reads values from the user until they input a 0. After this, the program prints the total number of inputted values. The zero that's used to exit the loop should not be included in the total number count.
 
 <!-- Ohjelman tulostusesimerkki: -->
 Example output of the program:
@@ -698,7 +698,11 @@ Number of numbers: 4
 <programming-exercise name="Number of negative numbers" tmcname='part02-Part02_09.NumberOfNegativeNumbers'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötteessä olleiden negatiivisten lukujen lukumäärän. Syötteen loppumisesta kertovaa nollaa ei tule laskea osaksi lukujen lukumäärää. -->
+<<<<<<< HEAD
 Write a program that reads values from the user until they input a 0. After this, the program prints the total number of inputted values that are negative. The zero that's used to exit the loop is not to be included in the total number count.
+=======
+Write a program that reads values from the user until they input a 0. After this, the program prints the total number of inputted values that are negative. The zero that's used to exit the loop should not be included in the total number count.
+>>>>>>> cfdd5598ac17564b305f3b3a13c15e641fd8ac39
 
 <!-- Ohjelman tulostusesimerkki: -->
 Example output of the program:
@@ -751,8 +755,62 @@ Sum of the numbers: 34
 </programming-exercise>
 
 
-TODO: lead in, avaa...
-TODO: esimerkki toistolauseesta, missä kaksi muuttujaa
+Sometimes you need to use multiple variables. The example below shows a program, which reads numbers from the user until the user writes 0.
+Then the program prints the number of positive and negative numbers given, and the precentage of positive numbers from all numbers given.
+
+```java
+Scanner reader = new Scanner(System.in);
+
+// For saving number of numbers
+int numberOfPositive = 0;
+int numberOfNegative = 0;
+
+// For repeatedly asking for numbers
+while (true) {
+    System.out.println("Give a number (0 to stop): ");
+    // For reading user input
+    int numberFromUser = Integer.valueOf(reader.nextLine());
+
+    // For breaking the loop when user writes 0
+    if (numberFromUser == 0) {
+        break;
+    }
+
+    // For increasing numberOfPositive by one
+    // when user gives a positive number
+    if (numberFromUser > 0) {
+        numberOfPositive = numberOfPositive + 1;
+    }
+
+    // For increasing numberOfNegative by one
+    // when user gives a negative number
+    if (numberFromUser < 0) {
+        numberOfNegative = numberOfNegative + 1;
+    }
+
+    // Also could have used..
+    // if (numberFromUser > 0) {
+    //     numberOfPositive = numberOfPositive + 1;
+    // } else {
+    //     numberOfNegative = numberOfNegative + 1;
+    // }
+
+}
+
+// For printing the number of positive numbers
+System.out.println("Positive numbers: " + numberOfPositive);
+// For printing the number of negative numbers
+System.out.println("Negative numbers: " + numberOfNegative);
+
+// For printing the precentage of positive numbers from all numbers
+
+if (numberOfPositive + numberOfNegative > 0) {
+    // Print only if user has given numbers
+    // to avoid dividing by zero
+    double precentageOfPositives = 100.0 * numberOfPositive / (numberOfPositive + numberOfNegative);
+    System.out.println("Precentage of positive numbers: " + precentageOfPositives + "%");
+}
+```
 
 
 

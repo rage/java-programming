@@ -1,7 +1,7 @@
 ---
 path: '/part-2/1-problems-and-patterns'
 title: 'Recurring problems and patterns to solve them'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Learning Objectives'>
@@ -64,7 +64,7 @@ public class Program {
 
         // Examples of reading different types of user input
         String text = reader.nextLine();
-        int neumber = Integer.valueOf(reader.nextLine());
+        int number = Integer.valueOf(reader.nextLine());
         double numberWithDecimals = Double.valueOf(reader.nextLine());
         boolean trueOrFalse = Boolean.valueOf(reader.nextLine());
 
@@ -494,7 +494,7 @@ Write a program, that reads an integer from the user. If the number is less than
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä kaksi kokonaislukua. Mikäli ensimmäinen luku on suurempi kuin toinen luku, ohjelma tulostaa "Luku (ensimmäinen) on suurempi kuin luku (toinen).". Mikäli ensimmäinen luku on pienempi kuin toinen luku, ohjelma tulostaa "Luku (ensimmäinen) on pienempi kuin luku (toinen).". Muulloin ohjelma tulostaa "Luku (ensimmäinen) on yhtä suuri kuin luku (toinen).". Edeltävissä esimerkeissä kohdat (ensimmäinen) ja (toinen) tulee aina korvata syötetyillä luvuilla. -->
 
-Write a program that reads two integers from the user input. If the first number is greater than the second, the program prints "(first) is greater than (second)." If the first number is smaller than the second, the program prints "(first) is smaller than (second)." Otherwise the program prints "(first) is equal to (second)." The (first) and (second) should always be replaced with the actual numbers given by the user.
+Write a program that reads two integers from the user input. If the first number is greater than the second, the program prints "(first) is greater than (second)." If the first number is less than the second, the program prints "(first) is smaller than (second)." Otherwise the program prints "(first) is equal to (second)." The (first) and (second) should always be replaced with the actual numbers given by the user.
 
 <!-- Alla on muutamia esimerkkejä ohjelman odotetusta toiminnasta. -->
 

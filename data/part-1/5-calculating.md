@@ -582,7 +582,7 @@ Syötä toinen luku!
 Give the first number:
 **73457**
 Give the second number:
-**128888**
+**12888**
 73457 + 12888 = 86345
 
 </sample-output>
