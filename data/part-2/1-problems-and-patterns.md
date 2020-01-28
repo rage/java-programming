@@ -156,7 +156,7 @@ public class Ohjelma {
 // Making the scanner available in the program
 import java.util.Scanner;
 
-public class Ohjelma {
+public class Program {
     public static void main(String[] main) {
         // Creating the scanner
         Scanner reader = new Scanner(System.in);
@@ -449,7 +449,7 @@ public class Program {
 
         if (sum > 100) { // if the sum is over 100
             System.out.println("too much");
-        } else if (summa < 0) { // if the sum is less than 0
+        } else if (sum < 0) { // if the sum is less than 0
             System.out.println("too little");
         } else { // otherwise
             System.out.println("ok");
