@@ -64,7 +64,7 @@ public class Program {
 
         // Examples of reading different types of user input
         String text = reader.nextLine();
-        int neumber = Integer.valueOf(reader.nextLine());
+        int number = Integer.valueOf(reader.nextLine());
         double numberWithDecimals = Double.valueOf(reader.nextLine());
         boolean trueOrFalse = Boolean.valueOf(reader.nextLine());
 
@@ -156,7 +156,7 @@ public class Ohjelma {
 // Making the scanner available in the program
 import java.util.Scanner;
 
-public class Ohjelma {
+public class Program {
     public static void main(String[] main) {
         // Creating the scanner
         Scanner reader = new Scanner(System.in);
@@ -166,8 +166,8 @@ public class Ohjelma {
         int second = 2;
 
         // Assigning the user input to the variables
-        first = Integer.valueOf(lukija.nextLine());
-        second = Integer.valueOf(lukija.nextLine());
+        first = Integer.valueOf(reader.nextLine());
+        second = Integer.valueOf(reader.nextLine());
 
         // Identifying the operation and declaring a variable for the result
         int product = first * second;
@@ -449,7 +449,7 @@ public class Program {
 
         if (sum > 100) { // if the sum is over 100
             System.out.println("too much");
-        } else if (summa < 0) { // if the sum is less than 0
+        } else if (sum < 0) { // if the sum is less than 0
             System.out.println("too little");
         } else { // otherwise
             System.out.println("ok");
@@ -512,7 +512,7 @@ A few examples of the expected behaviour:
 
 **-3**
 **5**
--3 is less than 5.
+-3 is smaller than 5.
 
 </sample-output>
 
