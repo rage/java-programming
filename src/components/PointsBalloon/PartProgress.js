@@ -69,7 +69,7 @@ const PartProgress = ({ name, data, appliesForStudyRight, t }) => {
   })
   let totalProgress = Math.floor((nPointsSum / maxPointsSum) * 100) / 100
   allChartData.push({
-    tool: "Tehtäväpisteet yhteensä",
+    tool: "Total points",
     progress: Math.floor(totalProgress * 100 + 0.000000001),
     n_points: nPointsSum,
     max_points: maxPointsSum,
@@ -99,24 +99,6 @@ const PartProgress = ({ name, data, appliesForStudyRight, t }) => {
             />
           </Bar>
         </StyledBarChart>
-        <LargeP>
-          {t("progressTotal")}{" "}
-          {Math.floor(Math.min(100, totalProgress * 111.112))}
-          /100.
-        </LargeP>
-        {appliesForStudyRight &&
-          (getCourseVariant() === "nodl" ? (
-            <SmallP>{t("noTimelimit")}</SmallP>
-          ) : (
-            <SmallP>
-              {t("canApplyForStudyRight")}{" "}
-              {
-                allChartData.find(o => o.tool === "Ohjelmointitehtävät")
-                  ?.progress
-              }
-              %.
-            </SmallP>
-          ))}
       </div>
     </PartProgressContainer>
   )

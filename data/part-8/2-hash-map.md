@@ -60,7 +60,8 @@ Helsinki
 <!-- Sisäisesti yllä luotavan hajautustaulun sisäinen tila näyttää seuraavalta. Kukin avain viittaa arvoon. -->
 The internal state of the hash table created above looks like this. Each key refers to some value.
 
-<img src="../img/drawings/hashmap.png" alt="Hashmapissa avaimen perusteella saadaan selville arvo."/>
+<!-- <img src="../img/drawings/hashmap.png" alt="Hashmapissa avaimen perusteella saadaan selville arvo."/> -->
+<img src="../img/drawings/part8.2-hashmap.png" alt="A value in a hashmap is looked up based on a key."/>
 
 <!-- Mikäli hajautustaulussa ei ole haettavaa avainta, palauttaa hajautustaulun metodi `get` `null`-viitteen. -->
 If the hash table does not contained the key used for the search, its `get` method returns a `null` reference.

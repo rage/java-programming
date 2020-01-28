@@ -45,7 +45,7 @@ System.out.println(sum); // prints 6
 
 <!-- Laskujärjestykseen voi vaikuttaa sulkujen avulla. Sulkujen sisällä olevat laskuoperaatiot suoritetaan ennen niiden ulkopuolella olevia laskuoperaatioita. -->
 
-You can affect the order of operations by using of parentheses. Operations within parentheses are performed before those outside them.
+You can affect the order of operations by using parentheses. Operations within parentheses are performed before those outside them.
 
 <!-- ```java
 int laskuSuluilla = (1 + 1) + 3 * (2 + 5);
@@ -56,7 +56,7 @@ System.out.println(laskuSuluitta); // tulostaa 13
 ``` -->
 
 ```java
-int calculationWithParentheses = (1 + 1) = 3 * (2 + 5);
+int calculationWithParentheses = (1 + 1) + 3 * (2 + 5);
 System.out.println(calculationWithParentheses); // prints 23
 
 int calculationWithoutParentheses = 1 + 1 + 3 * 2 + 5;
@@ -177,7 +177,7 @@ How many days would you like to convert to seconds?
 </programming-exercise>
 
 
-<quiz id="54056702-b227-5747-8d6c-d3f15e8f5c8a"></quiz>
+<quiz id="7ab44ccb-cf41-5609-854d-3909d452404d"></quiz>
 
 <!--
 <text-box variant='hint' name='Lauseke ja lause'>
@@ -250,7 +250,7 @@ int second = 4;
 first + second;
 ```
 
-<quiz id="f9af4add-d06f-59bb-ab42-d1cb9733ba88"></quiz>
+<quiz id="e7131986-67eb-55fd-b527-b2574f6de7df"></quiz>
 
 
 <!-- ## Laskentaa ja tulostamista -->
@@ -394,11 +394,13 @@ Lukujen summa on 11
 </sample-output> -->
 
 <sample-output>
-̈́Give the first number:
+
+Give the first number:
 **8**
 Give the second number:
 **3**
 The sum of the numbers is 11
+
 </sample-output>
 
 <!-- <sample-output>
@@ -543,7 +545,7 @@ Create a program that can be used to add two integers together. In the beginning
 
 
 <!-- Tulostusesimerkkejä: -->
-Exampe output:
+Example output:
 
 <!-- <sample-output>
 
@@ -580,7 +582,7 @@ Syötä toinen luku!
 Give the first number:
 **73457**
 Give the second number:
-**128888**
+**12888**
 73457 + 12888 = 86345
 
 </sample-output>
@@ -651,7 +653,7 @@ Give the second number:
 
 <!-- Kun olet saanut edellisen tehtävän toteutettua, kokeile mikä on suurin mahdollinen kertolasku minkä saat laskettua. Huomaamasi ilmiön taustalla on se, että kokonaislukumuuttujan arvo voi olla korkeintaan 2<sup>31</sup>-1 eli 2147483647. Tämä johtuu siitä, että kokonaislukumuuttujat esitetään tietokoneen muistissa 32 bitin avulla. Tähän tutustutaan tarkemmin muunmuassa kurssilla Tietokoneen toiminta. -->
 
-Once you have completed the previous exercise, try finding out the greatest possible multiplication that you can calculate. The reason behind the phenomenon you've observed is that the value of an integer value is capped at the maximum of 2<sup>31</sup>-1(i.e. 2147483647). This is because integer variables are represented with 32 bits in the computer's memory. Variable representation is covered in more detail on the Computer Organization course.
+Once you have completed the previous exercise, try finding out the greatest possible multiplication that you can calculate. The reason behind the phenomenon you've observed is that the value of an integer value is capped at the maximum of 2<sup>31</sup>-1 (i.e. 2147483647). This is because integer variables are represented with 32 bits in the computer's memory. Variable representation is covered in more detail on the Computer Organization course.
 
 
 <!-- ## Jakolasku -->
@@ -938,7 +940,7 @@ The average is 4.333333333333333
 </programming-exercise>
 
 
-<quiz id="cff67523-26f0-5f35-b00f-070778b40541"></quiz>
+<quiz id="a1b73ba2-e36e-5db5-99d3-991c502a94ea"></quiz>
 
 
 <!-- <programming-exercise name="Nelilaskin" tmcname='osa01-Osa01_23.Nelilaskin'> -->
@@ -1040,15 +1042,15 @@ rivi 9: System.out.println(kolmas);
 ``` -->
 
 ```java
-rivi 1: int first = (1 + 1);
-rivi 2: int second = first + 3 * (2 + 5);
-rivi 3:
-rivi 4: first = 5;
-rivi 5:
-rivi 6: int third = first + second;
-rivi 7: System.out.println(first);
-rivi 8: System.out.println(second);
-rivi 9: System.out.println(third);
+row 1: int first = (1 + 1);
+row 2: int second = first + 3 * (2 + 5);
+row 3:
+row 4: first = 5;
+row 5:
+row 6: int third = first + second;
+row 7: System.out.println(first);
+row 8: System.out.println(second);
+row 9: System.out.println(third);
 ```
 
 <!-- Alla on kirjoitettu yllä olevan ohjelmakoodin suoritus auki. -->
@@ -1135,4 +1137,4 @@ You'll find a step-by-step visualization of the previous program below, which go
 
 <code-states-visualizer input='{"code":"public class CalculationInSteps {\n  public static void main(String[] args) {\n    int first = (1 + 1);\n    int second = first + 3 * (2 + 5);\n\n    first = 5;\n\n    int third = first + second;\n    System.out.println(first);\n    System.out.println(second);\n    System.out.println(third);\n  }\n}","stdin":"","trace":[{"stdout":"","event":"call","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"1","frame_id":1}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"2","frame_id":2}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":4,"stack_to_render":[{"func_name":"main:4","encoded_locals":{"first":2},"ordered_varnames":["first"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"4","frame_id":4}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":6,"stack_to_render":[{"func_name":"main:6","encoded_locals":{"first":2,"second":23},"ordered_varnames":["first","second"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"9","frame_id":9}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"first":5,"second":23},"ordered_varnames":["first","second"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"12","frame_id":12}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":9,"stack_to_render":[{"func_name":"main:9","encoded_locals":{"first":5,"second":23,"third":28},"ordered_varnames":["first","second","third"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"17","frame_id":17}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"5\n","event":"step_line","line":10,"stack_to_render":[{"func_name":"main:10","encoded_locals":{"first":5,"second":23,"third":28},"ordered_varnames":["first","second","third"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"21","frame_id":21}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"5\n23\n","event":"step_line","line":11,"stack_to_render":[{"func_name":"main:11","encoded_locals":{"first":5,"second":23,"third":28},"ordered_varnames":["first","second","third"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"24","frame_id":24}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"5\n23\n28\n","event":"step_line","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"first":5,"second":23,"third":28},"ordered_varnames":["first","second","third"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"27","frame_id":27}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"5\n23\n28\n","event":"return","line":12,"stack_to_render":[{"func_name":"main:12","encoded_locals":{"first":5,"second":23,"third":28,"__return__":["VOID"]},"ordered_varnames":["first","second","third","__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"28","frame_id":28}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}}],"userlog":"Debugger VM maxMemory: 455M\n"}'></code-states-visualizer>
 
-<quiz id="286b44eb-0a4f-51de-9c67-68d5351a3b37"></quiz>
+<quiz id="01bc169c-8882-5cb3-99b1-286fe9775baf"></quiz>

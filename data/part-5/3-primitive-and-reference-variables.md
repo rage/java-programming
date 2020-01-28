@@ -523,9 +523,9 @@ After this the program calls the method makeYounger, which is given the variable
 
 Finally the method execution ends and the program returns to the main method. In the main method the value of the variable first is printed one more time. The final result of the print is"First(1972)".
 
-<quiz id='aedb9a67-73e0-5b34-b13c-bb84a6c59a0b'></quiz>
+<quiz id='9e71b471-4487-5886-9f31-b8af27fade92'></quiz>
 
-<quiz id='1aa0ccc3-2de4-59ba-99af-186c26e5eece'></quiz>
+<quiz id='3bd4e869-0dba-506f-8d7a-0d2153055cc8'></quiz>
 
 
 

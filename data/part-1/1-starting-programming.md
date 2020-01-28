@@ -18,7 +18,7 @@ hidden: false
 </text-box>
 
 
-<quiz id="3799f901-ef2a-53da-b4c6-669fbbf0038a"></quiz>
+<quiz id="ae09155d-d056-5662-9611-f322cd50959d"></quiz>
 
 
 <!-- Nykyaikainen ohjelmointi tapahtuu lähes poikkeuksetta ohjelmointiympäristössä. Ohjelmointiympäristö sisältää joukon ohjelmoijaa auttavia aputoimintoja. Se ei rakenna ohjelmaa ohjelmoijan puolesta, mutta se muunmuassa vinkkaa helpoista virheistä ohjelmakoodissa ja auttaa ohjelmoijaa hahmottamaan ohjelman rakennetta. -->
@@ -33,11 +33,11 @@ The IDE we use on this course is called [NetBeans](https://netbeans.apache.org),
 
 To start the course you need (1) a MOOC.fi -account that you can create at the top of this course material, (2) Java (Java JDK), and (3) Netbeans with TMC  development environment (in the future TMC).
 
-All of these can be installed with the following instructions. **When following the instructions, select "MOOC" as your organization and "Introduction to programming 2020" as your course.** Installation instructions for Java and NetBeans can be found here: [Java and NetBeans installation guide](https://www.mooc.fi/en/installation/netbeans)
+All of these can be installed with the following instructions. **When following the instructions, select "MOOC" as your organization and "Java Programming I" as your course.** Installation instructions for Java and NetBeans can be found here: [Java and NetBeans installation guide](https://www.mooc.fi/en/installation/netbeans)
 
 <!-- Kun olet luonut käyttäjätunnuksen ja asentanut Javan ja TMC:n, katso alla oleva video. Video näyttää mitä tapahtuu kun NetBeans with TMC -ohjelmointiympäristö käynnistetään ensimmäistä kertaa. Videolla valitaan organisaatio ja kurssi, sekä tehdään ensimmäinen ohjelmointitehtävä. -->
 
-Once you have created the user account and installed Java and TMC, watch the video below. The video demonstrates what happens when "Netbeans with TMC" is opened for the first time. We select the organization and the course, and do the first programming exercise. In the video the user selects the 2019 course, but do remember to **select Introduction to programming 2020 as your course**!
+Once you have created the user account and installed Java and TMC, watch the video below. The video demonstrates what happens when "Netbeans with TMC" is opened for the first time. We select the organization and the course, and do the first programming exercise. In the video the user selects the 2019 course, but do remember to **select Java Programming I as your course**!
 
 <youtube id="zvE8XA8D0gE"></youtube>
 
@@ -103,4 +103,4 @@ Java programs require a "code boilerplate", the frame around the code, in order 
 <!-- Alla on kurssin ensimmäinen kyselytehtävä. Kyselytehtäviin vastataan suoraan kurssimateriaalissa. -->
 Below is the first quiz of the course. You can answer the quizzes right here in the course material.
 
-<quiz id="118e6b38-0d42-5667-a674-84ae174ad798"></quiz>
+<quiz id="398ad482-25d6-5817-8d95-375c4d15452c"></quiz>

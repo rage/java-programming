@@ -22,7 +22,6 @@ hidden: true
 </text-box>
 
 
-
 <!-- Merkittävä osa ohjelmistoista perustuu tavalla tai toisella tiedon käsittelyyn. Musiikin toistoon tarkoitetut ohjelmistot käsittelevät musiikkitiedostoja, kuvankäsittelyohjelmat käsittelevät kuvatiedostoja. Verkossa ja mobiililaitteissa toimivat sovellukset kuten Facebook, WhatsApp ja Telegram taas käsittelevät tiedostoihin perustuviin tietokantoihin tallennettuja henkilötietoja. Kaikissa näistä sovelluksista on yhteistä tiedon lukeminen, tiedon käsitteleminen tavalla tai toisella sekä se, että käsiteltävä tieto on loppujenlopulta tallennettu jonkinlaisessa muodossa yhteen tai useampaan tiedostoon. -->
 
 A considerable amount of software is in some way based on handling data. Software for playing music handle music files, and image manipulation software handles image files. Software running on the internet and on mobile devices, like Facebook, WhatsApp, and Telegram handle user information stored in databases, which also use files. What they all have in common is: they read data, they manipulate the data in one way or another, and in the end the data that is being handled is stored in some format into one or multiple files.

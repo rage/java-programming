@@ -31,7 +31,7 @@ const ExtraDetails = ({ exerciseDetails, onUpdate, nocoins, t }) => {
             <StyledTypography>
               {t("submitNetBeans")}{" "}
               <OutboundLink
-                href="https://materiaalit.github.io/tmc-asennus/netbeans/"
+                href="https://www.mooc.fi/en/installation/netbeans"
                 rel="noopener noreferrer"
                 target="_blank"
               >
