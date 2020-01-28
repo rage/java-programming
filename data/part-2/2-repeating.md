@@ -53,7 +53,7 @@ System.out.println("The sum of the numbers is " + sum);
 ```
 
 <!-- Hoitaa asian, mutta ei kovin tyylikkäästi. Entä jos ohjelman pitäisi lukea sata tai vaikkapa tuhat lukua ja tulostaa niiden summa? Entä jos ohjelman pitäisi lukea kolme lukua? -->
-It does the job, but not elegantly. What if the program had to read a hundred, or perhaps a thousand, numbers and print their sum? What if the program had to read three numbers only?
+It does the job, but not elegantly. What if the program had to read a hundred, or perhaps a thousand numbers and print their sum? What if the program had to read three numbers only?
 
 <!-- Tämän ongelman voi ratkaista toistolauseella, joka pitää kirjaa sekä summasta että lukemiskerroista. Viiden luvun summan tulostava toistolauseella toteutettava ohjelma näyttää seuraavalta. -->
 The problem can be solved with a loop, which keeps track of both the sum and the number of times input has been read. The program that prints the sum of five numbers now looks as follows
@@ -151,7 +151,7 @@ Breaking out of the loop occurs when a user enters a specified input or whenever
 Users can also be asked for input within a loop. The variables that are commonly used in loops (such as Scanner readers) are defined before the loop, whereas variables (such as the value read from the user) that are specific to the loop are defined within it.
 
 <!-- Alla olevassa esimerkissä ohjelma kysyy käyttäjältä pitäisikö toistolauseesta poistua. Mikäli käyttäjä syöttää merkkijonon "k", ohjelman suoritus siirtyy toistolausetta seuraavaan komentoon, jonka suorittamisen jälkeen ohjelman suoritus päättyy. -->
-In the example below, the program asks the user whether to exit the loop or not. If the user inputs the string "k", the execution of the program moves to the command following the loop block, after which the execution of the program ends.
+In the example below, the program asks the user whether to exit the loop or not. If the user inputs the string "y", the execution of the program moves to the command following the loop block, after which the execution of the program ends.
 
 ```java
 Scanner scanner = new Scanner(System.in);
@@ -252,6 +252,7 @@ Write a program according to the preceding example that asks a user to input val
 
 <sample-output>
 
+Give a number:
 **5**
 Give a number:
 **744**
@@ -328,7 +329,7 @@ while (true) {
 <programming-exercise name="Only positives" tmcname='part02-Part02_07.OnlyPositives'>
 
 <!-- Kirjoita ohjelma, joka kysyy käyttäjältä lukuja. Mikäli luku on negatiivinen (eli pienempi kuin nolla), käyttäjälle tulostetaan viesti "Epäkelpo luku" ja käyttäjältä kysytään uutta lukua. Jos taas luku on nolla, lukujen lukeminen lopetetaan ja ohjelma poistuu toistolauseesta. Mikäli luku on positiivinen, ohjelma tulostaa luvun toisen potenssin. -->
-Write a program that asks a user for numbers. If the number is negative (smaller than zero), the program prints for user "unfit number" and asks the user for a new number. If the number is zero, the program exits the loop. If the number is positive, the program prints the number power of two.
+Write a program that asks a user for numbers. If the number is negative (smaller than zero), the program prints for user "Unsuitable number" and asks the user for a new number. If the number is zero, the program exits the loop. If the number is positive, the program prints the number power of two.
 
 <sample-output>
 
@@ -669,7 +670,7 @@ Total of ones: 2
 <programming-exercise name="Number of Numbers" tmcname='part02-Part02_08.NumberOfNumbers'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötettyjen lukujen lukumäärän. Syötteen loppumisesta kertovaa nollaa ei tule laskea osaksi lukujen lukumäärää. -->
-Write a program that reads values from the user until they input a 0. After this, the program prints the total number of inputted values. The zero that's used to exit the loop should is not to be included in the total number count.
+Write a program that reads values from the user until they input a 0. After this, the program prints the total number of inputted values. The zero that's used to exit the loop is not to be included in the total number count.
 
 <!-- Ohjelman tulostusesimerkki: -->
 Example output of the program:
@@ -697,7 +698,7 @@ Number of numbers: 4
 <programming-exercise name="Number of negative numbers" tmcname='part02-Part02_09.NumberOfNegativeNumbers'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötteessä olleiden negatiivisten lukujen lukumäärän. Syötteen loppumisesta kertovaa nollaa ei tule laskea osaksi lukujen lukumäärää. -->
-Write a program that reads values from the user until they input a 0. After this, the program prints the total number of inputted values that are negative. The zero that's used to exit the loop should is not to be included in the total number count.
+Write a program that reads values from the user until they input a 0. After this, the program prints the total number of inputted values that are negative. The zero that's used to exit the loop is not to be included in the total number count.
 
 <!-- Ohjelman tulostusesimerkki: -->
 Example output of the program:
@@ -743,7 +744,7 @@ Give a number:
 **-2**
 Give a number:
 **0**
-The sum of the numbers is 34
+Sum of the numbers: 34
 
 </sample-output>
 

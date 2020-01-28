@@ -450,7 +450,7 @@ Greetings!
 
 <!-- Aivan kuten Javan valmista `System.out.println()`-metodia kutsuttaessa, voi oman metodin kutsussa parametrina antaa lausekkeen. -->
 
-Just like when calling the predefined method `System.out.println`, you can pass an expression as a paratmeter.
+Just like when calling the predefined method `System.out.println`, you can pass an expression as a parameter.
 
 <!-- ```java
 public static void main(String[] args) {
@@ -626,7 +626,7 @@ sum(3, 5);
 int number1 = 2;
 int number2 = 4;
 
-summa(number1, number2);
+sum(number1, number2);
 ```
 
 <!-- <sample-output>
@@ -884,7 +884,7 @@ The parameter `number` is copied for the method's use, i.e., a new variable call
 
 <!-- Metodin määrittelyssä kerrotaan palauttaako metodi arvon. Jos metodi palauttaa arvon, tulee metodimäärittelyn yhteydessä kertoa palautettavan arvon tyyppi. Muulloin määrittelyssä käytetään avainsanaa `void`. Tähän mennessä tekemämme metodit ovat määritelty avainsanaa `void` käyttäen eli eivät ole palauttaneet arvoa. -->
 
-The definition of a method tells whether that method returns a value or not. If it does, the method definition has to include type of the return value. Otherwise the keyword `void` is used in the definition. The methods we've created so far have been defined with the keyword `void`, i.e., they've returned no values.
+The definition of a method tells whether that method returns a value or not. If it does, the method definition has to include the type of the return value. Otherwise the keyword `void` is used in the definition. The methods we've created so far have been defined with the keyword `void`, i.e., they've returned no values.
 
 <!-- ```java
 public static **void** kasvataKolmella() {
@@ -1087,7 +1087,7 @@ public static int functioningMethod(int parameter) {
 
     System.out.println("The number received as parameter is ten or lesser.");
 
-    return parametri;
+    return parameter;
 }
 ```
 
@@ -1306,7 +1306,7 @@ When the execution of the method reaches the statement `return first + second;`,
 
 <!-- Metodin kutsutaan seuraavasti. Alla metodia käytetään laskemaan luvut 2 ja 7 yhteen. Metodikutsusta saatava paluuarvo asetetaan muuttujaan `lukujenSumma`: -->
 
-The method is called in the following way. Below, the method is used to add the numbers 2 and 7 together. The value resuting from the method call is placed into the variable `sumOfNumbers`.
+The method is called in the following way. Below, the method is used to add the numbers 2 and 7 together. The value resulting from the method call is placed into the variable `sumOfNumbers`.
 
 <!-- ```java
 int lukujenSumma = summa(2, 7);
@@ -1467,11 +1467,7 @@ Sum: 14
 
 <!-- **Huom:** kun tehtävässä sanotaan että metodin pitää _palauttaa_ jotain, tarkoittaa tämä sitä että metodissa tulee olla määritelty paluutyyppi ja `return`-komento jolla haluttu asia palautetaan. Metodi ei itse tulosta (eli käytä komentoa `System.out.println(..)`), tulostuksen hoitaa metodin kutsuja, eli tässä tapauksessa pääohjelma. -->
 
-<<<<<<< HEAD:data/part-2/4-methods.md
 **NB:** when an exercise describes a method that should _return_ something, this means that the type of the return value must be declared in the method definition, and that the method contains a `return` command that returns the wanted data. The method itself will print nothing (i.e. will not use the command `System.out.println`) - that task is left to the method caller, which in this case is the main program.
-=======
-**N.B.:** when an exercise describes a method that should _return_ something, this means that the type of the return value must be declared in the method definition, and that the method contains a `return` command that returns the desired data. The method itself will print nothing (i.e. will not use the command `System.out.println`) - that task is left to the method's caller, which in this case is the main program.
->>>>>>> 73493be24544e9825a3a481cd6d5905f4653274f:data/osa-2/4-metodit.md
 
 </programming-exercise>
 
@@ -1661,7 +1657,7 @@ How does the computer remember where to return after the execution of a method?
 
 <!-- Java-lähdekoodin suoritusympäristö pitää kirjaa suoritettavasta metodista kutsupinossa. **Kutsupino** sisältää kehyksiä, joista jokainen sisältää tiedon kyseisen metodin sisäisistä muuttujista sekä niiden arvoista. Kun metodia kutsutaan, kutsupinoon luodaan uusi kehys, joka sisältää metodin sisältämät muuttujat. Kun metodin suoritus loppuu, metodiin liittyvä kehys poistetaan kutsupinosta, jolloin suoritusta jatketaan kutsupinon edeltävästä metodista. -->
 
-The environment that executes Java source code keeps track of the method being executed in the call stack. **The call stack** contains frames, each of which includes information about a specific method's internal variables and their values. When a method is called, a new frame containing its variables is created in the call stack. When the execution of a method ends, the frame relating tt method is removed from the call stack, which leads to execution resuming at the previous method of the stack.
+The environment that executes Java source code keeps track of the method being executed in the call stack. **The call stack** contains frames, each of which includes information about a specific method's internal variables and their values. When a method is called, a new frame containing its variables is created in the call stack. When the execution of a method ends, the frame relating to a method is removed from the call stack, which leads to execution resuming at the previous method of the stack.
 
 <!-- Alla olevan visualisaation oikealla laidalla näytetään kutsupinon toimintaa. Metodikutsun yhteydessä kutsupinoon luodaan uusi kehys, joka poistetaan metodikutsusta poistuttaessa. -->
 
