@@ -16,6 +16,11 @@ hidden: true
 
 </text-box>
 
+<text-box variant="hint" name="Motivation and study strategy questionnaire">
+Here you will answer to a questionnaire about motivation and study strategies. The questionnaire is MSLQ by Paul Pintrich and his colleaques. It contains 81 statements about motivation and study strategies. The results will be used for course development and education research.  <google-form-link href="https://docs.google.com/forms/d/e/1FAIpQLSdONWmF8GFyhMDzdpkXTeGxAi0FcRtIwPc-0e58B_7Qhl3w9g/viewform?usp=pp_url" emailfieldname="entry.575150039">Open the questionnaire by clicking this link.</google-form-link>
+</text-box>
+
+<quiz id="a8a1f3fb-8649-4819-9a83-deea85be6599"></quiz>
 
 <!-- Tähän mennessä käyttämämme "while-true" -toistolause on erittäin näppärä silloin, kun ohjelmassa tulee toistaa toiminnallisuutta kunnes käyttäjä syöttää tietynlaisen syötteen. -->
 The "while-true" loop we've been using is very handy when the program has to repeat a functionality until the user provides certain input.

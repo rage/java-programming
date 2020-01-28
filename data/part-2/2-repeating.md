@@ -750,8 +750,62 @@ The sum of the numbers is 34
 </programming-exercise>
 
 
-TODO: lead in, avaa...
-TODO: esimerkki toistolauseesta, missä kaksi muuttujaa
+Sometimes you need to use multiple variables. The example below shows a program, which reads numbers from the user until the user writes 0.
+Then the program prints the number of positive and negative numbers given, and the precentage of positive numbers from all numbers given.
+
+```java
+Scanner reader = new Scanner(System.in);
+
+// For saving number of numbers
+int numberOfPositive = 0;
+int numberOfNegative = 0;
+
+// For repeatedly asking for numbers
+while (true) {
+    System.out.println("Give a number (0 to stop): ");
+    // For reading user input
+    int numberFromUser = Integer.valueOf(reader.nextLine());
+
+    // For breaking the loop when user writes 0
+    if (numberFromUser == 0) {
+        break;
+    }
+
+    // For increasing numberOfPositive by one
+    // when user gives a positive number
+    if (numberFromUser > 0) {
+        numberOfPositive = numberOfPositive + 1;
+    }
+
+    // For increasing numberOfNegative by one
+    // when user gives a negative number
+    if (numberFromUser < 0) {
+        numberOfNegative = numberOfNegative + 1;
+    }
+
+    // Also could have used..
+    // if (numberFromUser > 0) {
+    //     numberOfPositive = numberOfPositive + 1;
+    // } else {
+    //     numberOfNegative = numberOfNegative + 1;
+    // }
+
+}
+
+// For printing the number of positive numbers
+System.out.println("Positive numbers: " + numberOfPositive);
+// For printing the number of negative numbers
+System.out.println("Negative numbers: " + numberOfNegative);
+
+// For printing the precentage of positive numbers from all numbers
+
+if (numberOfPositive + numberOfNegative > 0) {
+    // Print only if user has given numbers
+    // to avoid dividing by zero
+    double precentageOfPositives = 100.0 * numberOfPositive / (numberOfPositive + numberOfNegative);
+    System.out.println("Precentage of positive numbers: " + precentageOfPositives + "%");
+}
+```
 
 
 
