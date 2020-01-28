@@ -512,7 +512,7 @@ A few examples of the expected behaviour:
 
 **-3**
 **5**
--3 is less than 5.
+-3 is smaller than 5.
 
 </sample-output>
 
