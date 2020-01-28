@@ -1,7 +1,7 @@
 ---
 path: '/part-2/2-repeating'
 title: 'Repeating functionality'
-hidden: true
+hidden: false
 ---
 
 

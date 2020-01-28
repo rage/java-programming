@@ -2,7 +2,7 @@
 path: '/part-2/4-methods'
 # title: 'Metodit ja ohjelman jakaminen pienempiin osiin'
 title: 'Methods and dividing the program into smaller parts'
-hidden: true
+hidden: false
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
@@ -958,7 +958,6 @@ System.out.println("the result of the calculation " + luku);
 
 All the variable types we've encountered so far can be returned from a method.
 
-TODO: miksi esimerkkikoodit eivät toimi
 
 <table class="table">
   <tr>
@@ -976,6 +975,7 @@ public static void metodiJokaEiPalautaMitaan() {
     // metodin runko
 }
 ``` -->
+
 ```java
 public static void methodThatReturnsNothing() {
     // method body
@@ -992,6 +992,7 @@ public static int metodiJokaPalauttaaKokonaisLuvun() {
     // metodin runko, tarvitsee return-komennon
 }
 ``` -->
+
 ```java
 public static int methodThatReturnsInteger() {
     //method body, return statement must be included
@@ -1008,6 +1009,7 @@ public static double metodiJokaPalauttaaLiukuluvun() {
     // metodin runko, tarvitsee return-komennon
 }
 ``` -->
+
 ```java
 public static double methodThatReturnsFloatingPointNumber() {
     // method body, return statement must be included
