@@ -669,7 +669,7 @@ Total of ones: 2
 <programming-exercise name="Number of Numbers" tmcname='part02-Part02_08.NumberOfNumbers'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötettyjen lukujen lukumäärän. Syötteen loppumisesta kertovaa nollaa ei tule laskea osaksi lukujen lukumäärää. -->
-Write a program that reads values from the user until they input a 0. After this, the program prints the total number of inputted values. The zero that's used to exit the loop should is not to be included in the total number count.
+Write a program that reads values from the user until they input a 0. After this, the program prints the total number of inputted values. The zero that's used to exit the loop should not be included in the total number count.
 
 <!-- Ohjelman tulostusesimerkki: -->
 Example output of the program:
@@ -697,7 +697,7 @@ Number of numbers: 4
 <programming-exercise name="Number of negative numbers" tmcname='part02-Part02_09.NumberOfNegativeNumbers'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötteessä olleiden negatiivisten lukujen lukumäärän. Syötteen loppumisesta kertovaa nollaa ei tule laskea osaksi lukujen lukumäärää. -->
-Write a program that reads values from the user until they input a 0. After this, the program prints the total number of inputted values that are negative. The zero that's used to exit the loop should is not to be included in the total number count.
+Write a program that reads values from the user until they input a 0. After this, the program prints the total number of inputted values that are negative. The zero that's used to exit the loop should not be included in the total number count.
 
 <!-- Ohjelman tulostusesimerkki: -->
 Example output of the program:
@@ -743,7 +743,7 @@ Give a number:
 **-2**
 Give a number:
 **0**
-The sum of the numbers is 34
+Sum of the numbers: 34
 
 </sample-output>
 
