@@ -81,7 +81,7 @@ public class Program {
 
 <!-- Ohjelmissa tulee usein laskea asioita kuten lukujen keskiarvoa tai lukujen summaa. Ratkaisumalli tällaisissa ohjelmissa on seuraava. -->
 
-We quite often need to calculate something in a program, such as an average or a sum. The solution patter to solve such problems is as follows.
+We quite often need to calculate something in a program, such as an average or a sum. The solution pattern to solve such problems is as follows.
 
 <!-- 1. Määrittele laskemiseen tarvittavat syötteet ja luo niitä varten muuttujat. Ohjelman syötteitä ovat laskemisessa käytettävät arvot. Syötteiden tyypit tunnistaa tyypillisesti ongelma-alueen kuvauksesta.
 1. Selvitä tehtävä laskuoperaatio ja luo laskuoperaation tulokselle muuttuja. Tee ohjelman syötteiden perusteella lasku, jonka arvo asetetaan laskuoperaation tulokselle varattuun muuttujaan. Myös laskuoperaation tuloksen tyypin tunnistaa ongelma-alueen kuvauksesta.
@@ -93,7 +93,7 @@ We quite often need to calculate something in a program, such as an average or a
 
 <!-- Esimerkiksi ongelman _Tee ohjelma, jonka avulla voidaan laskea kahden kokonaisluvun summa_. ratkaisumalli on seuraava. -->
 
-For example, the solution patter for the problem _Create a program to calculate the sum of two integers_ is the following.
+For example, the solution pattern for the problem _Create a program to calculate the sum of two integers_ is the following.
 
 <!-- ```java
 // Määritellään syötteet ja luodaan niitä varten muuttujat
@@ -122,7 +122,7 @@ System.out.println("The sum of " + first + " and " + second + " is " + sum);
 
 <!-- Sekä lukemista että laskemista sisältävä ohjelma yhdistää edelliset ratkaisumallit. Kahden käyttäjältä pyydetyn luvun tulon laskeva ohjelma on seuraavanlainen. -->
 
-A program that both reads and calculates combines both of these patterns. One that calculates the product of two integers provided by the use looks like this:
+A program that both reads and calculates combines both of these patterns. One that calculates the product of two integers provided by the user looks like this:
 
 <!-- ```java
 // Tuodaan Scanner-apuväline ohjelman tietoon
@@ -316,7 +316,7 @@ Here are a few examples:
 
 <!-- Ongelmat sisältävät usein vaihtoehtoista toiminnallisuutta. Tällaisen toteuttamiseen käytetään ehtolauseita. Ehtolause alkaa `if`-komennosta, jota seuraa suluissa oleva lauseke. Lauseke evaluoituu joko todeksi tai epätodeksi. Mikäli lauseke evaluoituu todeksi, suoritetaan ehtolauseen lohko, joka on rajattuna aaltosuluilla. -->
 
-Problems often contain some alternative functionality, and in such case we use conditional statements. A Conditional statement starts with an `if` command followed by an expression in parentheses. The expression evaluates to either true or false. If it evaluates true, the following block delimited by curly brackets gets executed.
+Problems often contain some alternative functionality, and in such case we use conditional statements. A conditional statement starts with an `if` command followed by an expression in parentheses. The expression evaluates to either true or false. If it evaluates true, the following block delimited by curly brackets gets executed.
 
 <!-- ```java
 // jos luku on suurempi kuin viisi

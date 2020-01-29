@@ -35,7 +35,7 @@ Next, we'll come to know a few other ways to implement loops.
 So far we have been using a loop with the boolean 'true' in its paranthesis, so the loop continues forever (or until the loop is ended with the `break` command ).
 
 <!-- Toistolauseen sulut sisältävät oikeastaan ehtolausekkeen, aivan samalla tavalla kuin `if`-komentoa seuraavat sulut. Arvon `true` voi korvata lausekkeella, joka evaluoidaan ohjelman suorituksen yhteydessä. Lauseke määritellään täsmälleen samalla tavalla kuin ehtolauseen lauseke. -->
-Actually the paranthesis of a loop contain a conditional expression, or a condition, just like the paranthesis of an `if` statement. The `true` value can be replaced with an expression, which is evaluated as the program is executed. The expression is defined the same way as the condition of a conditional statement.
+Actually the paranthesis of a loop can contain a conditional expression, or a condition, just like the paranthesis of an `if` statement. The `true` value can be replaced with an expression, which is evaluated as the program is executed. The expression is defined the same way as the condition of a conditional statement.
 
 <!-- Seuraavassa esimerkissä tulostetaan luvut 1, 2, ..., 5.  Kun `luku`-muuttujan arvo on yli 5, `while`-ehto ei ole enää voimassa ja toistaminen lopetetaan. -->
 The following code prints the numbers 1,2,...,5. When the value of the variable `number` is more than 5, the `while`-condition evaluates to false and the execution ends.
@@ -131,7 +131,7 @@ We will continue practicing loops in the following exercises. You can use either
 <programming-exercise name='Counting' tmcname='part02-Part02_14.Counting'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä kokonaisluvun. Tämän jälkeen ohjelma tulostaa luvut nollasta käyttäjän syöttämään lukuun. Voit olettaa, että käyttäjä syöttää aina positiivisen luvun. Alla on muutamia esimerkkejä ohjelman toivotusta toiminnasta. -->
-Write a program that reads an integer from the user. Then the program prints numbers from 0 to the number given by the user. You can assume that the user always gives a positive number. Below is some examples of the wanted functionality.
+Write a program that reads an integer from the user. Then the program prints numbers from 0 to the number given by the user. You can assume that the user always gives a positive number. Below are some examples of the wanted functionality.
 
 <sample-output>
 
@@ -279,9 +279,9 @@ int number = 1;
 
 while (number != 2) {
     System.out.println(number);
-    luku = 2;
+    number = 2;
     System.out.println(number);
-    luku = 1;
+    number = 1;
 }
 ```
 
