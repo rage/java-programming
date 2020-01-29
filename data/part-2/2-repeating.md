@@ -698,11 +698,7 @@ Number of numbers: 4
 <programming-exercise name="Number of negative numbers" tmcname='part02-Part02_09.NumberOfNegativeNumbers'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä lukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelman tulee tulostaa syötteessä olleiden negatiivisten lukujen lukumäärän. Syötteen loppumisesta kertovaa nollaa ei tule laskea osaksi lukujen lukumäärää. -->
-<<<<<<< HEAD
-Write a program that reads values from the user until they input a 0. After this, the program prints the total number of inputted values that are negative. The zero that's used to exit the loop is not to be included in the total number count.
-=======
 Write a program that reads values from the user until they input a 0. After this, the program prints the total number of inputted values that are negative. The zero that's used to exit the loop should not be included in the total number count.
->>>>>>> cfdd5598ac17564b305f3b3a13c15e641fd8ac39
 
 <!-- Ohjelman tulostusesimerkki: -->
 Example output of the program:
