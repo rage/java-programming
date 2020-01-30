@@ -48,7 +48,8 @@ A line below the name of the class divides the name from the list of attributes 
 <!-- Luokkaakaaviossa luokkaan liittyvät oliomuuttujat määritellään muodossa "muuttujanNimi: muuttujanTyyppi". Muuttujien näkyvyysmääreet merkitään muuttujan nimeä edeltävällä miinuksella (private) tai plussalla (public). -->
 In a class diagram, class attributes are written "attributeName: attributeType". + before the attribute name means the attribute is public, and - the attribute is private.
 
-<img src="../img/diagrams/luokkakaavio-henkilo-ika-ja-nimi.png" alt="[Henkilo|-nimi:String;-ika:int]">
+<!-- <img src="../img/diagrams/luokkakaavio-henkilo-ika-ja-nimi.png" alt="[Henkilo|-nimi:String;-ika:int]"> -->
+<img src="../img/diagrams/part4.1-classdiagram-person-name-age.png" alt="[Person|-name:String;-age:int]">
 
 
 ## Describing class constructor
@@ -75,7 +76,8 @@ Methods are written +/- (debending on the visibility of the method), method name
 <!-- Parametrit noudattavat siis samaa määrittelymuotoa kuin oliomuuttujat, eli "muuttujanNimi: muuttujanTyyppi". -->
 The parameters are written the same way class attributes were, "parameterName: parameterType".
 
-<img src="../img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(nimi:String)]">
+<!-- <img src="../img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(nimi:String)]"> -->
+<img src="../img/diagrams/part4.1-classdiagram-person-name-age-constructor.png" alt="[person|-name:String;-age:int|+Person(initialName:String)]">
 
 
 ## Describing class methods
@@ -104,7 +106,8 @@ public class Person {
 In a class diagram we list all class methods with the constructors -- constructors are listed first and then all class methods.
 We also write the return type of a method to the class diagram.
 
-<img src="../img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(nimi:String);+printPerson():void]">
+<!-- <img src="../img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(nimi:String);+printPerson():void]"> -->
+<img src="../img/diagrams/part4.1-classdiagram-person-name-age-constructor-print.png" alt="[Person|-name:String;-age:int|+Person(initialName:String);+printPerson():void]">
 
 
 <text-box variant='hint' name='Luokkakaavio kertoo luokat, muuttujat, konstruktorit, ja metodit'>
@@ -142,7 +145,8 @@ public class Person {
 }
 ```
 
-<img src="../img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta-ja-getnimi.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(nimi:String);+printPerson():void;+getNimi():String]">
+<!-- <img src="../img/diagrams/luokkakaavio-henkilo-ika-ja-nimi-ja-konstruktori-ja-tulosta-ja-getnimi.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(nimi:String);+printPerson():void;+getNimi():String]"> -->
+<img src="../img/diagrams/part11.1-classdiagram-person-age-name-constructor-print-getName.png" alt="[Person|-name:String;-age:int|+Person(initialName:String);+printPerson():void;+getName():String]">
 
 
 <!-- <programming-exercise name='Asiakas' tmcname='osa11-Osa11_01.Asiakas'> -->
@@ -190,7 +194,8 @@ public class Book {
 }
 ```
 
-<img src="../img/diagrams/luokkakaavio-kirja-nimi-ja-kustantaja.png" alt="[Kirja|-nimi:String;-julkaisija:String]">
+<!-- <img src="../img/diagrams/luokkakaavio-kirja-nimi-ja-kustantaja.png" alt="[Kirja|-nimi:String;-julkaisija:String]"> -->
+<img src="../img/diagrams/part11.1-classdiagram-book-name-and-publisher.png" alt="[Book|-name:String;-publisher:String]">
 
 
 <!-- Jos luokalle kirja merkitään kirjoittaja, joka on tyyppiä Henkilo, ohjelmakoodissa oliomuuttuja merkitään muiden muuttujien seuraksi. -->
@@ -211,7 +216,8 @@ public class Book {
 In a class diagram variables which refer to other objects are not written with the rest of the class attributes, but are shown as connections between the classes. In the class diagram below we have the classes Person and Book, and the connection between them.
 
 
-<img src="../img/diagrams/luokkakaavio-kirja-nimi-ja-kustantaja-ja-kirjoittaja.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(nimi:String);+printPerson():void;+getNimi():String][Kirja|-nimi:String;-julkaisija:String][Kirja]-kirjoittaja->[Henkilo]">
+<!-- <img src="../img/diagrams/luokkakaavio-kirja-nimi-ja-kustantaja-ja-kirjoittaja.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(nimi:String);+printPerson():void;+getNimi():String][Kirja|-nimi:String;-julkaisija:String][Kirja]-kirjoittaja->[Henkilo]"> -->
+<img src="../img/diagrams/part11.1-classdiagram-book-name-and-publisher-and-author.png" alt="[Person|-name:String;-age:int|+Person(initialName:String);+printPerson():void;+getName():String][Book|-name:String;-publisher:String][Book]-author->[Person]">
 
 <!-- Nuoli kertoo "tietämyssuunnan". Yllä oleva yhteys kertoo, että kirja tietää kirjoittajansa, mutta henkilö ei tiedä mitään kirjoittamistaan kirjoista. Viivaan voi kirjoittaa myös tekstin, joka antaa lisätietoa yhteydestä. Yllä olevassa esimerkissä viivaan on kirjattu tieto siitä, että kirjaan liittyy "kirjoittaja". -->
 The arrow shows the direction of the connection. The connection above shows that a Book knows its author but a Person does not know about books they are the author of.
@@ -233,7 +239,8 @@ public class Book {
 <!-- Luokkakaaviossa tilanne merkitään yhteyden päätyyn asetettavalla tähdellä. Tähti kertoo, että kirjalla voi olla nollasta äärettömään kirjoittajaa. Alla olevassa esimerkissä yhteyteen ei ole merkitty yhteyttä kuvaavaa tekstiä "kirjoittajat", mutta se kannattaisi selkeyden takia lisätä kaavioon. -->
 In a class diagram this situation is described by adding a star to the end of the arrow showing a connection between classes. The star tells us that a book can have between 0 and unlimited number of authors. Below we have not amended the label to describe the multiplicity of the connection, but it would be a good idea for the sake of clarity.
 
-<img src="../img/diagrams/luokkakaavio-kirja-nimi-ja-kustantaja-ja-kirjoittajat.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(nimi:String);+printPerson():void;+getNimi():String][Kirja|-nimi:String;-julkaisija:String][Kirja]-*>[Henkilo]">
+<!-- <img src="../img/diagrams/luokkakaavio-kirja-nimi-ja-kustantaja-ja-kirjoittajat.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(nimi:String);+printPerson():void;+getNimi():String][Kirja|-nimi:String;-julkaisija:String][Kirja]-*>[Henkilo]"> -->
+<img src="../img/diagrams/part11.1-classdiagram-book-name-and-publisher-and-authors.png" alt="[Person|-name:String;-age:int|+Person(initialName:String);+printPerson():void;+getName():String][Book|-name:String;-publisher:String][Book]-*->[Person]">
 
 
 <!-- Metodit merkitään luokkakaavioon normaalisti. Alla luokkaan Kirja on lisätty metodit `getKirjoittajat` ja `lisaaKirjoittaja`. -->
@@ -258,7 +265,8 @@ public class Book {
 }
 ```
 
-<img src="../img/diagrams/luokkakaavio-kirja-nimi-ja-kustantaja-ja-kirjoittajat-ja-metodit.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(nimi:String);+printPerson():void;+getNimi():String][Kirja|-nimi:String;-julkaisija:String|+getAuthors():ArrayList;+lisaaKirjoittaja(kirjoittaja:Henkilo)][Kirja]-*>[Henkilo]">
+<!-- <img src="../img/diagrams/luokkakaavio-kirja-nimi-ja-kustantaja-ja-kirjoittajat-ja-metodit.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(nimi:String);+printPerson():void;+getNimi():String][Kirja|-nimi:String;-julkaisija:String|+getAuthors():ArrayList;+lisaaKirjoittaja(kirjoittaja:Henkilo)][Kirja]-*>[Henkilo]"> -->
+<img src="../img/diagrams/part11.1-classdiagram-book-name-and-publisher-and-authors-and-methods.png" alt="[Person|-name:String;-age:int|+Person(initialName:String);+printPerson():void;+getName():String][Book|-name:String;-publisher:String|+getAuthors():ArrayList;+addAuthor(author:Person)][Book]-*->[Person]">
 
 
 <!-- Ylläolevaan kaavioon voisi lisätä vielä ArrayListin sisältämien arvojen tyypin `ArrayList<Person>` sekä yhteyttä tarkentavan määreen "kirjoittajat". -->
@@ -286,7 +294,9 @@ Implement the classes in the diagram in the exercise base.
 If there is no arrowhead in a connection, both classes know about each other. Below is an example where a book knows about its author and a person knows about a book they have written.
 
 
-<img src="../img/diagrams/luokkakaavio-kirja-henkilo-kaksisuuntainen.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(nimi:String);+printPerson():void;+getNimi():String],[Kirja|-nimi:String;-julkaisija:String|+getAuthors():ArrayList;+lisaaKirjoittaja(kirjoittaja:Henkilo)],[Kirja]-*[Henkilo]">
+<!-- <img src="../img/diagrams/luokkakaavio-kirja-henkilo-kaksisuuntainen.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(nimi:String);+printPerson():void;+getNimi():String],[Kirja|-nimi:String;-julkaisija:String|+getAuthors():ArrayList;+lisaaKirjoittaja(kirjoittaja:Henkilo)],[Kirja]-*[Henkilo]"> -->
+
+<img src="../img/diagrams/part11.1-classdiagram-book-person-bidirectional.png" alt="[Person|-name:String;-age:int|+Person(initialName:String);+printPerson():void;+getName():String][Book|-name:String;-publisher:String|+getAuthors():ArrayList;+addAuthor(author:Person)][Book]-*[Person]">
 
 
 ```java
@@ -316,7 +326,8 @@ As you can see, by default -- if there is no star on the connection -- the conne
 <!-- Mikäli henkilöllä voi olla monta kirjaa ja kirjalla monta kirjoittajaa, merkitään tähti yhteyden kumpaankin päätyyn seuraavasti: -->
 If a person can have multiple books and a book can have multiple authors, we add a star to both ends of the connection:
 
-<img src="../img/diagrams/luokkakaavio-kirja-henkilo-kaksisuuntainen-monesta-moneen.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(nimi:String);+printPerson():void;+getNimi():String],[Kirja|-nimi:String;-julkaisija:String|+getAuthors():ArrayList;+lisaaKirjoittaja(kirjoittaja:Henkilo)],[Kirja]*-*[Henkilo]">
+<!-- <img src="../img/diagrams/luokkakaavio-kirja-henkilo-kaksisuuntainen-monesta-moneen.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(nimi:String);+printPerson():void;+getNimi():String],[Kirja|-nimi:String;-julkaisija:String|+getAuthors():ArrayList;+lisaaKirjoittaja(kirjoittaja:Henkilo)],[Kirja]*-*[Henkilo]"> -->
+<img src="../img/diagrams/part11.1-classdiagram-book-person-bidirectional-many-to-many.png" alt="[Person|-name:String;-age:int|+Person(initialName:String);+printPerson():void;+getName():String][Book|-name:String;-publisher:String|+getAuthors():ArrayList;+addAuthor(author:Person)][Book]*-*[Person]">
 
 <!-- Nyt luokka Henkilo olisi muotoa: -->
 Now the person class would be as follows:
@@ -352,21 +363,24 @@ Two classes, Student and University, are depicted below, as well as the connecti
 <!-- Perintä merkitään luokkakaavioon kolmion muotoisella nuolella. Kolmio on perittävän luokan päädyssä. Alla olevassa esimerkissä luokka Moottori perii luokan Osa. -->
 In a class diagram inheritance is described by an arrow with a triangle head. The triangle points to the class being inherited from. In the below example the Motor inherits the class Part.
 
-<img src="../img/diagrams/luokkakaavio-moottori-perii-osan.png" alt="[Osa|-tunnus:String;-valmistaja:String;-kuvaus:String][Moottori|-moottorityyppi:String][Osa]^-[Moottori]" />
+<!-- <img src="../img/diagrams/luokkakaavio-moottori-perii-osan.png" alt="[Osa|-tunnus:String;-valmistaja:String;-kuvaus:String][Moottori|-moottorityyppi:String][Osa]^-[Moottori]" /> -->
+<img src="../img/diagrams/part11.1-classdiagram-engine-inherits-part.png" alt="[Part|-id:String;-manufacturer:String;-description:String][Engine|-type:String][Part]^-[Engine]" />
 
 
 <!-- Alla olevaan esimerkkiin on kirjoitettu auki muistavaa tuotevarastoa käsittelevän tehtävän luokkakaavio. Muistava tuotevarasto perii tuotevaraston, joka taas perii varaston. Muutoshistoria on erillinen luokka, jonka muistava tuotevarasto sisältää. Muistava tuotevarasto tietää muutoshistorian, mutta muutoshistoria ei tiedä muistavasta tuotevarastosta. -->
 In the below example the class diagram describes the classes from the Product warehouse exercise. The ProductWarehouseWithHistory class inherits the ProductWarehouse class which in turn inherits the Warehouse class.
 ChangeHistory is a separate class connected to the ProductWarehouse. ProductWarehouseWithHistory knows about the ChangeHistory but the ChangeHistory does now know about the ProductWarehouseWithHistory.
 
-<img src="../img/diagrams/luokkakaavio-muistava-tuotevarasto.png" alt="[Varasto|-tilavuus:double;-saldo:double|+Varasto(tilavuus:double);+getSaldo():double;+getTilavuus():double;+paljonkoMahtuu():double;+lisaaVarastoon(maara:double):void;+otaVarastosta(maara:double):double;+toString():String][Tuotevarasto|-nimi:String|+Tuotevarasto(nimi:String، tilavuus:double);+getNimi():String;+setNimi(nimi:String):String;+toString():String][Muutoshistoria|-tilanteet:ArrayList|+Muutoshistoria();+lisaa(tilanne:double);+nollaa():void;...][MuistavaTuotevarasto||+MuistavaTuotevarasto(nimi:String، tilavuus:double،alkusaldo:double);+historia():String;+tulostaAnalyysi():void;+lisaaVarastoon(maara:double);+otaVarastosta(maara:double):double][Varasto]^-[Tuotevarasto][Tuotevarasto]^-[MuistavaTuotevarasto][Muutoshistoria]<-[MuistavaTuotevarasto]" />
+<!-- <img src="../img/diagrams/luokkakaavio-muistava-tuotevarasto.png" alt="[Varasto|-tilavuus:double;-saldo:double|+Varasto(tilavuus:double);+getSaldo():double;+getTilavuus():double;+paljonkoMahtuu():double;+lisaaVarastoon(maara:double):void;+otaVarastosta(maara:double):double;+toString():String][Tuotevarasto|-nimi:String|+Tuotevarasto(nimi:String، tilavuus:double);+getNimi():String;+setNimi(nimi:String):String;+toString():String][Muutoshistoria|-tilanteet:ArrayList|+Muutoshistoria();+lisaa(tilanne:double);+nollaa():void;...][MuistavaTuotevarasto||+MuistavaTuotevarasto(nimi:String، tilavuus:double،alkusaldo:double);+historia():String;+tulostaAnalyysi():void;+lisaaVarastoon(maara:double);+otaVarastosta(maara:double):double][Varasto]^-[Tuotevarasto][Tuotevarasto]^-[MuistavaTuotevarasto][Muutoshistoria]<-[MuistavaTuotevarasto]" /> -->
+<img src="../img/diagrams/part11.1-classdiagram-productWarehouseWithHistory.png" alt="[Warehouse|-capacity:double;-balance:double|+Warehouse(capacity:double);+getBalance():double;+getCapacity():double;+howMuchSpaceLeft():double;+addToWarehouse(amount:double):void;+takeFromWarehouse(amount:double):double;+toString():String][ProductWarehouse|-name:String|+ProductWarehouse(name:String، capacity:double);+getName():String;+setName(name:String):String;+toString():String][ChangeHistory|-states:ArrayList|+ChangeHistory();+add(status:double);+clear():void;...][ProductWarehouseWithHistory||+ProductWarehouseWithHistory(name:String، capacity:double، initialBalance:double);+history():String;+printAnalysis():void;+addToWarehouse(amount:double);+takeFromWarehouse(amount:double):double][Warehouse]^-[ProductWarehouse][ProductWarehouse]^-[ProductWarehouseWithHistory][ChangeHistory]<-[ProductWarehouseWithHistory]" />
 
 
 <!-- Abstraktien luokkien perintä toimii lähes samalla tavalla. Abstraktit luokat kuitenkin merkitään luokkakaavioon siten, että luokan nimen yläpuolella lukee `<<abstract>>`. Tämän lisäksi luokan nimi ja luokassa määritellyt abstraktit metodit kuvataan kursiivilla. -->
 Inheritance of abstract classes is described almost the same way as regular classes. However we add the description `<<abstract>>` above the name of the class. The name of the class and its abstract methods are also written in cursive.
 
 
-<img src="../img/diagrams/luokkakaavio-abstraktit.png" />
+<!-- <img src="../img/diagrams/luokkakaavio-abstraktit.png" /> -->
+<img src="../img/diagrams/part11.1-classdiagram-abstracts.png" />
 
 
 <programming-exercise name='Player and bot' nocoins='true' tmcname='part11-Part11_05.PlayerAndBot'>
@@ -398,7 +412,8 @@ public interface Readable {
 }
 ```
 
-<img src="../img/diagrams/luokkakaavio-rajapinta-luettava.png" alt="[&lt;&lt;interface&gt;&gt; Luettava]">
+<!-- <img src="../img/diagrams/luokkakaavio-rajapinta-luettava.png" alt="[&lt;&lt;interface&gt;&gt; Luettava]"> -->
+<img src="../img/diagrams/part11.1-classdiagram-interface-readable.png" alt="[&lt;&lt;interface&gt;&gt; Readable]">
 
 <!-- Metodit voidaan merkitä alle kuten luokkakaavioissa. -->
 Methods are described just like they are for a class.
@@ -406,7 +421,9 @@ Methods are described just like they are for a class.
 <!-- Rajapinnan toteuttaminen merkitään katkoviivalla ja kolmiolla. Alla on kuvattu tilanne, missä luokka Kirja toteuttaa rajapinnan Luettava. -->
 Implementing an interface is shown as a dashed arrow with a triangle arrowhead. Below is described a situation where Book implements interface Readable.
 
-<img src="../img/diagrams/luokkakaavio-kirja-toteuttaa-luettavan.png" alt="[<<interface>> Luettava][Kirja]-.-^[<<interface>> Luettava]">
+<!-- <img src="../img/diagrams/luokkakaavio-kirja-toteuttaa-luettavan.png" alt="[<<interface>> Luettava][Kirja]-.-^[<<interface>> Luettava]"> -->
+
+<img src="../img/diagrams/part11.1-classdiagram-book-implements-readable.png" alt="[<<interface>> Readable][Book]-.-^[<<interface>> Readable]">
 
 
 <programming-exercise name='Saveable person' tmcname='part11-Part11_06.SaveablePerson'>
