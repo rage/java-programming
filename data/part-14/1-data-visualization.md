@@ -1,7 +1,7 @@
 ---
 path: '/part-14/1-data-visualization'
 title: 'Data visualization'
-hidden: false
+hidden: true
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
