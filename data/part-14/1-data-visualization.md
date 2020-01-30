@@ -4,26 +4,34 @@ title: 'Data visualization'
 hidden: true
 ---
 
-<text-box variant='learningObjectives' name='Oppimistavoitteet'>
+<!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
-- Tunnet menetelmiä tiedon visualisointiin.
+<!-- - Tunnet menetelmiä tiedon visualisointiin.
 - Osaat käyttää Javan valmiita tiedon visualisointiin tarkoitettuja käyttöliittymäkomponentteja.
-- Tiedät tavan jatkuvasti muuttuvan tiedon visualisointiin
+- Tiedät tavan jatkuvasti muuttuvan tiedon visualisointiin -->
+- You are aware of data visualizations methods.
+- You know how to use Java's ready-made data visualization interface components.
+- You know a way to visualize information that changes dynamically.
 
 </text-box>
 
 
-Sananlasku "a picture is worth a thousand words" eli "yksi kuva kertoo enemmän kuin tuhat sanaa" kuvaa hyvin tiedon visualisoinnin tavoitetta. Tiedon visualisoinnilla pyritään tilanteeseen, missä tieto esitetään tiiviissä mutta ymmärrettävässä muodossa. Visualisaatioilla voi korostaa tärkeitä asioita ja käyttäjälle voi esimerkiksi tehdä yhteenvetoja datasta.
+<!-- Sananlasku "a picture is worth a thousand words" eli "yksi kuva kertoo enemmän kuin tuhat sanaa" kuvaa hyvin tiedon visualisoinnin tavoitetta. Tiedon visualisoinnilla pyritään tilanteeseen, missä tieto esitetään tiiviissä mutta ymmärrettävässä muodossa. Visualisaatioilla voi korostaa tärkeitä asioita ja käyttäjälle voi esimerkiksi tehdä yhteenvetoja datasta.
 
-Alla olevassa kuvassa on kuva sovelluksesta, joka mahdollistaa pyöräilijätilastojen tarkastelun. Käytetyt tilastot on noudettu osoitteessa [https://www.avoindata.fi/data/fi/dataset/helsingin-pyorailijamaarat](https://www.avoindata.fi/data/fi/dataset/helsingin-pyorailijamaarat) olevasta Helsingin kaupunkisuunnitteluviraston tietoaineistosta (CC-BY).
+Alla olevassa kuvassa on kuva sovelluksesta, joka mahdollistaa pyöräilijätilastojen tarkastelun. Käytetyt tilastot on noudettu osoitteessa [https://www.avoindata.fi/data/fi/dataset/helsingin-pyorailijamaarat](https://www.avoindata.fi/data/fi/dataset/helsingin-pyorailijamaarat) olevasta Helsingin kaupunkisuunnitteluviraston tietoaineistosta (CC-BY). -->
+The adage "a picture is worth a thousand words" describes the goal of data visualization appropriately. Data visualization seeks to present information in a concise, yet comprehensible form. Visualizations can emphasize important points and provide the user with useful things, such as summaries of data.
 
+The image below shows an application that allows you to view statistics of cyclists. The statistics used have been taken from the  the Helsinki City Planning Agency data set  (CC-BY) found at [https://www.avoindata.fi/data/en/dataset/helsingin-pyorailijamaarat](https://www.avoindata.fi/data/en/dataset/helsingin-pyorailijamaarat).
 <br/>
 
-<img src="../img/material/visualisointi-pyorat.png" />
+<!-- <img src="../img/material/visualisointi-pyorat.png" /> -->
+<img src="../img/material/visualisointi-pyorat.png" alt="cyclist data set visualization" />
 
 
-Kun vertaa kuvan näyttämää tilastoa tiedoston muotoon -- alla muutama rivi esimerkiksi -- edun huomaa hyvin. Alkuperäisessä datassa arvot on esitetty tuntikohtaisina, kun taas visualisaatiota varten datasta on luotu kuukausikohtaiset yhteenvedot. Alkuperäinen data sisältää myös kaikki tarkasteltavat paikat, kun taas visualisaatiossa käyttäjä voi valita tietyn pisteen.
+<!-- Kun vertaa kuvan näyttämää tilastoa tiedoston muotoon -- alla muutama rivi esimerkiksi -- edun huomaa hyvin. Alkuperäisessä datassa arvot on esitetty tuntikohtaisina, kun taas visualisaatiota varten datasta on luotu kuukausikohtaiset yhteenvedot. Alkuperäinen data sisältää myös kaikki tarkasteltavat paikat, kun taas visualisaatiossa käyttäjä voi valita tietyn pisteen. -->
 
+When comparing the statistics shown in the image to file format - a few lines have been shown below as an example - the benefits are evident. In the original data set the values ​​are presented on an hourly basis, whereas monthly summaries have been generated from the data for the visualization. The original set also contains all of the the places of inspection, whereas in the visualization the user is able to select a specific point.
 
 <pre>
 Päivämäärä;Huopalahti (asema);Kaisaniemi;Kulosaaren silta et.;...
@@ -36,13 +44,21 @@ ke 1 tammi 2014 03:00;;2;;;;;;0;2;0;;7;;;5;3
 
 <br/>
 
-Yllä kuvatun muotoista dataa voi käsitellä merkkijonoja riveittäin. Rivit pilkotaan paloiksi, joita voidaan käsitellä listamuotoisen rakenteen kautta. Tämä tapahtuu -- esimerkiksi -- seuraavalla tavalla.
+<!-- Yllä kuvatun muotoista dataa voi käsitellä merkkijonoja riveittäin. Rivit pilkotaan paloiksi, joita voidaan käsitellä listamuotoisen rakenteen kautta. Tämä tapahtuu -- esimerkiksi -- seuraavalla tavalla. -->
+Data that's in the format shown above can be processed as strings row by row. The rows are split into pieces that can be processed using a list structure. One way of doing this is the following.
 
-```java
+<!-- ```java
 String rivi = "Päivämäärä;Huopalahti (asema);Kaisaniemi;Kulosaaren silta et.;..."
 String[] palat = rivi.split(";");
 for (int i = 0; i < palat.length; i++) {
     System.out.println(i + ": " + palat[i]);
+}
+``` -->
+```java
+String row = "Päivämäärä;Huopalahti (asema);Kaisaniemi;Kulosaaren silta et.;..."
+String[] pieces = row.split(";");
+for (int i = 0; i < pieces.length; i++) {
+    System.out.println(i + ": " + pieces[i]);
 }
 ```
 
@@ -56,8 +72,8 @@ for (int i = 0; i < palat.length; i++) {
 
 
 
-Tutustutaan tässä muutamaan tiedon visualisointiin käytettävään kaavioon sekä erääseen liikkuvan tiedon visualisointitapaan.
-
+<!-- Tutustutaan tässä muutamaan tiedon visualisointiin käytettävään kaavioon sekä erääseen liikkuvan tiedon visualisointitapaan. -->
+We'll familiarize ourselves with some patterns used in data visualization, and a technique for visualizing changing data.
 
 <!-- ## Kaaviot -->
 
@@ -65,25 +81,25 @@ Tutustutaan tässä muutamaan tiedon visualisointiin käytettävään kaavioon s
 
 <!-- Java tarjoaa [paljon valmiita luokkia](https://docs.oracle.com/javafx/2/api/javafx/scene/chart/package-summary.html) kaavioiden piirtämiseen. Kaaviotyypit sisältävät muunmuassa aluekaavion, pylväskaavion, viivakaavion sekä piirakkakaavion. -->
 
-Java offers [a variety of classes](https://docs.oracle.com/javafx/2/api/javafx/scene/chart/package-summary.html) for drawing different types of charts. The types of charts include, among others, area charts, bar charts, and line charts.
+Java offers [lots of pre-made classes](https://docs.oracle.com/javafx/2/api/javafx/scene/chart/package-summary.html) for drawing different types of charts. The types of charts include, among others, area charts, bar charts, and line charts.
 
 <!-- Tutustutaan tässä viivakaavion ja pylväskaavion käyttöön. Kannattaa myös tutustua osoitteessa [https://docs.oracle.com/javafx/2/charts/jfxpub-charts.htm](https://docs.oracle.com/javafx/2/charts/jfxpub-charts.htm) olevaan Oraclen oppaaseen aiheesta. -->
 
-We are next going to take a look at using a line chart and a bar chart. It might we worthwhile to also take a look at Oracle's guide on the subject, which can be found at the following location: [https://docs.oracle.com/javafx/2/charts/jfxpub-charts.htm](https://docs.oracle.com/javafx/2/charts/jfxpub-charts.htm).
+We are next going to take a look at using both a line and a bar chart. It might be worthwhile to also take a look at Oracle's guide on the subject, which can be found here: [https://docs.oracle.com/javafx/2/charts/jfxpub-charts.htm](https://docs.oracle.com/javafx/2/charts/jfxpub-charts.htm).
 
 <br/>
 
 <!-- ### Viivakaavio -->
 
-### Line chart
+### Line Chart
 
 <!-- Viivakaaviota käytetään esimerkiksi ajan yli tapahtuvan muutoksen kuvaamiseen. Tieto kuvataan kaksiulotteisessa koordinaatistossa sijaitsevien pisteiden läpi piirretyllä viivalla, missä x-koordinaatti kuvaa ajanhetkeä ja y-koordinaatti muuttujan arvoa kullakin ajanhetkellä. Viivakaavio voi sisältää myös useampia muuttujia. -->
 
-Line charts can be used to illustrate change that happens over time. The data is illustrated as a line that connects dots in a two-dimencional coordinate system, where the x-axis represents time, and the y-axis the value of the variable at each ppoint of time. A line chart can also contain many different variables.
+Line charts can be used to illustrate change that happens over time. The data is illustrated as a line that connects dots in a two-dimencional coordinate system, where the x-axis represents time, and the y-axis the value of the variable at each point in time. A line chart can also contain many different variables.
 
 <!-- Viivakaaviota voi käyttää esimerkiksi Tilastokeskuksen tarjoaman puolueiden äänimääriä ja suhteellista kannatusta kunnallisvaaleissa vuosina 1968-2008 kuvaavan tiedon visualisointiin. Alkuperäinen data löytyy osoitteesta [https://tilastokeskus.fi/til/kvaa/2008/kvaa_2008_2010-07-30\_tau\_002.html](https://tilastokeskus.fi/til/kvaa/2008/kvaa_2008_2010-07-30_tau_002.html). Datasta on poimittu visualisointia varten muutama piste -- keskitymme tässä suhteelliseen kannatukseen. Käytössä oleva data on seuraavanlainen -- datan erottelussa on käytetty sarkainmerkkiä ('\t'). -->
 
-Let's use a line chart some real-world data. Statistics Finland offers data on the total votes and relative percentage of votes in Finnish communal elections in the years 1968-2008. The original data can be found at [https://tilastokeskus.fi/til/kvaa/2008/kvaa_2008_2010-07-30_tau_002.html](https://tilastokeskus.fi/til/kvaa/2008/kvaa_2008_2010-07-30_tau_002.html). Below a few point drawn from the data for visualization -- here we will focus on the relative share of the votes. Our data below uses tabs for separation (so the character '\t').
+Let's use a line chart on some real-world data. Statistics Finland offers data on the total votes and relative percentage of votes in the Finnish communal elections for the years 1968-2008. The original data can be found at [https://tilastokeskus.fi/til/kvaa/2008/kvaa_2008_2010-07-30_tau_002.html](https://tilastokeskus.fi/til/kvaa/2008/kvaa_2008_2010-07-30_tau_002.html). A few data points have been drawn from it for visualization purposes -- we'll be focusing on the relative share of the votes here. Our data below uses tabs for separation (i.e., the character '\t').
 
 <br/>
 
@@ -157,7 +173,7 @@ for (int i = 0; i < pieces.size(); i++) {
 
 <!-- Viivakaavion käyttö vaatii koordinaatiston akseleiden määrittelyn, koordinaatistoja käyttävän viivakaavion luomisen, sekä tiedon lisäämisen viivakaavioon. Ensimmäinen hahmotelma sovelluksesta on seuraava. Sovellus yrittää visualisoida RKP:n kannatusta vuosina 1968-2008. -->
 
-Using a line chart requires that we define the axes of the coordinate system, create the line chart that uses those axes, and insert the data into the created line chart. Our first take at the application follows. The progam attempts to visualize the support enjoyed by the RKP party in the years 1968-2008.
+Using a line chart requires that we define the axes of the coordinate system, create the line chart that uses those axes, and insert the data into the line chart. Our first conceptualization of the application is as follows. The progam attempts to visualize the support enjoyed by the RKP party in the years 1968-2008.
 
 <!-- ```java
 @Override
@@ -246,7 +262,7 @@ public void start(Stage stage) {
 
 <!-- Kun käynnistämme sovelluksen, huomaamme muutamia ongelmia (kokeile sovellusta ja katso miltä data näyttää). Koordinaatiston akseleiden luomiseen käytetty luokka [NumberAxis](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/chart/NumberAxis.html) tarjoaa onneksemme myös toisenlaisen konstruktorin. NumberAxin-luokan konstruktorille voi määritellä myös ala- ja yläraja sekä välien määrän näytettyjen numeroiden välillä. Määritellään alarajaksi 1968, ylärajaksi 2008, ja välien määräksi 4. -->
 
-When we start the program, there are a few problems we notice (try it out and see what the data looks like). The class that we used to create the axes, [NumberAxis](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/chart/NumberAxis.html), happens to offer another constructor, too. You can give as parameters to the constructor the lower and upper bounds, as well as the number of ticks betwen them. Let's set the lower bound as 1968, the upper bound as 2008, and the number of ticks as 4.
+When we start the program, we notice a few problems (try it out and see what the data looks like). The class that we've used to create the axes, [NumberAxis](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/chart/NumberAxis.html), happens to offer another constructor as well. You can give the lower and upper bounds as parameters to the constructor, as well as the number of ticks betwen them. Let's set the lower bound as 1968, the upper bound as 2008, and the number of ticks as 4.
 
 <br/>
 
@@ -269,7 +285,7 @@ public void start(Stage stage) {
 
 <!-- Toisen puolueen kannatuksen lisääminen onnistuu ohjelmaan vastaavasti. Alla olevassa esimerkissä kaavioon on lisätty Vihreät, joilla on ollut toimintaa vuodesta 1984 lähtien. -->
 
-Adding the support numbers of another party to the program can be accomplished in a similar manner. In the example below, we add the party VIHR to the chart -- the party has been active since the year 1984.
+Adding the numbers of support for another party to the program can be done in a similar manner. In the example below, we add the party VIHR to the chart -- the party has been active since the year 1984.
 
 
 <!-- ```java
@@ -368,7 +384,7 @@ public void start(Stage stage) {
     // create another data set that's going to be added to the chart
     XYChart.Series vihrData = new XYChart.Series();
     vihrData.setName("VIHR");
-    // and single points into the data set
+    // and single data points into the data set
     vihrData.getData().add(new XYChart.Data(1984, 2.8));
     vihrData.getData().add(new XYChart.Data(1988, 2.3));
     vihrData.getData().add(new XYChart.Data(1992, 6.9));
@@ -391,12 +407,12 @@ public void start(Stage stage) {
 
 The program should look like this when started.
 
-<img src="../img/material/chart-support-rkp-and-vihr.png"/>
+<img src="../img/material/chart-support-rkp-and-vihr.png" alt="chart showing support for the rkp and vihr parties"/>
 
 
 <!-- Edellä jokainen kaavion piste lisättiin ohjelmakoodiin manuaalisesti -- olemme ohjelmoijia, joten tämä tuntuu hieman hölmöltä. Ratkaisu on tiedon lukeminen sopivaan tietorakenteeseen, jota seuraa tietorakenteen läpikäynti ja tiedon lisääminen kaavioon. Sopiva tietorakenne on esimerkiksi puolueiden nimiä avaimena käyttävä hajautustaulu, jonka arvona on hajautustaulu -- tämä hajautustaulu sisältää numeropareja, jotka kuvaavat vuotta ja kannatusta. Nyt datan lisääminen kaavioon on suoraviivaisempaa. -->
 
-Above each data point was manually added to the program code -- since we're programmers, this approach seems needlessly tedious. The solution is to read the data into a suitable data structure, after which we go through the structure and add the data in it into the chart. A good candidate for the data structure is a hash map that uses the names of the parties as its keys. The values of the hash table are pairs of numbers that represent the year and the corresponding support number. Now it's much more straightforward to add data into the chart.
+Each data point was manually added above to the program code -- given that we're programmers, this approach feels clumsy. The solution is to read the data into a suitable data structure, after which we can go through the structure and add the data contained in it to the chart. A good candidate for this data structure is a hash map that uses the names of the parties as its keys. The values of the hash table are pairs of numbers that represent the year and the corresponding support number. It's now much more straightforward to add data into the chart.
 
 
 <!-- ```java
@@ -614,15 +630,15 @@ In the chart we see the compound interest of our savings, although with a very o
 
 <!-- ### Pylväskaaviot -->
 
-### Bar charts
+### Bar Charts
 
 <!-- Pylväskaavioita käytetään kategorisen datan visualisointiin. Tieto kuvataan pylväinä, missä jokainen pylväs kuvaa tiettyä kategoriaa, ja pylvään korkeus (tai pituus) kategoriaan liittyvää arvoa. Pylväskaavioilla kuvattavasta datasta esimerkkejä ovat esimerkiksi maiden asukasluvut tai kauppojen tai tuotteiden markkinaosuudet. -->
 
-Bar charts can be used to visualize categorical data. The data is represented as bars --  each bar represents a certain category, and its height (or length) represents the value associated with the category. Examples of data that could well be illustrated with bar charts are populations of countries, or market shares of stores or products.
+Bar charts are used to visualize categorical data. The data is represented as bars --  each bar represents a certain category, and its height (or length) represents the value associated with the category. Examples of data that could well be illustrated with bar charts are populations of countries or the market shares of stores or products.
 
 <!-- Tarkastellaan pylväskaavion käyttöä pohjoismaiden asukaslukujen visualisointiin. Käytetty data on Wikipedian pohjoismaita kuvaavasta artikkelista osoitteesta [https://fi.wikipedia.org/wiki/Pohjoismaat](https://fi.wikipedia.org/wiki/Pohjoismaat) (noudettu 10.4.2017, asukasluvut ovat vuoden 2015 arvioita). -->
 
-Let's take a look at using a bar chart to visualize the population counts of the Nordic countries. The used data is from [the Wikipedia article on the Nordic countries](https://en.wikipedia.org/wiki/Nordic_countries) (retrieved 6.12.2019, populations are estimates from the year 2018).
+Let's take a look at using a bar chart to visualize the population figures of the Nordic countries. The used data is from [the Wikipedia article on the Nordic countries](https://en.wikipedia.org/wiki/Nordic_countries) (retrieved 6.12.2019, populations are estimates from the year 2018).
 
 <br/>
 
@@ -645,7 +661,7 @@ Denmark, 5809502
 
 <!-- Pylväskaavio luodaan JavaFx:n luokan [BarChart](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/chart/BarChart.html) avulla. Kuten viivakaavion käyttö, myös pylväskaavion käyttö vaatii käytettävien koordinaatistojen määrittelyn sekä tiedon lisäämisen kaavioon. Toisin kuin viivakaavioesimerkissä, tässä käytämme x-akselin määrittelyssä kategorista kategorista [CategoryAxis](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/chart/CategoryAxis.html)-luokkaa. Kun käytössä on CategoryAxis-luokka, kaavion akselin arvojen tyyppi on String, mikä tulee näkyä myös kaavioon lisättävässä datassa. -->
 
-We will use the JavaFx class [BarChart](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/chart/BarChart.html). Like with line charts, using bar charts requires defining the used axes and adding the data into the chart. However, in this case we are going to take advantage of the categorical [CategoryAxis](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/chart/CategoryAxis.html) class when we define the x axis. With the CategoryAxis class, the type of axis values is String, which must be accounted for also in the data that is going to be added to the chart.
+We'll use the JavaFx [BarChart] class (https://docs.oracle.com/javase/8/javafx/api/javafx/scene/chart/BarChart.html). As with line charts, the axes have to be defined and data has to be added to the chart. In this case, however, we're going to take advantage of the categorical [CategoryAxis](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/chart/CategoryAxis.html) class to define the x axis. With the CategoryAxis class, the type of the axis values is String. This must also be accounted for in the data that is going to be added to the chart.
 
 <br/>
 
@@ -711,11 +727,11 @@ public void start(Stage stage) {
 
 The source code above produces the following chart.
 
-<img src="../img/material/chart-nordic-countries-populations.png" />
+<img src="../img/material/chart-nordic-countries-populations.png" alt="A bar chart showing the populations of the Nordic countries"/>
 
 <!-- Kuten huomaat, kun x-akseli on määritelty luokan CategoryAxis avulla, kaavio noudattaa sitä järjestystä, missä kategoriat annetaan sovellukselle. Edellisessä esimerkissä maat on järjestetty asukaslukumäärien mukaan. Kokeile muokata sovellusta siten, että pohjoismaat on järjestetty maan nimen mukaan kaaviossa. Ymmärrät mahdollisesti sovelluksen käynnistettyäsi miksei kyseistä visualisaatiota näytetä tällaisessa järjestyksessä lähes missään... -->
 
-As you can see, since the x-axis is defined with the CategoryAxis class, the chart follows the order in which the categories are supplied to the program. In the previous example the countries are ordered by population. Try to modify the program so that the Nordic countries are sorted by their names in the chart. You might understand after starting the application why this order is rarely ever used in visualizations...
+As you notice, since the x-axis is defined with the CategoryAxis class, the chart follows the order in which the categories are supplied to the program. In the previous example, the countries were ordered by population. Try to modify the program so that the chart orders the Nordic countries by name. After launching the application you may be able to understand why this form of visualization is hardly used...
 
 
 <programming-exercise name='Unfair Advertisement' tmcname='part14-Part14_04.UnfairAdvertisement'>
@@ -748,23 +764,27 @@ In the exercise base there is a ready application that illustrates cycling stati
 </programming-exercise>
 
 
-## Jatkuvasti muuttuvan tiedon visualisointi
+<!-- ## Jatkuvasti muuttuvan tiedon visualisointi -->
+## Visualizing Dynamic Data
 
 
-Ohjelmistoja käytetään myös jatkuvasti muuttuvan tiedon visualisaatioon. Esimerkiksi osakekurssien seurantaan käytetyt ohjelmistot hakevat jatkuvasti uusinta tietoa osakekursseista ja näyttävät tietoa käyttäjälle. Vastaavasti sääohjelmistot hakevat mittausasemien tietoja, ja näyttävät viimeisimmän tiedon käyttäjälle. Samalla tavoin toimivat myös palvelinohjelmistojen seurantaan kehitetyt ohjelmistot, jotka tietyin aikavälein tarkastavat vastaako palvelinohjelmisto pyyntöihin.
+<!-- Ohjelmistoja käytetään myös jatkuvasti muuttuvan tiedon visualisaatioon. Esimerkiksi osakekurssien seurantaan käytetyt ohjelmistot hakevat jatkuvasti uusinta tietoa osakekursseista ja näyttävät tietoa käyttäjälle. Vastaavasti sääohjelmistot hakevat mittausasemien tietoja, ja näyttävät viimeisimmän tiedon käyttäjälle. Samalla tavoin toimivat myös palvelinohjelmistojen seurantaan kehitetyt ohjelmistot, jotka tietyin aikavälein tarkastavat vastaako palvelinohjelmisto pyyntöihin.
 
 
-Luokkaa [AnimationTimer](https://docs.oracle.com/javase/8/javafx/api/javafx/animation/AnimationTimer.html) voidaan hyödyntää myös jatkuvasti muuttuvan tiedon visualisoinnissa. AnimationTimer-luokan avulla voidaan luoda sovellus, joka hakee tai luo uutta tietoa ajoittain sovellukseen.
+Luokkaa [AnimationTimer](https://docs.oracle.com/javase/8/javafx/api/javafx/animation/AnimationTimer.html) voidaan hyödyntää myös jatkuvasti muuttuvan tiedon visualisoinnissa. AnimationTimer-luokan avulla voidaan luoda sovellus, joka hakee tai luo uutta tietoa ajoittain sovellukseen. -->
+Software is also used to visualize contunually changing information. As an example, the software used to track share prices is constantly searching for the latest share prices and displaying that information to the user. Similarly, weather software retrieves data from stations and displays the most recent information to the user. Software developed for monitoring server-side software works in the same way by pinging the various parts of the server-side software at certain intervals to check for responses.
 
+
+The [AnimationTimer](https://docs.oracle.com/javase/8/javafx/api/javafx/animation/AnimationTimer.html) class can also be used to visualize dynamic data. The AnimationTimer class can be used to create an application that periodically retrieves or creates new information for the application.
 <br/>
 
 
-Alla olevassa esimerkissä havainnollistetaan [suurten lukujen lakia](https://fi.wikipedia.org/wiki/Suurten_lukujen_laki). Suurten lukujen laki on todennäköisyyslaskentaan liittyvä ilmiö, joka kertoo, erttä satunnaismuuttujan keskiarvo lähestyy satunnaismuuttujan odotusarvoa kun toistojen määrä kasvaa. Käytännössä esimerkiksi kuusisivuisen nopan heittojen keskiarvo lähestyy heittojen lukumäärän kasvaessa lukua 3.5. Vastaavasti kolikkoa heitettäessä kruunien ja klaavojen suhde lähestyy "fifti-fifti"-jakoa kun kolikonheittojen määrä kasvaa.
-
+<!-- Alla olevassa esimerkissä havainnollistetaan [suurten lukujen lakia](https://fi.wikipedia.org/wiki/Suurten_lukujen_laki). Suurten lukujen laki on todennäköisyyslaskentaan liittyvä ilmiö, joka kertoo, erttä satunnaismuuttujan keskiarvo lähestyy satunnaismuuttujan odotusarvoa kun toistojen määrä kasvaa. Käytännössä esimerkiksi kuusisivuisen nopan heittojen keskiarvo lähestyy heittojen lukumäärän kasvaessa lukua 3.5. Vastaavasti kolikkoa heitettäessä kruunien ja klaavojen suhde lähestyy "fifti-fifti"-jakoa kun kolikonheittojen määrä kasvaa. -->
+The example below illustrates [the large numbers law](https://en.wikipedia.org/wiki/Larger_numbers_Law). This law is a phenomenon related to probability calculus, which says that the average of a random variable approaches the expected value of the random variable as the number of iterations increases. In practice, for example, the average of rolls of a six-sided dice approaches 3.5 as the number of rolls increases. In the same way, when a coin is thrown the heads-to-tails ratio approaches a "fifty-fifty" split as the number of coin throws increases.
 <br/>
 
 
-```java
+<!-- ```java
 @Override
 public void start(Stage ikkuna) {
     // Luokkaa Random käytetään nopan heittojen arpomiseen
@@ -813,26 +833,90 @@ public void start(Stage ikkuna) {
     ikkuna.setScene(nakyma);
     ikkuna.show();
 }
+``` -->
+```java
+@Override
+public void start(Stage stage) {
+    // The class Random is used to randomize the dice rolls
+    Random random = new Random();
+
+    NumberAxis xAxis = new NumberAxis();
+    // y-axes represents the average of the rolls. The average is always between [1-6]
+    NumberAxis yAxis = new NumberAxis(1, 6, 1);
+
+    LineChart<Number, Number> lineChart = new LineChart<>(xAxis, yAxis);
+    // removing elements of the chart, e.g. circles on points
+    lineChart.setLegendVisible(false);
+    lineChart.setAnimated(false);
+    lineChart.setCreateSymbols(false);
+
+    // we create a variable representing the data and add it to the chart
+    XYChart.Series average = new XYChart.Series();
+    lineChart.getData().add(average);
+
+    new AnimationTimer() {
+        private long previous;
+        private long sum;
+        private long count;
+
+        @Override
+        public void handle(long current) {
+            if (current - previous < 100_000_000L) {
+                return;
+            }
+
+            previous = current;
+
+            // roll the dice
+            int number = random.nextInt(6) + 1;
+
+            // we grow the sum and increment the count
+            sum += number;
+            count++;
+
+            // we add a new data point to the chart
+            average.getData().add(new XYChart.Data(count, 1.0 * sum / count));
+        }
+    }.start();
+
+    Scene scene = new Scene(lineChart, 400, 300);
+    stage.setScene(scene);
+    stage.show();
+}
 ```
 
-Alla olevassa kuvassa on esimerkki sovelluksen toiminnassa. Kuvassa noppaa on heitetty lähes 100 kertaa.
+<!-- Alla olevassa kuvassa on esimerkki sovelluksen toiminnassa. Kuvassa noppaa on heitetty lähes 100 kertaa. -->
+The image below shows an example of the application in use. The dice has been rolled nearly a 100 times in it.
 
-<img src="../img/material/kaavio-suurten-lukujen-laki.png"/>
+<img src="../img/material/kaavio-suurten-lukujen-laki.png" alt="A chart illustrating the law of large numbers"/>
 
 
-Tarkkasilmäiset lukijat saattoivat huomata, että sovelluksen lähdekoodissa kaaviota ei piirretty uudestaan datan lisäämisen yhteydessä. Mitä ihmettä?
+<!-- Tarkkasilmäiset lukijat saattoivat huomata, että sovelluksen lähdekoodissa kaaviota ei piirretty uudestaan datan lisäämisen yhteydessä. Mitä ihmettä?
 
 Kaaviot kuten LineChart ja BarChart käyttävät sisäisen tiedon säilömiseen [ObservableList](https://docs.oracle.com/javase/8/javafx/api/javafx/collections/ObservableList.html)-rajapinnan toteuttavaa tietorakennetta. ObservableList-rajapinnan toteuttavat kokoelmat tarjoavat mahdollisuuden kokoelmissa tapahtuvien muutosten kuunteluun. Kun listalle lisätään uusi tietue, esimerkiksi uusi keskiarvoa kuvaava piste, kertoo lista muutoksesta kaikille listan muutoksia kuunteleville olioille. Kaavioiden kuten LineChart ja BarChart sisäinen toteutus on tehty siten, että ne kuuntelevat muutoksia niiden näyttämään tietoon. Jos tieto muuttuu, päivittyy kaavio automaattisesti.
 
 Joissain tilanteissa jatkuvasti muuttuvasta datasta halutaan näkyville esimerkiksi vain viimeiset 100 havaintoa. Tämä onnistuisi edellisessä esimerkissä asettamalla x-akselia kuvaavan NumberAxis-olion arvojen arvailu pois päältä (metodi setAutoRanging(false)) sekä lisäämällä seuraavan tarkistuksen AnimationTimer-luokan handle-metodin loppuun.
+ -->
+Eagle-eyed readers may have noticed that the application's source code did not re-draw the chart as data was added. What on earth?
 
+Charts such as LineChart and BarChart use a data structure that implements the [ObservableList](https://docs.oracle.com/javase/8/javafx/api/javafx/collections/ObservableList.html) interface to store internal data. Collections that implement the ObservableList interface provide the ability to listen to changes in collections. When a new record is added to the list, such as a new data point for the mean, the list informs all of the objects listening to changes on the list of this change. Charts such as LineChart and BarChart are constructed internally in a way that they listen to changes in the information that they display. If the data changes, the chart is updated automatically.
 
-```java
+In some situations we may only want to display the 100 most recent observations of the dynamically changing data. This can be done in the previous example by turning off the random value generation representing the x-axis of the NumberAxis object (the method setAutoRanging(false)), and by adding the following check to the end of the handle method of the AnimationTimer class.
+
+<!-- ```java
 if (keskiarvo.getData().size() > 100) {
     keskiarvo.getData().remove(0);
     xAkseli.setLowerBound(xAkseli.getLowerBound() + 1);
     xAkseli.setUpperBound(xAkseli.getUpperBound() + 1);
 }
+``` -->
+```java
+if (average.getData().size() > 100) {
+    average.getData().remove(0);
+    xAxis.setLowerBound(xAxis.getLowerBound() + 1);
+    xAxis.setUpperBound(xAxis.getUpperBound() + 1);
+}
 ```
 
-Nyt sovellus näyttää käyttäjälle aina vain viimeiset 100 arvoa.
+<!-- Nyt sovellus näyttää käyttäjälle aina vain viimeiset 100 arvoa. -->
+The application now only displays the last 100 observations to the user.
