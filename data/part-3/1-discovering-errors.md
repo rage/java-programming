@@ -7,10 +7,9 @@ hidden: true
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
 <text-box variant='learningObjectives' name='Learning Objectives'>
-
-- You can use comments to clarify your code
-
-- You know how to begin searching for the causes of errors
+ - Know the term perceptual blindness, and know can learn to regodnize essential (and unessential) things with practice.
+ - Know ways to comment code, and understand the importance of variable names on readability of your code.
+ - Know the concept print-debugging, and know how to search for errors in the source code by printing.
 
 </text-box>
 
