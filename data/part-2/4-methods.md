@@ -1415,7 +1415,7 @@ public static int sum(int first, int second) {
 
 <!-- Nyt pääohjelman muuttujan `luku1` arvo kopioituu metodin parametrin `eka` arvoksi ja pääohjelman muuttujan `luku2` arvo kopioituu metodin parametrin `toka` arvoksi. -->
 
-Now the value of the variable `number1` is copied as the value of the method parameter `first`, and the value of the variable `number1` is copied as the value of the parameter `second`.
+Now the value of the variable `number1` is copied as the value of the method parameter `first`, and the value of the variable `number2` is copied as the value of the parameter `second`.
 
 
 <quiz id="fa98830f-8715-5acb-ae72-aad063574ae0"></quiz>
