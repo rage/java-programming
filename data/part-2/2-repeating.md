@@ -874,7 +874,7 @@ Average of the numbers: 8.5
 <programming-exercise name='Average of positive numbers' tmcname='part02-Part02_13.AverageOfPositiveNumbers'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä kokonaislukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelma tulostaa syötteessä esiintyneiden positiivisten (eli nollaa suurempien lukujen) keskiarvon. -->
-Write a number that asks user for input until the user inputs 0.
+Write a program that asks user for input until the user inputs 0.
 After this, the program prints the average of the positive numbers (numbers that are greater than zero).
 
 <!-- Mikäli ohjelmassa ei syötetä yhtäkään positiivista lukua, ohjelman tulee tulostaa "keskiarvon laskeminen ei ole mahdollista". -->

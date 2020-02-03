@@ -981,7 +981,7 @@ public static void methodThatReturnsNothing() {
     // method body
 }
 ```
-    </td>
+  </td>
   </tr>
   <tr>
     <!-- <td>Metodi palauttaa `int`-tyyppisen muuttujan</td> -->
@@ -998,7 +998,7 @@ public static int methodThatReturnsInteger() {
     //method body, return statement must be included
 }
 ```
-    </td>
+  </td>
   </tr>
   <tr>
     <!-- <td>Metodi palauttaa `double`-tyyppisen muuttujan</td> -->
@@ -1015,7 +1015,7 @@ public static double methodThatReturnsFloatingPointNumber() {
     // method body, return statement must be included
 }
 ```
-    </td>
+  </td>
   </tr>
 </table>
 
