@@ -97,7 +97,7 @@ public class Program {
 
 <!-- Listan luominen tapahtuu sanomalla "`ArrayList<Tyyppi> lista = new ArrayList<>()`", missä _Tyyppi_ on listalle säilöttävien arvojen tyyppi, eli esimerkiksi `String`. Alla olevassa esimerkissä luodaan merkkijonojen säilömiseen tarkoitettu lista. -->
 
-Creating a new list is done with the command `ArrayList<Type> list = new ArrayList<>()`, where _Type_ is the type of the values to be stored in the list (e.g. `String`). We create a list for storing integers in the example below.
+Creating a new list is done with the command `ArrayList<Type> list = new ArrayList<>()`, where _Type_ is the type of the values to be stored in the list (e.g. `String`). We create a list for storing strings in the example below.
 
 <!-- ```java
 // tuodaan lista ohjelman käyttöön
@@ -190,7 +190,7 @@ lista.add("String on viittaustyyppinen muuttuja");
 
 ```java
 ArrayList<String> list = new ArrayList<>();
-lista.add("String is a reference-type variable");
+list.add("String is a reference-type variable");
 ```
 
 <!-- Kun lista on luotu, ArrayList olettaa, että sen sisältämät muuttujat ovat viittaustyyppisiä. Java muuntaa automaattisesti `int`-tyyppisen muuttujan `Integer`-tyyppiseksi kun se lisätään listalle, sama tapahtuu myös kun muuttuja haetaan listalta. Vastaava muunnos tapahtuu myös `double`-tyyppiselle muuttujalle, josta tulee `Double`-tyyppinen muuttuja. Tämä tarkoittaa sitä, että vaikka lista määritellään `Integer`-tyyppisiä arvoja sisältäväksi, voi siihen lisätä `int`-tyyppisiä arvoja. -->
@@ -688,12 +688,12 @@ System.out.println("Listalla arvoja: " + arvoja);
 ArrayList<String> list = new ArrayList<>();
 System.out.println("Number of values on the list: " + list.size());
 
-lista.add("First");
+list.add("First");
 System.out.println("Number of values on the list: " + list.size());
 
 int values = list.size();
 
-lista.add("Second");
+list.add("Second");
 System.out.println("Number of values on the list: " + values);
 ```
 
@@ -1048,7 +1048,7 @@ numbers.add(2);
 numbers.add(3);
 numbers.add(4);
 
-int index = numbres.size() - 1;
+int index = numbers.size() - 1;
 while (index >= 0) {
     int number = numbers.get(index);
     System.out.println(number);
@@ -1083,7 +1083,7 @@ Try and recreate the previous example with the for loop!
 
 <!-- Seuraavissa tehtävissä harjoitellaan listan ja indeksin käyttöä. Vaikka pystyisit tekemään tehtävät ilman listaa, keskity tehtävissä listan käytön harjoitteluun. Tehtävissä toivottu toiminnallisuus tulee toteuttaa lukujen lukemisen jälkeen. -->
 
-The next exercises are meant for learning to use lists and indices. Even if you could complete the execises without a list, concentrate on training to use it. The functionality in the exercises is to be implemented after reading the input numbers.
+The next exercises are meant for learning to use lists and indices. Even if you could complete the exercises without a list, concentrate on training to use it. The functionality in the exercises is to be implemented after reading the input numbers.
 
 </text-box>
 
@@ -1372,7 +1372,7 @@ The greatest number: 93
 
 <!-- Ota mallia allaolevasta pienintä lukua etsivästä lähdekoodista. -->
 
-You can use the source code below as an inspitation. It is used to find the smallest number.
+You can use the source code below as an example. It is used to find the smallest number.
 
 <!-- ```java
 // oletetaan, että käytössämme on lista, jossa on kokonaislukuja
@@ -1416,7 +1416,7 @@ The exercise template contains a base that reads numbers from the user and adds 
 
 <!-- Lisää ohjelmaan toiminnallisuus, joka kysyy käyttäjältä lukua ja kertoo luvun indeksin. Mikäli lukua ei löydy, ohjelman ei tule kertoa siitä. -->
 
-Expand the program that then asks the user for a number, and reporst that number's index in the list. If the number is not found, the program should not print anything.
+Expand the program that then asks the user for a number, and reports that number's index in the list. If the number is not found, the program should not print anything.
 
 <!-- <sample-output>
 
@@ -1588,7 +1588,7 @@ for (String teacher: teachers) {
 
 <!-- Yllä kuvattu for-each toistolause käytännössä piilottaa osan aiemmin harjoittelemastamme for-toistolauseesta. Edellä kuvattu for-each toistolause näyttäisi for-toistolauseella toteutettuna seuraavalta: -->
 
-In practical terms, the for-each loop described above hides some parts of the for-loop we practiced earlier.The for-each loop would look like this if implemented as a for-loop:
+In practical terms, the for-each loop described above hides some parts of the for-loop we practiced earlier. The for-each loop would look like this if implemented as a for-loop:
 
 <!-- ```java
 ArrayList<String> opettajat = new ArrayList<>();
@@ -1613,7 +1613,7 @@ teachers.add("Samuel");
 teachers.add("Ann");
 teachers.add("Anna");
 for (int i = 0; i < teachers.size(); i++) {
-    String teacher = teacher.get(i);
+    String teacher = teachers.get(i);
     // contents of the for each loop:
     System.out.println(teacher);
 }
@@ -1707,7 +1707,7 @@ Average: 23.25
 
 <!-- Listan metodi **remove** poistaa listalta parametrina annettuun indeksiin liittyvän arvon. Parametri annetaan kokonaislukuna. -->
 
-The list's \*_remove_ method removes the value that is located at the index that's given as the parameter. The parameter is an integer.
+The list's **remove** method removes the value that is located at the index that's given as the parameter. The parameter is an integer.
 
 <!-- ```java
 ArrayList<String> lista = new ArrayList<>();
@@ -1869,7 +1869,7 @@ list.add("First");
 list.add("Second");
 list.add("Third");
 
-System.out.println("Is the first found? " + lista.contains("First"));
+System.out.println("Is the first found? " + list.contains("First"));
 
 boolean found = list.contains("Second");
 if (found) {
@@ -1892,7 +1892,7 @@ Toka löytyi yhä
 
 <sample-output>
 
-Can we find first? true
+Is the first found? true
 Second was found
 Second can still be found
 
@@ -1962,7 +1962,7 @@ Logan was not found!
 
 <!-- Kuten muutkin muuttujat, myös listan voi asettaa metodin parametriksi. Kun lista määritellään metodin parametriksi, määritellään parametrin tyypiksi listan tyyppi sekä listan sisältämien arvojen tyyppi. Alla oleva metodi `tulosta` tulostaa listan arvot yksitellen. -->
 
-Like other variables, a list, too, can be used as a parameter to a method. When the method is defined to take a list as a parameter, the type of the parameter is defined as the type of the list and the type of the values contained in that list. Below, the method `print` prints the values in the list one by one.
+Like other variables, a list can be used as a parameter to a method too. When the method is defined to take a list as a parameter, the type of the parameter is defined as the type of the list and the type of the values contained in that list. Below, the method `print` prints the values in the list one by one.
 
 <!-- ```java
 public static void tulosta(ArrayList<String> lista) {
@@ -2112,7 +2112,7 @@ numbers.add(2);
 numbers.add(6);
 numbers.add(-1);
 numbers.add(5);
-numnbers.add(1);
+numbers.add(1);
 
 System.out.println("The numbers in the range [0, 5]");
 printNumbersInRange(numbers, 0, 5);
@@ -2207,7 +2207,7 @@ public static double average(ArrayList<Integer> numbers) {
 
 <!-- Luo tehtäväpohjaan metodi `public static int summa(ArrayList<Integer> luvut)`. Metodin tulee palauttaa parametrina annetun listan lukujen summa. -->
 
-Create the method `public static int sum(ArrayList<Integer> numers)` in the exercise template. The method is to return the sum of the numbers in the parameter list.
+Create the method `public static int sum(ArrayList<Integer> numbers)` in the exercise template. The method is to return the sum of the numbers in the parameter list.
 
 <!-- ```java
 ArrayList<Integer> luvut = new ArrayList<>();
@@ -2414,8 +2414,8 @@ exercises1.add("Ada Lovelace");
 exercises1.add("Hello World! (Ja Mualima!)");
 exercises1.add("Six");
 
-tehtavat2.add("Adding a positive number");
-tehtavat2.add("Employee's pension insurance");
+exercises2.add("Adding a positive number");
+exercises2.add("Employee's pension insurance");
 
 System.out.println("The size of list 1: " + exercises1.size());
 System.out.println("The size of list 2: " + exercises2.size());
