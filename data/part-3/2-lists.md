@@ -97,7 +97,7 @@ public class Program {
 
 <!-- Listan luominen tapahtuu sanomalla "`ArrayList<Tyyppi> lista = new ArrayList<>()`", missä _Tyyppi_ on listalle säilöttävien arvojen tyyppi, eli esimerkiksi `String`. Alla olevassa esimerkissä luodaan merkkijonojen säilömiseen tarkoitettu lista. -->
 
-Creating a new list is done with the command `ArrayList<Type> list = new ArrayList<>()`, where _Type_ is the type of the values to be stored in the list (e.g. `String`). We create a list for storing integers in the example below.
+Creating a new list is done with the command `ArrayList<Type> list = new ArrayList<>()`, where _Type_ is the type of the values to be stored in the list (e.g. `String`). We create a list for storing strings in the example below.
 
 <!-- ```java
 // tuodaan lista ohjelman käyttöön
@@ -673,12 +673,12 @@ The number of values on a list is provided by the list's **size** method which r
 
 <!-- ```java
 ArrayList<String> lista = new ArrayList<>();
-System.out.println("Listalla arvoja: " + lista.size());
+System.out.println("Listalla arvoja: " + list.size());
 
 lista.add("Eka");
-System.out.println("Listalla arvoja: " + lista.size());
+System.out.println("Listalla arvoja: " + list.size());
 
-int arvoja = lista.size();
+int arvoja = list.size();
 
 lista.add("Toka");
 System.out.println("Listalla arvoja: " + arvoja);
@@ -1007,7 +1007,7 @@ numbers.add(4);
 for (int i = 0; i < numbers.size(); i++) {
     int number = numbers.get(i);
     System.out.println(number);
-    // alternatively: System.out.println(nubers.get(i));
+    // alternatively: System.out.println(numbers.get(i));
 }
 ```
 
@@ -1342,7 +1342,7 @@ The exercise template contains a base that reads numbers from the user and adds 
 
 <!-- Lisää ohjelmaan toiminnallisuus, joka lukujen lukemisen jälkeen etsii listalta listan suurimman luvun ja tulostaa sen arvon. Ohjelman pitäisi toimia seuraavasti. -->
 
-Continue developing the program so that it ends the greatest number in the list and prints its value after reading all the numbers. The programming should work in the following manner.
+Continue developing the program so that it finds the greatest number in the list and prints its value after reading all the numbers. The programming should work in the following manner.
 
 <!-- <sample-output>
 
@@ -1416,7 +1416,7 @@ The exercise template contains a base that reads numbers from the user and adds 
 
 <!-- Lisää ohjelmaan toiminnallisuus, joka kysyy käyttäjältä lukua ja kertoo luvun indeksin. Mikäli lukua ei löydy, ohjelman ei tule kertoa siitä. -->
 
-Expand the program that then asks the user for a number, and reporst that number's index in the list. If the number is not found, the program should not print anything.
+Expand the program that then asks the user for a number, and report that number's index in the list. If the number is not found, the program should not print anything.
 
 <!-- <sample-output>
 
@@ -1547,7 +1547,7 @@ Found at index: 3
 
 <!-- Vihje: yhdistele tässä tehtävissä "Listan suurin luku" ja "Kysytyn luvun indeksi" harjoittelemiasi ohjelmia. Etsi ensin pienin luku, ja etsi tämän jälkeen pienimmän luvun indeksi. -->
 
-Hint: combine the programs you wrote for the exercises "Greatest number in the list" and "Index of the requested number". First find the smalleest number, and then find the index of that number.
+Hint: combine the programs you wrote for the exercises "Greatest number in the list" and "Index of the requested number". First find the smallest number, and then find the index of that number.
 
 </programming-exercise>
 
@@ -1869,7 +1869,7 @@ list.add("First");
 list.add("Second");
 list.add("Third");
 
-System.out.println("Is the first found? " + lista.contains("First"));
+System.out.println("Is the first found? " + list.contains("First"));
 
 boolean found = list.contains("Second");
 if (found) {
@@ -2112,7 +2112,7 @@ numbers.add(2);
 numbers.add(6);
 numbers.add(-1);
 numbers.add(5);
-numnbers.add(1);
+numbers.add(1);
 
 System.out.println("The numbers in the range [0, 5]");
 printNumbersInRange(numbers, 0, 5);
@@ -2207,7 +2207,7 @@ public static double average(ArrayList<Integer> numbers) {
 
 <!-- Luo tehtäväpohjaan metodi `public static int summa(ArrayList<Integer> luvut)`. Metodin tulee palauttaa parametrina annetun listan lukujen summa. -->
 
-Create the method `public static int sum(ArrayList<Integer> numers)` in the exercise template. The method is to return the sum of the numbers in the parameter list.
+Create the method `public static int sum(ArrayList<Integer> numbers)` in the exercise template. The method is to return the sum of the numbers in the parameter list.
 
 <!-- ```java
 ArrayList<Integer> luvut = new ArrayList<>();
@@ -2414,8 +2414,8 @@ exercises1.add("Ada Lovelace");
 exercises1.add("Hello World! (Ja Mualima!)");
 exercises1.add("Six");
 
-tehtavat2.add("Adding a positive number");
-tehtavat2.add("Employee's pension insurance");
+exercises2.add("Adding a positive number");
+exercises2.add("Employee's pension insurance");
 
 System.out.println("The size of list 1: " + exercises1.size());
 System.out.println("The size of list 2: " + exercises2.size());
