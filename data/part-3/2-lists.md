@@ -190,7 +190,7 @@ lista.add("String on viittaustyyppinen muuttuja");
 
 ```java
 ArrayList<String> list = new ArrayList<>();
-lista.add("String is a reference-type variable");
+list.add("String is a reference-type variable");
 ```
 
 <!-- Kun lista on luotu, ArrayList olettaa, että sen sisältämät muuttujat ovat viittaustyyppisiä. Java muuntaa automaattisesti `int`-tyyppisen muuttujan `Integer`-tyyppiseksi kun se lisätään listalle, sama tapahtuu myös kun muuttuja haetaan listalta. Vastaava muunnos tapahtuu myös `double`-tyyppiselle muuttujalle, josta tulee `Double`-tyyppinen muuttuja. Tämä tarkoittaa sitä, että vaikka lista määritellään `Integer`-tyyppisiä arvoja sisältäväksi, voi siihen lisätä `int`-tyyppisiä arvoja. -->
@@ -688,12 +688,12 @@ System.out.println("Listalla arvoja: " + arvoja);
 ArrayList<String> list = new ArrayList<>();
 System.out.println("Number of values on the list: " + list.size());
 
-lista.add("First");
+list.add("First");
 System.out.println("Number of values on the list: " + list.size());
 
 int values = list.size();
 
-lista.add("Second");
+list.add("Second");
 System.out.println("Number of values on the list: " + values);
 ```
 
@@ -1007,7 +1007,7 @@ numbers.add(4);
 for (int i = 0; i < numbers.size(); i++) {
     int number = numbers.get(i);
     System.out.println(number);
-    // alternatively: System.out.println(nubers.get(i));
+    // alternatively: System.out.println(numbers.get(i));
 }
 ```
 
@@ -2414,8 +2414,8 @@ exercises1.add("Ada Lovelace");
 exercises1.add("Hello World! (Ja Mualima!)");
 exercises1.add("Six");
 
-tehtavat2.add("Adding a positive number");
-tehtavat2.add("Employee's pension insurance");
+exercises2.add("Adding a positive number");
+exercises2.add("Employee's pension insurance");
 
 System.out.println("The size of list 1: " + exercises1.size());
 System.out.println("The size of list 2: " + exercises2.size());
