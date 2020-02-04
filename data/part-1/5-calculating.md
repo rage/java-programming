@@ -323,7 +323,7 @@ System.out.println("Mutta! kaksikymmentäkaksi: " + 2 + 2);
 
 ```java
 System.out.println("Four: " + (2 + 2));
-System.out.println("But! Twenty-two" + 2 + 2);
+System.out.println("But! Twenty-two: " + 2 + 2);
 ```
 
 <!-- <sample-output>

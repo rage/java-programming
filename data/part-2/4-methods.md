@@ -228,7 +228,7 @@ Strictly speaking the main program (`main`) itself is a method. When the program
 
 <!-- Tee metodi `tulostaTeksti`, joka tulostaa tekstin "Alussa olivat suo, kuokka ja Java." sekä rivinvaihdon. -->
 
-Create a method called `printPhrase` which prints the phrase "In a hole in the ground there lived a method" and a newline.
+Create a method called `printText` which prints the phrase "In a hole in the ground there lived a method" and a newline.
 
 <!-- ```java
 public static void main(String[] args) {
@@ -242,10 +242,10 @@ public static void tulostaTeksti() {
 
 ```java
 public static void main(String[] args) {
-    printPhrase();
+    printText();
 }
 
-public static void printPhrase() {
+public static void printText() {
     // Write some code in here
 }
 ```
@@ -295,7 +295,7 @@ public static void main(String[] args) {
     // use the while command to call the method a suitable number of times
 }
 
-public static void printPhrase() {
+public static void printText() {
     // write some code in here
 }
 ```
@@ -981,7 +981,7 @@ public static void methodThatReturnsNothing() {
     // method body
 }
 ```
-    </td>
+  </td>
   </tr>
   <tr>
     <!-- <td>Metodi palauttaa `int`-tyyppisen muuttujan</td> -->
@@ -998,7 +998,7 @@ public static int methodThatReturnsInteger() {
     //method body, return statement must be included
 }
 ```
-    </td>
+  </td>
   </tr>
   <tr>
     <!-- <td>Metodi palauttaa `double`-tyyppisen muuttujan</td> -->
@@ -1015,7 +1015,7 @@ public static double methodThatReturnsFloatingPointNumber() {
     // method body, return statement must be included
 }
 ```
-    </td>
+  </td>
   </tr>
 </table>
 
@@ -1415,7 +1415,7 @@ public static int sum(int first, int second) {
 
 <!-- Nyt pääohjelman muuttujan `luku1` arvo kopioituu metodin parametrin `eka` arvoksi ja pääohjelman muuttujan `luku2` arvo kopioituu metodin parametrin `toka` arvoksi. -->
 
-Now the value of the variable `number1` is copied as the value of the method parameter `first`, and the value of the variable `number1` is copied as the value of the parameter `second`.
+Now the value of the variable `number1` is copied as the value of the method parameter `first`, and the value of the variable `number2` is copied as the value of the parameter `second`.
 
 
 <quiz id="fa98830f-8715-5acb-ae72-aad063574ae0"></quiz>
