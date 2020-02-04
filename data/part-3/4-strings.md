@@ -1,7 +1,7 @@
 ---
 path: '/part-3/4-using-strings'
 title: 'Using strings'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Learning Objectives'>

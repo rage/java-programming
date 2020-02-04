@@ -2,7 +2,7 @@
 path: "/part-3/2-lists"
 # title: 'Listat'
 title: "Lists"
-hidden: true
+hidden: false
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
@@ -2405,8 +2405,6 @@ System.out.println("Listan 2 koko " + tehtavat2.size());
 System.out.println("Ensimmäisen listan eka arvo " + tehtavat1.get(0));
 System.out.println("Toisen listan vika arvo " + tehtavat2.get(tehtavat2.size() - 1));
 ``` -->
-
-<!-- TODO: linkitä oikeat käännösnimet tehtäviin! -->
 
 ```java
 ArrayList<String> exercises1 = new ArrayList<>();
