@@ -1416,11 +1416,7 @@ The exercise template contains a base that reads numbers from the user and adds 
 
 <!-- Lisää ohjelmaan toiminnallisuus, joka kysyy käyttäjältä lukua ja kertoo luvun indeksin. Mikäli lukua ei löydy, ohjelman ei tule kertoa siitä. -->
 
-<<<<<<< HEAD
-Expand the program that then asks the user for a number, and report that number's index in the list. If the number is not found, the program should not print anything.
-=======
-Expand the program that then asks the user for a number, and reports that number's index in the list. If the number is not found, the program should not print anything.
->>>>>>> 308016b9436e2658c73658131796fd7e412f3cd7
+Expand the program by adding a functionality that asks the user for a number, and reports that number's index in the list. If the number is not found, the program should not print anything.
 
 <!-- <sample-output>
 
