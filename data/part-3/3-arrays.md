@@ -267,7 +267,7 @@ numbers[1] = 13;
 numbers[2] = 12;
 numbers[3] = 7;
 
-System.out.println("The array has " + luvut.length + " elements.");
+System.out.println("The array has " + numbers.length + " elements.");
 
 int index = 0;
 while (index < numbers.length) {
@@ -699,7 +699,7 @@ int[] numbers = {100,  1,  42,  23,  1,  1, 3200, 3201};
 // prints the number at index 0, i.e. number 100
 System.out.println(numbers[0]);
 // prints the number at index 2, i.e. number 42
-System.out.println(luvut[2]);
+System.out.println(numbers[2]);
 ```
 
 <!-- Viittaus taulukon ulkopuolelle aivan kuten listan ulkopuolellekaan ei voi viitata. Kokeile alla olevaa esimerkkiä omalla koneella esimerkiksi hiekkalaatikossa. -->
