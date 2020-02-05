@@ -1048,7 +1048,7 @@ numbers.add(2);
 numbers.add(3);
 numbers.add(4);
 
-int index = numbres.size() - 1;
+int index = numbers.size() - 1;
 while (index >= 0) {
     int number = numbers.get(index);
     System.out.println(number);
@@ -1083,7 +1083,7 @@ Try and recreate the previous example with the for loop!
 
 <!-- Seuraavissa tehtävissä harjoitellaan listan ja indeksin käyttöä. Vaikka pystyisit tekemään tehtävät ilman listaa, keskity tehtävissä listan käytön harjoitteluun. Tehtävissä toivottu toiminnallisuus tulee toteuttaa lukujen lukemisen jälkeen. -->
 
-The next exercises are meant for learning to use lists and indices. Even if you could complete the execises without a list, concentrate on training to use it. The functionality in the exercises is to be implemented after reading the input numbers.
+The next exercises are meant for learning to use lists and indices. Even if you could complete the exercises without a list, concentrate on training to use it. The functionality in the exercises is to be implemented after reading the input numbers.
 
 </text-box>
 
@@ -1372,7 +1372,7 @@ The greatest number: 93
 
 <!-- Ota mallia allaolevasta pienintä lukua etsivästä lähdekoodista. -->
 
-You can use the source code below as an inspitation. It is used to find the smallest number.
+You can use the source code below as an example. It is used to find the smallest number.
 
 <!-- ```java
 // oletetaan, että käytössämme on lista, jossa on kokonaislukuja
@@ -1416,7 +1416,11 @@ The exercise template contains a base that reads numbers from the user and adds 
 
 <!-- Lisää ohjelmaan toiminnallisuus, joka kysyy käyttäjältä lukua ja kertoo luvun indeksin. Mikäli lukua ei löydy, ohjelman ei tule kertoa siitä. -->
 
+<<<<<<< HEAD
 Expand the program that then asks the user for a number, and report that number's index in the list. If the number is not found, the program should not print anything.
+=======
+Expand the program that then asks the user for a number, and reports that number's index in the list. If the number is not found, the program should not print anything.
+>>>>>>> 308016b9436e2658c73658131796fd7e412f3cd7
 
 <!-- <sample-output>
 
@@ -1588,7 +1592,7 @@ for (String teacher: teachers) {
 
 <!-- Yllä kuvattu for-each toistolause käytännössä piilottaa osan aiemmin harjoittelemastamme for-toistolauseesta. Edellä kuvattu for-each toistolause näyttäisi for-toistolauseella toteutettuna seuraavalta: -->
 
-In practical terms, the for-each loop described above hides some parts of the for-loop we practiced earlier.The for-each loop would look like this if implemented as a for-loop:
+In practical terms, the for-each loop described above hides some parts of the for-loop we practiced earlier. The for-each loop would look like this if implemented as a for-loop:
 
 <!-- ```java
 ArrayList<String> opettajat = new ArrayList<>();
@@ -1613,7 +1617,7 @@ teachers.add("Samuel");
 teachers.add("Ann");
 teachers.add("Anna");
 for (int i = 0; i < teachers.size(); i++) {
-    String teacher = teacher.get(i);
+    String teacher = teachers.get(i);
     // contents of the for each loop:
     System.out.println(teacher);
 }
@@ -1707,7 +1711,7 @@ Average: 23.25
 
 <!-- Listan metodi **remove** poistaa listalta parametrina annettuun indeksiin liittyvän arvon. Parametri annetaan kokonaislukuna. -->
 
-The list's \*_remove_ method removes the value that is located at the index that's given as the parameter. The parameter is an integer.
+The list's **remove** method removes the value that is located at the index that's given as the parameter. The parameter is an integer.
 
 <!-- ```java
 ArrayList<String> lista = new ArrayList<>();
@@ -1892,7 +1896,7 @@ Toka löytyi yhä
 
 <sample-output>
 
-Can we find first? true
+Is the first found? true
 Second was found
 Second can still be found
 
@@ -1962,7 +1966,7 @@ Logan was not found!
 
 <!-- Kuten muutkin muuttujat, myös listan voi asettaa metodin parametriksi. Kun lista määritellään metodin parametriksi, määritellään parametrin tyypiksi listan tyyppi sekä listan sisältämien arvojen tyyppi. Alla oleva metodi `tulosta` tulostaa listan arvot yksitellen. -->
 
-Like other variables, a list, too, can be used as a parameter to a method. When the method is defined to take a list as a parameter, the type of the parameter is defined as the type of the list and the type of the values contained in that list. Below, the method `print` prints the values in the list one by one.
+Like other variables, a list can be used as a parameter to a method too. When the method is defined to take a list as a parameter, the type of the parameter is defined as the type of the list and the type of the values contained in that list. Below, the method `print` prints the values in the list one by one.
 
 <!-- ```java
 public static void tulosta(ArrayList<String> lista) {
