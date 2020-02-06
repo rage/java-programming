@@ -963,7 +963,7 @@ System.out.println("Total amount of people read: " + people.size());
 
 <!-- Olioiden lukeminen tiedostosta on selkeä oma kokonaisuutensa, joka kannattaa eriyttää omaan metodiinsa. Näin tehdään myös seuraavassa tehtävässä. -->
 
-Reading objects from a file is a clear responsibility in and of itself, and should thus be isolated into a method. This is what we'll be doing in the next exercise.
+Reading objects from a file is a clear responsibility in and of itself, and should for that reason be isolated into a method. This is what we'll be doing in the next exercise.
 
 <!-- <programming-exercise name='Henkilot tiedostosta' tmcname='osa04-Osa04_30.HenkilotTiedostosta'> -->
 <programming-exercise name='Storing Records' tmcname='part04-Part04_30.StoringRecords'>
@@ -1071,11 +1071,11 @@ Games: 6
 
 <!-- Lisää ohjelmaan toiminnallisuus annetun joukkueen voittojen ja tappioiden määrän tulostamiseen. Voittaja on se joukkue, joka saa ottelussa enemmän pisteitä. -->
 
-Extend the program to have the ability to print the number of wins and losses of a given team. The winner of a game is the team that gains more points from a given match.
+Extend the program so that it has the ability to print the number of wins and losses of a given team. The winner of a game is the team that has gained more points from it.
 
 <!-- Voit olettaa, ettei pelit pääty koskaan tasapeliin. Alla olevassa esimerkissä käytetään edellä kuvattua **data.csv**-tiedostoa. -->
 
-You may assume that the games never end in a tie. We are using the above-mentioned  **data.csv** file below.
+You may assume that the games cannot be tied. Below, we're using the above-mentioned **data.csv** file.
 
 <!-- <sample-output>
 

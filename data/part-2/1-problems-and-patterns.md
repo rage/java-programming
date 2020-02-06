@@ -233,7 +233,7 @@ public class Program {
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä kokonaisluvun ja tulostaa luvun korotettuna toiseen potenssin eli luvun kerrottuna itsellään. -->
 
-Write a program that reads an integer from the user input, and then prints the second power of the given integer, i.e. the integer multiplied by itself.
+Write a program that reads an integer from the user and prints the square of the given integer, i.e. the integer multiplied by itself.
 
 <sample-output>
 
@@ -262,10 +262,10 @@ Write a program that reads an integer from the user input, and then prints the s
 <programming-exercise name='Square root of sum' tmcname='part02-Part02_02.SquareRootOfSum'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä kaksi kokonaislukua ja tulostaa lukujen summan neliöjuuren. Ohjelman ei tarvitse käsitellä negatiivisia lukuja. -->
-Write a program that reads two integers from the user, and prints the square root of the sum of these integers. The program does not need to work with negative values.
+Write a program that reads two integers from the user and prints the square root of the sum of these integers. The program does not need to work with negative values.
 
 <!-- Saat annetun luvun neliöjuuren laskettua komennolla `Math.sqrt` seuraavasti: -->
-You can get the square root of an integer with the command `Math.sqrt` like this:
+You can calculate the square root of an integer with the command `Math.sqrt` like this:
 
 <!-- ```java
 int luku = 42;
@@ -312,11 +312,11 @@ Here are a few examples:
 
 <!-- ## Vaihtoehtoista toiminnallisuutta -->
 
-## Some Alternative Functionality
+## Conditional Logic
 
 <!-- Ongelmat sisältävät usein vaihtoehtoista toiminnallisuutta. Tällaisen toteuttamiseen käytetään ehtolauseita. Ehtolause alkaa `if`-komennosta, jota seuraa suluissa oleva lauseke. Lauseke evaluoituu joko todeksi tai epätodeksi. Mikäli lauseke evaluoituu todeksi, suoritetaan ehtolauseen lohko, joka on rajattuna aaltosuluilla. -->
 
-Problems often contain some alternative functionality, and in such case we use conditional statements. A conditional statement starts with an `if` command followed by an expression in parentheses. The expression evaluates to either true or false. If it evaluates true, the following block delimited by curly brackets gets executed.
+Problems often contain some conditional logic. In these instances we use conditional statements. A conditional statement starts with an `if` command followed by an expression in parentheses. The expression evaluates to either true or false. If it evaluates true, the following block delimited by curly brackets gets executed.
 
 <!-- ```java
 // jos luku on suurempi kuin viisi
@@ -356,7 +356,7 @@ if (value > 42) {
 
 <!-- Ehtolauseiden ketjuttaminen on mahdollista. Tällöin ongelmat ovat muotoa "jos a, niin b; muulloin jos c, niin d; muulloin jos e, niin f; muulloin g". Ketjutus toteutetaan `if`-komennon lohkoa seuraavasta `else if` -komennosta, johon liittyy oma lauseke sekä lohko. Lopuksi tulee `else`komento sekä siihen liittyvä lohko. -->
 
-You can also chain together multiple conditions. In such a case, the problem takes the form "if a, then b; else if c, then d; else if e, then f; otherwise g". The chain consists of an `if`-statement followed by `else if`-statements each containing its own expression and a block.
+You can also chain together multiple conditions. In such a case, the problem takes the form "if a, then b; else if c, then d; else if e, then f; otherwise g". The chain consists of an `if`-statement followed by `else if`-statements, each containing its own expression and a block.
 
 <!-- ```java
 // jos luku on suurempi kuin viisi
@@ -395,7 +395,7 @@ The quiz below uses `System.out.print` for printing. It works exactly like `Syst
 
 <!-- Ehtotoiminnallisuutta voi yhdistää myös muiden ratkaisumallien kanssa. Tarkastellaan ongelmaa "Lue käyttäjältä kaksi lukua. Mikäli lukujen summa on yli 100, tulosta käyttäjälle merkkijono `liikaa`. Mikäli lukujen summa on alle 0, tulosta käyttäjälle merkkijono `liian vähän`. Muulloin, tulosta käyttäjälle merkkijono `ok`.". Ohjelma, joka yhdistää lukemisen, laskemisen ja ehtolauseen on annettu alla. -->
 
-Conditional functionality can be combined with other solution patterns. Let's look into a problem "Read two integers from the user. If the sum of the integers is over 100, print `too much`. If the sum is less than 0, print `too little`. Otherwise, print `ok`. The program below combines reading, calculating and conditional functionality.
+Conditional logic can be combined with other patterns used for problem solving. Let's look into a problem "Read two integers from the user. If the sum of the integers is over 100, print `too much`. If the sum is less than 0, print `too little`. Otherwise, print `ok`. The program below combines reading, calculating and conditional functionality.
 
 <!-- ```java
 // Tuodaan Scanner-apuväline ohjelman tietoon
@@ -429,7 +429,7 @@ public class Ohjelma {
 ``` -->
 
 ```java
-// Making Scanner available in the program
+// Bringing Scanner to the program's use
 import java.util.Scanner;
 
 public class Program {
@@ -464,7 +464,7 @@ public class Program {
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä kokonaisluvun. Mikäli luku on pienempi kuin 0, ohjelma tulostaa luvun kerrottuna luvulla -1. Muulloin ohjelma tulostaa käyttäjän syöttämän luvun. Alla on muutamia esimerkkejä ohjelman odotetusta toiminnasta. -->
 
-Write a program, that reads an integer from the user. If the number is less than 0, it prints the number multiplied by -1. Otherwise the program prints the number itself. A few examples of the expected function below:
+Write a program, that reads an integer from the user. If the number is less than 0, the program prints the given integer multiplied by -1. In all other cases, the program prints the number itself. A few examples of how the program's expected to funciton are shown below:
 
 <sample-output>
 
@@ -490,11 +490,11 @@ Write a program, that reads an integer from the user. If the number is less than
 </programming-exercise>
 
 <!-- <programming-exercise name='Tietoa luvuista' tmcname='osa02-Osa02_04.TietoaLuvuista'> -->
-<programming-exercise name='Comparing numbers' tmcname='part02-Part02_04.ComparingNumbers'>
+<programming-exercise name='Comparing Numbers' tmcname='part02-Part02_04.ComparingNumbers'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä kaksi kokonaislukua. Mikäli ensimmäinen luku on suurempi kuin toinen luku, ohjelma tulostaa "Luku (ensimmäinen) on suurempi kuin luku (toinen).". Mikäli ensimmäinen luku on pienempi kuin toinen luku, ohjelma tulostaa "Luku (ensimmäinen) on pienempi kuin luku (toinen).". Muulloin ohjelma tulostaa "Luku (ensimmäinen) on yhtä suuri kuin luku (toinen).". Edeltävissä esimerkeissä kohdat (ensimmäinen) ja (toinen) tulee aina korvata syötetyillä luvuilla. -->
 
-Write a program that reads two integers from the user input. If the first number is greater than the second, the program prints "(first) is greater than (second)." If the first number is less than the second, the program prints "(first) is smaller than (second)." Otherwise the program prints "(first) is equal to (second)." The (first) and (second) should always be replaced with the actual numbers given by the user.
+Write a program that reads two integers from the user. If the first number is greater than the second, the program prints "(first) is greater than (second)." If the first number is less than the second, the program prints "(first) is smaller than (second)." Otherwise, the program prints "(first) is equal to (second)." The (first) and (second) should always be replaced with the actual numbers that were provided by the user.
 
 <!-- Alla on muutamia esimerkkejä ohjelman odotetusta toiminnasta. -->
 
