@@ -31,8 +31,8 @@ The workshop is held in classroom **BK107** right next to Exactum's UniCafe. You
 This spring's workshop opening times are marked in the table below. The times may change as the course progresses, so please check the table before visiting the workshop.
 
 |       | MON | TUE | WED | THU | FRI |
-|:-----:|:--:|:--:|:--:|:--:|:--:|
-| 10-12 | X  |    |    |    | X  |
-| 12-14 | X  | X  | X  | X  | X  |
-| 14-16 | X  | X  | X  | X  | X  |
-| 16-18 | X  |    | X  | X  | X  |
+|:-----:|:---:|:---:|:---:|:---:|:---:|
+| 10-12 |  X  |     |     |     |     |
+| 12-14 |  X  |  X  |     |  X  |  X  |
+| 14-16 |  X  |  X  |     |  X  |  X  |
+| 16-18 |  X  |     |     |  X  |  X  |
