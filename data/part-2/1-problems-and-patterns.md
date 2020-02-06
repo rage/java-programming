@@ -1,7 +1,7 @@
 ---
 path: '/part-2/1-problems-and-patterns'
 title: 'Recurring problems and patterns to solve them'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Learning Objectives'>
@@ -32,7 +32,7 @@ Let's look at a few sub-problems and patterns for solving them.
 
 <!-- Ratkaisumalli käyttäjältä lukemista vaativiin ohjelmointiongelmiin on suoraviivainen. Mikäli ohjelmassa halutaan lukea käyttäjältä syötettä, tulee ohjelmaan luoda syötteen lukemiseen käytettävä Scanner-apuväline. Scanner-apuväline luodaan pääohjelman (eli lauseen `public static void main(String[] args) {`) jälkeiselle riville. Scanner-apuvälineen käyttö vaatii, että ohjelman määrittelyä (`public class`) edeltävillä riveillä on lause `import java.util.Scanner;`, joka tuo Scanner-apuvälineen ohjelman tietoon. -->
 
-The solution pattern for programming tasks involving reading user input is straightforward. If the program needs to read from the user, a Scanner helper tool is created for the task. The Scanner is created in the main method after the row `public static void main(String[] args) {`. To use the Scanner, it needs to be made available in the program through the statement `import java.util.Scanner;`, which comes before the class definition (`public class ...`). Importing the Scanner tool brings it to the program's use.
+The solution pattern for programming tasks involving reading user input is straightforward. If the program needs to read from the user, a Scanner helper tool is created for the task. The Scanner is created in the main method after the line `public static void main(String[] args) {`. To use the Scanner, it needs to be made available in the program through the statement `import java.util.Scanner;`, which comes before the class definition (`public class ...`). Importing the Scanner tool makes it available for the program.
 
 <!-- ```java
 // Tuodaan Scanner-apuväline ohjelman tietoon
@@ -64,7 +64,7 @@ public class Program {
 
         // Examples of reading different types of user input
         String text = reader.nextLine();
-        int neumber = Integer.valueOf(reader.nextLine());
+        int number = Integer.valueOf(reader.nextLine());
         double numberWithDecimals = Double.valueOf(reader.nextLine());
         boolean trueOrFalse = Boolean.valueOf(reader.nextLine());
 
@@ -81,7 +81,7 @@ public class Program {
 
 <!-- Ohjelmissa tulee usein laskea asioita kuten lukujen keskiarvoa tai lukujen summaa. Ratkaisumalli tällaisissa ohjelmissa on seuraava. -->
 
-We quite often need to calculate something in a program, such as an average or a sum. The solution patter to solve such problems is as follows.
+We quite often need to calculate something in a program, such as an average or a sum. The solution pattern to solve such problems is as follows.
 
 <!-- 1. Määrittele laskemiseen tarvittavat syötteet ja luo niitä varten muuttujat. Ohjelman syötteitä ovat laskemisessa käytettävät arvot. Syötteiden tyypit tunnistaa tyypillisesti ongelma-alueen kuvauksesta.
 1. Selvitä tehtävä laskuoperaatio ja luo laskuoperaation tulokselle muuttuja. Tee ohjelman syötteiden perusteella lasku, jonka arvo asetetaan laskuoperaation tulokselle varattuun muuttujaan. Myös laskuoperaation tuloksen tyypin tunnistaa ongelma-alueen kuvauksesta.
@@ -89,11 +89,11 @@ We quite often need to calculate something in a program, such as an average or a
 
 1. Define the inputs required for the calculation and declare variables for them. Input refers to the values used in the calculation. You can typically identify the type of inputs from the problem description.
 2. Identify the operation needed, and declare a variable for the result of the calculation. Perform the calculation using the inputs, and assign the result to the variable that was reserved for it. The type of the result can also usually be identified from the problem description.
-3. Once the calculation is done, do something with its result. This can mean printing the result of a computation, or, for example, using it in calculating an average by dividing a sum of integers by their count.
+3. Once the calculation is done, do something with its result. This can mean printing the result of a computation, or, for example, using it in calculating an average by dividing a sum of the inputs by their count.
 
 <!-- Esimerkiksi ongelman _Tee ohjelma, jonka avulla voidaan laskea kahden kokonaisluvun summa_. ratkaisumalli on seuraava. -->
 
-For example, the solution patter for the problem _Create a program to calculate the sum of two integers_ is the following.
+For example, the solution pattern for the problem _Create a program to calculate the sum of two integers_ is the following.
 
 <!-- ```java
 // Määritellään syötteet ja luodaan niitä varten muuttujat
@@ -122,7 +122,7 @@ System.out.println("The sum of " + first + " and " + second + " is " + sum);
 
 <!-- Sekä lukemista että laskemista sisältävä ohjelma yhdistää edelliset ratkaisumallit. Kahden käyttäjältä pyydetyn luvun tulon laskeva ohjelma on seuraavanlainen. -->
 
-A program that both reads and calculates combines both of these patterns. One that calculates the product of two integers provided by the use looks like this:
+A program that both reads and calculates combines both of these patterns. One that calculates the product of two integers provided by the user looks like this:
 
 <!-- ```java
 // Tuodaan Scanner-apuväline ohjelman tietoon
@@ -156,7 +156,7 @@ public class Ohjelma {
 // Making the scanner available in the program
 import java.util.Scanner;
 
-public class Ohjelma {
+public class Program {
     public static void main(String[] main) {
         // Creating the scanner
         Scanner reader = new Scanner(System.in);
@@ -166,8 +166,8 @@ public class Ohjelma {
         int second = 2;
 
         // Assigning the user input to the variables
-        first = Integer.valueOf(lukija.nextLine());
-        second = Integer.valueOf(lukija.nextLine());
+        first = Integer.valueOf(reader.nextLine());
+        second = Integer.valueOf(reader.nextLine());
 
         // Identifying the operation and declaring a variable for the result
         int product = first * second;
@@ -233,7 +233,7 @@ public class Program {
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä kokonaisluvun ja tulostaa luvun korotettuna toiseen potenssin eli luvun kerrottuna itsellään. -->
 
-Write a program that reads an integer from the user input, and then prints the second power of the given integer, i.e. the integer multiplied by itself.
+Write a program that reads an integer from the user input, and then prints the second power of the given integer. The second power of an integer is the integer multiplied by itself.
 
 <sample-output>
 
@@ -316,7 +316,7 @@ Here are a few examples:
 
 <!-- Ongelmat sisältävät usein vaihtoehtoista toiminnallisuutta. Tällaisen toteuttamiseen käytetään ehtolauseita. Ehtolause alkaa `if`-komennosta, jota seuraa suluissa oleva lauseke. Lauseke evaluoituu joko todeksi tai epätodeksi. Mikäli lauseke evaluoituu todeksi, suoritetaan ehtolauseen lohko, joka on rajattuna aaltosuluilla. -->
 
-Problems often contain some alternative functionality, and in such case we use conditional statements. A Conditional statement starts with an `if` command followed by an expression in parentheses. The expression evaluates to either true or false. If it evaluates true, the following block delimited by curly brackets gets executed.
+Problems often contain some alternative functionality, and in such case we use conditional statements. A conditional statement starts with an `if` command followed by an expression in parentheses. The expression evaluates to either true or false. If it evaluates true, the following block delimited by curly brackets gets executed.
 
 <!-- ```java
 // jos luku on suurempi kuin viisi
@@ -386,7 +386,7 @@ if (value > 5) {
 
 <!-- Alla olevassa kyselyssä käytetään tulostuskomentoa `System.out.print`. Komento toimii muuten täysin samoin kuin komento `System.out.println`, mutta se ei lisää rivinvaihtoa parametrina saadun merkkijonon perään. -->
 
-The quiz below uses `System.out.print` for printing. It works exactly like `System.out.println`, but it doesn't add a newline character after the string.
+The quiz below uses `System.out.print` for printing. It works exactly like `System.out.println`, but it doesn't add a line break to the end of the output.
 
 </text-box>
 
@@ -449,7 +449,7 @@ public class Program {
 
         if (sum > 100) { // if the sum is over 100
             System.out.println("too much");
-        } else if (summa < 0) { // if the sum is less than 0
+        } else if (sum < 0) { // if the sum is less than 0
             System.out.println("too little");
         } else { // otherwise
             System.out.println("ok");
@@ -494,7 +494,7 @@ Write a program, that reads an integer from the user. If the number is less than
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä kaksi kokonaislukua. Mikäli ensimmäinen luku on suurempi kuin toinen luku, ohjelma tulostaa "Luku (ensimmäinen) on suurempi kuin luku (toinen).". Mikäli ensimmäinen luku on pienempi kuin toinen luku, ohjelma tulostaa "Luku (ensimmäinen) on pienempi kuin luku (toinen).". Muulloin ohjelma tulostaa "Luku (ensimmäinen) on yhtä suuri kuin luku (toinen).". Edeltävissä esimerkeissä kohdat (ensimmäinen) ja (toinen) tulee aina korvata syötetyillä luvuilla. -->
 
-Write a program that reads two integers from the user input. If the first number is greater than the second, the program prints "(first) is greater than (second)." If the first number is less than the second, the program prints "(first) is less than (second)." Otherwise the program prints "(first) is equal to (second)." The (first) and (second) should always be replaced with the actual numbers given by the user.
+Write a program that reads two integers from the user input. If the first number is greater than the second, the program prints "(first) is greater than (second)." If the first number is less than the second, the program prints "(first) is smaller than (second)." Otherwise the program prints "(first) is equal to (second)." The (first) and (second) should always be replaced with the actual numbers given by the user.
 
 <!-- Alla on muutamia esimerkkejä ohjelman odotetusta toiminnasta. -->
 
@@ -512,7 +512,7 @@ A few examples of the expected behaviour:
 
 **-3**
 **5**
--3 is less than 5.
+-3 is smaller than 5.
 
 </sample-output>
 

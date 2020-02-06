@@ -18,7 +18,7 @@ hidden: false
 
 <!-- Laskuoperaatiot ovat tuttuja ja suoraviivaisia: yhteenlasku `+`, erotus `-`, kertolasku `*` ja jakolasku `/`. Laskentajärjestys on myös tuttu: laskenta tehdään vasemmalta oikealle sulut huomioon ottaen. Kuitenkin `*` ja `/` lasketaan ennen `+` ja `-` operaatioita, samoin kuin perus- tai kansakoulumatematiikassa on tullut tutuksi. -->
 
-The basic mathematical operations are both familiar and straightforward: addition `+`, subtraction `-`, multiplication `*`, and division`/`. The precedence is also familiar: operations are performed from left to right with the parentheses taken into account. Expressions involving `*` and `/` are calculated before those involving `+` and `-`, as is customary in elementary school mathematics.
+The basic mathematical operations are both familiar and straightforward: addition `+`, subtraction `-`, multiplication `*`, and division `/`. The precedence is also familiar: operations are performed from left to right with the parentheses taken into account. Expressions involving `*` and `/` are calculated before those involving `+` and `-`, as is customary in elementary school mathematics.
 
 <!-- ```java
 int eka = 2;
@@ -258,7 +258,7 @@ first + second;
 ## Calculating and Printing
 
 <!-- Muuttujan arvon voi tulostaa komennolla `System.out.println`. Tulostettavaan hipsuilla merkittyyn merkkijonoon, esim. "Pituus ", voidaan lisätä muuta tulostettavaa operaation `+` avulla. -->
-The command `System.out.println` prints the value of a variable. The string literal to be printed, which is marked by quotation marks, can be appended with the operation `+`.
+The command `System.out.println` prints the value of a variable. The string literal to be printed, which is marked by quotation marks, can be appended with other content by using the operation `+`.
 
 <!-- ```java
 int pituus = 42;
@@ -323,7 +323,7 @@ System.out.println("Mutta! kaksikymmentäkaksi: " + 2 + 2);
 
 ```java
 System.out.println("Four: " + (2 + 2));
-System.out.println("But! Twenty-two" + 2 + 2);
+System.out.println("But! Twenty-two: " + 2 + 2);
 ```
 
 <!-- <sample-output>
@@ -394,11 +394,13 @@ Lukujen summa on 11
 </sample-output> -->
 
 <sample-output>
-̈́Give the first number:
+
+Give the first number:
 **8**
 Give the second number:
 **3**
 The sum of the numbers is 11
+
 </sample-output>
 
 <!-- <sample-output>
@@ -543,7 +545,7 @@ Create a program that can be used to add two integers together. In the beginning
 
 
 <!-- Tulostusesimerkkejä: -->
-Exampe output:
+Example output:
 
 <!-- <sample-output>
 
@@ -580,7 +582,7 @@ Syötä toinen luku!
 Give the first number:
 **73457**
 Give the second number:
-**128888**
+**12888**
 73457 + 12888 = 86345
 
 </sample-output>
@@ -651,7 +653,7 @@ Give the second number:
 
 <!-- Kun olet saanut edellisen tehtävän toteutettua, kokeile mikä on suurin mahdollinen kertolasku minkä saat laskettua. Huomaamasi ilmiön taustalla on se, että kokonaislukumuuttujan arvo voi olla korkeintaan 2<sup>31</sup>-1 eli 2147483647. Tämä johtuu siitä, että kokonaislukumuuttujat esitetään tietokoneen muistissa 32 bitin avulla. Tähän tutustutaan tarkemmin muunmuassa kurssilla Tietokoneen toiminta. -->
 
-Once you have completed the previous exercise, try finding out the greatest possible multiplication that you can calculate. The reason behind the phenomenon you've observed is that the value of an integer value is capped at the maximum of 2<sup>31</sup>-1 (i.e. 2147483647). This is because integer variables are represented with 32 bits in the computer's memory. Variable representation is covered in more detail on the Computer Organization course.
+Once you have completed the previous exercise, try finding out the greatest possible multiplication that you can calculate. The reason behind the phenomenon you'll observe is that the value of an integer value is capped at the maximum of 2<sup>31</sup>-1 (i.e. 2147483647). This is because integer variables are represented with 32 bits in the computer's memory. Variable representation is covered in more detail on the Computer Organization course.
 
 
 <!-- ## Jakolasku -->
@@ -841,7 +843,7 @@ An average refers to the sum of numbers divided by their count. For instance, th
 
 <!-- Ohjelmoinnissa tähän liittyy muutamia asioita, jotka tulee muistaa. Ensiksi, nollalla jakaminen ei tyypillisesti ole sallittua. Tämä tarkoittaa sitä, että nollan luvun keskiarvon laskeminen ei onnistu. Toiseksi, mikäli ohjelma käsittelee lukujen lukumäärän ja summan kokonaislukumuuttujina, tulee muuttujista jompikumpi (tai kummatkin) muuntaa liukulukumuuttujaksi kertomalla luku arvolla 1.0 ennen jakolaskua. -->
 
-In the context of programming, there are a few things to keep in mind. Firstly, dividing by zero is typically not permitted. This implies that calculating the average of the number zero is impossible. Secondly, if the program handles both the sum of the numbers and their total count as integers, one (or both) of the variables should be casted to a floating-point number by multiplying it by 1.0 before the division.
+In the context of programming, there are a few things to keep in mind. Firstly, dividing by zero is typically not permitted. This implies that calculating the average of zero numbers is impossible. Secondly, if the program handles both the sum of the numbers and their total count as integers, one (or both) of the variables should be casted to a floating-point number by multiplying it by 1.0 before the division.
 
 </text-box>
 
@@ -1009,11 +1011,11 @@ It's crucial for a programmer to understand that assigning a value to a variable
 
 <!-- Kolme yleistä väärinkäsitystä, jotka liittyvät muuttujan arvon asettamiseen ovat seuraavat: -->
 
-Here's three common misunderstanding related to assigning a value to a variable:
+Here's three common misunderstandings related to assigning a value to a variable:
 
 <!-- * Muuttujan asettamisen näkeminen siirtona kopioimisen sijaan: ohjelmakoodin `eka = toka` suorituksen jälkeen ajatellaan, että muuttujan `toka` arvo on siirtynyt muuttujan `eka` arvoksi, jonka jälkeen muuttujalla `toka` ei ole enää arvoa, tai sen arvo on esimerkiksi nolla. Tämä ei pidä paikkansa, sillä ohjelmakoodin `eka = toka` suorituksessa muuttujan `toka` nimeämässä paikassa oleva arvo kopioidaan muuttujan `eka` nimeämään paikkaan. Muuttujan `toka` arvo ei siis muutu. -->
 
-* Viewing value assignment as a transfer instead of a copy operation: once `first = second` has been executed, it's often assumed that the value of the variable `second` has been moved to the value of the variable `first`, and that the variable `second` no longer holds a value, or that its value is 0, for instance. This is incorrect,  as executing `first = second` means that the value in the position specified by `second` is merely copied to the place specified by the variable `first`. Hence, the variable `second` is not modified.
+* Viewing value assignment as a transfer instead of a copy operation: once `first = second` has been executed, it's often assumed that the value of the variable `second` has been moved to the value of the variable `first`, and that the variable `second` no longer holds a value, or that its value is 0, for instance. This is incorrect, as executing `first = second` means that the value in the position specified by `second` is merely copied to the place specified by the variable `first`. Hence, the variable `second` is not modified.
 
 <!-- * Muuttujan asettamisen näkeminen riippuvuutena kopioimisen sijaan: ohjelmakoodin `eka = toka` suorituksen jälkeen ajatellaan, että mikä tahansa muutos muuttujaan `toka` vaikuttaa automaattisesti myös muuttujaan `eka`. Tämä ei pidä paikkansa, sillä asetus -- kopiointi -- on yksittäinen tapahtuma. Se tapahtuu vain silloin, kun ohjelmakoodi `eka = toka` suoritetaan. -->
 
@@ -1021,7 +1023,7 @@ Here's three common misunderstanding related to assigning a value to a variable:
 
 <!-- * Kolmas väärinkäsitys liittyy kopioimisen suuntaan: ohjelmakoodin `eka = toka` suorituksessa ajatellaan, että muuttujan `toka` arvoksi kopioidaan muuttujan `eka` arvo. Tämä näkyy myös tilanteina, missä ohjelmoija voi vahingossa kirjoittaa esimerkiksi `42 = arvo` -- onneksi ohjelmointiympäristöt tukevat myös tässä. -->
 
-* The third misunderstanding concerns the direction of copying: it's often thought that in executing `first = second` the value of the variable `first` is set as the value of the variable `second`. The confusion also manifests itself in situations where the programmer accidentally writes e.g. `42 = value -- fortunately, IDEs provide support on this issue too.
+* The third misunderstanding concerns the direction of copying: it's often thought that in executing `first = second` the value of the variable `first` is set as the value of the variable `second`. The confusion also manifests itself in situations where the programmer accidentally writes e.g. `42 = value` -- fortunately, IDEs provide support on this issue too.
 
 <!-- Ehkäpä paras tapa tietokoneen ohjelmakoodin suorittamisen ymmärtämiseen on paperin ja kynän käyttäminen. Kun luet ohjelmakoodia, kirjoita paperille uusien muuttujien nimet, sekä kirjoita ylös rivi riviltä, miten ohjelmakoodissa olevien muuttujien arvot muuttuvat. Havainnollistetaan suoritusta seuraavalla ohjelmakoodilla: -->
 
@@ -1040,15 +1042,15 @@ rivi 9: System.out.println(kolmas);
 ``` -->
 
 ```java
-row 1: int first = (1 + 1);
-row 2: int second = first + 3 * (2 + 5);
-row 3:
-row 4: first = 5;
-row 5:
-row 6: int third = first + second;
-row 7: System.out.println(first);
-row 8: System.out.println(second);
-row 9: System.out.println(third);
+line 1: int first = (1 + 1);
+line 2: int second = first + 3 * (2 + 5);
+line 3:
+line 4: first = 5;
+line 5:
+line 6: int third = first + second;
+line 7: System.out.println(first);
+line 8: System.out.println(second);
+line 9: System.out.println(third);
 ```
 
 <!-- Alla on kirjoitettu yllä olevan ohjelmakoodin suoritus auki. -->
@@ -1094,38 +1096,38 @@ rivi 9: tulostetaan arvo 28
 
 <sample-output>
 
-row 1: initiate a variable first
-row 1: copy the result of the calculation 1 + 1 as the value of the variable first
-row 1: the value of the variable first is 2
-row 2: create the variable second
-row 2: calculate 2 + 5, 2 + 5 -> 7
-row 2: calculate 3 * 7, 3 * 7 -> 21
-row 2: calculate first + 21
-row 2: copy the value of the variable first into the calculation, its value is 2
-row 2: calculate 2 + 21, 2 + 21 -> 23
-row 2: copy 23 to the value of the variable second
-row 2: the value of the variable second is 23
-row 3: (empty, do nothing)
-row 4: copy 5 to the value of the variable first
-row 4: the value of the variable first is 5
-row 5: (empty, do nothing)
-row 6: create variable third
-row 6: calculate first + second
-row 6: copy the value of the variable first into the calculation, its value is 5
-row 6: calculate 5 + second
-row 6: copy the value of the variable second into the calculation, its value is 23
-row 6: calculate 5 + 23 -> 28
-row 6: copy 28 to the value of the variable third
-row 6: the value of the variable third is 28
-row 7: print the variable first
-row 7: copy the value of the variable first for the print operation, its value is 5
-row 7: print the value 5
-row 8: print the variable second
-row 8: copy the value of the variable second for the print operation, its value is 23
-row 8: print the value 23
-row 9: print the variable third
-row 9: copy the value of the variable third for the print operation, its value is 28
-row 9: we print the value 28
+line 1: initiate a variable first
+line 1: copy the result of the calculation 1 + 1 as the value of the variable first
+line 1: the value of the variable first is 2
+line 2: create the variable second
+line 2: calculate 2 + 5, 2 + 5 -> 7
+line 2: calculate 3 * 7, 3 * 7 -> 21
+line 2: calculate first + 21
+line 2: copy the value of the variable first into the calculation, its value is 2
+line 2: calculate 2 + 21, 2 + 21 -> 23
+line 2: copy 23 to the value of the variable second
+line 2: the value of the variable second is 23
+line 3: (empty, do nothing)
+line 4: copy 5 to the value of the variable first
+line 4: the value of the variable first is 5
+line 5: (empty, do nothing)
+line 6: create variable third
+line 6: calculate first + second
+line 6: copy the value of the variable first into the calculation, its value is 5
+line 6: calculate 5 + second
+line 6: copy the value of the variable second into the calculation, its value is 23
+line 6: calculate 5 + 23 -> 28
+line 6: copy 28 to the value of the variable third
+line 6: the value of the variable third is 28
+line 7: print the variable first
+line 7: copy the value of the variable first for the print operation, its value is 5
+line 7: print the value 5
+line 8: print the variable second
+line 8: copy the value of the variable second for the print operation, its value is 23
+line 8: print the value 23
+line 9: print the variable third
+line 9: copy the value of the variable third for the print operation, its value is 28
+line 9: we print the value 28
 
 </sample-output>
 

@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
+// Localization?
 const ExerciseDescriptionWrapper = styled.div`
   counter-reset: headingCounter;
 
@@ -9,7 +10,7 @@ const ExerciseDescriptionWrapper = styled.div`
   h3::before,
   h4::before,
   h5::before {
-    content: "Osa " counter(headingCounter) ": ";
+    content: "Part " counter(headingCounter) ": ";
     counter-increment: headingCounter;
   }
 `

@@ -17,7 +17,7 @@ hidden: false
 
 - get familiar with comparison and logical operators commonly used in conditional statements.
 
-- know how to compare numbers as well as strings while remembering the equals-command for strings.
+- know how to compare both numbers and strings, remembering the equals-command for strings.
 
 - get familiar with the order of execution for a conditional statement, and know that the parsing of a conditional statement stops at the first condition whose statement evaluates to true.
 
@@ -61,7 +61,7 @@ A conditional statement begins with the keyword `if` followed by parentheses. An
 
 <!-- Sulkuja seuraa lohko, joka määritellään avaavan aaltosulun `{` ja sulkevan aaltosulun `}` sisään. Lohkon sisällä oleva lähdekoodi mikäli sulkujen sisälle asetettu lauseke evaluoidaan todeksi (true). -->
 
-The parentheses are followed by a block, which is defined inside opening- `{` and closing `}` curly brackets. The source code inside the block is executed if the expression inside the parentheses evaluates to *true*.
+The parentheses are followed by a block, which is defined inside opening `{` and closing `}` curly brackets. The source code inside the block is executed if the expression inside the parentheses evaluates to *true*.
 
 <!-- Tarkastellaan esimerkkiä, missä ehtolauseen lausekkeessa vertaillaan lukuja. -->
 
@@ -181,11 +181,11 @@ In Java, code is indented by four spaces or a single tab in each block. Use eith
 
 <!-- Jatkossa ohjelmakoodi tulee sisentää oikein myös tehtävissä. Jos sisennys on väärin, ei ohjelmointiympäristö hyväksy tehtävää. -->
 
-Going forward, program code needs to be indented correctly in exercises too. If the indentation is incorrect, the development environment will not accept the solution. You will see indentation errors highlighted yellow in the test results.
+Going forward, program code needs to be indented correctly in exercises too. If the indentation is incorrect, the development environment will not accept the solution. You will see indentation errors highlighted in yellow in the test results.
 
 ![Example of indentation error message](indentationError.png "Indentation Error")
 
-The above error message says, that there should have been 8 spaces at the beginning of line 8, but there was only 2.
+The above error message says that there should have been 8 spaces at the beginning of line 8, but there was only 2.
 In this case we can fix the indentation by adding 6 more spaces to the beginning of line 8.
 
 
@@ -337,7 +337,7 @@ Your number is five or less!
 
 <!-- Jos ehtolauseeseen on määritelty `else`-haara, suoritetaan else-haaran määrittelemä lohko jos ehtolauseen ehto ei ole totta. Komento `else` tulee samalle riville `if`-komennon määrittelemän lohkon lopettavan aaltosulun kanssa. -->
 
-If an `else`-branch has been defined for the conditional statement, then the block defined by the else-branch is run if the condition of the conditional statement is not true. The `else`-command is placed on the same line as the closing bracket of the block defined by the `if`-command.
+If an `else` branch has been defined for the conditional statement, then the block defined by the `else` branch is run if the condition of the conditional statement is not true. The `else` command is placed on the same line as the closing bracket of the block defined by the `if` command.
 
 <!-- <programming-exercise name="Positiivinen luku" tmcname='osa01-Osa01_28.PositiivinenLuku'> -->
 <programming-exercise name="Positivity" tmcname='part01-Part01_28.Positivity'>
@@ -435,9 +435,9 @@ The number must be three!
 Let's read out the example above: 'If the number is one, then print "The number is one", else if the number is two, then print "The given number is two", else if the number is three, then print "The number must be three!". Otherwise, print "Something else!"'
 
 <!-- Yllä olevan ohjelman askeleittainen visualisointi: -->
-The visualization of the code above:
+The step-by-step visualization of the code above:
 
-<code-states-visualizer input='{"code":"public class Esimerkki {\n  public static void main(String[] args) {\n    int luku = 3;\n    \n    if (luku == 1) {\n      System.out.println(\"Luku on yksi\");\n    } else if (luku == 2) {\n      System.out.println(\"Lukuna on kaksi\");\n    } else if (luku == 3) {\n      System.out.println(\"Kolme lienee lukuna!\");\n    } else {\n      System.out.println(\"Jotain muuta!\");\n    }\n  }\n}","stdin":"","trace":[{"stdout":"","event":"call","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"1","frame_id":1}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"2","frame_id":2}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{"luku":3},"ordered_varnames":["luku"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"4","frame_id":4}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":7,"stack_to_render":[{"func_name":"main:7","encoded_locals":{"luku":3},"ordered_varnames":["luku"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"8","frame_id":8}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":9,"stack_to_render":[{"func_name":"main:9","encoded_locals":{"luku":3},"ordered_varnames":["luku"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"12","frame_id":12}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":10,"stack_to_render":[{"func_name":"main:10","encoded_locals":{"luku":3},"ordered_varnames":["luku"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"16","frame_id":16}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"Kolme lienee lukuna!\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"luku":3},"ordered_varnames":["luku"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"20","frame_id":20}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"Kolme lienee lukuna!\n","event":"return","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"luku":3,"__return__":["VOID"]},"ordered_varnames":["luku","__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"21","frame_id":21}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}}],"userlog":"Debugger VM maxMemory: 455M\n"}'></code-states-visualizer>
+<code-states-visualizer input='{"code":"public class Example {\n  public static void main(String[] args) {\n    int number = 3;\n    \n    if (number == 1) {\n      System.out.println(\"The number is one\");\n    } else if (number == 2) {\n      System.out.println(\"The given number is two\");\n    } else if (number == 3) {\n      System.out.println(\"The number must be three!\");\n    } else {\n      System.out.println(\"Something else!\");\n    }\n  }\n}","stdin":"","trace":[{"stdout":"","event":"call","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"1","frame_id":1}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"2","frame_id":2}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{"number":3},"ordered_varnames":["number"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"4","frame_id":4}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":7,"stack_to_render":[{"func_name":"main:7","encoded_locals":{"number":3},"ordered_varnames":["number"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"8","frame_id":8}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":9,"stack_to_render":[{"func_name":"main:9","encoded_locals":{"number":3},"ordered_varnames":["number"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"12","frame_id":12}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":10,"stack_to_render":[{"func_name":"main:10","encoded_locals":{"number":3},"ordered_varnames":["number"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"16","frame_id":16}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"The number must be three!\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"number":3},"ordered_varnames":["number"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"20","frame_id":20}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"The number must be three!\n","event":"return","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"number":3,"__return__":["VOID"]},"ordered_varnames":["number","__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"21","frame_id":21}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}}],"userlog":"Debugger VM maxMemory: 455M\n"}'></code-states-visualizer>
 
 
 <!-- <programming-exercise name="Suurempi tai yhtäsuuri" tmcname='osa01-Osa01_30.SuurempiTaiYhtasuuri'> -->
@@ -524,7 +524,7 @@ The number is greater than zero.
 
 <!-- Yllä oleva esimerkki tulostaa merkkijonon "Luku on suurempi kuin nolla." vaikka myös ehto `luku > 2` on totta. Vertailu lopetetaan ensimmäiseen valintakäskyyn, jonka ehto on totta. -->
 
-The example above prints the string "The number is greater than zero." even if the condition `number > 2` is true. The comparing stops at the first condition that evaluates to true.
+The example above prints the string "The number is greater than zero." even if the condition `number > 2` is true. The comparison stops at the first condition that evaluates to true.
 
 <!-- <programming-exercise name="Arvosanat ja pisteet" tmcname='osa01-Osa01_31.ArvosanatJaPisteet'> -->
 <programming-exercise name="Grades and points" tmcname='part01-Part01_31.GradesAndPoints'>
@@ -892,7 +892,7 @@ Scanner reader = new Scanner(System.in);
 System.out.println("Enter a string");
 String input = reader.nextLine();
 
-if (input.equals("string")) {
+if (input.equals("a string")) {
     System.out.println("Great! You read the instructions correctly.");
 } else {
     System.out.println("Missed the mark!");
@@ -918,7 +918,7 @@ Great! You read the instructions correctly.
 <!-- Komento equals kirjoitetaan merkkijonomuuttujan jälkeen siten, että se kiinnitetään pisteellä vertailtavaan muuttujaan. Komennolle annetaan parametrina merkkijono, johon muuttujaa vertaillaan. Mikäli merkkijonomuuttujaa vertaillaan suoraan merkkijonoon, voi merkkijonon asettaa hipsuilla merkittynä equals-komennon sulkujen sisään. Muulloin sulkujen sisään asetetaan sen merkkijonomuuttujan nimi, johon merkkijonomuuttujan sisältämää merkkijonoa verrataan. -->
 
 <!-- TODO: Find a better way to translate -->
-The equals command is written after a string by attaching it to the string to be compared with a dot. The command is given a parameter, which is the string that the variable will be compared against. If the string variable is being directly compared with a string, then the string can be placed inside the parentheses of the equals-command within quotation marks. Otherwise, the name of the string variable that holds the string to be compared is placed inside the parentheses.
+The equals command comes after the first string, attached to it with a dot. The command is given the second string as a parameter. Both the first and the second string can be either string literals, or variables containing strings.
 
 <!-- Alla olevassa esimerkissä luetaan käyttäjältä kaksi merkkijonoa. Ensin tarkastetaan ovatko syötetyt merkkijonot samat, jonka jälkeen tarkastetaan onko syötettyjen merkkijonojen arvo "kaksi merkkijonoa". -->
 
@@ -1076,13 +1076,13 @@ The expression of a conditional statement may consist of multiple parts, in whic
 
 <!-- Seuraavassa yhdistetään `&&`:lla eli ja-operaatiolla kaksi yksittäistä ehtoa. Koodilla tarkistetaan, onko muuttujassa oleva luku suurempi kuin 4 ja pienempi kuin 11, eli siis välillä 5-10: -->
 
-In the next example we combine two individual conditions using `&&`, i.e., the and-operator. The code is used to check if the number in the variable is greater than 4 and less than 11. In other words, whether it's within the range of 5-10:
+In the next example we combine two individual conditions using `&&`, i.e., the and-operator. The code is used to check if the number in the variable is greater than or equal to 5 and less than or equal to 10. In other words, whether it's within the range of 5-10:
 
 <!-- ```java
 System.out.println("Onkohan luku väliltä 5-10: ");
 int luku = 7;
 
-if (luku >= 4 && luku <= 10) {
+if (luku >= 5 && luku <= 10) {
     System.out.println("On! :)");
 } else {
     System.out.println("Ei ollut :(")
@@ -1143,7 +1143,7 @@ It is! :)
 
 <!-- Seuraavassa käännetään `!` ei-operaatiolla lausekkeen `luku > 4` tulos. Ei-operaatio merkitään lauseketta ennen niin, että käännettävä lauseke rajataan suluilla, ja ei-operaatio lisätään sulkuja ennen. -->
 
-In this example we flip the result of the expression `number > 4` using `!`, i.e., the not-operator. The not-operator is notated in such a way that the expression to be flipped is wrapped in parentheses, and the not-operator is placed before the parentheses.
+In this example we flip the result of the expression `number > 4` using `!`, i.e., the not-operator. The not-operator is written in such a way that the expression to be flipped is wrapped in parentheses, and the not-operator is placed before the parentheses.
 
 <!-- ```java
 int luku = 7;
@@ -1443,7 +1443,7 @@ The year is a leap year.
 </sample-output>
 
 <!-- Vihje 1: Jollain luvulla jaollisuuden voi tarkastaa jakojäännösoperaation `%` avulla seuraavasti. -->
-Hint 1: The divisibility by a particular number can be checked using the modulo operator, aka `%`, in the following way.
+Hint 1: Divisibility by a particular number can be checked using the modulo operator, aka `%`, in the following way.
 
 <!-- ```java
 int luku = 5;
@@ -1479,7 +1479,7 @@ The number is not divisible by six!
 <!-- TODO: Virhe suomenkielisessä tekstissä. "ohjelma ei ole karkausvuosi" -->
 <!-- Vihje 2: mieti ongelmaa if, else if, else if, ... -vertailujen ketjuna ja aloita ohjelman rakentaminen tilanteesta, missä voit olla varma, että ohjelma ei ole karkausvuosi. -->
 
-Hint 2: Think of the problem as a chain of if, else if, else if, ... -comparisons, and start building the program from a situation in which you can be certain that the year is not a leap year.
+Hint 2: Think of the problem as a chain of if, else if, else if, ... comparisons, and start building the program from a situation in which you can be certain that the year is not a leap year.
 
 <!-- ```java
 Scanner lukija = new Scanner(System.in);

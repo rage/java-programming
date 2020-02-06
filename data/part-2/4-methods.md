@@ -2,7 +2,7 @@
 path: '/part-2/4-methods'
 # title: 'Metodit ja ohjelman jakaminen pienempiin osiin'
 title: 'Methods and dividing the program into smaller parts'
-hidden: true
+hidden: false
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
@@ -11,7 +11,7 @@ hidden: true
 
 - You are familiar with the concepts of a method parameter, a method's return value, and a program's call stack.
 <!-- - Osaat luoda metodeja ja osaat kutsua metodeja sekä pääohjelmasta (`main`-metodi) että muiden metodien sisältä. -->
-- You know how to create methods and how to call them, from the main program (the `main` method) as well as from inside other methods.
+- You know how to create methods and how to call them from both the main program (the `main` method) as well as from inside other methods.
 <!-- - Osaat luoda parametrillisia ja parametrittomia metodeja, ja osaat luoda metodeja, jotka palauttavat arvon. -->
 - You can create parameterized and non-parameterized methods, and you can create methods that return a value.
 
@@ -19,15 +19,15 @@ hidden: true
 
 <!-- Olemme käyttäneet useita erilaisia komentoja: arvon asettamista, laskutoimituksia, ehtolauseita, ja toistolauseita. -->
 
-We've used various different commands: value assignment, calculations, conditional statements, and loops.
+So far, we've used various commands: value assignment, calculations, conditional statements, and loops.
 
 <!-- Ruudulle tulostaminen on tehty `System.out.println()`-lauseella ja lukeminen `Integer.valueOf(lukija.nextLine())` lauseella. Ehtolauseessa on käytetty `if`:iä, toistolauseessa `while`:ä ja `for`:ia. Huomaamme, että tulostaminen ja lukeminen poikkeaa `if`:istä, `while`:stä, `for`:ista siinä, että tulostus- ja lukemiskomennon perässä on sulut ja joskus sulkujen sisällä komennolle annettava parametrit. Nämä "sulkuihin päättyvät" eivät oikeastaan olekaan komentoja vaan metodeja. -->
 
-Printing to the screen has been done with the statement `System.out.println()`, and the reading of values with `Integer.valueOf(scanner.nextLine())`. `if` has been used in conditional statements, and `while` and `for` in loops. We notice that printing and reading operations somewhat differ from `if`, `while`, and `and` in that the print and read commands are followed by parentheses, which may include parameters passed to the command. The ones that "end in parentheses" are not actually commands, but methods.
+Printing to the screen has been done with the statement `System.out.println()`, and the reading of values with `Integer.valueOf(scanner.nextLine())`. `if` has been used in conditional statements, and `while` and `for` in loops. We notice that printing and reading operations somewhat differ from `if`, `while`, and `for` in that the print and read commands are followed by parentheses, which may include parameters passed to the command. The ones that "end in parentheses" are not actually commands, but methods.
 
 <!-- Teknisesti ottaen **metodi** tarkoittaa nimettyä lauseista koostuvaa joukkoa, eli ohjelman palaa, jota voi kutsua muualta ohjelmakoodista metodille annetun nimen perusteella. Esimerkiksi koodirivillä `System.out.println("olen metodille annettava parametri!")` kutsutaan metodia, joka suorittaa ruudulle tulostamisen. Metodin sisäinen toteutus -- eli joukko suoritettavia lauseita -- on piilossa, eikä ohjelmoijan tarvitse välittää siitä metodia käytettäessä. -->
 
-Technically speaking, **a method** is a named set of statements. It's a piece of a program that can be called from elsewhere in the code by the name given to the method. For instance `System.out.println("I am a parameter given to the method!")` calls a methods that performs printing to the screen. The internal implementation of the method -- i.e., the set of statements to be executed -- is hidden, and the programmer does not need to concern themselves with it when using the method.
+Technically speaking, **a method** is a named set of statements. It's a piece of a program that can be called from elsewhere in the code by the name given to the method. For instance `System.out.println("I am a parameter given to the method!")` calls a methods that performs printing to the screen. The internal implementation of the method -- meaning the set of statements to be executed -- is hidden, and the programmer does not need to concern themselves with it when using the method.
 
 <!-- Tähän mennessä käyttämämme metodit ovat kaikki olleet Javan valmiita metodeita. Opetellaan seuraavaksi tekemään omia metodeita. -->
 
@@ -40,11 +40,11 @@ So far all the methods we have used have been ready-made Java methods. Next we w
 
 <!-- **Metodi** tarkoittaa nimettyä lauseista koostuvaa joukkoa, jota voi kutsua muualta ohjelmakoodista nimen perusteella. Ohjelmointikielet tarjoavat valmiita metodeja, mutta ohjelmoija voi myös kirjoittaa omia metodeja. On oikeastaan on melko poikkeuksellista mikäli ohjelmassa ei ole yhtään itse kirjoitettua metodia, sillä metodit auttavat ohjelman jäsentämisessä. Tästä lähtien lähes jokainen kurssilla tehty ohjelma sisältääkin itsekirjoitettuja metodeja. -->
 
-**A method** means a named set consisting of statements that can be called from elsewhere in the program code by its name. Programming languages offer pre-made methods, but programmers can also write their own ones. It would in fact be quite exceptional if a program used no methods written by the programmer, because methods help in structuring the program. From this point onward nearly every program on the course will therefore contain custom-created methods.
+**A method** means a named set consisting of statements that can be called from elsewhere in the program code by its name. Programming languages offer pre-made methods, but programmers can also write their own ones. It would, in fact, be quite exceptional if a program used no methods written by the programmer, because methods help in structuring the program. From this point onward nearly every program on the course will therefore contain custom-created methods.
 
 <!-- Metodit kirjoitetaan ohjelmarunkoon `main`:in aaltosulkeiden ulkopuolelle mutta kuitenkin "uloimmaisten" aaltosulkeiden sisäpuolelle, joko mainin ylä- tai alapuolelle. -->
 
-In the code boilerplate, methods are written outside of the curly braces of the `main`, yet inside out the `outermost` curly braces. They can be located above or below the main.
+In the code boilerplate, methods are written outside of the curly braces of the `main`, yet inside out the "outermost" curly braces. They can be located above or below the main.
 
 <!-- ```java
 import java.util.Scanner;
@@ -126,7 +126,7 @@ public class Example {
 
 <!-- Metodin määrittely sisältää kaksi osaa. Metodimäärittelyn ensimmäisellä rivillä on metodin nimi eli `tervehdi`. Nimen vasemmalla puolella tässä vaiheessa määreet `public static void`. Metodin nimen sisältävän rivin alla on aaltosulkeilla erotettu koodilohko, jonka sisälle kirjoitetaan metodin koodi, eli ne komennot jotka metodia kutsuttaessa suoritetaan. Metodimme `tervehdi` ei tee muuta kuin kirjoittaa rivillisen tekstiä ruudulle. -->
 
-The definition of the method consists of two parts. The first line of the definition includes the name of the method, i.e. `greet`. On the left side of the name are the keywords `public static void`. Beneath the row containing the name of the method is a code block surrounded by curly brackets, inside of which is the code of the method - the commands that are executed when it is called. The only thing our method `greet` does is write a line of text on the screen.
+The definition of the method consists of two parts. The first line of the definition includes the name of the method, i.e. `greet`. On the left side of the name are the keywords `public static void`. Beneath the line containing the name of the method is a code block surrounded by curly brackets, inside of which is the code of the method -- the commands that are executed when the method is called. The only thing our method `greet` does is write a line of text on the screen.
 
 <!-- Itsekirjoitetun metodin kutsu on helppoa, kirjoitetaan metodin nimi ja perään sulut ja puolipiste. Seuraavassa main eli pääohjelma kutsuu tervehdi-metodia yhteensä neljä kertaa. -->
 
@@ -218,7 +218,7 @@ The order of execution is worth noticing. The execution of the program happens b
 
 <!-- Jos ollaan tarkkoja niin pääohjelma eli main on itsekin metodi. Kun ohjelma käynnistyy, kutsuu käyttöjärjestelmä main:ia. Metodi main on siis ohjelman käynnistyspiste, jonka ylimmältä riviltä ohjelman suoritus lähtee liikkeelle. Ohjelman suoritus loppuu kun päädytään mainin loppuun. -->
 
-Strictly speaking the main program (`main`) itself is a method. When the program starts, the operating system calls `main`. The main method is the starting point for the program, since the execution begins from its first row. The execution of a program ends at the end of the main method.
+Strictly speaking, the main program (`main`) itself is a method. When the program starts, the operating system calls `main`. The main method is the starting point for the program, since the execution begins from its first line. The execution of a program ends at the end of the main method.
 
 <!-- <programming-exercise name='Tekstin tulostus' tmcname='osa02-Osa02_21.TekstinTulostus'> -->
 
@@ -228,7 +228,7 @@ Strictly speaking the main program (`main`) itself is a method. When the program
 
 <!-- Tee metodi `tulostaTeksti`, joka tulostaa tekstin "Alussa olivat suo, kuokka ja Java." sekä rivinvaihdon. -->
 
-Create a method called `printPhrase` which prints the phrase "In a hole in the ground there lived a method" and a newline.
+Create a method called `printText` which prints the phrase "In a hole in the ground there lived a method" and a newline.
 
 <!-- ```java
 public static void main(String[] args) {
@@ -242,10 +242,10 @@ public static void tulostaTeksti() {
 
 ```java
 public static void main(String[] args) {
-    printPhrase();
+    printText();
 }
 
-public static void printPhrase() {
+public static void printText() {
     // Write some code in here
 }
 ```
@@ -295,7 +295,7 @@ public static void main(String[] args) {
     // use the while command to call the method a suitable number of times
 }
 
-public static void printPhrase() {
+public static void printText() {
     // write some code in here
 }
 ```
@@ -341,7 +341,7 @@ In a hole in the ground there lived a method
 
 <!-- Jatkossa kun esittelemme metodeja, emme erikseen mainitse että niiden täytyy sijaita omalla paikallaan. Metodia ei esimerkiksi voi määritellä toisen metodin sisällä. -->
 
-From here on out, when introducing methods, we will not explicitly mention they must be located in the correct place. Methods cannot be defined e.g. inside other methods.
+From here on out, when introducing methods, we will not explicitly mention that they must be located in the correct place. Methods cannot be defined e.g. inside other methods.
 
 
 <!-- ## Metodien nimennästä -->
@@ -391,11 +391,11 @@ public static void thisMethodSaysWoof() {
 
 <!-- **Parametrit** ovat metodille annettavia arvoja, joita käytetään metodin suorituksessa. Metodin parametrit määritellään metodin ylimmällä rivillä metodin nimen jälkeen olevien sulkujen sisällä. Metodissa käytettävät parametrien arvot kopioituvat metodikutsun yhteydessä metodille annettavista parametreista. -->
 
-**Parameters** are values given to a method that can be used in its execution. The parameters of a method are defined on the uppermost row of the method within the parentheses following its name. The values of the parameters that the method can use are copied from the values given to the method when it is executed.
+**Parameters** are values given to a method that can be used in its execution. The parameters of a method are defined on the uppermost line of the method within the parentheses following its name. The values of the parameters that the method can use are copied from the values given to the method when it is executed.
 
 <!-- Seuraavassa esimerkissä määritellään parametrillinen metodi `tervehdi`, jolla on int-tyyppinen parametri `montakoKertaa`. -->
 
-In the following example a parameterized method `greet` is defined. It has an int type parameter called `numOfTimes`.
+In the following example a parameterized method `greet` is defined. It has an `int` type parameter called `numOfTimes`.
 
 ```java
 public static void greet(int numOfTimes) {
@@ -450,7 +450,7 @@ Greetings!
 
 <!-- Aivan kuten Javan valmista `System.out.println()`-metodia kutsuttaessa, voi oman metodin kutsussa parametrina antaa lausekkeen. -->
 
-Just like when calling the predefined method `System.out.println`, you can pass an expression as a paratmeter.
+Just like when calling the predefined method `System.out.println`, you can pass an expression as a parameter.
 
 <!-- ```java
 public static void main(String[] args) {
@@ -483,7 +483,7 @@ Greetings!
 
 <!-- Jos metodia kutsuttaessa parametriksi määritellään lauseke, evaluoidaan lauseke ennen metodikutsua. Yllä lauseke evaluoituu arvoksi `3` ja lopullinen metodikutsu on muotoa `tervehdi(3);`. -->
 
-If an expression is used as a parameter for a method, that expression is evaluated prior to the method call. Above, the expression evaluates to `3` and the final method call is of the form `greet(3);`.
+If an expression is used as a parameter for a method, the expression is evaluated prior to the method call. Above, the expression evaluates to `3` and the final method call is of the form `greet(3);`.
 
 
 <!-- <programming-exercise name='Yhdestä parametriin' tmcname='osa02-Osa02_23.YhdestaParametriin'> -->
@@ -626,7 +626,7 @@ sum(3, 5);
 int number1 = 2;
 int number2 = 4;
 
-summa(number1, number2);
+sum(number1, number2);
 ```
 
 <!-- <sample-output>
@@ -860,7 +860,7 @@ The value of the variable 'number' in the main program: 1
 
 <!-- Kun metodin sisällä kasvatetaan muuttujan `luku` arvoa kolmella, se onnistuu. Tämä ei kuitenkaan näy pääohjelmassa olevassa muuttujassa `luku`. Pääohjelmassa oleva muuttuja `luku` on eri kuin metodissa oleva muuttuja `luku`. -->
 
-When the variable `number` is incremented inside the method, there's no issue. This, owever, is not reflected in the `number` variable of the main program. The `number` variable living in the main program is different from the `number` variable of the method.
+When the variable `number` is incremented inside the method, there's no issue. This, however, is not reflected in the `number` variable of the main program. The `number` variable living in the main program is different from the `number` variable of the method.
 
 <!--
 <code-states-visualizer input='{"code":"public class Esimerkki {\n\n   public static void main(String[] args) {\n      int luku = 1;\n      System.out.println(\"Pääohjelman luvun arvo: \" + luku);\n      kasvataKolmella(luku);\n      System.out.println(\"Pääohjelman luvun arvo: \" + luku);\n   }\n\n   public static void kasvataKolmella(int luku) {\n      System.out.println(\"Metodin luvun arvo: \" + luku);\n      luku = luku + 3;\n      System.out.println(\"Metodin luvun arvo: \" + luku);\n   }\n}","stdin":"","trace":[{"stdout":"","event":"call","line":4,"stack_to_render":[{"func_name":"main:4","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"1","frame_id":1}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":4,"stack_to_render":[{"func_name":"main:4","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"2","frame_id":2}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{"luku":1},"ordered_varnames":["luku"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"4","frame_id":4}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"Pääohjelman luvun arvo: 1\n","event":"step_line","line":6,"stack_to_render":[{"func_name":"main:6","encoded_locals":{"luku":1},"ordered_varnames":["luku"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"7","frame_id":7}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"Pääohjelman luvun arvo: 1\n","event":"call","line":11,"stack_to_render":[{"func_name":"kasvataKolmella:11","encoded_locals":{"luku":1},"ordered_varnames":["luku"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"9","frame_id":9},{"func_name":"main:6","encoded_locals":{"luku":1},"ordered_varnames":["luku"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"10","frame_id":10}],"globals":{},"ordered_globals":[],"func_name":"kasvataKolmella","heap":{}},{"stdout":"Pääohjelman luvun arvo: 1\n","event":"step_line","line":11,"stack_to_render":[{"func_name":"kasvataKolmella:11","encoded_locals":{"luku":1},"ordered_varnames":["luku"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"11","frame_id":11},{"func_name":"main:6","encoded_locals":{"luku":1},"ordered_varnames":["luku"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"12","frame_id":12}],"globals":{},"ordered_globals":[],"func_name":"kasvataKolmella","heap":{}},{"stdout":"Pääohjelman luvun arvo: 1\nMetodin luvun arvo: 1\n","event":"step_line","line":12,"stack_to_render":[{"func_name":"kasvataKolmella:12","encoded_locals":{"luku":1},"ordered_varnames":["luku"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"21","frame_id":21},{"func_name":"main:6","encoded_locals":{"luku":1},"ordered_varnames":["luku"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"22","frame_id":22}],"globals":{},"ordered_globals":[],"func_name":"kasvataKolmella","heap":{}},{"stdout":"Pääohjelman luvun arvo: 1\nMetodin luvun arvo: 1\n","event":"step_line","line":13,"stack_to_render":[{"func_name":"kasvataKolmella:13","encoded_locals":{"luku":4},"ordered_varnames":["luku"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"29","frame_id":29},{"func_name":"main:6","encoded_locals":{"luku":1},"ordered_varnames":["luku"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"30","frame_id":30}],"globals":{},"ordered_globals":[],"func_name":"kasvataKolmella","heap":{}},{"stdout":"Pääohjelman luvun arvo: 1\nMetodin luvun arvo: 1\nMetodin luvun arvo: 4\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"kasvataKolmella:14","encoded_locals":{"luku":4},"ordered_varnames":["luku"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"39","frame_id":39},{"func_name":"main:6","encoded_locals":{"luku":1},"ordered_varnames":["luku"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"40","frame_id":40}],"globals":{},"ordered_globals":[],"func_name":"kasvataKolmella","heap":{}},{"stdout":"Pääohjelman luvun arvo: 1\nMetodin luvun arvo: 1\nMetodin luvun arvo: 4\n","event":"return","line":14,"stack_to_render":[{"func_name":"kasvataKolmella:14","encoded_locals":{"luku":4,"__return__":["VOID"]},"ordered_varnames":["luku","__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"41","frame_id":41},{"func_name":"main:6","encoded_locals":{"luku":1},"ordered_varnames":["luku"],"parent_frame_id_list":[],"is_highlighted":false,"is_zombie":false,"is_parent":false,"unique_hash":"42","frame_id":42}],"globals":{},"ordered_globals":[],"func_name":"kasvataKolmella","heap":{}},{"stdout":"Pääohjelman luvun arvo: 1\nMetodin luvun arvo: 1\nMetodin luvun arvo: 4\n","event":"step_line","line":7,"stack_to_render":[{"func_name":"main:7","encoded_locals":{"luku":1},"ordered_varnames":["luku"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"43","frame_id":43}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"Pääohjelman luvun arvo: 1\nMetodin luvun arvo: 1\nMetodin luvun arvo: 4\nPääohjelman luvun arvo: 1\n","event":"step_line","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"luku":1},"ordered_varnames":["luku"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"48","frame_id":48}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"Pääohjelman luvun arvo: 1\nMetodin luvun arvo: 1\nMetodin luvun arvo: 4\nPääohjelman luvun arvo: 1\n","event":"return","line":8,"stack_to_render":[{"func_name":"main:8","encoded_locals":{"luku":1,"__return__":["VOID"]},"ordered_varnames":["luku","__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"49","frame_id":49}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}}],"userlog":"Debugger VM maxMemory: 455M\n"}'></code-states-visualizer> -->
@@ -872,7 +872,7 @@ When the variable `number` is incremented inside the method, there's no issue. T
 
 <!-- Parametri `luku` kopioidaan metodin käyttöön, eli metodia `kasvataKolmella` varten luodaan oma muuttuja nimeltä `luku`, johon pääohjelmassa olevan muuttujan `luku` arvo kopioidaan metodikutsun yhteydessä. Metodissa `kasvataKolmella` oleva muuttuja `luku` on olemassa vain metodin suorituksen ajan, eikä sillä ole yhteyttä pääohjelman samannimiseen muuttujaan. -->
 
-The parameter `number` is copied for the method's use, i.e., a new variable called `number` is created for `incrementByThree` method, to which the value of the variable`number` in the main program is copied during the method call. The variable `number` inside the method `incrementByThree` exists only for theduration of the method's execution, and it has no relation to the variable of the same name in the main program.
+The parameter `number` is copied for the method's use, i.e., a new variable called `number` is created for `incrementByThree` method, to which the value of the variable`number` in the main program is copied during the method call. The variable `number` inside the method `incrementByThree` exists only for the duration of the method's execution and has no relation to the variable of the same name in the main program.
 
 
 <quiz id="1ec65f26-f66e-55d9-aa22-5a36ae9e3484"></quiz>
@@ -884,7 +884,7 @@ The parameter `number` is copied for the method's use, i.e., a new variable call
 
 <!-- Metodin määrittelyssä kerrotaan palauttaako metodi arvon. Jos metodi palauttaa arvon, tulee metodimäärittelyn yhteydessä kertoa palautettavan arvon tyyppi. Muulloin määrittelyssä käytetään avainsanaa `void`. Tähän mennessä tekemämme metodit ovat määritelty avainsanaa `void` käyttäen eli eivät ole palauttaneet arvoa. -->
 
-The definition of a method tells whether that method returns a value or not. If it does, the method definition has to include type of the return value. Otherwise the keyword `void` is used in the definition. The methods we've created so far have been defined with the keyword `void`, i.e., they've returned no values.
+The definition of a method tells whether that method returns a value or not. If it does, the method definition has to include the type of the returned value. Otherwise the keyword `void` is used in the definition. The methods we've created so far have been defined with the keyword `void`, meaning that they have not returned values.
 
 <!-- ```java
 public static **void** kasvataKolmella() {
@@ -904,7 +904,7 @@ The keyword `void` means that the method returns nothing. If we want the method 
 
 <!-- Konkreettinen arvon palautus tapahtuu komennolla `return`, jota seuraa palautettava arvo (tai muuttujan nimi, jonka arvo palautetaan). -->
 
-The concrete returning of a value happens with the command `return` followed by the value to be returned (or the name of the variable whose value is to be returned).
+To actually return a value, we use the command `return` followed by the value to be returned (or the name of the variable whose value is to be returned).
 
 <!-- ```java
 public static int palautetaanAinaKymppi() {
@@ -920,7 +920,7 @@ public static int alwaysReturnsTen() {
 
 <!-- Yllä määritelty metodi palauttaa sitä kutsuttaessa `int`-tyyppisen arvon `10`. Jotta metodin palauttamaa arvoa voisi käyttää, tulee se ottaa talteen muuttujaan. Tämä tapahtuu samalla tavalla kuin normaali muuttujan arvon asetus, eli yhtäsuuruusmerkillä. -->
 
-The method defined above returns an `int`-type value of `10` when called. For the return value to be used, it must be stored in a variable. This is done the same way as regular value assignment to a variable, i.e., by using an equals sig
+The method defined above returns an `int`-type value of `10` when called. For the return value to be used, it must be stored in a variable. This is done the same way as regular value assignment to a variable, by using an equals sign.
 <!-- ```java
 public static void main(String[] args) {
     int luku = palautetaanAinaKymppi();
@@ -939,7 +939,7 @@ public static void main(String[] args) {
 
 <!-- Metodin paluuarvo sijoitetaan `int`-tyyppiseen muuttujaan aivan kuin mikä tahansa muukin int-arvo. Paluuarvo voi toimia myös osana mitä tahansa lauseketta. -->
 
-The return value of the method is placed in an `int`-type variable as with any other int value. The return value can also be used in any other expression.
+The return value of the method is placed in an `int` type variable as with any other `int` value. The return value can also be used in any other expression.
 
 
 <!-- ```java
@@ -951,14 +951,13 @@ System.out.println("laskutoimituksen tulos " + luku);
 ```java
 double number = 4 * alwaysReturnsTen() + (alwaysReturnsTen() / 2) - 8;
 
-System.out.println("the result of the calculation " + luku);
+System.out.println("the result of the calculation " + number);
 ```
 
 <!-- Kaikki tähän mennessä näkemämme muuttujatyypit voidaan palauttaa metodista. -->
 
 All the variable types we've encountered so far can be returned from a method.
 
-TODO: miksi esimerkkikoodit eivät toimi
 
 <table class="table">
   <tr>
@@ -976,12 +975,13 @@ public static void metodiJokaEiPalautaMitaan() {
     // metodin runko
 }
 ``` -->
+
 ```java
 public static void methodThatReturnsNothing() {
     // method body
 }
 ```
-    </td>
+  </td>
   </tr>
   <tr>
     <!-- <td>Metodi palauttaa `int`-tyyppisen muuttujan</td> -->
@@ -992,12 +992,13 @@ public static int metodiJokaPalauttaaKokonaisLuvun() {
     // metodin runko, tarvitsee return-komennon
 }
 ``` -->
+
 ```java
 public static int methodThatReturnsInteger() {
     //method body, return statement must be included
 }
 ```
-    </td>
+  </td>
   </tr>
   <tr>
     <!-- <td>Metodi palauttaa `double`-tyyppisen muuttujan</td> -->
@@ -1008,12 +1009,13 @@ public static double metodiJokaPalauttaaLiukuluvun() {
     // metodin runko, tarvitsee return-komennon
 }
 ``` -->
+
 ```java
 public static double methodThatReturnsFloatingPointNumber() {
     // method body, return statement must be included
 }
 ```
-    </td>
+  </td>
   </tr>
 </table>
 
@@ -1085,9 +1087,9 @@ public static int functioningMethod(int parameter) {
         return 10;
     }
 
-    System.out.println("The number received as parameter is ten or lesser.");
+    System.out.println("The number received as parameter is ten or less.");
 
-    return parametri;
+    return parameter;
 }
 ```
 
@@ -1107,6 +1109,16 @@ public static void jakolasku(int osoittaja, int nimittaja) {
 }
 ``` -->
 
+```java
+public static void division(int numerator, int denominator) {
+    if (denominator == 0) {
+        System.out.println("Can not divide by 0!");
+        return;
+    }
+
+    System.out.println("" + numerator + " / " + denominator + " = " + (1.0 * numerator / denominator));
+}
+```
 
 <!--  Muuttujien määrittely metodien sisällä -->
 
@@ -1306,7 +1318,7 @@ When the execution of the method reaches the statement `return first + second;`,
 
 <!-- Metodin kutsutaan seuraavasti. Alla metodia käytetään laskemaan luvut 2 ja 7 yhteen. Metodikutsusta saatava paluuarvo asetetaan muuttujaan `lukujenSumma`: -->
 
-The method is called in the following way. Below, the method is used to add the numbers 2 and 7 together. The value resuting from the method call is placed into the variable `sumOfNumbers`.
+The method is called in the following way. Below, the method is used to add the numbers 2 and 7 together. The value resulting from the method call is placed into the variable `sumOfNumbers`.
 
 <!-- ```java
 int lukujenSumma = summa(2, 7);
@@ -1320,7 +1332,7 @@ int sumOfNumbers = sum(2, 7);
 
 <!-- Laajennetaan edellistä esimerkkiä siten, että käyttäjä syöttää luvut. -->
 
-Let's expand the previous example so that the numbers are entered by a user
+Let's expand the previous example so that the numbers are entered by a user.
 
 <!-- ```java
 public static void main(String[] args) {
@@ -1403,7 +1415,7 @@ public static int sum(int first, int second) {
 
 <!-- Nyt pääohjelman muuttujan `luku1` arvo kopioituu metodin parametrin `eka` arvoksi ja pääohjelman muuttujan `luku2` arvo kopioituu metodin parametrin `toka` arvoksi. -->
 
-Now the value of the variable `number1` is copied as the value of the method parameter `first`, and the value of the variable `number1` is copied as the value of the parameter `second`.
+Now the value of the variable `number1` is copied as the value of the method parameter `first`, and the value of the variable `number2` is copied as the value of the parameter `second`.
 
 
 <quiz id="fa98830f-8715-5acb-ae72-aad063574ae0"></quiz>
@@ -1467,11 +1479,7 @@ Sum: 14
 
 <!-- **Huom:** kun tehtävässä sanotaan että metodin pitää _palauttaa_ jotain, tarkoittaa tämä sitä että metodissa tulee olla määritelty paluutyyppi ja `return`-komento jolla haluttu asia palautetaan. Metodi ei itse tulosta (eli käytä komentoa `System.out.println(..)`), tulostuksen hoitaa metodin kutsuja, eli tässä tapauksessa pääohjelma. -->
 
-<<<<<<< HEAD:data/part-2/4-methods.md
 **NB:** when an exercise describes a method that should _return_ something, this means that the type of the return value must be declared in the method definition, and that the method contains a `return` command that returns the wanted data. The method itself will print nothing (i.e. will not use the command `System.out.println`) - that task is left to the method caller, which in this case is the main program.
-=======
-**N.B.:** when an exercise describes a method that should _return_ something, this means that the type of the return value must be declared in the method definition, and that the method contains a `return` command that returns the desired data. The method itself will print nothing (i.e. will not use the command `System.out.println`) - that task is left to the method's caller, which in this case is the main program.
->>>>>>> 73493be24544e9825a3a481cd6d5905f4653274f:data/osa-2/4-metodit.md
 
 </programming-exercise>
 
@@ -1661,7 +1669,7 @@ How does the computer remember where to return after the execution of a method?
 
 <!-- Java-lähdekoodin suoritusympäristö pitää kirjaa suoritettavasta metodista kutsupinossa. **Kutsupino** sisältää kehyksiä, joista jokainen sisältää tiedon kyseisen metodin sisäisistä muuttujista sekä niiden arvoista. Kun metodia kutsutaan, kutsupinoon luodaan uusi kehys, joka sisältää metodin sisältämät muuttujat. Kun metodin suoritus loppuu, metodiin liittyvä kehys poistetaan kutsupinosta, jolloin suoritusta jatketaan kutsupinon edeltävästä metodista. -->
 
-The environment that executes Java source code keeps track of the method being executed in the call stack. **The call stack** contains frames, each of which includes information about a specific method's internal variables and their values. When a method is called, a new frame containing its variables is created in the call stack. When the execution of a method ends, the frame relating tt method is removed from the call stack, which leads to execution resuming at the previous method of the stack.
+The environment that executes Java source code keeps track of the method being executed in the call stack. **The call stack** contains frames, each of which includes information about a specific method's internal variables and their values. When a method is called, a new frame containing its variables is created in the call stack. When the execution of a method ends, the frame relating to a method is removed from the call stack, which leads to execution resuming at the previous method of the stack.
 
 <!-- Alla olevan visualisaation oikealla laidalla näytetään kutsupinon toimintaa. Metodikutsun yhteydessä kutsupinoon luodaan uusi kehys, joka poistetaan metodikutsusta poistuttaessa. -->
 
@@ -1675,7 +1683,7 @@ The right side of the visualization below displays the functioning of the call s
 
 <!-- Kun metodia kutsutaan, kutsuvan metodin suoritus jää odottamaan kutsutun metodin suorittamista. Tätä voidaan visualisoida kutsupinon avulla. Kutsupino tarkoittaa metodien kutsumisen muodostamaa pinoa -- juuri suoritettevana oleva metodi on aina pinon päällimmäisenä, ja metodin suorituksen päättyessä palataan pinossa seuraavana olevaan metodiin. Tarkastellaan seuraavaa ohjelmaa: -->
 
-When a method is called, the execution of the calling method is left waiting for the execution of the called method. This can be visualized with the help of a call stack. The call stack refers to the stack formed by the method calls -- the method currently being executed is always on the top of the stack, and when that method has finished executing the execution moves on to the method that is next on the stack. Let's examine the following program:
+When a method is called, the execution of the calling method is left waiting for the execution of the called method to end. This can be visualized with the help of a call stack. The call stack refers to the stack formed by the method calls -- the method currently being executed is always on the top of the stack, and when that method has finished executing the execution moves on to the method that is next on the stack. Let's examine the following program:
 
 <!-- ```java
 public static void main(String[] args) {
@@ -1774,7 +1782,7 @@ public static void main(String[] args) {
 public static void printStars(int beginning, int end) {
     while (beginning < end) {
         System.out.print("*");
-        beginning++; // equal to beginning = beginning + 1
+        beginning++; // same as beginning = beginning + 1
     }
 }
 ```
@@ -1995,7 +2003,7 @@ After that, the print command is executed, and then we return to the `main` meth
 
 <!-- Kuten edellä huomattiin, metodin sisältä voi kutsua myös muita metodeja. Alla vielä esimerkki tähän liittyen. Tehdään metodi `kertotaulu`, joka tulostaa annetun luvun kertotaulun. Kertotaulu tulostaa rivit metodin `tulostaKertotaulunRivi` avulla. -->
 
-As earlier noticed, other methods can be called from within methods. An additional example of this technique is given below. We'll create the method `multiplicationTable` that prints the multiplication table of the given number. The multiplication table prints the rows with the help of the `printMultiplicationTableRow` method.
+As we noticed earlier, other methods can be called from within methods. An additional example of this technique is given below. We'll create the method `multiplicationTable` that prints the multiplication table of the given number. The multiplication table prints the rows with the help of the `printMultiplicationTableRow` method.
 
 <!-- ```java
 public static void kertotaulu(int ylaraja) {
@@ -2032,7 +2040,7 @@ public static void multiplicationTable(int max) {
 public static void printMultiplicationTableRow(int number, int coefficient) {
 
     int printable = number;
-    while (printable <= number * coefficitenct) {
+    while (printable <= number * coefficient) {
         System.out.print("  " + printable);
         printable += number;
     }
@@ -2124,7 +2132,7 @@ The output of the program:
 
 <!-- **Huom:** moniosaisen tehtävät voi palauttaa palvelimelle (painamalla testausnapin oikealla puolella olevaa nappia) vaikka kaikki osat eivät olisikaan tehty. Palvelin valittelee tällöin tekemättömien osien testeistä, tehdyt osat palvelin kirjaa. -->
 
-**N.B** multiple-part exercises can be uploaded to the server (click the button to the right of the testing button) even if some parts are unfinished. In this case the server will complain about the tests for the parts that haven't been completed, but it will mark down the finished parts.
+**N.B** multipart exercises can be uploaded to the server (click the button to the right of the testing button) even if some parts are unfinished. In this case the server will complain about the tests for the parts that haven't been completed, but it will mark down the finished parts.
 
 <!-- <h2>Neliön tulostus</h2> -->
 
@@ -2147,7 +2155,7 @@ Define a method called `printSquare(int size)` that prints a suitable square wit
 
 <!-- Ohjelmaa tehdessäsi kannattaa varmistaa main:iin kirjoitetun testikoodin avulla että metodit toimivat vaaditulla tavalla. -->
 
-When creating the program, you might benefit from the test code in the main to ensure that the methods behave as required.
+When creating the program, you can use the code in the main to test that the methods behave as required.
 
 
 <!-- <h2>Suorakulmion tulostus</h2> -->
@@ -2223,7 +2231,7 @@ Create a method called `printTriangle(int size)` that uses `printSpaces` and `pr
 
 <!-- Tee metodi `jouluKuusi(int korkeus)` joka tulostaa joulukuusen. Joulukuusi koostuu annetun korkuisesta kolmiosta ja jalasta. Jalka on kaksi tähteä korkea ja kolme tähteä leveä ja se on keskellä kolmion pohjaa. Kuusi tulee rakentaa käyttämällä tulostukseen metodeja `tulostaTyhjaa` ja `tulostaTahtia` -->
 
-Define a method called `christmasTree(int height)` that prints the correct Christmas tree. The Christmas tree consists of a triangle with the specified height and the base. The base is two stars high and three stars wide, and is placed at the center of the triangle's bottom. The tree is to be constructed by using the methods `printSpaces` and `printStars`.
+Define a method called `christmasTree(int height)` that prints the correct Christmas tree. The Christmas tree consists of a triangle with the specified height as well as the base. The base is two stars high and three stars wide, and is placed at the center of the triangle's bottom. The tree is to be constructed by using the methods `printSpaces` and `printStars`.
 
 <!-- Esimerkiksi kutsu `jouluKuusi(4)` tulostaa seuraavaa: -->
 

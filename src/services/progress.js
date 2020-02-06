@@ -28,7 +28,7 @@ export async function fetchProgress() {
     ([identifier, progresses]) => {
       console.log(JSON.stringify(progresses))
       progresses.forEach(progressEntry => {
-        const group = progressEntry.group.replace('osa', 'part')
+        const group = progressEntry.group.replace("osa", "part")
         if (!progressByGroup[group]) {
           progressByGroup[group] = {}
         }

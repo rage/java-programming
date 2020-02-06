@@ -4,33 +4,6 @@ title: 'Part 1'
 overview: true
 hidden: false
 ---
-<only-for-course-variant variant="dl">
-  <deadline>4.2.2020</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="nodl">
-  <deadline>4.1.2020</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="ohja-dl">
-  <deadline>This is not part of the course you chose in the settings</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="ohja-nodl">
-  <deadline>This is not part of the course you chose in the settings</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="kesa-dl">
-  <deadline>13.5.2020</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="kesa-ohja-dl">
-  <deadline>This is not part of the course you chose in the settings</deadline>
-</only-for-course-variant>
-
-<only-for-not-logged-in>
-  <deadline>Log in to see the deadline for this part</deadline>
-</only-for-not-logged-in>
 
 Welcome to learning programming! The first part of the course focuses on taking the plunge with programming and getting familiar with all the required tools.
 

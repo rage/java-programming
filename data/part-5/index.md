@@ -6,35 +6,6 @@ overview: true
 hidden: true
 ---
 
-<only-for-course-variant variant="dl">
-  <deadline>18.2.2020</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="nodl">
-  <deadline>4.1.2020</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="ohja-dl">
-  <deadline>This is not part of the course you chose in the settings</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="ohja-nodl">
-  <deadline>This is not part of the course you chose in the settings</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="kesa-dl">
-  <deadline>10.6.2020</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="kesa-ohja-dl">
-  <deadline>This is not part of the course you chose in the settings</deadline>
-</only-for-course-variant>
-
-<only-for-not-logged-in>
-  <deadline>Log in to see the deadline for this part</deadline>
-</only-for-not-logged-in>
-
-
 <!-- Kurssimateriaalin viides osa jatkaa neljännestä osasta alkaneen olio-ohjelmoinnin parissa. -->
 
 The fifth part of the course material continues with object-oriented programming, which was introduced in the fourth part.

@@ -1,7 +1,7 @@
 ---
 path: '/part-3/4-using-strings'
 title: 'Using strings'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Learning Objectives'>
@@ -168,7 +168,8 @@ if (text.equals("marzipan")) {
 }
 ```
 
-<!-- Komento `equals` liitetään aina siihen verrattavaan tekstimuuttujaan, "tekstimuuttuja piste equals teksti". Tekstimuuttujaa voidaan myös verrata toiseen tekstimuuttujaan. --> The `equals` command is always appended to the end of the string that we want to compare, "string variable dot equals some text". You can also compare a string variable to another string variable.
+<!-- Komento `equals` liitetään aina siihen verrattavaan tekstimuuttujaan, "tekstimuuttuja piste equals teksti". Tekstimuuttujaa voidaan myös verrata toiseen tekstimuuttujaan. -->
+The `equals` command is always appended to the end of the string that we want to compare, "string variable dot equals some text". You can also compare a string variable to another string variable.
 
 <!-- ```java
 String teksti = "kurssi";
@@ -193,7 +194,7 @@ if (text.equals(anotherText)) {
 ```
 
 <!-- Merkkijonoja vertailtaessa on syytä varmistaa että verrattavalla tekstimuuttujalla on arvo. Jos muuttujalla ei ole arvoa, ohjelma tuottaa virheen _NullPointerException_, joka tarkoittaa ettei muuttujan arvoa ole asetettu tai se on tyhjä (_null_). -->
-When comparing strings, you should make sure the string variable has some value assigned to ti. If it doesn't have a value, the program will produce a _NullPointerException_ error, which means that no value has been assigned to the variable, or that it is empty (_null_).
+When comparing strings, you should make sure the string variable has some value assigned to it. If it doesn't have a value, the program will produce a _NullPointerException_ error, which means that no value has been assigned to the variable, or that it is empty (_null_).
 
 <!-- Kuten aiemmin, negaation avulla arvon voi kääntää päinvastaiseksi. -->
 As we've come to know, a boolean value can be inverted through negation - `!`.
@@ -262,9 +263,9 @@ Try again!
 | tunnus | salasana |
 | ------ | -------- |
 | aleksi | tappara  |
-| elina  | kissa    | --> |
+| elina  | kissa    | -->
 
-write a program that recognizes the following users:
+Write a program that recognizes the following users:
 
 | username | password |
 | -------- | -------- |
@@ -274,7 +275,7 @@ write a program that recognizes the following users:
 
 <!-- Ohjelma näyttää käyttäjälle henkilökohtaisen viestin tai ilmoittaa, jos tunnus tai salasana on väärin. -->
 
-The program either shows a personal message or informs of incorrect username or password.
+The program either shows a personal message or informs of an incorrect username or password.
 
 <sample-output>
 
@@ -317,7 +318,7 @@ Incorrect username or password!
 **NB!** You can't compare strings with `==`!
 
 <!-- **HUOM:** Todellisuudessa kirjautumistoiminnallisuutta ei tule toteuttaa, eikä yleensä toteutetakkaan näin. Kirjautumistoiminnallisuuden toteuttamiseen tutustutaan mm. web-ohjelmointiin liittyvillä kursseilla. -->
-**NB!** In read life login should not be implemented like this! You can get familiar with safer ways to implement login on courses focusing on web programming.
+**NB!** Logins should not be implemented like this in real life! You can become familiar with safer ways to implement logins on courses focusing on web programming.
 
 </programming-exercise>
 
@@ -421,7 +422,7 @@ halted
 <programming-exercise name='AV Club' tmcname='part03-Part03_27.AVClub'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä merkkijonoja. Mikäli syötetty merkkijono on tyhjä, ohjelma lopettaa käyttäjältä lukemisen ja ohjelman suoritus päättyy. Mikäli merkkijono ei ole tyhjä, ohjelma pilkkoo syötetyn merkkijonon osiksi välilyöntien ` ` kohdalta ja tulostaa omille riveilleen pilkotusta merkkijonosta ne merkkijonot (merkkijonon osat), joissa esiintyy merkkijono `av`. -->
-Write a program, that reads user input until an empty line. For each non-empty string, the program splits the string by spaces ` ` and then prints the pieces that contain `av`, each on a new line.
+Write a program that reads user input until an empty line. For each non-empty string, the program splits the string by spaces ` ` and then prints the pieces that contain `av`, each on a new line.
 
 
 <sample-output>
@@ -498,7 +499,7 @@ tin wasn't found
 
 <!-- Merkkijonojen pilkkomista käytetään erityisesti silloin, kun käsitellään määrämuotoista tietoa. Määrämuotoisella tiedolla tarkoitetaan tietoa, joka noudattaa jotain tiettyä säännönmukaista muotoa. Tällainen muoto on esimerkiksi comma separated format (`csv`), missä arvot on eritelty toisistaan pilkuilla. Alla on esimerkki csv-muotoisesta nimiä ja ikiä sisältävästä tiedosta. Ensimmäinen sarake sisältää nimen ja toinen iän. Sarakkeet on eroteltu toisistaan pilkuilla. -->
 
-Splitting strings is used particularly when the data is of a fixed format. This refers to data that adheres to some predefined format. An example of this of this is the comma-separated values (`csv`) format, where commas are used to separate values. Belowm you'll find an example of data in csv form containing names and ages. The first column contains names and the second one ages. The columns are separed by a comma.
+Splitting strings is used particularly when the data is of a fixed format. This refers to data that adheres to some predefined format. An example of this of this is the comma-separated values (`csv`) format, where commas are used to separate values. Below you'll find an example of data in csv form containing names and ages. The first column contains names and the second one ages. The columns are separated by a comma.
 
 <sample-data>
 
@@ -569,7 +570,7 @@ Name: lily, age: 1
 <programming-exercise name='First words' tmcname='part03-Part03_28.FirstWords'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä merkkijonoja. Mikäli syötetty merkkijono on tyhjä, ohjelma ei jatka lukemista ja ohjelman suoritus päättyy. Mikäli merkkijono ei ole tyhjä, ohjelma pilkkoo syötetyn merkkijonon osiksi välilyöntien ` ` kohdalta ja tulostaa kunkin pilkotun merkkijonon ensimmäisen osan. -->
-Write a program, that reads user input until an empty line. For each non-empty line the program splits the string by spaces ` ` and prints the first part of the string.
+Write a program that reads user input until an empty line is entered. For each non-empty line the program splits the string by spaces ` `  and prints the first part of the string.
 
 <sample-output>
 
@@ -590,7 +591,7 @@ this
 <programming-exercise name='LastWords' tmcname='part03-Part03_29.LastWords'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä merkkijonoja. Mikäli syötetty merkkijono on tyhjä, ohjelma ei jatka lukemista ja ohjelman suoritus päättyy. Mikäli merkkijono ei ole tyhjä, ohjelma pilkkoo syötetyn merkkijonon osiksi välilyöntien ` ` kohdalta ja tulostaa kunkin pilkotun merkkijonon viimeisen osan. -->
-Write a program, that reads user input until an empty line. For each non-empty line the program splits the string by spaces ` ` and prints the last part of the string.
+Write a program that reads user input until an empty line is entered. For each non-empty line the program splits the string by spaces ` `  and prints the last part of the string.
 
 <sample-output>
 
@@ -819,10 +820,10 @@ Age average: 1.666
 <programming-exercise name='Age of the oldest' tmcname='part03-Part03_30.AgeOfTheOldest'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä henkilötietoja. Henkilötiedot sisältävät etunimen ja syntymävuoden pilkulla eroteltuna. Tietojen lukemista jatketaan kunnes käyttäjä syöttää tyhjän merkkijonon. -->
-Write a program that reads names and ages from the user until an empty line is entered. The  name and age are separed by a comma.
+Write a program that reads names and ages from the user until an empty line is entered. The  name and age are separated by a comma.
 
 <!-- Kun lukeminen lopetetaan, ohjelma tulostaa vanhimman henkilön iän. Voit olettaa, käyttäjä syöttää aina vähintään yhden henkilön ja että vanhimman henkilön ikä on yksikäsitteinen. -->
-After reading the program prints the age of the oldest person. You can assume, that the user enters at least one person, and the that one of the users is older than the others.
+After reading all user input, the program prints the age of the oldest person. You can assume that the user enters at least one person, and that one of the users is older than the others.
 
 <sample-output>
 
@@ -852,7 +853,7 @@ Age of the oldest: 10
 Write a program that reads names and ages from the user until an empty line is entered. The  name and age are separed by a comma.
 
 <!-- Kun lukeminen lopetetaan, ohjelma tulostaa vanhimman henkilön nimen. Voit olettaa, että vanhimman henkilön ikä on yksikäsitteinen. -->
-After reading the program prints the name of the oldest person. You can assume, that the user enters at least one person, and the that one of the users is older than the others.
+After reading all user input, the program prints the name of the oldest person. You can assume that the user enters at least one person, and the that one of the users is older than the others.
 
 
 <sample-output>
@@ -908,10 +909,10 @@ The length of the word equisterian is 11
 <programming-exercise name='Personal details' tmcname='part03-Part03_32.PersonalDetails'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä henkilötietoja. Henkilötiedot sisältävät etunimen ja syntymävuoden pilkulla eroteltuna. TIetojen lukemista jatketaan kunnes käyttäjä syöttää tyhjän merkkijonon. -->
-Write a program that reads names and birth years from the user until an empty line is entered. The  name and birth year are separed by a comma.
+Write a program that reads names and birth years from the user until an empty line is entered. The  name and birth year are separated by a comma.
 
 <!-- Kun lukeminen lopetetaan, ohjelman tulee tulostaa pisin luettu etunimi sekä luettujen henkilöiden syntymävuosien keskiarvo. Mikäli pisimpiä etunimiä on useita, voit tulostaa niistä minkä tahansa. Voit olettaa, että käyttäjä syöttää aina vähintään yhden henkilötiedon. -->
-After that the program prints the longest name and the average of the birth years. If multiple names are equally longest, you can print any of them. You can assume the user to enter at least one person.
+After that the program prints the longest name and the average of the birth years. If multiple names are equally longest, you can print any of them. You can assume that the user enters at least one person.
 
 
 <sample-output>

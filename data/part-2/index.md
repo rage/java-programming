@@ -2,37 +2,8 @@
 path: '/part-2'
 title: 'Part 2'
 overview: true
-hidden: true
+hidden: false
 ---
-
-<only-for-course-variant variant="dl">
-  <deadline>28.1.2020</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="nodl">
-  <deadline>4.1.2020</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="ohja-dl">
-  <deadline>This is not part of the course you chose in the settings</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="ohja-nodl">
-  <deadline>This is not part of the course you chose in the settings</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="kesa-dl">
-  <deadline>20.5.2020</deadline>
-</only-for-course-variant>
-
-<only-for-course-variant variant="kesa-ohja-dl">
-  <deadline>This is not part of the course you chose in the settings</deadline>
-</only-for-course-variant>
-
-<only-for-not-logged-in>
-  <deadline>Log in to see the deadline for this part</deadline>
-</only-for-not-logged-in>
-
 
 <!-- Kurssimateriaalin toisen osan pääteemoina ovat ohjelman toistaminen sekä toiminnallisuuden pilkkominen erillisiksi kokonaisuuksiksi. -->
 
