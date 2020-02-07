@@ -18,6 +18,10 @@ The participants in the channel are fellow students and volunteer course assista
 
 If you ask for help in the channel, you may add a link to your program code. You can get a link to your code in NetBeans by pressing "`TMC`" --> "`Send code to pastebin`" and then selecting "`Send`" from the opened view. After you've sent the code, a new view should show up with the link to your code, which you can then share on the channel when you're asking for help.
 
+## Email
+
+You can reach course staff by email using address ohjelmoinnin-mooc@helsinki.fi. Feel free to write in English or in Finnish.
+
 ## Workshop
 
 You can visit the course workshop for a good environment to do programming exercises with other students as well as receive assistance regarding the course and its exercises! The workshop is located at the Exactum building on University of Helsinki's Kumpula campus. Everyone is welcome to the workshop!
