@@ -386,7 +386,7 @@ Alla oleva animaatio kuvaa sout-komennon käyttöä. Kun käyttäjä on kirjoitt
 
 <text-box variant='hint' name='"sout"'>
 
-Writing the command `System.out.println("...")` can be pretty cumbersome. In NetBeans, write on a blank line (in main) **sout** and press tabulator (key to the left of q). What happens? This small tool will propably save much of your time.
+Writing the command `System.out.println("...")` can be pretty cumbersome. In NetBeans, write on a blank line (in main) **sout** and press tabulator (key to the left of q). What happens? This small tool will probably save much of your time.
 
 The animation below illustrates the use of sout-command. First, the user writes sout and then presses the tabulator. A Magic Trick!
 
