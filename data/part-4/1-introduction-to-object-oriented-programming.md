@@ -1548,7 +1548,7 @@ Pekka's and Antti's combined age 3 years
 <quiz id='d275c777-b081-5d8d-9efb-9247a17c8ea7'></quiz>
 
 <!-- <programming-exercise name='Musiikkikappale' tmcname='osa04-Osa04_10.Musiikkikappale'> -->
-<programming-exercise name='Music song' tmcname='part04-Part04_10.MusicSong'>
+<programming-exercise name='Song' tmcname='part04-Part04_10.Song'>
 
 <!-- Luo luokka nimeltä `Musiikkikappale`. Musiikkikappaleella on oliomuuttujat `nimi` (merkkijono) ja `pituus` sekunteina (kokonaisluku). Molemmat asetetaan konstruktorissa `public Musiikkikappale(String kappaleenNimi, int kappaleenPituus)`. Lisää oliolle myös metodit `public String nimi()`, joka palauttaa kappaleen nimen, ja `public int pituus()`, joka palauttaa kappaleen pituuden.
 
