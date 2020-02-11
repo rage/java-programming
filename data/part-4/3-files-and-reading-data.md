@@ -1,7 +1,7 @@
 ---
 path: "/part-4/3-files-and-reading-data"
 title: "Files and reading data"
-hidden: true
+hidden: false
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
@@ -525,7 +525,7 @@ alicia
 </programming-exercise>
 
 <!-- <programming-exercise name='Löytyykö tiedostosta?' tmcname='osa04-Osa04_27.LoytyykoTiedostosta'> -->
-<programming-exercise name='Is It In The File?' tmcname='part04-Part04_27.IsItInTheFile'>
+<programming-exercise name='Is it in the file?' tmcname='part04-Part04_27.IsItInTheFile'>
 
 <!-- Tehtäväpohjassa tulee kaksi tekstitiedostoa: `nimet.txt` ja `toiset-nimet.txt`. Kirjoita ohjelma, joka kysyy ensin käyttäjältä luettavan tiedoston nimeä, jonka jälkeen käyttäjältä kysytään etsittävää merkkijonoa. Tämän jälkeen ohjelma lukee tiedoston ja etsii tiedostosta haluttua merkkijonoa. -->
 

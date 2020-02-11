@@ -2,7 +2,7 @@
 path: "/part-4/1-introduction-to-object-oriented-programming"
 #title: 'Johdatus olio-ohjelmointiin'
 title: "Introduction to object-oriented programming"
-hidden: true
+hidden: false
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->

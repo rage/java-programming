@@ -2,7 +2,7 @@
 path: '/part-4/4-summary'
 #title: 'Ohjelman käsitteiden tunnistaminen ja sanoittaminen'
 title: 'Summary'
-hidden: true
+hidden: false
 ---
 
 <!-- TODO: onko ok otsikko?
