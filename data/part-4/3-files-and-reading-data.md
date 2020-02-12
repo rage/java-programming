@@ -1,7 +1,7 @@
 ---
 path: "/part-4/3-files-and-reading-data"
 title: "Files and reading data"
-hidden: true
+hidden: false
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
@@ -525,7 +525,7 @@ alicia
 </programming-exercise>
 
 <!-- <programming-exercise name='Löytyykö tiedostosta?' tmcname='osa04-Osa04_27.LoytyykoTiedostosta'> -->
-<programming-exercise name='Is It In The File?' tmcname='part04-Part04_27.IsItInTheFile'>
+<programming-exercise name='Is it in the file?' tmcname='part04-Part04_27.IsItInTheFile'>
 
 <!-- Tehtäväpohjassa tulee kaksi tekstitiedostoa: `nimet.txt` ja `toiset-nimet.txt`. Kirjoita ohjelma, joka kysyy ensin käyttäjältä luettavan tiedoston nimeä, jonka jälkeen käyttäjältä kysytään etsittävää merkkijonoa. Tämän jälkeen ohjelma lukee tiedoston ja etsii tiedostosta haluttua merkkijonoa. -->
 
@@ -679,9 +679,9 @@ numbers-2.txt:
 <!-- <text-box typie="hint" name="Tyhjä rivi tiedostossa"> -->
 <text-box typie="hint" name="An Empty Line In a File">
 
-<!-- Joskus tiedostoon eksyy tyhjä rivi. Tyhjän rivin ohittaminen onnistuu toistolauseen komennolla `continue` sekä merkkijonon `isBlank`-metodilla. -->
+<!-- Joskus tiedostoon eksyy tyhjä rivi. Tyhjän rivin ohittaminen onnistuu toistolauseen komennolla `continue` sekä merkkijonon `isEmpty`-metodilla. -->
 
-Sometimes an empty line finds it way into a file. Skipping an empty line can be done using the command `continue` and the `isBlank`-method of the string.
+Sometimes an empty line finds it way into a file. Skipping an empty line can be done using the command `continue` and the `isEmpty`-method of the string.
 
 <!-- Alla olevassa esimerkissä luetaan tiedostosta -->
 
@@ -700,7 +700,7 @@ try (Scanner tiedostonLukija = new Scanner(Paths.get("henkilot.csv"))) {
         String rivi = tiedostonLukija.nextLine();
 
         // mikäli rivi on tyhjä, ei käsitellä sitä
-        if (rivi.isBlank() == 0) {
+        if (rivi.isEmpty() == 0) {
             continue;
         }
 
@@ -721,7 +721,7 @@ try (Scanner scanner = new Scanner(Paths.get("henkilot.csv"))) {
         String line = scanner.nextLine();
 
         // if the line is blank we do nothing
-        if (line.isBlank() == 0) {
+        if (line.isEmpty() == 0) {
             continue;
         }
 
@@ -992,7 +992,7 @@ The exercise template has a `main` method that you can use to test how your prog
 </programming-exercise>
 
 <!-- <programming-exercise name='Urheilutilastot' tmcname='osa04-Osa04_31.Urheilutilastot (2 osaa)'> -->
-<programming-exercise name='Sport Statistics (2 parts)' tmcname='part04-Part04_31.SportStatistics'>
+<programming-exercise name='Sport Statistics' tmcname='part04-Part04_31.SportStatistics'>
 
 <!-- Tehtävässä käsitellään CSV-muodossa tallennettuja urheilutilastoja. Tiedosto sisältää pilkulla erotettuna kotijoukkeen, vierasjoukkueen, kotijoukkueen pisteet, sekä vierasjoukkueen pisteet. -->
 
