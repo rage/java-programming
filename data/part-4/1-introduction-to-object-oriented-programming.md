@@ -168,10 +168,10 @@ The `Account` from the previous exercise class is also available in this exercis
 
 Write a program that:
 
-1. Creates an account named `"Matti's account"` with the balance 1000
-2. Creates an account named `"Personal account"` with the balance 0
-3. Withdraws 100.0 from Matti's account
-4. Deposits 100.0 to its own personal account
+1. Creates an account named `"Matthews account"` with the balance 1000
+2. Creates an account named `"My account"` with the balance 0
+3. Withdraws 100.0 from Matthew's account
+4. Deposits 100.0 to "my account"
 5. Prints both the accounts
 
 </programming-exercise>
@@ -702,7 +702,7 @@ Create a class `Product` that represents a store product. The product should hav
 
 The class should have:
 
-- the constructor `public Item (String nameAlbum, double priceAlbum, int rateAlbum)`
+- the constructor `public Item (String initialName, double initialPrice, int initialQuantity)`
 - a method `public void printProduct()` that prints product information in the following format:
 
 <sample-output>
@@ -1152,7 +1152,7 @@ Luokan tulee toimia seuraavasti: -->
 
 Create the class `Debt` that has double-typed instance variables of `balance` and `interestRate`. The balance and the interest rate are passed to the constructor as parameters `public Debt(double initialBalance, double initialInterestRate)`.
 
-In addition, create the methods `public void printBalance()` and `public void waitOneyear()` for the class. The method printBalance prints the current balance, and the waitOneYear method grows the debt amount.
+In addition, create the methods `public void printBalance()` and `public void waitOneYear()` for the class. The method printBalance prints the current balance, and the waitOneYear method grows the debt amount.
 
 The debt is increased by multiplying the balance by the interest rate.
 
@@ -1185,10 +1185,10 @@ public class MainProgram {
     public static void main(String[] args) {
 
         Debt mortgage = new Debt(120000.0, 1.01);
-        mortgage.tulostaSaldo();
+        mortgage.printBalance();
 
-        mortgage.odotaVuosi();
-        mortgage.tulostaSaldo();
+        mortgage.waitOneYear();
+        mortgage.printBalance();
 
         int years = 0;
 
@@ -3244,7 +3244,7 @@ Matti: Kortilla on rahaa 72.8 euroa
 <sample-output>
 
 Paul: The card has a balance of 15.4 euros
-Matti: The card has a balance of 27.4 euros
+Matt: The card has a balance of 27.4 euros
 Paul: The card has a balance of 35.4 euros
 Matt: The card has a balance of 22.799999999999997 euros
 Paul: The card has a balance of 30.199999999999996 euros
