@@ -402,7 +402,7 @@ Create a class named `Room`. Add the variables `private String code` and `privat
 
 <img src="../img/diagrams/part4.1-classdiagram-ex-room.png" alt="[Huone|-koodi:String;-istumapaikat:int|+Huone(String‚ int)]">
 
-This class doesn't do much either. However,in the following exercise the object instantiated from our class is already capable of printing text.
+This class doesn't do much either. However, in the following exercise the object instantiated from our class is already capable of printing text.
 
 </programming-exercise>
 
@@ -525,7 +525,7 @@ Going forward, our methods will not include the `static` keyword if they're used
 
 <!-- Luokkakaavioon on merkitty luokan nimen, oliomuuttujien ja konstruktorin lisäksi nyt myös metodi `tulostaHenkilo`. Koska metodilla on `public`-määre, tulee sille alkuun plus, jota seuraa metodin nimi. Metodille ei ole määritelty parametreja, joten ei myöskään piirretä metodin sulkujen sisälle. Metodille merkitään myös tieto siitä, että se ei palauta arvoa, tässä `void`. -->
 
-In addition to the class name, instance variables, and constructor, the class diagram now also includes the method `printPerson`. Since the method comes with the `public` modifier, the method name is prefixed with a plus sign. No parameters are defined for the method, so nothing is put inside the method's parentheses. The method is also marked with information indicating that it does not return a value, here `void`.
+In addition to the class name, instance variables and constructor, the class diagram now also includes the method `printPerson`. Since the method comes with the `public` modifier, the method name is prefixed with a plus sign. No parameters are defined for the method, so nothing is put inside the method's parentheses. The method is also marked with information indicating that it does not return a value, here `void`.
 
 <img src="../img/diagrams/part4.1-classdiagram-person-name-age-constructor-print.png">
 
@@ -1395,7 +1395,7 @@ public String metodiJokaPalauttaaTekstin() {
 - A method that returns a string has the `String` modifier as the type of the variable to be returned
 
 ```java
-public int methodThatReturnsAString() {
+public String methodThatReturnsAString() {
     // the method body, requires a return statement
 }
 ```
@@ -1608,7 +1608,7 @@ Film chipmunks = new Film("Alvin and the Chipmunks: The Squeakquel", 0);
 
 Scanner reader = new Scanner(System.in);
 
-System.out.println("How old are you");
+System.out.println("How old are you?");
 int age = Integer.valueOf(reader.nextLine());
 
 System.out.println();
@@ -1633,7 +1633,7 @@ Saat katsoa elokuvan Alvin and the Chipmunks: The Squeakquel
 How old are you?
 **7**
 
-You may not watch the film Alvin and the Chipmunks: The Squeakquel
+You may watch the film Alvin and the Chipmunks: The Squeakquel
 
 </sample-output>
 
@@ -2219,7 +2219,7 @@ public class Person {
 
 <!-- Eli henkilölle lisättiin oliomuuttujat `pituus` ja `paino`. Näille voi asettaa arvon metodeilla `setPituus` ja `setPaino`. Jälleen käytössä Javaan vakiintunut nimeämiskäytäntö, eli jos metodin tehtävänä on ainoastaan asettaa arvo oliomuuttujaan, on metodi tapana nimetä `setMuuttujanNimi`:ksi. Arvon asettavia metodeja kutsutaan usein "settereiksi". Seuraavassa käytämme uusia metodeja: -->
 
-The instance variables `height` and`weight` were added to the person. Values for these can be set using the `setHeight` and `setWeight` methods. Java's standard naming convention is used once again, that is, if the method's only purpose is to set a value to an instance variable, then it's named as `setVariableName`. Value-setting methods are often called "setters". The new methods are put to use in the following case:
+The instance variables `height` and `weight` were added to the person. Values for these can be set using the `setHeight` and `setWeight` methods. Java's standard naming convention is used once again, that is, if the method's only purpose is to set a value to an instance variable, then it's named as `setVariableName`. Value-setting methods are often called "setters". The new methods are put to use in the following case:
 
 <!-- ```java
 public static void main(String[] args) {
@@ -2469,7 +2469,7 @@ Luokan ei tarvitse tallentaa mihinkään lisättyjä lukuja, vaan riittää muis
 
 Luokan runko on seuraava: -->
 
-Create a class `Statistics` that has the following functionality(the file for the class is provided in the in the exercise template):
+Create a class `Statistics` that has the following functionality (the file for the class is provided in the in the exercise template):
 
 - a method `addNumber` adds a new number to the statistics
 - a method `getCount` tells the number of added numbers
@@ -2501,7 +2501,7 @@ public class Lukutilasto {
 public class Statistics {
     private int count;
 
-    public NumberStatistics() {
+    public Statistics() {
         // initialize the variable numberCount here
     }
 
@@ -2654,7 +2654,7 @@ public class Main {
 ```java
 public class Main {
     public static void main(String[] args) {
-        NumberStatistics statistics = new NumberStatistics();
+        Statistics statistics = new Statistics();
         statistics.addNumber(3);
         statistics.addNumber(5);
         statistics.addNumber(1);
@@ -2697,9 +2697,9 @@ Ohjelmassa tulee käyttää `Lukutilasto`-olioa summan laskemiseen.
 
 Write a program that asks the user for numbers until the user enters -1. The program will then provide the sum of the numbers.
 
-The program should use a `NumberStatistics` object to calculate the sum.
+The program should use a `Statistics` object to calculate the sum.
 
-**NOTE:** Do not modify the NumberStatistics class in this part. Instead, implement the program for calculating the sum by making use of it.
+**NOTE:** Do not modify the Statistics class in this part. Instead, implement the program for calculating the sum by making use of it.
 
 <!-- <sample-output>
 
@@ -2806,7 +2806,7 @@ The project will include two code files:
 
 The exercise template comes with a code file called `Main`, which contains the `main` method.
 
-Add a new class to the project called `PaymentCard`. Here's how to add a new class: On the left side of the screen is the list of projects. Right-click on the project name. Select _New_ and _Java Class_ from the drop-down menu. Name the class as "Payment Card".
+Add a new class to the project called `PaymentCard`. Here's how to add a new class: On the left side of the screen is the list of projects. Right-click on the project name. Select _New_ and _Java Class_ from the drop-down menu. Name the class as "PaymentCard".
 
 First, create the `PaymentCard` object's constructor, which is passed the opening balance of the card, and which then stores that balance in the object's internal variable. Then, write the `toString` method, which will return the card's balance in the form "The card has a balance of X euros".
 
@@ -2884,7 +2884,7 @@ The card has a balance of 50.0 euros
 <!--
 Täydennä `Maksukortti`-luokkaa seuraavilla metodeilla: -->
 
-Complement the `PaymentCard` class with the follwing methods:
+Complement the `PaymentCard` class with the following methods:
 
 <!-- ```java
 public void syoEdullisesti() {
