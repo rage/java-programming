@@ -9,10 +9,10 @@ hidden: false
 
 <!-- - Osaat tehdä laskutoimintoja muuttujien avulla. -->
 
-- learn to perform calculations with the help of variables.
+- Learn to perform calculations with the help of variables.
 
 <!-- - Osaat muodostaa tulostuslauseita, jossa on mukana sekä laskuoperaatioita (lausekkeita) että merkkijonoja. -->
-- know how to form printable statements including both calculations (expressions) and strings.
+- Know how to form printable statements including both calculations (expressions) and strings.
 
 </text-box>
 
