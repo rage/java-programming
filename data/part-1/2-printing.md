@@ -58,9 +58,9 @@ Hello world!
 
 Tulostuskomennon avulla tulostettavaa tekstiä voi vaihtaa mielivaltaisesti, kunhan komento `System.out.println("mielivaltainen teksti");` -- eli `System` piste `out` piste `println` sulut auki `(` "teksti" sulut kiinni `)` ja puolipiste `;` pysyy muuttumattomana. Alla oleva komento tulostaa tekstin "Hei vaan!". -->
 
-In this material, the text boxes like the one above demonstrate an output produced by the example code. Accordingly, the above program would produce the print output "Hello World!". You can try any of these examples in the exercise template named "Sandbox", which you will find in the programming environment.
+In this material, text boxes like the one above demonstrate an output produced by the example code. Accordingly, the above program would produce the print output "Hello World!". You can try any of these examples in the exercise template named "Sandbox", which you will find in the programming environment.
 
-You can print any text you want with the command, as long as the command `System.out.println("arbitary text");` -- i.e., `System` dot `out` dot `println` open parenthesis `(` "the text" close parenthesis `)` and semicolon `;` remains unchanged. The command below will print the text "Hello there!".
+You can print any text you want with the command, as long as the command `System.out.println("arbitrary text");` -- i.e., `System` dot `out` dot `println` open parenthesis `(` "the text" close parenthesis `)` and semicolon `;` remains unchanged. The command below will print the text "Hello there!".
 
 <!-- ```java
 System.out.println("Hei vaan!");
@@ -98,7 +98,7 @@ public class Esimerkki {
 
 ## Program Boilerplate
 
-Our programs have to be written within a program boilerplate (the frame around the program itself), such as the one below, for them to work. The name of the boilerplate, `Example` in this case, corresponds to the name of the file that contains the source code (e.g. `Example.java`).
+In Java, our programs have to include some boilerplate code to function. This boilerplate, an example of which is shown below, for example tells the computer what your program is called. Below, the name of the program is `Example`. This name has to correspond to the name of the file that contains the source code (e.g. `Example.java`).
 
 ```java
 public class Example {
@@ -205,7 +205,7 @@ Here's the second programming exercise of this course. If you'd like, you can wa
 
 <programming-exercise name='Ada Lovelace' tmcname='part01-Part01_02.AdaLovelace'>
 
-The exercise template has the following frame:
+The exercise template has the following boilerplate code:
 
 ```java
 public class AdaLovelace {
@@ -244,7 +244,7 @@ Käytössämme oleva ohjelmointiympäristö kääntää ja suorittaa ohjelman yh
 
 <text-box variant='hint' name='Running the Program'>
 
-You can run a program in TMC by pressing the green play-button, or by selecting "Run project" from the TMC-menu.
+You can run a program in TMC by pressing the green play button, or by selecting "Run project" from the TMC menu.
 
 Even though running the program is straightforward, a lot is happenings behind the scenes. When a program is run, the source code is first compiled into Java bytecode. This compilation process is done by Java's compiler, which itself is a program. Following that, the program gets executed, meaning the commands are executed one-by-one by a Java-interpreter that is able to read Java bytecode.
 
@@ -488,7 +488,7 @@ world
 
 </sample-output>
 
-Although the previous example works, it's important to be considerate of other programmers (and future you!) and to use line breaks. That way, anyone reading the program knows that each line does only a single concrete thing.
+Although the previous example works, it's important to be considerate of other programmers (and your future self!) and to use line breaks. That way, anyone reading the program knows that each line does only a single concrete thing.
 
 <!-- TODO: quiz, jossa kysytään että mistä tietyssä termissä on kyse -->
 

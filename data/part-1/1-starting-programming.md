@@ -105,6 +105,7 @@ The above statement is pre-built into Java, and it's used for printing a string.
 
 Java programs require a certain frame around the code to work. Don't worry if it appears intimidating, it'll become very familiar over this course. Although you might not be able to make sense of the surrounding frame of code, you could probably guess what this following program does based on the print statement described above.
 
+
 <!-- Alla on kurssin ensimmäinen kyselytehtävä. Kyselytehtäviin vastataan suoraan kurssimateriaalissa. -->
 
 You'll find the first quiz of the course below. You can answer the quizzes right here in the course material.

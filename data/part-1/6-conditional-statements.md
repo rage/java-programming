@@ -17,7 +17,7 @@ hidden: false
 
 - Become familiar with comparison and logical operators commonly used in conditional statements.
 
-- know how to compare numbers as well as strings while remembering the equals-command for strings.
+- know how to compare both numbers and strings, remembering the equals-command for strings.
 
 - Become familiar with the order of execution for a conditional statement, and know that the parsing of a conditional statement stops at the first condition whose statement evaluates to true.
 
@@ -25,7 +25,7 @@ hidden: false
 
 <!-- Ohjelmamme ovat tähän mennessä olleet lineaarisia eli ohjelmien suoritus on tapahtunut ylhäältä alaspäin ilman suuria yllätyksiä tai vaihtoehtoja. Ohjelmiin halutaan kuitenkin usein vaihtoehtoista toiminnallisuutta, eli toiminnallisuutta joka riippuu tavalla tai toisella ohjelmassa olevien muuttujien tilasta. -->
 
-Our programs have so far been linear. In other words, the programs have executed from top to bottom without major surprises or conditional behaviour. However, we usually want to add conditional logic to our programs. By this we mean functionality that's in one way or another dependent on the state of the program's variables.
+Our programs have so far been linear. In other words, the programs have executed from top to bottom without major surprises or conditional behavior. However, we usually want to add conditional logic to our programs. By this we mean functionality that's in one way or another dependent on the state of the program's variables.
 
 <!-- Jotta ohjelman suoritus voisi _haarautua_ esimerkiksi käyttäjän antaman syötteen perusteella, tarvitsemme käyttöömme **ehtolauseen**. Yksinkertaisin ehtolause on seuraavanlainen. -->
 
@@ -528,7 +528,7 @@ The number is greater than zero.
 
 <!-- Yllä oleva esimerkki tulostaa merkkijonon "Luku on suurempi kuin nolla." vaikka myös ehto `luku > 2` on totta. Vertailu lopetetaan ensimmäiseen valintakäskyyn, jonka ehto on totta. -->
 
-The example above prints the string "The number is greater than zero." even if the condition `number > 2` is true. The comparing stops at the first condition that evaluates to true.
+The example above prints the string "The number is greater than zero." even if the condition `number > 2` is true. The comparison stops at the first condition that evaluates to true.
 
 <!-- <programming-exercise name="Arvosanat ja pisteet" tmcname='osa01-Osa01_31.ArvosanatJaPisteet'> -->
 <programming-exercise name="Grades and Points" tmcname='part01-Part01_31.GradesAndPoints'>
@@ -900,7 +900,7 @@ Scanner reader = new Scanner(System.in);
 System.out.println("Enter a string");
 String input = reader.nextLine();
 
-if (input.equals("string")) {
+if (input.equals("a string")) {
     System.out.println("Great! You read the instructions correctly.");
 } else {
     System.out.println("Missed the mark!");
@@ -959,8 +959,8 @@ if (toka.equals("kaksi merkkijonoa")) {
 Scanner reader = new Scanner(System.in);
 
 System.out.println("Input two strings");
-String first = lukija.nextLine();
-String second = lukija.nextLine();
+String first = reader.nextLine();
+String second = reader.nextLine();
 
 if (first.equals(second)) {
     System.out.println("The strings were the same!");
@@ -1083,13 +1083,13 @@ The expression of a conditional statement may consist of multiple parts, in whic
 
 <!-- Seuraavassa yhdistetään `&&`:lla eli ja-operaatiolla kaksi yksittäistä ehtoa. Koodilla tarkistetaan, onko muuttujassa oleva luku suurempi kuin 4 ja pienempi kuin 11, eli siis välillä 5-10: -->
 
-In the next example we combine two individual conditions using `&&`, i.e., the and-operator. The code is used to check if the number in the variable is greater than 4 and less than 11. In other words, whether it's within the range of 5-10:
+In the next example we combine two individual conditions using `&&`, i.e., the and-operator. The code is used to check if the number in the variable is greater than or equal to 5 and less than or equal to 10. In other words, whether it's within the range of 5-10:
 
 <!-- ```java
 System.out.println("Onkohan luku väliltä 5-10: ");
 int luku = 7;
 
-if (luku >= 4 && luku <= 10) {
+if (luku >= 5 && luku <= 10) {
     System.out.println("On! :)");
 } else {
     System.out.println("Ei ollut :(")
@@ -1149,7 +1149,7 @@ It is! :)
 
 <!-- Seuraavassa käännetään `!` ei-operaatiolla lausekkeen `luku > 4` tulos. Ei-operaatio merkitään lauseketta ennen niin, että käännettävä lauseke rajataan suluilla, ja ei-operaatio lisätään sulkuja ennen. -->
 
-In this example we flip the result of the expression `number > 4` using `!`, i.e., the not-operator. The not-operator is notated in such a way that the expression to be flipped is wrapped in parentheses, and the not-operator is placed before the parentheses.
+In this example we flip the result of the expression `number > 4` using `!`, i.e., the not-operator. The not-operator is written in such a way that the expression to be flipped is wrapped in parentheses, and the not-operator is placed before the parentheses.
 
 <!-- ```java
 int luku = 7;
@@ -1486,7 +1486,7 @@ The number is not divisible by six!
 <!-- TODO: Virhe suomenkielisessä tekstissä. "ohjelma ei ole karkausvuosi" -->
 <!-- Vihje 2: mieti ongelmaa if, else if, else if, ... -vertailujen ketjuna ja aloita ohjelman rakentaminen tilanteesta, missä voit olla varma, että ohjelma ei ole karkausvuosi. -->
 
-Hint 2: Think of the problem as a chain of if, else if, else if, ... -comparisons, and start building the program from a situation in which you can be certain that the year is not a leap year.
+Hint 2: Think of the problem as a chain of if, else if, else if, ... comparisons, and start building the program from a situation in which you can be certain that the year is not a leap year.
 
 <!-- ```java
 Scanner lukija = new Scanner(System.in);

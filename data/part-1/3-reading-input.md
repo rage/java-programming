@@ -36,7 +36,7 @@ public class Program {
 ```
 
 <!-- Alla on esitelty ohjelma, joka kysyy käyttäjältä syötettä, lukee käyttäjän syöttämän merkkijonon, ja lopulta tulostaa käyttäjän syöttämän merkkijonon. -->
-Below is an example of a program, which asks for user input, reads the string entered by the user, and then prints it.
+Below is an example of a program which asks for user input, reads the string entered by the user, and then prints it.
 
 ```java
 // Introduce the scanner tool used for reading user input
@@ -127,16 +127,18 @@ Once upon a time...
 </programming-exercise>
 
 <!-- Otetaan seuraavaksi askel taaksepäin ja tarkastellaan mitä ihmettä edellä käytetty `String viesti = ...` oikein tarkoittaa. -->
-Let's next take a step back, and examine what on earth `String message = ...` even means.
+Next up, let's take a step back, and examine what on earth `String message = ...` even means.
 
 
 ## Fundamentals of Strings
+
+As you might have noticed, in programming we refer to "strings" rather than "text". The term "string" is shorthand for "string of characters" which describes how the computer sees text on a more fundamental level: as a sequence of individual characters.
 
 <!-- Olemme käyttäneet merkkijonoja kahdella tapaa. Tulostuskomentoa harjoiteltaessa annoimme tulostettavan merkkijonon hipsuissa tulostuskomennolle, kun taas syötteen lukemista harjoiteltaessa luettu merkkijono tallennettiin muuttujaan. -->
 We've so far used strings in two ways. When practicing the print command, we passed the string to be printed to the print command in quotation marks, and when practicing reading input, we saved the string we read to a variable.
 
 <!-- Muuttujat ovat käytännössä nimettyjä lokeroita, jotka sisältävät tietyn tyyppistä tietoa ja joilla on nimi. Merkkijonomuuttuja esitellään ohjelmassa kertomalla muuttujan tyyppi (`String`) ja muuttujan nimi (esimerkiksi `mjono`). Muuttujan esittelyn yhteydessä muuttujaan asetetaan tyypillisesti myös arvo. Arvon asettaminen tapahtuu muuttujan esittelyä seuraavalla yhtäsuuruusmerkillä, jonka jälkeen tulee arvo sekä puolipiste. -->
-In practice, variables are named containers that contain a certain type of information and have a name. A string variable is declared in a program by stating the type of the variable (`String`) and its name (`myString`, for instance). Typically a variable is also assigned a value during it's declaration. You can assign a value by following the declaration with an equals sign followed by the value and a semicolon.
+In practice, variables are named containers that contain information of some specified type and have a name. A string variable is declared in a program by stating the type of the variable (`String`) and its name (`myString`, for instance). Typically a variable is also assigned a value during its declaration. You can assign a value by following the declaration with an equals sign followed by the value and a semicolon.
 
 <!-- Merkkijonomuotoinen muuttuja nimeltä `viesti`, jonka arvona on merkkijono "Hei maailma!", luodaan seuraavasti. -->
 A string variable called `message` that is assigned the value "Hello world!" is declared like this:
@@ -268,7 +270,7 @@ NB! When using the `System.out.println` command, do not pass in the string "Ada 
 ## Reading Strings
 
 <!-- Lukemiseen käytettävä komento `lukija.nextLine();` lukee käyttäjän syötteen ja palauttaa merkkijonon. Mikäli merkkijonoa halutaan käyttää ohjelmassa, tulee se säilöä merkkijonomuuttujaan -- `String viesti = lukija.nextLine();`. Muuttujassa olevaa arvoa voi käyttää monta kertaa. Alla olevassa esimerkissä käyttäjän syöttämä viesti tulostetaan kahteen kertaan. -->
-The `reader.nextLine();` command used for reading user input reads the user's input and *returns* a string. If we then want to use the string in the program, it must be saved to a string variable -- `String message = scanner.nextLine();`. A value saved to a variable can be used repeatedly. In the example below, the user input is printed twice.
+The `reader.nextLine();` command reads the user's input and *returns* a string. If we then want to use the string in the program, it must be saved to a string variable -- `String message = scanner.nextLine();`. A value saved to a variable can be used repeatedly. In the example below, the user input is printed twice.
 
 ```java
 //Introduce the Scanner tool used for reading
@@ -308,10 +310,10 @@ This will be printed twice...
 <programming-exercise name='Message Three Times' tmcname='part01-Part01_07.MessageThreeTimes'>
 
 <!-- Kirjoita ohjelma, joka pyytää käyttäjää kirjoittamaan merkkijonon. Kun käyttäjä on syöttänyt merkkijonon (eli kirjoittanut tekstin sekä painanut enter-näppäintä), ohjelman tulee tulostaa käyttäjän syöttämä merkkijono kolme kertaa (voit käyttää System.out.println-komentoa useampaan kertaan). -->
-Write a program that asks the user to write a string. When the user has given a string (i.e., written some text and pressed enter), the program must print the user's string three times (you can use the System.out.println - command multiple times).
+Write a program that asks the user to write a string. When the user has given a string (that is, written some text and pressed enter), the program must print the user's string three times (you can use the `System.out.println` command multiple times).
 
 <!-- Tehtäväpohjan mukana tulee runko, joka sisältää Scanner-apuvälineen luomisen. -->
-The exercise template comes with a program frame that includes the creation of a Scanner tool.
+The exercise template already includes the code that creates the `Scanner` tool.
 
 ```java
 import java.util.Scanner;
@@ -395,7 +397,7 @@ You wrote this
 Write a program that prompts the user for their name with the message "What's your name?". When the user has written their name, the program has to print "Hi " followed by the user's name.
 
 <!-- Tehtäväpohjan mukana tulee runko, joka sisältää Scanner-apuvälineen luomisen. -->
-The exercise template comes with a program frame that includes the creation of a Scanner helper tool.
+The exercise template already includes the code that creates the `Scanner` tool.
 
 ```java
 import java.util.Scanner;
@@ -508,7 +510,7 @@ Thanks for sharing!
 </sample-output>
 
 <!-- Tehtäväpohjan mukana tulee runko, joka sisältää Scanner-apuvälineen luomisen. -->
-The exercise template comes with a program frame that includes the creation of a Scanner tool.
+The exercise template already includes the code that creates the `Scanner` tool.
 
 ```java
 import java.util.Scanner;
@@ -589,8 +591,9 @@ Write the second string:
 **two**
 Write the third string:
 **three**
-Last string you wrote was three, which was preceded by
-two. The first string was one.
+Last string you wrote was three, which
+was preceded by two.
+The first string was one.
 All together: onetwothree
 
 </sample-output>
@@ -623,7 +626,7 @@ Perhaps Bob will not be a builder forever.
 </sample-output>
 
 <!-- Tehtäväpohjan mukana tulee runko, joka sisältää Scanner-apuvälineen luomisen. -->
-The exercise template comes with a program frame that includes the creation of a Scanner tool.
+The exercise template already includes the code that creates the `Scanner` tool.
 
 ```java
 import java.util.Scanner;
