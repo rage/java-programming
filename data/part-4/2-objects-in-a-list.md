@@ -17,7 +17,7 @@ hidden: false
 
 <!-- - Osaat käydä listalla olevia olioita läpi. -->
 
-- You can go through object in a list
+- You can go through objects in a list
 
 </text-box>
 
@@ -380,7 +380,7 @@ Enter a name, empty will stop: **Ivan Sutherland**
 Enter a name, empty will stop: **Kristen Nygaard**
 
 Persons in total: 3
-Perons:
+Persons:
 Alan Kay, age 0 years
 Ivan Sutherland, age 0 years
 Kristen Nygaard, age 0 years
@@ -405,7 +405,7 @@ Write a program that reads names of items from the user. If the name is empty, t
 
 Having read all the names, print all the items by using the `toString` method of the  `Item` class. The implementation of the `Item` class keeps track of the time of creation, in addition to the name of the item.
 
-Ohjelman esimerkkitulostus:
+An example of the working program is given below:
 
 <!-- <sample-output>
 
@@ -437,7 +437,7 @@ Collar (created at: 06.07.2018 12:34:57)
 
 <!-- Mikäli konstruktori vaatii useampia parametreja, voi käyttäjältä kysyä enemmän tietoa. Oletetaan, että luokan `Henkilo` konstruktori on seuraavanlainen. -->
 
-If the constructor demands more than one parameters, you can query the user for more information. Let's assume we have the following constructor for the class `Person`.
+If the constructor demands more than one parameter, you can query the user for more information. Let's assume we have the following constructor for the class `Person`.
 
 <!-- ```java
 public class Henkilo {
@@ -483,7 +483,7 @@ In this case, an object is created by calling the two-parameter constructor.
 
 <!-- Mikäli haluamme lukea tällaisia olioita käyttäjältä, tulee lukemisessa kysyä jokainen parametri erikseen. Alla olevassa esimerkissä käyttäjältä luetaan erikseen nimi ja ikä. Mikäli nimi on tyhjä, lukeminen lopetetaan. -->
 
-If we want to query the user for this kind of objects, they must be asked for each parameter separately. In the example below, name and age parameters are asked separately from the user. Entering an empty name will end the reading part.
+If we want to query the user for this kind of object, they must be asked for each parameter separately. In the example below, name and age parameters are asked separately from the user. Entering an empty name will end the reading part.
 
 <!-- Henkilöt tulostetaan lukemisen jälkeen. -->
 
@@ -533,7 +533,7 @@ while (true) {
         break;
     }
 
-    System.out.print("Enter the age of the person " + nimi + ": ");
+    System.out.print("Enter the age of the person " + name + ": ");
 
     int age = Integer.valueOf(scanner.nextLine());
 
@@ -547,7 +547,7 @@ System.out.println();
 System.out.println("Total number of persons: " + persons.size());
 System.out.println("Persons: ");
 
-for (Person persons: persons) {
+for (Person person: persons) {
     System.out.println(person);
 }
 ```
@@ -674,7 +674,7 @@ Scanner scanner = new Scanner(System.in);
 ArrayList<Person> persons = new ArrayList<>();
 
 // Read person information from the user
-System.out.println("Enter the person details separated by a comma, e.g.: Randall, 2")
+System.out.println("Enter the person details separated by a comma, e.g.: Randall,2");
 while (true) {
     System.out.print("Enter the details, empty will stop: ");
     String details = scanner.nextLine();
@@ -715,6 +715,21 @@ Sylvi, ikä 0 vuotta
 
 </sample-output> -->
 
+<sample-output>
+
+Enter the person details separated by a comma, e.g.: Randall,2
+Enter the details, empty will stop: **Leevi,2**
+Enter the details, empty will stop: **Anton,2**
+Enter the details, empty will stop: **Sylvi,0**
+Enter the details, empty will stop:
+
+Total number of persons: 3
+Persons:
+Leevi, age 2 years
+Anton, age 2 years
+Sylvi, age 0 years
+
+</sample-output>
 
 </text-box>
 
@@ -793,7 +808,7 @@ Miehen puolikkaat, 30 minuuttia
 <sample-output>
 
 Name: **Rick and Morty**
-Duratio: **25**
+Duration: **25**
 Name: **Two and a Half Men**
 Duration: **30**
 Name: **Love it or list it**
@@ -817,11 +832,11 @@ Two and a Half Men, 30 minutes
 
 <!-- Toteuta ohjelma, joka ensin lukee kirjojen tietoja käyttäjältä. Jokaisesta kirjasta tulee lukea kirjan nimi, sivujen lukumäärä sekä kirjoitusvuosi. Kirjojen lukeminen lopetetaan kun käyttäjä syöttää tyhjän kirjan nimen. -->
 
-Write a program that first reads book information from the user. The details to be asked for each book include the title, the number of pages, and the publication year. Entering an empty string as the name of the book ends the reading process.
+Write a program that first reads book information from the user. The details to be asked for each book include the title, the number of pages and the publication year. Entering an empty string as the name of the book ends the reading process.
 
 <!-- Tämän jälkeen käyttäjältä kysytään mitä tulostetaan. Jos käyttäjä syöttää merkkijonon "kaikki", tulostetaan kirjojen nimet, sivujen lukumäärät sekä kirjoitusvuodet. Jos taas käyttäjä syöttää merkkijonon "nimi", tulostetaan vain kirjojen nimet. -->
 
-After this the user is asked for what is to be printed. If the user inputs "everything", all the details are printed: the book titles, the numbers of pages, and the publication years. However, if the user enters the string "title", only the book titles are printed.
+After this the user is asked for what is to be printed. If the user inputs "everything", all the details are printed: the book titles, the numbers of pages and the publication years. However, if the user enters the string "name", only the book titles are printed.
 
 <!-- Ohjelmaa varten kannattanee toteuttaa Kirjaa kuvaava luokka. Tehtävä on kokonaisuudessaan kahden tehtäväpisteen arvoinen. -->
 
