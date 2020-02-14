@@ -1,6 +1,6 @@
 ---
-path: '/part-1/2-printing'
-title: 'Printing'
+path: "/part-1/2-printing"
+title: "Printing"
 hidden: false
 ---
 
@@ -20,11 +20,11 @@ hidden: true
 
 <text-box variant='learningObjectives' name='Learning Objectives'>
 
-- learn to write a program that prints text.
+- Learn to write a program that prints text.
 
-- become familiar with executing programs.
+- Become familiar with executing programs.
 
-- know what the term "parameter" means.
+- Know what the term "parameter" means.
 
 </text-box>
 
@@ -41,8 +41,6 @@ System.out.println("Hei maailma!");
 Hei maailma!
 
 </sample-output> -->
-
-
 
 The print command `System.out.println("Hello world");` prints the text "Hello world".
 
@@ -122,7 +120,7 @@ Tulostettava teksti
 
  -->
 
-Execution of the program starts from the line that follows `public static void main(string[] args) {`, and ends at the closing curly bracket `}`. Commands are executed one line at a time. We will get to know the meaning of the words `public class` and `public static void` later on. In the above example, `System.out.println("Text to be printed")` is the only command to be executed and its output is:
+Execution of the program starts from the line that follows `public static void main(string[] args) {`, and ends at the closing curly bracket `}`. Commands are executed one line at a time. We'll learn what the terms `public class` and `public static void` mean later on. In the above example, `System.out.println("Text to be printed")` is the only command to be executed. Its output is:
 
 <sample-output>
 
@@ -151,15 +149,15 @@ public class Esimerkki {
 
 </text-box> -->
 
-<text-box variant="hint" name="Examples in material and code boilerplate">
+<text-box variant="hint" name="Examples in the Material and Code Templates">
 
-The examples in the material will not always show the boilerplate, but you can assume that your program file always needs one. So the program examples might be one-liners like the example below
+The examples in the material will not always show the template, but you can assume that your program file always needs one. As such, the examples might be as short as a single line, such as the example below that illustrates the print command.
 
 ```java
 System.out.println("Hello world");
 ```
 
-In reality, the above example written as a full Java program looks like this:
+In reality, the above example, when written as a full Java program, looks like so:
 
 ```java
 public class Example {
@@ -201,7 +199,7 @@ Kun olet tehnyt tehtävän ja huomaat, että ohjelma tulostaa halutun merkkijono
 </programming-exercise>
 -->
 
-You'll find the second programming exercise of the course below. If you want, you can watch the video linked below in advance to see how the exercise is solved.
+Here's the second programming exercise of this course. If you'd like, you can watch this video on how to solve the exercise first:
 
 <youtube id="-DzOKI6iH5w"></youtube>
 
@@ -226,7 +224,7 @@ Ada Lovelace
 
 </sample-output>
 
-Once you've finished the exercise and have confirmed that it prints the correct string, return the exercise to TMC server. After that, you can read more about [Ada Lovelace](https://en.wikipedia.org/wiki/Ada_Lovelace), who was one of the first programmers.
+Once you've finished the exercise and see that it prints the correct string, return the exercise to the TMC server. After that, you can read more about [Ada Lovelace](https://en.wikipedia.org/wiki/Ada_Lovelace), who was one of the first programmers.
 
 </programming-exercise>
 
@@ -244,15 +242,15 @@ Käytössämme oleva ohjelmointiympäristö kääntää ja suorittaa ohjelman yh
 
 </text-box> -->
 
-<text-box variant='hint' name='Running the program'>
+<text-box variant='hint' name='Running the Program'>
 
 You can run a program in TMC by pressing the green play button, or by selecting "Run project" from the TMC menu.
 
-Although running the program is straightforward, a lot happens behind the scenes. When a program is run, the source code is first compiled into Java bytecode. This compilation process is done by Java's own compiler, which itself is a program. Following that, the program gets executed, meaning the commands are executed one-by-one by a Java-interpreter that is able to read Java bytecode.
+Even though running the program is straightforward, a lot is happenings behind the scenes. When a program is run, the source code is first compiled into Java bytecode. This compilation process is done by Java's compiler, which itself is a program. Following that, the program gets executed, meaning the commands are executed one-by-one by a Java-interpreter that is able to read Java bytecode.
 
-This compiling process affects how and when errors occur. When program is compiled before execution, the compiler can search for errors in your program. This allows the IDE to give you tips, so that you may more easily correct your mistakes.
+This compile process affects how and when errors occur. When a program is compiled before execution, the compiler can search for errors in it. This also affects the hints provided by the IDE, and in this way, the programmer can receive immediate feedback on any errors.
 
-The IDE both compiles and executes the program with just one touch of a button. However, the programming environment also compiles the program continuously, so that it can report errors. You can, for example, try to change above Ada Lovelace exercise print command to `Systemoutprintln("hi!")` -- you will notice that the line will be underlined and there will be notification about a error at the left end of the line.
+The IDE both compiles and executes the program with just one press of a button. However, the programming environment compiles the program continuously, so it can report errors. You can, for example, try to change above Ada Lovelace exercise print command to `Systemoutprintln("hi!")` -- what you'll notice is that the line will be underlined and you'll be notified of an error on the left-hand side.
 
 </text-box>
 
@@ -280,7 +278,7 @@ Hei maailma!
 
 ## Printing Multiple Lines
 
-Programs are constructed command by command so that each command comes on a new line. In the example below, the command `System.out.println` appears twice. This means that two print commands are being executed in the program.
+Programs are constructed command-by-command, where each command is placed on a new line. In the example below, the command `System.out.println` appears twice, which means that two print commands are being executed in the program.
 
 ```java
 public class Ohjelma {
@@ -313,13 +311,13 @@ Ohjelmoinnin opettelu onkin oikeastaan tie täynnä virheitä -- jokainen virhev
 
 </text-box> -->
 
-<text-box variant='hint' name='Exact inspector'>
+<text-box variant='hint' name='Exact Inspector'>
 
-Programming exercises will be checked by TMC Henrik, who is very exact. Expectations about the print format in assignments are very precise. If, for example, the assignment expects you to print a parenthesis, you must obey and print the parenthesis.
+The programming exercises will be checked by TMC Henrik, who is meticulous. The guidelines in the assignments regarding the print format are very precise. If the assignment expects you to print a parenthesis, you must print the parenthesis.
 
-This exactness in printing is widely relevant in programming. Missing a single character can cause an error. Beginner programmers often enter a comma instead of a dot, write `printin` instead of `println`, leave out apostrophes, or forget the semicolon after a command. Any of these would cause an error and make the program fail to execute.
+This preciseness with regard to the output is relevant in programming in a more general sense. Missing a single character may cause an error. Novice programmers often enter a comma instead of a dot, and write, for instance `printin` instead of `println`, leave out apostrophes, or forget the semicolon after a command. Any one of these would cause an error and cause the program execution to fail.
 
-Learning programming really is a road full of errors, with every error message a chance to learn. So look for any red signs in the IDE and read the test errors!
+Learning programming is, in fact, a path full of mistakes -- and every error message is a chance to learn. Keep a look out for any red signs in the IDE and try to read the test errors!
 
 </text-box>
 
@@ -349,7 +347,7 @@ ohjelma
 
 </programming-exercise> -->
 
-<programming-exercise name='Once upon a time' tmcname='part01-Part01_03.OnceUponATime'>
+<programming-exercise name='Once Upon a Time' tmcname='part01-Part01_03.OnceUponATime'>
 
 The exercise template comes with the following template:
 
@@ -362,7 +360,7 @@ public class OnceUponATime {
 }
 ```
 
-Edit the program so that it will print the following text. Use three `System.out.println` commands for printing.
+Modify the program so that it will print the following text. Use three `System.out.println`-commands for printing.
 
 <sample-output>
 
@@ -386,9 +384,9 @@ Alla oleva animaatio kuvaa sout-komennon käyttöä. Kun käyttäjä on kirjoitt
 
 <text-box variant='hint' name='"sout"'>
 
-Writing the command `System.out.println("...")` can be pretty cumbersome. In NetBeans, write on a blank line (in main) **sout** and press tabulator (key to the left of q). What happens? This small tool will propably save much of your time.
+Writing the command `System.out.println("...") can be taxing. In NetBeans, try to write **sout** on blank line (within main) and press tab (the key left to q). What happens? This shortcut may save you a lot of time in the future.
 
-The animation below illustrates the use of sout-command. First, the user writes sout and then presses the tabulator. A Magic Trick!
+The animation below illustrates the use of the sout command. The user first writes sout and then pressed tab. Magic!
 
 ![](../img/part1.2-sout.gif)
 
@@ -468,13 +466,13 @@ Vaikka yllä oleva esimerkki toimii, on rivinvaihtojen käyttö tärkeää muita
 
  -->
 
-## Terminology and Commenting Code
+## Terminology and Code Comments
 
 ### Command parameters
 
 The information to be printed by the print command, i.e. its **parameters**, are passed to it by placing them inside the parentheses `()` that follow the command. For example, passing `Hi` as a parameter to the `System.out.println` command is done like this: `System.out.println("Hi")`.
 
-### Semicolon separates commands
+### Semicolon Separates Commands
 
 Commands are separated with a semicolon `;`. We could, if we wanted to, write almost everything on a single line. However, that would be difficult to understand.
 
@@ -550,4 +548,4 @@ public class Comments {
 }
 ```
 
-The last line of the example shows a particularly handy use-case for comments. The source code does not need to be removed to temporarily try out something.
+The last line of the example shows a particularly handy use-case for comments. Code that has been written does not need to eb deleted to try out something else.

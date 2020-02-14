@@ -1,8 +1,8 @@
 {
   "@context": "http://schema.org",
   "@type": "Course",
-  "name": "Ohjelmoinnin MOOC 2020",
-  "description": "Helsingin yliopiston kaikille avoin ja ilmainen ohjelmoinnin perusteet opettava verkkokurssi. Kurssilla perehdytään nykyaikaisen ohjelmoinnin perusideoihin sekä ohjelmoinnissa käytettävien työvälineiden lisäksi algoritmien laatimiseen. Kurssille osallistuminen ei vaadi ennakkotietoja ohjelmoinnista.",
+  "name": "Java Programming I",
+  "description": "A free and open to everybody programming course by University of Helsinki. The course introduces you to basics of modern programming, tools used in programming and how to develop algorithms. Participation in the course does not require any prior knowledge about programming.",
   "provider": {
     "@type": "Organization",
     "name": "MOOC.fi",
@@ -16,14 +16,14 @@
   "hasCourseInstance": [
     {
       "@type": "CourseInstance",
-      "name": "Ohjelmoinnin MOOC 2020",
+      "name": "Java Programming I",
       "courseMode": ["MOOC", "online"],
       "location": {
         "@type": "Place",
         "name": "Exactum, Kumpulan kampus",
         "address": "Gustaf Hällströmin katu 2b 00560 Helsinki, Finland"
       },
-      "startDate": "2018-12-14",
+      "startDate": "2019-1-21",
       "audience": {
         "@type": "EducationalAudience",
         "educationalRole": "student",
@@ -31,8 +31,8 @@
       },
       "inLanguage": {
         "@type": "Language",
-        "name": "Finnish",
-        "alternateName": "fi"
+        "name": "English",
+        "alternateName": "en"
       },
       "isAccessibleForFree": true
     }

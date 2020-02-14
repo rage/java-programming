@@ -10,16 +10,16 @@ hidden: false
 <!-- - Opit kirjoittamaan ohjelman, joka lukee käyttäjän kirjoittamaa tekstiä. -->
 <!-- - Tiedät mitä merkkijonot ovat ohjelmoinnissa. -->
 <!-- - Tiedät miten merkkijonoja voidaan yhdistää toisiinsa ("katenointi"). -->
- - learn to write a program that reads text written by a user.
+ - Learn to write a program that reads text written by a user.
 
- - know what "string" means in programming.
+ - Know what a "string" refers to in programming.
 
- - know how to join strings together ("concatenation").
+ - Know how to join (i.e., "concatenate") strings together.
 
 </text-box>
 
 <!-- Syöte on ohjelman käyttäjän kirjoittamaa tekstiä, jota ohjelma lukee. Syöte luetaan aina merkkijonona. Syötteen lukemiseen käytetään Javan valmista `Scanner`-apuvälinettä. Apuväline tuodaan ohjelman käyttöön lisäämällä komento `import java.util.Scanner;` ennen pääohjelmarungon aloitusta (`public class` ...), ja itse apuväline luodaan komennolla `Scanner lukija = new Scanner(System.in);`. -->
-Input is text written by the user, which the program reads. Input is always read as a string of characters, or text. For reading input, we use the `Scanner` tool that comes with Java. The tool can be imported for use in a program by adding the command `import java.util.Scanner;` before the beginning of the main program's frame (`public class` ...). The tool itself is created with `Scanner scanner = new Scanner(System.in);`.
+Input refers to text written by the user read by the program. Input is always read as a string. For reading input, we use the `Scanner` tool that comes with Java. The tool can be imported for use in a program by adding the command `import java.util.Scanner;` before the beginning of the main program's frame (`public class` ...). The tool itself is created with `Scanner scanner = new Scanner(System.in);`.
 
 ```java
 import java.util.Scanner;
@@ -62,7 +62,7 @@ public class Program {
 ```
 
 <!-- Tarkemmin ottaen lukeminen tapahtuu `lukija`-apuvälineeseen liittyvällä komennolla `nextLine()`. Kutsu `lukija.nextLine()` jää odottamaan käyttäjän kirjoittamaa merkkijonoa. Kun käyttäjä syöttää merkkijonon ja painaa enteriä, käyttäjän syöttämä merkkijono asetetaan _merkkijonotyyppiseen muuttujaan_ (tässä muuttujan nimi on `viesti`). Muuttujaan `viesti` voi viitata ohjelmasta myöhemmin -- yllä olevassa esimerkissä muuttujaan `viesti` viitataan tulostuskomennossa. -->
-More precisely, input is read with the `scanner` tool's `nextLine()` command. The call `scanner.nextLine()` waits for the user to write something. When the user writes something and presses enter, the provided string (text) is assigned to a __string variable__ (in this case `message`). The program is then able to reference the variable `message` later on -- in the example above, the variable `message` is referenced in the print command.
+More precisely, input is read with the `scanner` tool's `nextLine()` method. The call `scanner.nextLine()` is left waiting for the user to write something. When user writes something and presses enter, the provided string is assigned to a __string variable__ (in this instance `message`). The program is then able to reference the variable `message` later on -- in the example above, the variable `message` is referenced in the print command.
 
 <!-- Kun ohjelma käynnistetään, tulostus on esimerkiksi seuraavanlainen. Alla olevassa esimerkissä käyttäjä on syöttänyt tekstin "Hei maailma" -- esimerkeissä käyttäjän syöttämät tekstit merkitään punaisella. -->
 When the program is run, its output can look like the example below. In this example, the user has written the text "Hello world" -- user input is marked with red in the sample examples.
@@ -83,10 +83,10 @@ The video below shows the process of making a program that reads user input. Wat
 <programming-exercise name='Message' tmcname='part01-Part01_05.Message'>
 
 <!-- Kirjoita ohjelma, joka pyytää käyttäjää kirjoittamaan merkkijonon. Kun käyttäjä on syöttänyt merkkijonon (eli kirjoittanut tekstin sekä painanut enter-näppäintä), ohjelman tulee tulostaa käyttäjän syöttämä merkkijono. -->
-Write a program that asks the user to write a string. When the user has given a string (that is, written some text and pressed the enter key), the program must print the string provided by the user.
+Write a program that asks the user to write a string. When the user has provided a string (i.e., written some text and pressed the enter key), the program should print the string that was provided by the user.
 
 <!-- Tehtäväpohjan mukana tulee runko, joka sisältää Scanner-apuvälineen luomisen. -->
-The exercise template comes with a program frame that includes the creation of a Scanner tool.
+The exercise template comes with a program template that includes the creation of a Scanner tool.
 
 ```java
 import java.util.Scanner;
@@ -103,7 +103,7 @@ public class Message {
 ```
 
 <!-- Tulostusesimerkki kun käyttäjä syöttää merkkijonon "Heippa". -->
-Example output when the user writes "Bye".
+Example output for when the user writes "Bye".
 
 <sample-output>
 
@@ -114,7 +114,7 @@ Bye
 </sample-output>
 
 <!-- Tulostusesimerkki kun käyttäjä syöttää merkkijonon "Olipa kerran...". -->
-Example output when the user writes "Once upon a time...".
+Example output for when the user writes "Once upon a time...".
 
 <sample-output>
 
@@ -262,7 +262,7 @@ Hi Ada Lovelace!
 </sample-output>
 
 <!-- Huom! Kun käytät `System.out.println`-komentoa, älä kirjoita komentoon merkkijonoa "Ada Lovelace", vaan hyödynnä tulostuksessa olemassaolevaa muuttujaa `nimi`: `System.out.println("Hei " + ...)`. -->
-NB! When using the  `System.out.println` -command, do not pass the string "Ada Lovelace" as a parameter. Instead, use the existing variable `name`: `System.out.println("Hi " + ...)`
+NB! When using the `System.out.println` command, do not pass in the string "Ada Lovelace" as a parameter. Instead, use the existing variable `name`: `System.out.println("Hi " + ...)`
 
 </programming-exercise>
 
@@ -307,7 +307,7 @@ This will be printed twice...
 </sample-output>
 
 
-<programming-exercise name='Message three times' tmcname='part01-Part01_07.MessageThreeTimes'>
+<programming-exercise name='Message Three Times' tmcname='part01-Part01_07.MessageThreeTimes'>
 
 <!-- Kirjoita ohjelma, joka pyytää käyttäjää kirjoittamaan merkkijonon. Kun käyttäjä on syöttänyt merkkijonon (eli kirjoittanut tekstin sekä painanut enter-näppäintä), ohjelman tulee tulostaa käyttäjän syöttämä merkkijono kolme kertaa (voit käyttää System.out.println-komentoa useampaan kertaan). -->
 Write a program that asks the user to write a string. When the user has given a string (that is, written some text and pressed enter), the program must print the user's string three times (you can use the `System.out.println` command multiple times).
@@ -324,13 +324,13 @@ public class MessageThreeTimes {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Write a message: ");
-        // Write the program here
+        // Write your program here
     }
 }
 ```
 
 <!-- Tulostusesimerkki kun käyttäjä syöttää merkkijonon "Heippa". -->
-Example output when the user writes "Hi".
+Example output for when the user writes the string "Hi".
 
 <sample-output>
 
@@ -394,7 +394,7 @@ You wrote this
 <programming-exercise name='Greeting' tmcname='part01-Part01_08.Greeting'>
 
 <!-- Kirjoita ohjelma, joka kysyy käyttäjältä nimeä käyttäen tekstiä "Mikä on nimesi?". Kun käyttäjä syöttää nimen, ohjelman tulee tulostaa käyttäjälle merkkijonon "Hei ", jota seuraa käyttäjän nimi. -->
-Write a program that asks the user for their name by prompting them with the message "What's your name?". When the user writes their name, the program has to print "Hi " followed by the user's name.
+Write a program that prompts the user for their name with the message "What's your name?". When the user has written their name, the program has to print "Hi " followed by the user's name.
 
 <!-- Tehtäväpohjan mukana tulee runko, joka sisältää Scanner-apuvälineen luomisen. -->
 The exercise template already includes the code that creates the `Scanner` tool.
@@ -440,7 +440,7 @@ Hi Lily
 ## Program Execution Waits for Input
 
 <!-- Kun ohjelman suoritus kohtaa kohdan, missä käyttäjältä halutaan lukea syötettä (komento `lukija.nextLine()`), ohjelman suoritus jää odottamaan. Suoritus jatkuu vasta kun käyttäjä kirjoittaa syötteen ja painaa enteriä. -->
-When program execution encounters a statement that attempts to read input from the user (the command `reader.nextLine()`), the execution stops and waits. The execution continues only after the user has written some input and pressed enter.
+When the program's execution comes a statement that attempts to read input from the user (the command `reader.nextLine()`), the execution stops and waits. The execution continues only after the user has written some input and pressed enter.
 
 <!-- Alla olevassa esimerkissä ohjelma pyytää käyttäjältä kolmea merkkijonoa. Ensin ohjelma tulostaa merkkijonon `Syötä ensimmäinen merkkijono:`, jonka jälkeen ohjelma jää odottamaan käyttäjän syötettä. Kun käyttäjä syöttää tekstin, ohjelma tulostaa merkkijonon `Syötä toinen merkkijono:`, jonka jälkeen ohjelma jää taas odottamaan käyttäjän syötettä. Tämä jatkuu myös kolmannen kerran, jonka jälkeen ohjelma tulostaa käyttäjän syöttämät tekstit. -->
 In the example below, the program prompts the user for three strings. First, the program prints `Write the first string: `, and then waits for user input. When the user writes some text, the program prints `Write the second string: `, and then waits for user input again. This continues for a third time, after which the program prints all three strings.
@@ -556,7 +556,7 @@ public class Program {
 ```
 
 <!-- Useampaa merkkijonoa käyttämällä voi luoda laajempia tekstejä, joissa sisältö vaihtelee käyttäjän syöttämän syötteen mukaan. Alla olevassa esimerkissä käyttäjälle kerrotaan hieman enemmän hänen syöttämistä teksteistä -- huomaa myös, että muuttujien järjestystä tulostuksessa voi halutessaan vaihdella: alla tulostetaan ensin viimeisenä luettu muuttuja. -->
-We can create more complicated texts using multiple strings, which change in content depending on user input. In the example below, the user is told a bit more about the texts they wrote -- note, the order in which the strings are printed can be changed: below, the third input string is printed first.
+We can form more complicated texts whose content changes depending on the user's input by using more strings. In the example below, the user is told a bit more about the texts they wrote -- notice that the order in which the strings are printed can be changed. In the example below, the third input string is printed first.
 
 ```java
 import java.util.Scanner;
@@ -591,8 +591,8 @@ Write the second string:
 **two**
 Write the third string:
 **three**
-Last string you wrote was three, which 
-was preceded by two. 
+Last string you wrote was three, which
+was preceded by two.
 The first string was one.
 All together: onetwothree
 
@@ -603,10 +603,10 @@ All together: onetwothree
 <programming-exercise name='Story' tmcname='part01-Part01_10.Story'>
 
 <!-- **Huom!** Esimerkkitulosteet saattavat rivittyä väärin kapeilla ruuduilla. Mikäli käytät selainikkunan koosta vain rajattua osaa, tai käytössäsi on muuten kapea ruutu, kokeile venyttää ruutua leveyssuunnassa ja tarkasta muuttuuko tekstin rivitys. Tehtävässä oletetaan "leveällä ruudulla" havaittava rivitys. -->
-**NB!** The example output might line up wrong on narrow screens. If you are only using a limited portion of the browser window, or your screen is otherwise very narrow, try to stretch the screen horizontally to see if the text lines up differently. The exercise expects the text to line up as it does on wide screens.
+**NB!** The example output might align wrong on narrow displays. If you're using only a limited portion of the browser window, or your display is otherwise very narrow, try to stretch the display horizontally to see if the text aligns differently. The exercise expects the text to align as it does on wider displays.
 
 <!-- Kirjoita ohjelma, joka kysyy käyttäjältä hahmon nimeä sekä hahmon ammattia. Tämän jälkeen ohjelma tulostaa pienen tarinan. -->
-Write a program that asks the user for a character's name and their job. The program then prints a little story.
+Write a program that asks the user for a character's name and their job. The program then prints a short story.
 
 <!-- Ohjelman tulostuksen tulee olla kuten esimerkissä -- huomaa, että nimi ja ammatti muuttuu syötteen perusteella. -->
 The output must be as shown below -- note, the name and job depend on the user's input.
