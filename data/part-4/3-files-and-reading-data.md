@@ -533,7 +533,7 @@ The exercise template comes with two files, `names.txt` and `other-names.txt`. W
 
 <!-- Jos merkkijono löytyy, ohjelman tulee tulostaa "Löytyi!". Jos merkkijonoa ei löydy, ohjelman tulee tulostaa "Ei löytynyt.". Jos tiedoston lukeminen epäonnistuu (lukeminen päätyy virhetilanteeseen), ohjelman tulee tulostaa viesti "Tiedoston lukeminen epäonnistui.". -->
 
-If the string is found, the program should print "Found!". If not, the program should print "Not found.". If reading the file fails (the reading ends in an error) the program should print the message "Failed to read the file.".
+If the string is found, the program should print "Found!". If not, the program should print "Not found.". If reading the file fails (the reading ends in an error) the program should print the message "Reading the file " + file + " failed.".
 
 <!-- <sample-output>
 
@@ -589,7 +589,7 @@ Name of the file:
 **nonexistent.txt**
 Search for:
 **test**
-Failed to read the file nonexistent.txt.
+Reading the file nonexistent.txt failed.
 
 </sample-output>
 
@@ -721,7 +721,7 @@ try (Scanner scanner = new Scanner(Paths.get("henkilot.csv"))) {
         String line = scanner.nextLine();
 
         // if the line is blank we do nothing
-        if (line.isEmpty() == 0) {
+        if (line.isEmpty()) {
             continue;
         }
 
@@ -741,7 +741,7 @@ try (Scanner scanner = new Scanner(Paths.get("henkilot.csv"))) {
 
 <!-- Maailma on täynnä tietoa, joka liittyy muuhun tietoon -- tieto muodostaa kokonaisuuksia. Esimerkiksi henkilön tietoihin kuuluu nimi, syntymäaika, puhelinnumero, osoitetietoihin kuuluu maa, kaupunki, katuosoite, postinumero ja niin edelleen. -->
 
-The world is full of data that are related to other data -- these form collection. For example, personal information includes name, date of birth, phone number. Address information, on the other hand, includes country, city, street address, postal number, and so on.
+The world is full of data that are related to other data -- these form collections. For example, personal information can include a name, date of birth and a phone number. Address information, on the other hand, can include a country, city, street address, postal number and so on.
 
 <!-- Tieto tallennetaan usein tiedostoihin määrämuotoisessa muodossa. Eräs tällainen muoto on kurssilla jo tutuksi tullut comma-separated values (CSV)-muoto, eli pilkuilla erotetut tiedot. -->
 
@@ -983,7 +983,7 @@ amy,1
 
 <!-- Tehtäväpohjassa on valmiina luokka `Henkilo` sekä luokassa `HenkilotTiedostosta` oleva runko metodille `public static ArrayList<Henkilo> lueHenkilot(String tiedosto)`. Toteuta metodi `lueHenkilot` siten, että metodissa luetaan parametrina annetusta tiedostosta henkilöt, jotka lopulta palautetaan metodin palauttamassa listassa. -->
 
-The exercise template already has a `Person` class, and the class `StoringRecords` that has a body for the method `public static ArrayList<Person> readPeople(String file)`. Implement the `readPeople` method such that it reads the persons from the file passed as a parameter, and finally returns them in the list returned by the method.
+The exercise template already has a `Person` class, and the class `StoringRecords` has a body for the method `public static ArrayList<Person> readPeople(String file)`. Implement the `readPeople` method such that it reads the persons from the file passed as a parameter, and finally returns them in the list returned by the method.
 
 <!-- Tehtäväpohjassa on valmiina `main`-metodi, jossa voit kokeilla ohjelmasi toimintaa. Muokkaa tehtävässä vain metodia `lueHenkilot`. -->
 
