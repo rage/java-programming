@@ -721,7 +721,7 @@ try (Scanner scanner = new Scanner(Paths.get("henkilot.csv"))) {
         String line = scanner.nextLine();
 
         // if the line is blank we do nothing
-        if (line.isBlank()) {
+        if (line.isEmpty()) {
             continue;
         }
 
