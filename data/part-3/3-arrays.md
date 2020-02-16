@@ -1,7 +1,7 @@
 ---
 path: '/part-3/3-arrays'
 title: 'Arrays'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Learning objectives'>
@@ -12,17 +12,17 @@ hidden: true
 
 - You know what an Array is and how to use it.
 - You can create an Array, assign a value to a given index and iterate over it.
-- You recognize, that array is a reference type and know how to use array as a parameter of a method
+- You recognize that an Array is a reference type and know how to use an array as a parameter of a method
 
 </text-box>
 
 <!-- Edellä käsitelty lista -- ArrayList -- tarjoaa ohjelmoijan elämää helpottavia toiminnallisuuksia. Näistä ehkäpä tärkein liittyy arvon lisäämiseen: ohjelmoijan näkökulmasta listan koko ei ole rajoitettu. Todellisuudessa listoissa ei ole taikatemppuja -- ne ovat ohjelmoitu siinä missä kaikki muutkin ohjelmointikielen tarjoamat välineet ja ohjelmat. Kun lista luodaan, sille varataan rajattu tila koneen muistista. Listan metodit ovat toteutettu siten, että varatun tilan loppuessa metodi varaa suuremman tilan listan käyttöön ja kopioi vanhassa tilassa olevat tiedot uuteen paikkaan. -->
 
-We've gotten familiar with ArrayList, which has a lot of functionality to make the life of a programmer easier. Perhaps the most important is about adding elements: From the point of view of the programmer the size of the ArrayList is unlimited. In reality there are no magic tricks in the ArrayList -- they have been programmed like any programs or tools offered by the programming language. When you create a list, a limited space is reserved in the memory of the computer. When the ArrayList runs out of space, larger space is reserved and the data from the previous space is copied to the new one.
+We've gotten familiar with the ArrayList, which has a lot of functionality to make the life of a programmer easier. Perhaps the most important is about adding elements. From the point of view of the programmer, the size of the ArrayList is unlimited. In reality there are no magic tricks in the ArrayList -- they have been programmed like any other programs or tools offered by the programming language. When you create a list, a limited space is reserved in the memory of the computer. When the ArrayList runs out of space, a larger space is reserved and the data from the previous space is copied to the new one.
 
 <!-- ArrayListin helppokäyttöisyydesta huolimatta ohjelmissa on joskus tarvetta ArrayListin esi-isälle eli **taulukolle**. -->
 
-Even though ArrayList is simple to use, sometimes we need the ancestor of the ArrayList, the Array.
+Even though the ArrayList is simple to use, sometimes we need the ancestor of the ArrayList, the Array.
 
 <!-- Taulukko sisältää rajatun määrän numeroituja paikkoja arvoille. Taulukon pituus (tai koko) on siinä olevien paikkojen lukumäärä, eli kuinka monta arvoa taulukkoon voi laittaa. Taulukon arvoja kutsutaan taulukon **alkioiksi**. -->
 
@@ -66,7 +66,7 @@ String[] strings = new String[5];
 
 <!-- Taulukon alkioihin viitataan taulukon indeksien perusteella. Alla olevassa esimerkissä luodaan kolmepaikkainen kokonaislukutaulukko, jonka jälkeen taulukon indekseihin 0 ja 2 asetetaan arvot. Tämän jälkeen arvot tulostetaan. -->
 
-An element of an Array is referred to by its index. In the example below we create an Array to hold 3 integers, and then assigning values to the indices 0 and 2. After that we print the values.
+An element of an Array is referred to by its index. In the example below we create an Array to hold 3 integers, and then assign values to indices 0 and 2. After that we print the values.
 
 <!-- ```java
 int[] luvut = new int[3];
@@ -97,11 +97,11 @@ System.out.println(numbers[2]);
 
 <!-- Yksittäisen arvon asettaminen taulukon tiettyyn paikkaan tapahtuu aivan kuten arvon asetus tavalliseen muuttujaan, mutta taulukkoon asetettaessa kerrotaan indeksi, eli taulukon kohta mihin arvo tullaan asettamaan. Indeksi kerrotaan hakasulkeiden sisällä. ArrayListin metodi `get` käyttäytyy hyvin samalla tavalla kuin taulukon tietystä indeksistä haku. Taulukon kohdalla vain syntaksi, eli merkintätapa, on erilainen. -->
 
-Assigning a value to a specific spot of an Array works much like assigning a value in a normal variable, but in the Array you must specify the index, i.e. to which spot you want to assign the value. The index is specified in in square brackets. The `get`-method of ArrayList works very similarly to accessing an element of an the Array. Just the syntax, i.e. the way things are written, is different.
+Assigning a value to a specific spot of an Array works much like assigning a value in a normal variable, but in the Array you must specify the index, i.e. to which spot you want to assign the value. The index is specified in square brackets. The ArrayList `get`-method works very similarly to accessing an element of an Array. Just the syntax, i.e. the way things are written, is different.
 
 <!-- Indeksi on kokonaisluku, jonka arvo on välillä [0, taulukon pituus - 1]. Esimerkiksi viiden alkion pituisessa taulukossa on indeksit 0, 1, 2, 3, ja 4. -->
 
-The index is an integer, and it's value is between [0, length of the Array - 1]. For example an Array to hold 5 elements has indices 0, 1, 2, 3, and 4.
+The index is an integer, and its value is between [0, length of the Array - 1]. For example an Array to hold 5 elements has indices 0, 1, 2, 3, and 4.
 
 <!-- ```java
 Scanner lukija = new Scanner(System.in);
@@ -137,7 +137,7 @@ System.out.println(numbers[index]);
 
 <!-- Taulukossa olevan muuttujan voi tulostuksen sijaan hyvin esimerkiksi asettaa uuden muuttujan arvoksi. -->
 
-The value held in an Array can also be assigned to be the value of another variable
+The value held in an Array can also be assigned to be the value of another variable.
 
 <!-- ```java
 Scanner lukija = new Scanner(System.in);
@@ -170,7 +170,7 @@ System.out.println("Which index should we access? ");
 int index = Integer.valueOf(reader.nextLine());
 
 int number = numbers[index];
-System.out.println(numbers);
+System.out.println(number);
 ```
 
 <quiz id="8c630846-5a8e-5afd-a65b-d171baabca57"></quiz>
@@ -226,7 +226,8 @@ Give two indices to swap:
 
 <!-- Voit olettaa, että käyttäjän syöttämät indeksit löytyvät taulukosta. Vinkki! Tarvitset apumuuttujan jomman kumman vaihdettavan arvon hetkelliseen säilömiseen. -->
 
-You can assume the array to contain the given indices. Tip! You'll need an additional variable to store one of the values for little while.
+You can assume that the array contains the given indices.
+Tip! You'll need an additional variable to store one of the values for a little while.
 
 </programming-exercise>
 
@@ -237,12 +238,12 @@ You can assume the array to contain the given indices. Tip! You'll need an addit
 
 <!-- Taulukon koon saa selville taulukko-olioon liittyvän muuttujan `length` avulla. Tähän taulukkoon liittyvään muuttujaan pääsee käsiksi kirjoittamalla taulukon nimi piste muuttujan nimi, eli esimerkiksi `taulukko.length`. Huomaa, että kyseessä ei ole metodikutsu, eli `taulukko.length()` ei toimi. -->
 
-You can find out the size of the array through the associated variable `length`. You can access this associated variable by writing name of the array dot name of the variable, i.e. `numbers.length`. Note, that this is not a method call, so `numbers.length()` doesn't work.
+You can find the size of the array through the associated variable `length`. You can access this associated variable by writing name of the array dot name of the variable, i.e. `numbers.length`. Note, that this is not a method call, so `numbers.length()` doesn't work.
 
 
 <!-- Taulukon alkioiden läpikäynti voidaan toteuttaa while-toistolauseen avulla. -->
 
-You can iterate the array, i.e. go through each element of the array with a while loop.
+You can iterate over the array, i.e. go through each element of the array with a while loop.
 
 <!-- ```java
 int[] luvut = new int[4];
@@ -267,7 +268,7 @@ numbers[1] = 13;
 numbers[2] = 12;
 numbers[3] = 7;
 
-System.out.println("The array has " + luvut.length + " elements.");
+System.out.println("The array has " + numbers.length + " elements.");
 
 int index = 0;
 while (index < numbers.length) {
@@ -299,7 +300,7 @@ The example above iterates over indices 0, 1, 2 and 3, and at each index prints 
 
 <!-- Tehtäväpohjassa on valmiina taulukko, joka sisältää lukuja. Täydennä ohjelmaa siten, että käyttäjältä kysyttyä lukua etsitään taulukosta. Jos luku löytyy taulukosta, ohjelma kertoo luvun indeksin. Jos lukua taas ei löydy taulukosta, ohjelma kertoo ettei lukua löydy. -->
 
-The exercise template has already an array containing numbers. Complete the program to ask the user for a number to search in the array. If the array contains the given number, the program tells the index containing the number. If the array doesn't contain the given number, the program will tell the number wasn't found.
+The exercise template already has an array containing numbers. Complete the program so that it asks the user for a number to search in the array. If the array contains the given number, the program tells the index containing the number. If the array doesn't contain the given number, the program will advise that the number wasn't found.
 
 <sample-output>
 
@@ -342,7 +343,7 @@ If the index is pointing outside the Array, i.e. the element doesn't exist, we g
 
 <!-- Seuraavassa esimerkissä on ohjelma, joka kysyy käyttäjältä lukujen määrän ja joukon lukuja. Tämän jälkeen ohjelma tulostaa luvut uudestaan samassa järjestyksessä. Käyttäjän antamat luvut säilötään taulukkoon. -->
 
-The next example is a program that first asks the user to enter how many numbers, and then enter the numbers. Finally it prints back the numbers in the same order. The numbers are stored in an Array.
+The next example is a program that initially asks the user to enter how many numbers, and then enter the numbers. Finally it prints back the numbers in the same order. The numbers are stored in an Array.
 
 
 <!-- ```java
@@ -467,7 +468,7 @@ The size of an int variable in java is 32 bits. One bit is reserved for the sign
 
 <!-- Osa ohjelmointikielistä pyrkii varmistamaan, ettei ohjelmoija mene "väärälle alueelle". Jos Java ei aiheuttaisi virhettä sanoessamme `taulukko[-1]`, saisimme tietoomme ohjelman muistissa juuri ennen taulukkoa olevan tiedon. Kukaan ei tällöin myöskään estäisi kirjoittamasta ohjelmaa, joka lukisi kaiken ohjelman muistissa olevan tiedon. -->
 
-Some programming languages try to make sure the programmer doesn't go "in the wrong area". If java didn't cause the exception when we say `array[-1]`, we would find out the data located just before the array in the memory of the program. In such case there there wouldn't also be anything preventing us from writing a program reading the whole memory reserved for the program.
+Some programming languages try to make sure that the programmer doesn't go "in the wrong area". If java didn't cause the exception when we say `array[-1]`, we would find the data located just before the array in the memory of the program. In such case there wouldn't be anything preventing us from writing a program reading the whole memory reserved for the program.
 
 </text-box>
 
@@ -478,7 +479,7 @@ Some programming languages try to make sure the programmer doesn't go "in the wr
 
 <!-- Taulukkoja voidaan käyttää metodin parametrina aivan kuten kaikkia muitakin muuttujia. Koska taulukko on viittaustyyppinen muuttuja, on taulukon arvo viite taulukkoon liittyviin tietoihin. Kun taulukkoa käytetään metodin parametrina, metodin käyttöön kopioidaan viite taulukkoon. -->
 
-You can use arrays as a parameter of a method just like any other variable. Because array is reference type, the value of the array is a reference to the information contained in the array. When you use array as a parameter of a method, the method receives a copy of the reference to the array.
+You can use arrays as a parameter of a method just like any other variable. As an array is a reference type, the value of the array is a reference to the information contained in the array. When you use array as a parameter of a method, the method receives a copy of the reference to the array.
 
 <!-- ```java
 public static void listaaAlkiot(int[] kokonaislukuTaulukko) {
@@ -523,7 +524,7 @@ numbers[0] = 1;
 numbers[1] = 2;
 numbers[2] = 3;
 
-listElemets(numbers);
+listElements(numbers);
 ```
 
 <sample-output>
@@ -535,17 +536,17 @@ listElemets(numbers);
 
 <!-- Kuten olemme aiemmin jo huomanneet, parametrin nimi metodin sisällä voi olla aivan vapaasti valittu, nimen ei tarvitse missään tapauksessa olla sama kuin kutsuvassa. Edellä taulukkoa kutsutaan metodin sisällä nimellä `kokonaislukuTaulukko`, metodin kutsuja taas näkee saman taulukon `luvut`-nimisenä. -->
 
-As noticed before, you can freely choose the name of the parameter inside the method, the name doesn't have to be the same as the name of the variable when you call the method. Above we call the array `integerArray`, meanwhile the caller of the method has named the same array `numbers`.
+As noticed earlier, you can freely choose the name of the parameter inside the method, the name doesn't have to be the same as the name of the variable when you call the method. In the example above, we call the array `integerArray`, meanwhile the caller of the method has named the same array `numbers`.
 
 <!-- Taulukko on olio, joten kaikki metodissa tapahtuvat taulukon sisältöön vaikuttavat muutokset ovat olemassa myös metodin suorituksen jälkeen. -->
 
-Array is an object, so when you change the array inside the method, the changes persist also after the execution of the method.
+Array is an object, so when you change the array inside the method, the changes persist after the execution of the method.
 
 <programming-exercise name='Sum of array' tmcname='part03-Part03_20.SumOfArray'>
 
 <!-- Täydennä luokassa Summaaja olevaa metodia `public static int laskeTaulukonLukujenSumma(int[] taulukko)` siten, että se laskee ja palauttaa sille parametrina annetussa taulukossa olevien lukujen summan. -->
 
-The class SumMaker has a method `public static int sumOfNumbersInArray(int[] array)`. Complete the method so, that it computes and returns the sum of the numbers in the array it receives as parameter.
+The class SumOfArray has a method `public static int sumOfNumbersInArray(int[] array)`. Complete the method so that it computes and returns the sum of the numbers in the array it receives as parameter.
 
 <!-- Voit kokeilla lukujen summan laskemista seuraavalla esimerkkikoodilla. -->
 
@@ -574,7 +575,7 @@ sumOfNumbersInArray(numbers);
 
 
 <!-- Täydennä luokan TaulukonTulostaja metodia `public static void tulostaTyylikkaasti(int[] taulukko)` siten, että metodi tulostaa parametrina saamansa taulukon luvut tyylikkäästi. Lukujen väliin tulee pilkku ja välilyönti. Viimeisen luvun jälkeen ei  pilkkua tule. -->
-Complete the method `public static void printNeatly(int[] array)` in ArrayPrinter class to make it print the numbers of the array it receives more neatly. There should be a whitespace and a comma between each number. don't put a comma after the last number.
+Complete the method `public static void printNeatly(int[] array)` in the class named 'ArrayPrinter' to make it print the numbers of the array it receives more neatly. There should be a whitespace and a comma between each number. don't put a comma after the last number.
 
 <!-- Tee tulostus yhdelle riville, eli käytä tässä komentoa `System.out.print`. -->
 Print the numbers on one line using `System.out.print`.
@@ -606,7 +607,7 @@ printNeatly(array);
 
 <!-- Täydennä tiedostossa Tulostin olevaa metodia `public static void tulostaTaulukkoTahtina(int[] taulukko)`, siten, että se tulostaa jokaista taulukossa olevaa lukua vastaavan pituisen rivin tähtiä. -->
 
-Complete the method `public static void printArrayInStars(int[] array)` in Printer class to make it print a row of stars for each number in the array. The amount of stars on each row is defined by the corresponding number in the array.
+Complete the method `public static void printArrayInStars(int[] array)` in the class named 'Printer' to make it print a row of stars for each number in the array. The amount of stars on each row is defined by the corresponding number in the array.
 
 <!-- Voit kokeilla tulostusta esimerkiksi seuraavalla esimerkkikoodilla. -->
 You can try out the printing with this example:
@@ -681,7 +682,7 @@ Matti V. 100.0
 
 <!-- Lohkoalustusta käytettäessä taulukon koko on aina täsmälleen lohkossa määriteltyjen arvojen määrä. Lohkossa määritellyt arvot asetetaan taulukkoon järjestestyksessä siten, että ensimmäinen arvo asetetaan nollanteen indeksiin, toinen arvo ensimmäiseen indeksiin jne. -->
 
-When you initialize an array with a block, the length of the array is precisely the number of the values specified in the block. The values of the block are assigned to the array in the order, eg. the first value is assigned to the index 0, the second value to the index 1 etc.
+When you initialize an array with a block, the length of the array is precisely the number of the values specified in the block. The values of the block are assigned to the array in the order, eg. the first value is assigned to index 0, the second value to index 1 etc.
 
 <!-- ```java
 // indeksi       0   1    2    3   4   5     6     7
@@ -699,7 +700,7 @@ int[] numbers = {100,  1,  42,  23,  1,  1, 3200, 3201};
 // prints the number at index 0, i.e. number 100
 System.out.println(numbers[0]);
 // prints the number at index 2, i.e. number 42
-System.out.println(luvut[2]);
+System.out.println(numbers[2]);
 ```
 
 <!-- Viittaus taulukon ulkopuolelle aivan kuten listan ulkopuolellekaan ei voi viitata. Kokeile alla olevaa esimerkkiä omalla koneella esimerkiksi hiekkalaatikossa. -->

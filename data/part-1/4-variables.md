@@ -11,8 +11,8 @@ hidden: false
 <!-- - Tunnet käsitteen muuttuja. Tiedät mitä ovat muuttujan tyyppi, muuttujan nimi, ja muuttujan arvo.
 - Osaat luoda ja käsitellä merkkijono-, kokonaisluku-, liukuluku-, ja totuusarvomuuttujia. -->
 
-- understand the concept of a variable. You know what variable types, names, and values are.
-- know how to create and use string, integer, floating-point, and boolean type variables.
+- Understand the concept of a variable. You know what variable types, names, and values are.
+- Know how to create and use string, integer, floating-point, and boolean variables.
 
 </text-box>
 
@@ -20,8 +20,8 @@ hidden: false
 
 <only-for-ab-group group="1">
 
-<text-box variant="hint" name="Media and technology use questionnaire">
-Please respond to a questionnaire about your media and technology use. With the questionnaire we collect information about media and technology use and student's attitudes towards them. Your replies will be used for developing the MOOC courses and research about education.
+<text-box variant="hint" name="Media and Technology Use Questionnaire">
+Please respond to the following questionnaire about your media and technology use. With this questionnaire, we collect information about media and technology use, along with student attitudes toward them. Your replies will be used in developing MOOC courses and education research.
 
 <google-form-link href="https://docs.google.com/forms/d/e/1FAIpQLSd45Hu1-IJ19wf7aQ0ZtK4tfijHgHbTVpF0FSXPck-Fq9BiTQ/viewform?usp=pp_url"  emailfieldname="entry.575150039">Open the questionnaire by following the link</google-form-link>.
 
@@ -31,10 +31,9 @@ Please respond to a questionnaire about your media and technology use. With the 
 
 <only-for-ab-group group="2">
 
-<text-box variant="hint" name="Media and technology use questionnaire">
+<text-box variant="hint" name="Media and Technology Use Questionnaire">
 
-Please respond to a questionnaire about your media and technology use. With the questionnaire we collect information about media and technology use and student's attitudes towards them. Your replies will be used for developing the MOOC courses and research about education.
-
+Please respond to the following questionnaire about your media and technology use. With this questionnaire, we collect information about media and technology use, along with student attitudes toward them. Your replies will be used in developing MOOC courses and education research.
 <google-form-link href="https://docs.google.com/forms/d/e/1FAIpQLSfT97npfOwD0HEVwbWH5SOTTmyYtYY5UIlqJ3HL29b5DPddqw/viewform?usp=pp_url" emailfieldname="entry.575150039">
 Open the questionnaire by following the link
 </google-form-link>.
@@ -50,7 +49,7 @@ Open the questionnaire by following the link
 
 <!-- Tutustuimme syötteen lukemisen yhteydessä jo pikaisesti merkkijonomuuttujiin. Tutustutaan seuraavaksi muihin usein käytettyihin Javan muuttujatyyppeihin. -->
 
-We already familiarized ourselves to some degree with strings while reading user inputs. Let's now move on to learn about other common variable *types* in Java.
+We've already familiarized ourselvese with strings to a degree while dealing with user inputs. Let's turn our attention to learning about other variable *types* commonly used in Java.
 
 <!-- Muuttujaa kannattaa ajatella lokerona, johon voi tallettaa annetun tyyppistä tietoa. Tyyppejä ovat esimerkiksi teksti eli merkkijono (`String`), kokonaisluku (`int`), liukuluku (`double`) eli desimaaliluku, ja totuusarvo (`boolean`). Muuttujaan asetetaan arvo yhtäsuuruusmerkillä (`=`). -->
 
@@ -68,7 +67,7 @@ int months = 12;
 
 Muuttujan arvo voidaan yhdistää merkkijonoon +-merkillä seuraavan esimerkin mukaisesti. -->
 
-In the above statement, the value of 12 is assigned to an integer variable called months. The statement could be read as: "the variable months is assigned the value 12".
+In the statement above, the value of 12 is assigned to an integer variable called months. The statement could be read as: "the variable months is assigned the value 12".
 
 A variable's value can be joined to a string using the + sign, as seen in the following example.
 
@@ -223,7 +222,7 @@ public class Example {
 
 <!-- Muuttujan tyyppi kerrotaan kun muuttuja esitellään ensimmäistä kertaa. Kun muuttujaan asetetaan uusi arvo, ei muuttujan tyyppiä enää kerrota. -->
 
-The variable type is stated when the variable is first declared. When a new value is assigned to the variable, its type is not mentioned again.
+The variable type is stated when the variable is first declared. When a new value is assigned to the variable, the type is no longer declared.
 
 <!-- ```java
 int luku = 10;
@@ -289,7 +288,7 @@ The value of the variable is 42
 
 <!-- Tarkastellaan edellisen ohjelmakoodin suoritusta askel askeleelta. Kun muuttuja esitellään ohjelmakoodissa ensimmäistä kertaa, eli sekä muuttujan tyyppi (tässä `int`) että sen nimi (tässä `luku`) kerrotaan tietokoneelle, tietokone luo muuttujaa varten "nimetyn lokeron". Tämän jälkeen yhtäsuuruusmerkin oikealla puolella oleva arvo kopioidaan tähän nimettyyn lokeroon. -->
 
-Let's look at the preceding program's execution step-by-step. When a variable appears in the program for the first time, i.e., the computer is told both its type (here `int`) and its name (here `number`), the computer creates a 'named container' for the variable. Then, the value on the right side of the equals sign is copied into this named container.
+Let's look at the preceding program's execution step-by-step. When a variable appears in the program for the first time, i.e., the computer is told both its type (in this case `int`) and its name (in this case `number`), the computer creates a 'named container' for the variable. Then, the value on the right side of the equals sign is copied into this named container.
 
 ![](../img/drawings/part1.4-variable-change-1.png)
 
@@ -426,17 +425,17 @@ System.out.println(surfaceArea);
 
 <!-- Edellä olevat kaksi esimerkkiä sisältävät täsmälleen saman toiminnallisuuden ja tuottavat saman tulostuksen. Toinen esimerkeistä on kuitenkin paljon ymmärrettävämpi. Kyseessä on ympyrän pinta-alan laskevan ohjelman koodi. Ensimmäisellä rivillä määritellään piin arvo, toisella rivillä ympyrän säde, ja kolmannella rivillä lasketaan pinta-ala. Tämän jälkeen pinta-ala tulostetaan. -->
 
-Both of the preceding examples function the same way and print the same result. However, one of them is much more understandable. The idea here is to compute the surface area of a circle. The value of pi is defined in the first row, the circle's radius in the second, and the surface area calculated in the third.
+Both of the preceding examples function the same way and output the same result. One of them is, however, much more understandable. The objective here is to compute the surface area of a circle. The value of pi is defined in the first row, the circle's radius in the second, and the surface area calculated in the third.
 
 <!-- <text-box variant='hint' name="Muuttujat sanoittavat ohjelmaa ja ratkaistavaa ongelmaa"> -->
 <text-box variant='hint' name="Variables Express the Program and the Problem to Be Solved">
 <!--
 Ohjelmointi on ongelmanratkaisuväline. Ohjelmoidessa luodaan ratkaisua jonkinlaiseen ongelmaan kuten autojen automaattiseen ohjaamiseen. Kun ongelmaa ratkaistaan, ohjelmoija päättää termeistä, joilla ongelmaa kuvataan. Tämä termistö, esimerkiksi ohjelmassa käytettävien muuttujien nimet, tulevat kuvaamaan ongelmaa ohjelman parissa tulevaisuudessa työskenteleville. -->
 
-Programming is a problem-solving tool. During programming, solutions are created for a given problem, such as automating the control of cars. While a problem is being solved, the developer decides on terms used to describe the problem domain. The terminology used, such as the chosen variable names, describes the problem for anyone working with it in the future.
+Programming is a problem-solving tool. The aim is to create solutions for any given problem, such as the automation of control in cars. As a problem is approached, the developer decides on the terms used to describe the problem domain. The terminology that is chosen, such as variable names, will serve to describe the problem for anyone who is to work with it in the future.
 <!-- Kun sanoitat ratkaistavaa ongelmaa, mieti ongelmaan liittyviä käsitteitä ja niitä kuvaavia sanoja. Jos et keksi sopivia termejä, pohdi ensin mitkä sanat eivät ainakaan kuvaa ongelmaa. Valitse tämän jälkeen jonkinlainen termistö -- voit tyypillisesti onneksi parantaa käyttämääsi termistöä myös jälkikäteen. -->
 
-As you're wording a problem to be solved, think about concepts related to that problem and words that can be used to describe them. If you find it hard to come up with relevant terms, start by thinking of words that don't describe the problem at all. After that, pick some terminology that you're going to use -- fortunately, you can usually improve it later.
+As you're wording the problem that you're solving, think about the concepts related to that problem and appropriate terms that could be used to describe them. If you find it hard to come up with relevant names, think of the ones that definitely do not describe it. After this, settle on some terminology that you're going to use -- the good thing is that you can usually improve on it later on.
 
 </text-box>
 
@@ -509,6 +508,7 @@ Letters containing diacritics (e.g. the letters ä and ö used in Finnish) shoul
 * ensimmainenVuosi = 1952
 * nimi = "Essi" -->
 ### Permissible Variable Names
+
 * lastDayOfMonth = 20
 * firstYear = 1952
 * name = "Essi"
@@ -533,11 +533,11 @@ Letters containing diacritics (e.g. the letters ä and ö used in Finnish) shoul
 
 <!-- Muuttujan tyyppi kerrotaan muuttujan esittelyn yhteydessä. Esimerkiksi merkkijonon "teksti" sisältävä merkkijonomuuttuja luodaan lauseella `String merkkijono = "teksti";` ja kokonaisluvun 42 sisältävä kokonaislukumuuttuja luodaan lauseella `int luku = 42;`. -->
 
-A variable's type is stated during its initial declaration. For example, a variable containing the string "text" is declared with the statement `String string = "text";`, and an integer having the value 42 is declared with the statement `int value = 42;`.
+A variable's type is specificed when it's initally declared. For example, a variable containing the string "text" is declared with the statement `String string = "text";`, and an integer having the value 42 is declared with the statement `int value = 42;`. -->
 
 <!-- Muuttujan tyyppi määrää arvot, joita muuttuja voi saada. `String`-tyyppiset muuttujat saavat arvokseen merkkijonoja, `int`-tyyppiset muuttujat saavat arvokseen kokonaislukuja, `double`-tyyppiset muuttujat saavat arvokseen liukulukuja, ja `boolean`-tyyppiset muuttujat saavat arvokseen totuusarvoja. -->
 
-A variable's type determines the values that can be assigned to it. `String` types hold text, `int` types whole numbers, `double` floating-point numbers, and `boolean` types are either true or false.
+A variable's type determines the types of values that can be assigned to it. `String` types hold text, `int` types whole numbers, `double` floating-point numbers, and `boolean` types are either true or false.
 <!--
 Kunkin tyypin mahdolliset arvot ovat siis rajattuja. Esimerkiksi merkkijonomuuttuja ei voi sisältää kokonaislukuarvoa, **eikä** liukuluku voi sisältää totuusarvoa. Alla on listattu käyttämillemme muuttujille niiden mahdolliset arvoalueet. -->
 
@@ -649,7 +649,7 @@ System.out.println(value);
 
 <!-- Scanneria käytettäessä lukeminen ja muuntaminen asetetaan yleensä sisäkkäin. Tämä tapahtuu seuraavasti. -->
 
- When using a Scanner object, the reading of the value is usually nested directly into the conversion. This happens in the following way:
+When using a Scanner object, the reading of the value is usually inserted directly into the type conversion. This happens like so:
 
 <!-- ```java
 import java.util.Scanner;
@@ -849,7 +849,7 @@ Alla on annettuna ohjelman esimerkkitulostuksia: -->
 
 Write a program that asks the user for a floating-point number. The program then prints the user's input value.
 
-Example prints for the program are provided below:
+Example prints for the program can be seen below:
 
 <!-- <sample-output>
 
@@ -984,7 +984,7 @@ Alla on annettuna ohjelman esimerkkitulostuksia: -->
 
 Write a program that asks the user for a boolean value. The program should then print the value provided by the user.
 
-Example outputs for the program are provided below.
+Example prints for the program can be seen below.
 
 <!-- <sample-output>
 
@@ -1068,7 +1068,7 @@ Alla on annettuna ohjelman esimerkkitulostuksia: -->
 
 Write a program that asks the user for a string, an integer, a floating-point number, and a boolean. The program should then print the values given by the user.
 
-Example prints for the program are provided below.
+Example prints for the program can be seen below.
 
 <!-- <sample-output>
 

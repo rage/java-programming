@@ -2,12 +2,13 @@
 path: '/part-3/1-discovering-errors'
 # title: 'Virheiden etsimisestä'
 title: 'Discovering errors'
-hidden: true
+hidden: false
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
 <text-box variant='learningObjectives' name='Learning Objectives'>
- - Know the term perceptual blindness, and know can learn to regodnize essential (and unessential) things with practice.
+
+ - Know the term perceptual blindness, and can learn to recognize essential (and non-essential) information with practice.
  - Know ways to comment code, and understand the importance of variable names on readability of your code.
  - Know the concept print-debugging, and know how to search for errors in the source code by printing.
 
@@ -86,7 +87,7 @@ while (true) {
 if (sum == 0) {
     System.out.println("The average of the values could not be calculated.");
 } else {
-    System.out.println("Average of values: " + (1.0 * sum / value));
+    System.out.println("Average of values: " + (1.0 * sum / values));
 }
 ```
 
@@ -258,13 +259,13 @@ while (true) {
 if (sum == 0) {
     System.out.println("The average of the values could not be calculated.");
 } else {
-    System.out.println("Average of values: " + (1.0 * sum / value));
+    System.out.println("Average of values: " + (1.0 * sum / values));
 }
 ```
 
 <!-- Mikäli ohjelmassa olisi virhe, print-debuggauksella ohjelman toimintaa voisi purkaa lisäämällä print-komentoja sopiviin kohtiin. Alla olevassa esimerkissä on eräs mahdollinen esimerkki print-debuggauskomentoja sisältävästä ohjelmasta. -->
 
-Had the program container an error, print debugging could have been used to unravel its functionality by adding print statements in the appropriate places. The example below contains one possible example of a program containing print-debug statements.
+Had the program contained an error, print debugging could have been used to unravel its functionality by adding print statements in the appropriate places. The example below contains one possible example of a program containing print-debug statements.
 
 <!--
 ```java
@@ -322,7 +323,7 @@ System.out.println("-- values: " + values + ", sum: " + sum);
 if (sum == 0) {
     System.out.println("The average of the values could not be calculated.");
 } else {
-    System.out.println("Average of values: " + (1.0 * sum / value));
+    System.out.println("Average of values: " + (1.0 * sum / values));
 }
 ```
 
