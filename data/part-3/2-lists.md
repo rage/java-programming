@@ -1775,8 +1775,8 @@ list.add("Third");
 
 list.remove("First");
 
-System.out.println("Index 0 so the first value: " + lista.get(0));
-System.out.println("Index 1 so the second value: " + lista.get(1));
+System.out.println("Index 0 so the first value: " + list.get(0));
+System.out.println("Index 1 so the second value: " + list.get(1));
 ```
 
 <!-- <sample-output>
