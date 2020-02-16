@@ -1744,8 +1744,8 @@ Kolmas
 
 <sample-output>
 
-First
-Third
+Index 0 so the first value: First
+Index 1 so the second value: Third
 
 </sample-output>
 
@@ -1788,8 +1788,8 @@ Kolmas
 
 <sample-output>
 
-Second
-Third
+Index 0 so the first value: Second
+Index 1 so the second value: Third
 
 </sample-output>
 
@@ -1829,8 +1829,8 @@ System.out.println("Index 1 so the second value: " + list.get(1));
 
 <sample-output>
 
-18
-24
+Index 0 so the second value: 18
+Index 1 so the second value: 24
 
 </sample-output>
 
