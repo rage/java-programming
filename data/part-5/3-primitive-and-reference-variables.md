@@ -14,22 +14,22 @@ hidden: true
 
 <!-- - Tunnet käsitteet alkeistyyppinen muuttuja ja viittaustyyppinen muuttuja. -->
 
-- You are familiar with the terms primitive and reference variable.
+- You understand the terms primitive and reference variable.
 
 <!-- - Tiedät minkälaisia alkeistyyppisiä muuttujia Javassa on, ja tiedät että erilaisia viittaustyyppisiä muuttujia voi olla käytännössä rajaton määrä. -->
 
-- You know what kinds of primitive variables exist in Java, and also that there can be practically an inifinite number of different reference type variables.
+- You know the types of primitive variables in Java, and also that there can be practically an infinite number of different reference-type variables.
 
 <!-- - Tiedät miten alkeis- ja viittaustyyppisten muuttujien käyttäytyminen eroaa toisistaan kun muuttujaan asetetaan arvoa ja kun muuttujaa käytetään metodin parametrina. -->
 
-- You know the differences between primitive and reference variables when a value is stored into them, or they are used as method parameters.
+- You know the differences in behavior between primitive and reference-type variables when values are assigned to them, or when they're used as method parameters.
 
 </text-box>
 
 
 <!-- Javan muuttujat jaetaan alkeis- ja viittaustyyppisiin muuttujiin. Ohjelmoijan näkökulmasta alkeistyyppisten muuttujien tieto on tallennettu muuttujan arvoksi, kun taas viittaustyyppisten muuttujien arvona on viite muuttujaan liittyvään tietoon. Viittaustyyppiset muuttujat ovat Java-kielessä käytännössä aina olioita. Tarkastellaan näitä muuttujatyyppejä kahden esimerkin kautta. -->
 
-The variables in Java are classified into primitive and reference type variables. From the programmer's point of view, the data in a primitive variable is stored as the value of that variable, whereas the value of a reference type varible is a reference to the data. Reference type variables are practically always object in Java. Let's examine these different types with two examples.
+Variables in Java are classified into primitive and reference-type variables. From the programmer's perspective, a primitive variable's information is stored as the value of that variable, whereas a reference-type variable holds a reference to information related to that variable. reference-type variables are practically always objects in Java. Let's take a look at both of these types with the help of two examples.
 
 
 
@@ -94,17 +94,17 @@ Name@4aa298b7
 
 <!-- Ensimmäisessä esimerkissä luodaan alkeistyyppinen `int`-muuttuja, jonka arvoksi kopioidaan luku `10`. Kun muuttuja annetaan `System.out.println`-metodille tulostettavaksi, tulostuu arvo `10`. Toisessa esimerkissä luodaan viittaustyyppinen `leevi`-niminen muuttuja, jonka arvoksi kopioidaan `Nimi`-luokassa määritellyn konstruktorin kutsun palauttama viite olioon. Kun muuttuja tulostetaan, tulostuu merkkijono `Nimi@4aa298b7`. Mistä tässä oikein on kyse? -->
 
-In the first example we create a primitive `int` variable, and the number 10 is stored as its value. When we pass the variable to the `System.out.println` method, the value `10` is printed. In the second example we create a reference type variable named `luke`. A reference to an object, returned by the constructor of the `Name` class when we call it, is stored as the value of the variable. When this latter variable is printed, the string `Name@4aa298b7` is what ends up being printed. What is the cause for this?
+In the first example, we create a primitive `int` variable, and the number 10 is stored as its value. When we pass the variable to the `System.out.println` method, the number `10` is printed. In the second example, we create a reference-type variable called `luke`. A reference to an object is returned by the constructor of the `Name` class when we call it, and this reference is stored as the value of the variable. When we print the variable, we get `Name@4aa298b7` as output. What is causing this?
 
 
 <!-- Metodikutsu `System.out.println` tulostaa muuttujan arvon. Alkeistyyppistien muuttujien arvo on konkreettinen, kun taas viittaustyyppisten muuttujien arvo on viite. Kun viittaustyyppinen muuttuja tulostetaan, tulostuksena on muuttujan tyyppi sekä Javan muuttujalle luoma tunniste: merkkijono `Nimi@4aa298b7` kertoo, että kyse on `Nimi`-tyyppisestä muuttujasta, jonka tunniste on `4aa298b7`. -->
 
-The method call `System.out.println` prints the value of the variable. The value of a primitive variable is concrete, whereas the value of a reference type variable is a reference. In the case of a reference type variable, what is printed is the type of the variable and an identifier created by Java for the variable: the string `Name@4aa298b7` tells that the variable in question is of type `Name` and its identifier is `4aa298b7`.
+The method call `System.out.println` prints the value of the variable. The value of a primitive variable is concrete, whereas the value of a reference-type variable is a reference. When we attempt to print the value of a reference-type variable, the output contains the type of the variable and an identifier created for it by Java: the string `Name@4aa298b7` tells us that the given variable is of type `Name` and its identifier is `4aa298b7`.
 
 
 <!-- Edellinen esimerkki pätee silloin, jos ohjelmoija ei ole muuttanut olion oletustulostusmuotoa. Tulostusmuodon voi muuttaa määrittelemällä olion luokkaan metodi `toString`, jossa kerrotaan miltä olion tulostuksen tulee näyttää. Alla olevassa esimerkissä luokalle `Nimi` on määritelty metodi `public String toString()`, joka palauttaa oliomuuttujan `nimi`. Nyt, kun luokasta luotu olio tulostetaan `System.out.println`-komennolla, tulostustettava tieto on metodin `toString` palauttama merkkijono. -->
 
-The previous example is the case when the programmer has not changed a variable's default print format. You can change the default print by defining the method `toString` in the class of the object in question. The method indicates what string should be printed when an instance of the class is printed. In the example below, we have defined the method `public String toString()` in the class `Name`: it returns the instance variable `name`. Now when we print an object that is an instance of `Name` with the `System.out.println` command, what is printed is the string returned by the `toString` method.
+The previous example applies whenever the programmer has not altered an object's default print format. You can modify the default print by defining the `toString` method within the class of the given object, where you specify what the objects print should look like. In the example below, we've defined the `public String toString()`  method within the `Name` class, which returns the instance variable `name`. Now, when we print any object that is an instance of the `Name` class with the `System.out.println` command, the string returned by the `toString` method is what gets printed.
 
 
 <!-- ```java
@@ -162,15 +162,15 @@ Luke
 
 <!-- ## Alkeistyyppiset muuttujat -->
 
-## Primitive variables
+## Primitive Variables
 
 <!-- Javassa on kahdeksan alkeistyyppistä muuttujaa. Nämä ovat `boolean` (totuusarvo, joko `true` tai `false`), `byte` (8 bittiä sisältävä tavu, välillä `-128` ja `127`), `char` (yhtä kirjainmerkkiä kuvaava 16-bittiä sisältävä kirjainarvo), `short` (pientä kokonaislukua kuvaava 16 bittiä sisältävä arvo, välillä `-32768` ja `32767`), `int` (keskikokoista kokonaislukua kuvaava 32 bittiä sisältävä arvo, välillä <code class="language-text">-2<sup>31</sup></code> ja <code class="language-text">2<sup>31</sup>-1</code>), `long` (isohkoa kokonaislukua kuvaava 64 bittiä sisältävä arvo, välillä <code class="language-text">-2<sup>63</sup></code> ja <code class="language-text">2<sup>63</sup>-1</code>), `float` (32-bittiä käyttävä liukuluku) ja `double` (64-bittiä käyttävä liukuluku). -->
 
-Java includes eight different primitive variables. These are: `boolean` (a truth value: either `true` or `false`), `byte` (a byte containing 8 bits, between the values `-128` and `127`), `char` (a 16-bit value representing a single character), `short` (a 16-bit value that represents a small integer, between the values `-32768` and `32767`), `int` (a 32-bit value that represents a medium-sized integer, between the values <code class="language-text">-2<sup>31</sup></code> and <code class="language-text">2<sup>31</sup>-1</code>), `long` (a 64-bit value that represents a large integer, between values <code class="language-text">-2<sup>63</sup></code> and <code class="language-text">2<sup>63</sup>-1</code>), `float` (a floating point number that uses 32 bits), and `double` (a floating point number that uses 64 bits).
+Java has eight different primitive variables. These are: `boolean` (a truth value: either `true` or `false`), `byte` (a byte containing 8 bits, between the values `-128` and `127`), `char` (a 16-bit value representing a single character), `short` (a 16-bit value that represents a small integer, between the values `-32768` and `32767`), `int` (a 32-bit value that represents a medium-sized integer, between the values <code class="language-text">-2<sup>31</sup></code> and <code class="language-text">2<sup>31</sup>-1</code>), `long` (a 64-bit value that represents a large integer, between values <code class="language-text">-2<sup>63</sup></code> and <code class="language-text">2<sup>63</sup>-1</code>), `float` (a floating-point number that uses 32 bits), and `double` (a floating-point number that uses 64 bits).
 
 <!-- Olemme käyttäneet näistä ensisijaisesti totuusarvomuuttujia (`boolean`), kokonaislukumuuttujia (`int`), ja liukulukumuuttujia (`double`). -->
 
-We have primarily used the truth value variable (`boolean`), integer variables (`int`) and floating point variables (`double`).
+Out of all of these, we've mainly been using the truth value (`boolean`), integer (`int`) and floating-point variables (`double`).
 
 
 <!-- ```java
@@ -204,7 +204,7 @@ false
 
 <!-- Alkeistyyppisillä muuttujilla muuttujan esittely varaa muistista muuttujan tyypin kokoisen muistipaikan, johon muuttujaan asetettava arvo kopioidaan. Alla olevassa esimerkissä luodaan kolme muuttujaa. Jokaisella muuttujalla on erillinen paikka muistissa, johon asetettava arvo kopioidaan. -->
 
-Introducing a primitive variable reserves a memory location of fixed size from the memory. The size is determined by the type of the primitive, and the memory location is where the value of the variable stored at. In the example below we create three variables. Each one has its own memory location, to where the assigned value is copied.
+Declaring a primitive variable causes the computer to reserve some memory where the value assigned to the variable can be stored. The size of the storage container reserved depends on type of the primitive. In the example below, we create three variables. Each one has its own memory location to which the value that is assigned is copied.
 
 
 <!-- ```java
@@ -233,7 +233,7 @@ System.out.println(first + " " + second + " " + third);
 
 <!-- Muuttujan nimi kertoo paikan, missä muuttujan arvo sijaitsee. Muuttujan arvon asetus yhtäsuuruusmerkillä aiheuttaa arvon kopioimisen muuttujan nimen perusteella tunnistettavaan muistipaikkaan. Esimerkiksi lause `int eka = 10` varaa muuttujalle paikan nimeltä `eka` ja kopioi arvon `10` siihen. -->
 
-The name of the variable tells the memory location where its value is stored. When you assign a value to a primitive variable with an equality sign, the value on the right side is copied to the memory location indicated by the name of the variable. For example, the statement `int first = 10` reserves a location called `first` for the variable, and then copies to value `10` into it.
+The name of the variable refers to the place in memory where its value is located. When you assign a value to a primitive variable with an equality sign, the value on the right side is copied to the memory location indicated by the name of the variable. For example, the statement `int first = 10` reserves a location called `first` for the variable, and then copies to value `10` into it.
 
 
 <!-- Vastaavasti lause `int toka = eka;` varaa luotavalle muuttujalle paikan nimeltä `toka` ja kopioi siihen muuttujan `eka` paikan sisältämän arvon. -->
@@ -258,7 +258,7 @@ The values of variables are also copied when they are used in method calls. In p
 
 <!-- Kaikki Javan valmiiksi tarjoamat muuttujat (paitsi edellä kuvatut kahdeksan alkeistyyppistä muuttujaa) ovat viittaustyyppisiä. Ohjelmoija voi myös luoda uusia viittaustyyppisiä muuttujatyyppejä määrittelemällä uusia luokkia. Käytännössä jokainen (mistä tahansa) luokasta luotu olio on viittaustyyppinen muuttuja. -->
 
-All the readymade Java variables (excluding the eight primitive variables discussed above) are reference type. The programmer is also free to create their own variable types by defining new classes. In practice any object instanced from a class is a reference variable
+All the readymade Java variables (excluding the eight primitive variables discussed above) are reference-type. The programmer is also free to create their own variable types by defining new classes. In practice any object instanced from a class is a reference variable
 
 
 <!-- Tarkastellaan alussa ollutta esimerkkiä, missä luotiin Nimi-tyyppinen muuttuja leevi. -->
@@ -342,7 +342,7 @@ The value of a reference variable -- i.e. a reference -- points to a location th
 
 <!-- ## Alkeis- tai viittaustyyppinen muuttuja metodin parametrina -->
 
-## Primitive or reference type variable as a method parameter
+## Primitive or reference-type variable as a method parameter
 
 <!-- Totesimme aiemmin, että alkeistyyppisten muuttujien arvo on tallennettuna suoraan muuttujaan, kun taas viittaustyyppisten muuttujien arvo sisältää viitteen olioon. Totesimme myös, että muuttujan arvon asettaminen yhtäsuuruusmerkillä kopioi oikealla olevan (mahdollisesti muuttujan) arvon vasemmalla olevan muuttujan arvoksi. -->
 
@@ -350,7 +350,7 @@ We stated earlier that the value of a primitive variable is directly stored in t
 
 <!-- Vastaavanlainen kopiointi tapahtuu metodikutsun yhteydessä. Riippumatta siitä, onko muuttuja alkeis- tai viittaustyyppinen, metodikutsun yhteydessä metodille parametrina annettava arvo kopioidaan metodin käyttöön. Alkeistyyppisillä muuttujilla metodin käyttöön tulee muuttujan arvo, viittaustyyppisillä muuttujilla metodin käyttöön tulee viite. -->
 
-A similar copying occurs when a method is called. Regardless of whether the variable is primitive or reference type, the value given as a method parameter is copied for the method to use. In the case of primitive variables, the value of the variable is given to the method; with reference type variables, the method receives a reference.
+A similar copying occurs when a method is called. Regardless of whether the variable is primitive or reference-type, the value given as a method parameter is copied for the method to use. In the case of primitive variables, the value of the variable is given to the method; with reference-type variables, the method receives a reference.
 
 
 <!-- Tarkastellaan tätä käytännössä. Oletetaan, että käytössämme on seuraava luokka `Henkilo`. -->
@@ -487,7 +487,7 @@ On the third row of the main method we print the value of the variable first. Th
 
 <!-- Neljännellä rivillä kutsutaan nuorenna-metodia, jolle annetaan parametriksi muuttuja eka. Metodia `nuorenna` kutsuttaessa sille parametrina annetun muuttujan arvo kopioituu metodin `nuorenna` käyttöön. Metodin `main` suoritus jää odottamaan kutsupinoon. Koska muuttuja eka on viittaustyyppinen, kopioituu metodin käyttöön aiemmin luotu viite. Metodin suorituksen lopussa tilanne on seuraava -- metodi kasvattaa parametrina saamansa olion syntymävuotta yhdellä. -->
 
-On the fourth row the program calls the makeYounger method, and the variable first is passed as a parameter to it. When the method `makeYounger` is called, the value of the variable passed as the parameter is copied for the method `makeYounger` to use. The execution of the `main` method remains waiting in the call stack. As the variable first is reference type, the reference created earlier is copied for the method's use. At the end of the method execution the situation is the following -- the method increments by one the birth year of the object it receives as a parameter.
+On the fourth row the program calls the makeYounger method, and the variable first is passed as a parameter to it. When the method `makeYounger` is called, the value of the variable passed as the parameter is copied for the method `makeYounger` to use. The execution of the `main` method remains waiting in the call stack. As the variable first is reference-type, the reference created earlier is copied for the method's use. At the end of the method execution the situation is the following -- the method increments by one the birth year of the object it receives as a parameter.
 
 
 <img src="../img/drawings/part5.3-first-2-tm.png"/>
