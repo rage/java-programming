@@ -9,10 +9,10 @@ information_page: true
 
 The course has a support chat channel in Telegram. We suggest that you use the channel either with Telegram's web browser client or with Telegram's desktop application.
 
-You can join the channel through this link: [https://t.me/java_programming_mooc](https://t.me/java_programming_mooc)
+You can join the channel through this link: [https://t.me/java\_programming\_mooc](https://t.me/java_programming_mooc)
 You can access the web browser client here: [https://web.telegram.org](https://web.telegram.org/)
 
-There's also an off-topic channel for conversation that isn't directly connected to the course: [https://t.me/java_programming_mooc_ot](https://t.me/java_programming_mooc_ot)
+There's also an off-topic channel for conversation that isn't directly connected to the course: [https://t.me/java\_programming\_mooc\_ot](https://t.me/java_programming_mooc_ot)
 
 The participants in the channel are fellow students and volunteer course assistants. The channel's activity is based on voluntary assistance. Please also help other students on the channel when you can.
 
@@ -34,9 +34,4 @@ The workshop is held in classroom **BK107** right next to Exactum's UniCafe. You
 
 This spring's workshop opening times are marked in the table below. The times may change as the course progresses, so please check the table before visiting the workshop.
 
-|       | MON | TUE | WED | THU | FRI |
-|:-----:|:---:|:---:|:---:|:---:|:---:|
-| 10-12 |  X  |     |     |     |     |
-| 12-14 |  X  |  X  |     |  X  |  X  |
-| 14-16 |  X  |  X  |     |  X  |  X  |
-| 16-18 |  X  |     |     |  X  |  X  |
+<workshop-schedule slug="ohpe"></workshop-schedule>
