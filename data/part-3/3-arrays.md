@@ -529,7 +529,7 @@ listElements(numbers);
 
 <sample-output>
 
-1 2 3
+the elements of the array are: 1 2 3
 
 </sample-output>
 
