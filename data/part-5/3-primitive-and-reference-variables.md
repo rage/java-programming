@@ -3,7 +3,7 @@
 path: '/part-5/3-primitive-and-reference-variables'
 ## title: 'TODO: uusi nimi? Muuttujien eroista: Alkeis- ja viittaustyyppiset muuttujat'
 title: 'Primitive and reference variables'
-hidden: true
+hidden: false
 ---
 
 

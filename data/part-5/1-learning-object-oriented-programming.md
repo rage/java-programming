@@ -3,7 +3,7 @@
 path: '/part-5/1-learning-object-oriented-programming'
 #title: 'Katsaus olio-ohjelmointiin'
 title: 'Learning object-oriented programming'
-hidden: true
+hidden: false
 ---
 
 

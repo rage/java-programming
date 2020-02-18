@@ -2,7 +2,7 @@
 #path: '/part-5/2-metodien-ja-konstruktorien-kuormittaminen'
 path: '/part-5/2-method-and-constructor-overloading'
 title: 'Removing repetitive code (overloading methods and constructors)'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Learning objectives'>
