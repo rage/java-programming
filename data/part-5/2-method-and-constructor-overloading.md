@@ -226,16 +226,16 @@ Add the following three constructors to the `Product` class:
  -  `public Product(String name, String location)` creates a product with the given name and the given location. Its weight is set to 1.
 
 <!-- - `public Esine(String nimi, int paino)` luo esineen annetulla nimellä ja painolla. Esineen sijainniksi tulee "varasto". -->
- - `public Product(String name, int weight)` creates a product with the given name and the given weight. Its location is set to "warehouse".
+ - `public Product(String name, int weight)` creates a product with the given name and the given weight. Its location is set to "shelf".
 
 <!-- Voit kokeilla ohjelmasi toimintaa seuraavalla koodilla: -->
 You can test your program with the following code:
 
 
 ```java
-Esine tapeMeasure = new Product("Tape measure");
-Esine plaster = new Product("Plaster", "home improvement section");
-Esine tyre = new Product("Tyre", 5);
+Product tapeMeasure = new Product("Tape measure");
+Product plaster = new Product("Plaster", "home improvement section");
+Product tyre = new Product("Tyre", 5);
 
 System.out.println(tapeMeasure);
 System.out.println(plaster);
@@ -245,9 +245,9 @@ System.out.println(tyre);
 
 <sample-output>
 
-Tape measure (1 kg) can be found from the shelf.
-Plaster (1 kg) can be found from the home improvement section.
-Tyre (5 kg) can be found from the warehouse.
+Tape measure (1 kg) can be found from the shelf
+Plaster (1 kg) can be found from the home improvement section
+Tyre (5 kg) can be found from the shelf
 
 </sample-output>
 
@@ -266,7 +266,7 @@ public void growOlder() {
     this.age = this.age + 1;
 }
 
-public void vanhene(int years) {
+public void growOlder(int years) {
     this.age = this.age + years;
 }
 ```
@@ -280,10 +280,10 @@ public static void main(String[] args) {
     Person paul = new Person("Paul", 24);
     System.out.println(paul);
 
-    pekka.growOlder();
+    paul.growOlder();
     System.out.println(paul);
 
-    pekka.growOlder(10);
+    paul.growOlder(10);
     System.out.println(paul);
 }
 ```
