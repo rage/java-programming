@@ -3,7 +3,7 @@
 path: '/part-5/4-objects-and-references'
 ## title: 'Oliot ja viitteet'
 title: 'Objects and references'
-hidden: true
+hidden: false
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
@@ -36,7 +36,7 @@ hidden: true
 
 <!-- Jatketaan olioiden ja viitteiden parissa. Oletetaan, että käytössämme on alla oleva henkilöä kuvaava luokka. Henkilöllä on oliomuuttujat nimi, ikä, paino ja pituus, jonka lisäksi se tarjoaa metodin mm. painoindeksin laskemiseen. -->
 
-Let's continue working with objects and references. Assume we can use the class that represents a person, shown below. Person has object variables name, age, weight, and height; additionally, it offers methods to calculate the body mass index, among other things.
+Let's continue working with objects and references. Assume we can use the class that represents a person, shown below. Person has object variables name, age, weight and height. Additionally, it contains methods to calculate the body mass index, among other things.
 
 
 <!-- ```java
@@ -211,7 +211,7 @@ Person ball = joan;
 
 <!-- Lause `Henkilo ball = joan;` luo uuden henkilömuuttujan `ball`, jonka arvoksi kopioidaan muuttujan `joan` arvo. Tämä saa aikaan sen, että `ball` viittaa samaan olioon kuin `joan`. -->
 
-The statement `Person ball = joan;` creates a new Person variable `call`, and copies the value of the variable `joan` as its value. As a result, `ball` refers to the same object as `joan`.
+The statement `Person ball = joan;` creates a new Person variable `ball`, and copies the value of the variable `joan` as its value. As a result, `ball` refers to the same object as `joan`.
 
 
 <img src="../img/drawings/olio-joan-ja-ball.png"/>
@@ -473,12 +473,10 @@ The result:
 
 <sample-output>
 
-Joan Ball, age 0 vuotta
+<!-- Joan Ball, age 0 vuotta
 **Exception in thread "main" java.lang.NullPointerException
   at Main.main(Main.java:(rivi))
-  Java Result: 1**
-
-</sample-output>
+  Java Result: 1** -->
 
 Joan Ball, age 0 years
 **Exception in thread "main" java.lang.NullPointerException
@@ -490,7 +488,7 @@ Joan Ball, age 0 years
 
 <!-- Käy huonosti. Tämä on ehkä ensimmäinen kerta kun näet tekstin **NullPointerException**. Ohjelmassa tapahtuu virhe, joka liittyy siihen, että olemme kutsuneet ei mihinkään viittaavan muuttujan metodia. -->
 
-Bad things follow. This could be the first time you have seen the text **NullPointerException**. In the course of the program,there occured an error indicating that we called a method on a variable that refers to nothing.
+Bad things follow. This could be the first time you have seen the text **NullPointerException**. In the course of the program, there occured an error indicating that we called a method on a variable that refers to nothing.
 
 
 <!-- Voimme luvata, että tulet näkemään edellisen virheen vielä uudelleen. Tällöin ensimmäinen askel on etsiä muuttujia, joiden arvona saattaisi olla `null`. Virheilmoitus on onneksi myös hyödyllinen: se kertoo millä rivillä virhe tapahtuu. Kokeile vaikka itse! -->
@@ -1785,8 +1783,8 @@ System.out.println(pascal);
 
 ```java
 SimpleDate date = new SimpleDate(1, 1, 780);
-Henkilo muhammad = new Person("Muhammad ibn Musa al-Khwarizmi", date);
-Henkilo pascal = new Person("Blaise Pascal", 19, 6, 1623);
+Person muhammad = new Person("Muhammad ibn Musa al-Khwarizmi", date);
+Person pascal = new Person("Blaise Pascal", 19, 6, 1623);
 
 System.out.println(muhammad);
 System.out.println(pascal);
@@ -2012,7 +2010,7 @@ if (muhammad.olderThan(pascal)) {  //  same as muhammad.olderThan(pascal)==true
 
 <!-- Yllä oleva ohjelma kysyy onko al-Khwarizmi vanhempi kuin Pascal. Metodi `vanhempiKuin` palauttaa arvon `true` jos olio jonka kohdalla metodia kutsutaan (`olio.vanhempiKuin(parametrinaAnnettavaOlio)`) on vanhempi kuin parametrina annettava olio, ja `false` muuten. -->
 
-The program above tells if al-Khwarizmi older than Pascal. The method `olderThan` returns `true` if the object that is used to call the method (`object.olderThan(objectGivenAsParameter)`) is older thatn the object given as the parameter, and `false` otherwise.
+The program above asks if al-Khwarizmi is older than Pascal. The method `olderThan` returns `true` if the object that is used to call the method (`object.olderThan(objectGivenAsParameter)`) is older than the object given as the parameter, and `false` otherwise.
 
 <!-- Käytännössä yllä kutsutaan "Muhammad ibn Musa al-Khwarizmia" vastaavan olion, johon muuttuja `muhammad` viittaa, metodia `vanhempiKuin`. Metodille annetaan parametriksi "Blaise Pascal" vastaavan olion viite `pascal`. -->
 
@@ -2513,7 +2511,7 @@ if (first.equals(second)) {
 
 <!-- Alkeistyyppisten muuttujien kuten `int` kanssa muuttujien vertailu on mahdollista kahden yhtäsuuruusmerkin avulla. Tämä johtuu siitä, että alkeistyyppisten muuttujien arvo sijaitsee "muuttujan lokerossa". Viittaustyyppisten muuttujien arvo on taas osoite viitattavaan olioon, eli viittaustyyppisten muuttujien "lokerossa" on viite muistipaikkaan. Kahden yhtäsuuruusmerkin avulla verrataan "muuttujan lokeron" sisällön yhtäsuuruutta -- viittaustyyppisillä muuttujilla vertailu tarkastelisi siis muuttujien viitteiden yhtäsuuruutta. -->
 
-With primitive variables such as `int`, comparing two variables can be done with two equality signs. This is becuase the value of a primitive variable is stored directly in the "variable's box". The value of reference variables, in contrast, is an address of the object that is referenced; so the "box" contains a reference to the memory location. Using two equality signs compares the equality of the values stored in the "boxes of the variables" -- with reference variables, such comparisons would examine the equality of the memory references.
+With primitive variables such as `int`, comparing two variables can be done with two equality signs. This is because the value of a primitive variable is stored directly in the "variable's box". The value of reference variables, in contrast, is an address of the object that is referenced; so the "box" contains a reference to the memory location. Using two equality signs compares the equality of the values stored in the "boxes of the variables" -- with reference variables, such comparisons would examine the equality of the memory references.
 
 <!-- Metodi `equals` on samankaltainen metodi kuin `toString` siinä, että se on käytettävissä vaikkei metodia olisi luokkaan määritelty. Metodin oletustoteutus vertaa viitteiden yhtäsuuruutta. Tarkastellaan tätä aiemmin toteuttamamme `Paivays`-luokan avulla. -->
 
@@ -3501,7 +3499,7 @@ We have seen methods return boolean values, numbers, and strings. Easy to guess,
 <!-- Seuraavassa esimerkissä on yksinkertainen laskuri, jolla on metodi `kloonaa`. Metodin avulla laskurista voidaan tehdä klooni, eli uusi laskurio-olio, jolla on luomishetkellä sama arvo kuin kloonattavalla laskurilla: -->
 
 
-In the next example we present a simple counter that has the method `clone`. The method can be used to crete a clone of the counter; i.e. a new counter object that has the same value at the time of its creation as the counter that is being cloned.
+In the next example we present a simple counter that has the method `clone`. The method can be used to create a clone of the counter; i.e. a new counter object that has the same value at the time of its creation as the counter that is being cloned.
 
 <!-- ```java
 public Laskuri {
@@ -4016,7 +4014,7 @@ Next we'll create a few operations for processing money.
 
 <!-- Tee ensin metodi `public Raha plus(Raha lisattava)`, joka palauttaa uuden raha-olion, joka on arvoltaan yhtä suuri kuin se olio jolle metodia kutsuttiin ja parametrina oleva olio yhteensä. -->
 
-First create the method `public Money plus(Money addition)` that returns a new money object that is worth the total amount of the object whose mehtod was called and the object that is received as the parameter.
+First create the method `public Money plus(Money addition)` that returns a new money object that is worth the total amount of the object whose method was called and the object that is received as the parameter.
 
 <!-- Metodin runko on seuraavanlainen: -->
 
