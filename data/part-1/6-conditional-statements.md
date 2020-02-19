@@ -17,7 +17,7 @@ hidden: false
 
 - Become familiar with comparison and logical operators commonly used in conditional statements.
 
-- know how to compare both numbers and strings, remembering the equals-command for strings.
+- Know how to compare both numbers and strings, remembering the equals-command for strings.
 
 - Become familiar with the order of execution for a conditional statement, and know that the parsing of a conditional statement stops at the first condition whose statement evaluates to true.
 

@@ -3,7 +3,7 @@ path: '/part-5'
 # title: 'Osa 5'
 title: 'Part 5'
 overview: true
-hidden: true
+hidden: false
 ---
 
 <!-- Kurssimateriaalin viides osa jatkaa neljännestä osasta alkaneen olio-ohjelmoinnin parissa. -->
