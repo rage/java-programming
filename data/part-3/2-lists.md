@@ -691,9 +691,9 @@ System.out.println("Number of values on the list: " + list.size());
 list.add("First");
 System.out.println("Number of values on the list: " + list.size());
 
+list.add("Second");
 int values = list.size();
 
-list.add("Second");
 System.out.println("Number of values on the list: " + values);
 ```
 
@@ -701,7 +701,7 @@ System.out.println("Number of values on the list: " + values);
 
 Listalla arvoja: 0
 Listalla arvoja: 1
-Listalla arvoja: 1
+Listalla arvoja: 2
 
 </sample-output> -->
 
@@ -709,7 +709,7 @@ Listalla arvoja: 1
 
 Number of values on the list: 0
 Number of values on the list: 1
-Number of values on the list: 1
+Number of values on the list: 2
 
 </sample-output>
 
