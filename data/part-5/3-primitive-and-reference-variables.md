@@ -144,7 +144,7 @@ System.out.println(leevi); // sama kuin System.out.println(leevi.toString());
 
 ```java
 Name luke = new Name("Luke");
-System.out.println(luke); // equal to System.out.println(leevi.toString());
+System.out.println(luke); // equal to System.out.println(luke.toString());
 ```
 
 <!-- <sample-output>
@@ -233,7 +233,7 @@ System.out.println(first + " " + second + " " + third);
 
 <!-- Muuttujan nimi kertoo paikan, missä muuttujan arvo sijaitsee. Muuttujan arvon asetus yhtäsuuruusmerkillä aiheuttaa arvon kopioimisen muuttujan nimen perusteella tunnistettavaan muistipaikkaan. Esimerkiksi lause `int eka = 10` varaa muuttujalle paikan nimeltä `eka` ja kopioi arvon `10` siihen. -->
 
-The name of the variable refers to the place in memory where its value is located. When you assign a value to a primitive variable with an equality sign, the value on the right side is copied to the memory location indicated by the name of the variable. For example, the statement `int first = 10` reserves a location called `first` for the variable, and then copies to value `10` into it.
+The name of the variable tells the memory location where its value is stored. When you assign a value to a primitive variable with an equality sign, the value on the right side is copied to the memory location indicated by the name of the variable. For example, the statement `int first = 10` reserves a location called `first` for the variable, and then copies the value `10` into it.
 
 
 <!-- Vastaavasti lause `int toka = eka;` varaa luotavalle muuttujalle paikan nimeltä `toka` ja kopioi siihen muuttujan `eka` paikan sisältämän arvon. -->
