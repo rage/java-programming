@@ -417,7 +417,7 @@ while (true) {
 }
 ``` -->
 ```java
-Stopwatch timer = new Timer();
+Timer timer = new Timer();
 
 while (true) {
     System.out.println(timer);
@@ -433,7 +433,7 @@ while (true) {
 
 <!-- Huom! Yllä kuvatun ohjelman suoritus ei lopu itsestään ikinä. Saat sammutettua ohjelman tulostusikkunan vasemmassa laidassa olevaa punaista neliötä painamalla. -->
 
-NB! The program above will never by itself stop running. Press the red square to the left of the program's print window to turn it off.
+NB! The program above will never stop running by itself. Press the red square to the left of the program's print window to turn it off.
 
 
 </programming-exercise>
@@ -468,15 +468,15 @@ Java-ohjelmointikielellä Henkilö-olion, joka pitää kirjaa nimestä, iästä,
 
 ## Object
 
-An **Object** refers to an independent entity that has contains both data (instance variables) and behavior (methods). Objects may come in lots of different forms: some may describe problem-domain concepts, others are used to coordinate the interaction that happens between objects. Objects interact with one another through method calls -- these method calls are used to both request information from objects and give instructions to them.
+An **Object** refers to an independent entity that contains both data (instance variables) and behavior (methods). Objects may come in lots of different forms: some may describe problem-domain concepts, others are used to coordinate the interaction that happens between objects. Objects interact with one another through method calls -- these method calls are used to both request information from objects and give instructions to them.
 
 Generally, each object has clearly defined boundaries and behaviors and is only aware of the objects that it needs to perform its task. In other words, the object hides its internal operations, providing access to its functionality through clearly defined methods. Moreover, the object is independent of any other object that it doesn't require to accomplish its task.
 
 In the previous section, we dealt with objects that represented people whose structure was defined in a "Person" class. It's a good idea to remind ourselves of what a class does: a **class** contains the blueprint needed to create objects, and also defines the objects' variables and methods. An object is created on the basis of the class constructor.
 
-Our person objects had a name, age, weight and height property, along with a few methods. If we were to think about the structure of our person object some more, we could surely come up with more variables related to a person, such as a personal ID number, telephone number, address, and eye color.
+Our person objects had a name, age, weight and height property, along with a few methods. If we were to think about the structure of our person object some more, we could surely come up with more variables related to a person, such as a personal ID number, telephone number, address and eye color.
 
-In reality, we can relate all kinds of different information and things to a person. However, when building an application that deals with persons, the **functionality and features related to a person are gathered based on the application's use case**. For example, an application focused on personal health and well-being would probably keep track of the variables mentioned earlier, such as age, weight, and height, and also provide the ability to calculate a body mass index and a maximum heart rate. On the other hand, an application focused on communication could store people's email addresses and phone numbers, but would have no need for information such as weight or height.
+In reality, we can relate all kinds of different information and things to a person. However, when building an application that deals with people, the **functionality and features related to a person are gathered based on the application's use case**. For example, an application focused on personal health and well-being would probably keep track of the variables mentioned earlier, such as age, weight, and height, and also provide the ability to calculate a body mass index and a maximum heart rate. On the other hand, an application focused on communication could store people's email addresses and phone numbers, but would have no need for information such as weight or height.
 
 
 **The state of an object** is the value of its internal variables at any given point in time.
@@ -748,7 +748,7 @@ In addition, make a `public String toString()` method for the book that will be 
 <sample-output>
 
 <!-- J. K. Rowling, Harry Potter ja viisasten kivi, 223 sivua -->
-J. K. Rowling, Harry Potter and the Sorcerer's Stone, 223 sivua
+J. K. Rowling, Harry Potter and the Sorcerer's Stone, 223 pages
 
 </sample-output>
 
