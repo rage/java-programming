@@ -2405,6 +2405,9 @@ System.out.println(jakomakiKolmio.suurempi(kallioKaksio));  // true
 Apartment manhattanStudioApt = new Apartment(1, 16, 5500);
 Apartment atlantaTwoBedroomApt = new Apartment(2, 38, 4200);
 Apartment bangorThreeBedroomApt = new Apartment(3, 78, 2500);
+
+System.out.println(manhattanStudioApt.largerThan(atlantaTwoBedroomApt));       // false
+System.out.println(bangorThreeBedroomApt.largerThan(atlantaTwoBedroomApt));  // true
 ```
 
 <!-- <h2>Asuntojen hintaero</h2> -->
@@ -2479,7 +2482,7 @@ System.out.println(bangorThreeBedroomApt.moreExpensiveThan(atlantaTwoBedroomApt)
 
 <!-- Opimme merkkijonojen käsittelyn yhteydessä, että merkkijonojen vertailu tulee toteuttaa `equals`-metodin avullla. Tämä tapahtuu seuraavasti. -->
 
-Working with strings, we learned that comparison between strings must be done with the `equals` method. This is how it's done.
+While working with strings, we learned that strings must be compared using the `equals` method. This is how it's done.
 
 <!-- ```java
 Scanner lukija = new Scanner(System.in);
@@ -2605,12 +2608,12 @@ There is a problem with the program above. Even though two dates (first and seco
 
 <!-- Mikäli haluamme pystyä vertailemaan kahta itse toteuttamaamme oliota equals-metodilla, tulee metodi määritellä luokkaan. Metodi equals määritellään boolean-tyyppisen arvon palauttavana metodina -- palautettu arvo kertoo ovatko oliot samat. -->
 
-If we want to be able to compare two objects of our own design with the equals method, that method must be defined in the class. The method equals is defined as a method that returns a boolean type value -- the return value indicates whether the objects are equal.
+If we want to be able to compare two objects of our own design with the `equals` method, that method must be defined in the class. The method `equals` is defined as a method that returns a boolean type value -- the return value indicates whether the objects are equal.
 
 
 <!-- Metodi `equals` toteutetaan siten, että sen avulla voidaan vertailla nykyistä oliota mihin tahansa muuhun olioon. Metodi saa parametrinaan Object-tyyppisen olion -- kaikki oliot ovat oman tyyppinsä lisäksi Object-tyyppisiä. Metodissa ensin vertaillaan ovatko osoitteet samat: jos kyllä, oliot ovat samat. Tämän jälkeen tarkastellaan ovatko olion tyypit samat: jos ei, oliot eivät ole samat. Tämän jälkeen parametrina saatu Object-olio muunnetaan tyyppimuunnoksella tarkasteltavan olion muotoiseksi, ja oliomuuttujien arvoja vertaillaan. Alla vertailu on toteutettu Paivays-oliolle. -->
 
-The method `equals` is implemented in a way that allows for using it to compare the current object with any other object. The method receives an Object type object as its single parameter -- all objects are Object type, in addition to their own type. The equals method first compares if the addresses are equal: if so, the objects are equal. After this, we examine if the types of the objects are the same: if not, the objects are not equal. Then the Object object passed as the parameter is converted to the type of the object that is being examined by using a type cast. Then the values of the object variables can be compared. Below the equality comparison has been implemented for the SimpleDate class.
+The `equals` method is implemented in such a way that it can be used to compare the current object with any other object. The method receives an `Object`-type object as its single parameter -- all objects are `Object`-type, in addition to their own type. The `equals` method first compares if the addresses are equal: if so, the objects are equal. After this, we examine if the types of the objects are the same: if not, the objects are not equal. Next, the `Object`-type object passed as the parameter is converted to the type of the object that is being examined by using a type cast, so that the values of the object variables can be compared. Below the equality comparison has been implemented for the SimpleDate class.
 
 
 <!-- ```java
@@ -2706,7 +2709,7 @@ public class SimpleDate {
         }
 
         // convert the Object type compared object
-        // into an SimpleDate type object called comparedSimpleDate
+        // into a SimpleDate type object called comparedSimpleDate
         SimpleDate comparedSimpleDate = (SimpleDate) compared;
 
         // if the values of the object variables are the same, the objects are equal
@@ -2729,7 +2732,7 @@ public class SimpleDate {
 
 <!-- Vastaavan vertailutoiminnallisuuden rakentaminen onnistuu myös Henkilö-olioille. Alla vertailu on toteutettu Henkilo-oliolle, jolla ei ole erillista Paivays-oliota. Huomaa, että henkilöiden nimet ovat merkijonoja (eli olioita), joten niiden vertailussa käytetään equals-metodia. -->
 
-Building a similar comparison functionality is possible for Person objects, too. Below, the comparison has been implemented for Person objects that don't have a separate SimpleDate object. Notice that the names of people are strings (i.e. objects), so we use the equals method for comparing them.
+Building a similar comparison functionality is possible for Person objects too. Below, the comparison has been implemented for Person objects that don't have a separate SimpleDate object. Notice that the names of people are strings (i.e. objects), so we use the `equals` method for comparing them.
 
 
 <!-- ```java
