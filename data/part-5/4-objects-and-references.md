@@ -2713,7 +2713,7 @@ public class SimpleDate {
         SimpleDate comparedSimpleDate = (SimpleDate) compared;
 
         // if the values of the object variables are the same, the objects are equal
-        if (this.day == comparedSimpleDate.date &&
+        if (this.day == comparedSimpleDate.day &&
             this.month == comparedSimpleDate.month &&
             this.year == comparedSimpleDate.year) {
             return true;

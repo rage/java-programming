@@ -574,7 +574,7 @@ int validNumbers = 0;
 int invalidNumbers = 0;
 
 while (true) {
-    int input = Integer.valueOf(input.nextLine());
+    int input = Integer.valueOf(reader.nextLine());
 
     if (input == 0) {
         System.out.println("Sum of valid numbers: " + sum);
