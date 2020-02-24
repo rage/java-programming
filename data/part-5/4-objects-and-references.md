@@ -2405,6 +2405,9 @@ System.out.println(jakomakiKolmio.suurempi(kallioKaksio));  // true
 Apartment manhattanStudioApt = new Apartment(1, 16, 5500);
 Apartment atlantaTwoBedroomApt = new Apartment(2, 38, 4200);
 Apartment bangorThreeBedroomApt = new Apartment(3, 78, 2500);
+
+System.out.println(manhattanStudioApt.largerThan(atlantaTwoBedroomApt)); // false
+System.out.println(bangorThreeBedroomApt.largerThan(atlantaTwoBedroomApt)); // true
 ```
 
 <!-- <h2>Asuntojen hintaero</h2> -->
@@ -2710,7 +2713,7 @@ public class SimpleDate {
         SimpleDate comparedSimpleDate = (SimpleDate) compared;
 
         // if the values of the object variables are the same, the objects are equal
-        if (this.day == comparedSimpleDate.date &&
+        if (this.day == comparedSimpleDate.day &&
             this.month == comparedSimpleDate.month &&
             this.year == comparedSimpleDate.year) {
             return true;
