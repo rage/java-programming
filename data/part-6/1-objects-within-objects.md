@@ -258,7 +258,7 @@ Toteuta metodi `public void tyhjennaRuokalista()` joka tyhjentää ruokalistan. 
 Kun ruokalista on valmis, kokeile sitä seuraavalla esimerkkikoodilla. -->
 <h2>Clearing the Food List</h2>
 
-Implement the `public void clearMenu()` method, which clears the menu. The `ArrayList` class has a method which is useful here. NetBeans can hint at the available methods when you type the object name an a dot. Try to write `meals.` inside the method frame and see what happens.
+Implement the `public void clearMenu()` method, which clears the menu. The `ArrayList` class has a method which is useful here. NetBeans can hint at the available methods when you type the object name and a dot. Try to write `meals.` inside the method frame and see what happens.
 
 Once the menu is ready, try it with the following example code.
 
@@ -378,7 +378,7 @@ false
 Lisää luokalle `Pakka` metodi `public String ota()`, joka palauttaa pakan päällimmäisenä olevan arvon (eli pakkaan viimeisenä lisätyn arvon) ja poistaa sen pakasta. -->
 <h2>Taking from the Stack</h2>
 
-Add to the `Stack` class a `public String take()` method, which returns the topmost value (i.e., the last value added to the deque) and removes it from the stack.
+Add to the `Stack` class a `public String take()` method, which returns the topmost value (i.e., the last value added to the queue) and removes it from the stack.
 
 <!-- ```java
 Pakka p = new Pakka();
@@ -760,11 +760,11 @@ System.out.println(hurjakuru);
 
 ```java
 Person matti = new Person("Matti");
-matti.setWeigth(86);
+matti.setWeight(86);
 matti.setHeight(180);
 
 Person juhana = new Person("Juhana");
-juhana.setWeigth(34);
+juhana.setWeight(34);
 juhana.setHeight(132);
 
 AmusementParkRide hurjakuru = new AmusementParkRide("Hurjakuru", 140);
@@ -773,15 +773,15 @@ System.out.println(hurjakuru);
 System.out.println();
 
 if (hurjakuru.isAllowedOn(matti)) {
-    System.out.println(matti.getNimi() + " is allowed on the ride");
+    System.out.println(matti.getName() + " is allowed on the ride");
 } else {
-    System.out.println(matti.getNimi() + " is not allowed on the ride");
+    System.out.println(matti.getName() + " is not allowed on the ride");
 }
 
 if (hurjakuru.isAllowedOn(juhana)) {
-    System.out.println(juhana.getNimi() + " is allowed on the ride");
+    System.out.println(juhana.getName() + " is allowed on the ride");
 } else {
-    System.out.println(juhana.getNimi() + " is not allowed on the ride");
+    System.out.println(juhana.getName() + " is not allowed on the ride");
 }
 
 System.out.println(hurjakuru);
@@ -864,7 +864,7 @@ public class AmusementParkRide {
     private String name;
     private int minimumHeight;
     private int visitors;
-    private ArrayList<Person> kyydissa;
+    private ArrayList<Person> riding;
 
     public AmusementParkRide(String name, int minimumHeight) {
         this.name = name;
@@ -1287,9 +1287,9 @@ no one is on the ride.
 
 Alla olevassa toteutuksessa palautetaan arvo `-1` mikäli kyydissä ei ole yhtäkään henkilöä. Pituuksien keskiarvoa laskevassa ohjelmassa luku `-1` on mahdoton, joten siitä voi päätellä ettei keskiarvoa ole voitu laskea. -->
 
-Let's now create a method for the amusement park ride that calculates the average height of the people currently on it. Average height can obtained by calculating the average from the persons on the ride -- the average is calculated by adding up the individual values and dividing that sum by the number of values.
+Let's now create a method for the amusement park ride that calculates the average height of the people currently on it. Average height can be obtained by calculating the average from the persons on the ride -- the average is calculated by adding up the individual values and dividing that sum by the number of values.
 
-The implementation underneath returns `-1` if not a single person is on the ride. The result of `-1` is impossible in a program that calculates averages. Based on that, we can determine that the average could not have been calculated.
+The implementation underneath returns `-1` if there is not a single person on the ride. The result of `-1` is impossible in a program that calculates averages. Based on that, we can determine that the average could not have been calculated.
 
 <!-- ```java
 public class Huvipuistolaite {
@@ -1762,7 +1762,7 @@ The class should eventually work in the following way.
 
 Create `Room` class. The class should contain a list of persons as an instance variable, and it should have a parameterless constructor. In addition, add the following methods to the class:
 
-- `public void add(Person person)` - add the person passed as a paramter to the list.
+- `public void add(Person person)` - add the person passed as a parameter to the list.
 
 - `public boolean isEmpty()` - returns a `boolean`-type value `true` or `false`, that tells whether the room is empty or not.
 
@@ -2291,9 +2291,9 @@ Seuraavassa on luokan käyttöesimerkki: -->
 
 Add the following methods to the `Suitcase` class:
 
-- a `printGoods` method, which prints all the items in the suitcase
+- a `printItems()` method, which prints all the items in the suitcase
 
-- a `totalWeight` method, which returns the total weight of the items
+- a `totalWeight()` method, which returns the total weight of the items
 
 <!-- Seuraavassa on luokan käyttöesimerkki: -->
 
