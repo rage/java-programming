@@ -1,7 +1,7 @@
 ---
 path: "/part-6/2-separating-user-interface-from-program-logic"
 title: "Separating the user interface from program logic"
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Learning objectives'>
@@ -1059,7 +1059,7 @@ In this exercise you will implement a text user interface that takes use of the 
 
 <!-- <h2>Tekstikäyttöliittymän käynnistys ja lopetus</h2> -->
 
-<h2>Stating and stopping the UI</h2>
+<h2>Starting and stopping the UI</h2>
 
 <!-- Toteuta luokka `Tekstikayttoliittyma`, joka saa konstruktorin parametrina `Scanner`-olion sekä `Sanakirja`-olion. Lisää tämän jälkeen luokalle metodi `public void kaynnista()`. Metodin tulee toimia seuraavalla tavalla: -->
 
@@ -1947,12 +1947,12 @@ public class Program {
 
         while (true) {
             System.out.print("Points: ");
-            String input = lukija.nextLine();
+            String input = scanner.nextLine();
             if (input.equals("")) {
                 break;
             }
 
-            int score = Integer.valueOf(luettu);
+            int score = Integer.valueOf(input);
 
             if (score < 0 || score > 100) {
                 System.out.println("Impossible number.");
@@ -2190,7 +2190,7 @@ public class UserInterface {
     public void readPoints() {
         while (true) {
             System.out.print("Points: ");
-            String input = lukija.nextLine();
+            String input = scanner.nextLine();
             if (input.equals("")) {
                 break;
             }

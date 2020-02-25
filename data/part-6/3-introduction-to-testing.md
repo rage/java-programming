@@ -1,7 +1,7 @@
 ---
 path: '/part-6/3-introduction-to-testing'
 title: 'Introduction to testing'
-hidden: true
+hidden: false
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
@@ -46,7 +46,7 @@ The report in the address <a href="http://sunnyday.mit.edu/accidents/MCO_report.
 
 <!-- Ohjelmistovirhe liittyi siihen, että käytetty ohjelma odotti, että ohjelmoija käyttäisi <a href="https://fi.wikipedia.org/wiki/Kansainv%C3%A4linen_yksikk%C3%B6j%C3%A4rjestelm%C3%A4" target="_blank">kansainvälistä yksikköjärjestelmää</a> laskuissa (metrit, kilogrammat, ...). Ohjelmoija oli kuitenkin käyttänyt <a href="https://en.wikipedia.org/wiki/English_Engineering_units" target="_blank">amerikkalaista mittajärjestelmää</a> erään järjestelmän osan laskuissa, jolloin satelliitin navigointiin liittynyt automaattinen korjausjärjestelmä ei toiminut oikein. -->
 
-The bug in the software was caused by the fact that the program in question expected the programmer to use the <a href = "https://en.wikipedia.org/wiki/International%C3%A4line_unit%C3%B6j%C3%A4systems%C3%A4" target = " _blank "> International System of Units </a> (meters, kilograms, ...) in the calculations. However, the programmer had used the <a href="https://en.wikipedia.org/wiki/English_Engineering_units" target="_blank"> American Measurement System </a> for some of the system's calculations, which prevented the satellite navigation auto-correction system from working as inteded.
+The bug in the software was caused by the fact that the program in question expected the programmer to use the <a href = "https://en.wikipedia.org/wiki/International_System_of_Units" target = " _blank "> International System of Units </a> (meters, kilograms, ...) in the calculations. However, the programmer had used the <a href="https://en.wikipedia.org/wiki/English_Engineering_units" target="_blank"> American Measurement System </a> for some of the system's calculations, which prevented the satellite navigation auto-correction system from working as inteded.
 
 <br/>
 
@@ -576,7 +576,7 @@ Test-driven software development consists of five steps that are repeated until 
 <br/>
 
 <!-- <programming-exercise name='Tehtavat (2 osaa)' tmcname='osa06-Osa06_13.Tehtavat'> -->
-<programming-exercise name='Tehtavat (2 osaa)' tmcname='osa06-Osa06_13.Tehtavat'>
+
 <programming-exercise name='Exercises (2 parts)' tmcname='part06-Part06_13.Exercises'>
 
 <!-- Tehtäväpohjassa tulee edellisen esimerkin alkutilanne -- tehtäväpohjaan on jo lisätty yksikkötestaukseen tarvittava JUnit-kirjasto. Seuraa esimerkkiä ja luo Tehtavienhallinnalta haluttu toiminnallisuus testivetoista ohjelmistokehitystä noudattaen. Kun olet saanut edellisen esimerkin loppuun asti, lisää sovellukseen vielä testit tehtävien poistamiseen sekä testien vaatima toiminnallisuus. -->
