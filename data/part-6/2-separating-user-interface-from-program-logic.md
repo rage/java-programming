@@ -39,7 +39,7 @@ There is no one clear answer -- sometimes it is good to start from the problem d
 
 <!-- Käyttöliittymän hahmottelu voisi lähteä liikenteeseen luokasta Kayttoliittyma. Käyttöliittymä käyttää syötteen lukemiseen Scanner-oliota, joka annetaan sille käyttöliittymän luonnin yhteydessä. Tämän lisäksi käyttöliittymällä on käynnistämiseen tarkoitettu metodi. -->
 
-We could start implementing the user interface by creating a class UserInterface. The user interface uses a Scanner object for reading user input. This object is given to the User Interface
+We could start implementing the user interface by creating a class UserInterface. The user interface uses a Scanner object for reading user input. This object is given to the user interface.
 
 <!-- ```java
 public class Kayttoliittyma {
@@ -149,7 +149,7 @@ public class UserInterface {
 
 <!-- Sanojen kysely jatkuu kunnes käyttäjä syöttää jo aiemmin syötetyn sanan. Täydennetään ohjelmaa siten, että se tarkastaa onko sana jo syötetty. Vielä ei tiedetä miten toiminnallisuus kannattaisi tehdä, joten tehdään siitä vasta runko. -->
 
-The program continues to ask for words until the user enters a word that has already been entered before. Let us modify the program so that it checks whether the word has been entered or not. We don't know yet how to implement this functionality, so let us first build an outline for it.
+The program continues to ask for words until the user enters a word that has already been entered before. Let us modify the program so that it checks whether the word has been entered or not. We don't know how to implement this functionality yet, so let us first build an outline for it.
 
 <!-- ```java
 public class Kayttoliittyma {
@@ -573,7 +573,7 @@ From the point of view of the user interface, the support variable 'words' is ju
 
 <!-- Tehdään luokka `Sanajoukko`, jonka käyttöönoton jälkeen käyttöliittymän metodi `kaynnista` on seuraavanlainen: -->
 
- Let's make a class called 'WordSet'. After implenting the class, the user interface's start method looks like this:
+ Let's make a class called 'WordSet'. After implementing the class, the user interface's start method looks like this:
 
 <!-- ```java
 while (true) {
@@ -799,7 +799,7 @@ public static void main(String[] args) {
 
 <!-- Olemme päätyneet tilanteeseen missä `Sanajoukko` ainoastaan "kapseloi" ArrayList:in. Onko tässä järkeä? Kenties. Voimme nimittäin halutessamme tehdä Sanajoukolle muitakin muutoksia. Ennen pitkään saatamme esim. huomata, että sanajoukko pitää tallentaa tiedostoon. Jos tekisimme nämä muutokset Sanajoukkoon muuttamatta käyttöliittymän käyttävien metodien nimiä, ei käyttöliittymää tarvitsisi muuttaa mitenkään. -->
 
-We have arrived at a situation where the class 'WordSet' "encapsulates" an ArrayList. Is this reasonable? Perhaps. This is because we can make other changes to the class if we so desire, and before long we might arrive into a situation where the word set has to be, for example, saved into a file. If we make all these changes inside the class WordSet without changing the names of the methods that the user interface uses, we don't have to modify the actual user interface at all.
+We have arrived at a situation where the class 'WordSet' "encapsulates" an ArrayList. Is this reasonable? Perhaps. This is because we can make other changes to the class if we so desire, and before long we might arrive at a situation where the word set has to be, for example, saved into a file. If we make all these changes inside the class WordSet without changing the names of the methods that the user interface uses, we don't have to modify the actual user interface at all.
 
 <!-- Oleellista on tässä se, että Sanajoukko-luokkaan tehdyt sisäiset muutokset eivät vaikuta luokkaan Käyttöliittymä. Tämä johtuu siitä, että käyttöliittymä käyttää sanajoukkoa sen tarjoamien metodien -- eli julkisten rajapintojen -- kautta. -->
 
@@ -967,7 +967,7 @@ Kun ohjelmakoodin käsitteet on eriytetty omiksi luokikseen, voi niitä uusiokä
 
 <text-box variant='hint' name='Recycling'>
 
-When concepts have been separated into different classes in the code, recycling them and reusing them in other projects becomes easy. For example, the class 'WordSet' could be well be used in a graphical user interface, and it could also part of a mobile phone application. In addition, testing the program is much easier when it has been divided into several concepts, each of which has its own separate logic and can function alone as a unit.
+When concepts have been separated into different classes in the code, recycling them and reusing them in other projects becomes easy. For example, the class 'WordSet' could be used in a graphical user interface, and it could also be part of a mobile phone application. In addition, testing the program is much easier when it has been divided into several concepts, each of which has its own separate logic and can function alone as a unit.
 
 </text-box>
 
@@ -1369,7 +1369,7 @@ We will build the program in parts.
 
 <!-- <h2>Tehtävälista</h2> -->
 
-<h2>ToDoList</h2>
+<h2>TodoList</h2>
 
 <!-- Luo luokka `Tehtavalista`. Luokalla tulee olla parametriton konstruktori sekä seuraavat metodit:
 
@@ -1377,7 +1377,7 @@ We will build the program in parts.
 - `public void tulosta()` - tulostaa tehtävät. Tulostuksessa jokaiselle tehtävällä on myös numero -- käytä tässä tehtävän indeksiä (+1).
 - `public void poista(int numero)` - poistaa annettua numeroa vastaavan tehtävän; numero liittyy tulostuksessa nähtyyn tehtävän numeroon. -->
 
-Create a class called `ToDoList`. It should have a constructor without parameters and the following methods:
+Create a class called `TodoList`. It should have a constructor without parameters and the following methods:
 
 - `public void add(String task)` - add the task passed as a parameter to the todo list.
 - `public void print()` - prints the exercises. Each task has a number associated with it on the print statement -- use the task's index here (+1).
@@ -1508,7 +1508,7 @@ list.print();
 
 Alla on esimerkki sovelluksen toiminnasta. -->
 
-Next, implement a class called `UserInterface`. It should have a constructor with two parameters. The first parameter is an instance of the class `ToDoList`, and the second is an instance of the class `Scanner`. In addition to the constructor, the class should have the method `public void start()` that is used to start the text user interface. The text UI works with an eternal looping statement (`while-true`), and it must offer the following commands to the user:
+Next, implement a class called `UserInterface`. It should have a constructor with two parameters. The first parameter is an instance of the class `TodoList`, and the second is an instance of the class `Scanner`. In addition to the constructor, the class should have the method `public void start()` that is used to start the text user interface. The text UI works with an eternal looping statement (`while-true`), and it must offer the following commands to the user:
 
 - The command `stop` stops the execution of the loop, after which the execution of the program advances out of the `start` method.
 
@@ -1570,7 +1570,7 @@ Command: **stop**
 
 <!-- Huom! Käyttöliittymän tulee käyttää sille parametrina annettua tehtävälistaa ja Scanneria. -->
 
-NB! The user interface is to use the ToDoList and Scanner that are passed as parameters to the constructor.
+NB! The user interface is to use the TodoList and Scanner that are passed as parameters to the constructor.
 
 
 </programming-exercise>
@@ -2506,7 +2506,7 @@ for (int i = 0; i < 5; i++) {
 }
 
 System.out.println("");
-System.out.println("Drawing jokes:");
+System.out.println("Printing jokes:");
 manager.printJokes();
 ```
 
@@ -2558,7 +2558,7 @@ Käyttöliittymän tulee tarjota seuraavat komennot:
 
 Esimerkki käyttöliittymän käytöstä: -->
 
-Create a class called `UserInterface` and move the UI functionality of the program theres. The class must have a constructor with two parameters. The first parameter is an instance of the JokeManager class, and the second parameter is an instance of the Scanner class. In addition, the class should have the method `public void start()` that can be used to start the user interface.
+Create a class called `UserInterface` and move the UI functionality of the program there. The class must have a constructor with two parameters. The first parameter is an instance of the JokeManager class, and the second parameter is an instance of the Scanner class. In addition, the class should have the method `public void start()` that can be used to start the user interface.
 
 The user interface should provide the user with the following commands:
 
