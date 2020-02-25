@@ -2,7 +2,7 @@
 path: '/part-4/4-summary'
 #title: 'Ohjelman käsitteiden tunnistaminen ja sanoittaminen'
 title: 'Summary'
-hidden: true
+hidden: false
 ---
 
 <!-- TODO: onko ok otsikko?
@@ -19,4 +19,4 @@ In the fourth part of the course we learned to read data from files, and took ou
 
 Please take a moment to answer the questionnaire below.
 
-<quiz id="e2190362-a20b-5c55-acfc-baf8104913e1"></quiz>
+<quiz id="48cece29-0c0c-5f24-a384-66fda76a69ac"></quiz>

@@ -1,7 +1,7 @@
 ---
 path: '/part-6/1-objects-within-objects'
 title: 'Objects on a list and a list as part of an object'
-hidden: true
+hidden: false
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
@@ -13,7 +13,6 @@ hidden: true
 - Osaat käyttää listaa oliomuuttujana. -->
 
 - You review the use of lists.
-- You know that adding a reference-type variable to a list copies the reference of the variable to the list.
 - You know how to use a list as an instance variable.
 
 </text-box>
@@ -181,7 +180,7 @@ menu.tulostaAteriat();
 
 ```java
 Menu menu = new Menu();
-menu.addMeal("Tofuratatouille");
+menu.addMeal("Tofu ratatouille");
 menu.addMeal("Chilli coconut chicken");
 menu.addMeal("Chilli coconut chicken");
 menu.addMeal("Meatballs with mustard sauce");
@@ -196,7 +195,7 @@ menu.printMeals();
 
 <sample-output>
 
-Tofuratatouille
+Tofu ratatouille
 Chilli coconut chicken
 Meatballs with mustard sauce
 
@@ -231,7 +230,7 @@ menu.tulostaAteriat();
 
 ```java
 Menu menu = new Menu();
-menu.addMeal("Tofuratatouille");
+menu.addMeal("Tofu ratatouille");
 menu.addMeal("Chilli Coconut Chicken");
 menu.addMeal("Chilli Coconut Chicken");
 menu.addMeal("Meatballs with mustard sauce");
@@ -245,7 +244,7 @@ menu.printMeals();
 Chili-kookoskana
 Lihapyörykät sinappikastikeella -->
 
-Tofuratatouille
+Tofu ratatouille
 Chilli Coconut Chicken
 Meatballs with mustard sauce
 
@@ -279,7 +278,7 @@ menu.tulostaAteriat();
 
 ```java
 Menu menu = new Menu();
-menu.addMeal("Tofuratatouille");
+menu.addMeal("Tofu ratatouille");
 menu.addMeal("Chilli Coconut Chicken");
 menu.addMeal("Chilli Coconut Chicken");
 menu.addMeal("Meatballs with mustard sauce");
@@ -300,7 +299,7 @@ Lihapyörykät sinappikastikeella
 
 Tomaatti-mozzarellasalaatti -->
 
-Tofuratatouille
+Tofu ratatouille
 Chilli Coconut Chicken
 Meatballs with mustard sauce
 
@@ -521,7 +520,7 @@ public class AmusementParkRide {
     }
 
     public boolean isAllowedOn(Person person) {
-        if (person.getPituus() < this.minimumHeight) {
+        if (person.getHeight() < this.minimumHeight) {
             return false;
         }
 
@@ -712,7 +711,7 @@ public class AmusementParkRide {
     public String toString() {
         // let's form a string from all the people on the list
         String onTheRide = "";
-        for (Person person: kyydissa) {
+        for (Person person: riding) {
             onTheRide = onTheRide + person.getName() + "\n";
         }
 
@@ -1375,9 +1374,9 @@ awak.setHeight(194);
 
 AmusementParkRide hurjakuru = new AmusementParkRide("Hurjakuru", 140);
 
-hurjakuru.isAllowedON(matti);
-hurjakuru.isAllowedON(juhana);
-hurjakuru.isAllowedON(awak);
+hurjakuru.isAllowedOn(matti);
+hurjakuru.isAllowedOn(juhana);
+hurjakuru.isAllowedOn(awak);
 
 System.out.println(hurjakuru);
 System.out.println(hurjakuru.averageHeightOfPeopleOnRide());
@@ -1396,7 +1395,7 @@ Awak
 187.0 -->
 
 Hurjakuru, minimum height requirement: 140, visitors: 2
-on the ride::
+on the ride:
 Matti
 Awak
 187.0
@@ -1456,7 +1455,7 @@ public class Main {
 ```java
 public class Main {
     public static void main(String[] args) {
-        Gift book = new Gift("Harry Potter and the philosoper's stone", 2);
+        Gift book = new Gift("Harry Potter and the Philosopher's Stone", 2);
 
         System.out.println("Gift's name: " + book.getName());
         System.out.println("Gift's weight: " + book.getWeight());
@@ -1476,9 +1475,9 @@ The program's print output should be as follows:
 Lahjan paino: 2
 Lahja: Aapiskukko (2 kg) -->
 
-Gift's name: AHarry Potter and the philosoper's stone
+Gift's name: Harry Potter and the Philosopher's Stone
 Gift's weight: 2
-Gift: Harry Potter and the philosoper's stone (2 kg)
+Gift: Harry Potter and the Philosopher's Stone (2 kg)
 
 </sample-output>
 
@@ -1532,7 +1531,7 @@ public class Main {
 ```java
 public class Main {
     public static void main(String[] args) {
-        Gift book = new Gift("Harry Potter and the philosoper's stone", 2);
+        Gift book = new Gift("Harry Potter and the Philosopher's Stone", 2);
 
         Package package = new Package();
         package.addGift(book);
@@ -1607,7 +1606,7 @@ public Person getTallest() {
     Person returnObject = this.riding.get(0);
 
     // go through the list
-    for (Person prs: this.rigdin) {
+    for (Person prs: this.riding) {
         // compare each object on the list
         // to the returnObject -- we compare heights
         // since we're searching for the tallest,
@@ -1653,30 +1652,33 @@ System.out.println(hurjakuru.haePisin().getNimi());
 Henkilo pisin = hurjakuru.haePisin();
 System.out.println(pisin.getNimi());
 ``` -->
-<!-- ```java
-Henkilo matti = new Henkilo("Matti");
+
+
+```java
+Person matti = new Person("Matti");
 matti.setPituus(180);
 
-Henkilo juhana = new Henkilo("Juhana");
+Person juhana = new Person("Juhana");
 juhana.setPituus(132);
 
-Henkilo awak = new Henkilo("Awak");
+Person awak = new Person("Awak");
 awak.setPituus(194);
 
-Huvipuistolaite hurjakuru = new Huvipuistolaite("Hurjakuru", 140);
+AmusementParkRide hurjakuru = new AmusementParkRide("Hurjakuru", 140);
 
-hurjakuru.paaseeKyytiin(matti);
-hurjakuru.paaseeKyytiin(juhana);
-hurjakuru.paaseeKyytiin(awak);
+hurjakuru.isAllowedOn(matti);
+hurjakuru.isAllowedOn(juhana);
+hurjakuru.isAllowedOn(awak);
 
 System.out.println(hurjakuru);
-System.out.println(hurjakuru.kyydissaOlevienKeskipituus());
+System.out.println(hurjakuru.averageHeightOfPeopleOnRide());
 
 System.out.println();
-System.out.println(hurjakuru.haePisin().getNimi());
-Henkilo pisin = hurjakuru.haePisin();
-System.out.println(pisin.getNimi());
-``` -->
+System.out.println(hurjakuru.haeTallest().getName());
+Person tallest = hurjakuru.getTallest();
+System.out.println(pisin.getName());
+```
+
 
 <sample-output>
 
@@ -2365,13 +2367,14 @@ Total Weight: 7 kg
 Make a further modification to your class so that you only use two instance variables. One holds the maximum weight, the other is the list of items in the suitcase.
 
 <!-- <h2>Raskain tavara</h2> -->
+
 <h2>Heaviest item</h2>
 
 <!-- Lisää vielä luokkaan `Matkalaukku` metodi `raskainTavara`, joka palauttaa painoltaan suurimman tavaran. Jos yhtä raskaita tavaroita on useita, metodi voi palauttaa minkä tahansa niistä. Metodin tulee palauttaa olioviite. Jos laukku on tyhjä, palauta arvo <em>null</em>.
 
 Seuraavassa on luokan käyttöesimerkki: -->
 
-Add to the `Suitcase` class a `heaviestItem` method, which returns the largest item based on weight. If several items share the heaviest weight, the method can return any one of them. The method should return an object reference. If the suitcase is empty, return the value <em>null</em>.
+Add to the `Suitcase` class a `heaviestItem` method, which returns the largest item based on weight. If several items share the heaviest weight, the method can return any one of them. The method should return an object reference. If the suitcase is empty, return the value *null*.
 
 The following is an example of the class in use:
 

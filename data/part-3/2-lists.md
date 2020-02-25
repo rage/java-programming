@@ -195,7 +195,7 @@ list.add("String is a reference-type variable");
 
 <!-- Kun lista on luotu, ArrayList olettaa, että sen sisältämät muuttujat ovat viittaustyyppisiä. Java muuntaa automaattisesti `int`-tyyppisen muuttujan `Integer`-tyyppiseksi kun se lisätään listalle, sama tapahtuu myös kun muuttuja haetaan listalta. Vastaava muunnos tapahtuu myös `double`-tyyppiselle muuttujalle, josta tulee `Double`-tyyppinen muuttuja. Tämä tarkoittaa sitä, että vaikka lista määritellään `Integer`-tyyppisiä arvoja sisältäväksi, voi siihen lisätä `int`-tyyppisiä arvoja. -->
 
-Once a list has been created, ArrayList assumes that all the variables contained in it are reference types. Java automatically converts an `int` variable into `Integer` when one is added to a list, and the same occurs when a variable is retrieved from a list. The same conversion occurs for `double`-type variables, which are converted to `Double`. This means that even though a list is defined to contain`Integer`-type variables, variables of type `int` can also be added to it.
+Once a list has been created, ArrayList assumes that all the variables contained in it are reference types. Java automatically converts an `int` variable into `Integer` when one is added to a list, and the same occurs when a variable is retrieved from a list. The same conversion occurs for `double`-type variables, which are converted to `Double`. This means that even though a list is defined to contain `Integer`-type variables, variables of type `int` can also be added to it.
 
 <!-- ```java
 ArrayList<Integer> kokonaisluvut = new ArrayList<>();
@@ -1744,8 +1744,8 @@ Kolmas
 
 <sample-output>
 
-First
-Third
+Index 0 so the first value: First
+Index 1 so the second value: Third
 
 </sample-output>
 
@@ -1775,8 +1775,8 @@ list.add("Third");
 
 list.remove("First");
 
-System.out.println("Index 0 so the first value: " + lista.get(0));
-System.out.println("Index 1 so the second value: " + lista.get(1));
+System.out.println("Index 0 so the first value: " + list.get(0));
+System.out.println("Index 1 so the second value: " + list.get(1));
 ```
 
 <!-- <sample-output>
@@ -1788,8 +1788,8 @@ Kolmas
 
 <sample-output>
 
-Second
-Third
+Index 0 so the first value: Second
+Index 1 so the second value: Third
 
 </sample-output>
 
@@ -1829,8 +1829,8 @@ System.out.println("Index 1 so the second value: " + list.get(1));
 
 <sample-output>
 
-18
-24
+Index 0 so the first value: 18
+Index 1 so the second value: 24
 
 </sample-output>
 

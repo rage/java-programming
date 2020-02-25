@@ -1,7 +1,7 @@
 ---
 path: "/part-4/3-files-and-reading-data"
 title: "Files and reading data"
-hidden: true
+hidden: false
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
@@ -525,7 +525,7 @@ alicia
 </programming-exercise>
 
 <!-- <programming-exercise name='Löytyykö tiedostosta?' tmcname='osa04-Osa04_27.LoytyykoTiedostosta'> -->
-<programming-exercise name='Is It In The File?' tmcname='part04-Part04_27.IsItInTheFile'>
+<programming-exercise name='Is it in the file?' tmcname='part04-Part04_27.IsItInTheFile'>
 
 <!-- Tehtäväpohjassa tulee kaksi tekstitiedostoa: `nimet.txt` ja `toiset-nimet.txt`. Kirjoita ohjelma, joka kysyy ensin käyttäjältä luettavan tiedoston nimeä, jonka jälkeen käyttäjältä kysytään etsittävää merkkijonoa. Tämän jälkeen ohjelma lukee tiedoston ja etsii tiedostosta haluttua merkkijonoa. -->
 
@@ -533,7 +533,7 @@ The exercise template comes with two files, `names.txt` and `other-names.txt`. W
 
 <!-- Jos merkkijono löytyy, ohjelman tulee tulostaa "Löytyi!". Jos merkkijonoa ei löydy, ohjelman tulee tulostaa "Ei löytynyt.". Jos tiedoston lukeminen epäonnistuu (lukeminen päätyy virhetilanteeseen), ohjelman tulee tulostaa viesti "Tiedoston lukeminen epäonnistui.". -->
 
-If the string is found, the program should print "Found!". If not, the program should print "Not found.". If reading the file fails (the reading ends in an error) the program should print the message "Failed to read the file.".
+If the string is found, the program should print "Found!". If not, the program should print "Not found.". If reading the file fails (the reading ends in an error) the program should print the message "Reading the file " + file + " failed.".
 
 <!-- <sample-output>
 
@@ -589,7 +589,7 @@ Name of the file:
 **nonexistent.txt**
 Search for:
 **test**
-Failed to read the file nonexistent.txt.
+Reading the file nonexistent.txt failed.
 
 </sample-output>
 
@@ -679,9 +679,9 @@ numbers-2.txt:
 <!-- <text-box typie="hint" name="Tyhjä rivi tiedostossa"> -->
 <text-box typie="hint" name="An Empty Line In a File">
 
-<!-- Joskus tiedostoon eksyy tyhjä rivi. Tyhjän rivin ohittaminen onnistuu toistolauseen komennolla `continue` sekä merkkijonon `isBlank`-metodilla. -->
+<!-- Joskus tiedostoon eksyy tyhjä rivi. Tyhjän rivin ohittaminen onnistuu toistolauseen komennolla `continue` sekä merkkijonon `isEmpty`-metodilla. -->
 
-Sometimes an empty line finds it way into a file. Skipping an empty line can be done using the command `continue` and the `isBlank`-method of the string.
+Sometimes an empty line finds it way into a file. Skipping an empty line can be done using the command `continue` and the `isEmpty`-method of the string.
 
 <!-- Alla olevassa esimerkissä luetaan tiedostosta -->
 
@@ -700,7 +700,7 @@ try (Scanner tiedostonLukija = new Scanner(Paths.get("henkilot.csv"))) {
         String rivi = tiedostonLukija.nextLine();
 
         // mikäli rivi on tyhjä, ei käsitellä sitä
-        if (rivi.isBlank() == 0) {
+        if (rivi.isEmpty() == 0) {
             continue;
         }
 
@@ -721,7 +721,7 @@ try (Scanner scanner = new Scanner(Paths.get("henkilot.csv"))) {
         String line = scanner.nextLine();
 
         // if the line is blank we do nothing
-        if (line.isBlank() == 0) {
+        if (line.isEmpty()) {
             continue;
         }
 
@@ -741,7 +741,7 @@ try (Scanner scanner = new Scanner(Paths.get("henkilot.csv"))) {
 
 <!-- Maailma on täynnä tietoa, joka liittyy muuhun tietoon -- tieto muodostaa kokonaisuuksia. Esimerkiksi henkilön tietoihin kuuluu nimi, syntymäaika, puhelinnumero, osoitetietoihin kuuluu maa, kaupunki, katuosoite, postinumero ja niin edelleen. -->
 
-The world is full of data that are related to other data -- these form collection. For example, personal information includes name, date of birth, phone number. Address information, on the other hand, includes country, city, street address, postal number, and so on.
+The world is full of data that are related to other data -- these form collections. For example, personal information can include a name, date of birth and a phone number. Address information, on the other hand, can include a country, city, street address, postal number and so on.
 
 <!-- Tieto tallennetaan usein tiedostoihin määrämuotoisessa muodossa. Eräs tällainen muoto on kurssilla jo tutuksi tullut comma-separated values (CSV)-muoto, eli pilkuilla erotetut tiedot. -->
 
@@ -963,7 +963,7 @@ System.out.println("Total amount of people read: " + people.size());
 
 <!-- Olioiden lukeminen tiedostosta on selkeä oma kokonaisuutensa, joka kannattaa eriyttää omaan metodiinsa. Näin tehdään myös seuraavassa tehtävässä. -->
 
-Reading objects from a file is a clear responsibility in and of itself, and should thus be isolated into a method. This is what we'll be doing in the next exercise.
+Reading objects from a file is a clear responsibility in and of itself, and should for that reason be isolated into a method. This is what we'll be doing in the next exercise.
 
 <!-- <programming-exercise name='Henkilot tiedostosta' tmcname='osa04-Osa04_30.HenkilotTiedostosta'> -->
 <programming-exercise name='Storing Records' tmcname='part04-Part04_30.StoringRecords'>
@@ -983,7 +983,7 @@ amy,1
 
 <!-- Tehtäväpohjassa on valmiina luokka `Henkilo` sekä luokassa `HenkilotTiedostosta` oleva runko metodille `public static ArrayList<Henkilo> lueHenkilot(String tiedosto)`. Toteuta metodi `lueHenkilot` siten, että metodissa luetaan parametrina annetusta tiedostosta henkilöt, jotka lopulta palautetaan metodin palauttamassa listassa. -->
 
-The exercise template already has a `Person` class, and the class `StoringRecords` that has a body for the method `public static ArrayList<Person> readPeople(String file)`. Implement the `readPeople` method such that it reads the persons from the file passed as a parameter, and finally returns them in the list returned by the method.
+The exercise template already has a `Person` class, and the class `StoringRecords` has a body for the method `public static ArrayList<Person> readPeople(String file)`. Implement the `readPeople` method such that it reads the persons from the file passed as a parameter, and finally returns them in the list returned by the method.
 
 <!-- Tehtäväpohjassa on valmiina `main`-metodi, jossa voit kokeilla ohjelmasi toimintaa. Muokkaa tehtävässä vain metodia `lueHenkilot`. -->
 
@@ -992,7 +992,7 @@ The exercise template has a `main` method that you can use to test how your prog
 </programming-exercise>
 
 <!-- <programming-exercise name='Urheilutilastot' tmcname='osa04-Osa04_31.Urheilutilastot (2 osaa)'> -->
-<programming-exercise name='Sport Statistics (2 parts)' tmcname='part04-Part04_31.SportStatistics'>
+<programming-exercise name='Sport Statistics' tmcname='part04-Part04_31.SportStatistics'>
 
 <!-- Tehtävässä käsitellään CSV-muodossa tallennettuja urheilutilastoja. Tiedosto sisältää pilkulla erotettuna kotijoukkeen, vierasjoukkueen, kotijoukkueen pisteet, sekä vierasjoukkueen pisteet. -->
 
@@ -1071,11 +1071,11 @@ Games: 6
 
 <!-- Lisää ohjelmaan toiminnallisuus annetun joukkueen voittojen ja tappioiden määrän tulostamiseen. Voittaja on se joukkue, joka saa ottelussa enemmän pisteitä. -->
 
-Extend the program to have the ability to print the number of wins and losses of a given team. The winner of a game is the team that gains more points from a given match.
+Extend the program so that it has the ability to print the number of wins and losses of a given team. The winner of a game is the team that has gained more points from it.
 
 <!-- Voit olettaa, ettei pelit pääty koskaan tasapeliin. Alla olevassa esimerkissä käytetään edellä kuvattua **data.csv**-tiedostoa. -->
 
-You may assume that the games never end in a tie. We are using the above-mentioned  **data.csv** file below.
+You may assume that the games cannot be tied. Below, we're using the above-mentioned **data.csv** file.
 
 <!-- <sample-output>
 
