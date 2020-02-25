@@ -1656,13 +1656,13 @@ System.out.println(pisin.getNimi());
 
 ```java
 Person matti = new Person("Matti");
-matti.setPituus(180);
+matti.setHeight(180);
 
 Person juhana = new Person("Juhana");
-juhana.setPituus(132);
+juhana.setHeight(132);
 
 Person awak = new Person("Awak");
-awak.setPituus(194);
+awak.setHeight(194);
 
 AmusementParkRide hurjakuru = new AmusementParkRide("Hurjakuru", 140);
 
@@ -1674,7 +1674,7 @@ System.out.println(hurjakuru);
 System.out.println(hurjakuru.averageHeightOfPeopleOnRide());
 
 System.out.println();
-System.out.println(hurjakuru.haeTallest().getName());
+System.out.println(hurjakuru.getTallest().getName());
 Person tallest = hurjakuru.getTallest();
 System.out.println(pisin.getName());
 ```
