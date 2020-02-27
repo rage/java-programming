@@ -1461,7 +1461,7 @@ list.add("take it easy");
 list.print();
 list.remove(2);
 list.print();
-list.add("buy rasins");
+list.add("buy raisins");
 list.print();
 list.remove(1);
 list.remove(1);
@@ -1490,8 +1490,8 @@ list.print();
 2: take it easy
 1: read the course material
 2: take it easy
-3: buy rasins
-1: buy rasins
+3: buy raisins
+1: buy raisins
 
 </sample-output>
 
