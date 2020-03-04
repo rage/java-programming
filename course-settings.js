@@ -18,13 +18,16 @@ const courseSettings = {
       path: "/support-and-assistance",
     },
     {
+      title: "Grading and exams",
+      path: "/grading-and-exams",
+    },
+    {
       title: "Frequently asked questions",
       path: "/faq",
     },
     { separator: true, title: "Java Programming I" },
   ],
   sidebarFuturePages: [
-    { title: "Part 7", tba: "3.3." },
     { separator: true, title: "Java Programming II" },
     { title: "Part 8", tba: "17.3." },
     { title: "Part 9", tba: "24.3." },
