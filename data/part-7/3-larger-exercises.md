@@ -1,7 +1,7 @@
 ---
 path: '/part-7/3-larger-exercises'
 title: 'Larger programming exercises'
-hidden: true
+hidden: false
 ---
 
 

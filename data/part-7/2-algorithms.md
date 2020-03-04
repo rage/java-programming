@@ -1,7 +1,7 @@
 ---
 path: '/part-7/2-algorithms'
 title: 'Algorithms'
-hidden: true
+hidden: false
 ---
 
 <!-- - Tiedät mitä käsite algoritmi tarkoittaa ja tunnet muutamia algoritmeja.

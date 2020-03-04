@@ -1,7 +1,7 @@
 ---
 path: '/part-7/4-introduction-to-programming'
 title: 'Summary and exercise information'
-hidden: true
+hidden: false
 ---
 
 <!-- Ensimmäisen seitsemän osan aikana olet tutustunut ohjelmoinnin perustaitoihin ja luonut useita toimivia ohjelmia. Osaat nyt käyttää muuttujia, ehtolauseita, toistolauseita ja metodeja. Tiedät että ohjelmissasi olevien muuttujien ja metodien nimentä vaikuttaa ohjelmien ymmärrettävyyteen, ja olet aloittanut syventymisen olio-ohjelmointiin ja sitä kautta ohjelmiesi sanoittamiseen. Olet myös tutustunut yhden ohjelmistoalan ammattilaisten tärkeimmän työvälineen eli ohjelmointiympäristön käyttöön.
@@ -17,5 +17,6 @@ During the first seven parts you've become familiar with the basics of programmi
 
 The journey continues with the Advanced Programming Course, which begins with part 8 of the material.
 
-**Note!** Completing this part ends the University of Helsinki's introduction to programming MOOC, which runs from parts 1-7. A course exam worth 5 ECTS is done once part 7 has been completed. If you're not one of the university's students and have not registered for the course through the Open University, do so now.
+**Note!** Completing this part ends the first part of this course, Introduction to Programming, which runs from parts 1-7. If you reside in Finland, you can participate on  a course exam worth 5 ECTS is done once part 7 has been completed.
 
+<quiz id="a343e0af-8203-44a1-adce-d7d220813576"></quiz>
