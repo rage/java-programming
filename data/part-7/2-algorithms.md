@@ -312,7 +312,7 @@ In other words:
 
 <!-- Toteuta luokkaan Paaohjelma luokkametodi `jarjesta`, joka perustuu yllä olevaan ideaan. Metodissa on syytä olla silmukka, joka käy läpi taulukon indeksejä. Metodeista `pieninIndeksiAlkaen` ja `vaihda` on varmasti hyötyä. Tulosta myös taulukon sisältö ennen järjestämistä ja jokaisen kierroksen jälkeen, jotta voit varmistaa algoritmin toimivan oikein. -->
 
-Implement a class method called `sort` based on the idea above in the class MainProgram. It should include a loop that goes through the indices of the array. Certainly the method `indexOfSmallestFrom` and `swap` will come in handy. Additionally, print the contents of the arrya before sorting and after every iteration of the loop to ensure that the algorithm works as you expect it to.
+Implement a class method called `sort` based on the idea above in the class MainProgram. It should include a loop that goes through the indices of the array. Certainly the method `indexOfSmallestFrom` and `swap` will come in handy. Additionally, print the contents of the array before sorting and after every iteration of the loop to ensure that the algorithm works as you expect it to.
 
 <!-- Metodin runko on seuraava: -->
 
@@ -477,7 +477,7 @@ Next let's take a look at algorithms meant for information retrieval.
 
 <!-- Peräkkäishaku on hakualgoritmi, joka etsii tietoa taulukosta käymällä taulukkoa läpi alkio alkiolta. Heti kun haettu alkio löytyy, sen indeksi palautetaan. Jos alkiota ei löydy, palautetaan tieto siitä ettei haettavaa alkiota löytynyt -- tämä kerrotaan tyypillisesti palauttamalla indeksin sijaan arvo `-1`. -->
 
-Linear search is a search algorithm that searches for information in array by going through every value in the array one by one. When the value that was searched for is found, its index is immediately returned. If the requested value cannot be found, linear sort return the information that the value was not found -- typically this means returning `-1` instead of a valid index.
+Linear search is a search algorithm that searches for information in an array by going through every value in the array one by one. When the value that was searched for is found, its index is immediately returned. If the requested value cannot be found, linear sort returns the information that the value was not found -- typically this means returning `-1` instead of a valid index.
 
 <!-- ```java
 public class Algoritmit {
@@ -512,7 +512,7 @@ public class Algorithms {
 <!-- Pahimmassa tapauksessa, eli tilanteessa missä alkiota ei löydy, algoritmi tekee taulukon koon verran vertailuja. Vaikkapa 10 miljoonaa arvoa sisältävässä taulukossa tämä tarkoittaa kymmentä miljoonaa vertailua. Jos tietoa haetaan useampia kertoja, kannattaa tehokkuutta yrittää parantaa.
  -->
 
- In the worst case scenario, i.e when the value searched for isn't found, the algorithm has to do as many comparisons as there are values in the array. In an array containing, say, 10 million values, this means 10 comparisons. If we are doing more than one search, it makes sense to try and improve efficiency.
+ In the worst case scenario, i.e when the value searched for isn't found, the algorithm has to do as many comparisons as there are values in the array. In an array containing, say, 10 million values, this means 10 million comparisons. If we are doing more than one search, it makes sense to try and improve efficiency.
 
 ### Binary search (aka half-interval search or logarithmic search )
 
@@ -534,9 +534,9 @@ The idea behind Binary Search is to start looking for the searched value in the 
 <!-- Tehtäväpohjassa on valmiina luokka `Kirja`, joka kuvaa numeerisen tunnuksen `id` ja nimen `nimi` sisältäviä olioita.
 
 Tässä tehtävässä toteutetaan peräkkäishaku- ja binäärihakualgoritmi kirjojen hakemiseen niiden numeerisen tunnuksen perusteella. Tehtäväpohjassa on valmiina toteutettavien metodien nimet -- tällä hetkellä kumpikin metodeista palauttaa arvon `-1` -- sekä pääohjelma, jota voi käyttää metodien testaamiseen. -->
-In the exercise template you'll find the class `Book`, ready for use. The class describes objects with an numeric id `id` and a name `name`.
+In the exercise template you'll find the class `Book`, ready for use. The class describes objects with a numeric id `id` and a name `name`.
 
-In this exercise you will implement linear search and binary search algorithms for searching for books by their numeric id. In the exercise template you'll find the names of the of methods to be implemented ready for you -- at the moment these method always return -1 -- you'll also find the Main method ready to be used for testing your methods.
+In this exercise you will implement linear search and binary search algorithms for searching for books by their numeric id. In the exercise template you'll find the names of the methods to be implemented ready for you -- at the moment these method always return -1 -- you'll also find the Main method ready to be used for testing your methods.
 
 <!-- <h2>Peräkkäishaku</h2>
 
@@ -570,7 +570,7 @@ Edellisessä esityksessä binäärihaun idea kuvattiin seuraavasti:
 Binäärihaun pseudokoodi on seuraavanlainen. -->
 <h2>Binary search</h2>
 
-In the `Main`-class, implement a method `public static int binarySearch(ArrayList<Book> books, long searchedId)`, which searches the list it received as a parameter, for a book with an `id` variable that matches the value of `searchedId` variable it received as a parameter. If that book is found the method, should return the index it's located at, in the list it received as a parameter. If the book isn't found, the method should return the value `-1`.
+In the `Main`-class, implement a method `public static int binarySearch(ArrayList<Book> books, int searchedId)`, which searches the list it received as a parameter, for a book with an `id` variable that matches the value of `searchedId` variable it received as a parameter. If that book is found the method, should return the index it's located at, in the list it received as a parameter. If the book isn't found, the method should return the value `-1`.
 
 The method must be implemented as a binary search, which assumes the list is ordered. You should also assume, that the `id`s towards the beginning of the list, are always smaller than the `id`s towards the end of the list.
 
@@ -578,11 +578,12 @@ To help you, you have the idea of the binary search shown in the slideshow above
 
 In the slideshow above, the idea of a binary search was described as follows:
 
--The array or list searched must be sorted
--The search begins in the middle of the array or list
--If the value in the middle-point being examined isn't the searched value, eliminate half of the searched area, and move on to examine the middle-point of the remaining half.
--If the value in the middle-point being examined is the searched value, return the index of the middle-point being examined.
--If there is nowhere left to search (the entire area has been eliminated), return the value -1, indicating that the searched value was not found (i.e, it wasn't in the list or array searched).
+- The array or list searched must be sorted
+
+- The search begins in the middle of the array or list
+- If the value in the middle-point being examined isn't the searched value, eliminate half of the searched area, and move on to examine the middle-point of the remaining half.
+- If the value in the middle-point being examined is the searched value, return the index of the middle-point being examined.
+- If there is nowhere left to search (the entire area has been eliminated), return the value -1, indicating that the searched value was not found (i.e, it wasn't in the list or array searched).
 
 The pseudocode for binary search looks like this:
 
@@ -621,7 +622,7 @@ repeat until begin is larger than end:
     if the value at list[middle] is smaller than searched
         begin = middle + 1
 
-    if the value at list[keski] is larger than searched
+    if the value at list[middle] is larger than searched
         end = middle - 1
 
 return value -1
@@ -629,7 +630,7 @@ return value -1
 
 <!-- Huomaa, että kirjojen tapauksessa tarkastelet kirjojen `id`-muuttujien arvoja. Tämä tarkoittaa sitä, että sen sijaan, että käsittelet vain listan tietyssä indeksissä olevaa arvoa, tulee tehtävässä käsitellä tietyssä indeksissä olevan arvon `id`-muuttujaa. -->
 
-Note that in the case of books, you are examining the values the books `id`-variables.  Meaning that in this exercise, instead of examining the value at an index, you should examine the value of the `id`-variable of the value found at the index.
+Note that in the case of books, you are examining the values of the books' `id`-variable.  Meaning that in this exercise, instead of examining the value at an index, you should examine the value of the `id`-variable of the value found at the index.
 
 </programming-exercise>
 
