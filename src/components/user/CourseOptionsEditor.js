@@ -220,6 +220,13 @@ class CourseOptionsEditor extends React.Component {
               </Row>
 
               <Row>
+                <DropdownMenu
+                  selectedVariant={this.state.currentCourseVariant || "i"}
+                  setSelectedVariant={this.setSelectedVariant}
+                />
+              </Row>
+
+              <Row>
                 <FormControlLabel
                   control={
                     <Checkbox

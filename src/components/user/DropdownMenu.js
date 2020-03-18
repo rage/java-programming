@@ -41,14 +41,8 @@ const DropdownMenu = ({ selectedVariant, setSelectedVariant, t }) => {
           />
         }
       >
-        <MenuItem value={"dl"}>{t("withDeadlines")}</MenuItem>
-        <MenuItem value={"nodl"}>{t("noDeadlines")}</MenuItem>
-        <MenuItem value={"ohja-dl"}>{t("beginPart8withDeadlines")}</MenuItem>
-        <MenuItem value={"ohja-nodl"}>
-          {t("beginPart8withoutDeadlines")}
-        </MenuItem>
-        <MenuItem value={"kesa-dl"}>{t("summerMooc")}</MenuItem>
-        <MenuItem value={"kesa-ohja-dl"}>{t("summerMoocDL")}</MenuItem>
+        <MenuItem value="i">Java Programming I</MenuItem>
+        <MenuItem value="ii">Java Programming II</MenuItem>
       </Select>
     </StyledFormControl>
   )

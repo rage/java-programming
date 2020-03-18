@@ -1,6 +1,6 @@
 ---
 path: '/part-7/4-java-programming'
-title: 'Summary and exercise information'
+title: 'Summary and about exam'
 hidden: false
 ---
 
