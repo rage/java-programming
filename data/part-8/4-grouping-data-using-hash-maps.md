@@ -166,7 +166,7 @@ public class TaskTracker {
         this.completedExercises = new HashMap<>();
     }
 
-    public void lisaa(String user, int exercise) {
+    public void add(String user, int exercise) {
         // an empty list has to be added for a new user if one has not already been added
         this.completedExercises.putIfAbsent(user, new ArrayList<>());
 
@@ -230,7 +230,7 @@ Ada: [3, 4, 3, 3]
 
 <!-- Tehtävänäsi on toteuttaa luokka `UseanKaannoksenSanakirja`, johon voidaan lisätä yksi tai useampi käännös jokaiselle sanalle. Luokan tulee toteuttaa seuraavat metodit: -->
 
-Your assignment is to create the class `DictionaryOfManyTranslations". In it can be stored one or more translations for each word. The class is to implement the following methods:
+Your assignment is to create the class `DictionaryOfManyTranslations`. In it can be stored one or more translations for each word. The class is to implement the following methods:
 
 <!-- - `public void lisaa(String sana, String kaannos)` lisää käännöksen sanalle säilyttäen vanhat käännökset -->
 
@@ -420,7 +420,7 @@ facility.add("g63", "pi");
 
 facility.remove("f156", "rollerblades");
 
-System.out.println(kellari.contents("f156"));
+System.out.println(facility.contents("f156"));
 
 facility.remove("f156", "rollerblades");
 
