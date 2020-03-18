@@ -1,7 +1,7 @@
 ---
 path: '/part-8/5-fast-data-fetching-and-grouping-information'
 title: 'Fast data fetching and grouping information'
-hidden: true
+hidden: false
 ---
 
 <!--
@@ -22,6 +22,4 @@ Vastaa vielä lopuksi seuraavaan kahdeksannen osan osaamistavoitteita tarkastele
 
 The eighth part also started the second part of this course. If you just jumped in, welcome aboard! Finally, please take a moment to answer a self-reflective survey on the learning goals of the eighth part.
 
-
-
-<quiz id='3d7f8b1d-8221-559d-91ab-ffbee0220842'></quiz>
+<quiz id='ce5dd5bb-4a47-5e73-96b2-6c93fb65134f'></quiz>

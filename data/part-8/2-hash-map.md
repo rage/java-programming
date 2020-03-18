@@ -1,7 +1,7 @@
 ---
 path: '/part-8/2-hash-map'
 title: 'Hash map'
-hidden: true
+hidden: false
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
@@ -13,11 +13,11 @@ hidden: true
 - Osaat käyttää hajautustaulua oliomuuttujana.
 - Osaat käydä hajautustaulun avaimet ja arvot läpi for-each -toistolausetta käyttäen. -->
 
-- You're familiar with the concept of a hash table and know how one works.
-- You know how to use Java's hash table: you know how to create one, add information to it and retrieve information from it.
-- You can describe situations where using a hash table could be useful.
-- You know how to use a hash table as an instance variable.
-- You know how to go through keys and values of a hash table using the for-each loop.
+- You're familiar with the concept of a hash map and know how one works.
+- You know how to use Java's hash map: you know how to create one, add information to it and retrieve information from it.
+- You can describe situations where using a hash map could be useful.
+- You know how to use a hash map as an instance variable.
+- You know how to go through keys and values of a hash map using the for-each loop.
 
 </text-box>
 
@@ -25,9 +25,9 @@ hidden: true
 
 Alla olevassa esimerkissä on luotu HashMap-olio kaupunkien hakemiseen postinumeron perusteella, jonka jälkeen HashMap-olioon on lisätty neljä postinumero-kaupunki -paria. Lopulta hajautustaulusta haetaan postinumeroa "00710". Sekä postinumero että kaupunki on esitetty merkkijonona. -->
 
-A [HashMap] (http://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html) is, in addition to ArrayList, one of the most widely used Java's pre-built data structures. The hash table is used whenever data is stored as key-value pairs, where values can be added, retrieved, and deleted using keys.
+A [HashMap] (http://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html) is, in addition to ArrayList, one of the most widely used Java's pre-built data structures. The hash map is used whenever data is stored as key-value pairs, where values can be added, retrieved, and deleted using keys.
 
-In the example below, a HashMap object has been created to search for cities by their postal codes, after which four postal code-city pairs have been added to the HashMap object. At the end of it, the postal code "00710" is retrieved from the hash table. Both the postal code and the city are represented as strings.
+In the example below, a HashMap object has been created to search for cities by their postal codes, after which four postal code-city pairs have been added to the HashMap object. At the end of it, the postal code "00710" is retrieved from the hash map. Both the postal code and the city are represented as strings.
 
 
 
@@ -58,13 +58,13 @@ Helsinki
 
 
 <!-- Sisäisesti yllä luotavan hajautustaulun sisäinen tila näyttää seuraavalta. Kukin avain viittaa arvoon. -->
-The internal state of the hash table created above looks like this. Each key refers to some value.
+The internal state of the hash map created above looks like this. Each key refers to some value.
 
 <!-- <img src="../img/drawings/hashmap.png" alt="Hashmapissa avaimen perusteella saadaan selville arvo."/> -->
 <img src="../img/drawings/part8.2-hashmap.png" alt="A value in a hashmap is looked up based on a key."/>
 
 <!-- Mikäli hajautustaulussa ei ole haettavaa avainta, palauttaa hajautustaulun metodi `get` `null`-viitteen. -->
-If the hash table does not contained the key used for the search, its `get` method returns a `null` reference.
+If the hash map does not contained the key used for the search, its `get` method returns a `null` reference.
 
 <!-- ```java
 HashMap<String, String> numerot = new HashMap<>();
@@ -108,11 +108,11 @@ null
 Hajautustaulua luodessa tarvitaan kaksi tyyppiparametria, avainmuuttujan tyyppi ja lisättävän arvon tyyppi. Mikäli hajautustaulussa on avaimena merkkijono (String) ja arvona luku (Integer) luodaan hajautustaulu komennolla `HashMap<String, Integer> hashmap = new HashMap<>();`
 
 Hajautustauluun lisääminen tapahtuu kaksiparametrisella metodilla `put(*avain*, *arvo*)`, joka saa parametrinaan avaimen ja arvon. Hajautustaulusta hakeminen onnistuu metodilla `get(*avain*)`, joka saa parametrinaan avaimen ja palauttaa arvon. -->
-Using a hash table requires the  `import java.util.HashMap;` statement at the beginning of the class.
+Using a hash map requires the  `import java.util.HashMap;` statement at the beginning of the class.
 
-Two type parameters are required when creating a hash table - the type of the key and the type of the value added. If the keys of the hash table are of type string, and the values of type integer, the hash table is created with the following statement `HashMap<String, Integer> hashmap = new HashMap<>();`
+Two type parameters are required when creating a hash map - the type of the key and the type of the value added. If the keys of the hash map are of type string, and the values of type integer, the hash map is created with the following statement `HashMap<String, Integer> hashmap = new HashMap<>();`
 
-Adding to the hash table is done through the `put(*key*, *value*)` method that has two parameters, one for the key, the other for the value. Retrieving from a hash table happens with the help of the `get(*key*)` method that is passed the key as a parameter and returns a value.
+Adding to the hash map is done through the `put(*key*, *value*)` method that has two parameters, one for the key, the other for the value. Retrieving from a hash map happens with the help of the `get(*key*)` method that is passed the key as a parameter and returns a value.
 
 <programming-exercise name='Nicknames' tmcname='part08-Part08_06.Nicknames'>
 
@@ -136,10 +136,10 @@ There is no automated tests for this exercise. Just submit the exercise when you
 
 
 <!-- ## Hajautustaulun avaimeen liittyy korkeintaan yksi arvo -->
-## Hash Table Keys Correspond to a Single Value at Most
+## Hash map Keys Correspond to a Single Value at Most
 
 <!-- Hajautustaulussa on jokaista avainta kohden korkeintaan yksi arvo. Mikäli hajautustauluun lisätään uusi avain-arvo -pari, missä avain on jo aiemmin liittynyt toiseen hajautustauluun tallennettuun arvoon, vanha arvo katoaa hajautustaulusta. -->
-The hash table has a maximum of one value per key. If a new key-value pair is added to the hash table, but the key has already been associated with some other value stored in the hash table, the old value will vanish from the hash table.
+The hash map has a maximum of one value per key. If a new key-value pair is added to the hash map, but the key has already been associated with some other value stored in the hash map, the old value will vanish from the hash map.
 
 <!-- ```java
 
@@ -181,7 +181,7 @@ Ein
 
 
 <!-- ## Viittaustyyppinen muuttuja hajautustaulun arvona -->
-## A Reference Type Variable as a Hash Table Value
+## A Reference Type Variable as a Hash map Value
 
 <!-- Tutkitaan hajautustaulun toimintaa kirjastoesimerkin avulla. Bookstosta voi hakea kirjoja kirjan nimen perusteella. Jos haetulla nimellä löytyy kirja, palauttaa kirjasto kirjan viitteen. Luodaan ensin esimerkkiluokka `Book`, jolla on oliomuuttujina nimi, kirjaan liittyvä sisältö sekä kirjan julkaisuvuosi. -->
 Let's take a look at how a spreadsheet works using a library example. You can search for books by book title. If a book is found with the given search term, the library returns a reference to the book. Let's begin by creating an example class `Book` that has its name, content and the year of publication as instance variables.
@@ -273,7 +273,7 @@ public class Book {
 ```
 
 <!-- Luodaan seuraavaksi hajautustaulu, joka käyttää avaimena kirjan nimeä eli String-tyyppistä oliota, ja arvona edellä luomaamme kirjaa. -->
-Let's create a hash table that uses the book's name as a key, i.e., a String-type object, and the book we've just created as the value.
+Let's create a hash map that uses the book's name as a key, i.e., a String-type object, and the book we've just created as the value.
 
 <!-- ```java
 HashMap<String, Book> hakemisto = new HashMap<>();
@@ -283,7 +283,7 @@ HashMap<String, Book> directory = new HashMap<>();
 ```
 
 <!-- Yllä oleva hajautustaulu käyttää avaimena `String`-oliota. Laajennetaan esimerkkiä siten, että hakemistoon lisätään kaksi kirjaa, `"Järki ja tunteet"` ja `"Ylpeys ja ennakkoluulo"`. -->
-The hash table above uses a`String` object as a key. Let's expand the example so that two books are added to the directory, `"Sense and Sensibility"` and `"Pride and Predujice"`.
+The hash map above uses a`String` object as a key. Let's expand the example so that two books are added to the directory, `"Sense and Sensibility"` and `"Pride and Predujice"`.
 
 <!-- ```java
 Book jarkiJaTunteet = new Book("Järki ja tunteet", 1811, "...");
@@ -303,7 +303,7 @@ hakemisto.put(prideAndPredujice.getNimi(), prideAndPredujice);
 ```
 
 <!-- Hakemistosta voi hakea kirjoja kirjan nimellä. Haku kirjalla `"Viisasteleva sydän"` ei tuota osumaa, jolloin hajautustaulu palauttaa `null`-viitteen. Book "Ylpeys ja ennakkoluulo" kuitenkin löytyy. -->
-Books can be retrieved from the directory by book name. A search for `"Persuasion"` will not produce any results, in which case the hash table returns a `null`-reference. The book "Pride and Prejudice" is found, however.
+Books can be retrieved from the directory by book name. A search for `"Persuasion"` will not produce any results, in which case the hash map returns a `null`-reference. The book "Pride and Prejudice" is found, however.
 
 
 <!-- ```java
@@ -345,7 +345,7 @@ Content: ...
 
 
 <!-- ## Milloin hajautustaulua oikein tulisi käyttää? -->
-## When Should Hash Tables Be Used?
+## When Should Hash maps Be Used?
 
 <!-- Hajautustaulu on toteutettu sisäisesti siten, että haku avaimen perusteella on hyvin nopeaa. Käytännössä hajautustaulu luo avaimen perusteella "hajautusarvon" eli koodin, jonka perusteella arvo tallennetaan tiettyyn paikkaan. Kun hajautustaulusta haetaan tietoa avaimen perusteella, tämä sama koodi tunnistaa paikan, missä avaimeen liittyvä arvo sijaitsee. Käytännössä avainta etsittäessä hajautustaulusta ei tarvitse käydä läpi kaikkia avain-arvo -pareja, vaan tarkasteltava joukko on merkittävästi pienempi. Hajautustaulun sisäiseen toteutukseen syvennytään tarkemmin kursseilla Ohjelmoinnin jatkokurssi ja Tietorakenteet ja algoritmit.
 
@@ -354,7 +354,7 @@ Tarkastellaan edellä esitettyä kirjastoesimerkkiä. Koko ohjelman olisi aivan 
 
 Alla olevassa esimerkissä kirjat on tallennettu listaan ja niiden etsiminen tapahtuu listaa läpikäyden. -->
 
-The hash table is implemented internally in such a way that searching by a key is very fast. The hash table generates a "hash value" from the key, i.e., a piece of code, which is used to store the value a specific location. When a key is used to retrieve information from a hash table, this particular code identifies the location where the value associated with the key is. In practice, it's not necessary to go through all the key-value pairs in the hash table when searching for a key; the set that's checked is significantly smaller. We'll be taking a deeper look into the implementation of a hash table in the Advanced Programming and Data Structures and Algorithms courses.
+The hash map is implemented internally in such a way that searching by a key is very fast. The hash map generates a "hash value" from the key, i.e., a piece of code, which is used to store the value a specific location. When a key is used to retrieve information from a hash map, this particular code identifies the location where the value associated with the key is. In practice, it's not necessary to go through all the key-value pairs in the hash map when searching for a key; the set that's checked is significantly smaller. We'll be taking a deeper look into the implementation of a hash map in the Advanced Programming and Data Structures and Algorithms courses.
 
 
 Consider the library example that was introduced above. The whole program could just as well have been implemented using a list. In that case, the books would be placed on the list instead of the directory, and the book search would happen by iterating over the list.
@@ -519,7 +519,7 @@ null
 <!-- Ohjelma toimisi nyt täysin samoin kuin hajautustaululla toteutettu ohjelma, eikö niin?
 
 Toiminnallisuuden näkökulmasta kyllä. Tarkastellaan ohjelma vielä tehokkuuden kannalta. Javan valmis metodi `System.nanoTime()` palauttaa tietokoneen ajan nanosekunteina. Lisätään edellä tarkasteltuun ohjelmaan toiminnallisuus, jonka perusteella voidaan laskea kuinka paljon aikaa kirjojen hakemiseen meni. -->
-The program would now work in the same way as the program implemented with the hash table, right?
+The program would now work in the same way as the program implemented with the hash map, right?
 
 Functionally, yes. Let's, however, consider the performance of the program. Java's `System.nanoTime ()` method returns the time of the computer in nanoseconds. We'll add functionality to the program considered above to calculate how long it took to retrieve the books.
 
@@ -581,7 +581,7 @@ Tarkastellaan samaa ohjelmaa hajautustaulua käyttäen. -->
 
 With ten million books, it takes almost a second to find two books. Of course, the way in which the list is ordered has an effect. If the book being searched was first on the list, the program would be faster. On the other hand, if the book were not on the list, the program would have to go through all of the books in the list before determining that such book does not exist.
 
-Let's consider the same program using a hash table.
+Let's consider the same program using a hash map.
 
 <!-- ```java
 HashMap<String, Book> hakemisto = new HashMap<>();
@@ -644,18 +644,18 @@ Tarkoittaako tämä sitä, että jatkossa käytämme vain hajautustauluja? Ei ti
 Hajautustauluilla ei ole myöskään sisäistä järjestystä, eikä hajautustaulun läpikäynti indeksien perusteella ole mahdollista. Listalla alkiot alkiot ovat siinä järjestyksessä missä ne on listalle lisättynä.
 
 Tyypillisesti hajautustauluja ja listoja käytetäänkin yhdessä. Hajautustaulun avulla tarjotaan nopea mahdollisuus hakuun tietyn tai tiettyjen avainten perusteella, kun taas listaa käytetään esimerkiksi järjestyksen ylläpitämiseen. -->
-It took about 0.4 milliseconds to search for two books out of ten million books with the hash table. The difference in performace in our example is over a thousandfold.
+It took about 0.4 milliseconds to search for two books out of ten million books with the hash map. The difference in performace in our example is over a thousandfold.
 
-The difference in performance is due to the fact that when a book is searched for in a list, the worst-case scenario involves going through all the books in the list. In a hash table, it isn't necessary to check all of the books as the key determines the location of a given book in a hash table. The difference in performance depends on the number of books - for example, the performance differences are negligible for 10 books. However, for millions of books, the performance differences are clearly visible.
+The difference in performance is due to the fact that when a book is searched for in a list, the worst-case scenario involves going through all the books in the list. In a hash map, it isn't necessary to check all of the books as the key determines the location of a given book in a hash map. The difference in performance depends on the number of books - for example, the performance differences are negligible for 10 books. However, for millions of books, the performance differences are clearly visible.
 
-Does this mean that we'll only be using hash tables going forward? Of course not. Hash tables work well when we know exactly what we are looking for. If we wanted to identify books whose title contains a particular string, the hash table would be of little use.
+Does this mean that we'll only be using hash maps going forward? Of course not. Hash maps work well when we know exactly what we are looking for. If we wanted to identify books whose title contains a particular string, the hash map would be of little use.
 
-The hash tables also have no internal order, and it is not possible to search the hash table based on the indexes. The items in a list are in the order they were added to the list.
+The hash maps also have no internal order, and it is not possible to search the hash map based on the indexes. The items in a list are in the order they were added to the list.
 
-Typically, hash tables and lists are used together. The hash table provides quick access to a specific key or keys, while the list is used,for instance, to maintain order.
+Typically, hash maps and lists are used together. The hash map provides quick access to a specific key or keys, while the list is used,for instance, to maintain order.
 
 <!-- ## Hajautustaulu oliomuuttujana -->
-##  Hash Table as an Instance Variable
+##  Hash map as an Instance Variable
 
 <!-- Edellä käsitellyn kirjojen tallentamiseen liittyvän esimerkin ongelma on se, että kirjan kirjoitusmuoto tulee muistaa täsmälleen oikein. Joku saattaa etsiä kirjaa pienellä alkukirjaimella ja joku toinen saattaa vaikkapa painaa välilyöntiä nimen kirjoituksen aluksi. Tarkastellaan seuraavaksi erästä tapaa hieman sallivampaan kirjan nimen perusteella tapahtuvaan hakemiseen.
 
@@ -684,9 +684,9 @@ Hahmotellaan ensin lisäämismetodia. Book lisätään hajautustauluun siten, et
 
 The conversion of the string described above will result in the book being found, even if the user happens to type the title of the book with lower-case letters.
 
-Let's create a `Library` class that encapsulates a hash table containing books, and enables you to case-independent search for books. We'll add methods for adding, retrieving and deleting to the `Library` class. Each of these is based on a sanitized name - this involves converting the name to lowercase and removing extrenous spaces from the beginning and end.
+Let's create a `Library` class that encapsulates a hash map containing books, and enables you to case-independent search for books. We'll add methods for adding, retrieving and deleting to the `Library` class. Each of these is based on a sanitized name - this involves converting the name to lowercase and removing extrenous spaces from the beginning and end.
 
-Let's first outline the method for adding. The book is added to the hash table with the book name as the key and the book itself as the value. Since we want to allow for minor misspellings, such as capitalized or lower-cased strings, or ones with spaces at the beginning and/or end, the key - the title of the book - is converted to lowercase, and spaces at the beginning and end are removed.
+Let's first outline the method for adding. The book is added to the hash map with the book name as the key and the book itself as the value. Since we want to allow for minor misspellings, such as capitalized or lower-cased strings, or ones with spaces at the beginning and/or end, the key - the title of the book - is converted to lowercase, and spaces at the beginning and end are removed.
 
 <!-- ```java
 public class Library {
@@ -742,7 +742,7 @@ public class Library {
 <!-- Yllä käytetään hajautustaulun tarjoamaa metodia `containsKey` avaimen olemassaolon tarkastamiseen. Metodi palauttaa arvon `true`, jos hajautustauluun on lisätty haetulla avaimella mikä tahansa arvo, muulloin metodi palauttaa arvon `false`.
 
 Huomaamme jo nyt että merkkijonon siistimiseen liittyvää koodia tarvitsisi jokaisessa kirjaa käsittelevässä metodissa, joten siitä on hyvä tehdä erillinen apumetodi -- metodi toteutettaan luokkametodina, sillä se ei käsittele oliomuuttujia. -->
-The `containsKey` method of the hash table is being used above to check for the existence of a key. The method returns `true` if any value has been added to the hash table with the given key. Otherwise, the method returns `false`.
+The `containsKey` method of the hash map is being used above to check for the existence of a key. The method returns `true` if any value has been added to the hash map with the given key. Otherwise, the method returns `false`.
 
 We can already see that code dealing with string sanitizion is needed in every method that handles a book, which makes it a good candiate for a  separate helper method. The method is implemented as a class method since it doesn't handle object variables.
 
@@ -962,16 +962,16 @@ for example more precisely and so on `null`
 
 
 <!-- ## Hajautustaulun avainten läpikäynti -->
-## Going Through A Hash Table's Keys
+## Going Through A Hash map's Keys
 
 <!-- Haluamme joskus etsiä kirjaa nimen osan perusteella. Hajautustaulun metodi `get` ei tähän sovellu, sillä sitä käytetään tietyllä avaimella etsimiseen. Bookn nimen osan perusteella etsiminen ei sillä onnistu.
 
 Hajautustaulun arvojen läpikäynti onnistuu hajautustaulun metodin `keySet()` palauttaman joukon sekä for-each -lauseen avulla.
 
 Alla haetaan kaikki ne kirjat, joiden nimessä esiintyy annettu merkkijono. -->
-We may sometimes want to search for a book by a part of it's title. The `get` method in the hash table is not applicable in this case as it's used to search by a specific key. Searching by a part of a book title is not possible with it.
+We may sometimes want to search for a book by a part of it's title. The `get` method in the hash map is not applicable in this case as it's used to search by a specific key. Searching by a part of a book title is not possible with it.
 
-We can go through the values ​​of a hash table by using a for-each loop on the set returned by the `keySet()` method of the hash table.
+We can go through the values ​​of a hash map by using a for-each loop on the set returned by the `keySet()` method of the hash map.
 
 Below, a search is performed for all the books whose names contain the given string.
 
@@ -1019,7 +1019,7 @@ public ArrayList<Book> getBookByPart(String titlePart) {
 
 <!-- Tällä tavalla etsiessä menetämme kuitenkin hajautustauluun liittyvän nopeusedun. Hajautustaulu on toteutettu siten, että yksittäisen avaimen perusteella hakeminen on erittäin nopeaa. Yllä olevassa esimerkissä käydään kaikkien kirjojen nimet läpi, kun tietyllä avaimella etsittäessä tarkasteltaisiin tasan yhden kirjan olemassaoloa. -->
 
-This way, however, we lose the speed advantage that comes with the hash table. The hash table is implemented in such a way that searching by a single key is extremely fast. The example above goes through all the book titles when looking for the existence of a single book using a particular key.
+This way, however, we lose the speed advantage that comes with the hash map. The hash map is implemented in such a way that searching by a single key is extremely fast. The example above goes through all the book titles when looking for the existence of a single book using a particular key.
 
 
 <programming-exercise name='Print me my hashmap' tmcname='part08-Part08_08.PrintMeMyHashmap'>
@@ -1070,11 +1070,11 @@ NB! The order of the output can vary, because the implementation of hashmaps doe
 
 
 <!-- ## Hajautustaulun arvojen läpikäynti -->
-## Going Through A Hash Table's Values
+## Going Through A Hash map's Values
 
 <!-- Edellä kuvatun toiminnallisuuden voisi toteuttaa myös hajautustaulun arvojen läpikäynnillä. Hajautustaulu arvojoukon saa hajautustaulun metodilla `values()`. Myös tämän arvojoukon voi käydä läpi for-each -lauseella. -->
 
-The preceding functionality could also be implemented by going through the hash table's values. The set of values can be retrieved with the hash table's `values​​()` method. This set of values can also be iterated ober ​​with a for-each loop.
+The preceding functionality could also be implemented by going through the hash map's values. The set of values can be retrieved with the hash map's `values​​()` method. This set of values can also be iterated ober ​​with a for-each loop.
 
 <!-- ```java
 public ArrayList<Book> haeBookNimenOsalla(String nimenOsa) {
@@ -1112,7 +1112,7 @@ public ArrayList<Book> getBookByPart(String titlePart) {
 ```
 
 <!-- Kuten edellisessä esimerkissä, myös tällä tavalla etsiessä menetetään hajautustauluun liittyvä nopeusedun. -->
-As with the previous example, the speed dvantage that comes with the hash table is lost.
+As with the previous example, the speed dvantage that comes with the hash map is lost.
 
 
 <programming-exercise name='Print me another hashmap' tmcname='part08-Part08_09.PrintMeAnotherHashmap'>
@@ -1167,11 +1167,11 @@ NB! The order of the output may vary. The implementation of a hashmap does not g
 
 
 <!-- ## Alkeistyyppiset muuttujat hajautustaulussa -->
-## Primitive Variables In Hash Tables
+## Primitive Variables In Hash maps
 
 <!-- Hajautustaulu olettaa, että siihen lisätään viittaustyyppisiä muuttujia (samoin kuin `ArrayList`). Java muuntaa alkeistyyppiset muuttujat viittaustyyppisiksi käytännössä kaikkia Javan valmiita tietorakenteita (kuten ArrayList ja HashMap) käytettäessä. Vaikka luku `1` voidaan esittää alkeistyyppisen muuttujan `int` arvona, tulee sen tyypiksi määritellä `Integer` ArrayListissä ja HashMapissa. -->
 
-A hash table expects that only reference-variables are added to it (in the same way that `ArrayList` does). Java converts primitive variables to their corresponding reference-types when using any Java's built in data structures (such as ArrayLisr and HashMap). Although the value `1` can be represented as a value of the primitive  `int` variable, its type should be defined as `Integer` when using ArrayLists and HashMaps.
+A hash map expects that only reference-variables are added to it (in the same way that `ArrayList` does). Java converts primitive variables to their corresponding reference-types when using any Java's built in data structures (such as ArrayLisr and HashMap). Although the value `1` can be represented as a value of the primitive  `int` variable, its type should be defined as `Integer` when using ArrayLists and HashMaps.
 
 <!-- ```java
 HashMap<Integer, String> hashmap = new HashMap<>(); // toimii
@@ -1186,7 +1186,7 @@ HashMap<int, String> map2 = new HashMap<>(); // ei toimi
 
 <!-- Hajautustaulun avain ja tallennettava olio ovat aina viittaustyyppisiä muuttujia. Jos haluat käyttää alkeistyyppisiä muuttujia avaimena tai tallennettavana arvona, on niille olemassa viittaustyyppiset vastineet. Alla on esitelty muutama. -->
 
-A hash table's key and the object to be stored are always reference-type variables. If you want to use a primitive variable as a key or value, there exists a reference-type version for each one. A few have been introduced below.
+A hash map's key and the object to be stored are always reference-type variables. If you want to use a primitive variable as a key or value, there exists a reference-type version for each one. A few have been introduced below.
 
 <!-- <table class="table">
 
@@ -1316,7 +1316,7 @@ public class registerSightingCounter {
 
 Kun teemme automaattista muunnosta, tulee varmistaa että muunnettava arvo ei ole null. Yllä olevassa ohjelmassa oleva `montakoKertaaBongattu`-metodi tulee korjata esimerkiksi seuraavasti. -->
 
-There is, however, some risk in type conversions. If we attempt to convert a `null` reference - a sighting not in HashMap, for instance - to an integer, we witness a *java.lang.reflect.InvocationTargetException* error. Such an error may occur in the `timesSighted` method in the example above - if the `allSightings` hash table does not contain the value being searched, it returns a `null` reference and the conversion to an integer fails.
+There is, however, some risk in type conversions. If we attempt to convert a `null` reference - a sighting not in HashMap, for instance - to an integer, we witness a *java.lang.reflect.InvocationTargetException* error. Such an error may occur in the `timesSighted` method in the example above - if the `allSightings` hash map does not contain the value being searched, it returns a `null` reference and the conversion to an integer fails.
 
 When performing automatic conversion, we should ensure that the value to be converted is not null. For example, the `timesSighted` method in the program program should be fixed in the following way. ->
 
@@ -1357,7 +1357,7 @@ public int timesSighted(String sighted) {
 
 <!-- Siistitään vielä lisaaBongaus-metodia hieman. Alkuperäisessä versiossa metodin alussa lisätään hajautustauluun bongausten lukumääräksi arvo 0, jos bongattua ei löydy. Tämän jälkeen bongausten määrä haetaan, sitä kasvatetaan yhdellä, ja vanha bongausten lukumäärä korvataan lisäämällä arvo uudestaan hajautustauluun. Osan tästäkin toiminnallisuudesta voi korvata metodilla `getOrDefault`. -->
 
-Let's make the `addSighting` method a little bit neater. In the original version, 0 is set as the value of the sighting count in the hash table if the given key is not found. We then get retrieve the count of the sightings, increment it by one, and the previous value of the sightings is replaced with the new one by adding the incremented count back into the hash table. A part of this can also be replaced with the `getOrDefault` method.
+Let's make the `addSighting` method a little bit neater. In the original version, 0 is set as the value of the sighting count in the hash map if the given key is not found. We then get retrieve the count of the sightings, increment it by one, and the previous value of the sightings is replaced with the new one by adding the incremented count back into the hash map. A part of this can also be replaced with the `getOrDefault` method.
 
 
 <!-- ```java

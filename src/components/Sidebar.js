@@ -135,13 +135,12 @@ class Sidebar extends React.Component {
     )
     let content = content2.concat(edges)
     content = content.concat(futurePages)
-    if (CourseSettings.default.splitCourses) {
-      let middlepoint = content.findIndex(o => o.title === "Osa 7")
-      content.splice(middlepoint + 1, 0, {
-        separator: true,
-        title: "Ohjelmoinnin jatkokurssi",
-      })
-    }
+
+    let middlepoint = content.findIndex(o => o.title === "Part 7")
+    content.splice(middlepoint + 1, 0, {
+      separator: true,
+      title: "Java Programming II",
+    })
 
     return (
       <MobileWrapperOrFragment mobileMenuOpen={this.props.mobileMenuOpen}>

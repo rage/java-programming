@@ -1,7 +1,7 @@
 ---
 path: '/part-8/4-grouping-data-using-hash-maps'
 title: 'Grouping data using hash maps'
-hidden: true
+hidden: false
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'>
@@ -12,13 +12,13 @@ hidden: true
 </text-box> -->
 <text-box variant='learningObjectives' name='Learning Objectives'>
 
-- You know how to use a list as a hash table's value
-- You know how to categorize data using a hash table
+- You know how to use a list as a hash map's value
+- You know how to categorize data using a hash map
 
 </text-box>
 
 <!-- Hajautustaulu sisältää korkeintaan yhden arvon yhtä avainta kohti. Seuraavassa esimerkissä tallennamme henkilöiden puhelinnumeroita hajautustauluun. -->
-A hash table has at most one value per each key. In the following example, we store the phone numbers of people into the hash table.
+A hash map has at most one value per each key. In the following example, we store the phone numbers of people into the hash map.
 
 
 <!-- ```java
@@ -61,7 +61,7 @@ Pekka's number: 09-111333
 Koska hajautustaulun avaimet ja arvot voivat olla mitä tahansa muuttujia, myös listojen käyttäminen hajautustaulun arvona on mahdollista. Useamman arvon lisääminen yhdelle avaimelle onnistuu liittämällä avaimeen lista. Muutetaan puhelinnumeroiden tallennustapaa seuraavasti: -->
 What if we wanted to assign multiple values ​​to a single key, such as multiple phone numbers for a given person?
 
-Since keys and values ​​in a hash table can be any variable, it is also possible to use lists as values in a hash table. You can add more values ​​to a single key by attaching a list to the key. Let's change the way the numbers are stored in the following way:
+Since keys and values ​​in a hash map can be any variable, it is also possible to use lists as values in a hash map. You can add more values ​​to a single key by attaching a list to the key. Let's change the way the numbers are stored in the following way:
 
 <!-- ```java
 HashMap<String, ArrayList<String>> puhelinnumerot = new HashMap<>();
@@ -71,7 +71,7 @@ HashMap<String, ArrayList<String>> phoneNumbers = new HashMap<>();
 ```
 
 <!-- Nyt hajautustaulussa on jokaiseen avaimeen liitettynä lista. Vaikka new-komento luo hajautustaulun, ei hajautustaulu sisällä alussa yhtäkään listaa. Ne on luotava tarvittaessa erikseen. -->
-Each key of the hash table now has a list attached to it. Although the new command creates a hash table, the hash table initially does not contain a single list. They need to be created separately as needed.
+Each key of the hash map now has a list attached to it. Although the new command creates a hash map, the hash map initially does not contain a single list. They need to be created separately as needed.
 
 <!-- ```java
 HashMap<String, ArrayList<String>> puhelinnumerot = new HashMap<>();
@@ -112,7 +112,7 @@ Pekka's number: [040-12348765, 09-111333]
 </sample-output>
 
 <!-- Määrittelimme muuttujan puhelinnumero tyypiksi `HashMap<String, ArrayList<String>>`. Tämä tarkoittaa hajautustaulua, joka käyttää avaimena merkkijonoa ja arvona merkkijonoja sisältävää listaa. Hajautustauluun lisättävät arvot ovat siis konkreettisia listoja. -->
-We define the type of the phone number as  `HashMap<String, ArrayList<String>>`. This refers to a hash table that uses a string as a key and a list containing strings as its value. As such, the values added to the hash table are concrete lists.
+We define the type of the phone number as  `HashMap<String, ArrayList<String>>`. This refers to a hash map that uses a string as a key and a list containing strings as its value. As such, the values added to the hash map are concrete lists.
 
 <!-- ```java
 // liitetään Pekka-nimeen ensin tyhjä ArrayList
