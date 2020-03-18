@@ -64,7 +64,7 @@ The internal state of the hash map created above looks like this. Each key refer
 <img src="../img/drawings/part8.2-hashmap.png" alt="A value in a hashmap is looked up based on a key."/>
 
 <!-- Mikäli hajautustaulussa ei ole haettavaa avainta, palauttaa hajautustaulun metodi `get` `null`-viitteen. -->
-If the hash map does not contained the key used for the search, its `get` method returns a `null` reference.
+If the hash map does not contain the key used for the search, its `get` method returns a `null` reference.
 
 <!-- ```java
 HashMap<String, String> numerot = new HashMap<>();
@@ -117,7 +117,7 @@ Adding to the hash map is done through the `put(*key*, *value*)` method that has
 <programming-exercise name='Nicknames' tmcname='part08-Part08_06.Nicknames'>
 
 <!-- Luo `main`-metodissa uusi `HashMap<String,String>`-olio. Tallenna luomaasi olioon seuraavien henkilöiden nimet ja lempinimet niin, että nimi on avain ja lempinimi on arvo. Käytä pelkkiä pieniä kirjaimia. -->
-In the `main`-method create a new `HashMap<String,String>` object. Store the names and nicknames of the following people in this hashmap so, that the name is the key and the nickname is the value. Use only lower case letters.
+In the `main`-method create a new `HashMap<String,String>` object. Store the names and nicknames of the following people in this hashmap so that the name is the key and the nickname is the value. Use only lower case letters.
 
 <!-- - matin lempinimi on mage -->
 <!-- - mikaelin lempinimi on mixu -->
@@ -283,7 +283,7 @@ HashMap<String, Book> directory = new HashMap<>();
 ```
 
 <!-- Yllä oleva hajautustaulu käyttää avaimena `String`-oliota. Laajennetaan esimerkkiä siten, että hakemistoon lisätään kaksi kirjaa, `"Järki ja tunteet"` ja `"Ylpeys ja ennakkoluulo"`. -->
-The hash map above uses a`String` object as a key. Let's expand the example so that two books are added to the directory, `"Sense and Sensibility"` and `"Pride and Predujice"`.
+The hash map above uses a `String` object as a key. Let's expand the example so that two books are added to the directory, `"Sense and Sensibility"` and `"Pride and Prejudice"`.
 
 <!-- ```java
 Book jarkiJaTunteet = new Book("Järki ja tunteet", 1811, "...");
@@ -295,11 +295,11 @@ hakemisto.put(ylpeysJaEnnakkoluulo.getNimi(), ylpeysJaEnnakkoluulo);
 ``` -->
 ```java
 Book senseAndSensibility = new Book("Sense and Sensibility", 1811, "...");
-Book prideAndPredujice = new Book("Pride and Prejudice", 1813, "....");
+Book prideAndPrejudice = new Book("Pride and Prejudice", 1813, "....");
 
-HashMap<String, Book> hakemisto = new HashMap<>();
-hakemisto.put(senseAndSensibility.getNimi(), senseAndSensibility);
-hakemisto.put(prideAndPredujice.getNimi(), prideAndPredujice);
+HashMap<String, Book> directory = new HashMap<>();
+directory.put(senseAndSensibility.getName(), senseAndSensibility);
+directory.put(prideAndPrejudice.getName(), prideAndPredujice);
 ```
 
 <!-- Hakemistosta voi hakea kirjoja kirjan nimellä. Haku kirjalla `"Viisasteleva sydän"` ei tuota osumaa, jolloin hajautustaulu palauttaa `null`-viitteen. Book "Ylpeys ja ennakkoluulo" kuitenkin löytyy. -->
@@ -317,7 +317,7 @@ System.out.println(kirja);
 Book book = directory.get("Persuasion");
 System.out.println(book);
 System.out.println();
-book = directory.get("Pride and Predujice");
+book = directory.get("Pride and Prejudice");
 System.out.println(book);
 ```
 
@@ -334,7 +334,7 @@ Sisältö: ...
 null
 
 Name: Pride and Prejudice(1813)
-Content: ...
+Content: ....
 
 </sample-output>
 
@@ -354,7 +354,7 @@ Tarkastellaan edellä esitettyä kirjastoesimerkkiä. Koko ohjelman olisi aivan 
 
 Alla olevassa esimerkissä kirjat on tallennettu listaan ja niiden etsiminen tapahtuu listaa läpikäyden. -->
 
-The hash map is implemented internally in such a way that searching by a key is very fast. The hash map generates a "hash value" from the key, i.e., a piece of code, which is used to store the value a specific location. When a key is used to retrieve information from a hash map, this particular code identifies the location where the value associated with the key is. In practice, it's not necessary to go through all the key-value pairs in the hash map when searching for a key; the set that's checked is significantly smaller. We'll be taking a deeper look into the implementation of a hash map in the Advanced Programming and Data Structures and Algorithms courses.
+The hash map is implemented internally in such a way that searching by a key is very fast. The hash map generates a "hash value" from the key, i.e., a piece of code, which is used to store the value at a  specific location. When a key is used to retrieve information from a hash map, this particular code identifies the location where the value associated with the key is. In practice, it's not necessary to go through all the key-value pairs in the hash map when searching for a key; the set that's checked is significantly smaller. We'll be taking a deeper look into the implementation of a hash map in the Advanced Programming and Data Structures and Algorithms courses.
 
 
 Consider the library example that was introduced above. The whole program could just as well have been implemented using a list. In that case, the books would be placed on the list instead of the directory, and the book search would happen by iterating over the list.
@@ -492,11 +492,11 @@ Book prideAndPrejudice = new Book("Pride and Prejudice", 1813, "....");
 books.add(senseAndSensibility);
 books.add(prideAndPrejudice);
 
-System.out.println(hae(books, "Sense and Sensibility"));
+System.out.println(get(books, "Sense and Sensibility"));
 
 System.out.println();
 
-System.out.println(hae(books, "Persuasion"));
+System.out.println(get(books, "Persuasion"));
 ```
 
 <!-- <sample-output>
@@ -521,7 +521,7 @@ null
 Toiminnallisuuden näkökulmasta kyllä. Tarkastellaan ohjelma vielä tehokkuuden kannalta. Javan valmis metodi `System.nanoTime()` palauttaa tietokoneen ajan nanosekunteina. Lisätään edellä tarkasteltuun ohjelmaan toiminnallisuus, jonka perusteella voidaan laskea kuinka paljon aikaa kirjojen hakemiseen meni. -->
 The program would now work in the same way as the program implemented with the hash map, right?
 
-Functionally, yes. Let's, however, consider the performance of the program. Java's `System.nanoTime ()` method returns the time of the computer in nanoseconds. We'll add functionality to the program considered above to calculate how long it took to retrieve the books.
+Functionally, yes. Let's, however, consider the performance of the program. Java's `System.nanoTime()` method returns the time of the computer in nanoseconds. We'll add functionality to the program considered above to calculate how long it took to retrieve the books.
 
 <!-- ```java
 ArrayList<Book> kirjat = new ArrayList<>();
@@ -634,8 +634,7 @@ null
 The book search took 0.411458 milliseconds.
 
 </sample-output>
-<!--
-Hajautustaululla kahden kirjan etsimiseen kymmenestä miljoonasta kirjasta meni noin 0.4 millisekuntia. Tehokkusero esimerkissämme on yli tuhatkertainen.
+<!-- Hajautustaululla kahden kirjan etsimiseen kymmenestä miljoonasta kirjasta meni noin 0.4 millisekuntia. Tehokkusero esimerkissämme on yli tuhatkertainen.
 
 Tämä tehokkuusero liittyy siihen, että kun listalta etsitään kirjaa, tulee huonoimmassa tapauksessa käydä kaikki listan kirjat läpi. Hajautustaulussa kaikkia kirjoja ei tarvitse tarkastella, sillä avain määrää kirjan paikan hajautustaulussa. Tehokkuuserot riippuvat kirjojen määrästä -- esimerkiksi kymmenellä kirjalla tehokkuuserot ovat mitättömiä, mutta miljoonilla kirjoilla tehokkuuserot näkyvät selkeästi.
 
@@ -644,7 +643,8 @@ Tarkoittaako tämä sitä, että jatkossa käytämme vain hajautustauluja? Ei ti
 Hajautustauluilla ei ole myöskään sisäistä järjestystä, eikä hajautustaulun läpikäynti indeksien perusteella ole mahdollista. Listalla alkiot alkiot ovat siinä järjestyksessä missä ne on listalle lisättynä.
 
 Tyypillisesti hajautustauluja ja listoja käytetäänkin yhdessä. Hajautustaulun avulla tarjotaan nopea mahdollisuus hakuun tietyn tai tiettyjen avainten perusteella, kun taas listaa käytetään esimerkiksi järjestyksen ylläpitämiseen. -->
-It took about 0.4 milliseconds to search for two books out of ten million books with the hash map. The difference in performace in our example is over a thousandfold.
+
+It took about 0.4 milliseconds to search for two books out of ten million books with the hash map. The difference in performace in our example is over a thousand-fold.
 
 The difference in performance is due to the fact that when a book is searched for in a list, the worst-case scenario involves going through all the books in the list. In a hash map, it isn't necessary to check all of the books as the key determines the location of a given book in a hash map. The difference in performance depends on the number of books - for example, the performance differences are negligible for 10 books. However, for millions of books, the performance differences are clearly visible.
 
@@ -672,8 +672,8 @@ text = text.trim(); // text nyt "ylpeys ja ennakkoluulo"
 ``` -->
 ```java
 String text = "Pride and Prejudice ";
-text = text.toLowerCase(); // text currently "Pride and Prejudice "
-text = text.trim(); // text now "Pride and Prejudice"
+text = text.toLowerCase(); // text currently "pride and prejudice "
+text = text.trim(); // text now "pride and prejudice"
 ```
 
 <!-- Edellä kuvatun merkkijonon muunnoksen johdosta kirja löytyy, vaikka käyttäjä kirjoittaisi kirjan nimen pienillä kirjaimilla.
@@ -878,11 +878,11 @@ System.out.println(kirjasto.haeBook("JÄRKI"));
 ``` -->
 ```java
 Book senseAndSensibility = new Book("Sense and Sensibility", 1811, "...");
-Book prideAndPredujice = new Book("Pride and Prejudice", 1813, "....");
+Book prideAndPrejudice = new Book("Pride and Prejudice", 1813, "....");
 
 Library library = new Library();
 library.addBook(senseAndSensibility);
-library.addBook(prideAndPredujice);
+library.addBook(prideAndPrejudice);
 
 System.out.println(library.getBook("pride and prejudice");
 System.out.println();
@@ -907,10 +907,10 @@ null
 <sample-output>
 
 Name: Pride and Prejudice (1813)
-Content: ...
+Content: ....
 
 Name: Pride and Prejudice (1813)
-Content: ...
+Content: ....
 
 null
 
@@ -1074,7 +1074,7 @@ NB! The order of the output can vary, because the implementation of hashmaps doe
 
 <!-- Edellä kuvatun toiminnallisuuden voisi toteuttaa myös hajautustaulun arvojen läpikäynnillä. Hajautustaulu arvojoukon saa hajautustaulun metodilla `values()`. Myös tämän arvojoukon voi käydä läpi for-each -lauseella. -->
 
-The preceding functionality could also be implemented by going through the hash map's values. The set of values can be retrieved with the hash map's `values​​()` method. This set of values can also be iterated ober ​​with a for-each loop.
+The preceding functionality could also be implemented by going through the hash map's values. The set of values can be retrieved with the hash map's `values​​()` method. This set of values can also be iterated over ​​with a for-each loop.
 
 <!-- ```java
 public ArrayList<Book> haeBookNimenOsalla(String nimenOsa) {
@@ -1100,7 +1100,7 @@ public ArrayList<Book> getBookByPart(String titlePart) {
     ArrayList<Book> books = new ArrayList<>();
 
     for(Book book : this.directory.values()) {
-        if(!book.getNimi().contains(titlePart)) {
+        if(!book.getName().contains(titlePart)) {
             continue;
         }
 
@@ -1112,7 +1112,7 @@ public ArrayList<Book> getBookByPart(String titlePart) {
 ```
 
 <!-- Kuten edellisessä esimerkissä, myös tällä tavalla etsiessä menetetään hajautustauluun liittyvä nopeusedun. -->
-As with the previous example, the speed dvantage that comes with the hash map is lost.
+As with the previous example, the speed advantage that comes with the hash map is lost.
 
 
 <programming-exercise name='Print me another hashmap' tmcname='part08-Part08_09.PrintMeAnotherHashmap'>
@@ -1126,7 +1126,7 @@ In the class `Program` implement the following class methods:
  the toString method of the Book objects.
 
 <!-- - `public static void tulostaArvoJosNimessa(HashMap<String, Book> hajautustaulu, String merkkijono)`, joka tulostaa parametrina annetun hajautustaulun arvoista ne, joiden nimessä on parametrina annettu merkkijono. Nimen saa selville kirjan metodilla `getNimi`. -->
-`public static void printValueIfNameContains(HashMap<String,Book> hashmap, String text)`, which prints only the Books in the given hashmap whichs name contains the given string. You can find out the name of a Book with the method `getName`.
+ - `public static void printValueIfNameContains(HashMap<String,Book> hashmap, String text)`, which prints only the Books in the given hashmap whichs name contains the given string. You can find out the name of a Book with the method `getName`.
 
 <!-- Esimerkki luokkametodien käytöstä: -->
 An example of using the class methods:
@@ -1171,7 +1171,7 @@ NB! The order of the output may vary. The implementation of a hashmap does not g
 
 <!-- Hajautustaulu olettaa, että siihen lisätään viittaustyyppisiä muuttujia (samoin kuin `ArrayList`). Java muuntaa alkeistyyppiset muuttujat viittaustyyppisiksi käytännössä kaikkia Javan valmiita tietorakenteita (kuten ArrayList ja HashMap) käytettäessä. Vaikka luku `1` voidaan esittää alkeistyyppisen muuttujan `int` arvona, tulee sen tyypiksi määritellä `Integer` ArrayListissä ja HashMapissa. -->
 
-A hash map expects that only reference-variables are added to it (in the same way that `ArrayList` does). Java converts primitive variables to their corresponding reference-types when using any Java's built in data structures (such as ArrayLisr and HashMap). Although the value `1` can be represented as a value of the primitive  `int` variable, its type should be defined as `Integer` when using ArrayLists and HashMaps.
+A hash map expects that only reference-variables are added to it (in the same way that `ArrayList` does). Java converts primitive variables to their corresponding reference-types when using any Java's built in data structures (such as ArrayList and HashMap). Although the value `1` can be represented as a value of the primitive  `int` variable, its type should be defined as `Integer` when using ArrayLists and HashMaps.
 
 <!-- ```java
 HashMap<Integer, String> hashmap = new HashMap<>(); // toimii
@@ -1179,9 +1179,9 @@ hashmap.put(1, "Ole!");
 HashMap<int, String> taulu2 = new HashMap<>(); // ei toimi
 ``` -->
 ```java
-HashMap<Integer, String> hashmap = new HashMap<>(); // toimii
+HashMap<Integer, String> hashmap = new HashMap<>(); // works
 hashmap.put(1, "Ole!");
-HashMap<int, String> map2 = new HashMap<>(); // ei toimi
+HashMap<int, String> map2 = new HashMap<>(); // does not work
 ```
 
 <!-- Hajautustaulun avain ja tallennettava olio ovat aina viittaustyyppisiä muuttujia. Jos haluat käyttää alkeistyyppisiä muuttujia avaimena tai tallennettavana arvona, on niille olemassa viittaustyyppiset vastineet. Alla on esitelty muutama. -->
@@ -1236,10 +1236,9 @@ A hash map's key and the object to be stored are always reference-type variables
 </table>
 
 
-Java muuntaa alkeistyyppiset muuttujat automaattisesti viittaustyyppisiksi kun niitä lisätään HashMapiin tai ArrayListiin. Tätä automaattista muunnosta viittaustyyppisiksi kutsutaan Javassa *auto-boxingiksi*, eli automaattiseksi "laatikkoon" asettamiseksi. Automaattinen muunnos onnistuu myös toiseen suuntaan.
+<!-- Java muuntaa alkeistyyppiset muuttujat automaattisesti viittaustyyppisiksi kun niitä lisätään HashMapiin tai ArrayListiin. Tätä automaattista muunnosta viittaustyyppisiksi kutsutaan Javassa *auto-boxingiksi*, eli automaattiseksi "laatikkoon" asettamiseksi. Automaattinen muunnos onnistuu myös toiseen suuntaan. -->
 
-Java converts primitive variabls to reference-types automatically as their added to either a HashMap or an ArrayList. This automatic conversion to a reference-type variable is termed *auto-boxing* in Java, i.e., putting something in a box automatically. The automatic conversion is also possible in the other direction.
-Java converts primitive variabls to reference-types automatically as their added to either a HashMap or an ArrayList. This automatic conversion to a reference-type variable is termed *auto-boxing* in Java, i.e., putting something in a box automatically. The automatic conversion is also possible in the other direction.
+Java converts primitive variabls to reference-types automatically as they are added to either a HashMap or an ArrayList. This automatic conversion to a reference-type variable is termed *auto-boxing* in Java, i.e., putting something in a box automatically. The automatic conversion is also possible in the other direction.
 
 <!-- ```java
 int avain = 2;
@@ -1296,7 +1295,7 @@ public class registerSightingCounter {
         this.allSightings = new HashMap<>();
     }
 
-    public void lisaaBongaus(String sighted) {
+    public void addSighting(String sighted) {
         if (!this.allSightings.containsKey(sighted)) {
             this.allSightings.put(sighted, 0);
         }
@@ -1306,7 +1305,7 @@ public class registerSightingCounter {
         this.allSightings.put(sighted, timesSighted);
     }
 
-    public int montakoKertaaBongattu(String sighted) {
+    public int timesSighted(String sighted) {
         this.allSightings.get(sighted);
     }
 }
@@ -1318,7 +1317,7 @@ Kun teemme automaattista muunnosta, tulee varmistaa että muunnettava arvo ei ol
 
 There is, however, some risk in type conversions. If we attempt to convert a `null` reference - a sighting not in HashMap, for instance - to an integer, we witness a *java.lang.reflect.InvocationTargetException* error. Such an error may occur in the `timesSighted` method in the example above - if the `allSightings` hash map does not contain the value being searched, it returns a `null` reference and the conversion to an integer fails.
 
-When performing automatic conversion, we should ensure that the value to be converted is not null. For example, the `timesSighted` method in the program program should be fixed in the following way. ->
+When performing automatic conversion, we should ensure that the value to be converted is not null. For example, the `timesSighted` method in the program program should be fixed in the following way.
 
 
 <!-- ```java
@@ -1334,7 +1333,7 @@ public int timesSighted(String sighted) {
 
 <!-- HashMapin metodi `getOrDefault` hakee sille ensimmäisenä parametrina annettua avainta HashMapista. Jos avainta ei löydy, palauttaa se toisena parametrina annetun arvon. Yllä kuvatun yhdellä rivillä esitetyn metodin toiminta vastaa seuraavaa metodia. -->
 
-The `getOrDefault`  method of the HashMap searches for the key passed to it as a parameter from the HashMap. If the key is not found, it returns the value of the second parameter passed to ti. The one-liner shown above is equivalent in its function to the following.
+The `getOrDefault`  method of the HashMap searches for the key passed to it as a parameter from the HashMap. If the key is not found, it returns the value of the second parameter passed to it. The one-liner shown above is equivalent in its function to the following.
 
 <!-- ```java
 public int montakoKertaaBongattu(String bongattu) {
@@ -1357,7 +1356,7 @@ public int timesSighted(String sighted) {
 
 <!-- Siistitään vielä lisaaBongaus-metodia hieman. Alkuperäisessä versiossa metodin alussa lisätään hajautustauluun bongausten lukumääräksi arvo 0, jos bongattua ei löydy. Tämän jälkeen bongausten määrä haetaan, sitä kasvatetaan yhdellä, ja vanha bongausten lukumäärä korvataan lisäämällä arvo uudestaan hajautustauluun. Osan tästäkin toiminnallisuudesta voi korvata metodilla `getOrDefault`. -->
 
-Let's make the `addSighting` method a little bit neater. In the original version, 0 is set as the value of the sighting count in the hash map if the given key is not found. We then get retrieve the count of the sightings, increment it by one, and the previous value of the sightings is replaced with the new one by adding the incremented count back into the hash map. A part of this can also be replaced with the `getOrDefault` method.
+Let's make the `addSighting` method a little bit neater. In the original version, 0 is set as the value of the sighting count in the hash map if the given key is not found. We then retrieve the count of the sightings, increment it by one, and the previous value of the sightings is replaced with the new one by adding the incremented count back into the hash map. A part of this can also be replaced with the `getOrDefault` method.
 
 
 <!-- ```java
@@ -1387,13 +1386,13 @@ public class registerSightingCounter {
         this.allSightings = new HashMap<>();
     }
 
-    public void lisaaBongaus(String sighted) {
+    public void addSighting(String sighted) {
         int timesSighted = this.allSightings.getOrDefault(sighted, 0);
         timesSighted++;
         this.allSightings.put(sighted, timesSighted);
     }
 
-    public int montakoKertaaBongattu(String sighted) {
+    public int timesSighted(String sighted) {
         return this.allSightings.getOrDefault(sighted, 0);
     }
 }
