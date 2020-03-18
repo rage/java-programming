@@ -211,7 +211,7 @@ public class Pair<T, K> {
 }
 ```
 
-<quiz id="e0d5af70-82db-5b33-b1b2-f85c6a22a92c"></quiz>
+<quiz id="4e28cce5-9043-58be-ac53-5243976494bd"></quiz>
 
 
 <!-- Huomattava osa Javan tietorakenteista käyttää tyyppiparametreja ja mahdollistaa eri tyyppisten muuttujien lisäämisen niihin. Esimerkiksi ArrayList saa yhden tyyppiparametrin, HashMap kaksi. -->
@@ -628,4 +628,4 @@ null
 </programming-exercise>
 
 
-<quiz id='ae08c266-de49-5cfd-a7b8-3e2c5f044cca'></quiz>
+<quiz id='515dc1a2-e0b9-5f2d-b8b3-cff8ae61b8b1'></quiz>

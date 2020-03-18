@@ -469,4 +469,4 @@ Below you'll see a somewhat larger class diagram. In it are the classes A, B, C,
 </programming-exercise>
 
 
-<quiz id="cc7eee4a-8e17-58bc-9f57-0f61fdfb6d9f"></quiz>
+<quiz id="1748c548-bfb5-506c-b56d-81bac26e7fc8"></quiz>

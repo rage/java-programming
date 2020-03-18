@@ -144,4 +144,4 @@ NB! Remember you have to submit the program and its tests. There is no automated
 </programming-exercise>
 
 
-<quiz id="fc0f931c-6b78-530b-8b3d-ce8b71b61160"></quiz>
+<quiz id="b6ffb141-b481-55f3-8986-e719d988bfd7"></quiz>

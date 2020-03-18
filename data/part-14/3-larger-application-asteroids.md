@@ -1115,7 +1115,7 @@ public class Asteroid extends Character {
 }
 ```
 
-<quiz id="45be5a68-eedb-5d8e-8b70-c98999509a33"></quiz>
+<quiz id="883787c9-4e85-5e33-a6d3-7e9845b4d028"></quiz>
 
 Testataan vielä, että asteroidin voi lisätä sovellukseen.
 

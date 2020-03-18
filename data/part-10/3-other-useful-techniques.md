@@ -188,9 +188,9 @@ System.out.println(luvut.toString());
 <!-- StringBuilderin käyttö on suurien merkkijonojen luomisessa tehokkaampaa kuin merkkijonojen luominen `+`-operaatiolla. -->
 Using StringBuilder is more performant that creating strings with the `+` operator.
 
-<quiz id='9fed4b64-9eb2-57e3-a8e7-5f25ec9e051e'></quiz>
+<quiz id='92458f4d-ec1e-5364-baf4-c1c71f3aa6f5'></quiz>
 
-<quiz id='1a6c2033-275e-5e5c-a6f8-b18587114e59'></quiz>
+<quiz id='b725bdfa-2081-5dcf-b20f-2aca838c0e7e'></quiz>
 
 
 <!-- ## Säännölliset lausekkeet -->
@@ -584,7 +584,7 @@ You can use more than one quantifier in a single regular expression. For example
 A character class can be used to specify a set of characters in a compact way. Characters are enclosed in square brackets, and a range is indicated with a dash. For example, `[145]` means `(1|4|5)` and `[2-36-9]` means `(2|3|6|7|8|9)`. Similarly, the entry `[a-c]*` defines a regular expression that requires the string to contain only `a`, `b` and `c`.
 
 
-<quiz id='0cb409d6-7976-5bf7-988a-da5a0783ce00'></quiz>
+<quiz id='eb0b5345-2b56-5405-b085-b32d7ea8de84'></quiz>
 
 
 <programming-exercise name='Regular expressions (3 parts)' tmcname='part10-Part10_15.RegularExpressions'>

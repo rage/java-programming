@@ -459,7 +459,7 @@ Line 43 of the `print` method has thrown a `NullPointerException` exception.
 The details of an exception are very useful when trying to pinpoint where an error happens.
 
 
-<quiz id="c9dd9445-960a-5b60-88f6-d2de2323ea56"></quiz>
+<quiz id="96e2f6ba-4efd-54c0-8b60-a93c8de397c0"></quiz>
 
 
 <!-- <programming-exercise name='Sensorit ja lämpötila (4 osaa)' tmcname='osa11-Osa11_12.SensoritJaLampotila'> -->

@@ -125,7 +125,7 @@ There are 4 elements in the array.
 
 </sample-output>
 
-<quiz id='fd66bcc3-962b-5970-936f-47c6d2d56d18'></quiz>
+<quiz id='aecece4d-a170-564c-881b-ef70ccdef697'></quiz>
 
 
 <programming-exercise name='Sum these for me' tmcname='part12-Part12_03.SumTheseForMe'>
@@ -1023,7 +1023,7 @@ private void copy(List<Pair<K, V>>[] newArray, int fromIdx) {
 }
 ```
 
-<quiz id='7fa6ce58-158d-51be-a1c1-f5df803443b5'></quiz>
+<quiz id='bf26ed5d-6f6b-5b04-a253-a0c14de7615d'></quiz>
 
 <!-- Nyt kopioi-metodia voidaan kutsua grow-metodista. -->
 

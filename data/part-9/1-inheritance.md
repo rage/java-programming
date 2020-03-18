@@ -1218,12 +1218,12 @@ What happens in detail when we call the toString method of a three-dimensional p
 
 As we can see, the sequence of events caused by the method call has multiple steps. The principle, however, is clear: The definition for the method is first searched for in the class definition of the actual type of the object. If it is not found, we next examine the superclass. If the definition cannot be found there, either, we move on to the superclass of this superclass, etc...
 
-<quiz id="7f53bd2a-48b3-541e-8d6a-d0cd64e16733"></quiz>
+<quiz id="6b36458c-2d7a-55ac-9d28-4c0e1fcaf490"></quiz>
 
-<quiz id="439cf6ac-da31-5a1e-bccf-2fd154841f7a"></quiz>
+<quiz id="a5a50681-f6b9-503e-a3e8-efc625156b59"></quiz>
 
 
-<quiz id="cd07625c-a98e-59a2-8b30-9c25790c48c6"></quiz>
+<quiz id="1a83b5ff-a503-5132-bead-ef70ac19167f"></quiz>
 
 <!-- ## Milloin perintää kannattaa käyttää? -->
 

@@ -721,7 +721,7 @@ public void start(Stage stage) {
 }
 ```
 
-<quiz id="798b180b-25c9-5c93-a666-dbe97b15d6fd"></quiz>
+<quiz id="2000e233-e8c2-5e16-b910-46d7b60e25c7"></quiz>
 
 <!-- Edellinen lähdekoodi tuottaa seuraavanlaisen kaavion. -->
 

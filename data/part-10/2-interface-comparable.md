@@ -188,7 +188,7 @@ matti (187)
 </sample-output>
 
 
-<quiz id='9011b5e1-21a0-50be-9a78-f25fe86b243c'></quiz>
+<quiz id='b8e7e5e2-b8f2-5f64-97fd-6ce4d24caf9d'></quiz>
 
 
 <!-- <programming-exercise name='Palkkajärjestys' tmcname='osa10-Osa10_11.Palkkajarjestys'> -->

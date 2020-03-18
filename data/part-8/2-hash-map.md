@@ -100,7 +100,7 @@ null
 
 </sample-output>
 
-<quiz id='f7de1258-acbb-5b76-850e-258b25fbc03b'></quiz>
+<quiz id='269eb381-b692-543b-96ec-a336d6baccb4'></quiz>
 
 
 <!-- Hajautustaulun käyttöönotto vaatii luokan alkuun rivin `import java.util.HashMap;`.
@@ -341,7 +341,7 @@ Content: ...
 <!-- Hajautustauluun lisättäessä avain-arvo -parin arvo voi olla käytännössä mitä tahansa. Arvo voi olla kokonaisluku, lista, tai vaikkapa toinen hajautustaulu. -->
 
 
-<quiz id='553b5c66-fd43-5f23-8d45-bc2cc34c8d5f'></quiz>
+<quiz id='765de5c0-f561-5d9b-b994-31b2b857eeb1'></quiz>
 
 
 <!-- ## Milloin hajautustaulua oikein tulisi käyttää? -->

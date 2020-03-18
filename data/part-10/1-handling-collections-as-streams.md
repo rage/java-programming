@@ -681,7 +681,7 @@ positiiviset.stream()
 </sample-output>
 
 
-<quiz id='d4b00724-e855-5657-b782-ddd619b841f4'></quiz>
+<quiz id='8973d124-afbf-5b38-95d8-f683022450ce'></quiz>
 
 
 <programming-exercise name='Divisible' tmcname='part10-Part10_04.Divisible'>

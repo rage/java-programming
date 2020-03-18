@@ -335,7 +335,7 @@ The books were the same
 
 </sample-output>
 
-<quiz id='2d73f896-d409-52a8-b09a-5a91a1bfc9f5'></quiz>
+<quiz id='8e476233-b04d-53cd-8470-aae57279f9e2'></quiz>
 
 <!-- Myös ArrayList käyttää equals-metodia osana sisäistä toteutustaan. Mikäli emme toteuta omissa olioissamme `equals`-metodia, ei ArrayListin tarjoama `contains`-metodi toimi oikein. Mikäli kokeilet alla olevaa koodia kahdella Kirja-luokalla, jossa toisessa on määritelty `equals`-metodi, ja toisessa ei, huomaat eron. -->
 
@@ -377,7 +377,7 @@ if (!books.contains(bookObject)) {
 
 This reliance on default methods such as `equals` is actually the reason why Java demands that variables added to ArrayList and HashMap are of reference type. Each reference type variable comes with default methods, such as equals, which means that you don't need to change the internal implementation of the ArrayList class when adding variables of different types. Primitive variables do not have such default methods.
 
-<quiz id='59122792-ed0f-5681-ae85-b277fb639027'></quiz>
+<quiz id='2a8d72a0-e777-53da-974f-106b7255eaa3'></quiz>
 
 <!-- ## Suurpiirteinen vertailu hajautusarvon avulla -->
 
