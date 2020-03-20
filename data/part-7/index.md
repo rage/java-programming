@@ -18,7 +18,7 @@ The first exam is on March 21st. The exam procedure is described below:
 
 The exam can be found at this page on March 21st 2020 at 08:00:
 
-<a href="https://exams.mooc.fi/">https://exams.mooc.fi/</a>
+<a href="https://exams.mooc.fi/en">https://exams.mooc.fi/en</a>
 
 * You have four hours to complete the exam. If extra time is provided to you by University of Helsinki, you have five hours. 
 * The exam ends at 22.00 (10pm). If you want to spend full 4 hours in the exam, start it at 18:00 the latest.
