@@ -226,9 +226,9 @@ Yksikkötestauksella tarkoitetaan lähdekoodiin kuuluvien yksittäisten osien ku
 
 Testien kirjoittamisessa hyödynnetään tyypillisesti valmiita yksikkötestauskirjastoja, jotka tarjoavat metodeja ja apuluokkia testien kirjoittamiseen. Javassa käytetyin yksikkötestauskirjasto on <a href="http://junit.org/" target="_blank" rel="noopener">JUnit</a>, johon löytyy myös tuki lähes kaikista ohjelmointiympäristöistä. Esimerkiksi NetBeans osaa automaattisesti etsiä JUnit-testejä projektista -- jos testejä löytyy, ne näytetään projektin alla Test Packages -kansiossa. -->
 
-The automated testing mehtod laid out above where the input to a program is modified is quite convenient, but limited nonetheless. Testing larger programs in this way is challenging. One solution to this is unit testing, where small parts of the program are tested in isolation.
+The automated testing method laid out above where the input to a program is modified is quite convenient, but limited nonetheless. Testing larger programs in this way is challenging. One solution to this is unit testing, where small parts of the program are tested in isolation.
 
-Unit testing refers to the testing of individual components in the source code, such as classes and their provided methods. The writing of tests revelas whether each class and method observs or deviates from the guideline of each method and class having a single, clear responsibility. The more responsibility the method has, the more complex the test. If a large application is written in a single method, writing tests for it becomes very challenging, if not impossible. Similarly, if the application is broken into clear classes and methods, then writing tests is straightforward.
+Unit testing refers to the testing of individual components in the source code, such as classes and their provided methods. The writing of tests reveals whether each class and method observes or deviates from the guideline of each method and class having a single, clear responsibility. The more responsibility the method has, the more complex the test. If a large application is written in a single method, writing tests for it becomes very challenging, if not impossible. Similarly, if the application is broken into clear classes and methods, then writing tests is straightforward.
 
 Ready-made unit test libraries are commonly used in writing tests, which provide methods and help classes for writing tests. The most common unit testing library in Java is <a href="http://junit.org/" target="_blank" rel="noopener"> JUnit </a>, which is also supported by almost all programming environments. For example, NetBeans can automatically search for JUnit tests in a project -- if any are found, they will be displayed under the project in the Test Packages folder.
 
@@ -236,7 +236,7 @@ Ready-made unit test libraries are commonly used in writing tests, which provide
 
 <!-- Tarkastellaan yksikkötestien kirjoittamista esimerkin kautta. Oletetaan, että käytössämme on seuraava luokka Laskin, ja haluamme kirjoittaa sitä varten automaattisia testejä. -->
 
-Let's take a look at writing unit tests with the help of an example. Let's assume that we have the following Calculator class at our use, and want to write automated tests for it.
+Let's take a look at writing unit tests with the help of an example. Let's assume that we have the following Calculator class and want to write automated tests for it.
 
 <!-- ```java
 public class Laskin {
@@ -270,11 +270,11 @@ public class Calculator {
         this.value = 0;
     }
 
-    public void sum(int number) {
+    public void add(int number) {
         this.value = this.value + number;
     }
 
-    public void substract(int number) {
+    public void subtract(int number) {
         this.value = this.value + number;
     }
 
@@ -290,9 +290,9 @@ Yksikkötestien kirjoittaminen aloitetaan testiluokan luomisella. Testiluokka lu
 
 Testiluokka `LaskinTest` on aluksi tyhjä. -->
 
-The calculator works by always remembering the result produced by the preceding calculation. All subsequent calculations are always added to the previous result. A minor error resulting from copying and pasting has been left in the calculator above. The method substract should deduct from the value, but it currently adds to it.
+The calculator works by always remembering the result produced by the preceding calculation. All subsequent calculations are always added to the previous result. A minor error resulting from copying and pasting has been left in the calculator above. The method subtract should deduct from the value, but it currently adds to it.
 
-Unit test writing begins by creating a test class, which is created under the Test-Packages folder. When testing the `Calculator` class, the test class is to be called `CalculatorTest`. The string `Test` at the end of the name tells the programming environment that this is a test class. Without the string Test, tests in the class would not be executed. (Note: Tests are created in NetBeans under the Test Packages folder.)
+Unit test writing begins by creating a test class, which is created under the Test-Packages folder. When testing the `Calculator` class, the test class is to be called `CalculatorTest`. The string `Test` at the end of the name tells the programming environment that this is a test class. Without the string Test, the tests in the class will not be executed. (Note: Tests are created in NetBeans under the Test Packages folder.)
 
 The test class `CalculatorTest` is initially empty.
 
@@ -334,8 +334,8 @@ public class CalculatorTest {
 
     @Test
     public void calculatorInitialValueZero() {
-        Calculator caclulator = new Calculator();
-        assertEquals(0, caclulator.getValue());
+        Calculator calculator = new Calculator();
+        assertEquals(0, calculator.getValue());
     }
 }
 ```
@@ -375,7 +375,7 @@ BUILD SUCCESSFUL (total time: 0 seconds)
 
 <!-- Lisätään testiluokkaan summaa ja erotusta lisäävää toiminnallisuutta. -->
 
-Let's add functionality for summing and substacting to the test class.
+Let's add functionality for adding and subtracting to the test class.
 
 <!--
 ```java
@@ -421,14 +421,14 @@ public class CalculatorTest {
     @Test
     public void valueFiveWhenFiveAdded() {
         Calculator calculator = new Calculator();
-        calculator.sum(5);
+        calculator.add(5);
         assertEquals(5, calculator.getValue());
     }
 
     @Test
     public void valueMinusTwoWhenTwoSubstracted() {
         Calculator calculator = new Calculator();
-        calculator.substract(2);
+        calculator.subtract(2);
         assertEquals(-2, calculator.getValue());
     }
 }
@@ -477,7 +477,7 @@ Edellisillä testeillä kaksi testeistä menee läpi, mutta yhdessä on tapahtun
 
 The output tells us that three tests were executed. One of them failed. The test output also informs us of the line in which the error occured (25), and of the expected (-2) and actual (2) values. Whenever the execution of tests ends in an error, NetBeans also displays the error state visually.
 
-With the previous tests two passed, but one of them resulted in an error. Let's fix the mistake left in the Calculator class.
+While the previous tests two passed, one of them resulted in an error. Let's fix the mistake left in the Calculator class.
 
 <!-- ```java
 // ...
@@ -489,7 +489,7 @@ public void erotus(int luku) {
 
 ```java
 // ...
-public void substract(int number) {
+public void subtract(int number) {
     this.value -= number;
 }
 // ...
@@ -527,7 +527,7 @@ Yksikkötestaaminen on hyvin monimutkaista mikäli sovellus on kirjoitettu "main
 </text-box> -->
 <text-box variant='hint' name='Unit Testing and the Parts of an Application'>
 
-Unit testing tends to be extremely complicated if the whole application has been written in "Main". To make testing easier, the app should split into small parts, each having a clear responsibility. In the previous section, we practiced this when we seperated the user interface from the application logic. Writing tests for parts of an application, such as the 'JokeManager' class from the previous section is significantly easier than writing them for program contained in "Main" in its entirety.
+Unit testing tends to be extremely complicated if the whole application has been written in "Main". To make testing easier, the app should be split into small parts, each having a clear responsibility. In the previous section, we practiced this when we seperated the user interface from the application logic. Writing tests for parts of an application, such as the 'JokeManager' class from the previous section is significantly easier than writing them for program contained in "Main" in its entirety.
 
 </text-box>
 
@@ -553,7 +553,7 @@ Testivetoinen ohjelmistokehitys koostuu viidestä askeleesta, joita toistetaan k
 
 <a href="https://en.wikipedia.org/wiki/Test-driven_development" target="_blank" rel="noopener"> Test-driven development </a> is a software development process that's based on constructing a piece of software in small iterations. In test-driven software development, the first thing a programmer always does is write an automatically-executable test, which tests a single piece of the computer program.
 
-The test will not pass because the functionality that satisfies the test, i.e., the part of the computer program to be examined, is missing. Once the test has been written, functionality that meets the test requirements is added to the program. The tests are run again. If all tests pass, a new test is added, or alternatively, if the tests fail, the already-written program is corrected. If necessary, the internal structure of the program will be corrected or refactored, so that the functionality of the program remains the same, but the structure becomes clearer.
+The test will not pass because the functionality that satisfies the test, i.e., the part of the computer program to be examined, is missing. Once the test has been written, functionality that meets the test requirements is added to the program. The tests are then run again. If all tests pass, a new test is added, or alternatively, if the tests fail, the already-written program is corrected. If necessary, the internal structure of the program will be corrected or refactored, so that the functionality of the program remains the same, but the structure becomes clearer.
 
 Test-driven software development consists of five steps that are repeated until the functionality of the program is complete.
 
@@ -601,7 +601,7 @@ Update the `partsCompleted` class method of the MainProgram to return the highes
 
 <!-- Esimerkiksi, kun olet saanut ensimmäisen osan tehtyä eli noudattanut esimerkkiä refaktorointiin asti, olet vaiheessa 1, jolloin metodin `osiaToteutettu` tulisi palautta arvo `1`. -->
 
-If you crave to develop the program further (not awarded with points), you can try using test-driven development to first write a test (or a few) for removing exercises, and then implement that feature in your program. This is purely for your own amusement and is not reflected in the points in any manner!
+If you desire to develop the program further (not awarded with points), you can try using test-driven development to first write a test (or a few) for removing exercises, and then implement that feature in your program. This is purely for your own amusement and is not reflected in the points in any manner!
 
 </programming-exercise>
 
