@@ -842,13 +842,17 @@ Try this out. Make some boxes containing some items, and add some smaller boxes 
 
 
 
-## Rajapinta metodin paluuarvona
+<!-- ## Rajapinta metodin paluuarvona -->
+
+## Interface as a return type of a method
 
 
-Kuten mitä tahansa muuttujan tyyppiä, myös rajapintaa voi käyttää metodin paluuarvona. Seuraavassa `Tehdas`, jota voi pyytää valmistamaan erilaisia `Talletettava`-rajapinnan toteuttavia oliota. Tehdas valmistaa aluksi satunnaisesti kirjoja ja levyjä.
+<!-- Kuten mitä tahansa muuttujan tyyppiä, myös rajapintaa voi käyttää metodin paluuarvona. Seuraavassa `Tehdas`, jota voi pyytää valmistamaan erilaisia `Talletettava`-rajapinnan toteuttavia oliota. Tehdas valmistaa aluksi satunnaisesti kirjoja ja levyjä -->
+
+Interfaces can be used as return types in methods -- just like regular variable types. In the next example is a class `Factory` that can be asked to construct differerent objects that implement the `Storable` interface.
 
 
-```java
+<!-- ```java
 import java.util.Random;
 
 public class Tehdas {
@@ -877,40 +881,98 @@ public class Tehdas {
         }
     }
 }
-```
-
-
-Tehdasta on mahdollista käyttää tuntematta tarkalleen mitä erityyppisiä Talletettava-rajapinnan luokkia on olemassa. Seuraavassa luokka Pakkaaja, jolta voi pyytää laatikollisen esineitä. Pakkaaja tuntee tehtaan, jota se pyytää luomaan esineet:
-
+``` -->
 
 ```java
-public class Pakkaaja {
-    private Tehdas tehdas;
+import java.util.Random;
 
-    public Pakkaaja() {
-        this.tehdas = new Tehdas();
+public class Factory {
+
+    public Factory() {
+        // Note that there is no need to write an empy constructor without
+        // paramatesr if the class doesn't have other constructors.
+        // In these cases Java automatically creates a default constructor for
+        // the class which is an empty constructor without parameters.
     }
 
-    public Laatikko annaLaatikollinen() {
-         Laatikko laatikko = new Laatikko(100);
+    public Storable produceNew() {
+        // The Random-object used here can be used to draw random numbers.
+        Random ticket = new Random();
+        // Draws a number from the range [0, 4[. The number will be 0, 1, 2, or 3.
+        int number = ticket.nextInt(4);
+
+        if (number == 0) {
+            return new CDDisk("Pink Floyd", "Dark Side of the Moon", 1973);
+        } else if (number == 1) {
+            return new CDDisk("Wigwam", "Nuclear Nightclub", 1975);
+        } else if (number == 2) {
+            return new Book("Robert Martin", "Clean Code", 1);
+        } else {
+            return new Book("Kent Beck", "Test Driven Development", 0.7);
+        }
+    }
+}
+
+
+// Tehdasta on mahdollista käyttää tuntematta tarkalleen mitä erityyppisiä Talletettava-rajapinnan luokkia on olemassa. Seuraavassa luokka Pakkaaja, jolta voi pyytää laatikollisen esineitä. Pakkaaja tuntee tehtaan, jota se pyytää luomaan esineet:
+
+The Factory can be used without excatly knowing what differend kind of Storable classes exist. In the next example there is a class Packer that gives a box of things. A packer knows a factory which is used to create the things:
+
+
+// ```java
+// public class Pakkaaja {
+//     private Tehdas tehdas;
+
+//     public Pakkaaja() {
+//         this.tehdas = new Tehdas();
+//     }
+
+//     public Laatikko annaLaatikollinen() {
+//          Laatikko laatikko = new Laatikko(100);
+
+//          int i = 0;
+//          while (i < 10) {
+//              Talletettava uusiTavara = tehdas.valmistaUusi();
+//              laatikko.lisaa(uusiTavara);
+
+//              i = i + 1;
+//          }
+
+//          return laatikko;
+//     }
+// }
+// ```
+
+```java
+public class Packer {
+    private Factory factory;
+
+    public Packer() {
+        this.factory = new Factory();
+    }
+
+    public Box giveABoxOfThings() {
+         Box box = new Box(100);
 
          int i = 0;
          while (i < 10) {
-             Talletettava uusiTavara = tehdas.valmistaUusi();
-             laatikko.lisaa(uusiTavara);
+             Storeable newThing = factory.produceNew();
+             box.add(newThing);
 
              i = i + 1;
          }
 
-         return laatikko;
+         return box;
     }
 }
 ```
 
-Koska pakkaaja ei tunne rajapinnan `Talletettava` toteuttavia luokkia, on ohjelmaan mahdollisuus lisätä uusia luokkia jotka toteuttavat rajapinnan ilman tarvetta muuttaa pakkaajaa. Seuraavassa on luotu uusi Talletettava-rajapinnan toteuttava luokka, `Suklaalevy`. Tehdasta on muutettu siten, että se luo kirjojen ja cd-levyjen lisäksi suklaalevyjä. Luokka `Pakkaaja` toimii muuttamatta tehtaan laajennetun version kanssa.
+<!-- Koska pakkaaja ei tunne rajapinnan `Talletettava` toteuttavia luokkia, on ohjelmaan mahdollisuus lisätä uusia luokkia jotka toteuttavat rajapinnan ilman tarvetta muuttaa pakkaajaa. Seuraavassa on luotu uusi Talletettava-rajapinnan toteuttava luokka, `Suklaalevy`. Tehdasta on muutettu siten, että se luo kirjojen ja cd-levyjen lisäksi suklaalevyjä. Luokka `Pakkaaja` toimii muuttamatta tehtaan laajennetun version kanssa. -->
+
+Because the packer does not know the classes that implement the interface `Storable`, one can add new classes that impement the interface without changing the packer. The next example creates a new class that implements the Storable interface `ChocolateBar`. The factory has been changed so that it creates chocolate bars in addition to books and cds. The class `Packer` works without changes with the updated version of the factory.
 
 
-```java
+<!-- ```java
 public class Suklaalevy implements Talletettava {
     // koska Javan generoima oletuskonstruktori riittää, emme tarvitse konstruktoria!
 
@@ -918,9 +980,20 @@ public class Suklaalevy implements Talletettava {
         return 0.2;
     }
 }
-```
+``` -->
 
 ```java
+public class ChocolateBar implements Storable {
+    // Because Java's automatically generated default constructor is enough,
+    // we don't need a constructor
+
+    public double weight() {
+        return 0.2;
+    }
+}
+```
+
+<!-- ```java
 import java.util.Random;
 
 public class Tehdas {
@@ -944,55 +1017,110 @@ public class Tehdas {
         }
     }
 }
+``` -->
+
+```java
+import java.util.Random;
+
+public class Factory {
+    // Because Java's automatically generated default constructor is enough,
+    // we don't need a constructor
+
+    public Storable produceNew() {
+
+        Random ticket = new Random();
+        int number = ticket.nextInt(5);
+
+        if (number == 0) {
+            return new CDDisk("Pink Floyd", "Dark Side of the Moon", 1973);
+        } else if (number == 1) {
+            return new CDDisk("Wigwam", "Nuclear Nightclub", 1975);
+        } else if (number == 2) {
+            return new Book("Robert Martin", "Clean Code", 1 );
+        } else if (number == 3) {
+            return new Book("Kent Beck", "Test Driven Development", 0.7);
+        } else {
+            return new ChocolateBar();
+        }
+    }
+}
 ```
 
 
 <quiz id="24da92ae-94f3-5eed-8d6d-fc27c06afa0b"></quiz>
 
-<text-box variant='hint' name='Luokkien välisten riippuvuuksien vähentäminen'>
+<!-- <text-box variant='hint' name='Luokkien välisten riippuvuuksien vähentäminen'>
 
 Rajapintojen käyttö ohjelmoinnissa mahdollistaa luokkien välisten riippuvaisuuksien vähentämisen. Esimerkissämme Pakkaaja ei ole riippuvainen rajapinnan Talletettava-toteuttavista luokista vaan ainoastaan rajapinnasta. Tämä mahdollistaa rajapinnan toteuttavien luokkien lisäämisen ohjelmaan ilman tarvetta muuttaa luokkaa Pakkaaja. Myöskään pakkaaja-luokkaa käyttäviin luokkiin uusien Talletettava-rajapinnan toteuttavien luokkien lisääminen ei vaikuta.
 
 Vähäisemmät riippuvuudet helpottavat ohjelman laajennettavuutta.
 
+</text-box> -->
+
+<text-box variant='hint' name='Reducing the dependencies between classes'>
+
+Using interfaces in programmign enables reducing dependencies between classes. In the previous example the Packer does not depend on the classes that implement the Storable interface. Instead, it just depends on the interface. This makes possible to add new classes that implement the interface without changing the Packer class. What is more, adding new Storable classes doesn't affect the classes that use the Packer class.
+
 </text-box>
 
 
-## Valmiit rajapinnat
+## Built-in interfaces
 
 
-Javan API tarjoaa huomattavan määrän valmiita rajapintoja. Tutustutaan tässä neljään usein käytettyyn rajapintaan: <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" target="_blank">List</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html" target="_blank">Map</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html" target="_blank">Set</a> ja <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html" target="_blank">Collection</a>.
+<!-- Javan API tarjoaa huomattavan määrän valmiita rajapintoja. Tutustutaan tässä neljään usein käytettyyn rajapintaan: <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" target="_blank">List</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html" target="_blank">Map</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html" target="_blank">Set</a> ja <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html" target="_blank">Collection</a>. -->
 
-<br/>
-
-### List-rajapinta
-
-
-Rajapinta <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a> määrittelee listoihin liittyvän peruskäyttäytymisen. Koska ArrayList-luokka toteuttaa `List`-rajapinnan, voi sitä käyttää myös `List`-rajapinnan kautta.
+<p>Java offers a considerable amount of built-in interfaces. Here we'll get familiar with four commonly used interfaces: <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" target="_blank">List</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html" target="_blank">Map</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html" target="_blank">Set</a>, and <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html" target="_blank">Collection</a>.</p>
 
 <br/>
 
-```java
+<!-- ### List-rajapinta -->
+### List-interface
+
+<!-- Rajapinta <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a> määrittelee listoihin liittyvän peruskäyttäytymisen. Koska ArrayList-luokka toteuttaa `List`-rajapinnan, voi sitä käyttää myös `List`-rajapinnan kautta. -->
+
+<p>Interface <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a> defines the basic functionality related to lists. Because the ArrayList class implements the `List` interface, one can also use it through the `List` interface.</p>
+
+<br/>
+
+<!-- ```java
 List<String> merkkijonot = new ArrayList<>();
 merkkijonot.add("merkkijono-olio arraylist-oliossa!");
+``` -->
+
+```java
+List<String> strings = new ArrayList<>();
+strings.add("string objects inside an arraylist object!");
 ```
 
-Kuten huomaamme <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" target="_blank">List-rajapinnan Java API</a>:sta, rajapinnan `List` toteuttavia luokkia on useita. Eräs tietojenkäsittelijöille tuttu listarakenne on linkitetty lista (<a href="http://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html" target="_blank">linked list</a>). Linkitettyä listaa voi käyttää rajapinnan List-kautta täysin samoin kuin ArrayLististä luotua oliota.
+<!-- Kuten huomaamme <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" target="_blank">List-rajapinnan Java API</a>:sta, rajapinnan `List` toteuttavia luokkia on useita. Eräs tietojenkäsittelijöille tuttu listarakenne on linkitetty lista (<a href="http://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html" target="_blank">linked list</a>). Linkitettyä listaa voi käyttää rajapinnan List-kautta täysin samoin kuin ArrayLististä luotua oliota. -->
+
+<p>As we can see fom the <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" target="_blank">Java API</a> of List, there are many classes that implement the `List` interdface. One list that is familiar to computer scientists is a (<a href="http://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html" target="_blank">linked list</a>). A linked list can be used through the List interface exactly the same way as an object created from ArrayList.</p>
 
 <br/>
 
-```java
+<!-- ```java
 List<String> merkkijonot = new LinkedList<>();
 merkkijonot.add("merkkijono-olio linkedlist-oliossa!");
+``` -->
+
+```java
+List<String> strings = new LinkedList<>();
+strings.add("string objects inside a linkedlist object!");
 ```
 
-Molemmat rajapinnan `List` toteutukset toimivat käyttäjän näkökulmasta samoin. Rajapinta siis *abstrahoi* niiden sisäisen toiminnallisuuden. ArrayListin ja LinkedListin sisäinen rakenne on kuitenkin huomattavan erilainen. ArrayList tallentaa alkioita taulukkoon, josta tietyllä indeksillä hakeminen on nopeaa. LinkedList taas rakentaa listan, jossa jokaisessa listan alkiossa on viite seuraavan listan alkioon. Kun linkitetyssä listassa haetaan alkiota tietyllä indeksillä, tulee listaa käydä läpi alusta indeksiin asti.
+<!-- Molemmat rajapinnan `List` toteutukset toimivat käyttäjän näkökulmasta samoin. Rajapinta siis *abstrahoi* niiden sisäisen toiminnallisuuden. ArrayListin ja LinkedListin sisäinen rakenne on kuitenkin huomattavan erilainen. ArrayList tallentaa alkioita taulukkoon, josta tietyllä indeksillä hakeminen on nopeaa. LinkedList taas rakentaa listan, jossa jokaisessa listan alkiossa on viite seuraavan listan alkioon. Kun linkitetyssä listassa haetaan alkiota tietyllä indeksillä, tulee listaa käydä läpi alusta indeksiin asti. -->
+
+From the perspective of the user, both implementations of the `List` interface work the same way. The inteface *abstracts* their inner functionality. The internal structures of `ArrayList` and `LinkedList` differs quite a bit. ArrayList saves objects to an array where fetching an object with a specific index is very fast. On the other hand LinkedList constructs a list where each element contains a reference to the next element in the list. When one searches for an object by index in a linked list, one has to go though the list from the beginning until the index.
 
 
-Isoilla listoille voimme nähdä huomattaviakin suorituskykyeroja. Linkitetyn listan vahvuutena on se, että listaan lisääminen on aina nopeaa. ArrayListillä taas taustalla on taulukko, jota täytyy kasvattaa aina kun se täyttyy. Taulukon kasvattaminen vaatii uuden taulukon luonnin ja vanhan taulukon tietojen kopioinnin uuteen taulukkoon. Toisaalta, indeksin perusteella hakeminen on Arraylististä erittäin nopeaa, kun taas linkitetyssä listassa joudutaan käymään listan alkioita yksitellen läpi tiettyyn indeksiin pääsemiseksi.
+<!-- Isoilla listoille voimme nähdä huomattaviakin suorituskykyeroja. Linkitetyn listan vahvuutena on se, että listaan lisääminen on aina nopeaa. ArrayListillä taas taustalla on taulukko, jota täytyy kasvattaa aina kun se täyttyy. Taulukon kasvattaminen vaatii uuden taulukon luonnin ja vanhan taulukon tietojen kopioinnin uuteen taulukkoon. Toisaalta, indeksin perusteella hakeminen on Arraylististä erittäin nopeaa, kun taas linkitetyssä listassa joudutaan käymään listan alkioita yksitellen läpi tiettyyn indeksiin pääsemiseksi. -->
+
+One can see noticeable performcance differences between list implementations if the lists are big enough. The strength of linked list is that adding to it is always fast. ArrayList, on the other hand, is backed by an array which needs to be resized each time it gets full. Resizing the array requires creating a new array and copying the values from the old array to the new one.  On the other hand searching objects by index is much faster in array list compared to linked list.
 
 
-Tällä ohjelmointikurssilla eteen tulevissa tilanteissa kannattanee käytännössä valita aina ArrayList. "Rajapintoihin ohjelmointi" kuitenkin kannattaa: toteuta ohjelmasi siten, että käytät tietorakenteita rajapintojen kautta.
+<!-- Tällä ohjelmointikurssilla eteen tulevissa tilanteissa kannattanee käytännössä valita aina ArrayList. "Rajapintoihin ohjelmointi" kuitenkin kannattaa: toteuta ohjelmasi siten, että käytät tietorakenteita rajapintojen kautta. -->
+
+For the problems that you encounter during this course you should almost always choose ArrayList. However, "Programming to interfaces" is beneficial: implement your programs so that you'll use the data structures through the interfaces.
 
 
 <programming-exercise name='List as a method parameter' tmcname='part09-Part09_07.ListAsAMethodParameter'>
