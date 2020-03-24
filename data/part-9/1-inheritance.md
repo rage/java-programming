@@ -1,7 +1,7 @@
 ---
 path: '/part-9/1-inheritance'
 title: 'Class inheritance'
-hidden: true
+hidden: false
 ---
 
 

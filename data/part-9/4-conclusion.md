@@ -1,7 +1,7 @@
 ---
 path: '/part-9/4-summary'
 title: 'Summary'
-hidden: true
+hidden: false
 ---
 <!-- Kurssin yhdeksännessä osassa tutustuttiin muutamaan olio-ohjelmoinnin piirteeseen -- perintään ja olioiden monimuotoisuuteen, joiden lisäksi tutustuimme myös rajapintoihin. Koska jokainen olio on oman tyyppinsä lisäksi Object-tyyppinen, voi ohjelmoinnissa käytettävien kirjastojen (kuten vaikkapa listan tai hajautustaulun) suunnittelija olettaa, että jokaisella oliolla on metodit `toString`, `hashCode`, ja `equals`. Tämän lisäksi, koska jokainen olio voidaan antaa parametrina kaikille niille metodeille ja konstruktoreille, jotka saavat parametrinaan olioon liittyvän luokan tyyppisiä olioita, mitä tahansa luokkia, joita olion luokka on perinyt, tai mitä tahansa rajapintoja, joita olion luokka tai sen perimät luokat ovat toteuttaneet, voidaan ohjelmiin toteuttaa metodeja ja konstruktoreita, jotka käsittelevät hyvin monentyyppisiä olioita. Tämä mahdollistaa muunmuassa ohjelmien laajennettavuuden ja helpottaa ongelma-alueen kuvaamista ja käsittelyä luokkien sekä niistä tehtyjen olioiden avulla. -->
 

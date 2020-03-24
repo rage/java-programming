@@ -2,7 +2,7 @@
 path: '/part-9'
 title: 'Part 9'
 overview: true
-hidden: true
+hidden: false
 ---
 
 <!-- Kurssimateriaalin yhdeksännessä osassa tutustutaan kahteen olio-ohjelmoinnin keskeiseen käsitteeseen eli perintään ja rajapintoihin. Opit luomaan luokkia, jotka periytyvät toisesta luokasta ja opit luomaan luokkia, jotka toteuttavat yhden tai useamman rajapinnan. Tulet myös huomaamaan, että olio voidaan esittää kaikkien sen todellisten tyyppien avulla. -->

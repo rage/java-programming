@@ -1,7 +1,7 @@
 ---
 path: '/part-9/3-object-polymorphism'
 title: 'Object polymorphism'
-hidden: true
+hidden: false
 ---
 
 

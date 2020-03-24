@@ -28,7 +28,6 @@ const courseSettings = {
     { separator: true, title: "Java Programming I" },
   ],
   sidebarFuturePages: [
-    { title: "Part 9", tba: "24.3." },
     { title: "Part 10", tba: "31.3." },
     { title: "Part 11", tba: "7.4." },
     { title: "Part 12", tba: "21.4." },
