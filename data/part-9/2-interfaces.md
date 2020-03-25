@@ -849,7 +849,7 @@ Try this out. Make some boxes containing some items, and add some smaller boxes 
 
 <!-- Kuten mitä tahansa muuttujan tyyppiä, myös rajapintaa voi käyttää metodin paluuarvona. Seuraavassa `Tehdas`, jota voi pyytää valmistamaan erilaisia `Talletettava`-rajapinnan toteuttavia oliota. Tehdas valmistaa aluksi satunnaisesti kirjoja ja levyjä -->
 
-Interfaces can be used as return types in methods -- just like regular variable types. In the next example is a class `Factory` that can be asked to construct differerent objects that implement the `Storable` interface.
+Interfaces can be used as return types in methods -- just like regular variable types. In the next example is a class `Factory` that can be asked to construct differerent objects that implement the `Packable` interface.
 
 
 <!-- ```java
@@ -895,16 +895,16 @@ public class Factory {
         // the class which is an empty constructor without parameters.
     }
 
-    public Storable produceNew() {
+    public Packable produceNew() {
         // The Random-object used here can be used to draw random numbers.
         Random ticket = new Random();
         // Draws a number from the range [0, 4[. The number will be 0, 1, 2, or 3.
         int number = ticket.nextInt(4);
 
         if (number == 0) {
-            return new CDDisk("Pink Floyd", "Dark Side of the Moon", 1973);
+            return new CD("Pink Floyd", "Dark Side of the Moon", 1973);
         } else if (number == 1) {
-            return new CDDisk("Wigwam", "Nuclear Nightclub", 1975);
+            return new CD("Wigwam", "Nuclear Nightclub", 1975);
         } else if (number == 2) {
             return new Book("Robert Martin", "Clean Code", 1);
         } else {
@@ -916,32 +916,32 @@ public class Factory {
 
 // Tehdasta on mahdollista käyttää tuntematta tarkalleen mitä erityyppisiä Talletettava-rajapinnan luokkia on olemassa. Seuraavassa luokka Pakkaaja, jolta voi pyytää laatikollisen esineitä. Pakkaaja tuntee tehtaan, jota se pyytää luomaan esineet:
 
-The Factory can be used without excatly knowing what differend kind of Storable classes exist. In the next example there is a class Packer that gives a box of things. A packer knows a factory which is used to create the things:
+The Factory can be used without excatly knowing what differend kind of Packable classes exist. In the next example there is a class Packer that gives a box of things. A packer knows a factory which is used to create the things:
 
 
-// ```java
-// public class Pakkaaja {
-//     private Tehdas tehdas;
+ <!-- ```java
+ public class Pakkaaja {
+     private Tehdas tehdas;
 
-//     public Pakkaaja() {
-//         this.tehdas = new Tehdas();
-//     }
+     public Pakkaaja() {
+         this.tehdas = new Tehdas();
+     }
 
-//     public Laatikko annaLaatikollinen() {
-//          Laatikko laatikko = new Laatikko(100);
+     public Laatikko annaLaatikollinen() {
+          Laatikko laatikko = new Laatikko(100);
 
-//          int i = 0;
-//          while (i < 10) {
-//              Talletettava uusiTavara = tehdas.valmistaUusi();
-//              laatikko.lisaa(uusiTavara);
+          int i = 0;
+          while (i < 10) {
+              Talletettava uusiTavara = tehdas.valmistaUusi();
+              laatikko.lisaa(uusiTavara);
 
-//              i = i + 1;
-//          }
+              i = i + 1;
+          }
 
-//          return laatikko;
-//     }
-// }
-// ```
+          return laatikko;
+     }
+ }
+ ``` -->
 
 ```java
 public class Packer {
@@ -956,7 +956,7 @@ public class Packer {
 
          int i = 0;
          while (i < 10) {
-             Storeable newThing = factory.produceNew();
+             Packable newThing = factory.produceNew();
              box.add(newThing);
 
              i = i + 1;
@@ -983,7 +983,7 @@ public class Suklaalevy implements Talletettava {
 ``` -->
 
 ```java
-public class ChocolateBar implements Storable {
+public class ChocolateBar implements Packable {
     // Because Java's automatically generated default constructor is enough,
     // we don't need a constructor
 
@@ -1026,7 +1026,7 @@ public class Factory {
     // Because Java's automatically generated default constructor is enough,
     // we don't need a constructor
 
-    public Storable produceNew() {
+    public Packable produceNew() {
 
         Random ticket = new Random();
         int number = ticket.nextInt(5);
