@@ -11,7 +11,7 @@ hidden: false
 <!-- - Tunnet käsitteen perintähierarkia.
 - Ymmärrät että olio voidaan esittää kaikkien sen todellisten tyyppien avulla. -->
 - You are familiar with the concept of inheritance hierarchy.
-- You understand that an object can be represented through all its actual types.
+- You understand that an object can be represented through all of its actual types.
 
 
 
@@ -61,7 +61,7 @@ Jokainen muuttuja voidaan esittää muuttujan alkuperäisen tyypin lisäksi myö
 
 What is this all about?
 
-In addition to each variable's original type, each variable can also be represented by the types of interfaces it implements and classes that it inherits. The String class inherits the Object class and, as such, String objects are always of type Object. The Object class does not inherit a String class, so Object-type variables are not automatically of type String. Take a closer look at the <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html"> String </a> API documentation, the top of the HTML page in particular.
+In addition to each variable's original type, each variable can also be represented by the types of interfaces it implements and classes that it inherits. The String class inherits the Object class and, as such, String objects are always of type Object. The Object class does not inherit a String class, so Object-type variables are not automatically of type String. Take a closer look at the <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html"> String </a> API documentation, in particular at the top of the HTML page.
 
 <!-- <img src="../img/material/string-api-perinta.png" alt="Kuvakaappaus String-luokan API-dokumentaatiosta. Kuvakaappauksessa näkyy, että String-luokka perii luokan Object."/> -->
 <img src="../img/material/string-api-perinta.png" alt="A screenshot of the String Class API documentation. The screenshot shows that the String class inherits the class Object."/>
@@ -83,13 +83,13 @@ Perintähierarkiaa voi ajatella myös listana tyypeistä, joita olio toteuttaa.
 
 
 Tieto siitä, että oliot voivat olla montaa eri tyyppiä -- esimerkiksi tyyppiä Object -- suoraviivaistaa ohjelmointia. Jos tarvitsemme metodissa vain Object-luokassa määriteltyjä metodeja kuten `toString`, `equals` ja `hashCode`, voimme käyttää metodin parametrina tyyppiä `Object`. Tällöin metodille voi antaa parametrina *minkä tahansa* olion. Tarkastellaan tätä metodin `tulostaMonesti` avulla. Metodi saa parametrinaan `Object`-tyyppisen muuttujan ja tulostusten lukumäärän. -->
-The inheritance hierarchy lists all the classes that the given class has inherited. Inherited classes are listed in the order of inheritance, with class being inspected always at the bottom. In the inheritance hierarchy of the String class, we see that the `String` class inherits the `Object` class. *In Java, each class can inherit one class at most*. On the other hand, the inherited class may have inherited another class. As such, a class may indirectly inherit more than a signle class.
+The inheritance hierarchy lists all the classes that the given class has inherited. Inherited classes are listed in the order of inheritance, with class being inspected always at the bottom. In the inheritance hierarchy of the String class, we see that the `String` class inherits the `Object` class. *In Java, each class can inherit one class at most*. On the other hand, the inherited class may have inherited another class. As such, a class may indirectly inherit more than a single class.
 
 
 The inheritance hierarchy can also be thought of as a list of the different types that the class implements.
 
 
-Knowledge of the fact that objects can be of many different types -- of type Object, for instance -- makes programming simpler. If we only need methods defined in the Object class, such as `toString`, `equals` and `hashCode` in a method, we can simply use `Object` as the type of the method parameter. In that case, you can pass the method **any* object as a parameter. Let's take a look at this with the `printManyTimes` method. The method gets an `Object`-type variable and the number of print operations as its parameters.
+Knowledge of the fact that objects can be of many different types -- of type Object, for instance -- makes programming simpler. If we only need methods defined in the Object class, such as `toString`, `equals` and `hashCode` in a method, we can simply use `Object` as the type of the method parameter. In that case, you can pass the method for *any* object as a parameter. Let's take a look at this with the `printManyTimes` method. The method gets an `Object`-type variable and the number of print operations as its parameters.
 
 <!-- ```java
 public class Tulostin {
@@ -147,8 +147,8 @@ words.add("inheritance");
 words.add("encapsulation");
 words.add("abstraction");
 
-printer.tulostaMonesti(string, 2);
-printer.tulostaMonesti(words, 3);
+printer.printManyTimes(string, 2);
+printer.printManyTimes(words, 3);
 ```
 
 <!-- <sample-output>
@@ -244,7 +244,7 @@ public class Printer {
 ```
 
 <!-- Metodille `tulostaMerkit` voi antaa minkä tahansa `CharSequence`-rajapinnan toteuttavan olion. Näitä ovat muun muassa `String` ja merkkijonojen rakentamisessa usein Stringiä tehokkaampi `StringBuilder`. Metodi `tulostaMerkit` tulostaa annetun olion jokaisen merkin omalle rivilleen. -->
-The `printCharacters` method can be passed any object that implements the `CharSequence` interface. These include `String` as well as `StringBuilder`, which is often more performant in building strings than `String`. The `printCharacters` method prints each character of a given object on its own line.
+The `printCharacters` method can be passed any object that implements the `CharSequence` interface. These include `String` as well as `StringBuilder`, which is often more functional for building strings than `String`. The `printCharacters` method prints each character of a given object on its own line.
 
 <!-- ```java
 Tulostin tulostin = new Tulostin();
@@ -258,7 +258,7 @@ Printer printer = new Printer();
 
 String string = "works";
 
-printer.tulostaMerkit(string);
+printer.printCharacters(string);
 ```
 
 <!-- <sample-output>
@@ -281,11 +281,11 @@ s
 
 </sample-output>
 
-<programming-exercise name='Herds (2 osaa)' tmcname='part09-Part09_11.Herds' nocoins='true'>
+<programming-exercise name='Herds (2 points)' tmcname='part09-Part09_11.Herds' nocoins='true'>
 
 <!-- Tässä tehtävässä teemme eliöita ja eliöistä koostuvia laumoja jotka liikkuvat ympäriinsä. Eliöiden sijaintien ilmoittamiseen käytetään *kaksiulotteista koordinaatistoa*. Jokaiseen sijaintiin liittyy kaksi lukua, `x`- ja `y`-koordinaatti. Koordinaatti `x` kertoo, kuinka pitkällä "nollapisteestä" mitattuna sijainti on vaakasuunnassa, ja koordinaatti `y` vastaavasti kuinka pitkällä sijainti on pystysuunnassa. Jos koordinaatiston käsite ei ole tuttu, voit lukea siitä lisää esimerkiksi <a href="http://fi.wikipedia.org/wiki/Koordinaatisto">wikipediasta</a>. -->
 
-In this exercise we are going to create organisms and herds of organisms that can move around. To represent the locations of the organisms we'll use a **two-dimensional coordinate system**. Each position involves two numbers: `x` and `y` coordinates. The `x` coordinate indicates how far from the (i.e. point zero, where x = 0, y = 0) that position is horizontally. The `y` coordinate indicates the distance from the origin vertically. If you are not familiar with using a coordinate system, you can study the basics from e.g.  [Wikipedia](https://en.wikipedia.org/wiki/Cartesian_coordinate_system).
+In this exercise we are going to create organisms and herds of organisms that can move around. To represent the locations of the organisms we'll use a **two-dimensional coordinate system**. Each position involves two numbers: `x` and `y` coordinates. The `x` coordinate indicates how far from the origin (i.e. point zero, where x = 0, y = 0) that position is horizontally. The `y` coordinate indicates the distance from the origin vertically. If you are not familiar with using a coordinate system, you can study the basics from  [Wikipedia](https://en.wikipedia.org/wiki/Cartesian_coordinate_system).
 
 <br/>
 
@@ -295,7 +295,7 @@ The exercise base includes the interface `Movable`, which represents something t
 
 <!-- Tehtävässä toteutat luokat `Elio` ja `Lauma`, jotka molemmat ovat siirrettäviä. -->
 
-This exercise consists of you implementing the classes `Organism` and `Herd`, both of which are movable.
+This exercise involves implementing the classes `Organism` and `Herd`, both of which are movable.
 
 
 <!-- <h2>Elio-luokan toteuttaminen</h2> -->
@@ -379,10 +379,10 @@ System.out.println(lauma);
 
 ```java
 Herd herd = new Herd();
-herd.lisaaLaumaan(new Organism(57, 66));
-herd.lisaaLaumaan(new Organism(73, 56));
-herd.lisaaLaumaan(new Organism(46, 52));
-herd.lisaaLaumaan(new Organism(19, 107));
+herd.addToHerd(new Organism(57, 66));
+herd.addToHerd(new Organism(73, 56));
+herd.addToHerd(new Organism(46, 52));
+herd.addToHerd(new Organism(19, 107));
 System.out.println(herd);
 ```
 
@@ -473,7 +473,7 @@ Fido barks
 
 <!-- Toteuta seuraavaksi luokka `Kissa`, joka perii luokan Elain. Luokalla Kissa tulee olla parametrillinen konstruktori, jolla luotavalle kissaoliolle voi antaa nimen. Tämän lisäksi kissalla tulee olla parametriton konstruktori, jolla kissan nimeksi tulee "Kissa" sekä parametriton metodi mourua, joka ei palauta arvoa (void). Kissalla tulee olla myös metodit syo ja nuku kuten ensimmäisessä osassa. -->
 
-Next to implement is the class `Cat`, that also inherits from the Animal class. Cat should have two constructors: one with a parameter, used to name the cat according to the parameter, and one without parameters, in which case the name is simply "Cat". Another methd for Cat is a non-parameterized method called purr that returns no value (void). Cats should be able to eat and sleep like in the first part.
+Next to implement is the class `Cat`, that also inherits from the Animal class. Cat should have two constructors: one with a parameter, used to name the cat according to the parameter, and one without parameters, in which case the name is simply "Cat". Another method for Cat is a non-parameterized method called purr that returns no value (void). Cats should be able to eat and sleep like in the first part.
 
 <!-- Alla on esimerkki luokan Kissa odotetusta toiminnasta: -->
 
