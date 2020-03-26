@@ -83,13 +83,13 @@ Perintähierarkiaa voi ajatella myös listana tyypeistä, joita olio toteuttaa.
 
 
 Tieto siitä, että oliot voivat olla montaa eri tyyppiä -- esimerkiksi tyyppiä Object -- suoraviivaistaa ohjelmointia. Jos tarvitsemme metodissa vain Object-luokassa määriteltyjä metodeja kuten `toString`, `equals` ja `hashCode`, voimme käyttää metodin parametrina tyyppiä `Object`. Tällöin metodille voi antaa parametrina *minkä tahansa* olion. Tarkastellaan tätä metodin `tulostaMonesti` avulla. Metodi saa parametrinaan `Object`-tyyppisen muuttujan ja tulostusten lukumäärän. -->
-The inheritance hierarchy lists all the classes that the given class has inherited. Inherited classes are listed in the order of inheritance, with class being inspected always at the bottom. In the inheritance hierarchy of the String class, we see that the `String` class inherits the `Object` class. *In Java, each class can inherit one class at most*. On the other hand, the inherited class may have inherited another class. As such, a class may indirectly inherit more than a signle class.
+The inheritance hierarchy lists all the classes that the given class has inherited. Inherited classes are listed in the order of inheritance, with class being inspected always at the bottom. In the inheritance hierarchy of the String class, we see that the `String` class inherits the `Object` class. *In Java, each class can inherit one class at most*. On the other hand, the inherited class may have inherited another class. As such, a class may indirectly inherit more than a single class.
 
 
 The inheritance hierarchy can also be thought of as a list of the different types that the class implements.
 
 
-Knowledge of the fact that objects can be of many different types -- of type Object, for instance -- makes programming simpler. If we only need methods defined in the Object class, such as `toString`, `equals` and `hashCode` in a method, we can simply use `Object` as the type of the method parameter. In that case, you can pass the method **any* object as a parameter. Let's take a look at this with the `printManyTimes` method. The method gets an `Object`-type variable and the number of print operations as its parameters.
+Knowledge of the fact that objects can be of many different types -- of type Object, for instance -- makes programming simpler. If we only need methods defined in the Object class, such as `toString`, `equals` and `hashCode` in a method, we can simply use `Object` as the type of the method parameter. In that case, you can pass the method *any* object as a parameter. Let's take a look at this with the `printManyTimes` method. The method gets an `Object`-type variable and the number of print operations as its parameters.
 
 <!-- ```java
 public class Tulostin {
@@ -147,8 +147,8 @@ words.add("inheritance");
 words.add("encapsulation");
 words.add("abstraction");
 
-printer.tulostaMonesti(string, 2);
-printer.tulostaMonesti(words, 3);
+printer.printManyTimes(string, 2);
+printer.printManyTimes(words, 3);
 ```
 
 <!-- <sample-output>
@@ -182,7 +182,7 @@ Let's continue to look at the API description of the `String` class. The inherit
 
 
 <!-- Luokka `String` toteuttaa rajapinnat `Serializable`, `CharSequence`, ja `Comparable<String>`. Myös rajapinta on tyyppi. Luokan String API-kuvauksen mukaan String-olion tyypiksi voi asettaa seuraavat rajapinnat. -->
-The `String` class implements the `Serializable`, `CharSequence`, and `Comparable <String>` interfaces. An interface is also a type. According to the class' API description, the following interfaces can be set as the type of a String object.
+The `String` class implements the `Serializable`, `CharSequence`, and `Comparable<String>` interfaces. An interface is also a type. According to the class' API description, the following interfaces can be set as the type of a String object.
 
 <!-- ```java
 Serializable serializableString = "merkkijono";
@@ -244,7 +244,7 @@ public class Printer {
 ```
 
 <!-- Metodille `tulostaMerkit` voi antaa minkä tahansa `CharSequence`-rajapinnan toteuttavan olion. Näitä ovat muun muassa `String` ja merkkijonojen rakentamisessa usein Stringiä tehokkaampi `StringBuilder`. Metodi `tulostaMerkit` tulostaa annetun olion jokaisen merkin omalle rivilleen. -->
-The `printCharacters` method can be passed any object that implements the `CharSequence` interface. These include `String` as well as `StringBuilder`, which is often more performant in building strings than `String`. The `printCharacters` method prints each character of a given object on its own line.
+The `printCharacters` method can be passed any object that implements the `CharSequence` interface. These include `String` as well as `StringBuilder`, which often outperforms `String` when building strings. The `printCharacters` method prints each character of a given object on its own line.
 
 <!-- ```java
 Tulostin tulostin = new Tulostin();
@@ -258,7 +258,7 @@ Printer printer = new Printer();
 
 String string = "works";
 
-printer.tulostaMerkit(string);
+printer.printCharacters(string);
 ```
 
 <!-- <sample-output>
@@ -281,7 +281,7 @@ s
 
 </sample-output>
 
-<programming-exercise name='Herds (2 osaa)' tmcname='part09-Part09_11.Herds' nocoins='true'>
+<programming-exercise name='Herds (2 Parts)' tmcname='part09-Part09_11.Herds' nocoins='true'>
 
 <!-- Tässä tehtävässä teemme eliöita ja eliöistä koostuvia laumoja jotka liikkuvat ympäriinsä. Eliöiden sijaintien ilmoittamiseen käytetään *kaksiulotteista koordinaatistoa*. Jokaiseen sijaintiin liittyy kaksi lukua, `x`- ja `y`-koordinaatti. Koordinaatti `x` kertoo, kuinka pitkällä "nollapisteestä" mitattuna sijainti on vaakasuunnassa, ja koordinaatti `y` vastaavasti kuinka pitkällä sijainti on pystysuunnassa. Jos koordinaatiston käsite ei ole tuttu, voit lukea siitä lisää esimerkiksi <a href="http://fi.wikipedia.org/wiki/Koordinaatisto">wikipediasta</a>. -->
 
@@ -291,7 +291,7 @@ In this exercise we are going to create organisms and herds of organisms that ca
 
 <!-- Tehtävän mukana tulee rajapinta `Siirrettava`, joka kuvaa asiaa jota voidaan siirtää paikasta toiseen. Rajapinta sisältää metodin `void siirra(int dx, int dy)`. Parametri `dx` kertoo, paljonko asia siirtyy x-akselilla ja `dy` y-akselilla. -->
 
-The exercise base includes the interface `Movable`, which represents something that can be moved from one position to another. The interface includes the method `void move(int dx, int dy)`. The parameter `dx` tells how much the object moves on the x axis, and dy tells the distance on the y axis.
+The exercise base includes the interface `Movable`, which represents something that can be moved from one position to another. The interface includes the method `void move(int dx, int dy)`. The parameter `dx` refers to how much the object moves on the x axis, and `dy` refers to the distance change on the y axis.
 
 <!-- Tehtävässä toteutat luokat `Elio` ja `Lauma`, jotka molemmat ovat siirrettäviä. -->
 
@@ -310,9 +310,9 @@ Create a class called `Organism` that implements the interface `Movable`. An org
 <!-- - **public Elio(int x, int y)**<br/>Luokan konstruktori, joka saa olion aloitussijainnin x- ja y-koordinaatit parametrina -->
 - **public Organism(int x, int y)**<br />The class constructor that receives the x and y coordinates of the initial position as its parameters.
 <!-- - **public String toString()**<br/> Luo ja palauttaa oliosta merkkijonoesityksen. Eliön merkkijonoesityksen tulee olla seuraavanlainen `"x: 3; y: 6"`. Huomaa että koordinaatit on erotettu puolipisteellä (`;`) -->
-- **public String toString()**<br/>Creates and returns a string representation of the organism. That representation should remind the following: `"x: 3; y: 6"`. Notice that a semicolon is used to separate the coordinates.
+- **public String toString()**<br/>Creates and returns a string representation of the organism. That representation should be in the following format: `"x: 3; y: 6"`. Notice that a semicolon is used to separate the coordinates.
 <!-- - **public void siirra(int dx, int dy)**<br/> Siirtää oliota parametrina saatujen arvojen verran. Muuttuja `dx` sisältää muutoksen koordinaattiin `x`, muuttuja `dy` sisältää muutoksen koordinaattiin `y`. Esimerkiksi jos muuttujan `dx` arvo on 5, tulee oliomuuttujan `x` arvoa kasvattaa viidellä -->
-- **public void move(int dx, int dy)**<br/> Moves the object by the values it receives as parameters. The `dx` variable contains the change to coordinate `x`, and the `dy` variable ontains the change to the coordinate `y`. For example, if the value of `dx` is 5, the value of the object variable `x` should be incremented by five.
+- **public void move(int dx, int dy)**<br/> Moves the object by the values it receives as parameters. The `dx` variable contains the change to coordinate `x`, and the `dy` variable contains the change to the coordinate `y`. For example, if the value of `dx` is 5, the value of the object variable `x` should be incremented by five.
 
 <!-- Kokeile luokan `Elio` toimintaa seuraavalla esimerkkikoodilla. -->
 
@@ -351,7 +351,7 @@ x: 60; y: 55
 
 <!-- Luo luokka `Lauma`, joka toteuttaa rajapinnan `Siirrettava`. Lauma koostuu useasta `Siirrettava`-rajapinnan toteutavasta oliosta, jotka tulee tallettaa esimerkiksi listarakenteeseen. -->
 
-Create a class called `Herd` that implements the interface `Movable`. A herd consists of multiple objects that implement the Movable interface. They must be stored in e.g. a list data structure.
+Create a class called `Herd` that implements the interface `Movable`. A herd consists of multiple objects that implement the Movable interface. They must be stored in a list data structure.
 
 <!-- Luokalla `Lauma` tulee olla seuraavanlainen API. -->
 
@@ -362,7 +362,7 @@ The `Herd` class must have the following API.
 <!-- - **public void lisaaLaumaan(Siirrettava siirrettava)**<br/> Lisää laumaan uuden `Siirrettava`-rajapinnan toteuttavan olion -->
 - **public void addToHerd(Movable movable)**<br/> Adds an object that implements the `Movable` interface to the herd.
 <!-- - **public void siirra(int dx, int dy)**<br/> Siirtää laumaa parametrina saatujen arvojen verran. Huomaa että tässä sinun tulee siirtää jokaista lauman jäsentä. -->
-- **public void move(int dx, int dy)**<br/> Moves the herd with by the amount specified by the parameters. Notice that here you have to move each member of the herd.
+- **public void move(int dx, int dy)**<br/> Moves the herd with by the amount specified by the parameters. Be aware that you have to move each member of the herd.
 
 <!-- Kokeile ohjelmasi toimintaa alla olevalla esimerkkikoodilla. -->
 
@@ -379,10 +379,10 @@ System.out.println(lauma);
 
 ```java
 Herd herd = new Herd();
-herd.lisaaLaumaan(new Organism(57, 66));
-herd.lisaaLaumaan(new Organism(73, 56));
-herd.lisaaLaumaan(new Organism(46, 52));
-herd.lisaaLaumaan(new Organism(19, 107));
+herd.addToHerd(new Organism(57, 66));
+herd.addToHerd(new Organism(73, 56));
+herd.addToHerd(new Organism(46, 52));
+herd.addToHerd(new Organism(19, 107));
 System.out.println(herd);
 ```
 
@@ -424,7 +424,7 @@ The sleep method should print "(name) sleeps", and the eat method should print "
 
 <!-- Toteuta luokan Elain perivä luokka `Koira`. Luokalla Koira tulee olla parametrillinen konstruktori, jolla luotavalle koiraoliolle voi antaa nimen. Tämän lisäksi koiralla tulee olla parametriton konstruktori, jolla koiran nimeksi tulee "Koira" sekä parametriton metodi hauku, joka ei palauta arvoa (void). Koiralla tulee olla myös metodit syo ja nuku kuten eläimillä yleensä ottaen. -->
 
-Implement a class called `Dog` that inherits from Animal. Dog should have a parameterized constructor that can be used to name it. The class should also have a non-parameterized constructor, which gives the dog the name "Dog". Another method that Dog must have is the non-parameterized bark, and it should not return any value (void). Like all animals, Dog needs to have the methods eat and sleep.
+Implement a class called `Dog` that inherits from Animal. Dog should have a parameterized constructor that can be used to name it. The class should also have a non-parameterized constructor, which gives the dog the name "Dog". Another method that Dog must have is the non-parameterized method bark, and it should not return any value (void). Like all animals, Dog needs to have the methods eat and sleep.
 
 <!-- Alla on esimerkki luokan Koira odotetusta toiminnasta: -->
 
@@ -473,7 +473,7 @@ Fido barks
 
 <!-- Toteuta seuraavaksi luokka `Kissa`, joka perii luokan Elain. Luokalla Kissa tulee olla parametrillinen konstruktori, jolla luotavalle kissaoliolle voi antaa nimen. Tämän lisäksi kissalla tulee olla parametriton konstruktori, jolla kissan nimeksi tulee "Kissa" sekä parametriton metodi mourua, joka ei palauta arvoa (void). Kissalla tulee olla myös metodit syo ja nuku kuten ensimmäisessä osassa. -->
 
-Next to implement is the class `Cat`, that also inherits from the Animal class. Cat should have two constructors: one with a parameter, used to name the cat according to the parameter, and one without parameters, in which case the name is simply "Cat". Another methd for Cat is a non-parameterized method called purr that returns no value (void). Cats should be able to eat and sleep like in the first part.
+Next to implement is the class `Cat`, that also inherits from the Animal class. Cat should have two constructors: one with a parameter, used to name the cat according to the parameter, and one without parameters, in which case the name is simply "Cat". Another method for Cat is a non-parameterized method called purr that returns no value (void). Cats should be able to eat and sleep like in the first part.
 
 <!-- Alla on esimerkki luokan Kissa odotetusta toiminnasta: -->
 
@@ -522,7 +522,7 @@ Garfield purrs
 
 <!-- Luo lopulta rajapinta `Aanteleva`, joka maarittelee parametrittoman metodin aantele, joka ei palauta arvoa (void). Toteuta rajapinta luokissa Koira että Kissa. Rajapinnan tulee hyödyntää aiemmin määriteltyjä hauku ja mourua -metodeja. -->
 
-Finally, create an interface called `NoiseCapable`. It should define a non-parameterized method makeNoise that returns no value (void). Implement the interface in the classes Dog and Cat. The interface should take use of the bark and purr methods you've defined earlier.
+Finally, create an interface called `NoiseCapable`. It should define a non-parameterized method makeNoise that returns no value (void). Implement the interface in the classes Dog and Cat. The interface should make use of the bark and purr methods you've defined earlier.
 
 <!-- Alla on esimerkki odotetusta toiminnasta: -->
 Below is an example of the expected functionality.
