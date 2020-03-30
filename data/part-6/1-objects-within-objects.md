@@ -2293,7 +2293,7 @@ Seuraavassa on luokan käyttöesimerkki: -->
 
 Add the following methods to the `Suitcase` class:
 
-- a `printGoods` method, which prints all the items in the suitcase
+- a `printItems` method, which prints all the items in the suitcase
 
 - a `totalWeight` method, which returns the total weight of the items
 
