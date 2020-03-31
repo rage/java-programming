@@ -24,9 +24,9 @@ Virran avulla ohjelmoija määrittelee käytännössä tapahtumaketjun, joka suo
 Tutustutaan virran käyttöön konkreettisen esimerkin kautta. Tarkastellaan seuraavaa ongelmaa:
 
 *Kirjoita ohjelma, joka lukee käyttäjältä syötteitä ja tulostaa niihin liittyen tilastoja. Kun käyttäjä syöttää merkkijonon "end", lukeminen lopetetaan. Muut syötteet ovat lukuja merkkijonomuodossa. Kun syötteiden lukeminen lopetetaan, ohjelma tulostaa kolmella jaollisten positiivisten lukujen lukumäärän sekä kaikkien lukujen keskiarvon.* -->
-Let's get to know collections, such as lists, as streams of values. Stream is a way of going through a collection of data such that the programmer determines the operation to be performed on each value. No record is kept of the index or the variable being processed at any given time.
+Let's get to know collections, such as lists, as streams of values. A stream is a way of going through a collection of data such that the programmer determines the operation to be performed on each value. No record is kept of the index or the variable being processed at any given time.
 
-With streams, the programmer defines a sequence of events that is executed for each value in a collection. An event chain may include dumping some of the values, converting values ​​from one form to another, or calucations. A stream does not change the values ​​in the original data collection, but merely processes them. If you want to retain the transformations, they need to be compiled into another data collection.
+With streams, the programmer defines a sequence of events that is executed for each value in a collection. An event chain may include dumping some of the values, converting values ​​from one form to another or doing calculations. A stream does not change the values ​​in the original data collection, but merely processes them. If you want to retain the transformations,  neetheyd to be compiled into another data collection.
 
 Let's begin to understand the usage of streams through a concrete example. Consider the following problem:
 
@@ -91,7 +91,7 @@ double average = inputs.stream()
     .getAsDouble();
 
 // printing out the statistics
-System.out.println("Divisible by three " + numbersDivisibleByThree);
+System.out.println("Divisible by three: " + numbersDivisibleByThree);
 System.out.println("Average number: " + average);
 ```
 
@@ -216,16 +216,16 @@ A brief summary of the stream methods we've encountered so far.
 
   <tr>
     <td>
-      Stream formation: `stream()`
+      Stream formation: <code>stream()</code>
     </td>
     <td>
-      The method is called on collection that implement the Collection interface, such as an ArrayList Object. Something is done on the created stream.
+      The method is called on a collection that implement the Collection interface, such as an ArrayList Object. Something is done on the created stream.
     </td>
   </tr>
 
   <tr>
     <td>
-      Converting a stream into an integer stream: `mapToInt(value -> another)`
+      Converting a stream into an integer stream: <code>mapToInt(value -> another)</code>
     </td>
     <td>
       The stream transforms into one containing integers.
@@ -237,30 +237,30 @@ A brief summary of the stream methods we've encountered so far.
   <tr>
     <td>
       Filtering values:
-      `filter(value -> filter condition)`
+      <code>filter(value -> filter condition)</code>
     </td>
     <td>
       The elements that do not satisfy the filter condition are removed from the string.
       On the right side of the arrow is a statement that returns a boolean.
-      If the boolean is `true`, the element is accepted into the stream. If the boolean evaluates to false, the value is not accepted into the stream. Something is done with the filtered values.
+      If the boolean is <code>true</code>, the element is accepted into the stream. If the boolean evaluates to false, the value is not accepted into the stream. Something is done with the filtered values.
     </td>
   </tr>
 
   <tr>
     <td>
-      Calculating the average: `average()`
+      Calculating the average: <code>average()</code>
     </td>
     <td>
-      Returns a OptionalDouble-type object that has a method `getAsDouble()` that returns a value of type `double`. Calling the method `average()` works on streams that contain integers - they can be created with the `mapToInt` method.
+      Returns an OptionalDouble-type object that has a method <code>getAsDouble()</code> that returns a value of type <code>double</code>. Calling the method <code>average()</code> works on streams that contain integers - they can be created with the <code>mapToInt</code> method.
     </td>
   </tr>
 
   <tr>
     <td>
-      Counting the number of elements in a stream: `count()`
+      Counting the number of elements in a stream: <code>count()</code>
     </td>
     <td>
-      Returns the number of elements in a stream as a `long`-type value.
+      Returns the number of elements in a stream as a <code>long</code>-type value.
     </td>
   </tr>
 
@@ -305,10 +305,10 @@ average of the numbers: 0.6666666666666666
 <programming-exercise name='Average of selected numbers' tmcname='part10-Part10_02.AverageOfSelectedNumbers'>
 
 <!-- Toteuta ohjelma, joka lukee käyttäjältä syötteitä. Jos käyttäjä syöttää merkkijonon "end", lukeminen lopetetaan. Muut syötteet ovat lukuja. Kun käyttäjä syöttää merkkijonon "end", syötteiden lukeminen lopetetaan. -->
-Implement a program, which reads user input. If the user input is "end", program stops reading input. The rest of the input is numbers.
+Implement a program which reads user input. If the user input is "end", the program stops reading input. The rest of the input is numbers.
 
 <!-- Tämän jälkeen käyttäjältä kysytään tulostetaanko negatiivisten vai positiivisten lukujen keskiarvo (n vai p). Jos käyttäjä syöttää merkkijonon "n", tulostetaan negatiivisten lukujen keskiarvo, muulloin tulostetaan positiivisten lukujen keskiarvo. -->
-Then user is asked if the program should print the average of all the positive numbers, or the average of all the negative numbers (n or p). If the user selects "n", the average of all the negative numbers is printed. Otherwise the average of all the positive numbers is printed.
+Afterwards, the user is asked if the program should print the average of all the positive numbers or the average of all the negative numbers (n or p). If the user selects "n", the average of all the negative numbers is printed. Otherwise the average of all the positive numbers is printed.
 
 <!-- Toteuta keskiarvon laskeminen sekä rajaus virran avulla! -->
 Use streams to calculate the average and filter the numbers!
@@ -353,7 +353,7 @@ Average of the positive numbers: 1.5
 Miksi funktiot kirjoitetaan muodossa `luku -> luku > 5`?
 
 Kyseinen kirjoitusmuoto, *lambda-lauseke*, on Javan tarjoama lyhenne ns. anonyymeille metodeille, joilla ei ole "omistajaa" eli ne eivät ole osa luokkaa tai rajapintaa. Funktio sisältää sekä parametrien määrittelyn että funktion rungon. Saman funktion voi kirjoittaa useammalla eri tavalla, kts. alla. -->
-Stream values ​​are handled by methods related to streams. Methods that handle values ​​get a function as a parameter that determines what is done with each element. What the function does is specific to the method in question. For instance, the `filter` method used for filtering elements is provided a function which returns the a boolean `true` or `false`, depending on whether to keep the value in the stream or not. The `mapToInt` method used for transformation is, on the other hand, provided a function which converts the value to an integer, and so on.
+Stream values ​​are handled by methods related to streams. Methods that handle values ​​get a function as a parameter that determines what is done with each element. What the function does is specific to the method in question. For instance, the `filter` method used for filtering elements is provided a function which returns the boolean `true` or `false`, depending on whether to keep the value in the stream or not. The `mapToInt` method used for transformation is, on the other hand, provided a function which converts the value to an integer, and so on.
 
 Why are the functions written in the form `value -> value > 5`?
 
@@ -420,7 +420,7 @@ public class Screeners {
 *stream*.filter(value -> value > 5).*furtherAction*
 
 // is the same as
-*stream*.filter(value -> Screeners.vitostaSuurempi(value)).*furtherAction*
+*stream*.filter(value -> Screeners.greaterThanFive(value)).*furtherAction*
 ```
 
 <!-- Funktion voi antaa myös suoraan parametrina. Alla oleva syntaksi `Rajaajat::vitostaSuurempi` tarkoittaa "hyödynnä tässä `Rajaajat`-luokassa olevaa staattista metodia `vitostaSuurempi`". -->
@@ -503,7 +503,7 @@ long numbersDivisibleByThree = inputs.stream()
 <!-- Virran metodit voi jakaa karkeasti kahteen eri ryhmään: virran (1) arvojen käsittelyyn tarkoitettuihin välioperaatioihin sekä (2) käsittelyn lopettaviin pääteoperaatiohin. Edellisessä esimerkissä nähdyt metodit `filter` ja `mapToInt` ovat välioperaatioita. Välioperaatiot palauttavat arvonaan virran, jonka käsittelyä voi jatkaa -- käytännössä välioperaatioita voi olla käytännössä ääretön määrä ketjutettuna peräkkäin (pisteellä eroteltuna). Toisaalta edellisessä esimerkissä nähty metodi `average` on pääteoperaatio. Pääteoperaatio palauttaa käsiteltävän arvon, joka luodaan esimerkiksi virran arvoista.
 
 Alla olevassa kuvassa on kuvattu virran toimintaa. Lähtötilanteena (1) on lista, jossa on arvoja. Kun listalle kutsutaan `stream()`-metodia, (2) luodaan virta listan arvoista. Arvoja käsitellään tämän jälkeen yksitellen. Virran arvoja voidaan (3) rajata metodilla `filter`. Tämä poistaa virrasta ne arvot, jotka ovat rajauksen ulkopuolella. Virran metodilla `map` voidaan (4) muuntaa virrassa olevia arvoja muodosta toiseen. Metodi `collect` (5) kerää virrassa olevat arvot arvot sille annettuun kokoelmaan, esim. listalle. -->
-Stream methods can be roughly divided into two categories: (1) intermediate operations inteded for processing elements ​​and (2) terminal operations that end the processing of elements. Both of the `filter` and `mapToInt` methods shown in the previous example are intermediate operations. Intermediate operations return a value that can be further processed - you could, in practice, have an infinite number of intermediate operations chained sequentially (& separated by a dot). On the other hand, the `average` method seen in the previous example is a terminal operation. A terminal operation returns a value to be processed, which is formed from, for instance, stream elements.
+Stream methods can be roughly divided into two categories: (1) intermediate operations intended for processing elements ​​and (2) terminal operations that end the processing of elements. Both of the `filter` and `mapToInt` methods shown in the previous example are intermediate operations. Intermediate operations return a value that can be further processed - you could, in practice, have an infinite number of intermediate operations chained sequentially, each separated by a dot. On the other hand, the `average` method seen in the previous example is a terminal operation. A terminal operation returns a value to be processed, which is formed from, for instance, stream elements.
 
 The figure below illustrates how a stream works. The starting point (1) is a list with values. When the `stream()` method is called on a list, (2) a stream of list values ​​is created. The values ​​are then dealt with individually. The stream values ​​can be (3) filtered by the `filter` method, which removes values ​​that fail to meet the condition from the stream. The stream's `map` method (4) can be used to map values ​​in a stream from one form to another. The `collect` method (5) collects the values ​​in a stream into a collection  provided to it, such as a list.
 
@@ -564,7 +564,7 @@ Implement the method using stream! For collecting the numbers try the command `C
 
 Metodi `count` kertoo virran alkioiden lukumäärän `long`-tyyppisenä muuttujana. -->
 
-Let's take a look at four terminal operations: the `count` method for counting the number of values on a list ​​using the, the `forEach` method for going a through list values, the `collect` method for gathering the list values ​​into a data structure, and the `reduce` method for combining the list items.
+Let's take a look at four terminal operations: the `count` method for counting the number of values in a list, the `forEach` method for going a through list values, the `collect` method for gathering the list values ​​into a data structure, and the `reduce` method for combining the list items.
 
 The `count` method informs us of the number of values in the stream as a `long`-type variable.
 
@@ -601,7 +601,7 @@ Values: 5
 </sample-output>
 
 <!-- Metodi `forEach` kertoo mitä kullekin listan arvolle tulee tehdä ja samalla päättää virran käsittelyn. Alla olevassa esimerkissä luodaan ensin numeroita sisältävä lista, jonka jälkeen tulostetaan vain kahdella jaolliset luvut. -->
-The `forEach` method defines what is done to each list value and terminated the stream processing. In the example below, we first create a list of numbers, after which we only print the numbers that are divisible by two.
+The `forEach` method defines what is done to each list value and terminates the stream processing. In the example below, we first create a list of numbers, after which we only print the numbers that are divisible by two.
 
 
 <!-- ```java
@@ -639,7 +639,7 @@ values.stream()
 
 
 <!-- Virran arvojen kerääminen toiseen kokoelmaan onnistuu metodin `collect` avulla. Alla olevassa esimerkissä luodaan uusi lista annetun positiivisista arvoista. Metodille `collect` annetaan parametrina <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html" target="_blank" norel>Collectors</a>-luokan avulla luotu olio, johon virran arvot kerätään -- esimerkiksi kutsu `Collectors.toCollection(ArrayList::new)` luo uuden ArrayList-olion, johon arvot kerätään. -->
-You can use the `collect` method to collect stream values into another collection. The example below creates a new list containing only positive values. The `collect` method is given as a parameter to the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html" target="_blank" norel> Collectors </a> > object to which the stream values ​​are collected - for example, calling `Collectors.toCollection(ArrayList::new)` creates a new ArrayList object that holds the collected values.
+You can use the `collect` method to collect stream values into another collection. The example below creates a new list containing only positive values. The `collect` method is given as a parameter to the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html" target="_blank" norel> Collectors </a> object to which the stream values ​​are collected - for example, calling `Collectors.toCollection(ArrayList::new)` creates a new ArrayList object that holds the collected values.
 
 <!-- ```java
 List<Integer> luvut = new ArrayList<>();
@@ -664,11 +664,11 @@ values.add(-17);
 values.add(-6);
 values.add(8);
 
-ArrayList<Integer> positiiviset = values.stream()
+ArrayList<Integer> positiveset = values.stream()
     .filter(value -> value > 0)
     .collect(Collectors.toCollection(ArrayList::new));
 
-positiiviset.stream()
+positiveset.stream()
     .forEach(value -> System.out.println(value));
 ```
 
@@ -817,7 +817,7 @@ Fourth
 <!-- Virran välioperaatiot ovat metodeja, jotka palauttavat arvonaan virran. Koska palautettava arvo on virta, voidaan välioperaatioita kutsua peräkkäin. Tyypillisiä välioperaatioita ovat arvon muuntaminen muodosta toiseen `map` sekä sen erityistapaus `mapToInt` eli virran muuntaminen kokonaislukuvirraksi, arvojen rajaaminen `filter`, uniikkien arvojen tunnistaminen `distinct` sekä arvojen järjestäminen `sorted` (mikäli mahdollista).
 
 Tarkastellaan näitä metodeja muutaman ongelman avulla. Oletetaan, että käytössämme on seuraava luokka Henkilo. -->
-Intermediate stream operations are methods that return a stream. Since the value returned is a stream, we can call intermediate operations sequentially. Typical intermediate operations include converting a value from one form to another using `map` and its more specific form `mapToInt` used for converting a stream to an integer stream. Other ones include filtering values with `filter`,identifying unique values with `distinct`, and arranging values with `sorted` (if possible).
+Intermediate stream operations are methods that return a stream. Since the value returned is a stream, we can call intermediate operations sequentially. Typical intermediate operations include converting a value from one form to another using `map` and its more specific form `mapToInt` used for converting a stream to an integer stream. Other ones include filtering values with `filter`, identifying unique values with `distinct`, and arranging values with `sorted` (if possible).
 
 Let's look at these methods in action through a few problems. Say we have the following Person class.
 
@@ -879,7 +879,7 @@ Käytetään `filter`-metodia henkilöiden rajaamiseen niihin, jotka ovat syntyn
 *Problem 1: You'll receive a list of persons. Print the number of persons born before the year 1970.*
 
 
-We'll use the `filter` method for filtering through only those persons who were born before the year 1970. We then count their number using the method `count`.
+We'll use the `filter` method for filtering through only those persons who were born before the year 1970. We then count the number of persons using the method `count`.
 
 
 ```java
@@ -887,7 +887,7 @@ We'll use the `filter` method for filtering through only those persons who were 
 // ArrayList<Person> persons = new ArrayList<>();
 
 long count = persons.stream()
-    .filter(henkilo -> henkilo.getSyntymavuosi() < 1970)
+    .filter(person -> person.getBirthYear() < 1970)
     .count();
 System.out.println("Count: " + count);
 ```
@@ -898,7 +898,7 @@ System.out.println("Count: " + count);
 
 <!-- Käytetään `filter`-metodia henkilöiden rajaamiseen niihin, joiden etunimi alkaa kirjaimella "A". Lasketaan tämän jälkeen henkilöiden lukumäärä metodilla `count`. -->
 
-Let's use the `filter`-method to narrow down the persons to those whose first name starts with the letter "A". Afterwards, we'll calculte the number of persons with the `count`-method.
+Let's use the `filter`-method to narrow down the persons to those whose first name starts with the letter "A". Afterwards, we'll calculate the number of persons with the `count`-method.
 
 
 <!-- ```java
@@ -916,7 +916,7 @@ System.out.println("Lukumäärä: " + lkm);
 // ArrayList<Person> persons = new ArrayList<>();
 
 long count = persons.stream()
-    .filter(person -> persons.getFistName().startsWith("A"))
+    .filter(person -> person.getFirstName().startsWith("A"))
     .count();
 System.out.println("Count: " + count);
 ```
@@ -1025,7 +1025,7 @@ Write a program that reads user input. When the user gives a negative number as 
 
 <!-- Tehtäväpohjaan on hahmoteltu ohjelmaa, joka lukee käyttäjältä syötteenä henkilötietoja. Täydennä ohjelmaa siten, että tietojen lukemisen jälkeen ohjelma tulostaa henkilöiden uniikit sukunimet aakkosjärjestyksessä. -->
 
-The exercise template contains a scetch of a program that reads user given information about people. Expand the program so, that it will print all the unique last names of the user given people in alphabetical order.
+The exercise template contains a sketch of a program that reads user given information about people. Expand the program so that it will print all the unique last names of the user given people in alphabetical order.
 
 
 <!-- <sample-output>
@@ -1187,7 +1187,7 @@ public class Book {
 
 <!-- Oletetaan, että käytössämme on lista kirjoja. Virran metodien avulla esimerkiksi kirjailijoiden syntymävuosien keskiarvon selvittäminen onnistuu luontevasti. Ensin muunnamme kirjoja sisältävän virran henkilöitä sisältäväksi virraksi ja tämän jälkeen muunnamme henkilöitä sisältävän virran syntymävuosia sisältäväksi virraksi. Lopulta pyydämme (kokonaislukuja sisältävältä) virralta keskiarvoa. -->
 
-Say we have a list of books. Calculatin the average of authors' birth years can be done using stream methods in a way that feels natural. First, we convert the stream of books to a stream of persons, and then we convert the stream of person to a stream of birth years. Finally, we ask the (integer) stream for an average.
+Say we have a list of books. Calculating the average of authors' birth years can be done using stream methods in a way that feels natural. First, we convert the stream of books to a stream of persons, and then we convert the stream of person to a stream of birth years. Finally, we ask the (integer) stream for an average.
 
 
 <!-- ```java
@@ -1219,9 +1219,9 @@ double average = books.stream()
 
 System.out.println("Average of authors' birth years: " + average);
 
-// the mapping of a book to an authoe could also be done with a single map call
+// the mapping of a book to an author could also be done with a single map call
 // double average = books.stream()
-//     .mapToInt(book -> book.getUthor().getBirthYear())
+//     .mapToInt(book -> book.getAuthor().getBirthYear())
 //     ...
 ```
 
@@ -1262,7 +1262,7 @@ kirjat.stream()
 ``` -->
 ```java
 // let's assume that we have a list of books at our disposal
-// ArrayList<Kirja> kirjat = new ArrayList<>();
+// ArrayList<Book> books = new ArrayList<>();
 
 books.stream()
     .map(book -> book.getAuthor().getName() + ": " + book.getName())
@@ -1277,7 +1277,7 @@ books.stream()
 
 <!-- Tehtäväpohjassa on tutuhko tehtävä "Tavara, Matkalaukku ja Lastiruuma". Tässä tehtävässä tarkoituksenasi on muuttaa toistolausetta käyttävät metodit virtaa käyttäviksi metodeiksi. Lopputuloksessa ei tule esiintyä `while (...)` tai `for (...)`-toistolauseita. -->
 
-The exercise template includes the probably familiar-y project "Cargo hold". However, in this exercise you need to make the for-loop using methods to use streams. The final product should not have any `while (...)` or `for (...)`-loops.
+The exercise template includes the familiar project "Cargo hold". However, in this exercise you need to convert the for-loop using methods into ones that use streams. The final product should not have any `while (...)` or `for (...)`-loops.
 
 </programming-exercise>
 
@@ -1288,7 +1288,7 @@ The exercise template includes the probably familiar-y project "Cargo hold". How
 <!-- Virta on myös erittäin näppärä tiedostojen käsittelyssä. Tiedoston lukeminen virtamuotoisena tapahtuu Javan valmiin <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html" target="_blank" rel="noopener">Files</a>-luokan avulla. Files-luokan metodin `lines` avulla tiedostosta voidaan luoda syötevirta, jonka avulla tiedoston rivit voidaan käsitellä yksi kerrallaan. Metodi `lines` saa patametrikseen polun, joka luodaan luokan <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Paths.html" target="_blank" rel="noopener">Paths</a> tarjoamalla metodilla `get`, jolle annetaan parametrina tiedostopolkua kuvaava merkkijono.
 
 Alla olevassa esimerkissä luetaan tiedoston "tiedosto.txt" kaikki rivit ja lisätään ne listaan. -->
-<p>Streams are also very handy in handling files. The file is read in stream form using Java's ready-made <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html" target="_blank" rel="noopener">Files</a> class. The `lines` method in the files class allows you to create an input stream from a file, allowing you to process the rows one by one. The `lines` method gets a path as its parameter, which is created using the `get` method the <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Paths.html" target="_blank" rel="noopener">Paths</a> class. The `get` method is provided a string describing the file path.</p>
+Streams are also very handy in handling files. The file is read in stream form using Java's ready-made <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html" target="_blank" rel="noopener">Files</a> class. The `lines` method in the files class allows you to create an input stream from a file, allowing you to process the rows one by one. The `lines` method gets a path as its parameter, which is created using the `get` method from the <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Paths.html" target="_blank" rel="noopener">Paths</a> class. The `get` method is provided a string describing the file path.
 
 The example below reads all the lines in "file.txt" and adds them to the list.
 
@@ -1307,7 +1307,7 @@ try {
 List<String> rows = new ArrayList<>();
 
 try {
-    Files.lines(Paths.get("tiefiledosto.txt")).forEach(row -> rows.add(row));
+    Files.lines(Paths.get("file.txt")).forEach(row -> rows.add(row));
 } catch (Exception e) {
     System.out.println("Error: " + e.getMessage());
 }
@@ -1363,7 +1363,7 @@ Sauli Väinämö Niinistö; 1948
 </sample-output>
 
 <!-- Oletetaan, että tiedoston nimi on `presidentit.txt`. Henkilöiden lukeminen onnistuu seuraavasti. -->
-Let's assume that the file is named `presidentit.txt`. Reading the details of the persons happens as follows.
+Let's assume that the file is named `presidents.txt`. Reading the details of the persons happens as follows.
 
 <!-- ```java
 List<Henkilo> presidentit = new ArrayList<>();
@@ -1386,7 +1386,7 @@ try {
 // nyt presidentit ovat listalla henkilöolioina
 ``` -->
 ```java
-List<Henkilo> presidents = new ArrayList<>();
+List<Person> presidents = new ArrayList<>();
 try {
     // reading the "presidents.txt" file line by line
     Files.lines(Paths.get("presidents.txt"))
