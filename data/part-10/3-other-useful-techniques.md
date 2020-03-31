@@ -1,7 +1,7 @@
 ---
 path: '/part-10/3-other-useful-techniques'
 title: 'Other useful techniques'
-hidden: true
+hidden: false
 ---
 
 
@@ -863,7 +863,8 @@ is not a spade
 
 <!-- Huomaamme, että enumin tunnukset tulostuvat mukavasti! Oraclella on `enum`-tyyppiin liittyvä sivusto osoitteessa <a href="http://docs.oracle.com/javase/tutorial/java/javaOO/enum.html" target="_blank" rel="noopener">http://docs.oracle.com/javase/tutorial/java/javaOO/enum.html</a>.
  -->
-We see that the Enum values are outputted nicely! Oracle has a site related to the `enum` data type at <a href="http://docs.oracle.com/javase/tutorial/java/javaOO/enum.html" target="_blank" rel="noopener"> http://docs.oracle.com/javase/tutorial/java/javaOO/enum.html </a>.
+
+<p>We see that the Enum values are outputted nicely! Oracle has a site related to the `enum` data type at <a href="http://docs.oracle.com/javase/tutorial/java/javaOO/enum.html" target="_blank" rel="noopener"> http://docs.oracle.com/javase/tutorial/java/javaOO/enum.html </a>.</p>
 
 
 <!-- <text-box variant='hint' name='Enumien vertailu'> -->
@@ -882,8 +883,8 @@ The numeric identifier of an enum field value can be found with `ordinal()`. The
 
 
 ```java
-public enum Maa {
-    RUUTU, PATA, RISTI, HERTTA
+public enum Suits {
+    DIAMOND, CLUB, HEART, SPADE
 }
 ```
 
@@ -893,7 +894,7 @@ System.out.println(Maa.HERTTA.ordinal());
 ``` -->
 ```java
 System.out.println(Suit.DIAMOND.ordinal());
-System.out.println(Suit.HEARTS.ordinal());
+System.out.println(Suit.HEART.ordinal());
 ```
 
 <sample-output>

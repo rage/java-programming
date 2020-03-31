@@ -1,7 +1,7 @@
 ---
 path: '/part-10/1-handling-collections-as-streams'
 title: 'Handling collections as streams'
-hidden: true
+hidden: false
 ---
 
 
@@ -812,7 +812,7 @@ Fourth
 
 
 <!-- ### Välioperaatiot -->
-### Imtermediate Operations
+### Intermediate Operations
 
 <!-- Virran välioperaatiot ovat metodeja, jotka palauttavat arvonaan virran. Koska palautettava arvo on virta, voidaan välioperaatioita kutsua peräkkäin. Tyypillisiä välioperaatioita ovat arvon muuntaminen muodosta toiseen `map` sekä sen erityistapaus `mapToInt` eli virran muuntaminen kokonaislukuvirraksi, arvojen rajaaminen `filter`, uniikkien arvojen tunnistaminen `distinct` sekä arvojen järjestäminen `sorted` (mikäli mahdollista).
 
@@ -883,21 +883,25 @@ We'll use the `filter` method for filtering through only those persons who were 
 
 
 ```java
-// oletetaan, että käytössämme on lista henkiloita
-// ArrayList<Henkilo> henkilot = new ArrayList<>();
+// suppose we have a list of persons
+// ArrayList<Person> persons = new ArrayList<>();
 
-long lkm = henkilot.stream()
+long count = persons.stream()
     .filter(henkilo -> henkilo.getSyntymavuosi() < 1970)
     .count();
-System.out.println("Lukumäärä: " + lkm);
+System.out.println("Count: " + count);
 ```
 
-*Ongelma 2: Saat käyttöösi listan henkilöitä. Kuinka monen henkilön etunimi alkaa kirjaimella "A"?*
+<!-- *Ongelma 2: Saat käyttöösi listan henkilöitä. Kuinka monen henkilön etunimi alkaa kirjaimella "A"?* -->
 
-Käytetään `filter`-metodia henkilöiden rajaamiseen niihin, joiden etunimi alkaa kirjaimella "A". Lasketaan tämän jälkeen henkilöiden lukumäärä metodilla `count`.
+*Problem 2: You'll receive a list of persons. How many person's first name starts with the letter "A"?*
+
+<!-- Käytetään `filter`-metodia henkilöiden rajaamiseen niihin, joiden etunimi alkaa kirjaimella "A". Lasketaan tämän jälkeen henkilöiden lukumäärä metodilla `count`. -->
+
+Let's use the `filter`-method to narrow down the persons to those whose first name starts with the letter "A". Afterwards, we'll calculte the number of persons with the `count`-method.
 
 
-```java
+<!-- ```java
 // oletetaan, että käytössämme on lista henkiloita
 // ArrayList<Henkilo> henkilot = new ArrayList<>();
 
@@ -905,25 +909,53 @@ long lkm = henkilot.stream()
     .filter(henkilo -> henkilo.getEtunimi().startsWith("A"))
     .count();
 System.out.println("Lukumäärä: " + lkm);
-```
-
-*Ongelma 3: Saat käyttöösi listan henkilöitä. Tulosta henkilöiden uniikit etunimet aakkosjärjestyksessä.*
-
-Käytetään ensin `map`-metodia, jonka avulla henkilö-olioita sisältävä virta muunnetaan etunimiä sisältäväksi virraksi. Tämän jälkeen kutsutaan metodia `distinct`, joka palauttaa virran, jossa on uniikit arvot. Seuraavaksi kutsutaan metodia `sorted`, joka järjestää merkkijonot. Lopulta kutsutaan metodia `forEach`, jonka avulla tulostetaan merkkijonot.
-
+``` -->
 
 ```java
+// suppose we have a list of persons
+// ArrayList<Person> persons = new ArrayList<>();
+
+long count = persons.stream()
+    .filter(person -> persons.getFistName().startsWith("A"))
+    .count();
+System.out.println("Count: " + count);
+```
+
+<!-- *Ongelma 3: Saat käyttöösi listan henkilöitä. Tulosta henkilöiden uniikit etunimet aakkosjärjestyksessä.* -->
+
+*Problem 3: You'll receive a list of persons. Print the number of unique first names in alphabetical order*
+
+<!-- Käytetään ensin `map`-metodia, jonka avulla henkilö-olioita sisältävä virta muunnetaan etunimiä sisältäväksi virraksi. Tämän jälkeen kutsutaan metodia `distinct`, joka palauttaa virran, jossa on uniikit arvot. Seuraavaksi kutsutaan metodia `sorted`, joka järjestää merkkijonot. Lopulta kutsutaan metodia `forEach`, jonka avulla tulostetaan merkkijonot. -->
+
+First we'll use the `map` method to change a stream containing person objects into a stream containing first names. After that we'll call the `distinct`-method, that returns a stream that only contains unique values. Next, we call the method `sorted`, which sorts the strings. Finally, we call the method `forEach`, that is used to print the strings.
+
+
+<!-- ```java
 // oletetaan, että käytössämme on lista henkiloita
 // ArrayList<Henkilo> henkilot = new ArrayList<>();
+
 
 henkilot.stream()
     .map(henkilo -> henkilo.getEtunimi())
     .distinct()
     .sorted()
     .forEach(nimi -> System.out.println(nimi));
+``` -->
+
+```java
+// suppose we have a list of persons
+// ArrayList<Person> persons = new ArrayList<>();
+
+persons.stream()
+    .map(person -> person.getFirstName())
+    .distinct()
+    .sorted()
+    .forEach(name -> System.out.println(name));
 ```
 
-Yllä kuvattu `distinct`-metodi hyödyntää olioiden `equals`-metodia yhtäsuuruuden tarkasteluun. Metodi `sorted` taas osaa järjestää olioita, joilla on tieto siitä, miten olio tulee järjestää -- näitä ovat esimerkiksi luvut ja merkkijonot.
+<!-- Yllä kuvattu `distinct`-metodi hyödyntää olioiden `equals`-metodia yhtäsuuruuden tarkasteluun. Metodi `sorted` taas osaa järjestää olioita, joilla on tieto siitä, miten olio tulee järjestää -- näitä ovat esimerkiksi luvut ja merkkijonot. -->
+
+The `distinct`-method described above uses the `equals`-method that is in all objects for comparing whether two strings are the same. The `sorted`-method on the other hand is able to sort objects that contain some kind of order -- examples of this kind of objects are for example numbers and strings.
 
 
 <!-- <programming-exercise name='Luettujen arvojen tulostaminen' tmcname='part10-Part10_05.LuettujenArvojenTulostaminen'> -->
@@ -1256,7 +1288,7 @@ The exercise template includes the probably familiar-y project "Cargo hold". How
 <!-- Virta on myös erittäin näppärä tiedostojen käsittelyssä. Tiedoston lukeminen virtamuotoisena tapahtuu Javan valmiin <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html" target="_blank" rel="noopener">Files</a>-luokan avulla. Files-luokan metodin `lines` avulla tiedostosta voidaan luoda syötevirta, jonka avulla tiedoston rivit voidaan käsitellä yksi kerrallaan. Metodi `lines` saa patametrikseen polun, joka luodaan luokan <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Paths.html" target="_blank" rel="noopener">Paths</a> tarjoamalla metodilla `get`, jolle annetaan parametrina tiedostopolkua kuvaava merkkijono.
 
 Alla olevassa esimerkissä luetaan tiedoston "tiedosto.txt" kaikki rivit ja lisätään ne listaan. -->
-Streams are also very handy in handling files. The file is read in stream form using Java's ready-made <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html" target="_blank" rel="noopener">Files</a> class. The `lines` method in the files class allows you to create an input stream from a file, allowing you to process the rows one by one. The `lines` method gets a path as its parameter, which is created using the `get` method the <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Paths.html" target="_blank" rel="noopener">Paths</a> class. The `get` method is provided a string describing the file path.
+<p>Streams are also very handy in handling files. The file is read in stream form using Java's ready-made <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html" target="_blank" rel="noopener">Files</a> class. The `lines` method in the files class allows you to create an input stream from a file, allowing you to process the rows one by one. The `lines` method gets a path as its parameter, which is created using the `get` method the <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Paths.html" target="_blank" rel="noopener">Paths</a> class. The `get` method is provided a string describing the file path.</p>
 
 The example below reads all the lines in "file.txt" and adds them to the list.
 
@@ -1309,6 +1341,7 @@ Implement the static method `public static List<String> read(String file)`, whic
 
 
 <!-- Virran metodit tekevät määritellyn muotoisten tiedostojen lukemisesta melko suoraviivaista. Tarkastellaan tilannetta, missä tiedosto sisältää henkilöiden tietoja. Kukin henkilö on omalla rivillään, ensin tulee henkilön nimi, sitten puolipiste, sitten henkilön syntymävuosi. Tiedoston muoto on seuraava. -->
+
 Stream methods make the reading of files that are of predefined format relatively straightforward. Let's look at a scenario where a file contains some personal information. Details of each person is on their own line, first the person's name, then the semicolon, then the person's Year of Birth. The file format is as follows.
 
 
