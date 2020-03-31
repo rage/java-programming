@@ -1369,7 +1369,7 @@ We will build the program in parts.
 
 <!-- <h2>Tehtävälista</h2> -->
 
-<h2>ToDoList</h2>
+<h2>TodoList</h2>
 
 <!-- Luo luokka `Tehtavalista`. Luokalla tulee olla parametriton konstruktori sekä seuraavat metodit:
 
@@ -1377,7 +1377,7 @@ We will build the program in parts.
 - `public void tulosta()` - tulostaa tehtävät. Tulostuksessa jokaiselle tehtävällä on myös numero -- käytä tässä tehtävän indeksiä (+1).
 - `public void poista(int numero)` - poistaa annettua numeroa vastaavan tehtävän; numero liittyy tulostuksessa nähtyyn tehtävän numeroon. -->
 
-Create a class called `ToDoList`. It should have a constructor without parameters and the following methods:
+Create a class called `TodoList`. It should have a constructor without parameters and the following methods:
 
 - `public void add(String task)` - add the task passed as a parameter to the todo list.
 - `public void print()` - prints the exercises. Each task has a number associated with it on the print statement -- use the task's index here (+1).
@@ -1508,7 +1508,7 @@ list.print();
 
 Alla on esimerkki sovelluksen toiminnasta. -->
 
-Next, implement a class called `UserInterface`. It should have a constructor with two parameters. The first parameter is an instance of the class `ToDoList`, and the second is an instance of the class `Scanner`. In addition to the constructor, the class should have the method `public void start()` that is used to start the text user interface. The text UI works with an eternal looping statement (`while-true`), and it must offer the following commands to the user:
+Next, implement a class called `UserInterface`. It should have a constructor with two parameters. The first parameter is an instance of the class `TodoList`, and the second is an instance of the class `Scanner`. In addition to the constructor, the class should have the method `public void start()` that is used to start the text user interface. The text UI works with an eternal looping statement (`while-true`), and it must offer the following commands to the user:
 
 - The command `stop` stops the execution of the loop, after which the execution of the program advances out of the `start` method.
 
@@ -1570,7 +1570,7 @@ Command: **stop**
 
 <!-- Huom! Käyttöliittymän tulee käyttää sille parametrina annettua tehtävälistaa ja Scanneria. -->
 
-NB! The user interface is to use the ToDoList and Scanner that are passed as parameters to the constructor.
+NB! The user interface is to use the TodoList and Scanner that are passed as parameters to the constructor.
 
 
 </programming-exercise>
