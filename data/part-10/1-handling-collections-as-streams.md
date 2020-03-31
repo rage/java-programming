@@ -26,7 +26,7 @@ Tutustutaan virran käyttöön konkreettisen esimerkin kautta. Tarkastellaan seu
 *Kirjoita ohjelma, joka lukee käyttäjältä syötteitä ja tulostaa niihin liittyen tilastoja. Kun käyttäjä syöttää merkkijonon "end", lukeminen lopetetaan. Muut syötteet ovat lukuja merkkijonomuodossa. Kun syötteiden lukeminen lopetetaan, ohjelma tulostaa kolmella jaollisten positiivisten lukujen lukumäärän sekä kaikkien lukujen keskiarvon.* -->
 Let's get to know collections, such as lists, as streams of values. A stream is a way of going through a collection of data such that the programmer determines the operation to be performed on each value. No record is kept of the index or the variable being processed at any given time.
 
-With streams, the programmer defines a sequence of events that is executed for each value in a collection. An event chain may include dumping some of the values, converting values ​​from one form to another or doing calculations. A stream does not change the values ​​in the original data collection, but merely processes them. If you want to retain the transformations,  neetheyd to be compiled into another data collection.
+With streams, the programmer defines a sequence of events that is executed for each value in a collection. An event chain may include dumping some of the values, converting values ​​from one form to another or doing calculations. A stream does not change the values ​​in the original data collection, but merely processes them. If you want to retain the transformations, they need to be compiled into another data collection.
 
 Let's begin to understand the usage of streams through a concrete example. Consider the following problem:
 
