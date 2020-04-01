@@ -548,7 +548,7 @@ Incorrect form.
 
 
 <!-- - Merkintä <strong>`{a,}`</strong> toisto `a` ... kertaa, esim: -->
-- The quantifier <strong>`{a,}`</strong> repeats `a` to n times, for example:
+- The quantifier <strong>`{a,}`</strong> repeats `a` ... times, for example:
 
 <!-- ```java
 String merkkijono = "11111";
@@ -1317,7 +1317,7 @@ HEART Q
 <h2>Comparable Card class</h2>
 
 <!--Tee Kortti-luokasta `Comparable`. Toteuta `compareTo`-metodi niin, että korttien järjestys on arvon mukaan nouseva. Jos verrattavien Korttien arvot ovat samat, verrataan niitä maan perusteella nousevassa järjestyksessä: *risti ensin, ruutu toiseksi, hertta kolmanneksi, pata viimeiseksi.*-->
-Change the Card class to be `Comparable`. Implement the `compareTo` method so that using it sorts the cards in ascending order by their value. If the cards being compared have the same value, they are sorted by *club first, diamond second, heart third, and spade last.*
+Change the Card class to be `Comparable`. Implement the `compareTo` method so that using it sorts the cards in ascending order based on their value. If the cards being compared have the same value, they are sorted by *club first, diamond second, heart third, and spade last.*
 
 <!--Maiden järjestämisessä apua löytynee <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#ordinal--"  target="_blank" norel>Enum-luokan ordinal-metodista</a>.-->
 Reading <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#ordinal--"  target="_blank" norel>Ordinal method of Enum</a> will help you out in sorting the cards by their suit.
