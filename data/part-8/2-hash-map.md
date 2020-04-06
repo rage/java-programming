@@ -1434,7 +1434,7 @@ The code above prints:
 <sample-output>
 
 51.5
-0.0
+30.0
 
 </sample-output>
 
