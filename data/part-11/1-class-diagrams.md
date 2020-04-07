@@ -1,7 +1,7 @@
 ---
 path: '/part-11/1-class-diagrams'
 title: 'Class diagrams'
-hidden: true
+hidden: false
 ---
 
 
@@ -110,7 +110,7 @@ We also write the return type of a method to the class diagram.
 <img src="../img/diagrams/part4.1-classdiagram-person-name-age-constructor-print.png" alt="[Person|-name:String;-age:int|+Person(initialName:String);+printPerson():void]">
 
 
-<text-box variant='hint' name='Luokkakaavio kertoo luokat, muuttujat, konstruktorit, ja metodit'>
+<text-box variant='hint' name='A class diagram describes classes, construcutors and methods'>
 
 <!-- Luokkakaaviossa kuvataan luokat, muuttujat, konstruktorit, ja metodit sekä luokkien väliset yhteydet. Luokkakaavio ei kuitenkaan kerro mitään konstruktorien ja metodien sisäisestä toteutuksesta. Luokkakaaviolla kerrotaan siis olioiden rakenteesta, mutta luokkakaaviot eivät itsessään määrittele toiminnallisuutta. -->
 A class diagram describes classes and their attributes, constructors and methods as well as the connections between classes. However a class diagram tells us nothing about the implementation of the constructors or the methods. Therefore a class diagram describes the structure of an object but not its functionality.
@@ -383,7 +383,7 @@ Inheritance of abstract classes is described almost the same way as regular clas
 <img src="../img/diagrams/part11.1-classdiagram-abstracts.png" />
 
 
-<programming-exercise name='Player and bot' nocoins='true' tmcname='part11-Part11_05.PlayerAndBot'>
+<programming-exercise name='The Player And the Bot' nocoins='true' tmcname='part11-Part11_05.ThePlayerAndTheBot'>
 
 <!-- Alla on kuvattu kaksi luokkaa, Pelaaja ja Tekoaly, sekä niiden välinen yhteys. Toteuta kuvatut luokat tehtäväpohjaan. -->
 
@@ -439,7 +439,7 @@ Below you'll see the interface Saveable and the class Person. Implement the cont
 </programming-exercise>
 
 
-<text-box variant='hint' name='Miten näitä kannattaa piirtää?'>
+<text-box variant='hint' name='How these should be drawn?'>
 
 <!-- Luokkakaaviot ovat erinomainen tapa kuvata ongelma-aluetta ja ongelman muotoa muille. Niiden käyttö on erittäin hyödyllistä myös silloin, kun ohjelmoija suunnittelee useammasta luokasta koostuvan ohjelman rakennetta. -->
 Class diagrams are an excellent way to describe a problem and a problem-domain to others. They are particularily useful when a programmer is designing a program with multiple classes.
@@ -451,8 +451,9 @@ Class diagram should also be drawn in a suitable level of abstraction. For examp
 
 
 <!-- Materiaalissa käytetyt luokkakaaviot on piirretty <a href="https://yuml.me/" target="_blank" norel>yUML</a>:n, <a href="https://creately.com" target="_blank" norel>Creately</a>n, ja <a href="https://www.draw.io/" target="_blank" norel>draw.io</a>:n. Myös NetBeansiin löytyy välineitä luokkakaavioiden luomiseen -- esimerkiksi <a href="http://plugins.netbeans.org/plugin/55435/easyuml" target="_blank" norel>easyUML</a> mahdollistaa luokkakaavioiden luomisen suoraan projektin koodista. -->
-The class diagrams in the material have been drawn using <a href="https://yuml.me/" target="_blank" norel>yUML</a>, <a href="https://creately.com" target="_blank" norel>Creately</a>, and <a href="https://www.draw.io/" target="_blank" norel>draw.io</a>.
-NetBeans also has tools for drawing class diagrams -- for example the <a href="http://plugins.netbeans.org/plugin/55435/easyuml" target="_blank" norel>easyUML</a> draws class diagrams from the source code.
+
+<p>The class diagrams in the material have been drawn using <a href="https://yuml.me/" target="_blank" norel>yUML</a>, <a href="https://creately.com" target="_blank" norel>Creately</a>, and <a href="https://www.draw.io/" target="_blank" norel>draw.io</a>.
+NetBeans also has tools for drawing class diagrams -- for example the <a href="http://plugins.netbeans.org/plugin/55435/easyuml" target="_blank" norel>easyUML</a> draws class diagrams from the source code.</p>
 
 </text-box>
 

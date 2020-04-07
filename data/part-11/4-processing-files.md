@@ -1,7 +1,7 @@
 ---
 path: '/part-11/4-processing-files'
 title: 'Processing files'
-hidden: true
+hidden: false
 ---
 
 

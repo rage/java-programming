@@ -1,7 +1,7 @@
 ---
 path: '/part-11/3-exceptions'
 title: 'Exceptions'
-hidden: true
+hidden: false
 ---
 
 
@@ -369,7 +369,7 @@ The methods of the `Calculator` class should be follow in the following manner: 
 </programming-exercise>
 
 
-<text-box variant='hint' name='Poikkeusten tyypit'>
+<text-box variant='hint' name='Types of exceptions'>
 
 <!-- Edellä todettiin seuraavaa: *...poikkeuksia on karkeasti ottaen kahdenlaisia. On poikkeuksia jotka on pakko käsitellä, ja on poikkeuksia joita ei ole pakko käsitellä.*. -->
 We said *...there are roughly two categories of exceptions. Exceptions which must be handled, and exceptions which do not have to be handled.*.
