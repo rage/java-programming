@@ -6,7 +6,7 @@ hidden: false
 
 
 
-<text-box variant='learningObjectives' name='Oppimistavoitteet'>
+<text-box variant='learningObjectives' name='Learning objectives'>
 
 <!-- - Tiedät mitä poikkeukset ovat ja osaat varautua poikkeuksiin. -->
 <!-- - Osaat heittää poikkeuksia. -->
@@ -48,6 +48,7 @@ Next we will look at one such situation, parsing strings to integers.
 
 
 <!-- Olemme käyttäneet luokan `Integer` metodia <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html#parseInt-java.lang.String-" target="_blank" rel="noopener">parseInt</a> merkkijonon kokonaisluvuksi muuntamiseen. Metodi heittää poikkeuksen `NumberFormatException`, jos sille parametrina annettu merkkijono ei ole muunnettavissa kokonaisluvuksi. -->
+
 We have used the <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html#parseInt-java.lang.String-" target="_blank" rel="noopener">parseInt</a> method of the `Integer` class before.
 The method throws a `NumberFormatException` if the string it has been given cannot be parsed into an integer.
 
@@ -246,7 +247,7 @@ public List<String> readLines(String fileName) throws Exception {
 ```
 
 <!-- Nyt metodia `lue` kutsuvan metodin tulee joko käsitellä poikkeus `try-catch` -lohkossa tai siirtää poikkeuksen käsittelyn vastuuta eteenpäin. Joskus poikkeuksen käsittelyä vältetään viimeiseen asti, ja `main`-metodikin heittää poikkeuksen käsiteltäväksi eteenpäin: -->
-Now the method calling the `readLines` method has to either handle the exception in a `try-catch` block or shift the responsibility yet forwards.
+Now the method calling the `readLines` method has to either handle the exception in a `try-catch` block or shift the responsibility forwards.
 Sometimes the responsibility of handling exceptions is avoided till the end, and even the `main` method throws an exception to the caller:
 
 ```java
