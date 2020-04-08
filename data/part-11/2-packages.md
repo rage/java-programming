@@ -22,7 +22,7 @@ hidden: false
 
 <!-- Ohjelmaa varten toteutettujen luokkien määrän kasvaessa toiminnallisuuksien ja metodien muistaminen vaikeutuu. Muistamista helpottaa luokkien järkevä nimentä sekä luokkien suunnittelu siten, että jokaisella luokalla on yksi selkeä vastuu. Tämän lisäksi luokat kannattaa jakaa toiminnallisuutta, käyttötarkoitusta tai jotain muuta loogista kokonaisuutta kuvaaviin pakkauksiin. -->
 
-As the number of classes implemented for the program grows, remembering all the functionality and methods becomes more difficult. What helps remembering is naming the classes in a sensible manner and planning them so that each class has one clear responsibility. In addition to these measures, it's wise to divide the classes into packages. Classes in one package might share funcionality, purpose, or share some other logical property.
+As the number of classes implemented for the program grows, remembering all the functionality and methods becomes more difficult. Strategies to aid memory include naming the classes in a sensible manner and planning them so that each class has one clear responsibility. In addition to these measures, it's wise to divide the classes into packages. Classes in one package might share funcionality, purpose, or share some other logical property.
 
 <!-- Pakkaukset (*package*) ovat käytännössä hakemistoja (directory, puhekielessä myös kansio), joihin lähdekooditiedostot organisoidaan. -->
 
@@ -30,7 +30,7 @@ Packages are practically directories in which the source code files are organise
 
 <!-- Ohjelmointiympäristöt tarjoavat valmiit työkalut pakkausten hallintaan. Olemme tähän mennessä luoneet luokkia ja rajapintoja vain projektiin liittyvän lähdekoodipakkaukset-osion (*Source Packages*) oletuspakkaukseen (*default package*). Uuden pakkauksen voi luoda NetBeansissa projektin pakkauksiin liittyvässä Source Packages -osiossa oikeaa hiirennappia painamalla ja valitsemalla *New -&gt; Java Package...*. -->
 
-IDEs offer existing tools for packet management. Up until this point we have only created classes and interfaces into the default package of the Source Packages part of the project. You can create a new package in NetBeans by clicking the right mouse button in the Source Packages section (which relates to the packets of the project), and then choosing *New -&gt; Java Package...*.
+IDEs offer existing tools for package management. Up until this point we have only created classes and interfaces into the default package of the Source Packages part of the project. You can create a new package in NetBeans by clicking the right mouse button in the Source Packages section (which relates to the packages of the project), and then choosing *New -&gt; Java Package...*.
 
 <!-- Pakkauksen sisälle voidaan luoda luokkia aivan kuten oletuspakkaukseenkin (`default package`). Alla luodaan juuri luotuun pakkaukseen `kirjasto` luokka `Sovellus`. -->
 
@@ -126,7 +126,7 @@ public class Program {
 
     public static void main(String[] args) {
         Book book = new Book("the ABC of packages!");
-        System.out.println("Hello packageworld: " + book.getNimi());
+        System.out.println("Hello packageworld: " + book.getName());
     }
 }
 ```
@@ -156,7 +156,7 @@ From this point on, *nearly all* of the exercises will use packages. Let's begin
 
 <!-- Tehtäväpohjassa on valmiina pakkaus `mooc`. Rakennetaan tämän pakkauksen sisälle sovelluksen toiminta. Lisää pakkaukseen mooc pakkaus `ui` (tämän jälkeen käytössä pitäisi olla pakkaus `mooc.ui`), ja lisää sinne rajapinta `Kayttoliittyma`. -->
 
-There is a package called `mooc` included in the exercise base. We will create the functionality of the program inside this package. Add the package `ui` inside the package `mooc` (after which the package `mocc.ui` should be available), and add an interface called `UserInterface` in it.
+There is a package called `mooc` included in the exercise base. We will create the functionality of the program inside this package. Add the package `ui` inside the package `mooc` (after which the package `mooc.ui` should be available), and add an interface called `UserInterface` in it.
 
 <!-- Rajapinnan `Kayttoliittyma` tulee määritellä metodi `void paivita()`. -->
 
@@ -271,7 +271,7 @@ Within the exercise base, create three packages: `a`, `b`, and `c`. Create class
 
 <!-- Projektin hakemistossa `src/main/java` on ohjelmaan liittyvät lähdekoodit. Jos luokan pakkauksena on kirjasto, sijaitsee luokka projektin lähdekoodihakemiston `src/main/java/kirjasto`-kansiossa. NetBeansissa voi käydä katsomassa projektien konkreettista rakennetta **Files**-välilehdeltä joka on normaalisti **Projects**-välilehden vieressä. Jos et näe välilehteä **Files**, saa sen näkyville valitsemalla vaihtoehdon **Files** valikosta **Window**. -->
 
-In the project directory `src/main/java` there are the source code files of the program. If the package of a class is library, that class is stored inside the `src/main/java/libary` folder of the source code directory. You can also check the concrete project structure in NetBeans in the **Files** tab, which is normally next to the **Project** tab. If you cannot see the **Files** tab, you can make it appear by choosing the option **Files** from the dropdown menu **Window**.
+In the project directory `src/main/java` there are the source code files of the program. If a class in located inside a package named library, that class is stored inside the `src/main/java/libary` folder of the source code directory. You can also check the concrete project structure in NetBeans in the **Files** tab, which is normally next to the **Project** tab. If you cannot see the **Files** tab, you can make it appear by choosing the option **Files** from the dropdown menu **Window**.
 
 <!-- Sovelluskehitystä tehdään normaalisti **Projects**-välilehdeltä, jossa NetBeans on piilottanut projektiin liittyviä tiedostoja joista ohjelmoijan ei tarvitse välittää. -->
 
@@ -336,7 +336,7 @@ public class UserInterface {
 
 <!-- Yllä olevasta `Kayttoliittyma`-luokasta tehdyn olion konstruktori ja `kaynnista`-metodi on kutsuttavissa mistä tahansa ohjelmasta. Metodi `tulostaOtsikko` ja `lukija`-muuttuja on käytössä vain luokan sisällä. -->
 
-If you create an object of the `UserInterface` class above, its constructor and `start` method are callable from anywhere in the program. The metho `printTitle` and the variable `scanner` are available only from within the class.
+If you create an object of the `UserInterface` class above, its constructor and `start` method are callable from anywhere in the program. The method `printTitle` and the variable `scanner` are available only from within the class.
 
 <!-- Jos näkyvyysmäärettä ei määritellä, metodit ja muuttujat ovat näkyvillä saman pakkauksen sisällä. Tätä kutsutaan oletus- tai pakkausnäkyvyydeksi. Muutetaan yllä olevaa esimerkkiä siten, että metodilla `tulostaOtsikko` on pakkausnäkyvyys. -->
 
@@ -685,7 +685,7 @@ The next subchapters list one possible division for the operation of the program
 
 <!-- Aihealueen käsitteitä kuvaavat luokat asetetaan usein pakkaukseen nimeltä `domain`. Koska koko sovellus on pakkauksessa `lentokentta`, asetetaan pakkaus `domain` pakkaukseen `lentokentta`. Aihealueen käsitteitä kuvaavat luokat `Paikka`, `Lentokone`, ja `Lento`. -->
 
-The classes that represent concepts of the problem domain are ofter placed inside a package called `domain`. Since the entirety of the application is inside the package `flightControl`, let's place the package `domain` inside the package `flightControl`. Concepts of the problem domain are represented by the classes `Place`, `Airplane`, and `Flight`.
+The classes that represent concepts of the problem domain are often placed inside a package called `domain`. Since the entirety of the application is inside the package `flightControl`, let's place the package `domain` inside the package `flightControl`. Concepts of the problem domain are represented by the classes `Place`, `Airplane`, and `Flight`.
 
 <!-- ```java
 package lentokentta.domain;
@@ -1250,7 +1250,7 @@ In this exercise you will implement the application that was described above. Yo
 
 <!-- Sekä lentokoneita että lentoja voi olla useita. Samalla lentokoneella voidaan myös lentää useita eri lentoja. -->
 
-There can be multpiple airplanes and flights. The same airplane can be used to make several flights.
+There can be multiple airplanes and flights. The same airplane can be used to make several flights.
 
 <!-- Sovelluksen tulee toimia kahdessa vaiheessa: ensin syötetään lentokoneiden ja lentojen tietoja hallintakäyttöliittymässä, jonka jälkeen siirrytään lentopalvelun käyttöön. Lentopalvelussa on kolme toimintoa; lentokoneiden tulostaminen, lentojen tulostaminen, ja lentokoneen tietojen tulostaminen. Tämän lisäksi käyttäjä voi poistua ohjelmasta valitsemalla vaihtoehdon `x`. Jos käyttäjä syöttää epäkelvon komennon, kysytään komentoa uudestaan. -->
 
@@ -1443,7 +1443,7 @@ Choose an action:
 
 <!-- **Huom1:** Testien kannalta on oleellista että *käyttöliittymä* toimii **täsmälleen** kuten yllä kuvattu. Ohjelman tulostamat vaihtoehdot kannattanee copypasteta tästä ohjelmakoodiin. Testit eivät oleta, että ohjelmasi on varautunut epäkelpoihin syötteisiin. -->
 
-**NB** For the purposes of the test it is essential that the *user interface* work **exactly** as described above. You should probably copy the options printed by the program from here to your code. The tests won't assume that your program is prepared to handle improper input.
+**NB** For the purposes of the test it is essential that the *user interface* works **exactly** as described above. You should probably copy the options printed by the program from here to your code. The tests won't assume that your program is prepared to handle improper input.
 
 <!-- **Huom2:** älä käytä luokkien nimissä skandeja, ne saattavat aiheuttaa ongelmia testeihin! -->
 
