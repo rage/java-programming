@@ -11,7 +11,7 @@ hidden: false
 <!-- - Tunnet luokkien väliset yhteydet ja osaat merkitä luokkakaavioon perinnän sekä rajapinnan toteutuksen. -->
 <!-- - Osaat luoda luokkia luokkakaavioiden perusteella. -->
 - Know how to draw class diagrams, and how to describe classes and their attributes, constructors and methods.
-- Know how to describe connections between classes, and can describe inheritance and iplementing interfaces
+- Know how to describe connections between classes, and can describe inheritance and the implementation of interfaces
 - Can implement a class based on a class diagram
 
 </text-box>
@@ -24,6 +24,7 @@ A class diagram is a diagram used in designing and modeling software to describe
 Classes in a class diagram correspond with classes in the source code. The diagram shows the names and attributes of the classes, connections between the classes and sometimes also the methods of the classes.
 
 <!-- Tutustumme seuraavaksi luokkakaavioiden merkintään ja tulkintaan. Opimme samalla <a href="https://en.wikipedia.org/wiki/Unified_Modeling_Language" target="_blank" norel>UML</a>-kielen luokkakaavioiden kuvaamiseen -- yhteisen kielen avulla eri ihmisten piirtämät luokkakaaviot ovat kaikkien ymmärrettävissä. -->
+
 Next we will get familiar with creating and reading class diagrams using <a href="https://en.wikipedia.org/wiki/Unified_Modeling_Language" target="_blank" norel>UML</a>. Using an unified modeling language ensures that class diagrams drawn by different people can be read and understood by everyone familiar with the language.
 
 <br/>
@@ -361,14 +362,14 @@ Two classes, Student and University, are depicted below, as well as the connecti
 ## Describing inheritance
 
 <!-- Perintä merkitään luokkakaavioon kolmion muotoisella nuolella. Kolmio on perittävän luokan päädyssä. Alla olevassa esimerkissä luokka Moottori perii luokan Osa. -->
-In a class diagram inheritance is described by an arrow with a triangle head. The triangle points to the class being inherited from. In the below example the Motor inherits the class Part.
+In a class diagram inheritance is described by an arrow with a triangle head. The triangle points to the class being inherited from. In the example below, the Part inherits the class Part.
 
 <!-- <img src="../img/diagrams/luokkakaavio-moottori-perii-osan.png" alt="[Osa|-tunnus:String;-valmistaja:String;-kuvaus:String][Moottori|-moottorityyppi:String][Osa]^-[Moottori]" /> -->
 <img src="../img/diagrams/part11.1-classdiagram-engine-inherits-part.png" alt="[Part|-id:String;-manufacturer:String;-description:String][Engine|-type:String][Part]^-[Engine]" />
 
 
 <!-- Alla olevaan esimerkkiin on kirjoitettu auki muistavaa tuotevarastoa käsittelevän tehtävän luokkakaavio. Muistava tuotevarasto perii tuotevaraston, joka taas perii varaston. Muutoshistoria on erillinen luokka, jonka muistava tuotevarasto sisältää. Muistava tuotevarasto tietää muutoshistorian, mutta muutoshistoria ei tiedä muistavasta tuotevarastosta. -->
-In the below example the class diagram describes the classes from the Product warehouse exercise. The ProductWarehouseWithHistory class inherits the ProductWarehouse class which in turn inherits the Warehouse class.
+In the example below the class diagram describes the classes from the Product warehouse exercise. The ProductWarehouseWithHistory class inherits the ProductWarehouse class which in turn inherits the Warehouse class.
 ChangeHistory is a separate class connected to the ProductWarehouse. ProductWarehouseWithHistory knows about the ChangeHistory but the ChangeHistory does now know about the ProductWarehouseWithHistory.
 
 <!-- <img src="../img/diagrams/luokkakaavio-muistava-tuotevarasto.png" alt="[Varasto|-tilavuus:double;-saldo:double|+Varasto(tilavuus:double);+getSaldo():double;+getTilavuus():double;+paljonkoMahtuu():double;+lisaaVarastoon(maara:double):void;+otaVarastosta(maara:double):double;+toString():String][Tuotevarasto|-nimi:String|+Tuotevarasto(nimi:String، tilavuus:double);+getNimi():String;+setNimi(nimi:String):String;+toString():String][Muutoshistoria|-tilanteet:ArrayList|+Muutoshistoria();+lisaa(tilanne:double);+nollaa():void;...][MuistavaTuotevarasto||+MuistavaTuotevarasto(nimi:String، tilavuus:double،alkusaldo:double);+historia():String;+tulostaAnalyysi():void;+lisaaVarastoon(maara:double);+otaVarastosta(maara:double):double][Varasto]^-[Tuotevarasto][Tuotevarasto]^-[MuistavaTuotevarasto][Muutoshistoria]<-[MuistavaTuotevarasto]" /> -->
@@ -376,7 +377,7 @@ ChangeHistory is a separate class connected to the ProductWarehouse. ProductWare
 
 
 <!-- Abstraktien luokkien perintä toimii lähes samalla tavalla. Abstraktit luokat kuitenkin merkitään luokkakaavioon siten, että luokan nimen yläpuolella lukee `<<abstract>>`. Tämän lisäksi luokan nimi ja luokassa määritellyt abstraktit metodit kuvataan kursiivilla. -->
-Inheritance of abstract classes is described almost the same way as regular classes. However we add the description `<<abstract>>` above the name of the class. The name of the class and its abstract methods are also written in cursive.
+Inheritance of abstract classes is described almost the same way as regular classes. However we add the description `<<abstract>>` above the name of the class. The name of the class and its abstract methods are also written in italics.
 
 
 <!-- <img src="../img/diagrams/luokkakaavio-abstraktit.png" /> -->
@@ -439,14 +440,14 @@ Below you'll see the interface Saveable and the class Person. Implement the cont
 </programming-exercise>
 
 
-<text-box variant='hint' name='How these should be drawn?'>
+<text-box variant='hint' name='How should these be drawn?'>
 
 <!-- Luokkakaaviot ovat erinomainen tapa kuvata ongelma-aluetta ja ongelman muotoa muille. Niiden käyttö on erittäin hyödyllistä myös silloin, kun ohjelmoija suunnittelee useammasta luokasta koostuvan ohjelman rakennetta. -->
 Class diagrams are an excellent way to describe a problem and a problem-domain to others. They are particularily useful when a programmer is designing a program with multiple classes.
 
 
 <!-- Luokkakaavioita piirretään ohjelman suunnitteluvaiheessa usein esimerkiksi valkotaulua tai isompaa paperiarkkia käyttäen. Luokkakaaviot kannattaa ajatella poisheitettävinä tuotoksina, jotka auttavat ohjelman rakennuksessa. Kaavion piirtämiseen -- eli tyylin oikeellisuuteen ja yksityiskohtiin -- ei kannata käyttää liian pitkään aikaa. Vastaavasti kaavio kannattaa piirtää sopivalla abstraktiotasolla. Esimerkiksi kymmeniä luokkia sisältävään luokkakaavioon ei kannata merkitä jokaisen luokan jokaista metodia ja muuttujaa: oleellista on, että kaaviosta saa luotua nopean yleiskuvan. -->
-Often a class diagram is drawn on a whiteboard or a big sheet of paper during the design phase. They should be though of as helpful tools to build a program, which can be thrown away afterwards. You should not use too much energy to think about the correctness and details of the modeling language.
+Often a class diagram is drawn on a whiteboard or a big sheet of paper during the design phase. They should be thought of as helpful tools to build a program, which can then be thrown away afterwards. You should not use too much energy to think about the correctness and details of the modeling language.
 Class diagram should also be drawn in a suitable level of abstraction. For example if you have tens of classes, it might not be worth it to describe each attribute and each method of each class: getting a good overview of the program structure is the most important.
 
 
