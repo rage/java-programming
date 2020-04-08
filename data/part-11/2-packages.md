@@ -1246,15 +1246,15 @@ In this exercise you will implement the application that was described above. Yo
 
 <!-- Lentokenttä-tehtävässä toteutetaan lentokentän hallintasovellus. Lentokentän hallintasovelluksessa hallinnoidaan lentokoneita ja lentoja. Lentokoneista tiedetään aina tunnus ja kapasiteetti. Lennoista tiedetään lennon lentokone, lähtöpaikan tunnus (esim. <a href="http://en.wikipedia.org/wiki/Helsinki_Airport" target="_blank" rel="noopener">HEL</a>) ja kohdepaikan tunnus (esim. <a href="http://en.wikipedia.org/wiki/Batman_Airport" target="_blank" rel="noopener">BAL</a>). -->
 
-<p>In this exercise you will implement a flight control application. It is used to control the airplanes and their flight routes. The system always knows the identifier and the capacity of an airplance. The flight information consists of the used airplane, the departure airport id (e.g. <a href="http://en.wikipedia.org/wiki/Helsinki_Airport" target="_blank" rel="noopener">HEL</a>), and the destination airport ID (e.g. <a href="http://en.wikipedia.org/wiki/Batman_Airport" target="_blank" rel="noopener">BAL</a>).</p>
+In this exercise you will implement a flight control application. It is used to control the airplanes and their flight routes. The system always knows the identifier and the capacity of an airplane. The flight information consists of the used airplane, the departure airport id (e.g. <a href="http://en.wikipedia.org/wiki/Helsinki_Airport" target="_blank" rel="noopener">HEL</a>), and the destination airport ID (e.g. <a href="http://en.wikipedia.org/wiki/Batman_Airport" target="_blank" rel="noopener">BAL</a>).
 
 <!-- Sekä lentokoneita että lentoja voi olla useita. Samalla lentokoneella voidaan myös lentää useita eri lentoja. -->
 
-There can be multpiple airplanes and flights. The same airplane can be used to make several flights.
+There can be multpiple airplanes and flights. The same airplane can be used on several flights.
 
 <!-- Sovelluksen tulee toimia kahdessa vaiheessa: ensin syötetään lentokoneiden ja lentojen tietoja hallintakäyttöliittymässä, jonka jälkeen siirrytään lentopalvelun käyttöön. Lentopalvelussa on kolme toimintoa; lentokoneiden tulostaminen, lentojen tulostaminen, ja lentokoneen tietojen tulostaminen. Tämän lisäksi käyttäjä voi poistua ohjelmasta valitsemalla vaihtoehdon `x`. Jos käyttäjä syöttää epäkelvon komennon, kysytään komentoa uudestaan. -->
 
-The application should operate in two parts: first, the user enters information about airplanes and flights in the airport asset control, after which the program offers the flight information service for the user. There are three operations in this latter flight control -- printing the airplanes, printing the flights, and printing the information of a single airplane. In addition, the user may exit the program by choosing the option `x`. If the user enters an invalid command, the program asks for a command again.
+The application should operate in two parts: first, the user enters information about airplanes and flights in the airport asset control, after which the program offers the flight information service for the user. There are three operations in this latter flight control -- printing the airplanes, printing the flights and printing the information of a single airplane. In addition, the user may exit the program by choosing the option `x`. If the user enters an invalid command, the program asks for a command again.
 
 <!-- **Ohjelman tulee käynnistyä kun pakkauksessa `lentokentta` olevan luokan Main metodi main suoritetaan.** -->
 
@@ -1357,6 +1357,7 @@ Valitse toiminto:
 Airport Asset Control
 --------------------
 
+Airport Asset Control
 Choose an action:
 [1] Add an airplane
 [2] Add a flight
@@ -1404,6 +1405,7 @@ Choose an action:
 Flight Control
 ------------
 
+Flight Control
 Choose an action:
 [1] Print airplanes
 [2] Print flights
@@ -1418,9 +1420,9 @@ Choose an action:
 [3] Print airplane details
 [x] Quit
 &gt; **2**
-HA-LOL (42 henkilöä) (HEL-BAL)
-HA-LOL (42 henkilöä) (BAL-HEL)
-G-OWAC (101 henkilöä) (JFK-BAL)
+HA-LOL (42 capacity) (HEL-BAL)
+HA-LOL (42 capacity) (BAL-HEL)
+G-OWAC (101 capacity) (JFK-BAL)
 
 Choose an action:
 [1] Print airplanes
@@ -1443,11 +1445,11 @@ Choose an action:
 
 <!-- **Huom1:** Testien kannalta on oleellista että *käyttöliittymä* toimii **täsmälleen** kuten yllä kuvattu. Ohjelman tulostamat vaihtoehdot kannattanee copypasteta tästä ohjelmakoodiin. Testit eivät oleta, että ohjelmasi on varautunut epäkelpoihin syötteisiin. -->
 
-**NB** For the purposes of the test it is essential that the *user interface* work **exactly** as described above. You should probably copy the options printed by the program from here to your code. The tests won't assume that your program is prepared to handle improper input.
+**NB** For the purposes of the tests, it is essential that the *user interface* work **exactly** as described above. You should probably copy the options printed by the program from here to your code. The tests won't assume that your program is prepared to handle improper input.
 
 <!-- **Huom2:** älä käytä luokkien nimissä skandeja, ne saattavat aiheuttaa ongelmia testeihin! -->
 
-**NB** don't use scandic letters (å, ä, ö) in the class names, since they might cause probelms with the tests!
+**NB** don't use Scandic letters (å, ä, ö) in the class names, since they might cause problems with the tests!
 
 
 </programming-exercise>
