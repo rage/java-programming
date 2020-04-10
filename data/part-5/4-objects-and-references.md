@@ -4090,7 +4090,7 @@ System.out.println(c);  // 15.00e
 
 <!-- Tee metodi `public boolean vahemman(Raha verrattava)`, joka palauttaa true jos raha-olio jolle metodia kutsutaan on arvoltaan pienempi kuin raha-olio, joka on metodin parametrina. -->
 
-Create the method `public boolean lessThan(Money compared)` that returns true if the money object whose method is called has a greater worth than the money object that is received as the method parameter.
+Create the method `public boolean lessThan(Money compared)` that returns true if the money-object on which the method is called on has a lesser value than the money object given as a parameter.
 
 
 <!-- ```java
