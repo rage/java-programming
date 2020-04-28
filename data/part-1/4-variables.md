@@ -49,7 +49,7 @@ Open the questionnaire by following the link
 
 <!-- Tutustuimme syötteen lukemisen yhteydessä jo pikaisesti merkkijonomuuttujiin. Tutustutaan seuraavaksi muihin usein käytettyihin Javan muuttujatyyppeihin. -->
 
-We've already familiarized ourselvese with strings to a degree while dealing with user inputs. Let's turn our attention to learning about other variable *types* commonly used in Java.
+We've already familiarized ourselves with strings to a degree while dealing with user inputs. Let's turn our attention to learning about other variable *types* commonly used in Java.
 
 <!-- Muuttujaa kannattaa ajatella lokerona, johon voi tallettaa annetun tyyppistä tietoa. Tyyppejä ovat esimerkiksi teksti eli merkkijono (`String`), kokonaisluku (`int`), liukuluku (`double`) eli desimaaliluku, ja totuusarvo (`boolean`). Muuttujaan asetetaan arvo yhtäsuuruusmerkillä (`=`). -->
 
@@ -195,7 +195,7 @@ Zetor
 
 <!-- Muuttujien nimet ovat uniikkeja, eikä kahdella muuttujalla saa olla ohjelmassa samaa nimeä. Seuraavassa esimerkissä oleva ohjelma on virheellinen, koska ohjelmassa yritetään luoda kahteen kertaan muuttujaa nimeltä `pii`. Muuttujan luominen tapahtuu kun muuttuja esitellään ensimmäistä kertaa. -->
 
-Variable names are unique - no two variables can have the same name. The program in the following example is faulty as it attempts to create the variable `pi` twice. The variable is created the first time its declared.
+Variable names are unique - no two variables can have the same name. The program in the following example is faulty as it attempts to create the variable `pi` twice. The variable is created the first time it is declared.
 
 <!-- ```java
 public class Esimerkki {
@@ -320,7 +320,7 @@ The variable is then referenced again by its name in the program -- we again wan
 
 <!-- Kun muuttujan tyyppi on kertaalleen määritelty, ei sitä voi enää muuttaa. Totuusarvoa ei siis voi esimerkiksi asettaa kokonaislukutyyppiseen muuttujaan, eikä totuusarvomuuttujaan voi asettaa kokonaislukua. -->
 
-Once a variable's type has been declared, it can no longer be changed. For example, a boolean value cannot be assigned to a variable of the integer type, nor can an integer be assigned to a variable of the boolean tpe.
+Once a variable's type has been declared, it can no longer be changed. For example, a boolean value cannot be assigned to a variable of the integer type, nor can an integer be assigned to a variable of the boolean type.
 
 <!-- ```java
 boolean onnistuukoKokonaisLuvunAsetus = false;
