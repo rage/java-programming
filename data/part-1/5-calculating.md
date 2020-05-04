@@ -700,7 +700,7 @@ System.out.println(result);
 
 <sample-output>
 
-1
+1.0
 
 </sample-output>
 
