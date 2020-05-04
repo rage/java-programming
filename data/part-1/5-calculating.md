@@ -706,7 +706,7 @@ System.out.println(result);
 
 <!-- Nytkin tulostus on 1, sillä eka ja toka ovat (yhä) kokonaislukuja. -->
 
-The output 1 again, since first and second are (still) integers.
+The output is 1.0, since the result is of type double (promotion int -> double).
 
 <!-- Jos jakolaskun jakaja tai jaettava (tai molemmat!) ovat liukulukuja, tulee tulokseksi myös liukuluku. -->
 
