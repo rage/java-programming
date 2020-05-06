@@ -1,6 +1,9 @@
 ---
+# path: '/osa-12/1-geneeriset-tyyppiparametrit'
 path: '/part-12/1-type-parameters'
+# title: 'Geneeriset tyyppiparametrit'
 title: 'Type parameters'
+# hidden: false
 hidden: true
 ---
 
@@ -21,7 +24,6 @@ hidden: true
 - You can create classes of your own that make use of generic type parameters.
 
 </text-box>
-
 
 <!-- Olemme listoihin tutustumisesta lähtien kertoneet tietorakenteille niiden sisältämän arvon tyypin. Esimerkiksi merkkijono-olioita sisältävä lista on esitelty muodossa `ArrayList<String>` ja merkkijonoja avaimina ja arvoina sisältävä hajautustaulu on esitelty muodossa `HashMap<String, String>`. Miten ihmeessä luokan voi toteuttaa niin, että luokka voi sisältää annetun tyyppisiä olioita? -->
 
@@ -63,11 +65,9 @@ public class Locker<T> {
 }
 ```
 
-
 <!-- Määrittely `public class Lokero<T>` kertoo että luokalle `Lokero` tulee antaa konstruktorissa tyyppiparametri. Konstruktorikutsun jälkeen kaikki olion sisäiset muuttujat tulevat olemaan kutsun yhteydessä annettua tyyppiä. Luodaan merkkijonon tallentava lokero. -->
 
-The definition `public class Locker<T>` indicates that the `Locker` class msut be given a type parameter in its constructor. After the constructor call is executed, all the variables stored in that object are going to be of the type that was given with the constructor. Let's create a locker for storing strings.
-
+The definition `public class Locker<T>` indicates that the `Locker` class must be given a type parameter in its constructor. After the constructor call is executed, all the variables stored in that object are going to be of the type that was given with the constructor. Let's create a locker for storing strings.
 
 <!-- ```java
 Lokero<String> merkkijono = new Lokero<>();
@@ -89,11 +89,9 @@ System.out.println(string.getValue());
 
 </sample-output>
 
-
 <!-- Yllä olevalla ohjelmalla merkkijono-nimisen `Lokero`-olion **ajonaikainen** toteutus on seuraavanlainen. -->
 
 In the program above, the **runtime** implementation of the `Locker` object named `string` looks like the following.
-
 
 <!-- ```java
 public class Lokero<String> {
@@ -147,7 +145,6 @@ System.out.println(integer.getValue());
 
 </sample-output>
 
-
 <!-- Vastaavasti esimerkiksi `Random`-olion sisältävän lokeron saa luotua seuraavalla tavalla. -->
 
 Similarly, here is how to create a locker for storing a `Random` object.
@@ -165,7 +162,6 @@ random.setValue(new Random());
 
 System.out.println(random.getValue().nextDouble());
 ```
-
 
 <!-- Tyyppiparametrien määrää ei ole rajattu, vaan määrä riippuu toteutuksesta. Ohjelmoija voisi halutessaan toteuttaa esimerkiksi `Pari`-luokan, johon voi laittaa kaksi halutun tyyppistä oliota. -->
 
@@ -213,11 +209,9 @@ public class Pair<T, K> {
 
 <quiz id="4e28cce5-9043-58be-ac53-5243976494bd"></quiz>
 
-
 <!-- Huomattava osa Javan tietorakenteista käyttää tyyppiparametreja ja mahdollistaa eri tyyppisten muuttujien lisäämisen niihin. Esimerkiksi ArrayList saa yhden tyyppiparametrin, HashMap kaksi. -->
 
 A significant portion of the Java data structures use type parameters, which enables them to handle different types of variables. ArrayList, for instance, receives a single type parameter, while HashMap receives two.
-
 
 <!-- ```java
 List<String> merkkijonot = new ArrayList<>();
@@ -229,7 +223,6 @@ List<String> strings = new ArrayList<>();
 Map<String, String> keyValuePairs = new HashMap<>();
 ```
 
-
 <!-- Jatkossa kun näet esimerkiksi tyypin `ArrayList<String>` tiedät että sen sisäisessä rakenteessa on käytetty geneeristä tyyppiparametria. Sama periaate löytyy esimerkiksi rajapinnassa Comparable. -->
 
 From here on out when you see the type `ArrayList<String>`, you know that its internal implementation uses a generic type parameter. The same principle holds true for the interface Comparable, for example.
@@ -237,7 +230,6 @@ From here on out when you see the type `ArrayList<String>`, you know that its in
 <!-- Geneeristen rajapintojen tekeminen onnistuu samalla tavalla kuin geneeristen luokkien tekeminen. Alla on esimerkki geneerisestä rajapinnasta `Lista`. -->
 
 Creating generic interfaces is very similar to creating generic classes. Below you can study the generic interface `List` (our own definition, which is not as extensive as the existing Java [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)).
-
 
 <!-- ```java
 public interface Lista<T> {
@@ -255,11 +247,9 @@ public interface List<T> {
 }
 ```
 
-
 <!-- Luokka voi toteuttaa geneerisen rajapinnan kahdella tavalla. Luokka voi määritellä rajapinnan toteutuksen yhteydessä rajapinnalle tyyppiparametrin tai luokalle voidaan myös määritellä tyyppiparametri. Alla olevassa esimerkissä on luokka `Elokuvalista`, joka määrittelee listan toteutuksen yhteydessä rajapinnalle tyyppiparametrin. Elokuvalista on vain elokuvien käsittelyyn tarkoitettu. -->
 
 There are two ways for a class to implement a generic interface. One is to decide the type parameter in the definition of the class, and the other is to define the implementing class with a type parameter as well. Below, the class `MovieList` defines the type parameter when it implements List. The MovieList is meant only for handling movies.
-
 
 <!-- ```java
 public class Elokuvalista implements Lista<Elokuva> {
@@ -411,7 +401,6 @@ public class GeneralList<T> implements List<T> {
 }
 ```
 
-
 <!-- <programming-exercise name='Piilo' tmcname='osa12-Osa12_01.Piilo'> -->
 
 <programming-exercise name='Hideout' tmcname='part12-Part12_01.Hideout'>
@@ -420,7 +409,6 @@ public class GeneralList<T> implements List<T> {
 <!-- Toteuta luokka Piilo, jolla on yksi geneerinen tyyppiparametri. Luokasta tehdyssä oliossa voi olla yksi olio kerralaan piilossa. Luokan tulee tarjota parametriton konstruktori sekä seuraavat kolme metodia: -->
 
 Implement a class called Hideout, which has a single generic type parameter. The object created from the class may only hide one object at a time. The class should provide a parameterless constructor as well as the following three methods:
-
 
 <!-- - `public void laitaPiiloon(T piilotettava)` laittaa piiloon luokan tyyppiparametrin mukaisen olion. Mikäli piilossa on jo olio, vanha olio katoaa. -->
 
@@ -437,7 +425,6 @@ Implement a class called Hideout, which has a single generic type parameter. The
 <!-- **Luokalle ei ole tehtäväpohjassa testejä**. Palauta tehtävä kun seuraavat esimerkit toimivat toivotulla tavalla. -->
 
 **There are no tests for the class in the exercise template**. Submit the exercise when the following examples work as intended.
-
 
 <!-- ```java
 Piilo<String> jemma = new Piilo<>();
@@ -523,7 +510,6 @@ false
 
 </programming-exercise>
 
-
 <!-- <programming-exercise name='Putki' tmcname='osa12-Osa12_02.Putki'> -->
 
 <programming-exercise name='Pipe' tmcname='part12-Part12_02.Pipe'>
@@ -572,15 +558,6 @@ while(pipe.isInPipe()) {
 }
 ```
 
-<!-- <sample-output>
-
-dibi
-dab
-dab
-daa
-
-</sample-output> -->
-
 <sample-output>
 
 dibi
@@ -626,6 +603,5 @@ null
 </sample-output>
 
 </programming-exercise>
-
 
 <quiz id='515dc1a2-e0b9-5f2d-b8b3-cff8ae61b8b1'></quiz>
