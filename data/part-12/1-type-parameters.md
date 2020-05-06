@@ -11,16 +11,14 @@ hidden: true
 
 <text-box variant='learningObjectives' name='Learning objectives'>
 
-<!-- - Tiedät mitä käsitteellä geneerinen tyyppiparametri tarkoitetaan. -->
+<!--
+- Tiedät mitä käsitteellä geneerinen tyyppiparametri tarkoitetaan.
+- Tunnet Javassa olevia geneerisiä tyyppiparametreja hyödyntäviä luokkia.
+- Osaat luoda omia luokkia, joissa käytetään geneerisiä tyyppiparametreja.
+-->
 
 - You know what is meant with the concept of a generic type parameter.
-
-<!-- - Tunnet Javassa olevia geneerisiä tyyppiparametreja hyödyntäviä luokkia. -->
-
 - You are familiar with already existing Java classes that make use of generic type parameters.
-
-<!-- - Osaat luoda omia luokkia, joissa käytetään geneerisiä tyyppiparametreja. -->
-
 - You can create classes of your own that make use of generic type parameters.
 
 </text-box>
@@ -410,16 +408,14 @@ public class GeneralList<T> implements List<T> {
 
 Implement a class called Hideout, which has a single generic type parameter. The object created from the class may only hide one object at a time. The class should provide a parameterless constructor as well as the following three methods:
 
-<!-- - `public void laitaPiiloon(T piilotettava)` laittaa piiloon luokan tyyppiparametrin mukaisen olion. Mikäli piilossa on jo olio, vanha olio katoaa. -->
+<!--
+- `public void laitaPiiloon(T piilotettava)` laittaa piiloon luokan tyyppiparametrin mukaisen olion. Mikäli piilossa on jo olio, vanha olio katoaa.
+- `public T otaPiilosta()` ottaa piilosta luokan tyyppiparametrin mukaisen olion. Mikäli piilossa ei ole mitään, palautetaan `null`. Metodin kutsuminen palauttaa piilossa olevan olion ja poistaa olion piilosta.
+- `public boolean onkoPiilossa()` palauttaa arvon `true` mikäli piilossa on olio. Mikäli piilossa ei ole oliota, palauttaa arvon `false`.
+-->
 
 - `public void putIntoHideout(T toHide)` puts an object with a type in accordance with the type parameter given to the the class into the hideout. In case an object is already in the hideout, it will disappear.
-
-<!-- - `public T otaPiilosta()` ottaa piilosta luokan tyyppiparametrin mukaisen olion. Mikäli piilossa ei ole mitään, palautetaan `null`. Metodin kutsuminen palauttaa piilossa olevan olion ja poistaa olion piilosta. -->
-
 - `public T takeFromHideout()` takes out the object with a type in accordance with the type parameter given to the the class from the hideout. In case there is nothing in the hideout, we return `null`. Calling the method returns the object in the hideout and removes the object from the hideout.
-
-<!-- - `public boolean onkoPiilossa()` palauttaa arvon `true` mikäli piilossa on olio. Mikäli piilossa ei ole oliota, palauttaa arvon `false`. -->
-
 - `public boolean isInHideout()` returns the value `true` if there is an object in the hideout. In case there isn't an object in the hideout, it should return the value `false`.
 
 <!-- **Luokalle ei ole tehtäväpohjassa testejä**. Palauta tehtävä kun seuraavat esimerkit toimivat toivotulla tavalla. -->
@@ -518,16 +514,13 @@ false
 
 Implement a class called Pipe, which has a single generic parameter type. The pipe works, such that we can add values into it and values can be taken out. Adding to the pipe happens from one end, and taking out from the other end. In other words, we always remove the value which has been inside the pipe the longest and add to it the newest value. The class should provide a parameterless constructor as well as the following three methods:
 
-<!-- - `public void lisaaPutkeen(T arvo)` lisää putkeen luokan tyyppiparametrin mukaisen olion. -->
+<!--
+- `public void lisaaPutkeen(T arvo)` lisää putkeen luokan tyyppiparametrin mukaisen olion.
+- `public T otaPutkesta()` ottaa putkesta siellä pisimpään olleen arvon. Mikäli putkessa ei ole mitään, palautetaan `null`. Metodin kutsuminen palauttaa putkessa pisimpään olleen olion ja poistaa sen putkesta.
+- `public boolean onkoPutkessa()` palauttaa arvon `true` mikäli putkessa on arvoja. Mikäli putki on tyhjä, palauttaa arvon `false`. -->
 
 - `public void putIntoPipe(T arvo)` puts an object with a type in accordance with the type parameter given to the the class into the pipe.
-
-<!-- - `public T otaPutkesta()` ottaa putkesta siellä pisimpään olleen arvon. Mikäli putkessa ei ole mitään, palautetaan `null`. Metodin kutsuminen palauttaa putkessa pisimpään olleen olion ja poistaa sen putkesta. -->
-
 - `public T takeFromPipe()` takes out the value, which has been in the pipe the longest. In case there is nothing in the pipe, return `null`. Calling the method returns the value, which has been in the pipe the longest, and removes it from the pipe.
-
-<!-- - `public boolean onkoPutkessa()` palauttaa arvon `true` mikäli putkessa on arvoja. Mikäli putki on tyhjä, palauttaa arvon `false`. -->
-
 - `public boolean isInPipe()` returns the value `true` if the pipe has values. In case the pipe is empty, it returns the value `false`.
 
 <!-- Tee luokan sisäinen toteutus ArrayListin avulla. -->

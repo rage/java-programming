@@ -11,20 +11,16 @@ hidden: true
 
 <text-box variant='learningObjectives' name='Learning objectives'>
 
-<!-- - Tiedät miten miten muuttuvankokoinen geneerinen lista toteutetaan. -->
+<!--
+- Tiedät miten miten muuttuvankokoinen geneerinen lista toteutetaan.
+- Tunnet erään mahdollisen tavan Javan ArrayListin kaltaisen luokan toteutukselle.
+- Tiedät miten miten hajautustaulu toteutetaan.
+- Tunnet erään mahdollisen tavan Javan HashMapin kaltaisen luokan toteutukselle.
+-->
 
 - You know how to implement a generic list that has changing size.
-
-<!-- - Tunnet erään mahdollisen tavan Javan ArrayListin kaltaisen luokan toteutukselle. -->
-
 - You know of one possible method to implement a class like Java's ArrayList.
-
-<!-- - Tiedät miten miten hajautustaulu toteutetaan. -->
-
 - You know how to implement a hash table.
-
-<!-- - Tunnet erään mahdollisen tavan Javan HashMapin kaltaisen luokan toteutukselle. -->
-
 - You are aware of one possible method to implement a class like Java's HashMap.
 
 </text-box>
