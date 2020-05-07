@@ -519,14 +519,16 @@ Implement a class called Pipe, which has a single generic parameter type. The pi
 - `public T otaPutkesta()` ottaa putkesta siellä pisimpään olleen arvon. Mikäli putkessa ei ole mitään, palautetaan `null`. Metodin kutsuminen palauttaa putkessa pisimpään olleen olion ja poistaa sen putkesta.
 - `public boolean onkoPutkessa()` palauttaa arvon `true` mikäli putkessa on arvoja. Mikäli putki on tyhjä, palauttaa arvon `false`. -->
 
-- `public void putIntoPipe(T arvo)` puts an object with a type in accordance with the type parameter given to the the class into the pipe.
+- `public void putIntoPipe(T value)` puts an object with a type in accordance with the type parameter given to the the class into the pipe.
 - `public T takeFromPipe()` takes out the value, which has been in the pipe the longest. In case there is nothing in the pipe, return `null`. Calling the method returns the value, which has been in the pipe the longest, and removes it from the pipe.
 - `public boolean isInPipe()` returns the value `true` if the pipe has values. In case the pipe is empty, it returns the value `false`.
 
 <!-- Tee luokan sisäinen toteutus ArrayListin avulla. -->
+
 Use ArrayList to implement the internal functionality of the class.
 
 <!-- **Luokalle ei ole tehtäväpohjassa testejä**. Palauta tehtävä kun seuraavat esimerkit toimivat toivotulla tavalla. -->
+
 **There are no tests for the class in the exercise template**. Submit the exercise when the following examples work as intended.
 
 <!-- ```java

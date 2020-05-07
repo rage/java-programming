@@ -230,8 +230,7 @@ false
 
 <!-- Luodaan luokka `Lista`. Listarakenne sisältää geneerisen taulukon -- eli taulukon, jonka alkioiden tyyppi määräytyy ajonaikaisesti tyyppiparametreista. Asetetaan taulukon alkukooksi `10`. Taulukko luodaan object-tyyppisenä ja muunnetaan geneerisen tyyppiseksi `(T[]) new Object[10];` -- tämä tehdään, sillä kutsu `new T[10];` ei ainakaan toistaiseksi toimi Javassa. -->
 
-Lets create class `List`. The List has a generic array -- the type of the elements in the array is defined on run time using type parameters.
-Lets set the size of the array to `10`. The array is created as type object, and changed to type generic with `(A[]) new object[10];` -- this is done because Java does not support the call `new A[10];` for now.
+Lets create class `List`. The List has a generic array -- the type of the elements in the array is defined on run time using type parameters. Lets set the size of the array to `10`. The array is created as type object, and changed to type generic with `(A[]) new object[10];` -- this is done because Java does not support the call `new A[10];` for now.
 
 <!-- ```java
 public class Lista<T> {
@@ -543,7 +542,7 @@ The above implementation is however problematic, because it leaves "empty" slots
 
 <!-- Ongelman voi ratkaista useammalla tavalla, joista yksi on siirtää jokaista poistettua valuea seuraavaa valuea vasemmalle. Lisätään tämä toiminnallisuus ohjelmaan. -->
 
-<!-- Google translate: The problem can be solved in several ways, one of which is to move each deleted run to the next run to the left. Add this functionality to the program. -->
+The problem can be solved in several ways, one of which is to move each element after deleted to the left. Add this functionality to the program.
 
 <!-- ```java
 public void poista(T arvo) {
@@ -1031,7 +1030,6 @@ The method begins by calculating a hash value for the key, and using it to figur
 <!-- Mikäli hajautusarvon ja jakojäänneksen avulla lasketussa indeksissä ei ole listaa, ei indeksiin ole lisätty vielä yhtäkään avain-arvo -paria, eikä avaimelle ole tallennettu arvoa. Tällöin palautetaan `null`-viite. Muussa tapauksessa taulukon indeksissä oleva lista käydään läpi, ja avaimen yhtäsuuruutta vertaillaan jokaiseen listan avain-arvo -parin avaimeen. Mikäli joku listalla olevista avaimista vastaa avainta, jonka perusteella arvoa haetaan, palautetaan kyseinen arvo. Muulloin avainta (ja siihen liittyvää arvoa) ei löydy, ja palautetaan arvo null. -->
 
 If there is no list in the calculated index, no key-value pairs have been added to that index. This means that there are no key-value pairs with this key that have been stored. In this case we'll return the `null` reference. Otherwise, the program goes through the list at the index, and we compare the parameter key to the key of every key-value pair on that list. If some of the keys matches the parameter key, the method returns the value of that key-value pair. Otherwise we cannot find a suitable key (and related value), so the method returns the value null.
-
 
 <!-- ```java
 public V hae(K avain) {
