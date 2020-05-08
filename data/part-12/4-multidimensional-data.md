@@ -16,7 +16,7 @@ hidden: true
 - Osaat luoda ja käyttää moniulotteisia taulukoita.
 -->
 
--  Know ways to represent multidimensional data
+- Know ways to represent multidimensional data
 - Can create and use multidimensional arrays
 
 </text-box>
@@ -107,8 +107,7 @@ We can see that the default value of variables type `int` is 0.
 
 <!-- Voimme muuttaa taulukon arvoja kuten ennenkin. Alla asetamme kolmeen kohtaan uudet arvot. -->
 
-We can change the values in the array just like before.
-Below we set new values to three elements of the array.
+We can change the values in the array just like before. Below we set new values to three elements of the array.
 
 <!-- ```java
 int rivit = 2;

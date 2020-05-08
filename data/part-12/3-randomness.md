@@ -59,7 +59,7 @@ public class Raffle {
 
 <!-- Yllä olevassa esimerkissä luodaan ensin `Random`-luokasta olio. Random-olio tarjoaa metodin `nextInt`, jolle annetaan parametrina kokonaisluku. Metodi palauttaa satunnaisen kokonaisluvun väliltä `[0,kokonaisluku[` eli *0..(annettu kokonaisluku - 1)*. -->
 
-Above we create an instance of the `Random`class. It has `nextInt` method, which gets an integer as a parameter. The method returns a random number between `[0, integer[` or *0..(integer -1)*.
+Above we create an instance of the `Random` class. It has `nextInt` method, which gets an integer as a parameter. The method returns a random number between `[0, integer[` or *0..(integer -1)*.
 
 <!-- Ohjelman tuottama tulostus ei ole aina sama. Yksi mahdollinen tulostusesimerkki on seuraava: -->
 

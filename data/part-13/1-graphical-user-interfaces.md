@@ -1,29 +1,42 @@
 ---
+# path: '/osa-13/1-graafiset-kayttoliittymat'
 path: '/part-13/1-graphical-user-interfaces'
+# title: 'Graafiset käyttöliittymät'
 title: 'Graphical user interfaces'
+# hidden: false
 hidden: true
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
+
 <text-box variant='learningObjectives' name='Learning Objectives'>
 
 <!-- - Tiedät mistä käyttöliittymät koostuvat ja osaat käynnistää graafisen käyttöliittymän. -->
+
 - You know what user interfaces (UIs) consist of and know how to launch a graphical user interfaces (GUIs).
 
 </text-box>
 
+<!-- <text-box variant="hint" name="Kysely paja-ohjauksesta ja tukiväylistä">
 
-<!-- Tutustutaan seuraavaksi graafisten käyttöliittymien luomiseen. Graafisia käyttöliittymiä luodessa hyödynnämme ensisijaisesti käyttöliittymäkirjastoja, jotka tarjoavat valmiita komponentteja kuten nappeja ja tekstikenttiä. Käyttöliittymäkirjastot hoitavat komponenttien piirtämisen puolestamme, eli meidän ei tarvitse piirtää jokaista käyttöliittymässä olevaa komponenttia ohjelmassamme -- riittää, että komponentit lisätään ohjelmaan.
+Vastaa tässä kohtaa kyselyyn kurssin paja-ohjauksesta ja tukiväylistä. <google-form-link href="https://docs.google.com/forms/d/e/1FAIpQLSdxwTaddxaQZIL-H6HLT5Bcb2JflxeejIj7J8TOiXYlNoKc4A/viewform?usp=pp_url" emailfieldname="entry.733692316">Avaa kysely tätä linkkiä klikkaamalla</google-form-link>.
 
-Siinä missä tekstikäyttöliittymissä toiminnallisuus kytketään tietyn muotoiseen syötteeseen, graafisissa käyttöliittymissä toiminnallisuus lisätään käyttöliittymäkomponentteihin. Ohjelmoija esimerkiksi lisää käyttöliittymässä olevaan buttonin metodin, joka käsittelee napin painallukseen liittyvän tapahtuman.
+</text-box>
 
-Käytämme graafisten käyttöliittymien luomiseen Javan [JavaFx](https://en.wikipedia.org/wiki/JavaFX) käyttöliittymäkirjastoa. Toteuttamamme sovellukset ovat työpöytäsovelluksia. -->
+<quiz id="aaa140b6-87e0-4ab4-bbae-e18e694ff804"></quiz> -->
+
+<!-- Tutustutaan seuraavaksi graafisten käyttöliittymien luomiseen. Graafisia käyttöliittymiä luodessa hyödynnämme ensisijaisesti käyttöliittymäkirjastoja, jotka tarjoavat valmiita komponentteja kuten nappeja ja tekstikenttiä. Käyttöliittymäkirjastot hoitavat komponenttien piirtämisen puolestamme, eli meidän ei tarvitse piirtää jokaista käyttöliittymässä olevaa komponenttia ohjelmassamme -- riittää, että komponentit lisätään ohjelmaan. -->
 
 We'll now take a look at creating graphical user interfaces (GUIs). When creating graphical user interfaces, we mostly make use of user-interface libraries that provide us with ready-made components, such as buttons and text areas. These user-interface libraries take care of the drawing the components for us, meaning that we don't have to draw every single component in our program, only add them to it.
 
+<!-- Siinä missä tekstikäyttöliittymissä toiminnallisuus kytketään tietyn muotoiseen syötteeseen, graafisissa käyttöliittymissä toiminnallisuus lisätään käyttöliittymäkomponentteihin. Ohjelmoija esimerkiksi lisää käyttöliittymässä olevaan nappiin metodin, joka käsittelee napin painallukseen liittyvän tapahtuman. -->
+
 Whereas text interfaces have the functionality coupled to a particular form of input, in GUIs it's added to the user-interface components. A programmer can, for instance, add a method to a button that lives on the interface, which handles an event associated with that button.
 
+<!-- Käytämme graafisten käyttöliittymien luomiseen Javan [JavaFx](https://en.wikipedia.org/wiki/JavaFX) käyttöliittymäkirjastoa. Toteuttamamme sovellukset ovat työpöytäsovelluksia. -->
+
 We'll be using Java's [JavaFx] (https://en.wikipedia.org/wiki/JavaFX) user-interface library to create our graphical user interfaces. The applications we develop are desktop applications.
+
 <br/>
 
 <!-- <text-box variant='hint' name='Graafiset käyttöliittymät ja tarvittavat kirjastot'> -->
