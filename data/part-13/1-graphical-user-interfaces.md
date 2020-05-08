@@ -40,24 +40,29 @@ We'll be using Java's [JavaFx] (https://en.wikipedia.org/wiki/JavaFX) user-inter
 <br/>
 
 <!-- <text-box variant='hint' name='Graafiset käyttöliittymät ja tarvittavat kirjastot'> -->
+
 <text-box variant='hint' name='Graphical User Interfaces and Required Libraries'>
 
 <!-- Graafisten käyttöliittymien luomiseen käytetään JavaFX-nimistä kirjastoa. Linux-koneilla joudut -- riippuen Javan asennuksesta -- asentamaan myös openjfx-kirjaston. Tämän asentaminen onnistuu Ubuntussa (komentoriviltä) komennolla: -->
+
 A library called JavaFX is used to create graphical user interfaces. On Linux machines, you may have to install the openjfx library -- depending on how Java's installed. You can install this in Ubuntu (from the command line) with the command:
 
 <!-- ```bash
 user@kone:~$ sudo apt-get install openjfx
 ``` -->
+
 ```bash
 user@computer:~$ sudo apt-get install openjfx
 ```
 
 <!-- Tehtäväpohjissa käytetään JavaFx-ohjelmien testaamiseen [TestFX](https://github.com/TestFX/TestFX/wiki)-nimistä apukirjastoa. Kirjasto tulee tehtäväpohjien mukana. -->
+
 A test library called [TestFX] (https://github.com/TestFX/TestFX/wiki) is used in the exercise templates to test JavaFx programs. This library is included in the templates.
 
 </text-box>
 
 <!-- <text-box variant='hint' name='Tarvittavat oikeudet macOS:lla tehtävien testeihin'> -->
+
 <text-box variant='hint' name='Required Rights on macOS for Exercise Tests''>
 
 <!-- Tämän osan tehtävissä osa testeistä odottaa, että tmcbeans saa vapaasti liikuttaa kursoria näytöllä. macOS-käyttöjärjestelmällä (Apple-tietokoneet) tähän tarvitsee antaa erikseen tmcbeansille oikeus. Täältä löytyy ohjeet, miten oikeus myönnetään: [macOS ohjeet](/macos-ohjeet) -->
@@ -67,6 +72,7 @@ Some of the tests in this section assume that tmcbeans is able to freely move th
 </text-box>
 
 <!-- Yksinkertaisen ikkunan luominen onnistuu JavaFX:n avulla seuraavanlaisella ohjelmalla. -->
+
 We can create a simple window using JavaFX with the following program.
 
 <!-- ```java
@@ -75,19 +81,20 @@ package sovellus;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
-public class JavaFxApplication extends Application {
+public class JavaFxSovellus extends Application {
 
     @Override
-    public void start(Stage window) {
-        window.setTitle("Hello World!");
-        window.show();
+    public void start(Stage ikkuna) {
+        ikkuna.setTitle("Hei Maailma!");
+        ikkuna.show();
     }
 
     public static void main(String[] args) {
-        launch(JavaFxApplication.class);
+        launch(JavaFxSovellus.class);
     }
 }
 ``` -->
+
 ```java
 package application;
 
@@ -108,34 +115,59 @@ public class JavaFxApplication extends Application {
 }
 ```
 
-
 <!-- Kun ohjelman käynnistää, sovellus näyttää seuraavalta. -->
+
 When the program is launched, it looks as follows.
 
 <!-- <img src="../img/material/gui-helloworld.png" alt="Tyhjä ikkuna, jonka otsikko on 'Hei Maailma!'"/> -->
+
 <img src="../img/material/gui-helloworld.png" alt="Empty window with a 'Hello World' title"/>
 
+<!-- Mitä ohjelmassa oikein tapahtuu? Luokkamme JavaFxSovellus perii JavaFx-käyttöliittymäkirjaston luokan [Application](https://docs.oracle.com/javase/8/javafx/api/javafx/application/Application.html), joka tarjoaa rungon graafisten käyttöliittymien luomiseen. Sovellus käynnistetään Application-luokalta perittävällä metodilla [launch](https://docs.oracle.com/javase/8/javafx/api/javafx/application/Application.html#launch-java.lang.Class-java.lang.String...--), jolle annetaan parametrina käynnistettävän luokan nimi muodossa *LuokanNimi.class* -- yllä luokan nimi on JavaFxSovellus, joten metodille launch annetaan parametrina `JavaFxSovellus.class`. -->
+
+<!-- Google Translate: -->
+What exactly is happening in the program? Our Class JavaFxApplication inherits the [Application] class of the JavaFx UI library (https://docs.oracle.com/javase/8/javafx/api/javafx/application/Application.html), which provides a framework for creating graphical user interfaces. The application is launched using the [class] method inherited from the Application class (https://docs.oracle.com/javase/8/javafx/api/javafx/application/Application.html#launch-java.lang.Class-java.lang.String ...--), which is given the name of the class to start the parameter in the form *ClassName.class* - above the class name is JavaFxApplication, so the launch method is given the parameter `JavaFxApplication.class`.
+
+<!-- Kun metodia launch kutsutaan, Application-luokassa sijaitseva metodi luo parametrina annetusta luokasta (tässä JavaFxSovellus) uuden olion ja kutsuu sen init-metodia. Metodi init on määritelty luokassa Application, ja sitä käytetään esimerkiksi ohjelmassa käytettävien olioiden alustamiseen. Metodin init kutsumisen jälkeen ohjelma kutsuu metodia start, joka saa parametrinaan ikkunaa kuvaavan [Stage](https://docs.oracle.com/javase/8/javafx/api/javafx/stage/Stage.html)-olion. Yllä tehdyssä start-metodin toteutuksessa parametrina saadulle Stage-tyyppiselle ikkunaoliolle asetetaan otsikko metodilla setTitle, jonka jälkeen kutsutaan ikkunan näyttämiseen johtavaa metodia show. Lopulta ohjelma jää kuuntelemaan käyttöliittymässä tapahtuvia tapahtumia kuten ikkunan sulkemista, joka johtaa sovelluksen sammumiseen. -->
+
 When the launch method is called, the method of the Application class creates a new object from the given class (here JavaFxApplication) and calls its init method. The init method is defined in the Application class and is used, for instance, to initialize objects of a program. After calling the init method, the program calls the start method, which gets a [Stage] (https://docs.oracle.com/javase/8/javafx/api/javafx/stage/Stage.html) object as its parameter, which describes the window. In the implementation of the start method above, the setTitle method sets the title of the Stage-type window object obtained as a parameter. The method show is then called, which leads to the window being displayed. The program then stays in a state where it continuously listens to events on user interface, such as closing the window that causes the application to shut down.
+
+<!-- <text-box variant='hint' name='JavaFX-ohjeet'> -->
+
+<!-- Google Translate: -->
+<text-box variant='hint' name='JavaFX instructions'>
+
+<!-- Jos JavaFX ei toimi suoraan tehtävien lataamisen jälkeen, käynnistä TMCBeans uudestaan. Jos tehtävät eivät silti toimi, voit kokeilla noudattaa ylimääräisiä [JavaFX-ohjeita](/javafx-ohjeet). -->
+
+<!-- Google Translate: -->
+If JavaFX does not work directly after downloading the tasks, restart TMCBeans. If the tasks still do not work, you can try following the additional [JavaFX instructions] (/ javafx instructions).
+
+</text-box>
+
+<!-- <programming-exercise name='Sovellukseni' tmcname='osa13-Osa13_01.Sovellukseni'> -->
 
 <programming-exercise name='My first application' tmcname='part13-Part13_01.MyFirstApplication'>
 
 <!-- Luo tehtäväpohjassa olevaan luokkaan graafinen käyttöliittymä, jonka otsikkona on "Sovellukseni". Sovelluksen tulee käynnistyä kun main-metodi suoritetaan. -->
 
+<!-- Google Translate: -->
+Create a graphical user interface for the category in the task template, titled "My Application." The application should start when the main method is executed.
+
 </programming-exercise>
 
-
 <!-- ## Käyttöliittymän rakenne -->
+
 ## Structure of a User Interface
 
-<!-- Graafiset käyttöliittymät koostuvat oleellisesti kolmesta osasta. Stage-olio toimii ohjelman ikkunana. Stage-oliolle asetetaan [Scene](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Scene.html)-olio, joka kuvastaa ikkunassa olevaa näkymää. Scene-olio taas sisältää näkymään liittyvien komponenttien asettelusta vastaavan olion (esim. FlowPane), joka taas sisältää konkreettiset käyttöliittymäkomponentit.
-
-Alla oleva ohjelma luo käyttöliittymän, jossa on yksittäinen nappi. -->
+<!-- Graafiset käyttöliittymät koostuvat oleellisesti kolmesta osasta. Stage-olio toimii ohjelman ikkunana. Stage-oliolle asetetaan [Scene](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Scene.html)-olio, joka kuvastaa ikkunassa olevaa näkymää. Scene-olio taas sisältää näkymään liittyvien komponenttien asettelusta vastaavan olion (esim. FlowPane), joka taas sisältää konkreettiset käyttöliittymäkomponentit. -->
 
 Graphical user interfaces consist of three essential parts. The Stage object behaves as the program's window. A [Scene] (https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Scene.html) is set for a Stage object that represents a scene within the window. The Scene object, on the other hand, contains an object responsible for arranging the components belonging to the scene (such as FlowPane), which contains the actual user interface components.
 
+<!-- Alla oleva ohjelma luo käyttöliittymän, jossa on yksittäinen nappi. -->
+
 The program below creates an interface with a single button.
-<!--
-```java
+
+<!-- ```java
 package sovellus;
 
 import javafx.application.Application;
@@ -144,23 +176,23 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 
-public class JavaFxApplication extends Application {
+public class JavaFxSovellus extends Application {
 
     @Override
-    public void start(Stage window) {
-        Button button = new Button("This is a button");
+    public void start(Stage ikkuna) {
+        Button nappi = new Button("Tämä on nappi");
 
-        FlowPane componentGroup = new FlowPane();
-        componentGroup.getChildren().add(button);
+        FlowPane komponenttiryhma = new FlowPane();
+        komponenttiryhma.getChildren().add(nappi);
 
-        Scene view = new Scene(componentGroup);
+        Scene nakyma = new Scene(komponenttiryhma);
 
-        window.setScene(view);
-        window.show();
+        ikkuna.setScene(nakyma);
+        ikkuna.show();
     }
 
     public static void main(String[] args) {
-        launch(JavaFxApplication.class);
+        launch(JavaFxSovellus.class);
     }
 }
 ``` -->
@@ -196,19 +228,17 @@ public class JavaFxApplication extends Application {
 ```
 
 <!-- Sovellus näyttää seuraavalta. -->
+
 The application looks like this.
-<!--
-<img src="../img/material/gui-nappi.png" alt="Ikkuna, jossa on nappi. Napissa on teksti 'Tämä on nappi'."/> -->
+
+<!-- <img src="../img/material/gui-nappi.png" alt="Ikkuna, jossa on nappi. Napissa on teksti 'Tämä on nappi'."/> -->
 
 <img src="../img/material/gui-nappi.png" alt="A window, which has a button. The button contains the text 'This is a button'."/>
 
-
-<!-- Käyttöliittymäkomponentit lisätään niiden asettelusta vastaavan olion -- edellä FlowPane -- "lapsiksi". Tämä liittyy JavaFx:n suunnittelussa tehtyyn päätökseen, missä jokainen käyttöliittymäkomponenttien asetteluun käytettävä olio voi sisältää muita käyttöliittymäkomponenttien asetteluun käytettäviä olioita sekä käyttöliittymäkomponentteja. Tämä mahdollistaa graafiset käyttöliittymät, joissa käyttöliittymäkomponenttien asettelutapa riippuu niiden paikasta käyttöliittymässä. Esimerkiksi käyttöliittymässä ylhäällä olevan valikon vaihtoehdot asetetaan yleensä vierekkäin, kun taas listattavat asiat allekkain.
-
-
-Käyttöliittymän rakenne on siis lyhyesti seuraava. Ikkuna sisältää Scene-olion. Scene-olio sisältää käyttöliittymäkomponenttien asettelusta vastaavan olion. Käyttöliittymäkomponenttien asettelusta vastaava olio voi sisältää sekä käyttöliitymäkomponentteja, että käyttöliittymäkomponenttien asettelusta vastaavia olioita. -->
+<!-- Käyttöliittymäkomponentit lisätään niiden asettelusta vastaavan olion -- edellä FlowPane -- "lapsiksi". Tämä liittyy JavaFx:n suunnittelussa tehtyyn päätökseen, missä jokainen käyttöliittymäkomponenttien asetteluun käytettävä olio voi sisältää muita käyttöliittymäkomponenttien asetteluun käytettäviä olioita sekä käyttöliittymäkomponentteja. Tämä mahdollistaa graafiset käyttöliittymät, joissa käyttöliittymäkomponenttien asettelutapa riippuu niiden paikasta käyttöliittymässä. Esimerkiksi käyttöliittymässä ylhäällä olevan valikon vaihtoehdot asetetaan yleensä vierekkäin, kun taas listattavat asiat allekkain. -->
 
 UI components are added as "children" to the object responsible for setting them -- FlowPane. This has to do with a JavaFx design decision, whereby each object responsible for UI components may contain other objects responsible for UI components as well as actual UI components. This enables GUIs where the layout of the UI components depends on their location on the user interface. For example, menu items located at the top of a UI are usually placed side by side, while list items are placed one below the other.
 
+<!-- Käyttöliittymän rakenne on siis lyhyesti seuraava. Ikkuna sisältää Scene-olion. Scene-olio sisältää käyttöliittymäkomponenttien asettelusta vastaavan olion. Käyttöliittymäkomponenttien asettelusta vastaava olio voi sisältää sekä käyttöliitymäkomponentteja, että käyttöliittymäkomponenttien asettelusta vastaavia olioita. -->
 
-To briefly summarize, the UI structure is as follows. The window contains a Scene object. The Scene object contains the object responsible for the layout of the user-interface components. The object responsible for the component layout can contain both UI components and objects responsible for UI component layouts. ->
+To briefly summarize, the UI structure is as follows. The window contains a Scene object. The Scene object contains the object responsible for the layout of the user-interface components. The object responsible for the component layout can contain both UI components and objects responsible for UI component layouts.
