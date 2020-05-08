@@ -1,17 +1,21 @@
 ---
+# path: '/osa-13/3-tapahtumien-kasittely'
 path: '/part-13/3-event-handling'
+# title: 'Tapahtumien käsittely'
 title: 'Event handling'
+# hidden: false
 hidden: true
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
+
 <text-box variant='learningObjectives' name='Learning Objectives'>
 
 <!-- - Tunnet käsitteen tapahtumankäsittelijä ja osaat käsitellä käyttöliittymän tapahtumia. -->
+
 - You're familiar with the concept of an event handler and are able to handle user interface events.
 
 </text-box>
-
 
 <!-- Edellä toteuttamamme käyttöliittymät eivät reagoi käyttöliittymässä tehtyihin tapahtumiin. Reagoimattomuus ei johdu käyttöliittymäkomponenteista, vaan siitä että emme ole lisänneet käyttöliittymäkomponentteihin tapahtumien käsittelyyn tarvittavaa toiminnallisuutta. -->
 
@@ -42,8 +46,8 @@ button.setOnAction(new EventHandler<ActionEvent>() {
 ```
 
 <!-- Rajapinnan eksplisiittisen toteutuksen voi korvata halutessaan Lambda-lausekkeella. -->
-If desired, the explicit implementation of the interface can be replaced by a Lambda expression.
 
+If desired, the explicit implementation of the interface can be replaced by a Lambda expression.
 
 <!-- ```java
 Button nappi = new Button("Tämä on nappi");
@@ -60,8 +64,8 @@ button.setOnAction((event) -> {
 ```
 
 <!-- Kun edellä olevaa nappi painetaan, konsoliin tulostetaan teksti "Painettu!". -->
-When the button is pressed, the program prints the text "Pressed!" to the console.
 
+When the button is pressed, the program prints the text "Pressed!" to the console.
 
 <!-- Käyttöliittymäkomponentteihin liitetyt **tapahtumankäsittelijät** kuten edellä käytetty EventHandler liittyvät aina tiettyihin käyttöliittymäkomponentteihin. Aina kun käyttöliittymäkomponentille tehdään toiminto, esimerkiksi napille napin painaminen, jokaista kyseiseen käyttöliittymäkomponenttiin liitettyä tapahtumankäsittelijää kutsutaan, ja niihin liittyvä ohjelmakoodi suoritetaan. -->
 
@@ -108,11 +112,12 @@ public void start(Stage window) {
 ```
 
 <!-- Käyttöliittymän vasemmassa ja oikeassa laidassa on tekstikenttä. Tekstikenttien lisäksi käyttöliittymän keskellä on nappi, jossa on teksti "Kopioi". -->
+
 There is a text field on both the left and right hand sides of the user interface. In addition to these, there's a button in the middle with the text "Copy".
 
 <!-- <img src="../img/material/gui-kopioija.png" alt="Kaksi tekstikenttää sekä nappi, jossa on teksti 'Kopioi'."/> -->
-<img src="../img/material/gui-kopioija.png" alt="Two text fields and a button with the text 'Copy'."/>
 
+<img src="../img/material/gui-kopioija.png" alt="Two text fields and a button with the text 'Copy'."/>
 
 <!-- Haluamme ohjelman, jossa vasemman tekstikentän sisältö kopioituu oikean kentän sisällöksi kun käyttäjä painaa nappia. Tämä onnistuu EventHandler-rajapinnan toteuttavan olion avulla. -->
 
@@ -162,26 +167,27 @@ public void start(Stage window) {
 }
 ```
 
-
 <!-- Nyt nappia painettaessa vasemman tekstikentän sisältö kopioituu oikealla olevaan tekstikenttään. -->
 
 Now pressing the button results in the content of the left text field being copied to the text field on the right.
 
 <!-- <img src="../img/material/gui-kopioija-2.png" alt="Kaksi tekstikenttää sekä nappi, jossa on teksti 'Kopioi'."/> -->
-<img src="../img/material/gui-kopioija-2.png" alt="Two text fields and a button with the text 'Copy'."/>
 
+<img src="../img/material/gui-kopioija-2.png" alt="Two text fields and a button with the text 'Copy'."/>
 
 <!-- Huom! Toteutettava metodi pystyy käyttämään metodin edellä määriteltyjä olioita, mikäli käytettävien olioiden arvoa ei aseteta ohjelmassa uudestaan yhtäsuuruusmerkillä (eli viitteet eivät muutu). -->
 
 NB! The method implemented can use objects that were declared before the method definition, as long as the values of the objects being used are not reassigned using the equals operator, i.e., the references do not change.
 
 <!-- <programming-exercise name='Ilmoitin' tmcname='osa13-Osa13_06.Ilmoitin'> -->
-<programming-exercise name='Notifier' tmcname='part13-Part13_06.Notifier'>
 
+<programming-exercise name='Notifier' tmcname='part13-Part13_06.Notifier'>
 
 <!-- Toteuta tehtäväpohjassa olevaan luokkaan käyttöliittymä, jossa on kolme käyttöliittymäkomponenttia. Ylin komponentti on tekstikenttä (TextField), keskimmäinen komponentti nappi (Button), ja alin komponentti tekstikomponentti (Label). Asettele komponentit VBox-luokan avulla. Käyttöliittymän tulee näyttää (esimerkiksi) seuraavalta. -->
 
 Create a user interface in the class included in the exercise template. It should contain three user interface components. The topmost is a text field (TextField), the middle one is a button (Button), and component on the bottom is a text component (Label). Lay out the components using the VBox class. The user interface should look kind of like the following.
+
+<!-- <img src="../img/material/gui-ilmoitin-1.png" alt="."/> -->
 
 <img src="../img/material/part13.3-gui-notifier-1-sm.png" alt="."/>
 
@@ -190,11 +196,11 @@ Create a user interface in the class included in the exercise template. It shoul
 
 Then add functionality to the application, where pressing the button leads to the text in the text field being copied as the value of the text component. In the example below we have written the message "hello world!" into the text field, after which we have pressed the button.
 
+<!-- <img src="../img/material/gui-ilmoitin-2.png" alt="."/> -->
+
 <img src="../img/material/part13.3-gui-notifier-2-sm.png" alt="."/>
 
-
 </programming-exercise>
-
 
 <!-- Käytettävä tapahtumankäsittelijä riippuu käyttöliittymäkomponentista, johon tapahtumankäsittelijä kytketään. Jos haluaisimme seurata tekstikenttään tapahtuvia muutoksia merkki merkiltä, käyttäisimme rajapintaa [ChangeListener](https://docs.oracle.com/javafx/2/api/javafx/beans/value/ChangeListener.html).  Alla olevassa esimerkissä vasempaan tekstikenttään on kytketty rajapinnan ChangeListener toteuttava olio, joka sekä tulostaa muutokset tekstikonsoliin että asettaa aina uuden arvon oikealla olevaan tekstikenttään. -->
 
@@ -224,16 +230,14 @@ leftText.textProperty().addListener(new ChangeListener<String>() {
 });
 ```
 
-
 <!-- Edellä muutoksia havainnoidaan tekstikenttään liittyvästä tekstistä. Koska teksti on merkkijonomuotoista, on muutoksia käsittelevälle rajapinnalle annettu tyypiksi merkkijono. Kuten edellä, myös tässäkin esimerkissä ohjelmakoodi voidaan esittää lyhyemmässä muodossa. -->
 
 In the previous example the changes being observed are in the text of the text field. Beacause text is in string format we have provided string as the type for the handler interface. As before, we can also express this code in a more compact form.
 
-
 <!-- ```java
 vasenTeksti.textProperty().addListener((muutos, vanhaArvo, uusiArvo) -> {
     System.out.println(vanhaArvo + " -> " + uusiArvo);
-    rightText.setText(uusiArvo);
+    oikeaTeksti.setText(uusiArvo);
 });
 ``` -->
 
@@ -243,7 +247,6 @@ leftText.textProperty().addListener((change, oldValue, newValue) -> {
     rightText.setText(newValue);
 });
 ```
-
 
 <!-- Ohjelma voi tehdä myös tilastointia. Edellisessä tehtävässä luotujen tekstikenttien arvot saa laskettua melko suoraviivaisesti. Alla olevaa esimerkkiä noudattaen arvot päivittyisivät aina kun käyttäjä muuttaa tekstikentän sisältöä. -->
 
@@ -277,8 +280,8 @@ leftText.textProperty().addListener((change, oldValue, newValue) -> {
 });
 ```
 
-
 <!-- <programming-exercise name='Tekstitilastointia, osa II' tmcname='osa13-Osa13_07.TekstitilastointiaOsa2'> -->
+
 <programming-exercise name='Text statistics, part II' tmcname='part13-Part13_07.TextStatisticsPart2'>
 
 
@@ -286,8 +289,8 @@ leftText.textProperty().addListener((change, oldValue, newValue) -> {
 
 Copy the work you did in the Text statistics exercise into the class included in the exercise template and add to it the functionality from the example above for calculating the statistics. The end result should an application that calculates statistics based on text that is input, which are updated automatically and displayed in the application.
 
+<!-- <img src="../img/material/gui-tilastoja.gif" alt="Esimerkki tekstitilastointiin tarkoitetun ohjelman toiminnasta."/> -->
 
-<!-- <img src="../img/material/part13.3-gui-stats.gif" alt="Esimerkki tekstitilastointiin tarkoitetun ohjelman toiminnasta."/> -->
 <img src="../img/material/part13.3-gui-stats.gif" alt="A example of the functionality of an application made for text statistics."/>
 
 </programming-exercise>
