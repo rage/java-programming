@@ -1,33 +1,41 @@
 ---
+# path: '/osa-14/1-tiedon-visualisointi'
 path: '/part-14/1-data-visualization'
+# title: 'Tiedon visualisointi'
 title: 'Data visualization'
+# hidden: false
 hidden: true
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
+
 <text-box variant='learningObjectives' name='Learning Objectives'>
 
-<!-- - Tunnet menetelmiä tiedon visualisointiin.
+<!--
+- Tunnet menetelmiä tiedon visualisointiin.
 - Osaat käyttää Javan valmiita tiedon visualisointiin tarkoitettuja käyttöliittymäkomponentteja.
-- Tiedät tavan jatkuvasti muuttuvan tiedon visualisointiin -->
+- Tiedät tavan jatkuvasti muuttuvan tiedon visualisointiin
+-->
+
 - You are aware of data visualizations methods.
 - You know how to use Java's ready-made data visualization interface components.
 - You know a way to visualize information that changes dynamically.
 
 </text-box>
 
+<!-- Sananlasku "a picture is worth a thousand words" eli "yksi kuva kertoo enemmän kuin tuhat sanaa" kuvaa hyvin tiedon visualisoinnin tavoitetta. Tiedon visualisoinnilla pyritään tilanteeseen, missä tieto esitetään tiiviissä mutta ymmärrettävässä muodossa. Visualisaatioilla voi korostaa tärkeitä asioita ja käyttäjälle voi esimerkiksi tehdä yhteenvetoja datasta. -->
 
-<!-- Sananlasku "a picture is worth a thousand words" eli "yksi kuva kertoo enemmän kuin tuhat sanaa" kuvaa hyvin tiedon visualisoinnin tavoitetta. Tiedon visualisoinnilla pyritään tilanteeseen, missä tieto esitetään tiiviissä mutta ymmärrettävässä muodossa. Visualisaatioilla voi korostaa tärkeitä asioita ja käyttäjälle voi esimerkiksi tehdä yhteenvetoja datasta.
-
-Alla olevassa kuvassa on kuva sovelluksesta, joka mahdollistaa pyöräilijätilastojen tarkastelun. Käytetyt tilastot on noudettu osoitteessa [https://www.avoindata.fi/data/fi/dataset/helsingin-pyorailijamaarat](https://www.avoindata.fi/data/fi/dataset/helsingin-pyorailijamaarat) olevasta Helsingin kaupunkisuunnitteluviraston tietoaineistosta (CC-BY). -->
 The adage "a picture is worth a thousand words" describes the goal of data visualization appropriately. Data visualization seeks to present information in a concise, yet comprehensible form. Visualizations can emphasize important points and provide the user with useful things, such as summaries of data.
 
-The image below shows an application that allows you to view statistics of cyclists. The statistics used have been taken from the  the Helsinki City Planning Agency data set  (CC-BY) found at [https://www.avoindata.fi/data/en/dataset/helsingin-pyorailijamaarat](https://www.avoindata.fi/data/en/dataset/helsingin-pyorailijamaarat).
+<!-- Alla olevassa kuvassa on kuva sovelluksesta, joka mahdollistaa pyöräilijätilastojen tarkastelun. Käytetyt tilastot on noudettu osoitteessa [https://www.avoindata.fi/data/fi/dataset/helsingin-pyorailijamaarat](https://www.avoindata.fi/data/fi/dataset/helsingin-pyorailijamaarat) olevasta Helsingin kaupunkisuunnitteluviraston tietoaineistosta (CC-BY). -->
+
+The image below shows an application that allows you to view statistics of cyclists. The statistics used have been taken from the  the Helsinki City Planning Agency data set (CC-BY) found at [https://www.avoindata.fi/data/en/dataset/helsingin-pyorailijamaarat](https://www.avoindata.fi/data/en/dataset/helsingin-pyorailijamaarat).
+
 <br/>
 
 <!-- <img src="../img/material/visualisointi-pyorat.png" /> -->
-<img src="../img/material/visualisointi-pyorat.png" alt="cyclist data set visualization" />
 
+<img src="../img/material/visualisointi-pyorat.png" alt="cyclist data set visualization" />
 
 <!-- Kun vertaa kuvan näyttämää tilastoa tiedoston muotoon -- alla muutama rivi esimerkiksi -- edun huomaa hyvin. Alkuperäisessä datassa arvot on esitetty tuntikohtaisina, kun taas visualisaatiota varten datasta on luotu kuukausikohtaiset yhteenvedot. Alkuperäinen data sisältää myös kaikki tarkasteltavat paikat, kun taas visualisaatiossa käyttäjä voi valita tietyn pisteen. -->
 
@@ -45,6 +53,7 @@ ke 1 tammi 2014 03:00;;2;;;;;;0;2;0;;7;;;5;3
 <br/>
 
 <!-- Yllä kuvatun muotoista dataa voi käsitellä merkkijonoja riveittäin. Rivit pilkotaan paloiksi, joita voidaan käsitellä listamuotoisen rakenteen kautta. Tämä tapahtuu -- esimerkiksi -- seuraavalla tavalla. -->
+
 Data that's in the format shown above can be processed as strings row by row. The rows are split into pieces that can be processed using a list structure. One way of doing this is the following.
 
 <!-- ```java
@@ -54,6 +63,7 @@ for (int i = 0; i < palat.length; i++) {
     System.out.println(i + ": " + palat[i]);
 }
 ``` -->
+
 ```java
 String row = "Päivämäärä;Huopalahti (asema);Kaisaniemi;Kulosaaren silta et.;..."
 String[] pieces = row.split(";");
@@ -70,9 +80,8 @@ for (int i = 0; i < pieces.length; i++) {
 4: ...
 </sample-output>
 
-
-
 <!-- Tutustutaan tässä muutamaan tiedon visualisointiin käytettävään kaavioon sekä erääseen liikkuvan tiedon visualisointitapaan. -->
+
 We'll familiarize ourselves with some patterns used in data visualization, and a technique for visualizing changing data.
 
 <!-- ## Kaaviot -->
@@ -125,11 +134,9 @@ PS	7.3	5.0	2.1	3.0	5.3	3.6	2.4	0.9	0.7	0.9	5.4
 RKP	5.6	5.2	4.7	4.7	5.1	5.3	5.0	5.4	5.1	5.2	4.7
 </pre>
 
-
 <!-- Yksittäisen yllä kuvatun rivin voi pilkkoa seuraavasti. -->
 
 It's possible to split one of the rows above in the following manner:
-
 
 <!-- ```java
 String rivi = "Puolue	1968	1972	1976	1980	1984	1988"
@@ -228,7 +235,6 @@ public void start(Stage stage) {
     xAxis.setLabel("Year");
     yAxis.setLabel("Relative support (%)");
 
-
     // create the line chart. The values of the chart are given as numbers
     // and it uses the axes we created earlier
     LineChart<Number, Number> lineChart = new LineChart<>(xAxis, yAxis);
@@ -274,7 +280,6 @@ public void start(Stage ikkuna) {
     // .. muu ohjelmakoodi pysyy samana
 ``` -->
 
-
 ```java
 @Override
 public void start(Stage stage) {
@@ -286,7 +291,6 @@ public void start(Stage stage) {
 <!-- Toisen puolueen kannatuksen lisääminen onnistuu ohjelmaan vastaavasti. Alla olevassa esimerkissä kaavioon on lisätty Vihreät, joilla on ollut toimintaa vuodesta 1984 lähtien. -->
 
 Adding the numbers of support for another party to the program can be done in a similar manner. In the example below, we add the party VIHR to the chart -- the party has been active since the year 1984.
-
 
 <!-- ```java
 @Override
@@ -356,7 +360,6 @@ public void start(Stage stage) {
     xAxis.setLabel("Year");
     yAxis.setLabel("Relative support (%)");
 
-
     // create the line chart. The values of the chart are given as numbers
     // and it uses the axes we created earlier
     LineChart<Number, Number> lineChart = new LineChart<>(xAxis, yAxis);
@@ -407,13 +410,13 @@ public void start(Stage stage) {
 
 The program should look like this when started.
 
-<img src="../img/material/chart-support-rkp-and-vihr.png" alt="chart showing support for the rkp and vihr parties"/>
+<!-- <img src="../img/material/kaavio-kannatus-rkp-ja-vihr.png"/> -->
 
+<img src="../img/material/chart-support-rkp-and-vihr.png" alt="chart showing support for the rkp and vihr parties"/>
 
 <!-- Edellä jokainen kaavion piste lisättiin ohjelmakoodiin manuaalisesti -- olemme ohjelmoijia, joten tämä tuntuu hieman hölmöltä. Ratkaisu on tiedon lukeminen sopivaan tietorakenteeseen, jota seuraa tietorakenteen läpikäynti ja tiedon lisääminen kaavioon. Sopiva tietorakenne on esimerkiksi puolueiden nimiä avaimena käyttävä hajautustaulu, jonka arvona on hajautustaulu -- tämä hajautustaulu sisältää numeropareja, jotka kuvaavat vuotta ja kannatusta. Nyt datan lisääminen kaavioon on suoraviivaisempaa. -->
 
 Each data point was manually added above to the program code -- given that we're programmers, this approach feels clumsy. The solution is to read the data into a suitable data structure, after which we can go through the structure and add the data contained in it to the chart. A good candidate for this data structure is a hash map that uses the names of the parties as its keys. The values of the hash table are pairs of numbers that represent the year and the corresponding support number. It's now much more straightforward to add data into the chart.
-
 
 <!-- ```java
 // akselit ja viivakaavio luotu aiemmin
@@ -487,12 +490,11 @@ You will find the class `ShangaiApplication` in the exercise base. Create in it 
 
 <!-- Sovelluksen tuottama tulos näyttää esimerkiksi seuraavanlaiselta: -->
 
-The result drawn by the application could like the following example:
+The result drawn by the application could looks like the following example:
 
 <img src="../img/shanghai.png"/>
 
 </programming-exercise>
-
 
 <!-- <programming-exercise name='Puolueet' tmcname='osa14-Osa14_02.Puolueet'> -->
 
@@ -541,7 +543,6 @@ KOK
 
 </sample-output>
 
-
 <!-- Merkkijonomuodossa olevan desimaaliluvun muuntaminen desimaaliluvuksi onnistuu luokan Double metodilla valueOf. Esim. `Double.valueOf("16.1");` -->
 
 To create a floating point number of a string that contains a floating point number, you can use the valueOf method of the Double class. So for instance `Double.valueOf("16.1");`
@@ -554,79 +555,87 @@ The visualization created by the application should look something like this:
 
 &nbsp;
 
-
 <!-- *Dataa vastaaviin kaavioihin löytyy muunmuassa Tilastokeskuksen [PX-Web-tietokannoista](https://pxnet2.stat.fi/PXWeb/pxweb/fi/StatFin/).* -->
 
 *Data for similar charts can be found in the [PX-Web databases](https://pxnet2.stat.fi/PXWeb/pxweb/fi/StatFin/) of Statistics Finland*
 
 </programming-exercise>
 
+<!-- <programming-exercise name='Säästölaskuri (3 osaa)' tmcname='osa14-Osa14_03.Saastolaskuri'> -->
 
 <programming-exercise name='Savings calculator (3 parts)' tmcname='part14-Part14_03.SavingsCalculator'>
 
 <!-- Toteutetaan tässä tehtävässä sovellus, jota käytetään säästämiseen liittyvien mahdollisten tuottojen tarkasteluun. Laskuri tarjoaa mahdollisuuden sekä kuukausittaisen säästön määrittelyyn että vuosittaisen koron määrittelyyn, ja näyttää säästösumman kasvun kolmenkymmenen vuoden aikana yli. -->
+
 In this exercise you will implement a program for calculating and displaying the sum in a savings account. User can give the calculator a sum to save each month and the yearly interest rate, and the calculator will display how the savings will increase over 30 years.
 
 <img src="../img/saastolaskuri.png" />
 
+<!-- <h2>Käyttöliittymä</h2> -->
 
 <h2>User interface</h2>
 
-
 <!-- Toteuta ensin sovelluksen käyttöliittymä. Sovelluksen komponentteja hallinnoidaan BorderPanen avulla. BorderPanen keskellä on viivakaavio (LineChart), joka sisältää kaksi numeerista akselia (NumberAxis). BorderPanen ylälaidassa on VBox-asettelu. VBox-asettelu sisältää kaksi BorderPanea. Ensimmäisessä (ylemmässä) BorderPanessa on vasemmalla teksti "Kuukausittainen tallennus", keskellä liukuri (Slider), ja oikealla liukurin arvoa kuvaava teksti. Toisessa (alemmassa) BorderPanessa on vasemmalla teksti "Vuosittainen", keskellä liukuri (Slider), ja oikealla liukurin arvoa kuvaava teksti. -->
-First implement the user interface of the program. The components of the application can be managed using a BorderPane.
-In the middle of the BorderPane add a line chart (LineChart), which has two numerical axis (NumberAxis). On the top of the BorderPane add a VBox component which contains two BorderPanes. The first BorderPane (on top) contains the text "Monthly savings" on the left, a slider in the middle and a text describing the slider on the right.
-The second BorderPane (below the first one) has the text "Yearly interest rate" on the left, a slider in the middle and a text describing the slider on the right.
 
+First implement the user interface of the program. The components of the application can be managed using a BorderPane. In the middle of the BorderPane add a line chart (LineChart), which has two numerical axis (NumberAxis). On the top of the BorderPane add a VBox component which contains two BorderPanes. The first BorderPane (on top) contains the text "Monthly savings" on the left, a slider in the middle and a text describing the slider on the right. The second BorderPane (below the first one) has the text "Yearly interest rate" on the left, a slider in the middle and a text describing the slider on the right.
 
 <!-- Löydät vinkkejä Slider-luokan käyttöön hakemalla Googlesta avainsanoilla "javafx slider". -->
-You can find tips for using the Slider -class by googling "javafx slider".
 
+You can find tips for using the `Slider` class by googling "javafx slider".
 
 <!-- Määrittele Sliderit siten, että kuukausittaista tallennusta kuvaavan Sliderin minimiarvo on 25 ja maksimiarvo on 250. Vuosittaisen koron minimiarvo on 0 ja maksimiarvo on 10. Kaavion x-akselin tulee näyttää arvon nollasta kolmeenkymmeneen, jotka kuvaavat vuosien kehitystä. Y-akselin arvojen tulee mukautua näytettäviin arvoihin. -->
+
 Define the Sliders so, that the minimum monthly savings is 25 and the maximum is 250.
 The minimum yearly interest rate is 0 and the maximum is 10.
 The x-axis of the line chart displays years from 0-30. The y-axis must adapt to the values being shown.
 
 <!-- Sovellus näyttää tämän vaiheen jälkeen seuraavalta. -->
+
 In this phase the application should look like so:
 
 <img src="../img/saastolaskuri-1.png" />
 
+<!-- <h2>Tallennusten näyttäminen</h2> -->
 
 <h2>Displaying the savings</h2>
 
 <!-- Kun käyttöliittymän rakenne ja ulkoasu on kohdallaan, aloitetaan laskurin toiminnallisuuden toteuttaminen. -->
+
 After the user interface is complete, start implementing the functionality of the program.
 
 <!-- Muokkaa käyttöliittymää siten, että kun käyttäjä siirtää kuukausittaiseen tallennukseen liittyvää liukuria (ylempi liukureista), kaavion näyttämä tallennuksen kasvua vuosien yli kuvaava kaavio päivittyy ja näyttää tallennuksen kasvun. Esimerkiksi kun kuukausittainen tallennus on 50, tulee kaaviossa olla viiva, joka näyttää arvot [(0, 0), (1, 600), (2, 1200), (3, 1800), ...] -->
+
 Modify the user interface so, that when user changes the sum to save each month (by moving the uppermost slider), the line chart updates to display the savings amount of the new monthly sum. For example when the monthly savings amount is 50, the line chart should have a line showing the values [(0,0), (1,600), (2,1200),(3,1800),...].
 
 <!-- Sovellus näyttää tämän vaiheen jälkeen (esimerkiksi) seuraavalta. Alla kuukausittaisen tallennuksen arvoksi on valittu 50. -->
+
 In this phase the application should look like so (when the monthly sum to save is 50):
 
 <img src="../img/saastolaskuri-2.png" />
 
+<!-- <h2>Tallennusten näyttäminen korkoineen</h2> -->
 
 <h2>Displaying the savings and the interest rate</h2>
 
 <!-- Muokkaa käyttöliittymää siten, että koron näyttäminen sovelluksessa toimii. Tämän jälkeen sovelluksen tulee näyttää kaksi viivaa, yksi viivoista näyttää pelkän talletuksen, ja toinen viiva näyttää talletuksen korkoineen. -->
+
 Modify the user interface so, that it shows the interest rate as well. The line chart should have two lines, one for showing just the monthly savings, and one for showing the monthly savings and the interest rate.
 
 <!-- Laske korko vuosittain vuoden lopussa olevan tallennuksen perusteella (eli hieman optimistisesti). Esimerkiksi kun kuukausittainen tallennus on 50 ja vuosikorko 5%, tulee vuosittaisten summien korkoineen olla [(0, 0), (1, 630), (2, 1291.5), (3, 1986.075), ...] -->
+
 Calculate the interest rate yearly according to the expected  savings at the end of the year. For example when the monthly savings sum is 50 and the yearly interest rate is 5%, the line chart should have a line showing the values [(0,0), (1, 630), (2, 1291.5), (3, 1986,075), ...].
 
 <!-- Sovellus näyttää tämän vaiheen jälkeen (esimerkiksi) seuraavalta. Alla kuukausittaisen tallennuksen arvoksi on valittu 50 ja koroksi 10 (eli 10% korko). -->
+
 In this phase the application should look like so (when the monthly sum to save is 50 and the yearly interest rate is 10%):
 
 <img src="../img/saastolaskuri-3.png" />
 
-
 <!-- Kuvassa huomaamme ns. "korkoa korolle"-efektin, joskin hyvin optimistiselle korolle. Kun olet saanut sovelluksen toimimaan ja olet palauttanut sen, voit tarkastella esimerkiksi miten 25 euron kuukausittainen tallennus 4% vuosikorolla kasvaa 50 vuoden aikana. -->
+
 In the chart we see the compound interest of our savings, although with a very optimistic interest rate. When you have completed the application and returned it, you can for example calculate how saving 25 euros a month with 4% yearly interest rate grows over 50 years.
 
 </programming-exercise>
-
 
 <!-- ### Pylväskaaviot -->
 
@@ -634,7 +643,7 @@ In the chart we see the compound interest of our savings, although with a very o
 
 <!-- Pylväskaavioita käytetään kategorisen datan visualisointiin. Tieto kuvataan pylväinä, missä jokainen pylväs kuvaa tiettyä kategoriaa, ja pylvään korkeus (tai pituus) kategoriaan liittyvää arvoa. Pylväskaavioilla kuvattavasta datasta esimerkkejä ovat esimerkiksi maiden asukasluvut tai kauppojen tai tuotteiden markkinaosuudet. -->
 
-Bar charts are used to visualize categorical data. The data is represented as bars --  each bar represents a certain category, and its height (or length) represents the value associated with the category. Examples of data that could well be illustrated with bar charts are populations of countries or the market shares of stores or products.
+Bar charts are used to visualize categorical data. The data is represented as bars -- each bar represents a certain category, and its height (or length) represents the value associated with the category. Examples of data that could well be illustrated with bar charts are populations of countries or the market shares of stores or products.
 
 <!-- Tarkastellaan pylväskaavion käyttöä pohjoismaiden asukaslukujen visualisointiin. Käytetty data on Wikipedian pohjoismaita kuvaavasta artikkelista osoitteesta [https://fi.wikipedia.org/wiki/Pohjoismaat](https://fi.wikipedia.org/wiki/Pohjoismaat) (noudettu 10.4.2017, asukasluvut ovat vuoden 2015 arvioita). -->
 
@@ -689,14 +698,6 @@ public void start(Stage ikkuna) {
 }
 ``` -->
 
-<pre>
-Iceland, 343518
-Norway, 5372191
-Sweden, 10313447
-Finland, 5537364
-Denmark, 5809502
-</pre>
-
 ```java
 @Override
 public void start(Stage stage) {
@@ -727,31 +728,37 @@ public void start(Stage stage) {
 
 The source code above produces the following chart.
 
+<!-- <img src="../img/material/kaavio-pohjoismaiden-asukasluvut.png" /> -->
+
 <img src="../img/material/chart-nordic-countries-populations.png" alt="A bar chart showing the populations of the Nordic countries"/>
 
 <!-- Kuten huomaat, kun x-akseli on määritelty luokan CategoryAxis avulla, kaavio noudattaa sitä järjestystä, missä kategoriat annetaan sovellukselle. Edellisessä esimerkissä maat on järjestetty asukaslukumäärien mukaan. Kokeile muokata sovellusta siten, että pohjoismaat on järjestetty maan nimen mukaan kaaviossa. Ymmärrät mahdollisesti sovelluksen käynnistettyäsi miksei kyseistä visualisaatiota näytetä tällaisessa järjestyksessä lähes missään... -->
 
 As you notice, since the x-axis is defined with the CategoryAxis class, the chart follows the order in which the categories are supplied to the program. In the previous example, the countries were ordered by population. Try to modify the program so that the chart orders the Nordic countries by name. After launching the application you may be able to understand why this form of visualization is hardly used...
 
+<!-- <programming-exercise name='Epäreilua mainontaa' tmcname='osa14-Osa14_04.EpareiluaMainontaa'> -->
 
 <programming-exercise name='Unfair Advertisement' tmcname='part14-Part14_04.UnfairAdvertisement'>
 
 <!-- Sanonnan "Vale, emävale, tilasto" mukaan mikään ei valehtele kuin tilasto. Sanonta ei ehkäpä ole täysin väärässä, sillä tilastoja luodaan silloin tällöin tahallisesti epäselviksi. -->
+
 According to the old saying "There are three kinds of lies: lies, damned lies and statistics.", nothing lies like a statistic. The saying might not be completely wrong, as some statistics are purposefully made difficult to read.
+
 <!-- Tehtäväpohjassa oleva sovellus käynnistää erään kuvitteellisen yrityksen mainonnassa käytetyn visualisaation. Visualisaatio kuvaa mobiiliyhteyden nopeutta, ja näyttää merkittävän eron kilpailijoihin verrattuna. -->
+
 The application in the exercise template opens a visualization used for marketing for an imaginary company. The visualization displays the speed of their internet, and shows a remarkable difference to their competitors.
 
 <img src="../img/material/kuvaaja-liittyman-nopeus.png" />
 
-
 <!-- Vertailu ei kuitenkaan ole kovin reilu ja se antaa väärän kuvan todellisesta tilanteesta. Muunna ohjelmaa siten, että vertailu on reilumpi. -->
+
 The comparison however is not really fair, and gives the wrong impression on the situation. Modify the program so, that the comparison is fairer.
 
 <!-- Tässä tehtävässä ei ole automaattisia testejä eikä mallivastausta, joten voit määritellä reilun vertailun hieman vapaammin. -->
+
 This exercise has no automatic tests or model answer, so you can define the comparison with some freedom.
 
 </programming-exercise>
-
 
 <!-- <programming-exercise name='Pyöräilijätilastot' tmcname='osa14-Osa14_05.Pyorailijatilastot'> -->
 
@@ -763,26 +770,25 @@ In the exercise base there is a ready application that illustrates cycling stati
 
 </programming-exercise>
 
-
 <!-- ## Jatkuvasti muuttuvan tiedon visualisointi -->
+
 ## Visualizing Dynamic Data
 
+<!-- Ohjelmistoja käytetään myös jatkuvasti muuttuvan tiedon visualisaatioon. Esimerkiksi osakekurssien seurantaan käytetyt ohjelmistot hakevat jatkuvasti uusinta tietoa osakekursseista ja näyttävät tietoa käyttäjälle. Vastaavasti sääohjelmistot hakevat mittausasemien tietoja, ja näyttävät viimeisimmän tiedon käyttäjälle. Samalla tavoin toimivat myös palvelinohjelmistojen seurantaan kehitetyt ohjelmistot, jotka tietyin aikavälein tarkastavat vastaako palvelinohjelmisto pyyntöihin. -->
 
-<!-- Ohjelmistoja käytetään myös jatkuvasti muuttuvan tiedon visualisaatioon. Esimerkiksi osakekurssien seurantaan käytetyt ohjelmistot hakevat jatkuvasti uusinta tietoa osakekursseista ja näyttävät tietoa käyttäjälle. Vastaavasti sääohjelmistot hakevat mittausasemien tietoja, ja näyttävät viimeisimmän tiedon käyttäjälle. Samalla tavoin toimivat myös palvelinohjelmistojen seurantaan kehitetyt ohjelmistot, jotka tietyin aikavälein tarkastavat vastaako palvelinohjelmisto pyyntöihin.
-
-
-Luokkaa [AnimationTimer](https://docs.oracle.com/javase/8/javafx/api/javafx/animation/AnimationTimer.html) voidaan hyödyntää myös jatkuvasti muuttuvan tiedon visualisoinnissa. AnimationTimer-luokan avulla voidaan luoda sovellus, joka hakee tai luo uutta tietoa ajoittain sovellukseen. -->
 Software is also used to visualize contunually changing information. As an example, the software used to track share prices is constantly searching for the latest share prices and displaying that information to the user. Similarly, weather software retrieves data from stations and displays the most recent information to the user. Software developed for monitoring server-side software works in the same way by pinging the various parts of the server-side software at certain intervals to check for responses.
 
+<!-- Luokkaa [AnimationTimer](https://docs.oracle.com/javase/8/javafx/api/javafx/animation/AnimationTimer.html) voidaan hyödyntää myös jatkuvasti muuttuvan tiedon visualisoinnissa. AnimationTimer-luokan avulla voidaan luoda sovellus, joka hakee tai luo uutta tietoa ajoittain sovellukseen. -->
 
 The [AnimationTimer](https://docs.oracle.com/javase/8/javafx/api/javafx/animation/AnimationTimer.html) class can also be used to visualize dynamic data. The AnimationTimer class can be used to create an application that periodically retrieves or creates new information for the application.
-<br/>
 
+<br/>
 
 <!-- Alla olevassa esimerkissä havainnollistetaan [suurten lukujen lakia](https://fi.wikipedia.org/wiki/Suurten_lukujen_laki). Suurten lukujen laki on todennäköisyyslaskentaan liittyvä ilmiö, joka kertoo, erttä satunnaismuuttujan keskiarvo lähestyy satunnaismuuttujan odotusarvoa kun toistojen määrä kasvaa. Käytännössä esimerkiksi kuusisivuisen nopan heittojen keskiarvo lähestyy heittojen lukumäärän kasvaessa lukua 3.5. Vastaavasti kolikkoa heitettäessä kruunien ja klaavojen suhde lähestyy "fifti-fifti"-jakoa kun kolikonheittojen määrä kasvaa. -->
-The example below illustrates [the large numbers law](https://en.wikipedia.org/wiki/Larger_numbers_Law). This law is a phenomenon related to probability calculus, which says that the average of a random variable approaches the expected value of the random variable as the number of iterations increases. In practice, for example, the average of rolls of a six-sided dice approaches 3.5 as the number of rolls increases. In the same way, when a coin is thrown the heads-to-tails ratio approaches a "fifty-fifty" split as the number of coin throws increases.
-<br/>
 
+The example below illustrates [the large numbers law](https://en.wikipedia.org/wiki/Larger_numbers_Law). This law is a phenomenon related to probability calculus, which says that the average of a random variable approaches the expected value of the random variable as the number of iterations increases. In practice, for example, the average of rolls of a six-sided dice approaches 3.5 as the number of rolls increases. In the same way, when a coin is thrown the heads-to-tails ratio approaches a "fifty-fifty" split as the number of coin throws increases.
+
+<br/>
 
 <!-- ```java
 @Override
@@ -834,6 +840,7 @@ public void start(Stage ikkuna) {
     ikkuna.show();
 }
 ``` -->
+
 ```java
 @Override
 public void start(Stage stage) {
@@ -886,20 +893,23 @@ public void start(Stage stage) {
 ```
 
 <!-- Alla olevassa kuvassa on esimerkki sovelluksen toiminnassa. Kuvassa noppaa on heitetty lähes 100 kertaa. -->
+
 The image below shows an example of the application in use. The dice has been rolled nearly a 100 times in it.
+
+<!-- <img src="../img/material/kaavio-suurten-lukujen-laki.png"/> -->
 
 <img src="../img/material/kaavio-suurten-lukujen-laki.png" alt="A chart illustrating the law of large numbers"/>
 
+<!-- Tarkkasilmäiset lukijat saattoivat huomata, että sovelluksen lähdekoodissa kaaviota ei piirretty uudestaan datan lisäämisen yhteydessä. Mitä ihmettä? -->
 
-<!-- Tarkkasilmäiset lukijat saattoivat huomata, että sovelluksen lähdekoodissa kaaviota ei piirretty uudestaan datan lisäämisen yhteydessä. Mitä ihmettä?
-
-Kaaviot kuten LineChart ja BarChart käyttävät sisäisen tiedon säilömiseen [ObservableList](https://docs.oracle.com/javase/8/javafx/api/javafx/collections/ObservableList.html)-rajapinnan toteuttavaa tietorakennetta. ObservableList-rajapinnan toteuttavat kokoelmat tarjoavat mahdollisuuden kokoelmissa tapahtuvien muutosten kuunteluun. Kun listalle lisätään uusi tietue, esimerkiksi uusi keskiarvoa kuvaava piste, kertoo lista muutoksesta kaikille listan muutoksia kuunteleville olioille. Kaavioiden kuten LineChart ja BarChart sisäinen toteutus on tehty siten, että ne kuuntelevat muutoksia niiden näyttämään tietoon. Jos tieto muuttuu, päivittyy kaavio automaattisesti.
-
-Joissain tilanteissa jatkuvasti muuttuvasta datasta halutaan näkyville esimerkiksi vain viimeiset 100 havaintoa. Tämä onnistuisi edellisessä esimerkissä asettamalla x-akselia kuvaavan NumberAxis-olion arvojen arvailu pois päältä (metodi setAutoRanging(false)) sekä lisäämällä seuraavan tarkistuksen AnimationTimer-luokan handle-metodin loppuun.
- -->
 Eagle-eyed readers may have noticed that the application's source code did not re-draw the chart as data was added. What on earth?
 
+<!-- Kaaviot kuten LineChart ja BarChart käyttävät sisäisen tiedon säilömiseen [ObservableList](https://docs.oracle.com/javase/8/javafx/api/javafx/collections/ObservableList.html)-rajapinnan toteuttavaa tietorakennetta. ObservableList-rajapinnan toteuttavat kokoelmat tarjoavat mahdollisuuden kokoelmissa tapahtuvien muutosten kuunteluun. Kun listalle lisätään uusi tietue, esimerkiksi uusi keskiarvoa kuvaava piste, kertoo lista muutoksesta kaikille listan muutoksia kuunteleville olioille. Kaavioiden kuten LineChart ja BarChart sisäinen toteutus on tehty siten, että ne kuuntelevat muutoksia niiden näyttämään tietoon. Jos tieto muuttuu, päivittyy kaavio automaattisesti. -->
+
 Charts such as LineChart and BarChart use a data structure that implements the [ObservableList](https://docs.oracle.com/javase/8/javafx/api/javafx/collections/ObservableList.html) interface to store internal data. Collections that implement the ObservableList interface provide the ability to listen to changes in collections. When a new record is added to the list, such as a new data point for the mean, the list informs all of the objects listening to changes on the list of this change. Charts such as LineChart and BarChart are constructed internally in a way that they listen to changes in the information that they display. If the data changes, the chart is updated automatically.
+
+<!-- Joissain tilanteissa jatkuvasti muuttuvasta datasta halutaan näkyville esimerkiksi vain viimeiset 100 havaintoa. Tämä onnistuisi edellisessä esimerkissä asettamalla x-akselia kuvaavan NumberAxis-olion arvojen arvailu pois päältä (metodi setAutoRanging(false)) sekä lisäämällä seuraavan tarkistuksen AnimationTimer-luokan handle-metodin loppuun.
+ -->
 
 In some situations we may only want to display the 100 most recent observations of the dynamically changing data. This can be done in the previous example by turning off the random value generation representing the x-axis of the NumberAxis object (the method setAutoRanging(false)), and by adding the following check to the end of the handle method of the AnimationTimer class.
 
@@ -919,4 +929,5 @@ if (average.getData().size() > 100) {
 ```
 
 <!-- Nyt sovellus näyttää käyttäjälle aina vain viimeiset 100 arvoa. -->
+
 The application now only displays the last 100 observations to the user.
