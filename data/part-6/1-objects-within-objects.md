@@ -1321,7 +1321,7 @@ public class AmusementParkRide {
     private String name;
     private int minimumHeight;
     private int visitors;
-    private ArrayList<Henkilo> riding;
+    private ArrayList<Person> riding;
 
     // ..
 
