@@ -519,7 +519,7 @@ Metodeistamme puuttuu jatkossa määre `static` mikäli ne käsittelevät kyseis
 
 We've used the modifier `static` in some of the methods that we've written. The `static` modifier indicates that the method in question does not belong to an object and thus cannot be used to access any variables that belong to objects.
 
-Going forward, our methods will not include the `static` keyword if they're used to process information about objects created form a given class. If a method receives as parameters all the variables whose values ​​it uses, it can have `static` modifier.
+Going forward, our methods will not include the `static` keyword if they're used to process information about objects created from a given class. If a method receives as parameters all the variables whose values ​​it uses, it can have `static` modifier.
 
 </text-box>
 
