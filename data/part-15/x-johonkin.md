@@ -1,5 +1,5 @@
 ---
-path: '/osa-15/x-jotain'
+path: '/part-15/x-jotain'
 title: 'TODO: jotain'
 hidden: true
 ---

@@ -1,5 +1,5 @@
 ---
-path: '/osa-15/3-viela-hieman-testaamisesta'
+path: '/part-15/3-viela-hieman-testaamisesta'
 title: 'Vielä hieman testaamisesta'
 hidden: true
 ---

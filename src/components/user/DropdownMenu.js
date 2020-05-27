@@ -35,7 +35,7 @@ const DropdownMenu = ({ selectedVariant, setSelectedVariant, t }) => {
         onChange={handleChange}
         input={
           <OutlinedInput
-            labelWidth={labelWidth}
+            labelWidth={labelWidth,[]}
             name="course-variant"
             id="course-variant-select"
           />

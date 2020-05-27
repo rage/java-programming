@@ -1,5 +1,5 @@
 ---
-path: '/osa-15/x-luokka-ja-oliometodit'
+path: '/part-15/x-luokka-ja-oliometodit'
 title: 'TODO: algoritmiikan yhteyteen: Luokka- ja oliometodit (static ja ei-static)'
 hidden: true
 ---
