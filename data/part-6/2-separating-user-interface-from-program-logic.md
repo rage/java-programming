@@ -2202,7 +2202,7 @@ public class UserInterface {
                 continue;
             }
 
-            this.register.addGradeBasedOnPoints(pisteet);
+            this.register.addGradeBasedOnPoints(points);
         }
     }
 
