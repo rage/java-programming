@@ -437,16 +437,16 @@ public class Example {
         Person first = new Person("First");
 
         System.out.println(first);
-        youthen(first);
+        makeYounger(first);
         System.out.println(first);
 
         Person second = first;
-        youthen(second);
+        makeYounger(second);
 
         System.out.println(first);
     }
 
-    public static void youthen(Person person) {
+    public static void makeYounger(Person person) {
         person.setBirthYear(person.getBirthYear() + 1);
     }
 }
@@ -470,7 +470,7 @@ First (1972)
 
 <!-- Ohjelman suoritus alkaa main-metodin ensimmäiseltä riviltä. Main-metodin ensimmäisellä rivillä esitellään Henkilo-tyyppinen muuttuja eka, johon kopioidaan Henkilo-luokan konstruktorin palauttama arvo. Konstruktorissa luodaan olio, jonka syntymävuodeksi asetetaan 1970 ja jonka nimeksi asetetaan parametrina saatu arvo. Konstruktori palauttaa viitteen. Rivin suorituksen jälkeen ohjelman tilanne on seuraava -- ohjelman muistiin on luotu Henkilo-olio, johon on viittaus main-metodissa määritellystä eka-muuttujasta. -->
 
-The program's execution starts off from the first line of the main method. A variable of type Person is declared on its first line, and the value returned by the Person class constructor is copied as its value. The constructor creates an object whose birth year is set to 1970 and whose name is set to the value received as a parameter. The constructor returns a reference. Once the row has been executed, the program's state is the following -- a Person object has been created in memory and the `first` variable defined in the main method contains a reference to ti.
+The program's execution starts off from the first line of the main method. A variable of type Person is declared on its first line, and the value returned by the Person class constructor is copied as its value. The constructor creates an object whose birth year is set to 1970 and whose name is set to the value received as a parameter. The constructor returns a reference. Once the row has been executed, the program's state is the following -- a Person object has been created in memory and the `first` variable defined in the main method contains a reference to it.
 
 
 <!-- *Alla olevissa piirroksissa vasemmalla puolella on kutsupino, oikealla ohjelman muisti.* -->
@@ -488,7 +488,7 @@ On the third row of the main method, we print the value of the variable `first`.
 
 <!-- Neljännellä rivillä kutsutaan nuorenna-metodia, jolle annetaan parametriksi muuttuja eka. Metodia `nuorenna` kutsuttaessa sille parametrina annetun muuttujan arvo kopioituu metodin `nuorenna` käyttöön. Metodin `main` suoritus jää odottamaan kutsupinoon. Koska muuttuja eka on viittaustyyppinen, kopioituu metodin käyttöön aiemmin luotu viite. Metodin suorituksen lopussa tilanne on seuraava -- metodi kasvattaa parametrina saamansa olion syntymävuotta yhdellä. -->
 
-On the fourth row, the program calls the `youthen` method, to which we pass the variable `first` as an argument. When the method `youthen` is called, the value of the parameter variable is copied to be used by the `youthen` method. The execution of the `main` method remains waiting in the call stack. As the variable `first` is a reference type, the reference that was created earlier is copied for the method's use. At the end of the method execution, the situation is as follows -- the method increments the birth year of the object it receives as a parameter by one.
+On the fourth row, the program calls the `makeYounger` method, to which we pass the variable `first` as an argument. When the method `makeYounger` is called, the value of the parameter variable is copied to be used by the `makeYounger` method. The execution of the `main` method remains waiting in the call stack. As the variable `first` is a reference type, the reference that was created earlier is copied for the method's use. At the end of the method execution, the situation is as follows -- the method increments the birth year of the object it receives as a parameter by one.
 
 
 <img src="../img/drawings/part5.3-first-2-tm.png"/>
@@ -503,7 +503,7 @@ When the execution of the method makeYounger ends, we return back to the main me
 
 <!-- Metodikutsusta palaamisen jälkeen suoritetaan taas muuttujan eka arvon tulostaminen. Muuttujan eka osoittamaa oliota on muutettu metodikutsun `nuorenna` yhteydessä: olion `syntymavuosi`-muuttujaa kasvatettiin yhdellä. Tulostukseksi tulee lopulta "Eka (1971)". -->
 
-Once we've returned from the method call, we once again print the value of the variable `first`. The object referenced by the variable `first` has been mutated during the `youthen` method call: the `birthYear` variable of the object has been incremented by one. The final value printed is "First (1971)".
+Once we've returned from the method call, we once again print the value of the variable `first`. The object referenced by the variable `first` has been mutated during the `makeYounger` method call: the `birthYear` variable of the object has been incremented by one. The final value printed is "First (1971)".
 
 <!-- Tämän jälkeen ohjelmassa esitellään uusi Henkilo-tyyppinen muuttuja toka. Muuttujaan toka kopioidaan muuttujan eka arvo, eli muuttujan toka arvoksi tulee viite jo olemassaolevaan Henkilo-olioon. -->
 
@@ -515,7 +515,7 @@ A new Person-type variable called `second` is then declared in the program. The 
 
 <!-- Tämän jälkeen kutsutaan metodia nuorenna, jolle annetaan parametriksi muuttuja toka. Metodia kutsuttaessa parametriksi annetun muuttujan arvo kopioituu metodin arvoksi. Metodi saa siis käyttöönsä muuttujan toka sisältämän viitteen. Metodin suorituksen lopuksi metodin viittaaman olion syntymävuosi on kasvanut yhdellä. -->
 
-The program calls the `youthen` method after this, which is given the `second` variable as a parameter. The value of the variable passed during the method call is copied as a value for the method, i.e., the method receives the reference contained in the `second` variable for its use. After the method's execution, the birth year of the object referenced by the method has increased by one.
+The program calls the `makeYounger` method after this, which is given the `second` variable as a parameter. The value of the variable passed during the method call is copied as a value for the method, i.e., the method receives the reference contained in the `second` variable for its use. After the method's execution, the birth year of the object referenced by the method has increased by one.
 
 <img src="../img/drawings/part5.3-first-5-tm.png"/>
 
