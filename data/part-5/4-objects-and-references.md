@@ -924,7 +924,7 @@ public static void main(String[] args) {
 public static void main(String[] args) {
     // example main program for the first section of the exercise
 
-    HealthStation childrensHospital = new HealthInstitution();
+    HealthStation childrensHospital = new HealthStation();
 
     Person ethan = new Person("Ethan", 1, 110, 7);
     Person peter = new Person("Peter", 33, 176, 85);
@@ -1472,7 +1472,7 @@ public class MainProgram {
         double change = unicafeExactum.eatAffordably(10);
         System.out.println("remaining change: " + change);
 
-        Maksukortti annesCard = new PaymentCard(7);
+        PaymentCard annesCard = new PaymentCard(7);
 
         boolean wasSuccessful = unicafeExactum.eatHeartily(annesCard);
         System.out.println("there was enough money: " + wasSuccessful);
@@ -2261,14 +2261,14 @@ public static void main(String[] args) {
     SimpleDate d3 = new SimpleDate(1, 3, 2011);
     SimpleDate d4 = new SimpleDate(31, 12, 2010);
 
-    System.out.println(p1 + " is earlier than " + p2 + ": " + p1.before(p2));
-    System.out.println(p2 + " is earlier than " + p1 + ": " + p2.before(p1));
+    System.out.println(d1 + " is earlier than " + d2 + ": " + p1.before(p2));
+    System.out.println(d2 + " is earlier than " + d1 + ": " + p2.before(p1));
 
-    System.out.println(p2 + " is earlier than " + p3 + ": " + p2.before(p3));
-    System.out.println(p3 + " is earlier than " + p2 + ": " + p3.before(p2));
+    System.out.println(d2 + " is earlier than " + d3 + ": " + p2.before(p3));
+    System.out.println(d3 + " is earlier than " + d2 + ": " + p3.before(p2));
 
-    System.out.println(p4 + " is earlier than " + p1 + ": " + p4.before(p1));
-    System.out.println(p1 + " is earlier than " + p4 + ": " + p1.before(p4));
+    System.out.println(d4 + " is earlier than " + d1 + ": " + p4.before(p1));
+    System.out.println(d1 + " is earlier than " + d4 + ": " + p1.before(p4));
 }
 ```
 
