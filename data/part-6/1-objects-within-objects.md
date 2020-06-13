@@ -1656,13 +1656,13 @@ System.out.println(pisin.getNimi());
 
 ```java
 Person matti = new Person("Matti");
-matti.setPituus(180);
+matti.setHeight(180);
 
 Person juhana = new Person("Juhana");
-juhana.setPituus(132);
+juhana.setHeight(132);
 
 Person awak = new Person("Awak");
-awak.setPituus(194);
+awak.setHeight(194);
 
 AmusementParkRide hurjakuru = new AmusementParkRide("Hurjakuru", 140);
 
@@ -1674,9 +1674,9 @@ System.out.println(hurjakuru);
 System.out.println(hurjakuru.averageHeightOfPeopleOnRide());
 
 System.out.println();
-System.out.println(hurjakuru.haeTallest().getName());
+System.out.println(hurjakuru.getTallest().getName());
 Person tallest = hurjakuru.getTallest();
-System.out.println(pisin.getName());
+System.out.println(tallest.getName());
 ```
 
 
@@ -1798,7 +1798,7 @@ System.out.println("Empty room? " + room.isEmpty());
 
 System.out.println("");
 for (Person person : room.getPersons()) {
-    System.out.println(Person);
+    System.out.println(person);
 }
 ```
 
@@ -2293,7 +2293,7 @@ Seuraavassa on luokan käyttöesimerkki: -->
 
 Add the following methods to the `Suitcase` class:
 
-- a `printGoods` method, which prints all the items in the suitcase
+- a `printItems` method, which prints all the items in the suitcase
 
 - a `totalWeight` method, which returns the total weight of the items
 
