@@ -1807,7 +1807,7 @@ Blaise Pascal, born on 19.6.1623
 
 <!-- Henkilöoliolla on nyt oliomuuttujat `nimi` ja `syntymapaiva`. Muuttuja `nimi` on merkkijono, joka sekin on siis olio, ja muuttuja `syntymapaiva` on Päiväysolio. -->
 
-Now a person object has object variables `name` and `birthday`. The variable `name` is a string, which itself is an object; the variable `birthday is an SimpleDate object.
+Now a person object has object variables `name` and `birthday`. The variable `name` is a string, which itself is an object; the variable `birthday` is a SimpleDate object.
 
 
 <!-- Molemmat muuttujat sisältävät arvon olioon. Henkilöolio sisältää siis kaksi viitettä. Alla olevassa kuvassa paino ja pituus on jätetty huomiotta. -->

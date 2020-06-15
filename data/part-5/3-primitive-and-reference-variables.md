@@ -333,7 +333,7 @@ The most significant difference between primitive and reference variables is tha
 
 <!-- Alkeistyyppisille muuttujille löytyy laskuoperaatioita kuten plus, miinus, kerto jne -- nämä operaatiot eivät muuta alkuperäisten muuttujien arvoja. Laskuoperaatioiden avulla luodaan uusia arvoja, jotka varastoidaan muuttujiin tarvittaessa. Toisaalta, viittaustyyppisten muuttujien arvoa ei voi muuttaa plus, miinus, kerto ym. laskuoperaatioiden avulla. -->
 
-Arithmetic operations, such as addition, subtraction, and multiplication can be used with primitive variables -- these operations do not change the original values of the variables. Arithmetic operations create new values that can be stored in variables as needed. Conversly, the values of reference variables cannot be changed by these arithmetic expressions.
+Arithmetic operations, such as addition, subtraction, and multiplication can be used with primitive variables -- these operations do not change the original values of the variables. Arithmetic operations create new values that can be stored in variables as needed. Conversely, the values of reference variables cannot be changed by these arithmetic expressions.
 
 <!-- Viittaustyyppisen muuttujan arvo -- eli viite -- osoittaa paikkaan, joka sisältää viittaustyyppiseen muuttujaan liittyvät tiedot. Oletetaan, että käytössä on luokka Henkilo, jossa on määritelty oliomuuttujaksi ika. Jos luokasta on luotu henkilö-olio, voi henkilö-olion viitettä seuraamalla päästä käsiksi muuttujaan ika, jonka arvoa voi tarvittaessa muuttaa. -->
 
