@@ -24,7 +24,7 @@ _When you write a software module, you want to make sure that when changes are r
 _[..in other words..] Gather together the things that change for the same reasons. Separate those things that change for different reasons._
 
 <!-- Selkeys ohjelmaan luodaan sopivalla ohjelman rakenteella sekä nimeämiskäytänteiden seuraamisella. Opit ohjelmoidessasi että jokaiselle ohjelman osalle voidaan määritellä yksi selkeä vastuu. -->
-Proper program structure and following good naming princibles leads to clean code. When you code a bit more, you'll learn that each program part can be given one clear area of responsibility.
+Proper program structure and following good naming principles leads to clean code. When you code a bit more, you'll learn that each program part can be given one clear area of responsibility.
 
 <!-- Vastaa vielä alla olevaan kyselyyn. -->
 

@@ -162,7 +162,7 @@ ArrayList<String> read = new ArrayList<>();
 
 while (true) {
     System.out.println("Enter an input: ");
-    String line = scanner.nextLine();
+    String line = reader.nextLine();
     if (read.contains(line)) {
         break;
     }
@@ -612,7 +612,7 @@ Yksikkötestaus on vain osa ohjelmiston testaamista. Yksikkötestaamisen lisäks
 Näitä testaamiseen liittyviä menetelmiä tarkastellaan tarkemmin muunmuassa kursseilla ohjelmistotekniikka sekä ohjelmistotuotanto.
 
 </text-box> -->
-<text-box variant='hint' name='Lisää ohjelmistojen testaamisesta'>
+<text-box variant='hint' name='More about software testing'>
 
 Unit testing is only a part of software testing. On top of unit testing, a developer also performs integration tests that examine the interoperability of components, such as classes, and interface tests that test the application's interface through elements provided by the interface, such as buttons.
 
