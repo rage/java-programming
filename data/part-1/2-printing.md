@@ -548,4 +548,4 @@ public class Comments {
 }
 ```
 
-The last line of the example shows a particularly handy use-case for comments. Code that has been written does not need to eb deleted to try out something else.
+The last line of the example shows a particularly handy use-case for comments. Code that has been written does not need to be deleted to try out something else.
