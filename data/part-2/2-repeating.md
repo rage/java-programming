@@ -190,17 +190,17 @@ Ready!
 <programming-exercise name="Carry on?" tmcname='part02-Part02_05.CarryOn'>
 
 <!-- Kirjoita edellä olevaa toistolause-esimerkkiä mukaillen ohjelma, joka kysyy käyttäjältä "Jatketaanko?" kunnes käyttäjä syöttää merkkijonon "ei". -->
-Write a program by using the loop example that asks "Carry on?" until the user inputs the string "no".
+Write a program by using the loop example that asks "Shall we carry on?" until the user inputs the string "no".
 
 <sample-output>
 
-Carry on?
+Shall we carry on?
 **yes**
-Carry on?
+Shall we carry on?
 **ye**
-Carry on?
+Shall we carry on?
 **y**
-Carry on?
+Shall we carry on?
 **no**
 
 </sample-output>
