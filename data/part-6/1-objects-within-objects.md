@@ -1321,7 +1321,7 @@ public class AmusementParkRide {
     private String name;
     private int minimumHeight;
     private int visitors;
-    private ArrayList<Henkilo> riding;
+    private ArrayList<Person> riding;
 
     // ..
 
@@ -1533,9 +1533,9 @@ public class Main {
     public static void main(String[] args) {
         Gift book = new Gift("Harry Potter and the Philosopher's Stone", 2);
 
-        Package package = new Package();
-        package.addGift(book);
-        System.out.println(package.totalWeight());
+        Package gifts = new Package();
+        gifts.addGift(book);
+        System.out.println(gifts.totalWeight());
     }
 }
 ```
