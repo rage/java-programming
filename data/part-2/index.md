@@ -7,7 +7,7 @@ hidden: false
 
 <!-- Kurssimateriaalin toisen osan pääteemoina ovat ohjelman toistaminen sekä toiminnallisuuden pilkkominen erillisiksi kokonaisuuksiksi. -->
 
-The second part of the material focuses on repetition in programs and on how to divide funcionality into distinct units.
+The second part of the material focuses on repetition in programs and on how to divide functionality into distinct units.
 
 <please-login></please-login>
 
