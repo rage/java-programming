@@ -452,7 +452,6 @@ have
 favorite
 flavor
 **was it a cat?**
-**bye**
 
 </sample-output>
 

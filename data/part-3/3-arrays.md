@@ -308,7 +308,7 @@ The exercise template already has an array containing numbers. Complete the prog
 Luku 3 löytyy indeksistä 4. -->
 
 Search for? **3**
-3 is at index 4
+3 is at index 4.
 
 </sample-output>
 
@@ -529,7 +529,7 @@ listElements(numbers);
 
 <sample-output>
 
-1 2 3
+the elements of the array are: 1 2 3
 
 </sample-output>
 
