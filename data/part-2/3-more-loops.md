@@ -662,6 +662,8 @@ The series of exercises form a larger program whose functionality is implemented
 <!-- Huom: muistathan, että jokaisen isomman tehtävän "alitehtävä" on saman arvoinen tehtävä kuin yksi alikohdaton tehtävä. Tämä tehtävä vastaa siis viittä normaalia tehtävää. -->
 NB: Remember that each sub-part of the series is equivalent to one individual exercise. As such, the series is equivalent to five individual exercises.
 
+**Note:** the tests might fail a correct solution. This is a known bug that will be fixed in the future. In the meantime, you can avoid the error by printing "Give numbers:" without **any** spaces after ':'
+
 <h2>Reading</h2>
 
 <!-- Tee ohjelma, joka kysyy käyttäjältä lukuja (ohjelma tulostaa käyttäjälle aluksi "Syötä luvut:"), kunnes käyttäjä antaa luvun -1. Kun käyttäjä syöttää luvun -1, ohjelma tulostaa "Kiitos ja näkemiin!" ja päättyy. -->
