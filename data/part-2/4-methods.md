@@ -2269,6 +2269,6 @@ The call `christmasTree(10)` should print:
 
 <!-- **Huom:** korkeuksien jotka ovat alle 3 ei tarvitse toimia! -->
 
-**NB:** heights shorter that 3 don't have work correctly!
+**NB:** heights shorter than 3 don't have to work correctly!
 
 </programming-exercise>
