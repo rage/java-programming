@@ -489,8 +489,8 @@ int camelCase = 5; // Ei sallittu -- muuttuja camelCase on jo käytössä!
 ``` -->
 
 ```java
-int 7variable = 4; // Not Allowed!
-int variable7 = 4; // Allowed, but not a descriptive variable name
+int System.out.print = 4; // Not Allowed!
+int System.out.println = 4; // Not Allowed!
 ```
 
 ```java
@@ -533,7 +533,7 @@ Letters containing diacritics (e.g. the letters ä and ö used in Finnish) shoul
 
 <!-- Muuttujan tyyppi kerrotaan muuttujan esittelyn yhteydessä. Esimerkiksi merkkijonon "teksti" sisältävä merkkijonomuuttuja luodaan lauseella `String merkkijono = "teksti";` ja kokonaisluvun 42 sisältävä kokonaislukumuuttuja luodaan lauseella `int luku = 42;`. -->
 
-A variable's type is specificed when it's initally declared. For example, a variable containing the string "text" is declared with the statement `String string = "text";`, and an integer having the value 42 is declared with the statement `int value = 42;`. -->
+A variable's type is specified when it's initally declared. For example, a variable containing the string "text" is declared with the statement `String string = "text";`, and an integer having the value 42 is declared with the statement `int value = 42;`. -->
 
 <!-- Muuttujan tyyppi määrää arvot, joita muuttuja voi saada. `String`-tyyppiset muuttujat saavat arvokseen merkkijonoja, `int`-tyyppiset muuttujat saavat arvokseen kokonaislukuja, `double`-tyyppiset muuttujat saavat arvokseen liukulukuja, ja `boolean`-tyyppiset muuttujat saavat arvokseen totuusarvoja. -->
 
