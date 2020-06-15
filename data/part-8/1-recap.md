@@ -307,7 +307,7 @@ Make a class called Container. The class must have a constructor which does not 
  -  `public void remove(int amount)` which removes the amount of liquid given as a parameter from the container. If the amount is negative, no liquid is removed. A container can never hold less than 0 units of liquid.
 
 <!-- - `public String toString()` palauttaa olion merkkijonoesityksen muodossa "<em>sisalto</em>/100", esim "32/100". -->
- -  `public string toString()` which returns the container as a string formatted "<em>amoun of liquid</em>100, for example "32/100".
+ -  `public String toString()` which returns the container as a string formatted "<em>amount of liquid</em>/100", for example "32/100".
 
 
 <!-- Luokan käyttöesimerkki: -->
