@@ -955,7 +955,7 @@ System.out.println();
 <sample-output>
 
 <!-- esimerkiksi ja niin edelleen ynnä muuta sellaista lol. -->
-for example more precisely and so on `null`
+for example more precisely and so on lol
 
 </sample-output>
 
@@ -1434,7 +1434,7 @@ The code above prints:
 <sample-output>
 
 51.5
-0.0
+30.0
 
 </sample-output>
 
