@@ -1356,6 +1356,7 @@ Valitse toiminto:
 
 Airport Asset Control
 --------------------
+Airport Asset Control
 
 Choose an action:
 [1] Add an airplane
@@ -1403,6 +1404,7 @@ Choose an action:
 
 Flight Control
 ------------
+Flight Control
 
 Choose an action:
 [1] Print airplanes
@@ -1418,9 +1420,9 @@ Choose an action:
 [3] Print airplane details
 [x] Quit
 &gt; **2**
-HA-LOL (42 passengers) (HEL-BAL)
-HA-LOL (42 passengers) (BAL-HEL)
-G-OWAC (101 passengers) (JFK-BAL)
+HA-LOL (42 capacity) (HEL-BAL)
+HA-LOL (42 capacity) (BAL-HEL)
+G-OWAC (101 capacity) (JFK-BAL)
 
 Choose an action:
 [1] Print airplanes
