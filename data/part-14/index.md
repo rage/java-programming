@@ -15,7 +15,5 @@ In the fourteenth part you will learn methods for data visualization and acquain
 
 <!-- Yllä oleva sisällysluettelo sisältää kurssin neljännentoista osan aihealueet. Kukin kurssin osa on suunniteltu siten, että siinä on työtä yhden viikon ajaksi. Kuhunkin kurssin osaan on hyvä varata reilusti yli kymmenen tuntia aikaa, riippuen aiemmasta tietokoneen käyttökokemuksesta. Ohjelmointia aiemmin kokeilleet saattavat edetä materiaalissa aluksi nopeamminkin. -->
 
-At the moment, only the exercises and key parts of this part are available in English.
-
 
 <exercises-in-this-section></exercises-in-this-section>
