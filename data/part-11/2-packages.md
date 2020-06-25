@@ -1356,8 +1356,6 @@ Valitse toiminto:
 
 Airport Asset Control
 --------------------
-Airport Asset Control
-
 Choose an action:
 [1] Add an airplane
 [2] Add a flight
@@ -1404,8 +1402,6 @@ Choose an action:
 
 Flight Control
 ------------
-Flight Control
-
 Choose an action:
 [1] Print airplanes
 [2] Print flights
