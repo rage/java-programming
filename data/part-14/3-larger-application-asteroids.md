@@ -1117,7 +1117,7 @@ public class Asteroid extends Character {
 
 <quiz id="883787c9-4e85-5e33-a6d3-7e9845b4d028"></quiz>
 
-Testataan vielä, että asteroidin voi lisätä sovellukseen.
+<!-- Testataan vielä, että asteroidin voi lisätä sovellukseen. -->
 
 Then let's make sure that you can also add an asteroid to the application.
 
