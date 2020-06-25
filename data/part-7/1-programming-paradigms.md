@@ -292,7 +292,7 @@ public class Clock() {
     public Clock() {
         this.hours = new Hand(24);
         this.minutes = new Hand(60);
-        this.hours = new Hand(60);
+        this.seconds = new Hand(60);
     }
 
     public void advance() {

@@ -924,7 +924,7 @@ The `location` method is not meant for external use, which is why it is defined 
 
 <!-- Värillinen piste on muuten samanlainen kuin piste, mutta se sisältää merkkijonona ilmaistavan värin. Luokka voidaan siis tehdä perimällä Piste. -->
 
-A colored point is otherwise identical to a point, but it contains also a color that expressed as a string. Due to the similarity, we can create a new class by extending the class Point.
+A colored point is otherwise identical to a point, but it contains also a color that is expressed as a string. Due to the similarity, we can create a new class by extending the class Point.
 
 
 <!-- ```java
@@ -963,7 +963,7 @@ public class ColorPoint extends Point {
 
 <!-- Luokka määrittelee oliomuuttujan värin talletusta varten. Koordinaatit on valmiiksi määriteltynä yliluokassa. Merkkijonoesityksestä halutaan muuten samanlainen kuin pisteellä, mutta väri tulee myös ilmaista. Ylikirjoitettu metodi `toString` kutsuu yliluokan toString-metodia ja lisää sen tulokseen pisteen värin. -->
 
-The class defines an object variable in which we store the color. The coordinates are already defined in the superclass. We want the string representation to be the same as with the Point class, but to also include information about the color. The overriden `toString` method calls the `toString` method of the superclass and adds to it the color of the point.
+The class defines an object variable in which we store the color. The coordinates are already defined in the superclass. We want the string representation to be the same as the Point class, but to also include information about the color. The overriden `toString` method calls the `toString` method of the superclass and adds to it the color of the point.
 
 <!-- Seuraavassa on esimerkki, jossa listalle laitetaan muutama piste. Osa pisteistä on "normaaleja" ja osa väripisteitä. Lopulta tulostetaan listalla olevat pisteet. Jokaisen pisteen metodi toString suoritetaan pisteen todellisen tyypin perusteella, vaikka lista tuntee kaikki pisteet `Piste`-tyyppisinä. -->
 
@@ -1374,7 +1374,7 @@ The problem becomes very clear when we think of what a change in a customer's ad
 
 <!-- Osoitteen muuttuessa joutuisimme muuttamaan *jokaista* kyseiseen asiakkaaseen liittyvää tilausoliota, mikä ei missään nimessä ole toivottua. Parempi ratkaisu olisi kapseloida `Asiakas` `Tilaus`-luokan oliomuuttujaksi. Jos ajattelemme tarkemmin tilauksen semantiikkaa, tämä on selvää. *Tilauksella on asiakas*. -->
 
-In the case that an address changes, we would have to change *every* order object that relates to that customer. This is hardly ideal. A better solution would be to encapsulate the customer as an object variable of the `Order` class. Thinking more closely on the semantcis of an order, this seems intuitive. *An order has a customer*.
+In the case that an address changes, we would have to change *every* order object that relates to that customer. This is hardly ideal. A better solution would be to encapsulate the customer as an object variable of the `Order` class. Thinking more closely on the semantics of an order, this seems intuitive. *An order has a customer*.
 
 
 <!-- Muutetaan luokkaa `Tilaus` siten, että se sisältää `Asiakas`-viitteen. -->
@@ -1509,7 +1509,7 @@ System.out.println(mehu);           // saldo = 988.7, tilaa 11.3
 ```java
 ProductWarehouse juice = new ProductWarehouse("Juice", 1000.0);
 juice.addToWarehouse(1000.0);
-juice.otaVarastosta(11.3);
+juice.takeFromWarehouse(11.3);
 System.out.println(juice.getName()); // Juice
 System.out.println(juice);           // balance = 988.7, space left 11.3
 ```
@@ -1754,7 +1754,7 @@ System.out.println(mehu.historia()); // [1000.0, 988.7, 989.7]
 ProductWarehouseWithHistory juice = new ProductWarehouseWithHistory("Juice", 1000.0, 1000.0);
 juice.takeFromWarehouse(11.3);
 System.out.println(juice.getName()); // Juice
-juice.takeFromWarehouse(1.0);
+juice.addToWarehouse(1.0);
 System.out.println(juice);           // Juice: balance = 989.7, space left 10.3
 
 // etc
