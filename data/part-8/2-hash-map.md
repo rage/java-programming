@@ -673,8 +673,8 @@ text = text.trim(); // text nyt "ylpeys ja ennakkoluulo"
 ``` -->
 ```java
 String text = "Pride and Prejudice ";
-text = text.toLowerCase(); // text currently "Pride and Prejudice "
-text = text.trim(); // text now "Pride and Prejudice"
+text = text.toLowerCase(); // text currently "pride and prejudice "
+text = text.trim(); // text now "pride and prejudice"
 ```
 
 <!-- Edellä kuvatun merkkijonon muunnoksen johdosta kirja löytyy, vaikka käyttäjä kirjoittaisi kirjan nimen pienillä kirjaimilla.
