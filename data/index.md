@@ -22,4 +22,6 @@ The course does not require separate registration. You can simply dive into the 
 
 The course is split up into two individual courses: Java Programming I and Java Programming II. Each course consists of seven parts, each with its own exercise set. Completing a single part takes approximately 5-20 hours, and we recommend reserving at least 10 hours per part, depending on prior skills with computers.
 
-If have a Finnish social security number you can get official study credits from the Open University of University of Helsinki if you take an exam after the course. If you don't have a Finnish social security number you can get a certificate starting from June. Instructions for the certificate will appear here later.
+## Credits and certificate
+
+If you have a Finnish social security number you can get official study credits from the Open University of University of Helsinki if you take an exam after the course. If you don't have a Finnish social security number you can get a certificate starting from June. Instructions for the certificate will appear here later.
