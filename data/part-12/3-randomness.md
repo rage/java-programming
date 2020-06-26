@@ -5,7 +5,7 @@ hidden: false
 ---
 
 
-<text-box variant='learningObjectives' name='Oppimistavoitteet'>
+<text-box variant='learningObjectives' name='Learning objectives'>
 
 <!-- - Tiedät miten satunnaislukuja luodaan ja tiedät joitakin tilanteita missä satunnaislukuja tarvitaan. -->
 <!-- - Osaat käyttää Javan valmista Random-luokkaa satunnaislukujen luomiseen. -->
