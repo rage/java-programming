@@ -1,7 +1,7 @@
 ---
 path: '/part-12/5-summary'
 title: 'Summary'
-hidden: true
+hidden: false
 ---
 
 

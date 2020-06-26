@@ -1,7 +1,7 @@
 ---
 path: '/part-12/3-randomness'
 title: 'Randomness'
-hidden: true
+hidden: false
 ---
 
 

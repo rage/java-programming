@@ -1,7 +1,7 @@
 ---
 path: '/part-12/4-multidimensional-data'
 title: 'Multidimensional data'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Oppimistavoitteet'>
