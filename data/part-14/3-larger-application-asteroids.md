@@ -1,7 +1,7 @@
 ---
 path: '/part-14/3-larger-application-asteroids'
 title: 'Larger application: Asteroids'
-hidden: true
+hidden: false
 ---
 
 

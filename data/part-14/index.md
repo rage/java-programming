@@ -2,7 +2,7 @@
 path: '/part-14'
 title: 'Part 14'
 overview: true
-hidden: true
+hidden: false
 ---
 
 <!-- Kurssimateriaalin viimeisessä osassa opit menetelmiä tiedon visualisointiin ja tutustut Javan valmiina tarjoamiin kaavioihin (viivakaavio, pylväskaavio). Opit luomaan yksinkertaisia piirroksia ja tutustut kuvien käsittelyyn. Opit myös soittamaan äänitiedostoja. Luot myös hieman suuremman ohjelman -- Asteroids-pelin -- esimerkkiä noudattaen. -->

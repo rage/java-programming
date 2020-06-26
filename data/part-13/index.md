@@ -2,7 +2,7 @@
 path: '/part-13'
 title: 'Part 13'
 overview: true
-hidden: true
+hidden: false
 ---
 
 <!-- Kurssimateriaalin kolmannessatoista osassa opit luomaan graafisia käyttöliittymiä ja tutustut graafisissa käyttöliittymissä käytettäviin käyttöliittymäkomponentteihin. Opit käsittelemään graafisissa käyttöliittymissä tapahtuvia tapahtumia ja harjoittelet useamman näkymän sisältävien graafisten käyttöliittymien luomista. -->

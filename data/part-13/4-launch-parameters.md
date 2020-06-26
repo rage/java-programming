@@ -1,7 +1,7 @@
 ---
 path: '/part-13/4-launch-parameters'
 title: "Application's launch parameters"
-hidden: true
+hidden: false
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
