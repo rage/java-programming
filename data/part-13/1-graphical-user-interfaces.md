@@ -45,7 +45,7 @@ A test library called [TestFX] (https://github.com/TestFX/TestFX/wiki) is used i
 </text-box>
 
 <!-- <text-box variant='hint' name='Tarvittavat oikeudet macOS:lla tehtävien testeihin'> -->
-<text-box variant='hint' name='Required Rights on macOS for Exercise Tests''>
+<text-box variant='hint' name='Required Rights on macOS for Exercise Tests'>
 
 <!-- Tämän osan tehtävissä osa testeistä odottaa, että tmcbeans saa vapaasti liikuttaa kursoria näytöllä. macOS-käyttöjärjestelmällä (Apple-tietokoneet) tähän tarvitsee antaa erikseen tmcbeansille oikeus. Täältä löytyy ohjeet, miten oikeus myönnetään: [macOS ohjeet](/macos-ohjeet) -->
 
@@ -107,6 +107,8 @@ When the launch method is called, the method of the Application class creates a 
 <programming-exercise name='My first application' tmcname='part13-Part13_01.MyFirstApplication'>
 
 <!-- Luo tehtäväpohjassa olevaan luokkaan graafinen käyttöliittymä, jonka otsikkona on "Sovellukseni". Sovelluksen tulee käynnistyä kun main-metodi suoritetaan. -->
+
+Create a GUI app with the title "My first application". The App shou start when main method is executed
 
 </programming-exercise>
 

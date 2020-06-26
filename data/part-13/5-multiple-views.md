@@ -225,7 +225,7 @@ Sometimes one wants an application to have a permanent view whose parts are swap
 
 In the example below, there is a application which contains a main menu and an area with variable content. When pressing the buttons on the main menu the the content of the content area changes.
 
-
+<!--
 ```java
 package application;
 
@@ -300,6 +300,82 @@ public class ExampleApplication extends Application {
     }
 }
 ```
+-->
+
+```java
+package application;
+
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+
+public class ExampleApplication extends Application {
+
+    @Override
+    public void start(Stage window) throws Exception {
+
+        // 1. Create main layout
+        BorderPane layout = new BorderPane();
+
+        // 1.1. Create menu for main layout
+        HBox menu = new HBox();
+        menu.setPadding(new Insets(20, 20, 20, 20));
+        menu.setSpacing(10);
+
+        // 1.2. Create buttons for menu
+        Button first = new Button("First");
+        Button second = new Button("Second");
+
+        // 1.3. Add buttons to menu
+        menu.getChildren().addAll(first, second);
+
+        layout.setTop(menu);
+
+
+        // 2. Add subviews and add them to the menu buttons
+        // 2.1. Create subview layout 
+        StackPane firstLayout = createView("First view");
+        StackPane secondLayout = createView("Second view");
+
+        // 2.2. Add subviews to button. Pressing the buttons will change the view
+        first.setOnAction((event) -> layout.setCenter(firstLayout));
+        second.setOnAction((event) -> asettelu.setCenter(secondLayout));
+
+        // 2.3. Set initial view
+        layout.setCenter(firstLayout);
+
+
+        // 3. Create main scene with layout 
+        Scene scene = new Scene(asettelu);
+
+
+        // 4. Show the main scene
+        window.setScene(scene);
+        window.show();
+    }
+
+    private StackPane createView(String text) {
+
+        StackPane layout = new StackPane();
+        layout.setPrefSize(300, 180);
+        layout.getChildren().add(new Label(text));
+        layout.setAlignment(Pos.CENTER);
+
+        return layout;
+    }
+
+    public static void main(String[] args) {
+        launch(ExampleApplication.class);
+    }
+}
+```
 
 
 <!-- Sovellus toimii seuraavalla tavalla: -->
@@ -359,9 +435,13 @@ public interface PersonWarehouse {
 
 When implementing a user interface a good starting point is drawing the interface followed bt adding appropriate user interface components to the user interface. When saving persons to a database we need a field for name, a field for social security number and a button for adding the person. In addition we'll also create
 
+<!--
 Käytetään käyttöliittymän asetteluun `GridPane`-asettelijaa. Rivejä käyttöliittymässä on 3, sarakkeita 2. Lisätään tapahtumien käsittelytoiminnallisuus myöhemmin. Käyttöliittymän alustusmetodi näyttää seuraavalta.
+-->
 
+Lets use `GridPane` class for the layout. There are 3 rows and 2 columns in the user interface. We'll add the event handling later. The initialization method is as follows:
 
+<!--
 ```java
 @Override
 public void start(Stage ikkuna) {
@@ -391,13 +471,50 @@ public void start(Stage ikkuna) {
     ikkuna.show();
 }
 ```
+-->
 
+```java
+@Override
+public void start(Stage window) {
+
+    Label nameText = new Label("Name: ");
+    TextField nameField = new TextField();
+    Label secText = new Label("Social security number: ");
+    TextField secField = new TextField();
+
+    Button addButton = new Button("Add person!");
+
+    GridPane components = new GridPane();
+    components.add(nameText, 0, 0);
+    components.add(nameField, 1, 0);
+    components.add(secText, 0, 1);
+    components.add(secField, 1, 1);
+    components.add(addButton, 1, 2);
+
+    // Add some style to the ui
+    components.setHgap(10);
+    components.setVgap(10);
+    components.setPadding(new Insets(10, 10, 10, 10));
+
+    Scene scene = new Scene(components);
+
+    window.setScene(scene);
+    window.show();
+}
+```
+<!--
 <img src="../img/material/gui-lisaa-henkilo.png" alt="Kaksi tekstikenttää sekä nappi, jossa on teksti 'Kopioi'."/>
+--->
 
+<img src="../img/material/gui-lisaa-henkilo.png" alt="Two text fields and a button"/>
 
+<!--
 Luodaan seuraavaksi ohjelmaan ActionEvent-rajapinnan toteuttava olio, joka lisää kenttien arvot Henkilovarasto-rajapinnalle.
+-->
 
+Next lets add an object that implements the ActionEvent interface that adds field values to PersonWarehouse interface.
 
+<!--
 ```java
 @Override
 public void start(Stage ikkuna) {
@@ -409,10 +526,27 @@ public void start(Stage ikkuna) {
     // ...
 }
 ```
+-->
 
+```java
+@Override
+public void start(Stage window) {
+    // ...
+
+    addButton.setOnAction((event) -> {
+        warehouse.talleta(new Person(nameText.getText(), secText.getText());
+    });
+    // ...
+}
+```
+
+<!--
 Mutta. Mistä saamme konkreettisen Henkilovarasto-olion? Se luodaan esimerkiksi start-metodin alussa. Alla annettuna koko sovelluksen runko.
+-->
 
+But where do we get the actual PersonWarehouse-object? It is created at the beginning of the start method. Below is the code in whole.
 
+<!--
 ```java
 // pakkaus
 
@@ -465,7 +599,59 @@ public class HenkiloSovellus extends Application {
     }
 }
 ```
+-->
 
+```java
+
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
+
+public class PersonApp extends Application {
+
+    @Override
+    public void start(Stage window) {
+        PersonWarehouse warehouse = new MyPersonWarehouse();
+
+        Label nameText = new Label("Name: ");
+        TextField nameField = new TextField();
+        Label secText = new Label("Social security number: ");
+        TextField secField = new TextField();
+
+        Button addButton = new Button("Add person!");
+
+        addButton.setOnAction((event) -> {
+            warehouse.talleta(new Person(nameText.getText(), secText.getText());
+        });
+
+        GridPane components = new GridPane();
+        components.add(nameText, 0, 0);
+        components.add(nameField, 1, 0);
+        components.add(secText, 0, 1);
+        components.add(secField, 1, 1);
+        components.add(addButton, 1, 2);
+
+        // Add some style to the ui
+        components.setHgap(10);
+        components.setVgap(10);
+        components.setPadding(new Insets(10, 10, 10, 10));
+
+        Scene scene = new Scene(components);
+
+        window.setScene(scene);
+        window.show();
+    }
+
+    public static void main(String[] args) {
+        launch(PersonApp.class);
+    }
+}
+```
 
 ## A slightly larger application: Vocabulary practice
 
@@ -541,7 +727,7 @@ public class Dictionary {
         this.words = new ArrayList<>();
         this.translations = new HashMap<>();
 
-        lisaa("sana", "word");
+        add("sana", "word");
     }
 
     public String get(String word) {

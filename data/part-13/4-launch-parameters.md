@@ -91,7 +91,7 @@ When the `main` method of the class above is executed, the user interface define
 
 The application can also be provided run-time parameters as part of the `launch` method. In addition to the lauched class, the `launch` method can be provided an unlimited number of strings that can be used as part of the launch. These strings are available during the application's launch via the `getParameters` method call.
 
-The `getParameters ()` method returns a [Parameters] (https://docs.oracle.com/javase/8/javafx/api/javafx/application/Application.Parameters.html) type object whose method `getNamed` can access a hash table containing key-value pairs. The key-value pairs are given to the launch method in the form `--key = value`. In the example below, the title is made up of two parameters: `organization` and `course`.
+The `getParameters` method returns a [Parameters] (https://docs.oracle.com/javase/8/javafx/api/javafx/application/Application.Parameters.html) type object whose method `getNamed` can access a hash table containing key-value pairs. The key-value pairs are given to the launch method in the form `--key = value`. In the example below, the title is made up of two parameters: `organization` and `course`.
 
 <!-- ```java
 package sovellus;
