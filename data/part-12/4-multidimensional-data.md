@@ -111,7 +111,7 @@ Create in the exercise base a method called `public static String arrayAsString(
 
 <!-- Kertaa yhdeksännestä osasta StringBuilderin käyttö ennen tehtävän tekoa. Alla muutamia esimerkkejä metodin odotetusta toiminnasta. -->
 
-Brush up on using StrinBuilder in part nine before taking  on this exercise. Below there are a few examples of how the method is expected to  work.
+Brush up on using StringBuilder in part nine before taking on this exercise. Below there are a few examples of how the method is expected to  work.
 
 <!-- ```java
 int rows = 2;

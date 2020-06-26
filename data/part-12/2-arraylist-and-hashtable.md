@@ -28,7 +28,7 @@ hidden: true
 
 <!-- ArrayList ja Hajautustaulu ovat ohjemoinnissa hyvin yleisesti käytettyjä tietorakenteita. Tarkastellaan tässä niiden todelmyList toteutusta. Kerrataan ensin lyhyesti taulukon käyttöä, jonka jälkeen rakennetaan esimerkinomaisesti ensin ArrayListiä imitoiva tietorakenne `List`, jota hyödynnetään sitten tietorakenteen `Hajautustaulu` tekemisessä. -->
 
-ArrayList and HashMap are some of commonly used data structures in programming. We are now going to take a look at their actual implementation. First we'll remind ourselves of how to use an array, after which we're going to build a data structure called `List`, imitating ArrayList. Then we'll make use of the List to implement the data structure `HashTable`.
+ArrayList and HashMap are commonly used data structures in programming. We are now going to take a look at their actual implementation. First we'll remind ourselves of how to use an array, after which we're going to build a data structure called `List`, imitating ArrayList. Then we'll make use of the List to implement the data structure `HashTable`.
 
 <!-- ## Lyhyt kertaus taulukoista -->
 
@@ -104,7 +104,7 @@ for (int i = 0; i < numbers.length; i++) {
 }
 ```
 
-
+<!---
 <sample-output>
 
 Taulukossa on 4 alkiota.
@@ -114,6 +114,7 @@ Taulukossa on 4 alkiota.
 7
 
 </sample-output>
+--->
 
 <sample-output>
 
@@ -252,7 +253,7 @@ myList.add("world");
 ### Adding values to a list part 2
 
 <!-- Edellä kuvatussa `add`-metodissa on pieni ongelma. Ongelma ilmenee kun seuraava ohjelmakoodi suoritetaan. -->
-There is a small problem with the `add` method. The problem comes when the following code is run:
+There is a small problem with the `add` method. The problem occurs when the following code is run:
 
 
 ```java
@@ -318,7 +319,7 @@ Now we can add almost unlimited amount of elements to the List.
 The method described above copies every element from the old array to the new array. If we would have for example two million elements in an array, we must go through two million elements while copying them.
 
 <!-- Menetelmän tehokkuuteen -- ja parannusehdotuksiin -- paneudutaan muunmuassa kursseilla Tietorakenteet ja algoritmit sekä Algoritmien suunnittelu ja analyysi. -->
-We will discuss the effectiveness of this method -- and ways to make it more effective -- in the course Tietorakenteet ja algoritmit and Algoritmien suunnittelu ja analyysi.
+We will discuss the effectiveness of this method -- and ways to make it more effective -- in the courses Datastructures and Algorithms and Design and analysis of algorithms.
 
 </text-box>
 
@@ -454,7 +455,7 @@ public void remove(Type value) {
 The method describes above copies each element after the removed element one place to the left. Think about the effectiveness of this method when the List is used as a queue.
 
 <!-- Tämänkin menetelmän tehokkuuteen -- ja parannusehdotuksiin -- paneudutaan muunmuassa kursseilla Tietorakenteet ja algoritmit sekä Algoritmien suunnittelu ja analyysi. -->
-We will discuss the effectiveness of this method -- and ways to make it more effective -- in the course Tietorakenteet ja algoritmit and Algoritmien suunnittelu ja analyysi.
+We will discuss the effectiveness of this method -- and ways to make it more effective -- in the courses Datastructures and algorithms and Design and analysis of algorithms.
 
 </text-box>
 
