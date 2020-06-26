@@ -28,10 +28,7 @@ const courseSettings = {
     { separator: true, title: "Java Programming I" },
   ],
   sidebarFuturePages: [
-    { title: "Part 12", tba: "Coming Soon" }, // 21.4.
-    { title: "Part 13", tba: "Coming Soon" }, // 28.4.
-    { title: "Part 14", tba: "Coming Soon" }, // 5.5.
-  ], // { title: "Osa 14", tba: "19.4.2019" },
+  ], 
   splitCourses: false,
   useNewPointsVisualization: false
 }
