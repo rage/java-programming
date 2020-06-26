@@ -2,7 +2,7 @@
 path: '/part-12'
 title: 'Part 12'
 overview: true
-hidden: true
+hidden: false
 ---
 
 <!-- Kurssimateriaalin kahdennessatoista osassa tutustut geneerisiin tyyppiparametreihin ja opit mitä merkintä ArrayList&lt;String&gt; oikeastaan tarkoittaa. Opit luomaan luokkia, joissa käytetään geneerisiä tyyppiparametreja. Tutustut ArrayListin ja HashMapin sisäiseen toteutukseen ja toteutat niistä yksinkertaiset omat versiot. Opit luomaan satunnaislukuja ja harjoittelet Javan valmiiden välineiden käyttöä satunnaislukujen luomiseen. Tutustut  moniulotteisen tiedon esittämiseen ja opit luomaan ja käsittelemään moniulotteisia taulukoita. -->
