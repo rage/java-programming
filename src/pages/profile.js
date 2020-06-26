@@ -68,7 +68,9 @@ class MissingInfo extends React.Component {
           <h1>Profile</h1>
 
           <p>
-          On this page, you can edit your mooc.fi account settings for this course. You can also check your profile on mooc.fi's Test My Code service: {" "}
+            On this page, you can edit your mooc.fi account settings for this
+            course. You can also check your profile on mooc.fi's Test My Code
+            service:{" "}
             <OutboundLink href="https://tmc.mooc.fi" rel="noopener noreferrer">
               https://tmc.mooc.fi
             </OutboundLink>
