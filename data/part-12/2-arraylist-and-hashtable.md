@@ -408,7 +408,7 @@ public void remove(T value) {
 We are not really satisfied with the solution above, because it does too many things at the same time. The method looks for an element and moves elements around. We will split the functionality into two methods: `private int indexOfValue(Type value)`, which searches for the index of the value given to it as a parameter, and `private void moveToTheLeft(int fromIndex)`, which moves the elements above the given index to the left.
 
 <!-- Toteutetaan ensin metodi `private int indexOfValue(T value)`, joka etsii annetun valuen indexn. Metodi palauttaa negatiivisen luvun mikäli valuea ei löydy. -->
-First let's implement the method `private ind indexOfValue(Type value)`, which searches for the index of the given value. The method returns -1 if the value is not found.
+First let's implement the method `private int indexOfValue(Type value)`, which searches for the index of the given value. The method returns -1 if the value is not found.
 
 ```java
 private int indexOfValue(Type value) {
