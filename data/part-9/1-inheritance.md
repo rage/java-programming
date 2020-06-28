@@ -556,7 +556,7 @@ System.out.println("opintopisteitä "+ olli.opintopisteita());
 Student ollie = new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028");
 System.out.println(ollie);
 System.out.println("Study credits " + ollie.credits());
-olli.study();
+ollie.study();
 System.out.println("Study credits "+ ollie.credits());
 ```
 
@@ -2163,8 +2163,8 @@ OneItemBox box = new OneItemBox();
 box.add(new Item("Saludo", 5));
 box.add(new Item("Pirkka", 5));
 
-System.out.println(box.isInBox(new Tavara("Saludo")));
-System.out.println(box.isInBox(new Tavara("Pirkka")));
+System.out.println(box.isInBox(new Item("Saludo")));
+System.out.println(box.isInBox(new Item("Pirkka")));
 ```
 <sample-output>
 
@@ -2192,7 +2192,7 @@ box.add(new Item("Saludo", 5));
 box.add(new Item("Pirkka", 5));
 
 System.out.println(box.isInBox(new Item("Saludo")));
-System.out.println(box.insInBox(new Item("Pirkka")));
+System.out.println(box.isInBox(new Item("Pirkka")));
 ```
 
 <sample-output>
