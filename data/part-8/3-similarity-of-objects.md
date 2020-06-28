@@ -282,7 +282,7 @@ public class Book {
             return false;
         }
 
-        // let's convert the object to a Book-olioksi
+        // let's convert the object to a Book-object
         Book comparedBook = (Book) comparedObject;
 
         // if the instance variables of the objects are the same, so are the objects
@@ -314,8 +314,8 @@ if (olioKirja.equals(toinenOlioKirja)) {
 ``` -->
 
 ```java
-Kirja bookObject = new Kirja("Book Object", 2000, "...");
-Kirja anotherBookObject = new Kirja("Book Object", 2000, "...");
+Book bookObject = new Book("Book Object", 2000, "...");
+Book anotherBookObject = new Book("Book Object", 2000, "...");
 
 if (bookObject.equals(anotherBookObject)) {
     System.out.println("The books are the same");
