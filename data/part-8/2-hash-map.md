@@ -1016,7 +1016,7 @@ This way, however, we lose the speed advantage that comes with the hash map. The
 <programming-exercise name='Print me my hash map' tmcname='part08-Part08_08.PrintMeMyHashmap'>
 
 <!-- Tehtäväpohjassa tulee luokka `Ohjelma`. Luo luokkaan seuraavat kolme luokkametodia: -->
-Exercise template contains a class `Program`. Implement the following class methods in the clas:
+Exercise template contains a class `Program`. Implement the following class methods in the class:
 
 <!-- - `public static void printKeys(HashMap<String, String> hajautustaulu)`, joka tulostaa parametrina annetun hajautustaulun avaimet. -->
 
@@ -1117,7 +1117,7 @@ In the class `Program` implement the following class methods:
  the toString method of the Book objects.
 
 <!-- - `public static void tulostaArvoJosNimessa(HashMap<String, Book> hajautustaulu, String merkkijono)`, joka tulostaa parametrina annetun hajautustaulun arvoista ne, joiden nimessä on parametrina annettu merkkijono. Nimen saa selville kirjan metodilla `getNimi`. -->
-`public static void printValueIfNameContains(HashMap<String,Book> hashmap, String text)`, which prints only the Books in the given hashmap whichs name contains the given string. You can find out the name of a Book with the method `getName`.
+- `public static void printValueIfNameContains(HashMap<String,Book> hashmap, String text)`, which prints only the Books in the given hashmap which name contains the given string. You can find out the name of a Book with the method `getName`.
 
 <!-- Esimerkki luokkametodien käytöstä: -->
 An example of using the class methods:
