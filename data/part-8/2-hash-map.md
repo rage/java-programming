@@ -1162,7 +1162,7 @@ NB! The order of the output may vary. The implementation of a hashmap does not g
 
 <!-- Hajautustaulu olettaa, että siihen lisätään viittaustyyppisiä muuttujia (samoin kuin `ArrayList`). Java muuntaa alkeistyyppiset muuttujat viittaustyyppisiksi käytännössä kaikkia Javan valmiita tietorakenteita (kuten ArrayList ja HashMap) käytettäessä. Vaikka luku `1` voidaan esittää alkeistyyppisen muuttujan `int` arvona, tulee sen tyypiksi määritellä `Integer` ArrayListissä ja HashMapissa. -->
 
-A hash map expects that only reference-variables are added to it (in the same way that `ArrayList` does). Java converts primitive variables to their corresponding reference-types when using any Java's built in data structures (such as ArrayLisr and HashMap). Although the value `1` can be represented as a value of the primitive  `int` variable, its type should be defined as `Integer` when using ArrayLists and HashMaps.
+A hash map expects that only reference-variables are added to it (in the same way that `ArrayList` does). Java converts primitive variables to their corresponding reference-types when using any Java's built in data structures (such as ArrayList and HashMap). Although the value `1` can be represented as a value of the primitive  `int` variable, its type should be defined as `Integer` when using ArrayLists and HashMaps.
 
 <!-- ```java
 HashMap<Integer, String> hashmap = new HashMap<>(); // toimii
