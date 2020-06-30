@@ -595,7 +595,7 @@ System.out.println(olli);
 ```java
 Student ollie = new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028");
 System.out.println(ollie);
-olli.study();
+ollie.study();
 System.out.println(ollie);
 ```
 
