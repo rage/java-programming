@@ -556,7 +556,7 @@ System.out.println("opintopisteitä "+ olli.opintopisteita());
 Student ollie = new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028");
 System.out.println(ollie);
 System.out.println("Study credits " + ollie.credits());
-olli.study();
+ollie.study();
 System.out.println("Study credits "+ ollie.credits());
 ```
 
