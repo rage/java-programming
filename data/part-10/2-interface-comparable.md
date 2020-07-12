@@ -23,9 +23,9 @@ hidden: false
 Comparable-rajapinnan vaatima compareTo-metodi saa parametrinaan olion, johon "this"-oliota verrataan. Mikäli olio on vertailujärjestyksessä ennen parametrina saatavaa olioa, tulee metodin palauttaa negatiivinen luku. Mikäli taas olio on järjestyksessä parametrina saatavan olion jälkeen, tulee metodin palauttaa positiivinen luku. Muulloin palautetaan luku 0. Tätä `compareTo`-metodin avulla johdettua järjestystä kutsutaan *luonnolliseksi järjestykseksi* (natural ordering).
 
 Tarkastellaan tätä kerhossa käyvää lasta tai nuorta kuvaavan luokan Kerholainen avulla. Jokaisella kerholaisella on nimi ja pituus. Kerholaisten tulee mennä syömään pituusjärjestyksessä, joten toteutetaan kerholaisille rajapinta `Comparable`. Comparable-rajapinta ottaa tyyppiparametrinaan luokan, johon vertaus tehdään. Käytetään tyyppiparametrina samaa luokkaa `Kerholainen`. -->
-<p>In the previous section, we looked at interfaces in more general terms - let's now familiarize oruselves with one of Java's ready interfaces. The <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html"> Comparable </a> interface defines the `compareTo` method used to compare objects. If a class implements the Comparable interface, objects created from that class can be sorted using Java's sorting algorithms.</p>
+<p>In the previous section, we looked at interfaces in more general terms - let's now familiarize ourselves with one of Java's ready-made interfaces. The <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html"> Comparable </a> interface defines the `compareTo` method used to compare objects. If a class implements the Comparable interface, objects created from that class can be sorted using Java's sorting algorithms.</p>
 
-The compareTo method required by the Comparable interface receives as its parameter the object to which the "this" object is compared. If the "this" object comes before the object received as a parameter in terms of sorting order, the method should return a negative number. If, on the other hand, the "this" object comes after the object received as a parameter, the method should return a positive number. Otherwise, 0 is returned. The sorting resulting from the `compareTo` method is called *natural ordering*.
+The `compareTo` method required by the Comparable interface receives as its parameter the object to which the "this" object is compared. If the "this" object comes before the object received as a parameter in terms of sorting order, the method should return a negative number. If, on the other hand, the "this" object comes after the object received as a parameter, the method should return a positive number. Otherwise, 0 is returned. The sorting resulting from the `compareTo` method is called *natural ordering*.
 
 Let's take a look at this with the help of a Member class that represents a child or youth who belongs to a club. Each club member has a name and height. The club members should go to eat in order of height, so the Member class should implement the `Comparable` interface. The Comparable interface takes as its type parameter the class that is the subject of the comparison. We'll use the same `Member` class as the type parameter.
 
@@ -199,7 +199,7 @@ matti (187)
 
 <!-- Saat valmiin luokan Ihminen. Ihmisellä on nimi- ja palkkatiedot. Toteuta Ihminen-luokassa `Comparable`-rajapinta siten, että `compareTo`-metodi lajittelee ihmiset palkan mukaan järjestykseen isoimmasta palkasta pienimpään. -->
 
-You are provided with the class human. A human has a name and wage information. Implement the interface `Comparable` in a way, such that the overridden `compareTo` method sorts the humans according to wage from largest to smallest salary.
+You are provided with the class Human. A human has a name and wage information. Implement the interface `Comparable` in a way, such that the overridden `compareTo` method sorts the humans according to wage from largest to smallest salary.
 
 </programming-exercise>
 
