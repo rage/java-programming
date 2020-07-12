@@ -912,7 +912,7 @@ public class Factory {
         }
     }
 }
-
+```
 
 <!-- Tehdasta on mahdollista käyttää tuntematta tarkalleen mitä erityyppisiä Talletettava-rajapinnan luokkia on olemassa. Seuraavassa luokka Pakkaaja, jolta voi pyytää laatikollisen esineitä. Pakkaaja tuntee tehtaan, jota se pyytää luomaan esineet: -->
 
@@ -1158,7 +1158,7 @@ System.out.println(palautaKoko(names));
 
 <!-- Rajapinta <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html">Map</a> määrittelee hajautustauluihin liittyvän peruskäyttäytymisen. Koska HashMap-luokka toteuttaa `Map`-rajapinnan, voi sitä käyttää myös `Map`-rajapinnan kautta. -->
 
-The <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html">Map</a> interface defines the basic behavior associated with hash tables. Because the HashMap class implements the `Map` interface, it can also be accessed through the `Map` interface. 
+The <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html">Map</a> interface defines the basic behavior associated with hash tables. Because the HashMap class implements the `Map` interface, it can also be accessed through the `Map` interface.
 
 <br/>
 
@@ -1213,7 +1213,7 @@ hai: yes
 
 <!--Metodi `keySet` palauttaa `Set`-rajapinnan toteuttavan joukon alkioita. `Set`-rajapinnan toteuttavan joukon voi käydä läpi `for-each`-lauseella. Hajautustaulusta saa talletetut arvot metodin `values`-avulla. Metodi `values` palauttaa `Collection` rajapinnan toteuttavan joukon alkioita. Tutustutaan vielä pikaisesti Set- ja Collection-rajapintoihin. -->
 
-The `keySet` method returns a set of elements that implement the `Set` interface. You can use a for-each statement to go through a set that implements the `Set` interface. The hash values can be obtained from the hash table using the `values` method. The `values` method returns a set of elements that implement the `Collection` interface. Let's take a quidk look at the `Set` and `Collection` interfaces. 
+The `keySet` method returns a set of elements that implement the `Set` interface. You can use a for-each statement to go through a set that implements the `Set` interface. The hash values can be obtained from the hash table using the `values` method. The `values` method returns a set of elements that implement the `Collection` interface. Let's take a quidk look at the `Set` and `Collection` interfaces.
 
 <programming-exercise name='Map as a method parameter' tmcname='part09-Part09_08.MapAsAMethodParameter'>
 
