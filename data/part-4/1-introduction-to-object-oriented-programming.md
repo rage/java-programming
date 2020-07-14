@@ -702,7 +702,7 @@ Create a class `Product` that represents a store product. The product should hav
 
 The class should have:
 
-- the constructor `public Item (String initialName, double initialPrice, int initialQuantity)`
+- the constructor `public Product (String initialName, double initialPrice, int initialQuantity)`
 - a method `public void printProduct()` that prints product information in the following format:
 
 <sample-output>
