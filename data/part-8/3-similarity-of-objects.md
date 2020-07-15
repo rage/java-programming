@@ -282,7 +282,7 @@ public class Book {
             return false;
         }
 
-        // let's convert the object to a Book-olioksi
+        // let's convert the object to a Book-object
         Book comparedBook = (Book) comparedObject;
 
         // if the instance variables of the objects are the same, so are the objects
@@ -314,8 +314,8 @@ if (olioKirja.equals(toinenOlioKirja)) {
 ``` -->
 
 ```java
-Kirja bookObject = new Kirja("Book Object", 2000, "...");
-Kirja anotherBookObject = new Kirja("Book Object", 2000, "...");
+Book bookObject = new Book("Book Object", 2000, "...");
+Book anotherBookObject = new Book("Book Object", 2000, "...");
 
 if (bookObject.equals(anotherBookObject)) {
     System.out.println("The books are the same");
@@ -433,7 +433,7 @@ Jotta HashMap toimisi haluamallamme tavalla, eli palauttaisi lainaajan kun avaim
 
 Olemme aiemmin käyttäneet `String`-olioita menestyksekkäästi HashMapin avaimena, joten voimme päätellä että `String`-luokassa on oma järkevästi toimiva `hashCode`-toteutus. _Delegoidaan_, eli siirretään laskemisvastuu `String`-oliolle. -->
 
-We find the borrower when searching for the same object that was given as a key to the hash map's `put` method. However, when searching by the exact same book but with a different object,a borrwer isn't found, and we get the _null_ reference instead. The reason lies in the default implementation of the `hashCode` method in the `Object` class. The default implementation creates a `hashCode` value based on the object's reference, which means that books having the same content that are nonetheless different objects get different results from the hashCode method. As such, the object is not being searched for in the right place.
+We find the borrower when searching for the same object that was given as a key to the hash map's `put` method. However, when searching by the exact same book but with a different object, a borrower isn't found, and we get the _null_ reference instead. The reason lies in the default implementation of the `hashCode` method in the `Object` class. The default implementation creates a `hashCode` value based on the object's reference, which means that books having the same content that are nonetheless different objects get different results from the hashCode method. As such, the object is not being searched for in the right place.
 
 For the HashMap to work in the way we want it to, that is, to return the borrower when given an object with the correct _content_ (not necessarily the same object as the original key), the class that the key belongs to must overwrite the `hashCode` method in addition to the `equals` method. The method must be overwritten so that it gives the same numerical result for all objects with the same content. Also, some objects with different contents may get the same result from the hashCode method. However, with the HashMap's performance in mind, it is essential that objects with different contents get the same hash value as rarely as possible.
 

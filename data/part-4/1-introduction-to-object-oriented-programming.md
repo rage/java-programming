@@ -2469,7 +2469,7 @@ Luokan ei tarvitse tallentaa mihinkään lisättyjä lukuja, vaan riittää muis
 
 Luokan runko on seuraava: -->
 
-Create a class `Statistics` that has the following functionality (the file for the class is provided in the in the exercise template):
+Create a class `Statistics` that has the following functionality (the file for the class is provided in the exercise template):
 
 - a method `addNumber` adds a new number to the statistics
 - a method `getCount` tells the number of added numbers

@@ -3780,7 +3780,7 @@ Implement the method `public void advance(int howManyDays)` that moves the date 
 
 <!-- Lisätään `Paivays`-olioon mahdollisuus edistää aikaa. Tee oliolle metodi `Paivays paivienPaasta(int paivia)`, joka luo **uuden** `Paivays`-olion, jonka päiväys on annetun päivien lukumäärän verran suurempi kuin oliolla, jolle sitä kutsuttiin. Voit edelleen olettaa, että jokaisessa kuukaudessa on 30 päivää. Huomaa, että vanhan päiväysolion on pysyttävä muuttumattomana! -->
 
-Let's add the possibility to advance time to the `SimpleDate` class. Create the method `SimpleDate afterNumberOfDays(int days)` for the class. It creates a **new** `SimpleDate` object whose date is the specified number of days greater than the object that the method was called on. You may still assume that each month has 30 days. Notice that the old date object must remain unchanged!
+Let's add the possibility to advance time to the `SimpleDate` class. Create the method `public SimpleDate afterNumberOfDays(int days)` for the class. It creates a **new** `SimpleDate` object whose date is the specified number of days greater than the object that the method was called on. You may still assume that each month has 30 days. Notice that the old date object must remain unchanged!
 
 <!-- Koska metodissa on luotava **uusi olio**, tulee rungon olla suunnilleen seuraavanlainen: -->
 
