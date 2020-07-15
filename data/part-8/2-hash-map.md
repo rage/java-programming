@@ -1296,7 +1296,7 @@ public class registerSightingCounter {
     }
 
     public int timesSighted(String sighted) {
-        this.allSightings.get(sighted);
+        return this.allSightings.get(sighted);
     }
 }
 ```
