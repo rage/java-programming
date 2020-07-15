@@ -983,11 +983,11 @@ amy,1
 
 <!-- Tehtäväpohjassa on valmiina luokka `Henkilo` sekä luokassa `HenkilotTiedostosta` oleva runko metodille `public static ArrayList<Henkilo> lueHenkilot(String tiedosto)`. Toteuta metodi `lueHenkilot` siten, että metodissa luetaan parametrina annetusta tiedostosta henkilöt, jotka lopulta palautetaan metodin palauttamassa listassa. -->
 
-The exercise template already has a `Person` class, and the class `StoringRecords` has a body for the method `public static ArrayList<Person> readPeople(String file)`. Implement the `readPeople` method such that it reads the persons from the file passed as a parameter, and finally returns them in the list returned by the method.
+The exercise template already has a `Person` class, and the class `StoringRecords` has a body for the method `public static ArrayList<Person> readRecordsFromFile(String file)`. Implement the `readRecordsFromFile` method such that it reads the persons from the file passed as a parameter, and finally returns them in the list returned by the method.
 
 <!-- Tehtäväpohjassa on valmiina `main`-metodi, jossa voit kokeilla ohjelmasi toimintaa. Muokkaa tehtävässä vain metodia `lueHenkilot`. -->
 
-The exercise template has a `main` method that you can use to test how your program works. In this exercise, only modify the method `readPeople`.
+The exercise template has a `main` method that you can use to test how your program works. In this exercise, only modify the method `readRecordsFromFile`.
 
 </programming-exercise>
 
