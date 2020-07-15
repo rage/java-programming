@@ -1297,7 +1297,7 @@ Command: **add**
 Word: **pike**
 Translation: **hauki**
 Command: **change**
-Unkown command
+Unknown command
 Command: **search**
 To be translated: **pike**
 Translation: hauki
