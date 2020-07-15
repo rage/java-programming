@@ -912,36 +912,11 @@ public class Factory {
         }
     }
 }
+```
 
-
-<!-- Tehdasta on mahdollista käyttää tuntematta tarkalleen mitä erityyppisiä Talletettava-rajapinnan luokkia on olemassa. Seuraavassa luokka Pakkaaja, jolta voi pyytää laatikollisen esineitä. Pakkaaja tuntee tehtaan, jota se pyytää luomaan esineet: -->
 
 The Factory can be used without exactly knowing what different kind of Packable classes exist. In the next example there is a class Packer that gives a box of things. A packer defines a factory which is used to create the things:
 
-<!--
-// ```java
-// public class Pakkaaja {
-//     private Tehdas tehdas;
-
-//     public Pakkaaja() {
-//         this.tehdas = new Tehdas();
-//     }
-
-//     public Laatikko annaLaatikollinen() {
-//          Laatikko laatikko = new Laatikko(100);
-
-//          int i = 0;
-//          while (i < 10) {
-//              Talletettava uusiTavara = tehdas.valmistaUusi();
-//              laatikko.lisaa(uusiTavara);
-
-//              i = i + 1;
-//          }
-
-//          return laatikko;
-//     }
-// }
-// ``` -->
 
 ```java
 public class Packer {
@@ -1140,7 +1115,7 @@ names.add("First");
 names.add("Second");
 names.add("Third");
 
-System.out.println(palautaKoko(names));
+System.out.println(returnSize(names));
 ```
 
 <sample-output>
@@ -1213,7 +1188,7 @@ hai: yes
 
 <!--Metodi `keySet` palauttaa `Set`-rajapinnan toteuttavan joukon alkioita. `Set`-rajapinnan toteuttavan joukon voi käydä läpi `for-each`-lauseella. Hajautustaulusta saa talletetut arvot metodin `values`-avulla. Metodi `values` palauttaa `Collection` rajapinnan toteuttavan joukon alkioita. Tutustutaan vielä pikaisesti Set- ja Collection-rajapintoihin. -->
 
-The `keySet` method returns a set of elements that implement the `Set` interface. You can use a for-each statement to go through a set that implements the `Set` interface. The hash values can be obtained from the hash table using the `values` method. The `values` method returns a set of elements that implement the `Collection` interface. Let's take a quidk look at the `Set` and `Collection` interfaces. 
+The `keySet` method returns a set of elements that implement the `Set` interface. You can use a for-each statement to go through a set that implements the `Set` interface. The hash values can be obtained from the hash table using the `values` method. The `values` method returns a set of elements that implement the `Collection` interface. Let's take a quick look at the `Set` and `Collection` interfaces. 
 
 <programming-exercise name='Map as a method parameter' tmcname='part09-Part09_08.MapAsAMethodParameter'>
 
@@ -1510,7 +1485,7 @@ Esimerkki varaston käytöstä: -->
 Save the stock balance of products in a variable with the `Map<String, Integer>` type, in the same way the prices were stored. Supplement the warehouse with the following methods:
 
 - `public int stock(String product)` returns the current remaining stock of the product in the warehouse. If the product hasn't been added to the warehouse, the method must return 0.
-- `public boolean take(String product)` reduces the stock ramaining for the product it received as a parameter by one, and returns true if there was stock remaining. If the product was not available in the warehouse the method returns false. A products stock can't go below zero.
+- `public boolean take(String product)` reduces the stock remaining for the product it received as a parameter by one, and returns true if there was stock remaining. If the product was not available in the warehouse the method returns false. A products stock can't go below zero.
 
 An example of the warehouse in use:
 <!-- ```java
