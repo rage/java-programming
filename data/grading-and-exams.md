@@ -13,11 +13,11 @@ Both exams will be held on several different days. You can attend the exam on an
 
 ## Upcoming exams
 
-#### Part I exams
+#### Introduction To Programming
 
 * 22.08.2020
 
-#### Part II exams
+#### Advanced Course In Programming
 
 * 29.08.2020
 
