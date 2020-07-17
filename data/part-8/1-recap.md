@@ -289,13 +289,13 @@ Second: 0/100
 
 <!-- Toteutetaan edellä kuvattu interaktiivinen ohjelma kahden nestesäiliön käsittelyyn uudestaan. Tällä kertaa luodaan ohjelman toteutusta varten luokka "Sailio", jonka vastuulla on säiliön sisällön ylläpito. -->
 
-Let's redo the previous program for handling two liquid containers. This time we'll create a class "Container", which is responsible for managing the contents of a container.
+Let's redo the previous program for handling two liquid containers. This time we'll create a class `Container`, which is responsible for managing the contents of a container.
 
 
 <h2>Container</h2>
 
 <!-- Toteuta luokka Sailio. Säiliöllä tulee olla parametriton konstruktori sekä seuraavat metodit: -->
-Make a class called Container. The class must have a constructor which does not take any parameters, and the following methods:
+Make a class called `Container`. The class must have a constructor which does not take any parameters, and the following methods:
 
 <!-- - `public int sisalto()` palauttaa säiliössä olevan nesteen määrän kokonaislukuna. -->
  -  `public int contains()` which returns the amount of liquid in a container as an integer.
@@ -303,6 +303,7 @@ Make a class called Container. The class must have a constructor which does not 
 <!-- - `public void add(int maara)` lisää parametrina annetun määrän nestettä säiliöön. Mikäli parametrin arvo on negatiivinen, ei nestettä lisätä. Lisäyksen jälkeen säiliössä on korkeintaan 100 yksikköä nestettä. -->
  -  `public void add(int amount)` which adds the amount of liquid given as a parameter to the container. If the amount is negative, no liquid is added.
  A container can hold maximum of 100 units of liquid.
+ 
 <!-- - `public void remove(int maara)` poistaa parametrina annetun määrän nestettä säiliöstä. Mikäli parametrin arvo on negatiivinen, ei nestettä poisteta. Poistaminen poistaa vain olemassaolevaa nestettä -- poiston takia säiliössä ei voi koskaan olla alle nollaa nesteyksikköä. -->
  -  `public void remove(int amount)` which removes the amount of liquid given as a parameter from the container. If the amount is negative, no liquid is removed. A container can never hold less than 0 units of liquid.
 
@@ -342,7 +343,7 @@ System.out.println(container);
 <h2>Functionality</h2>
 
 <!-- Kopioi ensimmäisessä osassa toteuttamasi käyttöliittymä ja muokkaa sitä siten, että ohjelmassa käytetään juuri toteuttamiasi säiliöitä. Luokassa `NestesailiotOlioilla` olevan main-metodin suorituksen tulee käynnistää ohjelma. -->
-Copy the user interface you implemented for the previous example, and modify it to use the new Container class.
+Copy the user interface you implemented for the previous example, and modify it to use the new `Container` class.
 The main method in the class `LiquidContainers2` must start the program.
 
 <!-- Alla on esimerkkitulostus. Ohjelman tekstikäyttöliittymän toiminnan tulee olla seuraavanlainen: -->

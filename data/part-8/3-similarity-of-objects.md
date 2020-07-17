@@ -744,7 +744,7 @@ Vinkki! Voit luoda metodiin `tulostaOmistajat` listan, jota käytät jo tulostet
 
 <h2>Expanded vehicle registry</h2>
 
-Add the following methods to the VehicleRegistry:
+Add the following methods to the `VehicleRegistry`:
 
 - `public void printLicensePlates()`prints the license plates in the registry.
 
