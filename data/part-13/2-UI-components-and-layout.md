@@ -167,7 +167,6 @@ The Label must be either on top or on the left side of the Button.
 
 <!-- Luo tehtäväpohjassa olevaan luokkaan graafinen käyttöliittymä, jossa on nappi ja tekstikenttä. Tekstikentän saa toteutettua luokalla [TextField](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/TextField.html). Napin tulee olla tekstikentän vasemmalla puolella tai yläpuolella. -->
 Create a graphical user interface to the class in the exercise template. The interface must contain a button and a text field. The text field can be implemented using the [TextField](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/TextField.html) class. The Button must be on the left or on the top of the text field.
-<programming-exercise name='Button and text field' tmcname='part13-Part13_03.ButtonAndTextField'>
 
 <!-- Luo tehtäväpohjassa olevaan luokkaan graafinen käyttöliittymä, jossa on nappi ja tekstikenttä. Tekstikentän saa toteutettua luokalla [TextField](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/TextField.html). Napin tulee olla tekstikentän vasemmalla puolella tai yläpuolella. -->
 
