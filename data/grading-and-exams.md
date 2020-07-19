@@ -11,7 +11,15 @@ The exam corresponding to Introduction to Programming is to be completed after p
 
 Both exams will be held on several different days. You can attend the exam on any of these days. You may attend multiple exams and only the best grade will be registered.
 
-The first exam will take place at March 21st. Please check Section 7 for details.
+## Upcoming exams
+
+#### Introduction To Programming
+
+* 22.08.2020
+
+#### Advanced Course In Programming
+
+* 29.08.2020
 
 ## Points
 
