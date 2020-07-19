@@ -1189,8 +1189,8 @@ Make a class `Person`. The Person constructor takes a name and the education as 
 <!-- System.out.println(vilma); -->
 <!-- ``` -->
 ```java
-Person anna = new Person("Anna", Education.PHD)
-System.out.println(anna)
+Person anna = new Person("Anna", Education.PHD);
+System.out.println(anna);
 ```
 <sample-output>
 
@@ -1208,10 +1208,13 @@ Make a class `Employees`. Employees -object contains a list of Person -objects. 
 
 <!-- - `public void add(Person lisattava)` lisää parametrina olevan henkilön työntekijäksi -->
 - `public void add(Person personToAdd)` adds the given person to the employees list
+
 <!-- - `public void add(List<Person> lisattavat)` lisää parametrina olevan listan henkilöitä työntekijöiksi -->
 - `public void add(List<Person> peopleToAdd)` adds the given list of people to the employees list
+
 <!-- - `public void print()` printa kaikki työntekijät -->
 - `public void print()` prints all employees
+
 <!-- - `public void print(Education koulutus)` printa työntekijät joiden koulutus on sama kuin parametrissa määritelty koulutus -->
 - `public void print(Education education)` prints the employees whose education matches the education given as a parameter.
 
