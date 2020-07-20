@@ -6,7 +6,7 @@ hidden: false
 
 
 
-<text-box variant='learningObjectives' name='Oppimistavoitteet'>
+<text-box variant='learningObjectives' name='Learning objectives'>
 
 <!-- - Tiedät mitä poikkeukset ovat ja osaat varautua poikkeuksiin. -->
 <!-- - Osaat heittää poikkeuksia. -->
@@ -616,7 +616,7 @@ public static void main(String[] args) {
 public static void main(String[] args) {
     Sensor kumpula = new TemperatureSensor();
     kumpula.setOn();
-    System.out.println("temperature in Kumpula " + kumpula.mittaa() + " degrees Celsius");
+    System.out.println("temperature in Kumpula " + kumpula.read() + " degrees Celsius");
 
     Sensor kaisaniemi = new TemperatureSensor();
     Sensor helsinkiVantaaAirport = new TemperatureSensor();
