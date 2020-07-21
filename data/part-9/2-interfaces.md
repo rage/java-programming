@@ -1421,7 +1421,7 @@ In this exercise we'll create program components, that can used to run an online
 
 <h2>Warehouse</h2>
 
-Create the class Warehouse` with the following methods:
+Create the class `Warehouse` with the following methods:
 
 - `public void addProduct(String product, int price, int stock)`, which adds a product to the warehouse with the price and stock balance given as parameters.
 - `public int price(String product)`, which returns the price of the product it received as a parameter. If the product hasn't been added to the warehouse, the method must return -99.
