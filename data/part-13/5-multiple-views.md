@@ -12,7 +12,7 @@ hidden: false
 
 </text-box> -->
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 - You proctice adding multiple views to a graphical interface.
 - You know methods for changing the view.

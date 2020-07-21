@@ -4,7 +4,7 @@ title: 'Maven and third-party libraries'
 hidden: false
 ---
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 <!-- - Tunnet käsitteen kirjasto ja tiedät muutamia kolmannen osapuolen kirjastoja. -->
 <!-- - Tiedät mistä kirjastoja voi etsiä. -->

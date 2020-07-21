@@ -4,7 +4,7 @@ title: 'Multidimensional data'
 hidden: false
 ---
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 <!-- - Tunnet menetelmiä moniulotteisen tiedon esittämiseen. -->
 <!-- - Osaat luoda ja käyttää moniulotteisia taulukoita. -->

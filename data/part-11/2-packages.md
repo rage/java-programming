@@ -12,7 +12,7 @@ hidden: false
 
 </text-box> -->
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 - You know what packages are and can place classes in them
 

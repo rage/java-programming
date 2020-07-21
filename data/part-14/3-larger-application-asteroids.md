@@ -6,7 +6,7 @@ hidden: false
 
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 <!-- - Tiedät tavan interaktiivisen pelin toteuttamiseen. -->
 <!-- - Näet miten laajempi sovellus rakentuu askel askeleelta. -->

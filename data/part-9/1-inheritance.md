@@ -15,7 +15,7 @@ hidden: false
 
 </text-box> -->
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 - You know that in the Java programming language every class inherits the Object class, and you understand why every object has methods toString, equals, and hashCode.
 - You are familiar with the concepts of inheritance, superclass, and subclass.
