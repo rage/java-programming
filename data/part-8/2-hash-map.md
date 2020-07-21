@@ -283,7 +283,7 @@ HashMap<String, Book> directory = new HashMap<>();
 ```
 
 <!-- Yllä oleva hajautustaulu käyttää avaimena `String`-oliota. Laajennetaan esimerkkiä siten, että hakemistoon lisätään kaksi kirjaa, `"Järki ja tunteet"` ja `"Ylpeys ja ennakkoluulo"`. -->
-The hash map above uses a`String` object as a key. Let's expand the example so that two books are added to the directory, `"Sense and Sensibility"` and `"Pride and prideAndPrejudice"`.
+The hash map above uses a`String` object as a key. Let's expand the example so that two books are added to the directory, `"Sense and Sensibility"` and `"Pride and Prejudice"`.
 
 <!-- ```java
 Book jarkiJaTunteet = new Book("Järki ja tunteet", 1811, "...");
