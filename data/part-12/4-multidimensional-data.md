@@ -86,7 +86,9 @@ for (int row = 0; row < twoDimensionalArray.length; row++) {
 }
 ```
 
-Nyt tulostus näyttää seuraavalta:
+<!-- Nyt tulostus näyttää seuraavalta: -->
+
+Now the printout looks like this:
 
 <sample-output>
 
@@ -125,7 +127,7 @@ System.out.println(taulukkoMerkkijonona(matriisi));
 
 ```java
 int rows = 2;
-int cols = 3;
+int columns = 3;
 int[][] matrix = new int[rows][columns];
 matrix[0][1] = 5;
 matrix[1][0] = 3;
@@ -325,7 +327,7 @@ We can implement the same functionality using a hash table. Wouldn't a hash tabl
 
 <!-- Kun hajautustaulusta haetaan tietoa tietyllä avaimella, metodin hashCode perusteella selvitetään paikka, mistä tietoa haetaan. Samassa paikassa voi olla useampi value (listassa), jolloin haettavaa avainta verrataan jokaiseen listalla olevaan valueon equals-metodia käyttäen. Kun taulukosta haetaan valuea tietyllä avaimella -- eli indeksillä -- ei vastaavaa toiminnallisuutta tarvitse tehdä. Taulukossa joko on value tai valuea ei ole. Taulukkoon liittyy pieni tehokkuushyöty ohjelman suorituskyvyn kannalta. -->
 When we search for a value of a key from a hash table, we use the hashCode method to find the index to search from.
-There can be multiple values at the same index (on a list). Then we have to kompare the key we want to find the value for to the key of each key-value pair on the list using the equals method.
+There can be multiple values at the same index (on a list). Then we have to compare the key we want to find the value for to the key of each key-value pair on the list using the equals method.
 When we search for a a value of a key -- or index -- in an array, we do not have to do any of that.
 An array either contains a certain value or it does not, so there is a small performance beneft on using arrays.
 
