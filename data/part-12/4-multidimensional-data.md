@@ -86,7 +86,8 @@ for (int row = 0; row < twoDimensionalArray.length; row++) {
 }
 ```
 
-Nyt tulostus näyttää seuraavalta:
+<!-- Nyt tulostus näyttää seuraavalta: -->
+The program output is as follows:
 
 <sample-output>
 
