@@ -769,9 +769,9 @@ public V get(K key) {
 
     List<Pair<K, V>> valuesAtIndex = this.values[hashValue];
 
-    for (int i = 0; i < valuesAtINdex.size(); i++) {
+    for (int i = 0; i < valuesAtIndex.size(); i++) {
         if (valuesAtIndex.value(i).getKey().equals(key)) {
-            return valuesAtindex.value(i).getValue();
+            return valuesAtIndex.value(i).getValue();
         }
     }
 
@@ -843,7 +843,7 @@ public void add(K key, V value) {
         values[hashValue] = new List<>();
     }
 
-    List<Pari<K, V>> valuesAtindex = values[hashValue];
+    List<Pari<K, V>> valuesAtIndex = values[hashValue];
 
     int index = -1;
     for (int i = 0; i < valuesAtIndex.size(); i++) {
@@ -937,7 +937,7 @@ public void add(K key, V value) {
         valuesAtIndex.add(new Pair<>(key, value));
         this.firstFreeIndex++;
     } else {
-        valuesAtindex.value(index).setValue(value);
+        valuesAtIndex.value(index).setValue(value);
     }
 }
 ```
