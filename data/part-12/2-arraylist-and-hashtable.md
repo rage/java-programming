@@ -1246,7 +1246,7 @@ System.out.println("Hash map: the search took about " + hashMapSearch / 1000000 
 <sample-output>
 
 List: the search took about 6284 milliseconds (6284420580 nanoseconds.)
-Hajautustaulu: the search took about 0 milliseconds (805106 nanoseconds.)
+Hash map: the search took about 0 milliseconds (805106 nanoseconds.)
 
 </sample-output>
 
