@@ -126,7 +126,7 @@ System.out.println(taulukkoMerkkijonona(matriisi));
 
 ```java
 int rows = 2;
-int cols = 3;
+int columns = 3;
 int[][] matrix = new int[rows][columns];
 matrix[0][1] = 5;
 matrix[1][0] = 3;
