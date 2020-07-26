@@ -847,7 +847,7 @@ public void add(K key, V value) {
 
     int index = -1;
     for (int i = 0; i < valuesAtIndex.size(); i++) {
-        if (valuesAtINdex.value(i).getKey().equals(key)) {
+        if (valuesAtIndex.value(i).getKey().equals(key)) {
             index = i;
             break;
         }
