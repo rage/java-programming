@@ -1114,7 +1114,7 @@ Let's give the hash map the functionality to remove a key-value pair based on ke
 
 <!-- Voimme hyödyntää valmiiksi toteuttamiamme metodeja poistotoiminnallisuudessa. Selitä itsellesi (ääneen) alla olevan metodin konkreettinen toiminta. -->
 
-We can take advantage of the method we've already implemented in the removing method. Explain to yourself (out loud) how the method described below conretely works.
+We can take advantage of the method we've already implemented in the removing method. Explain to yourself (out loud) how the method described below concretely works.
 
 <!-- ```java
 public V remove(K avain) {
