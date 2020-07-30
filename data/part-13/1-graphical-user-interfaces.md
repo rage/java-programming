@@ -108,7 +108,7 @@ When the launch method is called, the method of the Application class creates a 
 
 <!-- Luo tehtäväpohjassa olevaan luokkaan graafinen käyttöliittymä, jonka otsikkona on "Sovellukseni". Sovelluksen tulee käynnistyä kun main-metodi suoritetaan. -->
 
-Create a GUI app with the title "My first application". The App shou start when main method is executed
+Create a GUI app with the title "My first application". The App should start when main method is executed
 
 </programming-exercise>
 
