@@ -130,7 +130,7 @@ For the dictionary, implement a constructor which takes no parameters, and the f
 
  - `public void add(String words, String translation)` adds a word to the dictionary. Every word has just one translation, and if the same word is added for the second time, nothing happens.
 
- - `public string translate(String word)` returns the translation for the given word. If the word is not in the dictionary, returns null.
+ - `public String translate(String word)` returns the translation for the given word. If the word is not in the dictionary, returns null.
 
 
 <!-- Sanakirjan tulee tässä vaiheessa toimia seuraavasti: -->
