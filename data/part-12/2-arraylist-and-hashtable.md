@@ -769,9 +769,9 @@ public V get(K key) {
 
     List<Pair<K, V>> valuesAtIndex = this.values[hashValue];
 
-    for (int i = 0; i < valuesAtINdex.size(); i++) {
+    for (int i = 0; i < valuesAtIndex.size(); i++) {
         if (valuesAtIndex.value(i).getKey().equals(key)) {
-            return valuesAtindex.value(i).getValue();
+            return valuesAtIndex.value(i).getValue();
         }
     }
 
@@ -843,11 +843,11 @@ public void add(K key, V value) {
         values[hashValue] = new List<>();
     }
 
-    List<Pari<K, V>> valuesAtindex = values[hashValue];
+    List<Pari<K, V>> valuesAtIndex = values[hashValue];
 
     int index = -1;
     for (int i = 0; i < valuesAtIndex.size(); i++) {
-        if (valuesAtINdex.value(i).getKey().equals(key)) {
+        if (valuesAtIndex.value(i).getKey().equals(key)) {
             index = i;
             break;
         }
@@ -937,7 +937,7 @@ public void add(K key, V value) {
         valuesAtIndex.add(new Pair<>(key, value));
         this.firstFreeIndex++;
     } else {
-        valuesAtindex.value(index).setValue(value);
+        valuesAtIndex.value(index).setValue(value);
     }
 }
 ```
@@ -1114,7 +1114,7 @@ Let's give the hash map the functionality to remove a key-value pair based on ke
 
 <!-- Voimme hyödyntää valmiiksi toteuttamiamme metodeja poistotoiminnallisuudessa. Selitä itsellesi (ääneen) alla olevan metodin konkreettinen toiminta. -->
 
-We can take advantage of the method we've already implemented in the removing method. Explain to yourself (out loud) how the method described below conretely works.
+We can take advantage of the method we've already implemented in the removing method. Explain to yourself (out loud) how the method described below concretely works.
 
 <!-- ```java
 public V remove(K avain) {
@@ -1246,7 +1246,7 @@ System.out.println("Hash map: the search took about " + hashMapSearch / 1000000 
 <sample-output>
 
 List: the search took about 6284 milliseconds (6284420580 nanoseconds.)
-Hajautustaulu: the search took about 0 milliseconds (805106 nanoseconds.)
+Hash map: the search took about 0 milliseconds (805106 nanoseconds.)
 
 </sample-output>
 
