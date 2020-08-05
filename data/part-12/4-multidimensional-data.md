@@ -88,7 +88,7 @@ for (int row = 0; row < twoDimensionalArray.length; row++) {
 
 <!-- Nyt tulostus näyttää seuraavalta: -->
 
-Now the printout looks like this:
+The program output is as follows:
 
 <sample-output>
 
@@ -113,7 +113,7 @@ Create in the exercise base a method called `public static String arrayAsString(
 
 <!-- Kertaa yhdeksännestä osasta StringBuilderin käyttö ennen tehtävän tekoa. Alla muutamia esimerkkejä metodin odotetusta toiminnasta. -->
 
-Brush up on using StringBuilder in part nine before taking on this exercise. Below there are a few examples of how the method is expected to  work.
+Brush up on using StringBuilder in part 10.3 before taking on this exercise. Below there are a few examples of how the method is expected to  work.
 
 <!-- ```java
 int rows = 2;
@@ -328,7 +328,9 @@ We can implement the same functionality using a hash table. Wouldn't a hash tabl
 <!-- Kun hajautustaulusta haetaan tietoa tietyllä avaimella, metodin hashCode perusteella selvitetään paikka, mistä tietoa haetaan. Samassa paikassa voi olla useampi value (listassa), jolloin haettavaa avainta verrataan jokaiseen listalla olevaan valueon equals-metodia käyttäen. Kun taulukosta haetaan valuea tietyllä avaimella -- eli indeksillä -- ei vastaavaa toiminnallisuutta tarvitse tehdä. Taulukossa joko on value tai valuea ei ole. Taulukkoon liittyy pieni tehokkuushyöty ohjelman suorituskyvyn kannalta. -->
 When we search for a value of a key from a hash table, we use the hashCode method to find the index to search from.
 There can be multiple values at the same index (on a list). Then we have to compare the key we want to find the value for to the key of each key-value pair on the list using the equals method.
-When we search for a a value of a key -- or index -- in an array, we do not have to do any of that.
+
+When we search for a value of a key -- or index -- in an array, we do not have to do any of that.
+
 An array either contains a certain value or it does not, so there is a small performance beneft on using arrays.
 
 <!-- Tämä tehokkuushyöty kuitenkin tulee lisääntyneen virhealttiuden sekä työmäärän kustannuksella. Hajautustauluun on valmiiksi toteutettuna sisäisen taulukon kasvattaminen ja sen toiminnallisuutta on testattu hyvin laajasti. Taulukkoa käytettäessä tällaista etua ei ole -- uutta toiminnallisuutta toteuttaessa saattaa päätyä virheisiin, mikä kasvattaa työmäärää. Virheet ovat toki luonnollinen osa ohjelmistokehitystä. -->
@@ -337,7 +339,7 @@ Hash tables have tested and proven functionality for increasing the size of the 
 However, errors are accepted and natural part of software development.
 
 <!-- Kun ajattelemme muistin käyttöä, hajautustaululla voi olla -- tapauksesta riippuen -- pieni etu. Kun taulukko luodaan, muistista varataan heti tila koko taulukolle. Mikäli taulukon jokaiseen indeksiin ei tarvitse lisätä tietoa, on osa tästä tiedosta varattuna turhaan. Hajautustaululla taas tällaista muistin varaamista ei ennakkoon tehdä -- hajautustaulun kokoa kasvatetaan tarvittaessa. -->
-When we consider the memory usage, hash table might -- in some situations -- have some benefits.
+When we consider the memory usage, hash tables might -- in some situations -- have some benefits.
 When an array is created, enough memory for the whole array is allocated for it.
 If we do not have values in each element of the array, some of the memory stays unused.
 With hash tables this does not happen -- the size of the hash table is increased only when necessary.

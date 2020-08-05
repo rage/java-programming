@@ -61,7 +61,7 @@ public Nimi {
 ``` -->
 
 ```java
-public Name {
+public class Name {
     private String name;
 
     public Name(String name) {
@@ -122,7 +122,7 @@ public Nimi {
 ``` -->
 
 ```java
-public Name {
+public class Name {
     private String name;
 
     public Name(String name) {

@@ -26,7 +26,7 @@ Thus far our graphical interfaces have always included only one view. Next, we'l
 
 <!-- Yleisesti ottaen näkymät luodaan Scene-olion avulla, joiden välillä siirtyminen tapahtuu sovellukseen kytkettyjen tapahtumien avulla. Alla olevassa esimerkissä on luotu kaksi erillistä Scene-oliota, joista kummallakin on oma sisältö sekä sisältöön liittyvä tapahtuma. Alla Scene-olioihin ei ole erikseen liitetty käyttöliittymän asetteluun käytettyä komponenttia (esim. BorderPane), vaan kummassakin Scene-oliossa on täsmälleen yksi käyttöliittymäkomponentti. -->
 
-Generally the views are created as Scene-objects and the transitioning between them happens with  events bound to the application. The example below has to Scene objects which both have their own content and an event related to the content. Instead of having an object for laying out components (such as BorderPane) in the example Scene objects, both objects have just one user interface component.
+Generally the views are created as Scene-objects and the transitioning between them happens with  events bound to the application. The example below has two Scene objects which both have their own content and an event related to the content. Instead of having an object for laying out components (such as BorderPane) in the example Scene objects, both objects have just one user interface component.
 
 
 ```java
