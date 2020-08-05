@@ -9,7 +9,7 @@ hidden: false
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 
 <!-- - Tunnet käsitteet alkeistyyppinen muuttuja ja viittaustyyppinen muuttuja. -->

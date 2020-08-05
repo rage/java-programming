@@ -8,7 +8,7 @@ hidden: false
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 
 <!-- - Kertaat luokkien ja olioiden toimintaa. -->
@@ -1819,7 +1819,7 @@ Both variables contain a reference to an object. Therefore a person object conta
 
 <!-- Pääohjelmalla on nyt siis langan päässä kaksi Henkilö-olioa. Henkilöllä on nimi ja syntymäpäivä. Koska molemmat ovat olioita, ovat ne henkilöllä langan päässä. -->
 
-So the main program has is connected to two Person objects by strands. A person has a name and a birthday. Since both variables are objects, these attributes exist at the other ends of the strands.
+So the main program is connected to two Person objects by strands. A person has a name and a birthday. Since both variables are objects, these attributes exist at the other ends of the strands.
 
 
 <!-- Syntymäpäivä vaikuttaa hyvältä laajennukselta Henkilö-luokkaan. Totesimme aiemmin, että oliomuuttuja `ika` voidaan laskea syntymäpäivästä, joten siitä hankkiuduttiin eroon. -->
@@ -2437,8 +2437,8 @@ Apartment manhattanStudioApt = new Apartment(1, 16, 5500);
 Apartment atlantaTwoBedroomApt = new Apartment(2, 38, 4200);
 Apartment bangorThreeBedroomApt = new Apartment(3, 78, 2500);
 
-System.out.println(manhattanSingleRoomApt.priceDifference(atlantaTwoRoomApt));  //71600
-System.out.println(bangorThreeRoomApt.priceDifference(atlantaTwoRoomApt));   //35400
+System.out.println(manhattanStudioApt.priceDifference(atlantaTwoBedroomApt));  //71600
+System.out.println(bangorThreeBedroomApt.priceDifference(atlantaTwoBedroomApt));   //35400
 ```
 
 

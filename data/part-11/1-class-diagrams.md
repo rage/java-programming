@@ -5,7 +5,7 @@ hidden: false
 ---
 
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 <!-- - Tunnet luokkakaavioiden merkintätavan ja osaat merkitä luokkakaavioon luokat, attribuutit, konstruktorit, ja metodit. -->
 <!-- - Tunnet luokkien väliset yhteydet ja osaat merkitä luokkakaavioon perinnän sekä rajapinnan toteutuksen. -->
@@ -446,7 +446,7 @@ Class diagrams are an excellent way to describe a problem and a problem-domain t
 
 
 <!-- Luokkakaavioita piirretään ohjelman suunnitteluvaiheessa usein esimerkiksi valkotaulua tai isompaa paperiarkkia käyttäen. Luokkakaaviot kannattaa ajatella poisheitettävinä tuotoksina, jotka auttavat ohjelman rakennuksessa. Kaavion piirtämiseen -- eli tyylin oikeellisuuteen ja yksityiskohtiin -- ei kannata käyttää liian pitkään aikaa. Vastaavasti kaavio kannattaa piirtää sopivalla abstraktiotasolla. Esimerkiksi kymmeniä luokkia sisältävään luokkakaavioon ei kannata merkitä jokaisen luokan jokaista metodia ja muuttujaa: oleellista on, että kaaviosta saa luotua nopean yleiskuvan. -->
-Often a class diagram is drawn on a whiteboard or a large sheet of paper during the design phase. Class diagrams should be though of as helpful tools to build a program, which can be thrown away afterwards. You should not use too much energy to think about the correctness and details of the modeling language.
+Often a class diagram is drawn on a whiteboard or a large sheet of paper during the design phase. Class diagrams should be thought of as helpful tools to build a program, which can be thrown away afterwards. You should not use too much energy to think about the correctness and details of the modeling language.
 Class diagrams should also be drawn in a suitable level of abstraction. For example, if you have tens of classes, it might not be worth describing each attribute and each method of each class; getting a good overview of the program structure is the most important.
 
 

@@ -6,7 +6,7 @@ hidden: false
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 <!-- - Tiedät mitä käsitteellä geneerinen tyyppiparametri tarkoitetaan. -->
 

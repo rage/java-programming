@@ -308,10 +308,15 @@ This exercise involves implementing the classes `Organism` and `Herd`, both of w
 Create a class called `Organism` that implements the interface `Movable`. An organism should know its own location (as x, y coordinates). The API for the class `Organism` is to be as follows:
 
 <!-- - **public Elio(int x, int y)**<br/>Luokan konstruktori, joka saa olion aloitussijainnin x- ja y-koordinaatit parametrina -->
+
 - **public Organism(int x, int y)**<br />The class constructor that receives the x and y coordinates of the initial position as its parameters.
+
 <!-- - **public String toString()**<br/> Luo ja palauttaa oliosta merkkijonoesityksen. Eliön merkkijonoesityksen tulee olla seuraavanlainen `"x: 3; y: 6"`. Huomaa että koordinaatit on erotettu puolipisteellä (`;`) -->
+
 - **public String toString()**<br/>Creates and returns a string representation of the organism. That representation should remind the following: `"x: 3; y: 6"`. Notice that a semicolon is used to separate the coordinates.
+
 <!-- - **public void siirra(int dx, int dy)**<br/> Siirtää oliota parametrina saatujen arvojen verran. Muuttuja `dx` sisältää muutoksen koordinaattiin `x`, muuttuja `dy` sisältää muutoksen koordinaattiin `y`. Esimerkiksi jos muuttujan `dx` arvo on 5, tulee oliomuuttujan `x` arvoa kasvattaa viidellä -->
+
 - **public void move(int dx, int dy)**<br/> Moves the object by the values it receives as parameters. The `dx` variable contains the change to coordinate `x`, and the `dy` variable ontains the change to the coordinate `y`. For example, if the value of `dx` is 5, the value of the object variable `x` should be incremented by five.
 
 <!-- Kokeile luokan `Elio` toimintaa seuraavalla esimerkkikoodilla. -->
@@ -358,10 +363,15 @@ Create a class called `Herd` that implements the interface `Movable`. A herd con
 The `Herd` class must have the following API.
 
 <!-- - **public String toString()**<br/> Palauttaa merkkijonoesityksen lauman jäsenten sijainnista rivin vaihdolla erotettuna. -->
+
 - **public String toString()**<br/> Returns a string representation of the positions of the members of the herd, each on its own line.
+
 <!-- - **public void lisaaLaumaan(Siirrettava siirrettava)**<br/> Lisää laumaan uuden `Siirrettava`-rajapinnan toteuttavan olion -->
+
 - **public void addToHerd(Movable movable)**<br/> Adds an object that implements the `Movable` interface to the herd.
+
 <!-- - **public void siirra(int dx, int dy)**<br/> Siirtää laumaa parametrina saatujen arvojen verran. Huomaa että tässä sinun tulee siirtää jokaista lauman jäsentä. -->
+
 - **public void move(int dx, int dy)**<br/> Moves the herd with by the amount specified by the parameters. Notice that here you have to move each member of the herd.
 
 <!-- Kokeile ohjelmasi toimintaa alla olevalla esimerkkikoodilla. -->
@@ -539,10 +549,10 @@ k.mourua();
 
 ```java
 NoiseCapable dog = new Dog();
-dog.makeSound();
+dog.makeNoise();
 
 NoiseCapable cat = new Cat("Garfield");
-cat.makeSound();
+cat.makeNoise();
 Cat c = (Cat) cat;
 c.purr();
 ```

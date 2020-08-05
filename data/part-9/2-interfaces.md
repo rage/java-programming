@@ -5,7 +5,7 @@ hidden: false
 ---
 
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 <!-- - Tunnet käsitteen rajapinta, osaat määritellä omia rajapintoja, ja osaat toteuttaa rajapinnan luokassa.
 - Osaat käyttää rajapintoja muuttujan tyyppinä, metodin parametrina sekä metodin paluuarvona.
@@ -275,7 +275,9 @@ In the exercise template you'll find Interface `TacoBox` ready for your use. It 
 
 
 - the method `int tacosRemaining()` return the number of tacos remaining in the box.
+
 - the method `void eat()` reduces the number of tacos remaining by one. The number of tacos remaining can't become negative.
+
 <!-- ```java
 public interface Palvelusvelvollinen {
     int paiviaJaljella();
@@ -759,7 +761,7 @@ NB: The weight is not printed
 
 
 <!-- Tee luokka box, jonka sisälle voidaan tallettaa `able`-rajapinnan toteuttavia tavaroita. Box saa konstruktorissaan parametrina laatikon maksimikapasiteetin kiloina. Boxon ei saa lisätä enempää tavaraa kuin sen maksimikapasiteetti määrää. Laatikon sisältämien tavaroiden weight ei siis koskaan saa olla yli laatikon maksimikapasiteetin. -->
-Make a class called Box. Items implementing the `Packable` interface can be packed into a box. The Box constructor takes the maximum capacity of the box in kilograms as a parameter. The combined weight of all items in a box cannot be more than the maximum capacity of the box.
+Make a class called `Box`. Items implementing the `Packable` interface can be packed into a box. The `Box` constructor takes the maximum capacity of the box in kilograms as a parameter. The combined weight of all items in a box cannot be more than the maximum capacity of the box.
 
 
 <!-- Seuraavassa esimerkki laatikon käytöstä: -->
@@ -1419,7 +1421,7 @@ In this exercise we'll create program components, that can used to run an online
 
 <h2>Warehouse</h2>
 
-Create the class Warehouse with the following methods:
+Create the class `Warehouse` with the following methods:
 
 - `public void addProduct(String product, int price, int stock)`, which adds a product to the warehouse with the price and stock balance given as parameters.
 - `public int price(String product)`, which returns the price of the product it received as a parameter. If the product hasn't been added to the warehouse, the method must return -99.
@@ -1712,11 +1714,11 @@ Esimerkki ostoskorin käytöstä: -->
 
 We finally get to implement the shopping cart class!
 
-Internally, ShoppingCart stores products added there as *Item-objects*. ShoppingCart must have an instance variable with either the `Map<String, Item>` type, or the `List<Item>` type. Don't add any other instance variable to the ShoppingCart class, besides the List or Map used to store the items.
+Internally, `ShoppingCart` stores products added there as *Item-objects*. ShoppingCart must have an instance variable with either the `Map<String, Item>` type, or the `List<Item>` type. Don't add any other instance variable to the ShoppingCart class, besides the List or Map used to store the items.
 
 NB: If you save the items in a Map type variable, you'll finds its `values()` method to be quite useful for going though all the items objects stored in it for both this part of the exercise and the next.
 
-First let's give ShoppingCart a constructor with no parameters and these methods:
+First let's give `ShoppingCart` a constructor with no parameters and these methods:
 
 - `public void add(String product, int price)` adds an item to the cart that matches the product given as a parameter, with the price given as a parameter.
 - `public int price()` returns the total price of the shopping cart.
@@ -1889,7 +1891,7 @@ Seuraavassa on valmiina verkkokaupan tekstikäyttöliittymän runko. Tee projekt
 
 We now have all the parts we need for our "online store", except the store itself. Let's make that next. Our store has a warehouse that includes all our products. For each 'visit' we have a shopping cart. Every time the customer chooses a product its added to their cart if its available in the warehouse. At the same time, the stock in the warehouse is reduced by one.
 
-Below you'll find a template for a text-based user interface for our store. Create a Store class for your project and copy-paste the code below there.
+Below you'll find a template for a text-based user interface for our store. Create a `Store` class for your project and copy-paste the code below there.
 
 <!-- ```java
 import java.util.Scanner;

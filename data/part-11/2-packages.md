@@ -12,7 +12,7 @@ hidden: false
 
 </text-box> -->
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 - You know what packages are and can place classes in them
 
@@ -663,7 +663,7 @@ The package structure of the program could look like the following (for example)
 
 <!-- - `lentokentta.domain` - sisältää aihealueen käsitteitä kuvaavat luokat `Lentokone`, `Lento`, ja `Paikka`. -->
 
-- `flightControl.domain` - includes the classes that represent concepts of the probelm domain: `Airplane`, `Flight`, and `Place`
+- `flightControl.domain` - includes the classes that represent concepts of the problem domain: `Airplane`, `Flight`, and `Place`
 
 <!-- - `lentokentta.logiikka` - sisältää toiminnallisuuden, jonka avulla sovellusta hallinnoidaan -->
 

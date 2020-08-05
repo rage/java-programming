@@ -15,7 +15,7 @@ hidden: false
 
 </text-box> -->
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 - You know that in the Java programming language every class inherits the Object class, and you understand why every object has methods toString, equals, and hashCode.
 - You are familiar with the concepts of inheritance, superclass, and subclass.
@@ -1205,7 +1205,9 @@ What happens in detail when we call the toString method of a three-dimensional p
     * jälleen metodi laskee tuloksensa kutsuen ensin yliluokassa olevaa samannimistä metodia -->
 
 1. Look for a definition of toString in the class Point3D. It does not exist, so the superclass is next to be examined.
+
 2. Look for a definition of toString in the superclass point. It can be found, so the code inside the implementation of the method is executed
+
     * so the exact code to be executed is `return "("+this.location()+") distance "+this.manhattanDistanceFromOrigin();`
     * the method `location` is executed first
     * look for a definition of `location` in the class Point3D. It can be found, so its code is executed.

@@ -4,7 +4,7 @@ title: 'Multidimensional data'
 hidden: false
 ---
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 <!-- - Tunnet menetelmiä moniulotteisen tiedon esittämiseen. -->
 <!-- - Osaat luoda ja käyttää moniulotteisia taulukoita. -->
@@ -87,6 +87,7 @@ for (int row = 0; row < twoDimensionalArray.length; row++) {
 ```
 
 <!-- Nyt tulostus näyttää seuraavalta: -->
+
 The program output is as follows:
 
 <sample-output>
@@ -327,7 +328,9 @@ We can implement the same functionality using a hash table. Wouldn't a hash tabl
 <!-- Kun hajautustaulusta haetaan tietoa tietyllä avaimella, metodin hashCode perusteella selvitetään paikka, mistä tietoa haetaan. Samassa paikassa voi olla useampi value (listassa), jolloin haettavaa avainta verrataan jokaiseen listalla olevaan valueon equals-metodia käyttäen. Kun taulukosta haetaan valuea tietyllä avaimella -- eli indeksillä -- ei vastaavaa toiminnallisuutta tarvitse tehdä. Taulukossa joko on value tai valuea ei ole. Taulukkoon liittyy pieni tehokkuushyöty ohjelman suorituskyvyn kannalta. -->
 When we search for a value of a key from a hash table, we use the hashCode method to find the index to search from.
 There can be multiple values at the same index (on a list). Then we have to compare the key we want to find the value for to the key of each key-value pair on the list using the equals method.
+
 When we search for a value of a key -- or index -- in an array, we do not have to do any of that.
+
 An array either contains a certain value or it does not, so there is a small performance beneft on using arrays.
 
 <!-- Tämä tehokkuushyöty kuitenkin tulee lisääntyneen virhealttiuden sekä työmäärän kustannuksella. Hajautustauluun on valmiiksi toteutettuna sisäisen taulukon kasvattaminen ja sen toiminnallisuutta on testattu hyvin laajasti. Taulukkoa käytettäessä tällaista etua ei ole -- uutta toiminnallisuutta toteuttaessa saattaa päätyä virheisiin, mikä kasvattaa työmäärää. Virheet ovat toki luonnollinen osa ohjelmistokehitystä. -->

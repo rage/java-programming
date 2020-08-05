@@ -6,7 +6,7 @@ hidden: false
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 <!-- - Tiedät miten miten muuttuvansizeinen geneerinen myList toteutetaan. -->
 
@@ -593,7 +593,7 @@ This exercise is worth 2 points.
 
 <!-- Hajautustaulu on toteutettu taulukkona, missä jokainen alkio sisältää myListn. Listalle tallennetaan (avain,value)-pareja. Käyttäjä voi hakea hajautustaulusta firstFreeIndex avaimen perusteella, ja toisaalta käyttäjä voi lisätä hajautustauluun avain-value -pareja. Kukin avain voi esiintyä hajautustaulussa korkeintaan kerran. -->
 
-Hash map is implemented as an array, in which every element includes a list. The lists contain (key, value) pairs. The user can search from the hash map based on the key, and they can also add new key-value pairs into it. Eech key can appear at most once in the hash map.
+Hash map is implemented as an array, in which every element includes a list. The lists contain (key, value) pairs. The user can search from the hash map based on the key, and they can also add new key-value pairs into it. Each key can appear at most once in the hash map.
 
 <!-- Hajautustaulun toiminta perustuu avaimen hajautusvalueon. Kun hajautustauluun lisätään (avain,value)-pari, lasketaan avaimeen liittyvä hajautusvalue. Hajautusvalue määrää hajautustaulun sisäisen taulukon indexn, missä olevaan myListan (avain,value)-pari lisätään. -->
 
