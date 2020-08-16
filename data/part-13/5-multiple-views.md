@@ -40,7 +40,7 @@ import javafx.stage.Stage;
 public class BackAndForthApplication extends Application {
 
   @Override
-  public void start(Stage windows) {
+  public void start(Stage window) {
 
       Button back = new Button("Back ..");
       Button forth = new Button(".. forth.");
@@ -340,7 +340,7 @@ public class ExampleApplication extends Application {
 
 
         // 2. Add subviews and add them to the menu buttons
-        // 2.1. Create subview layout 
+        // 2.1. Create subview layout
         StackPane firstLayout = createView("First view");
         StackPane secondLayout = createView("Second view");
 
@@ -352,7 +352,7 @@ public class ExampleApplication extends Application {
         layout.setCenter(firstLayout);
 
 
-        // 3. Create main scene with layout 
+        // 3. Create main scene with layout
         Scene scene = new Scene(asettelu);
 
 
