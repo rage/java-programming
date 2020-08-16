@@ -194,7 +194,7 @@ public class PasswordProtectedApplication extends Application {
 
 <!-- Esimerkissä on hyödynnetty sekä GridPanen että StackPanen asettelussa niiden tarjoamia setPrefSize ja setAlignment-metodeja. Metodilla setPrefSize annetaan asettelulle toivottu koko, ja metodilla setAlignment kerrotaan miten asettelun sisältö tulee ryhmittää. Parametrilla Pos.CENTER toivotaan asettelua näkymän keskelle. -->
 
-The example takes advantage of GridPane's and StackPane's built in setPrefSize and setAlignMents -methods for layout. Method setPrefSize takes the preferred size of the layout as and arguments and the setAlignMent-method is used to define how the content of the layout should be aligned. The parameter Pos.CENTER is used for asking the content to be placed to the center of the application
+The example takes advantage of GridPane's and StackPane's built in setPrefSize and setAlignment methods for layout. Method setPrefSize takes the preferred size of the layout as an argument and the setAlignment method is used to define how the content of the layout should be aligned. The parameter Pos.CENTER is used to place the content in the center of the application
 
 
 <!-- <programming-exercise name='Tervehtijä' tmcname='osa13-Osa13_10.Tervehtija'> -->
