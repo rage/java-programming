@@ -104,7 +104,7 @@ When first started, the program should display the first view.
 
 <!-- Tutustutaan seuraavaksi kaksi erillistä näkymää sisältävään esimerkkiin. Ensimmäisessä näkymässä käyttäjää pyydetään syöttämään salasana. Jos käyttäjä kirjoittaa väärän salasanan, väärästä salasanasta ilmoitetaan. Jos käyttäjä kirjoittaa oikean salasanan, ohjelma vaihtaa seuraavaan näkymään. Ohjelman toiminta on seuraavanlainen. -->
 
-Let's get familiar with an example containing two different views. In the first view user is asked to input a password. If the user types a wrong password, the application informs the user about the mistake. If the user types the correct passwod, the application switches to the next view. The program functions as follows:
+Let's get familiar with an example containing two different views. In the first view user is asked to input a password. If the user types a wrong password, the application informs the user about the mistake. If the user types the correct password, the application switches to the next view. The program functions as follows:
 
 
 <img src="../img/material/gui-salasana.gif" />
