@@ -346,14 +346,14 @@ public class ExampleApplication extends Application {
 
         // 2.2. Add subviews to button. Pressing the buttons will change the view
         first.setOnAction((event) -> layout.setCenter(firstLayout));
-        second.setOnAction((event) -> asettelu.setCenter(secondLayout));
+        second.setOnAction((event) -> layout.setCenter(secondLayout));
 
         // 2.3. Set initial view
         layout.setCenter(firstLayout);
 
 
         // 3. Create main scene with layout
-        Scene scene = new Scene(asettelu);
+        Scene scene = new Scene(layout);
 
 
         // 4. Show the main scene
