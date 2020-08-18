@@ -5,9 +5,20 @@ hidden: false
 information_page: true
 ---
 
-The course was made by the [Agile Education Research -group](https://www.helsinki.fi/en/researchgroups/data-driven-education).
+This course page is a derivative of the [Java Programming MOOC](https://java-programming.mooc.fi/) made by the [Agile Education Research-group](https://www.helsinki.fi/en/researchgroups/data-driven-education).
 
-## Material
+The course material is licensed under a [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en) license.
+
+## Contributors to this Derivative Works
+
+The following individuals have contributed to creating this course page for the Introduction to Programming course at the Erasmus University:
+
+* Rowan Hoogervorst
+* Marja van der Wind
+
+## Contributors Original Course material
+
+### Material
 
 The course material was written by Arto Hellas (né Vihavainen) and
 Matti Luukkainen. The following individuals have also contributed to the material (in alphabetical order):
@@ -44,10 +55,7 @@ The course was translated by these individuals (in alphabetical order):
 * Tero Tapio
 
 
-The course material is licensed under a [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi)-license.
-
-
-## Technology used in this course
+### Technology used in this course
 
 The course page has been made by [Henrik Nygren](https://github.com/nygrenh) and [Antti Leinonen](https://github.com/redande).
 
