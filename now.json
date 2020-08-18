@@ -6,6 +6,5 @@
       "use": "@now/static-build",
       "config": { "distDir": "public" }
     }
-  ],
-  "alias": "java-programming.mooc.fi"
+  ]
 }
