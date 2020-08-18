@@ -1,5 +1,5 @@
 ---
-path: '/part-7/4-java-programming'
+path: '/week-7/4-java-programming'
 title: 'Summary and about exam'
 hidden: false
 ---

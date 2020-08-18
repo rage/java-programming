@@ -1,6 +1,6 @@
 ---
-path: '/part-7'
-title: 'Part 7'
+path: '/week-7'
+title: 'Week 7'
 overview: true
 hidden: false
 ---
@@ -12,7 +12,7 @@ In the seventh part of the course we'll focus on general programming paradigms a
 
 <text-box variant="hint" name="Getting ECTS credits from Open University of University of Helsinki">
 
-If you **reside in Finland and want to get 5 ECTS credits from parts 1-7 from the Open University of University of Helsinki**, you'll need to participate in a course exam. 
+If you **reside in Finland and want to get 5 ECTS credits from parts 1-7 from the Open University of University of Helsinki**, you'll need to participate in a course exam.
 
 The first exam is on March 21st. The exam procedure is described below:
 
@@ -20,7 +20,7 @@ The exam can be found at this page on March 21st 2020 at 08:00:
 
 <a href="https://exams.mooc.fi/en">https://exams.mooc.fi/en</a>
 
-* You have four hours to complete the exam. If extra time is provided to you by University of Helsinki, you have five hours. 
+* You have four hours to complete the exam. If extra time is provided to you by University of Helsinki, you have five hours.
 * The exam ends at 22.00 (10pm). If you want to spend full 4 hours in the exam, start it at 18:00 the latest.
 * The exam time starts running when you open the exam. Submissions outside the exam time will not be considered.
 * You can log in to exam site with you mooc.fi credentials.

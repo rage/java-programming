@@ -1,5 +1,5 @@
 ---
-path: '/part-7/2-algorithms'
+path: '/week-7/2-algorithms'
 title: 'Algorithms'
 hidden: false
 ---
