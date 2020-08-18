@@ -1,6 +1,7 @@
 ---
-slug: "/week-1/calculating"
+path: "/week-1/6-calculating"
 title: "Calculating"
+hidden: false
 ---
 
 # Calculations with variables

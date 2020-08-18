@@ -1,6 +1,7 @@
 ---
-slug: "/week-1/the-java-language"
-title: "The Java Programming Language"
+path: '/week-1/1-the-java-language'
+title: 'The Java Programming Language'
+hidden: false
 ---
 
 # The Java Programming Language

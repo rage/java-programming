@@ -1,6 +1,7 @@
 ---
-slug: "/week-1/printing"
+path: '/week-1/3-printing'
 title: "Printing"
+hidden: false
 ---
 
 # Printing
