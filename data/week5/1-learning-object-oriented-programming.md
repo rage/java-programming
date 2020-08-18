@@ -1,6 +1,6 @@
 ---
-#path: '/part-5/1-katsaus-olio-ohjelmointiin'
-path: '/part-5/1-learning-object-oriented-programming'
+#path: '/week-5/1-katsaus-olio-ohjelmointiin'
+path: '/week-5/1-learning-object-oriented-programming'
 #title: 'Katsaus olio-ohjelmointiin'
 title: 'Learning object-oriented programming'
 hidden: false

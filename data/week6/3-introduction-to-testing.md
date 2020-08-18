@@ -1,5 +1,5 @@
 ---
-path: '/part-6/3-introduction-to-testing'
+path: '/week-6/3-introduction-to-testing'
 title: 'Introduction to testing'
 hidden: false
 ---

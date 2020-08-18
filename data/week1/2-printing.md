@@ -1,5 +1,5 @@
 ---
-path: "/part-1/2-printing"
+path: "/week-1/2-printing"
 title: "Printing"
 hidden: false
 ---

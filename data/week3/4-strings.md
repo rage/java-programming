@@ -1,5 +1,5 @@
 ---
-path: '/part-3/4-using-strings'
+path: '/week-3/4-using-strings'
 title: 'Using strings'
 hidden: false
 ---

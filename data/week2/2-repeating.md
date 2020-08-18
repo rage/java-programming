@@ -1,5 +1,5 @@
 ---
-path: '/part-2/2-repeating'
+path: '/week-2/2-repeating'
 title: 'Repeating functionality'
 hidden: false
 ---

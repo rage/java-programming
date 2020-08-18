@@ -1,5 +1,5 @@
 ---
-path: '/part-3/3-arrays'
+path: '/week-3/3-arrays'
 title: 'Arrays'
 hidden: false
 ---

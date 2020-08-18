@@ -1,5 +1,5 @@
 ---
-path: '/part-4/2-objects-in-a-list'
+path: '/week-4/2-objects-in-a-list'
 # title: 'Oliot listalla'
 title: 'Objects in a list'
 hidden: false

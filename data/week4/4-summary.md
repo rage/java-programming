@@ -1,5 +1,5 @@
 ---
-path: '/part-4/4-summary'
+path: '/week-4/4-summary'
 #title: 'Ohjelman käsitteiden tunnistaminen ja sanoittaminen'
 title: 'Summary'
 hidden: false

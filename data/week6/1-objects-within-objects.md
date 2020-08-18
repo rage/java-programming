@@ -1,5 +1,5 @@
 ---
-path: '/part-6/1-objects-within-objects'
+path: '/week-6/1-objects-within-objects'
 title: 'Objects on a list and a list as part of an object'
 hidden: false
 ---

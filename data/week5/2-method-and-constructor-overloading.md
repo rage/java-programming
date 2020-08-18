@@ -1,6 +1,6 @@
 ---
-#path: '/part-5/2-metodien-ja-konstruktorien-kuormittaminen'
-path: '/part-5/2-method-and-constructor-overloading'
+#path: '/week-5/2-metodien-ja-konstruktorien-kuormittaminen'
+path: '/week-5/2-method-and-constructor-overloading'
 title: 'Removing repetitive code (overloading methods and constructors)'
 hidden: false
 ---

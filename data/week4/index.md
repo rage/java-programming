@@ -1,7 +1,7 @@
 ---
-path: '/part-4'
+path: '/week-4'
 #title: 'Osa 4'
-title: 'Part 4'
+title: 'Week 4'
 overview: true
 hidden: false
 ---

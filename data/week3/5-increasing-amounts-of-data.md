@@ -1,6 +1,6 @@
 ---
-# path: '/part-3/5-kasvava-tiedon-maara'
-path: '/part-3/5-increasing-amounts-of-data'
+# path: '/week-3/5-kasvava-tiedon-maara'
+path: '/week-3/5-increasing-amounts-of-data'
 # title: 'Kasvava tiedon määrä'
 title: 'Summary'
 hidden: false

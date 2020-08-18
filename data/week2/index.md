@@ -1,6 +1,6 @@
 ---
-path: '/part-2'
-title: 'Part 2'
+path: '/week-2'
+title: 'Week 2'
 overview: true
 hidden: false
 ---

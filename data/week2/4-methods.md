@@ -1,5 +1,5 @@
 ---
-path: '/part-2/4-methods'
+path: '/week-2/4-methods'
 # title: 'Metodit ja ohjelman jakaminen pienempiin osiin'
 title: 'Methods and dividing the program into smaller parts'
 hidden: false

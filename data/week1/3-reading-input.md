@@ -1,5 +1,5 @@
 ---
-path: '/part-1/3-reading'
+path: '/week-1/3-reading'
 title: 'Reading input'
 hidden: false
 ---

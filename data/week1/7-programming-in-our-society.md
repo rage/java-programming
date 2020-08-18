@@ -1,5 +1,5 @@
 ---
-path: '/part-1/7-programming-in-our-society'
+path: '/week-1/7-programming-in-our-society'
 # title: 'Ohjelmointi yhteiskunnassa'
 title: 'Programming in our society'
 hidden: false

@@ -1,5 +1,5 @@
 ---
-path: "/part-4/1-introduction-to-object-oriented-programming"
+path: "/week-4/1-introduction-to-object-oriented-programming"
 #title: 'Johdatus olio-ohjelmointiin'
 title: "Introduction to object-oriented programming"
 hidden: false

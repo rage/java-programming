@@ -1,5 +1,5 @@
 ---
-path: '/part-2/5-end-questionnaire'
+path: '/week-2/5-end-questionnaire'
 title: 'End questionnaire'
 hidden: false
 ---

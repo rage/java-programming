@@ -1,6 +1,6 @@
 ---
-#path: '/part-5/4-oliot-ja-viitteet'
-path: '/part-5/4-objects-and-references'
+#path: '/week-5/4-oliot-ja-viitteet'
+path: '/week-5/4-objects-and-references'
 ## title: 'Oliot ja viitteet'
 title: 'Objects and references'
 hidden: false

@@ -1,5 +1,5 @@
 ---
-path: "/part-1/5-calculating"
+path: "/week-1/5-calculating"
 # title: "Laskentaa luvuilla"
 title: "Calculating with numbers"
 hidden: false

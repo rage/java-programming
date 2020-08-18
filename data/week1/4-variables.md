@@ -1,7 +1,7 @@
 ---
 # path: "/part-1/4-muuttujat"
 # title: "Muuttujat"
-path: "/part-1/4-variables"
+path: "/week-1/4-variables"
 title: "Variables"
 hidden: false
 ---

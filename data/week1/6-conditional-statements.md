@@ -1,7 +1,7 @@
 ---
 # path: "/part-1/6-ehtolauseet"
 # title: "Ehtolauseet ja vaihtoehtoinen toiminta"
-path: "/part-1/6-conditional-statements"
+path: "/week-1/6-conditional-statements"
 title: "Conditional statements and conditional operation"
 hidden: false
 ---

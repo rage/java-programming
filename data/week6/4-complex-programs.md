@@ -1,5 +1,5 @@
 ---
-path: '/part-6/4-complex-programs'
+path: '/week-6/4-complex-programs'
 title: 'Complex programs'
 hidden: false
 ---
