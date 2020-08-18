@@ -1396,7 +1396,7 @@ good luck
 
 <!-- Seuraavassa tehtävässä rakennetaan verkkokauppaan liittyvää toiminnallisuutta ja harjoitellaan luokkien käyttämistä niiden tarjoamien rajapintojen kautta. -->
 
-In the next exercise, we build functionality realted to e-commerce and practice using classes through the their interfaces.
+In the next exercise, we build functionality related to e-commerce and practice using classes through their interfaces.
 
 <programming-exercise name='Online shop (8 parts)' tmcname='part09-Part09_10.OnlineShop' nocoins='true'>
 
