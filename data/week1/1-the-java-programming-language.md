@@ -4,7 +4,13 @@ title: 'The Java Programming Language'
 hidden: false
 ---
 
-# The Java Programming Language
+<text-box variant='learningObjectives' name='Learning Objectives'>
+
+- Learn what a computer program is
+
+- Learn the main characteristics of the Java programming language
+
+</text-box>
 
 ## Computer Programs
 When programming, we write `source code` in order to tell the computer what to execute.
@@ -17,16 +23,17 @@ This allows you to use more high-level functions and methods, instead of having 
 In this course we will consider the `Java` programming language, which is among the most often used programming languages out there.
 
 ## Characteristics of Java
-Java is a member of the class of object-oriented programming languages, where objects offer a further abstraction to think about the code that you write.
+Java is a member of the class of object-oriented programming languages, where objects offer a convenient abstraction to think about the code that you write.
 We will have a further look at objects in week 5 of this course.
-Other well-known programming languages using objects include `C++`, `C#` and `Python`.
-Learning such an object-oriented language will thus provide you a good basis for learning other programming languages.
+Other popular programming languages using objects include `C++`, `C#` and `Python`.
+All of these, including Java, rank within the [top 10 of most popular programming languages](https://octoverse.github.com/#top-languages).
+Learning Java will thus provide you with a good basis for learning many other programming languages.
 
-Another important reason for the popularity is that a Java program can be run on any platform.
+Another important reason for the popularity of Java is that a Java program can be run on any platform.
 In essence, this means that you can easily share your written program with someone else and that this person can directly run your code without having to make changes or to transform the code to a different format.
 This is made possible by the `Java Virtual Machine (JVM)`, which translates the source code that is run to code that is understandable by the operating system and computer you are running it on.
 
 ## This course
 In this course, you will become familiar with some of the most important concepts of Java.
-In essence, our aim is that after this course you will be able to write simple Java programs that you can use during your studies.
+In essence, our aim is that you will be able to write simple Java programs after this course that you can use during your studies.
 Moreover, this will provide you with a first stepping stone to learn more advanced programming concepts, either in follow-up courses or by self-study.
