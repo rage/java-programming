@@ -739,7 +739,7 @@ public class Dictionary {
             this.words.add(word);
         }
 
-        this.translations.put(word, translations);
+        this.translations.put(word, translation);
     }
 
     public String getRandomWord() {
