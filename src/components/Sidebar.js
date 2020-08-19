@@ -162,9 +162,6 @@ class Sidebar extends React.Component {
           <TreeViewContainer>
             <TreeView data={content} />
           </TreeViewContainer>
-          <LogoContainer>
-            <Logo />
-          </LogoContainer>
         </SidebarContainer>
       </MobileWrapperOrFragment>
     )
