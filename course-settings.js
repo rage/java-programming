@@ -1,8 +1,8 @@
 const courseSettings = {
   language: "en",
-  name: "Java Programming",
-  siteUrl: "https://java-programming.mooc.fi",
-  subtitle: "A free online course on learning Java",
+  name: "Introduction To Programming",
+  siteUrl: "https://rowtricker.github.io",
+  subtitle: "An introductory programming course on Java",
   slug: "java-programming-i",
   tmcCourse: "java-programming-i",
   quizzesId: "6a635a2d-4e4b-49cc-8487-8d9cab6a74e7",
