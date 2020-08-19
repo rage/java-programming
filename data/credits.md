@@ -9,14 +9,14 @@ This course page is a derivative of the [Java Programming MOOC](https://java-pro
 
 The course material is licensed under a [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en) license.
 
-## Contributors to this Derivative Works
+## Contributors to this Derivative Work
 
 The following individuals have contributed to creating this course page for the Introduction to Programming course at the Erasmus University:
 
 * Rowan Hoogervorst
 * Marja van der Wind
 
-## Contributors Original Course material
+## Contributors Original Course Material
 
 ### Material
 
