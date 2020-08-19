@@ -9,8 +9,6 @@ hidden: false
 
 The sixth part of the course material handles objects consisting of objects, and we'll take a look at separating the text user interface and the program logic.
 
-<please-login></please-login>
-
 <pages-in-this-section></pages-in-this-section>
 
 <!-- Yllä oleva sisällysluettelo sisältää kurssin kuudennen osan aihealueet. Kukin kurssin osa on suunniteltu siten, että siinä on työtä yhden viikon ajaksi. Kuhunkin kurssin osaan on hyvä varata reilusti yli kymmenen tuntia aikaa, riippuen aiemmasta tietokoneen käyttökokemuksesta. Ohjelmointia aiemmin kokeilleet saattavat edetä materiaalissa aluksi nopeamminkin. -->

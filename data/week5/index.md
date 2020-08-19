@@ -10,8 +10,6 @@ hidden: false
 
 The fifth part of the course material continues with object-oriented programming, which was introduced in the fourth part.
 
-<please-login></please-login>
-
 <pages-in-this-section></pages-in-this-section>
 
 <!-- Yllä oleva sisällysluettelo sisältää kurssin viidennen osan aihealueet. Kukin kurssin osa on suunniteltu siten, että siinä on työtä yhden viikon ajaksi. Kuhunkin kurssin osaan on hyvä varata reilusti yli kymmenen tuntia aikaa, riippuen aiemmasta tietokoneen käyttökokemuksesta. Ohjelmointia aiemmin kokeilleet saattavat edetä materiaalissa aluksi nopeamminkin. -->

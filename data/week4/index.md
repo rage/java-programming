@@ -10,8 +10,6 @@ hidden: false
 
 The main theme of the fourth part is object-oriented programming. You will learn to read data from files and to represent and handle information with the help of objects.
 
-<please-login></please-login>
-
 <pages-in-this-section></pages-in-this-section>
 
 <!-- Yllä oleva sisällysluettelo sisältää kurssin neljännen osan aihealueet. Kukin kurssin osa on suunniteltu siten, että siinä on työtä yhden viikon ajaksi. Kuhunkin kurssin osaan on hyvä varata reilusti yli kymmenen tuntia aikaa, riippuen aiemmasta tietokoneen käyttökokemuksesta. Ohjelmointia aiemmin kokeilleet saattavat edetä materiaalissa aluksi nopeamminkin. -->
