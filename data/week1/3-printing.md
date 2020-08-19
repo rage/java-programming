@@ -4,13 +4,15 @@ title: "Printing"
 hidden: false
 ---
 
-# Printing
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 - Learn to write a program that prints text.
 
 - Become familiar with executing programs.
 
 - Know what the term "parameter" means.
+
+</text-box>
 
 ## Running your code
 

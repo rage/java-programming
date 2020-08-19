@@ -1,14 +1,16 @@
 ---
 path: "/week-1/6-calculating"
-title: "Calculating"
+title: "Calculating with Variables"
 hidden: false
 ---
 
-# Calculations with variables
-**Learning objectives**
+<text-box variant='learningObjectives' name='Learning Objectives'>
+
 - Learn to perform calculations with the help of variables.
 
 - Know how to form printable statements including both calculations (expressions) and strings.
+
+</text-box>
 
 The basic mathematical operations are both familiar and straightforward: addition `+`, subtraction `-`, multiplication `*`, and division `/`. The precedence is also familiar: operations are performed from left to right with the parentheses taken into account. Expressions involving `*` and `/` are calculated before those involving `+` and `-`, as is customary in elementary school mathematics.
 

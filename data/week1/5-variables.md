@@ -4,9 +4,6 @@ title: 'Variables'
 hidden: false
 ---
 
-# Variables
-## Learning objectives
-
 <text-box variant='learningObjectives' name='Learning Objectives'>
 
 - Understand the concept of a variable. You know what variable types, names, and values are.
