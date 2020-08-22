@@ -20,7 +20,8 @@ Both exams will be held on several different days. You can attend the exam on an
 
 #### Advanced Course In Programming
 
-* 29.08.2020
+* ~~29.08.2020~~ canceled
+* 05.09.2020
 
 ## Points
 
