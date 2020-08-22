@@ -15,7 +15,8 @@ Both exams will be held on several different days. You can attend the exam on an
 
 #### Introduction To Programming
 
-* 22.08.2020
+* ~~22.08.2020~~ canceled
+* 29.08.2020
 
 #### Advanced Course In Programming
 
