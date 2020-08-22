@@ -1055,7 +1055,7 @@ Using interfaces in programming enables reducing dependencies between classes. I
 
 <!-- Rajapinta <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a> määrittelee listoihin liittyvän peruskäyttäytymisen. Koska ArrayList-luokka toteuttaa `List`-rajapinnan, voi sitä käyttää myös `List`-rajapinnan kautta. -->
 
-<p>The <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a> interface defines the basic functionality related to lists. Because the ArrayList class implements the `List` interface, one can also use it through the `List` interface.</p>
+<p>The <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a> interface defines the basic functionality related to lists. Because the ArrayList class implements the <code>List</code> interface, one can also use it through the <code>List</code> interface.</p>
 
 <br/>
 
@@ -1071,7 +1071,7 @@ strings.add("string objects inside an arraylist object!");
 
 <!-- Kuten huomaamme <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" target="_blank">List-rajapinnan Java API</a>:sta, rajapinnan `List` toteuttavia luokkia on useita. Eräs tietojenkäsittelijöille tuttu listarakenne on linkitetty lista (<a href="http://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html" target="_blank">linked list</a>). Linkitettyä listaa voi käyttää rajapinnan List-kautta täysin samoin kuin ArrayLististä luotua oliota. -->
 
-<p>As we can see fom the <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" target="_blank">Java API</a> of List, there are many classes that implement the `List` interface. One list that is familiar to computer scientists is a <a href="http://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html" target="_blank">linked list</a>. A linked list can be used through the List interface exactly the same way as an object created from ArrayList.</p>
+<p>As we can see fom the <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" target="_blank">Java API</a> of List, there are many classes that implement the <code>List</code> interface. One list that is familiar to computer scientists is a <a href="http://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html" target="_blank">linked list</a>. A linked list can be used through the List interface exactly the same way as an object created from ArrayList.</p>
 
 <br/>
 

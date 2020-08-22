@@ -216,7 +216,7 @@ A brief summary of the stream methods we've encountered so far.
 
   <tr>
     <td>
-      Stream formation: `stream()`
+      Stream formation: <code>stream()</code>
     </td>
     <td>
       The method is called on collection that implements the Collection interface, such as an ArrayList Object. Something is done on the created stream.
@@ -225,7 +225,7 @@ A brief summary of the stream methods we've encountered so far.
 
   <tr>
     <td>
-      Converting a stream into an integer stream: `mapToInt(value -> another)`
+      Converting a stream into an integer stream: <code>mapToInt(value -> another)</code>
     </td>
     <td>
       The stream transforms into one containing integers.
@@ -237,30 +237,30 @@ A brief summary of the stream methods we've encountered so far.
   <tr>
     <td>
       Filtering values:
-      `filter(value -> filter condition)`
+      <code>filter(value -> filter condition)</code>
     </td>
     <td>
       The elements that do not satisfy the filter condition are removed from the string.
       On the right side of the arrow is a statement that returns a boolean.
-      If the boolean is `true`, the element is accepted into the stream. If the boolean evaluates to false, the value is not accepted into the stream. Something is done with the filtered values.
+      If the boolean is <code>true</code>, the element is accepted into the stream. If the boolean evaluates to false, the value is not accepted into the stream. Something is done with the filtered values.
     </td>
   </tr>
 
   <tr>
     <td>
-      Calculating the average: `average()`
+      Calculating the average: <code>average()</code>
     </td>
     <td>
-      Returns a OptionalDouble-type object that has a method `getAsDouble()` that returns a value of type `double`. Calling the method `average()` works on streams that contain integers - they can be created with the `mapToInt` method.
+      Returns a OptionalDouble-type object that has a method <code>getAsDouble()</code> that returns a value of type <code>double</code>. Calling the method <code>average()</code> works on streams that contain integers - they can be created with the <code>mapToInt</code> method.
     </td>
   </tr>
 
   <tr>
     <td>
-      Counting the number of elements in a stream: `count()`
+      Counting the number of elements in a stream: <code>count()</code>
     </td>
     <td>
-      Returns the number of elements in a stream as a `long`-type value.
+      Returns the number of elements in a stream as a <code>long</code>-type value.
     </td>
   </tr>
 
@@ -1288,7 +1288,7 @@ The exercise template includes the probably familiar project "Cargo hold". Howev
 <!-- Virta on myös erittäin näppärä tiedostojen käsittelyssä. Tiedoston lukeminen virtamuotoisena tapahtuu Javan valmiin <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html" target="_blank" rel="noopener">Files</a>-luokan avulla. Files-luokan metodin `lines` avulla tiedostosta voidaan luoda syötevirta, jonka avulla tiedoston rivit voidaan käsitellä yksi kerrallaan. Metodi `lines` saa patametrikseen polun, joka luodaan luokan <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Paths.html" target="_blank" rel="noopener">Paths</a> tarjoamalla metodilla `get`, jolle annetaan parametrina tiedostopolkua kuvaava merkkijono.
 
 Alla olevassa esimerkissä luetaan tiedoston "tiedosto.txt" kaikki rivit ja lisätään ne listaan. -->
-<p>Streams are also very handy in handling files. The file is read in stream form using Java's ready-made <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html" target="_blank" rel="noopener">Files</a> class. The `lines` method in the files class allows you to create an input stream from a file, allowing you to process the rows one by one. The `lines` method gets a path as its parameter, which is created using the `get` method in the <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Paths.html" target="_blank" rel="noopener">Paths</a> class. The `get` method is provided a string describing the file path.</p>
+<p>Streams are also very handy in handling files. The file is read in stream form using Java's ready-made <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html" target="_blank" rel="noopener">Files</a> class. The <code>lines</code> method in the files class allows you to create an input stream from a file, allowing you to process the rows one by one. The <code>lines</code> method gets a path as its parameter, which is created using the <code>get</code> method in the <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Paths.html" target="_blank" rel="noopener">Paths</a> class. The <code>get</code> method is provided a string describing the file path.</p>
 
 The example below reads all the lines in "file.txt" and adds them to the list.
 
