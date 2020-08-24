@@ -6,9 +6,9 @@ hidden: false
 
 <text-box variant='learningObjectives' name='Learning Objectives'>
 
-- Learn what a computer program is
+- Learn how to write and execute a simple program
 
-- Learn the main Characteristics of the Java programming language
+- Become familiar with IntelliJ and testing your assignment code
 
 </text-box>
 
