@@ -33,7 +33,7 @@ Step-by-step, the commands in the movie are as follows:
 - Select the `Hello World` task under the lesson `First programming code`
 
 ## Writing your first program
-You are now ready to write your first program. In Java, our programs have to include boilerplate code to function. It tells the computer what your program is called. Below, the name of the program is `HelloWorld`. This class name has to correspond to the name of the file that contains the source code (e.g. `HelloWorld.java`).
+You are now ready to write your first program. In Java, our programs have to include some boilerplate code to function. It tells the computer what your program is called. Below, the name of the program is `HelloWorld`. This class name has to correspond to the name of the file that contains the source code (e.g. `HelloWorld.java`).
 
 ```java
 public class HelloWorld {
@@ -42,11 +42,11 @@ public class HelloWorld {
     }
 }
 ```
-Execution of the program starts from the line that follows `public static void main(string[] args) {`, and ends at the closing curly bracket `}`. Java programs require this frame around the code to work. Please do not worry if it appears intimidating, it will become very familiar over this course.
+Execution of the program starts from the line that follows `public static void main(string[] args) {`, and ends at the closing curly bracket `}`. Do not worry if this template seems intimidating now, it will become very familiar over this course.
 The examples in the material will not always show the template, but you can assume that your program file always needs one. As such, the examples might be as short as a single line, such as the example below that illustrates the print command.
 
 ## Actual code
-Between these curly brackets, you can write your code. Let's write our first code! We will consider the statement:
+Between the curly brackets in the above example, you can write your code. Let's write our first code! We will consider the statement:
 ``` Java
 System.out.println("Hello World!");
 ```
@@ -64,4 +64,4 @@ public class HelloWorld {
 ```
 
 ## Running the code
-To run this program, you should click on the green triangle that has appeared in the margin and click on `run`. The shortcut is `Ctrl + Shift + F10`. If you followed the above steps, you should now see that the text "Hello World!" is printed to the console, which you can read under the `Run` tab which has opened at the bottom of your screen. If you want to rerun your code, you can click on the green triangle in the top right corner, or use the shortcut `Shift + F10`.
+You are now ready to run your code! To run this program, click on the green triangle has appeared in the margin and click on `run`. You can also use the keyboard shortcut `Ctrl + Shift + F10`. If you followed the above steps, you should now see that the text "Hello World!" is printed to the console, which you can read under the `Run` tab which has opened at the bottom of your screen. If you want to rerun your code, you can click on the green triangle in the top right corner, or use the keyboard shortcut `Shift + F10`.
