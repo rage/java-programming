@@ -1,6 +1,6 @@
 ---
-path: "/support-and-assistance"
-title: "Support and assistance"
+path: "/sessions-and-support"
+title: "Sessions and support"
 hidden: false
 information_page: true
 ---

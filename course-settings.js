@@ -14,16 +14,12 @@ const courseSettings = {
       path: "/",
     },
     {
-      title: "Support and assistance",
-      path: "/support-and-assistance",
+      title: "Sessions and Support",
+      path: "/sessions-and-support",
     },
     {
       title: "Grading and exams",
       path: "/grading-and-exams",
-    },
-    {
-      title: "Frequently asked questions",
-      path: "/faq",
     },
     { separator: true, title: "Java Programming I" },
   ],
