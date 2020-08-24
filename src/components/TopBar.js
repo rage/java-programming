@@ -37,7 +37,6 @@ class TopBar extends React.Component {
               Pisteet
             </Button>
           )}
-        <LoginControls />
       </TopBarContainer>
     )
   }
