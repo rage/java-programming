@@ -13,6 +13,8 @@ Both exams will be held on several different days. You can attend the exam on an
 
 ## Upcoming exams
 
+**Detailed information on the upcomping exam can be found here: [https://java-programming.mooc.fi/exam](https://java-programming.mooc.fi/exam)**
+
 #### Introduction To Programming
 
 * ~~22.08.2020~~ canceled
