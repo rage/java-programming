@@ -8,28 +8,63 @@ hidden: false
 
 - Learn to write a program that prints text.
 
-- Become familiar with executing programs.
-
-- Know what the term "parameter" means.
+- Know what the term "argument" means.
 
 </text-box>
 
-## Running your code
+In the previous lesson, we learned that using the command
+```java
+System.out.println("Hello World!")
+```
+results in the output below to be printed in the console.
 
-You can run a program in by pressing the green play button, or by selecting "Run project" from the menu.
+<sample-output>
 
-Even though running the program is straightforward, a lot is happening behind the scenes. When a program is run, the source code is first compiled into Java bytecode. This compilation process is done by Java compiler, which itself is a program. Following that, the program gets executed, meaning the commands are executed one-by-one by a Java-interpreter that is able to read Java bytecode.
+Hello World!
 
-This compile process affects how and when errors occur. When a program is compiled before execution, the compiler can search for errors in it. This also affects the hints provided by the IDE (Integrated development environment), and in this way, the programmer can receive immediate feedback on any errors.
+</sample-output>
 
-The IDE both compiles and executes the program with just one press of a button. However, the programming environment compiles the program continuously, so it can report errors. You can, for example, try to change above Ada Lovelace exercise print command to `System.out.println("hi!")` -- what you'll notice is that the line will be underlined and you'll be notified of an error on the left-hand side.
+The same command can be used to print other text as well. For example, we might want to say goodbye as well. We would then again use the `System.out.println` command, now putting a different value between the brackets. For example, we could use the command as follows:
+``` Java
+System.our.println("Goodbye!")
+```
+leading to the text below to be printed to the console.
+
+<sample-output>
+
+Goodbye!
+
+</sample-output>
+
+The input that we give between brackets is referred to as an `argument`. In the first case, we gave as argument to the function `System.out.println` the text ``"Hello World!"``, while in the second case our argument was ``"Goodbye!"``. Note that we can use any argument to this function, as long as it is composed of text, as indicated by the quotation marks around the text that we want to print.
+
+<programming-exercise name="Goodbye">
+
+The template for this assignment already contains the boilerplate that is needed for the assignment:
+```java
+public class Goodbye {
+    public static void main(String[] args) {
+        // Code comes here
+    }
+}
+
+```
+
+Complete the assignment by replacing the comment `// Code comes here` by the necessary code. Your program should print the text below when it is run:
+<sample-output>
+  Goodbye! I hope to see you again.
+</sample-output>
+
+You can check your code by clicking on the `Check` button that is shown in the bottom right of the screen.
+
+</programming-exercise>
+
 
 ## Printing Multiple Lines
-
 Programs are constructed command-by-command, where each command is placed on a new line. In the example below, the command `System.out.println` appears twice, which means that two print commands are being executed in the program.
 
 ```java
-public class Ohjelma {
+public class Example {
     public static void main(String[] args) {
         System.out.println("Hello world!");
         System.out.println("... and the universe!");
@@ -39,18 +74,47 @@ public class Ohjelma {
 
 The program above will print:
 
-Hello world! <br>
+<sample-output>
+
+Hello world!
 ... and the universe!
 
-The guidelines in the assignments regarding the print format are very precise. If the assignment expects you to print a parenthesis, you must print the parenthesis.
+</sample-output>
+
+
+<!-- The guidelines in the assignments regarding the print format are very precise. If the assignment expects you to print a parenthesis, you must print the parenthesis.
 This preciseness with regard to the output is relevant in programming in general. Missing a single character may cause an error. Novice programmers often enter a comma instead of a dot, and write, for instance `printin` instead of `println`, leave out apostrophes, or forget the semicolon after a command. Any one of these would cause an error and cause the program execution to fail.
-Learning programming is, in fact, a path full of mistakes -- and every error message is a chance to learn. Keep a look out for any red signs and try to read the test errors!
+Learning programming is, in fact, a path full of mistakes -- and every error message is a chance to learn. Keep a look out for any red signs and try to read the test errors! -->
 
-Writing the command `System.out.println("...")` can be taxing. Try to write **sout** on blank line (within main) and press tab. This shortcut may save you a lot of time in the future.
+<programming-exercise name="Multiple Lines">
 
-## Terminology and Code Comments
-### Command parameters
-The information to be printed by the print command, i.e. its **parameters**, are passed to it by placing them inside the parentheses `()` that follow the command. For example, passing `Hi` as a parameter to the `System.out.println` command is done like this: `System.out.println("Hi")`.
+The template for this assignment already contains the boilerplate that is needed for the assignment:
+```java
+public class MultipleLines {
+    public static void main(String[] args) {
+        // Code comes here
+    }
+}
+
+```
+
+Complete the assignment in such a way that your code prints the following output when run.
+
+<sample-output>
+  Hello, this is your program!
+  My presence is only short-lived this time.
+  So I will now say Goodbye!
+</sample-output>
+
+</programming-exercise>
+
+<text-box variant=hint name="Using the shortcut *sout*">
+
+Writing the command `System.out.println("...")` can be taxing. Try to write **sout** in IntelliJ on a blank line (within main) and press tab. Note how this will autocomplete to `System.out.println("...")`. This shortcut may save you a lot of time in the future.
+
+</text-box>
+
+## Code style and Code Comments
 
 ### Semicolon Separates Commands
 Commands are separated with a semicolon `;`. We could, if we wanted to, write almost everything on a single line. However, that would be difficult to understand.
@@ -92,4 +156,4 @@ public class Comments {
 }
 ```
 
-The last line of the example shows a particularly handy use-case for comments. Code that has been written does not need to eb deleted to try out something else.
+The last line of the example shows a particularly handy use-case for comments. Code that has been written does not need to be deleted to try out something else. However, do make sure that your code stays organized and prevent having old code in comments in the final version of your program.
