@@ -10,9 +10,9 @@ IntelliJ will be the default programming environment, the program in which you w
 It comes pre-installed on university computers, so if you plan to only work from those you can skip the remainder of this page.
 
 ## Installation Video
-The following video shows how the steps look like on Windows:
+The following video shows how the installation looks like on Windows and guides you through the installation procedure.
 
---- ADD VIDEO ---
+<youtube id="_6Y3KDBFV-A"></youtube>
 
 ## Installation Steps
 The steps described in the video are the following:
