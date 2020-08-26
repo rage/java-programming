@@ -87,17 +87,6 @@ const Body = styled.div`
   min-height: 300px;
 `
 
-const LoginNag = styled.div`
-  margin-bottom: 1rem;
-`
-
-const LoginNagWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
-`
-
 const PointsWrapper = styled.div`
   margin-left: 0.5rem;
   display: flex;
@@ -228,51 +217,11 @@ class ProgrammingExercise extends React.Component {
               <StyledRefreshIcon icon={faRedo} />
             </Button>
           )}
-          <PointsWrapper>
-            <PointsLabel>{this.props.t("points")}</PointsLabel>
-
-            <PointContentWrapper>
-              {awardedPoints !== undefined ? (
-                <span>{awardedPoints}</span>
-              ) : (
-                <StyledQuizPointsContentLoader
-                  animate={!points}
-                  height={40}
-                  width={30}
-                  speed={2}
-                  primaryColor="#ffffff"
-                  primaryOpacity={0.6}
-                  secondaryColor="#dddddd"
-                  secondaryOpacity={0.6}
-                >
-                  <rect x="0" y="10" rx="12" ry="12" width="30" height="30" />
-                </StyledQuizPointsContentLoader>
-              )}
-              <span>/</span>
-              {points ? (
-                <span>{points}</span>
-              ) : (
-                <StyledQuizPointsContentLoader
-                  animate
-                  height={40}
-                  width={30}
-                  speed={2}
-                  primaryColor="#ffffff"
-                  primaryOpacity={0.6}
-                  secondaryColor="#dddddd"
-                  secondaryOpacity={0.6}
-                >
-                  <rect x="0" y="10" rx="12" ry="12" width="30" height="30" />
-                </StyledQuizPointsContentLoader>
-              )}
-            </PointContentWrapper>
-          </PointsWrapper>
         </Header>
         <CardContent>
           <Body>
             <div>
-              {this.context.loggedIn ? (
-                <div>
+              <div>
                   {points && points > 1 && (
                     <Small>
                       <p>
@@ -294,14 +243,6 @@ class ProgrammingExercise extends React.Component {
                     <div>Error loading exercise details</div>
                   )}
                 </div>
-              ) : (
-                <div>
-                  <LoginNag>{this.props.t("loginForExercise")}</LoginNag>
-                  <LoginNagWrapper>
-                    <LoginControls />
-                  </LoginNagWrapper>
-                </div>
-              )}
             </div>
 
             {this.context.loggedIn && (
