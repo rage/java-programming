@@ -24,6 +24,12 @@ const courseSettings = {
     { separator: true, title: "Java Programming I" },
   ],
   sidebarFuturePages: [
+  	{ title: "Week 2", tba: "7.9." },
+        { title: "Week 3", tba: "14.9." },
+        { title: "Week 4", tba: "21.9." },
+        { title: "Week 5", tba: "28.9." },
+        { title: "Week 6", tba: "5.10." },
+        { title: "Week 7", tba: "12.10." },
   ], 
   splitCourses: false,
   useNewPointsVisualization: false

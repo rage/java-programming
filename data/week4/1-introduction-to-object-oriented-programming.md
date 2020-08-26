@@ -2,7 +2,7 @@
 path: "/week-4/1-introduction-to-object-oriented-programming"
 #title: 'Johdatus olio-ohjelmointiin'
 title: "Introduction to object-oriented programming"
-hidden: false
+hidden: true
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->

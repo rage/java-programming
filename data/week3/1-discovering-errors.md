@@ -2,7 +2,7 @@
 path: '/week-3/1-discovering-errors'
 # title: 'Virheiden etsimisestä'
 title: 'Discovering errors'
-hidden: false
+hidden: true
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->

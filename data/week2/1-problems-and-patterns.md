@@ -1,7 +1,7 @@
 ---
 path: '/part-2/1-problems-and-patterns'
 title: 'Recurring problems and patterns to solve them'
-hidden: false
+hidden: true
 ---
 
 <text-box variant='learningObjectives' name='Learning Objectives'>

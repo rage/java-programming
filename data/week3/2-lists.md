@@ -2,7 +2,7 @@
 path: "/week-3/2-lists"
 # title: 'Listat'
 title: "Lists"
-hidden: false
+hidden: true
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->

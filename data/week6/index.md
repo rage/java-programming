@@ -2,7 +2,7 @@
 path: '/week-6'
 title: 'Week 6'
 overview: true
-hidden: false
+hidden: true
 ---
 
 <!-- Kurssimateriaalin kuudennessa osassa käsitellään olioista koostuvia olioita sekä tutustutaan tekstikäyttöliittymän ja sovelluslogiikan eriyttämiseen. -->

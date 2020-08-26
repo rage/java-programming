@@ -1,7 +1,7 @@
 ---
 path: '/week-5/5-conclusion'
 title: 'Conclusion'
-hidden: false
+hidden: true
 ---
 
 <!-- TODO: kirjoita uudestaan, teemana olio-ohjelmointi ja tiedon väliset yhteydet -->

@@ -1,7 +1,7 @@
 ---
 path: '/week-7/4-java-programming'
 title: 'Summary and about exam'
-hidden: false
+hidden: true
 ---
 
 <!-- Ensimmäisen seitsemän osan aikana olet tutustunut ohjelmoinnin perustaitoihin ja luonut useita toimivia ohjelmia. Osaat nyt käyttää muuttujia, ehtolauseita, toistolauseita ja metodeja. Tiedät että ohjelmissasi olevien muuttujien ja metodien nimentä vaikuttaa ohjelmien ymmärrettävyyteen, ja olet aloittanut syventymisen olio-ohjelmointiin ja sitä kautta ohjelmiesi sanoittamiseen. Olet myös tutustunut yhden ohjelmistoalan ammattilaisten tärkeimmän työvälineen eli ohjelmointiympäristön käyttöön.

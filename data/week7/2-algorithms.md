@@ -1,7 +1,7 @@
 ---
 path: '/week-7/2-algorithms'
 title: 'Algorithms'
-hidden: false
+hidden: true
 ---
 
 <!-- - Tiedät mitä käsite algoritmi tarkoittaa ja tunnet muutamia algoritmeja.

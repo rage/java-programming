@@ -1,7 +1,7 @@
 ---
 path: '/week-6/3-introduction-to-testing'
 title: 'Introduction to testing'
-hidden: false
+hidden: true
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->

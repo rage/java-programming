@@ -3,7 +3,7 @@
 path: '/week-3/5-increasing-amounts-of-data'
 # title: 'Kasvava tiedon määrä'
 title: 'Summary'
-hidden: false
+hidden: true
 ---
 
 Very often programs handle data. This data must be stored somewhere for the duration of program execution -- creating a new variable for each piece of data would be very laborous and make the code hard to understand.

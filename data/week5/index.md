@@ -3,7 +3,7 @@ path: '/week-5'
 # title: 'Osa 5'
 title: 'Week 5'
 overview: true
-hidden: false
+hidden: true
 ---
 
 <!-- Kurssimateriaalin viides osa jatkaa neljännestä osasta alkaneen olio-ohjelmoinnin parissa. -->

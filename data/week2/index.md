@@ -2,7 +2,7 @@
 path: '/week-2'
 title: 'Week 2'
 overview: true
-hidden: false
+hidden: true
 ---
 
 The second week of the course focuses on repetition in programs and on how to divide functionality into distinct units.
