@@ -25,10 +25,14 @@ const courseSettings = {
       title: "Frequently asked questions",
       path: "/faq",
     },
+    {
+      title:"Exam 29.8",
+      path: "/exam"
+    },
     { separator: true, title: "Java Programming I" },
   ],
   sidebarFuturePages: [
-  ], 
+  ],
   splitCourses: false,
   useNewPointsVisualization: false
 }
