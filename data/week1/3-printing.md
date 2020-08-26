@@ -112,6 +112,8 @@ Complete the assignment in such a way that your code prints the following output
 
 Writing the command `System.out.println("...")` can be taxing. Try to write **sout** in IntelliJ on a blank line (within main) and press tab. Note how this will autocomplete to `System.out.println("...")`. This shortcut may save you a lot of time in the future.
 
+![](../img/soutVideo.gif)
+
 </text-box>
 
 ## Code style and Code Comments
