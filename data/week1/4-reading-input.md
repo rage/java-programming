@@ -188,6 +188,8 @@ public class Program {
 }
 ```
 
+<sample-output>
+
 The output will look like this:
 Write the first string:
 **one**
@@ -199,3 +201,5 @@ Last string you wrote was three, which
 was preceded by two.
 The first string was one.
 All together: onetwothree
+
+</sample-output>
