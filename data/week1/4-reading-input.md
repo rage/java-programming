@@ -94,7 +94,7 @@ Once upon a time...
 </programming-exercise>
 
 ## Input String as a Part of Output
-The example below demonstrates a program that takes user input and prints it concatenated with a string literal.
+Often we want to integrate user input within a larger piece of text as output. We refer to such a piece of text as a `String` and we already saw examples of strings when we printed output with the `System.out.println` command. When we want to join two pieces of text, or two `String`s together, we can use the addition (`+`) operator. The example below demonstrates a program that takes user input and prints it concatenated with another piece of text.
 
 ```java
 import java.util.Scanner;
