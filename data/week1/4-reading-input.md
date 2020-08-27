@@ -118,6 +118,47 @@ The user inputs **this** and presses enter.
 
 The output will be: `You wrote this`
 
+<programming-exercise name='Greeting'>
+
+Write a program that prompts the user for their name with the message "What's your name?". When the user has written their name, the program has to print "Hi " followed by the user's name.
+
+The exercise template already includes the code that creates the `Scanner` tool.
+
+```java
+import java.util.Scanner;
+
+public class Greeting {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Write your program here
+    }
+}
+```
+
+Example output when user gives the name Ada.
+
+<sample-output>
+
+What's your name?
+**Ada**
+Hi Ada
+
+</sample-output>
+
+Example output when user gives the name Lily.
+
+<sample-output>
+
+What's your name?
+**Lily**
+Hi Lily
+
+</sample-output>
+
+</programming-exercise>
+
 ## Program Execution Waits for Input
 When the program's execution comes a statement that attempts to read input from the user (the command `reader.nextLine()`), the execution stops and waits. The execution continues only after the user has written some input and pressed enter.
 In the example below, the program prompts the user for three strings. First, the program prints `Write the first string: `, and then waits for user input. When the user writes some text, the program prints `Write the second string: `, and then waits for user input again. This continues for a third time, after which the program prints all three strings. Be aware, if the scanner is done receiving input, the scanner should be closed. If you do not close it, no error will pop up, but you will get deductions in style points anyway.
