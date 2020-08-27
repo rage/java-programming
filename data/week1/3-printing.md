@@ -36,7 +36,7 @@ Goodbye!
 
 </sample-output>
 
-The input that we give between brackets is referred to as an `argument`. In the first case, we gave as argument to the function `System.out.println` the text ``"Hello World!"``, while in the second case our argument was ``"Goodbye!"``. Note that we can use any argument to this function, as long as it is composed of text, as indicated by the quotation marks `""` around the text that we want to print.
+The input that we give between brackets is referred to as an `argument` of the function. In the first case, we gave as argument to the function `System.out.println` the text ``"Hello World!"``, while in the second case our argument was ``"Goodbye!"``. Note that we can use any argument to this function, as long as it is composed of text, as indicated by the quotation marks `""` around the text that we want to print.
 
 <programming-exercise name="Goodbye">
 
