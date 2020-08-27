@@ -115,7 +115,7 @@ So I will now say Goodbye!
 
 </programming-exercise>
 
-<text-box variant=hint name="Using the shortcut *sout*">
+<text-box variant=hint name="Using a shortcut for printing">
 
 Writing the command `System.out.println("...")` can be taxing. Try to write **sout** in IntelliJ on a blank line (within main) and press tab. Note how this will autocomplete to `System.out.println("...")`. This shortcut may save you a lot of time in the future.
 
