@@ -106,9 +106,11 @@ public class MultipleLines {
 Complete the assignment in such a way that your code prints the following output when run.
 
 <sample-output>
-  Hello, this is your program!
-  My presence is only short-lived this time.
-  So I will now say Goodbye!
+
+Hello, this is your program!
+My presence is only short-lived.
+So I will now say Goodbye!
+
 </sample-output>
 
 </programming-exercise>
