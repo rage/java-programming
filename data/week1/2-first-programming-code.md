@@ -74,7 +74,7 @@ public class HelloWorld {
 }
 ```
 
-Complete the code to the one shown above by replacing the comment `// Code comes here` by the print command that is shown above. Your program should print the text `Hello World!` when executed.
+Complete the code in such a way that it looks exactly like in the text above. Do so by replacing the comment `// Code comes here` by the printing statement in the text above. Your program should print the text `Hello World!` when executed.
 
 You can check your code by clicking on the `Check` button that is shown in the bottom right of the screen.
 
