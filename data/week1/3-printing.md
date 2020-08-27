@@ -16,7 +16,7 @@ In the previous lesson, we learned that using the command
 ```java
 System.out.println("Hello World!")
 ```
-results in the output below to be printed in the console.
+results in the following output to be printed in the console:
 
 <sample-output>
 
@@ -28,7 +28,7 @@ The same command can be used to print other text as well. For example, we might 
 ``` Java
 System.our.println("Goodbye!")
 ```
-This then leads to the following output printed to the console.
+This then leads to the below output being printed to the console.
 
 <sample-output>
 
