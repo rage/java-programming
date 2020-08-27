@@ -5,6 +5,8 @@ hidden: false
 information_page: true
 ---
 
+<notice>The exam is only for residents of Finland</notice>
+
 ### Particpating
 
 * You can take part in the exam after you've completed at least 25% from each part
