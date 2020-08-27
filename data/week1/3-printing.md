@@ -53,7 +53,9 @@ public class Goodbye {
 Complete the assignment by replacing the comment `// Code comes here` by the necessary code. Your program should print the text below when it is run:
 
 <sample-output>
-  Goodbye! I hope to see you again.
+
+Goodbye! I hope to see you again.
+
 </sample-output>
 
 You can check your code by clicking on the `Check` button that is shown in the bottom right of the screen.
