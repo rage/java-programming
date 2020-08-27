@@ -4,7 +4,15 @@ title: "Reading Input"
 hidden: false
 ---
 
-In this paragraph we will learn how to write a program that reads text written by a user. Input refers to text written by the user read by the program. For reading input, we use the `Scanner` tool that comes with Java. The tool can be imported for use in a program by adding the command `import java.util.Scanner;` before the beginning of the main program's frame (`public class` ...). The tool itself is created with `Scanner scanner = new Scanner(System.in);`.
+<text-box variant='learningObjectives' name='Learning Objectives'>
+
+- Learn to write a program that reads user input.
+
+- Know how to concatenate text together
+
+</text-box>
+
+Input refers to text written by the user read by the program. For reading input, we use the `Scanner` tool that comes with Java. The tool can be imported for use in a program by adding the command `import java.util.Scanner;` before the beginning of the main program's frame (`public class` ...). The tool itself is created with `Scanner scanner = new Scanner(System.in);`.
 
 ```java
 import java.util.Scanner;
