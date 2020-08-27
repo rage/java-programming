@@ -52,6 +52,47 @@ public class Program {
 
 More precisely, input is read with the `scanner` tool's `nextLine()` reading method. The call `scanner.nextLine()` is left waiting for the user to write something. When user writes something and presses enter, the provided string is assigned to a the string variable `message`. The program is then able to reference the variable `message` later on, for instance to print the message. If you are running a program like this, you should enter a message in the console as if you were the user. The `reader.nextLine();` command reads the user's input and *returns* a string. If we then want to use the string in the program, it must be saved to a string variable -- `String message = scanner.nextLine();`. A value saved to a variable can be used repeatedly.
 
+<programming-exercise name='Message'>
+
+Write a program that asks the user to write a string. When the user has provided a string (i.e., written some text and pressed the enter key), the program should print the string that was provided by the user.
+
+The exercise template comes with a program template that includes the creation of a Scanner tool.
+
+```java
+import java.util.Scanner;
+
+public class Message {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Write a message: ");
+        // Write your program here
+    }
+}
+```
+Example output for when the user writes "Bye".
+
+<sample-output>
+
+Write a message:
+**Bye**
+Bye
+
+</sample-output>
+
+Example output for when the user writes "Once upon a time...".
+
+<sample-output>
+
+Write a message:
+**Once upon a time...**
+Once upon a time...
+
+</sample-output>
+
+</programming-exercise>
+
 ## Input String as a Part of Output
 The example below demonstrates a program that takes user input and prints it concatenated with a string literal.
 
