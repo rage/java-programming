@@ -132,9 +132,13 @@ Commands are separated with a semicolon `;`. We could, if we wanted to, write al
 System.out.println("Hello "); System.out.println("world"); System.out.println("!\n");
 ```
 
+<sample-output>
+
 Hello
 world
 !
+
+</sample-output>
 
 Although the previous example works, it's important to be considerate of other programmers (and your future self!) and to use line breaks. That way, anyone reading the program knows that each line does only a single concrete thing.
 
