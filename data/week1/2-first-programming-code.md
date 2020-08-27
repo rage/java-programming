@@ -13,7 +13,7 @@ hidden: false
 </text-box>
 
 In this lesson, you will write your first programming code in Java.
-Our goal is to write a program that prints the text `Hello World` when run.
+Our goal is to write a program that prints the text `Hello World!` when run.
 To create this program, we will walk you through all necessary steps.
 
 ## Setting up for Coding
