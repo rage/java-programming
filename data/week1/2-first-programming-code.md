@@ -52,7 +52,7 @@ System.out.println("Hello World!");
 ```
 Note that source code is written line-by-line and is read from left-to right. Moreover, each statement should be terminated by a semicolon (`;`), which indicates the end of the statement.
 
-The statement that we have used is part of the Java programming language and is used to print out text to the console, which will appear when running your code. The text that should be printed is given between the brackets, in this case `Hello World!`. Note that the printed text should be surrounded by quotation marks, which will not be printed themselves.
+The statement that we have used is part of the Java programming language and is used to print out text to the console, which will appear when running your code. The text that should be printed is given between the brackets, in this case `Hello World!`. Note that the printed text should be surrounded by quotation marks (`""`), which will not be printed themselves.
 
 Your program should now look like:
 ``` Java
