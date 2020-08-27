@@ -199,30 +199,3 @@ Last string you wrote was three, which
 was preceded by two.
 The first string was one.
 All together: onetwothree
-
-## Reading Different Variable Types from User
-In the text-based user interfaces that we've used in our programs, the user's input is always read as a string, since the user writes their input as text. Reading strings from the user has become familiar by this point - we do it using the `nextLine`-command of the Scanner helper method.
-
-```java
-import java.util.Scanner;
-
-public class Program {
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Write text and press enter ");
-        String text = scanner.nextLine();
-        System.out.println("You wrote " + text);
-    }
-}
-```
-Output:
-
-Write text and press enter
-
-**something**
-
-You wrote something
-
-If you expect the user to insert a number, you should use scanner.nextInt() instead of nextLine(), so that you can store the incoming number in an int type of variable.
