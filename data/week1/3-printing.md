@@ -131,7 +131,7 @@ Writing the command `System.out.println("...")` can be taxing. Try to write **so
 Commands are separated with a semicolon `;`. We could, if we wanted to, write almost everything on a single line. However, that would be difficult to understand.
 
 ```java
-System.out.println("Hello "); System.out.println("world"); System.out.println("!\n");
+System.out.println("Hello "); System.out.println("world"); System.out.println("!");
 ```
 
 <sample-output>
