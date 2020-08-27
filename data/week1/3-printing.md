@@ -8,7 +8,7 @@ hidden: false
 
 - Learn to write a program that prints text.
 
-- Know what the term "argument" means.
+- Know what an "argument" is.
 
 </text-box>
 
@@ -28,7 +28,7 @@ The same command can be used to print other text as well. For example, we might 
 ``` Java
 System.our.println("Goodbye!")
 ```
-leading to the text below to be printed to the console.
+This then leads to the following output printed to the console.
 
 <sample-output>
 
@@ -36,7 +36,7 @@ Goodbye!
 
 </sample-output>
 
-The input that we give between brackets is referred to as an `argument`. In the first case, we gave as argument to the function `System.out.println` the text ``"Hello World!"``, while in the second case our argument was ``"Goodbye!"``. Note that we can use any argument to this function, as long as it is composed of text, as indicated by the quotation marks around the text that we want to print.
+The input that we give between brackets is referred to as an `argument`. In the first case, we gave as argument to the function `System.out.println` the text ``"Hello World!"``, while in the second case our argument was ``"Goodbye!"``. Note that we can use any argument to this function, as long as it is composed of text, as indicated by the quotation marks `""` around the text that we want to print.
 
 <programming-exercise name="Goodbye">
 
@@ -82,9 +82,11 @@ Hello world!
 </sample-output>
 
 
-<!-- The guidelines in the assignments regarding the print format are very precise. If the assignment expects you to print a parenthesis, you must print the parenthesis.
-This preciseness with regard to the output is relevant in programming in general. Missing a single character may cause an error. Novice programmers often enter a comma instead of a dot, and write, for instance `printin` instead of `println`, leave out apostrophes, or forget the semicolon after a command. Any one of these would cause an error and cause the program execution to fail.
-Learning programming is, in fact, a path full of mistakes -- and every error message is a chance to learn. Keep a look out for any red signs and try to read the test errors! -->
+<text-box variant=hint name="Assignment guidelines">
+  The guidelines in the assignments regarding the print format are very precise. If the assignment expects you to print a parenthesis, you must print the parenthesis.
+  This preciseness with regard to the output is relevant in programming in general. Missing a single character may cause an error. Novice programmers often enter a comma instead of a dot, and write, for instance `printin` instead of `println`, leave out apostrophes, or forget the semicolon after a command. Any one of these would cause an error and cause the program execution to fail.
+  Learning programming is, in fact, a path full of mistakes -- and every error message is a chance to learn. Keep a look out for any red signs and try to read the test errors!
+</text-box>
 
 <programming-exercise name="Multiple Lines">
 

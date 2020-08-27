@@ -89,6 +89,6 @@ Even though running the program is straightforward, a lot is happening behind th
 
 This compile process affects how and when errors occur. When a program is compiled before execution, the compiler can search for errors in it. This also affects the hints provided by the IDE (Integrated development environment), and in this way, the programmer can receive immediate feedback on any errors.
 
-The IDE both compiles and executes the program with just one press of a button. However, the programming environment compiles the program continuously, so it can report errors. You can, for example, try to change above Ada Lovelace exercise print command to `System.out.println("hi!")` -- what you'll notice is that the line will be underlined and you'll be notified of an error on the left-hand side.
+The IDE both compiles and executes the program with just one press of a button. However, the programming environment compiles the program continuously, so it can report errors. You can, for example, try to change the above Hello World exercise print command to `System.out.println("Hello World!")` -- what you'll notice is that the line will be underlined and you'll be notified of an error on the left-hand side.
 
 </text-box>

@@ -27,7 +27,7 @@ Java is a member of the class of object-oriented programming languages, where ob
 We will have a further look at objects in week 5 of this course.
 Other popular programming languages using objects include `C++`, `C#` and `Python`.
 All of these, including Java, rank within the [top 10 of most popular programming languages](https://octoverse.github.com/#top-languages).
-Learning Java will thus provide you with a good basis for learning other popular (object-oriented) programming languages.
+Learning Java will thus provide you with a good basis for learning many other popular (object-oriented) programming languages.
 
 Another important reason for the popularity of Java is that a Java program can be run on any platform.
 This means that you can easily share your written program with someone else and that this person can directly run your code without having to make changes or to transform the code to a different format.
