@@ -42,6 +42,48 @@ int second = 4;
 first + second;
 ```
 
+<programming-exercise name="Seconds in a day" tmcname='part01-Part01_16.SecondsInADay'>
+
+In the exercise template, implement a program that asks the user for the number of days. After that, the program prints the number of seconds in the given number of days.
+
+Earlier we learned to read an integer in the following manner:
+
+```java
+Scanner scanner = new Scanner(System.in);
+
+System.out.println("Give a number:");
+int number = scanner.nextInt();
+System.out.println("You gave " + number);
+```
+
+Examples of expected output:
+
+<sample-output>
+
+How many days would you like to convert to seconds?
+**1**
+86400
+
+</sample-output>
+
+<sample-output>
+
+How many days would you like to convert to seconds?
+**3**
+259200
+
+</sample-output>
+
+<sample-output>
+
+How many days would you like to convert to seconds?
+**7**
+604800
+
+</sample-output>
+
+</programming-exercise>
+
 ## Calculating and Printing
 If one of the operands of the operation `+` is a string, the other operand will be changed into a string too during program execution. In the example below, the integer `2` is turned into the string "2", and a string has been appended to it. The precedence introduced earlier also apply here:
 
