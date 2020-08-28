@@ -334,21 +334,21 @@ const pheromones = {
 
       pheromones.storage.clear()
 
-      $.post(pheromones.API_URL + "snapshots.json", {
-        list: dataToSubmit,
-      })
-        .done(function(data) {})
-        .fail(function(details) {
-          if (
-            details.status === 200 &&
-            details.statusText === "OK" &&
-            details.responseText === "{success:true}"
-          ) {
-            return
-          }
-
-          pheromones.storage.addAll(JSON.parse(dataToSubmit))
-        })
+      // $.post(pheromones.API_URL + "snapshots.json", {
+      //   list: dataToSubmit,
+      // })
+      //   .done(function(data) {})
+      //   .fail(function(details) {
+      //     if (
+      //       details.status === 200 &&
+      //       details.statusText === "OK" &&
+      //       details.responseText === "{success:true}"
+      //     ) {
+      //       return
+      //     }
+      //
+      //     pheromones.storage.addAll(JSON.parse(dataToSubmit))
+      //   })
     },
     hasLocalStorageSupport: function() {
       try {
