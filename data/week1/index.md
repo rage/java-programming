@@ -12,5 +12,3 @@ In this first week of the course, we will focus on getting to know what programm
 The table of contents above lists the topics covered in this first week of the course. These pages will be the main material for the course and contain assignments to train yourself.
 
 Have fun!
-
-<exercises-in-this-section></exercises-in-this-section>
