@@ -87,17 +87,7 @@ export function onLoginStateChanged(callback) {
 }
 
 export async function userDetails() {
-  const res = await axios.get(
-    `${BASE_URL}/users/current?show_user_fields=true&extra_fields=${CourseSettings.default.slug}`,
-    {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${accessToken()}`,
-      },
-    },
-  )
-  store.set("tmc.user.details", res.data)
-  return res.data
+  return new Promise((resolve, reject) => reject("Login not supported"))
 }
 
 export async function getCachedUserDetails() {
