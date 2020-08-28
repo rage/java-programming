@@ -12,7 +12,7 @@ It comes pre-installed on university computers, so if you plan to only work from
 ## Installation Video
 The following video shows how the installation looks like on Windows and guides you through the installation procedure.
 
-<youtube id="_6Y3KDBFV-A"></youtube>
+<panopto src='https://eur.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=a61d286a-0c23-4fc5-9910-ac25009f9bac&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all'></panopto>
 
 ## Installation Steps
 The steps described in the video are the following:
