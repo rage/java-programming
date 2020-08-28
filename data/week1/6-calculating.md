@@ -1,6 +1,6 @@
 ---
 path: "/week-1/6-calculating"
-title: "Calculating with Variables"
+title: "Calculating with Numbers"
 hidden: false
 ---
 
