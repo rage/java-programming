@@ -12,8 +12,7 @@ hidden: false
 
 </text-box>
 
-## What a variable is
-Let's turn our attention to learning about variable *types* commonly used in Java. A variable can be thought of as a container in which information of a given type can be stored. Examples of these different types include text (`String`), whole numbers (`int`), floating-point numbers (`double`), and whether something is true or false (`boolean`). A value is assigned to a variable using the equals sign (`=`).
+You saw some first examples of variables when dealing with user input in the last section. Let's turn our attention to learning about variable *types* commonly used in Java. A variable can be thought of as a container in which information of a given type can be stored. Examples of these different types include text (`String`), whole numbers (`int`), floating-point numbers (`double`), and whether something is true or false (`boolean`). A value is assigned to a variable using the equals sign (`=`).
 
 ```java
 int months = 12;
@@ -32,32 +31,49 @@ System.out.println("Floating-point variable: " + floatingPoint);
 System.out.println("Boolean: " + trueOrFalse);
 ```
 Output:
+
+<sample-output>
+
 Text variable: contains text
 Integer variable: 123
 Floating-point variable: 3.141592653
 Booolean: true
 
-Be aware that the printing of variables does not require quotation marks. If you would add those, the name of the variable will be printed, instead of its content.
-Variable names are unique - no two variables can have the same name. The variable is created the first time its declared, but the second time you try to declare a variable with the same name, your compiler will give an error.
+</sample-output>
 
-## Concatenation - Joining Strings Together
-The string to be printed can be formed from multiple strings and/or variables using the `+` operator. For example, we join a string literal and the value of a string variable. We can do this with any number of strings.
+Be aware that the printing of variables does not require quotation marks. If you would add those, the name of the variable (e.g., `text` for the first print statement) will be printed, instead of its content.
+
+<programming-exercise name="Recipe">
+
+The template for this assignment already contains code to print a recipe consisting of milk and flour. In the print statements, two variables are used: an `int` variable named `gramsOfMilk` and a `double` variable `kilosOfFlour`. The first variable indicates the amount of milk, in grams, while the second indicates the amount of flour, in kilo's.
+
+Complete the assignment in such a way, by declaring both variables with the correct amount, such that the following output is printed:
+
+<sample-output>
+
+This recipe requires the following ingredients
+Grams of milk: 750
+Kilo's of flour: 1.5
+
+</sample-output>
+
+</programming-exercise>
+
+Variable names are unique - no two variables can have the same name. The variable is created the first time its declared, but the second time you try to declare a variable with the same name, your compiler will give an error. The following program would thus lead to an error, as the variable pi is declared twice:
 
 ```java
-public class Program {
-
+public class Example {
     public static void main(String[] args) {
-        String message = "Hello world!";
+        double pi = 3.14;
+        double pi = 3.141592653;
 
-        System.out.println(message + " ... and the universe!");
+        System.out.println("The value of pi is: " + pi);
     }
 }
 ```
 
-The output of this program will be: Hello world! ... and the universe!
-
 ## Changing a Value Assigned to a Variable
-A variable exists from the moment of its declaration, and its initial value is preserved until another value is assigned to it. You can change a variable's value using a statement that comprises the variable name, an equals sign, and the new value to be assigned. Remember to keep in mind that the variable type is only stated during the initial variable declaration. In the following example, you can see both the declaration and update of a variable.
+A variable exists from the moment of its declaration, and its initial value is preserved until another value is assigned to it. You can change a variable's value using a statement that comprises the variable name, an equals sign, and the new value to be assigned. Note that when changing the value of the variable, we do not declare the type of the variable again, as this has already been determined when the variable was declared.
 
 ```java
 int number = 123;
@@ -67,12 +83,31 @@ number = 42;
 System.out.println("The value of the variable is " + number);
 ```
 Output:
+
+<sample-output>
+
 The value of the variable is 123
 The value of the variable is 42
 
-When a variable appears in the program for the first time, one must tell the computer both its type (in this case `int`) and its name (in this case `number`). Then, the computer creates a 'named container' for the variable and the value on the right side of the equals sign is copied into this named container. Whenever a variable is referenced by its name in a program, its value is retrieved from a container that has the corresponding name.
-Whenever a value is assigned to an existing variable (here `number = 42`), the new value is copied in the place of the old value, and the old value disappears. The variable is then referenced again by its name in the program. We proceed as normal, retrieving the value of `number` from a container having its name. At the end of the program, you'll notice that the original value of the variable has vanished. A variable can hold only one value at a time.
+</sample-output>
 
+Let's look at the preceding program's execution step-by-step. When a variable appears in the program for the first time, one must tell the computer both its type (in this case `int`) and its name (in this case `number`). Then, the computer creates a 'named container' for the variable and the value on the right side of the equals sign is copied into this named container.
+
+![](../img/drawings/part1.4-variable-change-1.png)
+
+Whenever a variable is referenced by its name in a program, its value is retrieved from a container that has the corresponding name.
+
+![](../img/drawings/part1.4-variable-change-2.png)
+
+Whenever a value is assigned to an existing variable (here `number = 42`), the new value is copied in the place of the old value, and the old value disappears.
+
+![](../img/drawings/part1.4-variable-change-3.png)
+
+The variable is then referenced again by its name in the program. We proceed as normal, retrieving the value of `number` from a container having its name.
+
+![](../img/drawings/part1.4-variable-change-4.png)
+
+At the end of the program, you'll notice that the original value of the variable has vanished. A variable can hold only one value at a time.
 
 ## Variable's Type Persists
 Once a variable's type has been declared, it can no longer be changed. For example, a boolean value cannot be assigned to a variable of the integer type, nor can an integer be assigned to a variable of the boolean type. However, exceptions do exist: an integer can be assigned to a variable of the double type, since Java knows how to convert an integer to a double. A floating-point value cannot, however, be assigned to an integer variable. The reason for this is that those who develop the language aim to prevent developers from making errors that lead to a loss of information.
@@ -125,4 +160,4 @@ A variable's type determines the types of values that can be assigned to it. `St
 | Text, i.e., `String`                  | `String text = "Hi!";`  | Text (enclosed in quotation marks).   |
 | True or false value, i.e., `boolean`  | `boolean right = true;` | A boolean contains either the value `true` or `false`.   |
 
-When a decimal number is represented with a floating-point number, the value can be inaccurate as floating-points are incapable of representing all decimal numbers.
+Note that when a decimal number is represented with a floating-point number, the value can be inaccurate as floating-points are incapable of representing all decimal numbers exactly.
