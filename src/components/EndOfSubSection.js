@@ -90,7 +90,6 @@ class EndOfSubSection extends React.Component {
                   </ButtonWrapper>
                 </Fragment>
               )}
-              <p>{this.props.t("rememberToCheckPoints")}</p>
             </div>
           )
         }}
