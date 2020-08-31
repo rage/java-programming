@@ -28,3 +28,6 @@ The steps described in the video are the following:
 10. You are ready and set. Good luck with this programming course!
 
 Note that installing the program might be a bit different on Linux. See the `Installation Instructions` on the download page for further information.
+
+## Installing java
+Lastly, it is needed to install a recent version of the Java Development Kit, if you haven't already one installed on your PC. You can download a recent version of the Java JDK [via this link](https://adoptopenjdk.net/releases). On this page, select the `OpenJDK 11 (LTS)` version and make sure the `Hotspot` JVM is selected. Then find your operating system in the list. In particular, make sure to choose either the 64-bit or 32-bit version depending on your operating system. Moreover, on Windows, select the `.msi` download. If you are working on Mac, use the `.pkg` download instead. After downloading, open the downloaded file and follow the installation steps that are shown on the screen to complete the installation.
