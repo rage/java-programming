@@ -21,17 +21,17 @@ First, make sure that you have IntelliJ set-up.
 When working on a campus computer, this should already be the case.
 When working on your own computer, see [the installation instructions](/installation) for setting up.
 
-Next, download the code samples for this week and open these in IntelliJ. The below video shows you how to do this:
+Next, download the code samples for this week from Canvas and open these in IntelliJ. The below video shows you how to do this:
 
 <panopto src="https://eur.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=6cc47a12-c757-49c0-a9db-ac26010c104f&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all"></panopto>
 
 Step-by-step, the commands in the video are as follows:
 - Open IntelliJ IDEA.
-- Click on `Learn and Teach`
+- Click on `Learn`
 - Click on `Import Local Source`
 - Select the zip-file that you downloaded
-- Click `Join`
-- Select the `Hello World` task under the lesson `First programming code`
+- Click `Start`
+- Select the `Hello World` task under the lesson `First Programming Code`
 
 ## Writing your first program
 You are now ready to write your first program. In Java, our programs have to include some boilerplate code to function. It tells the computer what your program is called. Below, the name of the program is `HelloWorld`. This class name has to correspond to the name of the file that contains the source code (i.e., `HelloWorld.java`).
