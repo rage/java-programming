@@ -37,11 +37,11 @@ Output:
 Text variable: contains text
 Integer variable: 123
 Floating-point variable: 3.141592653
-Booolean: true
+Boolean: true
 
 </sample-output>
 
-Be aware that the printing of variables does not require quotation marks. If you would add those, the name of the variable (e.g., `text` for the first print statement) will be printed, instead of its content.
+Be aware that the printing of variables does not require quotation marks. If you added those, the name of the variable (e.g., `text` for the first print statement) will be printed, instead of its content.
 
 <programming-exercise name="Recipe">
 

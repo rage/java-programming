@@ -19,12 +19,13 @@ To create this program, we will walk you through all necessary steps.
 ## Setting up for Coding
 First, make sure that you have IntelliJ set-up.
 When working on a campus computer, this should already be the case.
-When working on your own computer, see the [the installation instructions](/installation) for setting up.
+When working on your own computer, see [the installation instructions](/installation) for setting up.
 
 Next, download the code samples for this week and open these in IntelliJ. The below video shows you how to do this:
 
+<panopto src="https://eur.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=6cc47a12-c757-49c0-a9db-ac26010c104f&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all"></panopto>
 
-Step-by-step, the commands in the movie are as follows:
+Step-by-step, the commands in the video are as follows:
 - Open IntelliJ IDEA.
 - Click on `Learn and Teach`
 - Click on `Import Local Source`
@@ -87,7 +88,7 @@ You are now ready to run your code! To run this program, click on the green tria
 
 Even though running the program is straightforward, a lot is happening behind the scenes. When a program is run, the source code is first compiled into Java bytecode. This compilation process is done by Java compiler, which itself is a program. Following that, the program gets executed, meaning the commands are executed one-by-one by a Java-interpreter that is able to read Java bytecode.
 
-This compile process affects how and when errors occur. When a program is compiled before execution, the compiler can search for errors in it. This also affects the hints provided by the IDE (Integrated development environment), and in this way, the programmer can receive immediate feedback on any errors.
+This compile process affects how and when errors occur. When a program is compiled before execution, the compiler can search for errors in it. This also affects the hints provided by the IDE (Integrated Development Environment), and in this way, the programmer can receive immediate feedback on any errors.
 
 The IDE both compiles and executes the program with just one press of a button. However, the programming environment compiles the program continuously, so it can report errors. You can, for example, try to change the above Hello World exercise print command to `System.out.println("Hello World!")` -- what you'll notice is that the line will be underlined and you'll be notified of an error on the left-hand side.
 

@@ -17,4 +17,4 @@ The software that we recommend you to use for this course for programming is cal
 If you feel that you need some further background material, we advice the following book: _Allen Downey, Chris Mayfield, **Think Java: How to Think Like a Computer Scientist**, ISBN: 9781491929568_. Be aware that this is background material. You are not obliged to buy this and it will not be exam material either. As it once was said by Alan Turing: "Programming is a skill best acquired by practice and example rather than from books." Note that a free e-book version of the book can be acquired [through the university library](https://eur-on-worldcat-org.eur.idm.oclc.org/oclc/1138950137). Moreover, a PDF version can be donwloaded [through this link](http://greenteapress.com/thinkjava7/thinkjava2.pdf).
 
 ## Sessions and Support
-Lectures, question hours and tutorials will be provided with learning the material. See an overview of the provided sessions [on this page](/support-and-assistance).
+Lectures, question hours and tutorials will be provided with learning the material. See an overview of the provided sessions [on this page](/sessions-and-support).

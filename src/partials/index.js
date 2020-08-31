@@ -29,6 +29,7 @@ import TextBox from "./TextBox"
 import SampleData from "./SampleData"
 import SampleOutput from "./SampleOutput"
 import Youtube from "./Youtube"
+import Panopto from "./Panopto"
 import Quiz from "./Quiz"
 import Quiznator from "./Quiznator"
 import PleaseLogin from "./PleaseLogin"
@@ -94,6 +95,7 @@ const mapping = {
   notice: Notice,
   crowdsorcerer: CrowdSorcerer,
   youtube: Youtube,
+  panopto: Panopto,
   quiz: Quiz,
   quiznator: Quiznator,
   table: Table,
