@@ -155,9 +155,9 @@ When you ask for multiple numbers, create a separate variable for each:
 Scanner scanner = new Scanner(System.in);
 
 System.out.println("Give the first number:");
-int first = Integer.valueOf(scanner.nextLine());
+int first = scanner.nextInt();
 System.out.println("Give the second number:");
-int second = Integer.valueOf(scanner.nextLine());
+int second = scanner.nextInt();
 
 // do something with the numbers
 ```
