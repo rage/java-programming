@@ -215,27 +215,6 @@ Done, thank you!
 
 </sample-output>
 
-<programming-exercise name="Are we there yet?">
-
-Write a program, according to the preceding example, that asks the user to input values until they input the value 4.
-
-<sample-output>
-
-Give a number:
-**5**
-Give a number:
-**744**
-Give a number:
-**22**
-Give a number:
-**-1**
-Give a number:
-**4**
-
-</sample-output>
-
-</programming-exercise>
-
 ## Returning to the Start of the Loop
 
 When the execution reaches the end of the loop, the execution starts again from the start of the loop. This means that all the commands in the loop have been executed. You can also return to the beginning from other places besides the end with the command `continue`. When the computer executes the command `continue`, the execution of the program moves to the beginning of the loop.
@@ -598,57 +577,6 @@ Give a number (end with 0):
 Total of ones: 2
 
 </sample-output>
-
-
-<programming-exercise name="Number of Numbers">
-
-Write a program that reads values from the user until they input a 0. After this, the program prints the total number of inputted values. The zero that's used to exit the loop should not be included in the total number count.
-
-Example output of the program:
-
-<sample-output>
-
-Give a number:
-**5**
-Give a number:
-**22**
-Give a number:
-**9**
-Give a number:
-**-2**
-Give a number:
-**0**
-Number of numbers: 4
-
-</sample-output>
-
-</programming-exercise>
-
-<programming-exercise name="Number of negative numbers">
-
-Write a program that reads values from the user until they input a 0. After this, the program prints the total number of inputted values that are negative. The zero that's used to exit the loop should not be included in the total number count.
-
-Example output of the program:
-
-<sample-output>
-
-Give a number:
-**5**
-Give a number:
-**22**
-Give a number:
-**9**
-Give a number:
-**-2**
-Give a number:
-**0**
-Number of negative numbers: 1
-
-</sample-output>
-
-</programming-exercise>
-
-The programs written in the previous exercises have read input from the user and kept track of the count of certain types of numbers. In the next exercise, the requested sum of numbers is not much different -- this time, rather than keeping track of the number of values entered, you add the number entered by the user to the sum.
 
 <programming-exercise name="Sum of Numbers">
 
