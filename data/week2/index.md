@@ -5,8 +5,9 @@ overview: true
 hidden: true
 ---
 
-The second week of the course focuses on repetition in programs and on how to divide functionality into distinct units.
+The second week of the course focuses on functional programming, where we discuss conditional statements and loops. Moreover, we look further into the reading and printing of different variable types.
+
 
 <pages-in-this-section></pages-in-this-section>
 
-The table of contents above lists the topics of the second part of the course. The second part has been designed to cover the second week of the course. You should reserve well above 10 hours for each part of the course, depending on previous experience with computers. If you've tried programming before, you might advance faster in the beginning.
+The table of contents above lists the topics of the second week of the course.
