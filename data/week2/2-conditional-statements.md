@@ -1,10 +1,11 @@
 ---
-slug: "/week-2/conditional-statements`"
-title: "Conditionals"
+path: '/week-2/2-conditional-statements'
+title: 'Conditional Statements'
+hidden: true
 ---
 
-# Conditional statements
-**Learning objectives**
+<text-box variant='learningObjectives' name='Learning Objectives'>
+
 - Become familiar with the idea of a conditional statement and know how to create a program containing optional operations through the use of conditional statements.
 
 - Become familiar with comparison and logical operators commonly used in conditional statements.
@@ -13,9 +14,11 @@ title: "Conditionals"
 
 - Become familiar with the order of execution for a conditional statement, and know that the parsing of a conditional statement stops at the first condition whose statement evaluates to true.
 
-So far, our programs have executed from top to bottom without major surprises or conditional behavior. However, we usually want to add conditional logic to our programs. By this we mean functionality that's in one way or another dependent on the state of the program's variables. To branch the execution of a program based on user input, for example, we need to use something known as a **conditional statement**.
-A conditional statement begins with the keyword `if` followed by parentheses. An expression is placed inside the parentheses, which is evaluated when the conditional statement is reached. The result of the evaluation is a boolean value. No evaluation occurred above. Instead, a boolean value was explicitly used in the conditional statement.
-The parentheses are followed by a block, which is defined inside opening- `{` and closing `}` curly brackets. The source code inside the block is executed if the expression inside the parentheses evaluates to _true_. On the other hand, if the expression evaluates to false, the execution moves on to the statement after the closing curly bracket of the current conditional statement. The simplest conditional statement looks something like this.
+</text-box>
+
+So far, our programs have executed from top to bottom without major surprises or conditional behavior. However, we usually want to add conditional logic to our programs. By this we mean functionality that's in one way or another dependent on the state of the program's variables.
+
+To branch the execution of a program based on user input, for example, we need to use something known as a **conditional statement**. The simplest conditional statement looks something like this.
 
 ```java
 System.out.println("Hello, world!");
@@ -23,12 +26,19 @@ if (true) {
     System.out.println("This code is unavoidable!");
 }
 ```
-Output:
+
+<sample-output>
+
 Hello, world!
 This code is unavoidable!
 
-Be aware of the fact that an `if` -statement is not followed by a semicolon since the statement doesn't end after the conditional.
-Let's also look at an example where we compare numbers in the conditional statement.
+</sample-output>
+
+A conditional statement begins with the keyword `if` followed by parentheses. An expression is placed inside the parentheses, which is evaluated when the conditional statement is reached. The result of the evaluation is a boolean value. No evaluation occurred above. Instead, a boolean value was explicitly used in the conditional statement.
+
+The parentheses are followed by a block, which is defined inside opening- `{` and closing `}` curly brackets. The source code inside the block is executed if the expression inside the parentheses evaluates to _true_. On the other hand, if the expression evaluates to false, the execution moves on to the statement after the closing curly bracket of the current conditional statement.
+
+Be aware of the fact that an `if` -statement is not followed by a semicolon since the statement doesn't end after the conditional. Let's now look at an example where we compare numbers in the conditional statement.
 
 ```java
 int number = 11;
@@ -36,7 +46,7 @@ if (number < 10) {
     System.out.println("The number was less than 10");
 }
 ```
-Note that the sentence "The number was less than 10" will not be printed, since the condition `number < 10 ` does not hold for number with value `11`.
+Note that the sentence "The number was less than 10" will not be printed, since the condition `number < 10 ` does not hold for the variable `number` with value `11`.
 
 ## Code Indentation and Block Statements
 A code block refers to a section enclosed by a pair of curly brackets. The source file containing the program includes the string `public class`, which is followed by the name of the program and the opening curly bracket of the block. The block ends in a closing curly bracket. The recurring snippet `public static void main(String[] args)` in the programs begins a block, and the source code within it is executed when the program is run. This snippet is, in fact, the starting point of all programs. Blocks define a program's structure and its bounds. A curly bracket must always have a matching pair: any code that's missing a closing (or opening) curly bracket is erroneous.
@@ -51,10 +61,10 @@ if (number > 10) {
 }
 ```
 
-Code in Java is indented either by four spaces or a single tab for each block. Use either spaces or tabs for indentation, not both. For automatic intendation, you can use the shortcut `Ctrl + alt + L`. From now on your program code needs to be indented correctly in the exercises as well. If the indentation is incorrect, style points will be deducted.
+Code in Java is indented either by four spaces or a single tab for each block. Use either spaces or tabs for indentation, not both. For automatic indendation in IntelliJ, you can use the shortcut `Ctrl + alt + L`. From now on your program code needs to be indented correctly in the exercises as well. If the indentation is incorrect, style points may be deducted for the graded assignments.
 
-## Comparison Operators
-As you might have noticed, in the argument of conditional statements, some comparison operators are used to compare numbers. In Java, we use the following signs for comparison:
+## Relational Operators
+As you might have noticed, in the argument of conditional statements, some comparison operators, also referred to as `relational operators` are used to compare numbers. In Java, we use the following relational operators:
 
 - `>` greater than
 - `>=` greater than or equal to
@@ -63,6 +73,7 @@ As you might have noticed, in the argument of conditional statements, some compa
 - `==` equal to
 - `!=` not equal to
 
+An example of two relational operators being used in code is given below:
 ```java
 int number = 55;
 
@@ -76,7 +87,7 @@ if (number >= 1000) {
 ```
 
 ## Else
-If the expression inside the parentheses of the conditional statement evaluates to false, then the execution of the code moves to the statement following the closing curly bracket of the current conditional statement. This is not always desired, and usually we want to create an alternative option for when the conditional expression evaluates to false. This can be done with the help of the `else` command, which is used together with the `if` command. If an `else` branch has been specified for a conditional statement, the block defined by the else branch is run in the case that the condition of the conditional statement is false. The `else`-command is placed on the same line as the closing bracket of the block defined by the `if`-command. In the following example, the argument for the if-statement is false, so that the program will return the code block under the `else` command. The output will be: "Your number is five or less."
+If the expression inside the parentheses of the conditional statement evaluates to false, then the execution of the code moves to the statement following the closing curly bracket of the current conditional statement. This is not always desired, and usually we want to create an alternative option for when the conditional expression evaluates to false. This can be done with the help of the `else` command, which is used together with the `if` command.
 
 ```java
 int number = 4;
@@ -88,8 +99,10 @@ if (number > 5) {
 }
 ```
 
+If an `else` branch has been specified for a conditional statement, the block defined by the else branch is run in the case that the condition of the conditional statement is false. The `else`-command is placed on the same line as the closing bracket of the block defined by the `if`-command. In the following example, the argument for the if-statement is false, so that the program will return the code block under the `else` command. The output will be: "Your number is five or less."
+
 ## More Conditionals: else if
-In the case of multiple conditionals, we use the `else if`-command. The command `else if` is like `else`, but with an additional condition. `else if` follows the `if`-condition, and they may be multiple.
+In the case of multiple conditionals, we use the `else if`-command. The command `else if` is like `else`, but with an additional condition. `else if` follows the `if`-condition, and there may be multiple of them.
 
 ```java
 int number = 3;
@@ -106,6 +119,10 @@ if (number == 1) {
 ```
 
 Let's read out the example above: 'If the number is one, then print "The number is one", else if the number is two, then print "The given number is two", else if the number is three, then print "The number must be three!". Otherwise, print "Something else!"'
+
+The step-by-step visualization of the code above is as follows:
+
+<code-states-visualizer input='{"code":"public class Example {\n  public static void main(String[] args) {\n    int number = 3;\n    \n    if (number == 1) {\n      System.out.println(\"The number is one\");\n    } else if (number == 2) {\n      System.out.println(\"The given number is two\");\n    } else if (number == 3) {\n      System.out.println(\"The number must be three!\");\n    } else {\n      System.out.println(\"Something else!\");\n    }\n  }\n}","stdin":"","trace":[{"stdout":"","event":"call","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"1","frame_id":1}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"2","frame_id":2}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{"number":3},"ordered_varnames":["number"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"4","frame_id":4}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":7,"stack_to_render":[{"func_name":"main:7","encoded_locals":{"number":3},"ordered_varnames":["number"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"8","frame_id":8}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":9,"stack_to_render":[{"func_name":"main:9","encoded_locals":{"number":3},"ordered_varnames":["number"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"12","frame_id":12}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":10,"stack_to_render":[{"func_name":"main:10","encoded_locals":{"number":3},"ordered_varnames":["number"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"16","frame_id":16}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"The number must be three!\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"number":3},"ordered_varnames":["number"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"20","frame_id":20}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"The number must be three!\n","event":"return","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"number":3,"__return__":["VOID"]},"ordered_varnames":["number","__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"21","frame_id":21}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}}],"userlog":"Debugger VM maxMemory: 455M\n"}'></code-states-visualizer>
 
 ## Conditional Statement Expression and the Boolean Variable
 The value that goes between the parentheses of the conditional statement should be of type boolean after the evaluation. `boolean` type variables are either _true_ or _false_. A conditional statement can also be done as follows:
@@ -138,7 +155,7 @@ if (isLessThan) {
 ```
 The program finally prints: 1 is less than 3!
 
-### Modulo operator
+<!-- ### Modulo operator
 The modulo operator is a slightly less-used operator, which is, however, very handy when we want to check the divisibility of a number, for example. The symbol for the modulo operator is `%`. The output of a modulo operator is the remainder after division of the first number by the second number.
 
 ```java
@@ -162,11 +179,50 @@ if (number % 400 == 0) {
 } else {
     System.out.println("The number " + number + " is not divisible by four hundred.");
 }
-```
+``` -->
 
 ## Conditional Statements and Comparing Strings
 Even though we can compare integers, floating point numbers, and boolean values using two equals signs (`variable1 == variable2`), we cannot compare the equality of strings using two equals signs.
+
+You can try this with the following program:
+
+```java
+Scanner reader = new Scanner(System.in);
+
+System.out.println("Enter the first string");
+String first = reader.nextLine();
+System.out.println("Enter the second string");
+String second = reader.nextLine();
+
+if (first == second) {
+    System.out.println("The strings were the same!");
+} else {
+    System.out.println("The strings were different!");
+}
+```
+
+<sample-output>
+
+Enter the first string
+**same**
+Enter the second string
+**same**
+The strings were different!
+
+</sample-output>
+
+<sample-output>
+
+Enter the first string
+**same**
+Enter the second string
+**different**
+The strings were different!
+
+</sample-output>
+
 This has to do with the internal workings of strings as well as how variable comparison is implemented in Java. In practice, the comparison is affected by how much information a variable can hold -- strings can hold a limitless amount of characters, whereas integers, floating-point numbers, and boolean values always contain a single number or value only. Variables that always contain only one number or value can be compared using an equals sign, whereas this doesn't work for variables containing more information. We will return to this topic later in this course.
+
 When comparing strings we use the `equals`-command, which is related to string variables. The `equals` command is written after a string by attaching it to the string to be compared with a dot. The command is given a parameter, which is the string that the variable will be compared against. If the string variable is being directly compared with a string, then the string can be placed inside the parentheses of the equals-command within quotation marks. Otherwise, the name of the string variable that holds the string to be compared is placed inside the parentheses. The command works in the following way:
 
 ```java
