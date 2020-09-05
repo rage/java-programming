@@ -48,6 +48,27 @@ if (number < 10) {
 ```
 Note that the sentence "The number was less than 10" will not be printed, since the condition `number < 10 ` does not hold for the variable `number` with value `11`.
 
+<programming-exercise name="Speeding Ticket">
+
+Write a program that asks the user for an integer and prints the string "Speeding ticket!" if the input is (strictly) greater than 120.
+
+<sample-output>
+
+Give speed:
+**15**
+
+</sample-output>
+
+<sample-output>
+
+Give speed:
+**135**
+Speeding ticket!
+
+</sample-output>
+
+</programming-exercise>
+
 ## Code Indentation and Block Statements
 A code block refers to a section enclosed by a pair of curly brackets. The source file containing the program includes the string `public class`, which is followed by the name of the program and the opening curly bracket of the block. The block ends in a closing curly bracket. The recurring snippet `public static void main(String[] args)` in the programs begins a block, and the source code within it is executed when the program is run. This snippet is, in fact, the starting point of all programs. Blocks define a program's structure and its bounds. A curly bracket must always have a matching pair: any code that's missing a closing (or opening) curly bracket is erroneous.
 
@@ -86,6 +107,27 @@ if (number >= 1000) {
 }
 ```
 
+<programming-exercise name="Orwell">
+
+Write a program that prompts the user for an integer and prints the string "Orwell" if the number is exactly 1984.
+
+<sample-output>
+
+Give a number:
+**1983**
+
+</sample-output>
+
+<sample-output>
+
+Give a number:
+**1984**
+Orwell
+
+</sample-output>
+
+</programming-exercise>
+
 ## Else
 If the expression inside the parentheses of the conditional statement evaluates to false, then the execution of the code moves to the statement following the closing curly bracket of the current conditional statement. This is not always desired, and usually we want to create an alternative option for when the conditional expression evaluates to false. This can be done with the help of the `else` command, which is used together with the `if` command.
 
@@ -99,7 +141,30 @@ if (number > 5) {
 }
 ```
 
-If an `else` branch has been specified for a conditional statement, the block defined by the else branch is run in the case that the condition of the conditional statement is false. The `else`-command is placed on the same line as the closing bracket of the block defined by the `if`-command. In the following example, the argument for the if-statement is false, so that the program will return the code block under the `else` command. The output will be: "Your number is five or less."
+If an `else` branch has been specified for a conditional statement, the block defined by the else branch is run in the case that the condition of the conditional statement is false. The `else`-command is placed on the same line as the closing bracket of the block defined by the `if`-command. In the following example, the argument for the if-statement is false, so that the program
+will return the code block under the `else` command. The output will be: "Your number is five or less."
+
+<programming-exercise name="Adulthood" tmcname='part01-Part01_29.Adulthood'>
+
+Write a program that prompts the user for their age and tells them whether or not they are an adult (18 years old or older).
+
+<sample-output>
+
+How old are you?
+**12**
+You are not an adult
+
+</sample-output>
+
+<sample-output>
+
+How old are you?
+**32**
+You are an adult
+
+</sample-output>
+
+</programming-exercise>
 
 ## More Conditionals: else if
 In the case of multiple conditionals, we use the `else if`-command. The command `else if` is like `else`, but with an additional condition. `else if` follows the `if`-condition, and there may be multiple of them.
@@ -123,6 +188,42 @@ Let's read out the example above: 'If the number is one, then print "The number 
 The step-by-step visualization of the code above is as follows:
 
 <code-states-visualizer input='{"code":"public class Example {\n  public static void main(String[] args) {\n    int number = 3;\n    \n    if (number == 1) {\n      System.out.println(\"The number is one\");\n    } else if (number == 2) {\n      System.out.println(\"The given number is two\");\n    } else if (number == 3) {\n      System.out.println(\"The number must be three!\");\n    } else {\n      System.out.println(\"Something else!\");\n    }\n  }\n}","stdin":"","trace":[{"stdout":"","event":"call","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"1","frame_id":1}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":3,"stack_to_render":[{"func_name":"main:3","encoded_locals":{},"ordered_varnames":[],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"2","frame_id":2}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":5,"stack_to_render":[{"func_name":"main:5","encoded_locals":{"number":3},"ordered_varnames":["number"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"4","frame_id":4}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":7,"stack_to_render":[{"func_name":"main:7","encoded_locals":{"number":3},"ordered_varnames":["number"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"8","frame_id":8}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":9,"stack_to_render":[{"func_name":"main:9","encoded_locals":{"number":3},"ordered_varnames":["number"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"12","frame_id":12}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"","event":"step_line","line":10,"stack_to_render":[{"func_name":"main:10","encoded_locals":{"number":3},"ordered_varnames":["number"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"16","frame_id":16}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"The number must be three!\n","event":"step_line","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"number":3},"ordered_varnames":["number"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"20","frame_id":20}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}},{"stdout":"The number must be three!\n","event":"return","line":14,"stack_to_render":[{"func_name":"main:14","encoded_locals":{"number":3,"__return__":["VOID"]},"ordered_varnames":["number","__return__"],"parent_frame_id_list":[],"is_highlighted":true,"is_zombie":false,"is_parent":false,"unique_hash":"21","frame_id":21}],"globals":{},"ordered_globals":[],"func_name":"main","heap":{}}],"userlog":"Debugger VM maxMemory: 455M\n"}'></code-states-visualizer>
+
+<programming-exercise name="Larger Than or Equal To">
+
+Write a program that prompts the user for two integers and prints the larger of the two. If the numbers are the same, then the program informs us about this as well.
+
+Sample outputs:
+
+<sample-output>
+
+Give the first number:
+**5**
+Give the second number:
+**3**
+Greater number is: 5
+
+</sample-output>
+
+<sample-output>
+
+Give the first number:
+**5**
+Give the second number:
+**8**
+Greater number is: 8
+
+</sample-output>
+
+<sample-output>
+
+Give the first number; **5**
+Give the second number: **5**
+The numbers are equal!
+
+</sample-output>
+
+</programming-exercise>
 
 ## Conditional Statement Expression and the Boolean Variable
 The value that goes between the parentheses of the conditional statement should be of type boolean after the evaluation. `boolean` type variables are either _true_ or _false_. A conditional statement can also be done as follows:
@@ -261,6 +362,31 @@ if (second.equals("two strings")) {
     System.out.println("Sneaky!");
 }
 ```
+<programming-exercise name="Same">
+
+Write a program that prompts the user for two strings. If the strings are the same, then the program prints "Same". Otherwise, it prints "Different".
+
+<sample-output>
+
+Enter the first string:
+**hello**
+Enter the second string:
+**hello**
+Same
+
+</sample-output>
+
+<sample-output>
+
+Enter the first string:
+**hello**
+Enter the second string:
+**world**
+Different
+
+</sample-output>
+
+</programming-exercise>
 
 ## Logical Operators
 The expression of a conditional statement may consist of multiple parts, in which the logical operators **and** `&&`, **or** `||`, and **not** `!` are used.
@@ -308,6 +434,40 @@ if (!(number > 4)) {
     System.out.println("The number is greater than 4.")
 }
 ```
+
+<programming-exercise name='Checking the age'>
+
+Write a program that prompts the user to input their age and checks whether or not it is possible (at least 0 and at most 120). Only use a single `if`-command in your program.
+
+<sample-output>
+
+How old are you? **10**
+OK
+
+</sample-output>
+
+<sample-output>
+
+How old are you? **55**
+OK
+
+</sample-output>
+
+<sample-output>
+
+How old are you? **-3**
+Impossible!
+
+</sample-output>
+
+<sample-output>
+
+How old are you? **150**
+Impossible!
+
+</sample-output>
+
+</programming-exercise>
 
 ## Execution order
 #### Order of Execution for Comparisons
