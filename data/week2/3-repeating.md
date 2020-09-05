@@ -89,7 +89,7 @@ while (true) {
 }
 ```
 
-A program that runs infinitely does not end on its own. In IntelliJ, it can be shut down by clicking the red button located on the left side of the output window.
+A program that runs infinitely does not end on its own. In IntelliJ, it can be shut down by clicking the red square button located on the left side of the output window (or use the keyboard shortcut `Ctrl` + `F2`).
 
 
 # Ending a Loop
