@@ -441,28 +441,32 @@ Write a program that prompts the user to input their age and checks whether or n
 
 <sample-output>
 
-How old are you? **10**
+How old are you?
+**10**
 OK
 
 </sample-output>
 
 <sample-output>
 
-How old are you? **55**
+How old are you?
+**55**
 OK
 
 </sample-output>
 
 <sample-output>
 
-How old are you? **-3**
+How old are you?
+**-3**
 Impossible!
 
 </sample-output>
 
 <sample-output>
 
-How old are you? **150**
+How old are you?
+**150**
 Impossible!
 
 </sample-output>
