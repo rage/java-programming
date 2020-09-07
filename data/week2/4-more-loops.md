@@ -533,7 +533,7 @@ Sum: 11
 Numbers: 3
 Average: 3.666666666666
 
-</sample-output
+</sample-output>
 
 </programming-exercise>
 
