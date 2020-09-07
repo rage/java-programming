@@ -1,7 +1,7 @@
 ---
 path: '/week-2/4-more-loops'
 title: 'More loops'
-hidden: true
+hidden: false
 ---
 
 

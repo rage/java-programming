@@ -1,7 +1,7 @@
 ---
 path: '/week-2/2-conditional-statements'
 title: 'Conditional Statements'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Learning Objectives'>

@@ -1,7 +1,7 @@
 ---
 path: '/week-2/3-repeating'
 title: 'Repeating functionality'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Learning Objectives'>
