@@ -157,75 +157,6 @@ Write a program, which reads an integer from the user. Then the program prints n
 
 </programming-exercise>
 
-
-<text-box variant='hint' name='Exercises with multiple parts'>
-
-Note, that from now on exercises can have multiple parts. All of the parts are counted as separate exercises, so for example the following exercise counts as two separate exercises. Exercises with multiple parts can also typically be submitted even if all parts are not ready -- points for the completed parts are added to your points count. Submitting a partial solution does not prevent you from submitting the full solution later on.
-
-</text-box>
-
-
-<programming-exercise name='From where to where? (2 parts)'>
-
-This exercise is the first two-part exercise. When you complete both parts, you will get two exercise points. You can also submit the exercise after completing only the first part.
-
-
-<h2>Where to</h2>
-
-Write a program which prints the integers from 1 to a number given by the user.
-
-<sample-output>
-
-Where to? **3**
-1
-2
-3
-
-</sample-output>
-
-<sample-output>
-
-Where to? **5**
-1
-2
-3
-4
-5
-
-</sample-output>
-
-**hint** the number read from the user is now the upper limit of the condition. Remember that in Java `a <= b` means _a is smaller or equal to b_.
-
-
-<h2>Where from</h2>
-
-Ask the user for the starting point as well.
-
-<sample-output>
-
-Where to? **8**
-Where from? **5**
-5
-6
-7
-8
-
-</sample-output>
-
-If the upper limit is larger than the starting point, nothing is printed:
-
-<sample-output>
-
-Where to? **12**
-Where from? **16**
-
-</sample-output>
-
-**NB** remember that the lower and upper limits can be negative!
-
-</programming-exercise>
-
-
 ## On Stopping a Loop Execution
 
 A loop does not stop executing immediately when its condition evaluates to true. A loop's condition is evaluated at the start of a loop, meaning when (1) the loop starts for the first time or (2) the execution of a previous iteration of the loop body has just finished.
@@ -569,17 +500,8 @@ System.out.println("Invalid numbers: " + invalidNumbers);
 
 Next, we'll implement a program one piece at a time. This is always strongly recommended when coding.
 
-The series of exercises form a larger program whose functionality is implemented in small pieces. If you do not finish the whole series, you can still submit the parts you've completed to be checked. This can be done by clicking the "submit" button (the arrow pointing up) to the right of the "test" button. Although the submission system complains about the tests of unfinished parts, you get points for the parts you have finished.
-
-
-<!-- Huom: muistathan, että jokaisen isomman tehtävän "alitehtävä" on saman arvoinen tehtävä kuin yksi alikohdaton tehtävä. Tämä tehtävä vastaa siis viittä normaalia tehtävää. -->
-NB: Remember that each sub-part of the series is equivalent to one individual exercise. As such, the series is equivalent to five individual exercises.
-
-**Note:** the tests might fail a correct solution. This is a known bug that will be fixed in the future. In the meantime, you can avoid the error by printing "Give numbers:" without **any** spaces after ':'
-
 <h2>Reading</h2>
 
-<!-- Tee ohjelma, joka kysyy käyttäjältä lukuja (ohjelma tulostaa käyttäjälle aluksi "Syötä luvut:"), kunnes käyttäjä antaa luvun -1. Kun käyttäjä syöttää luvun -1, ohjelma tulostaa "Kiitos ja näkemiin!" ja päättyy. -->
 Implement a program that asks the user for numbers (the program first prints "Write numbers: ") until the user gives the number -1. When the user writes -1, the program prints "Thx! Bye!" and ends.
 
 <sample-output>
@@ -593,10 +515,8 @@ Thx! Bye!
 
 </sample-output>
 
-
 <h2>Sum of numbers</h2>
 
-<!-- Laajenna edellistä ohjelmaa siten, että ohjelma ilmoittaa käyttäjän syöttämien lukujen summan. (Lukua -1 ei lasketa mukaan.) -->
 Extend the program so that it prints the sum of the numbers (not including the -1) the user has written.
 
 <sample-output>
@@ -611,10 +531,8 @@ Sum: 11
 
 </sample-output>
 
-
 <h2>Sum and the number of numbers</h2>
 
-<!-- Laajenna edellistä ohjelmaa siten, että ohjelma ilmoittaa myös käyttäjien antamien lukujen lukumäärän. (Lukua -1 ei lasketa mukaan.) -->
 Extend the program so that it also prints the number of numbers (not including the -1) the user has written.
 
 <sample-output>
@@ -633,7 +551,6 @@ Numbers: 3
 
 <h2>Average of numbers</h2>
 
-<!-- Muuta edellistä ohjelmaa siten, ohjelma ilmoittaa lukujen keskiarvon. (Lukua -1 ei lasketa mukaan.) -->
 Extend the program so that it prints the mean of the numbers (not including the -1) the user has written.
 
 <sample-output>
@@ -653,7 +570,6 @@ Average: 3.666666666666
 
 <h2>Even and odd numbers</h2>
 
-<!-- Laajenna edellistä ohjelmaa siten, että  ohjelma ilmoittaa parillisten ja parittomien lukujen määrän. (Lukua -1 ei lasketa mukaan.) -->
 Extend the program so that it prints the number of even and odd numbers (excluding the -1).
 
 <sample-output>
@@ -675,18 +591,14 @@ Odd: 1
 </programming-exercise>
 
 
-<text-box variant='hint' name='Implementing a program small part at a time'>
+<text-box variant='hint' name='Implementing a program a small part at a time'>
 
-<!-- Edellisessä tehtävässä harjoiteltiin tehtävän osien kautta ohjelman tekemistä pienissä paloissa. -->
 In the previous exercise, we used a series of exercises to practice implementing a program one piece at a time.
 
-<!-- Kun teet ohjelmaa, oli se sitten harjoitustehtävä tai oma projektisi, mieti minkälaisia osia ohjelma tarvitsee toimiakseen, ja etene näitä pieniä osia yksitellen toteuttaen. Jokaisen osan toteuttamisen jälkeen kokeile tähänastisen ohjelmasi toimintaa. -->
 When you are writing a program, whether it's an exercise or a personal project, figure out the types of parts the program needs to function and proceed by implementing them one part at a time. Make sure to test the program right after implementing each part.
 
-<!-- Älä koskaan yritä ratkaista koko ongelmaa kerralla, sillä tällöin ohjelman suorittaminen ja testaaminen kesken ongelmanratkaisuprosessin on vaikeaa. Aloita jollain helpolla asialla jonka tiedät varmasti osaavasi. Kun yksi ohjelman osa on saatu toimimaan, voit siirtyä ratkaisemaan seuraavaa ongelmaa. -->
 Never try solving the whole problem at once, because that makes running and testing the program in the middle of the problem-solving process difficult. Start with something easy that you know you can do. When one part works, you can move on to the next.
 
-<!-- Osa kurssin tehtävistä on valmiiksi osiin pilkottuja. Usein osat pitää vielä pilkkoa ohjelmoinnin kannalta vieläkin pienempiin paloihin. Kannattaa tehdä siten, että suoritat ohjelman lähes jokaisen uuden koodirivin jälkeen. Tällöin varmistat, että ratkaisu on etenemässä haluttuun suuntaan. -->
 Some of the exercises are already split into parts. However, it's often the case in programming that these parts need to be split into even smaller parts. You should almost always run the program after every new line of code. This ensures that the solution is moving in the right direction.
 
 </text-box>
