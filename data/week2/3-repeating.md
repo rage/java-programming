@@ -576,25 +576,25 @@ Total of ones: 2
 
 </sample-output>
 
-<programming-exercise name="Sum of Numbers">
+<programming-exercise name="Sum of Squares">
 
-Write a program that reads numbers from the user until the user inputs a number 0. After this the program outputs the sum of the numbers. The number zero does not need to be added to the sum, even if it does not change the results.
+Write a program that reads numbers from the user until the user inputs a number 0. After this the program outputs the sum of the squares of the numbers (so, the sum of each number squared). The square of the number zero does not need to be added to the sum, even if it does not change the results.
 
 Example output of the program:
 
 <sample-output>
 
 Give a number:
-**5**
+**2**
 Give a number:
-**22**
+**3**
 Give a number:
-**9**
+**4**
 Give a number:
 **-2**
 Give a number:
 **0**
-Sum of the numbers: 34
+Sum of the squares: 33
 
 </sample-output>
 
