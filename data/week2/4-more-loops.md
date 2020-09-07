@@ -203,7 +203,6 @@ for (int i = 0; i != 100; i++) {
 }
 ```
 
-<!-- Yllä olevan ohjelman suoritus ei pääty koskaan. -->
 The loop above never stops executing.
 
 
@@ -230,7 +229,6 @@ while (true) {
 System.out.println(result);
 ```
 
-<!-- Saman toiminnallisuuden voi toteuttaa myös seuraavasti. -->
 The same functionality can be achieved with the following code.
 
 ```java
@@ -246,7 +244,6 @@ while (i < 4) {
 System.out.println(result);
 ```
 
-<!-- Tai for-lauseen avulla seuraavasti. -->
 Or by using a for loop as seen in the following.
 
 ```java
@@ -359,14 +356,10 @@ Factorial: 6
 
 </sample-output>
 
-<!-- Nyt laskettiin 1 * 2 * 3 = 6 -->
-<!-- TODO: not quite a good way to say this -->
 The internal calculation here was 1 * 2 * 3 = 6
 
 <sample-output>
 
-<!-- Anna luku: **10** -->
-<!-- Kertoma on 3628800 -->
 Give a number: **10**
 Factorial: 3628800
 
@@ -398,7 +391,7 @@ int validNumbers = 0;
 int invalidNumbers = 0;
 
 while (true) {
-    int input = Integer.valueOf(reader.nextLine());
+    int input = scanner.nextInt();
 
     if (input == 0) {
         System.out.println("Sum of valid numbers: " + sum);
@@ -540,28 +533,7 @@ Sum: 11
 Numbers: 3
 Average: 3.666666666666
 
-</sample-output>
-
-
-<h2>Even and odd numbers</h2>
-
-Extend the program so that it prints the number of even and odd numbers (excluding the -1).
-
-<sample-output>
-
-Give numbers:
-**5**
-**2**
-**4**
-**-1**
-Thx! Bye!
-Sum: 11
-Numbers: 3
-Average: 3.666666666666
-Even: 2
-Odd: 1
-
-</sample-output>
+</sample-output
 
 </programming-exercise>
 
