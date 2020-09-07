@@ -46,7 +46,7 @@ System.out.println("The sum of the numbers is " + sum);
 
 It does the job, but not elegantly. What if the program had to read a hundred, or perhaps a thousand numbers and print their sum? What if the program had to read three numbers only?
 
-The problem can be solved with a loop which keeps track of both the sum and the number of times input has been read. The program that prints the sum of five numbers now looks as follows
+The problem can be solved with a loop which keeps track of both the sum and the number of times input has been read. The program that prints the sum of five numbers now looks as follows:
 
 ```java
 Scanner scanner = new Scanner(System.in);
@@ -67,8 +67,6 @@ while (true) {
 System.out.println("The sum of the numbers is " + sum);
 ```
 
-Next off we will get familiar with loops.
-
 ## Loops and Infinite Loops
 A loop consists of an expression that determines whether or not the code within the loop should be repeated, along with a block containing the source code to be repeated. A loop takes the following form.
 
@@ -79,7 +77,7 @@ while (_expression_) {
 }
 ```
 
-We'll use the value `true` as the loop's expression for now. This way, the loop's execution is always continued when the program arrives at the point that decides whether it should be repeated or not. This happens when the execution of the program first arrives at the loop expression for the first time, and also when it reaches the end of the loop's block.
+We'll use the value `true` as the loop's expression for now. This way, the loop's execution is always continued when the program arrives at the point that decides whether it should be repeated or not. This happens when the execution of the program arrives at the loop expression for the first time, and also when it reaches the end of the loop's block.
 
 The loop execution proceeds line-by-line. The following program outputs _I can program_ an infinite number of times.
 
@@ -94,9 +92,9 @@ A program that runs infinitely does not end on its own. In IntelliJ, it can be s
 
 # Ending a Loop
 
-The loop can be broken out of with command 'break'. When a computer executes the command 'break', the program execution moves onto the next command following the loop block.
+You can break out of a loop by using the 'break' command. When a computer executes the command 'break', the program execution moves onto the next command following the loop block.
 
-The example below is a program that prints numbers from one to five. Note how the variable that's used within the loop is defined before the loop. This way the variable can be incremented inside the loop and the change sticks between multiple iterations of the loop.
+The example below is a program that prints numbers the from one to five. Note how the variable that's used within the loop is defined before the loop. This way the variable can be incremented inside the loop and the change sticks between multiple iterations of the loop.
 
 ```java
 int number = 1;
@@ -181,7 +179,7 @@ Shall we carry on?
 
 </programming-exercise>
 
-In the previous example, the program read inputs of type string from the user. The program can also be implemented with other types of variables. The program below asks numbers from the user until the user inputs a zero.
+In the previous example, the program read inputs of type `String` from the user. The program can also be implemented with other types of variables. The program below asks numbers from the user until the user inputs a zero.
 
 ```java
 Scanner scanner = new Scanner(System.in);
@@ -263,7 +261,7 @@ while (true) {
 
 <programming-exercise name="Only positives">
 
-Write a program that asks the user for numbers. If the number is negative (smaller than zero), the program prints for user "Unsuitable number" and asks the user for a new number. If the number is zero, the program exits the loop. If the number is positive, the program prints the number to the power of two.
+Write a program that asks the user for round numbers (integers). If the number is negative (smaller than zero), the program prints to the user "Unsuitable number" and asks the user for a new number. If the number is zero, the program exits the loop. If the number is positive, the program prints the number to the power of two.
 
 <sample-output>
 
