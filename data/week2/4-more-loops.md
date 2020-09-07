@@ -309,47 +309,20 @@ The values of variables `result` and `i` from the previous example have been wri
 
 </text-box>
 
+
 <programming-exercise name='Sum of a sequence'>
-
-Implement a program, which calculates the sum 1+2+3+...+n where n is given as user input.
-
-Sample output:
-
-<sample-output>
-
-Last number? **3**
-The sum is 6
-
-</sample-output>
-
-The previous example calculated 1 + 2 + 3  = 6
-
-<sample-output>
-
-Last number? **7**
-The sum is 28
-
-</sample-output>
-
-And this one calculated 1 + 2 + 3 + 4 + 5 + 6 + 7 = 28
-
-</programming-exercise>
-
-
-<programming-exercise name='Sum of a sequence - the sequel'>
 
 Implement a program which calculates the sum of a closed interval, and prints it. Expect the user to write the smaller number first and then the larger number.
 
-You can base your solution to this exercise to the solution of last exercise -- add the functionality for the user to enter the starting point as well.
-
-<!-- Esimerkkitulostuksia: -->
 Sample output:
 
 <sample-output>
 
 
-First number? **3**
-Last number? **5**
+First number?
+**3**
+Last number?
+**5**
 The sum is 12
 
 </sample-output>
@@ -358,8 +331,10 @@ The above example internally calculated  3 + 4 + 5 = 12
 
 <sample-output>
 
-First number? **2**
-Last number? **8**
+First number?
+**2**
+Last number?
+**8**
 The sum is: 35
 
 </sample-output>
