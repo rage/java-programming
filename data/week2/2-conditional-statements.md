@@ -144,7 +144,7 @@ if (number > 5) {
 If an `else` branch has been specified for a conditional statement, the block defined by the else branch is run in the case that the condition of the conditional statement is false. The `else`-command is placed on the same line as the closing bracket of the block defined by the `if`-command. In the following example, the argument for the if-statement is false, so that the program
 will return the code block under the `else` command. The output will be: "Your number is five or less."
 
-<programming-exercise name="Adulthood" tmcname='part01-Part01_29.Adulthood'>
+<programming-exercise name="Adulthood">
 
 Write a program that prompts the user for their age and tells them whether or not they are an adult (18 years old or older).
 

@@ -410,7 +410,7 @@ And this one calculated 1 + 2 + 3 + 4 + 5 + 6 + 7 = 28
 </programming-exercise>
 
 
-<programming-exercise name='Sum of a sequence - the sequel' tmcname='part02-Part02_18.SumOfASequenceTheSequel'>
+<programming-exercise name='Sum of a sequence - the sequel'>
 
 Implement a program which calculates the sum of a closed interval, and prints it. Expect the user to write the smaller number first and then the larger number.
 
