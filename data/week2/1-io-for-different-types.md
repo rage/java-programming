@@ -1,7 +1,7 @@
 ---
 path: '/week-2/1-io-for-different types'
 title: 'Reading and Printing Variables of Different Type'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Learning Objectives'>
