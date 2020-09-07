@@ -43,11 +43,6 @@ The code above can be read "As long as the value of the variable number is less 
 
 Above, the value of the variable `number` is increased by one every time the loop body is executed.
 
-Below is a video about using loops.
-
-<youtube id='us9GXUZ60ws'></youtube>
-
-
 ## For Loop
 
 Above, we learned how a `while` loop with a condition can be used to go through numbers in a certain interval.
