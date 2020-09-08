@@ -71,12 +71,13 @@ Please enter the second double:
 **10.15**
 The value of the boolean input: true
 The sum of the double inputs: 19.35
+
 </sample-output>
 
 </programming-exercise>
 
 ## Converting Strings
-Another option to deal with transferring a `String` value, as is obtained, for example, from input give by a user, to a different type is my means of the dedicated parsing methods. In  particular, let us assume we have a given `String` with the variable name `message`. We can then use the following methods to convert this `String` to the variable types we have seen so far:
+Another option to deal with transferring a `String` value, as is obtained, for example, from input give by a user, to a different type is by means of the dedicated parsing methods. In  particular, let us assume we have a given `String` with the variable name `message`. We can then use the following methods to convert this `String` to the variable types we have seen so far:
 ``` Java
 boolean booleanValue = Boolean.parseBoolean(message);
 int intValue = Integer.parseInt(message);

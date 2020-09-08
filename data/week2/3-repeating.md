@@ -68,7 +68,7 @@ System.out.println("The sum of the numbers is " + sum);
 ```
 
 ## Loops and Infinite Loops
-A loop consists of an expression that determines whether or not the code within the loop should be repeated, along with a block containing the source code to be repeated. A loop takes the following form.
+A loop consists of an expression that determines whether the code within the loop should be repeated, along with a block containing the source code to be repeated. A loop takes the following form.
 
 ```java
 while (_expression_) {
@@ -122,7 +122,7 @@ Ready!
 
 </sample-output>
 
-Breaking out of the loop occurs when a user enters a specified input or whenever a calculation performed in the loop ends in the desired result. These kinds of programs contain both a loop used to define a section to be repeated and also a conditional expression used to check whether or not the condition to exit the loop has been fulfilled.
+Breaking out of the loop occurs when a user enters a specified input or whenever a calculation performed in the loop ends in the desired result. These kinds of programs contain both a loop used to define a section to be repeated and also a conditional expression used to check whether the condition to exit the loop has been fulfilled.
 
 Users can also be asked for input within a loop. The variables that are commonly used in loops (such as Scanner readers) are defined before the loop, whereas variables (such as the value read from the user) that are specific to the loop are defined within it.
 

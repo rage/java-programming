@@ -36,7 +36,7 @@ This code is unavoidable!
 
 A conditional statement begins with the keyword `if` followed by parentheses. An expression is placed inside the parentheses, which is evaluated when the conditional statement is reached. The result of the evaluation is a boolean value. No evaluation occurred above. Instead, a boolean value was explicitly used in the conditional statement.
 
-The parentheses are followed by a block, which is defined inside opening- `{` and closing `}` curly brackets. The source code inside the block is executed if the expression inside the parentheses evaluates to _true_. On the other hand, if the expression evaluates to false, the execution moves on to the statement after the closing curly bracket of the current conditional statement.
+The parentheses are followed by a block, which is defined inside opening `{` and closing `}` curly brackets. The source code inside the block is executed if the expression inside the parentheses evaluates to _true_. On the other hand, if the expression evaluates to false, the execution moves on to the statement after the closing curly bracket of the current conditional statement.
 
 Be aware of the fact that an `if` -statement is not followed by a semicolon since the statement doesn't end after the conditional. Let's now look at an example where we compare numbers in the conditional statement.
 
@@ -146,7 +146,7 @@ will return the code block under the `else` command. The output will be: "Your n
 
 <programming-exercise name="Adulthood">
 
-Write a program that prompts the user for their age and tells them whether or not they are an adult (18 years old or older).
+Write a program that prompts the user for their age and tells them whether they are an adult (18 years old or older).
 
 <sample-output>
 
@@ -437,7 +437,7 @@ if (!(number > 4)) {
 
 <programming-exercise name='Checking the age'>
 
-Write a program that prompts the user to input their age and checks whether or not it is possible (at least 0 and at most 120). Only use a single `if`-command in your program.
+Write a program that prompts the user to input their age and checks whether it is possible (at least 0 and at most 120). Only use a single `if`-command in your program.
 
 <sample-output>
 
@@ -539,7 +539,7 @@ One approach for developing this train of thought would be to first find the **m
 
 4. If the number is divisible by five, then print "Buzz" instead of the number.
 
-5. Otherwise the program prints the number given by the user.
+5. Otherwise, the program prints the number given by the user.
 
 This corresponds to the following code:
 
