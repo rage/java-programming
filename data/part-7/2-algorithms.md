@@ -384,7 +384,7 @@ Instance methods are methods that are associated with an object, can process the
 </text-box>
 
 
-###  Build-in sorting algorithms in Java
+###  Built-in sorting algorithms in Java
 
 <!-- Java tarjoaa merkittävän määrän valmiita järjestysalgoritmeja. Taulukot voi järjestää (luonnolliseen järjestykseen) luokan `Arrays` tarjoamalla luokkametodilla `sort`, ja listat voi järjestää (luonnolliseen järjestykseen) luokan `Collections` tarjoamalla luokkametodilla `sort`. -->
 
