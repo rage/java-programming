@@ -60,7 +60,9 @@ Note that it is important that the user actually enters an input of the correct 
 
 <programming-exercise name="Different Inputs">
 In this assignment, you should write a program that reads three values: one corresponding to a boolean and two to a `double`. You should then print the value of the `boolean` and the sum of the two `double` inputs. The output of your program should look like:
+
 <sample-output>
+
 Please enter a boolean:
 **true**
 Please enter the first double:
