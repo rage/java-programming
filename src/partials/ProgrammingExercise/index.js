@@ -1,10 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import ContentLoader from "react-content-loader"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPencilAlt as icon, faRedo } from "@fortawesome/free-solid-svg-icons"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
-import { get } from "lodash"
 import { Card, CardContent, Button } from "@material-ui/core"
 
 import { withTranslation } from "react-i18next"
@@ -13,7 +10,6 @@ import {
   fetchProgrammingExerciseModelSolution,
 } from "../../services/moocfi"
 import LoginStateContext from "../../contexes/LoginStateContext"
-import LoginControls from "../../components/LoginControls"
 import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
 import { normalizeExerciseId } from "../../util/strings"
 import ExerciseDescription from "./ExerciseDescription"
@@ -72,42 +68,9 @@ const HeaderMuted = styled.span`
   bottom: -3px;
 `
 
-const PointsLabel = styled.span`
-  font-size: 18px;
-  font-weight: 400;
-`
-
-const PointContentWrapper = styled.div`
-  display: flex;
-  justify-content: flex-end;
-`
-
 const Body = styled.div`
   padding-bottom: 0.5rem;
   min-height: 300px;
-`
-
-const PointsWrapper = styled.div`
-  margin-left: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-  color: white;
-`
-
-const Small = styled.div`
-  p {
-    font-size: 0.9rem;
-    color: #333;
-  }
-`
-
-const StyledQuizPointsContentLoader = styled(ContentLoader)`
-  width: 100%;
-  max-width: 30px;
-  height: 31.2px;
-  position: relative;
-  top: -4px;
 `
 
 class ProgrammingExercise extends React.Component {
@@ -195,12 +158,6 @@ class ProgrammingExercise extends React.Component {
       return <div>Loading</div>
     }
 
-    const points = get(this.state, "exerciseDetails.available_points.length")
-    const awardedPoints = get(
-      this.state,
-      "exerciseDetails.awarded_points.length",
-    )
-
     return (
       <ProgrammingExerciseWrapper
         id={normalizeExerciseId(`programming-exercise-${name}`)}
@@ -222,27 +179,11 @@ class ProgrammingExercise extends React.Component {
           <Body>
             <div>
               <div>
-                  {points && points > 1 && (
-                    <Small>
-                      <p>
-                        {this.props.t("submitNB")}{" "}
-                        <OutboundLink
-                          href="https://www.mooc.fi/en/installation/netbeans"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                        >
-                          {this.props.t("submitHowTo")}
-                        </OutboundLink>
-                        .
-                      </p>
-                      <StyledDivider />
-                    </Small>
-                  )}
-                  <ExerciseDescription>{children}</ExerciseDescription>
-                  {this.state.exerciseDetails === null && (
-                    <div>Error loading exercise details</div>
-                  )}
-                </div>
+                <ExerciseDescription>{children}</ExerciseDescription>
+                {this.state.exerciseDetails === null && (
+                  <div>Error loading exercise details</div>
+                )}
+              </div>
             </div>
 
             {this.context.loggedIn && (
