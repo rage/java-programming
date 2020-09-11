@@ -1,6 +1,5 @@
 ---
-path: '/week-3/4-methods'
-# title: 'Metodit ja ohjelman jakaminen pienempiin osiin'
+path: '/week-3/2-methods'
 title: 'Methods and dividing the program into smaller parts'
 hidden: true
 ---

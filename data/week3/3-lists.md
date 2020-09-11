@@ -1,6 +1,5 @@
 ---
-path: "/week-3/2-lists"
-# title: 'Listat'
+path: "/week-3/3-lists"
 title: "Lists"
 hidden: true
 ---
