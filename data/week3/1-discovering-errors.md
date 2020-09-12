@@ -1,13 +1,13 @@
 ---
 path: "/week-3/1-discovering-errors"
-title: 'Discovering errors'
+title: 'Discovering and Solving Errors'
 hidden: true
 ---
 
 <text-box variant='learningObjectives' name='Learning Objectives'>
 
  - Understand the difference between compile-time, run-time and logical errors
- - Know the main strategies to solve each type of errors
+ - Know the main strategies to solve each type of error
  - Know how to use print debugging and a debugger to solve errors in your code
 
 </text-box>
@@ -40,6 +40,36 @@ Error:(5, 46) java: ';' expected
 
 Note how the error that is shown often points us towards reason of the error. First of all, the message states what goes wrong from the perspective of the compiler. In this case, the compiler expected a semicolon, but didn't find it in the code. Moreover, the compiler often also tells us where this error occurred. In this case on line 5, at character 46. When we check the above program, we notice that there is indeed a semicolon missing after the `System.out.println(i)` command, which is on the fifth line of the source code.
 
+<programming-exercise name="Syntax Errors">
+
+The sample code for this exercise describes the following program that should print the sum of the numbers between a given lower and upper bound, both of which are integer and inputted by the user:
+
+``` java
+public class SyntaxErrors {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Please input an integer lower bound:");
+        int lowerBound = scanner.nextInt();
+
+        System.out.println("Please input an integer upper bound:");
+        int upperBound = scanner.nextInt()
+
+        int sum = 0;
+        int currentNumber = lowerBound;
+        while (currentNumber <= upperBound) {
+            sum = sum + currentNumber;
+            currentNumber++;
+        }
+
+        System.out.println("The sum is: " + sum);
+}
+```
+
+As you may have noticed already, the source code contains some syntax errors. It is your task to solve the syntax errors and make sure the program prints the required output.
+
+</programming-exercise>
+
 ## Run-Time Errors
 A second type of error, referred to as a run-time error, can occur when the program is actually run. These type of errors occur when a program encounters some unexpected condition while running, leading to the program throwing an *exception*. An exception is, for example, thrown when the user inputs a value of the incorrect type when using the `scanner.nextDouble()` statement, or when you use an argument that does not fit the used flag in the `System.printf()` statement.
 
@@ -68,7 +98,9 @@ Exception in thread "main" java.util.InputMismatchException
 
 </sample-output>
 
-Note that the exception message shows again useful information which helps us in finding what happened. In particular, we see that an `InputMismatchException` occured and that the `Scanner`tool was involved in this exception. Moreover, the message also occurs where the error in our code occured, in this case on line 7 of the `Example` program. Combining this information, we are often able to figure out what triggered the exception to be thrown.
+Note that the exception message shows again useful information which helps us in finding what happened. In particular, we see that an `InputMismatchException` occured and that the `Scanner`tool was involved in this exception. Moreover, the message also occurs where the error in our code occurred, in this case on line 7 of the `Example` program. Combining this information, we are often able to figure out what triggered the exception to be thrown.
+
+As long as you are the person using the code, you can often fix the error, for example by making sure to give input of the correct type. However, if some other user uses your program, you don't have the same level of control. We will explore methods to deal with run-time errors in these cases later in the course.
 
 ## Logical Errors
 
