@@ -28,7 +28,7 @@ The solution presented above is useless in effect -- consider a situation in whi
 
 Programming languages offer tools to assist in storing a large quantity of values. We will next take a peek at perhaps the single most used tool in Java, the [ArrayList](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html), which is used for storing many values that are of the same type.
 
-ArrayList is a pre-made tool in Java that helps dealing with lists. It offers various methods, including ones for adding values to the list, removing values from it, and also for the retrieval of a value from a specific place in the list. The concrete implementations -- i.e., how the list is actually programmed -- has beed abstracted behind the methods, so that a programmer making use of a list doesn't need to concern themselves with its inner workings.
+ArrayList is a pre-made tool in Java that helps dealing with lists. It offers various methods, including ones for adding values to the list, removing values from it, and also for the retrieval of a value from a specific place in the list. The concrete implementations -- i.e., how the list is actually programmed -- has been abstracted behind the methods, so that a programmer making use of a list doesn't need to concern themselves with its inner workings.
 
 ## Using and Creating Lists
 For an ArrayList to be used, it first needs be imported into the program. This is achieved by including the command `import java.util.ArrayList;` at the top of the program. Moreover, we also need the command `import java.util.List`. Below is an example program where an ArrayList is imported into the program.
@@ -197,7 +197,7 @@ Modify the program so that instead of the first value, the program prints the su
 </programming-exercise>
 
 ## Retrieving Information from a "Non-Existent" Place
-If you try to retrieve information from a place that does not exist on the list, the program will print a `IndexOutOfBoundsException` error. In the example below, two values are added to a list, after which there is an attempt to print the value at place two on the list.
+If you try to retrieve information from a place that does not exist on the list, the program will print an `IndexOutOfBoundsException` error. In the example below, two values are added to a list, after which there is an attempt to print the value at place two on the list.
 
 ```java
 import java.util.ArrayList;
@@ -246,7 +246,7 @@ Similarly, by calling the method `get` with the parameter 4 the fifth number in 
 
 <text-box variant='hint' name='Importing multiple premade Java tools into the program'>
 
-Each tool offered by Java has a name and location. The program can use a tool after it has been imported with the `import` command. The command is given the location and the name of the desired class. For example, the use of an ArrayList necessitates placing the commans `import java.util.ArrayList;` and `import java.util.List;` to the top of the program.
+Each tool offered by Java has a name and location. The program can use a tool after it has been imported with the `import` command. The command is given the location and the name of the desired class. For example, the use of an ArrayList necessitates placing the commands `import java.util.ArrayList;` and `import java.util.List;` to the top of the program.
 
 ```java
 import java.util.ArrayList;

@@ -135,7 +135,7 @@ if (sum == 0) {
     System.out.println("Average of values: " + (1.0 * sum / values));
 }
 ```
-Note that the above program will not correctly compute the average if we only give the number `0` (followed by a negative number) as an input. Namely, the variable `sum` variable remains `0` in that case, leading to the text `The average of the values could not be calculated.` to be printed. This, while the average should actually be equal to `0`.
+Note that the above program will not correctly compute the average if we only give the number `0` (followed by a negative number) as an input. Namely, the `sum` variable remains `0` in that case, leading to the text `The average of the values could not be calculated.` to be printed. This, while the average should actually be equal to `0`.
 
 Perceptual blindness is something that one cannot be eliminated completely. However, there are ways by which a programmer can lessen its effect - the first one being taking breaks, which requires that work is begun early. Code comments, proper naming of things, and "debugging" prints are additional examples of things that are also helpful.
 
