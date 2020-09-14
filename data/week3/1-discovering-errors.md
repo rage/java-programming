@@ -98,7 +98,7 @@ Exception in thread "main" java.util.InputMismatchException
 
 </sample-output>
 
-Note that the exception message shows again useful information which helps us in finding what happened. In particular, we see that an `InputMismatchException` occured and that the `Scanner`tool was involved in this exception. Moreover, the message also occurs where the error in our code occurred, in this case on line 7 of the `Example` program. Combining this information, we are often able to figure out what triggered the exception to be thrown.
+Note that the exception message shows again useful information which helps us in finding what happened. In particular, we see that an `InputMismatchException` occurred and that the `Scanner`tool was involved in this exception. Moreover, the message also occurs where the error in our code occurred, in this case on line 7 of the `Example` program. Combining this information, we are often able to figure out what triggered the exception to be thrown.
 
 As long as you are the person using the code, you can often fix the error, for example by making sure to give input of the correct type. However, if some other user uses your program, you don't have the same level of control. We will explore methods to deal with run-time errors in these cases later in the course.
 
@@ -107,11 +107,8 @@ As long as you are the person using the code, you can often fix the error, for e
 Logical errors correspond to situations in which the code does run without throwing an exception, but does not produce the output that we would expect it to give. For example, the program might not compute the value that you would expect it to compute or not print the text that you would like it to.
 
 ### A Programmer Blind to Their Own Code
-A programmer often becomes blind to their code. Let's familiarize ourselves with this effect with the aid of the short video below. Count how many times the white-shirted players pass the ball between each other.
+One reason for logical errors to occur is that a programmer often becomes blind to their code. This is often due to a concept known as perceptual blindness, and is explained by the fact that as we focus on a specific task, our brains tend to filter out information that is irrelevant to that task. However, we don't always know what information is, in fact, essential and what is not - an example of this being when we study. Concentrating on a specific part of a study exercise can lead to relevant information being filtered out.
 
-<youtube id="Ahg6qcgoay4"></youtube>
-
-There's something else that also happens in the video that may go unnoticed at first. This effect is known as perceptual blindness, and is explained by the fact that as we focus on a specific task, our brains tend to filter out information that is irrelevant to that task. However, we don't always know what information is, in fact, essential and what is not - an example of this being when we study. Concentrating on a specific part of a study exercise can lead to relevant information being filtered out.
 Fortunately, applying oneself to a given task lessens the occurrence of perceptual blindness. In other words, practice develops one's ability to distinguish between relevant and irrelevant information.
 One way in which perceptual blindness manifests itself in programming practice is when concentrating on a specific part of a program draws attention away from seemingly correct, yet erroneous parts. For instance, while inspecting the correctness of a program's output, a programmer may fixate on the print statements, and mistakenly neglect some aspects of the logic.
 Likewise, a programmer may focus on the most complicated aspect of a program featuring a loop, when in fact the error lies somewhere else completely. An example of this is the program below, which is used to calculate the average of user-inputted values. It contains an error, and when searching for it, the loop is typically the first target of focus.
@@ -123,7 +120,7 @@ int sum = 0;
 
 while (true) {
     System.out.println("Provide a value, a negative value ends the program");
-    int value = Integer.valueOf(scanner.nextLine());
+    int value = scanner.nextInt();
     if (value < 0) {
         break;
     }
@@ -138,6 +135,7 @@ if (sum == 0) {
     System.out.println("Average of values: " + (1.0 * sum / values));
 }
 ```
+Note that the above program will not correctly compute the average if we only give the number `0` (followed by a negative number) as an input. Namely, the variable `sum` variable remains `0` in that case, leading to the text `The average of the values could not be calculated.` to be printed. This, while the average should actually be equal to `0`.
 
 Perceptual blindness is something that one cannot be eliminated completely. However, there are ways by which a programmer can lessen its effect - the first one being taking breaks, which requires that work is begun early. Code comments, proper naming of things, and "debugging" prints are additional examples of things that are also helpful.
 
@@ -169,27 +167,6 @@ while (value > 0) {
 Comments have no impact on the execution of the program, i.e., the program works in the same way with the comments as it does without them.
 
 The comment style displayed above that is intended for learning purposes is, however, too elaborate for real development, where the goal is for the source code to be **self documenting**. This means that the functionality of the program should be evident from the way classes, methods, and variables are named.
-
-The example can be "commented out" by encapsulating the code into an appropriately named method. Below are two examples of methods that do this - one of the methods is more general in its purpose compared to the other. The more general method assumes, however, that the user knows which of the two parameters is assigned the higher value and which the lower.
-
-```java
-public static void printValuesFromTenToOne() {
-    int value = 10;
-    while (value > 0) {
-        System.out.println(value);
-        value = value - 1;
-    }
-}
-```
-
-```java
-public static void printValuesFromLargestToSmallest(int start, int end) {
-    while (start >= end) {
-        System.out.println(start);
-        start = start - 1;
-    }
-}
-```
 
 ## Searching for Errors with Print Debugging
 One required skill in programming is the ability to test and debug when searching for errors. The simplest way to search for errors is to use so-called print debugging, which in practice involves adding messages to certain lines of code. These messages are used to follow the flow of the program's execution, and can also contain values of variables that live in the program.
@@ -251,3 +228,8 @@ if (sum == 0) {
 ```
 
 When a program is executed multiple times with appropriate inputs the hidden error is often found. Coming up with relevant inputs is a skill in its own right. It's essential to test the so-called corner cases, i.e., circumstances where the program execution could be exceptional. An example scenario would be one where the user does not enter a single acceptable value or enters zeros or very large values.
+
+## Using the Debugger
+A second way in which you can find errors (bugs) in your programs is by using the `debugger` that is available within IntelliJ. The debugger allows you to stop the execution of the program by means of breakpoints and to walk through the code line-by-line. This allows you to follow the flow of execution of the program and to inspect the values that different variables take in various steps of the program.
+
+Breakpoints can be added by clicking next to the line number of the line of code, just left of the window in which the actual code is shown. You can also add `ctrl+F8` to add a breakpoint to a line, when your cursor is currently on that line. To access the debugging tool, you have to run the program in debug mode. You can again do this by going to the green triangle symbol, that you have also used for running your code so far, but now select `Debug ...` instead of `Run ...`. You will now notice that your program stops at the first breakpoint and that an additional window shows up at the bottom of your screen. This new window also allows you to step through the code, which can also be done by using the `F8` key.
