@@ -13,7 +13,6 @@ import LoginStateContext from "../../contexes/LoginStateContext"
 import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
 import { normalizeExerciseId } from "../../util/strings"
 import ExerciseDescription from "./ExerciseDescription"
-import ExtraDetails from "./ExtraDetails"
 import StyledDivider from "../../components/StyledDivider"
 
 const accentColor = "#FAAA38"
