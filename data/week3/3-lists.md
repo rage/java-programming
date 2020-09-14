@@ -26,16 +26,17 @@ String word10;
 
 The solution presented above is useless in effect -- consider a situation in which there are thousands of words to store.
 
-Programming languages offer tools to assist in storing a large quantity of values. We will next take a peek at perhaps the single most used tool in Java, the [ArrayList](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html), which is used for storing many values that are of the same type.
+Programming languages offer tools to assist in storing a large quantity of values. We will next take a peek at perhaps the single most used tool in Java, the [ArrayList](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html), which is used for storing many values that are of the same type.
 
 ArrayList is a pre-made tool in Java that helps dealing with lists. It offers various methods, including ones for adding values to the list, removing values from it, and also for the retrieval of a value from a specific place in the list. The concrete implementations -- i.e., how the list is actually programmed -- has beed abstracted behind the methods, so that a programmer making use of a list doesn't need to concern themselves with its inner workings.
 
 ## Using and Creating Lists
-For an ArrayList to be used, it first needs be imported into the program. This is achieved by including the command `import java.util.ArrayList;` at the top of the program. Below is an example program where an ArrayList is imported into the program.
+For an ArrayList to be used, it first needs be imported into the program. This is achieved by including the command `import java.util.ArrayList;` at the top of the program. Moreover, we also need the command `import java.util.List`. Below is an example program where an ArrayList is imported into the program.
 
 ```java
 // import the list to make it available to the program
 import java.util.ArrayList;
+import java.util.List;
 
 public class Program {
 
@@ -45,61 +46,62 @@ public class Program {
 }
 ```
 
-Creating a new list is done with the command `ArrayList<Type> list = new ArrayList<>()`, where _Type_ is the type of the values to be stored in the list (e.g. `String`). We create a list for storing strings in the example below.
+Creating a new list is done with the command `List<Type> list = new ArrayList<>()`, where _Type_ is the type of the values to be stored in the list (e.g. `String`). We create a list for storing strings in the example below.
 
 ```java
 // import the list so the program can use it
 import java.util.ArrayList;
+import java.util.List;
 
 public class Program {
 
     public static void main(String[] args) {
         // create a list
-        ArrayList<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<>();
 
         // the list isn't used yet
     }
 }
 ```
 
-The type of the ArrayList variable is `ArrayList`. When a list variable is initialized, the type of the values to be stored is also defined in addition to the variable type -- **all the variables stored in a given list are of the same type**. As such, the type of an ArrayList that stores strings is `ArrayList<String>`. A new list is created with the command `new ArrayList<>();`.
+The type of the ArrayList variable is `List`. When a list variable is initialized, the type of the values to be stored is also defined in addition to the variable type -- **all the variables stored in a given list are of the same type**. As such, the type of an ArrayList that stores strings is `List<String>`. A new list is created with the command `new ArrayList<>();`.
 
 ## Defining the Type of Values That a List Can Contain
-When defining the type of values that a list can include, the first letter of the element type has to be capitalized. A list that includes int-type variables has to be defined in the form `ArrayList<Integer>`; and a list that includes double-type variables is defined in the form `ArrayList<Double>`.
+When defining the type of values that a list can include, the first letter of the element type has to be capitalized. A list that includes int-type variables has to be defined in the form `List<Integer>`; and a list that includes double-type variables is defined in the form `List<Double>`.
 
-The reason for this has to do with how the ArrayList is implemented. Variables in Java can be divided into two categories: value type (primitive) and reference type (reference type) variables. **Value-type** variables such as `int` or `double` hold their actual values. **Reference-type** variables such as `ArrayList`, in contrast, contain a reference to the location that contains the value(s) relating to that variable.
+The reason for this has to do with how the ArrayList is implemented. Variables in Java can be divided into two categories: value type (primitive) and reference type (reference type) variables. **Value-type** variables such as `int` or `double` hold their actual values. **Reference-type** variables such as `List`, in contrast, contain a reference to the location that contains the value(s) relating to that variable.
 
 Value-type variables can hold a very limited amount of information, whereas references can store a near limitless amount of it.
 You'll find examples below of creating lists that contain different types of values.
 
 ```java
-ArrayList<Integer> list = new ArrayList<>();
+List<Integer> list = new ArrayList<>();
 list.add(1);
 ```
 
 ```java
-ArrayList<Double> list = new ArrayList<>();
+List<Double> list = new ArrayList<>();
 list.add(4.2);
 ```
 
 ```java
-ArrayList<Boolean> list = new ArrayList<>();
+List<Boolean> list = new ArrayList<>();
 list.add(true);
 ```
 
 ```java
-ArrayList<String> list = new ArrayList<>();
+List<String> list = new ArrayList<>();
 list.add("String is a reference-type variable");
 ```
 
-Once a list has been created, ArrayList assumes that all the variables contained in it are reference types. Java automatically converts an `int` variable into `Integer` when one is added to a list, and the same occurs when a variable is retrieved from a list. The same conversion occurs for `double`-type variables, which are converted to `Double`. This means that even though a list is defined to contain `Integer`-type variables, variables of type `int` can also be added to it.
+Once a list has been created, List assumes that all the variables contained in it are reference types. Java automatically converts an `int` variable into `Integer` when one is added to a list, and the same occurs when a variable is retrieved from a list. The same conversion occurs for `double`-type variables, which are converted to `Double`. This means that even though a list is defined to contain `Integer`-type variables, variables of type `int` can also be added to it.
 
 ```java
-ArrayList<Integer> integers = new ArrayList<>();
+List<Integer> integers = new ArrayList<>();
 int integer = 1;
 integers.add(integer);
 
-ArrayList<Double> doubles = new ArrayList<>();
+List<Double> doubles = new ArrayList<>();
 double d = 4.2;
 doubles.add(d);
 ```
@@ -107,19 +109,20 @@ doubles.add(d);
 We'll be returning to this theme since the categorization of variables into value and reference types affects our programs in other ways as well.
 
 ## Adding to a List and Retrieving a Value from a Specific Place
-The next example demonstrates the addition of a few strings into an ArrayList containing strings. Addition is done with the list method `add`, which takes the value to be added as a parameter. We then print the value at position zero. To retrieve a value from a certain position, you use the list method `get`, which is given the place of retrieval as a parameter.
+The next example demonstrates the addition of a few strings into a List containing strings. Addition is done with the list method `add`, which takes the value to be added as a parameter. We then print the value at position zero. To retrieve a value from a certain position, you use the list method `get`, which is given the place of retrieval as a parameter.
 
 To call a list method you first write the name of the variable describing the list, followed by a dot and the name of the method.
 
 ```java
 // import list so that the program can use it
 import java.util.ArrayList;
+import java.util.List;
 
 public class WordListExample {
 
     public static void main(String[] args) {
         // create the word list for storing strings
-        ArrayList<String> wordList = new ArrayList<>();
+        List<String> wordList = new ArrayList<>();
 
         // add two values to the word list
         wordList.add("First");
@@ -141,11 +144,12 @@ As can be seen, the `get` method retrieves the first value from the list when it
 
 ```java
 import java.util.ArrayList;
+import java.util.List;
 
 public class WordListExample {
 
     public static void main(String[] args) {
-        ArrayList<String> wordList = new ArrayList<>();
+        List<String> wordList = new ArrayList<>();
 
         wordList.add("First");
         wordList.add("Second");
@@ -197,11 +201,12 @@ If you try to retrieve information from a place that does not exist on the list,
 
 ```java
 import java.util.ArrayList;
+import java.util.List;
 
 public class Example {
 
     public static void main(String[] args) {
-        ArrayList<String> wordList = new ArrayList<>();
+        List<String> wordList = new ArrayList<>();
 
         wordList.add("First");
         wordList.add("Second");
@@ -241,15 +246,16 @@ Similarly, by calling the method `get` with the parameter 4 the fifth number in 
 
 <text-box variant='hint' name='Importing multiple premade Java tools into the program'>
 
-Each tool offered by Java has a name and location. The program can use a tool after it has been imported with the `import` command. The command is given the location and the name of the desired class. For example, the use of an ArrayList necessitates placing the command `import java.util.ArrayList;` to the top of the program.
+Each tool offered by Java has a name and location. The program can use a tool after it has been imported with the `import` command. The command is given the location and the name of the desired class. For example, the use of an ArrayList necessitates placing the commans `import java.util.ArrayList;` and `import java.util.List;` to the top of the program.
 
 ```java
 import java.util.ArrayList;
+import java.util.List;
 
 public class ListProgram {
 
     public static void main(String[] args) {
-        ArrayList<String> wordList = new ArrayList<>();
+        List<String> wordList = new ArrayList<>();
 
         wordList.add("First");
         wordList.add("Second");
@@ -263,13 +269,14 @@ Bringing of multiple tools to use is straightforward. The tools to be imported a
 
 ```java
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class ListProgram {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ArrayList<String> wordList = new ArrayList<>();
+        List<String> wordList = new ArrayList<>();
 
         wordList.add("First");
         wordList.add(scanner.nextLine());
@@ -283,7 +290,7 @@ public class ListProgram {
 We'll next be examining methods that can be used to go through the values on a list. Let's start with a simple example where we print a list containing four values.
 
 ```java
-ArrayList<String> teachers = new ArrayList<>();
+List<String> teachers = new ArrayList<>();
 
 teachers.add("Simon");
 teachers.add("Samuel");
@@ -309,7 +316,7 @@ The example is obviously clumsy. What if there were more values on the list? Or 
 The number of values on a list is provided by the list's **size** method which returns the number of elements the list contains. The number is an integer (`int`), and it can be used as a part of an expression or stored in an integer variable for later use.
 
 ```java
-ArrayList<String> list = new ArrayList<>();
+List<String> list = new ArrayList<>();
 System.out.println("Number of values on the list: " + list.size());
 
 list.add("First");
@@ -371,7 +378,7 @@ In total: 11
 Let's make a new version of the program that prints each index manually. In this intermediate version we use the `index` variable to keep track of the place that is to be outputted.
 
 ```java
-ArrayList<String> teachers = new ArrayList<>();
+List<String> teachers = new ArrayList<>();
 
 teachers.add("Simon");
 teachers.add("Samuel");
@@ -412,7 +419,7 @@ We can see that there's repetition in the program above.
 We can convert the `if` statements into a `while` loop that is repeated until the condition `index < teachers.size()` no longer holds (i.e., the value of the variable `index` grows too great).
 
 ```java
-ArrayList<String> teachers = new ArrayList<>();
+List<String> teachers = new ArrayList<>();
 
 teachers.add("Simon");
 teachers.add("Samuel");
@@ -432,7 +439,7 @@ Now the printing works regardless of the number of elements.
 The for-loop we inspected earlier used to iterate over a known number of elements is extremely handy here. We can convert the loop above to a `for`-loop, after which the program looks like this.
 
 ```java
-ArrayList<String> teachers = new ArrayList<>();
+List<String> teachers = new ArrayList<>();
 
 teachers.add("Simon");
 teachers.add("Samuel");
@@ -464,7 +471,7 @@ for (int i = 0; i < teachers.size(); i++) {
 Let's consider using a list to store integers. The functionality is largely the same as in the previous example. The greatest difference has to do with the initialization of the list -- the type of value to be stored is defined as `Integer`, and the value to be printed is stored in a variable called `number` before printing.
 
 ```java
-ArrayList<Integer> numbers = new ArrayList<>();
+List<Integer> numbers = new ArrayList<>();
 
 numbers.add(1);
 numbers.add(2);
@@ -490,7 +497,7 @@ for (int i = 0; i < numbers.size(); i++) {
 Printing the numbers in the list in reverse order would also be straightforward.
 
 ```java
-ArrayList<Integer> numbers = new ArrayList<>();
+List<Integer> numbers = new ArrayList<>();
 
 numbers.add(1);
 numbers.add(2);
@@ -610,8 +617,8 @@ Expand the program by adding a functionality that asks the user for a number, an
 **8**
 **11**
 **-1**
-
-Search for? **2**
+Search for?
+ **2**
 2 is at index 1
 
 </sample-output>
@@ -624,8 +631,8 @@ Search for? **2**
 **8**
 **11**
 **-1**
-
-Search for? **8**
+Search for?
+ **8**
 8 is at index 2
 8 is at index 3
 
@@ -645,7 +652,6 @@ Write a program that reads numbers from the user. When number 9999 is entered, t
 **8**
 **11**
 **9999**
-
 Smallest number: 2
 Found at index: 1
 
@@ -659,7 +665,6 @@ Found at index: 1
 **8**
 **11**
 **9999**
-
 Smallest number: 8
 Found at index: 2
 Found at index: 3
@@ -674,7 +679,7 @@ Hint: combine the programs you wrote for the exercises "Greatest number in the l
 If you don't need to keep track of the index as you're going through a list's values, you can make use of the **for-each** loop. It differs from the previous loops in that it has no separate condition for repeating or incrementing.
 
 ```java
-ArrayList<String> teachers = new ArrayList<>();
+List<String> teachers = new ArrayList<>();
 
 teachers.add("Simon");
 teachers.add("Samuel");
@@ -689,7 +694,7 @@ for (String teacher: teachers) {
 In practical terms, the for-each loop described above hides some parts of the for-loop we practiced earlier. The for-each loop would look like this if implemented as a for-loop:
 
 ```java
-ArrayList<String> teachers = new ArrayList<>();
+List<String> teachers = new ArrayList<>();
 
 teachers.add("Simon");
 teachers.add("Samuel");
@@ -731,7 +736,7 @@ Average: 23.25
 The list's **remove** method removes the value that is located at the index that's given as the parameter. The parameter is an integer.
 
 ```java
-ArrayList<String> list = new ArrayList<>();
+List<String> list = new ArrayList<>();
 
 list.add("First");
 list.add("Second");
@@ -753,7 +758,7 @@ Index 1 so the second value: Third
 If the parameter given to `remove` is the same type as the values in the list, but not an integer, (integers are used to remove from a given index), it can be used to remove a value directly from the list.
 
 ```java
-ArrayList<String> list = new ArrayList<>();
+List<String> list = new ArrayList<>();
 
 list.add("First");
 list.add("Second");
@@ -775,7 +780,7 @@ Index 1 so the second value: Third
 If the list contains integers, you cannot remove a number value by giving an `int` type parameter to the remove method. This would remove the number from the index that the parameter indicates, instead of an element on the list that has the same value as the parameter. To remove an integer type value you can convert the parameter to Integer type; this is achieved by the `valueOf` method of the Integer class.
 
 ```java
-ArrayList<Integer> list = new ArrayList<>();
+List<Integer> list = new ArrayList<>();
 
 list.add(15);
 list.add(18);
@@ -799,7 +804,7 @@ Index 1 so the second value: 24
 The list method **contains** can be used to check the existence of a value in the list. The method receives the value to be searched as its parameter, and it returns a boolean type value (`true` or `false`) that indicates whether or not that value is stored in the list.
 
 ```java
-ArrayList<String> list = new ArrayList<>();
+List<String> list = new ArrayList<>();
 
 list.add("First");
 list.add("Second");
@@ -830,7 +835,7 @@ Second can still be found
 Like other variables, a list can be used as a parameter to a method too. When the method is defined to take a list as a parameter, the type of the parameter is defined as the type of the list and the type of the values contained in that list. Below, the method `print` prints the values in the list one by one.
 
 ```java
-public static void print(ArrayList<String> list) {
+public static void print(List<String> list) {
     for (String value: list) {
         System.out.println(value);
     }
@@ -840,7 +845,7 @@ public static void print(ArrayList<String> list) {
 We're by now familiar with methods, and it works in the same way here. In the example below we use the `print` method that was implemented above.
 
 ```java
-ArrayList<String> strings = new ArrayList<>();
+List<String> strings = new ArrayList<>();
 
 strings.add("First");
 strings.add("Second");
@@ -861,7 +866,7 @@ The chosen parameter in the method definition is not dependent on the list that 
 It's also possible to define multiple variables for a method. In the example the method receives two parameters: a list of numbers and a threshold value. It then prints all the numbers in the list that are smaller than the second parameter.
 
 ```java
-public static void printSmallerThan(ArrayList<Integer> numbers, int threshold) {
+public static void printSmallerThan(List<Integer> numbers, int threshold) {
     for (int number: numbers) {
         if (number < threshold) {
             System.out.println(number);
@@ -871,7 +876,7 @@ public static void printSmallerThan(ArrayList<Integer> numbers, int threshold) {
 ```
 
 ```java
-ArrayList<Integer> list = new ArrayList<>();
+List<Integer> list = new ArrayList<>();
 
 list.add(1);
 list.add(2);
@@ -894,7 +899,7 @@ printSmallerThan(list, 3);
 As before, a method can also return a value. The methods that return values have the type of the return value in place of the `void` keyword, and the actual returning of the value is done by the `return` command. The method below returns the size of the list.
 
 ```java
-public static int size(ArrayList<String> list) {
+public static int size(List<String> list) {
     return list.size();
 }
 ```
@@ -902,7 +907,7 @@ public static int size(ArrayList<String> list) {
 You can also define own variables for methods. The method below calculates the average of the numbers in the list. If the list is empty, it returns the number -1.
 
 ```java
-public static double average(ArrayList<Integer> numbers) {
+public static double average(List<Integer> numbers) {
     if (numbers.size() == 0) {
         return -1.0;
     }
@@ -918,10 +923,10 @@ public static double average(ArrayList<Integer> numbers) {
 
 <programming-exercise name='Sum'>
 
-Create the method `public static int sum(ArrayList<Integer> numbers)` in the exercise template. The method is to return the sum of the numbers in the parameter list.
+Create the method `public static int sum(List<Integer> numbers)` in the exercise template. The method is to return the sum of the numbers in the parameter list.
 
 ```java
-ArrayList<Integer> numbers = new ArrayList<>();
+List<Integer> numbers = new ArrayList<>();
 numbers.add(3);
 numbers.add(2);
 numbers.add(6);
@@ -949,7 +954,7 @@ When a list (or any reference-type variable) is copied for a method's use, the m
 Let us look at this briefly with the following method.
 
 ```java
-public static void removeFirst(ArrayList<Integer> numbers) {
+public static void removeFirst(List<Integer> numbers) {
     if (numbers.size() == 0) {
         return;
     }
@@ -959,7 +964,7 @@ public static void removeFirst(ArrayList<Integer> numbers) {
 ```
 
 ```java
-ArrayList<Integer> numbers = new ArrayList<>();
+List<Integer> numbers = new ArrayList<>();
 numbers.add(3);
 numbers.add(2);
 numbers.add(6);
@@ -986,10 +991,10 @@ System.out.println(numbers);
 
 <programming-exercise name='Remove last'>
 
-Create the method `public static void removeLast(ArrayList<String> strings)` in the exercise template. The method should remove the last value in the list it receives as a parameter. If the list is empty, the method does nothing.
+Create the method `public static void removeLast(List<String> strings)` in the exercise template. The method should remove the last value in the list it receives as a parameter. If the list is empty, the method does nothing.
 
 ```java
-ArrayList<String> strings = new ArrayList<>();
+List<String> strings = new ArrayList<>();
 
 strings.add("First");
 strings.add("Second");
@@ -1014,8 +1019,8 @@ System.out.println(strings);
 The ArrayList contains a bunch of useful methods. The method always operates on the list object that is connected to the method call -- this connection is established with a dot. The example below illustrates that a program can contain multiple lists, which also holds true for other variables. Two separate lists are created below.
 
 ```java
-ArrayList<String> exercises1 = new ArrayList<>();
-ArrayList<String> exercises2 = new ArrayList<>();
+List<String> exercises1 = new ArrayList<>();
+List<String> exercises2 = new ArrayList<>();
 
 exercises1.add("Ada Lovelace");
 exercises1.add("Hello World! (Ja Mualima!)");
@@ -1045,14 +1050,14 @@ Each list is its own separate entity, and the list methods always concern the li
 - Adding to a list is done with the method `add` that receives the value to be added as a parameter.
 
 ```java
-ArrayList<String> list = new ArrayList<>();
+List<String> list = new ArrayList<>();
 list.add("hello world!");
 ```
 
 - The number of elements in a list can be discovered with the non-parameterized method `size`; it returns an integer.
 
 ```java
-ArrayList<String> list = new ArrayList<>();
+List<String> list = new ArrayList<>();
 int size = list.size();
 System.out.println(size);
 ```
@@ -1060,7 +1065,7 @@ System.out.println(size);
 - You can retrieve a value from a certain index with the method `get` that is given the index at which the value resides as a parameter.
 
 ```java
-ArrayList<String> list = new ArrayList<>();
+List<String> list = new ArrayList<>();
 list.add("hello world!");
 String string = list.get(0);
 System.out.println(string);
@@ -1069,7 +1074,7 @@ System.out.println(string);
 - Removing elements from a list is done with the help of `remove`. It receives as a parameter either the value that is to be removed, or the index of the value to be removed.
 
 ```java
-ArrayList<String> list = new ArrayList<>();
+List<String> list = new ArrayList<>();
 // remove the string "hello world!"
 list.remove("hello world!");
  // remove the value at index 3
@@ -1079,6 +1084,26 @@ list.remove(3);
 - Checking for the existence of a value is done with the method `contains`. It's provided the value being searched for as a parameter, and it returns a boolean value.
 
 ```java
-ArrayList<String> list = new ArrayList<>();
+List<String> list = new ArrayList<>();
 boolean found = list.contains("hello world!");
 ```
+
+<text-box variant=hint name="Immutable Lists">
+
+Another way of creating a list and adding elements to it is by means of the `List.of` method, which is available since Java 9. For example, to create a list of String values, we would use:
+
+``` java
+import java.util.List;
+
+public class ImmutableListExample {
+    public static void main(String[] args) {
+        List<String> names = List.of("John", "Jane", "Dave");
+
+        // We can now use the list
+    }
+}
+```
+
+Note that a `List` created in this way is *Immutable*, meaning that adding or removing elements from it is not possible. In particular, a run-time exception will be thrown if you use the `add` or `remove` method on such a list.
+
+</text-box>
