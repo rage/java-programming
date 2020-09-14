@@ -184,17 +184,6 @@ class ProgrammingExercise extends React.Component {
                 )}
               </div>
             </div>
-
-            {this.context.loggedIn && (
-              <div>
-                <StyledDivider />
-                <ExtraDetails
-                  exerciseDetails={this.state.exerciseDetails}
-                  onUpdate={this.onUpdate}
-                  nocoins={this.props.nocoins}
-                />
-              </div>
-            )}
           </Body>
         </CardContent>
       </ProgrammingExerciseWrapper>
