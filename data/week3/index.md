@@ -2,10 +2,10 @@
 path: '/week-3'
 title: 'Week 3'
 overview: true
-hidden: true
+hidden: false
 ---
 
-In the third week of the course we look at splitting up programs into smaller parts called methods. Moreover, we look at adding information to list and array data structures, and handling information in string form.
+In the third week of the course we look at splitting up programs into smaller parts called methods. Moreover, we look at adding information to lists. We also look at how to find and fix errors in your code.
 
 <pages-in-this-section></pages-in-this-section>
 

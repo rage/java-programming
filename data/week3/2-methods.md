@@ -1,7 +1,7 @@
 ---
 path: '/week-3/2-methods'
 title: 'Methods and dividing the program into smaller parts'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Learning Objectives'>

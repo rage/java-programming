@@ -1,7 +1,7 @@
 ---
 path: "/week-3/3-lists"
 title: "Lists"
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Learning Objectives'>

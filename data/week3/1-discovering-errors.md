@@ -1,7 +1,7 @@
 ---
 path: "/week-3/1-discovering-errors"
 title: 'Discovering and Solving Errors'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Learning Objectives'>
