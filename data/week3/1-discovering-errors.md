@@ -98,7 +98,7 @@ Exception in thread "main" java.util.InputMismatchException
 
 </sample-output>
 
-Note that the exception message shows again useful information which helps us in finding what happened. In particular, we see that an `InputMismatchException` occurred and that the `Scanner`tool was involved in this exception. Moreover, the message also occurs where the error in our code occurred, in this case on line 7 of the `Example` program. Combining this information, we are often able to figure out what triggered the exception to be thrown.
+Note that the exception message shows again useful information which helps us in finding what happened. In particular, we see that an `InputMismatchException` occurred and that the `Scanner`tool was involved in this exception. Moreover, the message also occurs where the error in our code occurred, in this case on line 8 of the `RunTimeExample` program. Combining this information, we are often able to figure out what triggered the exception to be thrown.
 
 As long as you are the person using the code, you can often fix the error, for example by making sure to give input of the correct type. However, if some other user uses your program, you don't have the same level of control. We will explore methods to deal with run-time errors in these cases later in the course.
 
