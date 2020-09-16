@@ -1288,7 +1288,7 @@ System.out.println(palautaKoko(nimet));
 ``` -->
 ```java
 Set<String> names = new HashSet<>();
-name.add("first");
+names.add("first");
 names.add("first");
 names.add("second");
 names.add("second");
