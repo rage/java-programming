@@ -91,10 +91,27 @@ row, column, value
 
 </sample-output>
 
+<text-box variant="hint" variant="print">
 
-<programming-exercise name='Array as a string'>
+Sometimes you do not want to create a line break, which forces the following printed content to a new line, at the end of some printed text. For this, you can make use of the `System.out.print` command. Consider for example the below code and output:
 
-Create in the exercise base a method called `public static String arrayAsString(int[][] array)`. It should create a string representation of the array it receives as the parameter and return it. Below there are a few examples of how the method is expected to  work.
+``` java
+System.out.print("Hi ");
+System.out.print(" John")
+System.out.print("!")
+```
+
+<sample-output>
+Hi John!
+</sample-output>
+
+Note that we saw the same behavior for the `System.out.printf` method.
+
+</text-box>
+
+<programming-exercise name='Printing a multidimensional array'>
+
+Create in the exercise base a method called `public static void printArray(int[][] array)`. It should print a text representation of the two-dimensional array it receives as the parameter. Below there are a few examples of how the method is expected to  work.
 
 ```java
 int rows = 2;
@@ -103,7 +120,7 @@ int[][] matrix = new int[rows][columns];
 matrix[0][1] = 5;
 matrix[1][0] = 3;
 matrix[1][2] = 7;
-System.out.println(arrayAsString(matrix));
+printArray(matrix);
 ```
 
 <sample-output>
@@ -120,7 +137,7 @@ int[][] matrix = {
     {3, 2, 1, 0}
 };
 
-System.out.println(arrayAsString(matrix));
+printArray(matrix);
 ```
 
 <sample-output>
@@ -180,7 +197,7 @@ int[][] matrix = {
     {3, 2, 7, 6},
     {2, 4, 1, 0},
     {3, 2, 1, 0},
-    {2, 3, 4, 1}
+    {2, 3, 4, 2}
 };
 
 System.out.println(getElementsOnDiagonal(matrix));
@@ -188,7 +205,7 @@ System.out.println(getElementsOnDiagonal(matrix));
 
 <sample-output>
 
-[3, 4, 1, 1]
+[3, 4, 1, 2]
 
 </sample-output>
 
