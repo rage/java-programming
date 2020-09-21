@@ -1,7 +1,7 @@
 ---
 path: "/week-4/3-introduction-to-object-oriented-programming"
 title: "Introduction to object-oriented programming"
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Learning Objectives'>

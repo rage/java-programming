@@ -1,7 +1,7 @@
 ---
 path: '/week-4/1-arrays'
 title: 'Arrays'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Learning Objectives'>
