@@ -1,5 +1,5 @@
 ---
-path: "/week-4/3-files-and-reading-data"
+path: "/week-5/5-files-and-reading-data"
 title: "Files and reading data"
 hidden: true
 ---
