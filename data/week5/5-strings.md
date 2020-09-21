@@ -1,5 +1,5 @@
 ---
-path: '/week-4/5-using-strings'
+path: '/week-5/5-using-strings'
 title: 'Using strings'
 hidden: false
 ---
