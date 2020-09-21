@@ -370,7 +370,7 @@ Matti V. 100.0
 
 </sample-output>
 
-When you initialize an array with a block, the length of the array is precisely the number of the values specified in the block. The values of the block are assigned to the array in the order, eg. the first value is assigned to index 0, the second value to index 1 etc.
+When you initialize an array with a block, the length of the array is precisely the number of the values specified in the block. The values of the block are assigned to the array in the order, e.g., the first value is assigned to index 0, the second value to index 1 etc.
 
 ```java
 // index           0   1    2    3   4   5     6     7
@@ -382,7 +382,7 @@ System.out.println(numbers[0]);
 System.out.println(numbers[2]);
 ```
 
-Just like in ArrayLists, you can't access an index outside of the array. You can try out the following example on your own computer, for example in the sandbox.
+Just like in ArrayLists, you can't access an index outside of the array. You can try out the following example on your own computer to see what happens in that case.
 
 ```java
 String[] arrayOfStrings = {"Matti L.", "Matti P.", "Matti V."};
