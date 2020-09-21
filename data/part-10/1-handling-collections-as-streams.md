@@ -601,7 +601,7 @@ Values: 5
 </sample-output>
 
 <!-- Metodi `forEach` kertoo mitä kullekin listan arvolle tulee tehdä ja samalla päättää virran käsittelyn. Alla olevassa esimerkissä luodaan ensin numeroita sisältävä lista, jonka jälkeen tulostetaan vain kahdella jaolliset luvut. -->
-The `forEach` method defines what is done to each list value and terminated the stream processing. In the example below, we first create a list of numbers, after which we only print the numbers that are divisible by two.
+The `forEach` method defines what is done to each list value and terminates the stream processing. In the example below, we first create a list of numbers, after which we only print the numbers that are divisible by two.
 
 
 <!-- ```java
