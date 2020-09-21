@@ -312,7 +312,7 @@ You can try out the computation of the sum with this example:
 
 ```java
 int[] numbers = {5, 1, 3, 4, 2};
-computeAverageOfArray(numbers);
+System.out.println(computeAverageOfArray(numbers));
 ```
 
 <sample-output>
