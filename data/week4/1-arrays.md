@@ -134,7 +134,7 @@ Tip! You'll need an additional variable to store one of the values for a little 
 </programming-exercise>
 
 ## Size of an array and iterating
-You can find the size of the array through the associated variable `length`. You can access this associated variable by writing name of the array dot name of the variable, i.e. `numbers.length`. Note, that this is not a method call, so `numbers.length()` doesn't work.
+You can find the size of the array through the associated variable `length`. You can access this associated variable by writing the name of the array dot name of the variable, i.e. `numbers.length`. Note, that this is not a method call, so `numbers.length()` doesn't work.
 You can iterate over the array, i.e. go through each element of the array with a while loop.
 
 ```java
@@ -200,9 +200,9 @@ Search for?
 
 </programming-exercise>
 
-If the index is pointing outside the Array, i.e. the element doesn't exist, we get an **ArrayIndexOutOfBoundsException**. This error tells, that the Array doesn't contain the given index. You cannot access outside of the Array, i.e. index that's less than 0 or greater or equal to the size of the Array.
+If the index is pointing outside the Array, i.e. the element doesn't exist, we get an **ArrayIndexOutOfBoundsException**. This error tells, that the Array doesn't contain the given index. You cannot access outside the Array, i.e., an index that's less than 0 or greater or equal to the size of the Array.
 
-The next example is a program that initially asks the user to enter how many numbers, and then enter the numbers. Finally it prints back the numbers in the same order. The numbers are stored in an Array.
+The next example is a program that initially asks the user to enter how many numbers, and then enter the numbers. Finally, it prints back the numbers in the same order. The numbers are stored in an Array.
 
 ```java
 System.out.print("How many numbers? ");
@@ -247,7 +247,7 @@ Here are the numbers again:
 </sample-output>
 
 ## Type of the elements
-You can create an array stating the type of the elements of the array followed by square brackets (typeofelements[]). Therefore the elements of the array can be of any type. Here's a few examples:
+You can create an array stating the type of the elements of the array followed by square brackets (typeofelements[]). Therefore, the elements of the array can be of any type. Here's a few examples:
 
 ```java
 String[] months = new String[12];
@@ -325,7 +325,7 @@ System.out.println(computeAverageOfArray(numbers));
 
 <programming-exercise name='Print neatly'>
 
-Complete the method `public static void printNeatly(int[] array)` in the class named 'ArrayPrinter' to make it print the numbers of the array it receives more neatly. There should be a whitespace and a comma between each number. don't put a comma after the last number.
+Complete the method `public static void printNeatly(int[] array)` in the class named 'ArrayPrinter' to make it print the numbers of the array it receives more neatly. There should be a whitespace and a comma between each number. Don't put a comma after the last number.
 
 Print the numbers on one line using `System.out.print`.
 
@@ -351,7 +351,7 @@ Just like for Strings, there's also a shortcut to create an array. Here we creat
 ```java
 int[] numbers = {100, 1, 42};
 ```
-So apart from calling for `new`, we can also initialize an array with a block, that contains comma-separated values to be assigned in the array. This works for all the types: below we initialize an array of strings, then an array of floating-point numbers. Finally the values are printed.
+So apart from calling for `new`, we can also initialize an array with a block, that contains comma-separated values to be assigned in the array. This works for all the types: below we initialize an array of strings, then an array of floating-point numbers. Finally, the values are printed.
 
 ```java
 String[] arrayOfStrings = {"Matti L.", "Matti P.", "Matti V."};

@@ -16,12 +16,12 @@ hidden: false
 
 We'll now begin our journey in to the world of object-oriented programming. We'll start with focusing on describing concepts and data using objects. From there on, we'll learn how to add functionality, i.e., methods to our program.
 
-Object-oriented programming is concerned with isolating concepts of a problem domain into separate entities and then using those entities to solve problems. Concepts related to a problem can only be considered once they've been identified. In other words, we can form abstractions from problems that make those problem easier to approach.
+Object-oriented programming is concerned with isolating concepts of a problem domain into separate entities and then using those entities to solve problems. Concepts related to a problem can only be considered once they've been identified. In other words, we can form abstractions from problems that make those problems easier to approach.
 
-Once concepts related to a given problem have been identified, we can also begin to build constructs that represent them them into programs. These constructs, and the individual instances that are formed from them, i.e., objects, are used in solving the problem. The statement "programs are built from small, clear, and cooperative objects" may not make much sense yet. However, it will appear more sensible as we progress through the course, perhaps even self-evident.
+Once concepts related to a given problem have been identified, we can also begin to build constructs that represent them into programs. These constructs, and the individual instances that are formed from them, i.e., objects, are used in solving the problem. The statement "programs are built from small, clear, and cooperative objects" may not make much sense yet. However, it will appear more sensible as we progress through the course, perhaps even self-evident.
 
 ## Classes and Objects
-We've already used some of the classes and objects provided by Java. A **class** defines the attributes of objects, i.e., the information related to them (instance variables), and their commands, i.e., their methods. The values of instance (i.e., object) variables define the internal state of an individual object, whereas methods define the functionality it offers.
+We've already used some classes and objects provided by Java. A **class** defines the attributes of objects, i.e., the information related to them (instance variables), and their commands, i.e., their methods. The values of instance (i.e., object) variables define the internal state of an individual object, whereas methods define the functionality it offers.
 
 A **Method** is a piece of source code written inside a class that's been named and has the ability to be called. A method is always part of some class and is often used to modify the internal state of an object instantiated from a class.
 
@@ -220,11 +220,11 @@ public class Person {
 }
 ```
 
-A method is written inside of the class beneath the constructor. The method name is preceded by `public void`, since the method is intended to be visible to the outside world (`public`), and it does not return a value (`void`).
+A method is written inside the class beneath the constructor. The method name is preceded by `public void`, since the method is intended to be visible to the outside world (`public`), and it does not return a value (`void`).
 
 <text-box variant='hint' name='Objects and the Static Modifier'>
 
-We've used the modifier `static` in some of the methods that we've written. The `static` modifier indicates that the method in question does not belong to an object and thus cannot be used to access any variables that belong to objects.
+We've used the modifier `static` in some methods that we've written. The `static` modifier indicates that the method in question does not belong to an object and thus cannot be used to access any variables that belong to objects.
 
 Going forward, our methods will not include the `static` keyword if they're used to process information about objects created form a given class. If a method receives as parameters all the variables whose values ​​it uses, it can have the `static` modifier.
 
@@ -234,7 +234,7 @@ In addition to the class name, instance variables and constructor, the class dia
 
 <img src="../img/diagrams/part4.1-classdiagram-person-name-age-constructor-print.png">
 
-The method `printPerson` contains one line of code that makes use of the instance variables `name` and `age` -- the class diagram says nothing about its internal implementations. Instance variables are referred to with the prefix `this`. All of the object's variables are visible and available from within the method.
+The method `printPerson` contains one line of code that makes use of the instance variables `name` and `age` -- the class diagram says nothing about its internal implementations. Instance variables are referred to with the prefix `this`. All the object's variables are visible and available from within the method.
 
 Let's create three persons in the main program and request them to print themselves:
 
