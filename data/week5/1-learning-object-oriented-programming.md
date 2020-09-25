@@ -4,7 +4,6 @@ title: 'Learning object-oriented programming'
 hidden: true
 ---
 
-
 <text-box variant='learningObjectives' name='Learning Objectives'>
 
 - To revise the concepts of class and object.
@@ -183,7 +182,7 @@ while (true) {
 The clock we implemented above is an object whose functionality is based on "simpler" objects, i.e., its hands. This is precisely the **great idea behind ​​object-oriented programming: a program is built from small and distinct objects that work together**
 
 
-<programming-exercise name='One Minute' tmcname='part05-Part05_01.OneMinute'>
+<programming-exercise name='One Minute'>
 
 The exercise template comes with the "ClockHand" class described above. Implement a `Timer` class based on the material's `Clock` class.
 
@@ -355,7 +354,7 @@ System.out.println(first.surfaceArea());
 
 </sample-output>
 
-<programming-exercise name='Book' tmcname='part05-Part05_02.Book'>
+<programming-exercise name='Book'>
 
 Create a "Book" class that describes a book. Each book has an author, title, and page count.
 
@@ -377,42 +376,7 @@ J. K. Rowling, Harry Potter and the Sorcerer's Stone, 223 pages
 
 </programming-exercise>
 
-
-<programming-exercise name='Cube' tmcname='part05-Part05_03.Cube'>
-
-Create a `Cube` class that represents a cube (i.e., a standard hexahedron). Create a `public Cube (int edgeLength)` constructor for the class, that takes the length of the cube's edge as its parameter.
-
-
-Make a `public int volume()` method for the cube, which calculates and returns the cube's volume. The volume of the cube is calculated with the formula `edgeLength * edgeLength * edgeLength`. Moreover, make a `public String toString()` method for the cube, which returns a string representation of it. The string representation should take the form "`The length of the edge is l and the volume v`", where `l` is the length and `v` the volume - both the length and volume must be represented as integers.
-
-Examples are provided underneath
-
-```java
-Cube oSheaJackson = new Cube(4);
-System.out.println(oSheaJackson.volume());
-System.out.println(oSheaJackson);
-
-System.out.println();
-
-Cube salt = new Cube(2);
-System.out.println(salt.volume());
-System.out.println(salt);
-```
-
-<sample-output>
-
-64
-The length of the edge is 4 and the volume 64
-
-8
-The length of the edge is 2 and the volume 8
-
-</sample-output>
-
-</programming-exercise>
-
-
-<programming-exercise name='Fitbyte' tmcname='part05-Part05_04.FitByte'>
+<programming-exercise name='Fitbyte'>
 
 
 <a href="https://en.wikipedia.org/wiki/Heart_rate#Karvonen_method" target="_blank" norel>The Karvonen method </a> allows you to calculate your target heart rate for physical exercise. The target heart rate is calculated with the formula `(maximum heart rate - resting heart rate) * (target heart rate percentage) + resting heart rate`, where the target heart rate is given as a percentage of the maximum heart rate.

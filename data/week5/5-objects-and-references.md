@@ -1,4 +1,4 @@
----
+mensa---
 path: '/week-5/5-objects-and-references'
 title: 'Objects and references'
 hidden: true
@@ -237,15 +237,9 @@ Joan Ball, age 0 years
 
 </sample-output>
 
-Bad things follow. This could be the first time you have seen the text **NullPointerException**. In the course of the program, there occured an error indicating that we called a method on a variable that refers to nothing.
+Bad things follow. This could be the first time you have seen the text **NullPointerException**. In the course of the program, there occurred a run-time error indicating that we called a method on a variable that refers to nothing.
 
-We promise that this is not the last time you will encounter the previous error. When you do, the first step is to look for variables whose value could be `null`. Fortunately, the error message is useful: it tells which row caused the error. Try it out yourself!
-
-<programming-exercise name='NullPointerException' tmcname='part05-Part05_07.NullPointerException'>
-
-Implement a program that causes the NullPointerException error. The error should occur directly after starting the program -- don't wait to read input from the user, for instance.
-
-</programming-exercise>
+We promise that this is not the last time you will encounter the previous error. When you do, the first step is to look for variables whose value could be `null`. Fortunately, the error message is useful: it tells which row caused the error.
 
 ## Object as a method parameter
 
@@ -411,137 +405,11 @@ Water track, minimum height: 140, visitors: 1
 
 Development environments can help the programmer. If you have created object variables for a class, creating constructors, getters, and setters can be done almost automatically.
 
-Go inside the code block of the class, but outside of all the methods, and simultaneously press ctrl and space. If your class has e.g. an object variable `balance`, NetBeans offers the option to generate the getter and setter methods for the object variable, and a constuctor that assigns an initial value for that variable.
-
-On some Linux machines, like on the ones on the Kumpula campus (University of Helsinki), this feature is triggered by simultaneously pressing ctrl, alt, and space.
+Such code generation can be done in IntelliJ by going to `Code > Generate` or using the shortcut `Alt + Insert`. Then select the what you would like to generate, e.g., getter methods, and select the instance variables (fields) for which these should be generated.
 
 </text-box>
 
-<programming-exercise name='Health station (3 parts)' tmcname='part05-Part05_09.HealthStation'>
-
-In the exercise base there is the class `Person`, which we are already quite familiar with. There is also an outline for the class `HealthStation`. Health station objects process people in different ways, they e.g. weigh and feed people. In this exercise we will construct a health station. The code of the Person class should not be modified in this exercise!
-
-<h2>Weighing people</h2>
-
-In the outline of the Health station there is an outline for the method `weigh`:
-
-```java
-public class HealthStation {
-
-    public int weigh(Person person) {
-        // return the weight of the person passed as the parameter
-        return -1;
-    }
-}
-```
-
-The method receives a person as a parameter, and it is meant to return to its caller the weight of that person. The weight information can be found by calling a suitable method of the person `person`. **So your task is to complete the code of the method!**
-
-Here is a main program where a health station weight two people:
-
-```java
-public static void main(String[] args) {
-    // example main program for the first section of the exercise
-
-    HealthStation childrensHospital = new HealthStation();
-
-    Person ethan = new Person("Ethan", 1, 110, 7);
-    Person peter = new Person("Peter", 33, 176, 85);
-
-    System.out.println(ethan.getName() + " weight: " + childrensHospital.weigh(ethan) + " kilos");
-    System.out.println(peter.getName() + " weight: " + childrensHospital.weigh(peter) + " kilos");
-}
-```
-
-The output should be the following:
-
-<sample-output>
-
-Ethan's weight: 7 kilos
-Peter's weight: 85 kilos
-
-</sample-output>
-
-<h2>Feeding</h2>
-
-It is possible to modify the state of the object that is received as a parameter. Write a method called `public void feed(Person person)` for the health station. It should increase the weight of the parameter person by one.
-
-Following is an example where people are weighed first, and then ethan is fed three times in the children's hospital. After this the people are weighed again:
-
-```java
-public static void main(String[] args) {
-    HealthStation childrensHospital = new HealthStation();
-
-    Person ethan = new Person("Ethan", 1, 110, 7);
-    Person peter = new Person("Peter", 33, 176, 85);
-
-    System.out.println(ethan.getName() + " weight: " + childrensHospital.weigh(ethan) + " kilos");
-    System.out.println(peter.getName() + " weight: " + childrensHospital.weigh(peter) + " kilos");
-
-    childrensHospital.feed(ethan);
-    childrensHospital.feed(ethan);
-    childrensHospital.feed(ethan);
-
-    System.out.println("");
-
-    System.out.println(ethan.getName() + " weight: " + childrensHospital.weigh(ethan) + " kilos");
-    System.out.println(peter.getName() + " weight: " + childrensHospital.weigh(peter) + " kilos");
-}
-```
-
-The output should reveal that Ethan's weight has increased by three:
-
-<sample-output>
-
-Ethan weight: 7 kilos
-Peter weight: 85 kilos
-
-Ethan weight: 10 kilos
-Peter weight: 85 kilos
-
-</sample-output>
-
-<h2>Counting weighings</h2>
-
-Create a new method called `public int weighings()` for the health station. It should tell how many weighings the health station has performed. *NB! You will need a new object variable for counting the number of weighings!*. Test main program:
-
-```java
-public static void main(String[] args) {
-
-    HealthStation childrensHospital = new HealthInstitution();
-
-    Person ethan = new Person("Ethan", 1, 110, 7);
-    Person peter = new Person("Peter", 33, 176, 85);
-
-    System.out.println("weighings performed: " + childrensHospital.weighings());
-
-    childrensHospital.weigh(ethan);
-    childrensHospital.weigh(peter);
-
-    System.out.println("weighings performed: " + childrensHospital.weighings());
-
-    childrensHospital.weigh(ethan);
-    childrensHospital.weigh(ethan);
-    childrensHospital.weigh(ethan);
-    childrensHospital.weigh(ethan);
-
-    System.out.println("weighings performed: " + childrensHospital.weighings());
-}
-```
-
-The output is:
-
-<sample-output>
-
-weighings performed: 0
-weighings performed: 2
-weighings performed: 6
-
-</sample-output>
-
-</programming-exercise>
-
-<programming-exercise name='Card payments (4 sections)' tmcname='part05-Part05_10.CardPayments'>
+<programming-exercise name='Card payments'>
 
 <h2>"Dumb" payment card</h2>
 
@@ -601,9 +469,9 @@ The output should be like below
 <sample-output>
 
 money 10.0
-successfully took: true
+successfully withdrew: true
 money 2.0
-successfully took: false
+successfully withdrew: false
 money 2.0
 
 </sample-output>
@@ -637,7 +505,7 @@ public class PaymentTerminal {
     }
 
     public String toString() {
-        return "money: " + money + ", number of sold afforable meals: " + affordableMeals + ", number of sold hearty meals: " + heartyMeals;
+        return "money: " + money + ", number of sold affordable meals: " + affordableMeals + ", number of sold hearty meals: " + heartyMeals;
     }
 }
 ```
@@ -647,18 +515,18 @@ The terminal starts with 1000 euros in it. Implement the methods so they work co
 ```java
 public class MainProgram {
     public static void main(String[] args) {
-        PaymentTerminal unicafeExactum = new PaymentTerminal();
+        PaymentTerminal mensa = new PaymentTerminal();
 
-        double change = unicafeExactum.eatAffordably(10);
+        double change = mensa.eatAffordably(10);
         System.out.println("remaining change " + change);
 
-        change = unicafeExactum.eatAffordably(5);
+        change = mensa.eatAffordably(5);
         System.out.println("remaining change " + change);
 
-        change = unicafeExactum.eatHeartily(4.3);
+        change = mensa.eatHeartily(4.3);
         System.out.println("remaining change " + change);
 
-        System.out.println(unicafeExactum);
+        System.out.println(mensa);
     }
 }
 ```
@@ -704,21 +572,21 @@ Below is a main program to test the classes, and the output that is desired:
 ```java
 public class MainProgram {
     public static void main(String[] args) {
-        PaymentTerminal unicafeExactum = new PaymentTerminal();
+        PaymentTerminal mensa = new PaymentTerminal();
 
-        double change = unicafeExactum.eatAffordably(10);
+        double change = mensa.eatAffordably(10);
         System.out.println("remaining change: " + change);
 
         PaymentCard annesCard = new PaymentCard(7);
 
-        boolean wasSuccessful = unicafeExactum.eatHeartily(annesCard);
+        boolean wasSuccessful = mensa.eatHeartily(annesCard);
         System.out.println("there was enough money: " + wasSuccessful);
-        wasSuccessful = unicafeExactum.eatHeartily(annesCard);
+        wasSuccessful = mensa.eatHeartily(annesCard);
         System.out.println("there was enough money: " + wasSuccessful);
-        wasSuccessful = unicafeExactum.eatAffordably(annesCard);
+        wasSuccessful = mensa.eatAffordably(annesCard);
         System.out.println("there was enough money: " + wasSuccessful);
 
-        System.out.println(unicafeExactum);
+        System.out.println(mensa);
     }
 }
 ```
@@ -729,59 +597,9 @@ remaining change: 7.5
 there was enough money: true
 there was enough money: false
 there was enough money: true
-money: 1002.5, number of sold afforable meals: 2, number of sold hearty meals: 1
+money: 1002.5, number of sold affordable meals: 2, number of sold hearty meals: 1
 
 </sample-output>
-
-
-<h2>Adding money</h2>
-
-Let's create a method for the terminal that can be used to add money to a payment card. Recall that the payment that is received when adding money to the card is stored in the register. The basis for the method:
-
-```java
-public void addMoneyToCard(PaymentCard card, double sum) {
-    // ...
-}
-```
-
-A main program to illustrate:
-
-```java
-public class MainProgram {
-    public static void main(String[] args) {
-        PaymentTerminal unicafeExactum = new PaymentTerminal();
-        System.out.println(unicafeExactum);
-
-        PaymentCard annesCard = new PaymentCard(2);
-
-        System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
-
-        boolean wasSuccessful = unicafeExactum.eatHeartily(annesCard);
-        System.out.println("there was enough money: " + wasSuccessful);
-
-        unicafeExactum.addMoneyToCard(annesCard, 100);
-
-        wasSuccessful = unicafeExactum.eatHeartily(annesCard);
-        System.out.println("there was enough money: " + wasSuccessful);
-
-        System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
-
-        System.out.println(unicafeExactum);
-    }
-}
-```
-
-<sample-output>
-
-money: 1000.0, number of sold afforable meals: 0, number of sold hearty meals: 0
-amount of money on the card is 2.0 euros
-there was enough money: false
-there was enough money: true
-amount of money on the card is 97.7 euros
-money: 1100.0, number of sold afforable meals: 0, number of sold hearty meals: 1
-
-</sample-output>
-
 
 </programming-exercise>
 
@@ -919,7 +737,7 @@ public class Example {
 
 </text-box>
 
-<programming-exercise name='Biggest pet shop' tmcname='part05-Part05_08.BiggestPetShop'>
+<programming-exercise name='Biggest pet shop'>
 
 Two classes, `Person` and `Pet`, are included in the exercise template. Each person has one pet. Modify the `public String toString` method of the `Person` class so that the string it returns tells the pet's name and breed in addition to the person's own name.
 
@@ -1146,7 +964,7 @@ public class Person {
 
 Now the concrete comparison of dates is implemented in the class that it logically (based on the class names) belongs to.
 
-<programming-exercise name='Comparing apartments (3 parts)' tmcname='part05-Part05_11.ComparingApartments'>
+<programming-exercise name='Comparing apartments'>
 
 In the estate agent's information system, an apartment that is on sale is represented by an object that is instantiated from the following class:
 
@@ -1158,7 +976,7 @@ public class Apartment {
 
     public Apartment(int rooms, int squares, int pricePerSquare) {
         this.rooms = rooms;
-        this.square = squares;
+        this.squares = squares;
         this.pricePerSquare = pricePerSquare;
     }
 }
@@ -1194,22 +1012,6 @@ Apartment bangorThreeBedroomApt = new Apartment(3, 78, 2500);
 System.out.println(manhattanStudioApt.priceDifference(atlantaTwoBedroomApt));  //71600
 System.out.println(bangorThreeBedroomApt.priceDifference(atlantaTwoBedroomApt));   //35400
 ```
-
-<h2>More expensive?</h2>
-
-Write a method `public boolean moreExpensiveThan(Apartment compared)` that returns true if the apartment object whose method is called is more expensive than the apartment object being compared.
-
-An example of how the method should work:
-
-```java
-Apartment manhattanStudioApt = new Apartment(1, 16, 5500);
-Apartment atlantaTwoBedroomApt = new Apartment(2, 38, 4200);
-Apartment bangorThreeBedroomApt = new Apartment(3, 78, 2500);
-
-System.out.println(manhattanStudioApt.moreExpensiveThan(atlantaTwoBedroomApt));  // false
-System.out.println(bangorThreeBedroomApt.moreExpensiveThan(atlantaTwoBedroomApt));   // true
-```
-
 </programming-exercise>
 
 ## Comparing the equality of objects (equals)
@@ -1380,7 +1182,7 @@ public class Person {
 }
 ```
 
-<programming-exercise name='Song' tmcname='part05-Part05_12.Song'>
+<programming-exercise name='Song'>
 
 In the exercise base there is a class called `Song` that can be used to create new objects that represent songs. Add to that class the `equals` method so that the similarity of songs can be examined.
 
@@ -1401,34 +1203,6 @@ if (jackSparrow.equals("Another object")) {
 Songs are equal
 
 </sample-output>
-
-</programming-exercise>
-
-<programming-exercise name='Identical twins' tmcname='part05-Part05_13.IdenticalTwins'>
-
-In the exercise base you can find the `Person` class that is linked with an `SimpleDate` object. Add to the class Person the method `public boolean equals (Object compared)`, which can be used to compare the similarity of people. The comparison should take into account the equality of all the variables of a person (birthday included).
-
-**NB!** Recall that you cannot compare two birthday objects with equality signs!
-
-There are no tests in the exercise template to check the correctness of the solution. Only return your answer after the comparison works as it should. Below is some code to help test the program.
-
-```java
-SimpleDate date = new SimpleDate(24, 3, 2017);
-SimpleDate date2 = new SimpleDate(23, 7, 2017);
-
-Person leo = new Person("Leo", date, 62, 9);
-Person lily = new Person("Lily", date2, 65, 8);
-
-if (leo.equals(lily)) {
-    System.out.println("Is this quite correct?");
-}
-
-Person leoWithDifferentWeight = new Person("Leo", date, 62, 10);
-
-if (leo.equals(leoWithDifferentWeight)) {
-    System.out.println("Is this quite correct?");
-}
-```
 
 </programming-exercise>
 
@@ -1571,37 +1345,7 @@ public class Bird {
 }
 ```
 
-<!-- Nyt listan contains-metodi tunnistaa samansisältöiset linnut. -->
-
 Now the contains list method recognizes birds with identical contents.
-
-<!-- ```java
-ArrayList<Lintu> linnut = new ArrayList<>()
-Lintu red = new Lintu("Red");
-
-if (linnut.contains(red)) {
-    System.out.println("Red on listalla.");
-} else {
-    System.out.println("Red ei ole listalla.");
-}
-
-linnut.add(red);
-if (linnut.contains(red)) {
-    System.out.println("Red on listalla.");
-} else {
-    System.out.println("Red ei ole listalla.");
-}
-
-
-System.out.println("Mutta!");
-
-red = new Lintu("Red");
-if (linnut.contains(red)) {
-    System.out.println("Red on listalla.");
-} else {
-    System.out.println("Red ei ole listalla.");
-}
-``` -->
 
 ```java
 ArrayList<Bird> birds = new ArrayList<>()
@@ -1631,15 +1375,6 @@ if (birds.contains(red)) {
 }
 ```
 
-<!-- <sample-output>
-
-Red ei ole listalla.
-Red on listalla.
-Mutta!
-Red on listalla.
-
-</sample-output> -->
-
 <sample-output>
 
 Red is not on the list.
@@ -1649,44 +1384,11 @@ Red is on the list.
 
 </sample-output>
 
-
-<!-- <programming-exercise name='Kirjat' tmcname='osa05-Osa05_14.Kirjat'> -->
-
-<programming-exercise name='Books' tmcname='part05-Part05_14.Books'>
-
-
-<!-- Tehtäväpohjassa on ohjelma, joka lukee käyttäjältä kirjoja ja lisää niitä listalle. -->
+<programming-exercise name='Books'>
 
 There is a program in the exercise base that asks for books from the user and adds them to a list.
 
-<!-- Muokkaa ohjelmaa siten, että listalle ei lisätä kirjoja, jotka ovat jo listalla. Kaksi kirjaa tulee käsittää samaksi mikäli niiden nimi ja julkaisuvuosi on sama. -->
-
 Modify the program so that books that are already on the list are not added to it again. Two books should be considered the same if they have the same name and publication year.
-
-<!-- Esimerkkitulostus: -->
-
-Example print
-
-<!-- <sample-output>
-
-Syötä kirjan nimi, tyhjä lopettaa.
-**Bossypants**
-Syötä kirjan julkaisuvuosi.
-**2013**
-Syötä kirjan nimi, tyhjä lopettaa.
-**Seriously...I'm Kidding**
-Syötä kirjan julkaisuvuosi.
-**2012**
-Syötä kirjan nimi, tyhjä lopettaa.
-**Seriously...I'm Kidding**
-Syötä kirjan julkaisuvuosi.
-**2012**
-Kirja on jo listalla. Ei lisätä samaa kirjaa uudestaan.
-Syötä kirjan nimi, tyhjä lopettaa.
-
-Kiitos! Kirjoja lisätty: 2
-
-</sample-output> -->
 
 <sample-output>
 
@@ -1711,216 +1413,11 @@ Thank you! Books added: 2
 
 </programming-exercise>
 
-
-<!-- <programming-exercise name='Keräilijän varasto (2 osaa)' tmcname='osa05-Osa05_15.KerailijanVarasto'> -->
-
-<programming-exercise name='Archive (2 parts)' tmcname='part05-Part05_15.Archive'>
-
-
-<!-- Tässä tehtävässä toteutat ohjelman, jota käytetään keräilijän varaston käsittelyyn. Varastoon voi lisätä esineitä. Kun esineiden lisääminen lopetetaan, varastossa olevat esineet tulostetaan. -->
-
-In this exercise you get to implement a program that can be used to handle an archive. Several items can be added to it. When no more items are added, all the items in the archive are printed.
-
-<!-- <h2>Esineiden lisääminen ja listaaminen</h2> -->
-
-<h2>Adding and listing items</h2>
-
-
-<!-- Ohjelman tulee lukea käyttäjältä esineitä. Kun kaikki käyttäjän esineet on luettu, ohjelma tulostaa esineiden tiedot. -->
-
-The program should read items from the user. When all the items from the user have been read, the program prints the information of each item.
-
-<!-- Kustakin esineestä tulee lukea tunnus ja nimi. Mikäli syötetty tunnus tai nimi on tyhjä, ohjelma lopettaa syötteen pyytämisen ja tulostaa esineiden tiedot. -->
-
-For each item, its identifier and name should be read. If the identifier or name is empty, the program stops asking for input, and prints all the item information.
-
-<!-- Esimerkkitulostus: -->
-
-Example print:
-
-<!-- <sample-output>
-
-Syötä esineen tunnus, tyhjä lopettaa.
-**B07H8ND8HH**
-Syötä esineen nimi, tyhjä lopettaa.
-**He-Man hahmo**
-Syötä esineen tunnus, tyhjä lopettaa.
-**B07H8ND8HH**
-Syötä esineen nimi, tyhjä lopettaa.
-**He-Man**
-Syötä esineen tunnus, tyhjä lopettaa.
-**B07NQFMZYG**
-Syötä esineen nimi, tyhjä lopettaa.
-**He-Man hahmo**
-Syötä esineen tunnus, tyhjä lopettaa.
-**B07NQFMZYG**
-Syötä esineen nimi, tyhjä lopettaa.
-**He-Man hahmo**
-Syötä esineen tunnus, tyhjä lopettaa.
-
-==Esineet==
-B07H8ND8HH: He-Man hahmo
-B07H8ND8HH: He-Man
-B07NQFMZYG: He-Man hahmo
-B07NQFMZYG: He-Man hahmo
-
-</sample-output> -->
-
-<sample-output>
-
-Identifier? (empty will stop)
-**B07H8ND8HH**
-Name? (empty will stop)
-**He-Man figure**
-Identifier? (empty will stop)
-**B07H8ND8HH**
-Name? (empty will stop)
-**He-Man**
-Identifier? (empty will stop)
-**B07NQFMZYG**
-Name? (empty will stop)
-**He-Man figure**
-Identifier? (empty will stop)
-**B07NQFMZYG**
-Name? (empty will stop)
-**He-Man figure**
-Identifier? (empty will stop)
-
-==Items==
-B07H8ND8HH: He-Man figure
-B07H8ND8HH: He-Man
-B07NQFMZYG: He-Man figure
-B07NQFMZYG: He-Man figure
-
-</sample-output>
-
-<!-- Esineiden tulostusmuodon tulee olla `tunnus: nimi`. -->
-
-The printing format of the items should be `identifier: name`.
-
-<!-- Huom! Älä käytä kaksoispistettä ohjelman muussa tulostuksessa. -->
-
-NB! Don't print the colon (:) anywhere else in the output of the program.
-
-
-<!-- <h2>Kukin esine tulostetaan vain kerran</h2> -->
-
-<h2>You only print once (per item)</h2>
-
-
-<!-- Muokkaa ohjelmaa siten, että esineiden syöttämisen jälkeen kukin esine tulostetaan korkeintaan kerran. Kaksi esinettä tulee käsittää samoina mikäli niiden tunnukset ovat samat (nimet voivat vaihdella esimerkiksi maittain). -->
-
-Modify the program so that after entering the items, each item is printed at most once. Two items should be considered the same if their identifiers are the same (there can be variation in their names in different countries, for instance).
-
-<!-- Mikäli käyttäjä syöttää saman esineen useaan otteeseen, tulostuksessa käytetään ensimmäisenä syötettyä esinettä. -->
-
-If the user enters the same item multiple times, the print uses the item that was added first.
-
-<!-- <sample-output>
-
-Syötä esineen tunnus, tyhjä lopettaa.
-**B07H8ND8HH**
-Syötä esineen nimi, tyhjä lopettaa.
-**He-Man hahmo**
-Syötä esineen tunnus, tyhjä lopettaa.
-**B07H8ND8HH**
-Syötä esineen nimi, tyhjä lopettaa.
-**He-Man**
-Syötä esineen tunnus, tyhjä lopettaa.
-**B07NQFMZYG**
-Syötä esineen nimi, tyhjä lopettaa.
-**He-Man hahmo**
-Syötä esineen tunnus, tyhjä lopettaa.
-**B07NQFMZYG**
-Syötä esineen nimi, tyhjä lopettaa.
-**He-Man hahmo**
-Syötä esineen tunnus, tyhjä lopettaa.
-
-==Esineet==
-B07H8ND8HH: He-Man hahmo
-B07NQFMZYG: He-Man hahmo
-
-</sample-output> -->
-
-<sample-output>
-
-Identifier? (empty will stop)
-**B07H8ND8HH**
-Name? (empty will stop)
-**He-Man figure**
-Identifier? (empty will stop)
-**B07H8ND8HH**
-Name? (empty will stop)
-**He-Man**
-Identifier? (empty will stop)
-**B07NQFMZYG**
-Name? (empty will stop)
-**He-Man figure**
-Identifier? (empty will stop)
-**B07NQFMZYG**
-Name? (empty will stop)
-**He-Man figure**
-Identifier? (empty will stop)
-
-==Items==
-B07H8ND8HH: He-Man figure
-B07NQFMZYG: He-Man figure
-
-</sample-output>
-
-
-<!-- Vinkki! Tämä kannattaa toteuttaa siten, että kukin esine lisätään listalle korkeintaan kerran -- vertaile esineiden samuutta niiden tunnuksien perusteella. -->
-
-Hint! It is probably smart to add each item to the list at most once -- compare the equality of the objects based on their identifiers.
-
-</programming-exercise>
-
-
-<!-- ## Olio metodin paluuarvona -->
-
 ## Object as a method's return value
-
-<!-- Olemme nähneet metodeja jotka palauttavat totuusarvoja, lukuja ja merkkijonoja. On helppoa arvata, että metodi voi palauttaa minkä tahansa tyyppisen olion. -->
 
 We have seen methods return boolean values, numbers, and strings. Easy to guess, a method can return an object of any type.
 
-<!-- Seuraavassa esimerkissä on yksinkertainen laskuri, jolla on metodi `kloonaa`. Metodin avulla laskurista voidaan tehdä klooni, eli uusi laskurio-olio, jolla on luomishetkellä sama arvo kuin kloonattavalla laskurilla: -->
-
-
 In the next example we present a simple counter that has the method `clone`. The method can be used to create a clone of the counter; i.e. a new counter object that has the same value at the time of its creation as the counter that is being cloned.
-
-<!-- ```java
-public Laskuri {
-    private int arvo;
-
-    // esimerkki useamman konstruktorin käytöstä:
-    // konstruktorista voi kutsua toista konstruktoria this-kutsulla
-    // huomaa tosin, että this-kutsun tulee olla konstruktorin ensimmäisellä rivillä.
-    public Laskuri() {
-        this(0);
-    }
-
-    public Laskuri(int alkuarvo) {
-        this.arvo = alkuarvo;
-    }
-
-    public void kasvata() {
-        this.arvo = this.arvo + 1;
-    }
-
-    public String toString() {
-        return "arvo: " + arvo;
-    }
-
-    public Laskuri kloonaa() {
-        // luodaan uusi laskuriolio, joka saa alkuarvokseen kloonattavan laskurin arvon
-        Laskuri klooni = new Laskuri(this.arvo);
-
-        // palautetaan klooni kutsujalle
-        return klooni;
-    }
-}
-``` -->
 
 ```java
 public Counter {
@@ -1955,36 +1452,7 @@ public Counter {
 }
 ```
 
-<!-- Seuraavassa käyttöesimerkki: -->
-
 An example of using counters follows:
-
-
-<!-- ```java
-Laskuri laskuri = new Laskuri();
-laskuri.kasvata();
-laskuri.kasvata();
-
-System.out.println(laskuri);         // tulostuu 2
-
-Laskuri klooni = laskuri.kloonaa();
-
-System.out.println(laskuri);         // tulostuu 2
-System.out.println(klooni);          // tulostuu 2
-
-laskuri.kasvata();
-laskuri.kasvata();
-laskuri.kasvata();
-laskuri.kasvata();
-
-System.out.println(laskuri);         // tulostuu 6
-System.out.println(klooni);          // tulostuu 2
-
-klooni.kasvata();
-
-System.out.println(laskuri);         // tulostuu 6
-System.out.println(klooni);          // tulostuu 3
-``` -->
 
 ```java
 Counter counter = new Counter();
@@ -2012,28 +1480,9 @@ System.out.println(counter);         // prints 6
 System.out.println(clone);          // prints 3
 ```
 
-<!-- Kloonattavan ja kloonin sisältämä arvo on kloonauksen tapahduttua sama. Kyseessä on kuitenkin kaksi erillistä olioa, eli kun toista laskureista kasvatetaan, ei kasvatus vaikuta toisen arvoon millään tavalla. -->
-
 Immediately after the cloning operation, the values contained by the clone and the cloned object are the same. However, they are two different objects, so increasing the value of one counter does not affect the value of the other in any way.
 
-<!-- Vastaavasti myös `Tehdas`-olio voisi luoda ja palauttaa uusia `Auto`-olioita. Alla on hahmoteltu tehtaan runkoa -- tehdas tietää myös luotavien autojen merkin. -->
-
 Similarly, a `Factory` object could also be used to create and return new `Car` objects. Below is a sketch of the outline of the factory -- the factory also knows the makes of the cars that are created.
-
-
-<!-- ```java
-public class Tehdas {
-    private String merkki;
-
-    public Tehdas(String merkki) {
-        this.merkki = merkki;
-    }
-
-    public Auto tuotaAuto() {
-        return new Auto(this.merkki);
-    }
-}
-``` -->
 
 ```java
 public class Factory {
@@ -2049,313 +1498,9 @@ public class Factory {
 }
 ```
 
-
-<!-- <programming-exercise name='Päiväys (3 osaa)' tmcname='osa05-Osa05_16.Paivays'> -->
-
-<programming-exercise name='Dating app (3 parts)' tmcname='part05-Part05_16.DatingApp'>
-
-
-<!-- Tehtäväpohjan mukana tulee luokka `Paivays`, jossa päivämäärä talletetaan oliomuuttujien `vuosi`, `kuukausi`, ja `paiva` avulla: -->
-
-With the exercise base the class `SimpleDate` is supplied. The date is stored with the help of the object variables `year`, `month`, and `day`:
-
-
-<!-- ```java
-public class Paivays {
-    private int paiva;
-    private int kuukausi;
-    private int vuosi;
-
-    public Paivays(int paiva, int kuukausi, int vuosi) {
-        this.paiva = paiva;
-        this.kuukausi = kuukausi;
-        this.vuosi = vuosi;
-    }
-
-    public String toString() {
-        return this.paiva + "." + this.kuukausi + "." + this.vuosi;
-    }
-
-    public boolean aiemmin(Paivays verrattava) {
-        // ensin verrataan vuosia
-        if (this.vuosi < verrattava.vuosi) {
-            return true;
-        }
-
-        // jos vuodet ovat samat, verrataan kuukausia
-        if (this.vuosi == verrattava.vuosi && this.kuukausi < verrattava.kuukausi) {
-            return true;
-        }
-
-        // vuodet ja kuukaudet samoja, verrataan päivää
-        if (this.vuosi == verrattava.vuosi && this.kuukausi == verrattava.kuukausi &&
-            this.paiva < verrattava.paiva) {
-            return true;
-        }
-
-        return false;
-    }
-}
-``` -->
-
-```java
-public class SimpleDate {
-    private int day;
-    private int month;
-    private int year;
-
-    public SimpleDate(int day, int month, int year) {
-        this.day = day;
-        this.month = month;
-        this.year = year;
-    }
-
-    public String toString() {
-        return this.day + "." + this.month + "." + this.year;
-    }
-
-    public boolean before(SimpleDate compared) {
-        // first compare years
-        if (this.year < compared.year) {
-            return true;
-        }
-
-        // if the years are the same, compare months
-        if (this.year == compared.year && this.month < compared.month) {
-            return true;
-        }
-
-        // the years and the months are the same, compare days
-        if (this.year == compared.year && this.month == compared.month &&
-            this.day < compared.day) {
-            return true;
-        }
-
-        return false;
-    }
-}
-```
-
-<!-- Tässä tehtäväsarjassa laajennetaan luokkaa. -->
-
-In this exercise set we will expand this class.
-
-
-<!-- <h2>Seuraava päivä</h2> -->
-
-<h2>Next day</h2>
-
-<!-- Toteuta metodi `public void etene()`, joka siirtää päiväystä yhdellä päivällä. Tässä tehtävässä oletetaan, että jokaisessa kuukaudessa on 30 päivää. Huom! Sinun tulee *tietyissä* tilanteissa muuttaa kuukauden ja vuoden arvoa. -->
-
-Implement the method `public void advance()` that moves the date by one day. In this exercise we assume that each month has 30 day. NB! In *certain* situations you need to change the values of month and year.
-
-
-<!-- <h2>Tietty määrä päiviä eteenpäin</h2> -->
-
-<h2>Advance specific number of days</h2>
-
-<!-- Toteuta metodi `public void etene(int montakoPaivaa)`, joka siirtää päiväystä annetun päivien määrän verran. Käytä apuna edellisessä tehtävässä toteutettua metodia `etene()`. -->
-
-Implement the method `public void advance(int howManyDays)` that moves the date by the number of days that is given. Use the method `advance()` that you implemented in the previous section to help you in this.
-
-
-<!-- <h2>Ajan kuluminen</h2> -->
-
-<h2>Passing of time</h2>
-
-<!-- Lisätään `Paivays`-olioon mahdollisuus edistää aikaa. Tee oliolle metodi `Paivays paivienPaasta(int paivia)`, joka luo **uuden** `Paivays`-olion, jonka päiväys on annetun päivien lukumäärän verran suurempi kuin oliolla, jolle sitä kutsuttiin. Voit edelleen olettaa, että jokaisessa kuukaudessa on 30 päivää. Huomaa, että vanhan päiväysolion on pysyttävä muuttumattomana! -->
-
-Let's add the possibility to advance time to the `SimpleDate` class. Create the method `public SimpleDate afterNumberOfDays(int days)` for the class. It creates a **new** `SimpleDate` object whose date is the specified number of days greater than the object that the method was called on. You may still assume that each month has 30 days. Notice that the old date object must remain unchanged!
-
-<!-- Koska metodissa on luotava **uusi olio**, tulee rungon olla suunnilleen seuraavanlainen: -->
-
-Since the method must create **a new object**, the structure of the code should be somewhat similar to this:
-
-
-<!-- ```java
-public Paivays paivienPaasta(int paivia) {
-    Paivays uusiPaivays = new Paivays( ... );
-
-    // tehdään jotain...
-
-    return uusiPaivays;
-}
-``` -->
-
-```java
-public SimpleDate afterNumberOfDays(int days) {
-    SimpleDate newDate = new SimpleDate( ... );
-
-    // do something..
-
-    return newDate;
-}
-```
-
-<!-- Ohessa on esimerkki metodin toiminnasta. -->
-
-Here is an example of how the method works.
-
-<!-- ```java
-public static void main(String[] args) {
-    Paivays pvm = new Paivays(13, 2, 2015);
-    System.out.println("Tarkistellun viikon perjantai on " + pvm);
-
-    Paivays uusiPvm = pvm.paivienPaasta(7);
-    int vk = 1;
-    while (vk <= 7) {
-        System.out.println("Perjantai " + vk + " viikon kuluttua on " + uusiPvm);
-        uusiPvm = uusiPvm.paivienPaasta(7);
-
-        vk = vk + 1;
-    }
-
-
-    System.out.println("Päivämäärä 790:n päivän päästä tarkistellusta perjantaista on ... kokeile itse!");
-    //    System.out.println("Kokeile " + pvm.paivienPaasta(790));
-}
-``` -->
-
-```java
-public static void main(String[] args) {
-    SimpleDate date = new SimpleDate(13, 2, 2015);
-    System.out.println("Friday of the examined week is " + pvm);
-
-    SimpleDate newDate = date.afterNumberOfDays(7);
-    int week = 1;
-    while (week <= 7) {
-        System.out.println("Friday after " + week + " weeks is " + newDate);
-        newDate = newDate.afterNumberOfDays(7);
-
-        week = week + 1;
-    }
-
-
-    System.out.println("The date after 790 days from the examined Friday is ... try it out yourself!");
-    //    System.out.println("Try " + date.afterNumberOfDays(790));
-}
-```
-
-<!-- Ohjelma tulostaa: -->
-
-The program prints:
-
-<!-- <sample-output>
-
-Tarkistellun viikon perjantai on 13.2.2015
-Perjantai 1 viikon kuluttua on 20.2.2015
-Perjantai 2 viikon kuluttua on 27.2.2015
-Perjantai 3 viikon kuluttua on 4.3.2015
-Perjantai 4 viikon kuluttua on 11.3.2015
-Perjantai 5 viikon kuluttua on 18.3.2015
-Perjantai 6 viikon kuluttua on 25.3.2015
-Perjantai 7 viikon kuluttua on 2.4.2015
-Päivämäärä 790:n päivän päästä tarkistellusta perjantaista on ... kokeile itse!
-
-</sample-output> -->
-
-<sample-output>
-
-Friday of the examined week is 13.2.2015
-Friday after 1 weeks is 20.2.2015
-Friday after 2 weeks is 27.2.2015
-Friday after 3 weeks is 4.3.2015
-Friday after 4 weeks is 11.3.2015
-Friday after 5 weeks is 18.3.2015
-Friday after 6 weeks is 25.3.2015
-Friday after 7 weeks is 2.4.2015
-The date after 790 days from the examined Friday is ... try it out yourself!
-
-</sample-output>
-
-
-<!-- **Huom!** Sen sijaan, että muuttaisimme vanhan olion tilaa palautamme uuden olion. Kuvitellaan, että `Paivays`-luokalle on olemassa metodi `edista`, joka toimii vastaavasti kuin ohjelmoimamme metodi, mutta se muuttaa vanhan olion tilaa. Tällöin seuraava koodin pätkä tuottaisi ongelmia. -->
-
-**NB!** Instead of modifying the state of the old object we return a new one. Imagine that the `SimpleDate` class has a method `advance` that works similarly to the method we programmed, but it modifies the state of the old object. In that case the next block of code would cause problems.
-
-
-<!-- ```java
-Paivays nyt = new Paivays(13, 2, 2015);
-Paivays viikonPaasta = nyt;
-viikonPaasta.edista(7);
-
-System.out.println("Nyt: " + nyt);
-System.out.println("Viikon päästä: " + viikonPaasta);
-``` -->
-
-```java
-SimpleDate now = new SimpleDate(13, 2, 2015);
-SimpleDate afterOneWeek = now;
-afterOneWeek.advance(7);
-
-System.out.println("Now: " + now);
-System.out.println("After one week: " + afterOneWeek);
-```
-
-<!-- Ohjelman tulostus olisi seuraavanlainen: -->
-
-The output of the program should be like this:
-
-<!-- <sample-output>
-
-Nyt 20.2.2015
-Viikon päästä 20.2.2015
-
-</sample-output> -->
-
-<sample-output>
-
-Now: 20.2.2015
-After one week: 20.2.2015
-
-</sample-output>
-
-<!-- Tämä johtuu siitä, että tavallinen sijoitus kopioi ainoastaan viitteen olioon. Siis itse asiassa ohjelman oliot `nyt` ja `viikonPaasta` viittavaat **yhteen ja samaan** `Paivays`-olioon. -->
-
-This is because a normal assignment only copies the reference to the object. So the objects `now` and `afterOneWeek` in the program now refer to the **one and same** `SimpleDate` object.
-
-</programming-exercise>
-
-
-<!-- <programming-exercise name='Raha (3 osaa)' tmcname='osa05-Osa05_17.Raha'> -->
-
-<programming-exercise name='Money (3 parts)' tmcname='part05-Part05_17.Money'>
-
-
-<!-- Maksukortti-tehtävässä käytimme rahamäärän tallettamiseen double-tyyppistä oliomuuttujaa. Todellisissa sovelluksissa näin ei kannata tehdä, sillä kuten jo olemme nähneet, doubleilla laskenta ei ole tarkkaa. Onkin järkevämpää toteuttaa rahamäärän käsittely oman luokkansa avulla. Seuraavassa on luokan runko: -->
+<programming-exercise name='Money'>
 
 In the Payment card exercise we used a double-type object variable to store the amount of money. In real applications this is not the approach you want to take, since as we have seen, calculating with doubles is not exact. A more reasonable way to handle amounts of money is create an own class for that purpose. Here is a layout for the class:
-
-
-<!-- ```java
-public class Raha {
-
-    private final int euroa;
-    private final int senttia;
-
-    public Raha(int euroa, int senttia) {
-        this.euroa = euroa;
-        this.senttia = senttia;
-    }
-
-    public int eurot() {
-        return euroa;
-    }
-
-    public int sentit() {
-        return senttia;
-    }
-
-    public String toString() {
-        String nolla = "";
-        if (senttia <= 10) {
-            nolla = "0";
-        }
-
-        return euroa + "." + nolla + senttia + "e";
-    }
-}
-``` -->
 
 ```java
 public class Money {
@@ -2386,37 +1531,15 @@ public class Money {
     }
 }
 ```
-
-<!-- Määrittelyssä pistää silmään oliomuuttujien määrittelyn yhteydessä käytetty sana `final`, tällä saadaan aikaan se, että oliomuuttujien arvoa ei pystytä muuttamaan sen jälkeen kun ne on konstruktorissa asetettu. Raha-luokan oliot ovatkin muuttumattomia eli *immutaabeleita*, eli jos halutaan esim. kasvattaa rahamäärää, on luotava uusi olio, joka kuvaa kasvatettua rahasummaa. -->
-
 The word `final` used in the definition of object variables catches attention. The result of this word is that the values of these object variables cannot be modified after they have been set in the constructor. The objects of Money class are unchangeable so **immutable** -- if we want to e.g. increase the amount of money, we must create a new object to represent that new amount of money.
-
-
-<!-- Luomme seuraavassa muutaman operaation rahojen käsittelyyn. -->
 
 Next we'll create a few operations for processing money.
 
-<!-- <h2>Plus</h2> -->
-
 <h2>Plus</h2>
-
-<!-- Tee ensin metodi `public Raha plus(Raha lisattava)`, joka palauttaa uuden raha-olion, joka on arvoltaan yhtä suuri kuin se olio jolle metodia kutsuttiin ja parametrina oleva olio yhteensä. -->
 
 First create the method `public Money plus(Money addition)` that returns a new money object that is worth the total amount of the object whose method was called and the object that is received as the parameter.
 
-<!-- Metodin runko on seuraavanlainen: -->
-
 The basis for the method is the following:
-
-
-<!-- ```java
-public Raha plus(Raha lisattava) {
-    Raha uusi = new Raha(...); // luodaan uusi Raha-olio jolla on oikea arvo
-
-    // palautetaan uusi Raha-olio
-    return uusi;
-}
-``` -->
 
 ```java
 public Money plus(Money addition) {
@@ -2427,28 +1550,7 @@ public Money plus(Money addition) {
 }
 ```
 
-<!-- Seuraavassa esimerkkejä metodin toiminnasta -->
-
 Here are some examples of how the method works.
-
-
-<!-- ```java
-Raha a = new Raha(10,0);
-Raha b = new Raha(5,0);
-
-Raha c = a.plus(b);
-
-System.out.println(a);  // 10.00e
-System.out.println(b);  // 5.00e
-System.out.println(c);  // 15.00e
-
-a = a.plus(c);          // HUOM: tässä syntyy uusi Raha-olio, joka laitataan "a:n langan päähän"
-//       vanha a:n langan päässä ollut 10 euroa häviää ja Javan roskien kerääjä korjaa sen pois
-
-System.out.println(a);  // 25.00e
-System.out.println(b);  // 5.00e
-System.out.println(c);  // 15.00e
-``` -->
 
 ```java
 Money a = new Money(10,0);
@@ -2469,23 +1571,9 @@ System.out.println(c);  // 15.00e
 ```
 
 
-<!-- <h2>Vähemmän</h2> -->
-
 <h2>Less</h2>
 
-<!-- Tee metodi `public boolean vahemman(Raha verrattava)`, joka palauttaa true jos raha-olio jolle metodia kutsutaan on arvoltaan pienempi kuin raha-olio, joka on metodin parametrina. -->
-
 Create the method `public boolean lessThan(Money compared)` that returns true if the money-object on which the method is called on has a lesser value than the money object given as a parameter.
-
-
-<!-- ```java
-Raha a = new Raha(10, 0);
-Raha b = new Raha(3, 0);
-Raha c = new Raha(5, 0);
-
-System.out.println(a.vahemman(b));  // false
-System.out.println(b.vahemman(c));  // true
-``` -->
 
 ```java
 Money a = new Money(10, 0);
@@ -2496,37 +1584,11 @@ System.out.println(a.lessThan(b));  // false
 System.out.println(b.lessThan(c));  // true
 ```
 
-
-<!-- <h2>Miinus</h2> -->
-
 <h2>Minus</h2>
-
-<!-- Tee metodi `public Raha miinus(Raha vahentaja)`, joka palauttaa uuden raha-olion, jonka arvoksi tulee sen olion jolle metodia kutsuttiin ja parametrina olevan olion arvojen erotus. Jos erotus olisi negatiivinen, tulee luotavan raha-olion arvoksi 0. -->
 
 Write the method `public Money minus(Money decreaser)` that returns a new money object worth the difference of the object whose method was called and the object received as the parameter. If the difference would be negative, the worth of the created money object is set to 0.
 
-<!-- Seuraavassa esimerkkejä metodin toiminnasta -->
-
 Here are examples of how the method works.
-
-
-<!-- ```java
-Raha a = new Raha(10, 0);
-Raha b = new Raha(3, 50);
-
-Raha c = a.miinus(b);
-
-System.out.println(a);  // 10.00e
-System.out.println(b);  // 3.50e
-System.out.println(c);  // 6.50e
-
-c = c.miinus(a);        // HUOM: tässä syntyy uusi Raha-olio, joka laitataan "c:n langan päähän"
-//       vanha c:n langan päässä ollut 6.5 euroa häviää ja Javan roskien kerääjä korjaa sen pois
-
-System.out.println(a);  // 10.00e
-System.out.println(b);  // 3.50e
-System.out.println(c);  // 0.00e
-``` -->
 
 ```java
 Money a = new Money(10, 0);

@@ -14,7 +14,6 @@ hidden: true
 
 Let's once more return to our Person class. It currently looks like this:
 
-
 ```java
 public class Person {
 
@@ -275,7 +274,7 @@ public void growOlder(int years) {
 }
 ```
 
-<programming-exercise name='Overloaded Counter (2 parts)' tmcname='part05-Part05_06.OverloadedCounter'>
+<programming-exercise name='Overloaded Counter'>
 
 <h2>Multiple constructors</h2>
 

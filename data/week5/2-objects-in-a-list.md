@@ -12,12 +12,12 @@ hidden: true
 </text-box>
 
 
-The type parameter used in creating a list defines the type of the variables that are added to the list. For instance, `ArrayList<String>` includes strings, `ArrayList<Integer>` integers, and `ArrayList<Double>` floating point numbers
+The type parameter used in creating a list defines the type of the variables that are added to the list. For instance, `List<String>` includes strings, `List<Integer>` integers, and `List<Double>` floating point numbers
 
 In the example below we first add strings to a list, after which the strings in the list are printed one by one.
 
 ```java
-ArrayList<String> names = new ArrayList<>();
+List<String> names = new ArrayList<>();
 
 // string can first be stored in a variable
 String name = "Betty Jennings";
@@ -136,7 +136,7 @@ Handling objects in a list is not really different in any way from the previous 
 In the example below we first create a list meant for storing Person type object, after which we add persons to it. Finally the person objects are printed one by one.
 
 ```java
-ArrayList<Person> persons = new ArrayList<>();
+List<Person> persons = new ArrayList<>();
 
 // a person object can be created first
 Person john = new Person("John");
@@ -166,7 +166,7 @@ The structure we used earlier for reading inputs is still very useful.
 
 ```java
 Scanner scanner = new Scanner(System.in);
-ArrayList<Person> persons = new ArrayList<>();
+List<Person> persons = new ArrayList<>();
 
 // Read the names of persons from the user
 while (true) {
@@ -260,7 +260,7 @@ The persons are printed after they have been read.
 
 ```java
 Scanner scanner = new Scanner(System.in);
-ArrayList<Person> persons = new ArrayList<>();
+List<Person> persons = new ArrayList<>();
 
 // Read person information from the user
 while (true) {
@@ -334,7 +334,7 @@ If the name and age were separated by a comma, the program could work in the fol
 
 ```java
 Scanner scanner = new Scanner(System.in);
-ArrayList<Person> persons = new ArrayList<>();
+List<Person> persons = new ArrayList<>();
 
 // Read person information from the user
 System.out.println("Enter the person details separated by a comma, e.g.: Randall,2");
