@@ -45,6 +45,7 @@ Sometimes when making certain type of changes to the queries, you may wish to re
 
 ## Authors
 
+
 Material template created by [Henrik Nygren](https://github.com/nygrenh) and [Antti Leinonen](https://github.com/Redande).
 
 # License
