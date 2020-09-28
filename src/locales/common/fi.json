@@ -72,8 +72,8 @@
     "researchYes":"Osallistun oppimiseen liittyvään tutkimukseen. Valitsemalla tämän autat sekä nykyisiä että tulevia opiskelijoita.",
     "researchNo":"En osallistu oppimiseen liittyvään tutkimukseen.",
     "save":"Tallenna",
-    "fillRequired":"Täytä vaaditut kentät."
-
+    "fillRequired":"Täytä vaaditut kentät.",
+    "howSeeSolution": "Voit katsella mallivastausta Test My Code -palvelusta, joko TMCBeansin kautta tai TMC-sivuilla palautettuasi tehtävän hyväksytysti."
 
 
 }
