@@ -651,7 +651,8 @@ public class Person {
     private int weight = 0;
     private int length = 0;
 
-// ...
+    // ..
+}
 ```
 
 Let's create a new Person constructor that allows for setting the birthday:
