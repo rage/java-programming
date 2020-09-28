@@ -1,7 +1,7 @@
 ---
 path: '/week-5/4-primitive-and-reference-variables'
 title: 'Primitive and reference variables'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Learning Objectives'>

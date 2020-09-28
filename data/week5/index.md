@@ -2,7 +2,7 @@
 path: '/week-5'
 title: 'Week 5'
 overview: true
-hidden: true
+hidden: false
 ---
 
 The fifth week of the course continues with object-oriented programming, which was introduced in the fourth week. Among others, we further explore the main ideas in object-oriented programming, look at constructor and method overloading and look into how object references work.

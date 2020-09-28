@@ -1,7 +1,7 @@
 ---
 path: '/week-5/3-method-and-constructor-overloading'
 title: 'Removing repetitive code (overloading methods and constructors)'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Learning Objectives'>

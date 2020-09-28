@@ -1,7 +1,7 @@
-mensa---
+---
 path: '/week-5/5-objects-and-references'
 title: 'Objects and references'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Learning Objectives'>
