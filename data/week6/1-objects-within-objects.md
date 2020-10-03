@@ -11,9 +11,9 @@ hidden: true
 
 </text-box>
 
- Next, let's have a look at objects that contain a list. Examples of objects like these include objects that describe sets, for example playlists.
+Next, let's have a look at objects that contain a list. Examples of objects like these include objects that describe sets, for example playlists.
 
- In the following example, we have made a class for the concept of a playlist. The playlist contains songs: songs can be added, songs can be removed, and the songs that the playlist contains can be printed.
+In the following example, we have made a class for the concept of a playlist. The playlist contains songs: songs can be added, songs can be removed, and the songs that the playlist contains can be printed.
 
 ```java
 // imports
@@ -296,8 +296,6 @@ public class AmusementParkRide {
 }
 ```
 
-<!-- Laajennetaan luokkaa siten, että huvipuistolaite pitää kirjaa kyydissä olevista henkilöistä. Laajennetussa versiossa huvipuistolaitteella on oliomuuttujana lista, joka sisältää laitteeseen päässeet henkilöt. Lista luodaan konstruktorissa. -->
-
 We'll extend the class so that the amusement park keeps track of the people on the ride. In this version, the ride has, as an instance variable, a list of the people who have been allowed on the ride. The list is created in the constructor.
 
 ```java
@@ -364,8 +362,6 @@ Implement the `MessagingService` class. The class must have a parameterless cons
 Tip! You can find out the length of the string using the `length()` method associated with the string.
 
 </programming-exercise>
-
-<!-- ### Listan sisältävän olion tulostaminen -->
 
 ### Printing an Object from a List
 
