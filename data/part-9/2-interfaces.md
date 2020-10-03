@@ -1417,7 +1417,7 @@ Varaston sisällä tuotteiden hinnat (ja seuraavassa kohdassa saldot) tulee tall
 
 Seuraavassa esimerkki varaston käytöstä: -->
 
-In this exercise we'll create program components, that can used to run an online store.
+In this exercise we'll create program components, that can be used to run an online store.
 
 <h2>Warehouse</h2>
 
