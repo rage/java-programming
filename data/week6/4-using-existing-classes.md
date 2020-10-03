@@ -134,9 +134,9 @@ public class Movie {
 ```
 
 ## Static methods
-When looking at the [documentation]() for the `LocalDate` class we see that no constructors are given. This has to do with the fact that `LocalDate` objects are created by means of a `static` method. As discussed before, `static` indicates that a method is not part of an object of the class, but instead belongs directly to the class. Hence, we can not call a static method on an object of the class, but can directly call a static method from the class. This is the reason why we could call `static` methods within a `Main` class without having to create a `Main` object first.
+When looking at the [documentation]() for the `LocalDate` class we see that no constructors are given. This has to do with the fact that `LocalDate` objects are created by means of a `static` method. As discussed before, `static` indicates that a method is not part of an object of the class, but instead belongs directly to the class. For this reason, we often refer to `static` methods as `static methods`, while methods that are not `static` are referred to as `instance methods`. They can also be found under these names in the documentation.
 
-We have already seen one example in which we used a static method to create an object, namely for lists. Here, we used the `List.of` method to create a list containing certain elements. Similarly, we use the `LocalDate.of` method to create a `LocalDate` object. Note how this method is listed under the `Method summary` section of the documentation of the `LocalDate` class.
+We have already seen one example in which we used a static method to create an object, namely for lists. Here, we used the `List.of` method to create a list containing certain elements. Note how we are using `List` here to refer to the `List` class and then use a dot to indicate that we want to access a `static` method of this class. Similarly, we use the `LocalDate.of` method to create a `LocalDate` object. The documentation of this method is given [here](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDate.html#of(int,int,int)).
 
 Our code to read the movies from the user and print them now looks as follows:
 ``` java
