@@ -5,7 +5,7 @@ overview: true
 hidden: true
 ---
 
-In the sixth week of the course we conclude the topic of object-oriented programming. Moreover, we focus on programming in practice, where we discuss how to work on more complex programs and how to use existing Java classes.
+In the sixth week of the course we conclude the topic of object-oriented programming. Moreover, we focus on programming in practice, where we discuss how to read data from files, how to separate different parts of your program and how to use existing Java classes.
 
 <pages-in-this-section></pages-in-this-section>
 
