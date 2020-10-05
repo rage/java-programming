@@ -85,7 +85,7 @@ Write a program that reads strings from the user until the user inputs the strin
 
 Computers have several different programs for browsing files. These programs are specific to the operating system. All programs used for browsing files make use of the filesystem of the computer in one way or another.
 
-Our development environment provides us with the ability to browse the files of a project. In NetBeans you can take a look at all the files attached to a project by selecting the `Files` tab, which is found in the same place as the `Projects` tab. If the tab cannot be be found, it can be opened from the `Window` menu. Clicking the project to open it will reveal all its files.
+Our development environment provides us with the ability to browse the files of a project. In IntelliJ you can take a look at all the files attached to a project by selecting the `Project Files` tab, which is found in the same place as the `Projects` tab. Moreover, you will also see the files in the familar `Projects` tab together with the code.
 
 <text-box type="info" name="The Concrete File Storage Format">
 
@@ -123,7 +123,7 @@ try (Scanner scanner = new Scanner(Paths.get("file.txt"))) {
 }
 ```
 
-A file is read from the project root by default ( when `new Scanner(Paths.get("file.txt"))` is called), i.e., the folder that contains the folder `src` and the file `pom.xml` (and possibly other files as well). The contents of this folder can the inspected using the `Files`-tab in NetBeans.
+A file is read from the project root by default ( when `new Scanner(Paths.get("file.txt"))` is called), i.e., the folder that contains the folder `src` (and possibly other files as well). The contents of this folder can the inspected using the `Project Files`-tab in IntelliJ.
 
 <programming-exercise name='Printing a Specified File'>
 
