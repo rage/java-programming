@@ -150,7 +150,7 @@ Another sub-problem is remembering the words that have already been entered. A l
 ```java
 public class UserInterface {
     private Scanner scanner;
-    private ArrayList<String> words;
+    private List<String> words;
 
     public UserInterface(Scanner scanner) {
         this.scanner = scanner;
@@ -182,7 +182,7 @@ The whole user interface looks as follows.
 ```java
 public class UserInterface {
     private Scanner scanner;
-    private ArrayList<String> words;
+    private List<String> words;
 
     public UserInterface(Scanner scanner) {
         this.scanner = scanner;
@@ -258,7 +258,7 @@ We came up with the following solution:
 ```java
 public class UserInterface {
     private Scanner scanner;
-    private ArrayList<String> words;
+    private List<String> words;
 
     public UserInterface(Scanner scanner) {
         this.scanner = scanner;
@@ -344,9 +344,10 @@ We can implement the set of words by making our earlier solution, the list, into
 
 ```java
 import java.util.ArrayList;
+import java.util.List;
 
 public class WordSet {
-    private ArrayList<String> words
+    private List<String> words
 
     public WordSet() {
         this.words = new ArrayList<>();
@@ -408,7 +409,7 @@ public static void main(String[] args) {
 
 ## Changing the implementation of a class
 
-We have arrived at a situation where the class 'WordSet' "encapsulates" an ArrayList. Is this reasonable? Perhaps. This is because we can make other changes to the class if we so desire, and before long we might arrive at a situation where the word set has to be, for example, saved into a file. If we make all these changes inside the class WordSet without changing the names of the methods that the user interface uses, we don't have to modify the actual user interface at all.
+We have arrived at a situation where the class 'WordSet' "encapsulates" a List. Is this reasonable? Perhaps. This is because we can make other changes to the class if we so desire, and before long we might arrive at a situation where the word set has to be, for example, saved into a file. If we make all these changes inside the class WordSet without changing the names of the methods that the user interface uses, we don't have to modify the actual user interface at all.
 
 The main point here is that changes made inside the class WordSet don't affect the class UserInterface. This is because the user interface uses WordSet through the methods that it provides -- these are called its public interfaces.
 
@@ -488,9 +489,10 @@ public class Sanajoukko {
 
 ```java
 import java.util.ArrayList;
+import java.util.List;
 
 public class WordSet {
-    private ArrayList<String> words;
+    private List<String> words;
 
     public WordSet() {
         this.words = new ArrayList<>();
@@ -736,6 +738,7 @@ As almost all programs, this program can be written into main as one entity. Her
 
 ```java
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Program {
@@ -743,7 +746,7 @@ public class Program {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        ArrayList<Integer> grades = new ArrayList<>();
+        List<Integer> grades = new ArrayList<>();
 
         while (true) {
             System.out.print("Points: ");
@@ -810,10 +813,12 @@ An example class follows.
 
 ```java
 import java.util.ArrayList;
+import java.util.List;
+
 
 public class GradeRegister {
 
-    private ArrayList<Integer> grades;
+    private List<Integer> grades;
 
     public GradeRegister() {
         this.grades = new ArrayList<>();

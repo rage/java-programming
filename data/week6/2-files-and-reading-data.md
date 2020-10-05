@@ -153,10 +153,10 @@ Tieto is here allright!
 
 </programming-exercise>
 
-In the example below, we read all the lines of the file "file.txt", which are then added to an ArrayList.
+In the example below, we read all the lines of the file "file.txt", which are then added to a List.
 
 ```java
-ArrayList<String> lines = new ArrayList<>();
+List<String> lines = new ArrayList<>();
 
 // we create a scanner for reading the file
 try (Scanner scanner = new Scanner(Paths.get("file.txt"))) {
@@ -356,7 +356,7 @@ Creating objects from data that is read from a file is straightforward. Let's as
 Reading objects can be done like so:
 
 ```java
-ArrayList<Person> people = new ArrayList<>();
+List<Person> people = new ArrayList<>();
 
 try (Scanner scanner = new Scanner(Paths.get("records.txt"))) {
 
