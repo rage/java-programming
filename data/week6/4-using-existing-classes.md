@@ -133,7 +133,7 @@ public class Movie {
 }
 ```
 
-<programming-exercise name="substring">
+<programming-exercise name="Substring">
 
 Write a method `public static String firstPartOfString(String string)` that returns a string with the first three characters of the passed String. When the program is called as:
 
@@ -151,7 +151,7 @@ hi
 
 </sample-output>
 
-Hint: check the documentation of the `Scanner` class for which methods are available that could help you.
+Hint: check the [documentation](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html) of the `String` class for a method that returns a part of a given string.
 
 </programming-exercise>
 
@@ -231,10 +231,34 @@ Collection My collection has the movies: [Tarzan (88m, 1999-06-16), Lion King (8
 <programming-exercise name="Calendar">
 
 Write a `Calendar` class that is able to store dates. The class should have:
-- A constructor without Parameters
+- A constructor without any parameters
 - A method `public void addDate(LocalDate date)` which adds a date to the Calendar
-- A method `public void print` that prints the dates in the Calendar
-- A method `public LocalDate latestDate()` which returns the last date (in time) on the Calendar
+- A method `public void print()` that prints the dates in the Calendar. See the usage below for the format of printing. Moreover, it should print the text `Calendar is empty` if there are no dates in the calendar.
+- A method `public LocalDate latestDate()` which returns the last date (in time) on the Calendar. If no date is present in the calendar, return `null`
+
+The usage of this class should looks as follows:
+``` java
+Calendar calendar = new Calendar();
+calendar.addDate(LocalDate.of(2019,2,5));
+calendar.addDate(LocalDate.of(2020, 3, 8));
+calendar.addDate(LocalDate.of(2020, 8,1));
+
+calendar.print();
+
+System.out.println("The latest date is: " + calendar.getLatestDate());
+```
+
+<sample-output>
+
+Dates in the calendar are:
+2019-02-05
+2020-03-08
+2020-08-01
+The latest date is: 2020-08-01
+
+</sample-output>
+
+Hint: Look at the [documentation](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDate.html) of the `LocalDate` class to see how it is used.
 
 </programming-exercise>
 
