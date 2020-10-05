@@ -234,7 +234,7 @@ public class AmusementParkRide {
 }
 ```
 
-<programming-exercise name='MessagingService' tmcname='part06-Part06_03.MessagingService'>
+<programming-exercise name='MessagingService'>
 
 The exercise template comes with a pre-defined `Message` class that can be used to create objects representing messages. Each message has a sender and some content.
 
@@ -410,7 +410,7 @@ Matti
 
 </sample-output>
 
-<programming-exercise name='Printing a Collection' tmcname='part06-Part06_04.PrintingACollection'>
+<programming-exercise name='Printing a Collection'>
 
 The exercise template has a predefined `SimpleCollection` class, which is used to represent a group of values. The class is missing the `toString` method used for printing.
 
@@ -626,7 +626,7 @@ Awak
 
 </sample-output>
 
-<programming-exercise name="Santa's Workshop (2 parts)" tmcname='part06-Part06_05.SantasWorkshop'>
+<programming-exercise name="Santa's Workshop (2 parts)">
 
 We'll practice wrapping gifts in this exercise. Let's create the classes `Gift` and `Package`. The gift has a name and weight, and the package contains gifts.
 
@@ -786,7 +786,7 @@ Awak
 
 </sample-output>
 
-<programming-exercise name='Cargo hold (6 parts)' tmcname='part06-Part06_08.CargoHold' nocoins='true'>
+<programming-exercise name='Cargo hold (6 parts)'>
 
 In this exercise, we create the classes `Item`, `Suitcase` and `Hold` to practice the use of objects containing other objects.
 

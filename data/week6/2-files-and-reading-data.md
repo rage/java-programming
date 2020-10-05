@@ -319,7 +319,7 @@ try (Scanner scanner = new Scanner(Paths.get("records.txt"))) {
 }
 ```
 
-<programming-exercise name='Records From a File' tmcname='part04-Part04_29.RecordsFromAFile'>
+<programming-exercise name='Records From a File'>
 
 In this exercise, we'll be working with files stored in CSV-format that contain names and ages separated by commas. The file format may look like this:
 
