@@ -38,37 +38,6 @@ while (true) {
 
 In the example above, we pass system input (`System.in`) as a parameter to the constructor of the Scanner-class. In text-based user interfaces, the input of the user is directed into the input stream one line at a time, which means that the information is sent to be handled every time the user enters a new line.
 
-<programming-exercise name='Number of Strings' tmcname='part04-Part04_21.NumberOfStrings'>
-
-Write a program that reads strings from the user until the user inputs the string "end". At that point, the program should print how many strings have been read. The string "end" should not be included in the number strings read. You can find some examples below of how the program works.
-
-<sample-output>
-
-**I**
-**have**
-**a**
-**feeling**
-**that**
-**I**
-**have**
-**written**
-**this**
-**wrong**
-**before**
-**end**
-11
-
-</sample-output>
-
-<sample-output>
-
-**end**
-0
-
-</sample-output>
-
-</programming-exercise>
-
 The user input is read in string form. If we wanted to handle the input as integers, for instance, we'd have to convert it to another form. An example program has been provided below - it reads input from the user until the user inputs "end". As long as the user input is not "end" the inputs are handled as integers -- in this case, the number is simply printed.
 
 ```java
@@ -86,7 +55,7 @@ while (true) {
 }
 ```
 
-<programming-exercise name='Cubes' tmcname='part04-Part04_22.Cubes'>
+<programming-exercise name='Cubes'>
 
 Write a program that reads strings from the user until the user inputs the string "end". As long as the input is not "end", the program should handle the input as an integer and print the cube of the number provided (i.e., number _ number _ number). Below are some sample outputs
 
@@ -117,14 +86,6 @@ Write a program that reads strings from the user until the user inputs the strin
 Computers have several different programs for browsing files. These programs are specific to the operating system. All programs used for browsing files make use of the filesystem of the computer in one way or another.
 
 Our development environment provides us with the ability to browse the files of a project. In NetBeans you can take a look at all the files attached to a project by selecting the `Files` tab, which is found in the same place as the `Projects` tab. If the tab cannot be be found, it can be opened from the `Window` menu. Clicking the project to open it will reveal all its files.
-
-<programming-exercise name='Creating a New File' tmcname='part04-Part04_23.CreatingANewFile'>
-
-**NB!** In this exercise, we won't be programming. Instead, you'll familiarize yourself with the `Files`-tab in NetBeans and how to create a new file.
-
-Create a file called `file.txt` in the root folder (the folder containing the folder `src` and the file `pom.xml`) of the exercise template using the `Files`-tab in NetBeans. Edit the file and write the message `Hello, world!` on the first line of the file.
-
-</programming-exercise>
 
 <text-box type="info" name="The Concrete File Storage Format">
 
@@ -164,31 +125,7 @@ try (Scanner scanner = new Scanner(Paths.get("file.txt"))) {
 
 A file is read from the project root by default ( when `new Scanner(Paths.get("file.txt"))` is called), i.e., the folder that contains the folder `src` and the file `pom.xml` (and possibly other files as well). The contents of this folder can the inspected using the `Files`-tab in NetBeans.
 
-<programming-exercise name='Printing a File' tmcname='part04-Part04_24.PrintingAFile'>
-
-Write a program that prints the contents of a file called "data.txt", such that each line of the file is printed on its own line.
-
-If the file content looks like so:
-
-<sample-data>
-
-In a
-world
-
-</sample-data>
-
-Then the program should print the following:
-
-<sample-output>
-
-In a
-world
-
-</sample-output>
-
-</programming-exercise>
-
-<programming-exercise name='Printing a Specified File' tmcname='part04-Part04_25.PrintingASpecifiedFile'>
+<programming-exercise name='Printing a Specified File'>
 
 Write a program that asks the user for a string, and then prints the contents of a file with a name matching the string provided. You may assume that the user provides a file name that the program can find.
 
@@ -236,99 +173,7 @@ try (Scanner scanner = new Scanner(Paths.get("file.txt"))) {
 System.out.println("Total lines: " + lines.size());
 ```
 
-<programming-exercise name='Guest List From a File' tmcname='part04-Part04_26.GuestListFromAFile'>
-
-The exercise template comes ready with functionality for the guest list application. It checks whether names entered by the user are on the guest list.
-
-However, the program is missing the functionality needed for reading the guest list. Modify the program so that the names on the guest list are read from the file.
-
-<sample-output>
-
-Name of the file:
-**guestlist.txt**
-
-Enter names, an empty line quits.
-**Chuck Norris**
-The name is not on the list.
-**Jack Baluer**
-The name is not on the list.
-**Jack Bauer**
-The name is on the list.
-**Jack Bower**
-The name is on the list.
-
-Thank you!
-
-</sample-output>
-
-**NB!** The exercise template comes with two files, `names.txt` and `other-names.txt`, which have the following contents. Do not change the contents of the files!
-
-<!-- nimet.txt: -->
-
-names.txt:
-
-<sample-data>
-
-ada
-arto
-leena
-test
-
-</sample-data>
-
-<!-- toiset-nimet.txt: -->
-
-other-names.txt:
-
-<sample-data>
-
-leo
-jarmo
-alicia
-
-</sample-data>
-
-</programming-exercise>
-
-<programming-exercise name='Is it in the file?' tmcname='part04-Part04_27.IsItInTheFile'>
-
-The exercise template comes with two files, `names.txt` and `other-names.txt`. Write a program that first asks the user for the name of the file to be read, after which the user is prompted for the string that they're looking for. The program then reads the file and searches for the desired string.
-
-If the string is found, the program should print "Found!". If not, the program should print "Not found.". If reading the file fails (the reading ends in an error) the program should print the message "Reading the file " + file + " failed.".
-
-<sample-output>
-
-Name of the file:
-**names.txt**
-Search for:
-**Antti**
-Not found.
-
-</sample-output>
-
-<sample-output>
-
-Name of the file:
-**names.txt**
-Search for:
-**ada**
-Found!
-
-</sample-output>
-
-<sample-output>
-
-Name of the file:
-**nonexistent.txt**
-Search for:
-**test**
-Reading the file nonexistent.txt failed.
-
-</sample-output>
-
-</programming-exercise>
-
-<programming-exercise name='Numbers From a File' tmcname='part04-Part04_28.NumbersFromAFile'>
+<programming-exercise name='Numbers From a File'>
 
 Write a program that prompts the user for a filename, as well as the upper and lower bounds for the accepted range of numbers. Then the program reads the numbers contained in the file (each number is on its own line) and only accounts for the numbers which are inside the given range. Finally, the program should print the number of numbers that were inside the given range.
 
@@ -531,7 +376,7 @@ System.out.println("Total amount of people read: " + people.size());
 
 Reading objects from a file is a clear responsibility in and of itself, and should for that reason be isolated into a method. This is what we'll be doing in the next exercise.
 
-<programming-exercise name='Storing Records' tmcname='part04-Part04_30.StoringRecords'>
+<programming-exercise name='Storing Records'>
 
 In this exercise, we'll be working with files stored in CSV format, which contain names and ages separated by commas. The file format may look like this:
 
@@ -544,85 +389,8 @@ amy,1
 
 </sample-data>
 
-The exercise template already has a `Person` class, and the class `StoringRecords` has a body for the method `public static ArrayList<Person> readRecordsFromFile(String file)`. Implement the `readRecordsFromFile` method such that it reads the persons from the file passed as a parameter, and finally returns them in the list returned by the method.
+The exercise template already has a `Person` class, and the class `StoringRecords` has a body for the method `public static List<Person> readRecordsFromFile(String file)`. Implement the `readRecordsFromFile` method such that it reads the persons from the file passed as a parameter, and finally returns them in the list returned by the method.
 
 The exercise template has a `main` method that you can use to test how your program works. In this exercise, only modify the method `readRecordsFromFile`.
-
-</programming-exercise>
-
-<programming-exercise name='Sport Statistics' tmcname='part04-Part04_31.SportStatistics'>
-
-In this exercise, we'll be working with files stored in CSV format. Each line of the file contains the home team, visiting team, home team points, and visiting team points, all separated by commas.
-
-You can see an example below of the file's contents. The file shown below is also included in the exercise template with the name "data.csv".
-
-<sample-data>
-
-ENCE,Vitality,9,16
-ENCE,Vitality,16,12
-ENCE,Vitality,9,16
-ENCE,Heroic,10,16
-SJ,ENCE,0,16
-SJ,ENCE,3,16
-FURIA,NRG,7,16
-FURIA,Prospects,16,1
-
-</sample-data>
-
-Write a program that prompts the user for a filename, after which it reads the match statistics from the file. The program then prompts the user for the name of a team, and prints the data specified in the following parts for that team.
-
-<h2>Games Played</h2>
-
-Implement the ability to output the number of games played by any given team. We're using the above-mentioned **data.csv** file.
-
-<sample-output>
-
-File:
-**data.csv**
-Team:
-**FURIA**
-Games: 2
-
-</sample-output>
-
-<sample-output>
-
-File:
-**data.csv**
-Team:
-**ENCE**
-Games: 6
-
-</sample-output>
-
-<h2>Wins and Losses</h2>
-
-Extend the program so that it has the ability to print the number of wins and losses of a given team. The winner of a game is the team that has gained more points from it.
-
-You may assume that the games cannot be tied. Below, we're using the above-mentioned **data.csv** file.
-
-<sample-output>
-
-File:
-**data.csv**
-Team:
-**FURIA**
-Games: 2
-Wins: 1
-Losses: 1
-
-</sample-output>
-
-<sample-output>
-
-File:
-**data.csv**
-Name:
-**ENCE**
-Games: 6
-Wins: 3
-Losses: 3
-
-</sample-output>
 
 </programming-exercise>
