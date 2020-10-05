@@ -1,7 +1,7 @@
 ---
 path: "/week-6/3-separating-user-interface-from-program-logic"
 title: "Separating the user interface from program logic"
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Learning Objectives'>

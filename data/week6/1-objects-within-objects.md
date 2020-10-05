@@ -1,7 +1,7 @@
 ---
 path: '/week-6/1-objects-within-objects'
 title: 'Objects containing a list'
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Learning Objectives'>

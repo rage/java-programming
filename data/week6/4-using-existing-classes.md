@@ -1,7 +1,7 @@
 ---
 path: "/week-6/4-using-existing-classes"
 title: "Using existing classes in Java"
-hidden: true
+hidden: false
 ---
 
 So far, we have already been using some of the built in classes that are available in the Java programming language. Examples include the `Scanner` class, the `List` class and the `String` class. Over the course we have been getting used to how they work and have learned some of the methods they provide.

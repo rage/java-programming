@@ -1,7 +1,7 @@
 ---
 path: '/week-6/5-complex-programs'
 title: 'Complex programs'
-hidden: true
+hidden: false
 ---
 
 When you learn programming, you also develop a better eye for reading code (yours and others).

@@ -1,7 +1,7 @@
 ---
 path: "/week-6/2-files-and-reading-data"
 title: "Files and reading data"
-hidden: true
+hidden: false
 ---
 
 <text-box variant='learningObjectives' name='Learning Objectives'>
