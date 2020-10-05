@@ -438,55 +438,6 @@ public void start() {
 
 The user interface remains clean, because counting the palindromes is done inside the 'WordSet' object. The following is an example implementation of the method.
 
-<!-- ```java
-import java.util.ArrayList;
-
-public class Sanajoukko {
-    private ArrayList<String> sanat;
-
-    public Sanajoukko() {
-        this.sanat = new ArrayList<>();
-    }
-
-    public boolean sisaltaa(String sana) {
-        return this.sanat.contains(sana);
-    }
-
-    public void lisaa(String sana) {
-        this.sanat.add(sana);
-    }
-
-    public int palindromeja() {
-        int lukumaara = 0;
-
-        for (String sana: this.sanat) {
-            if (onPalindromi(sana)) {
-                lukumaara++;
-            }
-        }
-
-        return lukumaara;
-    }
-
-    public boolean onPalindromi(String sana) {
-        int loppu = sana.length() - 1;
-
-        int i = 0;
-        while (i < sana.length() / 2) {
-            // metodi charAt palauttaa annetussa indeksissä olevan merkin
-            // alkeistyyppisenä char-muuttujana
-            if(sana.charAt(i) != sana.charAt(loppu - i)) {
-                return false;
-            }
-
-            i++;
-        }
-
-        return true;
-    }
-}
-``` -->
-
 ```java
 import java.util.ArrayList;
 import java.util.List;
