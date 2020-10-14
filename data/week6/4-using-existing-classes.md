@@ -26,7 +26,6 @@ public class Movie {
         return length;
     }
 
-    @Override
     public String toString() {
         return title + " (" + length + "m)";
     }
@@ -126,7 +125,6 @@ public class Movie {
         return releaseDate;
     }
 
-    @Override
     public String toString() {
         return title + " (" + length + "m)" + ", " + releaseDate;
     }
