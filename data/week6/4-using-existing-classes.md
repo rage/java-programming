@@ -38,7 +38,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MovieCollection {
-    private final String name;
+    private String name;
     private List<Movie> movies;
 
     public MovieCollection(String name) {
@@ -269,7 +269,7 @@ Let us look again at the `MovieCollection` class that we have created before. Wh
  * A class that represents a movie collection and thus allows to store movies.
  */
 public class MovieCollection {
-    private final String name;
+    private String name;
     private List<Movie> movies;
 
     /**
