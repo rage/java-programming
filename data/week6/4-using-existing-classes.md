@@ -19,15 +19,15 @@ public class Movie {
     }
 
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public int getLength() {
-        return length;
+        return this.length;
     }
 
     public String toString() {
-        return title + " (" + length + "m)";
+        return this.title + " (" + this.length + "m)";
     }
 }
 ```
@@ -47,18 +47,18 @@ public class MovieCollection {
     }
 
     public void addMovie(Movie movie) {
-        movies.add(movie);
+        this.movies.add(movie);
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public String toString() {
         if (movies.isEmpty()) {
-            return "Collection " + name + " is currently empty";
+            return "Collection " + this.name + " is currently empty";
         } else {
-            return "Collection " + name + " has the movies: " + movies;
+            return "Collection " + this.name + " has the movies: " + this.movies;
         }
     }
 }
@@ -114,19 +114,19 @@ public class Movie {
     }
 
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public int getLength() {
-        return length;
+        return this.length;
     }
 
     public LocalDate getReleaseDate() {
-        return releaseDate;
+        return this.releaseDate;
     }
 
     public String toString() {
-        return title + " (" + length + "m)" + ", " + releaseDate;
+        return this.title + " (" + this.length + "m)" + ", " + this.releaseDate;
     }
 }
 ```
@@ -288,7 +288,7 @@ public class MovieCollection {
      * @param movie the movie that should be added.
      */
     public void addMovie(Movie movie) {
-        movies.add(movie);
+        this.movies.add(movie);
     }
 
     /**
@@ -297,7 +297,7 @@ public class MovieCollection {
      * @return the name of the collection
      */
     public String getName() {
-        return name;
+        return this.name;
     }
 
     /**
@@ -308,9 +308,9 @@ public class MovieCollection {
      */
     public String toString() {
         if (movies.isEmpty()) {
-            return "Collection " + name + " is currently empty";
+            return "Collection " + this.name + " is currently empty";
         } else {
-            return "Collection " + name + " has the movies: " + movies;
+            return "Collection " + this.name + " has the movies: " + this.movies;
         }
     }
 }
