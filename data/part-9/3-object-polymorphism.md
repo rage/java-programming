@@ -398,8 +398,8 @@ System.out.println(herd);
 
 <sample-output>
 
-x: 73; y: 56
 x: 57; y: 66
+x: 73; y: 56
 x: 46; y: 52
 x: 19; y: 107
 
