@@ -19,11 +19,13 @@ Both exams will be held on several different days. You can attend the exam on an
 
 * ~~22.08.2020~~ canceled
 * 29.08.2020
+* Final exam January 15th, 2021
 
 #### Advanced Course In Programming
 
 * ~~29.08.2020~~ canceled
 * 05.09.2020
+* Final exam January 16th, 2021
 
 ## Points
 
