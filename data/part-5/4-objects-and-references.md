@@ -1603,7 +1603,7 @@ amount of money on the card is 2.0 euros
 there was enough money: false
 there was enough money: true
 amount of money on the card is 97.7 euros
-money: 1100.0, number of sold afforable meals: 0, number of sold hearty meals: 1
+money: 1004.3, number of sold afforable meals: 0, number of sold hearty meals: 1
 
 </sample-output>
 
