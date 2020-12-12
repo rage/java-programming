@@ -1519,7 +1519,7 @@ public class Main {
         antti.growOlder();
 
         System.out.println("Pekka's age: " + pekka.returnAge());
-        System.out.println("Antti's age: " + antti.returnAge())
+        System.out.println("Antti's age: " + antti.returnAge());
         int combined = pekka.returnAge() + antti.returnAge();
 
         System.out.println("Pekka's and Antti's combined age " + combined + " years");
