@@ -575,7 +575,7 @@ public class Program {
 
         System.out.println("Last string you wrote was " + third + ", which ");
         System.out.println("was preceded by " + second+ ".");
-        System.out.println("The first string was" + first + ".");
+        System.out.println("The first string was " + first + ".");
 
         System.out.println("All together: " + first + second + third);
     }
