@@ -361,7 +361,7 @@ Once upon a time...
 ## Input String as a Part of Output
 
 <!-- Huomasimme ohjelmointitehtävässä "Hei Ada Lovelace!", että merkkijonoliteraaleja ja merkkijonomuuttujia voidaan yhdistää `+`-merkillä. Alla oleva esimerkki näyttää ohjelman, missä käyttäjältä luetaan merkkijono, joka tulostetaan merkkijonoliteraaliin yhdistettynä. -->
-We noticed in the "Hi Ada Lovelace!" exercise that string literals and string variables can be joined using the `+` -operator. The example below demonstrates a program that takes user input and prints it concatenated with a string literal.
+We noticed in the "Hi Ada Lovelace!" exercise that string literals and string variables can be joined using the `+` operator. The example below demonstrates a program that takes user input and prints it concatenated with a string literal.
 
 ```java
 import java.util.Scanner;
