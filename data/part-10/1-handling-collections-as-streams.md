@@ -916,7 +916,7 @@ System.out.println("Lukumäärä: " + lkm);
 // ArrayList<Person> persons = new ArrayList<>();
 
 long count = persons.stream()
-    .filter(person -> persons.getFirstName().startsWith("A"))
+    .filter(person -> person.getFirstName().startsWith("A"))
     .count();
 System.out.println("Count: " + count);
 ```
