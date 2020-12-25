@@ -656,6 +656,24 @@ The sum of numbers 2 and 4 is 6
 
 Write a method `public static void division(int numerator, int denominator)` that prints the result of the division of the numerator by the denominator. Keep in mind that the result of the division of the integers is an integer -- in this case we want the result to be a floating point number.
 
+<!-- ```java
+public static void main(String[] args) {
+    jakolasku(3, 5);
+}
+``` -->
+
+```java
+public static void main(String[] args) {
+    division(3, 5);
+}
+```
+
+<sample-output>
+
+0.6
+
+</sample-output>
+
 </programming-exercise>
 
 
