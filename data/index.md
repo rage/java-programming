@@ -24,4 +24,4 @@ The course is split up into two individual courses: Java Programming I and Java 
 
 ## Credits and certificate
 
-If you have a Finnish social security number you can get official study credits from the Open University of University of Helsinki if you take an exam after the course. If you don't have a Finnish social security number you can get a certificate starting from June. Instructions for the certificate will appear here later.
+If you have a Finnish social security number you can get official study credits from the Open University of University of Helsinki if you take an exam after the course. If you don't have a Finnish social security number you can get a certificate after completing the course from here: https://www.mooc.fi/en/profile/completions.
