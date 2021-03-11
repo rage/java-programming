@@ -15,7 +15,7 @@ hidden: false
 
 <!-- Edellä toteuttamamme käyttöliittymät eivät reagoi käyttöliittymässä tehtyihin tapahtumiin. Reagoimattomuus ei johdu käyttöliittymäkomponenteista, vaan siitä että emme ole lisänneet käyttöliittymäkomponentteihin tapahtumien käsittelyyn tarvittavaa toiminnallisuutta. -->
 
-The user interfaces we've previously implemented have not been able to react to events in the user interface. This inability to react is not due to the components of the interface themselves, but due to the fact that we've yet to added any functionality that handles component events.
+The user interfaces we've previously implemented have not been able to react to events in the user interface. This inability to react is not due to the components of the interface themselves, but due to the fact that we've yet to add any functionality that handles component events.
 
 <!-- Nappien painaminen käsitellään [EventHandler](https://docs.oracle.com/javase/8/javafx/api/javafx/event/EventHandler.html)-rajapinnan toteuttavalla luokalla. Tapahtuman tyyppi on tällöin [ActionEvent](https://docs.oracle.com/javase/8/javafx/api/javafx/event/ActionEvent.html). Rajapinnan toteutukseen määritellään *mitä tehdään* silloin, kun käyttäjä painaa nappia. -->
 
@@ -31,7 +31,7 @@ nappi.setOnAction(new EventHandler<ActionEvent>() {
 });
 ``` -->
 
-```java
+​```java
 Button button = new Button("This is a button");
 button.setOnAction(new EventHandler<ActionEvent>() {
     @Override
@@ -52,7 +52,7 @@ nappi.setOnAction((event) -> {
 });
 ``` -->
 
-```java
+​```java
 Button button = new Button("This is a button");
 button.setOnAction((event) -> {
     System.out.println("Pressed!");
@@ -81,15 +81,15 @@ public void start(Stage ikkuna) {
     HBox komponenttiryhma = new HBox();
     komponenttiryhma.setSpacing(20);
     komponenttiryhma.getChildren().addAll(vasenTeksti, nappi, oikeaTeksti);
-
+    
     Scene nakyma = new Scene(komponenttiryhma);
-
+    
     ikkuna.setScene(nakyma);
     ikkuna.show();
 }
 ``` -->
 
-```java
+​```java
 @Override
 public void start(Stage window) {
     TextField leftText = new TextField();
@@ -128,19 +128,19 @@ public void start(Stage ikkuna) {
     nappi.setOnAction((event) -> {
         oikeaTeksti.setText(vasenTeksti.getText());
     });
-
+    
     HBox komponenttiryhma = new HBox();
     komponenttiryhma.setSpacing(20);
     komponenttiryhma.getChildren().addAll(vasenTeksti, nappi, oikeaTeksti);
-
+    
     Scene nakyma = new Scene(komponenttiryhma);
-
+    
     ikkuna.setScene(nakyma);
     ikkuna.show();
 }
 ``` -->
 
-```java
+​```java
 @Override
 public void start(Stage window) {
     TextField leftText = new TextField();
@@ -212,14 +212,14 @@ vasenTeksti.textProperty().addListener(new ChangeListener<String>() {
 });
 ``` -->
 
-```java
+​```java
 leftText.textProperty().addListener(new ChangeListener<String>() {
     @Override
     public void changed(ObservableValue<? extends String> change,
             String oldValue, String newValue) {
 
         System.out.println(oldValue + " -> " + newValue);
-        oikeaTeksti.setText(newValue);
+        rightText.setText(newValue);
     }
 });
 ```
@@ -237,7 +237,7 @@ vasenTeksti.textProperty().addListener((muutos, vanhaArvo, uusiArvo) -> {
 });
 ``` -->
 
-```java
+​```java
 leftText.textProperty().addListener((change, oldValue, newValue) -> {
     System.out.println(oldValue + " -> " + newValue);
     rightText.setText(newValue);
@@ -263,7 +263,7 @@ vasenTeksti.textProperty().addListener((muutos, vanhaArvo, uusiArvo) -> {
 });
 ``` -->
 
-```java
+​```java
 leftText.textProperty().addListener((change, oldValue, newValue) -> {
     int characters = newValue.length();
     String[] parts = newValue.split(" ");

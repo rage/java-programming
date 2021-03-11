@@ -54,7 +54,7 @@ for (int i = 0; i < palat.length; i++) {
     System.out.println(i + ": " + palat[i]);
 }
 ``` -->
-```java
+​```java
 String row = "Päivämäärä;Huopalahti (asema);Kaisaniemi;Kulosaaren silta et.;..."
 String[] pieces = row.split(";");
 for (int i = 0; i < pieces.length; i++) {
@@ -139,7 +139,7 @@ for (int i = 0; i < palat.size(); i++) {
 }
 ``` -->
 
-```java
+​```java
 String row = "Party	1968	1972	1976	1980	1984	1988"
 List<String> pieces = Arrays.asList(row.split("\t"));
 for (int i = 0; i < pieces.size(); i++) {
@@ -185,12 +185,12 @@ public void start(Stage ikkuna) {
     // asetetaan akseleille nimet
     xAkseli.setLabel("Vuosi");
     yAkseli.setLabel("Suhteellinen kannatus (%)");
-
+    
     // luodaan viivakaavio. Viivakaavion arvot annetaan numeroina
     // ja se käyttää aiemmin luotuja x- ja y-akseleita
     LineChart<Number, Number> viivakaavio = new LineChart<>(xAkseli, yAkseli);
     viivakaavio.setTitle("Suhteellinen kannatus vuosina 1968-2008");
-
+    
     // luodaan viivakaavioon lisättävä datajoukko
     XYChart.Series rkpData = new XYChart.Series();
     rkpData.setName("RKP");
@@ -206,10 +206,10 @@ public void start(Stage ikkuna) {
     rkpData.getData().add(new XYChart.Data(2000, 5.1));
     rkpData.getData().add(new XYChart.Data(2004, 5.2));
     rkpData.getData().add(new XYChart.Data(2008, 4.7));
-
+    
     // lisätään datajoukko viivakaavioon
     viivakaavio.getData().add(rkpData);
-
+    
     // näytetään viivakaavio
     Scene nakyma = new Scene(viivakaavio, 640, 480);
     ikkuna.setScene(nakyma);
@@ -217,7 +217,7 @@ public void start(Stage ikkuna) {
 }
 ``` -->
 
-```java
+​```java
 @Override
 public void start(Stage stage) {
     // create the x and y axes that the chart is going to use
@@ -275,7 +275,7 @@ public void start(Stage ikkuna) {
 ``` -->
 
 
-```java
+​```java
 @Override
 public void start(Stage stage) {
     // create the x and y axis
@@ -298,12 +298,12 @@ public void start(Stage ikkuna) {
     // asetetaan akseleille nimet
     xAkseli.setLabel("Vuosi");
     yAkseli.setLabel("Suhteellinen kannatus (%)");
-
+    
     // luodaan viivakaavio. Viivakaavion arvot annetaan numeroina
     // ja se käyttää aiemmin luotuja x- ja y-akseleita
     LineChart<Number, Number> viivakaavio = new LineChart<>(xAkseli, yAkseli);
     viivakaavio.setTitle("Suhteellinen kannatus vuosina 1968-2008");
-
+    
     // luodaan viivakaavioon lisättävä datajoukko
     XYChart.Series rkpData = new XYChart.Series();
     rkpData.setName("RKP");
@@ -319,10 +319,10 @@ public void start(Stage ikkuna) {
     rkpData.getData().add(new XYChart.Data(2000, 5.1));
     rkpData.getData().add(new XYChart.Data(2004, 5.2));
     rkpData.getData().add(new XYChart.Data(2008, 4.7));
-
+    
     // lisätään datajoukko viivakaavioon
     viivakaavio.getData().add(rkpData);
-
+    
     // luodaan toinen viivakaavioon lisättävä datajoukko
     XYChart.Series vihreatData = new XYChart.Series();
     vihreatData.setName("VIHR");
@@ -334,10 +334,10 @@ public void start(Stage ikkuna) {
     vihreatData.getData().add(new XYChart.Data(2000, 7.7));
     vihreatData.getData().add(new XYChart.Data(2004, 7.4));
     vihreatData.getData().add(new XYChart.Data(2008, 8.9));
-
+    
     // lisätään datajoukko viivakaavioon
     viivakaavio.getData().add(vihreatData);
-
+    
     // näytetään viivakaavio
     Scene nakyma = new Scene(viivakaavio, 640, 480);
     ikkuna.setScene(nakyma);
@@ -345,7 +345,7 @@ public void start(Stage ikkuna) {
 }
 ``` -->
 
-```java
+​```java
 @Override
 public void start(Stage stage) {
     // create the x and y axes that the chart is going to use
@@ -431,13 +431,13 @@ arvot.keySet().stream().forEach(puolue -> {
     arvot.get(puolue).entrySet().stream().forEach(pari -> {
         data.getData().add(new XYChart.Data(pari.getKey(), pari.getValue()));
     });
-
+    
     // ja datajoukko lisätään kaavioon
     viivakaavio.getData().add(data);
 });
 ``` -->
 
-```java
+​```java
 // the axes and the line chart created previously
 
 // data has been read earlier -- the following object contains the data
@@ -523,7 +523,7 @@ System.out.println(palat[2]);
 System.out.println(palat[3]);
 ``` -->
 
-```java
+​```java
 String string = "KOK    16.1    18.1    20.9";
 String[] pieces = string.split("\t");
 System.out.println(pieces[0]);
@@ -661,7 +661,7 @@ Denmark, 5809502
 
 <!-- Pylväskaavio luodaan JavaFx:n luokan [BarChart](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/chart/BarChart.html) avulla. Kuten viivakaavion käyttö, myös pylväskaavion käyttö vaatii käytettävien koordinaatistojen määrittelyn sekä tiedon lisäämisen kaavioon. Toisin kuin viivakaavioesimerkissä, tässä käytämme x-akselin määrittelyssä kategorista kategorista [CategoryAxis](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/chart/CategoryAxis.html)-luokkaa. Kun käytössä on CategoryAxis-luokka, kaavion akselin arvojen tyyppi on String, mikä tulee näkyä myös kaavioon lisättävässä datassa. -->
 
-We'll use the JavaFx [BarChart] class (https://docs.oracle.com/javase/8/javafx/api/javafx/scene/chart/BarChart.html). As with line charts, the axes have to be defined and data has to be added to the chart. In this case, however, we're going to take advantage of the categorical [CategoryAxis](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/chart/CategoryAxis.html) class to define the x axis. With the CategoryAxis class, the type of the axis values is String. This must also be accounted for in the data that is going to be added to the chart.
+We'll use the JavaFx [BarChart class](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/chart/BarChart.html). As with line charts, the axes have to be defined and data has to be added to the chart. In this case, however, we're going to take advantage of the categorical [CategoryAxis](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/chart/CategoryAxis.html) class to define the x axis. With the CategoryAxis class, the type of the axis values is String. This must also be accounted for in the data that is going to be added to the chart.
 
 <br/>
 
@@ -674,14 +674,14 @@ public void start(Stage ikkuna) {
 
     pylvaskaavio.setTitle("Pohjoismaiden asukasluvut");
     pylvaskaavio.setLegendVisible(false);
-
+    
     XYChart.Series asukasluvut = new XYChart.Series();
     asukasluvut.getData().add(new XYChart.Data("Ruotsi", 9801616));
     asukasluvut.getData().add(new XYChart.Data("Tanska", 5678348));
     asukasluvut.getData().add(new XYChart.Data("Suomi", 5483533));
     asukasluvut.getData().add(new XYChart.Data("Norja", 5165800));
     asukasluvut.getData().add(new XYChart.Data("Islanti", 329100));
-
+    
     pylvaskaavio.getData().add(asukasluvut);
     Scene nakyma = new Scene(pylvaskaavio, 640, 480);
     ikkuna.setScene(nakyma);
@@ -697,7 +697,7 @@ Finland, 5537364
 Denmark, 5809502
 </pre>
 
-```java
+​```java
 @Override
 public void start(Stage stage) {
     CategoryAxis xAxis = new CategoryAxis();
@@ -793,48 +793,48 @@ public void start(Stage ikkuna) {
     NumberAxis xAkseli = new NumberAxis();
     // y-akseli kuvaa nopanheittojen keskiarvoa. Keskiarvo on aina välillä [1-6]
     NumberAxis yAkseli = new NumberAxis(1, 6, 1);
-
+    
     LineChart<Number, Number> viivakaavio = new LineChart<>(xAkseli, yAkseli);
     // kaaviosta poistetaan mm. pisteisiin liittyvät ympyrät
     viivakaavio.setLegendVisible(false);
     viivakaavio.setAnimated(false);
     viivakaavio.setCreateSymbols(false);
-
+    
     // luodaan dataa kuvaava muuttuja ja lisätään se kaavioon
     XYChart.Series keskiarvo = new XYChart.Series();
     viivakaavio.getData().add(keskiarvo);
-
+    
     new AnimationTimer() {
         private long edellinen;
         private long summa;
         private long lukuja;
-
+    
         @Override
         public void handle(long nykyhetki) {
             if (nykyhetki - edellinen < 100_000_000L) {
                 return;
             }
-
+    
             edellinen = nykyhetki;
-
+    
             // heitetään noppaa
             int luku = arpoja.nextInt(6) + 1;
-
+    
             // kasvatetaan summaa ja lukujen määrää
             summa += luku;
             lukuja++;
-
+    
             // lisätään dataan uusi piste
             keskiarvo.getData().add(new XYChart.Data(lukuja, 1.0 * summa / lukuja));
         }
     }.start();
-
+    
     Scene nakyma = new Scene(viivakaavio, 400, 300);
     ikkuna.setScene(nakyma);
     ikkuna.show();
 }
 ``` -->
-```java
+​```java
 @Override
 public void start(Stage stage) {
     // The class Random is used to randomize the dice rolls
@@ -910,7 +910,7 @@ if (keskiarvo.getData().size() > 100) {
     xAkseli.setUpperBound(xAkseli.getUpperBound() + 1);
 }
 ``` -->
-```java
+​```java
 if (average.getData().size() > 100) {
     average.getData().remove(0);
     xAxis.setLowerBound(xAxis.getLowerBound() + 1);
