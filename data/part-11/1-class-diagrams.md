@@ -110,7 +110,7 @@ We also write the return type of a method in the class diagram.
 <img src="../img/diagrams/part4.1-classdiagram-person-name-age-constructor-print.png" alt="[Person|-name:String;-age:int|+Person(initialName:String);+printPerson():void]">
 
 
-<text-box variant='hint' name='A class diagram describes classes, construcutors and methods'>
+<text-box variant='hint' name='A class diagram describes classes, constructors and methods'>
 
 <!-- Luokkakaaviossa kuvataan luokat, muuttujat, konstruktorit, ja metodit sekä luokkien väliset yhteydet. Luokkakaavio ei kuitenkaan kerro mitään konstruktorien ja metodien sisäisestä toteutuksesta. Luokkakaaviolla kerrotaan siis olioiden rakenteesta, mutta luokkakaaviot eivät itsessään määrittele toiminnallisuutta. -->
 A class diagram describes classes and their attributes, constructors and methods as well as the connections between classes. However a class diagram tells us nothing about the implementation of the constructors or the methods. Therefore a class diagram describes the structure of an object but not its functionality.
@@ -122,7 +122,7 @@ For example the method `printPerson` uses the class attributes `name` and `age`,
 
 
 <!-- Lisätään luokalle vielä nimen palauttava metodi `getNimi`. -->
-Below we have added method `getName` to the Person class which returns the name of the Person.
+Below we have added the method `getName` to the Person class which returns the name of the Person.
 
 
 ```java
