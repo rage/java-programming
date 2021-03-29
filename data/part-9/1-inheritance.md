@@ -771,7 +771,7 @@ System.out.println(ollie);   // ollie.toString() WORKS
 
 <!-- Oliolla on siis käytössä jokainen sen tyyppiin sekä sen yliluokkiin ja rajapintoihin liittyvä metodi. Esimerkiksi Opiskelija-tyyppisellä oliolla on käytössä Person-luokassa määritellyt metodit sekä Object-luokassa määritellyt metodit. -->
 
-So an object has at its disposal the methods that relate to its type, and also to its superclasses and interfaces. The Student object above offers the methods defined in the the classes Person and Object.
+So an object has at its disposal the methods that relate to its type, and also to its superclasses and interfaces. The Student object above offers the methods defined in the classes Person and Object.
 
 <!-- Edellisessä tehtävässä korvasimme Opiskelijan luokalta Henkilö perimän `toString` uudella versiolla. Myös luokka Henkilö oli jo korvannut Object-luokalta perimänsä toStringin. Jos käsittelemme olioa jonkun muun kuin sen todellisen tyypin kautta, mitä versiota olion metodista kutsutaan? -->
 
@@ -780,7 +780,7 @@ In the last exercise we wrote a new `toString` implementation for Student to ove
 
 <!-- Seuraavassa esimerkissä kahta opiskelijaa käsitellään erityyppisten muuttujien kautta. Mikä versio metodista toString suoritetaan, luokassa Object, Person vai Opiskelija määritelty? -->
 
-In the following example, we'll have two students that we refer to by variables of different types. Which version of the toString method will be executed: the one defined in Objecct, Person, or Student?
+In the following example, we'll have two students that we refer to by variables of different types. Which version of the toString method will be executed: the one defined in Object, Person, or Student?
 
 <!-- ```java
 Opiskelija olli = new Opiskelija("Olli", "Ida Albergintie 1 00400 Helsinki");
