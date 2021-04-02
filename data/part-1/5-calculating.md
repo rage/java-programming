@@ -783,7 +783,7 @@ The last example produces an incorrectly rounded result, because the integer div
 
 <!-- Jos jakolausekkeen tulos asetetaan kokonaislukutyyppiseen muuttujaan, on tulos automaattisesti kokonaisluku. -->
 
-If the result of a division is assigned to an integer-type variable, the result is automatically an integer.
+If the floating point result of a division is assigned to an integer-type variable, the result is NOT automatically an integer -- it has to be casted to int, like this:
 
 <!-- ```java
 int kokonaisluku = 3.0 / 2;
@@ -791,7 +791,7 @@ System.out.println(kokonaisluku);
 ``` -->
 
 ```java
-int integer = 3.0 / 2;
+int integer = (int) (3.0 / 2);
 System.out.println(integer);
 ```
 
