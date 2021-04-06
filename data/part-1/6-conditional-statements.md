@@ -247,7 +247,7 @@ if (number >= 1000) {
 
 <sample-output>
 
-The number was not equal to 0
+The number is not equal to 0
 
 </sample-output>
 
