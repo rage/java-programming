@@ -1092,7 +1092,7 @@ int luku = 7;
 if (luku >= 5 && luku <= 10) {
     System.out.println("On! :)");
 } else {
-    System.out.println("Ei ollut :(")
+    System.out.println("Ei ollut :(");
 }
 ``` -->
 
@@ -1103,7 +1103,7 @@ int number = 7;
 if (number >= 4 && number <= 10) {
     System.out.println("It is! :)");
 } else {
-    System.out.println("It is not :(")
+    System.out.println("It is not :(");
 }
 ```
 
