@@ -1079,7 +1079,7 @@ The expression of a conditional statement may consist of multiple parts, in whic
 
 <!-- * Loogista operaatiota ei käytetään totuusarvon muuntamiseen truesta falseksi tai falsesta trueksi. -->
 
-- Logical operators are not used for changing the boolean value from true to false, or false to true.
+- Logical not-operator is used for changing the boolean value from true to false, or false to true.
 
 <!-- Seuraavassa yhdistetään `&&`:lla eli ja-operaatiolla kaksi yksittäistä ehtoa. Koodilla tarkistetaan, onko muuttujassa oleva luku suurempi kuin 4 ja pienempi kuin 11, eli siis välillä 5-10: -->
 
