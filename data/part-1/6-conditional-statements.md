@@ -1079,7 +1079,7 @@ The expression of a conditional statement may consist of multiple parts, in whic
 
 <!-- * Loogista operaatiota ei käytetään totuusarvon muuntamiseen truesta falseksi tai falsesta trueksi. -->
 
-- Logical operators are not used for changing the boolean value from true to false, or false to true.
+- Logical not-operator is used for changing the boolean value from true to false, or false to true.
 
 <!-- Seuraavassa yhdistetään `&&`:lla eli ja-operaatiolla kaksi yksittäistä ehtoa. Koodilla tarkistetaan, onko muuttujassa oleva luku suurempi kuin 4 ja pienempi kuin 11, eli siis välillä 5-10: -->
 
@@ -1092,7 +1092,7 @@ int luku = 7;
 if (luku >= 5 && luku <= 10) {
     System.out.println("On! :)");
 } else {
-    System.out.println("Ei ollut :(")
+    System.out.println("Ei ollut :(");
 }
 ``` -->
 
@@ -1103,7 +1103,7 @@ int number = 7;
 if (number >= 4 && number <= 10) {
     System.out.println("It is! :)");
 } else {
-    System.out.println("It is not :(")
+    System.out.println("It is not :(");
 }
 ```
 
@@ -1125,7 +1125,7 @@ int luku = 145;
 if (luku < 0 || luku > 100) {
     System.out.println("On! :)");
 } else {
-    System.out.println("Ei ollut :(")
+    System.out.println("Ei ollut :(");
 }
 ``` -->
 
@@ -1136,7 +1136,7 @@ int number = 145;
 if (number < 0 || number > 100) {
     System.out.println("It is! :)");
 } else {
-    System.out.println("It is not :(")
+    System.out.println("It is not :(");
 }
 ```
 
@@ -1157,7 +1157,7 @@ int luku = 7;
 if (!(luku > 4)) {
     System.out.println("Luku ei ole suurempi kuin 4.");
 } else {
-    System.out.println("Luku on suurempi tai yhtäsuuri kuin 4.")
+    System.out.println("Luku on suurempi tai yhtäsuuri kuin 4.");
 }
 ``` -->
 
@@ -1167,7 +1167,7 @@ int number = 7;
 if (!(number > 4)) {
     System.out.println("The number is not greater than 4.");
 } else {
-    System.out.println("The number is greater than or equal to 4.")
+    System.out.println("The number is greater than or equal to 4.");
 }
 ```
 
@@ -1534,7 +1534,7 @@ When a gift is given by a close relative or a family member, the amount of gift 
 
 <!-- Esimerkiksi 6000 euron lahjasta tulee maksaa veroa 180 euroa (100 + (6000-5000) * 0.08), ja 75000 euron lahjasta tulee maksaa veroa 7100 euroa (4700 + (75000-55000) * 0.12). -->
 
-For example 6000€ gift implies 180€ of gift tax (100 + (6000-5000)_0.08), and 75000€ gift implies 7100€ of gift tax (4700 + (75000-55000) _ 0.12).
+For example 6000€ gift implies 180€ of gift tax (100 + (6000-5000) * 0.08), and 75000€ gift implies 7100€ of gift tax (4700 + (75000-55000) * 0.12).
 
 <!-- Tee ohjelma, joka laskee lahjaveron lähimmiltä sukulaisilta annetulle lahjalle. Alla on muutama esimerkki ohjelman toiminnasta. -->
 
