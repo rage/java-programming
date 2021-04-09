@@ -3963,7 +3963,7 @@ public class Raha {
 
     public String toString() {
         String nolla = "";
-        if (senttia <= 10) {
+        if (senttia < 10) {
             nolla = "0";
         }
 
