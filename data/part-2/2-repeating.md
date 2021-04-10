@@ -97,7 +97,7 @@ while (_statement_) {
 We'll use the value `true` as the loop's statement for now. This way, the loop's execution is always continued when the program arrives at the point that decides whether it should be repeated or not. This happens when the execution of the program first arrives at the loop statement for the first time, and also when it reaches the end of the loop's block.
 
 <!-- Toistolauseen suoritus etenee askeleittain lause kerrallaan. Seuraava ohjelma tulostaa merkkijonoa _osaan ohjelmoida!_ ikuisesti eli "äärettömän monta kertaa": -->
-The loop execution proceeds line-by-line. The following program outputs _I can program_ an infinite number of times.
+The loop execution proceeds line-by-line. The following program outputs _I can program!_ an infinite number of times.
 
 ```java
 while (true) {
