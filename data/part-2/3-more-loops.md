@@ -251,7 +251,7 @@ Where from? **5**
 </sample-output>
 
 <!-- Jos tavoite on suurempi kuin lähtökohta ei tulostu mitään: -->
-If the upper limit is larger than the starting point, nothing is printed:
+If the upper limit is smaller than the starting point, nothing is printed:
 
 <sample-output>
 
