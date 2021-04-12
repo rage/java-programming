@@ -661,7 +661,7 @@ Give a number (end with 0):
 **-1**
 Give a number (end with 0):
 **0**
-Total of ones: 2
+The total of ones: 2
 
 </sample-output>
 
