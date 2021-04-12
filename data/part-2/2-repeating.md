@@ -594,19 +594,19 @@ The example above works, but not in a way we hoped it would. Below the example o
 
 <sample-output>
 
-Insert a number (0 exits)
+Insert a number (0 exits):
 **5**
 The total of ones: 0
-Insert a number (0 exits)
+Insert a number (0 exits):
 **1**
 The total of ones: 1
-Insert a number (0 exits)
+Insert a number (0 exits):
 **1**
 The total of ones: 1
-Insert a number (0 exits)
+Insert a number (0 exits):
 **2**
 The total of ones: 0
-Insert a number (0 exits)
+Insert a number (0 exits):
 **0**
 
 </sample-output>
