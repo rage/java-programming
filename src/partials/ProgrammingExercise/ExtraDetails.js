@@ -58,9 +58,7 @@ const ExtraDetails = ({ exerciseDetails, onUpdate, nocoins, t }) => {
           <Typography>{t("solutionHowTo")}</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <StyledTypography>
-            {t("howSeeSolution")}
-          </StyledTypography>
+          <StyledTypography>{t("howSeeSolution")}</StyledTypography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
     </div>
