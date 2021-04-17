@@ -17,7 +17,7 @@ hidden: false
 
 <!-- - Osaat kirjoittaa ohjelman, joka lukee tietoa tiedostosta. -->
 
-- You know how to create a write a program that reads data from a file.
+- You know how to write a program that reads data from a file.
 
 </text-box>
 
