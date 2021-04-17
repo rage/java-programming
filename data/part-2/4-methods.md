@@ -1711,7 +1711,7 @@ public static void printNumber() {
 
 <!-- Kun ohjelma käynnistetään, suoritus alkaa `main`-metodin ensimmäiseltä riviltä. Tällä rivillä olevalla komennolla tulostetaan teksti `"Heippa maailma!"`. Ohjelman kutsupino näyttää seuraavalta: -->
 
-The execution begins from the first line of the  `main` method when the program is run. The command on this line prints the text `"Hello world!"`. The call stack of the program looks as follows:
+The execution begins from the first line of the  `main` method when the program is running. The command on this line prints the text `"Hello world!"`. The call stack of the program looks as follows:
 
 <sample-output>
 
