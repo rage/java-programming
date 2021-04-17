@@ -1776,7 +1776,7 @@ public static void main(String[] args) {
     int beginning = 1;
     int end = 5;
 
-    printStarts(beginning, end);
+    printStars(beginning, end);
 }
 
 public static void printStars(int beginning, int end) {
