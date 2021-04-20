@@ -1490,8 +1490,8 @@ public class MainProgram {
 
 vaihtorahaa jäi 7.5
 riittikö raha: true
-riittikö raha: false
 riittikö raha: true
+riittikö raha: false
 kassassa rahaa 1002.5 edullisia lounaita myyty 2 maukkaita lounaita myyty 1
 
 </sample-output> -->
@@ -1500,8 +1500,8 @@ kassassa rahaa 1002.5 edullisia lounaita myyty 2 maukkaita lounaita myyty 1
 
 remaining change: 7.5
 there was enough money: true
-there was enough money: false
 there was enough money: true
+there was enough money: false
 money: 1002.5, number of sold afforable meals: 2, number of sold hearty meals: 1
 
 </sample-output>
