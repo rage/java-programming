@@ -120,7 +120,7 @@ public int compareTo(Kerholainen kerholainen) {
 ```java
 @Override
 public int compareTo(Member member) {
-    return this.length - member.getHeight();
+    return this.height - member.getHeight();
 }
 ```
 
