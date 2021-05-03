@@ -25,8 +25,8 @@ const Page = styled.li`
   border-radius: 10px;
 
   ${props =>
-    props.currentPage &&
-    `
+      props.currentPage &&
+      `
     background-color: black;
     border-radius: 0.25rem;
     color: white;
@@ -36,8 +36,7 @@ const Page = styled.li`
       color: white !important;
     }
   `}
-
-  :hover {
+    :hover {
     background-color: #f5ebeb;
     color: black;
   }
