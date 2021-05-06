@@ -635,7 +635,7 @@ The book search took 0.411458 milliseconds.
 
 </sample-output>
 
-It took about 0.4 milliseconds to search for two books out of ten million books with the hash map. The difference in performace in our example is over a thousandfold.
+It took about 0.4 milliseconds to search for two books out of ten million books with the hash map. The difference in performance in our example is over a thousandfold.
 
 The difference in performance is due to the fact that when a book is searched for in a list, the worst-case scenario involves going through all the books in the list. In a hash map, it isn't necessary to check all of the books as the key determines the location of a given book in a hash map. The difference in performance depends on the number of books - for example, the performance differences are negligible for 10 books. However, for millions of books, the performance differences are clearly visible.
 
@@ -735,7 +735,7 @@ public class Library {
 Huomaamme jo nyt että merkkijonon siistimiseen liittyvää koodia tarvitsisi jokaisessa kirjaa käsittelevässä metodissa, joten siitä on hyvä tehdä erillinen apumetodi -- metodi toteutettaan luokkametodina, sillä se ei käsittele oliomuuttujia. -->
 The `containsKey` method of the hash map is being used above to check for the existence of a key. The method returns `true` if any value has been added to the hash map with the given key. Otherwise, the method returns `false`.
 
-We can already see that code dealing with string sanitizion is needed in every method that handles a book, which makes it a good candiate for a  separate helper method. The method is implemented as a class method since it doesn't handle object variables.
+We can already see that code dealing with string sanitization is needed in every method that handles a book, which makes it a good candidate for a  separate helper method. The method is implemented as a class method since it doesn't handle object variables.
 
 <!-- ```java
 public static String siistiMerkkijono(String merkkijono) {
