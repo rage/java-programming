@@ -477,7 +477,7 @@ Next let's take a look at algorithms meant for information retrieval.
 
 <!-- Peräkkäishaku on hakualgoritmi, joka etsii tietoa taulukosta käymällä taulukkoa läpi alkio alkiolta. Heti kun haettu alkio löytyy, sen indeksi palautetaan. Jos alkiota ei löydy, palautetaan tieto siitä ettei haettavaa alkiota löytynyt -- tämä kerrotaan tyypillisesti palauttamalla indeksin sijaan arvo `-1`. -->
 
-Linear search is a search algorithm that searches for information in an array by going through every value in the array one by one. When the value that was searched for is found, its index is immediately returned. If the requested value cannot be found, linear sort returns the information that the value was not found -- typically this means returning `-1` instead of a valid index.
+Linear search is a search algorithm that searches for information in an array by going through every value in the array one by one. When the value that was searched for is found, its index is immediately returned. If the requested value cannot be found, linear search returns the information that the value was not found -- typically this means returning `-1` instead of a valid index.
 
 <!-- ```java
 public class Algoritmit {
