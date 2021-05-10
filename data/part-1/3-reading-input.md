@@ -280,7 +280,7 @@ public class Program {
 
     public static void main(String[] args) {
 
-        //Create the tool for reading, assign it to variable caller "scanner
+        //Create the tool for reading, assign it to variable called "scanner"
         Scanner scanner = new Scanner(System.in);
 
         //Print user a message "Write a message: "
