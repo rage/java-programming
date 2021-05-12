@@ -97,7 +97,7 @@ while (_expression_) {
 We'll use the value `true` as the loop's expression for now. This way, the loop's execution is always continued when the program arrives at the point that decides whether it should be repeated or not. This happens when the execution of the program first arrives at the loop expression for the first time, and also when it reaches the end of the loop's block.
 
 <!-- Toistolauseen suoritus etenee askeleittain lause kerrallaan. Seuraava ohjelma tulostaa merkkijonoa _osaan ohjelmoida!_ ikuisesti eli "äärettömän monta kertaa": -->
-The loop execution proceeds line-by-line. The following program outputs _I can program_ an infinite number of times.
+The loop execution proceeds line-by-line. The following program outputs _I can program!_ an infinite number of times.
 
 ```java
 while (true) {
@@ -590,23 +590,23 @@ while (true) {
 ```
 
 <!-- Yllä oleva esimerkki toimii, mutta ei kuten toivomme. Alla ohjelman toimintaesimerkki. -->
-The example above works, but not in a way we hoped it would. Below the example output of the program
+The example above works, but not in a way we hoped it would. Below is the example output of the program.
 
 <sample-output>
 
-Insert a number (0 exits)
+Insert a number (0 exits):
 **5**
 The total of ones: 0
-Insert a number (0 exits)
+Insert a number (0 exits):
 **1**
 The total of ones: 1
-Insert a number (0 exits)
+Insert a number (0 exits):
 **1**
 The total of ones: 1
-Insert a number (0 exits)
+Insert a number (0 exits):
 **2**
 The total of ones: 0
-Insert a number (0 exits)
+Insert a number (0 exits):
 **0**
 
 </sample-output>
@@ -661,7 +661,7 @@ Give a number (end with 0):
 **-1**
 Give a number (end with 0):
 **0**
-Total of ones: 2
+The total of ones: 2
 
 </sample-output>
 
@@ -796,7 +796,7 @@ while (true) {
 // For printing the number of positive numbers
 System.out.println("Positive numbers: " + numberOfPositives);
 // For printing the number of negative numbers
-System.out.println("Negative numbers: " + numberOfNegative)s;
+System.out.println("Negative numbers: " + numberOfNegatives);
 
 // For printing the percentage of positive numbers from all numbers
 
@@ -816,7 +816,7 @@ if (numberOfPositives + numberOfNegatives > 0) {
 Write a program that asks the user for input until the user inputs 0. After this the program prints the amount of numbers inputted and the sum of the numbers. The number zero does not need to be added to the sum, but adding it does not change the results.
 
 <!-- _Tarvitset tässä kaksi muuttujaa tiedon säilömiseen. Käytä toista muuttujaa lukujen lukumäärän säilömiseen ja toista muuttujaa lukujen summan laskemiseen._ -->
-_You need two variables to keep track of the information. Use one for keeping track of the numbers inputted and other for keeping track of the sum_
+_You need two variables to keep track of the information. Use one for keeping track of the numbers inputted and other for keeping track of the sum._
 
 <!-- Ohjelman tulostusesimerkki: -->
 Example output of the program:
@@ -881,7 +881,7 @@ After this, the program prints the average of the positive numbers (numbers that
 If no positive number is inputted, the program prints "Cannot calculate the average"
 
 <!-- Alla on muutamia esimerkkejä ohjelman toiminnasta. -->
-Below a few examples of the programs output
+Below are few examples of the program's output.
 
 <sample-output>
 
