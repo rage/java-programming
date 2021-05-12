@@ -1092,7 +1092,7 @@ From the perspective of the user, both implementations of the `List` interface w
 
 <!-- Isoilla listoille voimme nähdä huomattaviakin suorituskykyeroja. Linkitetyn listan vahvuutena on se, että listaan lisääminen on aina nopeaa. ArrayListillä taas taustalla on taulukko, jota täytyy kasvattaa aina kun se täyttyy. Taulukon kasvattaminen vaatii uuden taulukon luonnin ja vanhan taulukon tietojen kopioinnin uuteen taulukkoon. Toisaalta, indeksin perusteella hakeminen on Arraylististä erittäin nopeaa, kun taas linkitetyssä listassa joudutaan käymään listan alkioita yksitellen läpi tiettyyn indeksiin pääsemiseksi. -->
 
-One can see noticeable performcance differences between list implementations if the lists are big enough. The strength of a linked list is that adding to it is always fast. ArrayList, on the other hand, is backed by an array, which needs to be resized each time it gets full. Resizing the array requires creating a new array and copying the values from the old array to the new one.  On the other hand, searching objects by index is much faster in an array list compared to a linked list.
+One can see noticeable performance differences between list implementations if the lists are big enough. The strength of a linked list is that adding to it is always fast. ArrayList, on the other hand, is backed by an array, which needs to be resized each time it gets full. Resizing the array requires creating a new array and copying the values from the old array to the new one.  On the other hand, searching objects by index is much faster in an array list compared to a linked list.
 
 
 <!-- Tällä ohjelmointikurssilla eteen tulevissa tilanteissa kannattanee käytännössä valita aina ArrayList. "Rajapintoihin ohjelmointi" kuitenkin kannattaa: toteuta ohjelmasi siten, että käytät tietorakenteita rajapintojen kautta. -->
@@ -1288,7 +1288,7 @@ System.out.println(palautaKoko(nimet));
 ``` -->
 ```java
 Set<String> names = new HashSet<>();
-name.add("first");
+names.add("first");
 names.add("first");
 names.add("second");
 names.add("second");
@@ -1396,7 +1396,7 @@ good luck
 
 <!-- Seuraavassa tehtävässä rakennetaan verkkokauppaan liittyvää toiminnallisuutta ja harjoitellaan luokkien käyttämistä niiden tarjoamien rajapintojen kautta. -->
 
-In the next exercise, we build functionality realted to e-commerce and practice using classes through the their interfaces.
+In the next exercise, we build functionality related to e-commerce and practice using classes through their interfaces.
 
 <programming-exercise name='Online shop (8 parts)' tmcname='part09-Part09_10.OnlineShop' nocoins='true'>
 
@@ -1968,7 +1968,7 @@ public class Store {
 
             // Add code here that adds the product to the cart,
             // If there is any in the warehouse, and reduces the stock in the warehouse
-            // Dont't touch any of the other code!
+            // Don't touch any of the other code!
         }
 
         System.out.println("your shoppingcart contents:");
