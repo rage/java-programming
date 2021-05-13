@@ -374,7 +374,7 @@ if (luku > 5) {
 // if the value is greater than five
 if (value > 5) {
     // functionality when value is greater than five
-} else if (value < 0) { //
+} else if (value < 0) { // else if the value is less than zero
     // functionality when value is less than zero
     // and the value IS NOT larger than five
 } else {  // otherwise
