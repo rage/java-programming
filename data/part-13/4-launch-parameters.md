@@ -120,7 +120,7 @@ import javafx.application.Application;
 import javafx.application.Application.Parameters;
 import javafx.stage.Stage;
 
-public class JavaFxApplicationextends Application {
+public class JavaFxApplication extends Application {
 
     @Override
     public void start(Stage window) {
