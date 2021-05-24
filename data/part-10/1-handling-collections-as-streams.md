@@ -668,7 +668,7 @@ ArrayList<Integer> positives = values.stream()
     .filter(value -> value > 0)
     .collect(Collectors.toCollection(ArrayList::new));
 
-positiiviset.stream()
+positives.stream()
     .forEach(value -> System.out.println(value));
 ```
 

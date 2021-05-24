@@ -163,7 +163,7 @@ Here we expect that the file `humming.jpg` exists and is located at the root of 
 In the example we use an image by [Linda Tanner](https://www.flickr.com/photos/15323831@N05) from [http://www.freestockphotos.biz/stockphoto/17874](http://www.freestockphotos.biz/stockphoto/17874). The image has a [Creative Commons CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) lisence.
 
 <!-- ImageView-olio tarjoaa joukon menetelmiä imagen (yksinkertaiseen käsittelyyn). Kuvaa voi muunmuassa kääntää, sen kokoa voi muuttaa, ja sitä voi siirtää ruudulla. Alla olevassa esimerkissä image on käännetty ympäri, sen koko on puolitettu, ja sitä on siirretty hieman oikealle. -->
-ImageView object has a punch of methods available for (simple) image processing tasks. We can for example change the size of an image, flip it around or move it on the screen.
+ImageView object has a bunch of methods available for (simple) image processing tasks. We can for example change the size of an image, flip it around or move it on the screen.
 Below we have flipped the image, halved its size and moved it a bit to the right.
 
 

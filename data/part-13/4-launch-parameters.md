@@ -120,7 +120,7 @@ import javafx.application.Application;
 import javafx.application.Application.Parameters;
 import javafx.stage.Stage;
 
-public class JavaFxApplicationextends Application {
+public class JavaFxApplication extends Application {
 
     @Override
     public void start(Stage window) {
@@ -163,7 +163,7 @@ import javafx.application.Application;
 public class Main {
 
     public static void main(String[] args) {
-        Application.launch(JavaFxSovellus.class,
+        Application.launch(JavaFxApplication.class,
             "--organization=Once upon a time",
             "--course=Title");
     }
