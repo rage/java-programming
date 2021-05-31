@@ -630,7 +630,7 @@ The form is correct.
 
 <sample-output>
 
-Anna merkkijono: **abc**
+Enter a string: **abc**
 The form is incorrect.
 
 </sample-output>
@@ -751,7 +751,7 @@ Almost all programming languages ​​support regular expressions nowadays. The
 
 <!-- Jos tiedämme muuttujien mahdolliset arvot ennalta, voimme käyttää niiden esittämiseen `enum`-tyyppistä luokkaa eli *lueteltua tyyppiä*. Luetellut tyypit ovat oma luokkatyyppinsä rajapinnan ja normaalin luokan lisäksi. Lueteltu tyyppi määritellään avainsanalla `enum`. Esimerkiksi seuraava `Maa`-enumluokka määrittelee neljä vakioarvoa: `RUUTU`, `PATA`, `RISTI` ja `HERTTA`. -->
 
-If we know the possible values ​​of a variable in advance, we can use a class of type `enum`, i.e., *enumerated type* to represent the values. Enumerated types are their own type in addition to being normal classes and interfaces. An enumerated type is defined by the keyword `enum`. For example, the following `Suit` enum class defines four constant values: `Diamond`, `SPADE`, `CLUB` and `HEART`.
+If we know the possible values ​​of a variable in advance, we can use a class of type `enum`, i.e., *enumerated type* to represent the values. Enumerated types are their own type in addition to being normal classes and interfaces. An enumerated type is defined by the keyword `enum`. For example, the following `Suit` enum class defines four constant values: `DIAMOND`, `SPADE`, `CLUB` and `HEART`.
 
 
 <!-- ```java
