@@ -1307,7 +1307,7 @@ Kun teemme automaattista muunnosta, tulee varmistaa että muunnettava arvo ei ol
 
 There is, however, some risk in type conversions. If we attempt to convert a `null` reference - a sighting not in HashMap, for instance - to an integer, we witness a *java.lang.reflect.InvocationTargetException* error. Such an error may occur in the `timesSighted` method in the example above - if the `allSightings` hash map does not contain the value being searched, it returns a `null` reference and the conversion to an integer fails.
 
-When performing automatic conversion, we should ensure that the value to be converted is not null. For example, the `timesSighted` method in the program program should be fixed in the following way. ->
+When performing automatic conversion, we should ensure that the value to be converted is not null. For example, the `timesSighted` method in the program should be fixed in the following way. ->
 
 
 <!-- ```java

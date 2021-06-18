@@ -1067,7 +1067,7 @@ public static void main(String[] args) {
 ```java
 public static void main(String[] args) {
 
-    HealthStation childrensHospital = new HealthInstitution();
+    HealthStation childrensHospital = new HealthStation();
 
     Person ethan = new Person("Ethan", 1, 110, 7);
     Person peter = new Person("Peter", 33, 176, 85);
