@@ -346,14 +346,14 @@ public class ExampleApplication extends Application {
 
         // 2.2. Add subviews to button. Pressing the buttons will change the view
         first.setOnAction((event) -> layout.setCenter(firstLayout));
-        second.setOnAction((event) -> asettelu.setCenter(secondLayout));
+        second.setOnAction((event) -> layout.setCenter(secondLayout));
 
         // 2.3. Set initial view
         layout.setCenter(firstLayout);
 
 
         // 3. Create main scene with layout 
-        Scene scene = new Scene(asettelu);
+        Scene scene = new Scene(layout);
 
 
         // 4. Show the main scene
@@ -433,7 +433,7 @@ public interface PersonWarehouse {
 
 <!-- Käyttöliittymää toteutettaessa hyvä aloitustapa on ensin käyttöliittymän piirtäminen, jota seuraa sopivien käyttöliittymäkomponenttien lisääminen käyttöliittymään. Henkilöiden tallennuksessa tarvitsemme kentät nimelle ja henkilötunnukselle sekä napin jolla henkilö voidaan lisätä. Käytetään luokkaa TextField nimen ja henkilötunnuksen syöttämiseen ja luokkaa Button napin toteuttamiseen. Luodaan käyttöliittymään lisäksi käyttöliittymän toiminnallisuutta selventävät Label-tyyppiset selitystekstit. -->
 
-When implementing a user interface a good starting point is drawing the interface followed bt adding appropriate user interface components to the user interface. When saving persons to a database we need a field for name, a field for social security number and a button for adding the person. In addition we'll also create
+When implementing a user interface a good starting point is drawing the interface followed by adding appropriate user interface components to the user interface. When saving persons to a database we need a field for name, a field for social security number and a button for adding the person. In addition we'll also create
 
 <!--
 Käytetään käyttöliittymän asetteluun `GridPane`-asettelijaa. Rivejä käyttöliittymässä on 3, sarakkeita 2. Lisätään tapahtumien käsittelytoiminnallisuus myöhemmin. Käyttöliittymän alustusmetodi näyttää seuraavalta.
@@ -534,7 +534,7 @@ public void start(Stage window) {
     // ...
 
     addButton.setOnAction((event) -> {
-        warehouse.talleta(new Person(nameText.getText(), secText.getText());
+        warehouse.save(new Person(nameText.getText(), secText.getText());
     });
     // ...
 }
@@ -626,7 +626,7 @@ public class PersonApp extends Application {
         Button addButton = new Button("Add person!");
 
         addButton.setOnAction((event) -> {
-            warehouse.talleta(new Person(nameText.getText(), secText.getText());
+            warehouse.save(new Person(nameText.getText(), secText.getText());
         });
 
         GridPane components = new GridPane();
@@ -682,26 +682,26 @@ public class Sanakirja {
 
     private List<String> sanat;
     private Map<String, String> kaannokset;
-
+    
     public Sanakirja() {
         this.sanat = new ArrayList<>();
         this.kaannokset = new HashMap<>();
-
+    
         lisaa("sana", "word");
     }
-
+    
     public String hae(String sana) {
         return this.kaannokset.get(sana);
     }
-
+    
     public void lisaa(String sana, String kaannos) {
         if (!this.kaannokset.containsKey(sana)) {
             this.sanat.add(sana);
         }
-
+    
         this.kaannokset.put(sana, kaannos);
     }
-
+    
     public String arvoSana() {
         Random satunnainen = new Random();
         return this.sanat.get(satunnainen.nextInt(this.sanat.size()));
@@ -709,7 +709,7 @@ public class Sanakirja {
 }
 ``` -->
 
-```java
+​```java
 package application;
 
 import java.util.ArrayList;
@@ -784,49 +784,49 @@ import javafx.scene.layout.GridPane;
 public class Syottonakyma {
 
     private Sanakirja sanakirja;
-
+    
     public Syottonakyma(Sanakirja sanakirja) {
         this.sanakirja = sanakirja;
     }
-
+    
     public Parent getNakyma() {
         GridPane asettelu = new GridPane();
-
+    
         Label sanaohje = new Label("Sana");
         TextField sanakentta = new TextField();
         Label kaannosohje = new Label("Käännös");
         TextField kaannoskentta = new TextField();
-
+    
         asettelu.setAlignment(Pos.CENTER);
         asettelu.setVgap(10);
         asettelu.setHgap(10);
         asettelu.setPadding(new Insets(10, 10, 10, 10));
-
+    
         Button lisaanappi = new Button("Lisää sanapari");
-
+    
         asettelu.add(sanaohje, 0, 0);
         asettelu.add(sanakentta, 0, 1);
         asettelu.add(kaannosohje, 0, 2);
         asettelu.add(kaannoskentta, 0, 3);
         asettelu.add(lisaanappi, 0, 4);
-
+    
         lisaanappi.setOnMouseClicked((event) -> {
             String sana = sanakentta.getText();
             String kaannos = kaannoskentta.getText();
-
+    
             sanakirja.lisaa(sana, kaannos);
-
+    
             sanakentta.clear();
             kaannoskentta.clear();
         });
-
+    
         return asettelu;
     }
 }
 ``` -->
 
-```java
-package applicatoin;
+​```java
+package application;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -911,32 +911,32 @@ public class Harjoittelunakyma {
 
     private Sanakirja sanakirja;
     private String sana;
-
+    
     public Harjoittelunakyma(Sanakirja sanakirja) {
         this.sanakirja = sanakirja;
         this.sana = sanakirja.arvoSana();
     }
-
+    
     public Parent getNakyma() {
         GridPane asettelu = new GridPane();
-
+    
         Label sanaohje = new Label("Käännä sana '" + this.sana + "'");
         TextField kaannoskentta = new TextField();
-
+    
         asettelu.setAlignment(Pos.CENTER);
         asettelu.setVgap(10);
         asettelu.setHgap(10);
         asettelu.setPadding(new Insets(10, 10, 10, 10));
-
+    
         Button lisaanappi = new Button("Tarkista");
-
+    
         Label palaute = new Label("");
-
+    
         asettelu.add(sanaohje, 0, 0);
         asettelu.add(kaannoskentta, 0, 1);
         asettelu.add(lisaanappi, 0, 2);
         asettelu.add(palaute, 0, 3);
-
+    
         lisaanappi.setOnMouseClicked((event) -> {
             String kaannos = kaannoskentta.getText();
             if (sanakirja.hae(sana).equals(kaannos)) {
@@ -945,18 +945,18 @@ public class Harjoittelunakyma {
                 palaute.setText("Väärin! Sanan '" + sana + "' käännös on '" + sanakirja.hae(sana) + "'.");
                 return;
             }
-
+    
             this.sana = this.sanakirja.arvoSana();
             sanaohje.setText("Käännä sana '" + this.sana + "'");
             kaannoskentta.clear();
         });
-
+    
         return asettelu;
     }
 }
 ``` -->
 
-```java
+​```java
 package application;
 
 import javafx.geometry.Insets;
@@ -1040,57 +1040,57 @@ import javafx.stage.Stage;
 public class HarjoitteluSovellus extends Application {
 
     private Sanakirja sanakirja;
-
+    
     @Override
     public void init() throws Exception {
         // 1. Luodaan sovelluksen käyttämä sanakirja
         this.sanakirja = new Sanakirja();
     }
-
+    
     @Override
     public void start(Stage ikkuna) throws Exception {
         // 2. Luodaan näkymät ("alinäkymät")
         Harjoittelunakyma harjoittelunakyma = new Harjoittelunakyma(sanakirja);
         Syottonakyma syottonakyma = new Syottonakyma(sanakirja);
-
+    
         // 3. Luodaan päätason asettelu
         BorderPane asettelu = new BorderPane();
-
+    
         // 3.1. Luodaan päätason asettelun valikko
         HBox valikko = new HBox();
         valikko.setPadding(new Insets(20, 20, 20, 20));
         valikko.setSpacing(10);
-
+    
         // 3.2. Luodaan valikon napit
         Button lisaanappi = new Button("Lisää sanoja");
         Button harjoittelenappi = new Button("Harjoittele");
-
+    
         // 3.3. Lisätään napit valikkoon
         valikko.getChildren().addAll(lisaanappi, harjoittelenappi);
         asettelu.setTop(valikko);
-
+    
         // 4. Liitetään alinäkymät nappeihin. Napin painaminen vaihtaa alinäkymää.
         lisaanappi.setOnAction((event) -> asettelu.setCenter(syottonakyma.getNakyma()));
         harjoittelenappi.setOnAction((event) -> asettelu.setCenter(harjoittelunakyma.getNakyma()));
-
+    
         // 5. Näytetään ensin syöttönäkymä
         asettelu.setCenter(syottonakyma.getNakyma());
-
+    
         // 6. Luodaan päänäkymä ja asetetaan päätason asettelu siihen
         Scene nakyma = new Scene(asettelu, 400, 300);
-
+    
         // 7. Näytetään sovellus
         ikkuna.setScene(nakyma);
         ikkuna.show();
     }
-
+    
     public static void main(String[] args) {
         launch(HarjoitteluSovellus.class);
     }
 }
 ``` -->
 
-```java
+​```java
 package application;
 
 import javafx.application.Application;
@@ -1169,8 +1169,7 @@ Follow the previous example and create an application for practising translation
 
 <!-- Käyttöliittymästä tarkemmin. Sanojen syöttämisnäkymän näyttävän napin tekstin tulee olla "Lisää sanoja". Sanojen harjoittelunäkymän näyttävän napin tekstin tulee olla "Harjoittele". Sanoja syötettäessä ensimmäisen tekstikentän tulee olla sana alkuperäiskielellä, ja toisen tekstikentän tulee olla sana käännettynä. Syöttämiseen käytetyn napin tekstin tulee olla "Lisää sanapari". Harjoittelutilassa käyttäjältä kysytään aina sanoja alkuperäiskielellä ja hänen tulee kirjoittaa sanojen käännöksiä. Vastauksen tarkistamiseen käytetyn napin tekstin tulee olla "Tarkista". Jos vastaus on oikein, käyttöliittymässä näytetään teksti "Oikein!". Jos taas vastaus on väärin, käyttöliittymässä näytetään teksti "Väärin!" sekä tieto oikeasta vastausksesta. -->
 
-Let's discuss the user interface in more detail. The button that shows the input view should contain the text "Enter new words". The button that shows the practice view should contain the text "Practice". In the input view, the first text field should have the word in the original language, and the second text field should contain the translation of that word. The button that adds this word and the translation should read "Add the word pair". In the practice view the user is represented with a word in the original language, and their task is to write down the translation. If the answer is correct, the user interface displays the text "Correct!". If the answer is incorrect, the text that is displayed is "Incorrec!". In this case the correct translation is also shown.
-
+Let's discuss the user interface in more detail. The button that shows the input view should contain the text "Enter new words". The button that shows the practice view should contain the text "Practice". In the input view, the first text field should have the word in the original language, and the second text field should contain the translation of that word. The button that adds this word and the translation should read "Add the word pair". In the practice view the user is represented with a word in the original language, and their task is to write down the translation. If the answer is correct, the user interface displays the text "Correct!". If the answer is incorrect, the text that is displayed is "Incorrect!". In this case the correct translation is also shown.
 
 <img src="../img/material/gui-vocabulary-practice.gif"/>
 
@@ -1203,7 +1202,7 @@ Button nappi = new Button(" ");
 nappi.setFont(Font.font("Monospaced", 40));
 ``` -->
 
-```java
+​```java
 Button btn = new Button(" ");
 btn.setFont(Font.font("Monospaced", 40));
 ```

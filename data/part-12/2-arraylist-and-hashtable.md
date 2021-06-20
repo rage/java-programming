@@ -90,7 +90,7 @@ for (int i = 0; i < numbers.length; i++) {
 }
 ``` -->
 
-```java
+​```java
 int[] numbers = new int[4];
 numbers[0] = 42;
 numbers[1] = 13;
@@ -616,27 +616,27 @@ public class Pari<K, V> {
 
     private K avain;
     private V value;
-
+    
     public Pari(K avain, V value) {
         this.avain = avain;
         this.value = value;
     }
-
+    
     public K getAvain() {
         return avain;
     }
-
+    
     public V getArvo() {
         return value;
     }
-
+    
     public void setArvo(V value) {
         this.value = value;
     }
 }
 ``` -->
 
-```java
+​```java
 public class Pair<K, V> {
 
     private K key;
@@ -670,7 +670,7 @@ Pari<String, Integer> pari = new Pari<>("yksi", 1);
 System.out.println(pari.getAvain() + " -> " + pari.getArvo());
 ``` -->
 
-```java
+​```java
 Pair<String, Integer> pair = new Pair<>("one", 1);
 System.out.println(pair.getKey() + " -> " + pair.getValue());
 ```
@@ -702,7 +702,7 @@ public class Hajautustaulu<K, V> {
 
     private List<Pari<K, V>>[] values;
     private int firstFreeIndex;
-
+    
     public Hajautustaulu() {
         this.values = new List[32];
         this.firstFreeIndex = 0;
@@ -710,7 +710,7 @@ public class Hajautustaulu<K, V> {
 }
 ``` -->
 
-```java
+​```java
 public class HashMap<K, V> {
 
     private List<Pair<K, V>>[] values;
@@ -749,18 +749,18 @@ public V hae(K avain) {
     }
 
     List<Pari<K, V>> valuesIndeksissa = this.values[hajautusArvo];
-
+    
     for (int i = 0; i < valuesIndeksissa.size(); i++) {
         if (valuesIndeksissa.value(i).getAvain().equals(avain)) {
             return valuesIndeksissa.value(i).getArvo();
         }
     }
-
+    
     return null;
 }
 ``` -->
 
-```java
+​```java
 public V get(K key) {
     int hashValue = Math.abs(key.hashCode() % this.values.length);
     if (this.values[hashValue] == null) {
@@ -818,7 +818,7 @@ public void add(K avain, V value) {
     }
 
     List<Pari<K, V>> valuesIndeksissa = values[hajautusArvo];
-
+    
     int index = -1;
     for (int i = 0; i < valuesIndeksissa.size(); i++) {
         if (valuesIndeksissa.value(i).getAvain().equals(avain)) {
@@ -826,7 +826,7 @@ public void add(K avain, V value) {
             break;
         }
     }
-
+    
     if (index < 0) {
         valuesIndeksissa.add(new Pari<>(avain, value));
         this.firstFreeIndex++;
@@ -836,14 +836,14 @@ public void add(K avain, V value) {
 }
 ``` -->
 
-```java
+​```java
 public void add(K key, V value) {
     int hashValue = Math.abs(key.hashCode() % values.length);
     if (values[hashValue] == null) {
         values[hashValue] = new List<>();
     }
 
-    List<Pari<K, V>> valuesAtIndex = values[hashValue];
+    List<Pair<K, V>> valuesAtIndex = values[hashValue];
 
     int index = -1;
     for (int i = 0; i < valuesAtIndex.size(); i++) {
@@ -888,7 +888,7 @@ private int haeAvaimenIndeksi(List<Pari<K, V>> myList, K avain) {
 }
 ``` -->
 
-```java
+​```java
 private List<Pair<K, V>> getListBasedOnKey(K key) {
     int hashValue = Math.abs(key.hashCode() % values.length);
     if (values[hashValue] == null) {
@@ -928,7 +928,7 @@ public void add(K avain, V value) {
 }
 ``` -->
 
-```java
+​```java
 public void add(K key, V value) {
     List<Pair<K, V>> valuesAtIndex = getListBasedOnKey(key);
     int index = getIndexOfKey(valuesAtIndex, key);
@@ -966,15 +966,15 @@ private void grow() {
 
     for (int i = 0; i < this.values.length; i++) {
         // kopioidaan vanhan taulukon values uuteen
-
+    
     }
-
+    
     // korvataan vanha taulukko uudella
     this.values = new;
 }
 ``` -->
 
-```java
+​```java
 private void grow() {
     // crete a new array
     List<Pair<K, V>>[] newValues = new List[this.values.length * 2];
@@ -1003,13 +1003,13 @@ private void kopioi(List<Pari<K, V>>[] new, int indexsta) {
         if(new[hajautusvalue] == null) {
             new[hajautusvalue] = new List<>();
         }
-
+    
         new[hajautusvalue].add(value);
     }
 }
 ``` -->
 
-```java
+​```java
 private void copy(List<Pair<K, V>>[] newArray, int fromIdx) {
     for (int i = 0; i < this.values[fromIdx].size(); i++) {
         Pair<K, V> value = this.values[fromIdx].value(i);
@@ -1040,20 +1040,20 @@ private void grow() {
         // kopioidaan vanhan taulukon values uuteen
         kopioi(new, i);
     }
-
+    
     // korvataan vanha taulukko uudella
     this.values = new;
 }
 ``` -->
 
-```java
+​```java
 private void grow() {
     // create a new array
-    List<Pair<K, V>>[] newArray = new List[this.values.length * 2];
+    List<Pair<K, V>>[] newValues = new List[this.values.length * 2];
 
     for (int i = 0; i < this.values.length; i++) {
         // copy the values of the old array into the new one
-        copy(newArray, i);
+        copy(newValues, i);
     }
 
     // replace the old array with the new
@@ -1077,14 +1077,14 @@ public void add(K avain, V value) {
     } else {
         valuesIndeksissa.value(index).setArvo(value);
     }
-
+    
     if (1.0 * this.firstFreeIndex / this.values.length > 0.75) {
         grow();
     }
 }
 ``` -->
 
-```java
+​```java
 public void add(K key, V value) {
     List<Pair<K, V>> valuesAtIndex = getListBasedOnKey(key);
     int index = getIndexOfKey(valuesAtIndex, key);
@@ -1127,14 +1127,14 @@ public V remove(K avain) {
     if (index < 0) {
         return null;
     }
-
+    
     Pari<K, V> pari = valuesIndeksissa.value(index);
     valuesIndeksissa.remove(pari);
     return pari.getArvo();
 }
 ``` -->
 
-```java
+​```java
 public V remove(K key) {
     List<Pair<K, V>> valuesAtIndex = getListBasedOnKey(key);
     if (valuesAtIndex.size() == 0) {
@@ -1206,7 +1206,7 @@ System.out.println("Hajautustaulu: haku kesti noin " + hajautustaulunHaku / 1000
     " millisekuntia (" + hajautustaulunHaku + " nanosekuntia.)");
 ``` -->
 
-```java
+​```java
 List<String> myList = new List<>();
 HashMap<String, String> hashMap = new HashMap<>();
 

@@ -91,19 +91,19 @@ public class PaneEsimerkki extends Application {
         Pane ruutu = new Pane();
         ruutu.setPrefSize(300, 200);
         ruutu.getChildren().add(new Circle(30, 50, 10));
-
+    
         Scene scene = new Scene(ruutu);
         stage.setScene(scene);
         stage.show();
     }
-
+    
     public static void main(String[] args) {
         launch(args);
     }
 }
 ``` -->
 
-```java
+​```java
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -148,20 +148,20 @@ public class AsteroidsApplication extends Application {
     public void start(Stage stage) throws Exception {
         Pane ruutu = new Pane();
         ruutu.setPrefSize(600, 400);
-
+    
         Scene scene = new Scene(ruutu);
         stage.setTitle("Asteroids!");
         stage.setScene(scene);
         stage.show();
     }
-
+    
     public static void main(String[] args) {
         launch(args);
     }
 }
 ``` -->
 
-```java
+​```java
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -206,14 +206,14 @@ public void start(Stage stage) throws Exception {
 
     Polygon suunnikas = new Polygon(0, 0, 100, 0, 100, 50, 0, 50);
     ruutu.getChildren().add(suunnikas);
-
+    
     Scene scene = new Scene(ruutu);
     stage.setScene(scene);
     stage.show();
 }
 ``` -->
 
-```java
+​```java
 @Override
 public void start(Stage stage) throws Exception {
     Pane pane = new Pane();
@@ -244,16 +244,16 @@ public void start(Stage stage) throws Exception {
     Polygon suunnikas = new Polygon(0, 0, 100, 0, 100, 50, 0, 50);
     suunnikas.setTranslateX(100);
     suunnikas.setTranslateY(20);
-
+    
     ruutu.getChildren().add(suunnikas);
-
+    
     Scene scene = new Scene(ruutu);
     stage.setScene(scene);
     stage.show();
 }
 ``` -->
 
-```java
+​```java
 @Override
 public void start(Stage stage) throws Exception {
     Pane pane = new Pane();
@@ -291,26 +291,26 @@ public class AsteroidsSovellus extends Application {
     public void start(Stage stage) throws Exception {
         Pane ruutu = new Pane();
         ruutu.setPrefSize(600, 400);
-
+    
         Polygon alus = new Polygon(-5, -5, 10, 0, -5, 5);
         alus.setTranslateX(300);
         alus.setTranslateY(200);
-
+    
         ruutu.getChildren().add(alus);
-
+    
         Scene scene = new Scene(ruutu);
         stage.setTitle("Asteroids!");
         stage.setScene(scene);
         stage.show();
     }
-
+    
     public static void main(String[] args) {
         launch(args);
     }
 }
 ``` -->
 
-```java
+​```java
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -364,16 +364,16 @@ public void start(Stage stage) throws Exception {
     alus.setTranslateX(300);
     alus.setTranslateY(200);
     alus.setRotate(30);
-
+    
     ruutu.getChildren().add(alus);
-
+    
     Scene scene = new Scene(ruutu);
     stage.setScene(scene);
     stage.show();
 }
 ``` -->
 
-```java
+​```java
 @Override
 public void start(Stage stage) throws Exception {
     Pane pane = new Pane();
@@ -416,7 +416,7 @@ scene.setOnKeyPressed(event -> {
 });
 ``` -->
 
-```java
+​```java
 scene.setOnKeyPressed(event -> {
     if (event.getCode() == KeyCode.LEFT) {
         ship.setRotate(-30);
@@ -451,7 +451,7 @@ scene.setOnKeyPressed(event -> {
 });
 ``` -->
 
-```java
+​```java
 scene.setOnKeyPressed(event -> {
     if (event.getCode() == KeyCode.LEFT) {
         ship.setRotate(ship.getRotate() - 5);
@@ -500,7 +500,7 @@ scene.setOnKeyReleased(event -> {
 });
 ``` -->
 
-```java
+​```java
 Map<KeyCode, Boolean> pressedKeys = new HashMap<>();
 
 scene.setOnKeyPressed(event -> {
@@ -539,7 +539,7 @@ new AnimationTimer() {
         if(painetutNapit.getOrDefault(KeyCode.LEFT, false)) {
             alus.setRotate(alus.getRotate() - 5);
         }
-
+    
         if(painetutNapit.getOrDefault(KeyCode.RIGHT, false)) {
             alus.setRotate(alus.getRotate() + 5);
         }
@@ -547,7 +547,7 @@ new AnimationTimer() {
 }.start();
 ``` -->
 
-```java
+​```java
 Map<KeyCode, Boolean> pressedKeys = new HashMap<>();
 
 scene.setOnKeyPressed(event -> {
@@ -599,7 +599,7 @@ The first test version is to create a movement variable and adding it to the Ani
 Point2D liike = new Point2D(1, 0);
 ```
 
-```java
+​```java
 new AnimationTimer() {
 
     @Override
@@ -615,9 +615,9 @@ new AnimationTimer() {
         alus.setTranslateX(alus.getTranslateX() + liike.getX());
     }
 }.start();
-``` -->
+​``` -->
 
-```java
+​```java
 Point2D movement = new Point2D(1, 0);
 ```
 
@@ -664,7 +664,7 @@ new AnimationTimer() {
 }.start();
 ``` -->
 
-```java
+​```java
 new AnimationTimer() {
 
     @Override
@@ -698,27 +698,27 @@ public class Alus {
 
     private Polygon hahmo;
     private Point2D liike;
-
+    
     public Alus(int x, int y) {
         this.hahmo = new Polygon(-5, -5, 10, 0, -5, 5);
         this.hahmo.setTranslateX(x);
         this.hahmo.setTranslateY(y);
-
+    
         this.liike = new Point2D(0, 0);
     }
-
+    
     public Polygon getHahmo() {
         return hahmo;
     }
-
+    
     public void kaannaVasemmalle() {
         this.hahmo.setRotate(this.hahmo.getRotate() - 5);
     }
-
+    
     public void kaannaOikealle() {
         this.hahmo.setRotate(this.hahmo.getRotate() + 5);
     }
-
+    
     public void liiku() {
         this.hahmo.setTranslateX(this.hahmo.getTranslateX() + this.liike.getX());
         this.hahmo.setTranslateY(this.hahmo.getTranslateY() + this.liike.getY());
@@ -726,7 +726,7 @@ public class Alus {
 }
 ``` -->
 
-```java
+​```java
 import javafx.geometry.Point2D;
 import javafx.scene.shape.Polygon;
 
@@ -774,7 +774,7 @@ Alus alus = new Alus(150, 100);
 ruutu.getChildren().add(alus.getHahmo());
 ``` -->
 
-```java
+​```java
 Ship ship = new Ship(150, 100);
 
 pane.getChildren().add(ship.getCharacter());
@@ -792,18 +792,18 @@ new AnimationTimer() {
         if(painetutNapit.getOrDefault(KeyCode.LEFT, false)) {
             alus.kaannerent timings you should create a dedicated class for that. If each of them runs at a different speed, yo
         }
-
+    
         if(painetutNapit.getOrDefault(KeyCode.RIGHT, false)) {
             alus.kaannaOikealle();
         }
-
+    
         alus.liiku();
     }
 
 }.start();
 ``` -->
 
-```java
+​```java
 new AnimationTimer() {
 
     @Override
@@ -828,7 +828,7 @@ new AnimationTimer() {
 
 <!-- Alus liikkuu, mutta aluksen liikettä ei voi vielä muuttaa. Lisätään alukselle kiihdytystoiminnallisuus. Kiihdytyksen tulee toimia niin, että aluksen nopeus kiihtyy aluksen osoittamaan suuntaan. Saamme kiihdytyksen monikulmion asteesta, jonka saa selville metodilla `getRotate()`. Olemme käyttäneet tätä jo paljon alusta kääntäessä. -->
 
-The ship moves, but it's not possible to affect the movement yet. Let's add an acceleration functionality to the shpi. The ship should accelerate so that the speed accelerates to the direction that the ship points to. We can get the acceleration information from the rotation degree, which we can use the `getRotate()` method. We have already become well acquainted with it in rotating the ship.
+The ship moves, but it's not possible to affect the movement yet. Let's add an acceleration functionality to the ship. The ship should accelerate so that the speed accelerates to the direction that the ship points to. We can get the acceleration information from the rotation degree, which we can use the `getRotate()` method. We have already become well acquainted with it in rotating the ship.
 
 <!-- Kiihdytyksen suunta saadaan selville sini- ja kosinifunktion avulla. Nämä löytyvät Javan valmiista [Math](https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html)-luokasta. Metodit saavat parametrina asteen radiaaneina, joten joudumme hyödyntämään myös Math-luokan asteiden radiaaneiksi muuttavaa metodia. -->
 
@@ -839,7 +839,7 @@ double muutosX = Math.cos(Math.toRadians(*kulmaAsteina*));
 double muutosY = Math.sin(Math.toRadians(*kulmaAsteina*));
 ``` -->
 
-```java
+​```java
 double changeX = Math.cos(Math.toRadians(*angle in degrees*));
 double changeY = Math.sin(Math.toRadians(*angle in degrees*));
 ```
@@ -857,7 +857,7 @@ public void kiihdyta() {
 }
 ``` -->
 
-```java
+​```java
 public void accelerate() {
     double changeX = Math.cos(Math.toRadians(this.character.getRotate()));
     double changeY = Math.sin(Math.toRadians(this.character.getRotate()));
@@ -878,21 +878,21 @@ new AnimationTimer() {
         if(painetutNapit.getOrDefault(KeyCode.LEFT, false)) {
             alus.kaannaVasemmalle();
         }
-
+    
         if(painetutNapit.getOrDefault(KeyCode.RIGHT, false)) {
             alus.kaannaOikealle();
         }
-
+    
         if(painetutNapit.getOrDefault(KeyCode.UP, false)) {
             alus.kiihdyta();
         }
-
+    
         alus.liiku();
     }
 }.start();
 ``` -->
 
-```java
+​```java
 new AnimationTimer() {
 
     @Override
@@ -929,12 +929,12 @@ public void kiihdyta() {
 
     muutosX *= 0.05;
     muutosY *= 0.05;
-
+    
     this.liike = this.liike.add(muutosX, muutosY);
 }
 ``` -->
 
-```java
+​```java
 public void accelerate() {
     double changeX = Math.cos(Math.toRadians(this.character.getRotate()));
     double changeY = Math.sin(Math.toRadians(this.character.getRotate()));
@@ -974,45 +974,45 @@ public abstract class Hahmo {
 
     private Polygon hahmo;
     private Point2D liike;
-
+    
     public Hahmo(Polygon monikulmio, int x, int y) {
         this.hahmo = monikulmio;
         this.hahmo.setTranslateX(x);
         this.hahmo.setTranslateY(y);
-
+    
         this.liike = new Point2D(0, 0);
     }
-
+    
     public Polygon getHahmo() {
         return hahmo;
     }
-
+    
     public void kaannaVasemmalle() {
         this.hahmo.setRotate(this.hahmo.getRotate() - 5);
     }
-
+    
     public void kaannaOikealle() {
         this.hahmo.setRotate(this.hahmo.getRotate() + 5);
     }
-
+    
     public void liiku() {
         this.hahmo.setTranslateX(this.hahmo.getTranslateX() + this.liike.getX());
         this.hahmo.setTranslateY(this.hahmo.getTranslateY() + this.liike.getY());
     }
-
+    
     public void kiihdyta() {
         double muutosX = Math.cos(Math.toRadians(this.hahmo.getRotate()));
         double muutosY = Math.sin(Math.toRadians(this.hahmo.getRotate()));
-
+    
         muutosX *= 0.05;
         muutosY *= 0.05;
-
+    
         this.liike = this.liike.add(muutosX, muutosY);
     }
 }
 ``` -->
 
-```java
+​```java
 import javafx.geometry.Point2D;
 import javafx.scene.shape.Polygon;
 
@@ -1074,7 +1074,7 @@ public class Alus extends Hahmo {
 }
 ``` -->
 
-```java
+​```java
 import javafx.scene.shape.Polygon;
 
 public class Ship extends Character {
@@ -1104,7 +1104,7 @@ public class Asteroidi extends Hahmo {
 }
 ``` -->
 
-```java
+​```java
 import javafx.scene.shape.Polygon;
 
 public class Asteroid extends Character {
@@ -1137,7 +1137,7 @@ asteroidi.kiihdyta();
 asteroidi.kiihdyta();
 ``` -->
 
-```java
+​```java
 Pane pane = new Pane();
 // setting the size ..
 
@@ -1166,22 +1166,22 @@ new AnimationTimer() {
         if (painetutNapit.getOrDefault(KeyCode.LEFT, false)) {
             alus.kaannaVasemmalle();
         }
-
+    
         if (painetutNapit.getOrDefault(KeyCode.RIGHT, false)) {
             alus.kaannaOikealle();
         }
-
+    
         if (painetutNapit.getOrDefault(KeyCode.UP, false)) {
             alus.kiihdyta();
         }
-
+    
         alus.liiku();
         asteroidi.liiku();
     }
 }.start();
 ``` -->
 
-```java
+​```java
 new AnimationTimer() {
 
     @Override
@@ -1227,7 +1227,7 @@ public boolean tormaa(Hahmo toinen) {
 }
 ``` -->
 
-```java
+​```java
 public boolean collide(Character other) {
     return false;
 }
@@ -1246,7 +1246,7 @@ public boolean tormaa(Hahmo toinen) {
 }
 ``` -->
 
-```java
+​```java
 public boolean collide(Character other) {
     Shape collisionArea = Shape.intersect(this.character, other.getCharacter());
     return collisionArea.getBoundsInLocal().getWidth() != -1;
@@ -1265,18 +1265,18 @@ new AnimationTimer() {
         if (painetutNapit.getOrDefault(KeyCode.LEFT, false)) {
             alus.kaannaVasemmalle();
         }
-
+    
         if (painetutNapit.getOrDefault(KeyCode.RIGHT, false)) {
             alus.kaannaOikealle();
         }
-
+    
         if (painetutNapit.getOrDefault(KeyCode.UP, false)) {
             alus.kiihdyta();
         }
-
+    
         alus.liiku();
         asteroidi.liiku();
-
+    
         if (alus.tormaa(asteroidi)) {
             stop();
         }
@@ -1284,7 +1284,7 @@ new AnimationTimer() {
 }.start();
 ``` -->
 
-```java
+​```java
 new AnimationTimer() {
 
     @Override
@@ -1338,7 +1338,7 @@ ruutu.getChildren().add(alus.getHahmo());
 asteroidit.forEach(asteroidi -> ruutu.getChildren().add(asteroidi.getHahmo()));
 ``` -->
 
-```java
+​```java
 Ship ship = new Ship(150, 100);
 List<Asteroid> asteroids = new ArrayList<>();
 for (int i = 0; i < 5; i++) {
@@ -1363,29 +1363,29 @@ new AnimationTimer() {
         if (painetutNapit.getOrDefault(KeyCode.LEFT, false)) {
             alus.kaannaVasemmalle();
         }
-
+    
         if (painetutNapit.getOrDefault(KeyCode.RIGHT, false)) {
             alus.kaannaOikealle();
         }
-
+    
         if (painetutNapit.getOrDefault(KeyCode.UP, false)) {
             alus.kiihdyta();
         }
-
+    
         alus.liiku();
         asteroidit.forEach(asteroidi -> asteroidi.liiku());
-
+    
         asteroidit.forEach(asteroidi -> {
             if (alus.tormaa(asteroidi)) {
                 stop();
             }
         });
-
+    
     }
 }.start();
 ``` -->
 
-```java
+​```java
 new AnimationTimer() {
 
     @Override
@@ -1437,33 +1437,33 @@ public class MonikulmioTehdas {
 
     public Polygon luoMonikulmio() {
         Random rnd = new Random();
-
+    
         double koko = 10 + rnd.nextInt(10);
-
+    
         Polygon monikulmio = new Polygon();
         double c1 = Math.cos(Math.PI * 2 / 5);
         double c2 = Math.cos(Math.PI / 5);
         double s1 = Math.sin(Math.PI * 2 / 5);
         double s2 = Math.sin(Math.PI * 4 / 5);
-
+    
         monikulmio.getPoints().addAll(
             koko, 0.0,
             koko * c1, -1 * koko * s1,
             -1 * koko * c2, -1 * koko * s2,
             -1 * koko * c2, koko * s2,
             koko * c1, koko * s1);
-
+    
         for (int i = 0; i < monikulmio.getPoints().size(); i++) {
             int muutos = rnd.nextInt(5) - 2;
             monikulmio.getPoints().set(i, monikulmio.getPoints().get(i) + muutos);
         }
-
+    
         return monikulmio;
     }
 }
 ``` -->
 
-```java
+​```java
 import java.util.Random;
 import javafx.scene.shape.Polygon;
 
@@ -1510,7 +1510,7 @@ public class Asteroidi extends Hahmo {
 }
 ``` -->
 
-```java
+​```java
 public class Asteroid extends Character {
 
     public Asteroid(int x, int y) {
@@ -1539,22 +1539,22 @@ import java.util.Random;
 public class Asteroidi extends Hahmo {
 
     private double pyorimisliike;
-
+    
     public Asteroidi(int x, int y) {
         super(new MonikulmioTehdas().luoMonikulmio(), x, y);
-
+    
         Random rnd = new Random();
-
+    
         super.getHahmo().setRotate(rnd.nextInt(360));
-
+    
         int kiihdytystenMaara = 1 + rnd.nextInt(10);
         for (int i = 0; i < kiihdytystenMaara; i++) {
             kiihdyta();
         }
-
+    
         this.pyorimisliike = 0.5 - rnd.nextDouble();
     }
-
+    
     @Override
     public void liiku() {
         super.liiku();
@@ -1563,7 +1563,7 @@ public class Asteroidi extends Hahmo {
 }
 ``` -->
 
-```java
+​```java
 import java.util.Random;
 
 public class Asteroid extends Character {
@@ -1615,12 +1615,12 @@ public class AsteroidsSovellus extends Application {
 
     public static int LEVEYS = 300;
     public static int KORKEUS = 200;
-
+    
     @Override
     public void start(Stage stage) throws Exception {
         Pane ruutu = new Pane();
         ruutu.setPrefSize(LEVEYS, KORKEUS);
-
+    
         Alus alus = new Alus(LEVEYS / 2, KORKEUS / 2);
         List<Asteroidi> asteroidit = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
@@ -1628,14 +1628,14 @@ public class AsteroidsSovellus extends Application {
             Asteroidi asteroidi = new Asteroidi(rnd.nextInt(LEVEYS / 3), rnd.nextInt(KORKEUS));
             asteroidit.add(asteroidi);
         }
-
+    
         ruutu.getChildren().add(alus.getHahmo());
         asteroidit.forEach(asteroidi -> ruutu.getChildren().add(asteroidi.getHahmo()));
-
+    
     // ...
 ``` -->
 
-```java
+​```java
 public class AsteroidsApplication extends Application {
 
     public static int WIDTH = 300;
@@ -1675,40 +1675,40 @@ public void liiku() {
     if (this.hahmo.getTranslateX() < 0) {
         this.hahmo.setTranslateX(this.hahmo.getTranslateX() + AsteroidsSovellus.LEVEYS);
     }
-
+    
     if (this.hahmo.getTranslateX() > AsteroidsSovellus.LEVEYS) {
         this.hahmo.setTranslateX(this.hahmo.getTranslateX() % AsteroidsSovellus.LEVEYS);
     }
-
+    
     if (this.hahmo.getTranslateY() < 0) {
         this.hahmo.setTranslateY(this.hahmo.getTranslateY() + AsteroidsSovellus.KORKEUS);
     }
-
+    
     if (this.hahmo.getTranslateY() > AsteroidsSovellus.KORKEUS) {
         this.hahmo.setTranslateY(this.hahmo.getTranslateY() % AsteroidsSovellus.KORKEUS);
     }
 }
 ``` -->
 
-```java
+​```java
 public void move() {
     this.character.setTranslateX(this.character.getTranslateX() + this.movement.getX());
     this.character.setTranslateY(this.character.getTranslateY() + this.movement.getY());
 
     if (this.character.getTranslateX() < 0) {
-        this.character.setTranslateX(this.character.getTranslateX() + AsteroidsApplication.LEVEYS);
+        this.character.setTranslateX(this.character.getTranslateX() + AsteroidsApplication.WIDTH);
     }
 
-    if (this.character.getTranslateX() > AsteroidsApplication.LEVEYS) {
-        this.character.setTranslateX(this.character.getTranslateX() % AsteroidsApplication.LEVEYS);
+    if (this.character.getTranslateX() > AsteroidsApplication.WIDTH) {
+        this.character.setTranslateX(this.character.getTranslateX() % AsteroidsApplication.WIDTH);
     }
 
     if (this.character.getTranslateY() < 0) {
-        this.character.setTranslateY(this.character.getTranslateY() + AsteroidsApplication.KORKEUS);
+        this.character.setTranslateY(this.character.getTranslateY() + AsteroidsApplication.HEIGHT);
     }
 
-    if (this.character.getTranslateY() > AsteroidsApplication.KORKEUS) {
-        this.character.setTranslateY(this.character.getTranslateY() % AsteroidsApplication.KORKEUS);
+    if (this.character.getTranslateY() > AsteroidsApplication.HEIGHT) {
+        this.character.setTranslateY(this.character.getTranslateY() % AsteroidsApplication.HEIGHT);
     }
 }
 ```
@@ -1744,7 +1744,7 @@ public class Ammus extends Hahmo {
 }
 ``` -->
 
-```java
+​```java
 import javafx.scene.shape.Polygon;
 
 public class Projectile extends Character {
@@ -1765,7 +1765,7 @@ Contrary to ships and asteroids, we don't want any projectiles on screen when th
 List<Ammus> ammukset = new ArrayList<>();
 ``` -->
 
-```java
+​```java
 List<Projectile> projectiles = new ArrayList<>();
 ```
 
@@ -1784,7 +1784,7 @@ if (painetutNapit.getOrDefault(KeyCode.SPACE, false)) {
 }
 ``` -->
 
-```java
+​```java
 if (pressedKeys.getOrDefault(KeyCode.SPACE, false)) {
     // we shoot
     Projectile projectile = new Projectile((int) ship.getCharacter().getTranslateX(), (int) ship.getCharacter().getTranslateY());
@@ -1815,12 +1815,12 @@ if (painetutNapit.getOrDefault(KeyCode.SPACE, false)) {
 
     ammus.kiihdyta();
     ammus.setLiike(ammus.getLiike().normalize().multiply(3));
-
+    
     ruutu.getChildren().add(ammus.getHahmo());
 }
 ``` -->
 
-```java
+​```java
 if (pressedKeys.getOrDefault(KeyCode.SPACE, false)) {
     // we shoot
     Projectile projectile = new Projectile((int) ship.getCharacter().getTranslateX(), (int) ship.getCharacter().getTranslateY());
@@ -1843,7 +1843,7 @@ asteroidit.forEach(asteroidi -> asteroidi.liiku());
 ammukset.forEach(ammus -> ammus.liiku());
 ``` -->
 
-```java
+​```java
 ship.move();
 asteroids.forEach(asteroid -> asteroid.move());
 projectiles.forEach(projectile -> projectile.move());
@@ -1861,12 +1861,12 @@ if (painetutNapit.getOrDefault(KeyCode.SPACE, false) && ammukset.size() < 3) {
 
     ammus.kiihdyta();
     ammus.setLiike(ammus.getLiike().normalize().multiply(3));
-
+    
     ruutu.getChildren().add(ammus.getHahmo());
 }
 ``` -->
 
-```java
+​```java
 if (pressedKeys.getOrDefault(KeyCode.SPACE, false) && projectiles.size() < 3) {
     // we shoot
     Projectile projectile = new Projectile((int) ship.getCharacter().getTranslateX(), (int) ship.getCharacter().getTranslateY());
@@ -1897,7 +1897,7 @@ ammukset.forEach(ammus -> {
 });
 ``` -->
 
-```java
+​```java
 projectiles.forEach(projectile -> {
     List<Asteroid> collisions = asteroids.stream()
                                                 .filter(asteroid -> asteroid.collide(projectile))
@@ -1924,12 +1924,12 @@ List<Ammus> poistettavatAmmukset = ammukset.stream().filter(ammus -> {
     if(tormatyt.isEmpty()) {
         return false;
     }
-
+    
     tormatyt.stream().forEach(tormatty -> {
         asteroidit.remove(tormatty);
         ruutu.getChildren().remove(tormatty.getHahmo());
     });
-
+    
     return true;
 }).collect(Collectors.toList());
 
@@ -1939,7 +1939,7 @@ poistettavatAmmukset.forEach(ammus -> {
 });
 ``` -->
 
-```java
+​```java
 List<Projectile> projectilesToRemove = projectiles.stream().filter(projectile -> {
     List<Asteroidi> collisions = asteroids.stream()
                                                 .filter(asteroid -> asteroid.collide(projectile))
@@ -1992,7 +1992,7 @@ asteroidit.removeAll(asteroidit.stream()
                             .collect(Collectors.toList()));
 ``` -->
 
-```java
+​```java
 projectiles.forEach(projectile -> {
     asteroids.forEach(asteroid -> {
         if(projectile.collide(asteroid)) {
@@ -2050,7 +2050,7 @@ public void start(Stage stage) throws Exception {
 }
 ``` -->
 
-```java
+​```java
 @Override
 public void start(Stage stage) throws Exception {
     Pane pane = new Pane();
@@ -2079,7 +2079,7 @@ public void start(Stage stage) throws Exception {
     ruutu.getChildren().add(text);
 
     AtomicInteger pisteet = new AtomicInteger();
-
+    
     Scene scene = new Scene(ruutu);
     stage.setTitle("Asteroids!");
     stage.setScene(scene);
@@ -2087,7 +2087,7 @@ public void start(Stage stage) throws Exception {
 
 
     new AnimationTimer() {
-
+    
         @Override
         public void handle(long nykyhetki) {
             text.setText("Pisteet: " + pisteet.incrementAndGet());
@@ -2096,7 +2096,7 @@ public void start(Stage stage) throws Exception {
 }
 ``` -->
 
-```java
+​```java
 @Override
 public void start(Stage stage) throws Exception {
     Pane pane = new Pane();
@@ -2145,7 +2145,7 @@ ammukset.forEach(ammus -> {
 });
 ``` -->
 
-```java
+​```java
 projectiles.forEach(projectile -> {
     asteroids.forEach(asteroid -> {
         if(projectile.collide(asteroid)) {
@@ -2189,7 +2189,7 @@ if(Math.random() < 0.005) {
 }
 ``` -->
 
-```java
+​```java
 if(Math.random() < 0.005) {
     Asteroid asteroid = new Asteroid(WIDTH, HEIGHT);
     if(!asteroid.collide(ship)) {

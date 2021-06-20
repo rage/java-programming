@@ -23,7 +23,7 @@ We'll now take a look at creating graphical user interfaces (GUIs). When creatin
 
 Whereas text interfaces have the functionality coupled to a particular form of input, in GUIs it's added to the user-interface components. A programmer can, for instance, add a method to a button that lives on the interface, which handles an event associated with that button.
 
-We'll be using Java's [JavaFx] (https://en.wikipedia.org/wiki/JavaFX) user-interface library to create our graphical user interfaces. The applications we develop are desktop applications.
+We'll be using Java's [JavaFx](https://en.wikipedia.org/wiki/JavaFX) user-interface library to create our graphical user interfaces. The applications we develop are desktop applications.
 <br/>
 
 <!-- <text-box variant='hint' name='Graafiset käyttöliittymät ja tarvittavat kirjastot'> -->
@@ -35,12 +35,12 @@ A library called JavaFX is used to create graphical user interfaces. On Linux ma
 <!-- ```bash
 user@kone:~$ sudo apt-get install openjfx
 ``` -->
-```bash
+​```bash
 user@computer:~$ sudo apt-get install openjfx
 ```
 
 <!-- Tehtäväpohjissa käytetään JavaFx-ohjelmien testaamiseen [TestFX](https://github.com/TestFX/TestFX/wiki)-nimistä apukirjastoa. Kirjasto tulee tehtäväpohjien mukana. -->
-A test library called [TestFX] (https://github.com/TestFX/TestFX/wiki) is used in the exercise templates to test JavaFx programs. This library is included in the templates.
+A test library called [TestFX](https://github.com/TestFX/TestFX/wiki) is used in the exercise templates to test JavaFx programs. This library is included in the templates.
 
 </text-box>
 
@@ -49,7 +49,7 @@ A test library called [TestFX] (https://github.com/TestFX/TestFX/wiki) is used i
 
 <!-- Tämän osan tehtävissä osa testeistä odottaa, että tmcbeans saa vapaasti liikuttaa kursoria näytöllä. macOS-käyttöjärjestelmällä (Apple-tietokoneet) tähän tarvitsee antaa erikseen tmcbeansille oikeus. Täältä löytyy ohjeet, miten oikeus myönnetään: [macOS ohjeet](/macos-ohjeet) -->
 
-Some of the tests in this section assume that tmcbeans is able to freely move the cursor around the screen. On macOS (Apple computers), tmcbeans has to be granted this right explicitly. Here are instructions on how to grant this right: [macOS help] (/macos help)
+Some of the tests in this section assume that tmcbeans is able to freely move the cursor around the screen. On macOS (Apple computers), tmcbeans has to be granted this right explicitly. Here are instructions on how to grant this right: [macOS help](/macos help)
 
 </text-box>
 
@@ -69,13 +69,13 @@ public class JavaFxApplication extends Application {
         window.setTitle("Hello World!");
         window.show();
     }
-
+    
     public static void main(String[] args) {
         launch(JavaFxApplication.class);
     }
 }
 ``` -->
-```java
+​```java
 package application;
 
 import javafx.application.Application;
@@ -102,7 +102,7 @@ When the program is launched, it looks as follows.
 <!-- <img src="../img/material/gui-helloworld.png" alt="Tyhjä ikkuna, jonka otsikko on 'Hei Maailma!'"/> -->
 <img src="../img/material/gui-helloworld.png" alt="Empty window with a 'Hello World' title"/>
 
-When the launch method is called, the method of the Application class creates a new object from the given class (here JavaFxApplication) and calls its init method. The init method is defined in the Application class and is used, for instance, to initialize objects of a program. After calling the init method, the program calls the start method, which gets a [Stage] (https://docs.oracle.com/javase/8/javafx/api/javafx/stage/Stage.html) object as its parameter, which describes the window. In the implementation of the start method above, the setTitle method sets the title of the Stage-type window object obtained as a parameter. The method show is then called, which leads to the window being displayed. The program then stays in a state where it continuously listens to events on user interface, such as closing the window that causes the application to shut down.
+When the launch method is called, the method of the Application class creates a new object from the given class (here JavaFxApplication) and calls its init method. The init method is defined in the Application class and is used, for instance, to initialize objects of a program. After calling the init method, the program calls the start method, which gets a [Stage](https://docs.oracle.com/javase/8/javafx/api/javafx/stage/Stage.html) object as its parameter, which describes the window. In the implementation of the start method above, the setTitle method sets the title of the Stage-type window object obtained as a parameter. The method show is then called, which leads to the window being displayed. The program then stays in a state where it continuously listens to events on user interface, such as closing the window that causes the application to shut down.
 
 <programming-exercise name='My first application' tmcname='part13-Part13_01.MyFirstApplication'>
 
@@ -120,7 +120,7 @@ Create a GUI app with the title "My first application". The app should start whe
 
 Alla oleva ohjelma luo käyttöliittymän, jossa on yksittäinen nappi. -->
 
-Graphical user interfaces consist of three essential parts. The Stage object behaves as the program's window. A [Scene] (https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Scene.html) is set for a Stage object that represents a scene within the window. The Scene object, on the other hand, contains an object responsible for arranging the components belonging to the scene (such as FlowPane), which contains the actual user interface components.
+Graphical user interfaces consist of three essential parts. The Stage object behaves as the program's window. A [Scene](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Scene.html) is set for a Stage object that represents a scene within the window. The Scene object, on the other hand, contains an object responsible for arranging the components belonging to the scene (such as FlowPane), which contains the actual user interface components.
 
 The program below creates an interface with a single button.
 <!--
@@ -152,9 +152,9 @@ public class JavaFxApplication extends Application {
         launch(JavaFxApplication.class);
     }
 }
-``` -->
+​``` -->
 
-```java
+​```java
 package application;
 
 import javafx.application.Application;
