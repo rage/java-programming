@@ -6,7 +6,7 @@ title: "Variables"
 hidden: false
 ---
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 <!-- - Tunnet käsitteen muuttuja. Tiedät mitä ovat muuttujan tyyppi, muuttujan nimi, ja muuttujan arvo.
 - Osaat luoda ja käsitellä merkkijono-, kokonaisluku-, liukuluku-, ja totuusarvomuuttujia. -->
@@ -489,8 +489,8 @@ int camelCase = 5; // Ei sallittu -- muuttuja camelCase on jo käytössä!
 ``` -->
 
 ```java
-int 7variable = 4; // Not Allowed!
-int variable7 = 4; // Allowed, but not a descriptive variable name
+int System.out.print = 4; // Not Allowed!
+int System.out.println = 4; // Not Allowed!
 ```
 
 ```java

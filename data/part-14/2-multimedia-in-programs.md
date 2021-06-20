@@ -1,7 +1,7 @@
 ---
 path: '/part-14/2-multimedia-in-programs'
 title: 'Multimedia in programs'
-hidden: true
+hidden: false
 ---
 
 <text-box pixelColorant='learningObjectives' name='Learning Objectives'>

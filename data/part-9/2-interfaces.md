@@ -5,7 +5,7 @@ hidden: false
 ---
 
 
-<text-box variant='learningObjectives' name='Oppimistavoitteet'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 <!-- - Tunnet käsitteen rajapinta, osaat määritellä omia rajapintoja, ja osaat toteuttaa rajapinnan luokassa.
 - Osaat käyttää rajapintoja muuttujan tyyppinä, metodin parametrina sekä metodin paluuarvona.
@@ -171,11 +171,11 @@ public class Ebook implements Readable {
 
     public String read() {
         String page = this.pages.get(this.pageNumber);
-        seuraavaSivu();
+        nextPage();
         return page;
     }
 
-    private void seuraavaSivu() {
+    private void nextPage() {
         this.pageNumber = this.pageNumber + 1;
         if(this.pageNumber % this.pages.size() == 0) {
             this.pageNumber = 0;
@@ -199,8 +199,8 @@ tekstiviestit.add(new Tekstiviesti("tuntematon numero", "I hid the body.");
 TextMessage message = new TextMessage("ope", "It's going great!");
 System.out.println(message.read());
 
-ArrayList<TextMessage> tekstiviestit = new ArrayList<>();
-tekstiviestit.add(new TextMessage("private number", "I hid the body.");
+ArrayList<TextMessage> textMessage = new ArrayList<>();
+textMessage.add(new TextMessage("private number", "I hid the body.");
 ```
 
 <!-- <sample-output>
@@ -232,7 +232,7 @@ while (sivu < kirja.sivuja()) {
 ```java
 ArrayList<String> pages = new ArrayList<>();
 pages.add("Split your method into short, readable entities.");
-pages.add("Seperate the user-interface logic from the application logic.");
+pages.add("Separate the user-interface logic from the application logic.");
 pages.add("Always program a small part initially that solves a part of the problem.");
 pages.add("Practice makes the master. Try different out things for yourself and work on your own projects.");
 
@@ -256,9 +256,9 @@ Harjoittelu tekee mestarin. Keksi ja tee omia kokeiluja ja projekteja.
 <sample-output>
 
 Split your method into short, readable entities.
-Seperate the user-interface logic from the application logic.
+Separate the user-interface logic from the application logic.
 Always program a small part initially that solves a part of the problem.
-Practice makes the master.Try different out things for yourself and work on your own projects.
+Practice makes the master. Try different out things for yourself and work on your own projects.
 
 </sample-output>
 
@@ -275,7 +275,9 @@ In the exercise template you'll find Interface `TacoBox` ready for your use. It 
 
 
 - the method `int tacosRemaining()` return the number of tacos remaining in the box.
+
 - the method `void eat()` reduces the number of tacos remaining by one. The number of tacos remaining can't become negative.
+
 <!-- ```java
 public interface Palvelusvelvollinen {
     int paiviaJaljella();
@@ -328,7 +330,7 @@ Tekstiviesti viesti = new Tekstiviesti("ope", "samalla oliolla monta tyyppiä");
 ``` -->
 ```java
 String string = "string-object";
-Tekstiviesti message = new TextMessage("ope", "many types for the same object");
+TextMessage message = new TextMessage("ope", "many types for the same object");
 ```
 
 
@@ -425,7 +427,7 @@ Tekstiviesti muunnettuViesti = (Tekstiviesti) luettava; // toimii jos ja vain jo
 ``` -->
 ```java
 Readable readable = new TextMessage("ope", "TextMessage is Readable!"); // works
-TextMessage viesti = readable; // doesn't work
+TextMessage message = readable; // doesn't work
 
 TextMessage castMessage = (TextMessage) readable; // works if, and only if, readable is of text message type
 ```
@@ -449,15 +451,15 @@ public class Tulostin {
 ``` -->
 ```java
 public class Printer {
-    public void print(Readable reaable) {
-        System.out.println(reaable.read());
+    public void print(Readable readable) {
+        System.out.println(readable.read());
     }
 }
 ```
 
 
 <!-- Luokan `Tulostin` tarjoaman metodin `tulosta` huikeus piilee siinä, että sille voi antaa parametrina *minkä tahansa* `Luettava`-rajapinnan toteuttavan luokan ilmentymän. Kutsummepa metodia millä tahansa Luettava-luokan toteuttaneen luokan oliolla, metodi osaa toimia oikein. -->
-The value of the `print` method of the `printer` class lies in the fact that it can be given *any* class that implements the `Readable` interface as a parameter. Were we to call the method with any object instantiate from a class that inherits the Readable class, the method would function as desired.
+The value of the `print` method of the `printer` class lies in the fact that it can be given *any* class that implements the `Readable` interface as a parameter. Were we to call the method with any object instantiated from a class that inherits the Readable class, the method would function as desired.
 
 
 <!-- ```java
@@ -497,7 +499,7 @@ Values common to both {1, 3, 5} and {2, 3, 4, 5} are {3, 5}.
 </sample-output>
 
 <!-- Toteutetaan toinen luokka `Lukulista`, johon voidaan lisätä mielenkiintoisia luettavia asioita. Luokalla on oliomuuttujana `ArrayList`-luokan ilmentymä, johon luettavia asioita tallennetaan. Lukulistaan lisääminen tapahtuu `lisaa`-metodilla, joka saa parametrikseen `Luettava`-tyyppisen olion. -->
-Let's make another class called `ReadingList` to which we can ad interesting things to read. The class has an `ArrayList` instance as an instance variable, where the things to be read are added. Adding to the reading list is done using the `add` method, which receives a `Readable`-type object as its parameter.
+Let's make another class called `ReadingList` to which we can add interesting things to read. The class has an `ArrayList` instance as an instance variable, where the things to be read are added. Adding to the reading list is done using the `add` method, which receives a `Readable`-type object as its parameter.
 
 
 <!-- ```java
@@ -580,7 +582,7 @@ public class ReadingList implements Readable {
         this.readables.add(readable);
     }
 
-    public int luettavia() {
+    public int toRead() {
         return this.readables.size();
     }
 
@@ -653,7 +655,7 @@ System.out.println("Jonilla luettavia: " + joninLista.luettavia());
 ReadingList jonisList = new ReadingList();
 int i = 0;
 while (i < 1000) {
-    jonisList.add(new TextMessage("arto", "teitkö jo testit?"));
+    jonisList.add(new TextMessage("arto", "have you written the tests yet?"));
     i = i + 1;
 }
 
@@ -718,7 +720,7 @@ Remember to implement the Interface `Packable` in both of the classes. The class
 
 ```java
 public static void main(String[] args) {
-    Book book1 = new Book("Fedor Dostojevski", "Crime and Punishment", 2);
+    Book book1 = new Book("Fyodor Dostoevsky", "Crime and Punishment", 2);
     Book book2 = new Book("Robert Martin", "Clean Code", 1);
     Book book3 = new Book("Kent Beck", "Test Driven Development", 0.5);
 
@@ -742,7 +744,7 @@ Prints:
 
 <sample-output>
 
-Fedor Dostojevski: Crime and Punishment
+Fyodor Dostoevsky: Crime and Punishment
 Robert Martin: Clean Code
 Kent Beck: Test Driven Development
 Pink Floyd: Dark Side of the Moon (1973)
@@ -759,7 +761,7 @@ NB: The weight is not printed
 
 
 <!-- Tee luokka box, jonka sisälle voidaan tallettaa `able`-rajapinnan toteuttavia tavaroita. Box saa konstruktorissaan parametrina laatikon maksimikapasiteetin kiloina. Boxon ei saa lisätä enempää tavaraa kuin sen maksimikapasiteetti määrää. Laatikon sisältämien tavaroiden weight ei siis koskaan saa olla yli laatikon maksimikapasiteetin. -->
-Make a class called Box. Items implementing the `Packable` interface can be packed into a box. The Box constructor takes the maximum capacity of the box in kilograms as a parameter. The combined weight of all items in a box cannot be more than the maximum capacity of the box.
+Make a class called `Box`. Items implementing the `Packable` interface can be packed into a box. The `Box` constructor takes the maximum capacity of the box in kilograms as a parameter. The combined weight of all items in a box cannot be more than the maximum capacity of the box.
 
 
 <!-- Seuraavassa esimerkki laatikon käytöstä: -->
@@ -770,7 +772,7 @@ Below is an example of using a box:
 public static void main(String[] args) {
     Box box = new Box(10);
 
-    box.add(new Book("Fedor Dostojevski", "Crime and Punishment", 2)) ;
+    box.add(new Book("Fyodor Dostoevsky", "Crime and Punishment", 2)) ;
     box.add(new Book("Robert Martin", "Clean Code", 1));
     box.add(new Book("Kent Beck", "Test Driven Development", 0.7));
 
@@ -790,13 +792,13 @@ Prints
 <sample-output>
 
 <!-- Box: 6 esinettä, weight yhteensä 4.0 kiloa -->
-Box: 6 items, total weight 4.0 kg.
+Box: 6 items, total weight 4.0 kg
 
 </sample-output>
 
 
 <!-- Huom: koska painot esitetään doubleina, saattaa laskutoimituksissa tulla pieniä pyöristysvirheitä. Tehtävässä ei tarvitse välittää niistä. -->
-NB: As the weights are saved as a double, the calculations might have some small rounding errors. You do not have to mind about them.
+NB: As the weights are saved as a double, the calculations might have some small rounding errors. You don't need to worry about them.
 
 <h2>Box weight</h2>
 
@@ -849,7 +851,7 @@ Try this out. Make some boxes containing some items, and add some smaller boxes 
 
 <!-- Kuten mitä tahansa muuttujan tyyppiä, myös rajapintaa voi käyttää metodin paluuarvona. Seuraavassa `Tehdas`, jota voi pyytää valmistamaan erilaisia `Talletettava`-rajapinnan toteuttavia oliota. Tehdas valmistaa aluksi satunnaisesti kirjoja ja levyjä -->
 
-Interfaces can be used as return types in methods -- just like regular variable types. In the next example is a class `Factory` that can be asked to construct differerent objects that implement the `Storable` interface.
+Interfaces can be used as return types in methods -- just like regular variable types. In the next example is a class `Factory` that can be asked to construct differerent objects that implement the `Packable` interface.
 
 
 <!-- ```java
@@ -890,21 +892,21 @@ public class Factory {
 
     public Factory() {
         // Note that there is no need to write an empy constructor without
-        // paramatesr if the class doesn't have other constructors.
+        // parameters if the class doesn't have other constructors.
         // In these cases Java automatically creates a default constructor for
         // the class which is an empty constructor without parameters.
     }
 
-    public Storable produceNew() {
+    public Packable produceNew() {
         // The Random-object used here can be used to draw random numbers.
         Random ticket = new Random();
-        // Draws a number from the range [0, 4[. The number will be 0, 1, 2, or 3.
+        // Draws a number from the range [0, 4). The number will be 0, 1, 2, or 3.
         int number = ticket.nextInt(4);
 
         if (number == 0) {
-            return new CDDisk("Pink Floyd", "Dark Side of the Moon", 1973);
+            return new CD("Pink Floyd", "Dark Side of the Moon", 1973);
         } else if (number == 1) {
-            return new CDDisk("Wigwam", "Nuclear Nightclub", 1975);
+            return new CD("Wigwam", "Nuclear Nightclub", 1975);
         } else if (number == 2) {
             return new Book("Robert Martin", "Clean Code", 1);
         } else {
@@ -912,36 +914,11 @@ public class Factory {
         }
     }
 }
+```
 
 
-// Tehdasta on mahdollista käyttää tuntematta tarkalleen mitä erityyppisiä Talletettava-rajapinnan luokkia on olemassa. Seuraavassa luokka Pakkaaja, jolta voi pyytää laatikollisen esineitä. Pakkaaja tuntee tehtaan, jota se pyytää luomaan esineet:
+The Factory can be used without exactly knowing what different kind of Packable classes exist. In the next example there is a class Packer that gives a box of things. A packer defines a factory which is used to create the things:
 
-The Factory can be used without excatly knowing what differend kind of Storable classes exist. In the next example there is a class Packer that gives a box of things. A packer knows a factory which is used to create the things:
-
-
-// ```java
-// public class Pakkaaja {
-//     private Tehdas tehdas;
-
-//     public Pakkaaja() {
-//         this.tehdas = new Tehdas();
-//     }
-
-//     public Laatikko annaLaatikollinen() {
-//          Laatikko laatikko = new Laatikko(100);
-
-//          int i = 0;
-//          while (i < 10) {
-//              Talletettava uusiTavara = tehdas.valmistaUusi();
-//              laatikko.lisaa(uusiTavara);
-
-//              i = i + 1;
-//          }
-
-//          return laatikko;
-//     }
-// }
-// ```
 
 ```java
 public class Packer {
@@ -956,7 +933,7 @@ public class Packer {
 
          int i = 0;
          while (i < 10) {
-             Storeable newThing = factory.produceNew();
+             Packable newThing = factory.produceNew();
              box.add(newThing);
 
              i = i + 1;
@@ -969,7 +946,7 @@ public class Packer {
 
 <!-- Koska pakkaaja ei tunne rajapinnan `Talletettava` toteuttavia luokkia, on ohjelmaan mahdollisuus lisätä uusia luokkia jotka toteuttavat rajapinnan ilman tarvetta muuttaa pakkaajaa. Seuraavassa on luotu uusi Talletettava-rajapinnan toteuttava luokka, `Suklaalevy`. Tehdasta on muutettu siten, että se luo kirjojen ja cd-levyjen lisäksi suklaalevyjä. Luokka `Pakkaaja` toimii muuttamatta tehtaan laajennetun version kanssa. -->
 
-Because the packer does not know the classes that implement the interface `Storable`, one can add new classes that impement the interface without changing the packer. The next example creates a new class that implements the Storable interface `ChocolateBar`. The factory has been changed so that it creates chocolate bars in addition to books and cds. The class `Packer` works without changes with the updated version of the factory.
+Because the packer does not know the classes that implement the interface `Packable`, one can add new classes that implement the interface without changing the packer. The next example creates a new class that implements the Packable interface `ChocolateBar`. The factory has been changed so that it creates chocolate bars in addition to books and CDs. The class `Packer` works without changes with the updated version of the factory.
 
 
 <!-- ```java
@@ -983,7 +960,7 @@ public class Suklaalevy implements Talletettava {
 ``` -->
 
 ```java
-public class ChocolateBar implements Storable {
+public class ChocolateBar implements Packable {
     // Because Java's automatically generated default constructor is enough,
     // we don't need a constructor
 
@@ -1026,7 +1003,7 @@ public class Factory {
     // Because Java's automatically generated default constructor is enough,
     // we don't need a constructor
 
-    public Storable produceNew() {
+    public Packable produceNew() {
 
         Random ticket = new Random();
         int number = ticket.nextInt(5);
@@ -1059,12 +1036,12 @@ Vähäisemmät riippuvuudet helpottavat ohjelman laajennettavuutta.
 
 <text-box variant='hint' name='Reducing the dependencies between classes'>
 
-Using interfaces in programmign enables reducing dependencies between classes. In the previous example the Packer does not depend on the classes that implement the Storable interface. Instead, it just depends on the interface. This makes possible to add new classes that implement the interface without changing the Packer class. What is more, adding new Storable classes doesn't affect the classes that use the Packer class.
+Using interfaces in programming enables reducing dependencies between classes. In the previous example the Packer does not depend on the classes that implement the Packable interface. Instead, it just depends on the interface. This makes possible to add new classes that implement the interface without changing the Packer class. What is more, adding new Packable classes doesn't affect the classes that use the Packer class.
 
 </text-box>
 
 
-## Built-in interfaces
+## Built-in Interfaces
 
 
 <!-- Javan API tarjoaa huomattavan määrän valmiita rajapintoja. Tutustutaan tässä neljään usein käytettyyn rajapintaan: <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" target="_blank">List</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html" target="_blank">Map</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html" target="_blank">Set</a> ja <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html" target="_blank">Collection</a>. -->
@@ -1074,11 +1051,11 @@ Using interfaces in programmign enables reducing dependencies between classes. I
 <br/>
 
 <!-- ### List-rajapinta -->
-### List-interface
+### The List Interface
 
 <!-- Rajapinta <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a> määrittelee listoihin liittyvän peruskäyttäytymisen. Koska ArrayList-luokka toteuttaa `List`-rajapinnan, voi sitä käyttää myös `List`-rajapinnan kautta. -->
 
-<p>Interface <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a> defines the basic functionality related to lists. Because the ArrayList class implements the `List` interface, one can also use it through the `List` interface.</p>
+<p>The <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a> interface defines the basic functionality related to lists. Because the ArrayList class implements the `List` interface, one can also use it through the `List` interface.</p>
 
 <br/>
 
@@ -1094,7 +1071,7 @@ strings.add("string objects inside an arraylist object!");
 
 <!-- Kuten huomaamme <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" target="_blank">List-rajapinnan Java API</a>:sta, rajapinnan `List` toteuttavia luokkia on useita. Eräs tietojenkäsittelijöille tuttu listarakenne on linkitetty lista (<a href="http://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html" target="_blank">linked list</a>). Linkitettyä listaa voi käyttää rajapinnan List-kautta täysin samoin kuin ArrayLististä luotua oliota. -->
 
-<p>As we can see fom the <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" target="_blank">Java API</a> of List, there are many classes that implement the `List` interdface. One list that is familiar to computer scientists is a (<a href="http://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html" target="_blank">linked list</a>). A linked list can be used through the List interface exactly the same way as an object created from ArrayList.</p>
+<p>As we can see fom the <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" target="_blank">Java API</a> of List, there are many classes that implement the `List` interface. One list that is familiar to computer scientists is a <a href="http://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html" target="_blank">linked list</a>. A linked list can be used through the List interface exactly the same way as an object created from ArrayList.</p>
 
 <br/>
 
@@ -1110,17 +1087,17 @@ strings.add("string objects inside a linkedlist object!");
 
 <!-- Molemmat rajapinnan `List` toteutukset toimivat käyttäjän näkökulmasta samoin. Rajapinta siis *abstrahoi* niiden sisäisen toiminnallisuuden. ArrayListin ja LinkedListin sisäinen rakenne on kuitenkin huomattavan erilainen. ArrayList tallentaa alkioita taulukkoon, josta tietyllä indeksillä hakeminen on nopeaa. LinkedList taas rakentaa listan, jossa jokaisessa listan alkiossa on viite seuraavan listan alkioon. Kun linkitetyssä listassa haetaan alkiota tietyllä indeksillä, tulee listaa käydä läpi alusta indeksiin asti. -->
 
-From the perspective of the user, both implementations of the `List` interface work the same way. The inteface *abstracts* their inner functionality. The internal structures of `ArrayList` and `LinkedList` differs quite a bit. ArrayList saves objects to an array where fetching an object with a specific index is very fast. On the other hand LinkedList constructs a list where each element contains a reference to the next element in the list. When one searches for an object by index in a linked list, one has to go though the list from the beginning until the index.
+From the perspective of the user, both implementations of the `List` interface work the same way. The interface *abstracts* their inner functionality. The internal structures of `ArrayList` and `LinkedList` differ quite a bit. ArrayList saves objects to an array where fetching an object with a specific index is very fast. On the other hand LinkedList constructs a list where each element contains a reference to the next element in the list. When one searches for an object by index in a linked list, one has to go though the list from the beginning until the index.
 
 
 <!-- Isoilla listoille voimme nähdä huomattaviakin suorituskykyeroja. Linkitetyn listan vahvuutena on se, että listaan lisääminen on aina nopeaa. ArrayListillä taas taustalla on taulukko, jota täytyy kasvattaa aina kun se täyttyy. Taulukon kasvattaminen vaatii uuden taulukon luonnin ja vanhan taulukon tietojen kopioinnin uuteen taulukkoon. Toisaalta, indeksin perusteella hakeminen on Arraylististä erittäin nopeaa, kun taas linkitetyssä listassa joudutaan käymään listan alkioita yksitellen läpi tiettyyn indeksiin pääsemiseksi. -->
 
-One can see noticeable performcance differences between list implementations if the lists are big enough. The strength of linked list is that adding to it is always fast. ArrayList, on the other hand, is backed by an array which needs to be resized each time it gets full. Resizing the array requires creating a new array and copying the values from the old array to the new one.  On the other hand searching objects by index is much faster in array list compared to linked list.
+One can see noticeable performcance differences between list implementations if the lists are big enough. The strength of a linked list is that adding to it is always fast. ArrayList, on the other hand, is backed by an array, which needs to be resized each time it gets full. Resizing the array requires creating a new array and copying the values from the old array to the new one.  On the other hand, searching objects by index is much faster in an array list compared to a linked list.
 
 
 <!-- Tällä ohjelmointikurssilla eteen tulevissa tilanteissa kannattanee käytännössä valita aina ArrayList. "Rajapintoihin ohjelmointi" kuitenkin kannattaa: toteuta ohjelmasi siten, että käytät tietorakenteita rajapintojen kautta. -->
 
-For the problems that you encounter during this course you should almost always choose ArrayList. However, "Programming to interfaces" is beneficial: implement your programs so that you'll use the data structures through the interfaces.
+For the problems that you encounter during this course you should almost always choose ArrayList. However, "interface programming" is beneficial: implement your programs so that you'll use the data structures through the interfaces.
 
 
 <programming-exercise name='List as a method parameter' tmcname='part09-Part09_07.ListAsAMethodParameter'>
@@ -1140,7 +1117,7 @@ names.add("First");
 names.add("Second");
 names.add("Third");
 
-System.out.println(palautaKoko(names));
+System.out.println(returnSize(names));
 ```
 
 <sample-output>
@@ -1153,22 +1130,31 @@ System.out.println(palautaKoko(names));
 
 
 
-### Map-rajapinta
+<!-- ### Map-rajapinta -->
+### The Map Interface
 
-Rajapinta <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html">Map</a> määrittelee hajautustauluihin liittyvän peruskäyttäytymisen. Koska HashMap-luokka toteuttaa `Map`-rajapinnan, voi sitä käyttää myös `Map`-rajapinnan kautta.
+<!-- Rajapinta <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html">Map</a> määrittelee hajautustauluihin liittyvän peruskäyttäytymisen. Koska HashMap-luokka toteuttaa `Map`-rajapinnan, voi sitä käyttää myös `Map`-rajapinnan kautta. -->
+
+The <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html">Map</a> interface defines the basic behavior associated with hash tables. Because the HashMap class implements the `Map` interface, it can also be accessed through the `Map` interface. 
 
 <br/>
 
-```java
+<!--```java
 Map<String, String> kaannokset = new HashMap<>();
 kaannokset.put("ganbatte", "tsemppiä");
 kaannokset.put("hai", "kyllä");
-```
-
-Hajautustaulun avaimet saa hajautustaulusta `keySet`-metodin avulla.
-
+```-->
 
 ```java
+Map<String, String> maps = new HashMap<>();
+maps.put("ganbatte", "good luck");
+maps.put("hai", "yes");
+```
+
+<!--Hajautustaulun avaimet saa hajautustaulusta `keySet`-metodin avulla.-->
+The keys to the hash table are obtained using the `keySet` method.
+
+<!--```java
 Map<String, String> kaannokset = new HashMap<>();
 kaannokset.put("ganbatte", "tsemppiä");
 kaannokset.put("hai", "kyllä");
@@ -1176,17 +1162,35 @@ kaannokset.put("hai", "kyllä");
 for (String avain: kaannokset.keySet()) {
     System.out.println(avain + ": " + kaannokset.get(avain));
 }
+``` -->
+
+```java
+Map<String, String> maps = new HashMap<>();
+maps.put("ganbatte", "good luck");
+maps.put("hai", "yes");
+
+for (String key : maps.keySet()) {
+    System.out.println(key + ": " + maps.get(key));
+}
 ```
 
-<sample-output>
+<!-- <sample-output>
 
 ganbatte: tsemppiä
 hai: kyllä
 
+</sample-output> -->
+<sample-output>
+
+ganbatte: good luck
+hai: yes
+
 </sample-output>
 
 
-Metodi `keySet` palauttaa `Set`-rajapinnan toteuttavan joukon alkioita. `Set`-rajapinnan toteuttavan joukon voi käydä läpi `for-each`-lauseella. Hajautustaulusta saa talletetut arvot metodin `values`-avulla. Metodi `values` palauttaa `Collection` rajapinnan toteuttavan joukon alkioita. Tutustutaan vielä pikaisesti Set- ja Collection-rajapintoihin.
+<!--Metodi `keySet` palauttaa `Set`-rajapinnan toteuttavan joukon alkioita. `Set`-rajapinnan toteuttavan joukon voi käydä läpi `for-each`-lauseella. Hajautustaulusta saa talletetut arvot metodin `values`-avulla. Metodi `values` palauttaa `Collection` rajapinnan toteuttavan joukon alkioita. Tutustutaan vielä pikaisesti Set- ja Collection-rajapintoihin. -->
+
+The `keySet` method returns a set of elements that implement the `Set` interface. You can use a for-each statement to go through a set that implements the `Set` interface. The hash values can be obtained from the hash table using the `values` method. The `values` method returns a set of elements that implement the `Collection` interface. Let's take a quick look at the `Set` and `Collection` interfaces. 
 
 <programming-exercise name='Map as a method parameter' tmcname='part09-Part09_08.MapAsAMethodParameter'>
 
@@ -1202,7 +1206,7 @@ Map<String, String> names = new HashMap<>();
 names.put("1", "first");
 names.put("2", "second");
 
-System.out.println(palautaKoko(names));
+System.out.println(returnSize(names));
 ```
 
 <sample-output>
@@ -1215,12 +1219,12 @@ System.out.println(palautaKoko(names));
 
 
 <!-- ### Set-rajapinta -->
-### Set-interface
+### The Set Interface
 
 
 <!-- Rajapinta <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html" target="_blank">Set</a> kuvaa joukkoihin liittyvää toiminnallisuutta. Javassa joukot sisältävät aina joko 0 tai 1 kappaletta tiettyä oliota. Set-rajapinnan toteuttaa muun muassa <a href="http://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html" target="_blank">HashSet</a>. Joukon alkioita pystyy käymään läpi seuraavasti. -->
 
-The <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html" target="_blank"> Set </a> interface describes functionality related to sets. In Java, sets always contain either 0 or 1 amounts of any given object. The set interface is implemented by <a href="http://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html" target="_blank"> HashSet </a>, for instance . Here's how to go through the elements of a set.
+The <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Set.html" target="_blank"> Set </a> interface describes functionality related to sets. In Java, sets always contain either 0 or 1 amounts of any given object. As an example, the set interface is implemented by <a href="http://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html" target="_blank"> HashSet</a>. Here's how to go through the elements of a set.
 
 <br/>
 
@@ -1260,7 +1264,7 @@ two
 
 
 <!-- Huomaa että HashSet ei ota millään tavalla kantaa joukon alkioiden järjestykseen. Mikäli HashSet-olioon lisätään omista luokista tehtyjä olioita, tulee niille olla määriteltynä metodit `equals` ja `hashCode`. -->
-Note that HashSet in no way assumes the order of a set of elements. If objects created from custom classes are added to the HashSet object, they must have both the `equals` and `hashCode` methods defined. ->
+Note that HashSet in no way assumes the order of a set of elements. If objects created from custom classes are added to the HashSet object, they must have both the `equals` and `hashCode` methods defined.
 
 
 <programming-exercise name='Set as  method parameter' tmcname='part09-Part09_09.SetAsMethodParameter'>
@@ -1308,7 +1312,7 @@ Prints:
 
 
 <!-- ### Collection-rajapinta -->
-### Collection-interface
+### The Collection Interface
 
 
 <!-- Rajapinta <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html" target="_blank" rel="noopener">Collection</a> kuvaa kokoelmiin liittyvää toiminnallisuutta. Javassa muun muassa listat ja joukot ovat kokoelmia -- rajapinnat List ja Set toteuttavat rajapinnan Collection. Kokoelmarajapinta tarjoaa metodit muun muassa alkioiden olemassaolon tarkistamiseen (metodi `contains`) ja kokoelman koon tarkistamiseen (metodi `size`). -->
@@ -1320,7 +1324,7 @@ The <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html"
 The Collection interface also determines how the collection is iterated over. Any class that implements the Collection interface, either directly or indirectly, inherits the functionality required for a `for-each` loop.
 
 <!-- Luodaan vielä hajautustaulu ja käydään erikseen läpi siihen liittyvät avaimet ja arvot. -->
-Let's create a hash table, and iterate over its keys and values.
+Let's create a hash table and iterate over its keys and values.
 
 
 <!-- ```java
@@ -1417,7 +1421,7 @@ In this exercise we'll create program components, that can used to run an online
 
 <h2>Warehouse</h2>
 
-Create the class Warehouse with the following methods:
+Create the class `Warehouse` with the following methods:
 
 - `public void addProduct(String product, int price, int stock)`, which adds a product to the warehouse with the price and stock balance given as parameters.
 - `public int price(String product)`, which returns the price of the product it received as a parameter. If the product hasn't been added to the warehouse, the method must return -99.
@@ -1480,10 +1484,10 @@ Aseta tuotteiden varastosaldot samaan tapaan `Map<String, Integer>`-tyyppiseen m
 Esimerkki varaston käytöstä: -->
 <h2>Products stock balance</h2>
 
-Save the stock balance of products in variable with the `Map<String, Integer>` type, in the same way the prices were stored. Supplement the warehouse with the following methods:
+Save the stock balance of products in a variable with the `Map<String, Integer>` type, in the same way the prices were stored. Supplement the warehouse with the following methods:
 
 - `public int stock(String product)` returns the current remaining stock of the product in the warehouse. If the product hasn't been added to the warehouse, the method must return 0.
-- `public boolean take(String product)` reduces the stock ramaining for the product it received as a parameter by one, and returns true if there was stock remaining. If the product was not available in the warehouse the method returns false. A products stock can't go below zero.
+- `public boolean take(String product)` reduces the stock remaining for the product it received as a parameter by one, and returns true if there was stock remaining. If the product was not available in the warehouse the method returns false. A products stock can't go below zero.
 
 An example of the warehouse in use:
 <!-- ```java
@@ -1507,16 +1511,16 @@ Warehouse warehouse = new Warehouse();
 warehouse.addProduct("coffee", 5, 1);
 
 System.out.println("stock:");
-System.out.println("coffee:  " + warehouse.saldo("coffee"));
-System.out.println("sugar: " + warehouse.saldo("sugar"));
+System.out.println("coffee:  " + warehouse.stock("coffee"));
+System.out.println("sugar: " + warehouse.stock("sugar"));
 
-System.out.println("taking coffee " + warehouse.ota("coffee"));
-System.out.println("taking coffee " + warehouse.ota("coffee"));
-System.out.println("taking sugar " + warehouse.ota("sugar"));
+System.out.println("taking coffee " + warehouse.take("coffee"));
+System.out.println("taking coffee " + warehouse.take("coffee"));
+System.out.println("taking sugar " + warehouse.take("sugar"));
 
 System.out.println("stock:");
-System.out.println("coffee:  " + warehouse.saldo("coffee"));
-System.out.println("sugar: " + warehouse.saldo("sugar"));
+System.out.println("coffee:  " + warehouse.stock("coffee"));
+System.out.println("sugar: " + warehouse.stock("sugar"));
 ```
 
 <!-- Tulostuu: -->
@@ -1708,13 +1712,13 @@ Esimerkki ostoskorin käytöstä: -->
 
 <h2>Shopping cart</h2>
 
-We finally get to implement the shopping cart -class!
+We finally get to implement the shopping cart class!
 
-internally, ShoppingCart stores products added there as *Item-objects*. ShoppingCart must have an instance variable with either the `Map<String, Item>` type, or the `List<Item>` type. Don't add any other instance variable to the ShoppingCart class, besides the List or Map used to store the items.
+Internally, `ShoppingCart` stores products added there as *Item-objects*. ShoppingCart must have an instance variable with either the `Map<String, Item>` type, or the `List<Item>` type. Don't add any other instance variable to the ShoppingCart class, besides the List or Map used to store the items.
 
-NB: If of save the items in a Map type variable, you'll finds its `values()` method to be quite useful for going though all the items objects stored in it. Both in this part of the exercise and the next.
+NB: If you save the items in a Map type variable, you'll finds its `values()` method to be quite useful for going though all the items objects stored in it for both this part of the exercise and the next.
 
-First let's give ShoppingCart a constructor with no parameters and these methods:
+First let's give `ShoppingCart` a constructor with no parameters and these methods:
 
 - `public void add(String product, int price)` adds an item to the cart that matches the product given as a parameter, with the price given as a parameter.
 - `public int price()` returns the total price of the shopping cart.
@@ -1866,7 +1870,7 @@ milk: 2
 cart price: 8
 
 buttermilk: 1
-maito: 3
+milk: 3
 cart price: 11
 
 </sample-output>
@@ -1887,7 +1891,7 @@ Seuraavassa on valmiina verkkokaupan tekstikäyttöliittymän runko. Tee projekt
 
 We now have all the parts we need for our "online store", except the store itself. Let's make that next. Our store has a warehouse that includes all our products. For each 'visit' we have a shopping cart. Every time the customer chooses a product its added to their cart if its available in the warehouse. At the same time, the stock in the warehouse is reduced by one.
 
-Below you'll find a template for a text-based user interface for our store. Create a Store-class for your project and copy-paste the code below there.
+Below you'll find a template for a text-based user interface for our store. Create a `Store` class for your project and copy-paste the code below there.
 
 <!-- ```java
 import java.util.Scanner;
@@ -1963,8 +1967,8 @@ public class Store {
             }
 
             // Add code here that adds the product to the cart,
-            // IF there is any in the warehouse, and reduces the stock in the warehouse
-            // Dont't do touch any of the other code!
+            // If there is any in the warehouse, and reduces the stock in the warehouse
+            // Dont't touch any of the other code!
         }
 
         System.out.println("your shoppingcart contents:");
@@ -2008,7 +2012,7 @@ Warehouse warehouse = new Warehouse();
 
 The store is almost done. The method `public void shop(String customer)` has a part you need to complete, marked with comments. In the marked part, add code that checks if the product requested by the customer is available and has stock in the warehouse. If so, reduce the products stock in the warehouse and add the product to the shopping cart.
 
-*In reality an online store would be implemented a little differently. Web-apps have an HTML-page as a user interface, and clicks there are send to the server application. There are several courses related to web development available at the University Of Helsinki*
+*In reality an online store would be implemented a little differently. Web-apps have an HTML-page as a user interface, and clicks there are send to the server application. There are several courses related to web development available at the University Of Helsinki.*
 
 </programming-exercise>
 

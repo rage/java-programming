@@ -6,7 +6,7 @@ hidden: false
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 <!-- - Tunnet käsitteet metmetodin parametri, metodin palautusarvo ja ohjelman kutsupino. -->
 
 - You are familiar with the concepts of a method parameter, a method's return value, and a program's call stack.
@@ -2269,6 +2269,6 @@ The call `christmasTree(10)` should print:
 
 <!-- **Huom:** korkeuksien jotka ovat alle 3 ei tarvitse toimia! -->
 
-**NB:** heights shorter that 3 don't have work correctly!
+**NB:** heights shorter than 3 don't have to work correctly!
 
 </programming-exercise>

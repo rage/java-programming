@@ -39,13 +39,12 @@ const NavigationLink = styled(GatsbyLink)`
   width: 100%;
   background-color: white;
   ${props =>
-    props.active === "t" &&
-    `
+      props.active === "t" &&
+      `
     border-color: #f75b4b !important;
     background-color: #edeaea;
   `}
-
-  :hover {
+    :hover {
     text-decoration: none;
     color: black;
     background-color: #f5ebeb;

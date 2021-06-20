@@ -72,6 +72,7 @@
     "researchYes":"I will take part on the research. By selecting this option you will help current and future students.",
     "researchNo":"I will not take part on the research.",
     "save":"Save",
-    "fillRequired":"Fill the required fields."
+    "fillRequired":"Fill the required fields.",
+    "howSeeSolution":"You can see the solution in the Test My Code -service either in TMCBeans or in TMC website after completing the exercise."
 
 }

@@ -1,7 +1,7 @@
 ---
 path: '/part-13/1-graphical-user-interfaces'
 title: 'Graphical user interfaces'
-hidden: true
+hidden: false
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
@@ -45,7 +45,7 @@ A test library called [TestFX] (https://github.com/TestFX/TestFX/wiki) is used i
 </text-box>
 
 <!-- <text-box variant='hint' name='Tarvittavat oikeudet macOS:lla tehtävien testeihin'> -->
-<text-box variant='hint' name='Required Rights on macOS for Exercise Tests''>
+<text-box variant='hint' name='Required Rights on macOS for Exercise Tests'>
 
 <!-- Tämän osan tehtävissä osa testeistä odottaa, että tmcbeans saa vapaasti liikuttaa kursoria näytöllä. macOS-käyttöjärjestelmällä (Apple-tietokoneet) tähän tarvitsee antaa erikseen tmcbeansille oikeus. Täältä löytyy ohjeet, miten oikeus myönnetään: [macOS ohjeet](/macos-ohjeet) -->
 
@@ -107,6 +107,8 @@ When the launch method is called, the method of the Application class creates a 
 <programming-exercise name='My first application' tmcname='part13-Part13_01.MyFirstApplication'>
 
 <!-- Luo tehtäväpohjassa olevaan luokkaan graafinen käyttöliittymä, jonka otsikkona on "Sovellukseni". Sovelluksen tulee käynnistyä kun main-metodi suoritetaan. -->
+
+Create a GUI app with the title "My first application". The app should start when the main method is executed.
 
 </programming-exercise>
 
@@ -198,4 +200,4 @@ Käyttöliittymän rakenne on siis lyhyesti seuraava. Ikkuna sisältää Scene-o
 UI components are added as "children" to the object responsible for setting them -- FlowPane. This has to do with a JavaFx design decision, whereby each object responsible for UI components may contain other objects responsible for UI components as well as actual UI components. This enables GUIs where the layout of the UI components depends on their location on the user interface. For example, menu items located at the top of a UI are usually placed side by side, while list items are placed one below the other.
 
 
-To briefly summarize, the UI structure is as follows. The window contains a Scene object. The Scene object contains the object responsible for the layout of the user-interface components. The object responsible for the component layout can contain both UI components and objects responsible for UI component layouts. ->
+To briefly summarize, the UI structure is as follows. The window contains a Scene object. The Scene object contains the object responsible for the layout of the user-interface components. The object responsible for the component layout can contain both UI components and objects responsible for UI component layouts.

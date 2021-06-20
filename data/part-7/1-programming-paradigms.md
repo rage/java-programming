@@ -37,7 +37,7 @@ The most common programming paradigms today are object-oriented programming, pro
 
 <!-- Olio-ohjelmoinnissa käsiteltävä tieto esitetään luokkina, jotka kuvaavat ongelma-alueen käsitteitä sekä sovelluksen toimintalogiikkaa. Luokkiin määritellään metodit, jotka määräävät miten tietoa käsitellään. Ohjelman suorituksen aikana luokista luodaan olioita, jotka sisältävät ajonaikaisen tiedon, ja jotka myös vaikuttavat ohjelman suoritukseen: ohjelman suoritus etenee tyypillisesti olioihin liittyvien metodikutsujen kautta. Kuten joitakin viikkoja sitten totesimme, "ohjelma rakennetaan pienistä selkeistä yhteistoiminnassa olevista olioista". -->
 
-In object-oriented programming, information is represented as classes that describe the concepts of the problem domain and the logic of the application. Classes define the methods that determine how information is handled. During program execution, classes are instantiated from objects that contain runtime information and that also have an effect on program execution: program execution typically proceeds through a series of method calls related to the objects. As mentioned a few weeks ago, "the program is built from small, clear, and cooperative entities."
+In object-oriented programming, information is represented as classes that describe the concepts of the problem domain and the logic of the application. Classes define the methods that determine how information is handled. During program execution, objects are instantiated from classes that contain runtime information and that also have an effect on program execution: program execution typically proceeds through a series of method calls related to the objects. As mentioned a few weeks ago, "the program is built from small, clear, and cooperative entities."
 
 <!-- Olio-ohjelmoinnin perusideat eli tiedon ja sen käsittelyyn liittyvien toimintojen esittäminen luokkien ja olioiden avulla esiintyivät ensimmäisiä kertoja simulaatioiden rakentamiseen tarkoitetussa <a href="https://en.wikipedia.org/wiki/Simula" target="_blank" norel>Simula 67</a>:ssä sekä <a href="https://en.wikipedia.org/wiki/Smalltalk" target="_blank" norel>Smalltalk</a>-ohjelmointikielessä. Sen läpimurto tapahtui 1980-luvulla <a href="https://en.wikipedia.org/wiki/C%2B%2B" target="_blank" norel>C++</a>-ohjelmointikielen kautta ja siitä on muodostunut <a href="https://en.wikipedia.org/wiki/Java_(programming_language)" target="_blank" norel>Java</a>-ohjelmointikielen myötä yksi maailman eniten käytetty ohjelmointiparadigma. -->
 
@@ -292,7 +292,7 @@ public class Clock() {
     public Clock() {
         this.hours = new Hand(24);
         this.minutes = new Hand(60);
-        this.hours = new Hand(60);
+        this.seconds = new Hand(60);
     }
 
     public void advance() {
@@ -505,13 +505,13 @@ Make a class called Container. The class must have a constructor which does not 
  -  `public int contains()` which returns the amount of liquid in a container as an integer.
 
 <!-- - `public void add(int maara)` lisää parametrina annetun määrän nestettä säiliöön. Mikäli parametrin arvo on negatiivinen, ei nestettä lisätä. Lisäyksen jälkeen säiliössä on korkeintaan 100 yksikköä nestettä. -->
- -  `public void add(int amount)` which adds the amount of liquid given as a parameter to the container. If the amount is negative, no liquid is added.
- A container can hold maximum of 100 units of liquid.
+ -  `public void add(int amount)` which adds the amount of liquid given as a parameter to the container. If the amount is negative, no liquid is added. A container can hold a maximum of 100 units of liquid.
+
 <!-- - `public void remove(int maara)` poistaa parametrina annetun määrän nestettä säiliöstä. Mikäli parametrin arvo on negatiivinen, ei nestettä poisteta. Poistaminen poistaa vain olemassaolevaa nestettä -- poiston takia säiliössä ei voi koskaan olla alle nollaa nesteyksikköä. -->
  -  `public void remove(int amount)` which removes the amount of liquid given as a parameter from the container. If the amount is negative, no liquid is removed. A container can never hold less than 0 units of liquid.
 
 <!-- - `public String toString()` palauttaa olion merkkijonoesityksen muodossa "<em>sisalto</em>/100", esim "32/100". -->
- -  `public string toString()` which returns the container as a string formatted "<em>amoun of liquid</em>100, for example "32/100".
+ -  `public String toString()` which returns the container as a string formatted "<em>amount of liquid</em>/100, for example "32/100".
 
 
 <!-- Luokan käyttöesimerkki: -->

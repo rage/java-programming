@@ -1,64 +1,75 @@
 ---
 path: '/part-13/5-multiple-views'
 title: 'Multiple views'
-hidden: true
+hidden: false
 ---
 
-<text-box variant='learningObjectives' name='Oppimistavoitteet'>
+<!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'>
 
 - Harjoittelet useamman näkymän lisäämistä graafiseen käyttöliittymään.
 - Tunnet näkymän vaihtamiseen käytettäviä menetelmiä.
 - Tunnet menetelmiä sovelluslogiikan ja käyttöliittymälogiikan eriyttämiseen.
 
+</text-box> -->
+
+<text-box variant='learningObjectives' name='Learning Objectives'>
+
+- You proctice adding multiple views to a graphical interface.
+- You know methods for changing the view.
+- You know methods for separating the application logic and the user interface logic
+
 </text-box>
 
+<!-- Tähän mennessä toteuttamamme graafiset käyttöliittymät ovat sisältäneet aina yhden näkymän. Tutustutaan seuraavaksi useampia näkymiä sisältäviin käyttöliittymiin. -->
 
-Tähän mennessä toteuttamamme graafiset käyttöliittymät ovat sisältäneet aina yhden näkymän. Tutustutaan seuraavaksi useampia näkymiä sisältäviin käyttöliittymiin.
+Thus far our graphical interfaces have always included only one view. Next, we'll become familiar with user interfaces containing multiple views.
 
+<!-- Yleisesti ottaen näkymät luodaan Scene-olion avulla, joiden välillä siirtyminen tapahtuu sovellukseen kytkettyjen tapahtumien avulla. Alla olevassa esimerkissä on luotu kaksi erillistä Scene-oliota, joista kummallakin on oma sisältö sekä sisältöön liittyvä tapahtuma. Alla Scene-olioihin ei ole erikseen liitetty käyttöliittymän asetteluun käytettyä komponenttia (esim. BorderPane), vaan kummassakin Scene-oliossa on täsmälleen yksi käyttöliittymäkomponentti. -->
 
-Yleisesti ottaen näkymät luodaan Scene-olion avulla, joiden välillä siirtyminen tapahtuu sovellukseen kytkettyjen tapahtumien avulla. Alla olevassa esimerkissä on luotu kaksi erillistä Scene-oliota, joista kummallakin on oma sisältö sekä sisältöön liittyvä tapahtuma. Alla Scene-olioihin ei ole erikseen liitetty käyttöliittymän asetteluun käytettyä komponenttia (esim. BorderPane), vaan kummassakin Scene-oliossa on täsmälleen yksi käyttöliittymäkomponentti.
+Generally the views are created as Scene-objects and the transitioning between them happens with  events bound to the application. The example below has two Scene objects which both have their own content and an event related to the content. Instead of having an object for laying out components (such as BorderPane) in the example Scene objects, both objects have just one user interface component.
 
 
 ```java
-package sovellus;
+package application;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class EdesTakaisinSovellus extends Application {
+public class BackAndForthApplication extends Application {
 
   @Override
-  public void start(Stage ikkuna) {
+  public void start(Stage windows) {
 
-      Button edes = new Button("Edes ..");
-      Button takaisin = new Button(".. takaisin.");
+      Button back = new Button("Back ..");
+      Button forth = new Button(".. forth.");
 
-      Scene eka = new Scene(edes);
-      Scene toka = new Scene(takaisin);
+      Scene first = new Scene(back);
+      Scene second = new Scene(forth);
 
-      edes.setOnAction((event) -> {
-          ikkuna.setScene(toka);
+      back.setOnAction((event) -> {
+          window.setScene(second);
       });
 
-      takaisin.setOnAction((event) -> {
-          ikkuna.setScene(eka);
+      forth.setOnAction((event) -> {
+          window.setScene(first);
       });
 
-      ikkuna.setScene(eka);
-      ikkuna.show();
+      window.setScene(first);
+      window.show();
   }
 
   public static void main(String[] args) {
-      launch(EdesTakaisinSovellus.class);
+      launch(BackAndForthApplication.class);
   }
 }
 ```
 
 
-Edellä olevan sovelluksen käynnistäminen luo käyttöliittymän, jossa siirtyminen näkymästä toiseen onnistuu nappia painamalla.
+<!-- Edellä olevan sovelluksen käynnistäminen luo käyttöliittymän, jossa siirtyminen näkymästä toiseen onnistuu nappia painamalla. -->
 
+Starting the application above creates a user interface where one can transition from a view to another with the press of a button.
 
 <!-- <programming-exercise name='Useampi Näkymä' tmcname='osa13-Osa13_09.UseampiNakyma'> -->
 
@@ -87,20 +98,25 @@ When first started, the program should display the first view.
 </programming-exercise>
 
 
-## Oma asettelu jokaista näkymää varten
+<!-- ## Oma asettelu jokaista näkymää varten -->
 
+## Own layout for each view
 
-Tutustutaan seuraavaksi kaksi erillistä näkymää sisältävään esimerkkiin. Ensimmäisessä näkymässä käyttäjää pyydetään syöttämään salasana. Jos käyttäjä kirjoittaa väärän salasanan, väärästä salasanasta ilmoitetaan. Jos käyttäjä kirjoittaa oikean salasanan, ohjelma vaihtaa seuraavaan näkymään. Ohjelman toiminta on seuraavanlainen.
+<!-- Tutustutaan seuraavaksi kaksi erillistä näkymää sisältävään esimerkkiin. Ensimmäisessä näkymässä käyttäjää pyydetään syöttämään salasana. Jos käyttäjä kirjoittaa väärän salasanan, väärästä salasanasta ilmoitetaan. Jos käyttäjä kirjoittaa oikean salasanan, ohjelma vaihtaa seuraavaan näkymään. Ohjelman toiminta on seuraavanlainen. -->
+
+Let's get familiar with an example containing two different views. In the first view user is asked to input a password. If the user types a wrong password, the application informs the user about the mistakee. If the user types the correct passwod, the application switches to the next view. The program functions as follows:
 
 
 <img src="../img/material/gui-salasana.gif" />
 
 
-Näkymien välillä vaihtaminen tapahtuu kuten edellisessä esimerkissä. Konkreettinen vaihtotapahtuma on määritelty kirjautumisnappiin. Nappia painettaessa ohjelma tarkastaa salasanakenttään kirjoitetun salasanan -- tässä toivotaan, että käyttäjä kirjoittaa "salasana". Jos salasana on oikein, ikkunan näyttämä näkymä vaihdetaan. Esimerkissämme näkymä sisältää vain tekstin "Tervetuloa, tästä se alkaa!".
+<!-- Näkymien välillä vaihtaminen tapahtuu kuten edellisessä esimerkissä. Konkreettinen vaihtotapahtuma on määritelty kirjautumisnappiin. Nappia painettaessa ohjelma tarkastaa salasanakenttään kirjoitetun salasanan -- tässä toivotaan, että käyttäjä kirjoittaa "salasana". Jos salasana on oikein, ikkunan näyttämä näkymä vaihdetaan. Esimerkissämme näkymä sisältää vain tekstin "Tervetuloa, tästä se alkaa!". -->
+
+Switching between views happens like in the previous example. The concrete switching event has been bound to the login button. When pressing the button, the application checks the password typed to the password field -- here we're hoping that the user writes "password". If the password is correct, the view of the window is changed. In our example the view only includes the text "Welcome, this is the beginning!".
 
 
 ```java
-package sovellus;
+package application;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -113,72 +129,72 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class SalattuSovellus extends Application {
+public class PasswordProtectedApplication extends Application {
 
   @Override
-  public void start(Stage ikkuna) throws Exception {
+  public void start(Stage window) throws Exception {
 
-      // 1. Luodaan salasanan kysymiseen käytetty näkymä
+      // 1. Creating the view for asking a password
 
-      // 1.1 luodaan käytettävät komponentit
-      Label ohjeteksti = new Label("Kirjoita salasana ja paina kirjaudu");
-      PasswordField salasanakentta = new PasswordField();
-      Button aloitusnappi = new Button("Kirjaudu");
-      Label virheteksti = new Label("");
+      // 1.1 Creating components to be used
+      Label instructionText = new Label("Write the password and press Log in");
+      PasswordField passwordField = new PasswordField();
+      Button startButton = new Button("Log in");
+      Label errorMessage = new Label("");
 
-      // 1.2 luodaan asettelu ja lisätään komponentit siihen
-      GridPane asettelu = new GridPane();
+      // 1.2 creating layout and adding components to it
+      GridPane layout = new GridPane();
 
-      asettelu.add(ohjeteksti, 0, 0);
-      asettelu.add(salasanakentta, 0, 1);
-      asettelu.add(aloitusnappi, 0, 2);
-      asettelu.add(virheteksti, 0, 3);
+      layout.add(instructionText, 0, 0);
+      layout.add(passwordField, 0, 1);
+      layout.add(startButton, 0, 2);
+      layout.add(errorMessage, 0, 3);
 
-      // 1.3 tyylitellään asettelua
-      asettelu.setPrefSize(300, 180);
-      asettelu.setAlignment(Pos.CENTER);
-      asettelu.setVgap(10);
-      asettelu.setHgap(10);
-      asettelu.setPadding(new Insets(20, 20, 20, 20));
+      // 1.3 styling the layout
+      layout.setPrefSize(300, 180);
+      layout.setAlignment(Pos.CENTER);
+      layout.setVgap(10);
+      layout.setHgap(10);
+      layout.setPadding(new Insets(20, 20, 20, 20));
 
-      // 1.4 luodaan itse näkymä ja asetetaan asettelu siihen
-      Scene salasanaNakyma = new Scene(asettelu);
+      // 1.4 creating the view itself and setting it to use the layout
+      Scene passwordView = new Scene(layout);
 
+      // 2. Creating a view for showing the welcome message
+      Label welcomeText = new Label("Welcome, this is the beginning!");
 
-      // 2. Luodaan tervetuloa-tekstin näyttämiseen käytetty näkymä
-      Label tervetuloaTeksti = new Label("Tervetuloa, tästä se alkaa!");
+      StackPane welcomeLayout = new StackPane();
+      welcomeLayout.setPrefSize(300, 180);
+      welcomeLayout.getChildren().add(welcomeText);
+      welcomeLayout.setAlignment(Pos.CENTER);
 
-      StackPane tervetuloaAsettelu = new StackPane();
-      tervetuloaAsettelu.setPrefSize(300, 180);
-      tervetuloaAsettelu.getChildren().add(tervetuloaTeksti);
-      tervetuloaAsettelu.setAlignment(Pos.CENTER);
+      Scene welcomeView = new Scene(welcomeLayout);
 
-      Scene tervetuloaNakyma = new Scene(tervetuloaAsettelu);
-
-
-      // 3. Lisätään salasanaruudun nappiin tapahtumankäsittelijä
-      //    näkymää vaihdetaan jos salasana on oikein
-      aloitusnappi.setOnAction((event) -> {
-          if (!salasanakentta.getText().trim().equals("salasana")) {
-              virheteksti.setText("Tuntematon salasana!");
+      // 3. Adding an event handler to the login button.
+      // The view is changed if the password is right.
+      startButton.setOnAction((event) -> {
+          if (!passwordField.getText().trim().equals("password")) {
+              errorMessage.setText("Unknown password!");
               return;
           }
 
-          ikkuna.setScene(tervetuloaNakyma);
+          window.setScene(welcomeView);
       });
 
-      ikkuna.setScene(salasanaNakyma);
-      ikkuna.show();
+      window.setScene(passwordView);
+      window.show();
   }
 
   public static void main(String[] args) {
-      launch(SalattuSovellus.class);
+      launch(PasswordProtectedApplication.class);
   }
 }
 ```
 
 
-Esimerkissä on hyödynnetty sekä GridPanen että StackPanen asettelussa niiden tarjoamia setPrefSize ja setAlignment-metodeja. Metodilla setPrefSize annetaan asettelulle toivottu koko, ja metodilla setAlignment kerrotaan miten asettelun sisältö tulee ryhmittää. Parametrilla Pos.CENTER toivotaan asettelua näkymän keskelle.
+<!-- Esimerkissä on hyödynnetty sekä GridPanen että StackPanen asettelussa niiden tarjoamia setPrefSize ja setAlignment-metodeja. Metodilla setPrefSize annetaan asettelulle toivottu koko, ja metodilla setAlignment kerrotaan miten asettelun sisältö tulee ryhmittää. Parametrilla Pos.CENTER toivotaan asettelua näkymän keskelle. -->
+
+The example takes advantage of GridPane's and StackPane's built in setPrefSize and setAlignMents -methods for layout. Method setPrefSize takes the preferred size of the layout as and arguments and the setAlignMent-method is used to define how the content of the layout should be aligned. The parameter Pos.CENTER is used for asking the content to be placed to the center of the application
 
 
 <!-- <programming-exercise name='Tervehtijä' tmcname='osa13-Osa13_10.Tervehtija'> -->
@@ -197,16 +213,21 @@ An example of how the program should work:
 
 </programming-exercise>
 
+<!-- ## Sama pääasettelu näkymillä -->
 
-## Sama pääasettelu näkymillä
+## Views with the same main alignment
 
-Riippuen sovelluksen käyttötarpeesta, joskus sovellukselle halutaan pysyvä näkymä, jonka osia vaihdetaan tarvittaessa. Jonkinlaisen valikon tarjoavat ohjelmat toimivat tyypillisesti tällä tavalla.
+<!-- Riippuen sovelluksen käyttötarpeesta, joskus sovellukselle halutaan pysyvä näkymä, jonka osia vaihdetaan tarvittaessa. Jonkinlaisen valikon tarjoavat ohjelmat toimivat tyypillisesti tällä tavalla. -->
 
-Alla olevassa esimerkissä on luotu sovellus, joka sisältää päävalikon sekä vaihtuvasisältöisen alueen. Vaihtuvasisältöisen alueen sisältö vaihtuu päävalikon nappeja painamalla.
+Sometimes one wants an application to have a permanent view whose parts are swapped when needed. Typically applications that have some kind of menus function in this manner.
 
+<!-- Alla olevassa esimerkissä on luotu sovellus, joka sisältää päävalikon sekä vaihtuvasisältöisen alueen. Vaihtuvasisältöisen alueen sisältö vaihtuu päävalikon nappeja painamalla. -->
 
+In the example below, there is a application which contains a main menu and an area with variable content. When pressing the buttons on the main menu the the content of the content area changes.
+
+<!--
 ```java
-package sovellus;
+package application;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -219,7 +240,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class EsimerkkiSovellus extends Application {
+public class ExampleApplication extends Application {
 
     @Override
     public void start(Stage ikkuna) throws Exception {
@@ -275,15 +296,96 @@ public class EsimerkkiSovellus extends Application {
     }
 
     public static void main(String[] args) {
-        launch(EsimerkkiSovellus.class);
+        launch(ExampleApplication.class);
+    }
+}
+```
+-->
+
+```java
+package application;
+
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+
+public class ExampleApplication extends Application {
+
+    @Override
+    public void start(Stage window) throws Exception {
+
+        // 1. Create main layout
+        BorderPane layout = new BorderPane();
+
+        // 1.1. Create menu for main layout
+        HBox menu = new HBox();
+        menu.setPadding(new Insets(20, 20, 20, 20));
+        menu.setSpacing(10);
+
+        // 1.2. Create buttons for menu
+        Button first = new Button("First");
+        Button second = new Button("Second");
+
+        // 1.3. Add buttons to menu
+        menu.getChildren().addAll(first, second);
+
+        layout.setTop(menu);
+
+
+        // 2. Add subviews and add them to the menu buttons
+        // 2.1. Create subview layout 
+        StackPane firstLayout = createView("First view");
+        StackPane secondLayout = createView("Second view");
+
+        // 2.2. Add subviews to button. Pressing the buttons will change the view
+        first.setOnAction((event) -> layout.setCenter(firstLayout));
+        second.setOnAction((event) -> asettelu.setCenter(secondLayout));
+
+        // 2.3. Set initial view
+        layout.setCenter(firstLayout);
+
+
+        // 3. Create main scene with layout 
+        Scene scene = new Scene(asettelu);
+
+
+        // 4. Show the main scene
+        window.setScene(scene);
+        window.show();
+    }
+
+    private StackPane createView(String text) {
+
+        StackPane layout = new StackPane();
+        layout.setPrefSize(300, 180);
+        layout.getChildren().add(new Label(text));
+        layout.setAlignment(Pos.CENTER);
+
+        return layout;
+    }
+
+    public static void main(String[] args) {
+        launch(ExampleApplication.class);
     }
 }
 ```
 
 
-Sovellus toimii seuraavalla tavalla:
+<!-- Sovellus toimii seuraavalla tavalla: -->
 
-<img src="../img/material/gui-nakyman-vaihto.gif" alt="Sovellus, joka sisältää valikon. Valikossa olevia nappeja painamalla voidaan vaihtaa sovelluksessa näkyvää sisältöä."/>
+The program functions as follows:
+
+
+<!-- <img src="../img/material/gui-nakyman-vaihto.gif" alt="Sovellus, joka sisältää valikon. Valikossa olevia nappeja painamalla voidaan vaihtaa sovelluksessa näkyvää sisältöä."/> -->
+
+<img src="../img/material/gui-nakyman-vaihto.gif" alt="Application which contains a menu. By pressing the buttons in the menu on is able to change the content of the applivation."/>
 
 
 <!-- <programming-exercise name='Vitsi' tmcname='osa13-Osa13_11.Vitsi'> -->
@@ -302,35 +404,44 @@ By default (when it starts) the program should show a joke-related question. Use
 
 
 
-## Sovelluslogiikan ja käyttöliittymälogiikan eriyttäminen
+<!-- ## Sovelluslogiikan ja käyttöliittymälogiikan eriyttäminen -->
+
+## Separating application logic and user interface logic
+
+<!-- Sovelluslogiikan (esimerkiksi ristinollan rivien tarkastamiseen tai vuorojen ylläpitoon liittyvä toiminnallisuus) ja käyttöliittymän pitäminen samassa luokassa tai samoissa luokissa on yleisesti ottaen huono asia. Se vaikeuttaa ohjelman testaamista ja muokkaamista huomattavasti ja tekee lähdekoodista myös vaikeammin luettavaa. Motto "Jokaisella luokalla pitäisi olla vain yksi selkeä vastuu" pätee hyvin tässäkin. -->
+
+Keeping the application logic and user interface logic in the same class or in the same classes is usually a bad idea. It makes testing and editing the application considerably more difficult and also makes the source code harder to read. The principle "Each class should have only one clear responsibility" applies well here too.
 
 
-Sovelluslogiikan (esimerkiksi ristinollan rivien tarkastamiseen tai vuorojen ylläpitoon liittyvä toiminnallisuus) ja käyttöliittymän pitäminen samassa luokassa tai samoissa luokissa on yleisesti ottaen huono asia. Se vaikeuttaa ohjelman testaamista ja muokkaamista huomattavasti ja tekee lähdekoodista myös vaikeammin luettavaa. Motto "Jokaisella luokalla pitäisi olla vain yksi selkeä vastuu" pätee hyvin tässäkin.
+<!-- Tarkastellaan sovelluslogiikan erottamista käyttöliittymälogiikasta. Oletetaan, että käytössämme on seuraavan rajapinnan toteuttava olio ja haluamme toteuttaa käyttöliittymän henkilöiden tallentamiseen. -->
 
-
-Tarkastellaan sovelluslogiikan erottamista käyttöliittymälogiikasta. Oletetaan, että käytössämme on seuraavan rajapinnan toteuttava olio ja haluamme toteuttaa käyttöliittymän henkilöiden tallentamiseen.
+Let's inspect separating application logic from user interface logic. Let's suppose that we have an object using the following interface and we want to create a user interface for saving applications.
 
 
 ```java
-public interface Henkilovarasto {
-    void talleta(Henkilo henkilo);
-    Henkilo hae(String henkilotunnus);
+public interface PersonWarehouse {
+    void save(Person person);
+    Person search(String socialSecurityNumber);
 
-    void poista(Henkilo henkilo);
-    void poista(String henkilotunnus);
-    void poistaKaikki();
+    void delete(Person person);
+    void delete(String socialSecurityNumber);
+    void deleteAll();
 
-    Collection<Henkilo> haeKaikki();
+    Collection<Person> getAll();
 }
 ```
 
+<!-- Käyttöliittymää toteutettaessa hyvä aloitustapa on ensin käyttöliittymän piirtäminen, jota seuraa sopivien käyttöliittymäkomponenttien lisääminen käyttöliittymään. Henkilöiden tallennuksessa tarvitsemme kentät nimelle ja henkilötunnukselle sekä napin jolla henkilö voidaan lisätä. Käytetään luokkaa TextField nimen ja henkilötunnuksen syöttämiseen ja luokkaa Button napin toteuttamiseen. Luodaan käyttöliittymään lisäksi käyttöliittymän toiminnallisuutta selventävät Label-tyyppiset selitystekstit. -->
 
-Käyttöliittymää toteutettaessa hyvä aloitustapa on ensin käyttöliittymän piirtäminen, jota seuraa sopivien käyttöliittymäkomponenttien lisääminen käyttöliittymään. Henkilöiden tallennuksessa tarvitsemme kentät nimelle ja henkilötunnukselle sekä napin jolla henkilö voidaan lisätä. Käytetään luokkaa TextField nimen ja henkilötunnuksen syöttämiseen ja luokkaa Button napin toteuttamiseen. Luodaan käyttöliittymään lisäksi käyttöliittymän toiminnallisuutta selventävät Label-tyyppiset selitystekstit.
+When implementing a user interface a good starting point is drawing the interface followed bt adding appropriate user interface components to the user interface. When saving persons to a database we need a field for name, a field for social security number and a button for adding the person. In addition we'll also create
 
-
+<!--
 Käytetään käyttöliittymän asetteluun `GridPane`-asettelijaa. Rivejä käyttöliittymässä on 3, sarakkeita 2. Lisätään tapahtumien käsittelytoiminnallisuus myöhemmin. Käyttöliittymän alustusmetodi näyttää seuraavalta.
+-->
 
+Lets use `GridPane` class for the layout. There are 3 rows and 2 columns in the user interface. We'll add the event handling later. The initialization method is as follows:
 
+<!--
 ```java
 @Override
 public void start(Stage ikkuna) {
@@ -360,13 +471,50 @@ public void start(Stage ikkuna) {
     ikkuna.show();
 }
 ```
+-->
 
+```java
+@Override
+public void start(Stage window) {
+
+    Label nameText = new Label("Name: ");
+    TextField nameField = new TextField();
+    Label secText = new Label("Social security number: ");
+    TextField secField = new TextField();
+
+    Button addButton = new Button("Add person!");
+
+    GridPane components = new GridPane();
+    components.add(nameText, 0, 0);
+    components.add(nameField, 1, 0);
+    components.add(secText, 0, 1);
+    components.add(secField, 1, 1);
+    components.add(addButton, 1, 2);
+
+    // Add some style to the ui
+    components.setHgap(10);
+    components.setVgap(10);
+    components.setPadding(new Insets(10, 10, 10, 10));
+
+    Scene scene = new Scene(components);
+
+    window.setScene(scene);
+    window.show();
+}
+```
+<!--
 <img src="../img/material/gui-lisaa-henkilo.png" alt="Kaksi tekstikenttää sekä nappi, jossa on teksti 'Kopioi'."/>
+--->
 
+<img src="../img/material/gui-lisaa-henkilo.png" alt="Two text fields and a button"/>
 
+<!--
 Luodaan seuraavaksi ohjelmaan ActionEvent-rajapinnan toteuttava olio, joka lisää kenttien arvot Henkilovarasto-rajapinnalle.
+-->
 
+Next lets add an object that implements the ActionEvent interface that adds field values to PersonWarehouse interface.
 
+<!--
 ```java
 @Override
 public void start(Stage ikkuna) {
@@ -378,10 +526,27 @@ public void start(Stage ikkuna) {
     // ...
 }
 ```
+-->
 
+```java
+@Override
+public void start(Stage window) {
+    // ...
+
+    addButton.setOnAction((event) -> {
+        warehouse.talleta(new Person(nameText.getText(), secText.getText());
+    });
+    // ...
+}
+```
+
+<!--
 Mutta. Mistä saamme konkreettisen Henkilovarasto-olion? Se luodaan esimerkiksi start-metodin alussa. Alla annettuna koko sovelluksen runko.
+-->
 
+But where do we get the actual PersonWarehouse-object? It is created at the beginning of the start method. Below is the code in whole.
 
+<!--
 ```java
 // pakkaus
 
@@ -434,7 +599,59 @@ public class HenkiloSovellus extends Application {
     }
 }
 ```
+-->
 
+```java
+
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
+
+public class PersonApp extends Application {
+
+    @Override
+    public void start(Stage window) {
+        PersonWarehouse warehouse = new MyPersonWarehouse();
+
+        Label nameText = new Label("Name: ");
+        TextField nameField = new TextField();
+        Label secText = new Label("Social security number: ");
+        TextField secField = new TextField();
+
+        Button addButton = new Button("Add person!");
+
+        addButton.setOnAction((event) -> {
+            warehouse.talleta(new Person(nameText.getText(), secText.getText());
+        });
+
+        GridPane components = new GridPane();
+        components.add(nameText, 0, 0);
+        components.add(nameField, 1, 0);
+        components.add(secText, 0, 1);
+        components.add(secField, 1, 1);
+        components.add(addButton, 1, 2);
+
+        // Add some style to the ui
+        components.setHgap(10);
+        components.setVgap(10);
+        components.setPadding(new Insets(10, 10, 10, 10));
+
+        Scene scene = new Scene(components);
+
+        window.setScene(scene);
+        window.show();
+    }
+
+    public static void main(String[] args) {
+        launch(PersonApp.class);
+    }
+}
+```
 
 ## A slightly larger application: Vocabulary practice
 
@@ -510,7 +727,7 @@ public class Dictionary {
         this.words = new ArrayList<>();
         this.translations = new HashMap<>();
 
-        lisaa("sana", "word");
+        add("sana", "word");
     }
 
     public String get(String word) {

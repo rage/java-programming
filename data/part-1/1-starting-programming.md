@@ -4,7 +4,7 @@ title: "Getting started with programming"
 hidden: false
 ---
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 <!-- - Tutustut kurssilla käytettyyn NetBeans with TMC -ohjelmointiympäristöön. -->
 

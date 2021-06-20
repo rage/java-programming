@@ -1,16 +1,17 @@
 ---
 path: '/part-12/3-randomness'
 title: 'Randomness'
-hidden: true
+hidden: false
 ---
 
 
-<text-box variant='learningObjectives' name='Oppimistavoitteet'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 <!-- - Tiedät miten satunnaislukuja luodaan ja tiedät joitakin tilanteita missä satunnaislukuja tarvitaan. -->
 <!-- - Osaat käyttää Javan valmista Random-luokkaa satunnaislukujen luomiseen. -->
 - Know how to generate random numbers, and know some situations where random numbers are needed.
- - Can use Java `Random` class to generate random numbers.
+- Can use Java `Random` class to generate random numbers.
+
 </text-box>
 
 <!-- Satunnaisuutta tarvitaan esimerkiksi salausalgoritmeissa, koneoppimisessa sekä tietokonepelien ennustettavuuden vähentämisessä. Satunnaisuutta mallinnetaan käytännössä satunnaislukujen avulla, joiden luomiseen Java tarjoaa valmiin `Random`-luokan. Random-luokasta voi tehdä olion jota voi käyttää seuraavalla tavalla. -->

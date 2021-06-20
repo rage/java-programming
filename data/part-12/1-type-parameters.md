@@ -1,12 +1,12 @@
 ---
 path: '/part-12/1-type-parameters'
 title: 'Type parameters'
-hidden: true
+hidden: false
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 <!-- - Tiedät mitä käsitteellä geneerinen tyyppiparametri tarkoitetaan. -->
 
@@ -25,7 +25,7 @@ hidden: true
 
 <!-- Olemme listoihin tutustumisesta lähtien kertoneet tietorakenteille niiden sisältämän arvon tyypin. Esimerkiksi merkkijono-olioita sisältävä lista on esitelty muodossa `ArrayList<String>` ja merkkijonoja avaimina ja arvoina sisältävä hajautustaulu on esitelty muodossa `HashMap<String, String>`. Miten ihmeessä luokan voi toteuttaa niin, että luokka voi sisältää annetun tyyppisiä olioita? -->
 
-Since we began using lists, we have given data structures the type of the values that we want them to store. For example, a list that stores strings has been defined as `ArrayList<String>`, and a hash map that stores keys and values as Strings has been defined as `HashMap<String, String>`. How an Earth can you implement a class that can contain objects of a given type?
+Since we began using lists, we have given data structures the type of the values that we want them to store. For example, a list that stores strings has been defined as `ArrayList<String>`, and a hash map that stores keys and values as Strings has been defined as `HashMap<String, String>`. How on Earth can you implement a class that can contain objects of a given type?
 
 <!-- Geneerisyys (*generics*) liittyy olioita säilövien luokkien tapaan säilöä vapaavalintaisen tyyppisiä olioita. Vapaavalintaisuus perustuu luokkien määrittelyssä käytettyyn geneeriseen tyyppiparametriin, jonka avulla voidaan määritellä *olion luontivaiheessa* valittavia tyyppejä. Luokan geneerisyys määritellään antamalla luokan nimen jälkeen haluttu määrä luokan tyyppiparametreja luokan nimen jälkeen tulevien pienempi kuin ja suurempi kuin -merkkien väliin `public class Luokka<Tyyppiparametri1, Tyyppiparametri2, ...>`. Tyyppiparametrit määritellään tyypillisesti yhdellä kirjaimella. -->
 
@@ -66,7 +66,7 @@ public class Locker<T> {
 
 <!-- Määrittely `public class Lokero<T>` kertoo että luokalle `Lokero` tulee antaa konstruktorissa tyyppiparametri. Konstruktorikutsun jälkeen kaikki olion sisäiset muuttujat tulevat olemaan kutsun yhteydessä annettua tyyppiä. Luodaan merkkijonon tallentava lokero. -->
 
-The definition `public class Locker<T>` indicates that the `Locker` class msut be given a type parameter in its constructor. After the constructor call is executed, all the variables stored in that object are going to be of the type that was given with the constructor. Let's create a locker for storing strings.
+The definition `public class Locker<T>` indicates that the `Locker` class must be given a type parameter in its constructor. After the constructor call is executed, all the variables stored in that object are going to be of the type that was given with the constructor. Let's create a locker for storing strings.
 
 
 <!-- ```java
@@ -287,7 +287,7 @@ public class MovieList implements List<Movie> {
     // object variables
 
     @Override
-    public void add(Movie arvo) {
+    public void add(Movie value) {
         // implementation
     }
 
@@ -534,7 +534,7 @@ Implement a class called Pipe, which has a single generic parameter type. The pi
 
 <!-- - `public void lisaaPutkeen(T arvo)` lisää putkeen luokan tyyppiparametrin mukaisen olion. -->
 
-- `public void putIntoPipe(T arvo)` puts an object with a type in accordance with the type parameter given to the the class into the pipe.
+- `public void putIntoPipe(T value)` puts an object with a type in accordance with the type parameter given to the the class into the pipe.
 
 <!-- - `public T otaPutkesta()` ottaa putkesta siellä pisimpään olleen arvon. Mikäli putkessa ei ole mitään, palautetaan `null`. Metodin kutsuminen palauttaa putkessa pisimpään olleen olion ja poistaa sen putkesta. -->
 

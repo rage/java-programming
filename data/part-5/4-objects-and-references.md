@@ -8,7 +8,7 @@ hidden: false
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 
 <!-- - Kertaat luokkien ja olioiden toimintaa. -->
@@ -924,7 +924,7 @@ public static void main(String[] args) {
 public static void main(String[] args) {
     // example main program for the first section of the exercise
 
-    HealthStation childrensHospital = new HealthInstitution();
+    HealthStation childrensHospital = new HealthStation();
 
     Person ethan = new Person("Ethan", 1, 110, 7);
     Person peter = new Person("Peter", 33, 176, 85);
@@ -1472,7 +1472,7 @@ public class MainProgram {
         double change = unicafeExactum.eatAffordably(10);
         System.out.println("remaining change: " + change);
 
-        Maksukortti annesCard = new PaymentCard(7);
+        PaymentCard annesCard = new PaymentCard(7);
 
         boolean wasSuccessful = unicafeExactum.eatHeartily(annesCard);
         System.out.println("there was enough money: " + wasSuccessful);
@@ -1807,7 +1807,7 @@ Blaise Pascal, born on 19.6.1623
 
 <!-- Henkilöoliolla on nyt oliomuuttujat `nimi` ja `syntymapaiva`. Muuttuja `nimi` on merkkijono, joka sekin on siis olio, ja muuttuja `syntymapaiva` on Päiväysolio. -->
 
-Now a person object has object variables `name` and `birthday`. The variable `name` is a string, which itself is an object; the variable `birthday is an SimpleDate object.
+Now a person object has object variables `name` and `birthday`. The variable `name` is a string, which itself is an object; the variable `birthday` is a SimpleDate object.
 
 
 <!-- Molemmat muuttujat sisältävät arvon olioon. Henkilöolio sisältää siis kaksi viitettä. Alla olevassa kuvassa paino ja pituus on jätetty huomiotta. -->
@@ -1819,7 +1819,7 @@ Both variables contain a reference to an object. Therefore a person object conta
 
 <!-- Pääohjelmalla on nyt siis langan päässä kaksi Henkilö-olioa. Henkilöllä on nimi ja syntymäpäivä. Koska molemmat ovat olioita, ovat ne henkilöllä langan päässä. -->
 
-So the main program has is connected to two Person objects by strands. A person has a name and a birthday. Since both variables are objects, these attributes exist at the other ends of the strands.
+So the main program is connected to two Person objects by strands. A person has a name and a birthday. Since both variables are objects, these attributes exist at the other ends of the strands.
 
 
 <!-- Syntymäpäivä vaikuttaa hyvältä laajennukselta Henkilö-luokkaan. Totesimme aiemmin, että oliomuuttuja `ika` voidaan laskea syntymäpäivästä, joten siitä hankkiuduttiin eroon. -->
@@ -2261,14 +2261,14 @@ public static void main(String[] args) {
     SimpleDate d3 = new SimpleDate(1, 3, 2011);
     SimpleDate d4 = new SimpleDate(31, 12, 2010);
 
-    System.out.println(p1 + " is earlier than " + p2 + ": " + p1.before(p2));
-    System.out.println(p2 + " is earlier than " + p1 + ": " + p2.before(p1));
+    System.out.println(d1 + " is earlier than " + d2 + ": " + p1.before(p2));
+    System.out.println(d2 + " is earlier than " + d1 + ": " + p2.before(p1));
 
-    System.out.println(p2 + " is earlier than " + p3 + ": " + p2.before(p3));
-    System.out.println(p3 + " is earlier than " + p2 + ": " + p3.before(p2));
+    System.out.println(d2 + " is earlier than " + d3 + ": " + p2.before(p3));
+    System.out.println(d3 + " is earlier than " + d2 + ": " + p3.before(p2));
 
-    System.out.println(p4 + " is earlier than " + p1 + ": " + p4.before(p1));
-    System.out.println(p1 + " is earlier than " + p4 + ": " + p1.before(p4));
+    System.out.println(d4 + " is earlier than " + d1 + ": " + p4.before(p1));
+    System.out.println(d1 + " is earlier than " + d4 + ": " + p1.before(p4));
 }
 ```
 
@@ -2406,8 +2406,8 @@ Apartment manhattanStudioApt = new Apartment(1, 16, 5500);
 Apartment atlantaTwoBedroomApt = new Apartment(2, 38, 4200);
 Apartment bangorThreeBedroomApt = new Apartment(3, 78, 2500);
 
-System.out.println(manhattanStudioApt.largerThan(atlantaTwoBedroomApt)); // false
-System.out.println(bangorThreeBedroomApt.largerThan(atlantaTwoBedroomApt)); // true
+System.out.println(manhattanStudioApt.largerThan(atlantaTwoBedroomApt));       // false
+System.out.println(bangorThreeBedroomApt.largerThan(atlantaTwoBedroomApt));  // true
 ```
 
 <!-- <h2>Asuntojen hintaero</h2> -->
@@ -2437,8 +2437,8 @@ Apartment manhattanStudioApt = new Apartment(1, 16, 5500);
 Apartment atlantaTwoBedroomApt = new Apartment(2, 38, 4200);
 Apartment bangorThreeBedroomApt = new Apartment(3, 78, 2500);
 
-System.out.println(manhattanSingleRoomApt.priceDifference(atlantaTwoRoomApt));  //71600
-System.out.println(bangorThreeRoomApt.priceDifference(atlantaTwoRoomApt));   //35400
+System.out.println(manhattanStudioApt.priceDifference(atlantaTwoBedroomApt));  //71600
+System.out.println(bangorThreeBedroomApt.priceDifference(atlantaTwoBedroomApt));   //35400
 ```
 
 
@@ -2469,8 +2469,8 @@ Apartment manhattanStudioApt = new Apartment(1, 16, 5500);
 Apartment atlantaTwoBedroomApt = new Apartment(2, 38, 4200);
 Apartment bangorThreeBedroomApt = new Apartment(3, 78, 2500);
 
-System.out.println(manhattanStudioApt.moreExpensiveThan(atlantaTwoBedroomApt));  // true
-System.out.println(bangorThreeBedroomApt.moreExpensiveThan(atlantaTwoBedroomApt));   // false
+System.out.println(manhattanStudioApt.moreExpensiveThan(atlantaTwoBedroomApt));  // false
+System.out.println(bangorThreeBedroomApt.moreExpensiveThan(atlantaTwoBedroomApt));   // true
 ```
 
 </programming-exercise>
@@ -2482,7 +2482,7 @@ System.out.println(bangorThreeBedroomApt.moreExpensiveThan(atlantaTwoBedroomApt)
 
 <!-- Opimme merkkijonojen käsittelyn yhteydessä, että merkkijonojen vertailu tulee toteuttaa `equals`-metodin avullla. Tämä tapahtuu seuraavasti. -->
 
-Working with strings, we learned that comparison between strings must be done with the `equals` method. This is how it's done.
+While working with strings, we learned that strings must be compared using the `equals` method. This is how it's done.
 
 <!-- ```java
 Scanner lukija = new Scanner(System.in);
@@ -2608,12 +2608,12 @@ There is a problem with the program above. Even though two dates (first and seco
 
 <!-- Mikäli haluamme pystyä vertailemaan kahta itse toteuttamaamme oliota equals-metodilla, tulee metodi määritellä luokkaan. Metodi equals määritellään boolean-tyyppisen arvon palauttavana metodina -- palautettu arvo kertoo ovatko oliot samat. -->
 
-If we want to be able to compare two objects of our own design with the equals method, that method must be defined in the class. The method equals is defined as a method that returns a boolean type value -- the return value indicates whether the objects are equal.
+If we want to be able to compare two objects of our own design with the `equals` method, that method must be defined in the class. The method `equals` is defined as a method that returns a boolean type value -- the return value indicates whether the objects are equal.
 
 
 <!-- Metodi `equals` toteutetaan siten, että sen avulla voidaan vertailla nykyistä oliota mihin tahansa muuhun olioon. Metodi saa parametrinaan Object-tyyppisen olion -- kaikki oliot ovat oman tyyppinsä lisäksi Object-tyyppisiä. Metodissa ensin vertaillaan ovatko osoitteet samat: jos kyllä, oliot ovat samat. Tämän jälkeen tarkastellaan ovatko olion tyypit samat: jos ei, oliot eivät ole samat. Tämän jälkeen parametrina saatu Object-olio muunnetaan tyyppimuunnoksella tarkasteltavan olion muotoiseksi, ja oliomuuttujien arvoja vertaillaan. Alla vertailu on toteutettu Paivays-oliolle. -->
 
-The method `equals` is implemented in a way that allows for using it to compare the current object with any other object. The method receives an Object type object as its single parameter -- all objects are Object type, in addition to their own type. The equals method first compares if the addresses are equal: if so, the objects are equal. After this, we examine if the types of the objects are the same: if not, the objects are not equal. Then the Object object passed as the parameter is converted to the type of the object that is being examined by using a type cast. Then the values of the object variables can be compared. Below the equality comparison has been implemented for the SimpleDate class.
+The `equals` method is implemented in such a way that it can be used to compare the current object with any other object. The method receives an `Object`-type object as its single parameter -- all objects are `Object`-type, in addition to their own type. The `equals` method first compares if the addresses are equal: if so, the objects are equal. After this, we examine if the types of the objects are the same: if not, the objects are not equal. Next, the `Object`-type object passed as the parameter is converted to the type of the object that is being examined by using a type cast, so that the values of the object variables can be compared. Below the equality comparison has been implemented for the SimpleDate class.
 
 
 <!-- ```java
@@ -2709,7 +2709,7 @@ public class SimpleDate {
         }
 
         // convert the Object type compared object
-        // into an SimpleDate type object called comparedSimpleDate
+        // into a SimpleDate type object called comparedSimpleDate
         SimpleDate comparedSimpleDate = (SimpleDate) compared;
 
         // if the values of the object variables are the same, the objects are equal
@@ -2732,7 +2732,7 @@ public class SimpleDate {
 
 <!-- Vastaavan vertailutoiminnallisuuden rakentaminen onnistuu myös Henkilö-olioille. Alla vertailu on toteutettu Henkilo-oliolle, jolla ei ole erillista Paivays-oliota. Huomaa, että henkilöiden nimet ovat merkijonoja (eli olioita), joten niiden vertailussa käytetään equals-metodia. -->
 
-Building a similar comparison functionality is possible for Person objects, too. Below, the comparison has been implemented for Person objects that don't have a separate SimpleDate object. Notice that the names of people are strings (i.e. objects), so we use the equals method for comparing them.
+Building a similar comparison functionality is possible for Person objects too. Below, the comparison has been implemented for Person objects that don't have a separate SimpleDate object. Notice that the names of people are strings (i.e. objects), so we use the `equals` method for comparing them.
 
 
 <!-- ```java
@@ -3780,7 +3780,7 @@ Implement the method `public void advance(int howManyDays)` that moves the date 
 
 <!-- Lisätään `Paivays`-olioon mahdollisuus edistää aikaa. Tee oliolle metodi `Paivays paivienPaasta(int paivia)`, joka luo **uuden** `Paivays`-olion, jonka päiväys on annetun päivien lukumäärän verran suurempi kuin oliolla, jolle sitä kutsuttiin. Voit edelleen olettaa, että jokaisessa kuukaudessa on 30 päivää. Huomaa, että vanhan päiväysolion on pysyttävä muuttumattomana! -->
 
-Let's add the possibility to advance time to the `SimpleDate` class. Create the method `SimpleDate afterNumberOfDays(int days)` for the class. It creates a **new** `SimpleDate` object whose date is the specified number of days greater than the object that the method was called on. You may still assume that each month has 30 days. Notice that the old date object must remain unchanged!
+Let's add the possibility to advance time to the `SimpleDate` class. Create the method `public SimpleDate afterNumberOfDays(int days)` for the class. It creates a **new** `SimpleDate` object whose date is the specified number of days greater than the object that the method was called on. You may still assume that each month has 30 days. Notice that the old date object must remain unchanged!
 
 <!-- Koska metodissa on luotava **uusi olio**, tulee rungon olla suunnilleen seuraavanlainen: -->
 
@@ -4090,7 +4090,7 @@ System.out.println(c);  // 15.00e
 
 <!-- Tee metodi `public boolean vahemman(Raha verrattava)`, joka palauttaa true jos raha-olio jolle metodia kutsutaan on arvoltaan pienempi kuin raha-olio, joka on metodin parametrina. -->
 
-Create the method `public boolean lessThan(Money compared)` that returns true if the money object whose method is called has a greater worth than the money object that is received as the method parameter.
+Create the method `public boolean lessThan(Money compared)` that returns true if the money-object on which the method is called on has a lesser value than the money object given as a parameter.
 
 
 <!-- ```java

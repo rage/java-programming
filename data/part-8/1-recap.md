@@ -11,7 +11,7 @@ hidden: false
 
 </text-box> -->
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 - You will brush up on the contents of the parts 1-7
 
@@ -289,13 +289,13 @@ Second: 0/100
 
 <!-- Toteutetaan edellä kuvattu interaktiivinen ohjelma kahden nestesäiliön käsittelyyn uudestaan. Tällä kertaa luodaan ohjelman toteutusta varten luokka "Sailio", jonka vastuulla on säiliön sisällön ylläpito. -->
 
-Let's redo the previous program for handling two liquid containers. This time we'll create a class "Container", which is responsible for managing the contents of a container.
+Let's redo the previous program for handling two liquid containers. This time we'll create a class `Container`, which is responsible for managing the contents of a container.
 
 
 <h2>Container</h2>
 
 <!-- Toteuta luokka Sailio. Säiliöllä tulee olla parametriton konstruktori sekä seuraavat metodit: -->
-Make a class called Container. The class must have a constructor which does not take any parameters, and the following methods:
+Make a class called `Container`. The class must have a constructor which does not take any parameters, and the following methods:
 
 <!-- - `public int sisalto()` palauttaa säiliössä olevan nesteen määrän kokonaislukuna. -->
  -  `public int contains()` which returns the amount of liquid in a container as an integer.
@@ -303,11 +303,12 @@ Make a class called Container. The class must have a constructor which does not 
 <!-- - `public void add(int maara)` lisää parametrina annetun määrän nestettä säiliöön. Mikäli parametrin arvo on negatiivinen, ei nestettä lisätä. Lisäyksen jälkeen säiliössä on korkeintaan 100 yksikköä nestettä. -->
  -  `public void add(int amount)` which adds the amount of liquid given as a parameter to the container. If the amount is negative, no liquid is added.
  A container can hold maximum of 100 units of liquid.
+ 
 <!-- - `public void remove(int maara)` poistaa parametrina annetun määrän nestettä säiliöstä. Mikäli parametrin arvo on negatiivinen, ei nestettä poisteta. Poistaminen poistaa vain olemassaolevaa nestettä -- poiston takia säiliössä ei voi koskaan olla alle nollaa nesteyksikköä. -->
  -  `public void remove(int amount)` which removes the amount of liquid given as a parameter from the container. If the amount is negative, no liquid is removed. A container can never hold less than 0 units of liquid.
 
 <!-- - `public String toString()` palauttaa olion merkkijonoesityksen muodossa "<em>sisalto</em>/100", esim "32/100". -->
- -  `public string toString()` which returns the container as a string formatted "<em>amoun of liquid</em>100, for example "32/100".
+ -  `public String toString()` which returns the container as a string formatted "<em>amount of liquid</em>/100", for example "32/100".
 
 
 <!-- Luokan käyttöesimerkki: -->
@@ -342,7 +343,7 @@ System.out.println(container);
 <h2>Functionality</h2>
 
 <!-- Kopioi ensimmäisessä osassa toteuttamasi käyttöliittymä ja muokkaa sitä siten, että ohjelmassa käytetään juuri toteuttamiasi säiliöitä. Luokassa `NestesailiotOlioilla` olevan main-metodin suorituksen tulee käynnistää ohjelma. -->
-Copy the user interface you implemented for the previous example, and modify it to use the new Container class.
+Copy the user interface you implemented for the previous example, and modify it to use the new `Container` class.
 The main method in the class `LiquidContainers2` must start the program.
 
 <!-- Alla on esimerkkitulostus. Ohjelman tekstikäyttöliittymän toiminnan tulee olla seuraavanlainen: -->
@@ -440,7 +441,7 @@ We will build the program in parts.
 
 <!-- <h2>Tehtävälista</h2> -->
 
-<h2>ToDoList</h2>
+<h2>TodoList</h2>
 
 <!-- Luo luokka `Tehtavalista`. Luokalla tulee olla parametriton konstruktori sekä seuraavat metodit:
 
@@ -448,7 +449,7 @@ We will build the program in parts.
 - `public void tulosta()` - tulostaa tehtävät. Tulostuksessa jokaiselle tehtävällä on myös numero -- käytä tässä tehtävän indeksiä (+1).
 - `public void poista(int numero)` - poistaa annettua numeroa vastaavan tehtävän; numero liittyy tulostuksessa nähtyyn tehtävän numeroon. -->
 
-Create a class called `ToDoList`. It should have a constructor without parameters and the following methods:
+Create a class called `TodoList`. It should have a constructor without parameters and the following methods:
 
 - `public void add(String task)` - add the task passed as a parameter to the todo list.
 - `public void print()` - prints the exercises. Each task has a number associated with it on the print statement -- use the task's index here (+1).
@@ -579,7 +580,7 @@ list.print();
 
 Alla on esimerkki sovelluksen toiminnasta. -->
 
-Next, implement a class called `UserInterface`. It should have a constructor with two parameters. The first parameter is an instance of the class `ToDoList`, and the second is an instance of the class `Scanner`. In addition to the constructor, the class should have the method `public void start()` that is used to start the text user interface. The text UI works with an eternal looping statement (`while-true`), and it must offer the following commands to the user:
+Next, implement a class called `UserInterface`. It should have a constructor with two parameters. The first parameter is an instance of the class `TodoList`, and the second is an instance of the class `Scanner`. In addition to the constructor, the class should have the method `public void start()` that is used to start the text user interface. The text UI works with an eternal looping statement (`while-true`), and it must offer the following commands to the user:
 
 - The command `stop` stops the execution of the loop, after which the execution of the program advances out of the `start` method.
 
@@ -641,6 +642,6 @@ Command: **stop**
 
 <!-- Huom! Käyttöliittymän tulee käyttää sille parametrina annettua tehtävälistaa ja Scanneria. -->
 
-NB! The user interface is to use the ToDoList and Scanner that are passed as parameters to the constructor.
+NB! The user interface is to use the TodoList and Scanner that are passed as parameters to the constructor.
 
 </programming-exercise>

@@ -6,7 +6,7 @@ title: "Conditional statements and conditional operation"
 hidden: false
 ---
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 <!-- - Tunnet käsitteen ehtolause ja osaat luoda ohjelmaan vaihtoehtoista toimintaa ehtolauseen avulla. -->
 <!-- - Tunnet ehtolauseissa tyypillisesti käytettävät vertailuoperaattorit ja loogiset operaatiot. -->
@@ -1100,7 +1100,7 @@ if (luku >= 5 && luku <= 10) {
 System.out.println("Is the number within the range 5-10: ");
 int number = 7;
 
-if (number >= 4 && number <= 10) {
+if (number >= 5 && number <= 10) {
     System.out.println("It is! :)");
 } else {
     System.out.println("It is not :(");

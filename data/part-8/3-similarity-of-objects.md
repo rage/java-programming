@@ -21,9 +21,9 @@ hidden: false
 
 </text-box>
 
-Kerrataan seuraavaksi olioiden vertailuun käytettyä metodia `equals` ja tutustutaan suurpiirteiseen vertailuun käytettyyn metodiin `hashCode`.
+<!-- Kerrataan seuraavaksi olioiden vertailuun käytettyä metodia `equals` ja tutustutaan suurpiirteiseen vertailuun käytettyyn metodiin `hashCode`. -->
 
-Let's revise the `equals` method used to compare object, and become familiar with the `hashCode` method used in making approximate comparisons.
+Let's revise the `equals` method used to compare objects, and become familiar with the `hashCode` method used in making approximate comparisons.
 
 <!-- ## Samuudesta kertova metodi "equals" -->
 
@@ -33,7 +33,7 @@ Let's revise the `equals` method used to compare object, and become familiar wit
 
 Tämä selvenee seuraavalla esimerkillä. Luokassa `Kirja` ei ole omaa `equals`-metodin toteutusta, joten se käyttää Javan tarjoamaa oletustoteutusta. -->
 
-The equals <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object" target="_blank"> method </a> > checks by default whether the object given as a parameter has the same reference as the object its being compared to. In other words, the default behaviour checks whether the two objects are the same. If the reference is the same, the method returns `true`, and `false` otherwise.
+The <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object" target="_blank">equals method </a> checks by default whether the object given as a parameter has the same reference as the object it is being compared to. In other words, the default behaviour checks whether the two objects are the same. If the reference is the same, the method returns `true`, and `false` otherwise.
 
 This can be illustrated with the following example. The `Book` class does not have its own implementation of the `equals` method, so it falls back on the default implementation provided by Java.
 
@@ -62,18 +62,18 @@ Book bookObject = new Book("Book object", 2000, "...");
 Book anotherBookObject = bookObject;
 
 if (bookObject.equals(anotherBookObject)) {
-    System.out.println("The books were the same");
+    System.out.println("The books are the same");
 } else {
-    System.out.println("The books weren't the same");
+    System.out.println("The books aren't the same");
 }
 
 // we now create an object with the same content that's nonetheless its own object
 anotherBookObject = new Book("Book object", 2000, "...");
 
 if (bookObject.equals(anotherBookObject)) {
-    System.out.println("The books were the same");
+    System.out.println("The books are the same");
 } else {
-    System.out.println("The books weren't the same");
+    System.out.println("The books aren't the same");
 }
 ```
 
@@ -85,8 +85,8 @@ Kirjat eivät olleet samat
 </sample-output> -->
 <sample-output>
 
-The books were the same
-The books weren't the same
+The books are the same
+The books aren't the same
 
 </sample-output>
 
@@ -96,7 +96,7 @@ Merkkijonojen eli Stringien yhteydessä `equals` toimii odotetulla tavalla, eli 
 
 Mikäli haluamme, että omien luokkiemme vertailu onnistuu `equals`-metodilla, tulee metodi määritellä luokkaan. Luotava metodi saa parametrina `Object`-tyyppisen viitteen, joka voi olla mikä tahansa olio. Vertailussa tarkastellaan ensin viitettä. Tätä seuraa parametrin olion tyypin tarkastelu `instanceof`-operaatiolla -- mikäli olion tyyppi ei vastaa luokkamme tyyppiä, olio ei voi olla sama. Tämän jälkeen oliosta luodaan luokkamme tyyppinen versio, jonka jälkeen oliomuuttujia verrataan toisiinsa. -->
 
-The internal structure of the book objects (i.e., the values of their instance variables ) in the previous example is the same, but only the first comparison prints "`The books were the same "`. This is because the references are the same in the first case, i.e., the object is compared to itself. The second comparison is about two different entities, even though the variables have the same values.
+The internal structure of the book objects (i.e., the values of their instance variables ) in the previous example is the same, but only the first comparison prints "`The books are the same`". This is because the references are the same in the first case, i.e., the object is compared to itself. The second comparison is about two different entities, even though the variables have the same values.
 
 For strings, `equals` works as expected in that it declares two strings _identical in content_ to be 'equal' even if they are two separate objects. The String class has replaced the default `equals` with its own implementation.
 
@@ -151,14 +151,14 @@ public boolean equals(Object comparedObject) {
         return true;
     }
 
-    // otherwise, the object's aren't the same
+    // otherwise, the objects aren't the same
     return false;
 }
 ```
 
 <!-- Alla `Kirja`-luokka kokonaisuudessaan. -->
 
-The `Book`-class in it's entirety.
+The `Book` class in its entirety.
 
 <!-- ```java
 public class Kirja {
@@ -282,7 +282,7 @@ public class Book {
             return false;
         }
 
-        // let's convert the object to a Book-olioksi
+        // let's convert the object to a Book-object
         Book comparedBook = (Book) comparedObject;
 
         // if the instance variables of the objects are the same, so are the objects
@@ -292,7 +292,7 @@ public class Book {
             return true;
         }
 
-        // otherwise, the object's aren't the same
+        // otherwise, the objects aren't the same
         return false;
     }
 }
@@ -314,13 +314,13 @@ if (olioKirja.equals(toinenOlioKirja)) {
 ``` -->
 
 ```java
-Kirja bookObject = new Kirja("Book Object", 2000, "...");
-Kirja anotherBookObject = new Kirja("Book Object", 2000, "...");
+Book bookObject = new Book("Book Object", 2000, "...");
+Book anotherBookObject = new Book("Book Object", 2000, "...");
 
 if (bookObject.equals(anotherBookObject)) {
-    System.out.println("The books were the same");
+    System.out.println("The books are the same");
 } else {
-    System.out.println("The books weren't the same");
+    System.out.println("The books aren't the same");
 }
 ```
 
@@ -331,7 +331,7 @@ Kirjat olivat samat
 </sample-output> -->
 <sample-output>
 
-The books were the same
+The books are the same
 
 </sample-output>
 
@@ -339,7 +339,7 @@ The books were the same
 
 <!-- Myös ArrayList käyttää equals-metodia osana sisäistä toteutustaan. Mikäli emme toteuta omissa olioissamme `equals`-metodia, ei ArrayListin tarjoama `contains`-metodi toimi oikein. Mikäli kokeilet alla olevaa koodia kahdella Kirja-luokalla, jossa toisessa on määritelty `equals`-metodi, ja toisessa ei, huomaat eron. -->
 
-The ArrayList also uses the equals method in its internal implementation. If we don't define the `equals` method in our objects, the `contains` method of the ArrayList does not work properly. If you try out the code below with two Book classes, one with the `equals` method defined, and another without it, you'll see the difference.
+The ArrayList also uses the `equals` method in its internal implementation. If we don't define the `equals` method in our objects, the `contains` method of the ArrayList does not work properly. If you try out the code below with two Book classes, one with the `equals` method defined and another without it, you'll see the difference.
 
 <!-- ```java
 ArrayList<Kirja> kirjat = new ArrayList<>();
@@ -433,11 +433,11 @@ Jotta HashMap toimisi haluamallamme tavalla, eli palauttaisi lainaajan kun avaim
 
 Olemme aiemmin käyttäneet `String`-olioita menestyksekkäästi HashMapin avaimena, joten voimme päätellä että `String`-luokassa on oma järkevästi toimiva `hashCode`-toteutus. _Delegoidaan_, eli siirretään laskemisvastuu `String`-oliolle. -->
 
-We find the borrower when searching for the same object that was given as a key to the hash map's `put` method. However, when searching by the exact same book but with a different object,a borrwer isn't found, and we get the _null_ reference instead. The reason lies in the default implementation of the `hashCode` method in the `Object` class. The default implementation creates a `hashCode` value based on the object's reference, which means that books having the same content that are nonetheless different objects get different results from the hashCode method. As such, the object is not being searched for in the right place.
+We find the borrower when searching for the same object that was given as a key to the hash map's `put` method. However, when searching by the exact same book but with a different object, a borrower isn't found, and we get the _null_ reference instead. The reason lies in the default implementation of the `hashCode` method in the `Object` class. The default implementation creates a `hashCode` value based on the object's reference, which means that books having the same content that are nonetheless different objects get different results from the hashCode method. As such, the object is not being searched for in the right place.
 
-For the HashMap to work in thw way we want it to, that is, to return the borrower when given an object with the correct _content_ (not necessarily the same object as the original key), the class that's the key must overwrite the `hashCode` method in addition to the `equals` method. The method must be overwritten so that it gives the same numerical result for all objects with the same content. Also, some objects with different contents may get the same result from the hashCode method. However, with the HashMap's performance in mind, it is essential that objects with different contents get the same hash value as rarely as possible.
+For the HashMap to work in the way we want it to, that is, to return the borrower when given an object with the correct _content_ (not necessarily the same object as the original key), the class that the key belongs to must overwrite the `hashCode` method in addition to the `equals` method. The method must be overwritten so that it gives the same numerical result for all objects with the same content. Also, some objects with different contents may get the same result from the hashCode method. However, with the HashMap's performance in mind, it is essential that objects with different contents get the same hash value as rarely as possible.
 
-We've previously used `String` objects as HashMap keys, so we can deduce that the`String` class has a well-functioning `hashCode` implementation of its own. We'll _Delegate_, i.e., transfer the computational responsibility to the `String` object.
+We've previously used `String` objects as HashMap keys, so we can deduce that the `String` class has a well-functioning `hashCode` implementation of its own. We'll _delegate_, i.e., transfer the computational responsibility to the `String` object.
 
 <!-- ```java
 public int hashCode() {
@@ -453,7 +453,7 @@ public int hashCode() {
 
 <!-- Yllä oleva ratkaisu on melko hyvä, mutta jos `nimi` on _null_, näemme `NullPointerException`-virheen. Korjataan tämä vielä määrittelemällä ehto: jos `nimi`-muuttujan arvo on _null_, palautetaan hajautusarvoksi julkaisuvuosi. -->
 
-The above solution is quite good. However, if `name` is _null_, we see a `NullPointerException` error. Let'fix this by defining a condition: if the value of the `name` variable is _null_, we'll return the year of publication as the hash value.
+The above solution is quite good. However, if `name` is _null_, we see a `NullPointerException` error. Let's fix this by defining a condition: if the value of the `name` variable is _null_, we'll return the year of publication as the hash value.
 
 <!-- ```java
 public int hashCode() {
@@ -475,7 +475,7 @@ public int hashCode() {
 }
 ```
 
-Now, all of the books that share a name are bundleded into one group. Let's improve it further so that the year of publiciation is also taken into account in the hash value calculation that's based on the book title.
+Now, all of the books that share a name are bundled into one group. Let's improve it further so that the year of publication is also taken into account in the hash value calculation that's based on the book title.
 
 <!-- ```java
 public int hashCode() {
@@ -525,7 +525,8 @@ System.out.println(borrowers.get(new Book("Book Object", 2000, "...")));
 System.out.println(borrowers.get(new Book("Test Driven Development", 1999)));
 ```
 
-Tulostuu:
+<!--Tulostuu:-->
+Output:
 
 <sample-output>
 
@@ -540,10 +541,10 @@ Arto
 - metodi `equals` siten, että kaikki samansuuruisena (tai saman sisältöisinä) ajatellut oliot tuottavat vertailussa tuloksen true ja muut false
 - metodi `hashCode` siten, että mahdollisimman harvalla erisuuruisella oliolla on sama hajautusarvo -->
 
-**Let's revise the ideas once more:** for a class to be used as a HashMap's key, we need to define for it:
+**Let's review the ideas once more:** for a class to be used as a HashMap's key, we need to define for it:
 
-- method `equals` , so that all equal or apporiximately equal objects cause the comparison to return true and all false for all the rest
-- metho `hashCode` , so that as few objects as possible end up with the same hash value
+- the `equals` method, so that all equal or approximately equal objects cause the comparison to return true and all false for all the rest
+- the `hashCode` method, so that as few objects as possible end up with the same hash value
 
 <!-- <text-box variant='hint' name='Metodien equals ja hashCode avustettu luominen'>
 
@@ -559,11 +560,11 @@ NetBeans tarjoaa tuen metodien `equals` ja `hashCode` avustettuun luomisen. Voit
 Käytä NetBeansin avustettua equals- ja hashCode-metodien luomista kunnes tiedät, että omat metodisi ovat varmasti paremmat kuin NetBeansin automaattisesti luomat metodit.
 
 </text-box> -->
-<text-box variant='hint' name='Assited creation of the equals method and hashCode '>
+<text-box variant='hint' name='Assisted creation of the equals method and hashCode '>
 
-NetBeans provides support for the creation of both `equals` and `hashCode`. You can select Source -> Insert Code from the menu and then select _equals() and hashCode() _ from the ensuing drop-down list. NetBeans then asks for the instance variables used in the methods. The methods developed by NetBeans are typically sufficient enough for our own needs.
+NetBeans provides support for the creation of both `equals` and `hashCode`. You can select Source -> Insert Code from the menu and then select *equals() and hashCode()* from the drop-down list. NetBeans then asks for the instance variables used in the methods. The methods developed by NetBeans are typically sufficient for our needs.
 
-Use NetBeans's support in creating equals and hashCode methods until you know that your methods are definitely better than those created automatically by net beans.
+Use NetBeans's support in creating the equals and hashCode methods until you know that your methods are better than those created automatically by NetBeans.
 
 </text-box>
 
@@ -627,7 +628,7 @@ Eurooppalaiset rekisteritunnukset koostuvat kahdesta osasta: yksi tai kaksikirja
 
 <h2>Equals and hashCode for the LicensePlate class</h2>
 
-European license plates have to parts, a two letter country code and a nationally unique license number. The license number is made up of numbers and characters. License plates are represented by the following class:
+European license plates have two parts: a two letter country code and a nationally unique license number. The license number is made up of numbers and characters. License plates are represented by the following class:
 
 ```java
 public class LicensePlate {
@@ -650,7 +651,7 @@ public class LicensePlate {
 
 <!-- Rekisterinumeroja halutaan tallettaa esim. ArrayList:eille ja käyttää HashMap:in avaimina, eli kuten yllä mainittu, tulee niille toteuttaa metodit `equals` ja `hashCode`, muuten ne eivät toimi halutulla tavalla. Toteuta luokalle rekisterinumero metodit `equals` ja `hashCode`. -->
 
-We want to be able to save the license plates in e.g ArrayLists and to use them as keys in a HashMap. Which, as explained above, means that the `equals` and `hashcode` methods need to be overwritten, or they won't work as intended. Implement the methods `equals` and `hashCode` for the LicensePlate class.
+We want to be able to save the license plates in ArrayLists and to use them as keys in a HashMap. This, as explained above, means that the `equals` and `hashcode` methods need to be overwritten, or they won't work as intended. Implement the methods `equals` and `hashCode` for the LicensePlate class.
 
 <!-- Esimerkkiohjelma: -->
 
@@ -725,11 +726,11 @@ Toteuta luokka `Ajoneuvorekisteri` jolla on seuraavat metodit:
 
 Implement the class `VehicleRegistry`, which has the following methods:
 
-- `public boolean add(LicensePlate licensePlate, String owner)` assigns the owner it received as a parameter to car corresponding with the license plate received as a parameter. If the license plate didn't have an owner returns true. If the license already had an owner attached, the method returns false and does nothing.
+- `public boolean add(LicensePlate licensePlate, String owner)` assigns the owner it received as a parameter to a car that corresponds to the license plate received as a parameter. If the license plate doesn't have an owner, the method returns true. If the license already has an owner attached, the method returns false and does nothing.
 
-- `public String get(LicensePlate licensePlate)` returns the owner of the car corresponding to the license plate received as a parameter. If the car isn't in the registry, returns null.
+- `public String get(LicensePlate licensePlate)` returns the owner of the car corresponding to the license plate received as a parameter. If the car isn't in the registry, the method returns null.
 
-- `public boolean remove(LicensePlate licensePlate)` removes the license plate and attached data from the registry. Returns true if removed successfully and false if the license plate wasn't in the registry.
+- `public boolean remove(LicensePlate licensePlate)` removes the license plate and attached data from the registry. The method returns true if removed successfully and false if the license plate wasn't in the registry.
 
 <!-- <h2>Ajoneuvorekisteri laajenee</h2>
 
@@ -743,12 +744,12 @@ Vinkki! Voit luoda metodiin `tulostaOmistajat` listan, jota käytät jo tulostet
 
 <h2>Expanded vehicle registry</h2>
 
-Add the following methods to the VehicleRegistry:
+Add the following methods to the `VehicleRegistry`:
 
 - `public void printLicensePlates()`prints the license plates in the registry.
 
 - `public void printOwners()` prints the owners of the cars in the registry. Each name should only be printed once, even if a particular person owns more than one car.
 
-Useful tip! In the printOwners method, you can create a list used for remembering the owners that were already printed. If an owner is not on the their name is printed and they are added to the list -- if an owner is on the list their name isn't printed.
+Useful tip! In the printOwners method, you can create a list used for remembering the owners that were already printed. If an owner is not on the list, their name is printed and they are added to the list; conversely, if an owner is on the list, their name isn't printed.
 
 </programming-exercise>

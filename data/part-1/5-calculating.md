@@ -5,7 +5,7 @@ title: "Calculating with numbers"
 hidden: false
 ---
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 <!-- - Osaat tehdä laskutoimintoja muuttujien avulla. -->
 
