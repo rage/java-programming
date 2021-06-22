@@ -2581,8 +2581,8 @@ liittyma.kaynnista();
 JokeManager manager = new JokeManager();
 Scanner scanner = new Scanner(System.in);
 
-UserInterface interface = new UserInterface(manager, scanner);
-interface.start();
+UserInterface ui = new UserInterface(manager, scanner);
+ui.start();
 ```
 
 <!-- <sample-output>
