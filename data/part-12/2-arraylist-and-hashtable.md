@@ -843,7 +843,7 @@ public void add(K key, V value) {
         values[hashValue] = new List<>();
     }
 
-    List<Pari<K, V>> valuesAtIndex = values[hashValue];
+    List<Pair<K, V>> valuesAtIndex = values[hashValue];
 
     int index = -1;
     for (int i = 0; i < valuesAtIndex.size(); i++) {
