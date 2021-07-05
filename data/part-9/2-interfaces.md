@@ -664,7 +664,7 @@ System.out.println("Delegating the reading to Verna");
 
 ReadingList vernasList = new ReadingList();
 vernasList.add(jonisList);
-vernanLista.read();
+vernasList.read();
 
 System.out.println();
 System.out.println("Joni's to-read: " + jonisList.toRead());
