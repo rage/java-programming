@@ -863,7 +863,7 @@ public class AmusementParkRide {
     private String name;
     private int minimumHeight;
     private int visitors;
-    private ArrayList<Person> kyydissa;
+    private ArrayList<Person> riding;
 
     public AmusementParkRide(String name, int minimumHeight) {
         this.name = name;
