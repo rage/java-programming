@@ -1776,7 +1776,7 @@ public static void main(String[] args) {
     int beginning = 1;
     int end = 5;
 
-    printStarts(beginning, end);
+    printStars(beginning, end);
 }
 
 public static void printStars(int beginning, int end) {
@@ -1789,7 +1789,7 @@ public static void printStars(int beginning, int end) {
 
 <!-- Ohjelman suoritus alkaa `main`-metodin ensimmäiseltä riviltä, jota seuraavilla riveillä luodaan muuttujat `alku` ja `loppu`, sekä asetetaan niihin arvot. Ohjelman tilanne ennen metodin `tulostaTahtia`-kutsumista: -->
 
-The execution of the program begins on the first line of the `main` method. The next two lines create the variables `beginning` and `end`, and also assign values to them. The state of the program prior to calling the method `printStarts`:
+The execution of the program begins on the first line of the `main` method. The next two lines create the variables `beginning` and `end`, and also assign values to them. The state of the program prior to calling the method `printStars`:
 
 <sample-output>
 main
