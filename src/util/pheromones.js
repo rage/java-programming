@@ -7,7 +7,7 @@ try {
 
 const pheromones = {
   CLASS_PREFIX: "PS-",
-  API_URL: "https://data.pheromones.io/",
+  API_URL: "https://pheromones.mooc.fi/",
   user: null,
   timer: null,
   IDLE_MODE: false,
