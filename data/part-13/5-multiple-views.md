@@ -433,7 +433,7 @@ public interface PersonWarehouse {
 
 <!-- Käyttöliittymää toteutettaessa hyvä aloitustapa on ensin käyttöliittymän piirtäminen, jota seuraa sopivien käyttöliittymäkomponenttien lisääminen käyttöliittymään. Henkilöiden tallennuksessa tarvitsemme kentät nimelle ja henkilötunnukselle sekä napin jolla henkilö voidaan lisätä. Käytetään luokkaa TextField nimen ja henkilötunnuksen syöttämiseen ja luokkaa Button napin toteuttamiseen. Luodaan käyttöliittymään lisäksi käyttöliittymän toiminnallisuutta selventävät Label-tyyppiset selitystekstit. -->
 
-When implementing a user interface a good starting point is drawing the interface followed bt adding appropriate user interface components to the user interface. When saving persons to a database we need a field for name, a field for social security number and a button for adding the person. In addition we'll also create
+When implementing a user interface a good starting point is drawing the interface followed by adding appropriate user interface components to the user interface. When saving persons to a database we need a field for name, a field for social security number and a button for adding the person. In addition we'll also create
 
 <!--
 Käytetään käyttöliittymän asetteluun `GridPane`-asettelijaa. Rivejä käyttöliittymässä on 3, sarakkeita 2. Lisätään tapahtumien käsittelytoiminnallisuus myöhemmin. Käyttöliittymän alustusmetodi näyttää seuraavalta.
