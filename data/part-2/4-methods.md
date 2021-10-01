@@ -2207,7 +2207,7 @@ Define a method called `printSpaces(int number)` that produces the number of spa
 
 <!-- Joudut myös joko kopioimaan edellisen tehtävän vastauksestasi metodin `tulostaTahtia` tai toteuttamaan sen uudelleen tämän tehtävän tehtäväpohjaan. -->
 
-You will also have to either copy the `printStars` method your previous answer or reimplement it in this exercise template.
+You will also have to either copy the `printStars` method from your previous exercise or reimplement it in this exercise template.
 
 <!-- <h2>Oikealle nojaavan kolmion tulostus</h2> -->
 
