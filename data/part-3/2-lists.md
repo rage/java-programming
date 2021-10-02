@@ -860,7 +860,7 @@ if (index < teachers.size()) {
     index = index + 1; // index = 4
 }
 
-if (index < index.size()) {
+if (index < teachers.size()) {
     // this will not be executed since index = 4 and teachers.size() = 4
     System.out.println(teachers.get(index));
     index = index + 1;
