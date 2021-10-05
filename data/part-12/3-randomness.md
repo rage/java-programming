@@ -150,7 +150,7 @@ public class Noppa {
         this.random = new Random();
         // Alusta oliomuuttuja tahkojenMaara tässä
     }
-
+    
     public int heita() {
         // arvo täällä luku jonka tulee olla yhdestä tahkojen määrään
         // ja palauta se
@@ -158,7 +158,7 @@ public class Noppa {
 }
 ``` -->
 
-```java
+​```java
 import java.util.Random;
 
 public class Die {
@@ -197,7 +197,7 @@ public class Ohjelma {
 }
 ``` -->
 
-```java
+​```java
 public class Program {
     public static void main(String[] args) {
         Die die = new Die(6);
@@ -256,11 +256,11 @@ public class WeatherMan {
     }
 
     public String forecast() {
-        double propability = this.random.nextDouble();
+        double probability = this.random.nextDouble();
 
-        if (propability <= 0.1) {
+        if (probability <= 0.1) {
             return "It rains";
-        } else if (propability <= 0.4) { // 0.1 + 0.3
+        } else if (probability <= 0.4) { // 0.1 + 0.3
             return "It snows";
         } else { // rest, 1.0 - 0.4 = 0.6
             return "The sun shines";
@@ -373,33 +373,33 @@ import java.util.Random;
 
     public class LottoRivi {
     private ArrayList<Integer> numerot;
-
+    
     public LottoRivi() {
         this.arvoNumerot();
     }
-
+    
     public ArrayList<Integer> numerot() {
         return this.numerot;
     }
-
+    
     public boolean sisaltaaNumeron(int numero) {
         // Testaa tässä onko numero jo arvottujen numeroiden joukossa
         return false;
     }
-
+    
     public void arvoNumerot() {
         // alustetaan lista numeroille
         this.numerot = new ArrayList<>();
         // Kirjoita numeroiden arvonta tänne käyttämällä metodia sisaltaaNumeron()
     }
-
+    
     public boolean equals(Object toinen) {
         return false;
     }
 }
 ``` -->
 
-```java
+​```java
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -448,13 +448,13 @@ public class Ohjelma {
         for (int numero: lottonumerot) {
             System.out.print(numero + " ");
         }
-
+    
         System.out.println("");
     }
 }
 ``` -->
 
-```java
+​```java
 import java.util.ArrayList;
 
 public class Program {

@@ -126,7 +126,7 @@ public class JavaFxApplication extends Application {
     }
 
     public static void main(String[] args) {
-        launch(JavaFxSovellus.class);
+        launch(JavaFxApplication.class);
     }
 }
 ```
@@ -184,7 +184,7 @@ Create a graphical user interface in the class that is supplied with the exercis
 Edellisissä esimerkeissä käytimme käyttöliittymäkomponenttien asetteluun [FlowPane](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/FlowPane.html)-nimistä luokkaa. FlowPanen avulla käyttöliittymään lisättävät komponentit tulevat vierekkäin. Jos windown koko pienenee siten, että kaikki komponentit eivät mahdu vierekkäin, rivitetään komponentit automaattisesti. Alla olevassa kuvassa edellisen esimerkin tuottamaa sovellusta on kavennettu, jolloin komponentit ovat rivittyneet automaattisesti. -->
 Each UI component has its place on the interface. The location of a component is determined by the class used to layout the components.
 
-In previous examples, we used a class called [FlowPane] (https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/FlowPane.html) to set up our front-end components. With FlowPane, components that you add to the interface are placed side-by-side. If the size of Window is reduced so that the components no longer fit next to eahch other, the components will be automatically aligned. In the image below, the application resulting from the previous example has been narrowed so that the components are automatically aligned.
+In previous examples, we used a class called [FlowPane](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/FlowPane.html) to set up our front-end components. With FlowPane, components that you add to the interface are placed side-by-side. If the size of Window is reduced so that the components no longer fit next to each other, the components will be automatically aligned. In the image below, the application resulting from the previous example has been narrowed so that the components are automatically aligned.
 
 <!-- <img src="../img/material/gui-nappi-ja-teksti-rivitetty.png" alt="Ikkuna, jossa on nappi sekä textComponent. Napissa on teksti 'This is a button' ja textComponent sisältää tekstin 'Text element'. Ikkunan leveys on niin pieni, että komponentit ovat omilla riveillään."/> -->
 <img src="../img/material/gui-nappi-ja-teksti-rivitetty.png" alt="Window that has a button and a textComponent. The button has the text 'This is a button and the textComponent contains the text 'Text element'. The window's width is so narrow that the components are placed on seperate rows."/>
@@ -193,7 +193,7 @@ In previous examples, we used a class called [FlowPane] (https://docs.oracle.com
 ### BorderPane
 
 <!-- [BorderPane](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/BorderPane.html)-luokan avulla käyttöliittymäkomponentit voidaan asetella viiteen pääkohtaan käyttöliittymässä: ylälaita, oikea laita, alalaita, vasen laita ja keskikohta. Perinteiset sovellukset, kuten käyttämäsi web-selain hyödyntävät tätä asettelua. Ylälaidassa on valikko sekä osoiterivi, ja keskellä on sivun sisältö. -->
-The [BorderPane] (https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/BorderPane.html) class lets you lay out components in five different primary positions: top, right, bottom, left and center. Traditional applications such as the web browser you are using take advantage of this layout. There's a menu and address bar at the top, and in the middle is the content of the page.
+The [BorderPane](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/BorderPane.html) class lets you lay out components in five different primary positions: top, right, bottom, left and center. Traditional applications such as the web browser you are using take advantage of this layout. There's a menu and address bar at the top, and in the middle is the content of the page.
 
 
 <!-- ```java
@@ -215,19 +215,19 @@ public class JavaFxSovellus extends Application {
         asettelu.setBottom(new Label("alalaita"));
         asettelu.setLeft(new Label("vasen laita"));
         asettelu.setCenter(new Label("keskikohta"));
-
+    
         Scene view = new Scene(asettelu);
-
+    
         window.setScene(view);
         window.show();
     }
-
+    
     public static void main(String[] args) {
         launch(JavaFxSovellus.class);
     }
 }
 ``` -->
-```java
+​```java
 package application;
 
 import javafx.application.Application;
@@ -287,14 +287,14 @@ public void start(Stage window) {
     asettelu.getChildren().add(new Label("eka"));
     asettelu.getChildren().add(new Label("toka"));
     asettelu.getChildren().add(new Label("kolmas"));
-
+    
     Scene view = new Scene(asettelu);
-
+    
     window.setScene(view);
     window.show();
 }
 ``` -->
-```java
+​```java
 @Override
 public void start(Stage window) {
     HBox layout = new HBox();
@@ -327,14 +327,14 @@ public void start(Stage window) {
     asettelu.getChildren().add(new Label("eka"));
     asettelu.getChildren().add(new Label("toka"));
     asettelu.getChildren().add(new Label("kolmas"));
-
+    
     Scene view = new Scene(asettelu);
-
+    
     window.setScene(view);
     window.show();
 }
 ``` -->
-```java
+​```java
 @Override
 public void start(Stage window) {
     HBox layout = new HBox();
@@ -380,14 +380,14 @@ public void start(Stage window) {
             asettelu.add(new Button("" + x + ", " + y), x, y);
         }
     }
-
+    
     Scene view = new Scene(asettelu);
-
+    
     window.setScene(view);
     window.show();
 }
 ``` -->
-```java
+​```java
 @Override
 public void start(Stage window) {
     GridPane layout = new GridPane();
@@ -435,36 +435,36 @@ public class JavaFxSovellus extends Application {
     @Override
     public void start(Stage window) {
         BorderPane asettelu = new BorderPane();
-
+    
         HBox napit = new HBox();
         napit.setSpacing(10);
         napit.getChildren().add(new Button("Eka"));
         napit.getChildren().add(new Button("Toka"));
         napit.getChildren().add(new Button("Kolmas"));
-
+    
         VBox tekstit = new VBox();
         tekstit.setSpacing(10);
         tekstit.getChildren().add(new Label("Eka"));
         tekstit.getChildren().add(new Label("Toka"));
         tekstit.getChildren().add(new Label("Kolmas"));
-
+    
         asettelu.setTop(napit);
         asettelu.setLeft(tekstit);
-
+    
         asettelu.setCenter(new TextArea(""));
-
+    
         Scene view = new Scene(asettelu);
-
+    
         window.setScene(view);
         window.show();
     }
-
+    
     public static void main(String[] args) {
         launch(JavaFxSovellus.class);
     }
 }
 ``` -->
-```java
+​```java
 package application;
 
 import javafx.application.Application;
