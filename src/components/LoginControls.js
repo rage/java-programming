@@ -1,5 +1,6 @@
 import React, { Fragment } from "react"
 import Button from "./Button"
+import { Button as MaterialButton } from "@material-ui/core"
 import { signOut, getCachedUserDetails } from "../services/moocfi"
 import LoginStateContext, {
   withLoginStateContext,
@@ -12,6 +13,11 @@ import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 
 const StyledIcon = styled(FontAwesomeIcon)`
   margin-right: 0.5rem;
+`
+
+const StyledButton = styled(MaterialButton)`
+  margin: 1rem 0.5rem !important;
+  padding: 1.1rem 1rem !important;
 `
 
 class LoginControls extends React.Component {
@@ -48,7 +54,9 @@ class LoginControls extends React.Component {
           <StyledIcon icon={profileIcon} />
           {this.state.name}
         </Button>
-        <Button onClick={this.doSignOut}>{this.props.t("logout")}</Button>
+        <StyledButton variant="outlined" onClick={this.doSignOut}>
+          {this.props.t("logout")}
+        </StyledButton>
       </Fragment>
     ) : (
       <Fragment>

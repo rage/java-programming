@@ -16,7 +16,7 @@ hidden: false
 
 </text-box>
 
-<ab-study id="ohjelmointi-20-scale-vs-mcq">
+<ab-study id="1a2faee2-7287-4277-ac4a-329220042a27">
 
 <only-for-ab-group group="1">
 
