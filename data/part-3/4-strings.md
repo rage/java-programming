@@ -146,7 +146,7 @@ NB! The program should ask for only one string. Don't use a loop here.
 ## String Comparisons And "Equals"
 
 <!-- Merkkijonoja ei voi vertailla yhtäsuuri kuin operaatiolla `==`.  Merkkijonojen vertailuun käytetään erillistä `equals`-komentoa, joka liittyy aina verrattavaan merkkijonoon. -->
-Strings can't be compared with with the equals operator - `==`. For strings, there exists a separate `equals`-command, which is always appended to the end of the string that we want to compare.
+Strings can't be compared with the equals operator - `==`. For strings, there exists a separate `equals`-command, which is always appended to the end of the string that we want to compare.
 
 <!-- ```java
 String teksti = "kurssi";
