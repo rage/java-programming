@@ -847,7 +847,7 @@ You wrote 18.0
 <!-- Kirjoita ohjelma, joka kysyy käyttäjältä liukulukua. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämän luvun.
 Alla on annettuna ohjelman esimerkkitulostuksia: -->
 
-Write a program that asks the user for a floating-point number. The program then prints the user's input value.
+Write a program that asks the user for a floating-point number using the variable type Double. The program then prints the user's input value.
 
 Example prints for the program can be seen below:
 
