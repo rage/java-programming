@@ -1762,9 +1762,9 @@ The class should eventually work in the following way.
 
 - `public ArrayList<Henkilo> getHenkilot()` - palauttaa listan huoneessa olevista henkilöistä. -->
 
-Create `Room` class. The class should contain a list of persons as an instance variable, and it should have a parameterless constructor. In addition, add the following methods to the class:
+Create the `Room` class. The class should contain a list of persons as an instance variable, and it should have a parameterless constructor. In addition, add the following methods to the class:
 
-- `public void add(Person person)` - add the person passed as a paramter to the list.
+- `public void add(Person person)` - add the person passed as a parameter to the list.
 
 - `public boolean isEmpty()` - returns a `boolean`-type value `true` or `false`, that tells whether the room is empty or not.
 
