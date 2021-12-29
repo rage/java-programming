@@ -3538,7 +3538,7 @@ public Laskuri {
 ``` -->
 
 ```java
-public Counter {
+public class Counter {
     private int value;
 
     // example of using multiple constructors:
