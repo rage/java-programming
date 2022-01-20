@@ -129,7 +129,7 @@ We can do this by first creating random a number between 0 and 80 and then subtr
 
 ```java
 Random weatherMan = new Random();
-int temperature = weatherMan(81) - 30;
+int temperature = weatherMan.nextInt(81) - 30;
 System.out.println(temperature);
 ```
 
