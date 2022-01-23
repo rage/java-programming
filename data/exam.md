@@ -1,7 +1,7 @@
 ---
 path: "/exam"
 title: "Exam 05.09"
-hidden: false
+hidden: true
 information_page: true
 ---
 
