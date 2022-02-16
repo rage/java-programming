@@ -7,6 +7,8 @@ information_page: true
 
 ## Chat channel
 
+<notice>This course does not have a channel in the Department of Computer Science Discord. Support is only offered on a volunteer basis in the Telegram group.</notice>
+
 The course has a support chat channel in Telegram. We suggest that you use the channel either with Telegram's web browser client or with Telegram's desktop application.
 
 You can join the channel through this link: [https://t.me/java\_programming\_mooc](https://t.me/java_programming_mooc)
