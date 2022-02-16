@@ -40,7 +40,7 @@ import javafx.stage.Stage;
 public class BackAndForthApplication extends Application {
 
   @Override
-  public void start(Stage windows) {
+  public void start(Stage window) {
 
       Button back = new Button("Back ..");
       Button forth = new Button(".. forth.");
@@ -104,7 +104,7 @@ When first started, the program should display the first view.
 
 <!-- Tutustutaan seuraavaksi kaksi erillistä näkymää sisältävään esimerkkiin. Ensimmäisessä näkymässä käyttäjää pyydetään syöttämään salasana. Jos käyttäjä kirjoittaa väärän salasanan, väärästä salasanasta ilmoitetaan. Jos käyttäjä kirjoittaa oikean salasanan, ohjelma vaihtaa seuraavaan näkymään. Ohjelman toiminta on seuraavanlainen. -->
 
-Let's get familiar with an example containing two different views. In the first view user is asked to input a password. If the user types a wrong password, the application informs the user about the mistakee. If the user types the correct passwod, the application switches to the next view. The program functions as follows:
+Let's get familiar with an example containing two different views. In the first view user is asked to input a password. If the user types a wrong password, the application informs the user about the mistake. If the user types the correct password, the application switches to the next view. The program functions as follows:
 
 
 <img src="../img/material/gui-salasana.gif" />
@@ -194,7 +194,7 @@ public class PasswordProtectedApplication extends Application {
 
 <!-- Esimerkissä on hyödynnetty sekä GridPanen että StackPanen asettelussa niiden tarjoamia setPrefSize ja setAlignment-metodeja. Metodilla setPrefSize annetaan asettelulle toivottu koko, ja metodilla setAlignment kerrotaan miten asettelun sisältö tulee ryhmittää. Parametrilla Pos.CENTER toivotaan asettelua näkymän keskelle. -->
 
-The example takes advantage of GridPane's and StackPane's built in setPrefSize and setAlignMents -methods for layout. Method setPrefSize takes the preferred size of the layout as and arguments and the setAlignMent-method is used to define how the content of the layout should be aligned. The parameter Pos.CENTER is used for asking the content to be placed to the center of the application
+The example takes advantage of GridPane's and StackPane's built in setPrefSize and setAlignment methods for layout. Method setPrefSize takes the preferred size of the layout as an argument and the setAlignment method is used to define how the content of the layout should be aligned. The parameter Pos.CENTER is used to place the content in the center of the application
 
 
 <!-- <programming-exercise name='Tervehtijä' tmcname='osa13-Osa13_10.Tervehtija'> -->
@@ -340,20 +340,20 @@ public class ExampleApplication extends Application {
 
 
         // 2. Add subviews and add them to the menu buttons
-        // 2.1. Create subview layout 
+        // 2.1. Create subview layout
         StackPane firstLayout = createView("First view");
         StackPane secondLayout = createView("Second view");
 
         // 2.2. Add subviews to button. Pressing the buttons will change the view
         first.setOnAction((event) -> layout.setCenter(firstLayout));
-        second.setOnAction((event) -> asettelu.setCenter(secondLayout));
+        second.setOnAction((event) -> layout.setCenter(secondLayout));
 
         // 2.3. Set initial view
         layout.setCenter(firstLayout);
 
 
-        // 3. Create main scene with layout 
-        Scene scene = new Scene(asettelu);
+        // 3. Create main scene with layout
+        Scene scene = new Scene(layout);
 
 
         // 4. Show the main scene
@@ -433,7 +433,7 @@ public interface PersonWarehouse {
 
 <!-- Käyttöliittymää toteutettaessa hyvä aloitustapa on ensin käyttöliittymän piirtäminen, jota seuraa sopivien käyttöliittymäkomponenttien lisääminen käyttöliittymään. Henkilöiden tallennuksessa tarvitsemme kentät nimelle ja henkilötunnukselle sekä napin jolla henkilö voidaan lisätä. Käytetään luokkaa TextField nimen ja henkilötunnuksen syöttämiseen ja luokkaa Button napin toteuttamiseen. Luodaan käyttöliittymään lisäksi käyttöliittymän toiminnallisuutta selventävät Label-tyyppiset selitystekstit. -->
 
-When implementing a user interface a good starting point is drawing the interface followed bt adding appropriate user interface components to the user interface. When saving persons to a database we need a field for name, a field for social security number and a button for adding the person. In addition we'll also create
+When implementing a user interface a good starting point is drawing the interface followed by adding appropriate user interface components to the user interface. When saving persons to a database we need a field for name, a field for social security number and a button for adding the person. In addition we'll also create
 
 <!--
 Käytetään käyttöliittymän asetteluun `GridPane`-asettelijaa. Rivejä käyttöliittymässä on 3, sarakkeita 2. Lisätään tapahtumien käsittelytoiminnallisuus myöhemmin. Käyttöliittymän alustusmetodi näyttää seuraavalta.
@@ -534,7 +534,7 @@ public void start(Stage window) {
     // ...
 
     addButton.setOnAction((event) -> {
-        warehouse.talleta(new Person(nameText.getText(), secText.getText());
+        warehouse.save(new Person(nameText.getText(), secText.getText());
     });
     // ...
 }
@@ -626,7 +626,7 @@ public class PersonApp extends Application {
         Button addButton = new Button("Add person!");
 
         addButton.setOnAction((event) -> {
-            warehouse.talleta(new Person(nameText.getText(), secText.getText());
+            warehouse.save(new Person(nameText.getText(), secText.getText());
         });
 
         GridPane components = new GridPane();
@@ -739,7 +739,7 @@ public class Dictionary {
             this.words.add(word);
         }
 
-        this.translations.put(word, translations);
+        this.translations.put(word, translation);
     }
 
     public String getRandomWord() {
@@ -1169,7 +1169,7 @@ Follow the previous example and create an application for practising translation
 
 <!-- Käyttöliittymästä tarkemmin. Sanojen syöttämisnäkymän näyttävän napin tekstin tulee olla "Lisää sanoja". Sanojen harjoittelunäkymän näyttävän napin tekstin tulee olla "Harjoittele". Sanoja syötettäessä ensimmäisen tekstikentän tulee olla sana alkuperäiskielellä, ja toisen tekstikentän tulee olla sana käännettynä. Syöttämiseen käytetyn napin tekstin tulee olla "Lisää sanapari". Harjoittelutilassa käyttäjältä kysytään aina sanoja alkuperäiskielellä ja hänen tulee kirjoittaa sanojen käännöksiä. Vastauksen tarkistamiseen käytetyn napin tekstin tulee olla "Tarkista". Jos vastaus on oikein, käyttöliittymässä näytetään teksti "Oikein!". Jos taas vastaus on väärin, käyttöliittymässä näytetään teksti "Väärin!" sekä tieto oikeasta vastausksesta. -->
 
-Let's discuss the user interface in more detail. The button that shows the input view should contain the text "Enter new words". The button that shows the practice view should contain the text "Practice". In the input view, the first text field should have the word in the original language, and the second text field should contain the translation of that word. The button that adds this word and the translation should read "Add the word pair". In the practice view the user is represented with a word in the original language, and their task is to write down the translation. If the answer is correct, the user interface displays the text "Correct!". If the answer is incorrect, the text that is displayed is "Incorrec!". In this case the correct translation is also shown.
+Let's discuss the user interface in more detail. The button that shows the input view should contain the text "Enter new words". The button that shows the practice view should contain the text "Practice". In the input view, the first text field should have the word in the original language, and the second text field should contain the translation of that word. The button that adds this word and the translation should read "Add the word pair". In the practice view the user is presented with a word in the original language, and their task is to write down the translation. If the answer is correct, the user interface displays the text "Correct!". If the answer is incorrect, the text that is displayed is "Incorrect!". In this case the correct translation is also shown.
 
 
 <img src="../img/material/gui-vocabulary-practice.gif"/>
@@ -1215,7 +1215,7 @@ btn.setFont(Font.font("Monospaced", 40));
 
 <!-- Muokkaa luokkaa RistinollaSovellus siten, että se käynnistää graafisen käyttöliittymän. Käytä käyttöliittymäkomponenttien asetteluun ensin BorderPane-luokkaa. Aseta BorderPanen ylälaitaan tekstikomponentti, joka sisältää tiedon vuorosta sekä pelin loppuessa tiedon pelin loppumisesta. Aseta BorderPanen keskelle GridPane, joka sisältää 9 nappia. GridPanessa tulee olla 3 riviä ja 3 saraketta, jolloin napit muodostavat 3x3-ruudukon. -->
 
-Modify the TicTacToeApplication class so that it starts the graphical user interface. First, use the BorderPane class to create the layout of the UI components. The top of the BorderPane should continue a text component that includes the information about the turn, and at the end of the game the message that the game has ended. Set to the middle of the BorderPane a GridPane that contains 9 buttons. The GridPane should have 3 rows and 3 columns, so that the buttons form a 3x3 grid.
+Modify the TicTacToeApplication class so that it starts the graphical user interface. First, use the BorderPane class to create the layout of the UI components. The top of the BorderPane should contain a text component that includes information about the turn, and at the end of the game a message to show that the game has ended. In the middle of the BorderPane create a GridPane that contains 9 buttons. The GridPane should have 3 rows and 3 columns, so that the buttons form a 3x3 grid.
 
 <!-- <h2>Vuorojen vaihtaminen ja reilu peli</h2> -->
 
@@ -1227,7 +1227,7 @@ The players of the game are X and O. X always takes the first turn. Add the foll
 
 <!-- Pelin ylälaidassa olevan tekstikentän tulee kertoa aina vuorossa oleva pelaaja. Teksti on aluksi "Vuoro: X". Kun X pelaa vuoronsa, eli painaa jotain nappia, tekstiksi asetetaan "Vuoro: O". Tämän jälkeen kun O pelaa vuoronsa, tekstiksi asetetaan taas "Vuoro: X". -->
 
-The text component at the top of the game must always show whose turn it is. The text begins as "Turn: X". Once X playes their turn, i.e. presses a button, the text should change to "Turn: O". After the player O has played their turn, the text turns once again into "Turn: X".
+The text component at the top of the game must always show whose turn it is. The text begins as "Turn: X". Once X finishes their turn by pressing a button, the text should change to "Turn: O". After player O has finished their turn, the text should turn into "Turn: X" again.
 
 <!-- Huom! Jos pelaaja on jo pelannut tietyn ruudun, ei toinen pelaaja saa enää pelata sitä. Varmista, ettei vuoro muutu tilanteessa, jossa pelaaja yrittää pelata jo pelatun ruudun. -->
 
@@ -1243,7 +1243,7 @@ NB!! You might encounter the following error: "local variables referenced from a
 
 <!-- Lisää peliin toiminnallisuus, jossa pelin voi pelata loppuun. Peli loppuu jos toinen pelaajista saa kolme samaa merkkiä riviin (pysty, vaaka, vino). Pelin loppuminen tulee ilmaista siten, että ylälaidassa on teksti "Loppu!". Tämän jälkeen pelin jatkaminen ei enää onnistu. -->
 
-Add the possibility to finish the game to the program. The game ends if one player positions three of their symbols in a line (horizontally, vertically, or diagonally). The end of the game should be indicated by the text "The end!" at the top of the program. It is no longer possible to continue the game after this.
+Add the possibility to finish the game to the program. The game ends if one player positions three of their symbols in a line (horizontally, vertically, or diagonally). The end of the game should be indicated by the text "The end!" at the top of the program. It should be no longer possible to continue the game after this.
 
 <!-- Tehtävän testit eivät ole kattavimmat. Pyri tekemään ohjelma ilman suurta testeihin tukeutumista. -->
 
