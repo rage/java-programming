@@ -256,11 +256,11 @@ public class WeatherMan {
     }
 
     public String forecast() {
-        double propability = this.random.nextDouble();
+        double probability = this.random.nextDouble();
 
-        if (propability <= 0.1) {
+        if (probability <= 0.1) {
             return "It rains";
-        } else if (propability <= 0.4) { // 0.1 + 0.3
+        } else if (probability <= 0.4) { // 0.1 + 0.3
             return "It snows";
         } else { // rest, 1.0 - 0.4 = 0.6
             return "The sun shines";
