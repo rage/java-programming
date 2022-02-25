@@ -14,9 +14,9 @@ hidden: false
 
 <text-box variant='learningObjectives' name='Learning Objectives'>
 
-- You proctice adding multiple views to a graphical interface.
+- You practise adding multiple views to a graphical interface.
 - You know methods for changing the view.
-- You know methods for separating the application logic and the user interface logic
+- You know methods for separating the application logic and the user interface logic.
 
 </text-box>
 
