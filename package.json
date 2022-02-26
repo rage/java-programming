@@ -51,7 +51,7 @@
     "moment": "^2.24.0",
     "moocfi-quizzes": "^0.9.10",
     "pdf-slideshow": "^0.1.4",
-    "prismjs": "^1.17.1",
+    "prismjs": "^1.27.0",
     "react": "^16.10.2",
     "react-content-loader": "^4.3.2",
     "react-dom": "^16.10.2",
