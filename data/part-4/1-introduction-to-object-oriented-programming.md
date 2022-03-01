@@ -967,7 +967,7 @@ public class Paaohjelma {
 ``` -->
 
 ```java
-public class MainPorgram {
+public class MainProgram {
     public static void main(String[] args) {
         DecreasingCounter counter = new DecreasingCounter(10);
 
