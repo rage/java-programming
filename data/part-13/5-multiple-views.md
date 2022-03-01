@@ -351,8 +351,7 @@ public class ExampleApplication extends Application {
         // 2.3. Set initial view
         layout.setCenter(firstLayout);
 
-
-        // 3. Create main scene with layout
+        // 3. Create main scene with layout 
         Scene scene = new Scene(layout);
 
 
