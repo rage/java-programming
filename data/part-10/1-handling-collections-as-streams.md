@@ -564,7 +564,7 @@ Implement the method using stream! For collecting the numbers try the command `C
 
 Metodi `count` kertoo virran alkioiden lukumäärän `long`-tyyppisenä muuttujana. -->
 
-Let's take a look at four terminal operations: the `count` method for counting the number of values on a list ​​using the, the `forEach` method for going a through list values, the `collect` method for gathering the list values ​​into a data structure, and the `reduce` method for combining the list items.
+Let's take a look at four terminal operations: the `count` method for counting the number of values on a list, the `forEach` method for going a through list values, the `collect` method for gathering the list values ​​into a data structure, and the `reduce` method for combining the list items.
 
 The `count` method informs us of the number of values in the stream as a `long`-type variable.
 
