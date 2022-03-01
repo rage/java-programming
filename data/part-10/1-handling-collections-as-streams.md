@@ -438,7 +438,7 @@ The function can also be passed directly as a parameter. The syntax found below 
 <!-- Virran arvoja käsittelevät funktiot eivät voi muuttaa funktion ulkopuolisten muuttujien arvoja. Kyse on käytännössä staattisten metodien käyttäytymisestä -- metodia kutsuttaessa metodin ulkopuolisiin muuttujiin ei pääse käsiksi. Funktioiden tilanteessa funktion ulkopuolisten muuttujien arvoja voi lukea olettaen, että luettavien muuttujien arvot eivät muutu lainkaan ohjelmassa.
 
 Alla oleva ohjelma demonstroi tilannetta, missä funktiossa yritetään hyödyntää funktion ulkopuolista muuttujaa. Tämä ei toimi. -->
-Functions thats handle stream elements ​​cannot change values ​​of variables outside of the function. This has to do with how static methods behave - during a method call, there is no access to any variables outside of the method. With  functions, the values ​​of variables outside the function can be read, assuming that those values of those variables do not change in the program.
+Functions that handle stream elements ​​cannot change values ​​of variables outside of the function. This has to do with how static methods behave - during a method call, there is no access to any variables outside of the method. With  functions, the values ​​of variables outside the function can be read, assuming that those values of those variables do not change in the program.
 
 The program below demonstrates the situation in which a function attempts to make use of a variable outside the function. It doesn't work.
 
