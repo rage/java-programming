@@ -23,7 +23,7 @@ hidden: false
 Comparable-rajapinnan vaatima compareTo-metodi saa parametrinaan olion, johon "this"-oliota verrataan. Mikäli olio on vertailujärjestyksessä ennen parametrina saatavaa olioa, tulee metodin palauttaa negatiivinen luku. Mikäli taas olio on järjestyksessä parametrina saatavan olion jälkeen, tulee metodin palauttaa positiivinen luku. Muulloin palautetaan luku 0. Tätä `compareTo`-metodin avulla johdettua järjestystä kutsutaan *luonnolliseksi järjestykseksi* (natural ordering).
 
 Tarkastellaan tätä kerhossa käyvää lasta tai nuorta kuvaavan luokan Kerholainen avulla. Jokaisella kerholaisella on nimi ja pituus. Kerholaisten tulee mennä syömään pituusjärjestyksessä, joten toteutetaan kerholaisille rajapinta `Comparable`. Comparable-rajapinta ottaa tyyppiparametrinaan luokan, johon vertaus tehdään. Käytetään tyyppiparametrina samaa luokkaa `Kerholainen`. -->
-<p>In the previous section, we looked at interfaces in more general terms - let's now familiarize ourselves with one of Java's ready-made interfaces. The <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html"> Comparable </a> interface defines the `compareTo` method used to compare objects. If a class implements the Comparable interface, objects created from that class can be sorted using Java's sorting algorithms.</p>
+<p>In the previous section, we looked at interfaces in more general terms - let's now familiarize ourselves with one of Java's ready-made interfaces. The <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html"> Comparable </a> interface defines the <code>compareTo</code> method used to compare objects. If a class implements the Comparable interface, objects created from that class can be sorted using Java's sorting algorithms.</p>
 
 The `compareTo` method required by the Comparable interface receives as its parameter the object to which the "this" object is compared. If the "this" object comes before the object received as a parameter in terms of sorting order, the method should return a negative number. If, on the other hand, the "this" object comes after the object received as a parameter, the method should return a positive number. Otherwise, 0 is returned. The sorting resulting from the `compareTo` method is called *natural ordering*.
 
@@ -120,7 +120,7 @@ public int compareTo(Kerholainen kerholainen) {
 ```java
 @Override
 public int compareTo(Member member) {
-    return this.length - member.getHeight();
+    return this.height - member.getHeight();
 }
 ```
 
@@ -159,14 +159,14 @@ member.add(new Member("mikael", 182));
 member.add(new Member("matti", 187));
 member.add(new Member("ada", 184));
 
-member.stream().forEach(m -> System.out.println(m);
+member.stream().forEach(m -> System.out.println(m));
 System.out.println();
 // sorting the stream that is to be printed using the sorted method
-member.stream().sorted().forEach(m -> System.out.println(m);
-member.stream().forEach(m -> System.out.println(m);
+member.stream().sorted().forEach(m -> System.out.println(m));
+member.stream().forEach(m -> System.out.println(m));
 // sorting a list with the sort-method of the Collections class
 Collections.sort(member);
-member.stream().forEach(m -> System.out.println(m);
+member.stream().forEach(m -> System.out.println(m));
 ```
 
 <sample-output>
@@ -214,7 +214,7 @@ The exercise template includes the class `Student`, which has a name. Implement 
 
 <!-- **Vinkki:** Opiskelijan nimi on String, ja String-luokka on itsessään `Comparable`. Voit hyödyntää String-luokan `compareTo`-metodia Opiskelija-luokan metodia toteuttaessasi. `String.compareTo` kohtelee kirjaimia eriarvoisesti kirjainkoon mukaan, ja tätä varten String-luokalla on myös metodi `compareToIgnoreCase` joka nimensä mukaisesti jättää kirjainkoon huomioimatta. Voit käyttää opiskelijoiden järjestämiseen kumpaa näistä haluat. -->
 
- The name of the `Student` is a String, which implements `Comparable` itself. You may use its `compareTo` method when implementing the method for the `Student` class. Note that `String.compareTo()` also treats letters according to their size, while the `compareToIgnoreCase` method of the same class ignores the capitalization completely. You may either of these methods in the exercise.
+ The name of the `Student` is a String, which implements `Comparable` itself. You may use its `compareTo` method when implementing the method for the `Student` class. Note that `String.compareTo()` also treats letters according to their size, while the `compareToIgnoreCase` method of the same class ignores the capitalization completely. You may use either of these methods in the exercise.
 
 </programming-exercise>
 
@@ -337,12 +337,12 @@ public class Henkilo {
 ```java
 public class Person {
 
-    private int birthYear;
     private String name;
+    private int birthYear;
 
-    public Person(int birthYear, String name) {
-        this.birthYear = birthYear;
+    public Person(String name, int birthYear) {
         this.name = name;
+        this.birthYear = birthYear;
     }
 
     public String getName() {
@@ -367,11 +367,11 @@ henkilot.add(new Henkilo("Grace Hopper", 1906));
 henkilot.add(new Henkilo("Mary Coombs", 1929));
 ``` -->
 ```java
-ArrayList<Person> person = new ArrayList<>();
-person.add(new Person("Ada Lovelace", 1815));
-person.add(new Person("Irma Wyman", 1928));
-person.add(new Person("Grace Hopper", 1906));
-person.add(new Person("Mary Coombs", 1929));
+ArrayList<Person> persons = new ArrayList<>();
+persons.add(new Person("Ada Lovelace", 1815));
+persons.add(new Person("Irma Wyman", 1928));
+persons.add(new Person("Grace Hopper", 1906));
+persons.add(new Person("Mary Coombs", 1929));
 ```
 
 <!-- Haluamme järjestää listan ilman, että henkilo-olion tulee toteuttaa rajapinta `Comparable`.
@@ -380,7 +380,7 @@ Sekä luokan `Collections` metodille `sort` että virran metodille `sorted` void
 
 We want to sort the list without having to implement the `Comparable` interface.
 
-<p>Both the `sort` method of the `Collections` class and the stream's `sorted` method accept a lambda expression as a parameter that defines the sorting criteria. More specifically, both methods can be provided with an object that implements the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html" target="_blank">Comparator</a> interface, which defines the desired order - the lambda expression is used to create this object.</p>
+<p>Both the <code>sort</code> method of the <code>Collections</code> class and the stream's <code>sorted</code> method accept a lambda expression as a parameter that defines the sorting criteria. More specifically, both methods can be provided with an object that implements the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html" target="_blank">Comparator</a> interface, which defines the desired order - the lambda expression is used to create this object.</p>
 
 <!-- ```java
 ArrayList<Henkilo> henkilot = new ArrayList<>();
@@ -553,7 +553,7 @@ pieces[1] = pieces[1].trim();
 <!--
 Joskus haluamme järjestää esineitä useamman asian perusteella. Tarkastellaan seuraavaksi esimerkkiä, missä elokuvat listataan nimen ja julkaisuvuoden perusteella järjestettynä. Tässä käytämme Javan valmista <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html" target="_blank" norel>Comparator</a>-luokkaa, joka tarjoaa menetelmiä järjestämiseen. Oletetaan, että käytössämme on seuraava luokka `Elokuva` -->
 
-<p>We sometimes want to sort items based on a number of things. Let's look at an example in which films are listed in order of their name and year of release. We'll make use of Java's <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html" target="_blank" norel>Comparator</a> class here, which offers us the functionality required for sorting. Let's assume that we have the class `Film` at our disposal.</p>
+<p>We sometimes want to sort items based on a number of things. Let's look at an example in which films are listed in order of their name and year of release. We'll make use of Java's <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html" target="_blank" norel>Comparator</a> class here, which offers us the functionality required for sorting. Let's assume that we have the class <code>Film</code> at our disposal.</p>
 
 <!--
 ```java

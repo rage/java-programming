@@ -1067,7 +1067,7 @@ public static void main(String[] args) {
 ```java
 public static void main(String[] args) {
 
-    HealthStation childrensHospital = new HealthInstitution();
+    HealthStation childrensHospital = new HealthStation();
 
     Person ethan = new Person("Ethan", 1, 110, 7);
     Person peter = new Person("Peter", 33, 176, 85);
@@ -1305,13 +1305,13 @@ public class PaymentTerminal {
 
     public double eatAffordably(double payment) {
         // an affordable meal costs 2.50 euros
-        // increase the amount of cash by the price of an affordable mean and return the change
+        // increase the amount of cash by the price of an affordable meal and return the change
         // if the payment parameter is not large enough, no meal is sold and the method should return the whole payment
     }
 
     public double eatHeartily(double payment) {
         // a hearty meal costs 4.30 euros
-        // increase the amount of cash by the price of a hearty mean and return the change
+        // increase the amount of cash by the price of a hearty meal and return the change
         // if the payment parameter is not large enough, no meal is sold and the method should return the whole payment
     }
 
@@ -2230,7 +2230,7 @@ public class SimpleDate {
 
 <!-- Vaikka oliomuuttujat `vuosi`, `kuukausi` ja `paiva` ovat olion kapseloimia (`private`) oliomuuttujia, pystymme lukemaan niiden arvon kirjoittamalla `verrattava.*muuttujanNimi*`. Tämä johtuu siitä, että `private`-muuttujat ovat luettavissa kaikissa metodeissa, jotka kyseinen luokka sisältää. Huomaa, että syntaksi (kirjoitusasu) vastaa tässä jonkin olion metodin kutsumista. Toisin kuin metodia kutsuttaessa, viittaamme olion kenttään, jolloin metodikutsun osoittavia sulkeita ei kirjoiteta. -->
 
-Even though the object variables `year`, `month`, and `day` are encapsulated (`private`) object variables, we can read their values by writing `compared.*variableName*`. This is because `private` variable can be accessed from all the methods contained by that class. Notice that the syntax here matches calling some object method. Unlike when calling a method, we refer to a field of an object, so the parentheses that indicate a method call are not written.
+Even though the object variables `year`, `month`, and `day` are encapsulated (`private`) object variables, we can read their values by writing `compared.*variableName*`. This is because a `private` variable can be accessed from all the methods contained by that class. Notice that the syntax here matches calling some object method. Unlike when calling a method, we refer to a field of an object, so the parentheses that indicate a method call are not written.
 
 <!-- Metodin käyttöesimerkki: -->
 
@@ -2261,14 +2261,14 @@ public static void main(String[] args) {
     SimpleDate d3 = new SimpleDate(1, 3, 2011);
     SimpleDate d4 = new SimpleDate(31, 12, 2010);
 
-    System.out.println(d1 + " is earlier than " + d2 + ": " + p1.before(p2));
-    System.out.println(d2 + " is earlier than " + d1 + ": " + p2.before(p1));
+    System.out.println(d1 + " is earlier than " + d2 + ": " + d1.before(d2));
+    System.out.println(d2 + " is earlier than " + d1 + ": " + d2.before(d1));
 
-    System.out.println(d2 + " is earlier than " + d3 + ": " + p2.before(p3));
-    System.out.println(d3 + " is earlier than " + d2 + ": " + p3.before(p2));
+    System.out.println(d2 + " is earlier than " + d3 + ": " + d2.before(d3));
+    System.out.println(d3 + " is earlier than " + d2 + ": " + d3.before(d2));
 
-    System.out.println(d4 + " is earlier than " + d1 + ": " + p4.before(p1));
-    System.out.println(d1 + " is earlier than " + d4 + ": " + p1.before(p4));
+    System.out.println(d4 + " is earlier than " + d1 + ": " + d4.before(d1));
+    System.out.println(d1 + " is earlier than " + d4 + ": " + d1.before(d4));
 }
 ```
 
