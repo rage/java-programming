@@ -30,7 +30,7 @@ export async function fetchQuizNames() {
   }
 
   const response = await axios.get(
-    `https://quizzes.mooc.fi/api/v1/quizzes/${id}/titles/${quizzesLanguage}`,
+    `https://quizzes.mooc.fi/api/v2/general/course/${id}/quiz-titles`,
   )
   return response.data
 }
