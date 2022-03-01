@@ -851,7 +851,7 @@ Try this out. Make some boxes containing some items, and add some smaller boxes 
 
 <!-- Kuten mitä tahansa muuttujan tyyppiä, myös rajapintaa voi käyttää metodin paluuarvona. Seuraavassa `Tehdas`, jota voi pyytää valmistamaan erilaisia `Talletettava`-rajapinnan toteuttavia oliota. Tehdas valmistaa aluksi satunnaisesti kirjoja ja levyjä -->
 
-Interfaces can be used as return types in methods -- just like regular variable types. In the next example is a class `Factory` that can be asked to construct differerent objects that implement the `Packable` interface.
+Interfaces can be used as return types in methods -- just like regular variable types. In the next example is a class `Factory` that can be asked to construct different objects that implement the `Packable` interface.
 
 
 <!-- ```java
