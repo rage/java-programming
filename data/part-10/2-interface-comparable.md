@@ -159,14 +159,14 @@ member.add(new Member("mikael", 182));
 member.add(new Member("matti", 187));
 member.add(new Member("ada", 184));
 
-member.stream().forEach(m -> System.out.println(m);
+member.stream().forEach(m -> System.out.println(m));
 System.out.println();
 // sorting the stream that is to be printed using the sorted method
-member.stream().sorted().forEach(m -> System.out.println(m);
-member.stream().forEach(m -> System.out.println(m);
+member.stream().sorted().forEach(m -> System.out.println(m));
+member.stream().forEach(m -> System.out.println(m));
 // sorting a list with the sort-method of the Collections class
 Collections.sort(member);
-member.stream().forEach(m -> System.out.println(m);
+member.stream().forEach(m -> System.out.println(m));
 ```
 
 <sample-output>
@@ -214,7 +214,7 @@ The exercise template includes the class `Student`, which has a name. Implement 
 
 <!-- **Vinkki:** Opiskelijan nimi on String, ja String-luokka on itsessään `Comparable`. Voit hyödyntää String-luokan `compareTo`-metodia Opiskelija-luokan metodia toteuttaessasi. `String.compareTo` kohtelee kirjaimia eriarvoisesti kirjainkoon mukaan, ja tätä varten String-luokalla on myös metodi `compareToIgnoreCase` joka nimensä mukaisesti jättää kirjainkoon huomioimatta. Voit käyttää opiskelijoiden järjestämiseen kumpaa näistä haluat. -->
 
- The name of the `Student` is a String, which implements `Comparable` itself. You may use its `compareTo` method when implementing the method for the `Student` class. Note that `String.compareTo()` also treats letters according to their size, while the `compareToIgnoreCase` method of the same class ignores the capitalization completely. You may either of these methods in the exercise.
+ The name of the `Student` is a String, which implements `Comparable` itself. You may use its `compareTo` method when implementing the method for the `Student` class. Note that `String.compareTo()` also treats letters according to their size, while the `compareToIgnoreCase` method of the same class ignores the capitalization completely. You may use either of these methods in the exercise.
 
 </programming-exercise>
 
@@ -337,12 +337,12 @@ public class Henkilo {
 ```java
 public class Person {
 
-    private int birthYear;
     private String name;
+    private int birthYear;
 
-    public Person(int birthYear, String name) {
-        this.birthYear = birthYear;
+    public Person(String name, int birthYear) {
         this.name = name;
+        this.birthYear = birthYear;
     }
 
     public String getName() {
@@ -367,11 +367,11 @@ henkilot.add(new Henkilo("Grace Hopper", 1906));
 henkilot.add(new Henkilo("Mary Coombs", 1929));
 ``` -->
 ```java
-ArrayList<Person> person = new ArrayList<>();
-person.add(new Person("Ada Lovelace", 1815));
-person.add(new Person("Irma Wyman", 1928));
-person.add(new Person("Grace Hopper", 1906));
-person.add(new Person("Mary Coombs", 1929));
+ArrayList<Person> persons = new ArrayList<>();
+persons.add(new Person("Ada Lovelace", 1815));
+persons.add(new Person("Irma Wyman", 1928));
+persons.add(new Person("Grace Hopper", 1906));
+persons.add(new Person("Mary Coombs", 1929));
 ```
 
 <!-- Haluamme järjestää listan ilman, että henkilo-olion tulee toteuttaa rajapinta `Comparable`.
