@@ -5,6 +5,8 @@ hidden: false
 information_page: true
 ---
 
+<notice><strong>No more exams will be held on this course.</strong> You can receive a certificate upon completing at least 25% of exercises per part. The certificates are seperate for Java Programming I and Java Programming II.</notice>
+
 The Java Programming MOOC contains University of Helsinki's courses Introduction to Programming (parts 1-7) and Advanced Course in Programming (parts 8-14). A free online exam will be held for both parts and both will be graded seperately.
 
 The exam corresponding to Introduction to Programming is to be completed after parts 1-7. Likewise, the exam corresponding to Advanced Course in Programming is to be completed after parts 8-14.
@@ -13,19 +15,9 @@ Both exams will be held on several different days. You can attend the exam on an
 
 ## Upcoming exams
 
-**Detailed information on the upcomping exam can be found here: [https://java-programming.mooc.fi/exam](https://java-programming.mooc.fi/exam)**
+**There are no upcoming exams.**
 
-#### Introduction To Programming
-
-* ~~22.08.2020~~ canceled
-* 29.08.2020
-* Final exam January 15th, 2021
-
-#### Advanced Course In Programming
-
-* ~~29.08.2020~~ canceled
-* 05.09.2020
-* Final exam January 16th, 2021
+The final exam was in January 2021.
 
 ## Points
 
