@@ -1,6 +1,6 @@
 ---
 path: '/part-7/4-java-programming'
-title: 'Summary and about exam'
+title: 'Conclusion'
 hidden: false
 ---
 
@@ -17,6 +17,6 @@ During the first seven parts you've become familiar with the basics of programmi
 
 The journey continues with the Java Programming II Course, which begins with part 8 of the material.
 
-**Note!** Completing this part ends the first part of this course, Java Programming I, which runs from parts 1-7. If you reside in Finland, you can participate on  a course exam worth 5 ECTS is done once part 7 has been completed.
+**Note!** Completing this part ends the first part of this course, Java Programming I, which runs from parts 1-7. You may request a certificate from here: https://www.mooc.fi/en/profile/completions
 
 <quiz id="a343e0af-8203-44a1-adce-d7d220813576"></quiz>
