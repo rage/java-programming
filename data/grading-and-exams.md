@@ -5,7 +5,7 @@ hidden: false
 information_page: true
 ---
 
-<notice><strong>No more exams will be held on this course.</strong> You can receive a certificate upon completing at least 25% of exercises per part. The certificates are seperate for Java Programming I and Java Programming II.</notice>
+<notice><strong>No more exams will be held on this course.</strong> You can receive a certificate upon completing at least 80% of exercises per part. The certificates are seperate for Java Programming I and Java Programming II.</notice>
 
 The Java Programming MOOC contains University of Helsinki's courses Introduction to Programming (parts 1-7) and Advanced Course in Programming (parts 8-14). A free online exam will be held for both parts and both will be graded seperately.
 
