@@ -554,11 +554,7 @@ public class UserInterface {
     }
 
     public boolean alreadyEntered(String word) {
-       if (word.equals("end")) {
-            return true;
-        }
-
-        return false;
+        return this.words.contains(word);
     }
 }
 ```
