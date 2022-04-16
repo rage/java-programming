@@ -6,7 +6,7 @@ title: 'Summary'
 hidden: false
 ---
 
-Very often programs handle data. This data must be stored somewhere for the duration of program execution -- creating a new variable for each piece of data would be very laborous and make the code hard to understand.
+Very often programs handle data. This data must be stored somewhere for the duration of program execution -- creating a new variable for each piece of data would be very laborious and make the code hard to understand.
 In this part we have taken the first steps towards effective data management: by using lists and arrays we can store almost unlimited amounts of data for the duration of program execution.
 We have also practiced string handling and splitting strings into smaller substrings.
 
