@@ -388,7 +388,7 @@ fourth
 <programming-exercise name='Line by line' tmcname='part03-Part03_26.LineByLine'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä merkkijonoja. Mikäli syötetty merkkijono on tyhjä, ohjelma lopettaa käyttäjältä lukemisen ja ohjelman suoritus päättyy. Mikäli merkkijono ei ole tyhjä, ohjelma pilkkoo syötetyn merkkijonon osiksi välilyöntien ` ` kohdalta ja tulostaa pilkotun merkkijonon osat omille riveilleen. -->
-Write a program that reads strings from the user. If the input is empty, the program stops reading input and halts. For each non-empty input it splits the string input by whitespaces ` ` and prints each part of the string on a new line.
+Write a program that reads strings from the user. If the input is empty, the program stops reading input and halts. For each non-empty input it splits the string input by whitespaces `" "` and prints each part of the string on a new line.
 
 
 <sample-output>
@@ -422,7 +422,7 @@ halted
 <programming-exercise name='AV Club' tmcname='part03-Part03_27.AVClub'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä merkkijonoja. Mikäli syötetty merkkijono on tyhjä, ohjelma lopettaa käyttäjältä lukemisen ja ohjelman suoritus päättyy. Mikäli merkkijono ei ole tyhjä, ohjelma pilkkoo syötetyn merkkijonon osiksi välilyöntien ` ` kohdalta ja tulostaa omille riveilleen pilkotusta merkkijonosta ne merkkijonot (merkkijonon osat), joissa esiintyy merkkijono `av`. -->
-Write a program that reads user input until an empty line. For each non-empty string, the program splits the string by spaces ` ` and then prints the pieces that contain `av`, each on a new line.
+Write a program that reads user input until an empty line. For each non-empty string, the program splits the string by spaces `" "` and then prints the pieces that contain `av`, each on a new line.
 
 
 <sample-output>
@@ -498,7 +498,7 @@ tin wasn't found
 
 <!-- Merkkijonojen pilkkomista käytetään erityisesti silloin, kun käsitellään määrämuotoista tietoa. Määrämuotoisella tiedolla tarkoitetaan tietoa, joka noudattaa jotain tiettyä säännönmukaista muotoa. Tällainen muoto on esimerkiksi comma separated format (`csv`), missä arvot on eritelty toisistaan pilkuilla. Alla on esimerkki csv-muotoisesta nimiä ja ikiä sisältävästä tiedosta. Ensimmäinen sarake sisältää nimen ja toinen iän. Sarakkeet on eroteltu toisistaan pilkuilla. -->
 
-Splitting strings is used particularly when the data is of a fixed format. This refers to data that adheres to some predefined format. An example of this of this is the comma-separated values (`csv`) format, where commas are used to separate values. Below you'll find an example of data in csv form containing names and ages. The first column contains names and the second one ages. The columns are separated by a comma.
+Splitting strings is used particularly when the data is of a fixed format. This refers to data that adheres to some predefined format. An example of this is the comma-separated values (`csv`) format, where commas are used to separate values. Below you'll find an example of data in csv form containing names and ages. The first column contains names and the second one ages. The columns are separated by a comma.
 
 <sample-data>
 
@@ -569,7 +569,7 @@ Name: lily, age: 1
 <programming-exercise name='First words' tmcname='part03-Part03_28.FirstWords'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä merkkijonoja. Mikäli syötetty merkkijono on tyhjä, ohjelma ei jatka lukemista ja ohjelman suoritus päättyy. Mikäli merkkijono ei ole tyhjä, ohjelma pilkkoo syötetyn merkkijonon osiksi välilyöntien ` ` kohdalta ja tulostaa kunkin pilkotun merkkijonon ensimmäisen osan. -->
-Write a program that reads user input until an empty line is entered. For each non-empty line the program splits the string by spaces ` `  and prints the first part of the string.
+Write a program that reads user input until an empty line is entered. For each non-empty line the program splits the string by spaces `" "` and prints the first part of the string.
 
 <sample-output>
 
@@ -590,7 +590,7 @@ this
 <programming-exercise name='LastWords' tmcname='part03-Part03_29.LastWords'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä merkkijonoja. Mikäli syötetty merkkijono on tyhjä, ohjelma ei jatka lukemista ja ohjelman suoritus päättyy. Mikäli merkkijono ei ole tyhjä, ohjelma pilkkoo syötetyn merkkijonon osiksi välilyöntien ` ` kohdalta ja tulostaa kunkin pilkotun merkkijonon viimeisen osan. -->
-Write a program that reads user input until an empty line is entered. For each non-empty line the program splits the string by spaces ` `  and prints the last part of the string.
+Write a program that reads user input until an empty line is entered. For each non-empty line the program splits the string by spaces `" "` and prints the last part of the string.
 
 <sample-output>
 
@@ -891,7 +891,7 @@ System.out.println("Merkkijonon " + mjono + " pituus on " + pituus);
 ```java
 String word = "equisterian";
 int length = word.length();
-System.out.println("The length of the word" + word + " is " + length);
+System.out.println("The length of the word " + word + " is " + length);
 ```
 
 <sample-output>
