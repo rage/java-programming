@@ -106,7 +106,7 @@ for (int i = 0; i < names.size(); i++) {
 System.out.println();
 
 // 3. for-each loop (no index)
-for (String name: names) {
+for (String name : names) {
     System.out.println(name);
 }
 ```
