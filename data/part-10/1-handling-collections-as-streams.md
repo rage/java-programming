@@ -143,7 +143,7 @@ double average = inputs.stream()
 <!-- Keskiarvon laskeminen onnistuu virrasta, jolle on kutsuttu `mapToInt`-metodia. Kokonaislukuja sisältävällä virralla on metodi `average()`, joka palauttaa <a href="https://docs.oracle.com/javase/8/docs/api/java/util/OptionalDouble.html" target="_blank" norel>OptionalDouble</a>-tyyppisen olion. Oliolla on metodi `getAsDouble()`, joka palauttaa listan arvojen keskiarvon `double`-tyyppisenä muuttujana.
 
 Lyhyt yhteenveto tähän mennessä tutuiksi tulleista virtaan liittyvistä metodeista. -->
-Calculating the average is possible from a stream that has the `mapToInt` method called on it. A stream of integers has an `average` method that returns an <a href="https://docs.oracle.com/javase/8/docs/api/java/util/OptionalDouble.html" target="_blank" norel>OptionalDouble</a>-type object. The object has `getAsDouble()` method that returns the average of the list values as a type `double` varaible.
+Calculating the average is possible from a stream that has the `mapToInt` method called on it. A stream of integers has an `average` method that returns an <a href="https://docs.oracle.com/javase/8/docs/api/java/util/OptionalDouble.html" target="_blank" norel>OptionalDouble</a>-type object. The object has `getAsDouble()` method that returns the average of the list values as a `double` type variable.
 
 A brief summary of the stream methods we've encountered so far.
 
@@ -216,7 +216,7 @@ A brief summary of the stream methods we've encountered so far.
 
   <tr>
     <td>
-      Stream formation: `stream()`
+      Stream formation: <code>stream()</code>
     </td>
     <td>
       The method is called on collection that implements the Collection interface, such as an ArrayList Object. Something is done on the created stream.
@@ -225,7 +225,7 @@ A brief summary of the stream methods we've encountered so far.
 
   <tr>
     <td>
-      Converting a stream into an integer stream: `mapToInt(value -> another)`
+      Converting a stream into an integer stream: <code>mapToInt(value -> another)</code>
     </td>
     <td>
       The stream transforms into one containing integers.
@@ -237,30 +237,30 @@ A brief summary of the stream methods we've encountered so far.
   <tr>
     <td>
       Filtering values:
-      `filter(value -> filter condition)`
+      <code>filter(value -> filter condition)</code>
     </td>
     <td>
       The elements that do not satisfy the filter condition are removed from the string.
       On the right side of the arrow is a statement that returns a boolean.
-      If the boolean is `true`, the element is accepted into the stream. If the boolean evaluates to false, the value is not accepted into the stream. Something is done with the filtered values.
+      If the boolean is <code>true</code>, the element is accepted into the stream. If the boolean evaluates to false, the value is not accepted into the stream. Something is done with the filtered values.
     </td>
   </tr>
 
   <tr>
     <td>
-      Calculating the average: `average()`
+      Calculating the average: <code>average()</code>
     </td>
     <td>
-      Returns a OptionalDouble-type object that has a method `getAsDouble()` that returns a value of type `double`. Calling the method `average()` works on streams that contain integers - they can be created with the `mapToInt` method.
+      Returns a OptionalDouble-type object that has a method <code>getAsDouble()</code> that returns a value of type <code>double</code>. Calling the method <code>average()</code> works on streams that contain integers - they can be created with the <code>mapToInt</code> method.
     </td>
   </tr>
 
   <tr>
     <td>
-      Counting the number of elements in a stream: `count()`
+      Counting the number of elements in a stream: <code>count()</code>
     </td>
     <td>
-      Returns the number of elements in a stream as a `long`-type value.
+      Returns the number of elements in a stream as a <code>long</code>-type value.
     </td>
   </tr>
 
@@ -353,7 +353,7 @@ Average of the positive numbers: 1.5
 Miksi funktiot kirjoitetaan muodossa `luku -> luku > 5`?
 
 Kyseinen kirjoitusmuoto, *lambda-lauseke*, on Javan tarjoama lyhenne ns. anonyymeille metodeille, joilla ei ole "omistajaa" eli ne eivät ole osa luokkaa tai rajapintaa. Funktio sisältää sekä parametrien määrittelyn että funktion rungon. Saman funktion voi kirjoittaa useammalla eri tavalla, kts. alla. -->
-Stream values ​​are handled by methods related to streams. Methods that handle values ​​get a function as a parameter that determines what is done with each element. What the function does is specific to the method in question. For instance, the `filter` method used for filtering elements is provided a function which returns the a boolean `true` or `false`, depending on whether to keep the value in the stream or not. The `mapToInt` method used for transformation is, on the other hand, provided a function which converts the value to an integer, and so on.
+Stream values ​​are handled by methods related to streams. Methods that handle values ​​get a function as a parameter that determines what is done with each element. What the function does is specific to the method in question. For instance, the `filter` method used for filtering elements is provided a function which returns a boolean `true` or `false`, depending on whether to keep the value in the stream or not. The `mapToInt` method used for transformation is, on the other hand, provided a function which converts the value to an integer, and so on.
 
 Why are the functions written in the form `value -> value > 5`?
 
@@ -438,7 +438,7 @@ The function can also be passed directly as a parameter. The syntax found below 
 <!-- Virran arvoja käsittelevät funktiot eivät voi muuttaa funktion ulkopuolisten muuttujien arvoja. Kyse on käytännössä staattisten metodien käyttäytymisestä -- metodia kutsuttaessa metodin ulkopuolisiin muuttujiin ei pääse käsiksi. Funktioiden tilanteessa funktion ulkopuolisten muuttujien arvoja voi lukea olettaen, että luettavien muuttujien arvot eivät muutu lainkaan ohjelmassa.
 
 Alla oleva ohjelma demonstroi tilannetta, missä funktiossa yritetään hyödyntää funktion ulkopuolista muuttujaa. Tämä ei toimi. -->
-Functions thats handle stream elements ​​cannot change values ​​of variables outside of the function. This has to do with how static methods behave - during a method call, there is no access to any variables outside of the method. With  functions, the values ​​of variables outside the function can be read, assuming that those values of those variables do not change in the program.
+Functions that handle stream elements ​​cannot change values ​​of variables outside of the function. This has to do with how static methods behave - during a method call, there is no access to any variables outside of the method. With  functions, the values ​​of variables outside the function can be read, assuming that those values of those variables do not change in the program.
 
 The program below demonstrates the situation in which a function attempts to make use of a variable outside the function. It doesn't work.
 
@@ -564,7 +564,7 @@ Implement the method using stream! For collecting the numbers try the command `C
 
 Metodi `count` kertoo virran alkioiden lukumäärän `long`-tyyppisenä muuttujana. -->
 
-Let's take a look at four terminal operations: the `count` method for counting the number of values on a list ​​using the, the `forEach` method for going a through list values, the `collect` method for gathering the list values ​​into a data structure, and the `reduce` method for combining the list items.
+Let's take a look at four terminal operations: the `count` method for counting the number of values on a list, the `forEach` method for going a through list values, the `collect` method for gathering the list values ​​into a data structure, and the `reduce` method for combining the list items.
 
 The `count` method informs us of the number of values in the stream as a `long`-type variable.
 
@@ -601,7 +601,7 @@ Values: 5
 </sample-output>
 
 <!-- Metodi `forEach` kertoo mitä kullekin listan arvolle tulee tehdä ja samalla päättää virran käsittelyn. Alla olevassa esimerkissä luodaan ensin numeroita sisältävä lista, jonka jälkeen tulostetaan vain kahdella jaolliset luvut. -->
-The `forEach` method defines what is done to each list value and terminated the stream processing. In the example below, we first create a list of numbers, after which we only print the numbers that are divisible by two.
+The `forEach` method defines what is done to each list value and terminates the stream processing. In the example below, we first create a list of numbers, after which we only print the numbers that are divisible by two.
 
 
 <!-- ```java
@@ -668,7 +668,7 @@ ArrayList<Integer> positives = values.stream()
     .filter(value -> value > 0)
     .collect(Collectors.toCollection(ArrayList::new));
 
-positiiviset.stream()
+positives.stream()
     .forEach(value -> System.out.println(value));
 ```
 
@@ -916,7 +916,7 @@ System.out.println("Lukumäärä: " + lkm);
 // ArrayList<Person> persons = new ArrayList<>();
 
 long count = persons.stream()
-    .filter(person -> persons.getFirstName().startsWith("A"))
+    .filter(person -> person.getFirstName().startsWith("A"))
     .count();
 System.out.println("Count: " + count);
 ```
@@ -1288,7 +1288,7 @@ The exercise template includes the probably familiar project "Cargo hold". Howev
 <!-- Virta on myös erittäin näppärä tiedostojen käsittelyssä. Tiedoston lukeminen virtamuotoisena tapahtuu Javan valmiin <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html" target="_blank" rel="noopener">Files</a>-luokan avulla. Files-luokan metodin `lines` avulla tiedostosta voidaan luoda syötevirta, jonka avulla tiedoston rivit voidaan käsitellä yksi kerrallaan. Metodi `lines` saa patametrikseen polun, joka luodaan luokan <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Paths.html" target="_blank" rel="noopener">Paths</a> tarjoamalla metodilla `get`, jolle annetaan parametrina tiedostopolkua kuvaava merkkijono.
 
 Alla olevassa esimerkissä luetaan tiedoston "tiedosto.txt" kaikki rivit ja lisätään ne listaan. -->
-<p>Streams are also very handy in handling files. The file is read in stream form using Java's ready-made <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html" target="_blank" rel="noopener">Files</a> class. The `lines` method in the files class allows you to create an input stream from a file, allowing you to process the rows one by one. The `lines` method gets a path as its parameter, which is created using the `get` method in the <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Paths.html" target="_blank" rel="noopener">Paths</a> class. The `get` method is provided a string describing the file path.</p>
+<p>Streams are also very handy in handling files. The file is read in stream form using Java's ready-made <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html" target="_blank" rel="noopener">Files</a> class. The <code>lines</code> method in the files class allows you to create an input stream from a file, allowing you to process the rows one by one. The <code>lines</code> method gets a path as its parameter, which is created using the <code>get</code> method in the <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Paths.html" target="_blank" rel="noopener">Paths</a> class. The <code>get</code> method is provided a string describing the file path.</p>
 
 The example below reads all the lines in "file.txt" and adds them to the list.
 

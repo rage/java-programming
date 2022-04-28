@@ -607,6 +607,8 @@ Pillin tulee toimia seuraavasti. -->
 
 Create a class named `Whistle`. Add the variable `private String sound` to the class. After that, create the constructor `public Whistle(String whistleSound)`, which is used to create a new whistle that's given a sound.
 
+Then create the method `public void sound()` that prints the whistle's sound.
+
 <!-- ```java
 Pilli sorsapilli = new Pilli("Kvaak");
 Pilli kukkopilli = new Pilli("Peef");
@@ -965,7 +967,7 @@ public class Paaohjelma {
 ``` -->
 
 ```java
-public class MainPorgram {
+public class MainProgram {
     public static void main(String[] args) {
         DecreasingCounter counter = new DecreasingCounter(10);
 
@@ -1519,7 +1521,7 @@ public class Main {
         antti.growOlder();
 
         System.out.println("Pekka's age: " + pekka.returnAge());
-        System.out.println("Antti's age: " + antti.returnAge())
+        System.out.println("Antti's age: " + antti.returnAge());
         int combined = pekka.returnAge() + antti.returnAge();
 
         System.out.println("Pekka's and Antti's combined age " + combined + " years");
