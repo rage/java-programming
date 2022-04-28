@@ -664,7 +664,7 @@ System.out.println("Delegating the reading to Verna");
 
 ReadingList vernasList = new ReadingList();
 vernasList.add(jonisList);
-vernanLista.read();
+vernasList.read();
 
 System.out.println();
 System.out.println("Joni's to-read: " + jonisList.toRead());
@@ -851,7 +851,7 @@ Try this out. Make some boxes containing some items, and add some smaller boxes 
 
 <!-- Kuten mitä tahansa muuttujan tyyppiä, myös rajapintaa voi käyttää metodin paluuarvona. Seuraavassa `Tehdas`, jota voi pyytää valmistamaan erilaisia `Talletettava`-rajapinnan toteuttavia oliota. Tehdas valmistaa aluksi satunnaisesti kirjoja ja levyjä -->
 
-Interfaces can be used as return types in methods -- just like regular variable types. In the next example is a class `Factory` that can be asked to construct differerent objects that implement the `Packable` interface.
+Interfaces can be used as return types in methods -- just like regular variable types. In the next example is a class `Factory` that can be asked to construct different objects that implement the `Packable` interface.
 
 
 <!-- ```java
@@ -1055,7 +1055,7 @@ Using interfaces in programming enables reducing dependencies between classes. I
 
 <!-- Rajapinta <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a> määrittelee listoihin liittyvän peruskäyttäytymisen. Koska ArrayList-luokka toteuttaa `List`-rajapinnan, voi sitä käyttää myös `List`-rajapinnan kautta. -->
 
-<p>The <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a> interface defines the basic functionality related to lists. Because the ArrayList class implements the `List` interface, one can also use it through the `List` interface.</p>
+<p>The <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a> interface defines the basic functionality related to lists. Because the ArrayList class implements the <code>List</code> interface, one can also use it through the <code>List</code> interface.</p>
 
 <br/>
 
@@ -1071,7 +1071,7 @@ strings.add("string objects inside an arraylist object!");
 
 <!-- Kuten huomaamme <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" target="_blank">List-rajapinnan Java API</a>:sta, rajapinnan `List` toteuttavia luokkia on useita. Eräs tietojenkäsittelijöille tuttu listarakenne on linkitetty lista (<a href="http://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html" target="_blank">linked list</a>). Linkitettyä listaa voi käyttää rajapinnan List-kautta täysin samoin kuin ArrayLististä luotua oliota. -->
 
-<p>As we can see fom the <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" target="_blank">Java API</a> of List, there are many classes that implement the `List` interface. One list that is familiar to computer scientists is a <a href="http://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html" target="_blank">linked list</a>. A linked list can be used through the List interface exactly the same way as an object created from ArrayList.</p>
+<p>As we can see fom the <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" target="_blank">Java API</a> of List, there are many classes that implement the <code>List</code> interface. One list that is familiar to computer scientists is a <a href="http://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html" target="_blank">linked list</a>. A linked list can be used through the List interface exactly the same way as an object created from ArrayList.</p>
 
 <br/>
 
@@ -1092,7 +1092,7 @@ From the perspective of the user, both implementations of the `List` interface w
 
 <!-- Isoilla listoille voimme nähdä huomattaviakin suorituskykyeroja. Linkitetyn listan vahvuutena on se, että listaan lisääminen on aina nopeaa. ArrayListillä taas taustalla on taulukko, jota täytyy kasvattaa aina kun se täyttyy. Taulukon kasvattaminen vaatii uuden taulukon luonnin ja vanhan taulukon tietojen kopioinnin uuteen taulukkoon. Toisaalta, indeksin perusteella hakeminen on Arraylististä erittäin nopeaa, kun taas linkitetyssä listassa joudutaan käymään listan alkioita yksitellen läpi tiettyyn indeksiin pääsemiseksi. -->
 
-One can see noticeable performcance differences between list implementations if the lists are big enough. The strength of a linked list is that adding to it is always fast. ArrayList, on the other hand, is backed by an array, which needs to be resized each time it gets full. Resizing the array requires creating a new array and copying the values from the old array to the new one.  On the other hand, searching objects by index is much faster in an array list compared to a linked list.
+One can see noticeable performance differences between list implementations if the lists are big enough. The strength of a linked list is that adding to it is always fast. ArrayList, on the other hand, is backed by an array, which needs to be resized each time it gets full. Resizing the array requires creating a new array and copying the values from the old array to the new one.  On the other hand, searching objects by index is much faster in an array list compared to a linked list.
 
 
 <!-- Tällä ohjelmointikurssilla eteen tulevissa tilanteissa kannattanee käytännössä valita aina ArrayList. "Rajapintoihin ohjelmointi" kuitenkin kannattaa: toteuta ohjelmasi siten, että käytät tietorakenteita rajapintojen kautta. -->
@@ -1288,7 +1288,7 @@ System.out.println(palautaKoko(nimet));
 ``` -->
 ```java
 Set<String> names = new HashSet<>();
-name.add("first");
+names.add("first");
 names.add("first");
 names.add("second");
 names.add("second");
@@ -1396,7 +1396,7 @@ good luck
 
 <!-- Seuraavassa tehtävässä rakennetaan verkkokauppaan liittyvää toiminnallisuutta ja harjoitellaan luokkien käyttämistä niiden tarjoamien rajapintojen kautta. -->
 
-In the next exercise, we build functionality realted to e-commerce and practice using classes through the their interfaces.
+In the next exercise, we build functionality related to e-commerce and practice using classes through their interfaces.
 
 <programming-exercise name='Online shop (8 parts)' tmcname='part09-Part09_10.OnlineShop' nocoins='true'>
 
@@ -1417,7 +1417,7 @@ Varaston sisällä tuotteiden hinnat (ja seuraavassa kohdassa saldot) tulee tall
 
 Seuraavassa esimerkki varaston käytöstä: -->
 
-In this exercise we'll create program components, that can used to run an online store.
+In this exercise we'll create program components, that can be used to run an online store.
 
 <h2>Warehouse</h2>
 
@@ -1968,7 +1968,7 @@ public class Store {
 
             // Add code here that adds the product to the cart,
             // If there is any in the warehouse, and reduces the stock in the warehouse
-            // Dont't touch any of the other code!
+            // Don't touch any of the other code!
         }
 
         System.out.println("your shoppingcart contents:");
@@ -2012,7 +2012,7 @@ Warehouse warehouse = new Warehouse();
 
 The store is almost done. The method `public void shop(String customer)` has a part you need to complete, marked with comments. In the marked part, add code that checks if the product requested by the customer is available and has stock in the warehouse. If so, reduce the products stock in the warehouse and add the product to the shopping cart.
 
-*In reality an online store would be implemented a little differently. Web-apps have an HTML-page as a user interface, and clicks there are send to the server application. There are several courses related to web development available at the University Of Helsinki.*
+*In reality an online store would be implemented a little differently. Web-apps have an HTML-page as a user interface, and clicks there are sent to a server application. There are several courses related to web development available at the University Of Helsinki.*
 
 </programming-exercise>
 

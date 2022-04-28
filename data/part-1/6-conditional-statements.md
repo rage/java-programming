@@ -476,8 +476,10 @@ Greater number is: 8
 
 <sample-output>
 
-Give the first number; **5**
-Give the second number: **5**
+Give the first number:
+**5**
+Give the second number:
+**5**
 The numbers are equal!
 
 </sample-output>
@@ -1151,7 +1153,7 @@ It is! :)
 
 In this example we flip the result of the expression `number > 4` using `!`, i.e., the not-operator. The not-operator is written in such a way that the expression to be flipped is wrapped in parentheses, and the not-operator is placed before the parentheses.
 
-<!-- ```java
+<!-- ```java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
 int luku = 7;
 
 if (!(luku > 4)) {
@@ -1167,13 +1169,13 @@ int number = 7;
 if (!(number > 4)) {
     System.out.println("The number is not greater than 4.");
 } else {
-    System.out.println("The number is greater than or equal to 4.");
+    System.out.println("The number is greater than 4.")
 }
 ```
 
 <sample-output>
 
-The number is greater than or equal to 4.
+The number is greater than 4.
 
 </sample-output>
 
@@ -1524,15 +1526,17 @@ if (number % 4 != 0) {
 
 When a gift is given by a close relative or a family member, the amount of gift tax is determined by the following table (source [vero.fi](https://www.vero.fi/en/individuals/property/gifts/gift-tax-calculator/#gifttaxtables)):
 
-| Value of gift        | Tax at the lower limit | Tax rate(%) for exceeding part |
-| -------------------- | ---------------------- | ------------------------------ |
-| 5 000 -- 25 000      | 100                    | 8                              |
-| 25 000 -- 55 000     |  1 700                 | 10                             |
-| 55 000 -- 200 000    | 4 700                  | 12                             |
-| 200 000 -- 1 000 000 | 22 100                 | 15                             |
-| 1 000 000 --         | 142 100                | 17                             |
+| Value of gift        | Tax at the lower limit    | Tax rate(%) for exceeding part  |
+| -------------------- | ----------------------    | ------------------------------  |
+| 5 000 -- 25 000      | 100                       | 8                               |
+| 25 000 -- 55 000     | 1 700                     | 10                              |
+| 55 000 -- 200 000    | 4 700                     | 12                              |
+| 200 000 -- 1 000 000 | 22 100                    | 15                              |
+| 1 000 000 --         | 142 100                   | 17                              |
 
 <!-- Esimerkiksi 6000 euron lahjasta tulee maksaa veroa 180 euroa (100 + (6000-5000) * 0.08), ja 75000 euron lahjasta tulee maksaa veroa 7100 euroa (4700 + (75000-55000) * 0.12). -->
+
+<!-- The formula used to calculate the gift tax is: (Tax at the lower limit + (Value of gift (€) - minimum value of gift (€)) * (Tax Rate (%) / 100) -->
 
 For example 6000€ gift implies 180€ of gift tax (100 + (6000-5000) * 0.08), and 75000€ gift implies 7100€ of gift tax (4700 + (75000-55000) * 0.12).
 
