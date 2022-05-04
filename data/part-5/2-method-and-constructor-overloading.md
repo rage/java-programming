@@ -5,7 +5,7 @@ title: 'Removing repetitive code (overloading methods and constructors)'
 hidden: false
 ---
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 - Becoming familiar with the term overloading
 - Creating multiple constructors for a class.

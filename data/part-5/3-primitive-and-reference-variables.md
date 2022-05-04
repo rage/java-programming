@@ -9,7 +9,7 @@ hidden: false
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 
 <!-- - Tunnet käsitteet alkeistyyppinen muuttuja ja viittaustyyppinen muuttuja. -->
@@ -61,7 +61,7 @@ public Nimi {
 ``` -->
 
 ```java
-public Name {
+public class Name {
     private String name;
 
     public Name(String name) {
@@ -122,7 +122,7 @@ public Nimi {
 ``` -->
 
 ```java
-public Name {
+public class Name {
     private String name;
 
     public Name(String name) {
@@ -333,7 +333,7 @@ The most significant difference between primitive and reference variables is tha
 
 <!-- Alkeistyyppisille muuttujille löytyy laskuoperaatioita kuten plus, miinus, kerto jne -- nämä operaatiot eivät muuta alkuperäisten muuttujien arvoja. Laskuoperaatioiden avulla luodaan uusia arvoja, jotka varastoidaan muuttujiin tarvittaessa. Toisaalta, viittaustyyppisten muuttujien arvoa ei voi muuttaa plus, miinus, kerto ym. laskuoperaatioiden avulla. -->
 
-Arithmetic operations, such as addition, subtraction, and multiplication can be used with primitive variables -- these operations do not change the original values of the variables. Arithmetic operations create new values that can be stored in variables as needed. Conversly, the values of reference variables cannot be changed by these arithmetic expressions.
+Arithmetic operations, such as addition, subtraction, and multiplication can be used with primitive variables -- these operations do not change the original values of the variables. Arithmetic operations create new values that can be stored in variables as needed. Conversely, the values of reference variables cannot be changed by these arithmetic expressions.
 
 <!-- Viittaustyyppisen muuttujan arvo -- eli viite -- osoittaa paikkaan, joka sisältää viittaustyyppiseen muuttujaan liittyvät tiedot. Oletetaan, että käytössä on luokka Henkilo, jossa on määritelty oliomuuttujaksi ika. Jos luokasta on luotu henkilö-olio, voi henkilö-olion viitettä seuraamalla päästä käsiksi muuttujaan ika, jonka arvoa voi tarvittaessa muuttaa. -->
 
@@ -470,7 +470,7 @@ First (1972)
 
 <!-- Ohjelman suoritus alkaa main-metodin ensimmäiseltä riviltä. Main-metodin ensimmäisellä rivillä esitellään Henkilo-tyyppinen muuttuja eka, johon kopioidaan Henkilo-luokan konstruktorin palauttama arvo. Konstruktorissa luodaan olio, jonka syntymävuodeksi asetetaan 1970 ja jonka nimeksi asetetaan parametrina saatu arvo. Konstruktori palauttaa viitteen. Rivin suorituksen jälkeen ohjelman tilanne on seuraava -- ohjelman muistiin on luotu Henkilo-olio, johon on viittaus main-metodissa määritellystä eka-muuttujasta. -->
 
-The program's execution starts off from the first line of the main method. A variable of type Person is declared on its first line, and the value returned by the Person class constructor is copied as its value. The constructor creates an object whose birth year is set to 1970 and whose name is set to the value received as a parameter. The constructor returns a reference. Once the row has been executed, the program's state is the following -- a Person object has been created in memory and the `first` variable defined in the main method contains a reference to ti.
+The program's execution starts off from the first line of the main method. A variable of type Person is declared on its first line, and the value returned by the Person class constructor is copied as its value. The constructor creates an object whose birth year is set to 1970 and whose name is set to the value received as a parameter. The constructor returns a reference. Once the row has been executed, the program's state is the following -- a Person object has been created in memory and the `first` variable defined in the main method contains a reference to it.
 
 
 <!-- *Alla olevissa piirroksissa vasemmalla puolella on kutsupino, oikealla ohjelman muisti.* -->

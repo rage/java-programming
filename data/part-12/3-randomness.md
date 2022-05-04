@@ -1,16 +1,17 @@
 ---
 path: '/part-12/3-randomness'
 title: 'Randomness'
-hidden: true
+hidden: false
 ---
 
 
-<text-box variant='learningObjectives' name='Oppimistavoitteet'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 <!-- - Tiedät miten satunnaislukuja luodaan ja tiedät joitakin tilanteita missä satunnaislukuja tarvitaan. -->
 <!-- - Osaat käyttää Javan valmista Random-luokkaa satunnaislukujen luomiseen. -->
 - Know how to generate random numbers, and know some situations where random numbers are needed.
- - Can use Java `Random` class to generate random numbers.
+- Can use Java `Random` class to generate random numbers.
+
 </text-box>
 
 <!-- Satunnaisuutta tarvitaan esimerkiksi salausalgoritmeissa, koneoppimisessa sekä tietokonepelien ennustettavuuden vähentämisessä. Satunnaisuutta mallinnetaan käytännössä satunnaislukujen avulla, joiden luomiseen Java tarjoaa valmiin `Random`-luokan. Random-luokasta voi tehdä olion jota voi käyttää seuraavalla tavalla. -->
@@ -128,7 +129,7 @@ We can do this by first creating random a number between 0 and 80 and then subtr
 
 ```java
 Random weatherMan = new Random();
-int temperature = weatherMan(81) - 30;
+int temperature = weatherMan.nextInt(81) - 30;
 System.out.println(temperature);
 ```
 
@@ -255,11 +256,11 @@ public class WeatherMan {
     }
 
     public String forecast() {
-        double propability = this.random.nextDouble();
+        double probability = this.random.nextDouble();
 
-        if (propability <= 0.1) {
+        if (probability <= 0.1) {
             return "It rains";
-        } else if (propability <= 0.4) { // 0.1 + 0.3
+        } else if (probability <= 0.4) { // 0.1 + 0.3
             return "It snows";
         } else { // rest, 1.0 - 0.4 = 0.6
             return "The sun shines";

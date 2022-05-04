@@ -461,9 +461,9 @@ while (!s.isEmpty()) {
 
 </sample-output>
 
-<!-- Vinkki! Kun ArrayListiin lisätään arvo, se menee listan loppuun. Viimeksi lisätty arvo on siis listan viimeisessä indeksissä -- listan tarjoamasta `length`-metodista on hyötyä viimeisen indeksin selvittämisessä. Poistaminen tietystä indeksistä onnistuu listan tarjoaman `remove`-metodin avulla. -->
+<!-- Vinkki! Kun ArrayListiin lisätään arvo, se menee listan loppuun. Viimeksi lisätty arvo on siis listan viimeisessä indeksissä -- listan tarjoamasta `size()`-metodista on hyötyä viimeisen indeksin selvittämisessä. Poistaminen tietystä indeksistä onnistuu listan tarjoaman `remove`-metodin avulla. -->
 
-Tip! When a value is added to an ArrayList, it goes to the end of the list. As such, the most recently added value is in the last index of the list - the `length` method provided by the list is useful for finding the last index. You can remove an element from a particular index using the `remove` method provided by the list.
+Tip! When a value is added to an ArrayList, it goes to the end of the list. As such, the most recently added value is in the last index of the list - the `size()` method provided by the list is useful for finding the last index. You can remove an element from a particular index using the `remove` method provided by the list.
 
 </programming-exercise>
 
@@ -863,7 +863,7 @@ public class AmusementParkRide {
     private String name;
     private int minimumHeight;
     private int visitors;
-    private ArrayList<Person> kyydissa;
+    private ArrayList<Person> riding;
 
     public AmusementParkRide(String name, int minimumHeight) {
         this.name = name;
@@ -1321,7 +1321,7 @@ public class AmusementParkRide {
     private String name;
     private int minimumHeight;
     private int visitors;
-    private ArrayList<Henkilo> riding;
+    private ArrayList<Person> riding;
 
     // ..
 
@@ -1533,9 +1533,9 @@ public class Main {
     public static void main(String[] args) {
         Gift book = new Gift("Harry Potter and the Philosopher's Stone", 2);
 
-        Package package = new Package();
-        package.addGift(book);
-        System.out.println(package.totalWeight());
+        Package gifts = new Package();
+        gifts.addGift(book);
+        System.out.println(gifts.totalWeight());
     }
 }
 ```
@@ -1656,13 +1656,13 @@ System.out.println(pisin.getNimi());
 
 ```java
 Person matti = new Person("Matti");
-matti.setPituus(180);
+matti.setHeight(180);
 
 Person juhana = new Person("Juhana");
-juhana.setPituus(132);
+juhana.setHeight(132);
 
 Person awak = new Person("Awak");
-awak.setPituus(194);
+awak.setHeight(194);
 
 AmusementParkRide hurjakuru = new AmusementParkRide("Hurjakuru", 140);
 
@@ -1674,9 +1674,9 @@ System.out.println(hurjakuru);
 System.out.println(hurjakuru.averageHeightOfPeopleOnRide());
 
 System.out.println();
-System.out.println(hurjakuru.haeTallest().getName());
+System.out.println(hurjakuru.getTallest().getName());
 Person tallest = hurjakuru.getTallest();
-System.out.println(pisin.getName());
+System.out.println(tallest.getName());
 ```
 
 
@@ -1798,7 +1798,7 @@ System.out.println("Empty room? " + room.isEmpty());
 
 System.out.println("");
 for (Person person : room.getPersons()) {
-    System.out.println(Person);
+    System.out.println(person);
 }
 ```
 
@@ -2293,7 +2293,7 @@ Seuraavassa on luokan käyttöesimerkki: -->
 
 Add the following methods to the `Suitcase` class:
 
-- a `printGoods` method, which prints all the items in the suitcase
+- a `printItems` method, which prints all the items in the suitcase
 
 - a `totalWeight` method, which returns the total weight of the items
 

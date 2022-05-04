@@ -21,7 +21,7 @@ hidden: false
 
 <!-- Olemme aiemmin oppineet menetelmiä tekstitiedostojen lukemiseen. Mikäli nämä eivät ole tuoreessa muistissa, kertaa kurssimateriaalin neljäs osa sopivilta osin. -->
 
-We have already learned some strategies to read text files. If your memories of the subject are hazy, take a look at the relevant parts of the fourth part of the course material.
+We have already learned some strategies to read text files. If your memories of the subject are hazy, take a look at the relevant parts of Part 4 of the course material.
 
 <!-- Tarkastellaan seuraavaksi tiedostoon kirjoittamista. Luokka <a href="https://docs.oracle.com/javase/8/docs/api/java/io/PrintWriter.html">PrintWriter</a> tarjoaa toiminnallisuuden tiedostoon kirjoittamiseen. Luokan `PrintWriter` konstruktorille annetaan parametrina kohdetiedoston sijaintia kuvaava merkkijono. -->
 
@@ -46,7 +46,7 @@ writer.close(); //closes the file and ensures that the written text is saved to 
 
 <!-- Esimerkissä kirjoitetaan tiedostoon "tiedosto.txt" merkkijono "Hei tiedosto!", jota seuraa linenvaihto, ja vielä hieman lisää tekstiä. Huomaa että tiedostoon kirjoitettaessa metodi `print` ei lisää linenvaihtoja, vaan ne tulee lisätä itse. Metodi `println` lisää myös linenvaihdot. -->
 
-In the example above we write to the file "file.txt" the string "Hello file!", followed by a line change and some additional text. Take notice that when writing to the file the method `print` does not add line changes, and you have to add them yourself. In contrast, the method `println` adds a new line change at the end of the parameter string it receives.
+In the example above, we write to the file "file.txt" the string "Hello file!", followed by a line change and some additional text. Take notice that when writing to the file the method `print` does not add line changes, and you have to add them yourself. In contrast, the method `println` adds a new line change at the end of the parameter string it receives.
 
 <!-- `PrintWriter`-luokan konstruktori heittää mahdollisesti poikkeuksen, joka tulee joko käsitellä tai siirtää kutsuvan metodin vastuulle. Metodi, jolle annetaan parametrina kirjoitettavan tiedoston nimi ja kirjoitettava sisältö voisi näyttää seuraavalta. -->
 
@@ -77,7 +77,7 @@ public class Storer {
 
 <!-- Yllä olevassa `kirjoitaTiedostoon`-metodissa luodaan ensin `PrintWriter`-olio, joka kirjoittaa parametrina annetussa sijainnissa sijaitsevaan tiedostoon `tiedostonNimi`. Tämän jälkeen kirjoitetaan tiedostoon `println`-metodilla. Konstruktorin mahdollisesti heittämä poikkeus tulee käsitellä joko `try-catch`-lohkolla tai siirtämällä poikkeuksen käsittelyvastuuta eteenpäin. Metodissa `kirjoitaTiedostoon` käsittelyvastuu on siirretty eteenpäin. -->
 
-In the `writeToFile` method above we begin by creating a `PrintWriter` object. It writes data the the file that is located at the path that the string `fileName` indicates. After this we write the text to the file by calling the `println` method. The possible exception that the constructor throws has to be handled with a `try-catch` block or the handling responsibility has to be transferred elsewhere. In the `writeToFile` method the responsibility to handle the exception is placed on the method that calls `writeToFile`.
+In the `writeToFile` method above we begin by creating a `PrintWriter` object. It writes data the the file that is located at the path that the string `fileName` indicates. After this, we write the text to the file by calling the `println` method. The possible exception that the constructor throws has to be handled with a `try-catch` block or the handling responsibility has to be transferred elsewhere. In the `writeToFile` method, the responsibility to handle the exception is placed on the method that calls `writeToFile`.
 
 <!-- Luodaan `main`-metodi jossa kutsutaan `Tallentaja`-olion `kirjoitaTiedostoon`-metodia. Poikkeusta ei ole pakko käsitellä `main`-metodissakaan, vaan se voi ilmoittaa heittävänsä mahdollisesti poikkeuksen määrittelyllä `throws Exception`. -->
 
@@ -104,7 +104,7 @@ By calling the method above we create a file called "diary.txt" and write the te
 
 <!-- Mikäli tiedostoja haluaa käsitellä siten, että kirjoitus tapahtuu olemassaolevan tiedoston perään, kannattaa kirjoituksessa käyttää <a href="https://docs.oracle.com/javase/8/docs/api/java/io/FileWriter.html" target="_blank" norel>FileWriter</a>-luokkaa. -->
 
-It's also possible to handle files in a way that adds the new texts after the existing contents. In that case you might want to use the [FileWriter](https://docs.oracle.com/javase/8/docs/api/java/io/FileWriter.html) class.
+It is also possible to handle files in a way that adds the new text after the existing content. In that case, you might want to use the [FileWriter](https://docs.oracle.com/javase/8/docs/api/java/io/FileWriter.html) class.
 
 <br/>
 
@@ -115,7 +115,7 @@ It's also possible to handle files in a way that adds the new texts after the ex
 
 <!-- Tässä tehtävässä laajennetaan dictionarya siten, että sanat voidaan lukea tiedostosta ja kirjoittaa tiedostoon. Sanakirjan tulee myös partsa kääntää molempiin suuntiin, suomesta vieraaseen kieleen sekä toiseen suuntaan (tehtävässä oletetaan hieman epärealistisesti, että suomen kielessä ja vieraassa kielessä ei ole yhtään samalla tavalla kirjoitettavaa sanaa). Tehtävänäsi on luoda dictionary luokkaan `SaveableDictionary`. Toteuta luokka pakkaukseen `dictionary`. -->
 
-In this exercise we will extend the dictionary so, that it can read words from a file and write words to a file.
+In this exercise we will extend the dictionary, so that it can read words from a file and write words to a file.
 The dictionary must also be able to translate both from Finnish to another language and from another language to Finnish (in this exercise we ignore the fact that some words might be written the same in Finnish and in other languages). Your mission is to create a dictionary in the class `SaveableDictionary`. Implement the class in the package `dictionary`.
 
 
@@ -130,7 +130,7 @@ For the dictionary, implement a constructor which takes no parameters, and the f
 
  - `public void add(String words, String translation)` adds a word to the dictionary. Every word has just one translation, and if the same word is added for the second time, nothing happens.
 
- - `public string translate(String word)` returns the translation for the given word. If the word is not in the dictionary, returns null.
+ - `public String translate(String word)` returns the translation for the given word. If the word is not in the dictionary, returns null.
 
 
 <!-- Sanakirjan tulee tässä vaiheessa toimia seuraavasti: -->
@@ -167,7 +167,7 @@ As can be seen from the output, after a translation has been added to the dictio
 
 
 <!-- <b>Huom:</b> metodit `add` ja `add` eivät lue tiedostoa tai kirjoita tiedostoon! Myöskään konstruktori ei koske tiedostoon. -->
-<b>NB:</b> the methods `add` and `translate` do not read from a file or write to a file! The constructor does not touch the file either.
+<b>NB:</b> the methods `add` and `translate` do not read from a file or write to a file! The constructor does not use a file either.
 
 
 <!-- <h2>Sanojen deleteminen</h2> -->
@@ -177,14 +177,14 @@ As can be seen from the output, after a translation has been added to the dictio
 Add the dictionary method `public void delete(String word)` which deletes the given word and its translation from the dictionary.
 
 <!-- Kannattanee kerrata aiemmilta viikoilta materiaalia, mikä liittyy olioiden deletemiseen ArrayListista. -->
-It might be worth it to revise the material concerning deleting objects from an ArrayList from the previous weeks.
+It might be worth reviewing the material concerning deleting objects from an ArrayList from previous weeks.
 
 <!-- <b>HUOM2:</b> metodi `delete` ei kirjoita tiedostoon. -->
 
-<b>NB:</b> the method `delete` does not write to the file.
+<b>NB:</b> the method `delete` does not write to a file.
 
 <!-- Sanakirjan tulee tässä vaiheessa toimia seuraavasti: -->
-In this phase the dictionary should work as follows:
+In this phase, the dictionary should work as follows:
 
 ```java
 SaveableDictionary dictionary = new SaveableDictionary();
@@ -224,13 +224,13 @@ Deleting also works both ways: Both the word and its translation are removed if 
 
 
 <!-- Tee dictionarylle konstruktori `public SaveableDictionary(String tiedosto)`  ja metodi `public boolean lataa()`, joka lataa dictionaryn konstruktorin parametrina annetun nimisestä tiedostosta. Jos tiedoston avaaminen tai lukeminen ei onnistu, palauttaa metodi false ja muuten true. -->
-Make a constructor `public SaveableDictionary(String file)` and mehtod `public boolean load()`, which loads the dictionary from the file given to the constructor as a parameter. If the program is unable to open the file or read from it, the method returns false, otherwise it returns true.
+Make a constructor `public SaveableDictionary(String file)` and method `public boolean load()`, which loads the dictionary from the file given to the constructor as a parameter. If the program is unable to open the file or read from it, the method returns false, otherwise it returns true.
 
 <!-- <b>Huom: </b> parameterillinen konstruktori ainoastaan kertoo dictionarylle käytetävän tiedoston nimen. Konstruktori ei lue tiedostoa, tiedoston lukeminen tapahtuu *ainoastaan* metodissa `lataa`. -->
 <b>NB:</b> the constructor only tells the dictionary the name of the file to load the dictionary from. The constructor does not read the file. Only the method `load` reads the file.
 
 <!-- Sanakirjatiedostossa yksi line sisältää sanan ja sen käännöksen merkillä ":" erotettuna. Tehtäväpohjan mukana tuleva testaamiseen tarkoitettu dictionarytiedosto `sanat.txt` on sisällöltään seuraava: -->
-In the dictionary file one line contains a word and its translation separated by ":".
+In the dictionary file, one line contains a word and its translation separated by ":".
 The exercise template contains a file `words.txt` which contains the following:
 
 <sample-output>
@@ -299,13 +299,13 @@ below
 <h2>Saving to a file</h2>
 
 <!-- Tee dictionarylle metodi `public boolean tallenna()`, jota kutsuttaessa dictionaryn sisältö kirjoitetaan konstruktorin parametrina annetun nimiseen tiedostoon. Jos tallennus ei onnistu, palauttaa metodi false ja muuten true. Sanakirjatiedostot tulee tallentaa ylläesitellyssä muodossa, eli ohjelman on partstava lukea itse kirjoittamiaan tiedostoja. -->
-Create the method `public boolean save()`, which saves the dictionary to the file given to the dictionary as a parameter to the constructor. If the program cannot save to the file, the method returns false. Otherwise it returns true. The dictionary files have to be saved in the form described above, so the program has to be able to read the files it has written.
+Create the method `public boolean save()`, which saves the dictionary to the file given to the dictionary as a parameter to the constructor. If the program cannot save to the file, the method returns false. Otherwise it returns true. The dictionary files have to be saved in the form described above, so the program can read the files it has written.
 
 <!-- <b>Huom1:</b> mikään muu metodi kuin `tallenna` ei kirjoita tiedostoon. Jos teit edelliset kohdat oikein, sinun ei tulisi tarvita muuttaa mitään olemassaolevaa koodia. -->
 <b>NB:</b> Only the method `save` writes to the file.
 
 <!-- **Huom2:** vaikka dictionary osaa käännökset molempiin suuntiin, ei dictionarytiedostoon tule kirjoittaa kuin toinen suunta. Eli jos dictionary tietää esim. käännöksen *tietokone = computer*, tulee tallennuksessa olla line: -->
-**NB:** Even though the dictionary can translate both ways, the dictionary file should only contain one way. So if the dictionary for example knows, that *computer = tietokone*, the file should contain:
+**NB:** Even though the dictionary can translate both ways, the dictionary file should only contain one way. So if the dictionary, for example, knows that *computer = tietokone*, the file should contain:
 
 
 <sample-output>
@@ -326,7 +326,7 @@ computer:tietokone
 but not both!
 
 <!-- Talletus kannattanee hoitaa siten, että koko käännöslista kirjoitetaan uudelleen vanhan tiedoston päälle, eli materiaalissa esiteltyä `append`-metodia ei kannata käyttää. -->
-It is best to handle the saving to, that the whole dictionary is written again on top of the previously saved version, so it might not be the best to use the `append` -method described in the material.
+It is best to handle the saving to, such that the whole dictionary is written on top of the previously saved version, so it might not be the best to use the `append` method described in the material.
 
 <!-- Sanakirjan lopullista versiota on tarkoitus käyttää  seuraavasti: -->
 The final version of the dictionary works as follows:
@@ -341,6 +341,6 @@ dictionary.save();
 ```
 
 <!-- Eli käytön aluksi ladataan dictionary tiedostosta ja lopussa tallennetaan se takaisin tiedostoon jotta dictionaryan tehdyt muutokset pysyvät voimassa seuraavallekin käynnistyskerralle. -->
-So in the beginning the dictionary is loaded from a file, and in the end it is saved back to the file, so that changes made to the dictionary are kept for the next time the dictionary is used.
+In the beginning, the dictionary is loaded from a file, and, in the end, it is saved back to the file, so that changes made to the dictionary are kept for the next time the dictionary is used.
 
 </programming-exercise>

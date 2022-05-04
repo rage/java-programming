@@ -2,7 +2,7 @@
 path: '/part-14'
 title: 'Part 14'
 overview: true
-hidden: true
+hidden: false
 ---
 
 <!-- Kurssimateriaalin viimeisessä osassa opit menetelmiä tiedon visualisointiin ja tutustut Javan valmiina tarjoamiin kaavioihin (viivakaavio, pylväskaavio). Opit luomaan yksinkertaisia piirroksia ja tutustut kuvien käsittelyyn. Opit myös soittamaan äänitiedostoja. Luot myös hieman suuremman ohjelman -- Asteroids-pelin -- esimerkkiä noudattaen. -->
@@ -14,8 +14,6 @@ In the fourteenth part you will learn methods for data visualization and acquain
 <pages-in-this-section></pages-in-this-section>
 
 <!-- Yllä oleva sisällysluettelo sisältää kurssin neljännentoista osan aihealueet. Kukin kurssin osa on suunniteltu siten, että siinä on työtä yhden viikon ajaksi. Kuhunkin kurssin osaan on hyvä varata reilusti yli kymmenen tuntia aikaa, riippuen aiemmasta tietokoneen käyttökokemuksesta. Ohjelmointia aiemmin kokeilleet saattavat edetä materiaalissa aluksi nopeamminkin. -->
-
-At the moment, only the exercises and key parts of this part are available in English.
 
 
 <exercises-in-this-section></exercises-in-this-section>

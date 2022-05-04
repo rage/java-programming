@@ -737,7 +737,7 @@ Crow (Corvus Corvus): 0 observations
 ? **One**
 Bird? **Hawk**
 Hawk (Dorkus Dorkus): 2 observations
-? **Lopeta**
+? **Quit**
 
 </sample-output>
 

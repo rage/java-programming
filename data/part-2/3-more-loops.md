@@ -251,7 +251,7 @@ Where from? **5**
 </sample-output>
 
 <!-- Jos tavoite on suurempi kuin lähtökohta ei tulostu mitään: -->
-If the upper limit is larger than the starting point, nothing is printed:
+If the upper limit is smaller than the starting point, nothing is printed:
 
 <sample-output>
 
@@ -629,7 +629,7 @@ int validNumbers = 0;
 int invalidNumbers = 0;
 
 while (true) {
-    int input = Integer.valueOf(lukija.nextLine());
+    int input = Integer.valueOf(reader.nextLine());
 
     if (input == 0) {
         break;
@@ -661,6 +661,8 @@ The series of exercises form a larger program whose functionality is implemented
 
 <!-- Huom: muistathan, että jokaisen isomman tehtävän "alitehtävä" on saman arvoinen tehtävä kuin yksi alikohdaton tehtävä. Tämä tehtävä vastaa siis viittä normaalia tehtävää. -->
 NB: Remember that each sub-part of the series is equivalent to one individual exercise. As such, the series is equivalent to five individual exercises.
+
+**Note:** the tests might fail a correct solution. This is a known bug that will be fixed in the future. In the meantime, you can avoid the error by printing "Give numbers:" without **any** spaces after ':'
 
 <h2>Reading</h2>
 

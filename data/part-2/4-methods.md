@@ -6,7 +6,7 @@ hidden: false
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 <!-- - Tunnet käsitteet metmetodin parametri, metodin palautusarvo ja ohjelman kutsupino. -->
 
 - You are familiar with the concepts of a method parameter, a method's return value, and a program's call stack.
@@ -655,6 +655,24 @@ The sum of numbers 2 and 4 is 6
 <!-- Kirjoita metodi `public static void jakolasku(int osoittaja, int nimittaja)`, joka tulostaa osoittajan ja nimittäjän jakolaskun tuloksen. Muistathan, että kahden kokonaisluvun jakolaskun tulos on kokonaisluku -- tässä halutaan tuloksena liukuluku. -->
 
 Write a method `public static void division(int numerator, int denominator)` that prints the result of the division of the numerator by the denominator. Keep in mind that the result of the division of the integers is an integer -- in this case we want the result to be a floating point number.
+
+<!-- ```java
+public static void main(String[] args) {
+    jakolasku(3, 5);
+}
+``` -->
+
+```java
+public static void main(String[] args) {
+    division(3, 5);
+}
+```
+
+<sample-output>
+
+0.6
+
+</sample-output>
 
 </programming-exercise>
 
@@ -1776,7 +1794,7 @@ public static void main(String[] args) {
     int beginning = 1;
     int end = 5;
 
-    printStarts(beginning, end);
+    printStars(beginning, end);
 }
 
 public static void printStars(int beginning, int end) {
@@ -1789,7 +1807,7 @@ public static void printStars(int beginning, int end) {
 
 <!-- Ohjelman suoritus alkaa `main`-metodin ensimmäiseltä riviltä, jota seuraavilla riveillä luodaan muuttujat `alku` ja `loppu`, sekä asetetaan niihin arvot. Ohjelman tilanne ennen metodin `tulostaTahtia`-kutsumista: -->
 
-The execution of the program begins on the first line of the `main` method. The next two lines create the variables `beginning` and `end`, and also assign values to them. The state of the program prior to calling the method `printStarts`:
+The execution of the program begins on the first line of the `main` method. The next two lines create the variables `beginning` and `end`, and also assign values to them. The state of the program prior to calling the method `printStars`:
 
 <sample-output>
 main
@@ -2207,7 +2225,7 @@ Define a method called `printSpaces(int number)` that produces the number of spa
 
 <!-- Joudut myös joko kopioimaan edellisen tehtävän vastauksestasi metodin `tulostaTahtia` tai toteuttamaan sen uudelleen tämän tehtävän tehtäväpohjaan. -->
 
-You will also have to either copy the `printStars` method your previous answer or reimplement it in this exercise template.
+You will also have to either copy the `printStars` method from your previous exercise or reimplement it in this exercise template.
 
 <!-- <h2>Oikealle nojaavan kolmion tulostus</h2> -->
 
@@ -2269,6 +2287,6 @@ The call `christmasTree(10)` should print:
 
 <!-- **Huom:** korkeuksien jotka ovat alle 3 ei tarvitse toimia! -->
 
-**NB:** heights shorter that 3 don't have work correctly!
+**NB:** heights shorter than 3 don't have to work correctly!
 
 </programming-exercise>

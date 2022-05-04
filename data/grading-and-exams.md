@@ -5,13 +5,24 @@ hidden: false
 information_page: true
 ---
 
+## Java Programming MOOC
+**No more exams will be held on this course.** You can receive a certificate upon completing at least 80% of exercises per part. The certificates are seperate for Java Programming I and Java Programming II.
+
+## Python Programming MOOC
+The current official MOOC course is [Python Programming MOOC 2022](https://programming-22.mooc.fi), for which it is possible for [residents of Finland](https://programming-22.mooc.fi/faq#can-i-receive-official-study-credits-for-this-course) to get 5+5 ECTS credits from the University of Helsinki. For non-residents there is also a certificate available after the exam.
+
+<!--
 The Java Programming MOOC contains University of Helsinki's courses Introduction to Programming (parts 1-7) and Advanced Course in Programming (parts 8-14). A free online exam will be held for both parts and both will be graded seperately.
 
 The exam corresponding to Introduction to Programming is to be completed after parts 1-7. Likewise, the exam corresponding to Advanced Course in Programming is to be completed after parts 8-14.
 
 Both exams will be held on several different days. You can attend the exam on any of these days. You may attend multiple exams and only the best grade will be registered.
 
-The first exam will take place at March 21st. Please check Section 7 for details.
+## Upcoming exams
+
+**There are no upcoming exams.**
+
+The final exam was in January 2021.
 
 ## Points
 
@@ -65,7 +76,7 @@ You may attend the exam once you have gotten at least 25% of each part's program
 ##### Minimum point treshold
 
 To pass each course you must receive at least half of the corresponding exam's points.
-
+-->
 <!--
 
 Arvostelu toimii seuraavasti:

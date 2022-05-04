@@ -11,7 +11,7 @@ hidden: false
 - You are familiar with loops and know how to create a program that contains one.
 
 <!-- - Osaat käyttää `break`-komentoa toistolauseen suorituksen lopettamiseen ja toistolausetta seuraavaan käskyyn siirtymiseen. -->
-- You know how to use the `break` command to end a loop's execution and move onto its next statement.
+- You know how to use the `break` command to end a loop's execution.
 
 <!-- - Osaat käyttää `continue`-komentoa toistolauseen alkuun palaamiseen. -->
 - You know how to use `continue` command to return to the beginning of a loop.
@@ -83,10 +83,10 @@ Next off we will get familiar with loops.
 <!-- ## Toistolause ja ikuinen toisto -->
 ## Loops and Infinite Loops
 <!-- Toistolause sisältää lausekkeen, jonka perusteella päätellään jatketaanko toistoa, sekä lohkon, joka sisältää toistettavan lähdekoodin. Toistolauseen muoto on seuraava. -->
-A loop consists of a statement that determines whether or not the code within the loop should be repeated, along with a block containing the source code to be repeated. A loop takes the following form.
+A loop consists of an expression that determines whether or not the code within the loop should be repeated, along with a block containing the source code to be repeated. A loop takes the following form.
 
 ```java
-while (_statement_) {
+while (_expression_) {
     // The content of the block wrapped in curly brackets
     // The block can have an unlimited amount of content
 }
@@ -94,7 +94,7 @@ while (_statement_) {
 
 <!-- Käytämme toistaiseksi lausekkeena `true`-arvoa, eli boolean-tyyppista arvoa "totta". Tämä tarkoittaa sitä, että toistolauseen toistamista jatketaan aina kun ohjelma on tilantessa, missä selvitetään tuleeko toistolauseen suoritusta jatkaa. Tämä tapahtuu sekä silloin kun ohjelman suoritus päätyy toistolauseeseen ensimmäistä kertaa että silloin kun ohjelman suoritus päätyy toistolauseen lohkon loppuun. -->
 <!-- TODO Muokkaa "execution of the program first ..." parempaan muotoon -->
-We'll use the value `true` as the loop's statement for now. This way, the loop's execution is always continued when the program arrives at the point that decides whether it should be repeated or not. This happens when the execution of the program first arrives at the loop statement for the first time, and also when it reaches the end of the loop's block.
+We'll use the value `true` as the loop's expression for now. This way, the loop's execution is always continued when the program arrives at the point that decides whether it should be repeated or not. This happens when the execution of the program first arrives at the loop expression for the first time, and also when it reaches the end of the loop's block.
 
 <!-- Toistolauseen suoritus etenee askeleittain lause kerrallaan. Seuraava ohjelma tulostaa merkkijonoa _osaan ohjelmoida!_ ikuisesti eli "äärettömän monta kertaa": -->
 The loop execution proceeds line-by-line. The following program outputs _I can program_ an infinite number of times.
@@ -113,7 +113,7 @@ A program that runs infinitely does not end on its own. In NetBeans, it can be s
 # Ending a Loop
 
 <!-- Toistolauseen saa päätettyä komennolla `break`. Kun tietokone suorittaa komennon `break`, siirtyy ohjelman suoritus toistolauseen lohkoa seuraavaan komentoon. -->
-The loop statement can be broken out of with command 'break'. When a computer executes the command 'break', the program execution moves onto the next command following the loop block.
+The loop can be broken out of with command 'break'. When a computer executes the command 'break', the program execution moves onto the next command following the loop block.
 
 <!-- Alla olevassa esimerkissä on ohjelma, joka tulostaa luvut yhdestä viiteen. Ohjelmassa määritellään toistolauseen sisällä käsiteltävä luku ennen toistolauseen lohkoa. Tällöin muuttujan kasvatus onnistuu. -->
 The example below is a program that prints numbers from one to five. Note how the variable that's used within the loop is defined before the loop. This way the variable can be incremented inside the loop and the change sticks between multiple iterations of the loop.
@@ -145,7 +145,7 @@ Ready!
 </sample-output>
 
 <!-- Toistolauseesta poistutaan esimerkiksi kun käyttäjä syöttää tietynlaisen syötteen tai mikäli toistolauseessa tehtävä laskenta päätyy haluttuun lopputulokseen. Tällaiset ohjelmat sisältävät sekä toistolauseen, jota käytetään toistettavan ohjelman määrittelyyn, että toistolauseen sisällä olevan ehtolauseen, jota käytetään toistolauseesta poistumiseen käytettävän ehdon täyttymisen tarkasteluun. -->
-Breaking out of the loop occurs when a user enters a specified input or whenever a calculation performed in the loop ends in the desired result. These kinds of programs contain both a loop used to define a section to be repeated and also a conditional statement used to check whether or not the condition to exit the loop has been fulfilled.
+Breaking out of the loop occurs when a user enters a specified input or whenever a calculation performed in the loop ends in the desired result. These kinds of programs contain both a loop used to define a section to be repeated and also a conditional expression used to check whether or not the condition to exit the loop has been fulfilled.
 
 <!-- Toistolauseessa voidaan myös kysyä käyttäjältä syötettä. Toistolauseessa useasti käytettävät muuttujat (kuten Scanner-lukija) määritellään ennen toistolausetta, toistokohtaiset muuttujat (kuten luettu arvo) määritellään toistolauseessa. -->
 Users can also be asked for input within a loop. The variables that are commonly used in loops (such as Scanner readers) are defined before the loop, whereas variables (such as the value read from the user) that are specific to the loop are defined within it.
@@ -190,17 +190,17 @@ Ready!
 <programming-exercise name="Carry on?" tmcname='part02-Part02_05.CarryOn'>
 
 <!-- Kirjoita edellä olevaa toistolause-esimerkkiä mukaillen ohjelma, joka kysyy käyttäjältä "Jatketaanko?" kunnes käyttäjä syöttää merkkijonon "ei". -->
-Write a program by using the loop example that asks "Carry on?" until the user inputs the string "no".
+Write a program by using the loop example that asks "Shall we carry on?" until the user inputs the string "no".
 
 <sample-output>
 
-Carry on?
+Shall we carry on?
 **yes**
-Carry on?
+Shall we carry on?
 **ye**
-Carry on?
+Shall we carry on?
 **y**
-Carry on?
+Shall we carry on?
 **no**
 
 </sample-output>

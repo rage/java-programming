@@ -5,7 +5,7 @@ hidden: false
 ---
 
 
-<text-box variant='learningObjectives' name='Oppimistavoitteet'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 <!-- - Tunnet perinteisen for-toistolauseen.
 - Tiedät merkkijonojen liittämiseen liittyviä ongelmia ja osaat välttää ne StringBuilder-luokan avulla.
@@ -143,7 +143,7 @@ i++;
 System.out.println(luvut); // tulostetaan merkkijono
 ``` -->
 ```java
-String numbers = ""; // luodaan uusi merkkijono: ""
+String numbers = ""; // creating a new string: ""
 int i = 1;
 // first creating the string "1" and then the string "1\n"
 numbers = numbers + i + "\n";
@@ -173,20 +173,28 @@ In the previous example, a total of nine strings is created.
 
 String creation - although unnoticeable at a small scale - is not a quick operation. Space is allocated in memory for each string where the string is then placed. If the string is only needed as part of creating a larger string, performance should be improved.
 
-Java's ready-made StringBuilder class  provides a way to concatenate strings without the need to create them. A new StringBuilder object is created with a `new StringBuilder()` call, and content is added to the object using the overloaded `append` method, i.e., there are variations of it for different types of variables. Finally, the StringBuilder object provides a string using the `toString` method.
+Java's ready-made StringBuilder class provides a way to concatenate strings without the need to create them. A new StringBuilder object is created with a `new StringBuilder()` call, and content is added to the object using the overloaded `append` method, i.e., there are variations of it for different types of variables. Finally, the StringBuilder object provides a string using the `toString` method.
 
 In the example below, only one string is created.
 
-```java
+<!--```java
 StringBuilder luvut = new StringBuilder();
 for (int i = 1; i < 5; i++) {
     luvut.append(i);
 }
 System.out.println(luvut.toString());
+```-->
+
+```java
+StringBuilder numbers = new StringBuilder();
+for (int i = 1; i < 5; i++) {
+    numbers.append(i);
+}
+System.out.println(numbers.toString());
 ```
 
 <!-- StringBuilderin käyttö on suurien merkkijonojen luomisessa tehokkaampaa kuin merkkijonojen luominen `+`-operaatiolla. -->
-Using StringBuilder is more performant that creating strings with the `+` operator.
+Using StringBuilder is more efficient than creating strings with the `+` operator.
 
 <quiz id='92458f4d-ec1e-5364-baf4-c1c71f3aa6f5'></quiz>
 
@@ -204,9 +212,9 @@ Opiskelijanumeron oikeellisuuden voisi tarkistaa esimerkiksi käymällä opiskel
 
 Oikeellisuuden tarkistus säännöllisten lausekkeiden avulla tapahtuu ensin sopivan säännöllisen lausekkeen määrittelyn. Tämän jälkeen käytetään `String`-luokan metodia `matches`, joka tarkistaa vastaako merkkijono parametrina annettua säännöllistä lauseketta. Opiskelijanumeron tapauksessa sopiva säännöllinen lauseke on `"01[0-9]{7}"`, ja käyttäjän syöttämän opiskelijanumeron tarkistaminen käy seuraavasti: -->
 
-A regular expression defines a set of strings in a compact form. Regular expressions are used, among other things, to verify the correctness of strings. We can assess the whether or not a string is in the desired form by a regular expression that defines the strings considered correct.
+A regular expression defines a set of strings in a compact form. Regular expressions are used, among other things, to verify the correctness of strings. We can assess whether or not a string is in the desired form by using a regular expression that defines the strings considered correct.
 
-Let's look at a problem where we need to check if a student number  entered by the user is in the correct format. A student number should begin with "01" followed by 7 digits between 0&ndash;9.
+Let's look at a problem where we need to check if a student number entered by the user is in the correct format. A student number should begin with "01" followed by 7 digits between 0&ndash;9.
 
 You could verify the format of the student number, for instance, by going through the character string representing the student number using the `charAt` method. Another way would be to check that the first character is "0" and call the `Integer.valueOf` method to convert the string to a number. You could then check that the number returned by the `Integer.valueOf` method is less than 20000000.
 
@@ -242,7 +250,7 @@ Let's go through the most common characters used in regular expressions.
 ### Alternation (Vertical Line)
 
 <!-- Pystyviiva tarkoittaa, että säännöllisen lausekkeen osat ovat vaihtoehtoisia. Esimerkiksi lauseke `00|111|0000` määrittelee merkkijonot `00`, `111` ja `0000`. Metodi `matches` palauttaa arvon `true` jos merkkijono vastaa jotain määritellyistä vaihtoehdoista. -->
-A vertical line indicates that parts of a regular expressions are optional. For example, `00|111|0000` defines the strings `00`,`111` and `0000`. The `respond` method returns` true` if the string matches any one of the specified group of alternatives.
+A vertical line indicates that parts of a regular expressions are optional. For example, `00|111|0000` defines the strings `00`, `111` and `0000`. The `respond` method returns` true` if the string matches any one of the specified group of alternatives.
 
 
 <!-- ```java
@@ -374,7 +382,7 @@ Correct form.
 </sample-output>
 
 <!-- - Merkintä <strong>`+`</strong> toisto 1... kertaa, esim: -->
-- The quantifier <strong>`+`</strong> repeats 1... times, for example;
+- The quantifier <strong>`+`</strong> repeats 1 ... times, for example;
 
 <!-- ```java
 String merkkijono = "trolololololo";
@@ -416,9 +424,9 @@ if (merkkijono.matches("(nä)+ Bätmään!")) {
 }
 ``` -->
 ```java
-String merkkijono = "nananananananana Batmaan!";
+String string = "nananananananana Batmaan!";
 
-if (merkkijono.matches("(na)+ Batmaan!")) {
+if (string.matches("(na)+ Batmaan!")) {
     System.out.println("Correct form.");
 } else {
     System.out.println("Incorrect form.");
@@ -438,7 +446,7 @@ Correct form.
 
 
 <!-- - Merkintä <strong>`?`</strong> toisto 0 tai 1 kertaa, esim: -->
-- The quantifier <strong>`?`</strong> repeats 0 or 1 times, esim:
+- The quantifier <strong>`?`</strong> repeats 0 or 1 times, for example:
 
 <!-- ```java
 String merkkijono = "You have to accidentally the whole meme";
@@ -622,7 +630,7 @@ The form is correct.
 
 <sample-output>
 
-Anna merkkijono: **abc**
+Enter a string: **abc**
 The form is incorrect.
 
 </sample-output>
@@ -743,7 +751,7 @@ Almost all programming languages ​​support regular expressions nowadays. The
 
 <!-- Jos tiedämme muuttujien mahdolliset arvot ennalta, voimme käyttää niiden esittämiseen `enum`-tyyppistä luokkaa eli *lueteltua tyyppiä*. Luetellut tyypit ovat oma luokkatyyppinsä rajapinnan ja normaalin luokan lisäksi. Lueteltu tyyppi määritellään avainsanalla `enum`. Esimerkiksi seuraava `Maa`-enumluokka määrittelee neljä vakioarvoa: `RUUTU`, `PATA`, `RISTI` ja `HERTTA`. -->
 
-If we know the possible values ​​of a variable in advance, we can use a class of type `enum`, i.e., *enumerated type* to represent the values. Enumerated types are their own type in addition to being normal classes and interfaces. An enumerated type is defined by the keyword `enum`. For example, the following `Earth` enum class defines four constant values:` SCREEN`, `PATA`,` CROSS` and `HEART`.
+If we know the possible values ​​of a variable in advance, we can use a class of type `enum`, i.e., *enumerated type* to represent the values. Enumerated types are their own type in addition to being normal classes and interfaces. An enumerated type is defined by the keyword `enum`. For example, the following `Suit` enum class defines four constant values: `DIAMOND`, `SPADE`, `CLUB` and `HEART`.
 
 
 <!-- ```java
@@ -864,7 +872,7 @@ is not a spade
 <!-- Huomaamme, että enumin tunnukset tulostuvat mukavasti! Oraclella on `enum`-tyyppiin liittyvä sivusto osoitteessa <a href="http://docs.oracle.com/javase/tutorial/java/javaOO/enum.html" target="_blank" rel="noopener">http://docs.oracle.com/javase/tutorial/java/javaOO/enum.html</a>.
  -->
 
-<p>We see that the Enum values are outputted nicely! Oracle has a site related to the `enum` data type at <a href="http://docs.oracle.com/javase/tutorial/java/javaOO/enum.html" target="_blank" rel="noopener"> http://docs.oracle.com/javase/tutorial/java/javaOO/enum.html </a>.</p>
+We see that the Enum values are outputted nicely! Oracle has a site related to the `enum` data type at <a href="http://docs.oracle.com/javase/tutorial/java/javaOO/enum.html" target="_blank" rel="noopener"> http://docs.oracle.com/javase/tutorial/java/javaOO/enum.html </a>.
 
 
 <!-- <text-box variant='hint' name='Enumien vertailu'> -->
@@ -913,9 +921,9 @@ System.out.println(Suit.HEART.ordinal());
 <!-- Luetellut tyypit voivat sisältää oliomuuttujia. Oliomuuttujien arvot tulee asettaa luetellun tyypin määrittelevän luokan sisäisessä eli näkyvyysmääreen `private` omaavassa konstruktorissa. Enum-tyyppisillä luokilla ei saa olla `public`-konstruktoria.
 
 Seuraavassa lueteltu tyyppi `Vari`, joka sisältää vakioarvot PUNAINEN, VIHREA ja SININEN. Vakioille on määritelty <a href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank" rel="noopener">värikoodin</a> kertova oliomuuttuja: -->
-Enumerated types may object reference variables. The values ​​of the reference variables should be set in an internal constructor of the class defining the enumerated type, i.e., within a constructor having a  `private` access modifier. Enum type classes cannot have a `public` constructor.
+Enumerated types may contain object reference variables. The values ​​of the reference variables should be set in an internal constructor of the class defining the enumerated type, i.e., within a constructor having a  `private` access modifier. Enum type classes cannot have a `public` constructor.
 
-In the following example, we have an enum `Color` that contains the constants ​​RED, GREEN and BLUE. The constants have been declared with object references  referring to their <a href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank" rel="noopener">color codes</a>:
+In the following example, we have an enum `Color` that contains the constants ​​RED, GREEN and BLUE. The constants have been declared with object reference variables referring to their <a href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank" rel="noopener">color codes</a>:
 
 <!-- ```java
 public enum Vari {
@@ -937,7 +945,7 @@ public enum Vari {
 ``` -->
 ```java
 public enum Color {
-    // constructor paramters are defined as
+    // constructor parameters are defined as
     // the constants are enumerated
     RED("#FF0000"),
     GREEN("#00FF00"),
@@ -1018,7 +1026,7 @@ public class Hand {
 <!-- Luokan metodi `print` printa jokaisen kädessä olevan kortin.
 
 ArrayList ja muut *Collection*-rajapinnan toteuttavat "oliosäiliöt" toteuttavat rajapinnan *Iterable*, ja ne voidaan käydä läpi myös käyttäen *iteraattoria*, eli olioa, joka on varta vasten tarkoitettu tietyn oliokokoelman läpikäyntiin. Seuraavassa on iteraattoria käyttävä versio korttien printmisesta: -->
-The `print` method of the class Prints each card in the current hand.
+The `print` method of the class prints each card in the current hand.
 
 ArrayList and other "object containers" that implement the *Collection* interface implement the *Iterable* interface, and they can also be iterated over with the help of an *iterator* - an object specifically designed to go through a particular type of object collection. The following is a version of printing the cards that uses an iterator:
 
@@ -1097,7 +1105,7 @@ public class Hand {
 
     public void removeWorst(int value) {
         this.cards.stream().forEach(card -> {
-            if (card.getArvo() < value) {
+            if (card.getValue() < value) {
                 cards.remove(card);
             }
         });
@@ -1181,8 +1189,8 @@ Make a class `Person`. The Person constructor takes a name and the education as 
 <!-- System.out.println(vilma); -->
 <!-- ``` -->
 ```java
-Person anna = new Person("Anna", Education.PHD)
-System.out.pringln(anna)
+Person anna = new Person("Anna", Education.PHD);
+System.out.println(anna);
 ```
 <sample-output>
 
@@ -1200,10 +1208,13 @@ Make a class `Employees`. Employees -object contains a list of Person -objects. 
 
 <!-- - `public void add(Person lisattava)` lisää parametrina olevan henkilön työntekijäksi -->
 - `public void add(Person personToAdd)` adds the given person to the employees list
+
 <!-- - `public void add(List<Person> lisattavat)` lisää parametrina olevan listan henkilöitä työntekijöiksi -->
-- `public void add(List<> peopleToAdd)` adds the given list of people to the employees list
+- `public void add(List<Person> peopleToAdd)` adds the given list of people to the employees list
+
 <!-- - `public void print()` printa kaikki työntekijät -->
 - `public void print()` prints all employees
+
 <!-- - `public void print(Education koulutus)` printa työntekijät joiden koulutus on sama kuin parametrissa määritelty koulutus -->
 - `public void print(Education education)` prints the employees whose education matches the education given as a parameter.
 
@@ -1214,6 +1225,7 @@ Make a class `Employees`. Employees -object contains a list of Person -objects. 
 <!-- <h2>Irtisanominen</h2> -->
 <h2>Firing an employee</h2>
 <!-- Tee luokalle  `Tyontekijat` metodi `public void fire(Education koulutus)` joka poistaa Työntekijöiden joukosta kaikki henkilöt joiden koulutus on sama kuin metodin parametrina annettu. -->
+
 Make a method `public void fire(Education education)` for the `Employees` class. The method  removes all employees whose education matches the education given as parameter from the employees list.
 
 <!-- **HUOM:** toteuta metodi iteraattoria käyttäen! -->
@@ -1259,7 +1271,7 @@ Elina, PHD
 
 <!--Tehtäväpohjan mukana on luokka, jonka oliot kuvaavat pelikortteja. Kortilla on arvo ja maa. Kortin arvo on esitetään numerona *2, 3, ..., 14* ja maa *Risti, Ruutu, Hertta* tai *Pata*. Ässä on siis arvo 14. Arvo esitetään kokonaislukuna ja maa enum-tyyppisenä oliona. Kortilla on myös metodi toString, jota käyttäen kortin arvo ja maa tulostuvat "ihmisystävällisesti".-->
 
-The exercise template has a class that represents a playing card. Each card has a value and a suit. Card's value is represented as a number *2, 3, ..., 14* and its suit as *Club, Diamond, Heart* or *Spade*. Ace's value is 14. The value is represented with an integer, and the suit as an enum. Cards also have a method toString, which can be used to print the value and the suit in a readable form.
+The exercise template has a class that represents a playing card. Each card has a value and a suit. A card's value is represented as a number *2, 3, ..., 14* and its suit as *Club, Diamond, Heart* or *Spade*. Ace's value is 14. The value is represented with an integer, and the suit as an enum. Cards also have a method toString, which can be used to print the value and the suit in a readable form.
 
 <!--Korttien luominen tapahtuu seuraavasti.-->
 New cards can be created like this:
@@ -1308,20 +1320,20 @@ HEART Q
 <h2>Comparable Card class</h2>
 
 <!--Tee Kortti-luokasta `Comparable`. Toteuta `compareTo`-metodi niin, että korttien järjestys on arvon mukaan nouseva. Jos verrattavien Korttien arvot ovat samat, verrataan niitä maan perusteella nousevassa järjestyksessä: *risti ensin, ruutu toiseksi, hertta kolmanneksi, pata viimeiseksi.*-->
-Change the Card class to be `Comparable`. Implement the `compareTo` method so that using it sorts the cards ascending by their value. If the cards being compared have the same value, they are sorted by *club first, diamond next, heart third, and spade last.*
+Change the Card class to be `Comparable`. Implement the `compareTo` method so that using it sorts the cards in ascending order based on their value. If the cards being compared have the same value, they are sorted by *club first, diamond second, heart third, and spade last.*
 
 <!--Maiden järjestämisessä apua löytynee <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#ordinal--"  target="_blank" norel>Enum-luokan ordinal-metodista</a>.-->
 Reading <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#ordinal--"  target="_blank" norel>Ordinal method of Enum</a> will help you out in sorting the cards by their suit.
 
 <!--Järjestyksessä pienin kortti siis olisi ristikakkonen ja suurin pataässä.-->
-So, for this sorting, the least valuable card is two of clubs, and highest the ace of spades.
+So, for this sorting, the least valuable card is two of clubs and most valuable card is the ace of spades.
 
 
 <h2>Hand</h2>
 <!--h2>Käsi</h2-->
 
 <!--Tee seuraavaksi luokka `Kasi` joka edustaa pelaajan kädessään pitämää korttien joukkoa. Tee kädelle seuraavat metodit:-->
-Create a class `Hand` to represent the cards in player's hand. Add the following methods to the class:
+Create a class `Hand` to represent the cards in a player's hand. Add the following methods to the class:
 
 <!--- `public void add(Kortti kortti)` lisää käteen kortin
 - `public void print()` printa kädessä olevat kortit alla olevan esimerkin tyylillä-->
@@ -1379,7 +1391,7 @@ Use an ArrayList to store the cards.
 <h2>Sorting the hand</h2>
 
 <!--Tee kädelle metodi `public void jarjesta()` jota kutsumalla käden sisällä olevat kortit menevät suuruusjärjestykseen. Järjestämisen jälkeen kortit tulostuvat järjestyksessä:-->
-Add a method `public void sort()` to Hand class, which sorts the cards in the hand. After sorting, the cards are printed out in order:
+Add a method `public void sort()` to the Hand class, which sorts the cards in the hand. After sorting, the cards are printed in order:
 
 <!--```java
 Kasi kasi = new Kasi();
@@ -1517,11 +1529,11 @@ HEART J
 
 <!--Entä jos haluaisimme välillä järjestää kortit hieman eri tavalla, esim. kaikki saman maan kortit peräkkäin? Luokalla voi olla vain yksi `compareTo`-metodi, joten joudumme muunlaisia järjestyksiä saadaksemme turvautumaan muihin keinoihin.-->
 
-What if we want to sort the cards in different ways, e.g. sorting all the cards of the same suit in a row. Class can only have one `compareTo` method, so we'll need something else to sort the cards in to a different order.
+What if we want to sort the cards in different ways, e.g. sorting all the cards of the same suit in a row. A class can only have one `compareTo` method, so we'll need something else to sort the cards in to a different order.
 
 
 <!--Vaihtoehtoiset järjestämistavat toteutetaan erillisten vertailun suorittavien luokkien avulla. Korttien vaihtoehtoisten järjestyksen määräävän luokkien tulee toteuttaa `Comparator<Kortti>`-rajapinta. Järjestyksen määräävän luokan olio vertailee kahta parametrina saamaansa korttia. Metodeja on ainoastaan yksi compare(Kortti k1, Kortti k2), jonka tulee palauttaa negatiivinen arvo, jos kortti k1 on järjestyksessä ennen korttia k2, positiivinen arvo jos k2 on järjestyksessä ennen k1:stä ja 0 muuten.-->
-Alternative sorting systems are possible through different sorting classes. Such a class must have the `Comparator<Kortti>` interface. An object of the sorting class will then compare two cards give as parameters. The class only has one method, compare(Card c1, Card c2), which returns a negative value if the card c1 should be sorted before card c2, a positive value if card c2 comes before card c1, and zero if they are equal.
+Alternative sorting systems are possible through different sorting classes. Such a class must have the `Comparator<Card>` interface. An object of the sorting class will then compare two cards give as parameters. The class only has one method, compare(Card c1, Card c2), which returns a negative value if the card c1 should be sorted before card c2, a positive value if card c2 comes before card c1, and zero if they are equal.
 
 
 <!--Periaatteena on luoda jokaista järjestämistapaa varten oma vertailuluokka, esim. saman maan kortit vierekkäin vievän järjestyksen määrittelevä luokka:-->
@@ -1619,7 +1631,7 @@ Collections.sort(cards, new SortBySuit());
 
 
 <!--Mikäli luokkaa ei halua toteuttaa, järjestyksen voi antaa `Collections`-luokan `sort`-metodille myös lambda-lausekkeena.-->
-Same can even be done with a lambda function, without ever creatingn the sorting class.
+It can even be done with a lambda function, without ever creating the sorting class.
 
 <!--```java
 Collections.sort(kortit, (k1, k2) -> k1.getMaa().ordinal() - k2.getMaa().ordinal());

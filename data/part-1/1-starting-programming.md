@@ -4,7 +4,7 @@ title: "Getting started with programming"
 hidden: false
 ---
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 <!-- - Tutustut kurssilla käytettyyn NetBeans with TMC -ohjelmointiympäristöön. -->
 
@@ -24,7 +24,7 @@ Modern programming is practically always done in an IDE (integrated development 
 
 <!-- Käytämme tällä kurssilla [NetBeans](https://netbeans.apache.org)-nimistä ohjelmointiympäristöä sekä siihen liitettävää Test My Code -liitännäistä. -->
 
-The IDE we use on this course is called [NetBeans](https://netbeans.apache.org), and we use it with Test My Code plugin.
+The IDE we use on this course is called [NetBeans](https://netbeans.apache.org), and we use it with the Test My Code plugin.
 
 <!-- Tarvitset kurssin aloittamiseen (1) käyttäjätunnuksen kurssilla käytettyyn TMC-järjestelmään, (2) Javan (Java JDK), ja (3) NetBeans with TMC -ohjelmointiympäristön (jatkossa TMC). Näiden asentaminen onnistuu seuraavia ohjeita noudattamalla. -->
 

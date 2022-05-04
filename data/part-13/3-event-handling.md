@@ -1,7 +1,7 @@
 ---
 path: '/part-13/3-event-handling'
 title: 'Event handling'
-hidden: true
+hidden: false
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->

@@ -245,7 +245,7 @@ Files exist on the hard drive of a computer, which is, in reality, a large set o
 
 <!-- Tiedostot voivat sijaita käytännössä missä tahansa kovalevyn kohdassa, jopa niin, että tiedosto on pilkottuna useampaan osaan. Tietokoneen **tiedostojärjestelmän** vastuulla on pitää kirjaa tiedostojen sijainnista kovalevyllä sekä tarjota mahdollisuus uusien tiedostojen luomiseen sekä näiden muokkaamiseen. Tärkein tiedostojärjestelmän toiminnallisuus on kovalevyn todellisen rakenteen abstrahointi: tiedostoja käyttävän henkilön tai ohjelman ei tarvitse välittää siitä, miten ja minne tiedosto on oikeasti tallennettu. -->
 
-Files can exist practically anywhere on a hard drive, even separated into multiple pieces. The computer's **filesystem** has the responsibility of keeping track of the locations of files on the hard drive as well as providing the ability to create new files and modify them. The filesystem's main responsibility is abstracting the true structure of the hard drive; a user or a program using a file doesn't need to care about the about how, or where, the file is actually stored.
+Files can exist practically anywhere on a hard drive, even separated into multiple pieces. The computer's **filesystem** has the responsibility of keeping track of the locations of files on the hard drive as well as providing the ability to create new files and modify them. The filesystem's main responsibility is abstracting the true structure of the hard drive; a user or a program using a file doesn't need to care about how, or where, the file is actually stored.
 
 </text-box>
 
@@ -983,11 +983,11 @@ amy,1
 
 <!-- Tehtäväpohjassa on valmiina luokka `Henkilo` sekä luokassa `HenkilotTiedostosta` oleva runko metodille `public static ArrayList<Henkilo> lueHenkilot(String tiedosto)`. Toteuta metodi `lueHenkilot` siten, että metodissa luetaan parametrina annetusta tiedostosta henkilöt, jotka lopulta palautetaan metodin palauttamassa listassa. -->
 
-The exercise template already has a `Person` class, and the class `StoringRecords` has a body for the method `public static ArrayList<Person> readPeople(String file)`. Implement the `readPeople` method such that it reads the persons from the file passed as a parameter, and finally returns them in the list returned by the method.
+The exercise template already has a `Person` class, and the class `StoringRecords` has a body for the method `public static ArrayList<Person> readRecordsFromFile(String file)`. Implement the `readRecordsFromFile` method such that it reads the persons from the file passed as a parameter, and finally returns them in the list returned by the method.
 
 <!-- Tehtäväpohjassa on valmiina `main`-metodi, jossa voit kokeilla ohjelmasi toimintaa. Muokkaa tehtävässä vain metodia `lueHenkilot`. -->
 
-The exercise template has a `main` method that you can use to test how your program works. In this exercise, only modify the method `readPeople`.
+The exercise template has a `main` method that you can use to test how your program works. In this exercise, only modify the method `readRecordsFromFile`.
 
 </programming-exercise>
 

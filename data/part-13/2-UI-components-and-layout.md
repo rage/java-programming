@@ -1,10 +1,10 @@
 ---
 path: '/part-13/2-UI-components-and-layout'
 title: 'UI components and their layout'
-hidden: true
+hidden: false
 ---
 
-<text-box variant='learningObjectives' name='Oppimistavoitteet'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 <!-- - Tiedät mistä käyttöliittymät koostuvat ja osaat käynnistää graafisen käyttöliittymän.
 - Tunnet muutamia käyttöliittymäkomponentteja ja osaat lisätä niitä käyttöliittymään.
@@ -167,7 +167,6 @@ The Label must be either on top or on the left side of the Button.
 
 <!-- Luo tehtäväpohjassa olevaan luokkaan graafinen käyttöliittymä, jossa on nappi ja tekstikenttä. Tekstikentän saa toteutettua luokalla [TextField](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/TextField.html). Napin tulee olla tekstikentän vasemmalla puolella tai yläpuolella. -->
 Create a graphical user interface to the class in the exercise template. The interface must contain a button and a text field. The text field can be implemented using the [TextField](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/TextField.html) class. The Button must be on the left or on the top of the text field.
-<programming-exercise name='Button and text field' tmcname='part13-Part13_03.ButtonAndTextField'>
 
 <!-- Luo tehtäväpohjassa olevaan luokkaan graafinen käyttöliittymä, jossa on nappi ja tekstikenttä. Tekstikentän saa toteutettua luokalla [TextField](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/TextField.html). Napin tulee olla tekstikentän vasemmalla puolella tai yläpuolella. -->
 
@@ -185,7 +184,7 @@ Create a graphical user interface in the class that is supplied with the exercis
 Edellisissä esimerkeissä käytimme käyttöliittymäkomponenttien asetteluun [FlowPane](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/FlowPane.html)-nimistä luokkaa. FlowPanen avulla käyttöliittymään lisättävät komponentit tulevat vierekkäin. Jos windown koko pienenee siten, että kaikki komponentit eivät mahdu vierekkäin, rivitetään komponentit automaattisesti. Alla olevassa kuvassa edellisen esimerkin tuottamaa sovellusta on kavennettu, jolloin komponentit ovat rivittyneet automaattisesti. -->
 Each UI component has its place on the interface. The location of a component is determined by the class used to layout the components.
 
-In previous examples, we used a class called [FlowPane] (https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/FlowPane.html) to set up our front-end components. With FlowPane, components that you add to the interface are placed side-by-side. If the size of Window is reduced so that the components no longer fit next to eahch other, the components will be automatically aligned. In the image below, the application resulting from the previous example has been narrowed so that the components are automatically aligned.
+In previous examples, we used a class called [FlowPane](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/FlowPane.html) to set up our front-end components. With FlowPane, components that you add to the interface are placed side-by-side. If the size of Window is reduced so that the components no longer fit next to eahch other, the components will be automatically aligned. In the image below, the application resulting from the previous example has been narrowed so that the components are automatically aligned.
 
 <!-- <img src="../img/material/gui-nappi-ja-teksti-rivitetty.png" alt="Ikkuna, jossa on nappi sekä textComponent. Napissa on teksti 'This is a button' ja textComponent sisältää tekstin 'Text element'. Ikkunan leveys on niin pieni, että komponentit ovat omilla riveillään."/> -->
 <img src="../img/material/gui-nappi-ja-teksti-rivitetty.png" alt="Window that has a button and a textComponent. The button has the text 'This is a button and the textComponent contains the text 'Text element'. The window's width is so narrow that the components are placed on seperate rows."/>
@@ -194,7 +193,7 @@ In previous examples, we used a class called [FlowPane] (https://docs.oracle.com
 ### BorderPane
 
 <!-- [BorderPane](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/BorderPane.html)-luokan avulla käyttöliittymäkomponentit voidaan asetella viiteen pääkohtaan käyttöliittymässä: ylälaita, oikea laita, alalaita, vasen laita ja keskikohta. Perinteiset sovellukset, kuten käyttämäsi web-selain hyödyntävät tätä asettelua. Ylälaidassa on valikko sekä osoiterivi, ja keskellä on sivun sisältö. -->
-The [BorderPane] (https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/BorderPane.html) class lets you lay out components in five different primary positions: top, right, bottom, left and center. Traditional applications such as the web browser you are using take advantage of this layout. There's a menu and address bar at the top, and in the middle is the content of the page.
+The [BorderPane](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/BorderPane.html) class lets you lay out components in five different primary positions: top, right, bottom, left and center. Traditional applications such as the web browser you are using take advantage of this layout. There's a menu and address bar at the top, and in the middle is the content of the page.
 
 
 <!-- ```java

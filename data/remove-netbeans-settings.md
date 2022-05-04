@@ -10,7 +10,7 @@ Sometimes NetBeans doesn't work beacuse of old settings files that are still pre
 # Windows
 1. Close NetBeans/TMCBeans.
 2. Open File Explorer.
-3. Press `CTRL + L`.
+3. Press `CTRL + L` to open the address bar.
 4. Type `%APPDATA%` and press Enter.
 5. From the folder that opens, remove the folder named `tmcbeans`.
 6. Start NetBeans/TMCBeans.
@@ -19,7 +19,7 @@ Sometimes NetBeans doesn't work beacuse of old settings files that are still pre
 1. Close NetBeans/TMCBeans.
 2. Open Finder.
 3. Go to the home folder (`Shift + Command + H` in Finder). Usually Finder opens the home folder by default.
-4. Remove the folder named `.tmcbeans`. If you do not see the folder, press `Command + Shift + piste`.
+4. Remove the folder named `.tmcbeans`. If you do not see the folder, press `Command + Shift + period`.
 5. Start NetBeans/TMCBeans.
 
 # Linux

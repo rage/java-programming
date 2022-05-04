@@ -23,15 +23,15 @@ hidden: false
 
 <!-- Aloitamme nyt matkan olio-ohjelmoinnin pariin. Aluksi keskiössä on käsitteiden ja tiedon kuvaaminen luokkien ja olioiden avulla, jonka jälkeen tutustumme toiminnallisuuden eli metodien lisäämiseen. -->
 
-We'll now begin our journey in to the world of object-oriented programming. We'll start with focusing on describing concepts and data using objects. From there on, we'll learn how to add functionality, i.e., methods to our program.
+We'll now begin our journey into the world of object-oriented programming. We'll start with focusing on describing concepts and data using objects. From there on, we'll learn how to add functionality, i.e., methods to our program.
 
 <!-- Olio-ohjelmoinnissa on kyse ratkaistavassa ongelmassa esiintyvien käsitteiden eristämisestä omiksi kokonaisuuksikseen sekä näiden kokonaisuuksien käyttämistä ongelman ratkaisemisessa. Kun ongelmaan liittyvät käsitteet on tunnistettu, niistä voidaan myös keskustella. Toisin ajatellen, ratkaistavasta ongelmasta muodostetaan abstraktioita, joiden avulla ongelmaa on helpompi käsitellä. -->
 
-Object-oriented programming is concerned with isolating concepts of a problem domain into separate entities and then using those entities to solve problems. Concepts related to a problem can only be considered once they've been identified. In other words, we can form abstractions from problems that make those problem easier to approach.
+Object-oriented programming is concerned with isolating concepts of a problem domain into separate entities and then using those entities to solve problems. Concepts related to a problem can only be considered once they've been identified. In other words, we can form abstractions from problems that make those problems easier to approach.
 
 <!-- Kun ongelmasta tunnistetaan käsitteitä, voidaan niitä vastaavia rakenteita luoda myös ohjelmaan. Näitä rakenteita ja niistä luotavia yksittäisiä ilmentymiä eli olioita käytetään ongelman ratkaisemisessa. Nyt ehkä käsittämättömältä tuntuva lausahdus **ohjelma rakennetaan pienistä selkeistä yhteistoiminnassa olevista olioista** alkaa hiljalleen kurssin edetessä tuntua järkeenkäyvältä ja jopa itsestäänselvältä. -->
 
-Once concepts related to a given problem have been identified, we can also begin to build constructs that represent them them into programs. These constructs, and the individual instances that are formed from them, i.e., objects, are used in solving the problem. The statement "programs are built from small, clear, and cooperative objects" may not make much sense yet. However, it will appear more sensible as we progress through the course, perhaps even self-evident.
+Once concepts related to a given problem have been identified, we can also begin to build constructs that represent them into programs. These constructs, and the individual instances that are formed from them, i.e., objects, are used in solving the problem. The statement "programs are built from small, clear, and cooperative objects" may not make much sense yet. However, it will appear more sensible as we progress through the course, perhaps even self-evident.
 
 <!-- ##  Luokka ja Olio -->
 
@@ -131,7 +131,7 @@ System.out.println(artonSveitsilainenTili);
 Account artosAccount = new Account("Arto's account", 100.00);
 Account artosSwissAccount = new Account("Arto's account in Switzerland", 1000000.00);
 
-System.out.println("Intial state");
+System.out.println("Initial state");
 System.out.println(artosAccount);
 System.out.println(artosSwissAccount);
 
@@ -519,7 +519,7 @@ Metodeistamme puuttuu jatkossa määre `static` mikäli ne käsittelevät kyseis
 
 We've used the modifier `static` in some of the methods that we've written. The `static` modifier indicates that the method in question does not belong to an object and thus cannot be used to access any variables that belong to objects.
 
-Going forward, our methods will not include the `static` keyword if they're used to process information about objects created form a given class. If a method receives as parameters all the variables whose values ​​it uses, it can have `static` modifier.
+Going forward, our methods will not include the `static` keyword if they're used to process information about objects created from a given class. If a method receives as parameters all the variables whose values ​​it uses, it can have a `static` modifier.
 
 </text-box>
 
@@ -606,6 +606,8 @@ Lisää pillille vielä metodi `public void soi()`, joka tulostaa pillin äänen
 Pillin tulee toimia seuraavasti. -->
 
 Create a class named `Whistle`. Add the variable `private String sound` to the class. After that, create the constructor `public Whistle(String whistleSound)`, which is used to create a new whistle that's given a sound.
+
+Then create the method `public void sound()` that prints the whistle's sound.
 
 <!-- ```java
 Pilli sorsapilli = new Pilli("Kvaak");
@@ -702,7 +704,7 @@ Create a class `Product` that represents a store product. The product should hav
 
 The class should have:
 
-- the constructor `public Item (String initialName, double initialPrice, int initialQuantity)`
+- the constructor `public Product (String initialName, double initialPrice, int initialQuantity)`
 - a method `public void printProduct()` that prints product information in the following format:
 
 <sample-output>
@@ -841,7 +843,7 @@ Antti, age 0 years
 
 Metodin sisään voi lisätä myös ehto- ja toistolauseita. Alla olevaa vanhene-metodia käytettäessä kenestäkään ei tulisi yli 30-vuotiasta. -->
 
-That is to say that when the two objects are "born" they're both zero-years old (`this.age = 0;` is executed in the constructor). The `ada` object's `growOlder` method is called twice. As the print output demonstrates, the age of Ada is 2 years after growing older. Calling the method on an object corresponding to Ada has no impact on the age of the other person object since each object instantiated form a class has its own instance variables.
+That is to say that when the two objects are "born" they're both zero-years old (`this.age = 0;` is executed in the constructor). The `ada` object's `growOlder` method is called twice. As the print output demonstrates, the age of Ada is 2 years after growing older. Calling the method on an object corresponding to Ada has no impact on the age of the other person object since each object instantiated from a class has its own instance variables.
 
 The method can also contain conditional statements and loops. The growOlder method below limits aging to 30 years.
 
@@ -965,7 +967,7 @@ public class Paaohjelma {
 ``` -->
 
 ```java
-public class MainPorgram {
+public class MainProgram {
     public static void main(String[] args) {
         DecreasingCounter counter = new DecreasingCounter(10);
 
@@ -1519,7 +1521,7 @@ public class Main {
         antti.growOlder();
 
         System.out.println("Pekka's age: " + pekka.returnAge());
-        System.out.println("Antti's age: " + antti.returnAge())
+        System.out.println("Antti's age: " + antti.returnAge());
         int combined = pekka.returnAge() + antti.returnAge();
 
         System.out.println("Pekka's and Antti's combined age " + combined + " years");
@@ -1682,7 +1684,7 @@ public class Person {
     }
 
     /*
-     The method could have been written more succintly in the following way:
+     The method could have been written more succinctly in the following way:
 
     public boolean isOfLegalAge() {
         return this.age >= 18;
@@ -2469,7 +2471,7 @@ Luokan ei tarvitse tallentaa mihinkään lisättyjä lukuja, vaan riittää muis
 
 Luokan runko on seuraava: -->
 
-Create a class `Statistics` that has the following functionality (the file for the class is provided in the in the exercise template):
+Create a class `Statistics` that has the following functionality (the file for the class is provided in the exercise template):
 
 - a method `addNumber` adds a new number to the statistics
 - a method `getCount` tells the number of added numbers

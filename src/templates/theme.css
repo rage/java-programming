@@ -82,6 +82,10 @@ table {
   outline: none;
 }
 
+.focus-visible {
+  border: solid 2px #3a539b;
+}
+
 h1,
 h2,
 h3,

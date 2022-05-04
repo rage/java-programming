@@ -1,12 +1,12 @@
 ---
 path: '/part-12/2-arraylist-and-hashtable'
 title: 'ArrayList and hash table'
-hidden: true
+hidden: false
 ---
 
 <!-- <text-box variant='learningObjectives' name='Oppimistavoitteet'> -->
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 <!-- - Tiedät miten miten muuttuvansizeinen geneerinen myList toteutetaan. -->
 
@@ -28,7 +28,7 @@ hidden: true
 
 <!-- ArrayList ja Hajautustaulu ovat ohjemoinnissa hyvin yleisesti käytettyjä tietorakenteita. Tarkastellaan tässä niiden todelmyList toteutusta. Kerrataan ensin lyhyesti taulukon käyttöä, jonka jälkeen rakennetaan esimerkinomaisesti ensin ArrayListiä imitoiva tietorakenne `List`, jota hyödynnetään sitten tietorakenteen `Hajautustaulu` tekemisessä. -->
 
-ArrayList and HashMap are some of commonly used data structures in programming. We are now going to take a look at their actual implementation. First we'll remind ourselves of how to use an array, after which we're going to build a data structure called `List`, imitating ArrayList. Then we'll make use of the List to implement the data structure `HashTable`.
+ArrayList and HashMap are commonly used data structures in programming. We are now going to take a look at their actual implementation. First we'll remind ourselves of how to use an array, after which we're going to build a data structure called `List`, imitating ArrayList. Then we'll make use of the List to implement the data structure `HashTable`.
 
 <!-- ## Lyhyt kertaus taulukoista -->
 
@@ -104,7 +104,7 @@ for (int i = 0; i < numbers.length; i++) {
 }
 ```
 
-
+<!---
 <sample-output>
 
 Taulukossa on 4 alkiota.
@@ -114,6 +114,7 @@ Taulukossa on 4 alkiota.
 7
 
 </sample-output>
+--->
 
 <sample-output>
 
@@ -131,11 +132,11 @@ There are 4 elements in the array.
 <programming-exercise name='Sum these for me' tmcname='part12-Part12_03.SumTheseForMe'>
 
 <!-- Luo luokkaan `Ohjelma` luokkametodi `public static int sum(int[] taulukko, int mista, int mihin, int pienin, int suurin)`. Metodin tulee laskea sille parametrina annetusta taulukosta indexen mista ja mihin välillä olevien valuejen sum. Summaan otetaan mukaan vain ne values, jotka ovat suurempia tai yhtäsuuria kuin pienin ja pienempiä kuin suurin. -->
-In the class `Program` implement a class method `public static int sum(int[]array, int fromWhere, int toWhere, int smallest, int largest)`. The method must calculate the sum of the elements in the array between the lower and the upper limits. Only numbers smaller or equal to the int largest and larger or equal to the int smallest are added to the sum.
+In the class `Program` implement a class method `public static int sum(int[] array, int fromWhere, int toWhere, int smallest, int largest)`. The method must calculate the sum of the elements in the array between the lower and the upper limits. Only numbers smaller or equal to the int largest and larger or equal to the int smallest are added to the sum.
 
 <!-- Metodin tulee lisäksi varmistaa, että käsiteltävät indext ovat valideja. Mikäli parametri `mista` on pienempi kuin 0, tulee taulukon indexen läpikäynti alkaa parametrin mista valuen sijaan nollasta. Vastaavasti, mikäli parametri `mihin` on suurempi kuin käsiteltävä taulukko, tulee taulukon indexen läpikäynti lopettaa  parametrin mihin valuen sijaan taulukon sizeon. -->
 
-The method must also check, that the lower and the upper limit are valid indexes in the array. If the parameter `fromWhere` is smaller than 0, the lower limit becomes 0 instead. Accordingly, if the parameter `toWhere` is larger than the size of the array, the upper limit becomes the last index of the array instead.
+The method must also check that the lower and the upper limit are valid indexes in the array. If the parameter `fromWhere` is smaller than 0, the lower limit becomes 0 instead. Accordingly, if the parameter `toWhere` is larger than the size of the array, the upper limit becomes the last index of the array instead.
 
 ```java
 int[] numbers = {3, -1, 8, 4};
@@ -162,7 +163,7 @@ System.out.println(sum(numbers, -1, 999, -10, 10));
 
 <!-- Taulukoita voi käyttää täysin samalla tavalla kuin muitakin muuttujia, eli niitä voi käyttää esimerkiksi oliomuuttujina, metodin parametreina, metodin paluuvaluena ym. -->
 
-Arrays can be used exactly in the same manner as other variables, so they can be object variables, method parameters, return values of methods, and so on.
+Arrays can be used in the exact same manner as other variables, so they can be object variables, method parameters, return values of methods, and so on.
 
 <!-- Merkittävä osa yleisesti käytetyistä tietorakenteista käyttää taulukoita niiden sisäisessä toteutuksessa. -->
 
@@ -173,7 +174,7 @@ A significant portion of generally used data structures use arrays in their inte
 
 <!-- Tarkastellaan erästä tapaa Javan tarjoaman ArrayList-tietorakenteen toteuttamiseen. Javan ArrayList hyödyntää sisäisesti taulukkoa, jonka alkioiden tyyppi on määritelty luokalle ArrayList annettavan tyyppiparametrin avulla. Tämän takia myListlle saa lisätä käytännössä minkä tyyppisiä firstFreeIndex tahansa. List tarjoaa useita metodeja, joista tämän esimerkin kannalta oleellisia ovat `add` eli lisääminen, `contains` eli olemassaolon tarkastaminen, `remove` eli removeminen sekä `get`, eli tietystä indexstä hakeminen. -->
 
-Lets examine one way to implement the Java ArrayList data structure. Java ArrayList uses an array. The type of the elements in the array is defined by the type parameter given to the ArrayList. Due to this we can add nearly any type of data to a list. Java List offers multiple methods, but right now `add`, `contains`,`remove` and `get` are most relevant for us.
+Let's examine one way to implement the Java ArrayList data structure. Java ArrayList uses an array. The type of the elements in the array is defined by the type parameter given to the ArrayList. Due to this we can add nearly any type of data to a list. Java List offers multiple methods, but right now `add`, `contains`, `remove` and `get` are most relevant for us.
 
 
 ```java
@@ -198,8 +199,8 @@ false
 
 <!-- Luodaan luokka `List`. Listarakenne sisältää geneerisen taulukon -- eli taulukon, jonka alkioiden tyyppi määräytyy ajonaikaisesti tyyppiparametreista. Asetetaan taulukon alkukooksi `10`. Taulukko luodaan object-tyyppisenä ja muunnetaan geneerisen tyyppiseksi `(T[]) new Object[10];` -- tämä tehdään, sillä kutsu `new T[10];` ei ainakaan toistaiseksi toimi Javassa. -->
 
-Lets create class `List`. The List has a generic array -- the type of the elements in the array is defined on run time using type parameters.
-Lets set the size of the array to `10`. The array is created as type object, and changed to type generic with `(A[]) new object[10];` -- this is done because Java does not support the call `new A[10];` for now.
+Let's create class `List`. The List has a generic array -- the type of the elements in the array is defined on run time using type parameters.
+Let's set the size of the array to `10`. The array is created as type object, and changed to type generic with `(A[]) new Object[10];` -- this is done because Java does not support the call `new A[10];` for now.
 
 
 ```java
@@ -219,7 +220,7 @@ List encapsulates an array. In the beginning, every element in the array contain
 ### Adding values to the list
 
 <!-- Lisätään luokalle metodi `public void add(T value)`, mikä mahdolmyLista valuejen lisäämisen myListlle. Luodaan luokalle tätä varten erillinen sizenaislukumuuttuja, joka pitää kirjaa taulukon ensimmäisestä tyhjästä paikasta. -->
-Lets add method `public void add(A value)`, which enables adding values to the list. We have to add an int variable to keep track of the first empty index in the array.
+Let's add the method `public void add(A value)`, which enables adding values to the list. We have to add an int variable to keep track of the first empty index in the array.
 
 
 ```java
@@ -252,7 +253,7 @@ myList.add("world");
 ### Adding values to a list part 2
 
 <!-- Edellä kuvatussa `add`-metodissa on pieni ongelma. Ongelma ilmenee kun seuraava ohjelmakoodi suoritetaan. -->
-There is a small problem with the `add` method. The problem comes when the following code is run:
+There is a small problem with the `add` method. The problem occurs when the following code is run:
 
 
 ```java
@@ -272,11 +273,11 @@ Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 10
 The size of the list does not grow. One of the benefits of the `ArrayList` class is, that it grows as needed -- programmers do not have to worry about the list getting full.
 
 <!-- Lisätään ohjelmaan myListn koon kasvattamiseen liittyvä toiminnallisuus. Listan sizea kasvatetaan aina jos täyteen myListan (eli myListn sisällä olevaan täyteen taulukkoon) yritetään lisätä value. Kasvattaminen toteutetaan luomalla new taulukko, johon vanhan taulukon values kopioidaan. Tämän jälkeen vanha taulukko jätetään hellotteille, ja uudesta taulukosta tulee olion käyttämä taulukko. -->
-Lets add the functionality for increasing the size of the List. The size of the List increases if user tries to add a value to a full list. The size of the List is increased by creating a new, larger, array to which the values from the old array are copied to. After this the old array is abandoned and the List starts to use the new array.
+Let's add the functionality for increasing the size of the List. The size of the List increases if user tries to add a value to a full list. The size of the List is increased by creating a new, larger, array to which the values from the old array are copied to. After this the old array is abandoned and the List starts to use the new array.
 
 <!-- Uuden taulukon size määräytyy Javassa kaavalla `vanhaKoko + vanhaKoko / 2`. Hyödynnetään samaa kaavaa omassa toteutuksessamme. Luodaan kasvattamista varten erillinen metodi `grow`, joka on vain luokan omien metodien käytössä (eli sillä on `private`-näkyvyys). -->
 
-The size of the array is determined in Java with the formula `oldSize + oldSize / 2`. Lets use the same formula in our implementation. We'll create a new method `grow` for increasing the size of the array. The method is available only for other methods in the class (it is `private`).
+The size of the array is determined in Java with the formula `oldSize + oldSize / 2`. Let's use the same formula in our implementation. We'll create a new method `grow` for increasing the size of the array. The method is available only for other methods in the class (it is `private`).
 
 ```java
 private void grow() {
@@ -318,7 +319,7 @@ Now we can add almost unlimited amount of elements to the List.
 The method described above copies every element from the old array to the new array. If we would have for example two million elements in an array, we must go through two million elements while copying them.
 
 <!-- Menetelmän tehokkuuteen -- ja parannusehdotuksiin -- paneudutaan muunmuassa kursseilla Tietorakenteet ja algoritmit sekä Algoritmien suunnittelu ja analyysi. -->
-We will discuss the effectiveness of this method -- and ways to make it more effective -- in the course Tietorakenteet ja algoritmit and Algoritmien suunnittelu ja analyysi.
+We will discuss the effectiveness of this method -- and ways to make it more effective -- in the courses Datastructures and Algorithms and Design and analysis of algorithms.
 
 </text-box>
 
@@ -326,7 +327,7 @@ We will discuss the effectiveness of this method -- and ways to make it more eff
 ### Checking the existence of a value
 
 <!-- Luodaan myListlle seuraavaksi metodi `public boolean contains(T value)`, minkä avulla voidaan tarkistaa onko alkio myListlla. Hyödynnetään tässä tietoa siitä, että jokainen Javan olio -- riippumatta sen tyypistä -- perii Object-luokan (tai on Object-tyyppinen). Tämän takia jokaisella oliolla on metodi `public boolean equals(Object object)`, jota voidaan käyttää yhtäsuuruuden tarkasteluun. -->
-Next we'll create a method `public boolean contains(A value)`, which we use to check whether the List contains a value or not. We will make use of the fact that each Java object -- no matter its type -- inherits the Object class (or is type Object). Due to this, each object has the method `public boolean equals(Object object)`, which we can use to check equality.
+Next we'll create the method `public boolean contains(Type value)`, which we use to check whether the List contains a value or not. We will make use of the fact that each Java object -- no matter its type -- inherits the Object class (or is type Object). Due to this, each object has the method `public boolean equals(Object object)`, which we can use to check equality.
 
 <!-- Luokan `List` muuttuja `firstFreeIndex` sisältää tiedon valuejen tämän hetkisestä lukumäärästä. Voimme siis toteuttaa `contains`-metodin siten, että tarkastelemme vain ne myListn indext, joissa on firstFreeIndex. -->
 The variable `firstFreeIndex` contains the number of elements in the array. We can implement the `contains` method so, that it only checks the indexes in the array which contain a value.
@@ -367,7 +368,7 @@ The method above assumes, that the user will not add a `null` reference to the l
 
 <!-- Toteuttamallemme myListlle voi nyt lisätä firstFreeIndex, jonka lisäksi valuen olemassaolon voi tarkastaa. Toteutetaan vielä valuen removeminen. Toteutetaan metodi `public void remove(T value)`, joka removea myListlta *yhden* `value`-valueisen alkion. -->
 We can now add values to the List, and check if the List contains a value. Now we will implement the functionality for removing a value from the List.
-Let's implement method `public void remove(Type value)`, which removes *one* value type `value`.
+Let's implement the method `public void remove(Type value)`, which removes *one* value type `value`.
 
 <!-- Yksinkertainen toteutus olisi seuraava. -->
 Simple implementation would be as follows:
@@ -407,7 +408,7 @@ public void remove(T value) {
 We are not really satisfied with the solution above, because it does too many things at the same time. The method looks for an element and moves elements around. We will split the functionality into two methods: `private int indexOfValue(Type value)`, which searches for the index of the value given to it as a parameter, and `private void moveToTheLeft(int fromIndex)`, which moves the elements above the given index to the left.
 
 <!-- Toteutetaan ensin metodi `private int indexOfValue(T value)`, joka etsii annetun valuen indexn. Metodi palauttaa negatiivisen luvun mikäli valuea ei löydy. -->
-First lets implement the method `private ind indexOfValue(Type value)`, which searches for the index of the given value. The method returns -1 if the value is not found.
+First let's implement the method `private int indexOfValue(Type value)`, which searches for the index of the given value. The method returns -1 if the value is not found.
 
 ```java
 private int indexOfValue(Type value) {
@@ -454,13 +455,13 @@ public void remove(Type value) {
 The method describes above copies each element after the removed element one place to the left. Think about the effectiveness of this method when the List is used as a queue.
 
 <!-- Tämänkin menetelmän tehokkuuteen -- ja parannusehdotuksiin -- paneudutaan muunmuassa kursseilla Tietorakenteet ja algoritmit sekä Algoritmien suunnittelu ja analyysi. -->
-We will discuss the effectiveness of this method -- and ways to make it more effective -- in the course Tietorakenteet ja algoritmit and Algoritmien suunnittelu ja analyysi.
+We will discuss the effectiveness of this method -- and ways to make it more effective -- in the courses Datastructures and algorithms and Design and analysis of algorithms.
 
 </text-box>
 
 
 <!-- Luokassa myList on nyt hieman toistuvaa koodia. Metodi `contains` on hyvin samankaltainen metodin `indexOfValue` kanssa. Muokataan vielä metodia `contains` siten, että se toteutetaan metodin `indexOfValue` avulla. -->
-The class List now contains some repeated code. The method `contains` is very similiar to the method `indexOfValue`. Lets modify the method `contains` so that it uses the method `indexOfValue`.
+The class List now contains some repeated code. The method `contains` is very similiar to the method `indexOfValue`. Let's modify the method `contains` so that it uses the method `indexOfValue`.
 
 
 ```java
@@ -592,7 +593,7 @@ This exercise is worth 2 points.
 
 <!-- Hajautustaulu on toteutettu taulukkona, missä jokainen alkio sisältää myListn. Listalle tallennetaan (avain,value)-pareja. Käyttäjä voi hakea hajautustaulusta firstFreeIndex avaimen perusteella, ja toisaalta käyttäjä voi lisätä hajautustauluun avain-value -pareja. Kukin avain voi esiintyä hajautustaulussa korkeintaan kerran. -->
 
-Hash map is implemented as an array, in which every element includes a list. The lists contain (key, value) pairs. The user can search from the hash map based on the key, and they can also add new key-value pairs into it. Eech key can appear at most once in the hash map.
+Hash map is implemented as an array, in which every element includes a list. The lists contain (key, value) pairs. The user can search from the hash map based on the key, and they can also add new key-value pairs into it. Each key can appear at most once in the hash map.
 
 <!-- Hajautustaulun toiminta perustuu avaimen hajautusvalueon. Kun hajautustauluun lisätään (avain,value)-pari, lasketaan avaimeen liittyvä hajautusvalue. Hajautusvalue määrää hajautustaulun sisäisen taulukon indexn, missä olevaan myListan (avain,value)-pari lisätään. -->
 
@@ -693,7 +694,7 @@ one -> 1
 
 <!-- Hajautustaulu sisältää taulukon listoja. Jokainen myListn value on edellä kuvattu pari, joka sisältää avain-value -parin. Hajautustaululla on lisäksi tieto valuejen lukumäärästä. Tässä käytössämme on edellä luotu luokka `List`. -->
 
-A hash map contians an array of lists. Each value on the list is a pair (described in the previous section) that contains a key and a value. A hash map also knows the number of the values. Here we have at our disposal the previously created class `List`.
+A hash map contains an array of lists. Each value on the list is a pair (described in the previous section) that contains a key and a value. A hash map also knows the number of the values. Here we have at our disposal the previously created class `List`.
 
 
 <!-- ```java
@@ -768,9 +769,9 @@ public V get(K key) {
 
     List<Pair<K, V>> valuesAtIndex = this.values[hashValue];
 
-    for (int i = 0; i < valuesAtINdex.size(); i++) {
+    for (int i = 0; i < valuesAtIndex.size(); i++) {
         if (valuesAtIndex.value(i).getKey().equals(key)) {
-            return valuesAtindex.value(i).getValue();
+            return valuesAtIndex.value(i).getValue();
         }
     }
 
@@ -842,11 +843,11 @@ public void add(K key, V value) {
         values[hashValue] = new List<>();
     }
 
-    List<Pari<K, V>> valuesAtindex = values[hashValue];
+    List<Pair<K, V>> valuesAtIndex = values[hashValue];
 
     int index = -1;
     for (int i = 0; i < valuesAtIndex.size(); i++) {
-        if (valuesAtINdex.value(i).getKey().equals(key)) {
+        if (valuesAtIndex.value(i).getKey().equals(key)) {
             index = i;
             break;
         }
@@ -936,7 +937,7 @@ public void add(K key, V value) {
         valuesAtIndex.add(new Pair<>(key, value));
         this.firstFreeIndex++;
     } else {
-        valuesAtindex.value(index).setValue(value);
+        valuesAtIndex.value(index).setValue(value);
     }
 }
 ```
@@ -948,7 +949,7 @@ public void add(K key, V value) {
 
 <!-- Edellä kuvattu hajautustauluun lisääminen toimii osittain. Toiminnallisuuden suurin puute on se, että taulukon sizea ei kasvateta kun valuejen määrä kasvaa liian suureksi. Lisätään ohjelmaan kasvatustoiminnallisuus, mikä tuplaa hajautustaulun sisäisen taulukon koon. Kasvatustoiminnallisuuden tulee myös sijoittaa jokainen hajautustaulussa olevan taulukon value uuteen taulukkoon. -->
 
-The way of adding to a hash table that was described above works party. The greates fault in the functionality is that the size of the internal array is not increased when the number of values grows too large. Let's add to the program a growing functionality that doubles the size of the internal array of the hash map. The growing operation should also place each value in the hash map into the newly created bigger array.
+The way of adding to a hash table that was described above works partly. The greatest fault in the functionality is that the size of the internal array is not increased when the number of values grows too large. Let's add a growing functionality to the program that doubles the size of the internal array of the hash map. The growing operation should also place each value in the hash map into the newly created bigger array.
 
 <!-- Hahmotellaan kasvatustoiminnallisuuden alku. Kasvatustoiminnallisuudessa luodaan new taulukko, jonka size on edelliseen verrattuna kaksinkertainen. Tämän jälkeen alkuperäinen taulukko käydään index indexltä läpi ja olemassaolevat avain-value -parit kopioidaan uuteen taulukkoon. Lopulta alkuperäinen taulukko korvataan uudella taulukolla. -->
 
@@ -1113,7 +1114,7 @@ Let's give the hash map the functionality to remove a key-value pair based on ke
 
 <!-- Voimme hyödyntää valmiiksi toteuttamiamme metodeja poistotoiminnallisuudessa. Selitä itsellesi (ääneen) alla olevan metodin konkreettinen toiminta. -->
 
-We can take advantage of the method we've already implemented in the removing method. Explain to yourself (out loud) how the method described below conretely works.
+We can take advantage of the method we've already implemented in the removing method. Explain to yourself (out loud) how the method described below concretely works.
 
 <!-- ```java
 public V remove(K avain) {
@@ -1245,7 +1246,7 @@ System.out.println("Hash map: the search took about " + hashMapSearch / 1000000 
 <sample-output>
 
 List: the search took about 6284 milliseconds (6284420580 nanoseconds.)
-Hajautustaulu: the search took about 0 milliseconds (805106 nanoseconds.)
+Hash map: the search took about 0 milliseconds (805106 nanoseconds.)
 
 </sample-output>
 

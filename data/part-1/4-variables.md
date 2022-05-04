@@ -6,7 +6,7 @@ title: "Variables"
 hidden: false
 ---
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Learning Objectives'>
 
 <!-- - Tunnet käsitteen muuttuja. Tiedät mitä ovat muuttujan tyyppi, muuttujan nimi, ja muuttujan arvo.
 - Osaat luoda ja käsitellä merkkijono-, kokonaisluku-, liukuluku-, ja totuusarvomuuttujia. -->
@@ -16,7 +16,7 @@ hidden: false
 
 </text-box>
 
-<ab-study id="ohjelmointi-20-scale-vs-mcq">
+<ab-study id="1a2faee2-7287-4277-ac4a-329220042a27">
 
 <only-for-ab-group group="1">
 
@@ -489,8 +489,8 @@ int camelCase = 5; // Ei sallittu -- muuttuja camelCase on jo käytössä!
 ``` -->
 
 ```java
-int 7variable = 4; // Not Allowed!
-int variable7 = 4; // Allowed, but not a descriptive variable name
+int System.out.print = 4; // Not Allowed!
+int System.out.println = 4; // Not Allowed!
 ```
 
 ```java
@@ -847,7 +847,7 @@ You wrote 18.0
 <!-- Kirjoita ohjelma, joka kysyy käyttäjältä liukulukua. Tämän jälkeen ohjelma tulostaa käyttäjän syöttämän luvun.
 Alla on annettuna ohjelman esimerkkitulostuksia: -->
 
-Write a program that asks the user for a floating-point number. The program then prints the user's input value.
+Write a program that asks the user for a floating-point number using the variable type Double. The program then prints the user's input value.
 
 Example prints for the program can be seen below:
 
