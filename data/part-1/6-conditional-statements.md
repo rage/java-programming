@@ -1157,7 +1157,7 @@ int luku = 7;
 if (!(luku > 4)) {
     System.out.println("Luku ei ole suurempi kuin 4.");
 } else {
-    System.out.println("Luku on suurempi tai yhtäsuuri kuin 4.");
+    System.out.println("Luku on suurempi kuin 4.");
 }
 ``` -->
 
@@ -1167,7 +1167,7 @@ int number = 7;
 if (!(number > 4)) {
     System.out.println("The number is not greater than 4.");
 } else {
-    System.out.println("The number is greater than or equal to 4.");
+    System.out.println("The number is greater than4.");
 }
 ```
 
