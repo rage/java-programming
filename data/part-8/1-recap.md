@@ -303,7 +303,7 @@ Make a class called `Container`. The class must have a constructor which does no
 <!-- - `public void add(int maara)` lisää parametrina annetun määrän nestettä säiliöön. Mikäli parametrin arvo on negatiivinen, ei nestettä lisätä. Lisäyksen jälkeen säiliössä on korkeintaan 100 yksikköä nestettä. -->
  -  `public void add(int amount)` which adds the amount of liquid given as a parameter to the container. If the amount is negative, no liquid is added.
  A container can hold maximum of 100 units of liquid.
- 
+
 <!-- - `public void remove(int maara)` poistaa parametrina annetun määrän nestettä säiliöstä. Mikäli parametrin arvo on negatiivinen, ei nestettä poisteta. Poistaminen poistaa vain olemassaolevaa nestettä -- poiston takia säiliössä ei voi koskaan olla alle nollaa nesteyksikköä. -->
  -  `public void remove(int amount)` which removes the amount of liquid given as a parameter from the container. If the amount is negative, no liquid is removed. A container can never hold less than 0 units of liquid.
 
@@ -423,7 +423,7 @@ Command: **list**
 2: vacuum clean
 Command: **completed**
 Which task was completed? **2**
-Task go to the store tehty
+Task: go to the store
 Command: **list**
 1: go to the store
 Command: **add**
