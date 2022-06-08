@@ -435,7 +435,7 @@ public class Person {
 
 <!-- Mikäli luokalle on määritelty konstruktori, oletuskonstruktoria ei ole olemassa. Alla olevalla luokalla kutsu `new Henkilo()` aiheuttaisi virhetilanteen, sillä Java ei löydä luokasta konstruktoria, jolla ei ole yhtäkään parametria. -->
 
-If a constructor has been defined for a class, no default constructor exists. For the class below, calling `new Person` would cause an error, as Java cannot find a constructor in the class that has no parameters.
+If a constructor has been defined for a class, no default constructor exists. For the class below, calling `new Person()` would cause an error, as Java cannot find a constructor in the class that has no parameters.
 
 <!-- ```java
 public class Henkilo {
