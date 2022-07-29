@@ -2368,7 +2368,7 @@ public class Apartment {
 
     public Apartment(int rooms, int squares, int pricePerSquare) {
         this.rooms = rooms;
-        this.square = squares;
+        this.squares = squares;
         this.pricePerSquare = pricePerSquare;
     }
 }
