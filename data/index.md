@@ -24,5 +24,6 @@ The course is split up into two individual courses: Java Programming I and Java 
 
 ## Credits and certificate
 
-No more exams will be held on this course. If you have a Finnish social security number and wish to complete Introduction to Programming and the Advanced Course in Programming for credits, see [Python Programming MOOC](https://programming-22.mooc.fi).  
+No more exams will be held on this course. If you wish to complete Introduction to Programming and the Advanced Course in Programming for credits, see [Python Programming MOOC](https://programming-22.mooc.fi).
+
 You can get a certificate for each course (Java Programming I & Java Programming II seperately) from here: https://www.mooc.fi/en/profile/completions.
