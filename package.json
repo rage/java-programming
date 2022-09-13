@@ -21,7 +21,7 @@
     "crowdsorcerer": "^0.1.79",
     "fetch-ponyfill": "^6.0.2",
     "focus-visible": "^5.0.2",
-    "gatsby": "^2.17.0",
+    "gatsby": "^4.23.0",
     "gatsby-plugin-catch-links": "^2.1.15",
     "gatsby-plugin-google-analytics": "^2.1.23",
     "gatsby-plugin-i18next": "^1.1.9",
