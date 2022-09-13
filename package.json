@@ -11,7 +11,7 @@
     "@material-ui/icons": "^4.5.1",
     "@rstacruz/gatsby-remark-component": "^1.2.0-pre.1",
     "apollo-boost": "^0.4.4",
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "babel-plugin-styled-components": "^1.10.0",
     "clsx": "^1.0.4",
     "code-states-visualizer": "^0.1.1",
