@@ -889,7 +889,7 @@ System.out.println("Merkkijonon " + mjono + " pituus on " + pituus);
 ``` -->
 
 ```java
-String word = "equisterian";
+String word = "equestrian";
 int length = word.length();
 System.out.println("The length of the word" + word + " is " + length);
 ```
@@ -898,7 +898,7 @@ System.out.println("The length of the word" + word + " is " + length);
 
 <!-- Merkkijonon heippatirallaa pituus on 14 -->
 
-The length of the word equisterian is 11
+The length of the word equestrian is 10
 
 </sample-output>
 
