@@ -98,7 +98,7 @@ public class Esimerkki {
 
 ## Program Boilerplate
 
-In Java, our programs have to include some boilerplate code to function. This boilerplate, an example of which is shown below, for example tells the computer what your program is called. Below, the name of the program is `Example`. This name has to correspond to the name of the file that contains the source code (e.g. `Example.java`).
+In Java, our programs have to include some boilerplate code to function. This boilerplate, an example of which is shown below, can, among others, tell the computer what your program is called. Below, the name of the program is `Example`. This name has to correspond to the name of the file that contains the source code (e.g. `Example.java`).
 
 ```java
 public class Example {
