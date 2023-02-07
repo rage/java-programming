@@ -141,7 +141,7 @@ public boolean equals(Object comparedObject) {
         return false;
     }
 
-    // let's convert the object to a Book-olioksi
+    // let's convert the object to a Book-object
     Book comparedBook = (Book) comparedObject;
 
     // if the instance variables of the objects are the same, so are the objects
