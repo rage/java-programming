@@ -511,7 +511,7 @@ We notice that it's difficult to define a single, clear task for `if-else if-els
 ## Calculation with Loops
 
 <!-- Toistolauseita hyödynnetään usein asioiden laskemisessa. Esimerkiksi ohjelmat, joissa käsitellään määrittelemätöntä määrää käyttäjän syöttämiä lukuja perustuvat toistolauseseen. Tällaisissa ohjelmissa tulostetaan tyypillisesti jonkinlaisia tilastoja luetuista luvuista tai muista syötteistä toistolauseen jälkeen. -->
-Loops are used in computing many different things. For example, programs that process indefinite numbers of user-inputted values make use of loops. These kinds of programs typically print out some sort of statistics about the numbers that were read or other inputs after the end loop.
+Loops are used in computing many different things. For example, programs that process indefinite numbers of user-inputed values make use of loops. These kinds of programs typically print out some sort of statistics about the numbers that were read or other inputs after the end loop.
 
 <!-- Jotta ohjelma voi tulostaa toistolauseen jälkeen tietoja toistolauseen suorituksesta, tulee tietoa säilöä ja muokata toistolauseen aikana. -->
 For the program to print out information from the loop execution after the loop, the information must be saved and modified during the loop.
