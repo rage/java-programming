@@ -2127,7 +2127,7 @@ public static void printStars(int number) {
     // you can print one star with the command
     // System.out.print("*");
     // call the print command n times
-    // in the end print a line break with the comand
+    // in the end print a line break with the command
     // System.out.println("");
 }
 
