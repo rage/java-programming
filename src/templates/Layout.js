@@ -29,7 +29,6 @@ import {
   SMALL_MEDIUM_BREAKPOINT,
 } from "../util/constants"
 import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
-import Notification from "../components/Notification"
 
 fontAwesomeConfig.autoAddCss = false
 
@@ -138,7 +137,6 @@ class Layout extends React.Component {
                 <SidebarPush>
                   <TopBar />
                   <ContentArea mobileMenuOpen={this.state.mobileMenuOpen}>
-                    <Notification />
                     {children}
                   </ContentArea>
                   <PointsBalloon />
