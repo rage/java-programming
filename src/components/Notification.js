@@ -45,7 +45,7 @@ export default class Notification extends React.Component {
     }
 
     this.setState({ open: false })
-    store.set("pajanotification.shown2", true)
+    store.set("javafx.shown2", true)
   }
 
   handleRefresh = () => {
@@ -53,7 +53,7 @@ export default class Notification extends React.Component {
   }
 
   render() {
-    if (!this.state.render || store.get("pajanotification.shown2")) {
+    if (!this.state.render || store.get("javafx.shown2")) {
       return <div />
     }
     return (
@@ -67,15 +67,9 @@ export default class Notification extends React.Component {
             <Fragment>
               <StyledInfoIcon />
               <StyledTypography>
-                Pajaohjausta on nyt saatavilla! Pajasta saa apua tehtäviin,
-                ohjelmointiin ja teknisiin ongelmiin sekä hyvää
-                ohjelmointiseuraa. Paja sijaitsee Helsingin Kumpulan
-                kampuksella. Kaikki ovat tervetulleita pajaan! Muut paja-ajat ja
-                tarkemmat ohjeet löytyvät{" "}
-                <Link onClick={this.handleClose} to="/tukivaylat">
-                  tukiväylät
-                </Link>
-                -sivulta.
+                Apologies for the JavaFX issue in some of the exercises in parts
+                13 and 14! We are currently investigating it and will hopefully
+                fix it asap.
               </StyledTypography>
             </Fragment>
           }
