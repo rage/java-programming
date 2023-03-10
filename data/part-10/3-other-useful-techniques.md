@@ -864,7 +864,7 @@ ei ole pata
 </sample-output> -->
 <sample-output>
 
-HEARTS 10
+HEART 10
 is not a spade
 
 </sample-output>
