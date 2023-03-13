@@ -71,15 +71,15 @@ class Layout extends React.Component {
   componentDidMount() {
     const user = store.get("tmc.user")
     if (typeof window !== "undefined" && user) {
-      if (canDoResearch()) {
-        setTimeout(() => {
-          this.removePheromones = Pheromones.init({
-            apiUrl: "https://pheromones.mooc.fi/",
-            username: user.username,
-            submitAfter: 20,
-          })
-        }, 1000)
-      }
+      // if (canDoResearch()) {
+      //   setTimeout(() => {
+      //     this.removePheromones = Pheromones.init({
+      //       apiUrl: "https://pheromones.mooc.fi/",
+      //       username: user.username,
+      //       submitAfter: 20,
+      //     })
+      //   }, 1000)
+      // }
     }
   }
 
