@@ -5,20 +5,19 @@ hidden: false
 information_page: true
 ---
 
-## Chat channel
+## Discord
 
-<notice>This course does not have a channel in the Department of Computer Science Discord. Support is only offered on a volunteer basis in the Telegram group.</notice>
+<notice>The Department of Computer Science provides no guidance for this course. Support is offered on a volunteer basis on the Discord channel.</notice>
 
-The course has a support chat channel in Telegram. We suggest that you use the channel either with Telegram's web browser client or with Telegram's desktop application.
+Discord is a communication platform which allows both text-based and voice/video chats. You can find out more about the platform on the [Discord website](https://discord.com/).
 
-You can join the channel through this link: [https://t.me/java\_programming\_mooc](https://t.me/java_programming_mooc)
-You can access the web browser client here: [https://web.telegram.org](https://web.telegram.org/)
-
-There's also an off-topic channel for conversation that isn't directly connected to the course: [https://t.me/java\_programming\_mooc\_ot](https://t.me/java_programming_mooc_ot)
+The course channel is available [through this link](https://study.cs.helsinki.fi/discord/join/java).
 
 The participants in the channel are fellow students and volunteer course assistants. The channel's activity is based on voluntary assistance. Please also help other students on the channel when you can.
 
-If you ask for help in the channel, you may add a link to your program code. You can get a link to your code in NetBeans by pressing "`TMC`" --> "`Send code to pastebin`" and then selecting "`Send`" from the opened view. After you've sent the code, a new view should show up with the link to your code, which you can then share on the channel when you're asking for help.
+There's also an off-topic channel for conversation that isn't directly connected to the course: [https://t.me/java\_programming\_mooc\_ot](https://t.me/java_programming_mooc_ot)
+
+We recommend all users in the course Telegram channel to join the Discord.
 
 ## Email
 
