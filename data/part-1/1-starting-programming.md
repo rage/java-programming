@@ -83,7 +83,7 @@ Programming is designing and implementing software. The functionality is impleme
 
 <!-- Ohjelmointikieliä on satoja ja tällä kurssilla keskitytään näistä kielistä yhteen. Kurssin kielenä on [Java](<https://en.wikipedia.org/wiki/Java_(programming_language)>), joka on yksi maailman eniten käytetyistä ohjelmointikielistä. Javaa tuntevan on myös helppo oppia uusia ohjelmointikieliä. -->
 
-There are hundreds of programming languages out there, and this course focuses one of them. The language used in this course is [Java](<https://en.wikipedia.org/wiki/Java_(programming_language)>), which is one of the most commonly-used programming languages in the world. Learning Java also makes it easier to pick up other programming languages.
+There are hundreds of programming languages out there, and this course focuses on one of them. The language used in this course is [Java](<https://en.wikipedia.org/wiki/Java_(programming_language)>), which is one of the most commonly-used programming languages in the world. Learning Java also makes it easier to pick up other programming languages.
 
 <!-- Ohjelmointikielet kuten Java tarjoavat suuren määrän valmiita komentoja, joita ohjelmoija käyttää ohjelmistoja luodessa. Tämä helpottaa ohjelmointia, sillä aivan kaikkea ei tarvitse toteuttaa alusta lähtien. Esimerkiksi graafisia käyttöliittymiä toteutettaessa ohjelmointikielillä on tyypillisesti valmiita toiminnallisuuksia erilaisten valikoiden ja näkymien luomiseen. Iso osa ohjelmoinnista onkin ohjelmointikielen valmiiksi tarjoamien komentojen soveltamista ongelmien ratkaisuissa -- tämä toisaalta vaatii ohjelmointirutiinia, joka kehittyy vain ohjelmoimalla. -->
 
