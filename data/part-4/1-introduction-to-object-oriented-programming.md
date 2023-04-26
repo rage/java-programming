@@ -222,7 +222,7 @@ public class Main {
 
 *Luokkien, muuttujien ja metodien nimissä ei tyypillisesti käytetä ääkkösiä. Vältä niiden käyttöä myös tässä.* -->
 
-In NetBeans, a new class can be created by going to the _projects_ section located on the left, right-clicking _new_, and then _java class_. The class is provided a name in the dialog that opens.
+In NetBeans, a new class can be created by going to the _Projects_ section located on the left, right-clicking _New_, and then _Java Class_. The class is provided a name in the dialog that opens.
 
 As with variables and methods, the name of a class should be as descriptive as possible. It's usual for a class to live on and take on a different form as a program develops. As such, the class may have to be renamed at some later point.
 
@@ -310,7 +310,7 @@ A new class can be added in NetBeans the following way: On the left side of the 
 
 Name the class `Dog` in this exercise, and press the finish button.
 
-You have now created a class called `Dog`. Add the variables `private String name`,`private String breed` and `private int age` to the class. As a class diagram, the class looks like this:
+You have now created a class called `Dog`. Add the variables `private String name`, `private String breed` and `private int age` to the class. As a class diagram, the class looks like this:
 
 <img src="../img/diagrams/part4.1-classdiagram-ex-dog.png" alt="[Koira|-nimi:String;-rotu:String;-ika:int]">
 
@@ -381,7 +381,7 @@ Koska oliomuuttujat on määritelty konstruktorin aaltosulkujen ulkopuolella, vo
 
 Nyt luokkakaavioon on merkitty luokan nimen ja muuttujien lisäksi myös konstruktori. Konstruktori saa public-näkyvyysmääreen takia eteen plussan, jonka lisäksi siitä merkitään sen nimi ja parametrin tyypit (tässä `+ Henkilo(String)`). -->
 
-The constructor's name is always the same as the class name. The class in the example above is named Person, so the constructor will also have to be named Person. The constructor is also provided,  as a parameter, the name of the person object to be created. The parameter is enclosed in parentheses and follows the constructor's name. The parentheses that contain optional parameters are followed by curly brackets. In between these brackets is the source code that the program executes when the constructor is called (e.g., `new Person ("Ada")`).
+The constructor's name is always the same as the class name. The class in the example above is named Person, so the constructor will also have to be named Person. The constructor is also provided,  as a parameter, the name of the person object to be created. The parameter is enclosed in parentheses and follows the constructor's name. The parentheses that contain optional parameters are followed by curly brackets. In between these brackets is the source code that the program executes when the constructor is called (e.g., `new Person("Ada")`).
 
 Objects are always created using a constructor.
 
@@ -414,9 +414,9 @@ This class doesn't do much either. However, in the following exercise the object
 
 Esimerkiksi alla olevasta luokasta voidaan luoda olio kutsulla `new Henkilo()`. -->
 
-If the programmer does not define a constructor for a class, Java automatically creates a default one for it. A default constructor is a constructor that doesn't do anything apart from creating the object. The object's variables remain uninitialized (generally, the value of any object references will be `null`, meaning that they do not point to anything, and the values of primitives will be `0`)
+If the programmer does not define a constructor for a class, Java automatically creates a default one for it. A default constructor is a constructor that doesn't do anything apart from creating the object. The object's variables remain uninitialized (generally, the value of any object references will be `null`, meaning that they do not point to anything, and the values of primitives will be `0`).
 
-For example, an object can be created from the class below by making the call `new Person()`
+For example, an object can be created from the class below by making the call `new Person()`:
 
 <!--
 ```java
@@ -1531,8 +1531,8 @@ public class Main {
 
 <!-- <sample-output>
 
-Pekan ikä 2
-Antin ikä 1
+Pekan ikä: 2
+Antin ikä: 1
 
 Pekka ja Antti yhteensä 3 vuotta
 
@@ -1540,8 +1540,8 @@ Pekka ja Antti yhteensä 3 vuotta
 
 <sample-output>
 
-Pekka's age 2
-Antti's age 1
+Pekka's age: 2
+Antti's age: 1
 
 Pekka's and Antti's combined age 3 years
 
@@ -2434,7 +2434,7 @@ public String toString() {
 
 <!-- Eli kun olio kutsuu omaa metodiaan, riittää etuliite this ja pelkkä metodin nimi. Vaihtoehtoinen tapa on tehdä oman metodin kutsu muodossa `painoindeksi()` jolloin ei korosteta, että kutsutaan "olion itsensä" metodia painoindeksi: -->
 
-So, when an object calls an internal method, the name of the method and this prefix suffice. An alternative way is to call the object's own method in the form `bodyMassIndex()`, whereby no emphasis is placed on the fact that the object's own bodyMassIndex method is being called:
+So, when an object calls an internal method, the name of the method and _**this**_ prefix suffice. An alternative way is to call the object's own method in the form `bodyMassIndex()`, whereby no emphasis is placed on the fact that the object's own bodyMassIndex method is being called:
 
 <!-- ```java
 public String toString() {
@@ -2504,7 +2504,7 @@ public class Statistics {
     private int count;
 
     public Statistics() {
-        // initialize the variable numberCount here
+        // initialize the variable count here
     }
 
     public void addNumber(int number) {
@@ -2789,7 +2789,7 @@ At the University of Helsinki student canteen, i.e. Unicafe, students pay for th
 
 <!-- Tässä tehtäväsäsarjassa tehdään luokka `Maksukortti`, jonka tarkoituksena on jäljitellä Unicafeissa tapahtuvaa maksutoimintaa. -->
 
-In this exercise series, a class called `PaymentCard` is created which aims to mimic Unicafe's payment process
+In this exercise series, a class called `PaymentCard` is created which aims to mimic Unicafe's payment process.
 
 <!-- <h2>Luokan runko</h2> -->
 <h2>The class template</h2>
@@ -2806,7 +2806,7 @@ Seuraavassa on luokan `Maksukortti` runko: -->
 
 The project will include two code files:
 
-The exercise template comes with a code file called `Main`, which contains the `main` method.
+The exercise template comes with a code file called `MainProgram`, which contains the `main` method.
 
 Add a new class to the project called `PaymentCard`. Here's how to add a new class: On the left side of the screen is the list of projects. Right-click on the project name. Select _New_ and _Java Class_ from the drop-down menu. Name the class as "PaymentCard".
 

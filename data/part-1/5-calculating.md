@@ -700,13 +700,13 @@ System.out.println(result);
 
 <sample-output>
 
-1
+1.0
 
 </sample-output>
 
 <!-- Nytkin tulostus on 1, sillä eka ja toka ovat (yhä) kokonaislukuja. -->
 
-The output 1 again, since first and second are (still) integers.
+The output is 1.0, since the variable `result` is of type `double` (***promotion*** `int` -> `double`).
 
 <!-- Jos jakolaskun jakaja tai jaettava (tai molemmat!) ovat liukulukuja, tulee tulokseksi myös liukuluku. -->
 
@@ -783,7 +783,7 @@ The last example produces an incorrectly rounded result, because the integer div
 
 <!-- Jos jakolausekkeen tulos asetetaan kokonaislukutyyppiseen muuttujaan, on tulos automaattisesti kokonaisluku. -->
 
-If the result of a division is assigned to an integer-type variable, the result is automatically an integer.
+If the floating point result of a division is assigned to an integer-type variable, the result is ***NOT automatically an integer*** -- it has to be *casted* to `int` (***demotion*** `double` -> `int` with lost of decimal part of result {*possible lossy conversion from `double` to `int`*}!!!), like this:
 
 <!-- ```java
 int kokonaisluku = 3.0 / 2;
@@ -791,7 +791,7 @@ System.out.println(kokonaisluku);
 ``` -->
 
 ```java
-int integer = 3.0 / 2;
+int integer = (int) (3.0 / 2);
 System.out.println(integer);
 ```
 

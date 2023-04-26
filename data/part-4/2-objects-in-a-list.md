@@ -24,7 +24,7 @@ hidden: false
 
 <!-- Listalle lisättävien muuttujien tyyppi määrätään listan luomisen yhteydessä annettavan tyyppiparametrin avulla. Esimerkiksi `ArrayList<String>` sisältää merkkijonoja, `ArrayList<Integer>` sisältää kokonaislukuja, ja `ArrayList<Double>` sisältää liukulukuja. -->
 
-The type parameter used in creating a list defines the type of the variables that are added to the list. For instance, `ArrayList<String>` includes strings, `ArrayList<Integer>` integers, and `ArrayList<Double>` floating point numbers
+The type parameter used in creating a list defines the type of the variables that are added to the list. For instance, `ArrayList<String>` includes strings, `ArrayList<Integer>` integers, and `ArrayList<Double>` floating point numbers.
 
 <!-- Alla olevassa esimerkissä lisätään ensin merkkijonoja listalle, jonka jälkeen listalla olevat merkkijonot tulostetaan yksitellen. -->
 
@@ -56,12 +56,15 @@ while (indeksi < nimet.size()) {
     indeksi = indeksi + 1;
 }
 
+System.out.println();
+
 // 2. for-toistolause indeksillä
 for (int i = 0; i < nimet.size(); i++) {
     System.out.println(nimet.get(i));
 }
 
 System.out.println();
+
 // 3. for-each toistolause (ei indeksiä)
 for (String nimi: nimet) {
     System.out.println(nimi);
@@ -93,14 +96,17 @@ while (index < names.size()) {
     index = index + 1;
 }
 
+System.out.println();
+
 // 2. for loop with index
 for (int i = 0; i < names.size(); i++) {
     System.out.println(names.get(i));
 }
 
 System.out.println();
-// 3. for each loop (no index)
-for (String name: names) {
+
+// 3. for-each loop (no index)
+for (String name : names) {
     System.out.println(name);
 }
 ```
@@ -272,7 +278,7 @@ persons.add(john);
 persons.add(new Person("Matthew"));
 persons.add(new Person("Martin"));
 
-for (Person person: persons) {
+for (Person person : persons) {
     System.out.println(person);
 }
 ```
@@ -343,7 +349,6 @@ while (true) {
         break;
     }
 
-
     // Add to the list a new person
     // whose name is the previous user input
     persons.add(new Person(name));
@@ -354,7 +359,7 @@ System.out.println();
 System.out.println("Persons in total: " + persons.size());
 System.out.println("Persons: ");
 
-for (Person person: persons) {
+for (Person person : persons) {
     System.out.println(person);
 }
 ```
@@ -547,7 +552,7 @@ System.out.println();
 System.out.println("Total number of persons: " + persons.size());
 System.out.println("Persons: ");
 
-for (Person person: persons) {
+for (Person person : persons) {
     System.out.println(person);
 }
 ```
@@ -634,7 +639,7 @@ Betty Holberton
 
 <!-- Yllä olevassa esimerkissä ja tehtävässä tiedot syötettiin rivi riviltä. Ohjelmassa voisi toki pyytää tietoja määrämuotoisessa muodossa, esimerkiksi pilkulla eroteltuna. -->
 
-In the example and exercise below, the required information was entered line by line. By no means is it impossible to ask for input in a specific format, e.g. separated by a comma.
+In the example and exercise above, the required information was entered line by line. By no means it is impossible to ask for input in a specific format, e.g. separated by a comma.
 
 <!-- Ohjelma, jossa nimi ja ikä tulisi syöttää pilkulla eroteltuna voisi toimia seuraavalla tavalla. -->
 
@@ -693,7 +698,7 @@ System.out.println();
 System.out.println("Total number of persons: " + persons.size());
 System.out.println("Persons: ");
 
-for (Person person: persons) {
+for (Person person : persons) {
     System.out.println(person);
 }
 ```
@@ -763,7 +768,7 @@ for (Henkilo henkilo: henkilot) {
 System.out.print("What is the age limit? ");
 int ageLimit = Integer.valueOf(scanner.nextLine());
 
-for (Person person: persons) {
+for (Person person : persons) {
     if (person.getAge() >= ageLimit) {
         System.out.println(person);
     }
@@ -815,6 +820,7 @@ Name: **Love it or list it**
 Duration: **60**
 Name: **House**
 Duration: **60**
+Name:
 
 Program's maximum duration? **30**
 Rick and Morty, 25 minutes
