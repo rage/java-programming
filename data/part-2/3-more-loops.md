@@ -667,7 +667,7 @@ NB: Remember that each sub-part of the series is equivalent to one individual ex
 <h2>Reading</h2>
 
 <!-- Tee ohjelma, joka kysyy käyttäjältä lukuja (ohjelma tulostaa käyttäjälle aluksi "Syötä luvut:"), kunnes käyttäjä antaa luvun -1. Kun käyttäjä syöttää luvun -1, ohjelma tulostaa "Kiitos ja näkemiin!" ja päättyy. -->
-Implement a program that asks the user for numbers (the program first prints "Write numbers: ") until the user gives the number -1. When the user writes -1, the program prints "Thx! Bye!" and ends.
+Implement a program that asks the user for numbers (the program first prints "Give numbers:") until the user gives the number -1. When the user writes -1, the program prints "Thx! Bye!" and ends.
 
 <sample-output>
 
