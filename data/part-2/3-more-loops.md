@@ -499,7 +499,7 @@ The above example internally calculated  3 + 4 + 5 = 12
 <!-- Summa on 35 -->
 First number? **2**
 Last number? **8**
-The sum is: 35
+The sum is 35
 
 </sample-output>
 
