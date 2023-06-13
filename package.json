@@ -1,7 +1,7 @@
 {
   "name": "ohjelmoinnin-mooc",
   "dependencies": {
-    "@apollo/client": "^3.7.15",
+    "@apollo/client": "^3.6.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-brands-svg-icons": "^5.11.2",
     "@fortawesome/free-regular-svg-icons": "^5.11.2",
