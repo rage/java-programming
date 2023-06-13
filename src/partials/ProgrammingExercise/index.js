@@ -3,7 +3,6 @@ import styled from "styled-components"
 import ContentLoader from "react-content-loader"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPencilAlt as icon, faRedo } from "@fortawesome/free-solid-svg-icons"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
 import { get } from "lodash"
 import { Card, CardContent, Button } from "@material-ui/core"
 
@@ -277,13 +276,13 @@ class ProgrammingExercise extends React.Component {
                     <Small>
                       <p>
                         {this.props.t("submitNB")}{" "}
-                        <OutboundLink
+                        <a
                           href="https://www.mooc.fi/en/installation/netbeans"
                           rel="noopener noreferrer"
                           target="_blank"
                         >
                           {this.props.t("submitHowTo")}
-                        </OutboundLink>
+                        </a>
                         .
                       </p>
                       <StyledDivider />

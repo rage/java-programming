@@ -2,7 +2,6 @@ import React, { useContext } from "react"
 import LoginStateContext from "../contexes/LoginStateContext"
 import styled from "styled-components"
 import { Card } from "@material-ui/core"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
 import { withTranslation } from "react-i18next"
 import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 import { useAsync } from "react-use"
@@ -55,9 +54,9 @@ const GoogleFormLink = ({ children, href, t, emailfieldname }) => {
     )}`
   }
   return (
-    <OutboundLink href={link} target="_blank" rel="noopener noreferrer">
+    <a href={link} target="_blank" rel="noopener noreferrer">
       {children}
-    </OutboundLink>
+    </a>
   )
 }
 

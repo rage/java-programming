@@ -9,7 +9,6 @@ import LoginStateContext, {
   withLoginStateContext,
 } from "../contexes/LoginStateContext"
 import Container from "../components/Container"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
 import { getCachedUserDetails } from "../services/moocfi"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -71,9 +70,9 @@ class MissingInfo extends React.Component {
             On this page, you can edit your mooc.fi account settings for this
             course. You can also check your profile on mooc.fi's Test My Code
             service:{" "}
-            <OutboundLink href="https://tmc.mooc.fi" rel="noopener noreferrer">
+            <a href="https://tmc.mooc.fi" rel="noopener noreferrer">
               https://tmc.mooc.fi
-            </OutboundLink>
+            </a>
             .
           </p>
           <CourseOptionsEditor onComplete={this.onStepComplete} />

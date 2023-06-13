@@ -1,6 +1,5 @@
 import React from "react"
 import moment from "moment"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
 import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 
 const start = moment("01/01/2018", "DD/MM/YYYY")
@@ -26,7 +25,7 @@ function getLink() {
 }
 
 const RegistrationLink = () => {
-  return <OutboundLink href={getLink()}>{getLink()}</OutboundLink>
+  return <a href={getLink()}>{getLink()}</a>
 }
 
 export default withSimpleErrorBoundary(RegistrationLink)

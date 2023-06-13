@@ -10,8 +10,6 @@ import {
   CardContent,
 } from "@material-ui/core"
 
-import { OutboundLink } from "gatsby-plugin-google-analytics"
-
 import Loading from "../Loading"
 
 import { updateUserDetails, userDetails } from "../../services/moocfi"
@@ -254,14 +252,14 @@ class CourseOptionsEditor extends React.Component {
 
           <p>
             {this.props.t("research5")}
-            <OutboundLink
+            <a
               href="https://dl.acm.org/citation.cfm?id=2858798"
               target="_blank"
               rel="noopener noreferrer"
             >
               Educational Data Mining and Learning Analytics in Programming:
               Literature Review and Case Studies
-            </OutboundLink>
+            </a>
             .
           </p>
 

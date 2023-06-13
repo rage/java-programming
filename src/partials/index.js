@@ -20,8 +20,6 @@
 
 // export default getNamedPartials
 
-import { OutboundLink } from "gatsby-plugin-google-analytics"
-
 import Test from "./Test"
 import PagesInThisSection from "./PagesInThisSection"
 import ProgrammingExercise from "./ProgrammingExercise"
@@ -103,7 +101,6 @@ const mapping = {
   td: TableCell,
   th: TableTh,
   deadline: Deadline,
-  a: OutboundLink,
   h1: H1,
   h2: H2,
   h3: H3,
