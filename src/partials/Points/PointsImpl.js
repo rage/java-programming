@@ -2,7 +2,7 @@ import React from "react"
 import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
 import CourseSettings from "../../../course-settings"
 
-import { useQuery } from "@apollo/react-hooks"
+import { useQuery } from "@apollo/client"
 import { gql } from "apollo-boost"
 import { Button } from "@material-ui/core"
 import OverallPoints from "./OverallPoints"

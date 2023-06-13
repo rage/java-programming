@@ -1,7 +1,7 @@
 import React from "react"
 import PointsImpl from "./PointsImpl"
 import ApolloClient from "apollo-boost"
-import { ApolloProvider } from "@apollo/react-hooks"
+import { ApolloProvider } from "@apollo/client"
 import { accessToken } from "../../services/moocfi"
 
 export default class Points extends React.Component {
