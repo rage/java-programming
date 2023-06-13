@@ -74,15 +74,15 @@ export async function fetchQuizProgress() {
     },
   ]
   const quizIdInformation = await fetchQuizIds()
-  const allQuizIds = flatten(quizIdInformation.map(o => o.quizIds))
+  const allQuizIds = flatten(quizIdInformation.map((o) => o.quizIds))
   const progress = await fetchProgressByQuizIds(allQuizIds)
-  const allAnswered = (progress.answered || []).map(o => o._id)
+  const allAnswered = (progress.answered || []).map((o) => o._id)
   partToTag.forEach(({ part, tag }) => {
     const relevant = quizIdInformation
-      .filter(o => {
+      .filter((o) => {
         return o.tags.indexOf(tag) !== -1
       })
-      .map(o => o.quizIds)
+      .map((o) => o.quizIds)
     const quizIds = flatten(relevant)
     const answered = getCommonElements(quizIds, allAnswered)
     const maxPoints = quizIds.length

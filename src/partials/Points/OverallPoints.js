@@ -31,7 +31,7 @@ export default ({ courseName, progress, refetch }) => {
           {courseName}
         </Typography>
 
-        {data.map(group => {
+        {data.map((group) => {
           return (
             <>
               <ProgressLineContainer>

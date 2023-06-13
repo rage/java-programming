@@ -24,7 +24,7 @@ const FormContainer = styled.div`
 `
 
 class CreateAccountForm extends React.Component {
-  onClick = async e => {
+  onClick = async (e) => {
     e.preventDefault()
     this.setState({ submitting: true, triedSubmitting: true })
     if (!this.validate()) {
@@ -45,10 +45,10 @@ class CreateAccountForm extends React.Component {
     } catch (error) {
       try {
         let message = ""
-        Object.entries(error).forEach(o => {
+        Object.entries(error).forEach((o) => {
           const key = o[0]
           const value = o[1]
-          value.forEach(msg => {
+          value.forEach((msg) => {
             let newMessage = capitalizeFirstLetter(
               `${key.replace(/_/g, " ")} ${msg}.`,
             )
@@ -72,7 +72,7 @@ class CreateAccountForm extends React.Component {
     }
   }
 
-  handleInput = e => {
+  handleInput = (e) => {
     const name = e.target.name
     const value = e.target.value
     this.setState({ [name]: value }, () => {
@@ -108,9 +108,8 @@ class CreateAccountForm extends React.Component {
       if (password !== password_confirmation) {
         newState.error += this.props.t("passwordsNoMatch")
         newState.errorObj.password = this.props.t("passwordsNoMatch")
-        newState.errorObj.password_confirmation = this.props.t(
-          "passwordsNoMatch",
-        )
+        newState.errorObj.password_confirmation =
+          this.props.t("passwordsNoMatch")
       }
     }
 

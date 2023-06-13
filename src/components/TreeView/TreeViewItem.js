@@ -38,13 +38,13 @@ const NavigationLink = styled(GatsbyLink)`
   border-left: 0.5em solid white;
   width: 100%;
   background-color: white;
-  ${props =>
-      props.active === "t" &&
-      `
+  ${(props) =>
+    props.active === "t" &&
+    `
     border-color: #f75b4b !important;
     background-color: #edeaea;
   `}
-    :hover {
+  :hover {
     text-decoration: none;
     color: black;
     background-color: #f5ebeb;
@@ -111,7 +111,7 @@ class TreeViewItem extends React.Component {
   }
 
   onClick = () => {
-    this.setState(prev => ({
+    this.setState((prev) => ({
       childrenVisible: !prev.childrenVisible,
     }))
   }
@@ -185,7 +185,7 @@ class TreeViewItem extends React.Component {
                         innerRef={this.childrenListRef}
                         style={{ "--open-ratio": `${openRatio}` }}
                       >
-                        {this.props.item.children.map(i => (
+                        {this.props.item.children.map((i) => (
                           <TreeViewItem key={i.title} item={i} />
                         ))}
                       </ChildrenList>

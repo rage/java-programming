@@ -33,7 +33,7 @@ function initAnalytics() {
 function onPlayerStateChange(event) {
   const player = event.target
   const eventCode = event.data
-  const action = Object.entries(YouTube.PlayerState).find(o => {
+  const action = Object.entries(YouTube.PlayerState).find((o) => {
     return o[1] === eventCode
   })[0]
   logAction(action, player)
@@ -75,7 +75,7 @@ const VideoWrapper = styled.div`
   }
 `
 
-const Youtube = props => {
+const Youtube = (props) => {
   return (
     <VideoWrapper>
       <YouTube

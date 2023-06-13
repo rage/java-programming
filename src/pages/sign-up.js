@@ -18,7 +18,7 @@ class SignInPage extends React.Component {
   }
 
   onStepComplete = () => {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       step: prevState.step + 1,
     }))
     if (typeof window !== "undefined") {

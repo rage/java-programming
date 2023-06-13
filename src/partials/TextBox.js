@@ -41,7 +41,7 @@ const variantToIcon = {
   learningObjectives: faUserGraduate,
 }
 
-const TextBox = props => {
+const TextBox = (props) => {
   return (
     <Wrapper style={{ "--color": variantToColor[props.variant] }}>
       <Header>

@@ -36,7 +36,7 @@ class ExerciseList extends React.Component {
     }
 
     const sectionPages = value.all
-      .filter(o => o.path.startsWith(`${sectionPath}/`))
+      .filter((o) => o.path.startsWith(`${sectionPath}/`))
       .sort((a, b) => {
         a = a.path.toLowerCase()
         b = b.path.toLowerCase()

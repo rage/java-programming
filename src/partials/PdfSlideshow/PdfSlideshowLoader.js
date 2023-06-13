@@ -7,7 +7,7 @@ import * as storejs from "store"
 
 setPdfJsWorkerPath(withPrefix("/pdf.worker.min.js"))
 
-export default props => {
+export default (props) => {
   const middleware = []
   const analytics = new ReduxActionAnalytics(
     "https://usage.testmycode.io/api/v0/data",

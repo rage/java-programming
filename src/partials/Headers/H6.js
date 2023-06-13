@@ -4,7 +4,7 @@ import { normalizeExerciseId } from "../../util/strings"
 const H6 = ({ children }) => {
   let text = "unknown heading"
   try {
-    text = children.find(o => typeof o === "string") || "unknown heading"
+    text = children.find((o) => typeof o === "string") || "unknown heading"
   } catch (e) {}
   const id = `heading-${normalizeExerciseId(text)}`
   return (

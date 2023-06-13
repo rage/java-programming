@@ -7,7 +7,7 @@ const ContentAreaContainer = styled.main`
   background-color: #fcfcfc;
   margin-bottom: 5rem;
   min-height: 80vh;
-  ${props =>
+  ${(props) =>
     props.mobileMenuOpen &&
     `
   display: none;

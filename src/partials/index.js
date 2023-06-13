@@ -35,7 +35,7 @@ import CodeStatesVisualizer from "./CodeStatesVisualizer"
 import PdfSlideshow from "./PdfSlideshow"
 import ExercisesInThisSection from "./ExercisesInThisSection"
 import AbStudy from "./AbStudy"
-import CrowdSorcerer from "./CrowdSorcerer"
+// import CrowdSorcerer from "./CrowdSorcerer"
 import MoodleExercise from "./MoodleExercise"
 import SqlTrainerExercise from "./SqlTrainerExercise"
 import GoogleFormLink from "./GoogleFormLink"
@@ -90,7 +90,7 @@ const mapping = {
   "google-form-link": GoogleFormLink,
   "workshop-schedule": WorkshopSchedule,
   notice: Notice,
-  crowdsorcerer: CrowdSorcerer,
+  // crowdsorcerer: CrowdSorcerer,
   youtube: Youtube,
   quiz: Quiz,
   quiznator: Quiznator,

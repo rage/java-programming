@@ -10,7 +10,7 @@ const LoadingWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   width: 100%;
-  ${props =>
+  ${(props) =>
     props.heightHint &&
     `
     height: ${props.heightHint};

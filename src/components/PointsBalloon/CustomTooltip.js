@@ -19,7 +19,7 @@ const StyledTooltip = styled.div`
   }
 `
 
-const CustomTooltip = props => {
+const CustomTooltip = (props) => {
   if (!props.active) {
     return null
   }

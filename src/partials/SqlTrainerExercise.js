@@ -32,7 +32,7 @@ const Body = styled.div`
   padding-bottom: 0.5rem;
 `
 
-const SqltrainerExercise = props => {
+const SqltrainerExercise = (props) => {
   return (
     <Wrapper
       id={normalizeExerciseId(`sqltrainer-exercise-${props.name}`)}

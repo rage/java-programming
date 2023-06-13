@@ -36,7 +36,7 @@ const Note = styled.div`
   font-size: 0.75rem;
 `
 
-const SampleData = props => {
+const SampleData = (props) => {
   return (
     <Wrapper>
       <Note>{props.t("sampleData")}</Note>

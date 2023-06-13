@@ -13,28 +13,28 @@ const StyledTableCell = styled(MaterialTableCell)`
   padding: 1rem !important;
 `
 
-export const Table = withSimpleErrorBoundary(props => (
+export const Table = withSimpleErrorBoundary((props) => (
   <Paper>
     <MaterialTable {...props} />
   </Paper>
 ))
 
-export const TableBody = withSimpleErrorBoundary(props => (
+export const TableBody = withSimpleErrorBoundary((props) => (
   <MaterialTableBody {...props} />
 ))
 
-export const TableCell = withSimpleErrorBoundary(props => (
+export const TableCell = withSimpleErrorBoundary((props) => (
   <StyledTableCell {...props} />
 ))
 
-export const TableTh = withSimpleErrorBoundary(props => (
+export const TableTh = withSimpleErrorBoundary((props) => (
   <StyledTableCell component="th" {...props} />
 ))
 
-export const TableHead = withSimpleErrorBoundary(props => (
+export const TableHead = withSimpleErrorBoundary((props) => (
   <MaterialTableHead {...props} />
 ))
 
-export const TableRow = withSimpleErrorBoundary(props => (
+export const TableRow = withSimpleErrorBoundary((props) => (
   <MaterialTableRow {...props} />
 ))

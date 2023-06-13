@@ -13,8 +13,8 @@ const saveHeight = (element, height) => {
   element.style.setProperty("--calculated-height", height)
 }
 
-const calculateElementHeightOffScreen = element => {
-  return new Promise(resolve => {
+const calculateElementHeightOffScreen = (element) => {
+  return new Promise((resolve) => {
     element.classList.add("render-element-off-screen-for-measurement")
     setTimeout(() => {
       const height = element.getBoundingClientRect().height
@@ -24,7 +24,7 @@ const calculateElementHeightOffScreen = element => {
   })
 }
 
-const calculateElementHeight = async element => {
+const calculateElementHeight = async (element) => {
   let { height } = element.getBoundingClientRect()
   if (height === 0) {
     height = await calculateElementHeightOffScreen(element)
@@ -32,7 +32,7 @@ const calculateElementHeight = async element => {
   saveHeight(element, height)
 }
 
-export const trackElementHeight = element => {
+export const trackElementHeight = (element) => {
   if (element === null) {
     return
   }
@@ -44,7 +44,7 @@ export default () => {
   window.addEventListener("resize", () => {
     document
       .querySelectorAll(".track-element-height-changes-for-animations")
-      .forEach(e => {
+      .forEach((e) => {
         calculateElementHeight(e)
       })
   })

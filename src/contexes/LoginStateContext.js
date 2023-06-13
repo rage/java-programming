@@ -12,7 +12,7 @@ export class LoginStateContextProvider extends React.Component {
   }
 
   componentDidMount() {
-    onLoginStateChanged(loggedIn => {
+    onLoginStateChanged((loggedIn) => {
       this.setState({ loggedIn })
     })
     setTimeout(() => {
@@ -32,7 +32,7 @@ export class LoginStateContextProvider extends React.Component {
 }
 
 export function withLoginStateContext(Component) {
-  return props => (
+  return (props) => (
     <LoginStateContextProvider>
       <Component {...props} />
     </LoginStateContextProvider>

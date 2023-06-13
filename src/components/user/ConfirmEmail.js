@@ -21,7 +21,7 @@ const StyledImage = styled.img`
 `
 
 class ConfirmEmail extends React.Component {
-  onClick = async e => {
+  onClick = async (e) => {
     e.preventDefault()
   }
 

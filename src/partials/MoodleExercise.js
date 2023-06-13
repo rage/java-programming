@@ -32,7 +32,7 @@ const Body = styled.div`
   padding-bottom: 0.5rem;
 `
 
-const MoodleExercise = props => {
+const MoodleExercise = (props) => {
   return (
     <Wrapper
       id={normalizeExerciseId(`moodle-exercise-${props.name}`)}

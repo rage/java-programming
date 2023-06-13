@@ -18,7 +18,7 @@ class TableOfContents extends Component {
       document.querySelectorAll(
         "h1.material-header,h2.material-header,h3.material-header",
       ),
-    ).map(o => {
+    ).map((o) => {
       return o.textContent || o.innerText
     })
     this.setState({ data })
@@ -31,7 +31,7 @@ class TableOfContents extends Component {
         <div>
           {this.state.data ? (
             <ol>
-              {this.state.data.map(o => {
+              {this.state.data.map((o) => {
                 return (
                   <li key={o}>
                     <a href={`#heading-${normalizeExerciseId(o)}`}>{o}</a>

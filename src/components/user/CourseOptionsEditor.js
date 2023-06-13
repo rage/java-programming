@@ -65,7 +65,7 @@ class CourseOptionsEditor extends React.Component {
     )
   }
 
-  onClick = async e => {
+  onClick = async (e) => {
     e.preventDefault()
     this.setState({ submitting: true })
     let extraFields = {
@@ -104,7 +104,7 @@ class CourseOptionsEditor extends React.Component {
     focused: null,
   }
 
-  handleInput = e => {
+  handleInput = (e) => {
     const name = e.target.name
     const value = e.target.value
     this.setState({ [name]: value }, () => {
@@ -112,7 +112,7 @@ class CourseOptionsEditor extends React.Component {
     })
   }
 
-  handleCheckboxInput = e => {
+  handleCheckboxInput = (e) => {
     const name = e.target.name
     const value = e.target.checked
     this.setState({ [name]: value }, () => {
@@ -120,7 +120,7 @@ class CourseOptionsEditor extends React.Component {
     })
   }
 
-  handleFocus = e => {
+  handleFocus = (e) => {
     const name = e.target.name
     this.setState({ focused: name })
   }
@@ -130,12 +130,12 @@ class CourseOptionsEditor extends React.Component {
   }
 
   validate = () => {
-    this.setState(prev => ({
+    this.setState((prev) => ({
       error: prev.research === undefined,
     }))
   }
 
-  setSelectedVariant = value => {
+  setSelectedVariant = (value) => {
     this.setState({ currentCourseVariant: value })
   }
 

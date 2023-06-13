@@ -23,16 +23,16 @@ const pheromones = {
     CURRENT_LAST: -1,
     IDLE_TICKS: 0,
   },
-  setUser: function(user) {
+  setUser: function (user) {
     pheromones.user = user
   },
   statistics: null,
   intervals: [],
-  init: function(options) {
+  init: function (options) {
     var elementCount = -1
     $(".content-area")
       .find("*")
-      .each(function() {
+      .each(function () {
         if (
           !$(this).is("table") &&
           !$(this).is("p") &&
@@ -74,31 +74,31 @@ const pheromones = {
 
     return pheromones.remove
   },
-  remove: function() {
+  remove: function () {
     setTimeout(() => {
       pheromones.storage.submit()
     }, 10)
 
     window.removeEventListener("scroll", pheromones.onScroll, false)
-    pheromones.intervals.forEach(interval => {
+    pheromones.intervals.forEach((interval) => {
       clearInterval(interval)
     })
   },
-  resetPosition: function() {
+  resetPosition: function () {
     var v = pheromones.state
     v.FIRST_VISIBLE = pheromones.fn.getTopmostVisibleElement(0, true)
     v.LAST_VISIBLE = pheromones.fn.getBottommostVisibleElement(v.FIRST_VISIBLE)
 
     v.PAGETOP_Y = window.pageYOffset
   },
-  initTimer: function() {
+  initTimer: function () {
     const interval = setInterval(() => {
       pheromones.storage.addLocation("tick")
     }, pheromones.TICK_LENGTH)
     pheromones.intervals.push(interval)
   },
-  bindMouseClicks: function() {
-    $(document).click(function(event) {
+  bindMouseClicks: function () {
+    $(document).click(function (event) {
       var hash = $(event.target).attr("data-hash")
       if (typeof hash === "undefined") {
         return
@@ -117,9 +117,9 @@ const pheromones = {
       pheromones.storage.addClick(clickedElement)
     })
   },
-  bindWindowActivity: function() {
+  bindWindowActivity: function () {
     // requires Visiblity.js
-    Visibility.change(function(e, state) {
+    Visibility.change(function (e, state) {
       if (state === "visible") {
         pheromones.IDLE_MODE = false
         pheromones.storage.addLocation("visibility-change-show")
@@ -130,7 +130,7 @@ const pheromones = {
     })
   },
 
-  onScroll: function() {
+  onScroll: function () {
     var state = pheromones.state
 
     var firstVisible = pheromones.fn.getTopmostVisibleElement(
@@ -159,7 +159,7 @@ const pheromones = {
         scroll.lastScrollFireTime = now
         pheromones.storage.addLocation("scroll")
       }
-      scroll.scrollTimer = setTimeout(function() {
+      scroll.scrollTimer = setTimeout(function () {
         scroll.scrollTimer = null
         scroll.lastScrollFireTime = pheromones.fn.getTime()
         pheromones.storage.addLocation("scroll")
@@ -170,36 +170,36 @@ const pheromones = {
     // include scroll events to the analysis
     scrollTimer: 0,
     lastScrollFireTime: 0,
-    bindScroll: function() {
+    bindScroll: function () {
       window.addEventListener("scroll", pheromones.onScroll, false)
     },
   },
   storage: {
     data: null,
-    add: function(element) {
+    add: function (element) {
       pheromones.storage.data.push(element)
       pheromones.storage.save()
       pheromones.storage.submit()
     },
-    addAll: function(list) {
+    addAll: function (list) {
       pheromones.storage.data = pheromones.storage.data.concat(list)
       pheromones.storage.save()
     },
-    clear: function() {
+    clear: function () {
       pheromones.storage.data = []
       pheromones.storage.save()
     },
-    size: function() {
+    size: function () {
       return pheromones.storage.data.length
     },
-    save: function() {
+    save: function () {
       if (!pheromones.storage.hasLocalStorageSupport()) {
         return
       }
 
       localStorage["pheromones.data"] = JSON.stringify(pheromones.storage.data)
     },
-    init: function() {
+    init: function () {
       if (
         !pheromones.storage.hasLocalStorageSupport() ||
         !localStorage["pheromones.data"]
@@ -210,7 +210,7 @@ const pheromones = {
 
       pheromones.storage.data = JSON.parse(localStorage["pheromones.data"])
     },
-    initPage: function() {
+    initPage: function () {
       pheromones.storage.init()
 
       var vis = {
@@ -222,7 +222,7 @@ const pheromones = {
 
       pheromones.storage.add(vis)
     },
-    addLocation: function(eventType) {
+    addLocation: function (eventType) {
       var v = pheromones.state
 
       if (v.CURRENT_FIRST === -1) {
@@ -289,7 +289,7 @@ const pheromones = {
 
       pheromones.storage.add(vis)
     },
-    addClick: function(clickInformation) {
+    addClick: function (clickInformation) {
       var v = pheromones.state
 
       var start = v.CURRENT_FIRST
@@ -322,7 +322,7 @@ const pheromones = {
 
       pheromones.storage.add(vis)
     },
-    submit: function() {
+    submit: function () {
       if (pheromones.storage.size() < pheromones.SUBMIT_AFTER) {
         return
       }
@@ -337,8 +337,8 @@ const pheromones = {
       $.post(pheromones.API_URL + "snapshots.json", {
         list: dataToSubmit,
       })
-        .done(function(data) {})
-        .fail(function(details) {
+        .done(function (data) {})
+        .fail(function (details) {
           if (
             details.status === 200 &&
             details.statusText === "OK" &&
@@ -350,7 +350,7 @@ const pheromones = {
           pheromones.storage.addAll(JSON.parse(dataToSubmit))
         })
     },
-    hasLocalStorageSupport: function() {
+    hasLocalStorageSupport: function () {
       try {
         return "localStorage" in window && window["localStorage"] !== null
       } catch (e) {
@@ -359,7 +359,7 @@ const pheromones = {
     },
   },
   fn: {
-    getTopmostVisibleElement: function(index, forward) {
+    getTopmostVisibleElement: function (index, forward) {
       if (index === -1) {
         index = 0
         forward = true
@@ -421,7 +421,7 @@ const pheromones = {
         }
       }
     },
-    getBottommostVisibleElement: function(index) {
+    getBottommostVisibleElement: function (index) {
       if (index === -1) {
         index = pheromones.fn.getTopmostVisibleElement(0, true)
       }
@@ -448,7 +448,7 @@ const pheromones = {
         index++
       }
     },
-    elementVisible: function(element) {
+    elementVisible: function (element) {
       if (!element || !element.offsetTop) {
         return false
       }
@@ -471,7 +471,7 @@ const pheromones = {
         left + width > window.pageXOffset
       )
     },
-    getTime: (function() {
+    getTime: (function () {
       /*
              var performance = window.performance || {};
              var performanceFunction = performance.now
@@ -485,7 +485,7 @@ const pheromones = {
              }
              */
 
-      return function() {
+      return function () {
         return new Date()
       }
     })(),
