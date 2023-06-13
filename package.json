@@ -4,7 +4,7 @@
     "node": "16.x"
   },
   "dependencies": {
-    "@apollo/client": "^3.7.15",
+    "@apollo/client": "^3.6.2",
     "@fortawesome/fontawesome-free": "^6.2.1",
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-brands-svg-icons": "^6.2.1",
@@ -47,7 +47,7 @@
     "gatsby-remark-smartypants": "^4.4.1",
     "gatsby-source-filesystem": "^3.7.1",
     "gatsby-transformer-remark": "^4.4.1",
-    "graphql": "^15.5.0",
+    "graphql": "^15.8.0",
     "graphql-request": "^3.4.0",
     "i18next": "^20.3.1",
     "i18next-browser-languagedetector": "^6.1.1",
