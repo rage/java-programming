@@ -63,7 +63,7 @@ import RegistrationLink from "./RegistrationLink"
 import RegistrationLink2 from "./RegistrationLink2"
 import OnlyForCourseVariant from "./OnlyForCourseVariant"
 import OnlyForNotLoggedIn from "./OnlyForNotLoggedIn"
-import Points from "./Points"
+// import Points from "./Points"
 import WorkshopSchedule from "./WorkshopSchedule"
 
 const mapping = {
@@ -108,7 +108,7 @@ const mapping = {
   h5: H5,
   h6: H6,
   hr: Hr,
-  points: Points,
+  // points: Points,
 }
 
 export default () => {
