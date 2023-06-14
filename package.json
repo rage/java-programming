@@ -4,7 +4,6 @@
     "node": "16.x"
   },
   "dependencies": {
-    "@apollo/client": "^3.6.2",
     "@fortawesome/fontawesome-free": "^6.2.1",
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-brands-svg-icons": "^6.2.1",
