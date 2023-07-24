@@ -409,7 +409,7 @@ public static void greet(int numOfTimes) {
 
 <!-- Kutsutaan metodia `tervehdi` siten, että parametrin `montakoKertaa` arvoksi asetetaan ensimmäisellä kutsulla `1` ja toisella kutsulla `3`. -->
 
-We will call the method `greet` with different values. The parameter `numOfTimes` is assigned the value `1`on the first call, and `3`on the second.
+We will call the method `greet` with different values. The parameter `numOfTimes` is assigned the value `1` on the first call, and `3` on the second.
 
 <!-- ```java
 public static void main(String[] args) {
