@@ -6,7 +6,7 @@ information_page: true
 ---
 
 ## Java Programming MOOC
-**No more exams will be held on this course.** You can receive a certificate upon completing at least 80% of exercises per part. The certificates are seperate for Java Programming I and Java Programming II.
+**No more exams will be held on this course.** You can receive a certificate upon gaining at least 80% of programming exercise points from each part. The certificates are seperate for Java Programming I and Java Programming II.
 
 ## Python Programming MOOC
 The current official MOOC course is [Python Programming MOOC 2023](https://programming-23.mooc.fi), for which it is possible to get 5+5 ECTS credits from the University of Helsinki. There is also a certificate available after the exam.
