@@ -200,7 +200,7 @@ TextMessage message = new TextMessage("ope", "It's going great!");
 System.out.println(message.read());
 
 ArrayList<TextMessage> textMessage = new ArrayList<>();
-textMessage.add(new TextMessage("private number", "I hid the body.");
+textMessage.add(new TextMessage("private number", "I hid the body."));
 ```
 
 <!-- <sample-output>
@@ -343,7 +343,7 @@ Tekstiviesti viesti = new Tekstiviesti("ope", "Kohta tapahtuu huikeita");
 Luettava luettava = new Tekstiviesti("ope", "Tekstiviesti on Luettava!");
 ``` -->
 ```java
-TextMessage message = new TextMessage("ope", "Something cool's about to happen);
+TextMessage message = new TextMessage("ope", "Something cool's about to happen");
 Readable readable = new TextMessage("ope", "The text message is Readable!");
 ```
 
