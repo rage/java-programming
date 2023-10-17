@@ -791,7 +791,7 @@ System.out.println(kokonaisluku);
 ``` -->
 
 ```java
-int integer = 3.0 / 2;
+int integer = (int) 3.0 / 2;
 System.out.println(integer);
 ```
 
