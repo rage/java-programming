@@ -750,6 +750,8 @@ Add the following methods to the `VehicleRegistry`:
 
 - `public void printOwners()` prints the owners of the cars in the registry. Each name should only be printed once, even if a particular person owns more than one car.
 
+- `public String search(LicensePlate)` Seaching for a plate that has been added to the registry should return its owner.
+
 Useful tip! In the printOwners method, you can create a list used for remembering the owners that were already printed. If an owner is not on the list, their name is printed and they are added to the list; conversely, if an owner is on the list, their name isn't printed.
 
 </programming-exercise>
