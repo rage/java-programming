@@ -392,7 +392,7 @@ Kun olet saanut tehtävän tehtyä, palauta se palvelimelle.
 Voit halutessasi kokeilla kellon toimintaa pääohjelmassa. Alla olevalla esimerkkikoodilla saat aikaan ohjelman, missä kello tulostetaan ja kello etenee kerran sadasosasekunnissa. -->
 
 - `public Timer()` creates a new timer.
-- `public String toString()` returns a string representation of the timer. The string representation should be in the form "seconds: hundredths of a second", where both the seconds and the hundredths of a second are represented by two numbers. For example, "19:83" would represent the time 19 seconds, 83 hundredths of a second.
+- `public String toString()` returns a string representation of the timer. The string representation should be in the form "seconds:hundredths of a second", where both the seconds and the hundredths of a second are represented by two numbers. For example, "19:83" would represent the time 19 seconds, 83 hundredths of a second.
 - `public void advance()` moves the timer forward by a hundredth of a second.
 
 
