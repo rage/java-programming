@@ -687,7 +687,7 @@ public class Sanajoukko {
 import java.util.ArrayList;
 
 public class WordSet {
-    private ArrayList<String> words
+    private ArrayList<String> words;
 
     public WordSet() {
         this.words = new ArrayList<>();

@@ -796,7 +796,7 @@ while (true) {
 // For printing the number of positive numbers
 System.out.println("Positive numbers: " + numberOfPositives);
 // For printing the number of negative numbers
-System.out.println("Negative numbers: " + numberOfNegative)s;
+System.out.println("Negative numbers: " + numberOfNegatives);
 
 // For printing the percentage of positive numbers from all numbers
 

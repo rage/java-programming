@@ -146,7 +146,7 @@ NB! The program should ask for only one string. Don't use a loop here.
 ## String Comparisons And "Equals"
 
 <!-- Merkkijonoja ei voi vertailla yhtäsuuri kuin operaatiolla `==`.  Merkkijonojen vertailuun käytetään erillistä `equals`-komentoa, joka liittyy aina verrattavaan merkkijonoon. -->
-Strings can't be compared with with the equals operator - `==`. For strings, there exists a separate `equals`-command, which is always appended to the end of the string that we want to compare.
+Strings can't be compared with the equals operator - `==`. For strings, there exists a separate `equals`-command, which is always appended to the end of the string that we want to compare.
 
 <!-- ```java
 String teksti = "kurssi";
@@ -849,7 +849,7 @@ Age of the oldest: 10
 <programming-exercise name='Name of the oldest' tmcname='part03-Part03_31.NameOfTheOldest'>
 
 <!-- Kirjoita ohjelma, joka lukee käyttäjältä henkilötietoja. Henkilötiedot sisältävät etunimen ja syntymävuoden pilkulla eroteltuna. Tietojen lukemista jatketaan kunnes käyttäjä syöttää tyhjän merkkijonon. -->
-Write a program that reads names and ages from the user until an empty line is entered. The  name and age are separed by a comma.
+Write a program that read names and ages from the user until an empty line is entered. The name and age are separated by a comma.
 
 <!-- Kun lukeminen lopetetaan, ohjelma tulostaa vanhimman henkilön nimen. Voit olettaa, että vanhimman henkilön ikä on yksikäsitteinen. -->
 After reading all user input, the program prints the name of the oldest person. You can assume that the user enters at least one person, and the that one of the users is older than the others.
