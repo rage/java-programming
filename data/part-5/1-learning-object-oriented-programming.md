@@ -715,7 +715,7 @@ System.out.println(first.surfaceArea());
 (40, 80)
 (10, 10)
 (39, 80)
-3920
+3120
 
 </sample-output>
 
