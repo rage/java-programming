@@ -520,7 +520,7 @@ public void start(Stage ikkuna) {
     // ...
 
     lisaaNappi.setOnAction((event) -> {
-        henkilovarasto.talleta(new Henkilo(nimiTeksti.getText(), hetuTeksti.getText());
+        henkilovarasto.talleta(new Henkilo(nimiKentta.getText(), hetuKentta.getText());
     });
     // ...
 }
@@ -533,7 +533,7 @@ public void start(Stage window) {
     // ...
 
     addButton.setOnAction((event) -> {
-        warehouse.save(new Person(nameText.getText(), secText.getText());
+        warehouse.save(new Person(nameField.getText(), secField.getText());
     });
     // ...
 }
@@ -571,7 +571,7 @@ public class HenkiloSovellus extends Application {
 
         Button lisaaNappi = new Button("Lisää henkilö!");
         lisaaNappi.setOnAction((event) -> {
-            Henkilo lisattava = new Henkilo(nimiTeksti.getText(), hetuTeksti.getText());
+            Henkilo lisattava = new Henkilo(nimiKentta.getText(), hetuKentta.getText());
             henkilovarasto.talleta(new Henkilo(lisattava);
         });
 
@@ -625,7 +625,7 @@ public class PersonApp extends Application {
         Button addButton = new Button("Add person!");
 
         addButton.setOnAction((event) -> {
-            warehouse.save(new Person(nameText.getText(), secText.getText());
+            warehouse.save(new Person(nameField.getText(), secField.getText());
         });
 
         GridPane components = new GridPane();
