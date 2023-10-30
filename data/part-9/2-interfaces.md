@@ -1104,7 +1104,7 @@ For the problems that you encounter during this course you should almost always 
 
 
 <!-- Toteuta pääohjelmaluokkaan luokkametodi `palautaKoko`, joka saa parametrina List-olion ja palauttaa sen koon kokonaislukuna. -->
-In the mainProgram class, implement a class method `returnSize`, which is given a List-object as a parameter, and returns the size of the list as an integer.
+In the mainProgram class, implement a static class method `returnSize`, which is given a List-object as a parameter, and returns the size of the list as an integer.
 
 
 <!-- Metodin tulee toimia esimerkiksi seuraavasti: -->
@@ -1196,7 +1196,7 @@ The `keySet` method returns a set of elements that implement the `Set` interface
 
 
 <!-- Toteuta pääohjelmaluokkaan luokkametodi `palautaKoko`, joka saa parametrina Map-olion ja palauttaa sen koon kokonaislukuna. -->
-In the class MainProgram implement a class method `returnSize` which gets a Map-object as a parameter, and returns its size as an integer.
+In the class MainProgram implement a static class method `returnSize` which gets a Map-object as a parameter, and returns its size as an integer.
 
 <!-- Metodin tulee toimia esimerkiksi seuraavasti: -->
 The method should work as follows:
