@@ -3834,7 +3834,7 @@ public static void main(String[] args) {
 ```java
 public static void main(String[] args) {
     SimpleDate date = new SimpleDate(13, 2, 2015);
-    System.out.println("Friday of the examined week is " + pvm);
+    System.out.println("Friday of the examined week is " + date);
 
     SimpleDate newDate = date.afterNumberOfDays(7);
     int week = 1;
