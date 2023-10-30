@@ -560,13 +560,13 @@ public class Huvipuistolaite {
 ```java
 public class AmusementParkRide {
     private String name;
-    private int minimumHeigth;
+    private int minimumHeight;
     private int visitors;
     private ArrayList<Person> riding;
 
-    public AmusementParkRide(String name, int minimumHeigth) {
+    public AmusementParkRide(String name, int minimumHeight) {
         this.name = name;
-        this.minimumHeigth = minimumHeigth;
+        this.minimumHeight = minimumHeight;
         this.visitors = 0;
         this.riding = new ArrayList<>();
     }
@@ -772,15 +772,15 @@ System.out.println(hurjakuru);
 System.out.println();
 
 if (hurjakuru.isAllowedOn(matti)) {
-    System.out.println(matti.getNimi() + " is allowed on the ride");
+    System.out.println(matti.getName() + " is allowed on the ride");
 } else {
-    System.out.println(matti.getNimi() + " is not allowed on the ride");
+    System.out.println(matti.getName() + " is not allowed on the ride");
 }
 
 if (hurjakuru.isAllowedOn(juhana)) {
-    System.out.println(juhana.getNimi() + " is allowed on the ride");
+    System.out.println(juhana.getName() + " is allowed on the ride");
 } else {
-    System.out.println(juhana.getNimi() + " is not allowed on the ride");
+    System.out.println(juhana.getName() + " is not allowed on the ride");
 }
 
 System.out.println(hurjakuru);
@@ -1286,7 +1286,7 @@ no one is on the ride.
 
 Alla olevassa toteutuksessa palautetaan arvo `-1` mikäli kyydissä ei ole yhtäkään henkilöä. Pituuksien keskiarvoa laskevassa ohjelmassa luku `-1` on mahdoton, joten siitä voi päätellä ettei keskiarvoa ole voitu laskea. -->
 
-Let's now create a method for the amusement park ride that calculates the average height of the people currently on it. Average height can obtained by calculating the average from the persons on the ride -- the average is calculated by adding up the individual values and dividing that sum by the number of values.
+Let's now create a method for the amusement park ride that calculates the average height of the people currently on it. Average height can be obtained by calculating the average from the persons on the ride -- the average is calculated by adding up the individual values and dividing that sum by the number of values.
 
 The implementation underneath returns `-1` if not a single person is on the ride. The result of `-1` is impossible in a program that calculates averages. Based on that, we can determine that the average could not have been calculated.
 
@@ -1762,9 +1762,9 @@ The class should eventually work in the following way.
 
 - `public ArrayList<Henkilo> getHenkilot()` - palauttaa listan huoneessa olevista henkilöistä. -->
 
-Create `Room` class. The class should contain a list of persons as an instance variable, and it should have a parameterless constructor. In addition, add the following methods to the class:
+Create the `Room` class. The class should contain a list of persons as an instance variable, and it should have a parameterless constructor. In addition, add the following methods to the class:
 
-- `public void add(Person person)` - add the person passed as a paramter to the list.
+- `public void add(Person person)` - add the person passed as a parameter to the list.
 
 - `public boolean isEmpty()` - returns a `boolean`-type value `true` or `false`, that tells whether the room is empty or not.
 
