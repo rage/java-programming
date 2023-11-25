@@ -227,7 +227,7 @@ leftText.textProperty().addListener(new ChangeListener<String>() {
 
 <!-- Edellä muutoksia havainnoidaan tekstikenttään liittyvästä tekstistä. Koska teksti on merkkijonomuotoista, on muutoksia käsittelevälle rajapinnalle annettu tyypiksi merkkijono. Kuten edellä, myös tässäkin esimerkissä ohjelmakoodi voidaan esittää lyhyemmässä muodossa. -->
 
-In the previous example the changes being observed are in the text of the text field. Beacause text is in string format we have provided string as the type for the handler interface. As before, we can also express this code in a more compact form.
+In the previous example the changes being observed are in the text of the text field. Because text is in string format we have provided string as the type for the handler interface. As before, we can also express this code in a more compact form.
 
 
 <!-- ```java
