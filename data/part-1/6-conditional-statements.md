@@ -1094,7 +1094,7 @@ int luku = 7;
 if (luku >= 5 && luku <= 10) {
     System.out.println("On! :)");
 } else {
-    System.out.println("Ei ollut :(")
+    System.out.println("Ei ollut :(");
 }
 ``` -->
 
@@ -1105,7 +1105,7 @@ int number = 7;
 if (number >= 5 && number <= 10) {
     System.out.println("It is! :)");
 } else {
-    System.out.println("It is not :(")
+    System.out.println("It is not :(");
 }
 ```
 
@@ -1127,7 +1127,7 @@ int luku = 145;
 if (luku < 0 || luku > 100) {
     System.out.println("On! :)");
 } else {
-    System.out.println("Ei ollut :(")
+    System.out.println("Ei ollut :(");
 }
 ``` -->
 
@@ -1138,7 +1138,7 @@ int number = 145;
 if (number < 0 || number > 100) {
     System.out.println("It is! :)");
 } else {
-    System.out.println("It is not :(")
+    System.out.println("It is not :(");
 }
 ```
 
@@ -1159,7 +1159,7 @@ int luku = 7;
 if (!(luku > 4)) {
     System.out.println("Luku ei ole suurempi kuin 4.");
 } else {
-    System.out.println("Luku on suurempi tai yhtäsuuri kuin 4.")
+    System.out.println("Luku on suurempi tai yhtäsuuri kuin 4.");
 }
 ``` -->
 
@@ -1169,7 +1169,7 @@ int number = 7;
 if (!(number > 4)) {
     System.out.println("The number is not greater than 4.");
 } else {
-    System.out.println("The number is greater than 4.")
+    System.out.println("The number is greater than 4.");
 }
 ```
 
