@@ -64,7 +64,7 @@ import java.util.Scanner;
 
 public class Example {
     public static void main(String[] args) {
-        Scanner scanned = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         // program code
     }
 
@@ -1885,7 +1885,7 @@ Let's observe the same program by visualizing its execution step-by-step. The ap
 
 <!-- Tarkastellaan seuraavaksi esimerkkiä, missä metodi palauttaa arvon. Ohjelman `main`-metodi kutsuu erillistä `kaynnista`-metodia, jossa luodaan kaksi muuttujaa, kutsutaan `summa`-metodia, ja tulostetaan `summa`-metodin palauttama arvo. -->
 
-Let's now study an example where the method returns a value. The `main` method of the program calls a separate `start` method, inside of which two variables are created, the `sum` method is called, and the the value returned by the `sum` method is printed.
+Let's now study an example where the method returns a value. The `main` method of the program calls a separate `start` method, inside of which two variables are created, the `sum` method is called, and the value returned by the `sum` method is printed.
 
 <!-- ```java
 public static void main(String[] args) {
@@ -1959,7 +1959,7 @@ main
 
 <!-- Komento `int summa = summa(eka, toka);` luo metodiin `kaynnista` muuttujan `summa`, ja kutsuu metodia `summa`. Metodi `kaynnista` jää odottamaan. Koska metodissa `summa` on määritelty parametrit `luku1` ja `luku2`, luodaan ne heti metodin suorituksen alussa, ja niihin kopioidaan parametrina annettujen muuttujien arvot. -->
 
-The command `int sum = sum(first, second);` creates the variable `sum` in the method `start` and calls the method `sum`. The method `start` enters a waiting state. Since the parameters `number1` and `number2` are defined in the method `sum`, they are created right at the beginning of the method's execution, after which the values of the variables given as parametes are copied into them.
+The command `int sum = sum(first, second);` creates the variable `sum` in the method `start` and calls the method `sum`. The method `start` enters a waiting state. Since the parameters `number1` and `number2` are defined in the method `sum`, they are created right at the beginning of the method's execution, after which the values of the variables given as parameters are copied into them.
 
 <!-- <sample-output>
 summa
