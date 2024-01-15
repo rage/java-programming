@@ -3104,7 +3104,7 @@ The program should print the following:
 Kortilla on rahaa 10.0 euroa
 Kortilla on rahaa 25.0 euroa
 Kortilla on rahaa 35.0 euroa
-Kortilla on rahaa 150.0 euroa
+Kortilla on rahaa 235.0 euroa
 
 </sample-output> -->
 
@@ -3113,7 +3113,7 @@ Kortilla on rahaa 150.0 euroa
 The card has a balance of 10.0 euros
 The card has a balance of 25.0 euros
 The card has a balance of 35.0 euros
-The card has a balance of 150.0 euros
+The card has a balance of 235.0 euros
 
 </sample-output>
 
