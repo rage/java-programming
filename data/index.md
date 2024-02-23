@@ -8,7 +8,7 @@ banner: true
 
 Welcome to the University of Helsinki’s massive open online course (MOOC) on programming! This is an updated version of our popular course Object-Oriented Programming with Java.
 
-Please note, that this is a *legacy course*. It is no longer possible to gain ECTS credits for completing the course. The course content is also no longer updated or maintained. You can find our current Python course at [https://mooc.fi](https://programming-24.mooc.fi/)
+Please note, that this is a *legacy course*. It is no longer possible to gain ECTS credits for completing the course. The course content is also no longer updated or maintained. You can find our current Python course [here](https://programming-24.mooc.fi/)
 
 During this course, you will learn the basics of computer programming, along with algorithms and object-oriented programming through the Java programming language. The course includes comprehensive materials and plenty of programming exercises - all of which are tested using our automatic testing service Test My Code.
 
