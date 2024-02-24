@@ -1514,7 +1514,7 @@ Next, implement a class called `UserInterface`. It should have a constructor wit
 
 - The command `add` asks the user for the next task to be added. Once the user enters this task, it should be added to the to-do list.
 
-- The commmand `list` prints all the tasks on the to-do list.
+- The command `list` prints all the tasks on the to-do list.
 
 - The command `remove` asks the user to enter the id of the task to be removed. When this has been entered, the specified task should be removed from the list of tasks.
 
