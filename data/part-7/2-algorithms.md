@@ -31,7 +31,7 @@ In a more general sense, retrieving and displaying information quickly is an int
 ## Sorting information
 
 <!-- Jos tieto ei noudata minkäänlaista järjestystä tai sääntöä, on tiedon hakeminen tietokoneelle työlästä. Tarvitsemme järjestystä! -->
-If the information (data) giving to a computer, doesn't follow any rules and isn't in order, retrieving that information is taxing for the computer. We need order!
+If the information (data) given to a computer, doesn't follow any rules and isn't in order, retrieving that information is taxing for the computer. We need order!
 
 
 ### Selection sort
