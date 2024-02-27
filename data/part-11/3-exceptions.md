@@ -27,7 +27,7 @@ Some exceptions we have to always prepare for, such as errors when reading from 
 ## Handling exceptions
 
 <!-- Poikkeukset käsitellään `try { } catch (Exception e) { }` -lohkorakenteella. Avainsanan `try` aloittaman lohkon sisällä on lähdekoodi, jonka suorituksessa tapahtuu *mahdollisesti* poikkeus. Avainsanan `catch` aloittaman lohkon sisällä taas määritellään poikkeustilanteessa tapahtuva käsittely, eli mitä tehdään kun try-lohkossa tapahtuu poikkeus. Avainsanaa catch seuraa myös käsiteltävän poikkeuksen tyyppi, esimerkiksi "kaikki poikkeukset" eli Exception (`catch (Exception e)`). -->
-We use the `try {} catch (Exception e) {}` block structure to handle exceptions. The keyword `try` starts a block containing the code which *might* throw an exception. the block starting with the keyword `catch` defines what happens if an exception is thrown in the `try` block. The keyword `catch` is followed by the type of the exception handled by that block, for example "all exceptions" `catch (Exception e)`.
+We use the `try {} catch (Exception e) {}` block structure to handle exceptions. The keyword `try` starts a block containing the code which *might* throw an exception. The block starting with the keyword `catch` defines what happens if an exception is thrown in the `try` block. The keyword `catch` is followed by the type of the exception handled by that block, for example "all exceptions" `catch (Exception e)`.
 
 
 ```java
