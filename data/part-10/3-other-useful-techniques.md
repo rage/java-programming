@@ -891,7 +891,7 @@ The numeric identifier of an enum field value can be found with `ordinal()`. The
 
 
 ```java
-public enum Suits {
+public enum Suit {
     DIAMOND, CLUB, HEART, SPADE
 }
 ```
