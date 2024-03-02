@@ -270,7 +270,7 @@ NB! When using the `System.out.println` command, do not pass in the string "Ada 
 ## Reading Strings
 
 <!-- Lukemiseen käytettävä komento `lukija.nextLine();` lukee käyttäjän syötteen ja palauttaa merkkijonon. Mikäli merkkijonoa halutaan käyttää ohjelmassa, tulee se säilöä merkkijonomuuttujaan -- `String viesti = lukija.nextLine();`. Muuttujassa olevaa arvoa voi käyttää monta kertaa. Alla olevassa esimerkissä käyttäjän syöttämä viesti tulostetaan kahteen kertaan. -->
-The `reader.nextLine();` command reads the user's input and *returns* a string. If we then want to use the string in the program, it must be saved to a string variable -- `String message = scanner.nextLine();`. A value saved to a variable can be used repeatedly. In the example below, the user input is printed twice.
+The `scanner.nextLine();` command reads the user's input and *returns* a string. If we then want to use the string in the program, it must be saved to a string variable -- `String message = scanner.nextLine();`. A value saved to a variable can be used repeatedly. In the example below, the user input is printed twice.
 
 ```java
 //Introduce the Scanner tool used for reading
@@ -440,7 +440,7 @@ Hi Lily
 ## Program Execution Waits for Input
 
 <!-- Kun ohjelman suoritus kohtaa kohdan, missä käyttäjältä halutaan lukea syötettä (komento `lukija.nextLine()`), ohjelman suoritus jää odottamaan. Suoritus jatkuu vasta kun käyttäjä kirjoittaa syötteen ja painaa enteriä. -->
-When the program's execution comes a statement that attempts to read input from the user (the command `reader.nextLine()`), the execution stops and waits. The execution continues only after the user has written some input and pressed enter.
+When the program's execution comes a statement that attempts to read input from the user (the command `scanner.nextLine()`), the execution stops and waits. The execution continues only after the user has written some input and pressed enter.
 
 <!-- Alla olevassa esimerkissä ohjelma pyytää käyttäjältä kolmea merkkijonoa. Ensin ohjelma tulostaa merkkijonon `Syötä ensimmäinen merkkijono:`, jonka jälkeen ohjelma jää odottamaan käyttäjän syötettä. Kun käyttäjä syöttää tekstin, ohjelma tulostaa merkkijonon `Syötä toinen merkkijono:`, jonka jälkeen ohjelma jää taas odottamaan käyttäjän syötettä. Tämä jatkuu myös kolmannen kerran, jonka jälkeen ohjelma tulostaa käyttäjän syöttämät tekstit. -->
 In the example below, the program prompts the user for three strings. First, the program prints `Write the first string: `, and then waits for user input. When the user writes some text, the program prints `Write the second string: `, and then waits for user input again. This continues for a third time, after which the program prints all three strings.
