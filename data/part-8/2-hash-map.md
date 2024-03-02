@@ -402,7 +402,7 @@ books.add(prideAndPrejudice);
 // searching for a book named Sense and Sensibility
 Book match = null;
 for (Book book: books) {
-    if (book.getName().equals("Sense and Sensibility") {
+    if (book.getName().equals("Sense and Sensibility")) {
         match = book;
         break;
     }
@@ -875,10 +875,10 @@ Library library = new Library();
 library.addBook(senseAndSensibility);
 library.addBook(prideAndPrejudice);
 
-System.out.println(library.getBook("pride and prejudice");
+System.out.println(library.getBook("pride and prejudice"));
 System.out.println();
 
-System.out.println(library.getBook("PRIDE AND PREJUDICE");
+System.out.println(library.getBook("PRIDE AND PREJUDICE"));
 System.out.println();
 
 System.out.println(library.getBook("SENSE"));
