@@ -126,7 +126,7 @@ public class JavaFxApplication extends Application {
     }
 
     public static void main(String[] args) {
-        launch(JavaFxSovellus.class);
+        launch(JavaFxApplication.class);
     }
 }
 ```
@@ -205,7 +205,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
-public class JavaFxSovellus extends Application {
+public class JavaFxApplication extends Application {
 
     @Override
     public void start(Stage window) {
@@ -223,7 +223,7 @@ public class JavaFxSovellus extends Application {
     }
 
     public static void main(String[] args) {
-        launch(JavaFxSovellus.class);
+        launch(JavaFxApplication.class);
     }
 }
 ``` -->
@@ -254,7 +254,7 @@ public class JavaFxSovellus extends Application {
     }
 
     public static void main(String[] args) {
-        launch(JavaFxSovellus.class);
+        launch(JavaFxApplication.class);
     }
 }
 ```
@@ -418,7 +418,7 @@ Layout components can be combined. A typical setup involves using the BorderPane
 
 
 <!-- ```java
-package sovellus;
+package application;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -430,7 +430,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class JavaFxSovellus extends Application {
+public class JavaFxApplication extends Application {
 
     @Override
     public void start(Stage window) {
@@ -460,7 +460,7 @@ public class JavaFxSovellus extends Application {
     }
 
     public static void main(String[] args) {
-        launch(JavaFxSovellus.class);
+        launch(JavaFxApplication.class);
     }
 }
 ``` -->
@@ -477,7 +477,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class JavaFxSovellus extends Application {
+public class JavaFxApplication extends Application {
 
     @Override
     public void start(Stage window) {
@@ -507,7 +507,7 @@ public class JavaFxSovellus extends Application {
     }
 
     public static void main(String[] args) {
-        launch(JavaFxSovellus.class);
+        launch(JavaFxApplication.class);
     }
 }
 ```
