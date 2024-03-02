@@ -250,7 +250,7 @@ Let's go through the most common characters used in regular expressions.
 ### Alternation (Vertical Line)
 
 <!-- Pystyviiva tarkoittaa, että säännöllisen lausekkeen osat ovat vaihtoehtoisia. Esimerkiksi lauseke `00|111|0000` määrittelee merkkijonot `00`, `111` ja `0000`. Metodi `matches` palauttaa arvon `true` jos merkkijono vastaa jotain määritellyistä vaihtoehdoista. -->
-A vertical line indicates that parts of a regular expressions are optional. For example, `00|111|0000` defines the strings `00`, `111` and `0000`. The `respond` method returns` true` if the string matches any one of the specified group of alternatives.
+A vertical line indicates that parts of a regular expressions are optional. For example, `00|111|0000` defines the strings `00`, `111` and `0000`. The `respond` method returns `true` if the string matches any one of the specified group of alternatives.
 
 
 <!-- ```java
@@ -864,7 +864,7 @@ ei ole pata
 </sample-output> -->
 <sample-output>
 
-HEARTS 10
+HEART 10
 is not a spade
 
 </sample-output>
