@@ -219,7 +219,7 @@ leftText.textProperty().addListener(new ChangeListener<String>() {
             String oldValue, String newValue) {
 
         System.out.println(oldValue + " -> " + newValue);
-        oikeaTeksti.setText(newValue);
+        rightText.setText(newValue);
     }
 });
 ```
