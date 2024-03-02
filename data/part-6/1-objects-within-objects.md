@@ -2110,7 +2110,7 @@ public class Main {
 ```java
 public class Main {
     public static void main(String[] args) {
-        Item book = new Item("The lord of the rings", 2);
+        Item book = new Item("Lord of the rings", 2);
         Item phone = new Item("Nokia 3210", 1);
 
         System.out.println("The book's name: " + book.getName());
