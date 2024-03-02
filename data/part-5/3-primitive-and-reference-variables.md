@@ -496,7 +496,7 @@ On the fourth row, the program calls the `youthen` method, to which we pass the 
 
 <!-- Kun metodin nuorenna suoritus loppuu, palataan takaisin main-metodiin. Nuorenna-metodin suoritukseen liittyvät tiedot katoavat kutsupinosta. -->
 
-When the execution of the method makeYounger ends, we return back to the main method. The information related to the execution of the makeYounger disappears from the call stack.
+When the execution of the method `youthen` ends, we return back to the main method. The information related to the execution of the `youthen` disappears from the call stack.
 
 <img src="../img/drawings/part5.3-first-3-tm.png"/>
 
