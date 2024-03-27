@@ -476,7 +476,7 @@ int variable7 = 4; // Allowed, but is not a descriptive variable name
 
 <!-- Muuttujan nimi ei saa olla jo entuudestaan käytössä. Tällaisia nimiä ovat mm. aikaisemmin määritellyt muuttujat ja Javan valmiit komennot, kuten `System.out.print` ja `System.out.println`. -->
 
-A variable's name cannot already be in use. These names include, for instance, variables previously defined in the program and commands provided by Java, such as `System.out.print` and `System.out.println`. -->
+A variable must have a unique name that is not already in use. These names include, for instance, variables previously defined in the program and commands provided by Java, such as `System.out.print` and `System.out.println`. -->
 
 <!-- ```java
 int 7muuttuja = 4; // Ei sallittu!
