@@ -1220,6 +1220,8 @@ What happens in detail when we call the toString method of a three-dimensional p
 
 As we can see, the sequence of events caused by the method call has multiple steps. The principle, however, is clear: The definition for the method is first searched for in the class definition of the actual type of the object. If it is not found, we next examine the superclass. If the definition cannot be found there, either, we move on to the superclass of this superclass, etc...
 
+If you see the `Counter` and `SuperCounter` quiz here, the correct output is `2`. The calls to `subtractFromNumber` use the inherited implementation from `Counter`, and only `addToNumber` is overridden in `SuperCounter`.
+
 <quiz id="6b36458c-2d7a-55ac-9d28-4c0e1fcaf490"></quiz>
 
 <quiz id="a5a50681-f6b9-503e-a3e8-efc625156b59"></quiz>
@@ -2205,4 +2207,3 @@ false
 </sample-output>
 
 </programming-exercise>
-
