@@ -262,7 +262,7 @@ Hi Ada Lovelace!
 </sample-output>
 
 <!-- Huom! Kun käytät `System.out.println`-komentoa, älä kirjoita komentoon merkkijonoa "Ada Lovelace", vaan hyödynnä tulostuksessa olemassaolevaa muuttujaa `nimi`: `System.out.println("Hei " + ...)`. -->
-NB! When using the `System.out.println` command, do not pass in the string "Ada Lovelace" as a parameter. Instead, use the existing variable `name`: `System.out.println("Hi " + ...)`
+NB! When using the `System.out.println` command, do not pass in the string "Ada Lovelace" as a argument. Instead, use the existing variable `name`: `System.out.println("Hi " + ...)`
 
 </programming-exercise>
 
