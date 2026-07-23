@@ -3658,7 +3658,7 @@ public class Factory {
         this.make = make;
     }
 
-    public Car procuceCar() {
+    public Car produceCar() {
         return new Car(this.make);
     }
 }
