@@ -120,7 +120,7 @@ Tulostettava teksti
 
  -->
 
-Execution of the program starts from the line that follows `public static void main(string[] args) {`, and ends at the closing curly bracket `}`. Commands are executed one line at a time. We'll learn what the terms `public class` and `public static void` mean later on. In the above example, `System.out.println("Text to be printed")` is the only command to be executed. Its output is:
+Execution of the program starts from the line that follows `public static void main(String[] args) {`, and ends at the closing curly bracket `}`. Commands are executed one line at a time. We'll learn what the terms `public class` and `public static void` mean later on. In the above example, `System.out.println("Text to be printed")` is the only command to be executed. Its output is:
 
 <sample-output>
 
